@@ -18,7 +18,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummary {
         this.confirmationUrl = confirmationUrl;
     }
 
-    public Optional<String> getConfirmationUrl() {
+    public Optional<String> confirmationUrl() {
         return Optional.ofNullable(this.confirmationUrl);
     }
 

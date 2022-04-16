@@ -24,7 +24,7 @@ public final class AgentPermissionsProperties extends com.pulumi.resources.Invok
     @Import(name="principals", required=true)
       private final List<String> principals;
 
-    public List<String> getPrincipals() {
+    public List<String> principals() {
         return this.principals;
     }
 

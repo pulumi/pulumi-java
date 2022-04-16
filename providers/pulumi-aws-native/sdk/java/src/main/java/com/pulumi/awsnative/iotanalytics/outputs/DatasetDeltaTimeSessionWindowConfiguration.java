@@ -16,7 +16,7 @@ public final class DatasetDeltaTimeSessionWindowConfiguration {
         this.timeoutInMinutes = timeoutInMinutes;
     }
 
-    public Integer getTimeoutInMinutes() {
+    public Integer timeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 

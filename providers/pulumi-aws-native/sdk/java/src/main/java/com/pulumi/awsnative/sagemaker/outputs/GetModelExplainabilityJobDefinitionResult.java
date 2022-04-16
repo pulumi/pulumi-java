@@ -34,14 +34,14 @@ public final class GetModelExplainabilityJobDefinitionResult {
      * The time at which the job definition was created.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The Amazon Resource Name (ARN) of job definition.
      * 
     */
-    public Optional<String> getJobDefinitionArn() {
+    public Optional<String> jobDefinitionArn() {
         return Optional.ofNullable(this.jobDefinitionArn);
     }
 

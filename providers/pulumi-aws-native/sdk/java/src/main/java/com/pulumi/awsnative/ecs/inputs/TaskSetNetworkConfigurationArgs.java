@@ -22,7 +22,7 @@ public final class TaskSetNetworkConfigurationArgs extends com.pulumi.resources.
     @Import(name="awsVpcConfiguration")
       private final @Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
 
-    public Output<TaskSetAwsVpcConfigurationArgs> getAwsVpcConfiguration() {
+    public Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration() {
         return this.awsVpcConfiguration == null ? Codegen.empty() : this.awsVpcConfiguration;
     }
 

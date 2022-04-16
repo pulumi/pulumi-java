@@ -43,20 +43,20 @@ public final class BucketAnalyticsConfiguration {
      * The ID that identifies the analytics configuration.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The prefix that an object must have to be included in the analytics results.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public BucketStorageClassAnalysis getStorageClassAnalysis() {
+    public BucketStorageClassAnalysis storageClassAnalysis() {
         return this.storageClassAnalysis;
     }
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

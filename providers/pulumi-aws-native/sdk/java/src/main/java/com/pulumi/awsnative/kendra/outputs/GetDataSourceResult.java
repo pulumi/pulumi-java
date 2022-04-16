@@ -50,35 +50,35 @@ public final class GetDataSourceResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<DataSourceConfiguration> getDataSourceConfiguration() {
+    public Optional<DataSourceConfiguration> dataSourceConfiguration() {
         return Optional.ofNullable(this.dataSourceConfiguration);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getIndexId() {
+    public Optional<String> indexId() {
         return Optional.ofNullable(this.indexId);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public Optional<String> getSchedule() {
+    public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Tags for labeling the data source
      * 
     */
-    public List<DataSourceTag> getTags() {
+    public List<DataSourceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

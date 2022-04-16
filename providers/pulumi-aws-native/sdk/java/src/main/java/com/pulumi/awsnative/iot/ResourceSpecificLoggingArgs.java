@@ -23,7 +23,7 @@ public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.Reso
     @Import(name="logLevel", required=true)
       private final Output<ResourceSpecificLoggingLogLevel> logLevel;
 
-    public Output<ResourceSpecificLoggingLogLevel> getLogLevel() {
+    public Output<ResourceSpecificLoggingLogLevel> logLevel() {
         return this.logLevel;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.Reso
     @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
 
@@ -45,7 +45,7 @@ public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.Reso
     @Import(name="targetType", required=true)
       private final Output<ResourceSpecificLoggingTargetType> targetType;
 
-    public Output<ResourceSpecificLoggingTargetType> getTargetType() {
+    public Output<ResourceSpecificLoggingTargetType> targetType() {
         return this.targetType;
     }
 

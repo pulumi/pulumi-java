@@ -22,10 +22,10 @@ public final class GameServerGroupInstanceDefinition {
         this.weightedCapacity = weightedCapacity;
     }
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
-    public Optional<String> getWeightedCapacity() {
+    public Optional<String> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
 

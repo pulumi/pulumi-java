@@ -65,46 +65,46 @@ public final class GetComponentResult {
         this.variants = variants;
     }
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
-    public Optional<ComponentBindingProperties> getBindingProperties() {
+    public Optional<ComponentBindingProperties> bindingProperties() {
         return Optional.ofNullable(this.bindingProperties);
     }
-    public List<ComponentChild> getChildren() {
+    public List<ComponentChild> children() {
         return this.children == null ? List.of() : this.children;
     }
-    public Optional<ComponentCollectionProperties> getCollectionProperties() {
+    public Optional<ComponentCollectionProperties> collectionProperties() {
         return Optional.ofNullable(this.collectionProperties);
     }
-    public Optional<String> getComponentType() {
+    public Optional<String> componentType() {
         return Optional.ofNullable(this.componentType);
     }
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
-    public Optional<String> getEnvironmentName() {
+    public Optional<String> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getModifiedAt() {
+    public Optional<String> modifiedAt() {
         return Optional.ofNullable(this.modifiedAt);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<ComponentOverrides> getOverrides() {
+    public Optional<ComponentOverrides> overrides() {
         return Optional.ofNullable(this.overrides);
     }
-    public Optional<ComponentProperties> getProperties() {
+    public Optional<ComponentProperties> properties() {
         return Optional.ofNullable(this.properties);
     }
-    public Optional<String> getSourceId() {
+    public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
-    public List<ComponentVariant> getVariants() {
+    public List<ComponentVariant> variants() {
         return this.variants == null ? List.of() : this.variants;
     }
 

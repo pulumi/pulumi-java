@@ -17,14 +17,14 @@ public final class ConnectionApiKeyAuthParametersArgs extends com.pulumi.resourc
     @Import(name="apiKeyName", required=true)
       private final Output<String> apiKeyName;
 
-    public Output<String> getApiKeyName() {
+    public Output<String> apiKeyName() {
         return this.apiKeyName;
     }
 
     @Import(name="apiKeyValue", required=true)
       private final Output<String> apiKeyValue;
 
-    public Output<String> getApiKeyValue() {
+    public Output<String> apiKeyValue() {
         return this.apiKeyValue;
     }
 

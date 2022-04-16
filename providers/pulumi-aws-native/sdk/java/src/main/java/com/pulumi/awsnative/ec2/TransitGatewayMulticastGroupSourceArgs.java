@@ -21,7 +21,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends com.pulumi.res
     @Import(name="groupIpAddress", required=true)
       private final Output<String> groupIpAddress;
 
-    public Output<String> getGroupIpAddress() {
+    public Output<String> groupIpAddress() {
         return this.groupIpAddress;
     }
 
@@ -32,7 +32,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends com.pulumi.res
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -43,7 +43,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends com.pulumi.res
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final Output<String> transitGatewayMulticastDomainId;
 
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

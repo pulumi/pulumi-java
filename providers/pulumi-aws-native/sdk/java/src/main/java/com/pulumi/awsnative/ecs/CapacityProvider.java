@@ -26,19 +26,19 @@ public class CapacityProvider extends com.pulumi.resources.CustomResource {
     @Export(name="autoScalingGroupProvider", type=CapacityProviderAutoScalingGroupProvider.class, parameters={})
     private Output<CapacityProviderAutoScalingGroupProvider> autoScalingGroupProvider;
 
-    public Output<CapacityProviderAutoScalingGroupProvider> getAutoScalingGroupProvider() {
+    public Output<CapacityProviderAutoScalingGroupProvider> autoScalingGroupProvider() {
         return this.autoScalingGroupProvider;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={CapacityProviderTag.class})
     private Output</* @Nullable */ List<CapacityProviderTag>> tags;
 
-    public Output</* @Nullable */ List<CapacityProviderTag>> getTags() {
+    public Output</* @Nullable */ List<CapacityProviderTag>> tags() {
         return this.tags;
     }
 

@@ -24,21 +24,21 @@ public final class ConnectorWorkerLogDeliveryArgs extends com.pulumi.resources.R
     @Import(name="cloudWatchLogs")
       private final @Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
 
-    public Output<ConnectorCloudWatchLogsLogDeliveryArgs> getCloudWatchLogs() {
+    public Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs() {
         return this.cloudWatchLogs == null ? Codegen.empty() : this.cloudWatchLogs;
     }
 
     @Import(name="firehose")
       private final @Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose;
 
-    public Output<ConnectorFirehoseLogDeliveryArgs> getFirehose() {
+    public Output<ConnectorFirehoseLogDeliveryArgs> firehose() {
         return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
     @Import(name="s3")
       private final @Nullable Output<ConnectorS3LogDeliveryArgs> s3;
 
-    public Output<ConnectorS3LogDeliveryArgs> getS3() {
+    public Output<ConnectorS3LogDeliveryArgs> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 

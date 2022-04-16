@@ -20,21 +20,21 @@ public final class CapacityProviderAutoScalingGroupProviderArgs extends com.pulu
     @Import(name="autoScalingGroupArn", required=true)
       private final Output<String> autoScalingGroupArn;
 
-    public Output<String> getAutoScalingGroupArn() {
+    public Output<String> autoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
 
     @Import(name="managedScaling")
       private final @Nullable Output<CapacityProviderManagedScalingArgs> managedScaling;
 
-    public Output<CapacityProviderManagedScalingArgs> getManagedScaling() {
+    public Output<CapacityProviderManagedScalingArgs> managedScaling() {
         return this.managedScaling == null ? Codegen.empty() : this.managedScaling;
     }
 
     @Import(name="managedTerminationProtection")
       private final @Nullable Output<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection;
 
-    public Output<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> getManagedTerminationProtection() {
+    public Output<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection() {
         return this.managedTerminationProtection == null ? Codegen.empty() : this.managedTerminationProtection;
     }
 

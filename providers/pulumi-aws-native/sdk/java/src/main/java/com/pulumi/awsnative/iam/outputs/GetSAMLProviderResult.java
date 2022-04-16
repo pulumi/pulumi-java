@@ -35,13 +35,13 @@ public final class GetSAMLProviderResult {
      * Amazon Resource Name (ARN) of the SAML provider
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getSamlMetadataDocument() {
+    public Optional<String> samlMetadataDocument() {
         return Optional.ofNullable(this.samlMetadataDocument);
     }
-    public List<SAMLProviderTag> getTags() {
+    public List<SAMLProviderTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

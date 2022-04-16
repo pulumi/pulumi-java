@@ -24,13 +24,13 @@ public final class DataSourceOracleParameters {
         this.port = port;
     }
 
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
-    public String getHost() {
+    public String host() {
         return this.host;
     }
-    public Double getPort() {
+    public Double port() {
         return this.port;
     }
 

@@ -23,14 +23,14 @@ public final class TableEncryptionSpecificationArgs extends com.pulumi.resources
     @Import(name="encryptionType", required=true)
       private final Output<TableEncryptionType> encryptionType;
 
-    public Output<TableEncryptionType> getEncryptionType() {
+    public Output<TableEncryptionType> encryptionType() {
         return this.encryptionType;
     }
 
     @Import(name="kmsKeyIdentifier")
       private final @Nullable Output<String> kmsKeyIdentifier;
 
-    public Output<String> getKmsKeyIdentifier() {
+    public Output<String> kmsKeyIdentifier() {
         return this.kmsKeyIdentifier == null ? Codegen.empty() : this.kmsKeyIdentifier;
     }
 

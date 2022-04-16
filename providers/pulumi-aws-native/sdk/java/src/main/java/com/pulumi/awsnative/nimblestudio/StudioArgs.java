@@ -24,7 +24,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminRoleArn", required=true)
       private final Output<String> adminRoleArn;
 
-    public Output<String> getAdminRoleArn() {
+    public Output<String> adminRoleArn() {
         return this.adminRoleArn;
     }
 
@@ -35,14 +35,14 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="studioEncryptionConfiguration")
       private final @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
 
-    public Output<StudioEncryptionConfigurationArgs> getStudioEncryptionConfiguration() {
+    public Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration() {
         return this.studioEncryptionConfiguration == null ? Codegen.empty() : this.studioEncryptionConfiguration;
     }
 
@@ -53,14 +53,14 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="studioName")
       private final @Nullable Output<String> studioName;
 
-    public Output<String> getStudioName() {
+    public Output<String> studioName() {
         return this.studioName == null ? Codegen.empty() : this.studioName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<StudioTagsArgs> tags;
 
-    public Output<StudioTagsArgs> getTags() {
+    public Output<StudioTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -71,7 +71,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userRoleArn", required=true)
       private final Output<String> userRoleArn;
 
-    public Output<String> getUserRoleArn() {
+    public Output<String> userRoleArn() {
         return this.userRoleArn;
     }
 

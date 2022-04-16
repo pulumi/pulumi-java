@@ -18,14 +18,14 @@ public final class DatasetTrigger extends com.pulumi.resources.InvokeArgs {
     @Import(name="schedule")
       private final @Nullable DatasetSchedule schedule;
 
-    public Optional<DatasetSchedule> getSchedule() {
+    public Optional<DatasetSchedule> schedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
     }
 
     @Import(name="triggeringDataset")
       private final @Nullable DatasetTriggeringDataset triggeringDataset;
 
-    public Optional<DatasetTriggeringDataset> getTriggeringDataset() {
+    public Optional<DatasetTriggeringDataset> triggeringDataset() {
         return this.triggeringDataset == null ? Optional.empty() : Optional.ofNullable(this.triggeringDataset);
     }
 

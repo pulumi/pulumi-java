@@ -22,14 +22,14 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends com
     @Import(name="endpointInput", required=true)
       private final Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
 
-    public Output<ModelQualityJobDefinitionEndpointInputArgs> getEndpointInput() {
+    public Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 
     @Import(name="groundTruthS3Input", required=true)
       private final Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
-    public Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> getGroundTruthS3Input() {
+    public Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input() {
         return this.groundTruthS3Input;
     }
 

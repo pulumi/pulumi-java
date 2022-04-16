@@ -25,7 +25,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
@@ -47,7 +47,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expressionType", required=true)
       private final Output<DestinationExpressionType> expressionType;
 
-    public Output<DestinationExpressionType> getExpressionType() {
+    public Output<DestinationExpressionType> expressionType() {
         return this.expressionType;
     }
 
@@ -58,7 +58,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -80,7 +80,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DestinationTagArgs>> tags;
 
-    public Output<List<DestinationTagArgs>> getTags() {
+    public Output<List<DestinationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

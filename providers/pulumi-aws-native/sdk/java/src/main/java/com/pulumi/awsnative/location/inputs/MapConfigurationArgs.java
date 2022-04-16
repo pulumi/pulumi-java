@@ -17,7 +17,7 @@ public final class MapConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="style", required=true)
       private final Output<String> style;
 
-    public Output<String> getStyle() {
+    public Output<String> style() {
         return this.style;
     }
 

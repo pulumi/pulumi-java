@@ -30,7 +30,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="accent")
       private final @Nullable Output<String> accent;
 
-    public Output<String> getAccent() {
+    public Output<String> accent() {
         return this.accent == null ? Codegen.empty() : this.accent;
     }
 
@@ -42,7 +42,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="accentForeground")
       private final @Nullable Output<String> accentForeground;
 
-    public Output<String> getAccentForeground() {
+    public Output<String> accentForeground() {
         return this.accentForeground == null ? Codegen.empty() : this.accentForeground;
     }
 
@@ -53,7 +53,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="danger")
       private final @Nullable Output<String> danger;
 
-    public Output<String> getDanger() {
+    public Output<String> danger() {
         return this.danger == null ? Codegen.empty() : this.danger;
     }
 
@@ -65,7 +65,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="dangerForeground")
       private final @Nullable Output<String> dangerForeground;
 
-    public Output<String> getDangerForeground() {
+    public Output<String> dangerForeground() {
         return this.dangerForeground == null ? Codegen.empty() : this.dangerForeground;
     }
 
@@ -77,7 +77,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="dimension")
       private final @Nullable Output<String> dimension;
 
-    public Output<String> getDimension() {
+    public Output<String> dimension() {
         return this.dimension == null ? Codegen.empty() : this.dimension;
     }
 
@@ -89,7 +89,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="dimensionForeground")
       private final @Nullable Output<String> dimensionForeground;
 
-    public Output<String> getDimensionForeground() {
+    public Output<String> dimensionForeground() {
         return this.dimensionForeground == null ? Codegen.empty() : this.dimensionForeground;
     }
 
@@ -100,7 +100,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="measure")
       private final @Nullable Output<String> measure;
 
-    public Output<String> getMeasure() {
+    public Output<String> measure() {
         return this.measure == null ? Codegen.empty() : this.measure;
     }
 
@@ -112,7 +112,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="measureForeground")
       private final @Nullable Output<String> measureForeground;
 
-    public Output<String> getMeasureForeground() {
+    public Output<String> measureForeground() {
         return this.measureForeground == null ? Codegen.empty() : this.measureForeground;
     }
 
@@ -123,7 +123,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="primaryBackground")
       private final @Nullable Output<String> primaryBackground;
 
-    public Output<String> getPrimaryBackground() {
+    public Output<String> primaryBackground() {
         return this.primaryBackground == null ? Codegen.empty() : this.primaryBackground;
     }
 
@@ -135,7 +135,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="primaryForeground")
       private final @Nullable Output<String> primaryForeground;
 
-    public Output<String> getPrimaryForeground() {
+    public Output<String> primaryForeground() {
         return this.primaryForeground == null ? Codegen.empty() : this.primaryForeground;
     }
 
@@ -146,7 +146,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="secondaryBackground")
       private final @Nullable Output<String> secondaryBackground;
 
-    public Output<String> getSecondaryBackground() {
+    public Output<String> secondaryBackground() {
         return this.secondaryBackground == null ? Codegen.empty() : this.secondaryBackground;
     }
 
@@ -158,7 +158,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="secondaryForeground")
       private final @Nullable Output<String> secondaryForeground;
 
-    public Output<String> getSecondaryForeground() {
+    public Output<String> secondaryForeground() {
         return this.secondaryForeground == null ? Codegen.empty() : this.secondaryForeground;
     }
 
@@ -170,7 +170,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="success")
       private final @Nullable Output<String> success;
 
-    public Output<String> getSuccess() {
+    public Output<String> success() {
         return this.success == null ? Codegen.empty() : this.success;
     }
 
@@ -182,7 +182,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="successForeground")
       private final @Nullable Output<String> successForeground;
 
-    public Output<String> getSuccessForeground() {
+    public Output<String> successForeground() {
         return this.successForeground == null ? Codegen.empty() : this.successForeground;
     }
 
@@ -193,7 +193,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="warning")
       private final @Nullable Output<String> warning;
 
-    public Output<String> getWarning() {
+    public Output<String> warning() {
         return this.warning == null ? Codegen.empty() : this.warning;
     }
 
@@ -205,7 +205,7 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
     @Import(name="warningForeground")
       private final @Nullable Output<String> warningForeground;
 
-    public Output<String> getWarningForeground() {
+    public Output<String> warningForeground() {
         return this.warningForeground == null ? Codegen.empty() : this.warningForeground;
     }
 

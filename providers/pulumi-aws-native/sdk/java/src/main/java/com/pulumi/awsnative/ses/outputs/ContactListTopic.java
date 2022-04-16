@@ -40,28 +40,28 @@ public final class ContactListTopic {
         this.topicName = topicName;
     }
 
-    public String getDefaultSubscriptionStatus() {
+    public String defaultSubscriptionStatus() {
         return this.defaultSubscriptionStatus;
     }
     /**
      * The description of the topic.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the topic.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The name of the topic.
      * 
     */
-    public String getTopicName() {
+    public String topicName() {
         return this.topicName;
     }
 

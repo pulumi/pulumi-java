@@ -68,50 +68,50 @@ public final class GetIndexResult {
         this.userTokenConfigurations = userTokenConfigurations;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Capacity units
      * 
     */
-    public Optional<IndexCapacityUnitsConfiguration> getCapacityUnits() {
+    public Optional<IndexCapacityUnitsConfiguration> capacityUnits() {
         return Optional.ofNullable(this.capacityUnits);
     }
     /**
      * A description for the index
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Document metadata configurations
      * 
     */
-    public List<IndexDocumentMetadataConfiguration> getDocumentMetadataConfigurations() {
+    public List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations() {
         return this.documentMetadataConfigurations == null ? List.of() : this.documentMetadataConfigurations;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Tags for labeling the index
      * 
     */
-    public List<IndexTag> getTags() {
+    public List<IndexTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<IndexUserContextPolicy> getUserContextPolicy() {
+    public Optional<IndexUserContextPolicy> userContextPolicy() {
         return Optional.ofNullable(this.userContextPolicy);
     }
-    public List<IndexUserTokenConfiguration> getUserTokenConfigurations() {
+    public List<IndexUserTokenConfiguration> userTokenConfigurations() {
         return this.userTokenConfigurations == null ? List.of() : this.userTokenConfigurations;
     }
 

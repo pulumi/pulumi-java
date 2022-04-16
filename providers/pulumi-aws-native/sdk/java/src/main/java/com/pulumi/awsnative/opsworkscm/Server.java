@@ -28,139 +28,139 @@ public class Server extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="associatePublicIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> associatePublicIpAddress;
 
-    public Output</* @Nullable */ Boolean> getAssociatePublicIpAddress() {
+    public Output</* @Nullable */ Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress;
     }
     @Export(name="backupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupId;
 
-    public Output</* @Nullable */ String> getBackupId() {
+    public Output</* @Nullable */ String> backupId() {
         return this.backupId;
     }
     @Export(name="backupRetentionCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> backupRetentionCount;
 
-    public Output</* @Nullable */ Integer> getBackupRetentionCount() {
+    public Output</* @Nullable */ Integer> backupRetentionCount() {
         return this.backupRetentionCount;
     }
     @Export(name="customCertificate", type=String.class, parameters={})
     private Output</* @Nullable */ String> customCertificate;
 
-    public Output</* @Nullable */ String> getCustomCertificate() {
+    public Output</* @Nullable */ String> customCertificate() {
         return this.customCertificate;
     }
     @Export(name="customDomain", type=String.class, parameters={})
     private Output</* @Nullable */ String> customDomain;
 
-    public Output</* @Nullable */ String> getCustomDomain() {
+    public Output</* @Nullable */ String> customDomain() {
         return this.customDomain;
     }
     @Export(name="customPrivateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> customPrivateKey;
 
-    public Output</* @Nullable */ String> getCustomPrivateKey() {
+    public Output</* @Nullable */ String> customPrivateKey() {
         return this.customPrivateKey;
     }
     @Export(name="disableAutomatedBackup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableAutomatedBackup;
 
-    public Output</* @Nullable */ Boolean> getDisableAutomatedBackup() {
+    public Output</* @Nullable */ Boolean> disableAutomatedBackup() {
         return this.disableAutomatedBackup;
     }
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     @Export(name="engine", type=String.class, parameters={})
     private Output</* @Nullable */ String> engine;
 
-    public Output</* @Nullable */ String> getEngine() {
+    public Output</* @Nullable */ String> engine() {
         return this.engine;
     }
     @Export(name="engineAttributes", type=List.class, parameters={ServerEngineAttribute.class})
     private Output</* @Nullable */ List<ServerEngineAttribute>> engineAttributes;
 
-    public Output</* @Nullable */ List<ServerEngineAttribute>> getEngineAttributes() {
+    public Output</* @Nullable */ List<ServerEngineAttribute>> engineAttributes() {
         return this.engineAttributes;
     }
     @Export(name="engineModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineModel;
 
-    public Output</* @Nullable */ String> getEngineModel() {
+    public Output</* @Nullable */ String> engineModel() {
         return this.engineModel;
     }
     @Export(name="engineVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineVersion;
 
-    public Output</* @Nullable */ String> getEngineVersion() {
+    public Output</* @Nullable */ String> engineVersion() {
         return this.engineVersion;
     }
     @Export(name="instanceProfileArn", type=String.class, parameters={})
     private Output<String> instanceProfileArn;
 
-    public Output<String> getInstanceProfileArn() {
+    public Output<String> instanceProfileArn() {
         return this.instanceProfileArn;
     }
     @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     @Export(name="keyPair", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyPair;
 
-    public Output</* @Nullable */ String> getKeyPair() {
+    public Output</* @Nullable */ String> keyPair() {
         return this.keyPair;
     }
     @Export(name="preferredBackupWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredBackupWindow;
 
-    public Output</* @Nullable */ String> getPreferredBackupWindow() {
+    public Output</* @Nullable */ String> preferredBackupWindow() {
         return this.preferredBackupWindow;
     }
     @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredMaintenanceWindow;
 
-    public Output</* @Nullable */ String> getPreferredMaintenanceWindow() {
+    public Output</* @Nullable */ String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupIds;
 
-    public Output</* @Nullable */ List<String>> getSecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     @Export(name="serverName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverName;
 
-    public Output</* @Nullable */ String> getServerName() {
+    public Output</* @Nullable */ String> serverName() {
         return this.serverName;
     }
     @Export(name="serviceRoleArn", type=String.class, parameters={})
     private Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetIds;
 
-    public Output</* @Nullable */ List<String>> getSubnetIds() {
+    public Output</* @Nullable */ List<String>> subnetIds() {
         return this.subnetIds;
     }
     @Export(name="tags", type=List.class, parameters={ServerTag.class})
     private Output</* @Nullable */ List<ServerTag>> tags;
 
-    public Output</* @Nullable */ List<ServerTag>> getTags() {
+    public Output</* @Nullable */ List<ServerTag>> tags() {
         return this.tags;
     }
 

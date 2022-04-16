@@ -21,42 +21,42 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends com.pulumi.res
     @Import(name="charset")
       private final @Nullable Output<String> charset;
 
-    public Output<String> getCharset() {
+    public Output<String> charset() {
         return this.charset == null ? Codegen.empty() : this.charset;
     }
 
     @Import(name="containsHeader")
       private final @Nullable Output<Boolean> containsHeader;
 
-    public Output<Boolean> getContainsHeader() {
+    public Output<Boolean> containsHeader() {
         return this.containsHeader == null ? Codegen.empty() : this.containsHeader;
     }
 
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
+    public Output<String> delimiter() {
         return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     @Import(name="fileCompression")
       private final @Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression;
 
-    public Output<AnomalyDetectorCsvFormatDescriptorFileCompression> getFileCompression() {
+    public Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression() {
         return this.fileCompression == null ? Codegen.empty() : this.fileCompression;
     }
 
     @Import(name="headerList")
       private final @Nullable Output<List<String>> headerList;
 
-    public Output<List<String>> getHeaderList() {
+    public Output<List<String>> headerList() {
         return this.headerList == null ? Codegen.empty() : this.headerList;
     }
 
     @Import(name="quoteSymbol")
       private final @Nullable Output<String> quoteSymbol;
 
-    public Output<String> getQuoteSymbol() {
+    public Output<String> quoteSymbol() {
         return this.quoteSymbol == null ? Codegen.empty() : this.quoteSymbol;
     }
 

@@ -22,14 +22,14 @@ public final class RuleGroupTextTransformationArgs extends com.pulumi.resources.
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
       private final Output<RuleGroupTextTransformationType> type;
 
-    public Output<RuleGroupTextTransformationType> getType() {
+    public Output<RuleGroupTextTransformationType> type() {
         return this.type;
     }
 

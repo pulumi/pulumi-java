@@ -22,7 +22,7 @@ public final class JobOutputFormatOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="csv")
       private final @Nullable Output<JobCsvOutputOptionsArgs> csv;
 
-    public Output<JobCsvOutputOptionsArgs> getCsv() {
+    public Output<JobCsvOutputOptionsArgs> csv() {
         return this.csv == null ? Codegen.empty() : this.csv;
     }
 

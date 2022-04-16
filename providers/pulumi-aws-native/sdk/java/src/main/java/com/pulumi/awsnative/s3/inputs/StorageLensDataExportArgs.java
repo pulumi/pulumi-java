@@ -23,14 +23,14 @@ public final class StorageLensDataExportArgs extends com.pulumi.resources.Resour
     @Import(name="cloudWatchMetrics")
       private final @Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics;
 
-    public Output<StorageLensCloudWatchMetricsArgs> getCloudWatchMetrics() {
+    public Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics() {
         return this.cloudWatchMetrics == null ? Codegen.empty() : this.cloudWatchMetrics;
     }
 
     @Import(name="s3BucketDestination")
       private final @Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination;
 
-    public Output<StorageLensS3BucketDestinationArgs> getS3BucketDestination() {
+    public Output<StorageLensS3BucketDestinationArgs> s3BucketDestination() {
         return this.s3BucketDestination == null ? Codegen.empty() : this.s3BucketDestination;
     }
 

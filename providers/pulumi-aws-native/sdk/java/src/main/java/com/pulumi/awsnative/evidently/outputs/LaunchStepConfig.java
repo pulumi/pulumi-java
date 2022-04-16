@@ -22,10 +22,10 @@ public final class LaunchStepConfig {
         this.startTime = startTime;
     }
 
-    public List<LaunchGroupToWeight> getGroupWeights() {
+    public List<LaunchGroupToWeight> groupWeights() {
         return this.groupWeights;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

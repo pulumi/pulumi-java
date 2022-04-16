@@ -27,13 +27,13 @@ public final class RuleGroup {
         this.statefulRuleOptions = statefulRuleOptions;
     }
 
-    public Optional<RuleGroupRuleVariables> getRuleVariables() {
+    public Optional<RuleGroupRuleVariables> ruleVariables() {
         return Optional.ofNullable(this.ruleVariables);
     }
-    public RuleGroupRulesSource getRulesSource() {
+    public RuleGroupRulesSource rulesSource() {
         return this.rulesSource;
     }
-    public Optional<RuleGroupStatefulRuleOptions> getStatefulRuleOptions() {
+    public Optional<RuleGroupStatefulRuleOptions> statefulRuleOptions() {
         return Optional.ofNullable(this.statefulRuleOptions);
     }
 

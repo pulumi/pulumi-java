@@ -25,7 +25,7 @@ public final class AlertLambdaConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
-    public Output<String> getLambdaArn() {
+    public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
 
@@ -36,7 +36,7 @@ public final class AlertLambdaConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

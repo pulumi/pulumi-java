@@ -18,7 +18,7 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends com.p
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> getPointInTimeRecoveryEnabled() {
+    public Output<Boolean> pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
     }
 

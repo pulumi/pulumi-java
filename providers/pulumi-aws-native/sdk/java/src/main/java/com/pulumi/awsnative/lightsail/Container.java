@@ -27,7 +27,7 @@ public class Container extends com.pulumi.resources.CustomResource {
     @Export(name="containerArn", type=String.class, parameters={})
     private Output<String> containerArn;
 
-    public Output<String> getContainerArn() {
+    public Output<String> containerArn() {
         return this.containerArn;
     }
     /**
@@ -41,7 +41,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return Describes a container deployment configuration of an Amazon Lightsail container service.
      * 
      */
-    public Output</* @Nullable */ ContainerServiceDeployment> getContainerServiceDeployment() {
+    public Output</* @Nullable */ ContainerServiceDeployment> containerServiceDeployment() {
         return this.containerServiceDeployment;
     }
     /**
@@ -55,7 +55,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return A Boolean value to indicate whether the container service is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsDisabled() {
+    public Output</* @Nullable */ Boolean> isDisabled() {
         return this.isDisabled;
     }
     /**
@@ -69,7 +69,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The power specification for the container service.
      * 
      */
-    public Output<String> getPower() {
+    public Output<String> power() {
         return this.power;
     }
     /**
@@ -83,7 +83,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The public domain names to use with the container service, such as example.com and www.example.com.
      * 
      */
-    public Output</* @Nullable */ List<ContainerPublicDomainName>> getPublicDomainNames() {
+    public Output</* @Nullable */ List<ContainerPublicDomainName>> publicDomainNames() {
         return this.publicDomainNames;
     }
     /**
@@ -97,7 +97,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The scale specification for the container service.
      * 
      */
-    public Output<Integer> getScale() {
+    public Output<Integer> scale() {
         return this.scale;
     }
     /**
@@ -111,7 +111,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The name for the container service.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -125,7 +125,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ContainerTag>> getTags() {
+    public Output</* @Nullable */ List<ContainerTag>> tags() {
         return this.tags;
     }
     /**
@@ -139,7 +139,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The publicly accessible URL of the container service.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

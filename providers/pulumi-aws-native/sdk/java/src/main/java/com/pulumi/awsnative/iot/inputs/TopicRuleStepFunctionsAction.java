@@ -17,21 +17,21 @@ public final class TopicRuleStepFunctionsAction extends com.pulumi.resources.Inv
     @Import(name="executionNamePrefix")
       private final @Nullable String executionNamePrefix;
 
-    public Optional<String> getExecutionNamePrefix() {
+    public Optional<String> executionNamePrefix() {
         return this.executionNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.executionNamePrefix);
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stateMachineName", required=true)
       private final String stateMachineName;
 
-    public String getStateMachineName() {
+    public String stateMachineName() {
         return this.stateMachineName;
     }
 

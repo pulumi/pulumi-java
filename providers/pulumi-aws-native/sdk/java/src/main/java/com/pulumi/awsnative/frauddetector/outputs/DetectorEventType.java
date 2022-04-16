@@ -80,54 +80,54 @@ public final class DetectorEventType {
      * The ARN of the event type.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the event type.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<DetectorEntityType> getEntityTypes() {
+    public List<DetectorEntityType> entityTypes() {
         return this.entityTypes == null ? List.of() : this.entityTypes;
     }
-    public List<DetectorEventVariable> getEventVariables() {
+    public List<DetectorEventVariable> eventVariables() {
         return this.eventVariables == null ? List.of() : this.eventVariables;
     }
-    public Optional<Boolean> getInline() {
+    public Optional<Boolean> inline() {
         return Optional.ofNullable(this.inline);
     }
-    public List<DetectorLabel> getLabels() {
+    public List<DetectorLabel> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The time when the event type was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * The name for the event type
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tags associated with this event type.
      * 
     */
-    public List<DetectorTag> getTags() {
+    public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

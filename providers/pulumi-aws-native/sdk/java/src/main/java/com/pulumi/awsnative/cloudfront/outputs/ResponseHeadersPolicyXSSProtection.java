@@ -29,16 +29,16 @@ public final class ResponseHeadersPolicyXSSProtection {
         this.reportUri = reportUri;
     }
 
-    public Optional<Boolean> getModeBlock() {
+    public Optional<Boolean> modeBlock() {
         return Optional.ofNullable(this.modeBlock);
     }
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
-    public Boolean getProtection() {
+    public Boolean protection() {
         return this.protection;
     }
-    public Optional<String> getReportUri() {
+    public Optional<String> reportUri() {
         return Optional.ofNullable(this.reportUri);
     }
 

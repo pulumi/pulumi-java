@@ -29,7 +29,7 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -40,14 +40,14 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="encryption")
       private final @Nullable Output<StorageLensEncryptionArgs> encryption;
 
-    public Output<StorageLensEncryptionArgs> getEncryption() {
+    public Output<StorageLensEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -58,7 +58,7 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="format", required=true)
       private final Output<StorageLensS3BucketDestinationFormat> format;
 
-    public Output<StorageLensS3BucketDestinationFormat> getFormat() {
+    public Output<StorageLensS3BucketDestinationFormat> format() {
         return this.format;
     }
 
@@ -69,7 +69,7 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="outputSchemaVersion", required=true)
       private final Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
 
-    public Output<StorageLensS3BucketDestinationOutputSchemaVersion> getOutputSchemaVersion() {
+    public Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 
@@ -80,7 +80,7 @@ public final class StorageLensS3BucketDestinationArgs extends com.pulumi.resourc
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

@@ -40,21 +40,21 @@ public final class DataSourcePrestoParameters {
      * <p>Catalog.</p>
      * 
     */
-    public String getCatalog() {
+    public String catalog() {
         return this.catalog;
     }
     /**
      * <p>Host.</p>
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * <p>Port.</p>
      * 
     */
-    public Double getPort() {
+    public Double port() {
         return this.port;
     }
 

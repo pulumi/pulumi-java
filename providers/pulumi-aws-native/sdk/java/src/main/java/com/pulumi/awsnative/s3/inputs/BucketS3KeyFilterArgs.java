@@ -22,7 +22,7 @@ public final class BucketS3KeyFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rules", required=true)
       private final Output<List<BucketFilterRuleArgs>> rules;
 
-    public Output<List<BucketFilterRuleArgs>> getRules() {
+    public Output<List<BucketFilterRuleArgs>> rules() {
         return this.rules;
     }
 

@@ -33,7 +33,7 @@ public class GlobalNetwork extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the global network.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +47,7 @@ public class GlobalNetwork extends com.pulumi.resources.CustomResource {
      * @return The description of the global network.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class GlobalNetwork extends com.pulumi.resources.CustomResource {
      * @return The tags for the global network.
      * 
      */
-    public Output</* @Nullable */ List<GlobalNetworkTag>> getTags() {
+    public Output</* @Nullable */ List<GlobalNetworkTag>> tags() {
         return this.tags;
     }
 

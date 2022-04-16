@@ -22,10 +22,10 @@ public final class CertificateExtendedKeyUsage {
         this.extendedKeyUsageType = extendedKeyUsageType;
     }
 
-    public Optional<String> getExtendedKeyUsageObjectIdentifier() {
+    public Optional<String> extendedKeyUsageObjectIdentifier() {
         return Optional.ofNullable(this.extendedKeyUsageObjectIdentifier);
     }
-    public Optional<String> getExtendedKeyUsageType() {
+    public Optional<String> extendedKeyUsageType() {
         return Optional.ofNullable(this.extendedKeyUsageType);
     }
 

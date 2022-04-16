@@ -41,21 +41,21 @@ public final class Device {
      * Description of the device
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the device
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * AWS Internet of Things (IoT) object name.
      * 
     */
-    public Optional<String> getIotThingName() {
+    public Optional<String> iotThingName() {
         return Optional.ofNullable(this.iotThingName);
     }
 

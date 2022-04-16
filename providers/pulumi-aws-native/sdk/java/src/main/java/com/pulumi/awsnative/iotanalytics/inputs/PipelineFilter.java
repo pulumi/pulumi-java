@@ -17,21 +17,21 @@ public final class PipelineFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable String next;
 
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 

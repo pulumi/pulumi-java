@@ -19,7 +19,7 @@ public final class DataPrivacyProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="childDirected", required=true)
       private final Boolean childDirected;
 
-    public Boolean getChildDirected() {
+    public Boolean childDirected() {
         return this.childDirected;
     }
 

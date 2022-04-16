@@ -55,7 +55,7 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      *             are automatically allowed.</p>
      * 
      */
-    public Output</* @Nullable */ List<DataSourceParameters>> getAlternateDataSourceParameters() {
+    public Output</* @Nullable */ List<DataSourceParameters>> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters;
     }
     /**
@@ -69,13 +69,13 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return <p>The Amazon Resource Name (ARN) of the data source.</p>
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> awsAccountId;
 
-    public Output</* @Nullable */ String> getAwsAccountId() {
+    public Output</* @Nullable */ String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -89,31 +89,31 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return <p>The time that this data source was created.</p>
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     @Export(name="credentials", type=DataSourceCredentials.class, parameters={})
     private Output</* @Nullable */ DataSourceCredentials> credentials;
 
-    public Output</* @Nullable */ DataSourceCredentials> getCredentials() {
+    public Output</* @Nullable */ DataSourceCredentials> credentials() {
         return this.credentials;
     }
     @Export(name="dataSourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSourceId;
 
-    public Output</* @Nullable */ String> getDataSourceId() {
+    public Output</* @Nullable */ String> dataSourceId() {
         return this.dataSourceId;
     }
     @Export(name="dataSourceParameters", type=DataSourceParameters.class, parameters={})
     private Output</* @Nullable */ DataSourceParameters> dataSourceParameters;
 
-    public Output</* @Nullable */ DataSourceParameters> getDataSourceParameters() {
+    public Output</* @Nullable */ DataSourceParameters> dataSourceParameters() {
         return this.dataSourceParameters;
     }
     @Export(name="errorInfo", type=DataSourceErrorInfo.class, parameters={})
     private Output</* @Nullable */ DataSourceErrorInfo> errorInfo;
 
-    public Output</* @Nullable */ DataSourceErrorInfo> getErrorInfo() {
+    public Output</* @Nullable */ DataSourceErrorInfo> errorInfo() {
         return this.errorInfo;
     }
     /**
@@ -127,7 +127,7 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return <p>The last time that this data source was updated.</p>
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -141,7 +141,7 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return <p>A display name for the data source.</p>
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -155,19 +155,19 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return <p>A list of resource permissions on the data source.</p>
      * 
      */
-    public Output</* @Nullable */ List<DataSourceResourcePermission>> getPermissions() {
+    public Output</* @Nullable */ List<DataSourceResourcePermission>> permissions() {
         return this.permissions;
     }
     @Export(name="sslProperties", type=DataSourceSslProperties.class, parameters={})
     private Output</* @Nullable */ DataSourceSslProperties> sslProperties;
 
-    public Output</* @Nullable */ DataSourceSslProperties> getSslProperties() {
+    public Output</* @Nullable */ DataSourceSslProperties> sslProperties() {
         return this.sslProperties;
     }
     @Export(name="status", type=DataSourceResourceStatus.class, parameters={})
     private Output<DataSourceResourceStatus> status;
 
-    public Output<DataSourceResourceStatus> getStatus() {
+    public Output<DataSourceResourceStatus> status() {
         return this.status;
     }
     /**
@@ -181,19 +181,19 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
      * 
      */
-    public Output</* @Nullable */ List<DataSourceTag>> getTags() {
+    public Output</* @Nullable */ List<DataSourceTag>> tags() {
         return this.tags;
     }
     @Export(name="type", type=DataSourceType.class, parameters={})
     private Output</* @Nullable */ DataSourceType> type;
 
-    public Output</* @Nullable */ DataSourceType> getType() {
+    public Output</* @Nullable */ DataSourceType> type() {
         return this.type;
     }
     @Export(name="vpcConnectionProperties", type=DataSourceVpcConnectionProperties.class, parameters={})
     private Output</* @Nullable */ DataSourceVpcConnectionProperties> vpcConnectionProperties;
 
-    public Output</* @Nullable */ DataSourceVpcConnectionProperties> getVpcConnectionProperties() {
+    public Output</* @Nullable */ DataSourceVpcConnectionProperties> vpcConnectionProperties() {
         return this.vpcConnectionProperties;
     }
 

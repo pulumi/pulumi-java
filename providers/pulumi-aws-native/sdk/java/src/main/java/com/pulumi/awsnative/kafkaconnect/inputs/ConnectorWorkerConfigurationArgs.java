@@ -26,7 +26,7 @@ public final class ConnectorWorkerConfigurationArgs extends com.pulumi.resources
     @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorWorkerConfigurationArgs extends com.pulumi.resources
     @Import(name="workerConfigurationArn", required=true)
       private final Output<String> workerConfigurationArn;
 
-    public Output<String> getWorkerConfigurationArn() {
+    public Output<String> workerConfigurationArn() {
         return this.workerConfigurationArn;
     }
 

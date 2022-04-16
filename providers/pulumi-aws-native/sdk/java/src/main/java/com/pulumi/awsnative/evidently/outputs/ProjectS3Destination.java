@@ -22,10 +22,10 @@ public final class ProjectS3Destination {
         this.prefix = prefix;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

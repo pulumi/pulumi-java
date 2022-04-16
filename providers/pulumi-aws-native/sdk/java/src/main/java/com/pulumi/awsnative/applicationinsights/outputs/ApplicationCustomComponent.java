@@ -33,14 +33,14 @@ public final class ApplicationCustomComponent {
      * The name of the component.
      * 
     */
-    public String getComponentName() {
+    public String componentName() {
         return this.componentName;
     }
     /**
      * The list of resource ARNs that belong to the component.
      * 
     */
-    public List<String> getResourceList() {
+    public List<String> resourceList() {
         return this.resourceList;
     }
 

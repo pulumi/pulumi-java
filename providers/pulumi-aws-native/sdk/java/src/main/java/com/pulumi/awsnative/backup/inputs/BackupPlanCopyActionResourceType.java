@@ -18,14 +18,14 @@ public final class BackupPlanCopyActionResourceType extends com.pulumi.resources
     @Import(name="destinationBackupVaultArn", required=true)
       private final String destinationBackupVaultArn;
 
-    public String getDestinationBackupVaultArn() {
+    public String destinationBackupVaultArn() {
         return this.destinationBackupVaultArn;
     }
 
     @Import(name="lifecycle")
       private final @Nullable BackupPlanLifecycleResourceType lifecycle;
 
-    public Optional<BackupPlanLifecycleResourceType> getLifecycle() {
+    public Optional<BackupPlanLifecycleResourceType> lifecycle() {
         return this.lifecycle == null ? Optional.empty() : Optional.ofNullable(this.lifecycle);
     }
 

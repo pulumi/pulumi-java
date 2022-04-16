@@ -21,7 +21,7 @@ public final class DeviceFleetEdgeOutputConfig extends com.pulumi.resources.Invo
     @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
     }
 
@@ -32,7 +32,7 @@ public final class DeviceFleetEdgeOutputConfig extends com.pulumi.resources.Invo
     @Import(name="s3OutputLocation", required=true)
       private final String s3OutputLocation;
 
-    public String getS3OutputLocation() {
+    public String s3OutputLocation() {
         return this.s3OutputLocation;
     }
 

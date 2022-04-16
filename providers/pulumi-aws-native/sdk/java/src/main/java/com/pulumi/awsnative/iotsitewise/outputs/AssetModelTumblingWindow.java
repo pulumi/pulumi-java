@@ -22,10 +22,10 @@ public final class AssetModelTumblingWindow {
         this.offset = offset;
     }
 
-    public String getInterval() {
+    public String interval() {
         return this.interval;
     }
-    public Optional<String> getOffset() {
+    public Optional<String> offset() {
         return Optional.ofNullable(this.offset);
     }
 

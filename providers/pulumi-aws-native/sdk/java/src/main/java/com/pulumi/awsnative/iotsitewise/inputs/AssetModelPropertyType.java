@@ -24,28 +24,28 @@ public final class AssetModelPropertyType extends com.pulumi.resources.InvokeArg
     @Import(name="attribute")
       private final @Nullable AssetModelAttribute attribute;
 
-    public Optional<AssetModelAttribute> getAttribute() {
+    public Optional<AssetModelAttribute> attribute() {
         return this.attribute == null ? Optional.empty() : Optional.ofNullable(this.attribute);
     }
 
     @Import(name="metric")
       private final @Nullable AssetModelMetric metric;
 
-    public Optional<AssetModelMetric> getMetric() {
+    public Optional<AssetModelMetric> metric() {
         return this.metric == null ? Optional.empty() : Optional.ofNullable(this.metric);
     }
 
     @Import(name="transform")
       private final @Nullable AssetModelTransform transform;
 
-    public Optional<AssetModelTransform> getTransform() {
+    public Optional<AssetModelTransform> transform() {
         return this.transform == null ? Optional.empty() : Optional.ofNullable(this.transform);
     }
 
     @Import(name="typeName", required=true)
       private final AssetModelTypeName typeName;
 
-    public AssetModelTypeName getTypeName() {
+    public AssetModelTypeName typeName() {
         return this.typeName;
     }
 

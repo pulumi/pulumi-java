@@ -16,7 +16,7 @@ public final class ScheduledQuerySnsConfiguration {
         this.topicArn = topicArn;
     }
 
-    public String getTopicArn() {
+    public String topicArn() {
         return this.topicArn;
     }
 

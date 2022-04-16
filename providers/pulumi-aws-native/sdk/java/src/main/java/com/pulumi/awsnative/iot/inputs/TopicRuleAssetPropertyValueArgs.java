@@ -20,21 +20,21 @@ public final class TopicRuleAssetPropertyValueArgs extends com.pulumi.resources.
     @Import(name="quality")
       private final @Nullable Output<String> quality;
 
-    public Output<String> getQuality() {
+    public Output<String> quality() {
         return this.quality == null ? Codegen.empty() : this.quality;
     }
 
     @Import(name="timestamp", required=true)
       private final Output<TopicRuleAssetPropertyTimestampArgs> timestamp;
 
-    public Output<TopicRuleAssetPropertyTimestampArgs> getTimestamp() {
+    public Output<TopicRuleAssetPropertyTimestampArgs> timestamp() {
         return this.timestamp;
     }
 
     @Import(name="value", required=true)
       private final Output<TopicRuleAssetPropertyVariantArgs> value;
 
-    public Output<TopicRuleAssetPropertyVariantArgs> getValue() {
+    public Output<TopicRuleAssetPropertyVariantArgs> value() {
         return this.value;
     }
 

@@ -19,7 +19,7 @@ public final class EndpointNetworkInterface extends com.pulumi.resources.InvokeA
     @Import(name="networkInterfaceId", required=true)
       private final String networkInterfaceId;
 
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
 

@@ -28,7 +28,7 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
     @Import(name="actions")
       private final @Nullable Output<List<DetectorModelActionArgs>> actions;
 
-    public Output<List<DetectorModelActionArgs>> getActions() {
+    public Output<List<DetectorModelActionArgs>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -39,7 +39,7 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
     @Import(name="condition", required=true)
       private final Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition;
     }
 
@@ -50,7 +50,7 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
     @Import(name="eventName", required=true)
       private final Output<String> eventName;
 
-    public Output<String> getEventName() {
+    public Output<String> eventName() {
         return this.eventName;
     }
 
@@ -61,7 +61,7 @@ public final class DetectorModelTransitionEventArgs extends com.pulumi.resources
     @Import(name="nextState", required=true)
       private final Output<String> nextState;
 
-    public Output<String> getNextState() {
+    public Output<String> nextState() {
         return this.nextState;
     }
 

@@ -57,35 +57,35 @@ public final class EventIntegrationAssociation {
      * The metadata associated with the client.
      * 
     */
-    public List<EventIntegrationMetadata> getClientAssociationMetadata() {
+    public List<EventIntegrationMetadata> clientAssociationMetadata() {
         return this.clientAssociationMetadata == null ? List.of() : this.clientAssociationMetadata;
     }
     /**
      * The identifier for the client that is associated with the event integration.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The name of the Eventbridge rule.
      * 
     */
-    public Optional<String> getEventBridgeRuleName() {
+    public Optional<String> eventBridgeRuleName() {
         return Optional.ofNullable(this.eventBridgeRuleName);
     }
     /**
      * The Amazon Resource Name (ARN) for the event integration association.
      * 
     */
-    public Optional<String> getEventIntegrationAssociationArn() {
+    public Optional<String> eventIntegrationAssociationArn() {
         return Optional.ofNullable(this.eventIntegrationAssociationArn);
     }
     /**
      * The identifier for the event integration association.
      * 
     */
-    public Optional<String> getEventIntegrationAssociationId() {
+    public Optional<String> eventIntegrationAssociationId() {
         return Optional.ofNullable(this.eventIntegrationAssociationId);
     }
 

@@ -38,7 +38,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The maximum number of items to retrieve in a single batch.
      * 
      */
-    public Output</* @Nullable */ Integer> getBatchSize() {
+    public Output</* @Nullable */ Integer> batchSize() {
         return this.batchSize;
     }
     /**
@@ -52,7 +52,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) If the function returns an error, split the batch in two and retry.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBisectBatchOnFunctionError() {
+    public Output</* @Nullable */ Boolean> bisectBatchOnFunctionError() {
         return this.bisectBatchOnFunctionError;
     }
     /**
@@ -66,7 +66,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      * 
      */
-    public Output</* @Nullable */ EventSourceMappingDestinationConfig> getDestinationConfig() {
+    public Output</* @Nullable */ EventSourceMappingDestinationConfig> destinationConfig() {
         return this.destinationConfig;
     }
     /**
@@ -80,7 +80,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return Disables the event source mapping to pause polling and invocation.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -94,7 +94,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the event source.
      * 
      */
-    public Output</* @Nullable */ String> getEventSourceArn() {
+    public Output</* @Nullable */ String> eventSourceArn() {
         return this.eventSourceArn;
     }
     /**
@@ -108,7 +108,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The filter criteria to control event filtering.
      * 
      */
-    public Output</* @Nullable */ FilterCriteriaProperties> getFilterCriteria() {
+    public Output</* @Nullable */ FilterCriteriaProperties> filterCriteria() {
         return this.filterCriteria;
     }
     /**
@@ -122,7 +122,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The name of the Lambda function.
      * 
      */
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
     /**
@@ -136,7 +136,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) A list of response types supported by the function.
      * 
      */
-    public Output</* @Nullable */ List<EventSourceMappingFunctionResponseTypesItem>> getFunctionResponseTypes() {
+    public Output</* @Nullable */ List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes() {
         return this.functionResponseTypes;
     }
     /**
@@ -150,7 +150,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumBatchingWindowInSeconds() {
+    public Output</* @Nullable */ Integer> maximumBatchingWindowInSeconds() {
         return this.maximumBatchingWindowInSeconds;
     }
     /**
@@ -164,7 +164,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The maximum age of a record that Lambda sends to a function for processing.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumRecordAgeInSeconds() {
+    public Output</* @Nullable */ Integer> maximumRecordAgeInSeconds() {
         return this.maximumRecordAgeInSeconds;
     }
     /**
@@ -178,7 +178,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The maximum number of times to retry when the function returns an error.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumRetryAttempts() {
+    public Output</* @Nullable */ Integer> maximumRetryAttempts() {
         return this.maximumRetryAttempts;
     }
     /**
@@ -192,7 +192,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The number of batches to process from each shard concurrently.
      * 
      */
-    public Output</* @Nullable */ Integer> getParallelizationFactor() {
+    public Output</* @Nullable */ Integer> parallelizationFactor() {
         return this.parallelizationFactor;
     }
     /**
@@ -206,7 +206,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (ActiveMQ) A list of ActiveMQ queues.
      * 
      */
-    public Output</* @Nullable */ List<String>> getQueues() {
+    public Output</* @Nullable */ List<String>> queues() {
         return this.queues;
     }
     /**
@@ -220,7 +220,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return Self-managed event source endpoints.
      * 
      */
-    public Output</* @Nullable */ EventSourceMappingSelfManagedEventSource> getSelfManagedEventSource() {
+    public Output</* @Nullable */ EventSourceMappingSelfManagedEventSource> selfManagedEventSource() {
         return this.selfManagedEventSource;
     }
     /**
@@ -234,7 +234,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return A list of SourceAccessConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<EventSourceMappingSourceAccessConfiguration>> getSourceAccessConfigurations() {
+    public Output</* @Nullable */ List<EventSourceMappingSourceAccessConfiguration>> sourceAccessConfigurations() {
         return this.sourceAccessConfigurations;
     }
     /**
@@ -248,7 +248,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
      * 
      */
-    public Output</* @Nullable */ String> getStartingPosition() {
+    public Output</* @Nullable */ String> startingPosition() {
         return this.startingPosition;
     }
     /**
@@ -262,7 +262,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
      * 
      */
-    public Output</* @Nullable */ Double> getStartingPositionTimestamp() {
+    public Output</* @Nullable */ Double> startingPositionTimestamp() {
         return this.startingPositionTimestamp;
     }
     /**
@@ -276,7 +276,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Kafka) A list of Kafka topics.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTopics() {
+    public Output</* @Nullable */ List<String>> topics() {
         return this.topics;
     }
     /**
@@ -290,7 +290,7 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
      * 
      */
-    public Output</* @Nullable */ Integer> getTumblingWindowInSeconds() {
+    public Output</* @Nullable */ Integer> tumblingWindowInSeconds() {
         return this.tumblingWindowInSeconds;
     }
 

@@ -107,87 +107,87 @@ public final class GetAssociationResult {
         this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
     }
 
-    public Optional<Boolean> getApplyOnlyAtCronInterval() {
+    public Optional<Boolean> applyOnlyAtCronInterval() {
         return Optional.ofNullable(this.applyOnlyAtCronInterval);
     }
     /**
      * Unique identifier of the association.
      * 
     */
-    public Optional<String> getAssociationId() {
+    public Optional<String> associationId() {
         return Optional.ofNullable(this.associationId);
     }
     /**
      * The name of the association.
      * 
     */
-    public Optional<String> getAssociationName() {
+    public Optional<String> associationName() {
         return Optional.ofNullable(this.associationName);
     }
-    public Optional<String> getAutomationTargetParameterName() {
+    public Optional<String> automationTargetParameterName() {
         return Optional.ofNullable(this.automationTargetParameterName);
     }
-    public List<String> getCalendarNames() {
+    public List<String> calendarNames() {
         return this.calendarNames == null ? List.of() : this.calendarNames;
     }
-    public Optional<AssociationComplianceSeverity> getComplianceSeverity() {
+    public Optional<AssociationComplianceSeverity> complianceSeverity() {
         return Optional.ofNullable(this.complianceSeverity);
     }
     /**
      * The version of the SSM document to associate with the target.
      * 
     */
-    public Optional<String> getDocumentVersion() {
+    public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * The ID of the instance that the SSM document is associated with.
      * 
     */
-    public Optional<String> getInstanceId() {
+    public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
-    public Optional<String> getMaxConcurrency() {
+    public Optional<String> maxConcurrency() {
         return Optional.ofNullable(this.maxConcurrency);
     }
-    public Optional<String> getMaxErrors() {
+    public Optional<String> maxErrors() {
         return Optional.ofNullable(this.maxErrors);
     }
     /**
      * The name of the SSM document.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<AssociationInstanceAssociationOutputLocation> getOutputLocation() {
+    public Optional<AssociationInstanceAssociationOutputLocation> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
     /**
      * Parameter values that the SSM document uses at runtime.
      * 
     */
-    public Optional<Object> getParameters() {
+    public Optional<Object> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * A Cron or Rate expression that specifies when the association is applied to the target.
      * 
     */
-    public Optional<String> getScheduleExpression() {
+    public Optional<String> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
-    public Optional<AssociationSyncCompliance> getSyncCompliance() {
+    public Optional<AssociationSyncCompliance> syncCompliance() {
         return Optional.ofNullable(this.syncCompliance);
     }
     /**
      * The targets that the SSM document sends commands to.
      * 
     */
-    public List<AssociationTarget> getTargets() {
+    public List<AssociationTarget> targets() {
         return this.targets == null ? List.of() : this.targets;
     }
-    public Optional<Integer> getWaitForSuccessTimeoutSeconds() {
+    public Optional<Integer> waitForSuccessTimeoutSeconds() {
         return Optional.ofNullable(this.waitForSuccessTimeoutSeconds);
     }
 

@@ -25,7 +25,7 @@ public final class BucketEventBridgeConfigurationArgs extends com.pulumi.resourc
     @Import(name="eventBridgeEnabled", required=true)
       private final Output<Boolean> eventBridgeEnabled;
 
-    public Output<Boolean> getEventBridgeEnabled() {
+    public Output<Boolean> eventBridgeEnabled() {
         return this.eventBridgeEnabled;
     }
 

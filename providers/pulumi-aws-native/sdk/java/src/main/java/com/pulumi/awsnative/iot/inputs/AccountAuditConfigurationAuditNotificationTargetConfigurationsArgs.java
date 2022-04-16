@@ -22,7 +22,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     @Import(name="sns")
       private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
 
-    public Output<AccountAuditConfigurationAuditNotificationTargetArgs> getSns() {
+    public Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns() {
         return this.sns == null ? Codegen.empty() : this.sns;
     }
 

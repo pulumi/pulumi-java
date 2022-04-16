@@ -37,23 +37,23 @@ public final class GetStoredQueryResult {
         this.tags = tags;
     }
 
-    public Optional<String> getQueryArn() {
+    public Optional<String> queryArn() {
         return Optional.ofNullable(this.queryArn);
     }
-    public Optional<String> getQueryDescription() {
+    public Optional<String> queryDescription() {
         return Optional.ofNullable(this.queryDescription);
     }
-    public Optional<String> getQueryExpression() {
+    public Optional<String> queryExpression() {
         return Optional.ofNullable(this.queryExpression);
     }
-    public Optional<String> getQueryId() {
+    public Optional<String> queryId() {
         return Optional.ofNullable(this.queryId);
     }
     /**
      * The tags for the stored query.
      * 
     */
-    public List<StoredQueryTag> getTags() {
+    public List<StoredQueryTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

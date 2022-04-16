@@ -20,10 +20,10 @@ public final class QuickConnectUserQuickConnectConfig {
         this.userArn = userArn;
     }
 
-    public String getContactFlowArn() {
+    public String contactFlowArn() {
         return this.contactFlowArn;
     }
-    public String getUserArn() {
+    public String userArn() {
         return this.userArn;
     }
 

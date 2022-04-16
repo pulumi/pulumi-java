@@ -19,7 +19,7 @@ public final class GetLoggingConfigurationArgs extends com.pulumi.resources.Invo
     @Import(name="resourceArn", required=true)
       private final String resourceArn;
 
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 

@@ -42,27 +42,27 @@ public final class GetSafetyRuleResult {
         this.status = status;
     }
 
-    public Optional<SafetyRuleAssertionRule> getAssertionRule() {
+    public Optional<SafetyRuleAssertionRule> assertionRule() {
         return Optional.ofNullable(this.assertionRule);
     }
-    public Optional<SafetyRuleGatingRule> getGatingRule() {
+    public Optional<SafetyRuleGatingRule> gatingRule() {
         return Optional.ofNullable(this.gatingRule);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Amazon Resource Name (ARN) of the safety rule.
      * 
     */
-    public Optional<String> getSafetyRuleArn() {
+    public Optional<String> safetyRuleArn() {
         return Optional.ofNullable(this.safetyRuleArn);
     }
     /**
      * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
     */
-    public Optional<SafetyRuleStatus> getStatus() {
+    public Optional<SafetyRuleStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

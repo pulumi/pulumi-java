@@ -18,7 +18,7 @@ public final class ListenerRuleHttpRequestMethodConfig extends com.pulumi.resour
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

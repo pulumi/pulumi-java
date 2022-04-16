@@ -26,7 +26,7 @@ public final class ConnectorCustomPluginArgs extends com.pulumi.resources.Resour
     @Import(name="customPluginArn", required=true)
       private final Output<String> customPluginArn;
 
-    public Output<String> getCustomPluginArn() {
+    public Output<String> customPluginArn() {
         return this.customPluginArn;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorCustomPluginArgs extends com.pulumi.resources.Resour
     @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
 

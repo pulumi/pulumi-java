@@ -20,10 +20,10 @@ public final class DataSourceS3Path {
         this.key = key;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

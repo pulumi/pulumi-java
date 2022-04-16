@@ -22,21 +22,21 @@ public final class JobS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketOwner")
       private final @Nullable Output<String> bucketOwner;
 
-    public Output<String> getBucketOwner() {
+    public Output<String> bucketOwner() {
         return this.bucketOwner == null ? Codegen.empty() : this.bucketOwner;
     }
 
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

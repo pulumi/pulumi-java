@@ -30,16 +30,16 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
         this.targetValue = targetValue;
     }
 
-    public Optional<Boolean> getDisableScaleIn() {
+    public Optional<Boolean> disableScaleIn() {
         return Optional.ofNullable(this.disableScaleIn);
     }
-    public Optional<Integer> getScaleInCooldown() {
+    public Optional<Integer> scaleInCooldown() {
         return Optional.ofNullable(this.scaleInCooldown);
     }
-    public Optional<Integer> getScaleOutCooldown() {
+    public Optional<Integer> scaleOutCooldown() {
         return Optional.ofNullable(this.scaleOutCooldown);
     }
-    public Double getTargetValue() {
+    public Double targetValue() {
         return this.targetValue;
     }
 

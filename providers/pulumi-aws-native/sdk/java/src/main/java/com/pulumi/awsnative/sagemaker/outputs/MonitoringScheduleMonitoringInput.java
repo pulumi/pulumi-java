@@ -16,7 +16,7 @@ public final class MonitoringScheduleMonitoringInput {
         this.endpointInput = endpointInput;
     }
 
-    public MonitoringScheduleEndpointInput getEndpointInput() {
+    public MonitoringScheduleEndpointInput endpointInput() {
         return this.endpointInput;
     }
 

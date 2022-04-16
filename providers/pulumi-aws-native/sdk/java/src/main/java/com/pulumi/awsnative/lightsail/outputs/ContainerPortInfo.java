@@ -22,10 +22,10 @@ public final class ContainerPortInfo {
         this.protocol = protocol;
     }
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

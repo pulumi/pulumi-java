@@ -28,7 +28,7 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="cmafPackage")
       private final @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
-    public Output<PackagingConfigurationCmafPackageArgs> getCmafPackage() {
+    public Output<PackagingConfigurationCmafPackageArgs> cmafPackage() {
         return this.cmafPackage == null ? Codegen.empty() : this.cmafPackage;
     }
 
@@ -39,7 +39,7 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="dashPackage")
       private final @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
 
-    public Output<PackagingConfigurationDashPackageArgs> getDashPackage() {
+    public Output<PackagingConfigurationDashPackageArgs> dashPackage() {
         return this.dashPackage == null ? Codegen.empty() : this.dashPackage;
     }
 
@@ -50,7 +50,7 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="hlsPackage")
       private final @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
-    public Output<PackagingConfigurationHlsPackageArgs> getHlsPackage() {
+    public Output<PackagingConfigurationHlsPackageArgs> hlsPackage() {
         return this.hlsPackage == null ? Codegen.empty() : this.hlsPackage;
     }
 
@@ -61,7 +61,7 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="mssPackage")
       private final @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
 
-    public Output<PackagingConfigurationMssPackageArgs> getMssPackage() {
+    public Output<PackagingConfigurationMssPackageArgs> mssPackage() {
         return this.mssPackage == null ? Codegen.empty() : this.mssPackage;
     }
 
@@ -72,7 +72,7 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="packagingGroupId", required=true)
       private final Output<String> packagingGroupId;
 
-    public Output<String> getPackagingGroupId() {
+    public Output<String> packagingGroupId() {
         return this.packagingGroupId;
     }
 
@@ -83,7 +83,7 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
 
-    public Output<List<PackagingConfigurationTagArgs>> getTags() {
+    public Output<List<PackagingConfigurationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

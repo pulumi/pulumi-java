@@ -22,7 +22,7 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="application", required=true)
       private final Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -44,7 +44,7 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceType", required=true)
       private final Output<ResourceAssociationResourceType> resourceType;
 
-    public Output<ResourceAssociationResourceType> getPropResourceType() {
+    public Output<ResourceAssociationResourceType> resourceType() {
         return this.resourceType;
     }
 

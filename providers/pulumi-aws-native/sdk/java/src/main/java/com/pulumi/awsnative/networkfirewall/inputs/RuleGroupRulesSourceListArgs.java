@@ -20,21 +20,21 @@ public final class RuleGroupRulesSourceListArgs extends com.pulumi.resources.Res
     @Import(name="generatedRulesType", required=true)
       private final Output<RuleGroupGeneratedRulesType> generatedRulesType;
 
-    public Output<RuleGroupGeneratedRulesType> getGeneratedRulesType() {
+    public Output<RuleGroupGeneratedRulesType> generatedRulesType() {
         return this.generatedRulesType;
     }
 
     @Import(name="targetTypes", required=true)
       private final Output<List<RuleGroupTargetType>> targetTypes;
 
-    public Output<List<RuleGroupTargetType>> getTargetTypes() {
+    public Output<List<RuleGroupTargetType>> targetTypes() {
         return this.targetTypes;
     }
 
     @Import(name="targets", required=true)
       private final Output<List<String>> targets;
 
-    public Output<List<String>> getTargets() {
+    public Output<List<String>> targets() {
         return this.targets;
     }
 

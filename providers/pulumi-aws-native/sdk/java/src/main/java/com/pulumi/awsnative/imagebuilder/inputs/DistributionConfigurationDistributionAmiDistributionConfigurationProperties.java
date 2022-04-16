@@ -28,7 +28,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="amiTags")
       private final @Nullable Object amiTags;
 
-    public Optional<Object> getAmiTags() {
+    public Optional<Object> amiTags() {
         return this.amiTags == null ? Optional.empty() : Optional.ofNullable(this.amiTags);
     }
 
@@ -39,7 +39,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -50,7 +50,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
     }
 
@@ -61,7 +61,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="launchPermissionConfiguration")
       private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
 
-    public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> getLaunchPermissionConfiguration() {
+    public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> launchPermissionConfiguration() {
         return this.launchPermissionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.launchPermissionConfiguration);
     }
 
@@ -72,7 +72,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -83,7 +83,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="targetAccountIds")
       private final @Nullable List<String> targetAccountIds;
 
-    public List<String> getTargetAccountIds() {
+    public List<String> targetAccountIds() {
         return this.targetAccountIds == null ? List.of() : this.targetAccountIds;
     }
 

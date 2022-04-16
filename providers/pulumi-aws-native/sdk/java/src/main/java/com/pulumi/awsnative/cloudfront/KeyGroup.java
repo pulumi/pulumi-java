@@ -22,13 +22,13 @@ public class KeyGroup extends com.pulumi.resources.CustomResource {
     @Export(name="keyGroupConfig", type=KeyGroupConfig.class, parameters={})
     private Output<KeyGroupConfig> keyGroupConfig;
 
-    public Output<KeyGroupConfig> getKeyGroupConfig() {
+    public Output<KeyGroupConfig> keyGroupConfig() {
         return this.keyGroupConfig;
     }
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
 

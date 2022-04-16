@@ -28,14 +28,14 @@ public final class LaunchProfileStreamConfigurationSessionStorage extends com.pu
     @Import(name="mode")
       private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
 
-    public List<LaunchProfileStreamingSessionStorageMode> getMode() {
+    public List<LaunchProfileStreamingSessionStorageMode> mode() {
         return this.mode == null ? List.of() : this.mode;
     }
 
     @Import(name="root")
       private final @Nullable LaunchProfileStreamingSessionStorageRoot root;
 
-    public Optional<LaunchProfileStreamingSessionStorageRoot> getRoot() {
+    public Optional<LaunchProfileStreamingSessionStorageRoot> root() {
         return this.root == null ? Optional.empty() : Optional.ofNullable(this.root);
     }
 

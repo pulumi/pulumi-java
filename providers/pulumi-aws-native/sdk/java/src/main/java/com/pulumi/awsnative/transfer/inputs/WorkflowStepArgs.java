@@ -30,7 +30,7 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyStepDetails")
       private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
 
-    public Output<WorkflowStepCopyStepDetailsPropertiesArgs> getCopyStepDetails() {
+    public Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails() {
         return this.copyStepDetails == null ? Codegen.empty() : this.copyStepDetails;
     }
 
@@ -41,7 +41,7 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customStepDetails")
       private final @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
 
-    public Output<WorkflowStepCustomStepDetailsPropertiesArgs> getCustomStepDetails() {
+    public Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails() {
         return this.customStepDetails == null ? Codegen.empty() : this.customStepDetails;
     }
 
@@ -52,7 +52,7 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteStepDetails")
       private final @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
 
-    public Output<WorkflowStepDeleteStepDetailsPropertiesArgs> getDeleteStepDetails() {
+    public Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails() {
         return this.deleteStepDetails == null ? Codegen.empty() : this.deleteStepDetails;
     }
 
@@ -63,14 +63,14 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagStepDetails")
       private final @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
 
-    public Output<WorkflowStepTagStepDetailsPropertiesArgs> getTagStepDetails() {
+    public Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails() {
         return this.tagStepDetails == null ? Codegen.empty() : this.tagStepDetails;
     }
 
     @Import(name="type")
       private final @Nullable Output<WorkflowStepType> type;
 
-    public Output<WorkflowStepType> getType() {
+    public Output<WorkflowStepType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

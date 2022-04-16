@@ -15,14 +15,14 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
-    public String getAwsAccountId() {
+    public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="templateId", required=true)
       private final String templateId;
 
-    public String getTemplateId() {
+    public String templateId() {
         return this.templateId;
     }
 

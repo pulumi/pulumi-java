@@ -23,14 +23,14 @@ public final class AssessmentReportsDestinationArgs extends com.pulumi.resources
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="destinationType")
       private final @Nullable Output<AssessmentReportDestinationType> destinationType;
 
-    public Output<AssessmentReportDestinationType> getDestinationType() {
+    public Output<AssessmentReportDestinationType> destinationType() {
         return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 

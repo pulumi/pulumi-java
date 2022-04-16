@@ -18,7 +18,7 @@ public final class TopicRuleLambdaAction {
         this.functionArn = functionArn;
     }
 
-    public Optional<String> getFunctionArn() {
+    public Optional<String> functionArn() {
         return Optional.ofNullable(this.functionArn);
     }
 

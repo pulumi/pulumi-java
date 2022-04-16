@@ -26,13 +26,13 @@ public final class WebACLRegexPatternSetReferenceStatement {
         this.textTransformations = textTransformations;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

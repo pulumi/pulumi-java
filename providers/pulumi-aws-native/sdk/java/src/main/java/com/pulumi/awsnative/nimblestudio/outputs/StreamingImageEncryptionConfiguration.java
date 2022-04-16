@@ -31,10 +31,10 @@ public final class StreamingImageEncryptionConfiguration {
      * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
      * 
     */
-    public Optional<String> getKeyArn() {
+    public Optional<String> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
-    public StreamingImageEncryptionConfigurationKeyType getKeyType() {
+    public StreamingImageEncryptionConfigurationKeyType keyType() {
         return this.keyType;
     }
 

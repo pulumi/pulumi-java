@@ -23,42 +23,42 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultVariation")
       private final @Nullable Output<String> defaultVariation;
 
-    public Output<String> getDefaultVariation() {
+    public Output<String> defaultVariation() {
         return this.defaultVariation == null ? Codegen.empty() : this.defaultVariation;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="entityOverrides")
       private final @Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides;
 
-    public Output<List<FeatureEntityOverrideArgs>> getEntityOverrides() {
+    public Output<List<FeatureEntityOverrideArgs>> entityOverrides() {
         return this.entityOverrides == null ? Codegen.empty() : this.entityOverrides;
     }
 
     @Import(name="evaluationStrategy")
       private final @Nullable Output<FeatureEvaluationStrategy> evaluationStrategy;
 
-    public Output<FeatureEvaluationStrategy> getEvaluationStrategy() {
+    public Output<FeatureEvaluationStrategy> evaluationStrategy() {
         return this.evaluationStrategy == null ? Codegen.empty() : this.evaluationStrategy;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -69,14 +69,14 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FeatureTagArgs>> tags;
 
-    public Output<List<FeatureTagArgs>> getTags() {
+    public Output<List<FeatureTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="variations", required=true)
       private final Output<List<FeatureVariationObjectArgs>> variations;
 
-    public Output<List<FeatureVariationObjectArgs>> getVariations() {
+    public Output<List<FeatureVariationObjectArgs>> variations() {
         return this.variations;
     }
 

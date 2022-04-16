@@ -57,35 +57,35 @@ public final class GetTransitGatewayConnectResult {
      * The creation time.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The state of the attachment.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the attachment.
      * 
     */
-    public List<TransitGatewayConnectTag> getTags() {
+    public List<TransitGatewayConnectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The ID of the Connect attachment.
      * 
     */
-    public Optional<String> getTransitGatewayAttachmentId() {
+    public Optional<String> transitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
     /**
      * The ID of the transit gateway.
      * 
     */
-    public Optional<String> getTransitGatewayId() {
+    public Optional<String> transitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }
 

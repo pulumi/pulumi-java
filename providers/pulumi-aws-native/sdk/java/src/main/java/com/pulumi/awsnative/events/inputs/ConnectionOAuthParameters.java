@@ -20,28 +20,28 @@ public final class ConnectionOAuthParameters extends com.pulumi.resources.Invoke
     @Import(name="authorizationEndpoint", required=true)
       private final String authorizationEndpoint;
 
-    public String getAuthorizationEndpoint() {
+    public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientParameters", required=true)
       private final ConnectionClientParameters clientParameters;
 
-    public ConnectionClientParameters getClientParameters() {
+    public ConnectionClientParameters clientParameters() {
         return this.clientParameters;
     }
 
     @Import(name="httpMethod", required=true)
       private final ConnectionOAuthParametersHttpMethod httpMethod;
 
-    public ConnectionOAuthParametersHttpMethod getHttpMethod() {
+    public ConnectionOAuthParametersHttpMethod httpMethod() {
         return this.httpMethod;
     }
 
     @Import(name="oAuthHttpParameters")
       private final @Nullable ConnectionHttpParameters oAuthHttpParameters;
 
-    public Optional<ConnectionHttpParameters> getOAuthHttpParameters() {
+    public Optional<ConnectionHttpParameters> oAuthHttpParameters() {
         return this.oAuthHttpParameters == null ? Optional.empty() : Optional.ofNullable(this.oAuthHttpParameters);
     }
 

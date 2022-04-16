@@ -93,70 +93,70 @@ public final class DeploymentMethodSetting {
      * Indicates whether the cached responses are encrypted
      * 
     */
-    public Optional<Boolean> getCacheDataEncrypted() {
+    public Optional<Boolean> cacheDataEncrypted() {
         return Optional.ofNullable(this.cacheDataEncrypted);
     }
     /**
      * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
      * 
     */
-    public Optional<Integer> getCacheTtlInSeconds() {
+    public Optional<Integer> cacheTtlInSeconds() {
         return Optional.ofNullable(this.cacheTtlInSeconds);
     }
     /**
      * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
      * 
     */
-    public Optional<Boolean> getCachingEnabled() {
+    public Optional<Boolean> cachingEnabled() {
         return Optional.ofNullable(this.cachingEnabled);
     }
     /**
      * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
      * 
     */
-    public Optional<Boolean> getDataTraceEnabled() {
+    public Optional<Boolean> dataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
     /**
      * The HTTP method.
      * 
     */
-    public Optional<String> getHttpMethod() {
+    public Optional<String> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
      * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
      * 
     */
-    public Optional<String> getLoggingLevel() {
+    public Optional<String> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
      * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
      * 
     */
-    public Optional<Boolean> getMetricsEnabled() {
+    public Optional<Boolean> metricsEnabled() {
         return Optional.ofNullable(this.metricsEnabled);
     }
     /**
      * The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash.
      * 
     */
-    public Optional<String> getResourcePath() {
+    public Optional<String> resourcePath() {
         return Optional.ofNullable(this.resourcePath);
     }
     /**
      * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
      * 
     */
-    public Optional<Integer> getThrottlingBurstLimit() {
+    public Optional<Integer> throttlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
     /**
      * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
      * 
     */
-    public Optional<Double> getThrottlingRateLimit() {
+    public Optional<Double> throttlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }
 

@@ -27,7 +27,7 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="encoding")
       private final @Nullable Output<ApplicationLogEncoding> encoding;
 
-    public Output<ApplicationLogEncoding> getEncoding() {
+    public Output<ApplicationLogEncoding> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logPath")
       private final @Nullable Output<String> logPath;
 
-    public Output<String> getLogPath() {
+    public Output<String> logPath() {
         return this.logPath == null ? Codegen.empty() : this.logPath;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationLogArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="patternSet")
       private final @Nullable Output<String> patternSet;
 
-    public Output<String> getPatternSet() {
+    public Output<String> patternSet() {
         return this.patternSet == null ? Codegen.empty() : this.patternSet;
     }
 

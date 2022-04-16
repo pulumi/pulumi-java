@@ -28,7 +28,7 @@ public final class ApplicationComponentConfigurationArgs extends com.pulumi.reso
     @Import(name="configurationDetails")
       private final @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
 
-    public Output<ApplicationConfigurationDetailsArgs> getConfigurationDetails() {
+    public Output<ApplicationConfigurationDetailsArgs> configurationDetails() {
         return this.configurationDetails == null ? Codegen.empty() : this.configurationDetails;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationComponentConfigurationArgs extends com.pulumi.reso
     @Import(name="subComponentTypeConfigurations")
       private final @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
-    public Output<List<ApplicationSubComponentTypeConfigurationArgs>> getSubComponentTypeConfigurations() {
+    public Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations() {
         return this.subComponentTypeConfigurations == null ? Codegen.empty() : this.subComponentTypeConfigurations;
     }
 

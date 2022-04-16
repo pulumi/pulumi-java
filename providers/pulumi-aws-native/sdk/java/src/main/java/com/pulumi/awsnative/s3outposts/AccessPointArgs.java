@@ -24,7 +24,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<Object> policy;
 
-    public Output<Object> getPolicy() {
+    public Output<Object> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -57,7 +57,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration", required=true)
       private final Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<AccessPointVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<AccessPointVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 

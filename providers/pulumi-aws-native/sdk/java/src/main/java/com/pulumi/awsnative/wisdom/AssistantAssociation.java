@@ -25,43 +25,43 @@ public class AssistantAssociation extends com.pulumi.resources.CustomResource {
     @Export(name="assistantArn", type=String.class, parameters={})
     private Output<String> assistantArn;
 
-    public Output<String> getAssistantArn() {
+    public Output<String> assistantArn() {
         return this.assistantArn;
     }
     @Export(name="assistantAssociationArn", type=String.class, parameters={})
     private Output<String> assistantAssociationArn;
 
-    public Output<String> getAssistantAssociationArn() {
+    public Output<String> assistantAssociationArn() {
         return this.assistantAssociationArn;
     }
     @Export(name="assistantAssociationId", type=String.class, parameters={})
     private Output<String> assistantAssociationId;
 
-    public Output<String> getAssistantAssociationId() {
+    public Output<String> assistantAssociationId() {
         return this.assistantAssociationId;
     }
     @Export(name="assistantId", type=String.class, parameters={})
     private Output<String> assistantId;
 
-    public Output<String> getAssistantId() {
+    public Output<String> assistantId() {
         return this.assistantId;
     }
     @Export(name="association", type=AssistantAssociationAssociationData.class, parameters={})
     private Output<AssistantAssociationAssociationData> association;
 
-    public Output<AssistantAssociationAssociationData> getAssociation() {
+    public Output<AssistantAssociationAssociationData> association() {
         return this.association;
     }
     @Export(name="associationType", type=AssistantAssociationAssociationType.class, parameters={})
     private Output<AssistantAssociationAssociationType> associationType;
 
-    public Output<AssistantAssociationAssociationType> getAssociationType() {
+    public Output<AssistantAssociationAssociationType> associationType() {
         return this.associationType;
     }
     @Export(name="tags", type=List.class, parameters={AssistantAssociationTag.class})
     private Output</* @Nullable */ List<AssistantAssociationTag>> tags;
 
-    public Output</* @Nullable */ List<AssistantAssociationTag>> getTags() {
+    public Output</* @Nullable */ List<AssistantAssociationTag>> tags() {
         return this.tags;
     }
 

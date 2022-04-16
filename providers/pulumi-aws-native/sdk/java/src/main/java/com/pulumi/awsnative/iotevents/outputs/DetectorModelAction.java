@@ -67,43 +67,43 @@ public final class DetectorModelAction {
         this.sqs = sqs;
     }
 
-    public Optional<DetectorModelClearTimer> getClearTimer() {
+    public Optional<DetectorModelClearTimer> clearTimer() {
         return Optional.ofNullable(this.clearTimer);
     }
-    public Optional<DetectorModelDynamoDB> getDynamoDB() {
+    public Optional<DetectorModelDynamoDB> dynamoDB() {
         return Optional.ofNullable(this.dynamoDB);
     }
-    public Optional<DetectorModelDynamoDBv2> getDynamoDBv2() {
+    public Optional<DetectorModelDynamoDBv2> dynamoDBv2() {
         return Optional.ofNullable(this.dynamoDBv2);
     }
-    public Optional<DetectorModelFirehose> getFirehose() {
+    public Optional<DetectorModelFirehose> firehose() {
         return Optional.ofNullable(this.firehose);
     }
-    public Optional<DetectorModelIotEvents> getIotEvents() {
+    public Optional<DetectorModelIotEvents> iotEvents() {
         return Optional.ofNullable(this.iotEvents);
     }
-    public Optional<DetectorModelIotSiteWise> getIotSiteWise() {
+    public Optional<DetectorModelIotSiteWise> iotSiteWise() {
         return Optional.ofNullable(this.iotSiteWise);
     }
-    public Optional<DetectorModelIotTopicPublish> getIotTopicPublish() {
+    public Optional<DetectorModelIotTopicPublish> iotTopicPublish() {
         return Optional.ofNullable(this.iotTopicPublish);
     }
-    public Optional<DetectorModelLambda> getLambda() {
+    public Optional<DetectorModelLambda> lambda() {
         return Optional.ofNullable(this.lambda);
     }
-    public Optional<DetectorModelResetTimer> getResetTimer() {
+    public Optional<DetectorModelResetTimer> resetTimer() {
         return Optional.ofNullable(this.resetTimer);
     }
-    public Optional<DetectorModelSetTimer> getSetTimer() {
+    public Optional<DetectorModelSetTimer> setTimer() {
         return Optional.ofNullable(this.setTimer);
     }
-    public Optional<DetectorModelSetVariable> getSetVariable() {
+    public Optional<DetectorModelSetVariable> setVariable() {
         return Optional.ofNullable(this.setVariable);
     }
-    public Optional<DetectorModelSns> getSns() {
+    public Optional<DetectorModelSns> sns() {
         return Optional.ofNullable(this.sns);
     }
-    public Optional<DetectorModelSqs> getSqs() {
+    public Optional<DetectorModelSqs> sqs() {
         return Optional.ofNullable(this.sqs);
     }
 

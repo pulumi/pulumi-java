@@ -18,7 +18,7 @@ public final class DataSourceWebCrawlerAuthenticationConfiguration {
         this.basicAuthentication = basicAuthentication;
     }
 
-    public List<DataSourceWebCrawlerBasicAuthentication> getBasicAuthentication() {
+    public List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication() {
         return this.basicAuthentication == null ? List.of() : this.basicAuthentication;
     }
 

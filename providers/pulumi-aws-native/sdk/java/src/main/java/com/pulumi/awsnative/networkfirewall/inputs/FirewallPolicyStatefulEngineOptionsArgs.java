@@ -18,7 +18,7 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends com.pulumi.re
     @Import(name="ruleOrder")
       private final @Nullable Output<FirewallPolicyRuleOrder> ruleOrder;
 
-    public Output<FirewallPolicyRuleOrder> getRuleOrder() {
+    public Output<FirewallPolicyRuleOrder> ruleOrder() {
         return this.ruleOrder == null ? Codegen.empty() : this.ruleOrder;
     }
 

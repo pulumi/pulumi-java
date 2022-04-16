@@ -26,7 +26,7 @@ public final class TemplateDataSetSchema {
      * <p>A structure containing the list of column schemas.</p>
      * 
     */
-    public List<TemplateColumnSchema> getColumnSchemaList() {
+    public List<TemplateColumnSchema> columnSchemaList() {
         return this.columnSchemaList == null ? List.of() : this.columnSchemaList;
     }
 

@@ -20,21 +20,21 @@ public final class ConfigSpectrumConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="bandwidth")
       private final @Nullable Output<ConfigFrequencyBandwidthArgs> bandwidth;
 
-    public Output<ConfigFrequencyBandwidthArgs> getBandwidth() {
+    public Output<ConfigFrequencyBandwidthArgs> bandwidth() {
         return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
     @Import(name="centerFrequency")
       private final @Nullable Output<ConfigFrequencyArgs> centerFrequency;
 
-    public Output<ConfigFrequencyArgs> getCenterFrequency() {
+    public Output<ConfigFrequencyArgs> centerFrequency() {
         return this.centerFrequency == null ? Codegen.empty() : this.centerFrequency;
     }
 
     @Import(name="polarization")
       private final @Nullable Output<ConfigPolarization> polarization;
 
-    public Output<ConfigPolarization> getPolarization() {
+    public Output<ConfigPolarization> polarization() {
         return this.polarization == null ? Codegen.empty() : this.polarization;
     }
 

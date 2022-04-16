@@ -20,14 +20,14 @@ public final class ThemeValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="children")
       private final @Nullable Output<List<ThemeValuesArgs>> children;
 
-    public Output<List<ThemeValuesArgs>> getChildren() {
+    public Output<List<ThemeValuesArgs>> children() {
         return this.children == null ? Codegen.empty() : this.children;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

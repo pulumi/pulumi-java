@@ -16,7 +16,7 @@ public final class RuleGroupPublishMetricAction extends com.pulumi.resources.Inv
     @Import(name="dimensions", required=true)
       private final List<RuleGroupDimension> dimensions;
 
-    public List<RuleGroupDimension> getDimensions() {
+    public List<RuleGroupDimension> dimensions() {
         return this.dimensions;
     }
 

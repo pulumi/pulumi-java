@@ -21,10 +21,10 @@ public final class BackupPlanAdvancedBackupSettingResourceType {
         this.resourceType = resourceType;
     }
 
-    public Object getBackupOptions() {
+    public Object backupOptions() {
         return this.backupOptions;
     }
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

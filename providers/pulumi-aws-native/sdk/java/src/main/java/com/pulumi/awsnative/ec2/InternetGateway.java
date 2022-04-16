@@ -33,7 +33,7 @@ public class InternetGateway extends com.pulumi.resources.CustomResource {
      * @return ID of internet gateway.
      * 
      */
-    public Output<String> getInternetGatewayId() {
+    public Output<String> internetGatewayId() {
         return this.internetGatewayId;
     }
     /**
@@ -47,7 +47,7 @@ public class InternetGateway extends com.pulumi.resources.CustomResource {
      * @return Any tags to assign to the internet gateway.
      * 
      */
-    public Output</* @Nullable */ List<InternetGatewayTag>> getTags() {
+    public Output</* @Nullable */ List<InternetGatewayTag>> tags() {
         return this.tags;
     }
 

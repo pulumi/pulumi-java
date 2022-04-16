@@ -27,7 +27,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends com.pulu
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -38,7 +38,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends com.pulu
     @Import(name="service")
       private final @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;
 
-    public Output<ContainerRecipeTargetContainerRepositoryService> getService() {
+    public Output<ContainerRecipeTargetContainerRepositoryService> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

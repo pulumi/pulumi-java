@@ -29,7 +29,7 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -43,13 +43,13 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
      * @return Collection of Available Labels.
      * 
      */
-    public Output<List<RuleGroupLabelSummary>> getAvailableLabels() {
+    public Output<List<RuleGroupLabelSummary>> availableLabels() {
         return this.availableLabels;
     }
     @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
     /**
@@ -63,31 +63,31 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
      * @return Collection of Consumed Labels.
      * 
      */
-    public Output<List<RuleGroupLabelSummary>> getConsumedLabels() {
+    public Output<List<RuleGroupLabelSummary>> consumedLabels() {
         return this.consumedLabels;
     }
     @Export(name="customResponseBodies", type=RuleGroupCustomResponseBodies.class, parameters={})
     private Output</* @Nullable */ RuleGroupCustomResponseBodies> customResponseBodies;
 
-    public Output</* @Nullable */ RuleGroupCustomResponseBodies> getCustomResponseBodies() {
+    public Output</* @Nullable */ RuleGroupCustomResponseBodies> customResponseBodies() {
         return this.customResponseBodies;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="labelNamespace", type=String.class, parameters={})
     private Output<String> labelNamespace;
 
-    public Output<String> getLabelNamespace() {
+    public Output<String> labelNamespace() {
         return this.labelNamespace;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -101,25 +101,25 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
      * @return Collection of Rules.
      * 
      */
-    public Output</* @Nullable */ List<RuleGroupRule>> getRules() {
+    public Output</* @Nullable */ List<RuleGroupRule>> rules() {
         return this.rules;
     }
     @Export(name="scope", type=RuleGroupScope.class, parameters={})
     private Output<RuleGroupScope> scope;
 
-    public Output<RuleGroupScope> getScope() {
+    public Output<RuleGroupScope> scope() {
         return this.scope;
     }
     @Export(name="tags", type=List.class, parameters={RuleGroupTag.class})
     private Output</* @Nullable */ List<RuleGroupTag>> tags;
 
-    public Output</* @Nullable */ List<RuleGroupTag>> getTags() {
+    public Output</* @Nullable */ List<RuleGroupTag>> tags() {
         return this.tags;
     }
     @Export(name="visibilityConfig", type=RuleGroupVisibilityConfig.class, parameters={})
     private Output<RuleGroupVisibilityConfig> visibilityConfig;
 
-    public Output<RuleGroupVisibilityConfig> getVisibilityConfig() {
+    public Output<RuleGroupVisibilityConfig> visibilityConfig() {
         return this.visibilityConfig;
     }
 

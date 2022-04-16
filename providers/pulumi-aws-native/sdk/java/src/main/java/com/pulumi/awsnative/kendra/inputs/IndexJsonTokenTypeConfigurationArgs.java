@@ -17,14 +17,14 @@ public final class IndexJsonTokenTypeConfigurationArgs extends com.pulumi.resour
     @Import(name="groupAttributeField", required=true)
       private final Output<String> groupAttributeField;
 
-    public Output<String> getGroupAttributeField() {
+    public Output<String> groupAttributeField() {
         return this.groupAttributeField;
     }
 
     @Import(name="userNameAttributeField", required=true)
       private final Output<String> userNameAttributeField;
 
-    public Output<String> getUserNameAttributeField() {
+    public Output<String> userNameAttributeField() {
         return this.userNameAttributeField;
     }
 

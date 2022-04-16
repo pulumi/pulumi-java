@@ -35,19 +35,19 @@ public final class WebACLByteMatchStatement {
         this.textTransformations = textTransformations;
     }
 
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public WebACLPositionalConstraint getPositionalConstraint() {
+    public WebACLPositionalConstraint positionalConstraint() {
         return this.positionalConstraint;
     }
-    public Optional<String> getSearchString() {
+    public Optional<String> searchString() {
         return Optional.ofNullable(this.searchString);
     }
-    public Optional<String> getSearchStringBase64() {
+    public Optional<String> searchStringBase64() {
         return Optional.ofNullable(this.searchStringBase64);
     }
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

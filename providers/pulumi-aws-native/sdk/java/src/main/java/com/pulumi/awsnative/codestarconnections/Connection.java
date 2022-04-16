@@ -33,7 +33,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
      * 
      */
-    public Output<String> getConnectionArn() {
+    public Output<String> connectionArn() {
         return this.connectionArn;
     }
     /**
@@ -47,7 +47,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The name of the connection. Connection names must be unique in an AWS user account.
      * 
      */
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
     /**
@@ -61,7 +61,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The current status of the connection.
      * 
      */
-    public Output<String> getConnectionStatus() {
+    public Output<String> connectionStatus() {
         return this.connectionStatus;
     }
     /**
@@ -75,7 +75,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
      * 
      */
-    public Output</* @Nullable */ String> getHostArn() {
+    public Output</* @Nullable */ String> hostArn() {
         return this.hostArn;
     }
     /**
@@ -89,7 +89,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
      * 
      */
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
     /**
@@ -103,7 +103,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
      * 
      */
-    public Output</* @Nullable */ String> getProviderType() {
+    public Output</* @Nullable */ String> providerType() {
         return this.providerType;
     }
     /**
@@ -117,7 +117,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Specifies the tags applied to a connection.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionTag>> getTags() {
+    public Output</* @Nullable */ List<ConnectionTag>> tags() {
         return this.tags;
     }
 

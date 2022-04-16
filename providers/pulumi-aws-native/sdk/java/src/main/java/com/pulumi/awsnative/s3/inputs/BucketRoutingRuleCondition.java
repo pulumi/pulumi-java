@@ -25,7 +25,7 @@ public final class BucketRoutingRuleCondition extends com.pulumi.resources.Invok
     @Import(name="httpErrorCodeReturnedEquals")
       private final @Nullable String httpErrorCodeReturnedEquals;
 
-    public Optional<String> getHttpErrorCodeReturnedEquals() {
+    public Optional<String> httpErrorCodeReturnedEquals() {
         return this.httpErrorCodeReturnedEquals == null ? Optional.empty() : Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
 
@@ -36,7 +36,7 @@ public final class BucketRoutingRuleCondition extends com.pulumi.resources.Invok
     @Import(name="keyPrefixEquals")
       private final @Nullable String keyPrefixEquals;
 
-    public Optional<String> getKeyPrefixEquals() {
+    public Optional<String> keyPrefixEquals() {
         return this.keyPrefixEquals == null ? Optional.empty() : Optional.ofNullable(this.keyPrefixEquals);
     }
 

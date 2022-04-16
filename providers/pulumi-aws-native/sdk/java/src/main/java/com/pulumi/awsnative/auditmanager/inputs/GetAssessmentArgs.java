@@ -15,7 +15,7 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assessmentId", required=true)
       private final String assessmentId;
 
-    public String getAssessmentId() {
+    public String assessmentId() {
         return this.assessmentId;
     }
 

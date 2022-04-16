@@ -27,7 +27,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends com.pulumi.r
     @Import(name="exponentialRolloutRate")
       private final @Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
 
-    public Output<JobTemplateExponentialRolloutRateArgs> getExponentialRolloutRate() {
+    public Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate() {
         return this.exponentialRolloutRate == null ? Codegen.empty() : this.exponentialRolloutRate;
     }
 
@@ -38,7 +38,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends com.pulumi.r
     @Import(name="maximumPerMinute")
       private final @Nullable Output<Integer> maximumPerMinute;
 
-    public Output<Integer> getMaximumPerMinute() {
+    public Output<Integer> maximumPerMinute() {
         return this.maximumPerMinute == null ? Codegen.empty() : this.maximumPerMinute;
     }
 

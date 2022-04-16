@@ -26,13 +26,13 @@ public final class GetKnowledgeBaseResult {
         this.renderingConfiguration = renderingConfiguration;
     }
 
-    public Optional<String> getKnowledgeBaseArn() {
+    public Optional<String> knowledgeBaseArn() {
         return Optional.ofNullable(this.knowledgeBaseArn);
     }
-    public Optional<String> getKnowledgeBaseId() {
+    public Optional<String> knowledgeBaseId() {
         return Optional.ofNullable(this.knowledgeBaseId);
     }
-    public Optional<KnowledgeBaseRenderingConfiguration> getRenderingConfiguration() {
+    public Optional<KnowledgeBaseRenderingConfiguration> renderingConfiguration() {
         return Optional.ofNullable(this.renderingConfiguration);
     }
 

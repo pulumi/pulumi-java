@@ -35,19 +35,19 @@ public final class IntegrationTask {
         this.taskType = taskType;
     }
 
-    public Optional<IntegrationConnectorOperator> getConnectorOperator() {
+    public Optional<IntegrationConnectorOperator> connectorOperator() {
         return Optional.ofNullable(this.connectorOperator);
     }
-    public Optional<String> getDestinationField() {
+    public Optional<String> destinationField() {
         return Optional.ofNullable(this.destinationField);
     }
-    public List<String> getSourceFields() {
+    public List<String> sourceFields() {
         return this.sourceFields;
     }
-    public List<IntegrationTaskPropertiesMap> getTaskProperties() {
+    public List<IntegrationTaskPropertiesMap> taskProperties() {
         return this.taskProperties == null ? List.of() : this.taskProperties;
     }
-    public IntegrationTaskType getTaskType() {
+    public IntegrationTaskType taskType() {
         return this.taskType;
     }
 

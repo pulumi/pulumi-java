@@ -31,10 +31,10 @@ public final class AnalysisError {
      * <p>The message associated with the analysis error.</p>
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<AnalysisErrorType> getType() {
+    public Optional<AnalysisErrorType> type() {
         return Optional.ofNullable(this.type);
     }
 

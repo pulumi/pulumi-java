@@ -20,21 +20,21 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
     @Import(name="proxyConfigurationProperties")
       private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
 
-    public Output<List<TaskDefinitionKeyValuePairArgs>> getProxyConfigurationProperties() {
+    public Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties() {
         return this.proxyConfigurationProperties == null ? Codegen.empty() : this.proxyConfigurationProperties;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

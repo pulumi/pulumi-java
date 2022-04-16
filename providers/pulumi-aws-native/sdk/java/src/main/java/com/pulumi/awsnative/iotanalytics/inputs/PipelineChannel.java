@@ -17,21 +17,21 @@ public final class PipelineChannel extends com.pulumi.resources.InvokeArgs {
     @Import(name="channelName", required=true)
       private final String channelName;
 
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable String next;
 
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 

@@ -16,7 +16,7 @@ public final class DataQualityJobDefinitionMonitoringOutput {
         this.s3Output = s3Output;
     }
 
-    public DataQualityJobDefinitionS3Output getS3Output() {
+    public DataQualityJobDefinitionS3Output s3Output() {
         return this.s3Output;
     }
 

@@ -25,35 +25,35 @@ public final class RuleGroupByteMatchStatement extends com.pulumi.resources.Invo
     @Import(name="fieldToMatch", required=true)
       private final RuleGroupFieldToMatch fieldToMatch;
 
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="positionalConstraint", required=true)
       private final RuleGroupPositionalConstraint positionalConstraint;
 
-    public RuleGroupPositionalConstraint getPositionalConstraint() {
+    public RuleGroupPositionalConstraint positionalConstraint() {
         return this.positionalConstraint;
     }
 
     @Import(name="searchString")
       private final @Nullable String searchString;
 
-    public Optional<String> getSearchString() {
+    public Optional<String> searchString() {
         return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
     }
 
     @Import(name="searchStringBase64")
       private final @Nullable String searchStringBase64;
 
-    public Optional<String> getSearchStringBase64() {
+    public Optional<String> searchStringBase64() {
         return this.searchStringBase64 == null ? Optional.empty() : Optional.ofNullable(this.searchStringBase64);
     }
 
     @Import(name="textTransformations", required=true)
       private final List<RuleGroupTextTransformation> textTransformations;
 
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

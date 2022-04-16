@@ -26,7 +26,7 @@ public final class EventSourceMappingSelfManagedEventSource {
      * The endpoints for a self-managed event source.
      * 
     */
-    public Optional<EventSourceMappingEndpoints> getEndpoints() {
+    public Optional<EventSourceMappingEndpoints> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
 

@@ -35,21 +35,21 @@ public final class DetectorModelSqs {
         this.useBase64 = useBase64;
     }
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return Optional.ofNullable(this.payload);
     }
     /**
      * The URL of the SQS queue where the data is written.
      * 
     */
-    public String getQueueUrl() {
+    public String queueUrl() {
         return this.queueUrl;
     }
     /**
      * Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
      * 
     */
-    public Optional<Boolean> getUseBase64() {
+    public Optional<Boolean> useBase64() {
         return Optional.ofNullable(this.useBase64);
     }
 

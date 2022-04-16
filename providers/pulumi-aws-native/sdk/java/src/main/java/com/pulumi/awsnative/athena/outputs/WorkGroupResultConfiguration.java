@@ -23,10 +23,10 @@ public final class WorkGroupResultConfiguration {
         this.outputLocation = outputLocation;
     }
 
-    public Optional<WorkGroupEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<WorkGroupEncryptionConfiguration> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
-    public Optional<String> getOutputLocation() {
+    public Optional<String> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
 

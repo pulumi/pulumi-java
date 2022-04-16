@@ -20,49 +20,49 @@ public final class CloudFormationProvisionedProductProvisioningPreferences exten
     @Import(name="stackSetAccounts")
       private final @Nullable List<String> stackSetAccounts;
 
-    public List<String> getStackSetAccounts() {
+    public List<String> stackSetAccounts() {
         return this.stackSetAccounts == null ? List.of() : this.stackSetAccounts;
     }
 
     @Import(name="stackSetFailureToleranceCount")
       private final @Nullable Integer stackSetFailureToleranceCount;
 
-    public Optional<Integer> getStackSetFailureToleranceCount() {
+    public Optional<Integer> stackSetFailureToleranceCount() {
         return this.stackSetFailureToleranceCount == null ? Optional.empty() : Optional.ofNullable(this.stackSetFailureToleranceCount);
     }
 
     @Import(name="stackSetFailureTolerancePercentage")
       private final @Nullable Integer stackSetFailureTolerancePercentage;
 
-    public Optional<Integer> getStackSetFailureTolerancePercentage() {
+    public Optional<Integer> stackSetFailureTolerancePercentage() {
         return this.stackSetFailureTolerancePercentage == null ? Optional.empty() : Optional.ofNullable(this.stackSetFailureTolerancePercentage);
     }
 
     @Import(name="stackSetMaxConcurrencyCount")
       private final @Nullable Integer stackSetMaxConcurrencyCount;
 
-    public Optional<Integer> getStackSetMaxConcurrencyCount() {
+    public Optional<Integer> stackSetMaxConcurrencyCount() {
         return this.stackSetMaxConcurrencyCount == null ? Optional.empty() : Optional.ofNullable(this.stackSetMaxConcurrencyCount);
     }
 
     @Import(name="stackSetMaxConcurrencyPercentage")
       private final @Nullable Integer stackSetMaxConcurrencyPercentage;
 
-    public Optional<Integer> getStackSetMaxConcurrencyPercentage() {
+    public Optional<Integer> stackSetMaxConcurrencyPercentage() {
         return this.stackSetMaxConcurrencyPercentage == null ? Optional.empty() : Optional.ofNullable(this.stackSetMaxConcurrencyPercentage);
     }
 
     @Import(name="stackSetOperationType")
       private final @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType;
 
-    public Optional<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
+    public Optional<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType() {
         return this.stackSetOperationType == null ? Optional.empty() : Optional.ofNullable(this.stackSetOperationType);
     }
 
     @Import(name="stackSetRegions")
       private final @Nullable List<String> stackSetRegions;
 
-    public List<String> getStackSetRegions() {
+    public List<String> stackSetRegions() {
         return this.stackSetRegions == null ? List.of() : this.stackSetRegions;
     }
 

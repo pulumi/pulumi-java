@@ -19,28 +19,28 @@ public final class TopicRuleFirehoseActionArgs extends com.pulumi.resources.Reso
     @Import(name="batchMode")
       private final @Nullable Output<Boolean> batchMode;
 
-    public Output<Boolean> getBatchMode() {
+    public Output<Boolean> batchMode() {
         return this.batchMode == null ? Codegen.empty() : this.batchMode;
     }
 
     @Import(name="deliveryStreamName", required=true)
       private final Output<String> deliveryStreamName;
 
-    public Output<String> getDeliveryStreamName() {
+    public Output<String> deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="separator")
       private final @Nullable Output<String> separator;
 
-    public Output<String> getSeparator() {
+    public Output<String> separator() {
         return this.separator == null ? Codegen.empty() : this.separator;
     }
 

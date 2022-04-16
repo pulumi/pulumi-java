@@ -27,7 +27,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends com.pulumi.reso
     @Import(name="agreeToInstallHANADBClient", required=true)
       private final Output<Boolean> agreeToInstallHANADBClient;
 
-    public Output<Boolean> getAgreeToInstallHANADBClient() {
+    public Output<Boolean> agreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends com.pulumi.reso
     @Import(name="hANAPort", required=true)
       private final Output<String> hANAPort;
 
-    public Output<String> getHANAPort() {
+    public Output<String> hANAPort() {
         return this.hANAPort;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends com.pulumi.reso
     @Import(name="hANASID", required=true)
       private final Output<String> hANASID;
 
-    public Output<String> getHANASID() {
+    public Output<String> hANASID() {
         return this.hANASID;
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends com.pulumi.reso
     @Import(name="hANASecretName", required=true)
       private final Output<String> hANASecretName;
 
-    public Output<String> getHANASecretName() {
+    public Output<String> hANASecretName() {
         return this.hANASecretName;
     }
 
@@ -74,7 +74,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends com.pulumi.reso
     @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;
 
-    public Output<String> getPrometheusPort() {
+    public Output<String> prometheusPort() {
         return this.prometheusPort == null ? Codegen.empty() : this.prometheusPort;
     }
 

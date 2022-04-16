@@ -24,28 +24,28 @@ public final class WebACLRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="allow")
       private final @Nullable WebACLAllowAction allow;
 
-    public Optional<WebACLAllowAction> getAllow() {
+    public Optional<WebACLAllowAction> allow() {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
     }
 
     @Import(name="block")
       private final @Nullable WebACLBlockAction block;
 
-    public Optional<WebACLBlockAction> getBlock() {
+    public Optional<WebACLBlockAction> block() {
         return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
     }
 
     @Import(name="captcha")
       private final @Nullable WebACLCaptchaAction captcha;
 
-    public Optional<WebACLCaptchaAction> getCaptcha() {
+    public Optional<WebACLCaptchaAction> captcha() {
         return this.captcha == null ? Optional.empty() : Optional.ofNullable(this.captcha);
     }
 
     @Import(name="count")
       private final @Nullable WebACLCountAction count;
 
-    public Optional<WebACLCountAction> getCount() {
+    public Optional<WebACLCountAction> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 

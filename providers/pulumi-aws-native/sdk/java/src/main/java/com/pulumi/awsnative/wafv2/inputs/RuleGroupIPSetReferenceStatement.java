@@ -18,14 +18,14 @@ public final class RuleGroupIPSetReferenceStatement extends com.pulumi.resources
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
     @Import(name="iPSetForwardedIPConfig")
       private final @Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
-    public Optional<RuleGroupIPSetForwardedIPConfiguration> getIPSetForwardedIPConfig() {
+    public Optional<RuleGroupIPSetForwardedIPConfiguration> iPSetForwardedIPConfig() {
         return this.iPSetForwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.iPSetForwardedIPConfig);
     }
 

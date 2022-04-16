@@ -28,7 +28,7 @@ public class Key extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -42,7 +42,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +56,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableKeyRotation() {
+    public Output</* @Nullable */ Boolean> enableKeyRotation() {
         return this.enableKeyRotation;
     }
     /**
@@ -70,13 +70,13 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     @Export(name="keyId", type=String.class, parameters={})
     private Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
     /**
@@ -90,7 +90,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
      * 
      */
-    public Output<Object> getKeyPolicy() {
+    public Output<Object> keyPolicy() {
         return this.keyPolicy;
     }
     /**
@@ -104,7 +104,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
      * 
      */
-    public Output</* @Nullable */ KeySpec> getKeySpec() {
+    public Output</* @Nullable */ KeySpec> keySpec() {
         return this.keySpec;
     }
     /**
@@ -118,7 +118,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
      * 
      */
-    public Output</* @Nullable */ KeyUsage> getKeyUsage() {
+    public Output</* @Nullable */ KeyUsage> keyUsage() {
         return this.keyUsage;
     }
     /**
@@ -132,7 +132,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMultiRegion() {
+    public Output</* @Nullable */ Boolean> multiRegion() {
         return this.multiRegion;
     }
     /**
@@ -146,7 +146,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
-    public Output</* @Nullable */ Integer> getPendingWindowInDays() {
+    public Output</* @Nullable */ Integer> pendingWindowInDays() {
         return this.pendingWindowInDays;
     }
     /**
@@ -160,7 +160,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<KeyTag>> getTags() {
+    public Output</* @Nullable */ List<KeyTag>> tags() {
         return this.tags;
     }
 

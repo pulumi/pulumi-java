@@ -36,13 +36,13 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -56,19 +56,19 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return <p>The time that this dataset was created.</p>
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     @Export(name="dashboardId", type=String.class, parameters={})
     private Output<String> dashboardId;
 
-    public Output<String> getDashboardId() {
+    public Output<String> dashboardId() {
         return this.dashboardId;
     }
     @Export(name="dashboardPublishOptions", type=DashboardPublishOptions.class, parameters={})
     private Output</* @Nullable */ DashboardPublishOptions> dashboardPublishOptions;
 
-    public Output</* @Nullable */ DashboardPublishOptions> getDashboardPublishOptions() {
+    public Output</* @Nullable */ DashboardPublishOptions> dashboardPublishOptions() {
         return this.dashboardPublishOptions;
     }
     /**
@@ -82,7 +82,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return <p>The last time that this dataset was published.</p>
      * 
      */
-    public Output<String> getLastPublishedTime() {
+    public Output<String> lastPublishedTime() {
         return this.lastPublishedTime;
     }
     /**
@@ -96,7 +96,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return <p>The last time that this dataset was updated.</p>
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -110,13 +110,13 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return <p>The display name of the dashboard.</p>
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="parameters", type=DashboardParameters.class, parameters={})
     private Output</* @Nullable */ DashboardParameters> parameters;
 
-    public Output</* @Nullable */ DashboardParameters> getParameters() {
+    public Output</* @Nullable */ DashboardParameters> parameters() {
         return this.parameters;
     }
     /**
@@ -138,13 +138,13 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      *         <p>To specify no permissions, omit the permissions list.</p>
      * 
      */
-    public Output</* @Nullable */ List<DashboardResourcePermission>> getPermissions() {
+    public Output</* @Nullable */ List<DashboardResourcePermission>> permissions() {
         return this.permissions;
     }
     @Export(name="sourceEntity", type=DashboardSourceEntity.class, parameters={})
     private Output<DashboardSourceEntity> sourceEntity;
 
-    public Output<DashboardSourceEntity> getSourceEntity() {
+    public Output<DashboardSourceEntity> sourceEntity() {
         return this.sourceEntity;
     }
     /**
@@ -160,7 +160,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      *             dashboard.</p>
      * 
      */
-    public Output</* @Nullable */ List<DashboardTag>> getTags() {
+    public Output</* @Nullable */ List<DashboardTag>> tags() {
         return this.tags;
     }
     /**
@@ -180,13 +180,13 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      *             dashboard.</p>
      * 
      */
-    public Output</* @Nullable */ String> getThemeArn() {
+    public Output</* @Nullable */ String> themeArn() {
         return this.themeArn;
     }
     @Export(name="version", type=DashboardVersion.class, parameters={})
     private Output<DashboardVersion> version;
 
-    public Output<DashboardVersion> getVersion() {
+    public Output<DashboardVersion> version() {
         return this.version;
     }
     /**
@@ -200,7 +200,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return <p>A description for the first version of the dashboard being created.</p>
      * 
      */
-    public Output</* @Nullable */ String> getVersionDescription() {
+    public Output</* @Nullable */ String> versionDescription() {
         return this.versionDescription;
     }
 

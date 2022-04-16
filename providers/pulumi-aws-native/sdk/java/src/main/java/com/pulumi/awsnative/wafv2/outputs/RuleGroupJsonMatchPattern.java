@@ -32,10 +32,10 @@ public final class RuleGroupJsonMatchPattern {
      * Inspect all parts of the web request's JSON body.
      * 
     */
-    public Optional<Object> getAll() {
+    public Optional<Object> all() {
         return Optional.ofNullable(this.all);
     }
-    public List<String> getIncludedPaths() {
+    public List<String> includedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
 

@@ -18,7 +18,7 @@ public final class TaskDefinitionRepositoryCredentials {
         this.credentialsParameter = credentialsParameter;
     }
 
-    public Optional<String> getCredentialsParameter() {
+    public Optional<String> credentialsParameter() {
         return Optional.ofNullable(this.credentialsParameter);
     }
 

@@ -31,7 +31,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The name of the Windows domain that the FSx for Windows server belongs to.
      * 
      */
-    public Output</* @Nullable */ String> getDomain() {
+    public Output</* @Nullable */ String> domain() {
         return this.domain;
     }
     /**
@@ -45,7 +45,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the FSx for Windows file system.
      * 
      */
-    public Output<String> getFsxFilesystemArn() {
+    public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
     /**
@@ -59,7 +59,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -73,7 +73,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The URL of the FSx for Windows location that was described.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     /**
@@ -87,7 +87,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
      * 
      */
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
     /**
@@ -101,7 +101,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The ARNs of the security groups that are to use to configure the FSx for Windows file system.
      * 
      */
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
@@ -115,7 +115,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return A subdirectory in the location's path.
      * 
      */
-    public Output</* @Nullable */ String> getSubdirectory() {
+    public Output</* @Nullable */ String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -129,7 +129,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationFSxWindowsTag>> getTags() {
+    public Output</* @Nullable */ List<LocationFSxWindowsTag>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The user who has the permissions to access files and folders in the FSx for Windows file system.
      * 
      */
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

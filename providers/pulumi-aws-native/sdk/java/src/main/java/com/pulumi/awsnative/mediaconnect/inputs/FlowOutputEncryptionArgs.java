@@ -28,7 +28,7 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
     @Import(name="algorithm")
       private final @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
 
-    public Output<FlowOutputEncryptionAlgorithm> getAlgorithm() {
+    public Output<FlowOutputEncryptionAlgorithm> algorithm() {
         return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
@@ -39,7 +39,7 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
     @Import(name="keyType")
       private final @Nullable Output<FlowOutputEncryptionKeyType> keyType;
 
-    public Output<FlowOutputEncryptionKeyType> getKeyType() {
+    public Output<FlowOutputEncryptionKeyType> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
@@ -50,7 +50,7 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -61,7 +61,7 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 

@@ -22,7 +22,7 @@ public final class FunctionCodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
@@ -33,7 +33,7 @@ public final class FunctionCodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -44,7 +44,7 @@ public final class FunctionCodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
@@ -55,7 +55,7 @@ public final class FunctionCodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> getS3ObjectVersion() {
+    public Output<String> s3ObjectVersion() {
         return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 
@@ -66,7 +66,7 @@ public final class FunctionCodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zipFile")
       private final @Nullable Output<String> zipFile;
 
-    public Output<String> getZipFile() {
+    public Output<String> zipFile() {
         return this.zipFile == null ? Codegen.empty() : this.zipFile;
     }
 

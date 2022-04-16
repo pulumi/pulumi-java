@@ -39,22 +39,22 @@ public final class MitigationActionActionParams {
         this.updateDeviceCertificateParams = updateDeviceCertificateParams;
     }
 
-    public Optional<MitigationActionAddThingsToThingGroupParams> getAddThingsToThingGroupParams() {
+    public Optional<MitigationActionAddThingsToThingGroupParams> addThingsToThingGroupParams() {
         return Optional.ofNullable(this.addThingsToThingGroupParams);
     }
-    public Optional<MitigationActionEnableIoTLoggingParams> getEnableIoTLoggingParams() {
+    public Optional<MitigationActionEnableIoTLoggingParams> enableIoTLoggingParams() {
         return Optional.ofNullable(this.enableIoTLoggingParams);
     }
-    public Optional<MitigationActionPublishFindingToSnsParams> getPublishFindingToSnsParams() {
+    public Optional<MitigationActionPublishFindingToSnsParams> publishFindingToSnsParams() {
         return Optional.ofNullable(this.publishFindingToSnsParams);
     }
-    public Optional<MitigationActionReplaceDefaultPolicyVersionParams> getReplaceDefaultPolicyVersionParams() {
+    public Optional<MitigationActionReplaceDefaultPolicyVersionParams> replaceDefaultPolicyVersionParams() {
         return Optional.ofNullable(this.replaceDefaultPolicyVersionParams);
     }
-    public Optional<MitigationActionUpdateCACertificateParams> getUpdateCACertificateParams() {
+    public Optional<MitigationActionUpdateCACertificateParams> updateCACertificateParams() {
         return Optional.ofNullable(this.updateCACertificateParams);
     }
-    public Optional<MitigationActionUpdateDeviceCertificateParams> getUpdateDeviceCertificateParams() {
+    public Optional<MitigationActionUpdateDeviceCertificateParams> updateDeviceCertificateParams() {
         return Optional.ofNullable(this.updateDeviceCertificateParams);
     }
 

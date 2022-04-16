@@ -21,84 +21,84 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="amazonSideAsn")
       private final @Nullable Output<Integer> amazonSideAsn;
 
-    public Output<Integer> getAmazonSideAsn() {
+    public Output<Integer> amazonSideAsn() {
         return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
     @Import(name="associationDefaultRouteTableId")
       private final @Nullable Output<String> associationDefaultRouteTableId;
 
-    public Output<String> getAssociationDefaultRouteTableId() {
+    public Output<String> associationDefaultRouteTableId() {
         return this.associationDefaultRouteTableId == null ? Codegen.empty() : this.associationDefaultRouteTableId;
     }
 
     @Import(name="autoAcceptSharedAttachments")
       private final @Nullable Output<String> autoAcceptSharedAttachments;
 
-    public Output<String> getAutoAcceptSharedAttachments() {
+    public Output<String> autoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments == null ? Codegen.empty() : this.autoAcceptSharedAttachments;
     }
 
     @Import(name="defaultRouteTableAssociation")
       private final @Nullable Output<String> defaultRouteTableAssociation;
 
-    public Output<String> getDefaultRouteTableAssociation() {
+    public Output<String> defaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation == null ? Codegen.empty() : this.defaultRouteTableAssociation;
     }
 
     @Import(name="defaultRouteTablePropagation")
       private final @Nullable Output<String> defaultRouteTablePropagation;
 
-    public Output<String> getDefaultRouteTablePropagation() {
+    public Output<String> defaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation == null ? Codegen.empty() : this.defaultRouteTablePropagation;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
-    public Output<String> getDnsSupport() {
+    public Output<String> dnsSupport() {
         return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
     }
 
     @Import(name="multicastSupport")
       private final @Nullable Output<String> multicastSupport;
 
-    public Output<String> getMulticastSupport() {
+    public Output<String> multicastSupport() {
         return this.multicastSupport == null ? Codegen.empty() : this.multicastSupport;
     }
 
     @Import(name="propagationDefaultRouteTableId")
       private final @Nullable Output<String> propagationDefaultRouteTableId;
 
-    public Output<String> getPropagationDefaultRouteTableId() {
+    public Output<String> propagationDefaultRouteTableId() {
         return this.propagationDefaultRouteTableId == null ? Codegen.empty() : this.propagationDefaultRouteTableId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayTagArgs>> tags;
 
-    public Output<List<TransitGatewayTagArgs>> getTags() {
+    public Output<List<TransitGatewayTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="transitGatewayCidrBlocks")
       private final @Nullable Output<List<String>> transitGatewayCidrBlocks;
 
-    public Output<List<String>> getTransitGatewayCidrBlocks() {
+    public Output<List<String>> transitGatewayCidrBlocks() {
         return this.transitGatewayCidrBlocks == null ? Codegen.empty() : this.transitGatewayCidrBlocks;
     }
 
     @Import(name="vpnEcmpSupport")
       private final @Nullable Output<String> vpnEcmpSupport;
 
-    public Output<String> getVpnEcmpSupport() {
+    public Output<String> vpnEcmpSupport() {
         return this.vpnEcmpSupport == null ? Codegen.empty() : this.vpnEcmpSupport;
     }
 

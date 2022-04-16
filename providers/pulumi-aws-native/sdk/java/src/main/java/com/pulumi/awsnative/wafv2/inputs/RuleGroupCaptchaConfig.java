@@ -17,7 +17,7 @@ public final class RuleGroupCaptchaConfig extends com.pulumi.resources.InvokeArg
     @Import(name="immunityTimeProperty")
       private final @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty;
 
-    public Optional<RuleGroupImmunityTimeProperty> getImmunityTimeProperty() {
+    public Optional<RuleGroupImmunityTimeProperty> immunityTimeProperty() {
         return this.immunityTimeProperty == null ? Optional.empty() : Optional.ofNullable(this.immunityTimeProperty);
     }
 

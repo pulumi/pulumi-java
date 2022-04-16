@@ -22,35 +22,35 @@ public final class ClusterExecuteCommandLogConfiguration extends com.pulumi.reso
     @Import(name="cloudWatchEncryptionEnabled")
       private final @Nullable Boolean cloudWatchEncryptionEnabled;
 
-    public Optional<Boolean> getCloudWatchEncryptionEnabled() {
+    public Optional<Boolean> cloudWatchEncryptionEnabled() {
         return this.cloudWatchEncryptionEnabled == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchEncryptionEnabled);
     }
 
     @Import(name="cloudWatchLogGroupName")
       private final @Nullable String cloudWatchLogGroupName;
 
-    public Optional<String> getCloudWatchLogGroupName() {
+    public Optional<String> cloudWatchLogGroupName() {
         return this.cloudWatchLogGroupName == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLogGroupName);
     }
 
     @Import(name="s3BucketName")
       private final @Nullable String s3BucketName;
 
-    public Optional<String> getS3BucketName() {
+    public Optional<String> s3BucketName() {
         return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
     }
 
     @Import(name="s3EncryptionEnabled")
       private final @Nullable Boolean s3EncryptionEnabled;
 
-    public Optional<Boolean> getS3EncryptionEnabled() {
+    public Optional<Boolean> s3EncryptionEnabled() {
         return this.s3EncryptionEnabled == null ? Optional.empty() : Optional.ofNullable(this.s3EncryptionEnabled);
     }
 
     @Import(name="s3KeyPrefix")
       private final @Nullable String s3KeyPrefix;
 
-    public Optional<String> getS3KeyPrefix() {
+    public Optional<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);
     }
 

@@ -31,85 +31,85 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="attributeDefinitions", type=List.class, parameters={GlobalTableAttributeDefinition.class})
     private Output<List<GlobalTableAttributeDefinition>> attributeDefinitions;
 
-    public Output<List<GlobalTableAttributeDefinition>> getAttributeDefinitions() {
+    public Output<List<GlobalTableAttributeDefinition>> attributeDefinitions() {
         return this.attributeDefinitions;
     }
     @Export(name="billingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingMode;
 
-    public Output</* @Nullable */ String> getBillingMode() {
+    public Output</* @Nullable */ String> billingMode() {
         return this.billingMode;
     }
     @Export(name="globalSecondaryIndexes", type=List.class, parameters={GlobalTableGlobalSecondaryIndex.class})
     private Output</* @Nullable */ List<GlobalTableGlobalSecondaryIndex>> globalSecondaryIndexes;
 
-    public Output</* @Nullable */ List<GlobalTableGlobalSecondaryIndex>> getGlobalSecondaryIndexes() {
+    public Output</* @Nullable */ List<GlobalTableGlobalSecondaryIndex>> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes;
     }
     @Export(name="keySchema", type=List.class, parameters={GlobalTableKeySchema.class})
     private Output<List<GlobalTableKeySchema>> keySchema;
 
-    public Output<List<GlobalTableKeySchema>> getKeySchema() {
+    public Output<List<GlobalTableKeySchema>> keySchema() {
         return this.keySchema;
     }
     @Export(name="localSecondaryIndexes", type=List.class, parameters={GlobalTableLocalSecondaryIndex.class})
     private Output</* @Nullable */ List<GlobalTableLocalSecondaryIndex>> localSecondaryIndexes;
 
-    public Output</* @Nullable */ List<GlobalTableLocalSecondaryIndex>> getLocalSecondaryIndexes() {
+    public Output</* @Nullable */ List<GlobalTableLocalSecondaryIndex>> localSecondaryIndexes() {
         return this.localSecondaryIndexes;
     }
     @Export(name="replicas", type=List.class, parameters={GlobalTableReplicaSpecification.class})
     private Output<List<GlobalTableReplicaSpecification>> replicas;
 
-    public Output<List<GlobalTableReplicaSpecification>> getReplicas() {
+    public Output<List<GlobalTableReplicaSpecification>> replicas() {
         return this.replicas;
     }
     @Export(name="sSESpecification", type=GlobalTableSSESpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableSSESpecification> sSESpecification;
 
-    public Output</* @Nullable */ GlobalTableSSESpecification> getSSESpecification() {
+    public Output</* @Nullable */ GlobalTableSSESpecification> sSESpecification() {
         return this.sSESpecification;
     }
     @Export(name="streamArn", type=String.class, parameters={})
     private Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
     @Export(name="streamSpecification", type=GlobalTableStreamSpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableStreamSpecification> streamSpecification;
 
-    public Output</* @Nullable */ GlobalTableStreamSpecification> getStreamSpecification() {
+    public Output</* @Nullable */ GlobalTableStreamSpecification> streamSpecification() {
         return this.streamSpecification;
     }
     @Export(name="tableId", type=String.class, parameters={})
     private Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
     @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
-    public Output</* @Nullable */ String> getTableName() {
+    public Output</* @Nullable */ String> tableName() {
         return this.tableName;
     }
     @Export(name="timeToLiveSpecification", type=GlobalTableTimeToLiveSpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableTimeToLiveSpecification> timeToLiveSpecification;
 
-    public Output</* @Nullable */ GlobalTableTimeToLiveSpecification> getTimeToLiveSpecification() {
+    public Output</* @Nullable */ GlobalTableTimeToLiveSpecification> timeToLiveSpecification() {
         return this.timeToLiveSpecification;
     }
     @Export(name="writeProvisionedThroughputSettings", type=GlobalTableWriteProvisionedThroughputSettings.class, parameters={})
     private Output</* @Nullable */ GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings;
 
-    public Output</* @Nullable */ GlobalTableWriteProvisionedThroughputSettings> getWriteProvisionedThroughputSettings() {
+    public Output</* @Nullable */ GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings() {
         return this.writeProvisionedThroughputSettings;
     }
 

@@ -19,28 +19,28 @@ public final class BucketMetricsConfiguration extends com.pulumi.resources.Invok
     @Import(name="accessPointArn")
       private final @Nullable String accessPointArn;
 
-    public Optional<String> getAccessPointArn() {
+    public Optional<String> accessPointArn() {
         return this.accessPointArn == null ? Optional.empty() : Optional.ofNullable(this.accessPointArn);
     }
 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @Import(name="tagFilters")
       private final @Nullable List<BucketTagFilter> tagFilters;
 
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

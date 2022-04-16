@@ -34,13 +34,13 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The aggregation field to perform aggregation and metric emission
      * 
      */
-    public Output</* @Nullable */ String> getAggregationField() {
+    public Output</* @Nullable */ String> aggregationField() {
         return this.aggregationField;
     }
     @Export(name="aggregationType", type=FleetMetricAggregationType.class, parameters={})
     private Output</* @Nullable */ FleetMetricAggregationType> aggregationType;
 
-    public Output</* @Nullable */ FleetMetricAggregationType> getAggregationType() {
+    public Output</* @Nullable */ FleetMetricAggregationType> aggregationType() {
         return this.aggregationType;
     }
     /**
@@ -54,7 +54,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The creation date of a fleet metric
      * 
      */
-    public Output<Double> getCreationDate() {
+    public Output<Double> creationDate() {
         return this.creationDate;
     }
     /**
@@ -68,7 +68,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The description of a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +82,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The index name of a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> getIndexName() {
+    public Output</* @Nullable */ String> indexName() {
         return this.indexName;
     }
     /**
@@ -96,7 +96,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The last modified date of a fleet metric
      * 
      */
-    public Output<Double> getLastModifiedDate() {
+    public Output<Double> lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
@@ -110,7 +110,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) of a fleet metric metric
      * 
      */
-    public Output<String> getMetricArn() {
+    public Output<String> metricArn() {
         return this.metricArn;
     }
     /**
@@ -124,7 +124,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The name of the fleet metric
      * 
      */
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
     /**
@@ -138,7 +138,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The period of metric emission in seconds
      * 
      */
-    public Output</* @Nullable */ Integer> getPeriod() {
+    public Output</* @Nullable */ Integer> period() {
         return this.period;
     }
     /**
@@ -152,7 +152,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The Fleet Indexing query used by a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> getQueryString() {
+    public Output</* @Nullable */ String> queryString() {
         return this.queryString;
     }
     /**
@@ -166,7 +166,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The version of a Fleet Indexing query used by a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> getQueryVersion() {
+    public Output</* @Nullable */ String> queryVersion() {
         return this.queryVersion;
     }
     /**
@@ -180,7 +180,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource
      * 
      */
-    public Output</* @Nullable */ List<FleetMetricTag>> getTags() {
+    public Output</* @Nullable */ List<FleetMetricTag>> tags() {
         return this.tags;
     }
     /**
@@ -194,7 +194,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The unit of data points emitted by a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> getUnit() {
+    public Output</* @Nullable */ String> unit() {
         return this.unit;
     }
     /**
@@ -208,7 +208,7 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The version of a fleet metric
      * 
      */
-    public Output<Double> getVersion() {
+    public Output<Double> version() {
         return this.version;
     }
 

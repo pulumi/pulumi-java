@@ -18,7 +18,7 @@ public final class EC2FleetMaintenanceStrategiesArgs extends com.pulumi.resource
     @Import(name="capacityRebalance")
       private final @Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance;
 
-    public Output<EC2FleetCapacityRebalanceArgs> getCapacityRebalance() {
+    public Output<EC2FleetCapacityRebalanceArgs> capacityRebalance() {
         return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 

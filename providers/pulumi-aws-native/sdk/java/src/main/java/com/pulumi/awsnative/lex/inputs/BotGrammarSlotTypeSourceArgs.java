@@ -26,7 +26,7 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -37,7 +37,7 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
     @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName;
     }
 
@@ -48,7 +48,7 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
     @Import(name="s3ObjectKey", required=true)
       private final Output<String> s3ObjectKey;
 
-    public Output<String> getS3ObjectKey() {
+    public Output<String> s3ObjectKey() {
         return this.s3ObjectKey;
     }
 

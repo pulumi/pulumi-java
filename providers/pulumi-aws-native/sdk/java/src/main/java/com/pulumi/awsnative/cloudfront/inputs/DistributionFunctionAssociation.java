@@ -17,14 +17,14 @@ public final class DistributionFunctionAssociation extends com.pulumi.resources.
     @Import(name="eventType")
       private final @Nullable String eventType;
 
-    public Optional<String> getEventType() {
+    public Optional<String> eventType() {
         return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
     }
 
     @Import(name="functionARN")
       private final @Nullable String functionARN;
 
-    public Optional<String> getFunctionARN() {
+    public Optional<String> functionARN() {
         return this.functionARN == null ? Optional.empty() : Optional.ofNullable(this.functionARN);
     }
 

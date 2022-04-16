@@ -19,7 +19,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceArn", required=true)
       private final String serviceArn;
 
-    public String getServiceArn() {
+    public String serviceArn() {
         return this.serviceArn;
     }
 

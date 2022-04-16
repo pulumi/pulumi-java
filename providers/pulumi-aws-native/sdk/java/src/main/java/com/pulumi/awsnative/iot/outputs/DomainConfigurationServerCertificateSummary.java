@@ -26,13 +26,13 @@ public final class DomainConfigurationServerCertificateSummary {
         this.serverCertificateStatusDetail = serverCertificateStatusDetail;
     }
 
-    public Optional<String> getServerCertificateArn() {
+    public Optional<String> serverCertificateArn() {
         return Optional.ofNullable(this.serverCertificateArn);
     }
-    public Optional<DomainConfigurationServerCertificateSummaryServerCertificateStatus> getServerCertificateStatus() {
+    public Optional<DomainConfigurationServerCertificateSummaryServerCertificateStatus> serverCertificateStatus() {
         return Optional.ofNullable(this.serverCertificateStatus);
     }
-    public Optional<String> getServerCertificateStatusDetail() {
+    public Optional<String> serverCertificateStatusDetail() {
         return Optional.ofNullable(this.serverCertificateStatusDetail);
     }
 

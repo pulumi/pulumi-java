@@ -15,14 +15,14 @@ public final class FunctionConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="comment", required=true)
       private final String comment;
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
 
     @Import(name="runtime", required=true)
       private final String runtime;
 
-    public String getRuntime() {
+    public String runtime() {
         return this.runtime;
     }
 

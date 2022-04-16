@@ -27,7 +27,7 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
     @Import(name="maxVideoBitsPerSecond")
       private final @Nullable Output<Integer> maxVideoBitsPerSecond;
 
-    public Output<Integer> getMaxVideoBitsPerSecond() {
+    public Output<Integer> maxVideoBitsPerSecond() {
         return this.maxVideoBitsPerSecond == null ? Codegen.empty() : this.maxVideoBitsPerSecond;
     }
 
@@ -38,7 +38,7 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
     @Import(name="minVideoBitsPerSecond")
       private final @Nullable Output<Integer> minVideoBitsPerSecond;
 
-    public Output<Integer> getMinVideoBitsPerSecond() {
+    public Output<Integer> minVideoBitsPerSecond() {
         return this.minVideoBitsPerSecond == null ? Codegen.empty() : this.minVideoBitsPerSecond;
     }
 
@@ -49,7 +49,7 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
     @Import(name="streamOrder")
       private final @Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder;
 
-    public Output<PackagingConfigurationStreamSelectionStreamOrder> getStreamOrder() {
+    public Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder() {
         return this.streamOrder == null ? Codegen.empty() : this.streamOrder;
     }
 

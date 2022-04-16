@@ -25,42 +25,42 @@ public final class StackSetOperationPreferencesArgs extends com.pulumi.resources
     @Import(name="failureToleranceCount")
       private final @Nullable Output<Integer> failureToleranceCount;
 
-    public Output<Integer> getFailureToleranceCount() {
+    public Output<Integer> failureToleranceCount() {
         return this.failureToleranceCount == null ? Codegen.empty() : this.failureToleranceCount;
     }
 
     @Import(name="failureTolerancePercentage")
       private final @Nullable Output<Integer> failureTolerancePercentage;
 
-    public Output<Integer> getFailureTolerancePercentage() {
+    public Output<Integer> failureTolerancePercentage() {
         return this.failureTolerancePercentage == null ? Codegen.empty() : this.failureTolerancePercentage;
     }
 
     @Import(name="maxConcurrentCount")
       private final @Nullable Output<Integer> maxConcurrentCount;
 
-    public Output<Integer> getMaxConcurrentCount() {
+    public Output<Integer> maxConcurrentCount() {
         return this.maxConcurrentCount == null ? Codegen.empty() : this.maxConcurrentCount;
     }
 
     @Import(name="maxConcurrentPercentage")
       private final @Nullable Output<Integer> maxConcurrentPercentage;
 
-    public Output<Integer> getMaxConcurrentPercentage() {
+    public Output<Integer> maxConcurrentPercentage() {
         return this.maxConcurrentPercentage == null ? Codegen.empty() : this.maxConcurrentPercentage;
     }
 
     @Import(name="regionConcurrencyType")
       private final @Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType;
 
-    public Output<StackSetRegionConcurrencyType> getRegionConcurrencyType() {
+    public Output<StackSetRegionConcurrencyType> regionConcurrencyType() {
         return this.regionConcurrencyType == null ? Codegen.empty() : this.regionConcurrencyType;
     }
 
     @Import(name="regionOrder")
       private final @Nullable Output<List<String>> regionOrder;
 
-    public Output<List<String>> getRegionOrder() {
+    public Output<List<String>> regionOrder() {
         return this.regionOrder == null ? Codegen.empty() : this.regionOrder;
     }
 

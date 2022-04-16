@@ -28,7 +28,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="algorithm")
       private final @Nullable Output<FlowEncryptionAlgorithm> algorithm;
 
-    public Output<FlowEncryptionAlgorithm> getAlgorithm() {
+    public Output<FlowEncryptionAlgorithm> algorithm() {
         return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
@@ -39,7 +39,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="constantInitializationVector")
       private final @Nullable Output<String> constantInitializationVector;
 
-    public Output<String> getConstantInitializationVector() {
+    public Output<String> constantInitializationVector() {
         return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
     }
 
@@ -50,7 +50,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deviceId")
       private final @Nullable Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId == null ? Codegen.empty() : this.deviceId;
     }
 
@@ -61,7 +61,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyType")
       private final @Nullable Output<FlowEncryptionKeyType> keyType;
 
-    public Output<FlowEncryptionKeyType> getKeyType() {
+    public Output<FlowEncryptionKeyType> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
@@ -72,7 +72,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -83,7 +83,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -94,7 +94,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -105,7 +105,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
@@ -116,7 +116,7 @@ public final class FlowEncryptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

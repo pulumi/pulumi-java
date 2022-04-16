@@ -29,21 +29,21 @@ public final class BotPromptSpecificationArgs extends com.pulumi.resources.Resou
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Output<Boolean> getAllowInterrupt() {
+    public Output<Boolean> allowInterrupt() {
         return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
     }
 
     @Import(name="maxRetries", required=true)
       private final Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
+    public Output<Integer> maxRetries() {
         return this.maxRetries;
     }
 
     @Import(name="messageGroupsList", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroupsList;
 
-    public Output<List<BotMessageGroupArgs>> getMessageGroupsList() {
+    public Output<List<BotMessageGroupArgs>> messageGroupsList() {
         return this.messageGroupsList;
     }
 

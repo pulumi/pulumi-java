@@ -38,16 +38,16 @@ public final class GetOIDCProviderResult {
      * Amazon Resource Name (ARN) of the OIDC provider
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<String> getClientIdList() {
+    public List<String> clientIdList() {
         return this.clientIdList == null ? List.of() : this.clientIdList;
     }
-    public List<OIDCProviderTag> getTags() {
+    public List<OIDCProviderTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public List<String> getThumbprintList() {
+    public List<String> thumbprintList() {
         return this.thumbprintList == null ? List.of() : this.thumbprintList;
     }
 

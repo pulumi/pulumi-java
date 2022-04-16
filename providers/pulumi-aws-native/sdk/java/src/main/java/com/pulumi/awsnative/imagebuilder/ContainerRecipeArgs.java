@@ -29,7 +29,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="components")
       private final @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
 
-    public Output<List<ContainerRecipeComponentConfigurationArgs>> getComponents() {
+    public Output<List<ContainerRecipeComponentConfigurationArgs>> components() {
         return this.components == null ? Codegen.empty() : this.components;
     }
 
@@ -40,7 +40,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="containerType")
       private final @Nullable Output<ContainerRecipeContainerType> containerType;
 
-    public Output<ContainerRecipeContainerType> getContainerType() {
+    public Output<ContainerRecipeContainerType> containerType() {
         return this.containerType == null ? Codegen.empty() : this.containerType;
     }
 
@@ -51,7 +51,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dockerfileTemplateData")
       private final @Nullable Output<String> dockerfileTemplateData;
 
-    public Output<String> getDockerfileTemplateData() {
+    public Output<String> dockerfileTemplateData() {
         return this.dockerfileTemplateData == null ? Codegen.empty() : this.dockerfileTemplateData;
     }
 
@@ -73,7 +73,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dockerfileTemplateUri")
       private final @Nullable Output<String> dockerfileTemplateUri;
 
-    public Output<String> getDockerfileTemplateUri() {
+    public Output<String> dockerfileTemplateUri() {
         return this.dockerfileTemplateUri == null ? Codegen.empty() : this.dockerfileTemplateUri;
     }
 
@@ -84,7 +84,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="imageOsVersionOverride")
       private final @Nullable Output<String> imageOsVersionOverride;
 
-    public Output<String> getImageOsVersionOverride() {
+    public Output<String> imageOsVersionOverride() {
         return this.imageOsVersionOverride == null ? Codegen.empty() : this.imageOsVersionOverride;
     }
 
@@ -95,7 +95,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceConfiguration")
       private final @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
 
-    public Output<ContainerRecipeInstanceConfigurationArgs> getInstanceConfiguration() {
+    public Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration() {
         return this.instanceConfiguration == null ? Codegen.empty() : this.instanceConfiguration;
     }
 
@@ -106,7 +106,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -117,7 +117,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -128,7 +128,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="parentImage")
       private final @Nullable Output<String> parentImage;
 
-    public Output<String> getParentImage() {
+    public Output<String> parentImage() {
         return this.parentImage == null ? Codegen.empty() : this.parentImage;
     }
 
@@ -139,7 +139,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="platformOverride")
       private final @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
 
-    public Output<ContainerRecipePlatformOverride> getPlatformOverride() {
+    public Output<ContainerRecipePlatformOverride> platformOverride() {
         return this.platformOverride == null ? Codegen.empty() : this.platformOverride;
     }
 
@@ -150,7 +150,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -161,7 +161,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetRepository")
       private final @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
 
-    public Output<ContainerRecipeTargetContainerRepositoryArgs> getTargetRepository() {
+    public Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository() {
         return this.targetRepository == null ? Codegen.empty() : this.targetRepository;
     }
 
@@ -172,7 +172,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -183,7 +183,7 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
-    public Output<String> getWorkingDirectory() {
+    public Output<String> workingDirectory() {
         return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 

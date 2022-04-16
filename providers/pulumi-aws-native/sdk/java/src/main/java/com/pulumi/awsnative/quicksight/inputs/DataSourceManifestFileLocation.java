@@ -23,7 +23,7 @@ public final class DataSourceManifestFileLocation extends com.pulumi.resources.I
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceManifestFileLocation extends com.pulumi.resources.I
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

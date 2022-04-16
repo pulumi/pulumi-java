@@ -29,7 +29,7 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="adMarkers")
       private final @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
 
-    public Optional<PackagingConfigurationHlsManifestAdMarkers> getAdMarkers() {
+    public Optional<PackagingConfigurationHlsManifestAdMarkers> adMarkers() {
         return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
     }
 
@@ -40,14 +40,14 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="includeIframeOnlyStream")
       private final @Nullable Boolean includeIframeOnlyStream;
 
-    public Optional<Boolean> getIncludeIframeOnlyStream() {
+    public Optional<Boolean> includeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
     @Import(name="manifestName")
       private final @Nullable String manifestName;
 
-    public Optional<String> getManifestName() {
+    public Optional<String> manifestName() {
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
     }
 
@@ -58,7 +58,7 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="programDateTimeIntervalSeconds")
       private final @Nullable Integer programDateTimeIntervalSeconds;
 
-    public Optional<Integer> getProgramDateTimeIntervalSeconds() {
+    public Optional<Integer> programDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
 
@@ -69,14 +69,14 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
     @Import(name="repeatExtXKey")
       private final @Nullable Boolean repeatExtXKey;
 
-    public Optional<Boolean> getRepeatExtXKey() {
+    public Optional<Boolean> repeatExtXKey() {
         return this.repeatExtXKey == null ? Optional.empty() : Optional.ofNullable(this.repeatExtXKey);
     }
 
     @Import(name="streamSelection")
       private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    public Optional<PackagingConfigurationStreamSelection> getStreamSelection() {
+    public Optional<PackagingConfigurationStreamSelection> streamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 

@@ -17,14 +17,14 @@ public final class LicenseIssuerData extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="signKey")
       private final @Nullable String signKey;
 
-    public Optional<String> getSignKey() {
+    public Optional<String> signKey() {
         return this.signKey == null ? Optional.empty() : Optional.ofNullable(this.signKey);
     }
 

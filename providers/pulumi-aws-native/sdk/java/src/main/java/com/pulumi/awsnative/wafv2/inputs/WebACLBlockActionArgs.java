@@ -22,7 +22,7 @@ public final class WebACLBlockActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="customResponse")
       private final @Nullable Output<WebACLCustomResponseArgs> customResponse;
 
-    public Output<WebACLCustomResponseArgs> getCustomResponse() {
+    public Output<WebACLCustomResponseArgs> customResponse() {
         return this.customResponse == null ? Codegen.empty() : this.customResponse;
     }
 

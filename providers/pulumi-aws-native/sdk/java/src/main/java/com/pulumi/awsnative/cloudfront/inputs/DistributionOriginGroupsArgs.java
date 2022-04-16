@@ -20,14 +20,14 @@ public final class DistributionOriginGroupsArgs extends com.pulumi.resources.Res
     @Import(name="items")
       private final @Nullable Output<List<DistributionOriginGroupArgs>> items;
 
-    public Output<List<DistributionOriginGroupArgs>> getItems() {
+    public Output<List<DistributionOriginGroupArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
     @Import(name="quantity", required=true)
       private final Output<Integer> quantity;
 
-    public Output<Integer> getQuantity() {
+    public Output<Integer> quantity() {
         return this.quantity;
     }
 

@@ -17,7 +17,7 @@ public final class AssociationInstanceAssociationOutputLocation extends com.pulu
     @Import(name="s3Location")
       private final @Nullable AssociationS3OutputLocation s3Location;
 
-    public Optional<AssociationS3OutputLocation> getS3Location() {
+    public Optional<AssociationS3OutputLocation> s3Location() {
         return this.s3Location == null ? Optional.empty() : Optional.ofNullable(this.s3Location);
     }
 

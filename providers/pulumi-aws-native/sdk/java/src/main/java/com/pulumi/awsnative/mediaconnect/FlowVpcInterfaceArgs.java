@@ -23,7 +23,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="flowArn", required=true)
       private final Output<String> flowArn;
 
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
 
@@ -34,7 +34,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -56,7 +56,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -67,7 +67,7 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

@@ -22,28 +22,28 @@ public final class AssistantAssociationArgs extends com.pulumi.resources.Resourc
     @Import(name="assistantId", required=true)
       private final Output<String> assistantId;
 
-    public Output<String> getAssistantId() {
+    public Output<String> assistantId() {
         return this.assistantId;
     }
 
     @Import(name="association", required=true)
       private final Output<AssistantAssociationAssociationDataArgs> association;
 
-    public Output<AssistantAssociationAssociationDataArgs> getAssociation() {
+    public Output<AssistantAssociationAssociationDataArgs> association() {
         return this.association;
     }
 
     @Import(name="associationType", required=true)
       private final Output<AssistantAssociationAssociationType> associationType;
 
-    public Output<AssistantAssociationAssociationType> getAssociationType() {
+    public Output<AssistantAssociationAssociationType> associationType() {
         return this.associationType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AssistantAssociationTagArgs>> tags;
 
-    public Output<List<AssistantAssociationTagArgs>> getTags() {
+    public Output<List<AssistantAssociationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -18,7 +18,7 @@ public final class WebACLBlockAction {
         this.customResponse = customResponse;
     }
 
-    public Optional<WebACLCustomResponse> getCustomResponse() {
+    public Optional<WebACLCustomResponse> customResponse() {
         return Optional.ofNullable(this.customResponse);
     }
 

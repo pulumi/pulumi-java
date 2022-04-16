@@ -22,7 +22,7 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     @Import(name="accessControlAttributes", required=true)
       private final Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
-    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
+    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes() {
         return this.accessControlAttributes;
     }
 

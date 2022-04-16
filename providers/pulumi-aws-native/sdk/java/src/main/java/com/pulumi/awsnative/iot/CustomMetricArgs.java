@@ -25,7 +25,7 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
@@ -47,7 +47,7 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricType", required=true)
       private final Output<CustomMetricMetricType> metricType;
 
-    public Output<CustomMetricMetricType> getMetricType() {
+    public Output<CustomMetricMetricType> metricType() {
         return this.metricType;
     }
 
@@ -58,7 +58,7 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<CustomMetricTagArgs>> tags;
 
-    public Output<List<CustomMetricTagArgs>> getTags() {
+    public Output<List<CustomMetricTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -18,14 +18,14 @@ public final class BucketReplicationTimeArgs extends com.pulumi.resources.Resour
     @Import(name="status", required=true)
       private final Output<BucketReplicationTimeStatus> status;
 
-    public Output<BucketReplicationTimeStatus> getStatus() {
+    public Output<BucketReplicationTimeStatus> status() {
         return this.status;
     }
 
     @Import(name="time", required=true)
       private final Output<BucketReplicationTimeValueArgs> time;
 
-    public Output<BucketReplicationTimeValueArgs> getTime() {
+    public Output<BucketReplicationTimeValueArgs> time() {
         return this.time;
     }
 

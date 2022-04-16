@@ -20,7 +20,7 @@ public final class SuiteDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="suiteDefinitionConfiguration", required=true)
       private final Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
 
-    public Output<SuiteDefinitionConfigurationPropertiesArgs> getSuiteDefinitionConfiguration() {
+    public Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
     }
 
@@ -31,7 +31,7 @@ public final class SuiteDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
 
-    public Output<List<SuiteDefinitionTagArgs>> getTags() {
+    public Output<List<SuiteDefinitionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

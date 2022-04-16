@@ -22,10 +22,10 @@ public final class JobTemplateRateIncreaseCriteria {
         this.numberOfSucceededThings = numberOfSucceededThings;
     }
 
-    public Optional<Integer> getNumberOfNotifiedThings() {
+    public Optional<Integer> numberOfNotifiedThings() {
         return Optional.ofNullable(this.numberOfNotifiedThings);
     }
-    public Optional<Integer> getNumberOfSucceededThings() {
+    public Optional<Integer> numberOfSucceededThings() {
         return Optional.ofNullable(this.numberOfSucceededThings);
     }
 

@@ -21,42 +21,42 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicy")
       private final @Nullable Output<Object> accessPolicy;
 
-    public Output<Object> getAccessPolicy() {
+    public Output<Object> accessPolicy() {
         return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
     @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
     }
 
     @Import(name="backupVaultTags")
       private final @Nullable Output<Object> backupVaultTags;
 
-    public Output<Object> getBackupVaultTags() {
+    public Output<Object> backupVaultTags() {
         return this.backupVaultTags == null ? Codegen.empty() : this.backupVaultTags;
     }
 
     @Import(name="encryptionKeyArn")
       private final @Nullable Output<String> encryptionKeyArn;
 
-    public Output<String> getEncryptionKeyArn() {
+    public Output<String> encryptionKeyArn() {
         return this.encryptionKeyArn == null ? Codegen.empty() : this.encryptionKeyArn;
     }
 
     @Import(name="lockConfiguration")
       private final @Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
 
-    public Output<BackupVaultLockConfigurationTypeArgs> getLockConfiguration() {
+    public Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration() {
         return this.lockConfiguration == null ? Codegen.empty() : this.lockConfiguration;
     }
 
     @Import(name="notifications")
       private final @Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications;
 
-    public Output<BackupVaultNotificationObjectTypeArgs> getNotifications() {
+    public Output<BackupVaultNotificationObjectTypeArgs> notifications() {
         return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 

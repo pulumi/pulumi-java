@@ -17,14 +17,14 @@ public final class ProvisioningTemplateProvisioningHook extends com.pulumi.resou
     @Import(name="payloadVersion")
       private final @Nullable String payloadVersion;
 
-    public Optional<String> getPayloadVersion() {
+    public Optional<String> payloadVersion() {
         return this.payloadVersion == null ? Optional.empty() : Optional.ofNullable(this.payloadVersion);
     }
 
     @Import(name="targetArn")
       private final @Nullable String targetArn;
 
-    public Optional<String> getTargetArn() {
+    public Optional<String> targetArn() {
         return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);
     }
 

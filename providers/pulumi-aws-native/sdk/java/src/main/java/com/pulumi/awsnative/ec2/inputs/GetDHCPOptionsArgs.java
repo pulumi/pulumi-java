@@ -15,7 +15,7 @@ public final class GetDHCPOptionsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dhcpOptionsId", required=true)
       private final String dhcpOptionsId;
 
-    public String getDhcpOptionsId() {
+    public String dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
 

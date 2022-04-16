@@ -29,7 +29,7 @@ public class HookDefaultVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a HookDefaultVersion
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +47,7 @@ public class HookDefaultVersion extends com.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
     /**
@@ -61,7 +61,7 @@ public class HookDefaultVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    public Output</* @Nullable */ String> getTypeVersionArn() {
+    public Output</* @Nullable */ String> typeVersionArn() {
         return this.typeVersionArn;
     }
     /**
@@ -75,7 +75,7 @@ public class HookDefaultVersion extends com.pulumi.resources.CustomResource {
      * @return The ID of an existing version of the hook to set as the default.
      * 
      */
-    public Output</* @Nullable */ String> getVersionId() {
+    public Output</* @Nullable */ String> versionId() {
         return this.versionId;
     }
 

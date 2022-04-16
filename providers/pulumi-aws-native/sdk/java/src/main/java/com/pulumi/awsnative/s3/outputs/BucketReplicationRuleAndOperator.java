@@ -24,10 +24,10 @@ public final class BucketReplicationRuleAndOperator {
         this.tagFilters = tagFilters;
     }
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

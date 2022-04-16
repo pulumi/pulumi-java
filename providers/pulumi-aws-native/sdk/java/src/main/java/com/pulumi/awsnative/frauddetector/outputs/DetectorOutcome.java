@@ -56,41 +56,41 @@ public final class DetectorOutcome {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the outcome was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Boolean> getInline() {
+    public Optional<Boolean> inline() {
         return Optional.ofNullable(this.inline);
     }
     /**
      * The time when the outcome was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tags associated with this outcome.
      * 
     */
-    public List<DetectorTag> getTags() {
+    public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

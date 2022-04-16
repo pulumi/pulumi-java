@@ -23,10 +23,10 @@ public final class BackupPlanCopyActionResourceType {
         this.lifecycle = lifecycle;
     }
 
-    public String getDestinationBackupVaultArn() {
+    public String destinationBackupVaultArn() {
         return this.destinationBackupVaultArn;
     }
-    public Optional<BackupPlanLifecycleResourceType> getLifecycle() {
+    public Optional<BackupPlanLifecycleResourceType> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
 

@@ -36,21 +36,21 @@ public final class GetAnalyzerResult {
         this.tags = tags;
     }
 
-    public List<AnalyzerArchiveRule> getArchiveRules() {
+    public List<AnalyzerArchiveRule> archiveRules() {
         return this.archiveRules == null ? List.of() : this.archiveRules;
     }
     /**
      * Amazon Resource Name (ARN) of the analyzer
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<AnalyzerTag> getTags() {
+    public List<AnalyzerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

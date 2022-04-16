@@ -15,7 +15,7 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="streamingImageId", required=true)
       private final String streamingImageId;
 
-    public String getStreamingImageId() {
+    public String streamingImageId() {
         return this.streamingImageId;
     }
 
@@ -26,7 +26,7 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="studioId", required=true)
       private final String studioId;
 
-    public String getStudioId() {
+    public String studioId() {
         return this.studioId;
     }
 

@@ -19,7 +19,7 @@ public final class GetLaunchConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="launchConfigurationName", required=true)
       private final String launchConfigurationName;
 
-    public String getLaunchConfigurationName() {
+    public String launchConfigurationName() {
         return this.launchConfigurationName;
     }
 

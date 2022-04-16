@@ -19,7 +19,7 @@ public final class GetMultiRegionAccessPointPolicyArgs extends com.pulumi.resour
     @Import(name="mrapName", required=true)
       private final String mrapName;
 
-    public String getMrapName() {
+    public String mrapName() {
         return this.mrapName;
     }
 

@@ -19,7 +19,7 @@ public final class GraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<GraphTagArgs>> tags;
 
-    public Output<List<GraphTagArgs>> getTags() {
+    public Output<List<GraphTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -18,7 +18,7 @@ public final class GetResourceDataSyncResult {
         this.syncSource = syncSource;
     }
 
-    public Optional<ResourceDataSyncSyncSource> getSyncSource() {
+    public Optional<ResourceDataSyncSyncSource> syncSource() {
         return Optional.ofNullable(this.syncSource);
     }
 

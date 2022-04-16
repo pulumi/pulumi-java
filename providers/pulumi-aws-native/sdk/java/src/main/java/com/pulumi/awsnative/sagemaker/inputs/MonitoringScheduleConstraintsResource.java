@@ -25,7 +25,7 @@ public final class MonitoringScheduleConstraintsResource extends com.pulumi.reso
     @Import(name="s3Uri")
       private final @Nullable String s3Uri;
 
-    public Optional<String> getS3Uri() {
+    public Optional<String> s3Uri() {
         return this.s3Uri == null ? Optional.empty() : Optional.ofNullable(this.s3Uri);
     }
 

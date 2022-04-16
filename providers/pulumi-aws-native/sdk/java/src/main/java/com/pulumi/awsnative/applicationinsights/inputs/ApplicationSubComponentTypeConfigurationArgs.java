@@ -26,7 +26,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends com.pulu
     @Import(name="subComponentConfigurationDetails", required=true)
       private final Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
 
-    public Output<ApplicationSubComponentConfigurationDetailsArgs> getSubComponentConfigurationDetails() {
+    public Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends com.pulu
     @Import(name="subComponentType", required=true)
       private final Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
-    public Output<ApplicationSubComponentTypeConfigurationSubComponentType> getSubComponentType() {
+    public Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType() {
         return this.subComponentType;
     }
 

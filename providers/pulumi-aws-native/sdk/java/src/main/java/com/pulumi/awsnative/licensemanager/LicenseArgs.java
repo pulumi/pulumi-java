@@ -28,21 +28,21 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="beneficiary")
       private final @Nullable Output<String> beneficiary;
 
-    public Output<String> getBeneficiary() {
+    public Output<String> beneficiary() {
         return this.beneficiary == null ? Codegen.empty() : this.beneficiary;
     }
 
     @Import(name="consumptionConfiguration", required=true)
       private final Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration;
 
-    public Output<LicenseConsumptionConfigurationArgs> getConsumptionConfiguration() {
+    public Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration() {
         return this.consumptionConfiguration;
     }
 
     @Import(name="entitlements", required=true)
       private final Output<List<LicenseEntitlementArgs>> entitlements;
 
-    public Output<List<LicenseEntitlementArgs>> getEntitlements() {
+    public Output<List<LicenseEntitlementArgs>> entitlements() {
         return this.entitlements;
     }
 
@@ -53,21 +53,21 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeRegion", required=true)
       private final Output<String> homeRegion;
 
-    public Output<String> getHomeRegion() {
+    public Output<String> homeRegion() {
         return this.homeRegion;
     }
 
     @Import(name="issuer", required=true)
       private final Output<LicenseIssuerDataArgs> issuer;
 
-    public Output<LicenseIssuerDataArgs> getIssuer() {
+    public Output<LicenseIssuerDataArgs> issuer() {
         return this.issuer;
     }
 
     @Import(name="licenseMetadata")
       private final @Nullable Output<List<LicenseMetadataArgs>> licenseMetadata;
 
-    public Output<List<LicenseMetadataArgs>> getLicenseMetadata() {
+    public Output<List<LicenseMetadataArgs>> licenseMetadata() {
         return this.licenseMetadata == null ? Codegen.empty() : this.licenseMetadata;
     }
 
@@ -78,7 +78,7 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseName")
       private final @Nullable Output<String> licenseName;
 
-    public Output<String> getLicenseName() {
+    public Output<String> licenseName() {
         return this.licenseName == null ? Codegen.empty() : this.licenseName;
     }
 
@@ -89,7 +89,7 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productName", required=true)
       private final Output<String> productName;
 
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName;
     }
 
@@ -100,21 +100,21 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productSKU")
       private final @Nullable Output<String> productSKU;
 
-    public Output<String> getProductSKU() {
+    public Output<String> productSKU() {
         return this.productSKU == null ? Codegen.empty() : this.productSKU;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="validity", required=true)
       private final Output<LicenseValidityDateFormatArgs> validity;
 
-    public Output<LicenseValidityDateFormatArgs> getValidity() {
+    public Output<LicenseValidityDateFormatArgs> validity() {
         return this.validity;
     }
 

@@ -26,7 +26,7 @@ public final class GetIPAMAllocationResult {
      * Id of the allocation.
      * 
     */
-    public Optional<String> getIpamPoolAllocationId() {
+    public Optional<String> ipamPoolAllocationId() {
         return Optional.ofNullable(this.ipamPoolAllocationId);
     }
 

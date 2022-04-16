@@ -18,21 +18,21 @@ public final class ResponseHeadersPolicyCustomHeaderArgs extends com.pulumi.reso
     @Import(name="header", required=true)
       private final Output<String> header;
 
-    public Output<String> getHeader() {
+    public Output<String> header() {
         return this.header;
     }
 
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

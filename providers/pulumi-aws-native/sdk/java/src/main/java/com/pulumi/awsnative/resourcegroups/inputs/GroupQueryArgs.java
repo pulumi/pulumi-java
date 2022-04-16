@@ -20,21 +20,21 @@ public final class GroupQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceTypeFilters")
       private final @Nullable Output<List<String>> resourceTypeFilters;
 
-    public Output<List<String>> getResourceTypeFilters() {
+    public Output<List<String>> resourceTypeFilters() {
         return this.resourceTypeFilters == null ? Codegen.empty() : this.resourceTypeFilters;
     }
 
     @Import(name="stackIdentifier")
       private final @Nullable Output<String> stackIdentifier;
 
-    public Output<String> getStackIdentifier() {
+    public Output<String> stackIdentifier() {
         return this.stackIdentifier == null ? Codegen.empty() : this.stackIdentifier;
     }
 
     @Import(name="tagFilters")
       private final @Nullable Output<List<GroupTagFilterArgs>> tagFilters;
 
-    public Output<List<GroupTagFilterArgs>> getTagFilters() {
+    public Output<List<GroupTagFilterArgs>> tagFilters() {
         return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 

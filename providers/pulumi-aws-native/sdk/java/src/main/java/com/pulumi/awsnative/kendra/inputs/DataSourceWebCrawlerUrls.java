@@ -18,14 +18,14 @@ public final class DataSourceWebCrawlerUrls extends com.pulumi.resources.InvokeA
     @Import(name="seedUrlConfiguration")
       private final @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration;
 
-    public Optional<DataSourceWebCrawlerSeedUrlConfiguration> getSeedUrlConfiguration() {
+    public Optional<DataSourceWebCrawlerSeedUrlConfiguration> seedUrlConfiguration() {
         return this.seedUrlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.seedUrlConfiguration);
     }
 
     @Import(name="siteMapsConfiguration")
       private final @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration;
 
-    public Optional<DataSourceWebCrawlerSiteMapsConfiguration> getSiteMapsConfiguration() {
+    public Optional<DataSourceWebCrawlerSiteMapsConfiguration> siteMapsConfiguration() {
         return this.siteMapsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.siteMapsConfiguration);
     }
 

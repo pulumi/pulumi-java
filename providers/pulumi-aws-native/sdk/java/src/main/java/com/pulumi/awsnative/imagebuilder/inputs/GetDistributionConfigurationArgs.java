@@ -19,7 +19,7 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

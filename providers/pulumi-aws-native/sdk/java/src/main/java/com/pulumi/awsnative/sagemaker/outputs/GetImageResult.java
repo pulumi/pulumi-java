@@ -37,23 +37,23 @@ public final class GetImageResult {
         this.tags = tags;
     }
 
-    public Optional<String> getImageArn() {
+    public Optional<String> imageArn() {
         return Optional.ofNullable(this.imageArn);
     }
-    public Optional<String> getImageDescription() {
+    public Optional<String> imageDescription() {
         return Optional.ofNullable(this.imageDescription);
     }
-    public Optional<String> getImageDisplayName() {
+    public Optional<String> imageDisplayName() {
         return Optional.ofNullable(this.imageDisplayName);
     }
-    public Optional<String> getImageRoleArn() {
+    public Optional<String> imageRoleArn() {
         return Optional.ofNullable(this.imageRoleArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<ImageTag> getTags() {
+    public List<ImageTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

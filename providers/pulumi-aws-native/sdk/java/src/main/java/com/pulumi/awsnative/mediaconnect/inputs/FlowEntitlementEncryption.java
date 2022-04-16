@@ -27,7 +27,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="algorithm", required=true)
       private final FlowEntitlementEncryptionAlgorithm algorithm;
 
-    public FlowEntitlementEncryptionAlgorithm getAlgorithm() {
+    public FlowEntitlementEncryptionAlgorithm algorithm() {
         return this.algorithm;
     }
 
@@ -38,7 +38,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="constantInitializationVector")
       private final @Nullable String constantInitializationVector;
 
-    public Optional<String> getConstantInitializationVector() {
+    public Optional<String> constantInitializationVector() {
         return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
     }
 
@@ -49,7 +49,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="deviceId")
       private final @Nullable String deviceId;
 
-    public Optional<String> getDeviceId() {
+    public Optional<String> deviceId() {
         return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
     }
 
@@ -60,7 +60,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="keyType")
       private final @Nullable FlowEntitlementEncryptionKeyType keyType;
 
-    public Optional<FlowEntitlementEncryptionKeyType> getKeyType() {
+    public Optional<FlowEntitlementEncryptionKeyType> keyType() {
         return this.keyType == null ? Optional.empty() : Optional.ofNullable(this.keyType);
     }
 
@@ -71,7 +71,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -82,7 +82,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
@@ -93,7 +93,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
@@ -104,7 +104,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="secretArn")
       private final @Nullable String secretArn;
 
-    public Optional<String> getSecretArn() {
+    public Optional<String> secretArn() {
         return this.secretArn == null ? Optional.empty() : Optional.ofNullable(this.secretArn);
     }
 
@@ -115,7 +115,7 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

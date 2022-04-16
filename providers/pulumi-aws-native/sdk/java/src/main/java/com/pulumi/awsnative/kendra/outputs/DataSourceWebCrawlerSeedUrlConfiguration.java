@@ -24,10 +24,10 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration {
         this.webCrawlerMode = webCrawlerMode;
     }
 
-    public List<String> getSeedUrls() {
+    public List<String> seedUrls() {
         return this.seedUrls;
     }
-    public Optional<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> getWebCrawlerMode() {
+    public Optional<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode() {
         return Optional.ofNullable(this.webCrawlerMode);
     }
 

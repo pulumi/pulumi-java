@@ -17,28 +17,28 @@ public final class ExperimentTreatmentObject extends com.pulumi.resources.Invoke
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @Import(name="feature", required=true)
       private final String feature;
 
-    public String getFeature() {
+    public String feature() {
         return this.feature;
     }
 
     @Import(name="treatmentName", required=true)
       private final String treatmentName;
 
-    public String getTreatmentName() {
+    public String treatmentName() {
         return this.treatmentName;
     }
 
     @Import(name="variation", required=true)
       private final String variation;
 
-    public String getVariation() {
+    public String variation() {
         return this.variation;
     }
 

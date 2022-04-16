@@ -20,21 +20,21 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy e
     @Import(name="base")
       private final @Nullable Integer base;
 
-    public Optional<Integer> getBase() {
+    public Optional<Integer> base() {
         return this.base == null ? Optional.empty() : Optional.ofNullable(this.base);
     }
 
     @Import(name="capacityProvider", required=true)
       private final Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider;
 
-    public Either<ClusterCapacityProviderAssociationsCapacityProvider,String> getCapacityProvider() {
+    public Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider() {
         return this.capacityProvider;
     }
 
     @Import(name="weight")
       private final @Nullable Integer weight;
 
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
     }
 

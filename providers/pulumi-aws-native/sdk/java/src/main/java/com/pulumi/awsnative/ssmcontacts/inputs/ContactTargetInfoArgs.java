@@ -26,7 +26,7 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="contactId", required=true)
       private final Output<String> contactId;
 
-    public Output<String> getContactId() {
+    public Output<String> contactId() {
         return this.contactId;
     }
 
@@ -37,7 +37,7 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="isEssential", required=true)
       private final Output<Boolean> isEssential;
 
-    public Output<Boolean> getIsEssential() {
+    public Output<Boolean> isEssential() {
         return this.isEssential;
     }
 

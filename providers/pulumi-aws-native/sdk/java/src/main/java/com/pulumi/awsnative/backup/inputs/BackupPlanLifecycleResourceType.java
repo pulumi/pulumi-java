@@ -17,14 +17,14 @@ public final class BackupPlanLifecycleResourceType extends com.pulumi.resources.
     @Import(name="deleteAfterDays")
       private final @Nullable Double deleteAfterDays;
 
-    public Optional<Double> getDeleteAfterDays() {
+    public Optional<Double> deleteAfterDays() {
         return this.deleteAfterDays == null ? Optional.empty() : Optional.ofNullable(this.deleteAfterDays);
     }
 
     @Import(name="moveToColdStorageAfterDays")
       private final @Nullable Double moveToColdStorageAfterDays;
 
-    public Optional<Double> getMoveToColdStorageAfterDays() {
+    public Optional<Double> moveToColdStorageAfterDays() {
         return this.moveToColdStorageAfterDays == null ? Optional.empty() : Optional.ofNullable(this.moveToColdStorageAfterDays);
     }
 

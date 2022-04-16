@@ -20,14 +20,14 @@ public final class ActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ActivityTagsEntryArgs>> tags;
 
-    public Output<List<ActivityTagsEntryArgs>> getTags() {
+    public Output<List<ActivityTagsEntryArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

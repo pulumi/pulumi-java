@@ -24,7 +24,7 @@ public final class ThemeResourcePermission extends com.pulumi.resources.InvokeAr
     @Import(name="actions", required=true)
       private final List<String> actions;
 
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions;
     }
 
@@ -49,7 +49,7 @@ public final class ThemeResourcePermission extends com.pulumi.resources.InvokeAr
     @Import(name="principal", required=true)
       private final String principal;
 
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
 

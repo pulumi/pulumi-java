@@ -18,28 +18,28 @@ public final class PublicKeyConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="callerReference", required=true)
       private final Output<String> callerReference;
 
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference;
     }
 
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="encodedKey", required=true)
       private final Output<String> encodedKey;
 
-    public Output<String> getEncodedKey() {
+    public Output<String> encodedKey() {
         return this.encodedKey;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

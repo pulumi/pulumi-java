@@ -27,7 +27,7 @@ public final class ThemeGutterStyleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="show")
       private final @Nullable Output<Boolean> show;
 
-    public Output<Boolean> getShow() {
+    public Output<Boolean> show() {
         return this.show == null ? Codegen.empty() : this.show;
     }
 

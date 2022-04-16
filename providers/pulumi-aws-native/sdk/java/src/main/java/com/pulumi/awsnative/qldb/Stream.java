@@ -26,43 +26,43 @@ public class Stream extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="exclusiveEndTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> exclusiveEndTime;
 
-    public Output</* @Nullable */ String> getExclusiveEndTime() {
+    public Output</* @Nullable */ String> exclusiveEndTime() {
         return this.exclusiveEndTime;
     }
     @Export(name="inclusiveStartTime", type=String.class, parameters={})
     private Output<String> inclusiveStartTime;
 
-    public Output<String> getInclusiveStartTime() {
+    public Output<String> inclusiveStartTime() {
         return this.inclusiveStartTime;
     }
     @Export(name="kinesisConfiguration", type=StreamKinesisConfiguration.class, parameters={})
     private Output<StreamKinesisConfiguration> kinesisConfiguration;
 
-    public Output<StreamKinesisConfiguration> getKinesisConfiguration() {
+    public Output<StreamKinesisConfiguration> kinesisConfiguration() {
         return this.kinesisConfiguration;
     }
     @Export(name="ledgerName", type=String.class, parameters={})
     private Output<String> ledgerName;
 
-    public Output<String> getLedgerName() {
+    public Output<String> ledgerName() {
         return this.ledgerName;
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="streamName", type=String.class, parameters={})
     private Output<String> streamName;
 
-    public Output<String> getStreamName() {
+    public Output<String> streamName() {
         return this.streamName;
     }
     /**
@@ -76,7 +76,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<StreamTag>> getTags() {
+    public Output</* @Nullable */ List<StreamTag>> tags() {
         return this.tags;
     }
 

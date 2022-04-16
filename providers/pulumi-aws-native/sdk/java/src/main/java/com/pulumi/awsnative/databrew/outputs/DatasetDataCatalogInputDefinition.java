@@ -45,24 +45,24 @@ public final class DatasetDataCatalogInputDefinition {
      * Catalog id
      * 
     */
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Database name
      * 
     */
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Table name
      * 
     */
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
-    public Optional<DatasetS3Location> getTempDirectory() {
+    public Optional<DatasetS3Location> tempDirectory() {
         return Optional.ofNullable(this.tempDirectory);
     }
 

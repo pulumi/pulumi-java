@@ -26,14 +26,14 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="creationTime", required=true)
       private final String creationTime;
 
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
 
     @Import(name="endpointName")
       private final @Nullable String endpointName;
 
-    public Optional<String> getEndpointName() {
+    public Optional<String> endpointName() {
         return this.endpointName == null ? Optional.empty() : Optional.ofNullable(this.endpointName);
     }
 
@@ -44,7 +44,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="failureReason")
       private final @Nullable String failureReason;
 
-    public Optional<String> getFailureReason() {
+    public Optional<String> failureReason() {
         return this.failureReason == null ? Optional.empty() : Optional.ofNullable(this.failureReason);
     }
 
@@ -55,7 +55,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
 
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
 
@@ -66,14 +66,14 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="monitoringExecutionStatus", required=true)
       private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
 
-    public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus getMonitoringExecutionStatus() {
+    public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
     @Import(name="monitoringScheduleName", required=true)
       private final String monitoringScheduleName;
 
-    public String getMonitoringScheduleName() {
+    public String monitoringScheduleName() {
         return this.monitoringScheduleName;
     }
 
@@ -84,7 +84,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="processingJobArn")
       private final @Nullable String processingJobArn;
 
-    public Optional<String> getProcessingJobArn() {
+    public Optional<String> processingJobArn() {
         return this.processingJobArn == null ? Optional.empty() : Optional.ofNullable(this.processingJobArn);
     }
 
@@ -95,7 +95,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
     @Import(name="scheduledTime", required=true)
       private final String scheduledTime;
 
-    public String getScheduledTime() {
+    public String scheduledTime() {
         return this.scheduledTime;
     }
 

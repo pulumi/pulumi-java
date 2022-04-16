@@ -16,14 +16,14 @@ public final class BucketReplicationTime extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
       private final BucketReplicationTimeStatus status;
 
-    public BucketReplicationTimeStatus getStatus() {
+    public BucketReplicationTimeStatus status() {
         return this.status;
     }
 
     @Import(name="time", required=true)
       private final BucketReplicationTimeValue time;
 
-    public BucketReplicationTimeValue getTime() {
+    public BucketReplicationTimeValue time() {
         return this.time;
     }
 

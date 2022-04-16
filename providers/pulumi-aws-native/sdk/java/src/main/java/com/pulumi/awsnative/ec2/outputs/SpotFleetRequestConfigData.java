@@ -94,70 +94,70 @@ public final class SpotFleetRequestConfigData {
         this.validUntil = validUntil;
     }
 
-    public Optional<SpotFleetRequestConfigDataAllocationStrategy> getAllocationStrategy() {
+    public Optional<SpotFleetRequestConfigDataAllocationStrategy> allocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
-    public Optional<String> getContext() {
+    public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
-    public Optional<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
+    public Optional<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
         return Optional.ofNullable(this.excessCapacityTerminationPolicy);
     }
-    public String getIamFleetRole() {
+    public String iamFleetRole() {
         return this.iamFleetRole;
     }
-    public Optional<SpotFleetRequestConfigDataInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
+    public Optional<SpotFleetRequestConfigDataInstanceInterruptionBehavior> instanceInterruptionBehavior() {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
-    public Optional<Integer> getInstancePoolsToUseCount() {
+    public Optional<Integer> instancePoolsToUseCount() {
         return Optional.ofNullable(this.instancePoolsToUseCount);
     }
-    public List<SpotFleetLaunchSpecification> getLaunchSpecifications() {
+    public List<SpotFleetLaunchSpecification> launchSpecifications() {
         return this.launchSpecifications == null ? List.of() : this.launchSpecifications;
     }
-    public List<SpotFleetLaunchTemplateConfig> getLaunchTemplateConfigs() {
+    public List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs() {
         return this.launchTemplateConfigs == null ? List.of() : this.launchTemplateConfigs;
     }
-    public Optional<SpotFleetLoadBalancersConfig> getLoadBalancersConfig() {
+    public Optional<SpotFleetLoadBalancersConfig> loadBalancersConfig() {
         return Optional.ofNullable(this.loadBalancersConfig);
     }
-    public Optional<String> getOnDemandAllocationStrategy() {
+    public Optional<String> onDemandAllocationStrategy() {
         return Optional.ofNullable(this.onDemandAllocationStrategy);
     }
-    public Optional<String> getOnDemandMaxTotalPrice() {
+    public Optional<String> onDemandMaxTotalPrice() {
         return Optional.ofNullable(this.onDemandMaxTotalPrice);
     }
-    public Optional<Integer> getOnDemandTargetCapacity() {
+    public Optional<Integer> onDemandTargetCapacity() {
         return Optional.ofNullable(this.onDemandTargetCapacity);
     }
-    public Optional<Boolean> getReplaceUnhealthyInstances() {
+    public Optional<Boolean> replaceUnhealthyInstances() {
         return Optional.ofNullable(this.replaceUnhealthyInstances);
     }
-    public Optional<SpotFleetSpotMaintenanceStrategies> getSpotMaintenanceStrategies() {
+    public Optional<SpotFleetSpotMaintenanceStrategies> spotMaintenanceStrategies() {
         return Optional.ofNullable(this.spotMaintenanceStrategies);
     }
-    public Optional<String> getSpotMaxTotalPrice() {
+    public Optional<String> spotMaxTotalPrice() {
         return Optional.ofNullable(this.spotMaxTotalPrice);
     }
-    public Optional<String> getSpotPrice() {
+    public Optional<String> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
-    public Integer getTargetCapacity() {
+    public Integer targetCapacity() {
         return this.targetCapacity;
     }
-    public Optional<SpotFleetRequestConfigDataTargetCapacityUnitType> getTargetCapacityUnitType() {
+    public Optional<SpotFleetRequestConfigDataTargetCapacityUnitType> targetCapacityUnitType() {
         return Optional.ofNullable(this.targetCapacityUnitType);
     }
-    public Optional<Boolean> getTerminateInstancesWithExpiration() {
+    public Optional<Boolean> terminateInstancesWithExpiration() {
         return Optional.ofNullable(this.terminateInstancesWithExpiration);
     }
-    public Optional<SpotFleetRequestConfigDataType> getType() {
+    public Optional<SpotFleetRequestConfigDataType> type() {
         return Optional.ofNullable(this.type);
     }
-    public Optional<String> getValidFrom() {
+    public Optional<String> validFrom() {
         return Optional.ofNullable(this.validFrom);
     }
-    public Optional<String> getValidUntil() {
+    public Optional<String> validUntil() {
         return Optional.ofNullable(this.validUntil);
     }
 

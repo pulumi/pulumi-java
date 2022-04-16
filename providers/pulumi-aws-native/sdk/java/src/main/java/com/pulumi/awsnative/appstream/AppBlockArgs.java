@@ -22,42 +22,42 @@ public final class AppBlockArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="setupScriptDetails", required=true)
       private final Output<AppBlockScriptDetailsArgs> setupScriptDetails;
 
-    public Output<AppBlockScriptDetailsArgs> getSetupScriptDetails() {
+    public Output<AppBlockScriptDetailsArgs> setupScriptDetails() {
         return this.setupScriptDetails;
     }
 
     @Import(name="sourceS3Location", required=true)
       private final Output<AppBlockS3LocationArgs> sourceS3Location;
 
-    public Output<AppBlockS3LocationArgs> getSourceS3Location() {
+    public Output<AppBlockS3LocationArgs> sourceS3Location() {
         return this.sourceS3Location;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AppBlockTagArgs>> tags;
 
-    public Output<List<AppBlockTagArgs>> getTags() {
+    public Output<List<AppBlockTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

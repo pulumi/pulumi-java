@@ -177,145 +177,145 @@ public final class TaskDefinitionContainerDefinition {
         this.workingDirectory = workingDirectory;
     }
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
-    public Optional<Integer> getCpu() {
+    public Optional<Integer> cpu() {
         return Optional.ofNullable(this.cpu);
     }
-    public List<TaskDefinitionContainerDependency> getDependsOn() {
+    public List<TaskDefinitionContainerDependency> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-    public Optional<Boolean> getDisableNetworking() {
+    public Optional<Boolean> disableNetworking() {
         return Optional.ofNullable(this.disableNetworking);
     }
-    public List<String> getDnsSearchDomains() {
+    public List<String> dnsSearchDomains() {
         return this.dnsSearchDomains == null ? List.of() : this.dnsSearchDomains;
     }
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
-    public Optional<Object> getDockerLabels() {
+    public Optional<Object> dockerLabels() {
         return Optional.ofNullable(this.dockerLabels);
     }
-    public List<String> getDockerSecurityOptions() {
+    public List<String> dockerSecurityOptions() {
         return this.dockerSecurityOptions == null ? List.of() : this.dockerSecurityOptions;
     }
-    public List<String> getEntryPoint() {
+    public List<String> entryPoint() {
         return this.entryPoint == null ? List.of() : this.entryPoint;
     }
     /**
      * The environment variables to pass to a container
      * 
     */
-    public List<TaskDefinitionKeyValuePair> getEnvironment() {
+    public List<TaskDefinitionKeyValuePair> environment() {
         return this.environment == null ? List.of() : this.environment;
     }
     /**
      * The list of one or more files that contain the environment variables to pass to a container
      * 
     */
-    public List<TaskDefinitionEnvironmentFile> getEnvironmentFiles() {
+    public List<TaskDefinitionEnvironmentFile> environmentFiles() {
         return this.environmentFiles == null ? List.of() : this.environmentFiles;
     }
-    public Optional<Boolean> getEssential() {
+    public Optional<Boolean> essential() {
         return Optional.ofNullable(this.essential);
     }
-    public List<TaskDefinitionHostEntry> getExtraHosts() {
+    public List<TaskDefinitionHostEntry> extraHosts() {
         return this.extraHosts == null ? List.of() : this.extraHosts;
     }
-    public Optional<TaskDefinitionFirelensConfiguration> getFirelensConfiguration() {
+    public Optional<TaskDefinitionFirelensConfiguration> firelensConfiguration() {
         return Optional.ofNullable(this.firelensConfiguration);
     }
-    public Optional<TaskDefinitionHealthCheck> getHealthCheck() {
+    public Optional<TaskDefinitionHealthCheck> healthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * The image used to start a container. This string is passed directly to the Docker daemon.
      * 
     */
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
-    public Optional<Boolean> getInteractive() {
+    public Optional<Boolean> interactive() {
         return Optional.ofNullable(this.interactive);
     }
-    public List<String> getLinks() {
+    public List<String> links() {
         return this.links == null ? List.of() : this.links;
     }
-    public Optional<TaskDefinitionLinuxParameters> getLinuxParameters() {
+    public Optional<TaskDefinitionLinuxParameters> linuxParameters() {
         return Optional.ofNullable(this.linuxParameters);
     }
-    public Optional<TaskDefinitionLogConfiguration> getLogConfiguration() {
+    public Optional<TaskDefinitionLogConfiguration> logConfiguration() {
         return Optional.ofNullable(this.logConfiguration);
     }
     /**
      * The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
      * 
     */
-    public Optional<Integer> getMemory() {
+    public Optional<Integer> memory() {
         return Optional.ofNullable(this.memory);
     }
-    public Optional<Integer> getMemoryReservation() {
+    public Optional<Integer> memoryReservation() {
         return Optional.ofNullable(this.memoryReservation);
     }
-    public List<TaskDefinitionMountPoint> getMountPoints() {
+    public List<TaskDefinitionMountPoint> mountPoints() {
         return this.mountPoints == null ? List.of() : this.mountPoints;
     }
     /**
      * The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Port mappings allow containers to access ports on the host container instance to send or receive traffic.
      * 
     */
-    public List<TaskDefinitionPortMapping> getPortMappings() {
+    public List<TaskDefinitionPortMapping> portMappings() {
         return this.portMappings == null ? List.of() : this.portMappings;
     }
-    public Optional<Boolean> getPrivileged() {
+    public Optional<Boolean> privileged() {
         return Optional.ofNullable(this.privileged);
     }
-    public Optional<Boolean> getPseudoTerminal() {
+    public Optional<Boolean> pseudoTerminal() {
         return Optional.ofNullable(this.pseudoTerminal);
     }
-    public Optional<Boolean> getReadonlyRootFilesystem() {
+    public Optional<Boolean> readonlyRootFilesystem() {
         return Optional.ofNullable(this.readonlyRootFilesystem);
     }
-    public Optional<TaskDefinitionRepositoryCredentials> getRepositoryCredentials() {
+    public Optional<TaskDefinitionRepositoryCredentials> repositoryCredentials() {
         return Optional.ofNullable(this.repositoryCredentials);
     }
-    public List<TaskDefinitionResourceRequirement> getResourceRequirements() {
+    public List<TaskDefinitionResourceRequirement> resourceRequirements() {
         return this.resourceRequirements == null ? List.of() : this.resourceRequirements;
     }
-    public List<TaskDefinitionSecret> getSecrets() {
+    public List<TaskDefinitionSecret> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
-    public Optional<Integer> getStartTimeout() {
+    public Optional<Integer> startTimeout() {
         return Optional.ofNullable(this.startTimeout);
     }
-    public Optional<Integer> getStopTimeout() {
+    public Optional<Integer> stopTimeout() {
         return Optional.ofNullable(this.stopTimeout);
     }
-    public List<TaskDefinitionSystemControl> getSystemControls() {
+    public List<TaskDefinitionSystemControl> systemControls() {
         return this.systemControls == null ? List.of() : this.systemControls;
     }
-    public List<TaskDefinitionUlimit> getUlimits() {
+    public List<TaskDefinitionUlimit> ulimits() {
         return this.ulimits == null ? List.of() : this.ulimits;
     }
-    public Optional<String> getUser() {
+    public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }
-    public List<TaskDefinitionVolumeFrom> getVolumesFrom() {
+    public List<TaskDefinitionVolumeFrom> volumesFrom() {
         return this.volumesFrom == null ? List.of() : this.volumesFrom;
     }
-    public Optional<String> getWorkingDirectory() {
+    public Optional<String> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
 

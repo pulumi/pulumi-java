@@ -23,7 +23,7 @@ public final class SamplingRuleRecordArgs extends com.pulumi.resources.ResourceA
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -34,14 +34,14 @@ public final class SamplingRuleRecordArgs extends com.pulumi.resources.ResourceA
     @Import(name="modifiedAt")
       private final @Nullable Output<String> modifiedAt;
 
-    public Output<String> getModifiedAt() {
+    public Output<String> modifiedAt() {
         return this.modifiedAt == null ? Codegen.empty() : this.modifiedAt;
     }
 
     @Import(name="samplingRule")
       private final @Nullable Output<SamplingRuleArgs> samplingRule;
 
-    public Output<SamplingRuleArgs> getSamplingRule() {
+    public Output<SamplingRuleArgs> samplingRule() {
         return this.samplingRule == null ? Codegen.empty() : this.samplingRule;
     }
 

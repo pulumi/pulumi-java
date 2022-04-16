@@ -29,7 +29,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="durationSeconds")
       private final @Nullable Output<Integer> durationSeconds;
 
-    public Output<Integer> getDurationSeconds() {
+    public Output<Integer> durationSeconds() {
         return this.durationSeconds == null ? Codegen.empty() : this.durationSeconds;
     }
 
@@ -40,7 +40,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
@@ -51,7 +51,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -62,7 +62,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="policyArns")
       private final @Nullable Output<List<String>> policyArns;
 
-    public Output<List<String>> getPolicyArns() {
+    public Output<List<String>> policyArns() {
         return this.policyArns == null ? Codegen.empty() : this.policyArns;
     }
 
@@ -73,7 +73,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -84,7 +84,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="sessionName")
       private final @Nullable Output<String> sessionName;
 
-    public Output<String> getSessionName() {
+    public Output<String> sessionName() {
         return this.sessionName == null ? Codegen.empty() : this.sessionName;
     }
 
@@ -95,7 +95,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -106,7 +106,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     @Import(name="transitiveTagKeys")
       private final @Nullable Output<List<String>> transitiveTagKeys;
 
-    public Output<List<String>> getTransitiveTagKeys() {
+    public Output<List<String>> transitiveTagKeys() {
         return this.transitiveTagKeys == null ? Codegen.empty() : this.transitiveTagKeys;
     }
 

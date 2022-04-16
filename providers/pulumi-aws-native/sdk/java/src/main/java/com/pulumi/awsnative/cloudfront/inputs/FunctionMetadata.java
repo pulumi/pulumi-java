@@ -17,7 +17,7 @@ public final class FunctionMetadata extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionARN")
       private final @Nullable String functionARN;
 
-    public Optional<String> getFunctionARN() {
+    public Optional<String> functionARN() {
         return this.functionARN == null ? Optional.empty() : Optional.ofNullable(this.functionARN);
     }
 

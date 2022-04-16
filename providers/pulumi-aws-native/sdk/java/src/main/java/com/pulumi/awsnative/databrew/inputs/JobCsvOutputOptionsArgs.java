@@ -22,7 +22,7 @@ public final class JobCsvOutputOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
+    public Output<String> delimiter() {
         return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 

@@ -28,21 +28,21 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
     @Import(name="deleteMarkerReplication")
       private final @Nullable Output<BucketDeleteMarkerReplicationArgs> deleteMarkerReplication;
 
-    public Output<BucketDeleteMarkerReplicationArgs> getDeleteMarkerReplication() {
+    public Output<BucketDeleteMarkerReplicationArgs> deleteMarkerReplication() {
         return this.deleteMarkerReplication == null ? Codegen.empty() : this.deleteMarkerReplication;
     }
 
     @Import(name="destination", required=true)
       private final Output<BucketReplicationDestinationArgs> destination;
 
-    public Output<BucketReplicationDestinationArgs> getDestination() {
+    public Output<BucketReplicationDestinationArgs> destination() {
         return this.destination;
     }
 
     @Import(name="filter")
       private final @Nullable Output<BucketReplicationRuleFilterArgs> filter;
 
-    public Output<BucketReplicationRuleFilterArgs> getFilter() {
+    public Output<BucketReplicationRuleFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -53,7 +53,7 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -64,21 +64,21 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="sourceSelectionCriteria")
       private final @Nullable Output<BucketSourceSelectionCriteriaArgs> sourceSelectionCriteria;
 
-    public Output<BucketSourceSelectionCriteriaArgs> getSourceSelectionCriteria() {
+    public Output<BucketSourceSelectionCriteriaArgs> sourceSelectionCriteria() {
         return this.sourceSelectionCriteria == null ? Codegen.empty() : this.sourceSelectionCriteria;
     }
 
@@ -89,7 +89,7 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
     @Import(name="status", required=true)
       private final Output<BucketReplicationRuleStatus> status;
 
-    public Output<BucketReplicationRuleStatus> getStatus() {
+    public Output<BucketReplicationRuleStatus> status() {
         return this.status;
     }
 

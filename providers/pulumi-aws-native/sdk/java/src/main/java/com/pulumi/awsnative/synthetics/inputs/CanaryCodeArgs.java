@@ -18,35 +18,35 @@ public final class CanaryCodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="handler", required=true)
       private final Output<String> handler;
 
-    public Output<String> getHandler() {
+    public Output<String> handler() {
         return this.handler;
     }
 
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> getS3ObjectVersion() {
+    public Output<String> s3ObjectVersion() {
         return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 

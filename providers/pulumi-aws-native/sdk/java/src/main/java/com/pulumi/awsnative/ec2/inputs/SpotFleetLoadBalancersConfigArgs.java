@@ -19,14 +19,14 @@ public final class SpotFleetLoadBalancersConfigArgs extends com.pulumi.resources
     @Import(name="classicLoadBalancersConfig")
       private final @Nullable Output<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig;
 
-    public Output<SpotFleetClassicLoadBalancersConfigArgs> getClassicLoadBalancersConfig() {
+    public Output<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig() {
         return this.classicLoadBalancersConfig == null ? Codegen.empty() : this.classicLoadBalancersConfig;
     }
 
     @Import(name="targetGroupsConfig")
       private final @Nullable Output<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig;
 
-    public Output<SpotFleetTargetGroupsConfigArgs> getTargetGroupsConfig() {
+    public Output<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig() {
         return this.targetGroupsConfig == null ? Codegen.empty() : this.targetGroupsConfig;
     }
 

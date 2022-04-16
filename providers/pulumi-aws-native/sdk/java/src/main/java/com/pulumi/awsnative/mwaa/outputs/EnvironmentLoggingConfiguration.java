@@ -31,19 +31,19 @@ public final class EnvironmentLoggingConfiguration {
         this.workerLogs = workerLogs;
     }
 
-    public Optional<EnvironmentModuleLoggingConfiguration> getDagProcessingLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> dagProcessingLogs() {
         return Optional.ofNullable(this.dagProcessingLogs);
     }
-    public Optional<EnvironmentModuleLoggingConfiguration> getSchedulerLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> schedulerLogs() {
         return Optional.ofNullable(this.schedulerLogs);
     }
-    public Optional<EnvironmentModuleLoggingConfiguration> getTaskLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> taskLogs() {
         return Optional.ofNullable(this.taskLogs);
     }
-    public Optional<EnvironmentModuleLoggingConfiguration> getWebserverLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> webserverLogs() {
         return Optional.ofNullable(this.webserverLogs);
     }
-    public Optional<EnvironmentModuleLoggingConfiguration> getWorkerLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> workerLogs() {
         return Optional.ofNullable(this.workerLogs);
     }
 

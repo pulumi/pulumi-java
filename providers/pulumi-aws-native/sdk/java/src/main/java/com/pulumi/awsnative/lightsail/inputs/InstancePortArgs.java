@@ -28,7 +28,7 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessDirection")
       private final @Nullable Output<String> accessDirection;
 
-    public Output<String> getAccessDirection() {
+    public Output<String> accessDirection() {
         return this.accessDirection == null ? Codegen.empty() : this.accessDirection;
     }
 
@@ -39,7 +39,7 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessFrom")
       private final @Nullable Output<String> accessFrom;
 
-    public Output<String> getAccessFrom() {
+    public Output<String> accessFrom() {
         return this.accessFrom == null ? Codegen.empty() : this.accessFrom;
     }
 
@@ -50,21 +50,21 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
-    public Output<String> getAccessType() {
+    public Output<String> accessType() {
         return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
     @Import(name="cidrListAliases")
       private final @Nullable Output<List<String>> cidrListAliases;
 
-    public Output<List<String>> getCidrListAliases() {
+    public Output<List<String>> cidrListAliases() {
         return this.cidrListAliases == null ? Codegen.empty() : this.cidrListAliases;
     }
 
     @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
-    public Output<List<String>> getCidrs() {
+    public Output<List<String>> cidrs() {
         return this.cidrs == null ? Codegen.empty() : this.cidrs;
     }
 
@@ -75,7 +75,7 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
@@ -86,14 +86,14 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort == null ? Codegen.empty() : this.fromPort;
     }
 
     @Import(name="ipv6Cidrs")
       private final @Nullable Output<List<String>> ipv6Cidrs;
 
-    public Output<List<String>> getIpv6Cidrs() {
+    public Output<List<String>> ipv6Cidrs() {
         return this.ipv6Cidrs == null ? Codegen.empty() : this.ipv6Cidrs;
     }
 
@@ -104,7 +104,7 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -115,7 +115,7 @@ public final class InstancePortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort == null ? Codegen.empty() : this.toPort;
     }
 

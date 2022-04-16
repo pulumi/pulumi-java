@@ -27,21 +27,21 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="deleteMarkerReplication")
       private final @Nullable BucketDeleteMarkerReplication deleteMarkerReplication;
 
-    public Optional<BucketDeleteMarkerReplication> getDeleteMarkerReplication() {
+    public Optional<BucketDeleteMarkerReplication> deleteMarkerReplication() {
         return this.deleteMarkerReplication == null ? Optional.empty() : Optional.ofNullable(this.deleteMarkerReplication);
     }
 
     @Import(name="destination", required=true)
       private final BucketReplicationDestination destination;
 
-    public BucketReplicationDestination getDestination() {
+    public BucketReplicationDestination destination() {
         return this.destination;
     }
 
     @Import(name="filter")
       private final @Nullable BucketReplicationRuleFilter filter;
 
-    public Optional<BucketReplicationRuleFilter> getFilter() {
+    public Optional<BucketReplicationRuleFilter> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -52,7 +52,7 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -63,21 +63,21 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
     @Import(name="sourceSelectionCriteria")
       private final @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria;
 
-    public Optional<BucketSourceSelectionCriteria> getSourceSelectionCriteria() {
+    public Optional<BucketSourceSelectionCriteria> sourceSelectionCriteria() {
         return this.sourceSelectionCriteria == null ? Optional.empty() : Optional.ofNullable(this.sourceSelectionCriteria);
     }
 
@@ -88,7 +88,7 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
       private final BucketReplicationRuleStatus status;
 
-    public BucketReplicationRuleStatus getStatus() {
+    public BucketReplicationRuleStatus status() {
         return this.status;
     }
 

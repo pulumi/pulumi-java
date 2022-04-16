@@ -43,31 +43,31 @@ public final class TopicRuleDynamoDBAction {
         this.tableName = tableName;
     }
 
-    public String getHashKeyField() {
+    public String hashKeyField() {
         return this.hashKeyField;
     }
-    public Optional<String> getHashKeyType() {
+    public Optional<String> hashKeyType() {
         return Optional.ofNullable(this.hashKeyType);
     }
-    public String getHashKeyValue() {
+    public String hashKeyValue() {
         return this.hashKeyValue;
     }
-    public Optional<String> getPayloadField() {
+    public Optional<String> payloadField() {
         return Optional.ofNullable(this.payloadField);
     }
-    public Optional<String> getRangeKeyField() {
+    public Optional<String> rangeKeyField() {
         return Optional.ofNullable(this.rangeKeyField);
     }
-    public Optional<String> getRangeKeyType() {
+    public Optional<String> rangeKeyType() {
         return Optional.ofNullable(this.rangeKeyType);
     }
-    public Optional<String> getRangeKeyValue() {
+    public Optional<String> rangeKeyValue() {
         return Optional.ofNullable(this.rangeKeyValue);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

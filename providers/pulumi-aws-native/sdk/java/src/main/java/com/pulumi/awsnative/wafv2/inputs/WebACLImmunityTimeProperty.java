@@ -15,7 +15,7 @@ public final class WebACLImmunityTimeProperty extends com.pulumi.resources.Invok
     @Import(name="immunityTime", required=true)
       private final Integer immunityTime;
 
-    public Integer getImmunityTime() {
+    public Integer immunityTime() {
         return this.immunityTime;
     }
 

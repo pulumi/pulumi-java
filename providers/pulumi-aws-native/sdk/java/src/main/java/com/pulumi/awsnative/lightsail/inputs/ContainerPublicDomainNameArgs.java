@@ -23,7 +23,7 @@ public final class ContainerPublicDomainNameArgs extends com.pulumi.resources.Re
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
@@ -34,7 +34,7 @@ public final class ContainerPublicDomainNameArgs extends com.pulumi.resources.Re
     @Import(name="domainNames")
       private final @Nullable Output<List<String>> domainNames;
 
-    public Output<List<String>> getDomainNames() {
+    public Output<List<String>> domainNames() {
         return this.domainNames == null ? Codegen.empty() : this.domainNames;
     }
 

@@ -25,7 +25,7 @@ public final class AccessPolicyIamUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 

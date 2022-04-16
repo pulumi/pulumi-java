@@ -30,7 +30,7 @@ public class BucketPolicy extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -44,7 +44,7 @@ public class BucketPolicy extends com.pulumi.resources.CustomResource {
      * @return A policy document containing permissions to add to the specified bucket.
      * 
      */
-    public Output<Object> getPolicyDocument() {
+    public Output<Object> policyDocument() {
         return this.policyDocument;
     }
 

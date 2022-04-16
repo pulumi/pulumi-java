@@ -23,14 +23,14 @@ public final class CertificateAuthorityOcspConfigurationArgs extends com.pulumi.
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="ocspCustomCname")
       private final @Nullable Output<String> ocspCustomCname;
 
-    public Output<String> getOcspCustomCname() {
+    public Output<String> ocspCustomCname() {
         return this.ocspCustomCname == null ? Codegen.empty() : this.ocspCustomCname;
     }
 

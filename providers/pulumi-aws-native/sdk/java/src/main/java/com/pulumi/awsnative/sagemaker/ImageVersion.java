@@ -22,37 +22,37 @@ public class ImageVersion extends com.pulumi.resources.CustomResource {
     @Export(name="baseImage", type=String.class, parameters={})
     private Output<String> baseImage;
 
-    public Output<String> getBaseImage() {
+    public Output<String> baseImage() {
         return this.baseImage;
     }
     @Export(name="containerImage", type=String.class, parameters={})
     private Output<String> containerImage;
 
-    public Output<String> getContainerImage() {
+    public Output<String> containerImage() {
         return this.containerImage;
     }
     @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
-    public Output<String> getImageArn() {
+    public Output<String> imageArn() {
         return this.imageArn;
     }
     @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
     @Export(name="imageVersionArn", type=String.class, parameters={})
     private Output<String> imageVersionArn;
 
-    public Output<String> getImageVersionArn() {
+    public Output<String> imageVersionArn() {
         return this.imageVersionArn;
     }
     @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

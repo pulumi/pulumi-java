@@ -26,7 +26,7 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactPostPassDurationSeconds")
       private final @Nullable Output<Integer> contactPostPassDurationSeconds;
 
-    public Output<Integer> getContactPostPassDurationSeconds() {
+    public Output<Integer> contactPostPassDurationSeconds() {
         return this.contactPostPassDurationSeconds == null ? Codegen.empty() : this.contactPostPassDurationSeconds;
     }
 
@@ -37,14 +37,14 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactPrePassDurationSeconds")
       private final @Nullable Output<Integer> contactPrePassDurationSeconds;
 
-    public Output<Integer> getContactPrePassDurationSeconds() {
+    public Output<Integer> contactPrePassDurationSeconds() {
         return this.contactPrePassDurationSeconds == null ? Codegen.empty() : this.contactPrePassDurationSeconds;
     }
 
     @Import(name="dataflowEdges", required=true)
       private final Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
 
-    public Output<List<MissionProfileDataflowEdgeArgs>> getDataflowEdges() {
+    public Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges() {
         return this.dataflowEdges;
     }
 
@@ -55,7 +55,7 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minimumViableContactDurationSeconds", required=true)
       private final Output<Integer> minimumViableContactDurationSeconds;
 
-    public Output<Integer> getMinimumViableContactDurationSeconds() {
+    public Output<Integer> minimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
     }
 
@@ -66,21 +66,21 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<MissionProfileTagArgs>> tags;
 
-    public Output<List<MissionProfileTagArgs>> getTags() {
+    public Output<List<MissionProfileTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="trackingConfigArn", required=true)
       private final Output<String> trackingConfigArn;
 
-    public Output<String> getTrackingConfigArn() {
+    public Output<String> trackingConfigArn() {
         return this.trackingConfigArn;
     }
 

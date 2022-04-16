@@ -27,7 +27,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
     @Import(name="instanceCount", required=true)
       private final Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount;
     }
 
@@ -38,7 +38,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -49,7 +49,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
     @Import(name="volumeKmsKeyId")
       private final @Nullable Output<String> volumeKmsKeyId;
 
-    public Output<String> getVolumeKmsKeyId() {
+    public Output<String> volumeKmsKeyId() {
         return this.volumeKmsKeyId == null ? Codegen.empty() : this.volumeKmsKeyId;
     }
 
@@ -60,7 +60,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends com
     @Import(name="volumeSizeInGB", required=true)
       private final Output<Integer> volumeSizeInGB;
 
-    public Output<Integer> getVolumeSizeInGB() {
+    public Output<Integer> volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 

@@ -24,7 +24,7 @@ public final class ClusterLogging extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterLogging")
       private final @Nullable ClusterLogging clusterLogging;
 
-    public Optional<ClusterLogging> getClusterLogging() {
+    public Optional<ClusterLogging> clusterLogging() {
         return this.clusterLogging == null ? Optional.empty() : Optional.ofNullable(this.clusterLogging);
     }
 

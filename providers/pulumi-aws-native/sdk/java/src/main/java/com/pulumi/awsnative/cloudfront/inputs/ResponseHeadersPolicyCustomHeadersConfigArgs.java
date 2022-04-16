@@ -18,7 +18,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends com.pulu
     @Import(name="items", required=true)
       private final Output<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
 
-    public Output<List<ResponseHeadersPolicyCustomHeaderArgs>> getItems() {
+    public Output<List<ResponseHeadersPolicyCustomHeaderArgs>> items() {
         return this.items;
     }
 

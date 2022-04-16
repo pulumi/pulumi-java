@@ -21,10 +21,10 @@ public final class WebACLTextTransformation {
         this.type = type;
     }
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
-    public WebACLTextTransformationType getType() {
+    public WebACLTextTransformationType type() {
         return this.type;
     }
 

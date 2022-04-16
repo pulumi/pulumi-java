@@ -49,28 +49,28 @@ public final class GetAliasResult {
      * Unique alias ID
      * 
     */
-    public Optional<String> getAliasId() {
+    public Optional<String> aliasId() {
         return Optional.ofNullable(this.aliasId);
     }
     /**
      * A human-readable description of the alias.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A descriptive label that is associated with an alias. Alias names do not need to be unique.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
      * 
     */
-    public Optional<AliasRoutingStrategy> getRoutingStrategy() {
+    public Optional<AliasRoutingStrategy> routingStrategy() {
         return Optional.ofNullable(this.routingStrategy);
     }
 

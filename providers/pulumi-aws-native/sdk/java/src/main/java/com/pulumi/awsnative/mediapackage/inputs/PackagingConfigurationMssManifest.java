@@ -22,14 +22,14 @@ public final class PackagingConfigurationMssManifest extends com.pulumi.resource
     @Import(name="manifestName")
       private final @Nullable String manifestName;
 
-    public Optional<String> getManifestName() {
+    public Optional<String> manifestName() {
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
     }
 
     @Import(name="streamSelection")
       private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    public Optional<PackagingConfigurationStreamSelection> getStreamSelection() {
+    public Optional<PackagingConfigurationStreamSelection> streamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 

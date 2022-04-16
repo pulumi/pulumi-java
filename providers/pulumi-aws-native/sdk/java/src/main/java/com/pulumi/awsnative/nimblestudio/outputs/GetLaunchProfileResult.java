@@ -58,10 +58,10 @@ public final class GetLaunchProfileResult {
      * <p>The description.</p>
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getLaunchProfileId() {
+    public Optional<String> launchProfileId() {
         return Optional.ofNullable(this.launchProfileId);
     }
     /**
@@ -69,17 +69,17 @@ public final class GetLaunchProfileResult {
      *             version is "2021-03-31".</p>
      * 
     */
-    public List<String> getLaunchProfileProtocolVersions() {
+    public List<String> launchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions == null ? List.of() : this.launchProfileProtocolVersions;
     }
     /**
      * <p>The name for the launch profile.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<LaunchProfileStreamConfiguration> getStreamConfiguration() {
+    public Optional<LaunchProfileStreamConfiguration> streamConfiguration() {
         return Optional.ofNullable(this.streamConfiguration);
     }
     /**
@@ -87,7 +87,7 @@ public final class GetLaunchProfileResult {
      *             launch profile.</p>
      * 
     */
-    public List<String> getStudioComponentIds() {
+    public List<String> studioComponentIds() {
         return this.studioComponentIds == null ? List.of() : this.studioComponentIds;
     }
 

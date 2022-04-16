@@ -22,7 +22,7 @@ public class Grant extends com.pulumi.resources.CustomResource {
     @Export(name="allowedOperations", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedOperations;
 
-    public Output</* @Nullable */ List<String>> getAllowedOperations() {
+    public Output</* @Nullable */ List<String>> allowedOperations() {
         return this.allowedOperations;
     }
     /**
@@ -36,7 +36,7 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return Arn of the grant.
      * 
      */
-    public Output<String> getGrantArn() {
+    public Output<String> grantArn() {
         return this.grantArn;
     }
     /**
@@ -50,7 +50,7 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return Name for the created Grant.
      * 
      */
-    public Output</* @Nullable */ String> getGrantName() {
+    public Output</* @Nullable */ String> grantName() {
         return this.grantName;
     }
     /**
@@ -64,7 +64,7 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return Home region for the created grant.
      * 
      */
-    public Output</* @Nullable */ String> getHomeRegion() {
+    public Output</* @Nullable */ String> homeRegion() {
         return this.homeRegion;
     }
     /**
@@ -78,19 +78,19 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return License Arn for the grant.
      * 
      */
-    public Output</* @Nullable */ String> getLicenseArn() {
+    public Output</* @Nullable */ String> licenseArn() {
         return this.licenseArn;
     }
     @Export(name="principals", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> principals;
 
-    public Output</* @Nullable */ List<String>> getPrincipals() {
+    public Output</* @Nullable */ List<String>> principals() {
         return this.principals;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -104,7 +104,7 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return The version of the grant.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

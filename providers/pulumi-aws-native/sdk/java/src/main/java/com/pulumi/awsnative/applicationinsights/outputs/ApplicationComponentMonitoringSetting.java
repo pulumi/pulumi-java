@@ -64,42 +64,42 @@ public final class ApplicationComponentMonitoringSetting {
      * The ARN of the compnonent.
      * 
     */
-    public Optional<String> getComponentARN() {
+    public Optional<String> componentARN() {
         return Optional.ofNullable(this.componentARN);
     }
     /**
      * The component monitoring configuration mode.
      * 
     */
-    public ApplicationComponentMonitoringSettingComponentConfigurationMode getComponentConfigurationMode() {
+    public ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode() {
         return this.componentConfigurationMode;
     }
     /**
      * The name of the component.
      * 
     */
-    public Optional<String> getComponentName() {
+    public Optional<String> componentName() {
         return Optional.ofNullable(this.componentName);
     }
     /**
      * The monitoring configuration of the component.
      * 
     */
-    public Optional<ApplicationComponentConfiguration> getCustomComponentConfiguration() {
+    public Optional<ApplicationComponentConfiguration> customComponentConfiguration() {
         return Optional.ofNullable(this.customComponentConfiguration);
     }
     /**
      * The overwritten settings on default component monitoring configuration.
      * 
     */
-    public Optional<ApplicationComponentConfiguration> getDefaultOverwriteComponentConfiguration() {
+    public Optional<ApplicationComponentConfiguration> defaultOverwriteComponentConfiguration() {
         return Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
     /**
      * The tier of the application component.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

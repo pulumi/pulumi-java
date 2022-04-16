@@ -20,56 +20,56 @@ public final class ResourceDataSyncArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="bucketRegion")
       private final @Nullable Output<String> bucketRegion;
 
-    public Output<String> getBucketRegion() {
+    public Output<String> bucketRegion() {
         return this.bucketRegion == null ? Codegen.empty() : this.bucketRegion;
     }
 
     @Import(name="kMSKeyArn")
       private final @Nullable Output<String> kMSKeyArn;
 
-    public Output<String> getKMSKeyArn() {
+    public Output<String> kMSKeyArn() {
         return this.kMSKeyArn == null ? Codegen.empty() : this.kMSKeyArn;
     }
 
     @Import(name="s3Destination")
       private final @Nullable Output<ResourceDataSyncS3DestinationArgs> s3Destination;
 
-    public Output<ResourceDataSyncS3DestinationArgs> getS3Destination() {
+    public Output<ResourceDataSyncS3DestinationArgs> s3Destination() {
         return this.s3Destination == null ? Codegen.empty() : this.s3Destination;
     }
 
     @Import(name="syncFormat")
       private final @Nullable Output<String> syncFormat;
 
-    public Output<String> getSyncFormat() {
+    public Output<String> syncFormat() {
         return this.syncFormat == null ? Codegen.empty() : this.syncFormat;
     }
 
     @Import(name="syncSource")
       private final @Nullable Output<ResourceDataSyncSyncSourceArgs> syncSource;
 
-    public Output<ResourceDataSyncSyncSourceArgs> getSyncSource() {
+    public Output<ResourceDataSyncSyncSourceArgs> syncSource() {
         return this.syncSource == null ? Codegen.empty() : this.syncSource;
     }
 
     @Import(name="syncType")
       private final @Nullable Output<String> syncType;
 
-    public Output<String> getSyncType() {
+    public Output<String> syncType() {
         return this.syncType == null ? Codegen.empty() : this.syncType;
     }
 

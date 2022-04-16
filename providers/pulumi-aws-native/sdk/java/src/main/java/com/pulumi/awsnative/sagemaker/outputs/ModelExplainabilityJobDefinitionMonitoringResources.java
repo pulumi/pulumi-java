@@ -16,7 +16,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringResources {
         this.clusterConfig = clusterConfig;
     }
 
-    public ModelExplainabilityJobDefinitionClusterConfig getClusterConfig() {
+    public ModelExplainabilityJobDefinitionClusterConfig clusterConfig() {
         return this.clusterConfig;
     }
 

@@ -21,7 +21,7 @@ public final class FleetCertificateConfigurationArgs extends com.pulumi.resource
     @Import(name="certificateType", required=true)
       private final Output<FleetCertificateConfigurationCertificateType> certificateType;
 
-    public Output<FleetCertificateConfigurationCertificateType> getCertificateType() {
+    public Output<FleetCertificateConfigurationCertificateType> certificateType() {
         return this.certificateType;
     }
 

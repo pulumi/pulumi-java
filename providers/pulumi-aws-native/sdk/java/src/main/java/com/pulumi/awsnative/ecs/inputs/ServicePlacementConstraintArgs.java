@@ -19,14 +19,14 @@ public final class ServicePlacementConstraintArgs extends com.pulumi.resources.R
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     @Import(name="type", required=true)
       private final Output<ServicePlacementConstraintType> type;
 
-    public Output<ServicePlacementConstraintType> getType() {
+    public Output<ServicePlacementConstraintType> type() {
         return this.type;
     }
 

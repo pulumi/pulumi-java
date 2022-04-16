@@ -32,14 +32,14 @@ public final class PackagingGroupAuthorization {
      * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that is used for CDN authorization.
      * 
     */
-    public String getCdnIdentifierSecret() {
+    public String cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
     /**
      * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
      * 
     */
-    public String getSecretsRoleArn() {
+    public String secretsRoleArn() {
         return this.secretsRoleArn;
     }
 

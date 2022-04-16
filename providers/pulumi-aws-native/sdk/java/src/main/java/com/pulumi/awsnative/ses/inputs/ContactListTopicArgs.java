@@ -18,7 +18,7 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     @Import(name="defaultSubscriptionStatus", required=true)
       private final Output<String> defaultSubscriptionStatus;
 
-    public Output<String> getDefaultSubscriptionStatus() {
+    public Output<String> defaultSubscriptionStatus() {
         return this.defaultSubscriptionStatus;
     }
 
@@ -29,7 +29,7 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class ContactListTopicArgs extends com.pulumi.resources.ResourceArg
     @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 

@@ -35,14 +35,14 @@ public final class EventSourceMappingSourceAccessConfiguration {
      * The type of source access configuration.
      * 
     */
-    public Optional<EventSourceMappingSourceAccessConfigurationType> getType() {
+    public Optional<EventSourceMappingSourceAccessConfigurationType> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The URI for the source access configuration resource.
      * 
     */
-    public Optional<String> getURI() {
+    public Optional<String> uRI() {
         return Optional.ofNullable(this.uRI);
     }
 

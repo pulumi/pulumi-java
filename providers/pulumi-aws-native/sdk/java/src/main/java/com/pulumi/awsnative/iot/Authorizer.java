@@ -26,49 +26,49 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="authorizerFunctionArn", type=String.class, parameters={})
     private Output<String> authorizerFunctionArn;
 
-    public Output<String> getAuthorizerFunctionArn() {
+    public Output<String> authorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
     @Export(name="authorizerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerName;
 
-    public Output</* @Nullable */ String> getAuthorizerName() {
+    public Output</* @Nullable */ String> authorizerName() {
         return this.authorizerName;
     }
     @Export(name="signingDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> signingDisabled;
 
-    public Output</* @Nullable */ Boolean> getSigningDisabled() {
+    public Output</* @Nullable */ Boolean> signingDisabled() {
         return this.signingDisabled;
     }
     @Export(name="status", type=AuthorizerStatus.class, parameters={})
     private Output</* @Nullable */ AuthorizerStatus> status;
 
-    public Output</* @Nullable */ AuthorizerStatus> getStatus() {
+    public Output</* @Nullable */ AuthorizerStatus> status() {
         return this.status;
     }
     @Export(name="tags", type=List.class, parameters={AuthorizerTag.class})
     private Output</* @Nullable */ List<AuthorizerTag>> tags;
 
-    public Output</* @Nullable */ List<AuthorizerTag>> getTags() {
+    public Output</* @Nullable */ List<AuthorizerTag>> tags() {
         return this.tags;
     }
     @Export(name="tokenKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tokenKeyName;
 
-    public Output</* @Nullable */ String> getTokenKeyName() {
+    public Output</* @Nullable */ String> tokenKeyName() {
         return this.tokenKeyName;
     }
     @Export(name="tokenSigningPublicKeys", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tokenSigningPublicKeys;
 
-    public Output</* @Nullable */ Object> getTokenSigningPublicKeys() {
+    public Output</* @Nullable */ Object> tokenSigningPublicKeys() {
         return this.tokenSigningPublicKeys;
     }
 

@@ -23,7 +23,7 @@ public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 
@@ -34,7 +34,7 @@ public final class RulesetSubstitutionValue extends com.pulumi.resources.InvokeA
     @Import(name="valueReference", required=true)
       private final String valueReference;
 
-    public String getValueReference() {
+    public String valueReference() {
         return this.valueReference;
     }
 

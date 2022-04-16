@@ -22,10 +22,10 @@ public final class DatastorePartition {
         this.timestampPartition = timestampPartition;
     }
 
-    public Optional<DatastorePartition> getPartition() {
+    public Optional<DatastorePartition> partition() {
         return Optional.ofNullable(this.partition);
     }
-    public Optional<DatastoreTimestampPartition> getTimestampPartition() {
+    public Optional<DatastoreTimestampPartition> timestampPartition() {
         return Optional.ofNullable(this.timestampPartition);
     }
 

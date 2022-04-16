@@ -23,70 +23,70 @@ public final class ApplicationInstanceArgs extends com.pulumi.resources.Resource
     @Import(name="applicationInstanceIdToReplace")
       private final @Nullable Output<String> applicationInstanceIdToReplace;
 
-    public Output<String> getApplicationInstanceIdToReplace() {
+    public Output<String> applicationInstanceIdToReplace() {
         return this.applicationInstanceIdToReplace == null ? Codegen.empty() : this.applicationInstanceIdToReplace;
     }
 
     @Import(name="defaultRuntimeContextDevice", required=true)
       private final Output<String> defaultRuntimeContextDevice;
 
-    public Output<String> getDefaultRuntimeContextDevice() {
+    public Output<String> defaultRuntimeContextDevice() {
         return this.defaultRuntimeContextDevice;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="deviceId")
       private final @Nullable Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId == null ? Codegen.empty() : this.deviceId;
     }
 
     @Import(name="manifestOverridesPayload")
       private final @Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload;
 
-    public Output<ApplicationInstanceManifestOverridesPayloadArgs> getManifestOverridesPayload() {
+    public Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload() {
         return this.manifestOverridesPayload == null ? Codegen.empty() : this.manifestOverridesPayload;
     }
 
     @Import(name="manifestPayload", required=true)
       private final Output<ApplicationInstanceManifestPayloadArgs> manifestPayload;
 
-    public Output<ApplicationInstanceManifestPayloadArgs> getManifestPayload() {
+    public Output<ApplicationInstanceManifestPayloadArgs> manifestPayload() {
         return this.manifestPayload;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="runtimeRoleArn")
       private final @Nullable Output<String> runtimeRoleArn;
 
-    public Output<String> getRuntimeRoleArn() {
+    public Output<String> runtimeRoleArn() {
         return this.runtimeRoleArn == null ? Codegen.empty() : this.runtimeRoleArn;
     }
 
     @Import(name="statusFilter")
       private final @Nullable Output<ApplicationInstanceStatusFilter> statusFilter;
 
-    public Output<ApplicationInstanceStatusFilter> getStatusFilter() {
+    public Output<ApplicationInstanceStatusFilter> statusFilter() {
         return this.statusFilter == null ? Codegen.empty() : this.statusFilter;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationInstanceTagArgs>> tags;
 
-    public Output<List<ApplicationInstanceTagArgs>> getTags() {
+    public Output<List<ApplicationInstanceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

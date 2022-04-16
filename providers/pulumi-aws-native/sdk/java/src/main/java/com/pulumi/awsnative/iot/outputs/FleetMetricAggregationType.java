@@ -33,14 +33,14 @@ public final class FleetMetricAggregationType {
      * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Fleet Indexing aggregation type values
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

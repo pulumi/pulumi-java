@@ -20,7 +20,7 @@ public final class BucketDataExport extends com.pulumi.resources.InvokeArgs {
     @Import(name="destination", required=true)
       private final BucketDestination destination;
 
-    public BucketDestination getDestination() {
+    public BucketDestination destination() {
         return this.destination;
     }
 
@@ -31,7 +31,7 @@ public final class BucketDataExport extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputSchemaVersion", required=true)
       private final String outputSchemaVersion;
 
-    public String getOutputSchemaVersion() {
+    public String outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 

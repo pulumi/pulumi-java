@@ -26,14 +26,14 @@ public final class BotMessageGroup {
         this.variations = variations;
     }
 
-    public BotMessage getMessage() {
+    public BotMessage message() {
         return this.message;
     }
     /**
      * Message variations to send to the user.
      * 
     */
-    public List<BotMessage> getVariations() {
+    public List<BotMessage> variations() {
         return this.variations == null ? List.of() : this.variations;
     }
 

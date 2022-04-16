@@ -27,42 +27,42 @@ public final class BucketReplicationDestinationArgs extends com.pulumi.resources
     @Import(name="accessControlTranslation")
       private final @Nullable Output<BucketAccessControlTranslationArgs> accessControlTranslation;
 
-    public Output<BucketAccessControlTranslationArgs> getAccessControlTranslation() {
+    public Output<BucketAccessControlTranslationArgs> accessControlTranslation() {
         return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
     }
 
     @Import(name="account")
       private final @Nullable Output<String> account;
 
-    public Output<String> getAccount() {
+    public Output<String> account() {
         return this.account == null ? Codegen.empty() : this.account;
     }
 
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<BucketEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<BucketEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="metrics")
       private final @Nullable Output<BucketMetricsArgs> metrics;
 
-    public Output<BucketMetricsArgs> getMetrics() {
+    public Output<BucketMetricsArgs> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     @Import(name="replicationTime")
       private final @Nullable Output<BucketReplicationTimeArgs> replicationTime;
 
-    public Output<BucketReplicationTimeArgs> getReplicationTime() {
+    public Output<BucketReplicationTimeArgs> replicationTime() {
         return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
     }
 
@@ -73,7 +73,7 @@ public final class BucketReplicationDestinationArgs extends com.pulumi.resources
     @Import(name="storageClass")
       private final @Nullable Output<BucketReplicationDestinationStorageClass> storageClass;
 
-    public Output<BucketReplicationDestinationStorageClass> getStorageClass() {
+    public Output<BucketReplicationDestinationStorageClass> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 

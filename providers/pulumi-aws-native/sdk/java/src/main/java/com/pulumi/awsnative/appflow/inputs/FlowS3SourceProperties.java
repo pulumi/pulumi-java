@@ -18,21 +18,21 @@ public final class FlowS3SourceProperties extends com.pulumi.resources.InvokeArg
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix", required=true)
       private final String bucketPrefix;
 
-    public String getBucketPrefix() {
+    public String bucketPrefix() {
         return this.bucketPrefix;
     }
 
     @Import(name="s3InputFormatConfig")
       private final @Nullable FlowS3InputFormatConfig s3InputFormatConfig;
 
-    public Optional<FlowS3InputFormatConfig> getS3InputFormatConfig() {
+    public Optional<FlowS3InputFormatConfig> s3InputFormatConfig() {
         return this.s3InputFormatConfig == null ? Optional.empty() : Optional.ofNullable(this.s3InputFormatConfig);
     }
 

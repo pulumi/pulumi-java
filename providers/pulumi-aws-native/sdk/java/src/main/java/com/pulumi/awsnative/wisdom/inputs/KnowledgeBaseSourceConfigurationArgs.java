@@ -18,7 +18,7 @@ public final class KnowledgeBaseSourceConfigurationArgs extends com.pulumi.resou
     @Import(name="appIntegrations")
       private final @Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
 
-    public Output<KnowledgeBaseAppIntegrationsConfigurationArgs> getAppIntegrations() {
+    public Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations() {
         return this.appIntegrations == null ? Codegen.empty() : this.appIntegrations;
     }
 

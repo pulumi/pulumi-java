@@ -23,217 +23,217 @@ public final class FilterCriteria extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccountId")
       private final @Nullable List<FilterStringFilter> awsAccountId;
 
-    public List<FilterStringFilter> getAwsAccountId() {
+    public List<FilterStringFilter> awsAccountId() {
         return this.awsAccountId == null ? List.of() : this.awsAccountId;
     }
 
     @Import(name="componentId")
       private final @Nullable List<FilterStringFilter> componentId;
 
-    public List<FilterStringFilter> getComponentId() {
+    public List<FilterStringFilter> componentId() {
         return this.componentId == null ? List.of() : this.componentId;
     }
 
     @Import(name="componentType")
       private final @Nullable List<FilterStringFilter> componentType;
 
-    public List<FilterStringFilter> getComponentType() {
+    public List<FilterStringFilter> componentType() {
         return this.componentType == null ? List.of() : this.componentType;
     }
 
     @Import(name="ec2InstanceImageId")
       private final @Nullable List<FilterStringFilter> ec2InstanceImageId;
 
-    public List<FilterStringFilter> getEc2InstanceImageId() {
+    public List<FilterStringFilter> ec2InstanceImageId() {
         return this.ec2InstanceImageId == null ? List.of() : this.ec2InstanceImageId;
     }
 
     @Import(name="ec2InstanceSubnetId")
       private final @Nullable List<FilterStringFilter> ec2InstanceSubnetId;
 
-    public List<FilterStringFilter> getEc2InstanceSubnetId() {
+    public List<FilterStringFilter> ec2InstanceSubnetId() {
         return this.ec2InstanceSubnetId == null ? List.of() : this.ec2InstanceSubnetId;
     }
 
     @Import(name="ec2InstanceVpcId")
       private final @Nullable List<FilterStringFilter> ec2InstanceVpcId;
 
-    public List<FilterStringFilter> getEc2InstanceVpcId() {
+    public List<FilterStringFilter> ec2InstanceVpcId() {
         return this.ec2InstanceVpcId == null ? List.of() : this.ec2InstanceVpcId;
     }
 
     @Import(name="ecrImageArchitecture")
       private final @Nullable List<FilterStringFilter> ecrImageArchitecture;
 
-    public List<FilterStringFilter> getEcrImageArchitecture() {
+    public List<FilterStringFilter> ecrImageArchitecture() {
         return this.ecrImageArchitecture == null ? List.of() : this.ecrImageArchitecture;
     }
 
     @Import(name="ecrImageHash")
       private final @Nullable List<FilterStringFilter> ecrImageHash;
 
-    public List<FilterStringFilter> getEcrImageHash() {
+    public List<FilterStringFilter> ecrImageHash() {
         return this.ecrImageHash == null ? List.of() : this.ecrImageHash;
     }
 
     @Import(name="ecrImagePushedAt")
       private final @Nullable List<FilterDateFilter> ecrImagePushedAt;
 
-    public List<FilterDateFilter> getEcrImagePushedAt() {
+    public List<FilterDateFilter> ecrImagePushedAt() {
         return this.ecrImagePushedAt == null ? List.of() : this.ecrImagePushedAt;
     }
 
     @Import(name="ecrImageRegistry")
       private final @Nullable List<FilterStringFilter> ecrImageRegistry;
 
-    public List<FilterStringFilter> getEcrImageRegistry() {
+    public List<FilterStringFilter> ecrImageRegistry() {
         return this.ecrImageRegistry == null ? List.of() : this.ecrImageRegistry;
     }
 
     @Import(name="ecrImageRepositoryName")
       private final @Nullable List<FilterStringFilter> ecrImageRepositoryName;
 
-    public List<FilterStringFilter> getEcrImageRepositoryName() {
+    public List<FilterStringFilter> ecrImageRepositoryName() {
         return this.ecrImageRepositoryName == null ? List.of() : this.ecrImageRepositoryName;
     }
 
     @Import(name="ecrImageTags")
       private final @Nullable List<FilterStringFilter> ecrImageTags;
 
-    public List<FilterStringFilter> getEcrImageTags() {
+    public List<FilterStringFilter> ecrImageTags() {
         return this.ecrImageTags == null ? List.of() : this.ecrImageTags;
     }
 
     @Import(name="findingArn")
       private final @Nullable List<FilterStringFilter> findingArn;
 
-    public List<FilterStringFilter> getFindingArn() {
+    public List<FilterStringFilter> findingArn() {
         return this.findingArn == null ? List.of() : this.findingArn;
     }
 
     @Import(name="findingStatus")
       private final @Nullable List<FilterStringFilter> findingStatus;
 
-    public List<FilterStringFilter> getFindingStatus() {
+    public List<FilterStringFilter> findingStatus() {
         return this.findingStatus == null ? List.of() : this.findingStatus;
     }
 
     @Import(name="findingType")
       private final @Nullable List<FilterStringFilter> findingType;
 
-    public List<FilterStringFilter> getFindingType() {
+    public List<FilterStringFilter> findingType() {
         return this.findingType == null ? List.of() : this.findingType;
     }
 
     @Import(name="firstObservedAt")
       private final @Nullable List<FilterDateFilter> firstObservedAt;
 
-    public List<FilterDateFilter> getFirstObservedAt() {
+    public List<FilterDateFilter> firstObservedAt() {
         return this.firstObservedAt == null ? List.of() : this.firstObservedAt;
     }
 
     @Import(name="inspectorScore")
       private final @Nullable List<FilterNumberFilter> inspectorScore;
 
-    public List<FilterNumberFilter> getInspectorScore() {
+    public List<FilterNumberFilter> inspectorScore() {
         return this.inspectorScore == null ? List.of() : this.inspectorScore;
     }
 
     @Import(name="lastObservedAt")
       private final @Nullable List<FilterDateFilter> lastObservedAt;
 
-    public List<FilterDateFilter> getLastObservedAt() {
+    public List<FilterDateFilter> lastObservedAt() {
         return this.lastObservedAt == null ? List.of() : this.lastObservedAt;
     }
 
     @Import(name="networkProtocol")
       private final @Nullable List<FilterStringFilter> networkProtocol;
 
-    public List<FilterStringFilter> getNetworkProtocol() {
+    public List<FilterStringFilter> networkProtocol() {
         return this.networkProtocol == null ? List.of() : this.networkProtocol;
     }
 
     @Import(name="portRange")
       private final @Nullable List<FilterPortRangeFilter> portRange;
 
-    public List<FilterPortRangeFilter> getPortRange() {
+    public List<FilterPortRangeFilter> portRange() {
         return this.portRange == null ? List.of() : this.portRange;
     }
 
     @Import(name="relatedVulnerabilities")
       private final @Nullable List<FilterStringFilter> relatedVulnerabilities;
 
-    public List<FilterStringFilter> getRelatedVulnerabilities() {
+    public List<FilterStringFilter> relatedVulnerabilities() {
         return this.relatedVulnerabilities == null ? List.of() : this.relatedVulnerabilities;
     }
 
     @Import(name="resourceId")
       private final @Nullable List<FilterStringFilter> resourceId;
 
-    public List<FilterStringFilter> getResourceId() {
+    public List<FilterStringFilter> resourceId() {
         return this.resourceId == null ? List.of() : this.resourceId;
     }
 
     @Import(name="resourceTags")
       private final @Nullable List<FilterMapFilter> resourceTags;
 
-    public List<FilterMapFilter> getResourceTags() {
+    public List<FilterMapFilter> resourceTags() {
         return this.resourceTags == null ? List.of() : this.resourceTags;
     }
 
     @Import(name="resourceType")
       private final @Nullable List<FilterStringFilter> resourceType;
 
-    public List<FilterStringFilter> getPropResourceType() {
+    public List<FilterStringFilter> resourceType() {
         return this.resourceType == null ? List.of() : this.resourceType;
     }
 
     @Import(name="severity")
       private final @Nullable List<FilterStringFilter> severity;
 
-    public List<FilterStringFilter> getSeverity() {
+    public List<FilterStringFilter> severity() {
         return this.severity == null ? List.of() : this.severity;
     }
 
     @Import(name="title")
       private final @Nullable List<FilterStringFilter> title;
 
-    public List<FilterStringFilter> getTitle() {
+    public List<FilterStringFilter> title() {
         return this.title == null ? List.of() : this.title;
     }
 
     @Import(name="updatedAt")
       private final @Nullable List<FilterDateFilter> updatedAt;
 
-    public List<FilterDateFilter> getUpdatedAt() {
+    public List<FilterDateFilter> updatedAt() {
         return this.updatedAt == null ? List.of() : this.updatedAt;
     }
 
     @Import(name="vendorSeverity")
       private final @Nullable List<FilterStringFilter> vendorSeverity;
 
-    public List<FilterStringFilter> getVendorSeverity() {
+    public List<FilterStringFilter> vendorSeverity() {
         return this.vendorSeverity == null ? List.of() : this.vendorSeverity;
     }
 
     @Import(name="vulnerabilityId")
       private final @Nullable List<FilterStringFilter> vulnerabilityId;
 
-    public List<FilterStringFilter> getVulnerabilityId() {
+    public List<FilterStringFilter> vulnerabilityId() {
         return this.vulnerabilityId == null ? List.of() : this.vulnerabilityId;
     }
 
     @Import(name="vulnerabilitySource")
       private final @Nullable List<FilterStringFilter> vulnerabilitySource;
 
-    public List<FilterStringFilter> getVulnerabilitySource() {
+    public List<FilterStringFilter> vulnerabilitySource() {
         return this.vulnerabilitySource == null ? List.of() : this.vulnerabilitySource;
     }
 
     @Import(name="vulnerablePackages")
       private final @Nullable List<FilterPackageFilter> vulnerablePackages;
 
-    public List<FilterPackageFilter> getVulnerablePackages() {
+    public List<FilterPackageFilter> vulnerablePackages() {
         return this.vulnerablePackages == null ? List.of() : this.vulnerablePackages;
     }
 

@@ -23,203 +23,203 @@ public final class RecipeParametersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="aggregateFunction")
       private final @Nullable Output<String> aggregateFunction;
 
-    public Output<String> getAggregateFunction() {
+    public Output<String> aggregateFunction() {
         return this.aggregateFunction == null ? Codegen.empty() : this.aggregateFunction;
     }
 
     @Import(name="base")
       private final @Nullable Output<String> base;
 
-    public Output<String> getBase() {
+    public Output<String> base() {
         return this.base == null ? Codegen.empty() : this.base;
     }
 
     @Import(name="caseStatement")
       private final @Nullable Output<String> caseStatement;
 
-    public Output<String> getCaseStatement() {
+    public Output<String> caseStatement() {
         return this.caseStatement == null ? Codegen.empty() : this.caseStatement;
     }
 
     @Import(name="categoryMap")
       private final @Nullable Output<String> categoryMap;
 
-    public Output<String> getCategoryMap() {
+    public Output<String> categoryMap() {
         return this.categoryMap == null ? Codegen.empty() : this.categoryMap;
     }
 
     @Import(name="charsToRemove")
       private final @Nullable Output<String> charsToRemove;
 
-    public Output<String> getCharsToRemove() {
+    public Output<String> charsToRemove() {
         return this.charsToRemove == null ? Codegen.empty() : this.charsToRemove;
     }
 
     @Import(name="collapseConsecutiveWhitespace")
       private final @Nullable Output<String> collapseConsecutiveWhitespace;
 
-    public Output<String> getCollapseConsecutiveWhitespace() {
+    public Output<String> collapseConsecutiveWhitespace() {
         return this.collapseConsecutiveWhitespace == null ? Codegen.empty() : this.collapseConsecutiveWhitespace;
     }
 
     @Import(name="columnDataType")
       private final @Nullable Output<String> columnDataType;
 
-    public Output<String> getColumnDataType() {
+    public Output<String> columnDataType() {
         return this.columnDataType == null ? Codegen.empty() : this.columnDataType;
     }
 
     @Import(name="columnRange")
       private final @Nullable Output<String> columnRange;
 
-    public Output<String> getColumnRange() {
+    public Output<String> columnRange() {
         return this.columnRange == null ? Codegen.empty() : this.columnRange;
     }
 
     @Import(name="count")
       private final @Nullable Output<String> count;
 
-    public Output<String> getCount() {
+    public Output<String> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
     @Import(name="customCharacters")
       private final @Nullable Output<String> customCharacters;
 
-    public Output<String> getCustomCharacters() {
+    public Output<String> customCharacters() {
         return this.customCharacters == null ? Codegen.empty() : this.customCharacters;
     }
 
     @Import(name="customStopWords")
       private final @Nullable Output<String> customStopWords;
 
-    public Output<String> getCustomStopWords() {
+    public Output<String> customStopWords() {
         return this.customStopWords == null ? Codegen.empty() : this.customStopWords;
     }
 
     @Import(name="customValue")
       private final @Nullable Output<String> customValue;
 
-    public Output<String> getCustomValue() {
+    public Output<String> customValue() {
         return this.customValue == null ? Codegen.empty() : this.customValue;
     }
 
     @Import(name="datasetsColumns")
       private final @Nullable Output<String> datasetsColumns;
 
-    public Output<String> getDatasetsColumns() {
+    public Output<String> datasetsColumns() {
         return this.datasetsColumns == null ? Codegen.empty() : this.datasetsColumns;
     }
 
     @Import(name="dateAddValue")
       private final @Nullable Output<String> dateAddValue;
 
-    public Output<String> getDateAddValue() {
+    public Output<String> dateAddValue() {
         return this.dateAddValue == null ? Codegen.empty() : this.dateAddValue;
     }
 
     @Import(name="dateTimeFormat")
       private final @Nullable Output<String> dateTimeFormat;
 
-    public Output<String> getDateTimeFormat() {
+    public Output<String> dateTimeFormat() {
         return this.dateTimeFormat == null ? Codegen.empty() : this.dateTimeFormat;
     }
 
     @Import(name="dateTimeParameters")
       private final @Nullable Output<String> dateTimeParameters;
 
-    public Output<String> getDateTimeParameters() {
+    public Output<String> dateTimeParameters() {
         return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
     }
 
     @Import(name="deleteOtherRows")
       private final @Nullable Output<String> deleteOtherRows;
 
-    public Output<String> getDeleteOtherRows() {
+    public Output<String> deleteOtherRows() {
         return this.deleteOtherRows == null ? Codegen.empty() : this.deleteOtherRows;
     }
 
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
+    public Output<String> delimiter() {
         return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     @Import(name="endPattern")
       private final @Nullable Output<String> endPattern;
 
-    public Output<String> getEndPattern() {
+    public Output<String> endPattern() {
         return this.endPattern == null ? Codegen.empty() : this.endPattern;
     }
 
     @Import(name="endPosition")
       private final @Nullable Output<String> endPosition;
 
-    public Output<String> getEndPosition() {
+    public Output<String> endPosition() {
         return this.endPosition == null ? Codegen.empty() : this.endPosition;
     }
 
     @Import(name="endValue")
       private final @Nullable Output<String> endValue;
 
-    public Output<String> getEndValue() {
+    public Output<String> endValue() {
         return this.endValue == null ? Codegen.empty() : this.endValue;
     }
 
     @Import(name="expandContractions")
       private final @Nullable Output<String> expandContractions;
 
-    public Output<String> getExpandContractions() {
+    public Output<String> expandContractions() {
         return this.expandContractions == null ? Codegen.empty() : this.expandContractions;
     }
 
     @Import(name="exponent")
       private final @Nullable Output<String> exponent;
 
-    public Output<String> getExponent() {
+    public Output<String> exponent() {
         return this.exponent == null ? Codegen.empty() : this.exponent;
     }
 
     @Import(name="falseString")
       private final @Nullable Output<String> falseString;
 
-    public Output<String> getFalseString() {
+    public Output<String> falseString() {
         return this.falseString == null ? Codegen.empty() : this.falseString;
     }
 
     @Import(name="groupByAggFunctionOptions")
       private final @Nullable Output<String> groupByAggFunctionOptions;
 
-    public Output<String> getGroupByAggFunctionOptions() {
+    public Output<String> groupByAggFunctionOptions() {
         return this.groupByAggFunctionOptions == null ? Codegen.empty() : this.groupByAggFunctionOptions;
     }
 
     @Import(name="groupByColumns")
       private final @Nullable Output<String> groupByColumns;
 
-    public Output<String> getGroupByColumns() {
+    public Output<String> groupByColumns() {
         return this.groupByColumns == null ? Codegen.empty() : this.groupByColumns;
     }
 
     @Import(name="hiddenColumns")
       private final @Nullable Output<String> hiddenColumns;
 
-    public Output<String> getHiddenColumns() {
+    public Output<String> hiddenColumns() {
         return this.hiddenColumns == null ? Codegen.empty() : this.hiddenColumns;
     }
 
     @Import(name="ignoreCase")
       private final @Nullable Output<String> ignoreCase;
 
-    public Output<String> getIgnoreCase() {
+    public Output<String> ignoreCase() {
         return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
     }
 
     @Import(name="includeInSplit")
       private final @Nullable Output<String> includeInSplit;
 
-    public Output<String> getIncludeInSplit() {
+    public Output<String> includeInSplit() {
         return this.includeInSplit == null ? Codegen.empty() : this.includeInSplit;
     }
 
@@ -230,504 +230,504 @@ public final class RecipeParametersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="input")
       private final @Nullable Output<RecipeParametersInputPropertiesArgs> input;
 
-    public Output<RecipeParametersInputPropertiesArgs> getInput() {
+    public Output<RecipeParametersInputPropertiesArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     @Import(name="isText")
       private final @Nullable Output<String> isText;
 
-    public Output<String> getIsText() {
+    public Output<String> isText() {
         return this.isText == null ? Codegen.empty() : this.isText;
     }
 
     @Import(name="joinKeys")
       private final @Nullable Output<String> joinKeys;
 
-    public Output<String> getJoinKeys() {
+    public Output<String> joinKeys() {
         return this.joinKeys == null ? Codegen.empty() : this.joinKeys;
     }
 
     @Import(name="joinType")
       private final @Nullable Output<String> joinType;
 
-    public Output<String> getJoinType() {
+    public Output<String> joinType() {
         return this.joinType == null ? Codegen.empty() : this.joinType;
     }
 
     @Import(name="leftColumns")
       private final @Nullable Output<String> leftColumns;
 
-    public Output<String> getLeftColumns() {
+    public Output<String> leftColumns() {
         return this.leftColumns == null ? Codegen.empty() : this.leftColumns;
     }
 
     @Import(name="limit")
       private final @Nullable Output<String> limit;
 
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit == null ? Codegen.empty() : this.limit;
     }
 
     @Import(name="lowerBound")
       private final @Nullable Output<String> lowerBound;
 
-    public Output<String> getLowerBound() {
+    public Output<String> lowerBound() {
         return this.lowerBound == null ? Codegen.empty() : this.lowerBound;
     }
 
     @Import(name="mapType")
       private final @Nullable Output<String> mapType;
 
-    public Output<String> getMapType() {
+    public Output<String> mapType() {
         return this.mapType == null ? Codegen.empty() : this.mapType;
     }
 
     @Import(name="modeType")
       private final @Nullable Output<String> modeType;
 
-    public Output<String> getModeType() {
+    public Output<String> modeType() {
         return this.modeType == null ? Codegen.empty() : this.modeType;
     }
 
     @Import(name="multiLine")
       private final @Nullable Output<Boolean> multiLine;
 
-    public Output<Boolean> getMultiLine() {
+    public Output<Boolean> multiLine() {
         return this.multiLine == null ? Codegen.empty() : this.multiLine;
     }
 
     @Import(name="numRows")
       private final @Nullable Output<String> numRows;
 
-    public Output<String> getNumRows() {
+    public Output<String> numRows() {
         return this.numRows == null ? Codegen.empty() : this.numRows;
     }
 
     @Import(name="numRowsAfter")
       private final @Nullable Output<String> numRowsAfter;
 
-    public Output<String> getNumRowsAfter() {
+    public Output<String> numRowsAfter() {
         return this.numRowsAfter == null ? Codegen.empty() : this.numRowsAfter;
     }
 
     @Import(name="numRowsBefore")
       private final @Nullable Output<String> numRowsBefore;
 
-    public Output<String> getNumRowsBefore() {
+    public Output<String> numRowsBefore() {
         return this.numRowsBefore == null ? Codegen.empty() : this.numRowsBefore;
     }
 
     @Import(name="orderByColumn")
       private final @Nullable Output<String> orderByColumn;
 
-    public Output<String> getOrderByColumn() {
+    public Output<String> orderByColumn() {
         return this.orderByColumn == null ? Codegen.empty() : this.orderByColumn;
     }
 
     @Import(name="orderByColumns")
       private final @Nullable Output<String> orderByColumns;
 
-    public Output<String> getOrderByColumns() {
+    public Output<String> orderByColumns() {
         return this.orderByColumns == null ? Codegen.empty() : this.orderByColumns;
     }
 
     @Import(name="other")
       private final @Nullable Output<String> other;
 
-    public Output<String> getOther() {
+    public Output<String> other() {
         return this.other == null ? Codegen.empty() : this.other;
     }
 
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     @Import(name="patternOption1")
       private final @Nullable Output<String> patternOption1;
 
-    public Output<String> getPatternOption1() {
+    public Output<String> patternOption1() {
         return this.patternOption1 == null ? Codegen.empty() : this.patternOption1;
     }
 
     @Import(name="patternOption2")
       private final @Nullable Output<String> patternOption2;
 
-    public Output<String> getPatternOption2() {
+    public Output<String> patternOption2() {
         return this.patternOption2 == null ? Codegen.empty() : this.patternOption2;
     }
 
     @Import(name="patternOptions")
       private final @Nullable Output<String> patternOptions;
 
-    public Output<String> getPatternOptions() {
+    public Output<String> patternOptions() {
         return this.patternOptions == null ? Codegen.empty() : this.patternOptions;
     }
 
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period == null ? Codegen.empty() : this.period;
     }
 
     @Import(name="position")
       private final @Nullable Output<String> position;
 
-    public Output<String> getPosition() {
+    public Output<String> position() {
         return this.position == null ? Codegen.empty() : this.position;
     }
 
     @Import(name="removeAllPunctuation")
       private final @Nullable Output<String> removeAllPunctuation;
 
-    public Output<String> getRemoveAllPunctuation() {
+    public Output<String> removeAllPunctuation() {
         return this.removeAllPunctuation == null ? Codegen.empty() : this.removeAllPunctuation;
     }
 
     @Import(name="removeAllQuotes")
       private final @Nullable Output<String> removeAllQuotes;
 
-    public Output<String> getRemoveAllQuotes() {
+    public Output<String> removeAllQuotes() {
         return this.removeAllQuotes == null ? Codegen.empty() : this.removeAllQuotes;
     }
 
     @Import(name="removeAllWhitespace")
       private final @Nullable Output<String> removeAllWhitespace;
 
-    public Output<String> getRemoveAllWhitespace() {
+    public Output<String> removeAllWhitespace() {
         return this.removeAllWhitespace == null ? Codegen.empty() : this.removeAllWhitespace;
     }
 
     @Import(name="removeCustomCharacters")
       private final @Nullable Output<String> removeCustomCharacters;
 
-    public Output<String> getRemoveCustomCharacters() {
+    public Output<String> removeCustomCharacters() {
         return this.removeCustomCharacters == null ? Codegen.empty() : this.removeCustomCharacters;
     }
 
     @Import(name="removeCustomValue")
       private final @Nullable Output<String> removeCustomValue;
 
-    public Output<String> getRemoveCustomValue() {
+    public Output<String> removeCustomValue() {
         return this.removeCustomValue == null ? Codegen.empty() : this.removeCustomValue;
     }
 
     @Import(name="removeLeadingAndTrailingPunctuation")
       private final @Nullable Output<String> removeLeadingAndTrailingPunctuation;
 
-    public Output<String> getRemoveLeadingAndTrailingPunctuation() {
+    public Output<String> removeLeadingAndTrailingPunctuation() {
         return this.removeLeadingAndTrailingPunctuation == null ? Codegen.empty() : this.removeLeadingAndTrailingPunctuation;
     }
 
     @Import(name="removeLeadingAndTrailingQuotes")
       private final @Nullable Output<String> removeLeadingAndTrailingQuotes;
 
-    public Output<String> getRemoveLeadingAndTrailingQuotes() {
+    public Output<String> removeLeadingAndTrailingQuotes() {
         return this.removeLeadingAndTrailingQuotes == null ? Codegen.empty() : this.removeLeadingAndTrailingQuotes;
     }
 
     @Import(name="removeLeadingAndTrailingWhitespace")
       private final @Nullable Output<String> removeLeadingAndTrailingWhitespace;
 
-    public Output<String> getRemoveLeadingAndTrailingWhitespace() {
+    public Output<String> removeLeadingAndTrailingWhitespace() {
         return this.removeLeadingAndTrailingWhitespace == null ? Codegen.empty() : this.removeLeadingAndTrailingWhitespace;
     }
 
     @Import(name="removeLetters")
       private final @Nullable Output<String> removeLetters;
 
-    public Output<String> getRemoveLetters() {
+    public Output<String> removeLetters() {
         return this.removeLetters == null ? Codegen.empty() : this.removeLetters;
     }
 
     @Import(name="removeNumbers")
       private final @Nullable Output<String> removeNumbers;
 
-    public Output<String> getRemoveNumbers() {
+    public Output<String> removeNumbers() {
         return this.removeNumbers == null ? Codegen.empty() : this.removeNumbers;
     }
 
     @Import(name="removeSourceColumn")
       private final @Nullable Output<String> removeSourceColumn;
 
-    public Output<String> getRemoveSourceColumn() {
+    public Output<String> removeSourceColumn() {
         return this.removeSourceColumn == null ? Codegen.empty() : this.removeSourceColumn;
     }
 
     @Import(name="removeSpecialCharacters")
       private final @Nullable Output<String> removeSpecialCharacters;
 
-    public Output<String> getRemoveSpecialCharacters() {
+    public Output<String> removeSpecialCharacters() {
         return this.removeSpecialCharacters == null ? Codegen.empty() : this.removeSpecialCharacters;
     }
 
     @Import(name="rightColumns")
       private final @Nullable Output<String> rightColumns;
 
-    public Output<String> getRightColumns() {
+    public Output<String> rightColumns() {
         return this.rightColumns == null ? Codegen.empty() : this.rightColumns;
     }
 
     @Import(name="sampleSize")
       private final @Nullable Output<String> sampleSize;
 
-    public Output<String> getSampleSize() {
+    public Output<String> sampleSize() {
         return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 
     @Import(name="sampleType")
       private final @Nullable Output<String> sampleType;
 
-    public Output<String> getSampleType() {
+    public Output<String> sampleType() {
         return this.sampleType == null ? Codegen.empty() : this.sampleType;
     }
 
     @Import(name="secondInput")
       private final @Nullable Output<String> secondInput;
 
-    public Output<String> getSecondInput() {
+    public Output<String> secondInput() {
         return this.secondInput == null ? Codegen.empty() : this.secondInput;
     }
 
     @Import(name="secondaryInputs")
       private final @Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs;
 
-    public Output<List<RecipeSecondaryInputArgs>> getSecondaryInputs() {
+    public Output<List<RecipeSecondaryInputArgs>> secondaryInputs() {
         return this.secondaryInputs == null ? Codegen.empty() : this.secondaryInputs;
     }
 
     @Import(name="sheetIndexes")
       private final @Nullable Output<List<Integer>> sheetIndexes;
 
-    public Output<List<Integer>> getSheetIndexes() {
+    public Output<List<Integer>> sheetIndexes() {
         return this.sheetIndexes == null ? Codegen.empty() : this.sheetIndexes;
     }
 
     @Import(name="sheetNames")
       private final @Nullable Output<List<String>> sheetNames;
 
-    public Output<List<String>> getSheetNames() {
+    public Output<List<String>> sheetNames() {
         return this.sheetNames == null ? Codegen.empty() : this.sheetNames;
     }
 
     @Import(name="sourceColumn")
       private final @Nullable Output<String> sourceColumn;
 
-    public Output<String> getSourceColumn() {
+    public Output<String> sourceColumn() {
         return this.sourceColumn == null ? Codegen.empty() : this.sourceColumn;
     }
 
     @Import(name="sourceColumn1")
       private final @Nullable Output<String> sourceColumn1;
 
-    public Output<String> getSourceColumn1() {
+    public Output<String> sourceColumn1() {
         return this.sourceColumn1 == null ? Codegen.empty() : this.sourceColumn1;
     }
 
     @Import(name="sourceColumn2")
       private final @Nullable Output<String> sourceColumn2;
 
-    public Output<String> getSourceColumn2() {
+    public Output<String> sourceColumn2() {
         return this.sourceColumn2 == null ? Codegen.empty() : this.sourceColumn2;
     }
 
     @Import(name="sourceColumns")
       private final @Nullable Output<String> sourceColumns;
 
-    public Output<String> getSourceColumns() {
+    public Output<String> sourceColumns() {
         return this.sourceColumns == null ? Codegen.empty() : this.sourceColumns;
     }
 
     @Import(name="startColumnIndex")
       private final @Nullable Output<String> startColumnIndex;
 
-    public Output<String> getStartColumnIndex() {
+    public Output<String> startColumnIndex() {
         return this.startColumnIndex == null ? Codegen.empty() : this.startColumnIndex;
     }
 
     @Import(name="startPattern")
       private final @Nullable Output<String> startPattern;
 
-    public Output<String> getStartPattern() {
+    public Output<String> startPattern() {
         return this.startPattern == null ? Codegen.empty() : this.startPattern;
     }
 
     @Import(name="startPosition")
       private final @Nullable Output<String> startPosition;
 
-    public Output<String> getStartPosition() {
+    public Output<String> startPosition() {
         return this.startPosition == null ? Codegen.empty() : this.startPosition;
     }
 
     @Import(name="startValue")
       private final @Nullable Output<String> startValue;
 
-    public Output<String> getStartValue() {
+    public Output<String> startValue() {
         return this.startValue == null ? Codegen.empty() : this.startValue;
     }
 
     @Import(name="stemmingMode")
       private final @Nullable Output<String> stemmingMode;
 
-    public Output<String> getStemmingMode() {
+    public Output<String> stemmingMode() {
         return this.stemmingMode == null ? Codegen.empty() : this.stemmingMode;
     }
 
     @Import(name="stepCount")
       private final @Nullable Output<String> stepCount;
 
-    public Output<String> getStepCount() {
+    public Output<String> stepCount() {
         return this.stepCount == null ? Codegen.empty() : this.stepCount;
     }
 
     @Import(name="stepIndex")
       private final @Nullable Output<String> stepIndex;
 
-    public Output<String> getStepIndex() {
+    public Output<String> stepIndex() {
         return this.stepIndex == null ? Codegen.empty() : this.stepIndex;
     }
 
     @Import(name="stopWordsMode")
       private final @Nullable Output<String> stopWordsMode;
 
-    public Output<String> getStopWordsMode() {
+    public Output<String> stopWordsMode() {
         return this.stopWordsMode == null ? Codegen.empty() : this.stopWordsMode;
     }
 
     @Import(name="strategy")
       private final @Nullable Output<String> strategy;
 
-    public Output<String> getStrategy() {
+    public Output<String> strategy() {
         return this.strategy == null ? Codegen.empty() : this.strategy;
     }
 
     @Import(name="targetColumn")
       private final @Nullable Output<String> targetColumn;
 
-    public Output<String> getTargetColumn() {
+    public Output<String> targetColumn() {
         return this.targetColumn == null ? Codegen.empty() : this.targetColumn;
     }
 
     @Import(name="targetColumnNames")
       private final @Nullable Output<String> targetColumnNames;
 
-    public Output<String> getTargetColumnNames() {
+    public Output<String> targetColumnNames() {
         return this.targetColumnNames == null ? Codegen.empty() : this.targetColumnNames;
     }
 
     @Import(name="targetDateFormat")
       private final @Nullable Output<String> targetDateFormat;
 
-    public Output<String> getTargetDateFormat() {
+    public Output<String> targetDateFormat() {
         return this.targetDateFormat == null ? Codegen.empty() : this.targetDateFormat;
     }
 
     @Import(name="targetIndex")
       private final @Nullable Output<String> targetIndex;
 
-    public Output<String> getTargetIndex() {
+    public Output<String> targetIndex() {
         return this.targetIndex == null ? Codegen.empty() : this.targetIndex;
     }
 
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     @Import(name="tokenizerPattern")
       private final @Nullable Output<String> tokenizerPattern;
 
-    public Output<String> getTokenizerPattern() {
+    public Output<String> tokenizerPattern() {
         return this.tokenizerPattern == null ? Codegen.empty() : this.tokenizerPattern;
     }
 
     @Import(name="trueString")
       private final @Nullable Output<String> trueString;
 
-    public Output<String> getTrueString() {
+    public Output<String> trueString() {
         return this.trueString == null ? Codegen.empty() : this.trueString;
     }
 
     @Import(name="udfLang")
       private final @Nullable Output<String> udfLang;
 
-    public Output<String> getUdfLang() {
+    public Output<String> udfLang() {
         return this.udfLang == null ? Codegen.empty() : this.udfLang;
     }
 
     @Import(name="units")
       private final @Nullable Output<String> units;
 
-    public Output<String> getUnits() {
+    public Output<String> units() {
         return this.units == null ? Codegen.empty() : this.units;
     }
 
     @Import(name="unpivotColumn")
       private final @Nullable Output<String> unpivotColumn;
 
-    public Output<String> getUnpivotColumn() {
+    public Output<String> unpivotColumn() {
         return this.unpivotColumn == null ? Codegen.empty() : this.unpivotColumn;
     }
 
     @Import(name="upperBound")
       private final @Nullable Output<String> upperBound;
 
-    public Output<String> getUpperBound() {
+    public Output<String> upperBound() {
         return this.upperBound == null ? Codegen.empty() : this.upperBound;
     }
 
     @Import(name="useNewDataFrame")
       private final @Nullable Output<String> useNewDataFrame;
 
-    public Output<String> getUseNewDataFrame() {
+    public Output<String> useNewDataFrame() {
         return this.useNewDataFrame == null ? Codegen.empty() : this.useNewDataFrame;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
     @Import(name="value1")
       private final @Nullable Output<String> value1;
 
-    public Output<String> getValue1() {
+    public Output<String> value1() {
         return this.value1 == null ? Codegen.empty() : this.value1;
     }
 
     @Import(name="value2")
       private final @Nullable Output<String> value2;
 
-    public Output<String> getValue2() {
+    public Output<String> value2() {
         return this.value2 == null ? Codegen.empty() : this.value2;
     }
 
     @Import(name="valueColumn")
       private final @Nullable Output<String> valueColumn;
 
-    public Output<String> getValueColumn() {
+    public Output<String> valueColumn() {
         return this.valueColumn == null ? Codegen.empty() : this.valueColumn;
     }
 
     @Import(name="viewFrame")
       private final @Nullable Output<String> viewFrame;
 
-    public Output<String> getViewFrame() {
+    public Output<String> viewFrame() {
         return this.viewFrame == null ? Codegen.empty() : this.viewFrame;
     }
 

@@ -19,35 +19,35 @@ public final class DistributionLegacyCustomOrigin extends com.pulumi.resources.I
     @Import(name="dNSName", required=true)
       private final String dNSName;
 
-    public String getDNSName() {
+    public String dNSName() {
         return this.dNSName;
     }
 
     @Import(name="hTTPPort")
       private final @Nullable Integer hTTPPort;
 
-    public Optional<Integer> getHTTPPort() {
+    public Optional<Integer> hTTPPort() {
         return this.hTTPPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPPort);
     }
 
     @Import(name="hTTPSPort")
       private final @Nullable Integer hTTPSPort;
 
-    public Optional<Integer> getHTTPSPort() {
+    public Optional<Integer> hTTPSPort() {
         return this.hTTPSPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPSPort);
     }
 
     @Import(name="originProtocolPolicy", required=true)
       private final String originProtocolPolicy;
 
-    public String getOriginProtocolPolicy() {
+    public String originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @Import(name="originSSLProtocols", required=true)
       private final List<String> originSSLProtocols;
 
-    public List<String> getOriginSSLProtocols() {
+    public List<String> originSSLProtocols() {
         return this.originSSLProtocols;
     }
 

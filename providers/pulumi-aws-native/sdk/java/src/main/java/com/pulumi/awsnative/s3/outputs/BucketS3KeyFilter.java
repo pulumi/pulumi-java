@@ -17,7 +17,7 @@ public final class BucketS3KeyFilter {
         this.rules = rules;
     }
 
-    public List<BucketFilterRule> getRules() {
+    public List<BucketFilterRule> rules() {
         return this.rules;
     }
 

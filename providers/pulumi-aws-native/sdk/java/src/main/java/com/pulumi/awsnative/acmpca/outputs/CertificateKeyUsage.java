@@ -43,31 +43,31 @@ public final class CertificateKeyUsage {
         this.nonRepudiation = nonRepudiation;
     }
 
-    public Optional<Boolean> getCRLSign() {
+    public Optional<Boolean> cRLSign() {
         return Optional.ofNullable(this.cRLSign);
     }
-    public Optional<Boolean> getDataEncipherment() {
+    public Optional<Boolean> dataEncipherment() {
         return Optional.ofNullable(this.dataEncipherment);
     }
-    public Optional<Boolean> getDecipherOnly() {
+    public Optional<Boolean> decipherOnly() {
         return Optional.ofNullable(this.decipherOnly);
     }
-    public Optional<Boolean> getDigitalSignature() {
+    public Optional<Boolean> digitalSignature() {
         return Optional.ofNullable(this.digitalSignature);
     }
-    public Optional<Boolean> getEncipherOnly() {
+    public Optional<Boolean> encipherOnly() {
         return Optional.ofNullable(this.encipherOnly);
     }
-    public Optional<Boolean> getKeyAgreement() {
+    public Optional<Boolean> keyAgreement() {
         return Optional.ofNullable(this.keyAgreement);
     }
-    public Optional<Boolean> getKeyCertSign() {
+    public Optional<Boolean> keyCertSign() {
         return Optional.ofNullable(this.keyCertSign);
     }
-    public Optional<Boolean> getKeyEncipherment() {
+    public Optional<Boolean> keyEncipherment() {
         return Optional.ofNullable(this.keyEncipherment);
     }
-    public Optional<Boolean> getNonRepudiation() {
+    public Optional<Boolean> nonRepudiation() {
         return Optional.ofNullable(this.nonRepudiation);
     }
 

@@ -16,14 +16,14 @@ public final class DatasetResourceConfiguration extends com.pulumi.resources.Inv
     @Import(name="computeType", required=true)
       private final DatasetResourceConfigurationComputeType computeType;
 
-    public DatasetResourceConfigurationComputeType getComputeType() {
+    public DatasetResourceConfigurationComputeType computeType() {
         return this.computeType;
     }
 
     @Import(name="volumeSizeInGB", required=true)
       private final Integer volumeSizeInGB;
 
-    public Integer getVolumeSizeInGB() {
+    public Integer volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 

@@ -20,10 +20,10 @@ public final class PolicyTag {
         this.value = value;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

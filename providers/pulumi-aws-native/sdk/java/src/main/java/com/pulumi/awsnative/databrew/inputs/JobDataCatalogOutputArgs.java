@@ -21,42 +21,42 @@ public final class JobDataCatalogOutputArgs extends com.pulumi.resources.Resourc
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databaseOptions")
       private final @Nullable Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
-    public Output<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
+    public Output<JobDatabaseTableOutputOptionsArgs> databaseOptions() {
         return this.databaseOptions == null ? Codegen.empty() : this.databaseOptions;
     }
 
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
+    public Output<Boolean> overwrite() {
         return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     @Import(name="s3Options")
       private final @Nullable Output<JobS3TableOutputOptionsArgs> s3Options;
 
-    public Output<JobS3TableOutputOptionsArgs> getS3Options() {
+    public Output<JobS3TableOutputOptionsArgs> s3Options() {
         return this.s3Options == null ? Codegen.empty() : this.s3Options;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

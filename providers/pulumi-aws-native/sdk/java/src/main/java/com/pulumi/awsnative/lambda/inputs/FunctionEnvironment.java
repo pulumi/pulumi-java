@@ -25,7 +25,7 @@ public final class FunctionEnvironment extends com.pulumi.resources.InvokeArgs {
     @Import(name="variables")
       private final @Nullable Object variables;
 
-    public Optional<Object> getVariables() {
+    public Optional<Object> variables() {
         return this.variables == null ? Optional.empty() : Optional.ofNullable(this.variables);
     }
 

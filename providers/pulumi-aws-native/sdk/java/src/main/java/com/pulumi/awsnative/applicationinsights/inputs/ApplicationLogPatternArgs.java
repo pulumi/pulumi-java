@@ -26,7 +26,7 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
     @Import(name="patternName", required=true)
       private final Output<String> patternName;
 
-    public Output<String> getPatternName() {
+    public Output<String> patternName() {
         return this.patternName;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
     @Import(name="rank", required=true)
       private final Output<Integer> rank;
 
-    public Output<Integer> getRank() {
+    public Output<Integer> rank() {
         return this.rank;
     }
 

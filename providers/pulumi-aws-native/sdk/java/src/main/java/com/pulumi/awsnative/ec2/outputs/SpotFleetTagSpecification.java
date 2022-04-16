@@ -24,10 +24,10 @@ public final class SpotFleetTagSpecification {
         this.tags = tags;
     }
 
-    public Optional<SpotFleetTagSpecificationResourceType> getPropResourceType() {
+    public Optional<SpotFleetTagSpecificationResourceType> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
-    public List<SpotFleetTag> getTags() {
+    public List<SpotFleetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

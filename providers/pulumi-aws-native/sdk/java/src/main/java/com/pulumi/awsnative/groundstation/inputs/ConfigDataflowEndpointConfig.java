@@ -17,14 +17,14 @@ public final class ConfigDataflowEndpointConfig extends com.pulumi.resources.Inv
     @Import(name="dataflowEndpointName")
       private final @Nullable String dataflowEndpointName;
 
-    public Optional<String> getDataflowEndpointName() {
+    public Optional<String> dataflowEndpointName() {
         return this.dataflowEndpointName == null ? Optional.empty() : Optional.ofNullable(this.dataflowEndpointName);
     }
 
     @Import(name="dataflowEndpointRegion")
       private final @Nullable String dataflowEndpointRegion;
 
-    public Optional<String> getDataflowEndpointRegion() {
+    public Optional<String> dataflowEndpointRegion() {
         return this.dataflowEndpointRegion == null ? Optional.empty() : Optional.ofNullable(this.dataflowEndpointRegion);
     }
 

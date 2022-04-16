@@ -22,10 +22,10 @@ public final class BotSlotTypeValue {
         this.synonyms = synonyms;
     }
 
-    public BotSampleValue getSampleValue() {
+    public BotSampleValue sampleValue() {
         return this.sampleValue;
     }
-    public List<BotSampleValue> getSynonyms() {
+    public List<BotSampleValue> synonyms() {
         return this.synonyms == null ? List.of() : this.synonyms;
     }
 

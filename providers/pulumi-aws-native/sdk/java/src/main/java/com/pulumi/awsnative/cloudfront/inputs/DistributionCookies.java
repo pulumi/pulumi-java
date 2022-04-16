@@ -18,14 +18,14 @@ public final class DistributionCookies extends com.pulumi.resources.InvokeArgs {
     @Import(name="forward", required=true)
       private final String forward;
 
-    public String getForward() {
+    public String forward() {
         return this.forward;
     }
 
     @Import(name="whitelistedNames")
       private final @Nullable List<String> whitelistedNames;
 
-    public List<String> getWhitelistedNames() {
+    public List<String> whitelistedNames() {
         return this.whitelistedNames == null ? List.of() : this.whitelistedNames;
     }
 

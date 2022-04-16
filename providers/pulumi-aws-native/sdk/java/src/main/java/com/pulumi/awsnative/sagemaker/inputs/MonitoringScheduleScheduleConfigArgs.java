@@ -25,7 +25,7 @@ public final class MonitoringScheduleScheduleConfigArgs extends com.pulumi.resou
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 

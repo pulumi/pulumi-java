@@ -17,7 +17,7 @@ public final class DataSourceAccessControlListConfiguration extends com.pulumi.r
     @Import(name="keyPath")
       private final @Nullable String keyPath;
 
-    public Optional<String> getKeyPath() {
+    public Optional<String> keyPath() {
         return this.keyPath == null ? Optional.empty() : Optional.ofNullable(this.keyPath);
     }
 

@@ -28,14 +28,14 @@ public final class BotResponseSpecificationArgs extends com.pulumi.resources.Res
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Output<Boolean> getAllowInterrupt() {
+    public Output<Boolean> allowInterrupt() {
         return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
     }
 
     @Import(name="messageGroupsList", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroupsList;
 
-    public Output<List<BotMessageGroupArgs>> getMessageGroupsList() {
+    public Output<List<BotMessageGroupArgs>> messageGroupsList() {
         return this.messageGroupsList;
     }
 

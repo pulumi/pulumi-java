@@ -26,7 +26,7 @@ public final class GetBucketPolicyResult {
      * A policy document containing permissions to add to the specified bucket.
      * 
     */
-    public Optional<Object> getPolicyDocument() {
+    public Optional<Object> policyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }
 

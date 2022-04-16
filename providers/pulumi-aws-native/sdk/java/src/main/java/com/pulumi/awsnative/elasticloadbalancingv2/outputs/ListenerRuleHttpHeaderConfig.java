@@ -23,10 +23,10 @@ public final class ListenerRuleHttpHeaderConfig {
         this.values = values;
     }
 
-    public Optional<String> getHttpHeaderName() {
+    public Optional<String> httpHeaderName() {
         return Optional.ofNullable(this.httpHeaderName);
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

@@ -21,7 +21,7 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends com.
     @Import(name="clusterConfig", required=true)
       private final Output<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Output<ModelQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 

@@ -34,19 +34,19 @@ public final class SuiteDefinitionConfigurationProperties {
         this.suiteDefinitionName = suiteDefinitionName;
     }
 
-    public String getDevicePermissionRoleArn() {
+    public String devicePermissionRoleArn() {
         return this.devicePermissionRoleArn;
     }
-    public List<SuiteDefinitionDeviceUnderTest> getDevices() {
+    public List<SuiteDefinitionDeviceUnderTest> devices() {
         return this.devices == null ? List.of() : this.devices;
     }
-    public Optional<Boolean> getIntendedForQualification() {
+    public Optional<Boolean> intendedForQualification() {
         return Optional.ofNullable(this.intendedForQualification);
     }
-    public String getRootGroup() {
+    public String rootGroup() {
         return this.rootGroup;
     }
-    public Optional<String> getSuiteDefinitionName() {
+    public Optional<String> suiteDefinitionName() {
         return Optional.ofNullable(this.suiteDefinitionName);
     }
 

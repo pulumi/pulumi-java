@@ -16,7 +16,7 @@ public final class ModelBiasJobDefinitionMonitoringOutput {
         this.s3Output = s3Output;
     }
 
-    public ModelBiasJobDefinitionS3Output getS3Output() {
+    public ModelBiasJobDefinitionS3Output s3Output() {
         return this.s3Output;
     }
 

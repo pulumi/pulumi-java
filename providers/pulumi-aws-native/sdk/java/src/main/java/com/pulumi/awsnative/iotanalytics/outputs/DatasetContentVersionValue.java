@@ -16,7 +16,7 @@ public final class DatasetContentVersionValue {
         this.datasetName = datasetName;
     }
 
-    public String getDatasetName() {
+    public String datasetName() {
         return this.datasetName;
     }
 

@@ -15,7 +15,7 @@ public final class GetVirtualMFADeviceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 

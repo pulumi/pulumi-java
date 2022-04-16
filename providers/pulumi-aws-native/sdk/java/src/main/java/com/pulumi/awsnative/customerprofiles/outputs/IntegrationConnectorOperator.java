@@ -35,19 +35,19 @@ public final class IntegrationConnectorOperator {
         this.zendesk = zendesk;
     }
 
-    public Optional<IntegrationMarketoConnectorOperator> getMarketo() {
+    public Optional<IntegrationMarketoConnectorOperator> marketo() {
         return Optional.ofNullable(this.marketo);
     }
-    public Optional<IntegrationS3ConnectorOperator> getS3() {
+    public Optional<IntegrationS3ConnectorOperator> s3() {
         return Optional.ofNullable(this.s3);
     }
-    public Optional<IntegrationSalesforceConnectorOperator> getSalesforce() {
+    public Optional<IntegrationSalesforceConnectorOperator> salesforce() {
         return Optional.ofNullable(this.salesforce);
     }
-    public Optional<IntegrationServiceNowConnectorOperator> getServiceNow() {
+    public Optional<IntegrationServiceNowConnectorOperator> serviceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
-    public Optional<IntegrationZendeskConnectorOperator> getZendesk() {
+    public Optional<IntegrationZendeskConnectorOperator> zendesk() {
         return Optional.ofNullable(this.zendesk);
     }
 

@@ -23,7 +23,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assertionRule")
       private final @Nullable Output<SafetyRuleAssertionRuleArgs> assertionRule;
 
-    public Output<SafetyRuleAssertionRuleArgs> getAssertionRule() {
+    public Output<SafetyRuleAssertionRuleArgs> assertionRule() {
         return this.assertionRule == null ? Codegen.empty() : this.assertionRule;
     }
 
@@ -34,28 +34,28 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
 
-    public Output<String> getControlPanelArn() {
+    public Output<String> controlPanelArn() {
         return this.controlPanelArn == null ? Codegen.empty() : this.controlPanelArn;
     }
 
     @Import(name="gatingRule")
       private final @Nullable Output<SafetyRuleGatingRuleArgs> gatingRule;
 
-    public Output<SafetyRuleGatingRuleArgs> getGatingRule() {
+    public Output<SafetyRuleGatingRuleArgs> gatingRule() {
         return this.gatingRule == null ? Codegen.empty() : this.gatingRule;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="ruleConfig")
       private final @Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
-    public Output<SafetyRuleRuleConfigArgs> getRuleConfig() {
+    public Output<SafetyRuleRuleConfigArgs> ruleConfig() {
         return this.ruleConfig == null ? Codegen.empty() : this.ruleConfig;
     }
 
@@ -66,7 +66,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<SafetyRuleTagArgs>> tags;
 
-    public Output<List<SafetyRuleTagArgs>> getTags() {
+    public Output<List<SafetyRuleTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

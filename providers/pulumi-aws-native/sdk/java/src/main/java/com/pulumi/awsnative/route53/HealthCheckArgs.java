@@ -24,7 +24,7 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckConfig", required=true)
       private final Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
-    public Output<HealthCheckConfigPropertiesArgs> getHealthCheckConfig() {
+    public Output<HealthCheckConfigPropertiesArgs> healthCheckConfig() {
         return this.healthCheckConfig;
     }
 
@@ -35,7 +35,7 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckTags")
       private final @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
 
-    public Output<List<HealthCheckTagArgs>> getHealthCheckTags() {
+    public Output<List<HealthCheckTagArgs>> healthCheckTags() {
         return this.healthCheckTags == null ? Codegen.empty() : this.healthCheckTags;
     }
 

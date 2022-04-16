@@ -22,10 +22,10 @@ public final class FilterNumberFilter {
         this.upperInclusive = upperInclusive;
     }
 
-    public Optional<Double> getLowerInclusive() {
+    public Optional<Double> lowerInclusive() {
         return Optional.ofNullable(this.lowerInclusive);
     }
-    public Optional<Double> getUpperInclusive() {
+    public Optional<Double> upperInclusive() {
         return Optional.ofNullable(this.upperInclusive);
     }
 

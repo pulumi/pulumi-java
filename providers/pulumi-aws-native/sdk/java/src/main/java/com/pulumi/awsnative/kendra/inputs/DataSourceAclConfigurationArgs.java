@@ -17,7 +17,7 @@ public final class DataSourceAclConfigurationArgs extends com.pulumi.resources.R
     @Import(name="allowedGroupsColumnName", required=true)
       private final Output<String> allowedGroupsColumnName;
 
-    public Output<String> getAllowedGroupsColumnName() {
+    public Output<String> allowedGroupsColumnName() {
         return this.allowedGroupsColumnName;
     }
 

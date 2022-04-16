@@ -29,7 +29,7 @@ public class GatewayRouteTableAssociation extends com.pulumi.resources.CustomRes
      * @return The route table association ID.
      * 
      */
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -43,7 +43,7 @@ public class GatewayRouteTableAssociation extends com.pulumi.resources.CustomRes
      * @return The ID of the gateway.
      * 
      */
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -57,7 +57,7 @@ public class GatewayRouteTableAssociation extends com.pulumi.resources.CustomRes
      * @return The ID of the route table.
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 

@@ -28,14 +28,14 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
         this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
     }
 
-    public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> getAccessControlAttributes() {
+    public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes() {
         return this.accessControlAttributes == null ? List.of() : this.accessControlAttributes;
     }
     /**
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
     */
-    public Optional<InstanceAccessControlAttributeConfigurationProperties> getInstanceAccessControlAttributeConfiguration() {
+    public Optional<InstanceAccessControlAttributeConfigurationProperties> instanceAccessControlAttributeConfiguration() {
         return Optional.ofNullable(this.instanceAccessControlAttributeConfiguration);
     }
 

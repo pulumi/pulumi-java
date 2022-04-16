@@ -16,7 +16,7 @@ public final class CertificateQualifier {
         this.cpsUri = cpsUri;
     }
 
-    public String getCpsUri() {
+    public String cpsUri() {
         return this.cpsUri;
     }
 

@@ -16,14 +16,14 @@ public final class WebACLLabelMatchStatement extends com.pulumi.resources.Invoke
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="scope", required=true)
       private final WebACLLabelMatchScope scope;
 
-    public WebACLLabelMatchScope getScope() {
+    public WebACLLabelMatchScope scope() {
         return this.scope;
     }
 

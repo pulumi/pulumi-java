@@ -27,14 +27,14 @@ public final class ServiceCodeConfiguration {
         this.configurationSource = configurationSource;
     }
 
-    public Optional<ServiceCodeConfigurationValues> getCodeConfigurationValues() {
+    public Optional<ServiceCodeConfigurationValues> codeConfigurationValues() {
         return Optional.ofNullable(this.codeConfigurationValues);
     }
     /**
      * Configuration Source
      * 
     */
-    public ServiceCodeConfigurationConfigurationSource getConfigurationSource() {
+    public ServiceCodeConfigurationConfigurationSource configurationSource() {
         return this.configurationSource;
     }
 

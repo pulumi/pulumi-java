@@ -20,28 +20,28 @@ public final class DataSourceSalesforceChatterFeedConfiguration extends com.pulu
     @Import(name="documentDataFieldName", required=true)
       private final String documentDataFieldName;
 
-    public String getDocumentDataFieldName() {
+    public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
       private final @Nullable String documentTitleFieldName;
 
-    public Optional<String> getDocumentTitleFieldName() {
+    public Optional<String> documentTitleFieldName() {
         return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @Import(name="includeFilterTypes")
       private final @Nullable List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes;
 
-    public List<DataSourceSalesforceChatterFeedIncludeFilterType> getIncludeFilterTypes() {
+    public List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes() {
         return this.includeFilterTypes == null ? List.of() : this.includeFilterTypes;
     }
 

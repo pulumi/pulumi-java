@@ -21,10 +21,10 @@ public final class WebACLLabelMatchStatement {
         this.scope = scope;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public WebACLLabelMatchScope getScope() {
+    public WebACLLabelMatchScope scope() {
         return this.scope;
     }
 

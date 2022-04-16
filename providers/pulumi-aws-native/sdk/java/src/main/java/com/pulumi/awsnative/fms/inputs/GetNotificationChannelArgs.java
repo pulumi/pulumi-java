@@ -15,7 +15,7 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     @Import(name="snsTopicArn", required=true)
       private final String snsTopicArn;
 
-    public String getSnsTopicArn() {
+    public String snsTopicArn() {
         return this.snsTopicArn;
     }
 

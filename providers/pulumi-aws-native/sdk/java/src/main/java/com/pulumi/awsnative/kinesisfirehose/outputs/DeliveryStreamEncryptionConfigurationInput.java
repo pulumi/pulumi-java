@@ -23,10 +23,10 @@ public final class DeliveryStreamEncryptionConfigurationInput {
         this.keyType = keyType;
     }
 
-    public Optional<String> getKeyARN() {
+    public Optional<String> keyARN() {
         return Optional.ofNullable(this.keyARN);
     }
-    public DeliveryStreamEncryptionConfigurationInputKeyType getKeyType() {
+    public DeliveryStreamEncryptionConfigurationInputKeyType keyType() {
         return this.keyType;
     }
 

@@ -27,14 +27,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="creationTime", required=true)
       private final Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
 
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
@@ -45,7 +45,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
-    public Output<String> getFailureReason() {
+    public Output<String> failureReason() {
         return this.failureReason == null ? Codegen.empty() : this.failureReason;
     }
 
@@ -56,7 +56,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="lastModifiedTime", required=true)
       private final Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
 
@@ -67,14 +67,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="monitoringExecutionStatus", required=true)
       private final Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
 
-    public Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> getMonitoringExecutionStatus() {
+    public Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
     @Import(name="monitoringScheduleName", required=true)
       private final Output<String> monitoringScheduleName;
 
-    public Output<String> getMonitoringScheduleName() {
+    public Output<String> monitoringScheduleName() {
         return this.monitoringScheduleName;
     }
 
@@ -85,7 +85,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="processingJobArn")
       private final @Nullable Output<String> processingJobArn;
 
-    public Output<String> getProcessingJobArn() {
+    public Output<String> processingJobArn() {
         return this.processingJobArn == null ? Codegen.empty() : this.processingJobArn;
     }
 
@@ -96,7 +96,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="scheduledTime", required=true)
       private final Output<String> scheduledTime;
 
-    public Output<String> getScheduledTime() {
+    public Output<String> scheduledTime() {
         return this.scheduledTime;
     }
 

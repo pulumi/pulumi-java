@@ -21,7 +21,7 @@ public final class StackSetParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameterKey", required=true)
       private final Output<String> parameterKey;
 
-    public Output<String> getParameterKey() {
+    public Output<String> parameterKey() {
         return this.parameterKey;
     }
 
@@ -32,7 +32,7 @@ public final class StackSetParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameterValue", required=true)
       private final Output<String> parameterValue;
 
-    public Output<String> getParameterValue() {
+    public Output<String> parameterValue() {
         return this.parameterValue;
     }
 

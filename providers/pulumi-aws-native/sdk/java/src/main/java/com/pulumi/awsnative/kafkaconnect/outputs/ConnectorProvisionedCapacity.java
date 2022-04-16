@@ -34,14 +34,14 @@ public final class ConnectorProvisionedCapacity {
      * Specifies how many MSK Connect Units (MCU) are allocated to the connector.
      * 
     */
-    public Optional<Integer> getMcuCount() {
+    public Optional<Integer> mcuCount() {
         return Optional.ofNullable(this.mcuCount);
     }
     /**
      * Number of workers for a connector.
      * 
     */
-    public Integer getWorkerCount() {
+    public Integer workerCount() {
         return this.workerCount;
     }
 

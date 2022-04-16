@@ -23,10 +23,10 @@ public final class ListenerRuleTargetGroupStickinessConfig {
         this.enabled = enabled;
     }
 
-    public Optional<Integer> getDurationSeconds() {
+    public Optional<Integer> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

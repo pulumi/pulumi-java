@@ -30,16 +30,16 @@ public final class WorkGroupResultConfigurationUpdates {
         this.removeOutputLocation = removeOutputLocation;
     }
 
-    public Optional<WorkGroupEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<WorkGroupEncryptionConfiguration> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
-    public Optional<String> getOutputLocation() {
+    public Optional<String> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
-    public Optional<Boolean> getRemoveEncryptionConfiguration() {
+    public Optional<Boolean> removeEncryptionConfiguration() {
         return Optional.ofNullable(this.removeEncryptionConfiguration);
     }
-    public Optional<Boolean> getRemoveOutputLocation() {
+    public Optional<Boolean> removeOutputLocation() {
         return Optional.ofNullable(this.removeOutputLocation);
     }
 

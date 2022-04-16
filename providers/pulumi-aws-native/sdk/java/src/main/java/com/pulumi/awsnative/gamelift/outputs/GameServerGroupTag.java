@@ -34,14 +34,14 @@ public final class GameServerGroupTag {
      * The key for a developer-defined key:value pair for tagging an AWS resource.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The value for a developer-defined key:value pair for tagging an AWS resource.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

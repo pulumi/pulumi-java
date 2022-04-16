@@ -52,35 +52,35 @@ public final class GetBotAliasResult {
         this.sentimentAnalysisSettings = sentimentAnalysisSettings;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getBotAliasId() {
+    public Optional<String> botAliasId() {
         return Optional.ofNullable(this.botAliasId);
     }
-    public List<BotAliasLocaleSettingsItem> getBotAliasLocaleSettings() {
+    public List<BotAliasLocaleSettingsItem> botAliasLocaleSettings() {
         return this.botAliasLocaleSettings == null ? List.of() : this.botAliasLocaleSettings;
     }
-    public Optional<String> getBotAliasName() {
+    public Optional<String> botAliasName() {
         return Optional.ofNullable(this.botAliasName);
     }
-    public Optional<BotAliasStatus> getBotAliasStatus() {
+    public Optional<BotAliasStatus> botAliasStatus() {
         return Optional.ofNullable(this.botAliasStatus);
     }
-    public Optional<String> getBotVersion() {
+    public Optional<String> botVersion() {
         return Optional.ofNullable(this.botVersion);
     }
-    public Optional<BotAliasConversationLogSettings> getConversationLogSettings() {
+    public Optional<BotAliasConversationLogSettings> conversationLogSettings() {
         return Optional.ofNullable(this.conversationLogSettings);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
      * 
     */
-    public Optional<SentimentAnalysisSettingsProperties> getSentimentAnalysisSettings() {
+    public Optional<SentimentAnalysisSettingsProperties> sentimentAnalysisSettings() {
         return Optional.ofNullable(this.sentimentAnalysisSettings);
     }
 

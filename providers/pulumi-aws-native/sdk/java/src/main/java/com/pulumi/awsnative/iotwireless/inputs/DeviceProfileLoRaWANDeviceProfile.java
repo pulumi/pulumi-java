@@ -19,98 +19,98 @@ public final class DeviceProfileLoRaWANDeviceProfile extends com.pulumi.resource
     @Import(name="classBTimeout")
       private final @Nullable Integer classBTimeout;
 
-    public Optional<Integer> getClassBTimeout() {
+    public Optional<Integer> classBTimeout() {
         return this.classBTimeout == null ? Optional.empty() : Optional.ofNullable(this.classBTimeout);
     }
 
     @Import(name="classCTimeout")
       private final @Nullable Integer classCTimeout;
 
-    public Optional<Integer> getClassCTimeout() {
+    public Optional<Integer> classCTimeout() {
         return this.classCTimeout == null ? Optional.empty() : Optional.ofNullable(this.classCTimeout);
     }
 
     @Import(name="macVersion")
       private final @Nullable String macVersion;
 
-    public Optional<String> getMacVersion() {
+    public Optional<String> macVersion() {
         return this.macVersion == null ? Optional.empty() : Optional.ofNullable(this.macVersion);
     }
 
     @Import(name="maxDutyCycle")
       private final @Nullable Integer maxDutyCycle;
 
-    public Optional<Integer> getMaxDutyCycle() {
+    public Optional<Integer> maxDutyCycle() {
         return this.maxDutyCycle == null ? Optional.empty() : Optional.ofNullable(this.maxDutyCycle);
     }
 
     @Import(name="maxEirp")
       private final @Nullable Integer maxEirp;
 
-    public Optional<Integer> getMaxEirp() {
+    public Optional<Integer> maxEirp() {
         return this.maxEirp == null ? Optional.empty() : Optional.ofNullable(this.maxEirp);
     }
 
     @Import(name="pingSlotDr")
       private final @Nullable Integer pingSlotDr;
 
-    public Optional<Integer> getPingSlotDr() {
+    public Optional<Integer> pingSlotDr() {
         return this.pingSlotDr == null ? Optional.empty() : Optional.ofNullable(this.pingSlotDr);
     }
 
     @Import(name="pingSlotFreq")
       private final @Nullable Integer pingSlotFreq;
 
-    public Optional<Integer> getPingSlotFreq() {
+    public Optional<Integer> pingSlotFreq() {
         return this.pingSlotFreq == null ? Optional.empty() : Optional.ofNullable(this.pingSlotFreq);
     }
 
     @Import(name="pingSlotPeriod")
       private final @Nullable Integer pingSlotPeriod;
 
-    public Optional<Integer> getPingSlotPeriod() {
+    public Optional<Integer> pingSlotPeriod() {
         return this.pingSlotPeriod == null ? Optional.empty() : Optional.ofNullable(this.pingSlotPeriod);
     }
 
     @Import(name="regParamsRevision")
       private final @Nullable String regParamsRevision;
 
-    public Optional<String> getRegParamsRevision() {
+    public Optional<String> regParamsRevision() {
         return this.regParamsRevision == null ? Optional.empty() : Optional.ofNullable(this.regParamsRevision);
     }
 
     @Import(name="rfRegion")
       private final @Nullable String rfRegion;
 
-    public Optional<String> getRfRegion() {
+    public Optional<String> rfRegion() {
         return this.rfRegion == null ? Optional.empty() : Optional.ofNullable(this.rfRegion);
     }
 
     @Import(name="supports32BitFCnt")
       private final @Nullable Boolean supports32BitFCnt;
 
-    public Optional<Boolean> getSupports32BitFCnt() {
+    public Optional<Boolean> supports32BitFCnt() {
         return this.supports32BitFCnt == null ? Optional.empty() : Optional.ofNullable(this.supports32BitFCnt);
     }
 
     @Import(name="supportsClassB")
       private final @Nullable Boolean supportsClassB;
 
-    public Optional<Boolean> getSupportsClassB() {
+    public Optional<Boolean> supportsClassB() {
         return this.supportsClassB == null ? Optional.empty() : Optional.ofNullable(this.supportsClassB);
     }
 
     @Import(name="supportsClassC")
       private final @Nullable Boolean supportsClassC;
 
-    public Optional<Boolean> getSupportsClassC() {
+    public Optional<Boolean> supportsClassC() {
         return this.supportsClassC == null ? Optional.empty() : Optional.ofNullable(this.supportsClassC);
     }
 
     @Import(name="supportsJoin")
       private final @Nullable Boolean supportsJoin;
 
-    public Optional<Boolean> getSupportsJoin() {
+    public Optional<Boolean> supportsJoin() {
         return this.supportsJoin == null ? Optional.empty() : Optional.ofNullable(this.supportsJoin);
     }
 

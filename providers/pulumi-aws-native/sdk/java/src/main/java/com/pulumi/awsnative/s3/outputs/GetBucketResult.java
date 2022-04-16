@@ -184,145 +184,145 @@ public final class GetBucketResult {
      * Configuration for the transfer acceleration state.
      * 
     */
-    public Optional<BucketAccelerateConfiguration> getAccelerateConfiguration() {
+    public Optional<BucketAccelerateConfiguration> accelerateConfiguration() {
         return Optional.ofNullable(this.accelerateConfiguration);
     }
     /**
      * A canned access control list (ACL) that grants predefined permissions to the bucket.
      * 
     */
-    public Optional<BucketAccessControl> getAccessControl() {
+    public Optional<BucketAccessControl> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
     /**
      * The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
      * 
     */
-    public List<BucketAnalyticsConfiguration> getAnalyticsConfigurations() {
+    public List<BucketAnalyticsConfiguration> analyticsConfigurations() {
         return this.analyticsConfigurations == null ? List.of() : this.analyticsConfigurations;
     }
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<BucketEncryption> getBucketEncryption() {
+    public Optional<BucketEncryption> bucketEncryption() {
         return Optional.ofNullable(this.bucketEncryption);
     }
     /**
      * Rules that define cross-origin resource sharing of objects in this bucket.
      * 
     */
-    public Optional<BucketCorsConfiguration> getCorsConfiguration() {
+    public Optional<BucketCorsConfiguration> corsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
     /**
      * The IPv4 DNS name of the specified bucket.
      * 
     */
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).
      * 
     */
-    public Optional<String> getDualStackDomainName() {
+    public Optional<String> dualStackDomainName() {
         return Optional.ofNullable(this.dualStackDomainName);
     }
     /**
      * Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
      * 
     */
-    public List<BucketIntelligentTieringConfiguration> getIntelligentTieringConfigurations() {
+    public List<BucketIntelligentTieringConfiguration> intelligentTieringConfigurations() {
         return this.intelligentTieringConfigurations == null ? List.of() : this.intelligentTieringConfigurations;
     }
     /**
      * The inventory configuration for an Amazon S3 bucket.
      * 
     */
-    public List<BucketInventoryConfiguration> getInventoryConfigurations() {
+    public List<BucketInventoryConfiguration> inventoryConfigurations() {
         return this.inventoryConfigurations == null ? List.of() : this.inventoryConfigurations;
     }
     /**
      * Rules that define how Amazon S3 manages objects during their lifetime.
      * 
     */
-    public Optional<BucketLifecycleConfiguration> getLifecycleConfiguration() {
+    public Optional<BucketLifecycleConfiguration> lifecycleConfiguration() {
         return Optional.ofNullable(this.lifecycleConfiguration);
     }
     /**
      * Settings that define where logs are stored.
      * 
     */
-    public Optional<BucketLoggingConfiguration> getLoggingConfiguration() {
+    public Optional<BucketLoggingConfiguration> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
     /**
      * Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
      * 
     */
-    public List<BucketMetricsConfiguration> getMetricsConfigurations() {
+    public List<BucketMetricsConfiguration> metricsConfigurations() {
         return this.metricsConfigurations == null ? List.of() : this.metricsConfigurations;
     }
     /**
      * Configuration that defines how Amazon S3 handles bucket notifications.
      * 
     */
-    public Optional<BucketNotificationConfiguration> getNotificationConfiguration() {
+    public Optional<BucketNotificationConfiguration> notificationConfiguration() {
         return Optional.ofNullable(this.notificationConfiguration);
     }
     /**
      * Places an Object Lock configuration on the specified bucket.
      * 
     */
-    public Optional<BucketObjectLockConfiguration> getObjectLockConfiguration() {
+    public Optional<BucketObjectLockConfiguration> objectLockConfiguration() {
         return Optional.ofNullable(this.objectLockConfiguration);
     }
     /**
      * Specifies the container element for object ownership rules.
      * 
     */
-    public Optional<BucketOwnershipControls> getOwnershipControls() {
+    public Optional<BucketOwnershipControls> ownershipControls() {
         return Optional.ofNullable(this.ownershipControls);
     }
-    public Optional<BucketPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
+    public Optional<BucketPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
         return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
     /**
      * Returns the regional domain name of the specified bucket.
      * 
     */
-    public Optional<String> getRegionalDomainName() {
+    public Optional<String> regionalDomainName() {
         return Optional.ofNullable(this.regionalDomainName);
     }
     /**
      * Configuration for replicating objects in an S3 bucket.
      * 
     */
-    public Optional<BucketReplicationConfiguration> getReplicationConfiguration() {
+    public Optional<BucketReplicationConfiguration> replicationConfiguration() {
         return Optional.ofNullable(this.replicationConfiguration);
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this S3 bucket.
      * 
     */
-    public List<BucketTag> getTags() {
+    public List<BucketTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<BucketVersioningConfiguration> getVersioningConfiguration() {
+    public Optional<BucketVersioningConfiguration> versioningConfiguration() {
         return Optional.ofNullable(this.versioningConfiguration);
     }
-    public Optional<BucketWebsiteConfiguration> getWebsiteConfiguration() {
+    public Optional<BucketWebsiteConfiguration> websiteConfiguration() {
         return Optional.ofNullable(this.websiteConfiguration);
     }
     /**
      * The Amazon S3 website endpoint for the specified bucket.
      * 
     */
-    public Optional<String> getWebsiteURL() {
+    public Optional<String> websiteURL() {
         return Optional.ofNullable(this.websiteURL);
     }
 

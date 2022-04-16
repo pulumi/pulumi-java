@@ -21,35 +21,35 @@ public final class OriginRequestPolicyConfigArgs extends com.pulumi.resources.Re
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="cookiesConfig", required=true)
       private final Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
-    public Output<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
+    public Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig() {
         return this.cookiesConfig;
     }
 
     @Import(name="headersConfig", required=true)
       private final Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
-    public Output<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
+    public Output<OriginRequestPolicyHeadersConfigArgs> headersConfig() {
         return this.headersConfig;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="queryStringsConfig", required=true)
       private final Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
-    public Output<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {
+    public Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig() {
         return this.queryStringsConfig;
     }
 

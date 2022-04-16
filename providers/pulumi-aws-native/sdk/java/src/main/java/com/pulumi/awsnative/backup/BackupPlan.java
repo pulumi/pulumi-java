@@ -23,31 +23,31 @@ public class BackupPlan extends com.pulumi.resources.CustomResource {
     @Export(name="backupPlan", type=BackupPlanResourceType.class, parameters={})
     private Output<BackupPlanResourceType> backupPlan;
 
-    public Output<BackupPlanResourceType> getBackupPlan() {
+    public Output<BackupPlanResourceType> backupPlan() {
         return this.backupPlan;
     }
     @Export(name="backupPlanArn", type=String.class, parameters={})
     private Output<String> backupPlanArn;
 
-    public Output<String> getBackupPlanArn() {
+    public Output<String> backupPlanArn() {
         return this.backupPlanArn;
     }
     @Export(name="backupPlanId", type=String.class, parameters={})
     private Output<String> backupPlanId;
 
-    public Output<String> getBackupPlanId() {
+    public Output<String> backupPlanId() {
         return this.backupPlanId;
     }
     @Export(name="backupPlanTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> backupPlanTags;
 
-    public Output</* @Nullable */ Object> getBackupPlanTags() {
+    public Output</* @Nullable */ Object> backupPlanTags() {
         return this.backupPlanTags;
     }
     @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 

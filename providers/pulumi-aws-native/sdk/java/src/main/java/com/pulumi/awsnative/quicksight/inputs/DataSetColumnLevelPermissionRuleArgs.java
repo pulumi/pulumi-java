@@ -19,14 +19,14 @@ public final class DataSetColumnLevelPermissionRuleArgs extends com.pulumi.resou
     @Import(name="columnNames")
       private final @Nullable Output<List<String>> columnNames;
 
-    public Output<List<String>> getColumnNames() {
+    public Output<List<String>> columnNames() {
         return this.columnNames == null ? Codegen.empty() : this.columnNames;
     }
 
     @Import(name="principals")
       private final @Nullable Output<List<String>> principals;
 
-    public Output<List<String>> getPrincipals() {
+    public Output<List<String>> principals() {
         return this.principals == null ? Codegen.empty() : this.principals;
     }
 

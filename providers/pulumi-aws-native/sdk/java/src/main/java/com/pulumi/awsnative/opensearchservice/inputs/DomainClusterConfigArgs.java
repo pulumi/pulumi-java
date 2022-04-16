@@ -21,70 +21,70 @@ public final class DomainClusterConfigArgs extends com.pulumi.resources.Resource
     @Import(name="dedicatedMasterCount")
       private final @Nullable Output<Integer> dedicatedMasterCount;
 
-    public Output<Integer> getDedicatedMasterCount() {
+    public Output<Integer> dedicatedMasterCount() {
         return this.dedicatedMasterCount == null ? Codegen.empty() : this.dedicatedMasterCount;
     }
 
     @Import(name="dedicatedMasterEnabled")
       private final @Nullable Output<Boolean> dedicatedMasterEnabled;
 
-    public Output<Boolean> getDedicatedMasterEnabled() {
+    public Output<Boolean> dedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled == null ? Codegen.empty() : this.dedicatedMasterEnabled;
     }
 
     @Import(name="dedicatedMasterType")
       private final @Nullable Output<String> dedicatedMasterType;
 
-    public Output<String> getDedicatedMasterType() {
+    public Output<String> dedicatedMasterType() {
         return this.dedicatedMasterType == null ? Codegen.empty() : this.dedicatedMasterType;
     }
 
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="warmCount")
       private final @Nullable Output<Integer> warmCount;
 
-    public Output<Integer> getWarmCount() {
+    public Output<Integer> warmCount() {
         return this.warmCount == null ? Codegen.empty() : this.warmCount;
     }
 
     @Import(name="warmEnabled")
       private final @Nullable Output<Boolean> warmEnabled;
 
-    public Output<Boolean> getWarmEnabled() {
+    public Output<Boolean> warmEnabled() {
         return this.warmEnabled == null ? Codegen.empty() : this.warmEnabled;
     }
 
     @Import(name="warmType")
       private final @Nullable Output<String> warmType;
 
-    public Output<String> getWarmType() {
+    public Output<String> warmType() {
         return this.warmType == null ? Codegen.empty() : this.warmType;
     }
 
     @Import(name="zoneAwarenessConfig")
       private final @Nullable Output<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
 
-    public Output<DomainZoneAwarenessConfigArgs> getZoneAwarenessConfig() {
+    public Output<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig() {
         return this.zoneAwarenessConfig == null ? Codegen.empty() : this.zoneAwarenessConfig;
     }
 
     @Import(name="zoneAwarenessEnabled")
       private final @Nullable Output<Boolean> zoneAwarenessEnabled;
 
-    public Output<Boolean> getZoneAwarenessEnabled() {
+    public Output<Boolean> zoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled == null ? Codegen.empty() : this.zoneAwarenessEnabled;
     }
 

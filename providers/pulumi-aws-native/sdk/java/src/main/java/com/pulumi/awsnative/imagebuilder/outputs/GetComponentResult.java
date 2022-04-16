@@ -43,21 +43,21 @@ public final class GetComponentResult {
      * The Amazon Resource Name (ARN) of the component.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The encryption status of the component.
      * 
     */
-    public Optional<Boolean> getEncrypted() {
+    public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
      * The type of the component denotes whether the component is used to build the image or only to test it.
      * 
     */
-    public Optional<ComponentType> getType() {
+    public Optional<ComponentType> type() {
         return Optional.ofNullable(this.type);
     }
 

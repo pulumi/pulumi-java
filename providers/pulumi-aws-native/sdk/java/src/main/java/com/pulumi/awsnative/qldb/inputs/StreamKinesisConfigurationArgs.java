@@ -19,14 +19,14 @@ public final class StreamKinesisConfigurationArgs extends com.pulumi.resources.R
     @Import(name="aggregationEnabled")
       private final @Nullable Output<Boolean> aggregationEnabled;
 
-    public Output<Boolean> getAggregationEnabled() {
+    public Output<Boolean> aggregationEnabled() {
         return this.aggregationEnabled == null ? Codegen.empty() : this.aggregationEnabled;
     }
 
     @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn == null ? Codegen.empty() : this.streamArn;
     }
 

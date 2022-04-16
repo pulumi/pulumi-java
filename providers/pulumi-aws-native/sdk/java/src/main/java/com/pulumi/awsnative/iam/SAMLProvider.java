@@ -31,25 +31,25 @@ public class SAMLProvider extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the SAML provider
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="samlMetadataDocument", type=String.class, parameters={})
     private Output<String> samlMetadataDocument;
 
-    public Output<String> getSamlMetadataDocument() {
+    public Output<String> samlMetadataDocument() {
         return this.samlMetadataDocument;
     }
     @Export(name="tags", type=List.class, parameters={SAMLProviderTag.class})
     private Output</* @Nullable */ List<SAMLProviderTag>> tags;
 
-    public Output</* @Nullable */ List<SAMLProviderTag>> getTags() {
+    public Output</* @Nullable */ List<SAMLProviderTag>> tags() {
         return this.tags;
     }
 

@@ -92,35 +92,35 @@ public final class GetVPCResult {
      * A list of IPv4 CIDR block association IDs for the VPC.
      * 
     */
-    public List<String> getCidrBlockAssociations() {
+    public List<String> cidrBlockAssociations() {
         return this.cidrBlockAssociations == null ? List.of() : this.cidrBlockAssociations;
     }
     /**
      * The default network ACL ID that is associated with the VPC.
      * 
     */
-    public Optional<String> getDefaultNetworkAcl() {
+    public Optional<String> defaultNetworkAcl() {
         return Optional.ofNullable(this.defaultNetworkAcl);
     }
     /**
      * The default security group ID that is associated with the VPC.
      * 
     */
-    public Optional<String> getDefaultSecurityGroup() {
+    public Optional<String> defaultSecurityGroup() {
         return Optional.ofNullable(this.defaultSecurityGroup);
     }
     /**
      * Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
      * 
     */
-    public Optional<Boolean> getEnableDnsHostnames() {
+    public Optional<Boolean> enableDnsHostnames() {
         return Optional.ofNullable(this.enableDnsHostnames);
     }
     /**
      * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
      * 
     */
-    public Optional<Boolean> getEnableDnsSupport() {
+    public Optional<Boolean> enableDnsSupport() {
         return Optional.ofNullable(this.enableDnsSupport);
     }
     /**
@@ -133,28 +133,28 @@ public final class GetVPCResult {
      * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
      * 
     */
-    public Optional<String> getInstanceTenancy() {
+    public Optional<String> instanceTenancy() {
         return Optional.ofNullable(this.instanceTenancy);
     }
     /**
      * A list of IPv6 CIDR blocks that are associated with the VPC.
      * 
     */
-    public List<String> getIpv6CidrBlocks() {
+    public List<String> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks == null ? List.of() : this.ipv6CidrBlocks;
     }
     /**
      * The tags for the VPC.
      * 
     */
-    public List<VPCTag> getTags() {
+    public List<VPCTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The Id for the model.
      * 
     */
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 

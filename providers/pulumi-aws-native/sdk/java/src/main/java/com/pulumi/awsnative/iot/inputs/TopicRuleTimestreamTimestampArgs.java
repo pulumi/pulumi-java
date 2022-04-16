@@ -17,14 +17,14 @@ public final class TopicRuleTimestreamTimestampArgs extends com.pulumi.resources
     @Import(name="unit", required=true)
       private final Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

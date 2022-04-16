@@ -36,7 +36,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
      * 
      */
-    public Output</* @Nullable */ List<SecurityProfileMetricToRetain>> getAdditionalMetricsToRetainV2() {
+    public Output</* @Nullable */ List<SecurityProfileMetricToRetain>> additionalMetricsToRetainV2() {
         return this.additionalMetricsToRetainV2;
     }
     /**
@@ -50,7 +50,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies the destinations to which alerts are sent.
      * 
      */
-    public Output</* @Nullable */ Object> getAlertTargets() {
+    public Output</* @Nullable */ Object> alertTargets() {
         return this.alertTargets;
     }
     /**
@@ -64,7 +64,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies the behaviors that, when violated by a device (thing), cause an alert.
      * 
      */
-    public Output</* @Nullable */ List<SecurityProfileBehavior>> getBehaviors() {
+    public Output</* @Nullable */ List<SecurityProfileBehavior>> behaviors() {
         return this.behaviors;
     }
     /**
@@ -78,7 +78,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return The ARN (Amazon resource name) of the created security profile.
      * 
      */
-    public Output<String> getSecurityProfileArn() {
+    public Output<String> securityProfileArn() {
         return this.securityProfileArn;
     }
     /**
@@ -92,7 +92,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A description of the security profile.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityProfileDescription() {
+    public Output</* @Nullable */ String> securityProfileDescription() {
         return this.securityProfileDescription;
     }
     /**
@@ -106,7 +106,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the security profile.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityProfileName() {
+    public Output</* @Nullable */ String> securityProfileName() {
         return this.securityProfileName;
     }
     /**
@@ -120,7 +120,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Metadata that can be used to manage the security profile.
      * 
      */
-    public Output</* @Nullable */ List<SecurityProfileTag>> getTags() {
+    public Output</* @Nullable */ List<SecurityProfileTag>> tags() {
         return this.tags;
     }
     /**
@@ -134,7 +134,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A set of target ARNs that the security profile is attached to.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetArns() {
+    public Output</* @Nullable */ List<String>> targetArns() {
         return this.targetArns;
     }
 

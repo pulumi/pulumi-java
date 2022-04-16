@@ -19,14 +19,14 @@ public final class DistributionGeoRestrictionArgs extends com.pulumi.resources.R
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     @Import(name="restrictionType", required=true)
       private final Output<String> restrictionType;
 
-    public Output<String> getRestrictionType() {
+    public Output<String> restrictionType() {
         return this.restrictionType;
     }
 

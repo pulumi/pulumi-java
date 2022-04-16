@@ -21,7 +21,7 @@ public final class BotVersionLocaleDetailsArgs extends com.pulumi.resources.Reso
     @Import(name="sourceBotVersion", required=true)
       private final Output<String> sourceBotVersion;
 
-    public Output<String> getSourceBotVersion() {
+    public Output<String> sourceBotVersion() {
         return this.sourceBotVersion;
     }
 

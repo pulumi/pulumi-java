@@ -25,7 +25,7 @@ public final class ConnectorScaleOutPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="cpuUtilizationPercentage", required=true)
       private final Output<Integer> cpuUtilizationPercentage;
 
-    public Output<Integer> getCpuUtilizationPercentage() {
+    public Output<Integer> cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 

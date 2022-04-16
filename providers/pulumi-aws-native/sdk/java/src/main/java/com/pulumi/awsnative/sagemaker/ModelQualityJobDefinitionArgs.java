@@ -27,49 +27,49 @@ public final class ModelQualityJobDefinitionArgs extends com.pulumi.resources.Re
     @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
-    public Output<String> getJobDefinitionName() {
+    public Output<String> jobDefinitionName() {
         return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
     }
 
     @Import(name="jobResources", required=true)
       private final Output<ModelQualityJobDefinitionMonitoringResourcesArgs> jobResources;
 
-    public Output<ModelQualityJobDefinitionMonitoringResourcesArgs> getJobResources() {
+    public Output<ModelQualityJobDefinitionMonitoringResourcesArgs> jobResources() {
         return this.jobResources;
     }
 
     @Import(name="modelQualityAppSpecification", required=true)
       private final Output<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> modelQualityAppSpecification;
 
-    public Output<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> getModelQualityAppSpecification() {
+    public Output<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> modelQualityAppSpecification() {
         return this.modelQualityAppSpecification;
     }
 
     @Import(name="modelQualityBaselineConfig")
       private final @Nullable Output<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> modelQualityBaselineConfig;
 
-    public Output<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> getModelQualityBaselineConfig() {
+    public Output<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> modelQualityBaselineConfig() {
         return this.modelQualityBaselineConfig == null ? Codegen.empty() : this.modelQualityBaselineConfig;
     }
 
     @Import(name="modelQualityJobInput", required=true)
       private final Output<ModelQualityJobDefinitionModelQualityJobInputArgs> modelQualityJobInput;
 
-    public Output<ModelQualityJobDefinitionModelQualityJobInputArgs> getModelQualityJobInput() {
+    public Output<ModelQualityJobDefinitionModelQualityJobInputArgs> modelQualityJobInput() {
         return this.modelQualityJobInput;
     }
 
     @Import(name="modelQualityJobOutputConfig", required=true)
       private final Output<ModelQualityJobDefinitionMonitoringOutputConfigArgs> modelQualityJobOutputConfig;
 
-    public Output<ModelQualityJobDefinitionMonitoringOutputConfigArgs> getModelQualityJobOutputConfig() {
+    public Output<ModelQualityJobDefinitionMonitoringOutputConfigArgs> modelQualityJobOutputConfig() {
         return this.modelQualityJobOutputConfig;
     }
 
     @Import(name="networkConfig")
       private final @Nullable Output<ModelQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
-    public Output<ModelQualityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
+    public Output<ModelQualityJobDefinitionNetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -80,14 +80,14 @@ public final class ModelQualityJobDefinitionArgs extends com.pulumi.resources.Re
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
       private final @Nullable Output<ModelQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
-    public Output<ModelQualityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
+    public Output<ModelQualityJobDefinitionStoppingConditionArgs> stoppingCondition() {
         return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 
@@ -98,7 +98,7 @@ public final class ModelQualityJobDefinitionArgs extends com.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<List<ModelQualityJobDefinitionTagArgs>> tags;
 
-    public Output<List<ModelQualityJobDefinitionTagArgs>> getTags() {
+    public Output<List<ModelQualityJobDefinitionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

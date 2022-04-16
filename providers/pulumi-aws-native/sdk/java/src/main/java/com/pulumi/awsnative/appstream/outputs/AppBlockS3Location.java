@@ -20,10 +20,10 @@ public final class AppBlockS3Location {
         this.s3Key = s3Key;
     }
 
-    public String getS3Bucket() {
+    public String s3Bucket() {
         return this.s3Bucket;
     }
-    public String getS3Key() {
+    public String s3Key() {
         return this.s3Key;
     }
 

@@ -23,7 +23,7 @@ public final class StreamModeDetails extends com.pulumi.resources.InvokeArgs {
     @Import(name="streamMode", required=true)
       private final StreamModeDetailsStreamMode streamMode;
 
-    public StreamModeDetailsStreamMode getStreamMode() {
+    public StreamModeDetailsStreamMode streamMode() {
         return this.streamMode;
     }
 

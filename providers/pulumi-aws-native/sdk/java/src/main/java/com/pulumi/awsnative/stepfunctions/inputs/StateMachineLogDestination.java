@@ -17,7 +17,7 @@ public final class StateMachineLogDestination extends com.pulumi.resources.Invok
     @Import(name="cloudWatchLogsLogGroup")
       private final @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
 
-    public Optional<StateMachineCloudWatchLogsLogGroup> getCloudWatchLogsLogGroup() {
+    public Optional<StateMachineCloudWatchLogsLogGroup> cloudWatchLogsLogGroup() {
         return this.cloudWatchLogsLogGroup == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLogsLogGroup);
     }
 

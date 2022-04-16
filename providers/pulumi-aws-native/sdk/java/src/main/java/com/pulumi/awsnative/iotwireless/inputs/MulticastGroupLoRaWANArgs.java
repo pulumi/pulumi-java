@@ -23,7 +23,7 @@ public final class MulticastGroupLoRaWANArgs extends com.pulumi.resources.Resour
     @Import(name="dlClass", required=true)
       private final Output<String> dlClass;
 
-    public Output<String> getDlClass() {
+    public Output<String> dlClass() {
         return this.dlClass;
     }
 
@@ -34,7 +34,7 @@ public final class MulticastGroupLoRaWANArgs extends com.pulumi.resources.Resour
     @Import(name="numberOfDevicesInGroup")
       private final @Nullable Output<Integer> numberOfDevicesInGroup;
 
-    public Output<Integer> getNumberOfDevicesInGroup() {
+    public Output<Integer> numberOfDevicesInGroup() {
         return this.numberOfDevicesInGroup == null ? Codegen.empty() : this.numberOfDevicesInGroup;
     }
 
@@ -45,7 +45,7 @@ public final class MulticastGroupLoRaWANArgs extends com.pulumi.resources.Resour
     @Import(name="numberOfDevicesRequested")
       private final @Nullable Output<Integer> numberOfDevicesRequested;
 
-    public Output<Integer> getNumberOfDevicesRequested() {
+    public Output<Integer> numberOfDevicesRequested() {
         return this.numberOfDevicesRequested == null ? Codegen.empty() : this.numberOfDevicesRequested;
     }
 
@@ -56,7 +56,7 @@ public final class MulticastGroupLoRaWANArgs extends com.pulumi.resources.Resour
     @Import(name="rfRegion", required=true)
       private final Output<String> rfRegion;
 
-    public Output<String> getRfRegion() {
+    public Output<String> rfRegion() {
         return this.rfRegion;
     }
 

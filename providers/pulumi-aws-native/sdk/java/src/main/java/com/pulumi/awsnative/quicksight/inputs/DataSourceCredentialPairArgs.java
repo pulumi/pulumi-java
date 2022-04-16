@@ -36,7 +36,7 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
     @Import(name="alternateDataSourceParameters")
       private final @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
-    public Output<List<DataSourceParametersArgs>> getAlternateDataSourceParameters() {
+    public Output<List<DataSourceParametersArgs>> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? Codegen.empty() : this.alternateDataSourceParameters;
     }
 
@@ -47,7 +47,7 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -58,7 +58,7 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

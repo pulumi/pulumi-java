@@ -46,29 +46,29 @@ public final class BucketReplicationDestination {
         this.storageClass = storageClass;
     }
 
-    public Optional<BucketAccessControlTranslation> getAccessControlTranslation() {
+    public Optional<BucketAccessControlTranslation> accessControlTranslation() {
         return Optional.ofNullable(this.accessControlTranslation);
     }
-    public Optional<String> getAccount() {
+    public Optional<String> account() {
         return Optional.ofNullable(this.account);
     }
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Optional<BucketEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<BucketEncryptionConfiguration> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
-    public Optional<BucketMetrics> getMetrics() {
+    public Optional<BucketMetrics> metrics() {
         return Optional.ofNullable(this.metrics);
     }
-    public Optional<BucketReplicationTime> getReplicationTime() {
+    public Optional<BucketReplicationTime> replicationTime() {
         return Optional.ofNullable(this.replicationTime);
     }
     /**
      * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
      * 
     */
-    public Optional<BucketReplicationDestinationStorageClass> getStorageClass() {
+    public Optional<BucketReplicationDestinationStorageClass> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
 

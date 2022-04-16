@@ -19,21 +19,21 @@ public final class GroupQuery extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceTypeFilters")
       private final @Nullable List<String> resourceTypeFilters;
 
-    public List<String> getResourceTypeFilters() {
+    public List<String> resourceTypeFilters() {
         return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
     }
 
     @Import(name="stackIdentifier")
       private final @Nullable String stackIdentifier;
 
-    public Optional<String> getStackIdentifier() {
+    public Optional<String> stackIdentifier() {
         return this.stackIdentifier == null ? Optional.empty() : Optional.ofNullable(this.stackIdentifier);
     }
 
     @Import(name="tagFilters")
       private final @Nullable List<GroupTagFilter> tagFilters;
 
-    public List<GroupTagFilter> getTagFilters() {
+    public List<GroupTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

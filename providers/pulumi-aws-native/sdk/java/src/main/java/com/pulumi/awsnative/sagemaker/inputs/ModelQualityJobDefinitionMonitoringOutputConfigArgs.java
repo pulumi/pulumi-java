@@ -28,7 +28,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends c
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -39,7 +39,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends c
     @Import(name="monitoringOutputs", required=true)
       private final Output<List<ModelQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
-    public Output<List<ModelQualityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
+    public Output<List<ModelQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 

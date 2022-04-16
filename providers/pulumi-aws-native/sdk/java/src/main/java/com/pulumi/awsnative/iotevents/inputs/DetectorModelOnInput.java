@@ -27,7 +27,7 @@ public final class DetectorModelOnInput extends com.pulumi.resources.InvokeArgs 
     @Import(name="events")
       private final @Nullable List<DetectorModelEvent> events;
 
-    public List<DetectorModelEvent> getEvents() {
+    public List<DetectorModelEvent> events() {
         return this.events == null ? List.of() : this.events;
     }
 
@@ -38,7 +38,7 @@ public final class DetectorModelOnInput extends com.pulumi.resources.InvokeArgs 
     @Import(name="transitionEvents")
       private final @Nullable List<DetectorModelTransitionEvent> transitionEvents;
 
-    public List<DetectorModelTransitionEvent> getTransitionEvents() {
+    public List<DetectorModelTransitionEvent> transitionEvents() {
         return this.transitionEvents == null ? List.of() : this.transitionEvents;
     }
 

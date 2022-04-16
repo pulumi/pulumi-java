@@ -21,14 +21,14 @@ public final class WebACLXssMatchStatement extends com.pulumi.resources.InvokeAr
     @Import(name="fieldToMatch", required=true)
       private final WebACLFieldToMatch fieldToMatch;
 
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
       private final List<WebACLTextTransformation> textTransformations;
 
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

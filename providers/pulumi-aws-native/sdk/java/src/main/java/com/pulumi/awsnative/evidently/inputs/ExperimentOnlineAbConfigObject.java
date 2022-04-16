@@ -19,14 +19,14 @@ public final class ExperimentOnlineAbConfigObject extends com.pulumi.resources.I
     @Import(name="controlTreatmentName")
       private final @Nullable String controlTreatmentName;
 
-    public Optional<String> getControlTreatmentName() {
+    public Optional<String> controlTreatmentName() {
         return this.controlTreatmentName == null ? Optional.empty() : Optional.ofNullable(this.controlTreatmentName);
     }
 
     @Import(name="treatmentWeights")
       private final @Nullable List<ExperimentTreatmentToWeight> treatmentWeights;
 
-    public List<ExperimentTreatmentToWeight> getTreatmentWeights() {
+    public List<ExperimentTreatmentToWeight> treatmentWeights() {
         return this.treatmentWeights == null ? List.of() : this.treatmentWeights;
     }
 

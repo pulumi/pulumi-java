@@ -27,119 +27,119 @@ public final class TaskDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="containerDefinitions")
       private final @Nullable Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions;
 
-    public Output<List<TaskDefinitionContainerDefinitionArgs>> getContainerDefinitions() {
+    public Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions() {
         return this.containerDefinitions == null ? Codegen.empty() : this.containerDefinitions;
     }
 
     @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
-    public Output<String> getCpu() {
+    public Output<String> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     @Import(name="ephemeralStorage")
       private final @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
 
-    public Output<TaskDefinitionEphemeralStorageArgs> getEphemeralStorage() {
+    public Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage() {
         return this.ephemeralStorage == null ? Codegen.empty() : this.ephemeralStorage;
     }
 
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
     @Import(name="inferenceAccelerators")
       private final @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
 
-    public Output<List<TaskDefinitionInferenceAcceleratorArgs>> getInferenceAccelerators() {
+    public Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators() {
         return this.inferenceAccelerators == null ? Codegen.empty() : this.inferenceAccelerators;
     }
 
     @Import(name="ipcMode")
       private final @Nullable Output<String> ipcMode;
 
-    public Output<String> getIpcMode() {
+    public Output<String> ipcMode() {
         return this.ipcMode == null ? Codegen.empty() : this.ipcMode;
     }
 
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
+    public Output<String> memory() {
         return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
-    public Output<String> getNetworkMode() {
+    public Output<String> networkMode() {
         return this.networkMode == null ? Codegen.empty() : this.networkMode;
     }
 
     @Import(name="pidMode")
       private final @Nullable Output<String> pidMode;
 
-    public Output<String> getPidMode() {
+    public Output<String> pidMode() {
         return this.pidMode == null ? Codegen.empty() : this.pidMode;
     }
 
     @Import(name="placementConstraints")
       private final @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
 
-    public Output<List<TaskDefinitionPlacementConstraintArgs>> getPlacementConstraints() {
+    public Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints() {
         return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
     @Import(name="proxyConfiguration")
       private final @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
 
-    public Output<TaskDefinitionProxyConfigurationArgs> getProxyConfiguration() {
+    public Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration() {
         return this.proxyConfiguration == null ? Codegen.empty() : this.proxyConfiguration;
     }
 
     @Import(name="requiresCompatibilities")
       private final @Nullable Output<List<String>> requiresCompatibilities;
 
-    public Output<List<String>> getRequiresCompatibilities() {
+    public Output<List<String>> requiresCompatibilities() {
         return this.requiresCompatibilities == null ? Codegen.empty() : this.requiresCompatibilities;
     }
 
     @Import(name="runtimePlatform")
       private final @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
 
-    public Output<TaskDefinitionRuntimePlatformArgs> getRuntimePlatform() {
+    public Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform() {
         return this.runtimePlatform == null ? Codegen.empty() : this.runtimePlatform;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TaskDefinitionTagArgs>> tags;
 
-    public Output<List<TaskDefinitionTagArgs>> getTags() {
+    public Output<List<TaskDefinitionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="taskRoleArn")
       private final @Nullable Output<String> taskRoleArn;
 
-    public Output<String> getTaskRoleArn() {
+    public Output<String> taskRoleArn() {
         return this.taskRoleArn == null ? Codegen.empty() : this.taskRoleArn;
     }
 
     @Import(name="volumes")
       private final @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
-    public Output<List<TaskDefinitionVolumeArgs>> getVolumes() {
+    public Output<List<TaskDefinitionVolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

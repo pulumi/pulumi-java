@@ -29,35 +29,35 @@ public final class WebACLRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="action")
       private final @Nullable WebACLRuleAction action;
 
-    public Optional<WebACLRuleAction> getAction() {
+    public Optional<WebACLRuleAction> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
     @Import(name="captchaConfig")
       private final @Nullable WebACLCaptchaConfig captchaConfig;
 
-    public Optional<WebACLCaptchaConfig> getCaptchaConfig() {
+    public Optional<WebACLCaptchaConfig> captchaConfig() {
         return this.captchaConfig == null ? Optional.empty() : Optional.ofNullable(this.captchaConfig);
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="overrideAction")
       private final @Nullable WebACLOverrideAction overrideAction;
 
-    public Optional<WebACLOverrideAction> getOverrideAction() {
+    public Optional<WebACLOverrideAction> overrideAction() {
         return this.overrideAction == null ? Optional.empty() : Optional.ofNullable(this.overrideAction);
     }
 
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -68,21 +68,21 @@ public final class WebACLRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleLabels")
       private final @Nullable List<WebACLLabel> ruleLabels;
 
-    public List<WebACLLabel> getRuleLabels() {
+    public List<WebACLLabel> ruleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }
 
     @Import(name="statement", required=true)
       private final WebACLStatement statement;
 
-    public WebACLStatement getStatement() {
+    public WebACLStatement statement() {
         return this.statement;
     }
 
     @Import(name="visibilityConfig", required=true)
       private final WebACLVisibilityConfig visibilityConfig;
 
-    public WebACLVisibilityConfig getVisibilityConfig() {
+    public WebACLVisibilityConfig visibilityConfig() {
         return this.visibilityConfig;
     }
 

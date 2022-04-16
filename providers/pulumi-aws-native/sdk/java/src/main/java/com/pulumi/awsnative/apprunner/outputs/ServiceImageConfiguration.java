@@ -39,17 +39,17 @@ public final class ServiceImageConfiguration {
      * Port
      * 
     */
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
-    public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
+    public List<ServiceKeyValuePair> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
     /**
      * Start Command
      * 
     */
-    public Optional<String> getStartCommand() {
+    public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }
 

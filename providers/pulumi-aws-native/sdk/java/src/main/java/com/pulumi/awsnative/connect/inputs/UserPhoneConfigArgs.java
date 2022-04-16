@@ -25,28 +25,28 @@ public final class UserPhoneConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="afterContactWorkTimeLimit")
       private final @Nullable Output<Integer> afterContactWorkTimeLimit;
 
-    public Output<Integer> getAfterContactWorkTimeLimit() {
+    public Output<Integer> afterContactWorkTimeLimit() {
         return this.afterContactWorkTimeLimit == null ? Codegen.empty() : this.afterContactWorkTimeLimit;
     }
 
     @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> getAutoAccept() {
+    public Output<Boolean> autoAccept() {
         return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
     }
 
     @Import(name="deskPhoneNumber")
       private final @Nullable Output<String> deskPhoneNumber;
 
-    public Output<String> getDeskPhoneNumber() {
+    public Output<String> deskPhoneNumber() {
         return this.deskPhoneNumber == null ? Codegen.empty() : this.deskPhoneNumber;
     }
 
     @Import(name="phoneType", required=true)
       private final Output<UserPhoneType> phoneType;
 
-    public Output<UserPhoneType> getPhoneType() {
+    public Output<UserPhoneType> phoneType() {
         return this.phoneType;
     }
 

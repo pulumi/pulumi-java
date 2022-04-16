@@ -63,21 +63,21 @@ public final class GetDashboardResult {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The last time that this dataset was published.</p>
      * 
     */
-    public Optional<String> getLastPublishedTime() {
+    public Optional<String> lastPublishedTime() {
         return Optional.ofNullable(this.lastPublishedTime);
     }
     /**
      * <p>The display name of the dashboard.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -88,7 +88,7 @@ public final class GetDashboardResult {
      *         <p>To specify no permissions, omit the permissions list.</p>
      * 
     */
-    public List<DashboardResourcePermission> getPermissions() {
+    public List<DashboardResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
@@ -96,7 +96,7 @@ public final class GetDashboardResult {
      *             dashboard.</p>
      * 
     */
-    public List<DashboardTag> getTags() {
+    public List<DashboardTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

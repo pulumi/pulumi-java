@@ -18,7 +18,7 @@ public final class AssetModelAttributeArgs extends com.pulumi.resources.Resource
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 

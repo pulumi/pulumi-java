@@ -21,7 +21,7 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends com.pul
     @Import(name="clusterConfig", required=true)
       private final Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Output<ModelBiasJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 

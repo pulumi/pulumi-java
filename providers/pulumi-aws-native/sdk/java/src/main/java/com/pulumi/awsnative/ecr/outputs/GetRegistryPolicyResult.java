@@ -31,10 +31,10 @@ public final class GetRegistryPolicyResult {
      * The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
      * 
     */
-    public Optional<Object> getPolicyText() {
+    public Optional<Object> policyText() {
         return Optional.ofNullable(this.policyText);
     }
-    public Optional<String> getRegistryId() {
+    public Optional<String> registryId() {
         return Optional.ofNullable(this.registryId);
     }
 

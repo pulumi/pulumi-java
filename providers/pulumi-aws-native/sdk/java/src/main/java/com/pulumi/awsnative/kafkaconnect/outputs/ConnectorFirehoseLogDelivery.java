@@ -35,14 +35,14 @@ public final class ConnectorFirehoseLogDelivery {
      * The Kinesis Data Firehose delivery stream that is the destination for log delivery.
      * 
     */
-    public Optional<String> getDeliveryStream() {
+    public Optional<String> deliveryStream() {
         return Optional.ofNullable(this.deliveryStream);
     }
     /**
      * Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

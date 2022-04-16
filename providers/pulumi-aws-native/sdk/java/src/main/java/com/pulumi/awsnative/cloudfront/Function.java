@@ -24,43 +24,43 @@ public class Function extends com.pulumi.resources.CustomResource {
     @Export(name="autoPublish", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoPublish;
 
-    public Output</* @Nullable */ Boolean> getAutoPublish() {
+    public Output</* @Nullable */ Boolean> autoPublish() {
         return this.autoPublish;
     }
     @Export(name="functionARN", type=String.class, parameters={})
     private Output<String> functionARN;
 
-    public Output<String> getFunctionARN() {
+    public Output<String> functionARN() {
         return this.functionARN;
     }
     @Export(name="functionCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionCode;
 
-    public Output</* @Nullable */ String> getFunctionCode() {
+    public Output</* @Nullable */ String> functionCode() {
         return this.functionCode;
     }
     @Export(name="functionConfig", type=FunctionConfig.class, parameters={})
     private Output</* @Nullable */ FunctionConfig> functionConfig;
 
-    public Output</* @Nullable */ FunctionConfig> getFunctionConfig() {
+    public Output</* @Nullable */ FunctionConfig> functionConfig() {
         return this.functionConfig;
     }
     @Export(name="functionMetadata", type=FunctionMetadata.class, parameters={})
     private Output</* @Nullable */ FunctionMetadata> functionMetadata;
 
-    public Output</* @Nullable */ FunctionMetadata> getFunctionMetadata() {
+    public Output</* @Nullable */ FunctionMetadata> functionMetadata() {
         return this.functionMetadata;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="stage", type=String.class, parameters={})
     private Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 

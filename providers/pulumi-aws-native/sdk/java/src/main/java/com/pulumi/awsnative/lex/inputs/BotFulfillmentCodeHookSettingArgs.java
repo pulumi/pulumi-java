@@ -24,21 +24,21 @@ public final class BotFulfillmentCodeHookSettingArgs extends com.pulumi.resource
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
     @Import(name="fulfillmentUpdatesSpecification")
       private final @Nullable Output<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification;
 
-    public Output<BotFulfillmentUpdatesSpecificationArgs> getFulfillmentUpdatesSpecification() {
+    public Output<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification() {
         return this.fulfillmentUpdatesSpecification == null ? Codegen.empty() : this.fulfillmentUpdatesSpecification;
     }
 
     @Import(name="postFulfillmentStatusSpecification")
       private final @Nullable Output<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification;
 
-    public Output<BotPostFulfillmentStatusSpecificationArgs> getPostFulfillmentStatusSpecification() {
+    public Output<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification() {
         return this.postFulfillmentStatusSpecification == null ? Codegen.empty() : this.postFulfillmentStatusSpecification;
     }
 

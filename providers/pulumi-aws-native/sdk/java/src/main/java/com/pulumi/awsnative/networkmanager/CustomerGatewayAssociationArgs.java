@@ -22,7 +22,7 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
     @Import(name="customerGatewayArn", required=true)
       private final Output<String> customerGatewayArn;
 
-    public Output<String> getCustomerGatewayArn() {
+    public Output<String> customerGatewayArn() {
         return this.customerGatewayArn;
     }
 
@@ -33,7 +33,7 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -44,7 +44,7 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -55,7 +55,7 @@ public final class CustomerGatewayAssociationArgs extends com.pulumi.resources.R
     @Import(name="linkId")
       private final @Nullable Output<String> linkId;
 
-    public Output<String> getLinkId() {
+    public Output<String> linkId() {
         return this.linkId == null ? Codegen.empty() : this.linkId;
     }
 

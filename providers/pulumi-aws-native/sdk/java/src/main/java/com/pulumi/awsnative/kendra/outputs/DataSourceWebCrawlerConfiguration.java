@@ -49,31 +49,31 @@ public final class DataSourceWebCrawlerConfiguration {
         this.urls = urls;
     }
 
-    public Optional<DataSourceWebCrawlerAuthenticationConfiguration> getAuthenticationConfiguration() {
+    public Optional<DataSourceWebCrawlerAuthenticationConfiguration> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
-    public Optional<Integer> getCrawlDepth() {
+    public Optional<Integer> crawlDepth() {
         return Optional.ofNullable(this.crawlDepth);
     }
-    public Optional<Double> getMaxContentSizePerPageInMegaBytes() {
+    public Optional<Double> maxContentSizePerPageInMegaBytes() {
         return Optional.ofNullable(this.maxContentSizePerPageInMegaBytes);
     }
-    public Optional<Integer> getMaxLinksPerPage() {
+    public Optional<Integer> maxLinksPerPage() {
         return Optional.ofNullable(this.maxLinksPerPage);
     }
-    public Optional<Integer> getMaxUrlsPerMinuteCrawlRate() {
+    public Optional<Integer> maxUrlsPerMinuteCrawlRate() {
         return Optional.ofNullable(this.maxUrlsPerMinuteCrawlRate);
     }
-    public Optional<DataSourceProxyConfiguration> getProxyConfiguration() {
+    public Optional<DataSourceProxyConfiguration> proxyConfiguration() {
         return Optional.ofNullable(this.proxyConfiguration);
     }
-    public List<String> getUrlExclusionPatterns() {
+    public List<String> urlExclusionPatterns() {
         return this.urlExclusionPatterns == null ? List.of() : this.urlExclusionPatterns;
     }
-    public List<String> getUrlInclusionPatterns() {
+    public List<String> urlInclusionPatterns() {
         return this.urlInclusionPatterns == null ? List.of() : this.urlInclusionPatterns;
     }
-    public DataSourceWebCrawlerUrls getUrls() {
+    public DataSourceWebCrawlerUrls urls() {
         return this.urls;
     }
 

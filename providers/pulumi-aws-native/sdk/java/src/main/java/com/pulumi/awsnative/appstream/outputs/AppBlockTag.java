@@ -20,10 +20,10 @@ public final class AppBlockTag {
         this.tagValue = tagValue;
     }
 
-    public String getTagKey() {
+    public String tagKey() {
         return this.tagKey;
     }
-    public String getTagValue() {
+    public String tagValue() {
         return this.tagValue;
     }
 

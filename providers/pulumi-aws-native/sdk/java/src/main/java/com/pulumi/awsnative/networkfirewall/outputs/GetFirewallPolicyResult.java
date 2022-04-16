@@ -34,19 +34,19 @@ public final class GetFirewallPolicyResult {
         this.tags = tags;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<FirewallPolicy> getFirewallPolicy() {
+    public Optional<FirewallPolicy> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
-    public Optional<String> getFirewallPolicyArn() {
+    public Optional<String> firewallPolicyArn() {
         return Optional.ofNullable(this.firewallPolicyArn);
     }
-    public Optional<String> getFirewallPolicyId() {
+    public Optional<String> firewallPolicyId() {
         return Optional.ofNullable(this.firewallPolicyId);
     }
-    public List<FirewallPolicyTag> getTags() {
+    public List<FirewallPolicyTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -23,10 +23,10 @@ public final class GetAccountResult {
         this.expiryEventsConfiguration = expiryEventsConfiguration;
     }
 
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
-    public Optional<AccountExpiryEventsConfiguration> getExpiryEventsConfiguration() {
+    public Optional<AccountExpiryEventsConfiguration> expiryEventsConfiguration() {
         return Optional.ofNullable(this.expiryEventsConfiguration);
     }
 

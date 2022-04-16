@@ -37,22 +37,22 @@ public final class EC2FleetOnDemandOptionsRequest {
         this.singleInstanceType = singleInstanceType;
     }
 
-    public Optional<String> getAllocationStrategy() {
+    public Optional<String> allocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
-    public Optional<EC2FleetCapacityReservationOptionsRequest> getCapacityReservationOptions() {
+    public Optional<EC2FleetCapacityReservationOptionsRequest> capacityReservationOptions() {
         return Optional.ofNullable(this.capacityReservationOptions);
     }
-    public Optional<String> getMaxTotalPrice() {
+    public Optional<String> maxTotalPrice() {
         return Optional.ofNullable(this.maxTotalPrice);
     }
-    public Optional<Integer> getMinTargetCapacity() {
+    public Optional<Integer> minTargetCapacity() {
         return Optional.ofNullable(this.minTargetCapacity);
     }
-    public Optional<Boolean> getSingleAvailabilityZone() {
+    public Optional<Boolean> singleAvailabilityZone() {
         return Optional.ofNullable(this.singleAvailabilityZone);
     }
-    public Optional<Boolean> getSingleInstanceType() {
+    public Optional<Boolean> singleInstanceType() {
         return Optional.ofNullable(this.singleInstanceType);
     }
 

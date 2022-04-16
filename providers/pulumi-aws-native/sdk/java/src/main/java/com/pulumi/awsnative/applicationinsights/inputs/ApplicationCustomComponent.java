@@ -24,7 +24,7 @@ public final class ApplicationCustomComponent extends com.pulumi.resources.Invok
     @Import(name="componentName", required=true)
       private final String componentName;
 
-    public String getComponentName() {
+    public String componentName() {
         return this.componentName;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationCustomComponent extends com.pulumi.resources.Invok
     @Import(name="resourceList", required=true)
       private final List<String> resourceList;
 
-    public List<String> getResourceList() {
+    public List<String> resourceList() {
         return this.resourceList;
     }
 

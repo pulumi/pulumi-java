@@ -15,7 +15,7 @@ public final class CloudFrontOriginAccessIdentityConfig extends com.pulumi.resou
     @Import(name="comment", required=true)
       private final String comment;
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
 

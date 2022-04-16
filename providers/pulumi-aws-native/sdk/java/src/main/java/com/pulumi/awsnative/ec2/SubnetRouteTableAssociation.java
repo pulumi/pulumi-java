@@ -21,13 +21,13 @@ public class SubnetRouteTableAssociation extends com.pulumi.resources.CustomReso
     @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

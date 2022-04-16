@@ -21,7 +21,7 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends com.pulu
     @Import(name="encryptionType", required=true)
       private final Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
 
-    public Output<ConnectorKafkaClusterEncryptionInTransitType> getEncryptionType() {
+    public Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType() {
         return this.encryptionType;
     }
 

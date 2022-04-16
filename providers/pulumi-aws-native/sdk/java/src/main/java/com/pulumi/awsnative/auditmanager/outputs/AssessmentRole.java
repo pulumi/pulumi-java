@@ -23,10 +23,10 @@ public final class AssessmentRole {
         this.roleType = roleType;
     }
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public Optional<AssessmentRoleType> getRoleType() {
+    public Optional<AssessmentRoleType> roleType() {
         return Optional.ofNullable(this.roleType);
     }
 

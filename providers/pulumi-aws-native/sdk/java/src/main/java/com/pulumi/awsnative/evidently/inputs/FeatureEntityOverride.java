@@ -17,14 +17,14 @@ public final class FeatureEntityOverride extends com.pulumi.resources.InvokeArgs
     @Import(name="entityId")
       private final @Nullable String entityId;
 
-    public Optional<String> getEntityId() {
+    public Optional<String> entityId() {
         return this.entityId == null ? Optional.empty() : Optional.ofNullable(this.entityId);
     }
 
     @Import(name="variation")
       private final @Nullable String variation;
 
-    public Optional<String> getVariation() {
+    public Optional<String> variation() {
         return this.variation == null ? Optional.empty() : Optional.ofNullable(this.variation);
     }
 

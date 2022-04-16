@@ -25,14 +25,14 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<RepositoryEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="imageScanningConfiguration")
       private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
-    public Output<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
+    public Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration() {
         return this.imageScanningConfiguration == null ? Codegen.empty() : this.imageScanningConfiguration;
     }
 
@@ -43,14 +43,14 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTagMutability")
       private final @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
 
-    public Output<RepositoryImageTagMutability> getImageTagMutability() {
+    public Output<RepositoryImageTagMutability> imageTagMutability() {
         return this.imageTagMutability == null ? Codegen.empty() : this.imageTagMutability;
     }
 
     @Import(name="lifecyclePolicy")
       private final @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
 
-    public Output<RepositoryLifecyclePolicyArgs> getLifecyclePolicy() {
+    public Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy() {
         return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
     }
 
@@ -61,7 +61,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -72,7 +72,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryPolicyText")
       private final @Nullable Output<Object> repositoryPolicyText;
 
-    public Output<Object> getRepositoryPolicyText() {
+    public Output<Object> repositoryPolicyText() {
         return this.repositoryPolicyText == null ? Codegen.empty() : this.repositoryPolicyText;
     }
 
@@ -83,7 +83,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<RepositoryTagArgs>> tags;
 
-    public Output<List<RepositoryTagArgs>> getTags() {
+    public Output<List<RepositoryTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

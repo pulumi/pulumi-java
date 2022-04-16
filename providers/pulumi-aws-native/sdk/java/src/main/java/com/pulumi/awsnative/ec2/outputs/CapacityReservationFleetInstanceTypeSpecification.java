@@ -40,25 +40,25 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
         this.weight = weight;
     }
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public Optional<String> getAvailabilityZoneId() {
+    public Optional<String> availabilityZoneId() {
         return Optional.ofNullable(this.availabilityZoneId);
     }
-    public Optional<Boolean> getEbsOptimized() {
+    public Optional<Boolean> ebsOptimized() {
         return Optional.ofNullable(this.ebsOptimized);
     }
-    public Optional<String> getInstancePlatform() {
+    public Optional<String> instancePlatform() {
         return Optional.ofNullable(this.instancePlatform);
     }
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
-    public Optional<Double> getWeight() {
+    public Optional<Double> weight() {
         return Optional.ofNullable(this.weight);
     }
 

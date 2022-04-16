@@ -18,21 +18,21 @@ public final class InAppTemplateBodyConfig extends com.pulumi.resources.InvokeAr
     @Import(name="alignment")
       private final @Nullable InAppTemplateAlignment alignment;
 
-    public Optional<InAppTemplateAlignment> getAlignment() {
+    public Optional<InAppTemplateAlignment> alignment() {
         return this.alignment == null ? Optional.empty() : Optional.ofNullable(this.alignment);
     }
 
     @Import(name="body")
       private final @Nullable String body;
 
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
     @Import(name="textColor")
       private final @Nullable String textColor;
 
-    public Optional<String> getTextColor() {
+    public Optional<String> textColor() {
         return this.textColor == null ? Optional.empty() : Optional.ofNullable(this.textColor);
     }
 

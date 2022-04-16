@@ -26,7 +26,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -37,7 +37,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -48,7 +48,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="linuxMountPoint")
       private final @Nullable Output<String> linuxMountPoint;
 
-    public Output<String> getLinuxMountPoint() {
+    public Output<String> linuxMountPoint() {
         return this.linuxMountPoint == null ? Codegen.empty() : this.linuxMountPoint;
     }
 
@@ -59,7 +59,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
@@ -70,7 +70,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="windowsMountDrive")
       private final @Nullable Output<String> windowsMountDrive;
 
-    public Output<String> getWindowsMountDrive() {
+    public Output<String> windowsMountDrive() {
         return this.windowsMountDrive == null ? Codegen.empty() : this.windowsMountDrive;
     }
 

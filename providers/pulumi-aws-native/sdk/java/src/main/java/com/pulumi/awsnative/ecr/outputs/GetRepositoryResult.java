@@ -55,37 +55,37 @@ public final class GetRepositoryResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<RepositoryImageScanningConfiguration> getImageScanningConfiguration() {
+    public Optional<RepositoryImageScanningConfiguration> imageScanningConfiguration() {
         return Optional.ofNullable(this.imageScanningConfiguration);
     }
     /**
      * The image tag mutability setting for the repository.
      * 
     */
-    public Optional<RepositoryImageTagMutability> getImageTagMutability() {
+    public Optional<RepositoryImageTagMutability> imageTagMutability() {
         return Optional.ofNullable(this.imageTagMutability);
     }
-    public Optional<RepositoryLifecyclePolicy> getLifecyclePolicy() {
+    public Optional<RepositoryLifecyclePolicy> lifecyclePolicy() {
         return Optional.ofNullable(this.lifecyclePolicy);
     }
     /**
      * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
      * 
     */
-    public Optional<Object> getRepositoryPolicyText() {
+    public Optional<Object> repositoryPolicyText() {
         return Optional.ofNullable(this.repositoryPolicyText);
     }
-    public Optional<String> getRepositoryUri() {
+    public Optional<String> repositoryUri() {
         return Optional.ofNullable(this.repositoryUri);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<RepositoryTag> getTags() {
+    public List<RepositoryTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

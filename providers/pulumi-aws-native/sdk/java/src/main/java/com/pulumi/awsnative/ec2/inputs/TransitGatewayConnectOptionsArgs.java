@@ -22,7 +22,7 @@ public final class TransitGatewayConnectOptionsArgs extends com.pulumi.resources
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

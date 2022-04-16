@@ -25,7 +25,7 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectionMode", required=true)
       private final Output<ConnectorProfileConnectionMode> connectionMode;
 
-    public Output<ConnectorProfileConnectionMode> getConnectionMode() {
+    public Output<ConnectorProfileConnectionMode> connectionMode() {
         return this.connectionMode;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectorProfileConfig")
       private final @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
 
-    public Output<ConnectorProfileConfigArgs> getConnectorProfileConfig() {
+    public Output<ConnectorProfileConfigArgs> connectorProfileConfig() {
         return this.connectorProfileConfig == null ? Codegen.empty() : this.connectorProfileConfig;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
 
-    public Output<String> getConnectorProfileName() {
+    public Output<String> connectorProfileName() {
         return this.connectorProfileName == null ? Codegen.empty() : this.connectorProfileName;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectorType", required=true)
       private final Output<ConnectorProfileConnectorType> connectorType;
 
-    public Output<ConnectorProfileConnectorType> getConnectorType() {
+    public Output<ConnectorProfileConnectorType> connectorType() {
         return this.connectorType;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kMSArn")
       private final @Nullable Output<String> kMSArn;
 
-    public Output<String> getKMSArn() {
+    public Output<String> kMSArn() {
         return this.kMSArn == null ? Codegen.empty() : this.kMSArn;
     }
 

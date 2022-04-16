@@ -27,13 +27,13 @@ public final class ScheduledActionType {
         this.resumeCluster = resumeCluster;
     }
 
-    public Optional<ScheduledActionPauseClusterMessage> getPauseCluster() {
+    public Optional<ScheduledActionPauseClusterMessage> pauseCluster() {
         return Optional.ofNullable(this.pauseCluster);
     }
-    public Optional<ScheduledActionResizeClusterMessage> getResizeCluster() {
+    public Optional<ScheduledActionResizeClusterMessage> resizeCluster() {
         return Optional.ofNullable(this.resizeCluster);
     }
-    public Optional<ScheduledActionResumeClusterMessage> getResumeCluster() {
+    public Optional<ScheduledActionResumeClusterMessage> resumeCluster() {
         return Optional.ofNullable(this.resumeCluster);
     }
 

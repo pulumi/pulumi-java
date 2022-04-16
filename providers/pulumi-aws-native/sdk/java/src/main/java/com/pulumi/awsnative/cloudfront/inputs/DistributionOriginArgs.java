@@ -24,63 +24,63 @@ public final class DistributionOriginArgs extends com.pulumi.resources.ResourceA
     @Import(name="connectionAttempts")
       private final @Nullable Output<Integer> connectionAttempts;
 
-    public Output<Integer> getConnectionAttempts() {
+    public Output<Integer> connectionAttempts() {
         return this.connectionAttempts == null ? Codegen.empty() : this.connectionAttempts;
     }
 
     @Import(name="connectionTimeout")
       private final @Nullable Output<Integer> connectionTimeout;
 
-    public Output<Integer> getConnectionTimeout() {
+    public Output<Integer> connectionTimeout() {
         return this.connectionTimeout == null ? Codegen.empty() : this.connectionTimeout;
     }
 
     @Import(name="customOriginConfig")
       private final @Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig;
 
-    public Output<DistributionCustomOriginConfigArgs> getCustomOriginConfig() {
+    public Output<DistributionCustomOriginConfigArgs> customOriginConfig() {
         return this.customOriginConfig == null ? Codegen.empty() : this.customOriginConfig;
     }
 
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="originCustomHeaders")
       private final @Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders;
 
-    public Output<List<DistributionOriginCustomHeaderArgs>> getOriginCustomHeaders() {
+    public Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders() {
         return this.originCustomHeaders == null ? Codegen.empty() : this.originCustomHeaders;
     }
 
     @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
-    public Output<String> getOriginPath() {
+    public Output<String> originPath() {
         return this.originPath == null ? Codegen.empty() : this.originPath;
     }
 
     @Import(name="originShield")
       private final @Nullable Output<DistributionOriginShieldArgs> originShield;
 
-    public Output<DistributionOriginShieldArgs> getOriginShield() {
+    public Output<DistributionOriginShieldArgs> originShield() {
         return this.originShield == null ? Codegen.empty() : this.originShield;
     }
 
     @Import(name="s3OriginConfig")
       private final @Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig;
 
-    public Output<DistributionS3OriginConfigArgs> getS3OriginConfig() {
+    public Output<DistributionS3OriginConfigArgs> s3OriginConfig() {
         return this.s3OriginConfig == null ? Codegen.empty() : this.s3OriginConfig;
     }
 

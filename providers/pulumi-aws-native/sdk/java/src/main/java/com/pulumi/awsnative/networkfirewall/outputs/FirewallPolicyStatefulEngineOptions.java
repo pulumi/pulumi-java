@@ -18,7 +18,7 @@ public final class FirewallPolicyStatefulEngineOptions {
         this.ruleOrder = ruleOrder;
     }
 
-    public Optional<FirewallPolicyRuleOrder> getRuleOrder() {
+    public Optional<FirewallPolicyRuleOrder> ruleOrder() {
         return Optional.ofNullable(this.ruleOrder);
     }
 

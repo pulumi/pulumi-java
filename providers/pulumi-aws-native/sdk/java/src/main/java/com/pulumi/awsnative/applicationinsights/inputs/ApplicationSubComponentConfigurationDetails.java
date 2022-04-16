@@ -28,7 +28,7 @@ public final class ApplicationSubComponentConfigurationDetails extends com.pulum
     @Import(name="alarmMetrics")
       private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
-    public List<ApplicationAlarmMetric> getAlarmMetrics() {
+    public List<ApplicationAlarmMetric> alarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationSubComponentConfigurationDetails extends com.pulum
     @Import(name="logs")
       private final @Nullable List<ApplicationLog> logs;
 
-    public List<ApplicationLog> getLogs() {
+    public List<ApplicationLog> logs() {
         return this.logs == null ? List.of() : this.logs;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationSubComponentConfigurationDetails extends com.pulum
     @Import(name="windowsEvents")
       private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
-    public List<ApplicationWindowsEvent> getWindowsEvents() {
+    public List<ApplicationWindowsEvent> windowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
     }
 

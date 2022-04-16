@@ -31,7 +31,7 @@ public class CarrierGateway extends com.pulumi.resources.CustomResource {
      * @return The ID of the carrier gateway.
      * 
      */
-    public Output<String> getCarrierGatewayId() {
+    public Output<String> carrierGatewayId() {
         return this.carrierGatewayId;
     }
     /**
@@ -45,7 +45,7 @@ public class CarrierGateway extends com.pulumi.resources.CustomResource {
      * @return The ID of the owner.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -59,7 +59,7 @@ public class CarrierGateway extends com.pulumi.resources.CustomResource {
      * @return The state of the carrier gateway.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -73,7 +73,7 @@ public class CarrierGateway extends com.pulumi.resources.CustomResource {
      * @return The tags for the carrier gateway.
      * 
      */
-    public Output</* @Nullable */ List<CarrierGatewayTag>> getTags() {
+    public Output</* @Nullable */ List<CarrierGatewayTag>> tags() {
         return this.tags;
     }
     /**
@@ -87,7 +87,7 @@ public class CarrierGateway extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

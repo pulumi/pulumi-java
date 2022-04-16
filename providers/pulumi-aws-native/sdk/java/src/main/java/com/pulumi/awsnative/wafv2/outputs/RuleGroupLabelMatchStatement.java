@@ -21,10 +21,10 @@ public final class RuleGroupLabelMatchStatement {
         this.scope = scope;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public RuleGroupLabelMatchScope getScope() {
+    public RuleGroupLabelMatchScope scope() {
         return this.scope;
     }
 

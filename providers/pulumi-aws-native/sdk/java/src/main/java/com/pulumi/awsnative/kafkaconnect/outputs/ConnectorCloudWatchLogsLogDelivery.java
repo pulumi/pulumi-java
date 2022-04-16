@@ -35,14 +35,14 @@ public final class ConnectorCloudWatchLogsLogDelivery {
      * Specifies whether the logs get sent to the specified CloudWatch Logs destination.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The CloudWatch log group that is the destination for log delivery.
      * 
     */
-    public Optional<String> getLogGroup() {
+    public Optional<String> logGroup() {
         return Optional.ofNullable(this.logGroup);
     }
 

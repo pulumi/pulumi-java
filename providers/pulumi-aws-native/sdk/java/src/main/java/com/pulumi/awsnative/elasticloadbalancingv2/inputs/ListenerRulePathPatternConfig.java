@@ -18,7 +18,7 @@ public final class ListenerRulePathPatternConfig extends com.pulumi.resources.In
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

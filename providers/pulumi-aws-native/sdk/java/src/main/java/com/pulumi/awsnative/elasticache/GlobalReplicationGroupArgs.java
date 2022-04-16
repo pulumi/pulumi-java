@@ -27,7 +27,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="automaticFailoverEnabled")
       private final @Nullable Output<Boolean> automaticFailoverEnabled;
 
-    public Output<Boolean> getAutomaticFailoverEnabled() {
+    public Output<Boolean> automaticFailoverEnabled() {
         return this.automaticFailoverEnabled == null ? Codegen.empty() : this.automaticFailoverEnabled;
     }
 
@@ -38,7 +38,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="cacheNodeType")
       private final @Nullable Output<String> cacheNodeType;
 
-    public Output<String> getCacheNodeType() {
+    public Output<String> cacheNodeType() {
         return this.cacheNodeType == null ? Codegen.empty() : this.cacheNodeType;
     }
 
@@ -49,7 +49,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="cacheParameterGroupName")
       private final @Nullable Output<String> cacheParameterGroupName;
 
-    public Output<String> getCacheParameterGroupName() {
+    public Output<String> cacheParameterGroupName() {
         return this.cacheParameterGroupName == null ? Codegen.empty() : this.cacheParameterGroupName;
     }
 
@@ -60,7 +60,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -71,7 +71,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalNodeGroupCount")
       private final @Nullable Output<Integer> globalNodeGroupCount;
 
-    public Output<Integer> getGlobalNodeGroupCount() {
+    public Output<Integer> globalNodeGroupCount() {
         return this.globalNodeGroupCount == null ? Codegen.empty() : this.globalNodeGroupCount;
     }
 
@@ -82,7 +82,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Output<String> getGlobalReplicationGroupDescription() {
+    public Output<String> globalReplicationGroupDescription() {
         return this.globalReplicationGroupDescription == null ? Codegen.empty() : this.globalReplicationGroupDescription;
     }
 
@@ -93,7 +93,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="globalReplicationGroupIdSuffix")
       private final @Nullable Output<String> globalReplicationGroupIdSuffix;
 
-    public Output<String> getGlobalReplicationGroupIdSuffix() {
+    public Output<String> globalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix == null ? Codegen.empty() : this.globalReplicationGroupIdSuffix;
     }
 
@@ -104,7 +104,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="members", required=true)
       private final Output<List<GlobalReplicationGroupMemberArgs>> members;
 
-    public Output<List<GlobalReplicationGroupMemberArgs>> getMembers() {
+    public Output<List<GlobalReplicationGroupMemberArgs>> members() {
         return this.members;
     }
 
@@ -115,7 +115,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
     @Import(name="regionalConfigurations")
       private final @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 
-    public Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> getRegionalConfigurations() {
+    public Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations() {
         return this.regionalConfigurations == null ? Codegen.empty() : this.regionalConfigurations;
     }
 

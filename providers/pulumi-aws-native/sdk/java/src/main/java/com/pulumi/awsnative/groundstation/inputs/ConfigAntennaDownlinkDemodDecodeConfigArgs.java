@@ -20,21 +20,21 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends com.pulumi
     @Import(name="decodeConfig")
       private final @Nullable Output<ConfigDecodeConfigArgs> decodeConfig;
 
-    public Output<ConfigDecodeConfigArgs> getDecodeConfig() {
+    public Output<ConfigDecodeConfigArgs> decodeConfig() {
         return this.decodeConfig == null ? Codegen.empty() : this.decodeConfig;
     }
 
     @Import(name="demodulationConfig")
       private final @Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig;
 
-    public Output<ConfigDemodulationConfigArgs> getDemodulationConfig() {
+    public Output<ConfigDemodulationConfigArgs> demodulationConfig() {
         return this.demodulationConfig == null ? Codegen.empty() : this.demodulationConfig;
     }
 
     @Import(name="spectrumConfig")
       private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
-    public Output<ConfigSpectrumConfigArgs> getSpectrumConfig() {
+    public Output<ConfigSpectrumConfigArgs> spectrumConfig() {
         return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
     }
 

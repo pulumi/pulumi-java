@@ -22,7 +22,7 @@ public final class CanaryArtifactConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="s3Encryption")
       private final @Nullable Output<CanaryS3EncryptionArgs> s3Encryption;
 
-    public Output<CanaryS3EncryptionArgs> getS3Encryption() {
+    public Output<CanaryS3EncryptionArgs> s3Encryption() {
         return this.s3Encryption == null ? Codegen.empty() : this.s3Encryption;
     }
 

@@ -25,7 +25,7 @@ public final class BotButtonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 
@@ -36,7 +36,7 @@ public final class BotButtonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

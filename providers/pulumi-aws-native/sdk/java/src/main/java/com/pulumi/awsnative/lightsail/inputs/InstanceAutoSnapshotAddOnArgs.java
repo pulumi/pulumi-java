@@ -26,7 +26,7 @@ public final class InstanceAutoSnapshotAddOnArgs extends com.pulumi.resources.Re
     @Import(name="snapshotTimeOfDay")
       private final @Nullable Output<String> snapshotTimeOfDay;
 
-    public Output<String> getSnapshotTimeOfDay() {
+    public Output<String> snapshotTimeOfDay() {
         return this.snapshotTimeOfDay == null ? Codegen.empty() : this.snapshotTimeOfDay;
     }
 

@@ -19,42 +19,42 @@ public final class PackageVersionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="markLatest")
       private final @Nullable Output<Boolean> markLatest;
 
-    public Output<Boolean> getMarkLatest() {
+    public Output<Boolean> markLatest() {
         return this.markLatest == null ? Codegen.empty() : this.markLatest;
     }
 
     @Import(name="ownerAccount")
       private final @Nullable Output<String> ownerAccount;
 
-    public Output<String> getOwnerAccount() {
+    public Output<String> ownerAccount() {
         return this.ownerAccount == null ? Codegen.empty() : this.ownerAccount;
     }
 
     @Import(name="packageId", required=true)
       private final Output<String> packageId;
 
-    public Output<String> getPackageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
 
     @Import(name="packageVersion", required=true)
       private final Output<String> packageVersion;
 
-    public Output<String> getPackageVersion() {
+    public Output<String> packageVersion() {
         return this.packageVersion;
     }
 
     @Import(name="patchVersion", required=true)
       private final Output<String> patchVersion;
 
-    public Output<String> getPatchVersion() {
+    public Output<String> patchVersion() {
         return this.patchVersion;
     }
 
     @Import(name="updatedLatestPatchVersion")
       private final @Nullable Output<String> updatedLatestPatchVersion;
 
-    public Output<String> getUpdatedLatestPatchVersion() {
+    public Output<String> updatedLatestPatchVersion() {
         return this.updatedLatestPatchVersion == null ? Codegen.empty() : this.updatedLatestPatchVersion;
     }
 

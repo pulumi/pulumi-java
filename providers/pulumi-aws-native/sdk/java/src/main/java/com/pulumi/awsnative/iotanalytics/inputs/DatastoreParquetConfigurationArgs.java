@@ -18,7 +18,7 @@ public final class DatastoreParquetConfigurationArgs extends com.pulumi.resource
     @Import(name="schemaDefinition")
       private final @Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition;
 
-    public Output<DatastoreSchemaDefinitionArgs> getSchemaDefinition() {
+    public Output<DatastoreSchemaDefinitionArgs> schemaDefinition() {
         return this.schemaDefinition == null ? Codegen.empty() : this.schemaDefinition;
     }
 

@@ -25,7 +25,7 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="containerProvider", required=true)
       private final Output<VirtualClusterContainerProviderArgs> containerProvider;
 
-    public Output<VirtualClusterContainerProviderArgs> getContainerProvider() {
+    public Output<VirtualClusterContainerProviderArgs> containerProvider() {
         return this.containerProvider;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<VirtualClusterTagArgs>> tags;
 
-    public Output<List<VirtualClusterTagArgs>> getTags() {
+    public Output<List<VirtualClusterTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

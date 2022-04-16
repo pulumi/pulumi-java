@@ -18,7 +18,7 @@ public final class ImportValueResult {
         this.value = value;
     }
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
 

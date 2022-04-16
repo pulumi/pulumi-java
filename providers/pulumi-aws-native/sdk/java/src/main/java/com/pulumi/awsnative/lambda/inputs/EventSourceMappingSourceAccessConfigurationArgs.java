@@ -27,7 +27,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
     @Import(name="type")
       private final @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type;
 
-    public Output<EventSourceMappingSourceAccessConfigurationType> getType() {
+    public Output<EventSourceMappingSourceAccessConfigurationType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -38,7 +38,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
     @Import(name="uRI")
       private final @Nullable Output<String> uRI;
 
-    public Output<String> getURI() {
+    public Output<String> uRI() {
         return this.uRI == null ? Codegen.empty() : this.uRI;
     }
 

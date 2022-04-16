@@ -19,7 +19,7 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="flowArn", required=true)
       private final String flowArn;
 
-    public String getFlowArn() {
+    public String flowArn() {
         return this.flowArn;
     }
 

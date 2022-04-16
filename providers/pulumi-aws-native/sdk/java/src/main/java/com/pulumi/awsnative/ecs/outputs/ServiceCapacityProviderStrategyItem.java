@@ -26,13 +26,13 @@ public final class ServiceCapacityProviderStrategyItem {
         this.weight = weight;
     }
 
-    public Optional<Integer> getBase() {
+    public Optional<Integer> base() {
         return Optional.ofNullable(this.base);
     }
-    public Optional<String> getCapacityProvider() {
+    public Optional<String> capacityProvider() {
         return Optional.ofNullable(this.capacityProvider);
     }
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

@@ -22,63 +22,63 @@ public final class CertificateKeyUsageArgs extends com.pulumi.resources.Resource
     @Import(name="cRLSign")
       private final @Nullable Output<Boolean> cRLSign;
 
-    public Output<Boolean> getCRLSign() {
+    public Output<Boolean> cRLSign() {
         return this.cRLSign == null ? Codegen.empty() : this.cRLSign;
     }
 
     @Import(name="dataEncipherment")
       private final @Nullable Output<Boolean> dataEncipherment;
 
-    public Output<Boolean> getDataEncipherment() {
+    public Output<Boolean> dataEncipherment() {
         return this.dataEncipherment == null ? Codegen.empty() : this.dataEncipherment;
     }
 
     @Import(name="decipherOnly")
       private final @Nullable Output<Boolean> decipherOnly;
 
-    public Output<Boolean> getDecipherOnly() {
+    public Output<Boolean> decipherOnly() {
         return this.decipherOnly == null ? Codegen.empty() : this.decipherOnly;
     }
 
     @Import(name="digitalSignature")
       private final @Nullable Output<Boolean> digitalSignature;
 
-    public Output<Boolean> getDigitalSignature() {
+    public Output<Boolean> digitalSignature() {
         return this.digitalSignature == null ? Codegen.empty() : this.digitalSignature;
     }
 
     @Import(name="encipherOnly")
       private final @Nullable Output<Boolean> encipherOnly;
 
-    public Output<Boolean> getEncipherOnly() {
+    public Output<Boolean> encipherOnly() {
         return this.encipherOnly == null ? Codegen.empty() : this.encipherOnly;
     }
 
     @Import(name="keyAgreement")
       private final @Nullable Output<Boolean> keyAgreement;
 
-    public Output<Boolean> getKeyAgreement() {
+    public Output<Boolean> keyAgreement() {
         return this.keyAgreement == null ? Codegen.empty() : this.keyAgreement;
     }
 
     @Import(name="keyCertSign")
       private final @Nullable Output<Boolean> keyCertSign;
 
-    public Output<Boolean> getKeyCertSign() {
+    public Output<Boolean> keyCertSign() {
         return this.keyCertSign == null ? Codegen.empty() : this.keyCertSign;
     }
 
     @Import(name="keyEncipherment")
       private final @Nullable Output<Boolean> keyEncipherment;
 
-    public Output<Boolean> getKeyEncipherment() {
+    public Output<Boolean> keyEncipherment() {
         return this.keyEncipherment == null ? Codegen.empty() : this.keyEncipherment;
     }
 
     @Import(name="nonRepudiation")
       private final @Nullable Output<Boolean> nonRepudiation;
 
-    public Output<Boolean> getNonRepudiation() {
+    public Output<Boolean> nonRepudiation() {
         return this.nonRepudiation == null ? Codegen.empty() : this.nonRepudiation;
     }
 

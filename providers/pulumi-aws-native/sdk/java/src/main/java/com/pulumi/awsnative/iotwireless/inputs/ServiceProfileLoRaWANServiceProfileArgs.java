@@ -20,133 +20,133 @@ public final class ServiceProfileLoRaWANServiceProfileArgs extends com.pulumi.re
     @Import(name="addGwMetadata")
       private final @Nullable Output<Boolean> addGwMetadata;
 
-    public Output<Boolean> getAddGwMetadata() {
+    public Output<Boolean> addGwMetadata() {
         return this.addGwMetadata == null ? Codegen.empty() : this.addGwMetadata;
     }
 
     @Import(name="channelMask")
       private final @Nullable Output<String> channelMask;
 
-    public Output<String> getChannelMask() {
+    public Output<String> channelMask() {
         return this.channelMask == null ? Codegen.empty() : this.channelMask;
     }
 
     @Import(name="devStatusReqFreq")
       private final @Nullable Output<Integer> devStatusReqFreq;
 
-    public Output<Integer> getDevStatusReqFreq() {
+    public Output<Integer> devStatusReqFreq() {
         return this.devStatusReqFreq == null ? Codegen.empty() : this.devStatusReqFreq;
     }
 
     @Import(name="dlBucketSize")
       private final @Nullable Output<Integer> dlBucketSize;
 
-    public Output<Integer> getDlBucketSize() {
+    public Output<Integer> dlBucketSize() {
         return this.dlBucketSize == null ? Codegen.empty() : this.dlBucketSize;
     }
 
     @Import(name="dlRate")
       private final @Nullable Output<Integer> dlRate;
 
-    public Output<Integer> getDlRate() {
+    public Output<Integer> dlRate() {
         return this.dlRate == null ? Codegen.empty() : this.dlRate;
     }
 
     @Import(name="dlRatePolicy")
       private final @Nullable Output<String> dlRatePolicy;
 
-    public Output<String> getDlRatePolicy() {
+    public Output<String> dlRatePolicy() {
         return this.dlRatePolicy == null ? Codegen.empty() : this.dlRatePolicy;
     }
 
     @Import(name="drMax")
       private final @Nullable Output<Integer> drMax;
 
-    public Output<Integer> getDrMax() {
+    public Output<Integer> drMax() {
         return this.drMax == null ? Codegen.empty() : this.drMax;
     }
 
     @Import(name="drMin")
       private final @Nullable Output<Integer> drMin;
 
-    public Output<Integer> getDrMin() {
+    public Output<Integer> drMin() {
         return this.drMin == null ? Codegen.empty() : this.drMin;
     }
 
     @Import(name="hrAllowed")
       private final @Nullable Output<Boolean> hrAllowed;
 
-    public Output<Boolean> getHrAllowed() {
+    public Output<Boolean> hrAllowed() {
         return this.hrAllowed == null ? Codegen.empty() : this.hrAllowed;
     }
 
     @Import(name="minGwDiversity")
       private final @Nullable Output<Integer> minGwDiversity;
 
-    public Output<Integer> getMinGwDiversity() {
+    public Output<Integer> minGwDiversity() {
         return this.minGwDiversity == null ? Codegen.empty() : this.minGwDiversity;
     }
 
     @Import(name="nwkGeoLoc")
       private final @Nullable Output<Boolean> nwkGeoLoc;
 
-    public Output<Boolean> getNwkGeoLoc() {
+    public Output<Boolean> nwkGeoLoc() {
         return this.nwkGeoLoc == null ? Codegen.empty() : this.nwkGeoLoc;
     }
 
     @Import(name="prAllowed")
       private final @Nullable Output<Boolean> prAllowed;
 
-    public Output<Boolean> getPrAllowed() {
+    public Output<Boolean> prAllowed() {
         return this.prAllowed == null ? Codegen.empty() : this.prAllowed;
     }
 
     @Import(name="raAllowed")
       private final @Nullable Output<Boolean> raAllowed;
 
-    public Output<Boolean> getRaAllowed() {
+    public Output<Boolean> raAllowed() {
         return this.raAllowed == null ? Codegen.empty() : this.raAllowed;
     }
 
     @Import(name="reportDevStatusBattery")
       private final @Nullable Output<Boolean> reportDevStatusBattery;
 
-    public Output<Boolean> getReportDevStatusBattery() {
+    public Output<Boolean> reportDevStatusBattery() {
         return this.reportDevStatusBattery == null ? Codegen.empty() : this.reportDevStatusBattery;
     }
 
     @Import(name="reportDevStatusMargin")
       private final @Nullable Output<Boolean> reportDevStatusMargin;
 
-    public Output<Boolean> getReportDevStatusMargin() {
+    public Output<Boolean> reportDevStatusMargin() {
         return this.reportDevStatusMargin == null ? Codegen.empty() : this.reportDevStatusMargin;
     }
 
     @Import(name="targetPer")
       private final @Nullable Output<Integer> targetPer;
 
-    public Output<Integer> getTargetPer() {
+    public Output<Integer> targetPer() {
         return this.targetPer == null ? Codegen.empty() : this.targetPer;
     }
 
     @Import(name="ulBucketSize")
       private final @Nullable Output<Integer> ulBucketSize;
 
-    public Output<Integer> getUlBucketSize() {
+    public Output<Integer> ulBucketSize() {
         return this.ulBucketSize == null ? Codegen.empty() : this.ulBucketSize;
     }
 
     @Import(name="ulRate")
       private final @Nullable Output<Integer> ulRate;
 
-    public Output<Integer> getUlRate() {
+    public Output<Integer> ulRate() {
         return this.ulRate == null ? Codegen.empty() : this.ulRate;
     }
 
     @Import(name="ulRatePolicy")
       private final @Nullable Output<String> ulRatePolicy;
 
-    public Output<String> getUlRatePolicy() {
+    public Output<String> ulRatePolicy() {
         return this.ulRatePolicy == null ? Codegen.empty() : this.ulRatePolicy;
     }
 

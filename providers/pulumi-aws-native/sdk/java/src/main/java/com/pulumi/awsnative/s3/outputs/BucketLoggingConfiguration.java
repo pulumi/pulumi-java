@@ -30,10 +30,10 @@ public final class BucketLoggingConfiguration {
      * The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
      * 
     */
-    public Optional<String> getDestinationBucketName() {
+    public Optional<String> destinationBucketName() {
         return Optional.ofNullable(this.destinationBucketName);
     }
-    public Optional<String> getLogFilePrefix() {
+    public Optional<String> logFilePrefix() {
         return Optional.ofNullable(this.logFilePrefix);
     }
 

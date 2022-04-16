@@ -24,63 +24,63 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends com.pulumi.resou
     @Import(name="completionWindowMinutes")
       private final @Nullable Output<Double> completionWindowMinutes;
 
-    public Output<Double> getCompletionWindowMinutes() {
+    public Output<Double> completionWindowMinutes() {
         return this.completionWindowMinutes == null ? Codegen.empty() : this.completionWindowMinutes;
     }
 
     @Import(name="copyActions")
       private final @Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
 
-    public Output<List<BackupPlanCopyActionResourceTypeArgs>> getCopyActions() {
+    public Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions() {
         return this.copyActions == null ? Codegen.empty() : this.copyActions;
     }
 
     @Import(name="enableContinuousBackup")
       private final @Nullable Output<Boolean> enableContinuousBackup;
 
-    public Output<Boolean> getEnableContinuousBackup() {
+    public Output<Boolean> enableContinuousBackup() {
         return this.enableContinuousBackup == null ? Codegen.empty() : this.enableContinuousBackup;
     }
 
     @Import(name="lifecycle")
       private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
-    public Output<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
+    public Output<BackupPlanLifecycleResourceTypeArgs> lifecycle() {
         return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
     @Import(name="recoveryPointTags")
       private final @Nullable Output<Object> recoveryPointTags;
 
-    public Output<Object> getRecoveryPointTags() {
+    public Output<Object> recoveryPointTags() {
         return this.recoveryPointTags == null ? Codegen.empty() : this.recoveryPointTags;
     }
 
     @Import(name="ruleName", required=true)
       private final Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
     @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
     }
 
     @Import(name="startWindowMinutes")
       private final @Nullable Output<Double> startWindowMinutes;
 
-    public Output<Double> getStartWindowMinutes() {
+    public Output<Double> startWindowMinutes() {
         return this.startWindowMinutes == null ? Codegen.empty() : this.startWindowMinutes;
     }
 
     @Import(name="targetBackupVault", required=true)
       private final Output<String> targetBackupVault;
 
-    public Output<String> getTargetBackupVault() {
+    public Output<String> targetBackupVault() {
         return this.targetBackupVault;
     }
 

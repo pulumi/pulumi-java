@@ -27,7 +27,7 @@ public final class FleetResourceCreationLimitPolicy extends com.pulumi.resources
     @Import(name="newGameSessionsPerCreator")
       private final @Nullable Integer newGameSessionsPerCreator;
 
-    public Optional<Integer> getNewGameSessionsPerCreator() {
+    public Optional<Integer> newGameSessionsPerCreator() {
         return this.newGameSessionsPerCreator == null ? Optional.empty() : Optional.ofNullable(this.newGameSessionsPerCreator);
     }
 
@@ -38,7 +38,7 @@ public final class FleetResourceCreationLimitPolicy extends com.pulumi.resources
     @Import(name="policyPeriodInMinutes")
       private final @Nullable Integer policyPeriodInMinutes;
 
-    public Optional<Integer> getPolicyPeriodInMinutes() {
+    public Optional<Integer> policyPeriodInMinutes() {
         return this.policyPeriodInMinutes == null ? Optional.empty() : Optional.ofNullable(this.policyPeriodInMinutes);
     }
 

@@ -35,20 +35,20 @@ public final class FlowZendeskDestinationProperties {
         this.writeOperationType = writeOperationType;
     }
 
-    public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
+    public Optional<FlowErrorHandlingConfig> errorHandlingConfig() {
         return Optional.ofNullable(this.errorHandlingConfig);
     }
     /**
      * List of fields used as ID when performing a write operation.
      * 
     */
-    public List<String> getIdFieldNames() {
+    public List<String> idFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;
     }
-    public String getObject() {
+    public String object() {
         return this.object;
     }
-    public Optional<FlowWriteOperationType> getWriteOperationType() {
+    public Optional<FlowWriteOperationType> writeOperationType() {
         return Optional.ofNullable(this.writeOperationType);
     }
 

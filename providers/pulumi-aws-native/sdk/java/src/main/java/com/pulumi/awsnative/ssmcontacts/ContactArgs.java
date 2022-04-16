@@ -24,7 +24,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias", required=true)
       private final Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
 
@@ -35,7 +35,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plan", required=true)
       private final Output<List<ContactStageArgs>> plan;
 
-    public Output<List<ContactStageArgs>> getPlan() {
+    public Output<List<ContactStageArgs>> plan() {
         return this.plan;
     }
 
@@ -57,7 +57,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<ContactType> type;
 
-    public Output<ContactType> getType() {
+    public Output<ContactType> type() {
         return this.type;
     }
 

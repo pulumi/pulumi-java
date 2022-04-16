@@ -27,7 +27,7 @@ public final class SafetyRuleAssertionRuleArgs extends com.pulumi.resources.Reso
     @Import(name="assertedControls", required=true)
       private final Output<List<String>> assertedControls;
 
-    public Output<List<String>> getAssertedControls() {
+    public Output<List<String>> assertedControls() {
         return this.assertedControls;
     }
 
@@ -38,7 +38,7 @@ public final class SafetyRuleAssertionRuleArgs extends com.pulumi.resources.Reso
     @Import(name="waitPeriodMs", required=true)
       private final Output<Integer> waitPeriodMs;
 
-    public Output<Integer> getWaitPeriodMs() {
+    public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 

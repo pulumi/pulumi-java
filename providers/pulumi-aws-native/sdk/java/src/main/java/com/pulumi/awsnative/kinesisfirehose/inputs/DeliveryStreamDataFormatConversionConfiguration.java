@@ -20,28 +20,28 @@ public final class DeliveryStreamDataFormatConversionConfiguration extends com.p
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="inputFormatConfiguration")
       private final @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration;
 
-    public Optional<DeliveryStreamInputFormatConfiguration> getInputFormatConfiguration() {
+    public Optional<DeliveryStreamInputFormatConfiguration> inputFormatConfiguration() {
         return this.inputFormatConfiguration == null ? Optional.empty() : Optional.ofNullable(this.inputFormatConfiguration);
     }
 
     @Import(name="outputFormatConfiguration")
       private final @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
 
-    public Optional<DeliveryStreamOutputFormatConfiguration> getOutputFormatConfiguration() {
+    public Optional<DeliveryStreamOutputFormatConfiguration> outputFormatConfiguration() {
         return this.outputFormatConfiguration == null ? Optional.empty() : Optional.ofNullable(this.outputFormatConfiguration);
     }
 
     @Import(name="schemaConfiguration")
       private final @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
 
-    public Optional<DeliveryStreamSchemaConfiguration> getSchemaConfiguration() {
+    public Optional<DeliveryStreamSchemaConfiguration> schemaConfiguration() {
         return this.schemaConfiguration == null ? Optional.empty() : Optional.ofNullable(this.schemaConfiguration);
     }
 

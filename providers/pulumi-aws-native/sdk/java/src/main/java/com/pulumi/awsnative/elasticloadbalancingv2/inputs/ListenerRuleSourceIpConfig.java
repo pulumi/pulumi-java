@@ -18,7 +18,7 @@ public final class ListenerRuleSourceIpConfig extends com.pulumi.resources.Invok
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

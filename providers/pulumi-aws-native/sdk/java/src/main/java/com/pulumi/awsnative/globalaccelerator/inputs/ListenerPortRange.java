@@ -19,14 +19,14 @@ public final class ListenerPortRange extends com.pulumi.resources.InvokeArgs {
     @Import(name="fromPort", required=true)
       private final Integer fromPort;
 
-    public Integer getFromPort() {
+    public Integer fromPort() {
         return this.fromPort;
     }
 
     @Import(name="toPort", required=true)
       private final Integer toPort;
 
-    public Integer getToPort() {
+    public Integer toPort() {
         return this.toPort;
     }
 

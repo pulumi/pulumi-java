@@ -21,42 +21,42 @@ public final class DataSourceServiceNowConfiguration extends com.pulumi.resource
     @Import(name="authenticationType")
       private final @Nullable DataSourceServiceNowAuthenticationType authenticationType;
 
-    public Optional<DataSourceServiceNowAuthenticationType> getAuthenticationType() {
+    public Optional<DataSourceServiceNowAuthenticationType> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
     @Import(name="hostUrl", required=true)
       private final String hostUrl;
 
-    public String getHostUrl() {
+    public String hostUrl() {
         return this.hostUrl;
     }
 
     @Import(name="knowledgeArticleConfiguration")
       private final @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration;
 
-    public Optional<DataSourceServiceNowKnowledgeArticleConfiguration> getKnowledgeArticleConfiguration() {
+    public Optional<DataSourceServiceNowKnowledgeArticleConfiguration> knowledgeArticleConfiguration() {
         return this.knowledgeArticleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
 
     @Import(name="secretArn", required=true)
       private final String secretArn;
 
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serviceCatalogConfiguration")
       private final @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
 
-    public Optional<DataSourceServiceNowServiceCatalogConfiguration> getServiceCatalogConfiguration() {
+    public Optional<DataSourceServiceNowServiceCatalogConfiguration> serviceCatalogConfiguration() {
         return this.serviceCatalogConfiguration == null ? Optional.empty() : Optional.ofNullable(this.serviceCatalogConfiguration);
     }
 
     @Import(name="serviceNowBuildVersion", required=true)
       private final DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
 
-    public DataSourceServiceNowBuildVersionType getServiceNowBuildVersion() {
+    public DataSourceServiceNowBuildVersionType serviceNowBuildVersion() {
         return this.serviceNowBuildVersion;
     }
 

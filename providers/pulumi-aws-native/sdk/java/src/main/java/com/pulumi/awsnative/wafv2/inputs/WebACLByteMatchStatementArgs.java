@@ -26,35 +26,35 @@ public final class WebACLByteMatchStatementArgs extends com.pulumi.resources.Res
     @Import(name="fieldToMatch", required=true)
       private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="positionalConstraint", required=true)
       private final Output<WebACLPositionalConstraint> positionalConstraint;
 
-    public Output<WebACLPositionalConstraint> getPositionalConstraint() {
+    public Output<WebACLPositionalConstraint> positionalConstraint() {
         return this.positionalConstraint;
     }
 
     @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
-    public Output<String> getSearchString() {
+    public Output<String> searchString() {
         return this.searchString == null ? Codegen.empty() : this.searchString;
     }
 
     @Import(name="searchStringBase64")
       private final @Nullable Output<String> searchStringBase64;
 
-    public Output<String> getSearchStringBase64() {
+    public Output<String> searchStringBase64() {
         return this.searchStringBase64 == null ? Codegen.empty() : this.searchStringBase64;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

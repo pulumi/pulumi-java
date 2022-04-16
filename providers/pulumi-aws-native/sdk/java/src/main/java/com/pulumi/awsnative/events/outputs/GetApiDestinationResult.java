@@ -52,30 +52,30 @@ public final class GetApiDestinationResult {
      * The arn of the api destination.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The arn of the connection.
      * 
     */
-    public Optional<String> getConnectionArn() {
+    public Optional<String> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<ApiDestinationHttpMethod> getHttpMethod() {
+    public Optional<ApiDestinationHttpMethod> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
      * Url endpoint to invoke.
      * 
     */
-    public Optional<String> getInvocationEndpoint() {
+    public Optional<String> invocationEndpoint() {
         return Optional.ofNullable(this.invocationEndpoint);
     }
-    public Optional<Integer> getInvocationRateLimitPerSecond() {
+    public Optional<Integer> invocationRateLimitPerSecond() {
         return Optional.ofNullable(this.invocationRateLimitPerSecond);
     }
 

@@ -23,7 +23,7 @@ public final class MetricStreamFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

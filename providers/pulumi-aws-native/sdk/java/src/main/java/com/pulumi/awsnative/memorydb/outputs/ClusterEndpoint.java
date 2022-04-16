@@ -35,14 +35,14 @@ public final class ClusterEndpoint {
      * The DNS address of the primary read-write node.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The port number that the engine is listening on.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
 

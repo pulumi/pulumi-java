@@ -24,7 +24,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -35,7 +35,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<FlowSourceArgs> source;
 
-    public Output<FlowSourceArgs> getSource() {
+    public Output<FlowSourceArgs> source() {
         return this.source;
     }
 
@@ -57,7 +57,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceFailoverConfig")
       private final @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
 
-    public Output<FlowFailoverConfigArgs> getSourceFailoverConfig() {
+    public Output<FlowFailoverConfigArgs> sourceFailoverConfig() {
         return this.sourceFailoverConfig == null ? Codegen.empty() : this.sourceFailoverConfig;
     }
 

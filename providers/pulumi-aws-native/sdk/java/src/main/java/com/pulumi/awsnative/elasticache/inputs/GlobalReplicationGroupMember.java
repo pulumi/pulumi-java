@@ -22,7 +22,7 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
     @Import(name="replicationGroupId")
       private final @Nullable String replicationGroupId;
 
-    public Optional<String> getReplicationGroupId() {
+    public Optional<String> replicationGroupId() {
         return this.replicationGroupId == null ? Optional.empty() : Optional.ofNullable(this.replicationGroupId);
     }
 
@@ -33,7 +33,7 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
     @Import(name="replicationGroupRegion")
       private final @Nullable String replicationGroupRegion;
 
-    public Optional<String> getReplicationGroupRegion() {
+    public Optional<String> replicationGroupRegion() {
         return this.replicationGroupRegion == null ? Optional.empty() : Optional.ofNullable(this.replicationGroupRegion);
     }
 
@@ -44,7 +44,7 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
     @Import(name="role")
       private final @Nullable GlobalReplicationGroupMemberRole role;
 
-    public Optional<GlobalReplicationGroupMemberRole> getRole() {
+    public Optional<GlobalReplicationGroupMemberRole> role() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 

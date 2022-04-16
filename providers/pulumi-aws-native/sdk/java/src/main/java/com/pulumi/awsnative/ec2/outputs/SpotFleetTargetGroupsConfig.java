@@ -17,7 +17,7 @@ public final class SpotFleetTargetGroupsConfig {
         this.targetGroups = targetGroups;
     }
 
-    public List<SpotFleetTargetGroup> getTargetGroups() {
+    public List<SpotFleetTargetGroup> targetGroups() {
         return this.targetGroups;
     }
 

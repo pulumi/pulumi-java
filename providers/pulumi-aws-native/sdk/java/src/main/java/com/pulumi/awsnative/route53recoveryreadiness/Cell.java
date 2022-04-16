@@ -31,7 +31,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the cell.
      * 
      */
-    public Output<String> getCellArn() {
+    public Output<String> cellArn() {
         return this.cellArn;
     }
     /**
@@ -45,7 +45,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return The name of the cell to create.
      * 
      */
-    public Output<String> getCellName() {
+    public Output<String> cellName() {
         return this.cellName;
     }
     /**
@@ -59,7 +59,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCells() {
+    public Output</* @Nullable */ List<String>> cells() {
         return this.cells;
     }
     /**
@@ -73,7 +73,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is a list but currently can have only one element.
      * 
      */
-    public Output<List<String>> getParentReadinessScopes() {
+    public Output<List<String>> parentReadinessScopes() {
         return this.parentReadinessScopes;
     }
     /**
@@ -87,7 +87,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<CellTag>> getTags() {
+    public Output</* @Nullable */ List<CellTag>> tags() {
         return this.tags;
     }
 

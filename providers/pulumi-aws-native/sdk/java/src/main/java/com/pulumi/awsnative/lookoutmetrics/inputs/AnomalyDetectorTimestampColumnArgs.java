@@ -22,14 +22,14 @@ public final class AnomalyDetectorTimestampColumnArgs extends com.pulumi.resourc
     @Import(name="columnFormat")
       private final @Nullable Output<String> columnFormat;
 
-    public Output<String> getColumnFormat() {
+    public Output<String> columnFormat() {
         return this.columnFormat == null ? Codegen.empty() : this.columnFormat;
     }
 
     @Import(name="columnName")
       private final @Nullable Output<String> columnName;
 
-    public Output<String> getColumnName() {
+    public Output<String> columnName() {
         return this.columnName == null ? Codegen.empty() : this.columnName;
     }
 

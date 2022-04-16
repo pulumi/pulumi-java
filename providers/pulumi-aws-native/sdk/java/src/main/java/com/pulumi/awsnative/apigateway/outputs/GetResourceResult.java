@@ -26,7 +26,7 @@ public final class GetResourceResult {
      * A unique primary identifier for a Resource
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

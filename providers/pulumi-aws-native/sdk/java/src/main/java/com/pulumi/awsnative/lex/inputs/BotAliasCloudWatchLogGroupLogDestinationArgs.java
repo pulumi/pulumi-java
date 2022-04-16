@@ -21,7 +21,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
     @Import(name="cloudWatchLogGroupArn", required=true)
       private final Output<String> cloudWatchLogGroupArn;
 
-    public Output<String> getCloudWatchLogGroupArn() {
+    public Output<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
 
@@ -32,7 +32,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
     @Import(name="logPrefix", required=true)
       private final Output<String> logPrefix;
 
-    public Output<String> getLogPrefix() {
+    public Output<String> logPrefix() {
         return this.logPrefix;
     }
 

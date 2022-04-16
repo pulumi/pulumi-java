@@ -22,49 +22,49 @@ public final class ResponseHeadersPolicyCorsConfig extends com.pulumi.resources.
     @Import(name="accessControlAllowCredentials", required=true)
       private final Boolean accessControlAllowCredentials;
 
-    public Boolean getAccessControlAllowCredentials() {
+    public Boolean accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
 
     @Import(name="accessControlAllowHeaders", required=true)
       private final ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders;
 
-    public ResponseHeadersPolicyAccessControlAllowHeaders getAccessControlAllowHeaders() {
+    public ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
 
     @Import(name="accessControlAllowMethods", required=true)
       private final ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods;
 
-    public ResponseHeadersPolicyAccessControlAllowMethods getAccessControlAllowMethods() {
+    public ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
 
     @Import(name="accessControlAllowOrigins", required=true)
       private final ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins;
 
-    public ResponseHeadersPolicyAccessControlAllowOrigins getAccessControlAllowOrigins() {
+    public ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
 
     @Import(name="accessControlExposeHeaders")
       private final @Nullable ResponseHeadersPolicyAccessControlExposeHeaders accessControlExposeHeaders;
 
-    public Optional<ResponseHeadersPolicyAccessControlExposeHeaders> getAccessControlExposeHeaders() {
+    public Optional<ResponseHeadersPolicyAccessControlExposeHeaders> accessControlExposeHeaders() {
         return this.accessControlExposeHeaders == null ? Optional.empty() : Optional.ofNullable(this.accessControlExposeHeaders);
     }
 
     @Import(name="accessControlMaxAgeSec")
       private final @Nullable Integer accessControlMaxAgeSec;
 
-    public Optional<Integer> getAccessControlMaxAgeSec() {
+    public Optional<Integer> accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec == null ? Optional.empty() : Optional.ofNullable(this.accessControlMaxAgeSec);
     }
 
     @Import(name="originOverride", required=true)
       private final Boolean originOverride;
 
-    public Boolean getOriginOverride() {
+    public Boolean originOverride() {
         return this.originOverride;
     }
 

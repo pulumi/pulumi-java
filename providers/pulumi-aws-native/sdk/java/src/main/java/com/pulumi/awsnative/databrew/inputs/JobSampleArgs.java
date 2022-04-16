@@ -23,14 +23,14 @@ public final class JobSampleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<JobSampleMode> mode;
 
-    public Output<JobSampleMode> getMode() {
+    public Output<JobSampleMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 

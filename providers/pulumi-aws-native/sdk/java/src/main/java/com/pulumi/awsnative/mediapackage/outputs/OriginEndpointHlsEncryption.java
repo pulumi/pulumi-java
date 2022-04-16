@@ -55,31 +55,31 @@ public final class OriginEndpointHlsEncryption {
      * A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
      * 
     */
-    public Optional<String> getConstantInitializationVector() {
+    public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * The encryption method to use.
      * 
     */
-    public Optional<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
+    public Optional<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
     /**
      * Interval (in seconds) between each encryption key rotation.
      * 
     */
-    public Optional<Integer> getKeyRotationIntervalSeconds() {
+    public Optional<Integer> keyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
     /**
      * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
      * 
     */
-    public Optional<Boolean> getRepeatExtXKey() {
+    public Optional<Boolean> repeatExtXKey() {
         return Optional.ofNullable(this.repeatExtXKey);
     }
-    public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
+    public OriginEndpointSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

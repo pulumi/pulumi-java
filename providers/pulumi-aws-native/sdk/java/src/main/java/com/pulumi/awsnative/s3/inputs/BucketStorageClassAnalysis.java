@@ -21,7 +21,7 @@ public final class BucketStorageClassAnalysis extends com.pulumi.resources.Invok
     @Import(name="dataExport")
       private final @Nullable BucketDataExport dataExport;
 
-    public Optional<BucketDataExport> getDataExport() {
+    public Optional<BucketDataExport> dataExport() {
         return this.dataExport == null ? Optional.empty() : Optional.ofNullable(this.dataExport);
     }
 

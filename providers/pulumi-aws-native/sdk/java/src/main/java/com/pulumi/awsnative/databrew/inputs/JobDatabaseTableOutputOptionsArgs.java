@@ -19,14 +19,14 @@ public final class JobDatabaseTableOutputOptionsArgs extends com.pulumi.resource
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
     @Import(name="tempDirectory")
       private final @Nullable Output<JobS3LocationArgs> tempDirectory;
 
-    public Output<JobS3LocationArgs> getTempDirectory() {
+    public Output<JobS3LocationArgs> tempDirectory() {
         return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
     }
 

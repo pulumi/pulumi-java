@@ -31,7 +31,7 @@ public class ConfigurationSet extends com.pulumi.resources.CustomResource {
      * @return The name of the configuration set.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
 

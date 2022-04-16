@@ -19,7 +19,7 @@ public final class JobExecutionsRetryConfigPropertiesArgs extends com.pulumi.res
     @Import(name="retryCriteriaList")
       private final @Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
 
-    public Output<List<JobTemplateRetryCriteriaArgs>> getRetryCriteriaList() {
+    public Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList() {
         return this.retryCriteriaList == null ? Codegen.empty() : this.retryCriteriaList;
     }
 

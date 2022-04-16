@@ -21,7 +21,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
     @Import(name="accessControlAttributes")
       private final @Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
-    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
+    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes() {
         return this.accessControlAttributes == null ? Codegen.empty() : this.accessControlAttributes;
     }
 
@@ -32,7 +32,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
     @Import(name="instanceAccessControlAttributeConfiguration")
       private final @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
 
-    public Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> getInstanceAccessControlAttributeConfiguration() {
+    public Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration() {
         return this.instanceAccessControlAttributeConfiguration == null ? Codegen.empty() : this.instanceAccessControlAttributeConfiguration;
     }
 
@@ -43,7 +43,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 

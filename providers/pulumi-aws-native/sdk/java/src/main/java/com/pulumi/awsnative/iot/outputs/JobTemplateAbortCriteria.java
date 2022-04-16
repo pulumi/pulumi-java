@@ -49,28 +49,28 @@ public final class JobTemplateAbortCriteria {
      * The type of job action to take to initiate the job abort.
      * 
     */
-    public JobTemplateAction getAction() {
+    public JobTemplateAction action() {
         return this.action;
     }
     /**
      * The type of job execution failures that can initiate a job abort.
      * 
     */
-    public JobTemplateFailureType getFailureType() {
+    public JobTemplateFailureType failureType() {
         return this.failureType;
     }
     /**
      * The minimum number of things which must receive job execution notifications before the job can be aborted.
      * 
     */
-    public Integer getMinNumberOfExecutedThings() {
+    public Integer minNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
     }
     /**
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
      * 
     */
-    public Double getThresholdPercentage() {
+    public Double thresholdPercentage() {
         return this.thresholdPercentage;
     }
 

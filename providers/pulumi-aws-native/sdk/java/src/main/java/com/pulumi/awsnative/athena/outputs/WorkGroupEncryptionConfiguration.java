@@ -23,10 +23,10 @@ public final class WorkGroupEncryptionConfiguration {
         this.kmsKey = kmsKey;
     }
 
-    public WorkGroupEncryptionOption getEncryptionOption() {
+    public WorkGroupEncryptionOption encryptionOption() {
         return this.encryptionOption;
     }
-    public Optional<String> getKmsKey() {
+    public Optional<String> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
 

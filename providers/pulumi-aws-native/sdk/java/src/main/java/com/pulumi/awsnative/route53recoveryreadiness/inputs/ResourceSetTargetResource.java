@@ -22,14 +22,14 @@ public final class ResourceSetTargetResource extends com.pulumi.resources.Invoke
     @Import(name="nLBResource")
       private final @Nullable ResourceSetNLBResource nLBResource;
 
-    public Optional<ResourceSetNLBResource> getNLBResource() {
+    public Optional<ResourceSetNLBResource> nLBResource() {
         return this.nLBResource == null ? Optional.empty() : Optional.ofNullable(this.nLBResource);
     }
 
     @Import(name="r53Resource")
       private final @Nullable ResourceSetR53ResourceRecord r53Resource;
 
-    public Optional<ResourceSetR53ResourceRecord> getR53Resource() {
+    public Optional<ResourceSetR53ResourceRecord> r53Resource() {
         return this.r53Resource == null ? Optional.empty() : Optional.ofNullable(this.r53Resource);
     }
 

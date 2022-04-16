@@ -25,14 +25,14 @@ public final class RecipeActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operation", required=true)
       private final Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
 
     @Import(name="parameters")
       private final @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
-    public Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> getParameters() {
+    public Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

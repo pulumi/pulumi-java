@@ -32,16 +32,16 @@ public final class JobProfileConfiguration {
         this.profileColumns = profileColumns;
     }
 
-    public List<JobColumnStatisticsConfiguration> getColumnStatisticsConfigurations() {
+    public List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations() {
         return this.columnStatisticsConfigurations == null ? List.of() : this.columnStatisticsConfigurations;
     }
-    public Optional<JobStatisticsConfiguration> getDatasetStatisticsConfiguration() {
+    public Optional<JobStatisticsConfiguration> datasetStatisticsConfiguration() {
         return Optional.ofNullable(this.datasetStatisticsConfiguration);
     }
-    public Optional<JobEntityDetectorConfiguration> getEntityDetectorConfiguration() {
+    public Optional<JobEntityDetectorConfiguration> entityDetectorConfiguration() {
         return Optional.ofNullable(this.entityDetectorConfiguration);
     }
-    public List<JobColumnSelector> getProfileColumns() {
+    public List<JobColumnSelector> profileColumns() {
         return this.profileColumns == null ? List.of() : this.profileColumns;
     }
 

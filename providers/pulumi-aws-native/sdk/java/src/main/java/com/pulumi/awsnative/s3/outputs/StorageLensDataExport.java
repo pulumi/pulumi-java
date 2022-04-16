@@ -23,10 +23,10 @@ public final class StorageLensDataExport {
         this.s3BucketDestination = s3BucketDestination;
     }
 
-    public Optional<StorageLensCloudWatchMetrics> getCloudWatchMetrics() {
+    public Optional<StorageLensCloudWatchMetrics> cloudWatchMetrics() {
         return Optional.ofNullable(this.cloudWatchMetrics);
     }
-    public Optional<StorageLensS3BucketDestination> getS3BucketDestination() {
+    public Optional<StorageLensS3BucketDestination> s3BucketDestination() {
         return Optional.ofNullable(this.s3BucketDestination);
     }
 

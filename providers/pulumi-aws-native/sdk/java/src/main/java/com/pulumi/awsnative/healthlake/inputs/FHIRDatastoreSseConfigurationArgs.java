@@ -21,7 +21,7 @@ public final class FHIRDatastoreSseConfigurationArgs extends com.pulumi.resource
     @Import(name="kmsEncryptionConfig", required=true)
       private final Output<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
 
-    public Output<FHIRDatastoreKmsEncryptionConfigArgs> getKmsEncryptionConfig() {
+    public Output<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig() {
         return this.kmsEncryptionConfig;
     }
 

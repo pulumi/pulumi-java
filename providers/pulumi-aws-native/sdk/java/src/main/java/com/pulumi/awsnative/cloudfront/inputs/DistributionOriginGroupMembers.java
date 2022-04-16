@@ -17,14 +17,14 @@ public final class DistributionOriginGroupMembers extends com.pulumi.resources.I
     @Import(name="items", required=true)
       private final List<DistributionOriginGroupMember> items;
 
-    public List<DistributionOriginGroupMember> getItems() {
+    public List<DistributionOriginGroupMember> items() {
         return this.items;
     }
 
     @Import(name="quantity", required=true)
       private final Integer quantity;
 
-    public Integer getQuantity() {
+    public Integer quantity() {
         return this.quantity;
     }
 

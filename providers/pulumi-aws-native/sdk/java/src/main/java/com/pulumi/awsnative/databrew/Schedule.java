@@ -33,13 +33,13 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Schedule cron
      * 
      */
-    public Output<String> getCronExpression() {
+    public Output<String> cronExpression() {
         return this.cronExpression;
     }
     @Export(name="jobNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> jobNames;
 
-    public Output</* @Nullable */ List<String>> getJobNames() {
+    public Output</* @Nullable */ List<String>> jobNames() {
         return this.jobNames;
     }
     /**
@@ -53,13 +53,13 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Schedule Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={ScheduleTag.class})
     private Output</* @Nullable */ List<ScheduleTag>> tags;
 
-    public Output</* @Nullable */ List<ScheduleTag>> getTags() {
+    public Output</* @Nullable */ List<ScheduleTag>> tags() {
         return this.tags;
     }
 

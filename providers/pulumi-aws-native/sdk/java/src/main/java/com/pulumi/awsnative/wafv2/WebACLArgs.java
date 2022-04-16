@@ -26,35 +26,35 @@ public final class WebACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="captchaConfig")
       private final @Nullable Output<WebACLCaptchaConfigArgs> captchaConfig;
 
-    public Output<WebACLCaptchaConfigArgs> getCaptchaConfig() {
+    public Output<WebACLCaptchaConfigArgs> captchaConfig() {
         return this.captchaConfig == null ? Codegen.empty() : this.captchaConfig;
     }
 
     @Import(name="customResponseBodies")
       private final @Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies;
 
-    public Output<WebACLCustomResponseBodiesArgs> getCustomResponseBodies() {
+    public Output<WebACLCustomResponseBodiesArgs> customResponseBodies() {
         return this.customResponseBodies == null ? Codegen.empty() : this.customResponseBodies;
     }
 
     @Import(name="defaultAction", required=true)
       private final Output<WebACLDefaultActionArgs> defaultAction;
 
-    public Output<WebACLDefaultActionArgs> getDefaultAction() {
+    public Output<WebACLDefaultActionArgs> defaultAction() {
         return this.defaultAction;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,28 +65,28 @@ public final class WebACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<WebACLRuleArgs>> rules;
 
-    public Output<List<WebACLRuleArgs>> getRules() {
+    public Output<List<WebACLRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     @Import(name="scope", required=true)
       private final Output<WebACLScope> scope;
 
-    public Output<WebACLScope> getScope() {
+    public Output<WebACLScope> scope() {
         return this.scope;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<WebACLTagArgs>> tags;
 
-    public Output<List<WebACLTagArgs>> getTags() {
+    public Output<List<WebACLTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="visibilityConfig", required=true)
       private final Output<WebACLVisibilityConfigArgs> visibilityConfig;
 
-    public Output<WebACLVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<WebACLVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 

@@ -19,21 +19,21 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends com.pulumi.
     @Import(name="enableDynamicFieldUpdate")
       private final @Nullable Output<Boolean> enableDynamicFieldUpdate;
 
-    public Output<Boolean> getEnableDynamicFieldUpdate() {
+    public Output<Boolean> enableDynamicFieldUpdate() {
         return this.enableDynamicFieldUpdate == null ? Codegen.empty() : this.enableDynamicFieldUpdate;
     }
 
     @Import(name="includeDeletedRecords")
       private final @Nullable Output<Boolean> includeDeletedRecords;
 
-    public Output<Boolean> getIncludeDeletedRecords() {
+    public Output<Boolean> includeDeletedRecords() {
         return this.includeDeletedRecords == null ? Codegen.empty() : this.includeDeletedRecords;
     }
 
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 

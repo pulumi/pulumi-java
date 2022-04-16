@@ -26,7 +26,7 @@ public final class BucketRoutingRuleConditionArgs extends com.pulumi.resources.R
     @Import(name="httpErrorCodeReturnedEquals")
       private final @Nullable Output<String> httpErrorCodeReturnedEquals;
 
-    public Output<String> getHttpErrorCodeReturnedEquals() {
+    public Output<String> httpErrorCodeReturnedEquals() {
         return this.httpErrorCodeReturnedEquals == null ? Codegen.empty() : this.httpErrorCodeReturnedEquals;
     }
 
@@ -37,7 +37,7 @@ public final class BucketRoutingRuleConditionArgs extends com.pulumi.resources.R
     @Import(name="keyPrefixEquals")
       private final @Nullable Output<String> keyPrefixEquals;
 
-    public Output<String> getKeyPrefixEquals() {
+    public Output<String> keyPrefixEquals() {
         return this.keyPrefixEquals == null ? Codegen.empty() : this.keyPrefixEquals;
     }
 

@@ -41,25 +41,25 @@ public final class GetListenerResult {
         this.sslPolicy = sslPolicy;
     }
 
-    public List<String> getAlpnPolicy() {
+    public List<String> alpnPolicy() {
         return this.alpnPolicy == null ? List.of() : this.alpnPolicy;
     }
-    public List<ListenerCertificate> getCertificates() {
+    public List<ListenerCertificate> certificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
-    public List<ListenerAction> getDefaultActions() {
+    public List<ListenerAction> defaultActions() {
         return this.defaultActions == null ? List.of() : this.defaultActions;
     }
-    public Optional<String> getListenerArn() {
+    public Optional<String> listenerArn() {
         return Optional.ofNullable(this.listenerArn);
     }
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
-    public Optional<String> getSslPolicy() {
+    public Optional<String> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
 

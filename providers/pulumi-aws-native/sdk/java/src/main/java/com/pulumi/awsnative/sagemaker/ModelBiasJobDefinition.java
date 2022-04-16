@@ -38,7 +38,7 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
      * @return The time at which the job definition was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -52,49 +52,49 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
      * @return The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    public Output<String> getJobDefinitionArn() {
+    public Output<String> jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
     @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
-    public Output</* @Nullable */ String> getJobDefinitionName() {
+    public Output</* @Nullable */ String> jobDefinitionName() {
         return this.jobDefinitionName;
     }
     @Export(name="jobResources", type=ModelBiasJobDefinitionMonitoringResources.class, parameters={})
     private Output<ModelBiasJobDefinitionMonitoringResources> jobResources;
 
-    public Output<ModelBiasJobDefinitionMonitoringResources> getJobResources() {
+    public Output<ModelBiasJobDefinitionMonitoringResources> jobResources() {
         return this.jobResources;
     }
     @Export(name="modelBiasAppSpecification", type=ModelBiasJobDefinitionModelBiasAppSpecification.class, parameters={})
     private Output<ModelBiasJobDefinitionModelBiasAppSpecification> modelBiasAppSpecification;
 
-    public Output<ModelBiasJobDefinitionModelBiasAppSpecification> getModelBiasAppSpecification() {
+    public Output<ModelBiasJobDefinitionModelBiasAppSpecification> modelBiasAppSpecification() {
         return this.modelBiasAppSpecification;
     }
     @Export(name="modelBiasBaselineConfig", type=ModelBiasJobDefinitionModelBiasBaselineConfig.class, parameters={})
     private Output</* @Nullable */ ModelBiasJobDefinitionModelBiasBaselineConfig> modelBiasBaselineConfig;
 
-    public Output</* @Nullable */ ModelBiasJobDefinitionModelBiasBaselineConfig> getModelBiasBaselineConfig() {
+    public Output</* @Nullable */ ModelBiasJobDefinitionModelBiasBaselineConfig> modelBiasBaselineConfig() {
         return this.modelBiasBaselineConfig;
     }
     @Export(name="modelBiasJobInput", type=ModelBiasJobDefinitionModelBiasJobInput.class, parameters={})
     private Output<ModelBiasJobDefinitionModelBiasJobInput> modelBiasJobInput;
 
-    public Output<ModelBiasJobDefinitionModelBiasJobInput> getModelBiasJobInput() {
+    public Output<ModelBiasJobDefinitionModelBiasJobInput> modelBiasJobInput() {
         return this.modelBiasJobInput;
     }
     @Export(name="modelBiasJobOutputConfig", type=ModelBiasJobDefinitionMonitoringOutputConfig.class, parameters={})
     private Output<ModelBiasJobDefinitionMonitoringOutputConfig> modelBiasJobOutputConfig;
 
-    public Output<ModelBiasJobDefinitionMonitoringOutputConfig> getModelBiasJobOutputConfig() {
+    public Output<ModelBiasJobDefinitionMonitoringOutputConfig> modelBiasJobOutputConfig() {
         return this.modelBiasJobOutputConfig;
     }
     @Export(name="networkConfig", type=ModelBiasJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ModelBiasJobDefinitionNetworkConfig> networkConfig;
 
-    public Output</* @Nullable */ ModelBiasJobDefinitionNetworkConfig> getNetworkConfig() {
+    public Output</* @Nullable */ ModelBiasJobDefinitionNetworkConfig> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -108,13 +108,13 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
      * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="stoppingCondition", type=ModelBiasJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ ModelBiasJobDefinitionStoppingCondition> stoppingCondition;
 
-    public Output</* @Nullable */ ModelBiasJobDefinitionStoppingCondition> getStoppingCondition() {
+    public Output</* @Nullable */ ModelBiasJobDefinitionStoppingCondition> stoppingCondition() {
         return this.stoppingCondition;
     }
     /**
@@ -128,7 +128,7 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ModelBiasJobDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<ModelBiasJobDefinitionTag>> tags() {
         return this.tags;
     }
 

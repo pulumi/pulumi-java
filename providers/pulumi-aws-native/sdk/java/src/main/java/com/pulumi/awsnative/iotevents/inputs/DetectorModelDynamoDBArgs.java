@@ -27,7 +27,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="hashKeyField", required=true)
       private final Output<String> hashKeyField;
 
-    public Output<String> getHashKeyField() {
+    public Output<String> hashKeyField() {
         return this.hashKeyField;
     }
 
@@ -44,7 +44,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="hashKeyType")
       private final @Nullable Output<String> hashKeyType;
 
-    public Output<String> getHashKeyType() {
+    public Output<String> hashKeyType() {
         return this.hashKeyType == null ? Codegen.empty() : this.hashKeyType;
     }
 
@@ -55,7 +55,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="hashKeyValue", required=true)
       private final Output<String> hashKeyValue;
 
-    public Output<String> getHashKeyValue() {
+    public Output<String> hashKeyValue() {
         return this.hashKeyValue;
     }
 
@@ -74,14 +74,14 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation == null ? Codegen.empty() : this.operation;
     }
 
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -94,7 +94,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="payloadField")
       private final @Nullable Output<String> payloadField;
 
-    public Output<String> getPayloadField() {
+    public Output<String> payloadField() {
         return this.payloadField == null ? Codegen.empty() : this.payloadField;
     }
 
@@ -105,7 +105,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="rangeKeyField")
       private final @Nullable Output<String> rangeKeyField;
 
-    public Output<String> getRangeKeyField() {
+    public Output<String> rangeKeyField() {
         return this.rangeKeyField == null ? Codegen.empty() : this.rangeKeyField;
     }
 
@@ -122,7 +122,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="rangeKeyType")
       private final @Nullable Output<String> rangeKeyType;
 
-    public Output<String> getRangeKeyType() {
+    public Output<String> rangeKeyType() {
         return this.rangeKeyType == null ? Codegen.empty() : this.rangeKeyType;
     }
 
@@ -133,7 +133,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="rangeKeyValue")
       private final @Nullable Output<String> rangeKeyValue;
 
-    public Output<String> getRangeKeyValue() {
+    public Output<String> rangeKeyValue() {
         return this.rangeKeyValue == null ? Codegen.empty() : this.rangeKeyValue;
     }
 
@@ -144,7 +144,7 @@ public final class DetectorModelDynamoDBArgs extends com.pulumi.resources.Resour
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

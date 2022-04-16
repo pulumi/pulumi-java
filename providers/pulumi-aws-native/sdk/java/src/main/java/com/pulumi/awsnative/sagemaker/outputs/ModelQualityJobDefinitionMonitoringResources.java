@@ -16,7 +16,7 @@ public final class ModelQualityJobDefinitionMonitoringResources {
         this.clusterConfig = clusterConfig;
     }
 
-    public ModelQualityJobDefinitionClusterConfig getClusterConfig() {
+    public ModelQualityJobDefinitionClusterConfig clusterConfig() {
         return this.clusterConfig;
     }
 

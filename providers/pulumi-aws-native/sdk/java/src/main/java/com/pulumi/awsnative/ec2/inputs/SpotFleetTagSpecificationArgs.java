@@ -20,14 +20,14 @@ public final class SpotFleetTagSpecificationArgs extends com.pulumi.resources.Re
     @Import(name="resourceType")
       private final @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType;
 
-    public Output<SpotFleetTagSpecificationResourceType> getPropResourceType() {
+    public Output<SpotFleetTagSpecificationResourceType> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<SpotFleetTagArgs>> tags;
 
-    public Output<List<SpotFleetTagArgs>> getTags() {
+    public Output<List<SpotFleetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

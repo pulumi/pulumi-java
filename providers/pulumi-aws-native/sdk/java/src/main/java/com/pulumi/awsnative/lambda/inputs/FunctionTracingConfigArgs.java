@@ -26,7 +26,7 @@ public final class FunctionTracingConfigArgs extends com.pulumi.resources.Resour
     @Import(name="mode")
       private final @Nullable Output<FunctionTracingConfigMode> mode;
 
-    public Output<FunctionTracingConfigMode> getMode() {
+    public Output<FunctionTracingConfigMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

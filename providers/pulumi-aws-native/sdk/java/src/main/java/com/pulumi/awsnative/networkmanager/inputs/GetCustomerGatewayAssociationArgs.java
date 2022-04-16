@@ -19,7 +19,7 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
     @Import(name="customerGatewayArn", required=true)
       private final String customerGatewayArn;
 
-    public String getCustomerGatewayArn() {
+    public String customerGatewayArn() {
         return this.customerGatewayArn;
     }
 
@@ -30,7 +30,7 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
     @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;
 
-    public String getGlobalNetworkId() {
+    public String globalNetworkId() {
         return this.globalNetworkId;
     }
 

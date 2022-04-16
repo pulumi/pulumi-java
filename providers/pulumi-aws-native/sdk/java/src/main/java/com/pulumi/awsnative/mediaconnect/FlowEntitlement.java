@@ -33,7 +33,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
      * 
      */
-    public Output</* @Nullable */ Integer> getDataTransferSubscriberFeePercent() {
+    public Output</* @Nullable */ Integer> dataTransferSubscriberFeePercent() {
         return this.dataTransferSubscriberFeePercent;
     }
     /**
@@ -47,7 +47,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return A description of the entitlement.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return The type of encryption that will be used on the output that is associated with this entitlement.
      * 
      */
-    public Output</* @Nullable */ FlowEntitlementEncryption> getEncryption() {
+    public Output</* @Nullable */ FlowEntitlementEncryption> encryption() {
         return this.encryption;
     }
     /**
@@ -75,7 +75,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return The ARN of the entitlement.
      * 
      */
-    public Output<String> getEntitlementArn() {
+    public Output<String> entitlementArn() {
         return this.entitlementArn;
     }
     /**
@@ -89,7 +89,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return  An indication of whether the entitlement is enabled.
      * 
      */
-    public Output</* @Nullable */ FlowEntitlementEntitlementStatus> getEntitlementStatus() {
+    public Output</* @Nullable */ FlowEntitlementEntitlementStatus> entitlementStatus() {
         return this.entitlementStatus;
     }
     /**
@@ -103,7 +103,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return The ARN of the flow.
      * 
      */
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -117,7 +117,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return The name of the entitlement.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
      * 
      */
-    public Output<List<String>> getSubscribers() {
+    public Output<List<String>> subscribers() {
         return this.subscribers;
     }
 

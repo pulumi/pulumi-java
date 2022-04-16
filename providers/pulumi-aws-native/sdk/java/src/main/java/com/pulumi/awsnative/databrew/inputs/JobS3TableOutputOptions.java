@@ -15,7 +15,7 @@ public final class JobS3TableOutputOptions extends com.pulumi.resources.InvokeAr
     @Import(name="location", required=true)
       private final JobS3Location location;
 
-    public JobS3Location getLocation() {
+    public JobS3Location location() {
         return this.location;
     }
 

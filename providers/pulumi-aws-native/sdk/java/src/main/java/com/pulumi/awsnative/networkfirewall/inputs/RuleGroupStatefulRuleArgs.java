@@ -20,21 +20,21 @@ public final class RuleGroupStatefulRuleArgs extends com.pulumi.resources.Resour
     @Import(name="action", required=true)
       private final Output<RuleGroupStatefulRuleAction> action;
 
-    public Output<RuleGroupStatefulRuleAction> getAction() {
+    public Output<RuleGroupStatefulRuleAction> action() {
         return this.action;
     }
 
     @Import(name="header", required=true)
       private final Output<RuleGroupHeaderArgs> header;
 
-    public Output<RuleGroupHeaderArgs> getHeader() {
+    public Output<RuleGroupHeaderArgs> header() {
         return this.header;
     }
 
     @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleOptionArgs>> ruleOptions;
 
-    public Output<List<RuleGroupRuleOptionArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleOptionArgs>> ruleOptions() {
         return this.ruleOptions;
     }
 

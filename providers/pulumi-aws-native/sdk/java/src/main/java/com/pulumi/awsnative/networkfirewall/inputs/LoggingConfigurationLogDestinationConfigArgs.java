@@ -23,21 +23,21 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends com.pulu
     @Import(name="logDestination", required=true)
       private final Output<Object> logDestination;
 
-    public Output<Object> getLogDestination() {
+    public Output<Object> logDestination() {
         return this.logDestination;
     }
 
     @Import(name="logDestinationType", required=true)
       private final Output<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType;
 
-    public Output<LoggingConfigurationLogDestinationConfigLogDestinationType> getLogDestinationType() {
+    public Output<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType() {
         return this.logDestinationType;
     }
 
     @Import(name="logType", required=true)
       private final Output<LoggingConfigurationLogDestinationConfigLogType> logType;
 
-    public Output<LoggingConfigurationLogDestinationConfigLogType> getLogType() {
+    public Output<LoggingConfigurationLogDestinationConfigLogType> logType() {
         return this.logType;
     }
 

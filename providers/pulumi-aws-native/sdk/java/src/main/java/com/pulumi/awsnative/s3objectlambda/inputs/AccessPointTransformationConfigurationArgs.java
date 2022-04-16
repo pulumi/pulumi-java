@@ -23,14 +23,14 @@ public final class AccessPointTransformationConfigurationArgs extends com.pulumi
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
     @Import(name="contentTransformation", required=true)
       private final Output<Object> contentTransformation;
 
-    public Output<Object> getContentTransformation() {
+    public Output<Object> contentTransformation() {
         return this.contentTransformation;
     }
 

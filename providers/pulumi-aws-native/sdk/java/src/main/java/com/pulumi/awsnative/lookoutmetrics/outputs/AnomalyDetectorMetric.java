@@ -34,13 +34,13 @@ public final class AnomalyDetectorMetric {
      * Operator used to aggregate metric values
      * 
     */
-    public AnomalyDetectorMetricAggregationFunction getAggregationFunction() {
+    public AnomalyDetectorMetricAggregationFunction aggregationFunction() {
         return this.aggregationFunction;
     }
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 

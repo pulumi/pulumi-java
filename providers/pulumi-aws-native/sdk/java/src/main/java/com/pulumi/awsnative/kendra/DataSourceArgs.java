@@ -22,42 +22,42 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceConfiguration")
       private final @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
 
-    public Output<DataSourceConfigurationArgs> getDataSourceConfiguration() {
+    public Output<DataSourceConfigurationArgs> dataSourceConfiguration() {
         return this.dataSourceConfiguration == null ? Codegen.empty() : this.dataSourceConfiguration;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="indexId", required=true)
       private final Output<String> indexId;
 
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -68,14 +68,14 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DataSourceTagArgs>> tags;
 
-    public Output<List<DataSourceTagArgs>> getTags() {
+    public Output<List<DataSourceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="type", required=true)
       private final Output<DataSourceType> type;
 
-    public Output<DataSourceType> getType() {
+    public Output<DataSourceType> type() {
         return this.type;
     }
 

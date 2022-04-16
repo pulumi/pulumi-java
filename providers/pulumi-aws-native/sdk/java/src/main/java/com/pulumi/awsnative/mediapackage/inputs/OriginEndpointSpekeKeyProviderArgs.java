@@ -27,7 +27,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -38,7 +38,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -49,7 +49,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -60,7 +60,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="systemIds", required=true)
       private final Output<List<String>> systemIds;
 
-    public Output<List<String>> getSystemIds() {
+    public Output<List<String>> systemIds() {
         return this.systemIds;
     }
 
@@ -71,7 +71,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

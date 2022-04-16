@@ -27,13 +27,13 @@ public final class ServiceAwsVpcConfiguration {
         this.subnets = subnets;
     }
 
-    public Optional<ServiceAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
+    public Optional<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp() {
         return Optional.ofNullable(this.assignPublicIp);
     }
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
 

@@ -26,13 +26,13 @@ public final class TaskDefinitionPortMapping {
         this.protocol = protocol;
     }
 
-    public Optional<Integer> getContainerPort() {
+    public Optional<Integer> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
-    public Optional<Integer> getHostPort() {
+    public Optional<Integer> hostPort() {
         return Optional.ofNullable(this.hostPort);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

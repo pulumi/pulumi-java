@@ -17,14 +17,14 @@ public final class TrackerConsumerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="consumerArn", required=true)
       private final Output<String> consumerArn;
 
-    public Output<String> getConsumerArn() {
+    public Output<String> consumerArn() {
         return this.consumerArn;
     }
 
     @Import(name="trackerName", required=true)
       private final Output<String> trackerName;
 
-    public Output<String> getTrackerName() {
+    public Output<String> trackerName() {
         return this.trackerName;
     }
 

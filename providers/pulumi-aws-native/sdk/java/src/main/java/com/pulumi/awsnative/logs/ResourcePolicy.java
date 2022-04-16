@@ -29,7 +29,7 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
      * @return The policy document
      * 
      */
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument;
     }
     /**
@@ -43,7 +43,7 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
      * @return A name for resource policy
      * 
      */
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 

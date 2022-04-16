@@ -27,14 +27,14 @@ public final class DetectorModelFirehoseArgs extends com.pulumi.resources.Resour
     @Import(name="deliveryStreamName", required=true)
       private final Output<String> deliveryStreamName;
 
-    public Output<String> getDeliveryStreamName() {
+    public Output<String> deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -45,7 +45,7 @@ public final class DetectorModelFirehoseArgs extends com.pulumi.resources.Resour
     @Import(name="separator")
       private final @Nullable Output<String> separator;
 
-    public Output<String> getSeparator() {
+    public Output<String> separator() {
         return this.separator == null ? Codegen.empty() : this.separator;
     }
 

@@ -35,14 +35,14 @@ public final class BucketAccessRules {
      * A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
      * 
     */
-    public Optional<Boolean> getAllowPublicOverrides() {
+    public Optional<Boolean> allowPublicOverrides() {
         return Optional.ofNullable(this.allowPublicOverrides);
     }
     /**
      * Specifies the anonymous access to all objects in a bucket.
      * 
     */
-    public Optional<String> getGetObject() {
+    public Optional<String> getObject() {
         return Optional.ofNullable(this.getObject);
     }
 

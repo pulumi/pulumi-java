@@ -27,7 +27,7 @@ public final class ReportSettingPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="frameworkArns")
       private final @Nullable Output<List<String>> frameworkArns;
 
-    public Output<List<String>> getFrameworkArns() {
+    public Output<List<String>> frameworkArns() {
         return this.frameworkArns == null ? Codegen.empty() : this.frameworkArns;
     }
 
@@ -38,7 +38,7 @@ public final class ReportSettingPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="reportTemplate", required=true)
       private final Output<String> reportTemplate;
 
-    public Output<String> getReportTemplate() {
+    public Output<String> reportTemplate() {
         return this.reportTemplate;
     }
 

@@ -24,7 +24,7 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="account", required=true)
       private final Output<String> account;
 
-    public Output<String> getAccount() {
+    public Output<String> account() {
         return this.account;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
+    public Output<Boolean> force() {
         return this.force == null ? Codegen.empty() : this.force;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
     @Import(name="vpcIds")
       private final @Nullable Output<List<String>> vpcIds;
 
-    public Output<List<String>> getVpcIds() {
+    public Output<List<String>> vpcIds() {
         return this.vpcIds == null ? Codegen.empty() : this.vpcIds;
     }
 

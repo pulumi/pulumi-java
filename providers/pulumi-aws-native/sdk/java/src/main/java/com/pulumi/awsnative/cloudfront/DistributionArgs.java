@@ -20,14 +20,14 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfig", required=true)
       private final Output<DistributionConfigArgs> distributionConfig;
 
-    public Output<DistributionConfigArgs> getDistributionConfig() {
+    public Output<DistributionConfigArgs> distributionConfig() {
         return this.distributionConfig;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DistributionTagArgs>> tags;
 
-    public Output<List<DistributionTagArgs>> getTags() {
+    public Output<List<DistributionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

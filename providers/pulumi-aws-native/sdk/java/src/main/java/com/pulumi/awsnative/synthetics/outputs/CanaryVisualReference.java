@@ -35,14 +35,14 @@ public final class CanaryVisualReference {
      * Canary run id to be used as base reference for visual testing
      * 
     */
-    public String getBaseCanaryRunId() {
+    public String baseCanaryRunId() {
         return this.baseCanaryRunId;
     }
     /**
      * List of screenshots used as base reference for visual testing
      * 
     */
-    public List<CanaryBaseScreenshot> getBaseScreenshots() {
+    public List<CanaryBaseScreenshot> baseScreenshots() {
         return this.baseScreenshots == null ? List.of() : this.baseScreenshots;
     }
 

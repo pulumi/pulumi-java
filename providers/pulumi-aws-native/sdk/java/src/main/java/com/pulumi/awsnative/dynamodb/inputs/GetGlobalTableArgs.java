@@ -15,7 +15,7 @@ public final class GetGlobalTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

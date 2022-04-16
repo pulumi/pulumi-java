@@ -25,7 +25,7 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -36,7 +36,7 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
+    public Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="regions", required=true)
       private final Output<List<MultiRegionAccessPointRegionArgs>> regions;
 
-    public Output<List<MultiRegionAccessPointRegionArgs>> getRegions() {
+    public Output<List<MultiRegionAccessPointRegionArgs>> regions() {
         return this.regions;
     }
 

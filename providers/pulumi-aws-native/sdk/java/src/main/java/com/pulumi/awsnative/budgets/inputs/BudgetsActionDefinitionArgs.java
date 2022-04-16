@@ -20,21 +20,21 @@ public final class BudgetsActionDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="iamActionDefinition")
       private final @Nullable Output<BudgetsActionIamActionDefinitionArgs> iamActionDefinition;
 
-    public Output<BudgetsActionIamActionDefinitionArgs> getIamActionDefinition() {
+    public Output<BudgetsActionIamActionDefinitionArgs> iamActionDefinition() {
         return this.iamActionDefinition == null ? Codegen.empty() : this.iamActionDefinition;
     }
 
     @Import(name="scpActionDefinition")
       private final @Nullable Output<BudgetsActionScpActionDefinitionArgs> scpActionDefinition;
 
-    public Output<BudgetsActionScpActionDefinitionArgs> getScpActionDefinition() {
+    public Output<BudgetsActionScpActionDefinitionArgs> scpActionDefinition() {
         return this.scpActionDefinition == null ? Codegen.empty() : this.scpActionDefinition;
     }
 
     @Import(name="ssmActionDefinition")
       private final @Nullable Output<BudgetsActionSsmActionDefinitionArgs> ssmActionDefinition;
 
-    public Output<BudgetsActionSsmActionDefinitionArgs> getSsmActionDefinition() {
+    public Output<BudgetsActionSsmActionDefinitionArgs> ssmActionDefinition() {
         return this.ssmActionDefinition == null ? Codegen.empty() : this.ssmActionDefinition;
     }
 

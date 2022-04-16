@@ -23,7 +23,7 @@ public final class BucketAbortIncompleteMultipartUpload extends com.pulumi.resou
     @Import(name="daysAfterInitiation", required=true)
       private final Integer daysAfterInitiation;
 
-    public Integer getDaysAfterInitiation() {
+    public Integer daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 

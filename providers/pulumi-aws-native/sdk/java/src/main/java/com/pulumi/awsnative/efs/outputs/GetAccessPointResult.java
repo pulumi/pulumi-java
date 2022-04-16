@@ -27,13 +27,13 @@ public final class GetAccessPointResult {
         this.arn = arn;
     }
 
-    public Optional<String> getAccessPointId() {
+    public Optional<String> accessPointId() {
         return Optional.ofNullable(this.accessPointId);
     }
-    public List<AccessPointTag> getAccessPointTags() {
+    public List<AccessPointTag> accessPointTags() {
         return this.accessPointTags == null ? List.of() : this.accessPointTags;
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
 

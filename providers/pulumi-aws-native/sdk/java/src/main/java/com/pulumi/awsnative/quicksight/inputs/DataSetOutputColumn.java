@@ -26,7 +26,7 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,14 +37,14 @@ public final class DataSetOutputColumn extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @Import(name="type")
       private final @Nullable DataSetColumnDataType type;
 
-    public Optional<DataSetColumnDataType> getType() {
+    public Optional<DataSetColumnDataType> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

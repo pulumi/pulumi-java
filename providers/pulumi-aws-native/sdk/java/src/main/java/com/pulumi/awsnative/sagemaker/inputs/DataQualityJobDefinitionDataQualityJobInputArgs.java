@@ -21,7 +21,7 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends com.p
     @Import(name="endpointInput", required=true)
       private final Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
 
-    public Output<DataQualityJobDefinitionEndpointInputArgs> getEndpointInput() {
+    public Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 

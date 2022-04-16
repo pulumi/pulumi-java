@@ -25,7 +25,7 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
 
-    public Output<List<FirewallRuleGroupFirewallRuleArgs>> getFirewallRules() {
+    public Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules() {
         return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
@@ -36,7 +36,7 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class FirewallRuleGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
 
-    public Output<List<FirewallRuleGroupTagArgs>> getTags() {
+    public Output<List<FirewallRuleGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

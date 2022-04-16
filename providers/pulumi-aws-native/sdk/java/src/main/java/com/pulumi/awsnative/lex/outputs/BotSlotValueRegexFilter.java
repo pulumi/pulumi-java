@@ -24,7 +24,7 @@ public final class BotSlotValueRegexFilter {
      * Regex pattern
      * 
     */
-    public String getPattern() {
+    public String pattern() {
         return this.pattern;
     }
 

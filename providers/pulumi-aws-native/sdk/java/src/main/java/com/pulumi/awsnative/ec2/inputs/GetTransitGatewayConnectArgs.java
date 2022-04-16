@@ -19,7 +19,7 @@ public final class GetTransitGatewayConnectArgs extends com.pulumi.resources.Inv
     @Import(name="transitGatewayAttachmentId", required=true)
       private final String transitGatewayAttachmentId;
 
-    public String getTransitGatewayAttachmentId() {
+    public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 

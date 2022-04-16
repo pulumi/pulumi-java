@@ -88,63 +88,63 @@ public final class GetVariableResult {
      * The ARN of the variable.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the variable was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The source of the data.
      * 
     */
-    public Optional<VariableDataSource> getDataSource() {
+    public Optional<VariableDataSource> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
      * The data type.
      * 
     */
-    public Optional<VariableDataType> getDataType() {
+    public Optional<VariableDataType> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * The default value for the variable when no value is received.
      * 
     */
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The time when the variable was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this variable.
      * 
     */
-    public List<VariableTag> getTags() {
+    public List<VariableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
      * 
     */
-    public Optional<VariableType> getVariableType() {
+    public Optional<VariableType> variableType() {
         return Optional.ofNullable(this.variableType);
     }
 

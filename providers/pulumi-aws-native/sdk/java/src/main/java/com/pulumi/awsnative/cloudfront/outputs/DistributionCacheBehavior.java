@@ -82,64 +82,64 @@ public final class DistributionCacheBehavior {
         this.viewerProtocolPolicy = viewerProtocolPolicy;
     }
 
-    public List<String> getAllowedMethods() {
+    public List<String> allowedMethods() {
         return this.allowedMethods == null ? List.of() : this.allowedMethods;
     }
-    public Optional<String> getCachePolicyId() {
+    public Optional<String> cachePolicyId() {
         return Optional.ofNullable(this.cachePolicyId);
     }
-    public List<String> getCachedMethods() {
+    public List<String> cachedMethods() {
         return this.cachedMethods == null ? List.of() : this.cachedMethods;
     }
-    public Optional<Boolean> getCompress() {
+    public Optional<Boolean> compress() {
         return Optional.ofNullable(this.compress);
     }
-    public Optional<Double> getDefaultTTL() {
+    public Optional<Double> defaultTTL() {
         return Optional.ofNullable(this.defaultTTL);
     }
-    public Optional<String> getFieldLevelEncryptionId() {
+    public Optional<String> fieldLevelEncryptionId() {
         return Optional.ofNullable(this.fieldLevelEncryptionId);
     }
-    public Optional<DistributionForwardedValues> getForwardedValues() {
+    public Optional<DistributionForwardedValues> forwardedValues() {
         return Optional.ofNullable(this.forwardedValues);
     }
-    public List<DistributionFunctionAssociation> getFunctionAssociations() {
+    public List<DistributionFunctionAssociation> functionAssociations() {
         return this.functionAssociations == null ? List.of() : this.functionAssociations;
     }
-    public List<DistributionLambdaFunctionAssociation> getLambdaFunctionAssociations() {
+    public List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? List.of() : this.lambdaFunctionAssociations;
     }
-    public Optional<Double> getMaxTTL() {
+    public Optional<Double> maxTTL() {
         return Optional.ofNullable(this.maxTTL);
     }
-    public Optional<Double> getMinTTL() {
+    public Optional<Double> minTTL() {
         return Optional.ofNullable(this.minTTL);
     }
-    public Optional<String> getOriginRequestPolicyId() {
+    public Optional<String> originRequestPolicyId() {
         return Optional.ofNullable(this.originRequestPolicyId);
     }
-    public String getPathPattern() {
+    public String pathPattern() {
         return this.pathPattern;
     }
-    public Optional<String> getRealtimeLogConfigArn() {
+    public Optional<String> realtimeLogConfigArn() {
         return Optional.ofNullable(this.realtimeLogConfigArn);
     }
-    public Optional<String> getResponseHeadersPolicyId() {
+    public Optional<String> responseHeadersPolicyId() {
         return Optional.ofNullable(this.responseHeadersPolicyId);
     }
-    public Optional<Boolean> getSmoothStreaming() {
+    public Optional<Boolean> smoothStreaming() {
         return Optional.ofNullable(this.smoothStreaming);
     }
-    public String getTargetOriginId() {
+    public String targetOriginId() {
         return this.targetOriginId;
     }
-    public List<String> getTrustedKeyGroups() {
+    public List<String> trustedKeyGroups() {
         return this.trustedKeyGroups == null ? List.of() : this.trustedKeyGroups;
     }
-    public List<String> getTrustedSigners() {
+    public List<String> trustedSigners() {
         return this.trustedSigners == null ? List.of() : this.trustedSigners;
     }
-    public String getViewerProtocolPolicy() {
+    public String viewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }
 

@@ -15,7 +15,7 @@ public final class FlowDynatraceSourceProperties extends com.pulumi.resources.In
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

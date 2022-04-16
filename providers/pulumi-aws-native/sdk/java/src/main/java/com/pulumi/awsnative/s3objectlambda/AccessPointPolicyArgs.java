@@ -22,7 +22,7 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectLambdaAccessPoint", required=true)
       private final Output<String> objectLambdaAccessPoint;
 
-    public Output<String> getObjectLambdaAccessPoint() {
+    public Output<String> objectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
 
@@ -33,7 +33,7 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyDocument", required=true)
       private final Output<Object> policyDocument;
 
-    public Output<Object> getPolicyDocument() {
+    public Output<Object> policyDocument() {
         return this.policyDocument;
     }
 

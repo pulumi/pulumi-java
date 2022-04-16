@@ -21,28 +21,28 @@ public final class ResourceDataSyncSyncSourceArgs extends com.pulumi.resources.R
     @Import(name="awsOrganizationsSource")
       private final @Nullable Output<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
 
-    public Output<ResourceDataSyncAwsOrganizationsSourceArgs> getAwsOrganizationsSource() {
+    public Output<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource() {
         return this.awsOrganizationsSource == null ? Codegen.empty() : this.awsOrganizationsSource;
     }
 
     @Import(name="includeFutureRegions")
       private final @Nullable Output<Boolean> includeFutureRegions;
 
-    public Output<Boolean> getIncludeFutureRegions() {
+    public Output<Boolean> includeFutureRegions() {
         return this.includeFutureRegions == null ? Codegen.empty() : this.includeFutureRegions;
     }
 
     @Import(name="sourceRegions", required=true)
       private final Output<List<String>> sourceRegions;
 
-    public Output<List<String>> getSourceRegions() {
+    public Output<List<String>> sourceRegions() {
         return this.sourceRegions;
     }
 
     @Import(name="sourceType", required=true)
       private final Output<String> sourceType;
 
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType;
     }
 

@@ -23,10 +23,10 @@ public final class ResourceSetTargetResource {
         this.r53Resource = r53Resource;
     }
 
-    public Optional<ResourceSetNLBResource> getNLBResource() {
+    public Optional<ResourceSetNLBResource> nLBResource() {
         return Optional.ofNullable(this.nLBResource);
     }
-    public Optional<ResourceSetR53ResourceRecord> getR53Resource() {
+    public Optional<ResourceSetR53ResourceRecord> r53Resource() {
         return Optional.ofNullable(this.r53Resource);
     }
 

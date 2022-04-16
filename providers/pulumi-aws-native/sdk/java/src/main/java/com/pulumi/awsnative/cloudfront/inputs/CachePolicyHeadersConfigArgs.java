@@ -19,14 +19,14 @@ public final class CachePolicyHeadersConfigArgs extends com.pulumi.resources.Res
     @Import(name="headerBehavior", required=true)
       private final Output<String> headerBehavior;
 
-    public Output<String> getHeaderBehavior() {
+    public Output<String> headerBehavior() {
         return this.headerBehavior;
     }
 
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
+    public Output<List<String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 

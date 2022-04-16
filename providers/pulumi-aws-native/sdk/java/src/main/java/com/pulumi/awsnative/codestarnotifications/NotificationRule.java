@@ -26,67 +26,67 @@ public class NotificationRule extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
-    public Output</* @Nullable */ String> getCreatedBy() {
+    public Output</* @Nullable */ String> createdBy() {
         return this.createdBy;
     }
     @Export(name="detailType", type=NotificationRuleDetailType.class, parameters={})
     private Output<NotificationRuleDetailType> detailType;
 
-    public Output<NotificationRuleDetailType> getDetailType() {
+    public Output<NotificationRuleDetailType> detailType() {
         return this.detailType;
     }
     @Export(name="eventTypeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventTypeId;
 
-    public Output</* @Nullable */ String> getEventTypeId() {
+    public Output</* @Nullable */ String> eventTypeId() {
         return this.eventTypeId;
     }
     @Export(name="eventTypeIds", type=List.class, parameters={String.class})
     private Output<List<String>> eventTypeIds;
 
-    public Output<List<String>> getEventTypeIds() {
+    public Output<List<String>> eventTypeIds() {
         return this.eventTypeIds;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="resource", type=String.class, parameters={})
     private Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
     @Export(name="status", type=NotificationRuleStatus.class, parameters={})
     private Output</* @Nullable */ NotificationRuleStatus> status;
 
-    public Output</* @Nullable */ NotificationRuleStatus> getStatus() {
+    public Output</* @Nullable */ NotificationRuleStatus> status() {
         return this.status;
     }
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     @Export(name="targetAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetAddress;
 
-    public Output</* @Nullable */ String> getTargetAddress() {
+    public Output</* @Nullable */ String> targetAddress() {
         return this.targetAddress;
     }
     @Export(name="targets", type=List.class, parameters={NotificationRuleTarget.class})
     private Output<List<NotificationRuleTarget>> targets;
 
-    public Output<List<NotificationRuleTarget>> getTargets() {
+    public Output<List<NotificationRuleTarget>> targets() {
         return this.targets;
     }
 

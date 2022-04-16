@@ -22,7 +22,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -33,7 +33,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
@@ -44,7 +44,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="databaseUrl", required=true)
       private final Output<String> databaseUrl;
 
-    public Output<String> getDatabaseUrl() {
+    public Output<String> databaseUrl() {
         return this.databaseUrl;
     }
 
@@ -55,7 +55,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

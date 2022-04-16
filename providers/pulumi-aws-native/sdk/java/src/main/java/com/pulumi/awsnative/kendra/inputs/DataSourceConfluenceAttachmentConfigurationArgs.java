@@ -20,14 +20,14 @@ public final class DataSourceConfluenceAttachmentConfigurationArgs extends com.p
     @Import(name="attachmentFieldMappings")
       private final @Nullable Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings;
 
-    public Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> getAttachmentFieldMappings() {
+    public Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings() {
         return this.attachmentFieldMappings == null ? Codegen.empty() : this.attachmentFieldMappings;
     }
 
     @Import(name="crawlAttachments")
       private final @Nullable Output<Boolean> crawlAttachments;
 
-    public Output<Boolean> getCrawlAttachments() {
+    public Output<Boolean> crawlAttachments() {
         return this.crawlAttachments == null ? Codegen.empty() : this.crawlAttachments;
     }
 

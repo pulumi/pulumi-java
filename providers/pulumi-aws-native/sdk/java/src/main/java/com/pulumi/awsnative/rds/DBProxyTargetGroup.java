@@ -24,19 +24,19 @@ public class DBProxyTargetGroup extends com.pulumi.resources.CustomResource {
     @Export(name="connectionPoolConfigurationInfo", type=DBProxyTargetGroupConnectionPoolConfigurationInfoFormat.class, parameters={})
     private Output</* @Nullable */ DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> connectionPoolConfigurationInfo;
 
-    public Output</* @Nullable */ DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> getConnectionPoolConfigurationInfo() {
+    public Output</* @Nullable */ DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> connectionPoolConfigurationInfo() {
         return this.connectionPoolConfigurationInfo;
     }
     @Export(name="dBClusterIdentifiers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dBClusterIdentifiers;
 
-    public Output</* @Nullable */ List<String>> getDBClusterIdentifiers() {
+    public Output</* @Nullable */ List<String>> dBClusterIdentifiers() {
         return this.dBClusterIdentifiers;
     }
     @Export(name="dBInstanceIdentifiers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dBInstanceIdentifiers;
 
-    public Output</* @Nullable */ List<String>> getDBInstanceIdentifiers() {
+    public Output</* @Nullable */ List<String>> dBInstanceIdentifiers() {
         return this.dBInstanceIdentifiers;
     }
     /**
@@ -50,7 +50,7 @@ public class DBProxyTargetGroup extends com.pulumi.resources.CustomResource {
      * @return The identifier for the proxy.
      * 
      */
-    public Output<String> getDBProxyName() {
+    public Output<String> dBProxyName() {
         return this.dBProxyName;
     }
     /**
@@ -64,7 +64,7 @@ public class DBProxyTargetGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) representing the target group.
      * 
      */
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn;
     }
     /**
@@ -78,7 +78,7 @@ public class DBProxyTargetGroup extends com.pulumi.resources.CustomResource {
      * @return The identifier for the DBProxyTargetGroup
      * 
      */
-    public Output<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {
+    public Output<DBProxyTargetGroupTargetGroupName> targetGroupName() {
         return this.targetGroupName;
     }
 

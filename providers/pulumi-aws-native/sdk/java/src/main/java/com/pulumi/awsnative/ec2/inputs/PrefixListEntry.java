@@ -17,14 +17,14 @@ public final class PrefixListEntry extends com.pulumi.resources.InvokeArgs {
     @Import(name="cidr", required=true)
       private final String cidr;
 
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
 
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 

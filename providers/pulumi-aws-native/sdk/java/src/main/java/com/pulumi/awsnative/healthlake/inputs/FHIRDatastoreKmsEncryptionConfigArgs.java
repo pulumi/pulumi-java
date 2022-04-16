@@ -27,7 +27,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resou
     @Import(name="cmkType", required=true)
       private final Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
 
-    public Output<FHIRDatastoreKmsEncryptionConfigCmkType> getCmkType() {
+    public Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType() {
         return this.cmkType;
     }
 
@@ -38,7 +38,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resou
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 

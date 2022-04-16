@@ -17,21 +17,21 @@ public final class BackupSelectionConditionResourceTypeArgs extends com.pulumi.r
     @Import(name="conditionKey", required=true)
       private final Output<String> conditionKey;
 
-    public Output<String> getConditionKey() {
+    public Output<String> conditionKey() {
         return this.conditionKey;
     }
 
     @Import(name="conditionType", required=true)
       private final Output<String> conditionType;
 
-    public Output<String> getConditionType() {
+    public Output<String> conditionType() {
         return this.conditionType;
     }
 
     @Import(name="conditionValue", required=true)
       private final Output<String> conditionValue;
 
-    public Output<String> getConditionValue() {
+    public Output<String> conditionValue() {
         return this.conditionValue;
     }
 

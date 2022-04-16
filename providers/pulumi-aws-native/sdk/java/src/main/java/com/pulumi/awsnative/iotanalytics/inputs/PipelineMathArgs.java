@@ -18,28 +18,28 @@ public final class PipelineMathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attribute", required=true)
       private final Output<String> attribute;
 
-    public Output<String> getAttribute() {
+    public Output<String> attribute() {
         return this.attribute;
     }
 
     @Import(name="math", required=true)
       private final Output<String> math;
 
-    public Output<String> getMath() {
+    public Output<String> math() {
         return this.math;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable Output<String> next;
 
-    public Output<String> getNext() {
+    public Output<String> next() {
         return this.next == null ? Codegen.empty() : this.next;
     }
 

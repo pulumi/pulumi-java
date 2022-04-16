@@ -18,7 +18,7 @@ public final class ThemeTypography {
         this.fontFamilies = fontFamilies;
     }
 
-    public List<ThemeFont> getFontFamilies() {
+    public List<ThemeFont> fontFamilies() {
         return this.fontFamilies == null ? List.of() : this.fontFamilies;
     }
 

@@ -15,7 +15,7 @@ public final class DatasetTriggeringDataset extends com.pulumi.resources.InvokeA
     @Import(name="datasetName", required=true)
       private final String datasetName;
 
-    public String getDatasetName() {
+    public String datasetName() {
         return this.datasetName;
     }
 

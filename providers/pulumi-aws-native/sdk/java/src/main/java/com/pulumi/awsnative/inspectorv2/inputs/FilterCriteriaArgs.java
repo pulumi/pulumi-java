@@ -24,217 +24,217 @@ public final class FilterCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="awsAccountId")
       private final @Nullable Output<List<FilterStringFilterArgs>> awsAccountId;
 
-    public Output<List<FilterStringFilterArgs>> getAwsAccountId() {
+    public Output<List<FilterStringFilterArgs>> awsAccountId() {
         return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     @Import(name="componentId")
       private final @Nullable Output<List<FilterStringFilterArgs>> componentId;
 
-    public Output<List<FilterStringFilterArgs>> getComponentId() {
+    public Output<List<FilterStringFilterArgs>> componentId() {
         return this.componentId == null ? Codegen.empty() : this.componentId;
     }
 
     @Import(name="componentType")
       private final @Nullable Output<List<FilterStringFilterArgs>> componentType;
 
-    public Output<List<FilterStringFilterArgs>> getComponentType() {
+    public Output<List<FilterStringFilterArgs>> componentType() {
         return this.componentType == null ? Codegen.empty() : this.componentType;
     }
 
     @Import(name="ec2InstanceImageId")
       private final @Nullable Output<List<FilterStringFilterArgs>> ec2InstanceImageId;
 
-    public Output<List<FilterStringFilterArgs>> getEc2InstanceImageId() {
+    public Output<List<FilterStringFilterArgs>> ec2InstanceImageId() {
         return this.ec2InstanceImageId == null ? Codegen.empty() : this.ec2InstanceImageId;
     }
 
     @Import(name="ec2InstanceSubnetId")
       private final @Nullable Output<List<FilterStringFilterArgs>> ec2InstanceSubnetId;
 
-    public Output<List<FilterStringFilterArgs>> getEc2InstanceSubnetId() {
+    public Output<List<FilterStringFilterArgs>> ec2InstanceSubnetId() {
         return this.ec2InstanceSubnetId == null ? Codegen.empty() : this.ec2InstanceSubnetId;
     }
 
     @Import(name="ec2InstanceVpcId")
       private final @Nullable Output<List<FilterStringFilterArgs>> ec2InstanceVpcId;
 
-    public Output<List<FilterStringFilterArgs>> getEc2InstanceVpcId() {
+    public Output<List<FilterStringFilterArgs>> ec2InstanceVpcId() {
         return this.ec2InstanceVpcId == null ? Codegen.empty() : this.ec2InstanceVpcId;
     }
 
     @Import(name="ecrImageArchitecture")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageArchitecture;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageArchitecture() {
+    public Output<List<FilterStringFilterArgs>> ecrImageArchitecture() {
         return this.ecrImageArchitecture == null ? Codegen.empty() : this.ecrImageArchitecture;
     }
 
     @Import(name="ecrImageHash")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageHash;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageHash() {
+    public Output<List<FilterStringFilterArgs>> ecrImageHash() {
         return this.ecrImageHash == null ? Codegen.empty() : this.ecrImageHash;
     }
 
     @Import(name="ecrImagePushedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> ecrImagePushedAt;
 
-    public Output<List<FilterDateFilterArgs>> getEcrImagePushedAt() {
+    public Output<List<FilterDateFilterArgs>> ecrImagePushedAt() {
         return this.ecrImagePushedAt == null ? Codegen.empty() : this.ecrImagePushedAt;
     }
 
     @Import(name="ecrImageRegistry")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageRegistry;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageRegistry() {
+    public Output<List<FilterStringFilterArgs>> ecrImageRegistry() {
         return this.ecrImageRegistry == null ? Codegen.empty() : this.ecrImageRegistry;
     }
 
     @Import(name="ecrImageRepositoryName")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageRepositoryName;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageRepositoryName() {
+    public Output<List<FilterStringFilterArgs>> ecrImageRepositoryName() {
         return this.ecrImageRepositoryName == null ? Codegen.empty() : this.ecrImageRepositoryName;
     }
 
     @Import(name="ecrImageTags")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageTags;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageTags() {
+    public Output<List<FilterStringFilterArgs>> ecrImageTags() {
         return this.ecrImageTags == null ? Codegen.empty() : this.ecrImageTags;
     }
 
     @Import(name="findingArn")
       private final @Nullable Output<List<FilterStringFilterArgs>> findingArn;
 
-    public Output<List<FilterStringFilterArgs>> getFindingArn() {
+    public Output<List<FilterStringFilterArgs>> findingArn() {
         return this.findingArn == null ? Codegen.empty() : this.findingArn;
     }
 
     @Import(name="findingStatus")
       private final @Nullable Output<List<FilterStringFilterArgs>> findingStatus;
 
-    public Output<List<FilterStringFilterArgs>> getFindingStatus() {
+    public Output<List<FilterStringFilterArgs>> findingStatus() {
         return this.findingStatus == null ? Codegen.empty() : this.findingStatus;
     }
 
     @Import(name="findingType")
       private final @Nullable Output<List<FilterStringFilterArgs>> findingType;
 
-    public Output<List<FilterStringFilterArgs>> getFindingType() {
+    public Output<List<FilterStringFilterArgs>> findingType() {
         return this.findingType == null ? Codegen.empty() : this.findingType;
     }
 
     @Import(name="firstObservedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> firstObservedAt;
 
-    public Output<List<FilterDateFilterArgs>> getFirstObservedAt() {
+    public Output<List<FilterDateFilterArgs>> firstObservedAt() {
         return this.firstObservedAt == null ? Codegen.empty() : this.firstObservedAt;
     }
 
     @Import(name="inspectorScore")
       private final @Nullable Output<List<FilterNumberFilterArgs>> inspectorScore;
 
-    public Output<List<FilterNumberFilterArgs>> getInspectorScore() {
+    public Output<List<FilterNumberFilterArgs>> inspectorScore() {
         return this.inspectorScore == null ? Codegen.empty() : this.inspectorScore;
     }
 
     @Import(name="lastObservedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> lastObservedAt;
 
-    public Output<List<FilterDateFilterArgs>> getLastObservedAt() {
+    public Output<List<FilterDateFilterArgs>> lastObservedAt() {
         return this.lastObservedAt == null ? Codegen.empty() : this.lastObservedAt;
     }
 
     @Import(name="networkProtocol")
       private final @Nullable Output<List<FilterStringFilterArgs>> networkProtocol;
 
-    public Output<List<FilterStringFilterArgs>> getNetworkProtocol() {
+    public Output<List<FilterStringFilterArgs>> networkProtocol() {
         return this.networkProtocol == null ? Codegen.empty() : this.networkProtocol;
     }
 
     @Import(name="portRange")
       private final @Nullable Output<List<FilterPortRangeFilterArgs>> portRange;
 
-    public Output<List<FilterPortRangeFilterArgs>> getPortRange() {
+    public Output<List<FilterPortRangeFilterArgs>> portRange() {
         return this.portRange == null ? Codegen.empty() : this.portRange;
     }
 
     @Import(name="relatedVulnerabilities")
       private final @Nullable Output<List<FilterStringFilterArgs>> relatedVulnerabilities;
 
-    public Output<List<FilterStringFilterArgs>> getRelatedVulnerabilities() {
+    public Output<List<FilterStringFilterArgs>> relatedVulnerabilities() {
         return this.relatedVulnerabilities == null ? Codegen.empty() : this.relatedVulnerabilities;
     }
 
     @Import(name="resourceId")
       private final @Nullable Output<List<FilterStringFilterArgs>> resourceId;
 
-    public Output<List<FilterStringFilterArgs>> getResourceId() {
+    public Output<List<FilterStringFilterArgs>> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     @Import(name="resourceTags")
       private final @Nullable Output<List<FilterMapFilterArgs>> resourceTags;
 
-    public Output<List<FilterMapFilterArgs>> getResourceTags() {
+    public Output<List<FilterMapFilterArgs>> resourceTags() {
         return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
     }
 
     @Import(name="resourceType")
       private final @Nullable Output<List<FilterStringFilterArgs>> resourceType;
 
-    public Output<List<FilterStringFilterArgs>> getPropResourceType() {
+    public Output<List<FilterStringFilterArgs>> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="severity")
       private final @Nullable Output<List<FilterStringFilterArgs>> severity;
 
-    public Output<List<FilterStringFilterArgs>> getSeverity() {
+    public Output<List<FilterStringFilterArgs>> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     @Import(name="title")
       private final @Nullable Output<List<FilterStringFilterArgs>> title;
 
-    public Output<List<FilterStringFilterArgs>> getTitle() {
+    public Output<List<FilterStringFilterArgs>> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
     @Import(name="updatedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> updatedAt;
 
-    public Output<List<FilterDateFilterArgs>> getUpdatedAt() {
+    public Output<List<FilterDateFilterArgs>> updatedAt() {
         return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
     }
 
     @Import(name="vendorSeverity")
       private final @Nullable Output<List<FilterStringFilterArgs>> vendorSeverity;
 
-    public Output<List<FilterStringFilterArgs>> getVendorSeverity() {
+    public Output<List<FilterStringFilterArgs>> vendorSeverity() {
         return this.vendorSeverity == null ? Codegen.empty() : this.vendorSeverity;
     }
 
     @Import(name="vulnerabilityId")
       private final @Nullable Output<List<FilterStringFilterArgs>> vulnerabilityId;
 
-    public Output<List<FilterStringFilterArgs>> getVulnerabilityId() {
+    public Output<List<FilterStringFilterArgs>> vulnerabilityId() {
         return this.vulnerabilityId == null ? Codegen.empty() : this.vulnerabilityId;
     }
 
     @Import(name="vulnerabilitySource")
       private final @Nullable Output<List<FilterStringFilterArgs>> vulnerabilitySource;
 
-    public Output<List<FilterStringFilterArgs>> getVulnerabilitySource() {
+    public Output<List<FilterStringFilterArgs>> vulnerabilitySource() {
         return this.vulnerabilitySource == null ? Codegen.empty() : this.vulnerabilitySource;
     }
 
     @Import(name="vulnerablePackages")
       private final @Nullable Output<List<FilterPackageFilterArgs>> vulnerablePackages;
 
-    public Output<List<FilterPackageFilterArgs>> getVulnerablePackages() {
+    public Output<List<FilterPackageFilterArgs>> vulnerablePackages() {
         return this.vulnerablePackages == null ? Codegen.empty() : this.vulnerablePackages;
     }
 

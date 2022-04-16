@@ -51,28 +51,28 @@ public final class GetDeviceFleetResult {
      * Description for the edge device fleet
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * S3 bucket and an ecryption key id (if available) to store outputs for the fleet
      * 
     */
-    public Optional<DeviceFleetEdgeOutputConfig> getOutputConfig() {
+    public Optional<DeviceFleetEdgeOutputConfig> outputConfig() {
         return Optional.ofNullable(this.outputConfig);
     }
     /**
      * Role associated with the device fleet
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Associate tags with the resource
      * 
     */
-    public List<DeviceFleetTag> getTags() {
+    public List<DeviceFleetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -25,13 +25,13 @@ public final class ConfigS3RecordingConfig {
         this.roleArn = roleArn;
     }
 
-    public Optional<String> getBucketArn() {
+    public Optional<String> bucketArn() {
         return Optional.ofNullable(this.bucketArn);
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
 

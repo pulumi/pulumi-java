@@ -24,7 +24,7 @@ public final class ConnectorProfileInforNexusConnectorProfileProperties {
      * The location of the InforNexus resource
      * 
     */
-    public String getInstanceUrl() {
+    public String instanceUrl() {
         return this.instanceUrl;
     }
 

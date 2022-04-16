@@ -19,7 +19,7 @@ public final class MonitoringScheduleMonitoringResources extends com.pulumi.reso
     @Import(name="clusterConfig", required=true)
       private final MonitoringScheduleClusterConfig clusterConfig;
 
-    public MonitoringScheduleClusterConfig getClusterConfig() {
+    public MonitoringScheduleClusterConfig clusterConfig() {
         return this.clusterConfig;
     }
 

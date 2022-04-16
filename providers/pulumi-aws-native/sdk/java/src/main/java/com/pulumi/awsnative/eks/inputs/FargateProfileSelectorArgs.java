@@ -20,14 +20,14 @@ public final class FargateProfileSelectorArgs extends com.pulumi.resources.Resou
     @Import(name="labels")
       private final @Nullable Output<List<FargateProfileLabelArgs>> labels;
 
-    public Output<List<FargateProfileLabelArgs>> getLabels() {
+    public Output<List<FargateProfileLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 

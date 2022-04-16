@@ -22,10 +22,10 @@ public final class RuleGroupTCPFlagField {
         this.masks = masks;
     }
 
-    public List<RuleGroupTCPFlag> getFlags() {
+    public List<RuleGroupTCPFlag> flags() {
         return this.flags;
     }
-    public List<RuleGroupTCPFlag> getMasks() {
+    public List<RuleGroupTCPFlag> masks() {
         return this.masks == null ? List.of() : this.masks;
     }
 

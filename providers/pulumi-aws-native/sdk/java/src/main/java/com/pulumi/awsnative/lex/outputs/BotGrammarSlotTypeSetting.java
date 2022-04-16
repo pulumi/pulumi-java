@@ -18,7 +18,7 @@ public final class BotGrammarSlotTypeSetting {
         this.source = source;
     }
 
-    public Optional<BotGrammarSlotTypeSource> getSource() {
+    public Optional<BotGrammarSlotTypeSource> source() {
         return Optional.ofNullable(this.source);
     }
 

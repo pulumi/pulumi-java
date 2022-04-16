@@ -22,21 +22,21 @@ public final class RuleGroupVisibilityConfigArgs extends com.pulumi.resources.Re
     @Import(name="cloudWatchMetricsEnabled", required=true)
       private final Output<Boolean> cloudWatchMetricsEnabled;
 
-    public Output<Boolean> getCloudWatchMetricsEnabled() {
+    public Output<Boolean> cloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
     @Import(name="sampledRequestsEnabled", required=true)
       private final Output<Boolean> sampledRequestsEnabled;
 
-    public Output<Boolean> getSampledRequestsEnabled() {
+    public Output<Boolean> sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 

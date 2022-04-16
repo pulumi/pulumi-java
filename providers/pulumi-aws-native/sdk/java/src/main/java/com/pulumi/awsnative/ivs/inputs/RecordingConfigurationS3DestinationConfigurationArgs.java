@@ -21,7 +21,7 @@ public final class RecordingConfigurationS3DestinationConfigurationArgs extends 
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 

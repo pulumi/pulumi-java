@@ -19,21 +19,21 @@ public final class InAppTemplateBodyConfigArgs extends com.pulumi.resources.Reso
     @Import(name="alignment")
       private final @Nullable Output<InAppTemplateAlignment> alignment;
 
-    public Output<InAppTemplateAlignment> getAlignment() {
+    public Output<InAppTemplateAlignment> alignment() {
         return this.alignment == null ? Codegen.empty() : this.alignment;
     }
 
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
     @Import(name="textColor")
       private final @Nullable Output<String> textColor;
 
-    public Output<String> getTextColor() {
+    public Output<String> textColor() {
         return this.textColor == null ? Codegen.empty() : this.textColor;
     }
 

@@ -22,77 +22,77 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification extends com.pu
     @Import(name="associatePublicIpAddress")
       private final @Nullable Boolean associatePublicIpAddress;
 
-    public Optional<Boolean> getAssociatePublicIpAddress() {
+    public Optional<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     @Import(name="deleteOnTermination")
       private final @Nullable Boolean deleteOnTermination;
 
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return this.deleteOnTermination == null ? Optional.empty() : Optional.ofNullable(this.deleteOnTermination);
     }
 
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @Import(name="deviceIndex")
       private final @Nullable Integer deviceIndex;
 
-    public Optional<Integer> getDeviceIndex() {
+    public Optional<Integer> deviceIndex() {
         return this.deviceIndex == null ? Optional.empty() : Optional.ofNullable(this.deviceIndex);
     }
 
     @Import(name="groups")
       private final @Nullable List<String> groups;
 
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
 
     @Import(name="ipv6AddressCount")
       private final @Nullable Integer ipv6AddressCount;
 
-    public Optional<Integer> getIpv6AddressCount() {
+    public Optional<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount == null ? Optional.empty() : Optional.ofNullable(this.ipv6AddressCount);
     }
 
     @Import(name="ipv6Addresses")
       private final @Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses;
 
-    public List<SpotFleetInstanceIpv6Address> getIpv6Addresses() {
+    public List<SpotFleetInstanceIpv6Address> ipv6Addresses() {
         return this.ipv6Addresses == null ? List.of() : this.ipv6Addresses;
     }
 
     @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
 
-    public Optional<String> getNetworkInterfaceId() {
+    public Optional<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
     }
 
     @Import(name="privateIpAddresses")
       private final @Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses;
 
-    public List<SpotFleetPrivateIpAddressSpecification> getPrivateIpAddresses() {
+    public List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses() {
         return this.privateIpAddresses == null ? List.of() : this.privateIpAddresses;
     }
 
     @Import(name="secondaryPrivateIpAddressCount")
       private final @Nullable Integer secondaryPrivateIpAddressCount;
 
-    public Optional<Integer> getSecondaryPrivateIpAddressCount() {
+    public Optional<Integer> secondaryPrivateIpAddressCount() {
         return this.secondaryPrivateIpAddressCount == null ? Optional.empty() : Optional.ofNullable(this.secondaryPrivateIpAddressCount);
     }
 
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 

@@ -26,7 +26,7 @@ public final class BotSlotDefaultValueSpecificationArgs extends com.pulumi.resou
     @Import(name="defaultValueList", required=true)
       private final Output<List<BotSlotDefaultValueArgs>> defaultValueList;
 
-    public Output<List<BotSlotDefaultValueArgs>> getDefaultValueList() {
+    public Output<List<BotSlotDefaultValueArgs>> defaultValueList() {
         return this.defaultValueList;
     }
 

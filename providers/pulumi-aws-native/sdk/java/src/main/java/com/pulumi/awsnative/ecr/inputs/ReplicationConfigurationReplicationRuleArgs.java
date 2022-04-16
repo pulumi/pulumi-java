@@ -28,7 +28,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends com.pulum
     @Import(name="destinations", required=true)
       private final Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
 
-    public Output<List<ReplicationConfigurationReplicationDestinationArgs>> getDestinations() {
+    public Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations() {
         return this.destinations;
     }
 
@@ -39,7 +39,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends com.pulum
     @Import(name="repositoryFilters")
       private final @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
-    public Output<List<ReplicationConfigurationRepositoryFilterArgs>> getRepositoryFilters() {
+    public Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters() {
         return this.repositoryFilters == null ? Codegen.empty() : this.repositoryFilters;
     }
 

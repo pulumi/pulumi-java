@@ -25,13 +25,13 @@ public final class PipelineChannel {
         this.next = next;
     }
 
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return Optional.ofNullable(this.next);
     }
 

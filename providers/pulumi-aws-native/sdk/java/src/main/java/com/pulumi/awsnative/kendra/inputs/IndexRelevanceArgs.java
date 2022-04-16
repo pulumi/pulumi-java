@@ -23,35 +23,35 @@ public final class IndexRelevanceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     @Import(name="freshness")
       private final @Nullable Output<Boolean> freshness;
 
-    public Output<Boolean> getFreshness() {
+    public Output<Boolean> freshness() {
         return this.freshness == null ? Codegen.empty() : this.freshness;
     }
 
     @Import(name="importance")
       private final @Nullable Output<Integer> importance;
 
-    public Output<Integer> getImportance() {
+    public Output<Integer> importance() {
         return this.importance == null ? Codegen.empty() : this.importance;
     }
 
     @Import(name="rankOrder")
       private final @Nullable Output<IndexOrder> rankOrder;
 
-    public Output<IndexOrder> getRankOrder() {
+    public Output<IndexOrder> rankOrder() {
         return this.rankOrder == null ? Codegen.empty() : this.rankOrder;
     }
 
     @Import(name="valueImportanceItems")
       private final @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
 
-    public Output<List<IndexValueImportanceItemArgs>> getValueImportanceItems() {
+    public Output<List<IndexValueImportanceItemArgs>> valueImportanceItems() {
         return this.valueImportanceItems == null ? Codegen.empty() : this.valueImportanceItems;
     }
 

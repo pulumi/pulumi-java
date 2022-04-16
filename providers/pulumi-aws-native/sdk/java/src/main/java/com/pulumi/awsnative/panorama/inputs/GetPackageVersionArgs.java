@@ -15,21 +15,21 @@ public final class GetPackageVersionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="packageId", required=true)
       private final String packageId;
 
-    public String getPackageId() {
+    public String packageId() {
         return this.packageId;
     }
 
     @Import(name="packageVersion", required=true)
       private final String packageVersion;
 
-    public String getPackageVersion() {
+    public String packageVersion() {
         return this.packageVersion;
     }
 
     @Import(name="patchVersion", required=true)
       private final String patchVersion;
 
-    public String getPatchVersion() {
+    public String patchVersion() {
         return this.patchVersion;
     }
 

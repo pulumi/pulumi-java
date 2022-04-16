@@ -44,25 +44,25 @@ public final class GlobalTableReplicaSpecification {
         this.tags = tags;
     }
 
-    public Optional<GlobalTableContributorInsightsSpecification> getContributorInsightsSpecification() {
+    public Optional<GlobalTableContributorInsightsSpecification> contributorInsightsSpecification() {
         return Optional.ofNullable(this.contributorInsightsSpecification);
     }
-    public List<GlobalTableReplicaGlobalSecondaryIndexSpecification> getGlobalSecondaryIndexes() {
+    public List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? List.of() : this.globalSecondaryIndexes;
     }
-    public Optional<GlobalTablePointInTimeRecoverySpecification> getPointInTimeRecoverySpecification() {
+    public Optional<GlobalTablePointInTimeRecoverySpecification> pointInTimeRecoverySpecification() {
         return Optional.ofNullable(this.pointInTimeRecoverySpecification);
     }
-    public Optional<GlobalTableReadProvisionedThroughputSettings> getReadProvisionedThroughputSettings() {
+    public Optional<GlobalTableReadProvisionedThroughputSettings> readProvisionedThroughputSettings() {
         return Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
-    public Optional<GlobalTableReplicaSSESpecification> getSSESpecification() {
+    public Optional<GlobalTableReplicaSSESpecification> sSESpecification() {
         return Optional.ofNullable(this.sSESpecification);
     }
-    public List<GlobalTableTag> getTags() {
+    public List<GlobalTableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

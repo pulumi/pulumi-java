@@ -18,7 +18,7 @@ public final class ConfigTrackingConfig {
         this.autotrack = autotrack;
     }
 
-    public Optional<ConfigTrackingConfigAutotrack> getAutotrack() {
+    public Optional<ConfigTrackingConfigAutotrack> autotrack() {
         return Optional.ofNullable(this.autotrack);
     }
 

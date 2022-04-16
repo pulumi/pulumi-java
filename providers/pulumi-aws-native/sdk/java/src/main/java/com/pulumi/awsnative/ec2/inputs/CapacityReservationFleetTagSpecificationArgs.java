@@ -20,14 +20,14 @@ public final class CapacityReservationFleetTagSpecificationArgs extends com.pulu
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<CapacityReservationFleetTagArgs>> tags;
 
-    public Output<List<CapacityReservationFleetTagArgs>> getTags() {
+    public Output<List<CapacityReservationFleetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

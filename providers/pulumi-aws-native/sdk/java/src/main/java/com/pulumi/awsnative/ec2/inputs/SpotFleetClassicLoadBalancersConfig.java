@@ -16,7 +16,7 @@ public final class SpotFleetClassicLoadBalancersConfig extends com.pulumi.resour
     @Import(name="classicLoadBalancers", required=true)
       private final List<SpotFleetClassicLoadBalancer> classicLoadBalancers;
 
-    public List<SpotFleetClassicLoadBalancer> getClassicLoadBalancers() {
+    public List<SpotFleetClassicLoadBalancer> classicLoadBalancers() {
         return this.classicLoadBalancers;
     }
 

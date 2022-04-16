@@ -21,7 +21,7 @@ public final class FlowZendeskDestinationPropertiesArgs extends com.pulumi.resou
     @Import(name="errorHandlingConfig")
       private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
-    public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
+    public Output<FlowErrorHandlingConfigArgs> errorHandlingConfig() {
         return this.errorHandlingConfig == null ? Codegen.empty() : this.errorHandlingConfig;
     }
 
@@ -32,21 +32,21 @@ public final class FlowZendeskDestinationPropertiesArgs extends com.pulumi.resou
     @Import(name="idFieldNames")
       private final @Nullable Output<List<String>> idFieldNames;
 
-    public Output<List<String>> getIdFieldNames() {
+    public Output<List<String>> idFieldNames() {
         return this.idFieldNames == null ? Codegen.empty() : this.idFieldNames;
     }
 
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 
     @Import(name="writeOperationType")
       private final @Nullable Output<FlowWriteOperationType> writeOperationType;
 
-    public Output<FlowWriteOperationType> getWriteOperationType() {
+    public Output<FlowWriteOperationType> writeOperationType() {
         return this.writeOperationType == null ? Codegen.empty() : this.writeOperationType;
     }
 

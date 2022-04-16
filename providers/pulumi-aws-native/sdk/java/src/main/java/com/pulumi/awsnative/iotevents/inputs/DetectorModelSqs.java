@@ -19,7 +19,7 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
     @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 
@@ -30,7 +30,7 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
     @Import(name="queueUrl", required=true)
       private final String queueUrl;
 
-    public String getQueueUrl() {
+    public String queueUrl() {
         return this.queueUrl;
     }
 
@@ -41,7 +41,7 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
     @Import(name="useBase64")
       private final @Nullable Boolean useBase64;
 
-    public Optional<Boolean> getUseBase64() {
+    public Optional<Boolean> useBase64() {
         return this.useBase64 == null ? Optional.empty() : Optional.ofNullable(this.useBase64);
     }
 

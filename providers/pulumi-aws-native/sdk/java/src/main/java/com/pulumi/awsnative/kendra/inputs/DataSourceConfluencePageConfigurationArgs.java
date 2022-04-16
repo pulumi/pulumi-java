@@ -19,7 +19,7 @@ public final class DataSourceConfluencePageConfigurationArgs extends com.pulumi.
     @Import(name="pageFieldMappings")
       private final @Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
 
-    public Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> getPageFieldMappings() {
+    public Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings() {
         return this.pageFieldMappings == null ? Codegen.empty() : this.pageFieldMappings;
     }
 

@@ -21,7 +21,7 @@ public final class InfrastructureConfigurationLogging extends com.pulumi.resourc
     @Import(name="s3Logs")
       private final @Nullable InfrastructureConfigurationS3Logs s3Logs;
 
-    public Optional<InfrastructureConfigurationS3Logs> getS3Logs() {
+    public Optional<InfrastructureConfigurationS3Logs> s3Logs() {
         return this.s3Logs == null ? Optional.empty() : Optional.ofNullable(this.s3Logs);
     }
 

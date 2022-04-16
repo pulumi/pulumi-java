@@ -25,7 +25,7 @@ public final class ApplicationJMXPrometheusExporter extends com.pulumi.resources
     @Import(name="hostPort")
       private final @Nullable String hostPort;
 
-    public Optional<String> getHostPort() {
+    public Optional<String> hostPort() {
         return this.hostPort == null ? Optional.empty() : Optional.ofNullable(this.hostPort);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationJMXPrometheusExporter extends com.pulumi.resources
     @Import(name="jMXURL")
       private final @Nullable String jMXURL;
 
-    public Optional<String> getJMXURL() {
+    public Optional<String> jMXURL() {
         return this.jMXURL == null ? Optional.empty() : Optional.ofNullable(this.jMXURL);
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationJMXPrometheusExporter extends com.pulumi.resources
     @Import(name="prometheusPort")
       private final @Nullable String prometheusPort;
 
-    public Optional<String> getPrometheusPort() {
+    public Optional<String> prometheusPort() {
         return this.prometheusPort == null ? Optional.empty() : Optional.ofNullable(this.prometheusPort);
     }
 

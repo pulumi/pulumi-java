@@ -32,13 +32,13 @@ public class ReplicationSet extends com.pulumi.resources.CustomResource {
      * @return The ARN of the ReplicationSet.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="deletionProtected", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtected;
 
-    public Output</* @Nullable */ Boolean> getDeletionProtected() {
+    public Output</* @Nullable */ Boolean> deletionProtected() {
         return this.deletionProtected;
     }
     /**
@@ -52,7 +52,7 @@ public class ReplicationSet extends com.pulumi.resources.CustomResource {
      * @return The ReplicationSet configuration.
      * 
      */
-    public Output<List<ReplicationSetReplicationRegion>> getRegions() {
+    public Output<List<ReplicationSetReplicationRegion>> regions() {
         return this.regions;
     }
 

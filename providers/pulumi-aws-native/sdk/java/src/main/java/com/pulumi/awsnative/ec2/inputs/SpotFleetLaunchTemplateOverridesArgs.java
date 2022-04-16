@@ -20,42 +20,42 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends com.pulumi.resou
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="instanceRequirements")
       private final @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
 
-    public Output<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
+    public Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements() {
         return this.instanceRequirements == null ? Codegen.empty() : this.instanceRequirements;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
+    public Output<String> spotPrice() {
         return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
-    public Output<Double> getWeightedCapacity() {
+    public Output<Double> weightedCapacity() {
         return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 

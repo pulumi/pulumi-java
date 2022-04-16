@@ -34,7 +34,7 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return The ARN of the event type.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +48,7 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return The time when the event type was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -62,25 +62,25 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return The description of the event type.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="entityTypes", type=List.class, parameters={EventTypeEntityType.class})
     private Output<List<EventTypeEntityType>> entityTypes;
 
-    public Output<List<EventTypeEntityType>> getEntityTypes() {
+    public Output<List<EventTypeEntityType>> entityTypes() {
         return this.entityTypes;
     }
     @Export(name="eventVariables", type=List.class, parameters={EventTypeEventVariable.class})
     private Output<List<EventTypeEventVariable>> eventVariables;
 
-    public Output<List<EventTypeEventVariable>> getEventVariables() {
+    public Output<List<EventTypeEventVariable>> eventVariables() {
         return this.eventVariables;
     }
     @Export(name="labels", type=List.class, parameters={EventTypeLabel.class})
     private Output<List<EventTypeLabel>> labels;
 
-    public Output<List<EventTypeLabel>> getLabels() {
+    public Output<List<EventTypeLabel>> labels() {
         return this.labels;
     }
     /**
@@ -94,7 +94,7 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return The time when the event type was last updated.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -108,7 +108,7 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return The name for the event type
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -122,7 +122,7 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return Tags associated with this event type.
      * 
      */
-    public Output</* @Nullable */ List<EventTypeTag>> getTags() {
+    public Output</* @Nullable */ List<EventTypeTag>> tags() {
         return this.tags;
     }
 

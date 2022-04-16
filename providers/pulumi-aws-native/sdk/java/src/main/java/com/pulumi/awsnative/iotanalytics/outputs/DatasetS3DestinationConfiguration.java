@@ -29,16 +29,16 @@ public final class DatasetS3DestinationConfiguration {
         this.roleArn = roleArn;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Optional<DatasetGlueConfiguration> getGlueConfiguration() {
+    public Optional<DatasetGlueConfiguration> glueConfiguration() {
         return Optional.ofNullable(this.glueConfiguration);
     }
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

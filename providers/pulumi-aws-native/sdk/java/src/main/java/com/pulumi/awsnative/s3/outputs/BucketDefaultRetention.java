@@ -26,13 +26,13 @@ public final class BucketDefaultRetention {
         this.years = years;
     }
 
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
-    public Optional<BucketDefaultRetentionMode> getMode() {
+    public Optional<BucketDefaultRetentionMode> mode() {
         return Optional.ofNullable(this.mode);
     }
-    public Optional<Integer> getYears() {
+    public Optional<Integer> years() {
         return Optional.ofNullable(this.years);
     }
 

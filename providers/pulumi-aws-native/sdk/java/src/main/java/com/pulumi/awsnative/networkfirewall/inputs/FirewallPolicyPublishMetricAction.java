@@ -16,7 +16,7 @@ public final class FirewallPolicyPublishMetricAction extends com.pulumi.resource
     @Import(name="dimensions", required=true)
       private final List<FirewallPolicyDimension> dimensions;
 
-    public List<FirewallPolicyDimension> getDimensions() {
+    public List<FirewallPolicyDimension> dimensions() {
         return this.dimensions;
     }
 

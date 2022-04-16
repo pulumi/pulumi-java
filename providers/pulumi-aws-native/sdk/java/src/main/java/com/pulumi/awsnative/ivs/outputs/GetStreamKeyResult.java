@@ -43,21 +43,21 @@ public final class GetStreamKeyResult {
      * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
     */
-    public List<StreamKeyTag> getTags() {
+    public List<StreamKeyTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Stream-key value.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

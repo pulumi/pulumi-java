@@ -18,7 +18,7 @@ public final class ConfigAntennaDownlinkConfigArgs extends com.pulumi.resources.
     @Import(name="spectrumConfig")
       private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
-    public Output<ConfigSpectrumConfigArgs> getSpectrumConfig() {
+    public Output<ConfigSpectrumConfigArgs> spectrumConfig() {
         return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
     }
 

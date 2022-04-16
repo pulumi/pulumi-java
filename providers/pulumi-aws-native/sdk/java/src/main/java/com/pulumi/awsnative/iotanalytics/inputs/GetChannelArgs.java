@@ -15,7 +15,7 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="channelName", required=true)
       private final String channelName;
 
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
 

@@ -29,14 +29,14 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
-    public Output<String> getEndTimeOffset() {
+    public Output<String> endTimeOffset() {
         return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
     }
 
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -47,7 +47,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="featuresAttribute")
       private final @Nullable Output<String> featuresAttribute;
 
-    public Output<String> getFeaturesAttribute() {
+    public Output<String> featuresAttribute() {
         return this.featuresAttribute == null ? Codegen.empty() : this.featuresAttribute;
     }
 
@@ -58,7 +58,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="inferenceAttribute")
       private final @Nullable Output<String> inferenceAttribute;
 
-    public Output<String> getInferenceAttribute() {
+    public Output<String> inferenceAttribute() {
         return this.inferenceAttribute == null ? Codegen.empty() : this.inferenceAttribute;
     }
 
@@ -69,7 +69,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath;
     }
 
@@ -80,14 +80,14 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="probabilityAttribute")
       private final @Nullable Output<String> probabilityAttribute;
 
-    public Output<String> getProbabilityAttribute() {
+    public Output<String> probabilityAttribute() {
         return this.probabilityAttribute == null ? Codegen.empty() : this.probabilityAttribute;
     }
 
     @Import(name="probabilityThresholdAttribute")
       private final @Nullable Output<Double> probabilityThresholdAttribute;
 
-    public Output<Double> getProbabilityThresholdAttribute() {
+    public Output<Double> probabilityThresholdAttribute() {
         return this.probabilityThresholdAttribute == null ? Codegen.empty() : this.probabilityThresholdAttribute;
     }
 
@@ -98,7 +98,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="s3DataDistributionType")
       private final @Nullable Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
-    public Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
+    public Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType() {
         return this.s3DataDistributionType == null ? Codegen.empty() : this.s3DataDistributionType;
     }
 
@@ -109,7 +109,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="s3InputMode")
       private final @Nullable Output<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
-    public Output<ModelBiasJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
+    public Output<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode() {
         return this.s3InputMode == null ? Codegen.empty() : this.s3InputMode;
     }
 
@@ -120,7 +120,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends com.pulumi.re
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
-    public Output<String> getStartTimeOffset() {
+    public Output<String> startTimeOffset() {
         return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
     }
 

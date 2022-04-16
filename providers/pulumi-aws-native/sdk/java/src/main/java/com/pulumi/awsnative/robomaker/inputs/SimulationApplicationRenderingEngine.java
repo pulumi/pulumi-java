@@ -24,7 +24,7 @@ public final class SimulationApplicationRenderingEngine extends com.pulumi.resou
     @Import(name="name", required=true)
       private final SimulationApplicationRenderingEngineName name;
 
-    public SimulationApplicationRenderingEngineName getName() {
+    public SimulationApplicationRenderingEngineName name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class SimulationApplicationRenderingEngine extends com.pulumi.resou
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

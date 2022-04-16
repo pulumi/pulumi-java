@@ -26,14 +26,14 @@ public final class DetectorModelIotEvents extends com.pulumi.resources.InvokeArg
     @Import(name="inputName", required=true)
       private final String inputName;
 
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
 
     @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 

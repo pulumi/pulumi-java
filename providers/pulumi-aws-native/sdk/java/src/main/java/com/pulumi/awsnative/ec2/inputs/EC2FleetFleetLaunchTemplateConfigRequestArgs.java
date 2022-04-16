@@ -20,14 +20,14 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends com.pulu
     @Import(name="launchTemplateSpecification")
       private final @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
 
-    public Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> getLaunchTemplateSpecification() {
+    public Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification == null ? Codegen.empty() : this.launchTemplateSpecification;
     }
 
     @Import(name="overrides")
       private final @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
 
-    public Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> getOverrides() {
+    public Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 

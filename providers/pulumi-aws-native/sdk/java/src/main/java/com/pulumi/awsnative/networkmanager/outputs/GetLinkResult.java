@@ -72,49 +72,49 @@ public final class GetLinkResult {
      * The Bandwidth for the link.
      * 
     */
-    public Optional<LinkBandwidth> getBandwidth() {
+    public Optional<LinkBandwidth> bandwidth() {
         return Optional.ofNullable(this.bandwidth);
     }
     /**
      * The description of the link.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the link.
      * 
     */
-    public Optional<String> getLinkArn() {
+    public Optional<String> linkArn() {
         return Optional.ofNullable(this.linkArn);
     }
     /**
      * The ID of the link.
      * 
     */
-    public Optional<String> getLinkId() {
+    public Optional<String> linkId() {
         return Optional.ofNullable(this.linkId);
     }
     /**
      * The provider of the link.
      * 
     */
-    public Optional<String> getProvider() {
+    public Optional<String> provider() {
         return Optional.ofNullable(this.provider);
     }
     /**
      * The tags for the link.
      * 
     */
-    public List<LinkTag> getTags() {
+    public List<LinkTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of the link.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -23,14 +23,14 @@ public final class PolicyIEMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aCCOUNT")
       private final @Nullable Output<List<String>> aCCOUNT;
 
-    public Output<List<String>> getACCOUNT() {
+    public Output<List<String>> aCCOUNT() {
         return this.aCCOUNT == null ? Codegen.empty() : this.aCCOUNT;
     }
 
     @Import(name="oRGUNIT")
       private final @Nullable Output<List<String>> oRGUNIT;
 
-    public Output<List<String>> getORGUNIT() {
+    public Output<List<String>> oRGUNIT() {
         return this.oRGUNIT == null ? Codegen.empty() : this.oRGUNIT;
     }
 

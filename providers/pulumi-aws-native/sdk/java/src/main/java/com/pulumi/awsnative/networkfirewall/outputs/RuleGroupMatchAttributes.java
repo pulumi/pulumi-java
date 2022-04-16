@@ -37,22 +37,22 @@ public final class RuleGroupMatchAttributes {
         this.tCPFlags = tCPFlags;
     }
 
-    public List<RuleGroupPortRange> getDestinationPorts() {
+    public List<RuleGroupPortRange> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
-    public List<RuleGroupAddress> getDestinations() {
+    public List<RuleGroupAddress> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
-    public List<Integer> getProtocols() {
+    public List<Integer> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
-    public List<RuleGroupPortRange> getSourcePorts() {
+    public List<RuleGroupPortRange> sourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
-    public List<RuleGroupAddress> getSources() {
+    public List<RuleGroupAddress> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
-    public List<RuleGroupTCPFlagField> getTCPFlags() {
+    public List<RuleGroupTCPFlagField> tCPFlags() {
         return this.tCPFlags == null ? List.of() : this.tCPFlags;
     }
 

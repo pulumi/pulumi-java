@@ -22,7 +22,7 @@ public final class RuleGroupRuleActionCountPropertiesArgs extends com.pulumi.res
     @Import(name="customRequestHandling")
       private final @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<RuleGroupCustomRequestHandlingArgs> getCustomRequestHandling() {
+    public Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling() {
         return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 

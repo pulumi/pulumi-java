@@ -16,7 +16,7 @@ public final class DeliveryStreamKMSEncryptionConfig {
         this.aWSKMSKeyARN = aWSKMSKeyARN;
     }
 
-    public String getAWSKMSKeyARN() {
+    public String aWSKMSKeyARN() {
         return this.aWSKMSKeyARN;
     }
 

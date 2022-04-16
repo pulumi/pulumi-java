@@ -19,35 +19,35 @@ public final class FlowVeevaSourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="documentType")
       private final @Nullable Output<String> documentType;
 
-    public Output<String> getDocumentType() {
+    public Output<String> documentType() {
         return this.documentType == null ? Codegen.empty() : this.documentType;
     }
 
     @Import(name="includeAllVersions")
       private final @Nullable Output<Boolean> includeAllVersions;
 
-    public Output<Boolean> getIncludeAllVersions() {
+    public Output<Boolean> includeAllVersions() {
         return this.includeAllVersions == null ? Codegen.empty() : this.includeAllVersions;
     }
 
     @Import(name="includeRenditions")
       private final @Nullable Output<Boolean> includeRenditions;
 
-    public Output<Boolean> getIncludeRenditions() {
+    public Output<Boolean> includeRenditions() {
         return this.includeRenditions == null ? Codegen.empty() : this.includeRenditions;
     }
 
     @Import(name="includeSourceFiles")
       private final @Nullable Output<Boolean> includeSourceFiles;
 
-    public Output<Boolean> getIncludeSourceFiles() {
+    public Output<Boolean> includeSourceFiles() {
         return this.includeSourceFiles == null ? Codegen.empty() : this.includeSourceFiles;
     }
 
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 

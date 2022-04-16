@@ -27,7 +27,7 @@ public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="filterType")
       private final @Nullable Output<TaskFilterRuleFilterType> filterType;
 
-    public Output<TaskFilterRuleFilterType> getFilterType() {
+    public Output<TaskFilterRuleFilterType> filterType() {
         return this.filterType == null ? Codegen.empty() : this.filterType;
     }
 
@@ -38,7 +38,7 @@ public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

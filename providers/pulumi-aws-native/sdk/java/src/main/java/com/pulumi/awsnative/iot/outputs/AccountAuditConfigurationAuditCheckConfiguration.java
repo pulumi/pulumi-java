@@ -26,7 +26,7 @@ public final class AccountAuditConfigurationAuditCheckConfiguration {
      * True if the check is enabled.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

@@ -29,7 +29,7 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     @Import(name="colors")
       private final @Nullable Output<List<String>> colors;
 
-    public Output<List<String>> getColors() {
+    public Output<List<String>> colors() {
         return this.colors == null ? Codegen.empty() : this.colors;
     }
 
@@ -41,7 +41,7 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     @Import(name="emptyFillColor")
       private final @Nullable Output<String> emptyFillColor;
 
-    public Output<String> getEmptyFillColor() {
+    public Output<String> emptyFillColor() {
         return this.emptyFillColor == null ? Codegen.empty() : this.emptyFillColor;
     }
 
@@ -52,7 +52,7 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     @Import(name="minMaxGradient")
       private final @Nullable Output<List<String>> minMaxGradient;
 
-    public Output<List<String>> getMinMaxGradient() {
+    public Output<List<String>> minMaxGradient() {
         return this.minMaxGradient == null ? Codegen.empty() : this.minMaxGradient;
     }
 

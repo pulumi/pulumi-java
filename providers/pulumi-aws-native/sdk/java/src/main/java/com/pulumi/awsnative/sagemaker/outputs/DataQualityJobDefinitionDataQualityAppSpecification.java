@@ -64,42 +64,42 @@ public final class DataQualityJobDefinitionDataQualityAppSpecification {
      * An array of arguments for the container used to run the monitoring job.
      * 
     */
-    public List<String> getContainerArguments() {
+    public List<String> containerArguments() {
         return this.containerArguments == null ? List.of() : this.containerArguments;
     }
     /**
      * Specifies the entrypoint for a container used to run the monitoring job.
      * 
     */
-    public List<String> getContainerEntrypoint() {
+    public List<String> containerEntrypoint() {
         return this.containerEntrypoint == null ? List.of() : this.containerEntrypoint;
     }
     /**
      * Sets the environment variables in the Docker container
      * 
     */
-    public Optional<Object> getEnvironment() {
+    public Optional<Object> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The container image to be run by the monitoring job.
      * 
     */
-    public String getImageUri() {
+    public String imageUri() {
         return this.imageUri;
     }
     /**
      * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
      * 
     */
-    public Optional<String> getPostAnalyticsProcessorSourceUri() {
+    public Optional<String> postAnalyticsProcessorSourceUri() {
         return Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
     /**
      * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
      * 
     */
-    public Optional<String> getRecordPreprocessorSourceUri() {
+    public Optional<String> recordPreprocessorSourceUri() {
         return Optional.ofNullable(this.recordPreprocessorSourceUri);
     }
 

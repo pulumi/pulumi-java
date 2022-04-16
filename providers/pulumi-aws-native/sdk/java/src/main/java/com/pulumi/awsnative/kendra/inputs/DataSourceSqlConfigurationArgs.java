@@ -18,7 +18,7 @@ public final class DataSourceSqlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="queryIdentifiersEnclosingOption")
       private final @Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
 
-    public Output<DataSourceQueryIdentifiersEnclosingOption> getQueryIdentifiersEnclosingOption() {
+    public Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption() {
         return this.queryIdentifiersEnclosingOption == null ? Codegen.empty() : this.queryIdentifiersEnclosingOption;
     }
 

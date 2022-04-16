@@ -23,10 +23,10 @@ public final class TaskDefinitionAuthorizationConfig {
         this.iAM = iAM;
     }
 
-    public Optional<String> getAccessPointId() {
+    public Optional<String> accessPointId() {
         return Optional.ofNullable(this.accessPointId);
     }
-    public Optional<TaskDefinitionAuthorizationConfigIAM> getIAM() {
+    public Optional<TaskDefinitionAuthorizationConfigIAM> iAM() {
         return Optional.ofNullable(this.iAM);
     }
 

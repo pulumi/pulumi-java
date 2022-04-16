@@ -42,25 +42,25 @@ public final class TaskDefinitionLinuxParameters {
         this.tmpfs = tmpfs;
     }
 
-    public Optional<TaskDefinitionKernelCapabilities> getCapabilities() {
+    public Optional<TaskDefinitionKernelCapabilities> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
-    public List<TaskDefinitionDevice> getDevices() {
+    public List<TaskDefinitionDevice> devices() {
         return this.devices == null ? List.of() : this.devices;
     }
-    public Optional<Boolean> getInitProcessEnabled() {
+    public Optional<Boolean> initProcessEnabled() {
         return Optional.ofNullable(this.initProcessEnabled);
     }
-    public Optional<Integer> getMaxSwap() {
+    public Optional<Integer> maxSwap() {
         return Optional.ofNullable(this.maxSwap);
     }
-    public Optional<Integer> getSharedMemorySize() {
+    public Optional<Integer> sharedMemorySize() {
         return Optional.ofNullable(this.sharedMemorySize);
     }
-    public Optional<Integer> getSwappiness() {
+    public Optional<Integer> swappiness() {
         return Optional.ofNullable(this.swappiness);
     }
-    public List<TaskDefinitionTmpfs> getTmpfs() {
+    public List<TaskDefinitionTmpfs> tmpfs() {
         return this.tmpfs == null ? List.of() : this.tmpfs;
     }
 

@@ -15,21 +15,21 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationIdentifier", required=true)
       private final String applicationIdentifier;
 
-    public String getApplicationIdentifier() {
+    public String applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
       private final String environmentIdentifier;
 
-    public String getEnvironmentIdentifier() {
+    public String environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="serviceIdentifier", required=true)
       private final String serviceIdentifier;
 
-    public String getServiceIdentifier() {
+    public String serviceIdentifier() {
         return this.serviceIdentifier;
     }
 

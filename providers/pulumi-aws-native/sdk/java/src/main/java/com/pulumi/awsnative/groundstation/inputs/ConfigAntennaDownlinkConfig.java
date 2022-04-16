@@ -17,7 +17,7 @@ public final class ConfigAntennaDownlinkConfig extends com.pulumi.resources.Invo
     @Import(name="spectrumConfig")
       private final @Nullable ConfigSpectrumConfig spectrumConfig;
 
-    public Optional<ConfigSpectrumConfig> getSpectrumConfig() {
+    public Optional<ConfigSpectrumConfig> spectrumConfig() {
         return this.spectrumConfig == null ? Optional.empty() : Optional.ofNullable(this.spectrumConfig);
     }
 

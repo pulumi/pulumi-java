@@ -26,7 +26,7 @@ public final class WebACLOverrideActionArgs extends com.pulumi.resources.Resourc
     @Import(name="count")
       private final @Nullable Output<Object> count;
 
-    public Output<Object> getCount() {
+    public Output<Object> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -37,7 +37,7 @@ public final class WebACLOverrideActionArgs extends com.pulumi.resources.Resourc
     @Import(name="none")
       private final @Nullable Output<Object> none;
 
-    public Output<Object> getNone() {
+    public Output<Object> none() {
         return this.none == null ? Codegen.empty() : this.none;
     }
 

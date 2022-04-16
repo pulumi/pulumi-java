@@ -23,7 +23,7 @@ public final class AnalyzerArchiveRuleArgs extends com.pulumi.resources.Resource
     @Import(name="filter", required=true)
       private final Output<List<AnalyzerFilterArgs>> filter;
 
-    public Output<List<AnalyzerFilterArgs>> getFilter() {
+    public Output<List<AnalyzerFilterArgs>> filter() {
         return this.filter;
     }
 
@@ -34,7 +34,7 @@ public final class AnalyzerArchiveRuleArgs extends com.pulumi.resources.Resource
     @Import(name="ruleName", required=true)
       private final Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 

@@ -25,63 +25,63 @@ public final class CapacityReservationFleetArgs extends com.pulumi.resources.Res
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     @Import(name="instanceMatchCriteria")
       private final @Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
-    public Output<CapacityReservationFleetInstanceMatchCriteria> getInstanceMatchCriteria() {
+    public Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria() {
         return this.instanceMatchCriteria == null ? Codegen.empty() : this.instanceMatchCriteria;
     }
 
     @Import(name="instanceTypeSpecifications")
       private final @Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
 
-    public Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> getInstanceTypeSpecifications() {
+    public Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications() {
         return this.instanceTypeSpecifications == null ? Codegen.empty() : this.instanceTypeSpecifications;
     }
 
     @Import(name="noRemoveEndDate")
       private final @Nullable Output<Boolean> noRemoveEndDate;
 
-    public Output<Boolean> getNoRemoveEndDate() {
+    public Output<Boolean> noRemoveEndDate() {
         return this.noRemoveEndDate == null ? Codegen.empty() : this.noRemoveEndDate;
     }
 
     @Import(name="removeEndDate")
       private final @Nullable Output<Boolean> removeEndDate;
 
-    public Output<Boolean> getRemoveEndDate() {
+    public Output<Boolean> removeEndDate() {
         return this.removeEndDate == null ? Codegen.empty() : this.removeEndDate;
     }
 
     @Import(name="tagSpecifications")
       private final @Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
 
-    public Output<List<CapacityReservationFleetTagSpecificationArgs>> getTagSpecifications() {
+    public Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications() {
         return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
     @Import(name="tenancy")
       private final @Nullable Output<CapacityReservationFleetTenancy> tenancy;
 
-    public Output<CapacityReservationFleetTenancy> getTenancy() {
+    public Output<CapacityReservationFleetTenancy> tenancy() {
         return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 
     @Import(name="totalTargetCapacity")
       private final @Nullable Output<Integer> totalTargetCapacity;
 
-    public Output<Integer> getTotalTargetCapacity() {
+    public Output<Integer> totalTargetCapacity() {
         return this.totalTargetCapacity == null ? Codegen.empty() : this.totalTargetCapacity;
     }
 

@@ -26,13 +26,13 @@ public final class FlowUpsolverDestinationProperties {
         this.s3OutputFormatConfig = s3OutputFormatConfig;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
-    public FlowUpsolverS3OutputFormatConfig getS3OutputFormatConfig() {
+    public FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig() {
         return this.s3OutputFormatConfig;
     }
 

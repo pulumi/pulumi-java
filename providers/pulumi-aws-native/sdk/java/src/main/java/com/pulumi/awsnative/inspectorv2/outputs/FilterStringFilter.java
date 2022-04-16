@@ -21,10 +21,10 @@ public final class FilterStringFilter {
         this.value = value;
     }
 
-    public FilterStringComparison getComparison() {
+    public FilterStringComparison comparison() {
         return this.comparison;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

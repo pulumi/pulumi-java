@@ -32,7 +32,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the EMR Studio.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio currently only supports SSO authentication.
      * 
      */
-    public Output<StudioAuthMode> getAuthMode() {
+    public Output<StudioAuthMode> authMode() {
         return this.authMode;
     }
     /**
@@ -60,7 +60,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The default Amazon S3 location to back up EMR Studio Workspaces and notebook files. A Studio user can select an alternative Amazon S3 location when creating a Workspace.
      * 
      */
-    public Output<String> getDefaultS3Location() {
+    public Output<String> defaultS3Location() {
         return this.defaultS3Location;
     }
     /**
@@ -74,7 +74,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return A detailed description of the Studio.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon EMR Studio Engine security group. The Engine security group allows inbound network traffic from the Workspace security group, and it must be in the same VPC specified by VpcId.
      * 
      */
-    public Output<String> getEngineSecurityGroupId() {
+    public Output<String> engineSecurityGroupId() {
         return this.engineSecurityGroupId;
     }
     /**
@@ -102,7 +102,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
      * 
      */
-    public Output</* @Nullable */ String> getIdpAuthUrl() {
+    public Output</* @Nullable */ String> idpAuthUrl() {
         return this.idpAuthUrl;
     }
     /**
@@ -116,7 +116,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The name of relay state parameter for external Identity Provider.
      * 
      */
-    public Output</* @Nullable */ String> getIdpRelayStateParameterName() {
+    public Output</* @Nullable */ String> idpRelayStateParameterName() {
         return this.idpRelayStateParameterName;
     }
     /**
@@ -130,7 +130,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return A descriptive name for the Amazon EMR Studio.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +144,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio to interoperate with other AWS services.
      * 
      */
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
     /**
@@ -158,7 +158,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The ID of the EMR Studio.
      * 
      */
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
     /**
@@ -172,7 +172,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return A list of up to 5 subnet IDs to associate with the Studio. The subnets must belong to the VPC specified by VpcId. Studio users can create a Workspace in any of the specified subnets.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -186,7 +186,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return A list of tags to associate with the Studio. Tags are user-defined key-value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters.
      * 
      */
-    public Output</* @Nullable */ List<StudioTag>> getTags() {
+    public Output</* @Nullable */ List<StudioTag>> tags() {
         return this.tags;
     }
     /**
@@ -200,7 +200,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The unique Studio access URL.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
     /**
@@ -214,7 +214,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The IAM user role that will be assumed by users and groups logged in to a Studio. The permissions attached to this IAM role can be scoped down for each user or group using session policies.
      * 
      */
-    public Output</* @Nullable */ String> getUserRole() {
+    public Output</* @Nullable */ String> userRole() {
         return this.userRole;
     }
     /**
@@ -228,7 +228,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon Virtual Private Cloud (Amazon VPC) to associate with the Studio.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -242,7 +242,7 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon EMR Studio Workspace security group. The Workspace security group allows outbound network traffic to resources in the Engine security group, and it must be in the same VPC specified by VpcId.
      * 
      */
-    public Output<String> getWorkspaceSecurityGroupId() {
+    public Output<String> workspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId;
     }
 

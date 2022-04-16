@@ -32,14 +32,14 @@ public final class HoursOfOperationTimeSlice {
      * The hours.
      * 
     */
-    public Integer getHours() {
+    public Integer hours() {
         return this.hours;
     }
     /**
      * The minutes.
      * 
     */
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
 

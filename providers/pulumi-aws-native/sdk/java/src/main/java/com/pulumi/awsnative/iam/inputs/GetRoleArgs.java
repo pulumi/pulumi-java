@@ -19,7 +19,7 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="roleName", required=true)
       private final String roleName;
 
-    public String getRoleName() {
+    public String roleName() {
         return this.roleName;
     }
 

@@ -21,10 +21,10 @@ public final class ScheduledQueryDimensionMapping {
         this.name = name;
     }
 
-    public ScheduledQueryDimensionValueType getDimensionValueType() {
+    public ScheduledQueryDimensionValueType dimensionValueType() {
         return this.dimensionValueType;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -27,7 +27,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="allowedValues")
       private final @Nullable Output<String> allowedValues;
 
-    public Output<String> getAllowedValues() {
+    public Output<String> allowedValues() {
         return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
@@ -38,7 +38,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="applyMethod")
       private final @Nullable Output<String> applyMethod;
 
-    public Output<String> getApplyMethod() {
+    public Output<String> applyMethod() {
         return this.applyMethod == null ? Codegen.empty() : this.applyMethod;
     }
 
@@ -49,7 +49,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="applyType")
       private final @Nullable Output<String> applyType;
 
-    public Output<String> getApplyType() {
+    public Output<String> applyType() {
         return this.applyType == null ? Codegen.empty() : this.applyType;
     }
 
@@ -60,7 +60,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
@@ -71,7 +71,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="isModifiable")
       private final @Nullable Output<Boolean> isModifiable;
 
-    public Output<Boolean> getIsModifiable() {
+    public Output<Boolean> isModifiable() {
         return this.isModifiable == null ? Codegen.empty() : this.isModifiable;
     }
 
@@ -93,7 +93,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="parameterName")
       private final @Nullable Output<String> parameterName;
 
-    public Output<String> getParameterName() {
+    public Output<String> parameterName() {
         return this.parameterName == null ? Codegen.empty() : this.parameterName;
     }
 
@@ -104,7 +104,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
     @Import(name="parameterValue")
       private final @Nullable Output<String> parameterValue;
 
-    public Output<String> getParameterValue() {
+    public Output<String> parameterValue() {
         return this.parameterValue == null ? Codegen.empty() : this.parameterValue;
     }
 

@@ -20,7 +20,7 @@ public final class RecipeStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<RecipeActionArgs> action;
 
-    public Output<RecipeActionArgs> getAction() {
+    public Output<RecipeActionArgs> action() {
         return this.action;
     }
 
@@ -31,7 +31,7 @@ public final class RecipeStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditionExpressions")
       private final @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
 
-    public Output<List<RecipeConditionExpressionArgs>> getConditionExpressions() {
+    public Output<List<RecipeConditionExpressionArgs>> conditionExpressions() {
         return this.conditionExpressions == null ? Codegen.empty() : this.conditionExpressions;
     }
 

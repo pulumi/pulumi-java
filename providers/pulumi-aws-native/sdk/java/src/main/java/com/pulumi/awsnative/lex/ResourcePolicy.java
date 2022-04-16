@@ -22,19 +22,19 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
     @Export(name="policy", type=ResourcePolicyPolicy.class, parameters={})
     private Output<ResourcePolicyPolicy> policy;
 
-    public Output<ResourcePolicyPolicy> getPolicy() {
+    public Output<ResourcePolicyPolicy> policy() {
         return this.policy;
     }
     @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
 

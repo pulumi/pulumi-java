@@ -57,35 +57,35 @@ public final class GetFilterResult {
      * Findings filter ARN.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Findings filter description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Findings filter action.
      * 
     */
-    public Optional<FilterAction> getFilterAction() {
+    public Optional<FilterAction> filterAction() {
         return Optional.ofNullable(this.filterAction);
     }
     /**
      * Findings filter criteria.
      * 
     */
-    public Optional<FilterCriteria> getFilterCriteria() {
+    public Optional<FilterCriteria> filterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
     /**
      * Findings filter name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

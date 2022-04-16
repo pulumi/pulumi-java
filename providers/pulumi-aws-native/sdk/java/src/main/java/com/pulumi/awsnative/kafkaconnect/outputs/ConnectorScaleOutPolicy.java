@@ -24,7 +24,7 @@ public final class ConnectorScaleOutPolicy {
      * Specifies the CPU utilization percentage threshold at which connector scale out should trigger.
      * 
     */
-    public Integer getCpuUtilizationPercentage() {
+    public Integer cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 

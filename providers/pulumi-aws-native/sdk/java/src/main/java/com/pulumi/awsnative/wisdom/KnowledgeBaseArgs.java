@@ -24,49 +24,49 @@ public final class KnowledgeBaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="knowledgeBaseType", required=true)
       private final Output<KnowledgeBaseType> knowledgeBaseType;
 
-    public Output<KnowledgeBaseType> getKnowledgeBaseType() {
+    public Output<KnowledgeBaseType> knowledgeBaseType() {
         return this.knowledgeBaseType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="renderingConfiguration")
       private final @Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
 
-    public Output<KnowledgeBaseRenderingConfigurationArgs> getRenderingConfiguration() {
+    public Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration() {
         return this.renderingConfiguration == null ? Codegen.empty() : this.renderingConfiguration;
     }
 
     @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
+    public Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
     }
 
     @Import(name="sourceConfiguration")
       private final @Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
 
-    public Output<KnowledgeBaseSourceConfigurationArgs> getSourceConfiguration() {
+    public Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration() {
         return this.sourceConfiguration == null ? Codegen.empty() : this.sourceConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<KnowledgeBaseTagArgs>> tags;
 
-    public Output<List<KnowledgeBaseTagArgs>> getTags() {
+    public Output<List<KnowledgeBaseTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

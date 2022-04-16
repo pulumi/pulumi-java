@@ -18,14 +18,14 @@ public final class BudgetsActionActionThresholdArgs extends com.pulumi.resources
     @Import(name="type", required=true)
       private final Output<BudgetsActionActionThresholdType> type;
 
-    public Output<BudgetsActionActionThresholdType> getType() {
+    public Output<BudgetsActionActionThresholdType> type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
       private final Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value;
     }
 

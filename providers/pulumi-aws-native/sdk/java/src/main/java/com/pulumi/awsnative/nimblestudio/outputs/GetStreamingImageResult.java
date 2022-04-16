@@ -63,41 +63,41 @@ public final class GetStreamingImageResult {
      * <p>A human-readable description of the streaming image.</p>
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<StreamingImageEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<StreamingImageEncryptionConfiguration> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
      * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
      * 
     */
-    public List<String> getEulaIds() {
+    public List<String> eulaIds() {
         return this.eulaIds == null ? List.of() : this.eulaIds;
     }
     /**
      * <p>A friendly name for a streaming image resource.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
      * 
     */
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
      * 
     */
-    public Optional<String> getPlatform() {
+    public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }
-    public Optional<String> getStreamingImageId() {
+    public Optional<String> streamingImageId() {
         return Optional.ofNullable(this.streamingImageId);
     }
 

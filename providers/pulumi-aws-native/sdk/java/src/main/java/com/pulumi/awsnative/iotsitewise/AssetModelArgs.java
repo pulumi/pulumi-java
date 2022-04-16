@@ -27,7 +27,7 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelCompositeModels")
       private final @Nullable Output<List<AssetModelCompositeModelArgs>> assetModelCompositeModels;
 
-    public Output<List<AssetModelCompositeModelArgs>> getAssetModelCompositeModels() {
+    public Output<List<AssetModelCompositeModelArgs>> assetModelCompositeModels() {
         return this.assetModelCompositeModels == null ? Codegen.empty() : this.assetModelCompositeModels;
     }
 
@@ -38,7 +38,7 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelDescription")
       private final @Nullable Output<String> assetModelDescription;
 
-    public Output<String> getAssetModelDescription() {
+    public Output<String> assetModelDescription() {
         return this.assetModelDescription == null ? Codegen.empty() : this.assetModelDescription;
     }
 
@@ -49,7 +49,7 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelHierarchies")
       private final @Nullable Output<List<AssetModelHierarchyArgs>> assetModelHierarchies;
 
-    public Output<List<AssetModelHierarchyArgs>> getAssetModelHierarchies() {
+    public Output<List<AssetModelHierarchyArgs>> assetModelHierarchies() {
         return this.assetModelHierarchies == null ? Codegen.empty() : this.assetModelHierarchies;
     }
 
@@ -60,7 +60,7 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelName")
       private final @Nullable Output<String> assetModelName;
 
-    public Output<String> getAssetModelName() {
+    public Output<String> assetModelName() {
         return this.assetModelName == null ? Codegen.empty() : this.assetModelName;
     }
 
@@ -71,7 +71,7 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelProperties")
       private final @Nullable Output<List<AssetModelPropertyArgs>> assetModelProperties;
 
-    public Output<List<AssetModelPropertyArgs>> getAssetModelProperties() {
+    public Output<List<AssetModelPropertyArgs>> assetModelProperties() {
         return this.assetModelProperties == null ? Codegen.empty() : this.assetModelProperties;
     }
 
@@ -82,7 +82,7 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AssetModelTagArgs>> tags;
 
-    public Output<List<AssetModelTagArgs>> getTags() {
+    public Output<List<AssetModelTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

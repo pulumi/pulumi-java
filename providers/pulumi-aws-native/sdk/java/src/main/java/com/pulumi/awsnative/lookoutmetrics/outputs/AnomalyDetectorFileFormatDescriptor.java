@@ -23,10 +23,10 @@ public final class AnomalyDetectorFileFormatDescriptor {
         this.jsonFormatDescriptor = jsonFormatDescriptor;
     }
 
-    public Optional<AnomalyDetectorCsvFormatDescriptor> getCsvFormatDescriptor() {
+    public Optional<AnomalyDetectorCsvFormatDescriptor> csvFormatDescriptor() {
         return Optional.ofNullable(this.csvFormatDescriptor);
     }
-    public Optional<AnomalyDetectorJsonFormatDescriptor> getJsonFormatDescriptor() {
+    public Optional<AnomalyDetectorJsonFormatDescriptor> jsonFormatDescriptor() {
         return Optional.ofNullable(this.jsonFormatDescriptor);
     }
 

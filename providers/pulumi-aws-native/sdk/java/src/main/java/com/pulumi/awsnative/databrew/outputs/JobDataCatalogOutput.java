@@ -37,22 +37,22 @@ public final class JobDataCatalogOutput {
         this.tableName = tableName;
     }
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public Optional<JobDatabaseTableOutputOptions> getDatabaseOptions() {
+    public Optional<JobDatabaseTableOutputOptions> databaseOptions() {
         return Optional.ofNullable(this.databaseOptions);
     }
-    public Optional<Boolean> getOverwrite() {
+    public Optional<Boolean> overwrite() {
         return Optional.ofNullable(this.overwrite);
     }
-    public Optional<JobS3TableOutputOptions> getS3Options() {
+    public Optional<JobS3TableOutputOptions> s3Options() {
         return Optional.ofNullable(this.s3Options);
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

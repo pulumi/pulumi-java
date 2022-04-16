@@ -26,7 +26,7 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportDeliveryChannel", required=true)
       private final Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
 
-    public Output<ReportDeliveryChannelPropertiesArgs> getReportDeliveryChannel() {
+    public Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel() {
         return this.reportDeliveryChannel;
     }
 
@@ -37,7 +37,7 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportPlanDescription")
       private final @Nullable Output<String> reportPlanDescription;
 
-    public Output<String> getReportPlanDescription() {
+    public Output<String> reportPlanDescription() {
         return this.reportPlanDescription == null ? Codegen.empty() : this.reportPlanDescription;
     }
 
@@ -48,7 +48,7 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportPlanName")
       private final @Nullable Output<String> reportPlanName;
 
-    public Output<String> getReportPlanName() {
+    public Output<String> reportPlanName() {
         return this.reportPlanName == null ? Codegen.empty() : this.reportPlanName;
     }
 
@@ -59,7 +59,7 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportPlanTags")
       private final @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
 
-    public Output<List<ReportPlanTagArgs>> getReportPlanTags() {
+    public Output<List<ReportPlanTagArgs>> reportPlanTags() {
         return this.reportPlanTags == null ? Codegen.empty() : this.reportPlanTags;
     }
 
@@ -70,7 +70,7 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportSetting", required=true)
       private final Output<ReportSettingPropertiesArgs> reportSetting;
 
-    public Output<ReportSettingPropertiesArgs> getReportSetting() {
+    public Output<ReportSettingPropertiesArgs> reportSetting() {
         return this.reportSetting;
     }
 

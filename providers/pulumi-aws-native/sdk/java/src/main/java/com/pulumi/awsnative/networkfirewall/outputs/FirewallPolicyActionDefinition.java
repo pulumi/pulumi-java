@@ -18,7 +18,7 @@ public final class FirewallPolicyActionDefinition {
         this.publishMetricAction = publishMetricAction;
     }
 
-    public Optional<FirewallPolicyPublishMetricAction> getPublishMetricAction() {
+    public Optional<FirewallPolicyPublishMetricAction> publishMetricAction() {
         return Optional.ofNullable(this.publishMetricAction);
     }
 

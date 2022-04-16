@@ -15,7 +15,7 @@ public final class GetSsmParameterStringArgs extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

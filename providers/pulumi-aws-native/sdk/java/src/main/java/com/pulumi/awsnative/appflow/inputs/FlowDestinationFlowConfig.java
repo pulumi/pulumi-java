@@ -27,7 +27,7 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
     @Import(name="connectorProfileName")
       private final @Nullable String connectorProfileName;
 
-    public Optional<String> getConnectorProfileName() {
+    public Optional<String> connectorProfileName() {
         return this.connectorProfileName == null ? Optional.empty() : Optional.ofNullable(this.connectorProfileName);
     }
 
@@ -38,7 +38,7 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
     @Import(name="connectorType", required=true)
       private final FlowConnectorType connectorType;
 
-    public FlowConnectorType getConnectorType() {
+    public FlowConnectorType connectorType() {
         return this.connectorType;
     }
 
@@ -49,7 +49,7 @@ public final class FlowDestinationFlowConfig extends com.pulumi.resources.Invoke
     @Import(name="destinationConnectorProperties", required=true)
       private final FlowDestinationConnectorProperties destinationConnectorProperties;
 
-    public FlowDestinationConnectorProperties getDestinationConnectorProperties() {
+    public FlowDestinationConnectorProperties destinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
 

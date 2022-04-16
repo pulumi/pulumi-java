@@ -32,16 +32,16 @@ public final class RuleGroupRulesSource {
         this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
     }
 
-    public Optional<RuleGroupRulesSourceList> getRulesSourceList() {
+    public Optional<RuleGroupRulesSourceList> rulesSourceList() {
         return Optional.ofNullable(this.rulesSourceList);
     }
-    public Optional<String> getRulesString() {
+    public Optional<String> rulesString() {
         return Optional.ofNullable(this.rulesString);
     }
-    public List<RuleGroupStatefulRule> getStatefulRules() {
+    public List<RuleGroupStatefulRule> statefulRules() {
         return this.statefulRules == null ? List.of() : this.statefulRules;
     }
-    public Optional<RuleGroupStatelessRulesAndCustomActions> getStatelessRulesAndCustomActions() {
+    public Optional<RuleGroupStatelessRulesAndCustomActions> statelessRulesAndCustomActions() {
         return Optional.ofNullable(this.statelessRulesAndCustomActions);
     }
 

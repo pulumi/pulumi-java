@@ -18,14 +18,14 @@ public final class FirewallPolicyCustomActionArgs extends com.pulumi.resources.R
     @Import(name="actionDefinition", required=true)
       private final Output<FirewallPolicyActionDefinitionArgs> actionDefinition;
 
-    public Output<FirewallPolicyActionDefinitionArgs> getActionDefinition() {
+    public Output<FirewallPolicyActionDefinitionArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 

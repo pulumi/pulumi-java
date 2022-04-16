@@ -35,13 +35,13 @@ public final class DetectorModelAssetPropertyValue {
      * The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
      * 
     */
-    public Optional<String> getQuality() {
+    public Optional<String> quality() {
         return Optional.ofNullable(this.quality);
     }
-    public Optional<DetectorModelAssetPropertyTimestamp> getTimestamp() {
+    public Optional<DetectorModelAssetPropertyTimestamp> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
-    public DetectorModelAssetPropertyVariant getValue() {
+    public DetectorModelAssetPropertyVariant value() {
         return this.value;
     }
 

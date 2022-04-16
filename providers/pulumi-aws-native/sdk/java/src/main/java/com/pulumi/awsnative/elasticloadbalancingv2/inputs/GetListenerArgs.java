@@ -15,7 +15,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="listenerArn", required=true)
       private final String listenerArn;
 
-    public String getListenerArn() {
+    public String listenerArn() {
         return this.listenerArn;
     }
 

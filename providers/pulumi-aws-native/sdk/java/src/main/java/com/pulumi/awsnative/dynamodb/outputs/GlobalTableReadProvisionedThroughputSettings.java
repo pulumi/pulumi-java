@@ -23,10 +23,10 @@ public final class GlobalTableReadProvisionedThroughputSettings {
         this.readCapacityUnits = readCapacityUnits;
     }
 
-    public Optional<GlobalTableCapacityAutoScalingSettings> getReadCapacityAutoScalingSettings() {
+    public Optional<GlobalTableCapacityAutoScalingSettings> readCapacityAutoScalingSettings() {
         return Optional.ofNullable(this.readCapacityAutoScalingSettings);
     }
-    public Optional<Integer> getReadCapacityUnits() {
+    public Optional<Integer> readCapacityUnits() {
         return Optional.ofNullable(this.readCapacityUnits);
     }
 

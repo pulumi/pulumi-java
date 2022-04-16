@@ -22,42 +22,42 @@ public final class InAppTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
 
-    public Output<List<InAppTemplateInAppMessageContentArgs>> getContent() {
+    public Output<List<InAppTemplateInAppMessageContentArgs>> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="customConfig")
       private final @Nullable Output<Object> customConfig;
 
-    public Output<Object> getCustomConfig() {
+    public Output<Object> customConfig() {
         return this.customConfig == null ? Codegen.empty() : this.customConfig;
     }
 
     @Import(name="layout")
       private final @Nullable Output<InAppTemplateLayout> layout;
 
-    public Output<InAppTemplateLayout> getLayout() {
+    public Output<InAppTemplateLayout> layout() {
         return this.layout == null ? Codegen.empty() : this.layout;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="templateDescription")
       private final @Nullable Output<String> templateDescription;
 
-    public Output<String> getTemplateDescription() {
+    public Output<String> templateDescription() {
         return this.templateDescription == null ? Codegen.empty() : this.templateDescription;
     }
 
     @Import(name="templateName", required=true)
       private final Output<String> templateName;
 
-    public Output<String> getTemplateName() {
+    public Output<String> templateName() {
         return this.templateName;
     }
 

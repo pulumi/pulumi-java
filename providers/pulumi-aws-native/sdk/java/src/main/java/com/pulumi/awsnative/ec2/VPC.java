@@ -32,7 +32,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return The primary IPv4 CIDR block for the VPC.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -46,7 +46,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return A list of IPv4 CIDR block association IDs for the VPC.
      * 
      */
-    public Output<List<String>> getCidrBlockAssociations() {
+    public Output<List<String>> cidrBlockAssociations() {
         return this.cidrBlockAssociations;
     }
     /**
@@ -60,7 +60,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return The default network ACL ID that is associated with the VPC.
      * 
      */
-    public Output<String> getDefaultNetworkAcl() {
+    public Output<String> defaultNetworkAcl() {
         return this.defaultNetworkAcl;
     }
     /**
@@ -74,7 +74,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return The default security group ID that is associated with the VPC.
      * 
      */
-    public Output<String> getDefaultSecurityGroup() {
+    public Output<String> defaultSecurityGroup() {
         return this.defaultSecurityGroup;
     }
     /**
@@ -88,7 +88,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDnsHostnames() {
+    public Output</* @Nullable */ Boolean> enableDnsHostnames() {
         return this.enableDnsHostnames;
     }
     /**
@@ -102,7 +102,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDnsSupport() {
+    public Output</* @Nullable */ Boolean> enableDnsSupport() {
         return this.enableDnsSupport;
     }
     /**
@@ -128,7 +128,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceTenancy() {
+    public Output</* @Nullable */ String> instanceTenancy() {
         return this.instanceTenancy;
     }
     /**
@@ -142,7 +142,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return A list of IPv6 CIDR blocks that are associated with the VPC.
      * 
      */
-    public Output<List<String>> getIpv6CidrBlocks() {
+    public Output<List<String>> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks;
     }
     /**
@@ -156,7 +156,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return The tags for the VPC.
      * 
      */
-    public Output</* @Nullable */ List<VPCTag>> getTags() {
+    public Output</* @Nullable */ List<VPCTag>> tags() {
         return this.tags;
     }
     /**
@@ -170,7 +170,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return The Id for the model.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

@@ -47,33 +47,33 @@ public final class GetBotResult {
         this.roleArn = roleArn;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Data privacy setting of the Bot.
      * 
     */
-    public Optional<DataPrivacyProperties> getDataPrivacy() {
+    public Optional<DataPrivacyProperties> dataPrivacy() {
         return Optional.ofNullable(this.dataPrivacy);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * IdleSessionTTLInSeconds of the resource
      * 
     */
-    public Optional<Integer> getIdleSessionTTLInSeconds() {
+    public Optional<Integer> idleSessionTTLInSeconds() {
         return Optional.ofNullable(this.idleSessionTTLInSeconds);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
 

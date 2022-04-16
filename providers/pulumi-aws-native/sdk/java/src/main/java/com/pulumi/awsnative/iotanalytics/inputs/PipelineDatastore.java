@@ -15,14 +15,14 @@ public final class PipelineDatastore extends com.pulumi.resources.InvokeArgs {
     @Import(name="datastoreName", required=true)
       private final String datastoreName;
 
-    public String getDatastoreName() {
+    public String datastoreName() {
         return this.datastoreName;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

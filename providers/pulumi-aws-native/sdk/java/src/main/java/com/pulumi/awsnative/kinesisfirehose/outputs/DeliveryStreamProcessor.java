@@ -23,10 +23,10 @@ public final class DeliveryStreamProcessor {
         this.type = type;
     }
 
-    public List<DeliveryStreamProcessorParameter> getParameters() {
+    public List<DeliveryStreamProcessorParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
-    public DeliveryStreamProcessorType getType() {
+    public DeliveryStreamProcessorType type() {
         return this.type;
     }
 

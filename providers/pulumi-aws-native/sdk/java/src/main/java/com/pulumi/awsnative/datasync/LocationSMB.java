@@ -32,7 +32,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
      * 
      */
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns;
     }
     /**
@@ -46,7 +46,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The name of the Windows domain that the SMB server belongs to.
      * 
      */
-    public Output</* @Nullable */ String> getDomain() {
+    public Output</* @Nullable */ String> domain() {
         return this.domain;
     }
     /**
@@ -60,7 +60,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the SMB location that is created.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -74,13 +74,13 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The URL of the SMB location that was described.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     @Export(name="mountOptions", type=LocationSMBMountOptions.class, parameters={})
     private Output</* @Nullable */ LocationSMBMountOptions> mountOptions;
 
-    public Output</* @Nullable */ LocationSMBMountOptions> getMountOptions() {
+    public Output</* @Nullable */ LocationSMBMountOptions> mountOptions() {
         return this.mountOptions;
     }
     /**
@@ -94,7 +94,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
      * 
      */
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
     /**
@@ -108,7 +108,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
      * 
      */
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
     /**
@@ -122,7 +122,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
      * 
      */
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -136,7 +136,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationSMBTag>> getTags() {
+    public Output</* @Nullable */ List<LocationSMBTag>> tags() {
         return this.tags;
     }
     /**
@@ -150,7 +150,7 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The user who can mount the share, has the permissions to access files and folders in the SMB share.
      * 
      */
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

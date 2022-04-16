@@ -36,14 +36,14 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      * Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
      * 
     */
-    public Optional<Object> getAll() {
+    public Optional<Object> all() {
         return Optional.ofNullable(this.all);
     }
     /**
      * Match only the specified include paths. See also MatchScope in JsonBody.
      * 
     */
-    public List<String> getIncludedPaths() {
+    public List<String> includedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
 

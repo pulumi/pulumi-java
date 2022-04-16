@@ -30,7 +30,7 @@ public class RoutingControl extends com.pulumi.resources.CustomResource {
      * @return Arn associated with Control Panel
      * 
      */
-    public Output</* @Nullable */ String> getClusterArn() {
+    public Output</* @Nullable */ String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -44,7 +44,7 @@ public class RoutingControl extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    public Output</* @Nullable */ String> getControlPanelArn() {
+    public Output</* @Nullable */ String> controlPanelArn() {
         return this.controlPanelArn;
     }
     /**
@@ -58,7 +58,7 @@ public class RoutingControl extends com.pulumi.resources.CustomResource {
      * @return The name of the routing control. You can use any non-white space character in the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class RoutingControl extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the routing control.
      * 
      */
-    public Output<String> getRoutingControlArn() {
+    public Output<String> routingControlArn() {
         return this.routingControlArn;
     }
     /**
@@ -86,7 +86,7 @@ public class RoutingControl extends com.pulumi.resources.CustomResource {
      * @return The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    public Output<RoutingControlStatus> getStatus() {
+    public Output<RoutingControlStatus> status() {
         return this.status;
     }
 

@@ -16,14 +16,14 @@ public final class ResponseHeadersPolicyContentSecurityPolicy extends com.pulumi
     @Import(name="contentSecurityPolicy", required=true)
       private final String contentSecurityPolicy;
 
-    public String getContentSecurityPolicy() {
+    public String contentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
 
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

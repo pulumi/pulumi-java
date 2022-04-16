@@ -23,49 +23,49 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerFunctionArn", required=true)
       private final Output<String> authorizerFunctionArn;
 
-    public Output<String> getAuthorizerFunctionArn() {
+    public Output<String> authorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
 
     @Import(name="authorizerName")
       private final @Nullable Output<String> authorizerName;
 
-    public Output<String> getAuthorizerName() {
+    public Output<String> authorizerName() {
         return this.authorizerName == null ? Codegen.empty() : this.authorizerName;
     }
 
     @Import(name="signingDisabled")
       private final @Nullable Output<Boolean> signingDisabled;
 
-    public Output<Boolean> getSigningDisabled() {
+    public Output<Boolean> signingDisabled() {
         return this.signingDisabled == null ? Codegen.empty() : this.signingDisabled;
     }
 
     @Import(name="status")
       private final @Nullable Output<AuthorizerStatus> status;
 
-    public Output<AuthorizerStatus> getStatus() {
+    public Output<AuthorizerStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AuthorizerTagArgs>> tags;
 
-    public Output<List<AuthorizerTagArgs>> getTags() {
+    public Output<List<AuthorizerTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tokenKeyName")
       private final @Nullable Output<String> tokenKeyName;
 
-    public Output<String> getTokenKeyName() {
+    public Output<String> tokenKeyName() {
         return this.tokenKeyName == null ? Codegen.empty() : this.tokenKeyName;
     }
 
     @Import(name="tokenSigningPublicKeys")
       private final @Nullable Output<Object> tokenSigningPublicKeys;
 
-    public Output<Object> getTokenSigningPublicKeys() {
+    public Output<Object> tokenSigningPublicKeys() {
         return this.tokenSigningPublicKeys == null ? Codegen.empty() : this.tokenSigningPublicKeys;
     }
 

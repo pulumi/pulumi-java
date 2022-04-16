@@ -32,7 +32,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Asset.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The time the Asset was initially submitted for Ingest.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -60,7 +60,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The list of egress endpoints available for the Asset.
      * 
      */
-    public Output<List<AssetEgressEndpoint>> getEgressEndpoints() {
+    public Output<List<AssetEgressEndpoint>> egressEndpoints() {
         return this.egressEndpoints;
     }
     /**
@@ -74,7 +74,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The ID of the PackagingGroup for the Asset.
      * 
      */
-    public Output<String> getPackagingGroupId() {
+    public Output<String> packagingGroupId() {
         return this.packagingGroupId;
     }
     /**
@@ -88,7 +88,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The resource ID to include in SPEKE key requests.
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -102,7 +102,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return ARN of the source object in S3.
      * 
      */
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
     /**
@@ -116,7 +116,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The IAM role_arn used to access the source S3 bucket.
      * 
      */
-    public Output<String> getSourceRoleArn() {
+    public Output<String> sourceRoleArn() {
         return this.sourceRoleArn;
     }
     /**
@@ -130,7 +130,7 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<AssetTag>> getTags() {
+    public Output</* @Nullable */ List<AssetTag>> tags() {
         return this.tags;
     }
 

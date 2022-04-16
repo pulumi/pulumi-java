@@ -36,13 +36,13 @@ public final class BotPromptSpecification {
      * Indicates whether the user can interrupt a speech prompt from the bot.
      * 
     */
-    public Optional<Boolean> getAllowInterrupt() {
+    public Optional<Boolean> allowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
-    public Integer getMaxRetries() {
+    public Integer maxRetries() {
         return this.maxRetries;
     }
-    public List<BotMessageGroup> getMessageGroupsList() {
+    public List<BotMessageGroup> messageGroupsList() {
         return this.messageGroupsList;
     }
 

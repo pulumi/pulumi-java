@@ -19,14 +19,14 @@ public final class ObjectTypeKeyMap extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @Import(name="objectTypeKeyList")
       private final @Nullable List<ObjectTypeKey> objectTypeKeyList;
 
-    public List<ObjectTypeKey> getObjectTypeKeyList() {
+    public List<ObjectTypeKey> objectTypeKeyList() {
         return this.objectTypeKeyList == null ? List.of() : this.objectTypeKeyList;
     }
 

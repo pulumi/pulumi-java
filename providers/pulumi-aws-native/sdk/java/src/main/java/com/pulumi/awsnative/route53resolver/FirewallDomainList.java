@@ -33,7 +33,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return Arn
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +47,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -61,7 +61,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return The id of the creator request.
      * 
      */
-    public Output<String> getCreatorRequestId() {
+    public Output<String> creatorRequestId() {
         return this.creatorRequestId;
     }
     /**
@@ -75,7 +75,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return Count
      * 
      */
-    public Output<Integer> getDomainCount() {
+    public Output<Integer> domainCount() {
         return this.domainCount;
     }
     /**
@@ -89,13 +89,13 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return S3 URL to import domains from.
      * 
      */
-    public Output</* @Nullable */ String> getDomainFileUrl() {
+    public Output</* @Nullable */ String> domainFileUrl() {
         return this.domainFileUrl;
     }
     @Export(name="domains", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domains;
 
-    public Output</* @Nullable */ List<String>> getDomains() {
+    public Output</* @Nullable */ List<String>> domains() {
         return this.domains;
     }
     /**
@@ -109,7 +109,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return ServicePrincipal
      * 
      */
-    public Output<String> getManagedOwnerName() {
+    public Output<String> managedOwnerName() {
         return this.managedOwnerName;
     }
     /**
@@ -123,7 +123,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getModificationTime() {
+    public Output<String> modificationTime() {
         return this.modificationTime;
     }
     /**
@@ -137,7 +137,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return FirewallDomainListName
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -151,7 +151,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
      */
-    public Output<FirewallDomainListStatus> getStatus() {
+    public Output<FirewallDomainListStatus> status() {
         return this.status;
     }
     /**
@@ -165,7 +165,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return FirewallDomainListAssociationStatus
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -179,7 +179,7 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return Tags
      * 
      */
-    public Output</* @Nullable */ List<FirewallDomainListTag>> getTags() {
+    public Output</* @Nullable */ List<FirewallDomainListTag>> tags() {
         return this.tags;
     }
 

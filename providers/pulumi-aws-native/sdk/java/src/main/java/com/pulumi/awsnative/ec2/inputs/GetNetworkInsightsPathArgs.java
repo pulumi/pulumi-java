@@ -15,7 +15,7 @@ public final class GetNetworkInsightsPathArgs extends com.pulumi.resources.Invok
     @Import(name="networkInsightsPathId", required=true)
       private final String networkInsightsPathId;
 
-    public String getNetworkInsightsPathId() {
+    public String networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
 

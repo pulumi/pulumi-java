@@ -22,21 +22,21 @@ public final class ClusterCapacityProviderStrategyItem extends com.pulumi.resour
     @Import(name="base")
       private final @Nullable Integer base;
 
-    public Optional<Integer> getBase() {
+    public Optional<Integer> base() {
         return this.base == null ? Optional.empty() : Optional.ofNullable(this.base);
     }
 
     @Import(name="capacityProvider")
       private final @Nullable String capacityProvider;
 
-    public Optional<String> getCapacityProvider() {
+    public Optional<String> capacityProvider() {
         return this.capacityProvider == null ? Optional.empty() : Optional.ofNullable(this.capacityProvider);
     }
 
     @Import(name="weight")
       private final @Nullable Integer weight;
 
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
     }
 

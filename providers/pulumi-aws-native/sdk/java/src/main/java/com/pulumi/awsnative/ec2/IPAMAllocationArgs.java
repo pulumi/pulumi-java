@@ -19,14 +19,14 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -48,7 +48,7 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
-    public Output<Integer> getNetmaskLength() {
+    public Output<Integer> netmaskLength() {
         return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
     }
 

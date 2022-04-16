@@ -19,21 +19,21 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
     @Import(name="isValueSecret")
       private final @Nullable Output<Boolean> isValueSecret;
 
-    public Output<Boolean> getIsValueSecret() {
+    public Output<Boolean> isValueSecret() {
         return this.isValueSecret == null ? Codegen.empty() : this.isValueSecret;
     }
 
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

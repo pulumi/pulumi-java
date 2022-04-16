@@ -35,19 +35,19 @@ public final class IntegrationSourceConnectorProperties {
         this.zendesk = zendesk;
     }
 
-    public Optional<IntegrationMarketoSourceProperties> getMarketo() {
+    public Optional<IntegrationMarketoSourceProperties> marketo() {
         return Optional.ofNullable(this.marketo);
     }
-    public Optional<IntegrationS3SourceProperties> getS3() {
+    public Optional<IntegrationS3SourceProperties> s3() {
         return Optional.ofNullable(this.s3);
     }
-    public Optional<IntegrationSalesforceSourceProperties> getSalesforce() {
+    public Optional<IntegrationSalesforceSourceProperties> salesforce() {
         return Optional.ofNullable(this.salesforce);
     }
-    public Optional<IntegrationServiceNowSourceProperties> getServiceNow() {
+    public Optional<IntegrationServiceNowSourceProperties> serviceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
-    public Optional<IntegrationZendeskSourceProperties> getZendesk() {
+    public Optional<IntegrationZendeskSourceProperties> zendesk() {
         return Optional.ofNullable(this.zendesk);
     }
 

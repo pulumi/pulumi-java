@@ -51,28 +51,28 @@ public final class AnalysisParameters {
      * <p>Date-time parameters.</p>
      * 
     */
-    public List<AnalysisDateTimeParameter> getDateTimeParameters() {
+    public List<AnalysisDateTimeParameter> dateTimeParameters() {
         return this.dateTimeParameters == null ? List.of() : this.dateTimeParameters;
     }
     /**
      * <p>Decimal parameters.</p>
      * 
     */
-    public List<AnalysisDecimalParameter> getDecimalParameters() {
+    public List<AnalysisDecimalParameter> decimalParameters() {
         return this.decimalParameters == null ? List.of() : this.decimalParameters;
     }
     /**
      * <p>Integer parameters.</p>
      * 
     */
-    public List<AnalysisIntegerParameter> getIntegerParameters() {
+    public List<AnalysisIntegerParameter> integerParameters() {
         return this.integerParameters == null ? List.of() : this.integerParameters;
     }
     /**
      * <p>String parameters.</p>
      * 
     */
-    public List<AnalysisStringParameter> getStringParameters() {
+    public List<AnalysisStringParameter> stringParameters() {
         return this.stringParameters == null ? List.of() : this.stringParameters;
     }
 

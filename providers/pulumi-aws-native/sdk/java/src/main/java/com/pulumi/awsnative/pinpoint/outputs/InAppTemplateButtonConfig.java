@@ -29,16 +29,16 @@ public final class InAppTemplateButtonConfig {
         this.web = web;
     }
 
-    public Optional<InAppTemplateOverrideButtonConfiguration> getAndroid() {
+    public Optional<InAppTemplateOverrideButtonConfiguration> android() {
         return Optional.ofNullable(this.android);
     }
-    public Optional<InAppTemplateDefaultButtonConfiguration> getDefaultConfig() {
+    public Optional<InAppTemplateDefaultButtonConfiguration> defaultConfig() {
         return Optional.ofNullable(this.defaultConfig);
     }
-    public Optional<InAppTemplateOverrideButtonConfiguration> getIOS() {
+    public Optional<InAppTemplateOverrideButtonConfiguration> iOS() {
         return Optional.ofNullable(this.iOS);
     }
-    public Optional<InAppTemplateOverrideButtonConfiguration> getWeb() {
+    public Optional<InAppTemplateOverrideButtonConfiguration> web() {
         return Optional.ofNullable(this.web);
     }
 

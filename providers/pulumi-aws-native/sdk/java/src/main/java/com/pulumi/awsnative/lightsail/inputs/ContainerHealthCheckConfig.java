@@ -26,7 +26,7 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="healthyThreshold")
       private final @Nullable Integer healthyThreshold;
 
-    public Optional<Integer> getHealthyThreshold() {
+    public Optional<Integer> healthyThreshold() {
         return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
     }
 
@@ -37,7 +37,7 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="intervalSeconds")
       private final @Nullable Integer intervalSeconds;
 
-    public Optional<Integer> getIntervalSeconds() {
+    public Optional<Integer> intervalSeconds() {
         return this.intervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalSeconds);
     }
 
@@ -48,7 +48,7 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -59,7 +59,7 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="successCodes")
       private final @Nullable String successCodes;
 
-    public Optional<String> getSuccessCodes() {
+    public Optional<String> successCodes() {
         return this.successCodes == null ? Optional.empty() : Optional.ofNullable(this.successCodes);
     }
 
@@ -70,7 +70,7 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
 
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
     }
 
@@ -81,7 +81,7 @@ public final class ContainerHealthCheckConfig extends com.pulumi.resources.Invok
     @Import(name="unhealthyThreshold")
       private final @Nullable Integer unhealthyThreshold;
 
-    public Optional<Integer> getUnhealthyThreshold() {
+    public Optional<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
     }
 

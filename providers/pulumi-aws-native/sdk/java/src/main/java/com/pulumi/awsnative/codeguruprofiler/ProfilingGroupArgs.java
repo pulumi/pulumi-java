@@ -27,7 +27,7 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="agentPermissions")
       private final @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
 
-    public Output<AgentPermissionsPropertiesArgs> getAgentPermissions() {
+    public Output<AgentPermissionsPropertiesArgs> agentPermissions() {
         return this.agentPermissions == null ? Codegen.empty() : this.agentPermissions;
     }
 
@@ -38,7 +38,7 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="anomalyDetectionNotificationConfiguration")
       private final @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
-    public Output<List<ProfilingGroupChannelArgs>> getAnomalyDetectionNotificationConfiguration() {
+    public Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration() {
         return this.anomalyDetectionNotificationConfiguration == null ? Codegen.empty() : this.anomalyDetectionNotificationConfiguration;
     }
 
@@ -49,7 +49,7 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="computePlatform")
       private final @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
 
-    public Output<ProfilingGroupComputePlatform> getComputePlatform() {
+    public Output<ProfilingGroupComputePlatform> computePlatform() {
         return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
@@ -60,7 +60,7 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="profilingGroupName")
       private final @Nullable Output<String> profilingGroupName;
 
-    public Output<String> getProfilingGroupName() {
+    public Output<String> profilingGroupName() {
         return this.profilingGroupName == null ? Codegen.empty() : this.profilingGroupName;
     }
 
@@ -71,7 +71,7 @@ public final class ProfilingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<ProfilingGroupTagArgs>> tags;
 
-    public Output<List<ProfilingGroupTagArgs>> getTags() {
+    public Output<List<ProfilingGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

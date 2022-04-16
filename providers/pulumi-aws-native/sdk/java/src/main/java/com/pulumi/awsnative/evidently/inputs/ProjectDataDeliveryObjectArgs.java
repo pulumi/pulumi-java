@@ -23,14 +23,14 @@ public final class ProjectDataDeliveryObjectArgs extends com.pulumi.resources.Re
     @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
-    public Output<String> getLogGroup() {
+    public Output<String> logGroup() {
         return this.logGroup == null ? Codegen.empty() : this.logGroup;
     }
 
     @Import(name="s3")
       private final @Nullable Output<ProjectS3DestinationArgs> s3;
 
-    public Output<ProjectS3DestinationArgs> getS3() {
+    public Output<ProjectS3DestinationArgs> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 

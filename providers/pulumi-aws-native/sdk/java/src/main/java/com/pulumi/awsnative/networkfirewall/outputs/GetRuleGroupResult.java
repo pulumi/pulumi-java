@@ -34,19 +34,19 @@ public final class GetRuleGroupResult {
         this.tags = tags;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<RuleGroup> getRuleGroup() {
+    public Optional<RuleGroup> ruleGroup() {
         return Optional.ofNullable(this.ruleGroup);
     }
-    public Optional<String> getRuleGroupArn() {
+    public Optional<String> ruleGroupArn() {
         return Optional.ofNullable(this.ruleGroupArn);
     }
-    public Optional<String> getRuleGroupId() {
+    public Optional<String> ruleGroupId() {
         return Optional.ofNullable(this.ruleGroupId);
     }
-    public List<RuleGroupTag> getTags() {
+    public List<RuleGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

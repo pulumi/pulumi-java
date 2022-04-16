@@ -24,79 +24,79 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="downlinkBandwidthBits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkBandwidthBits;
 
-    public Output</* @Nullable */ Integer> getDownlinkBandwidthBits() {
+    public Output</* @Nullable */ Integer> downlinkBandwidthBits() {
         return this.downlinkBandwidthBits;
     }
     @Export(name="downlinkDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkDelayMs;
 
-    public Output</* @Nullable */ Integer> getDownlinkDelayMs() {
+    public Output</* @Nullable */ Integer> downlinkDelayMs() {
         return this.downlinkDelayMs;
     }
     @Export(name="downlinkJitterMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkJitterMs;
 
-    public Output</* @Nullable */ Integer> getDownlinkJitterMs() {
+    public Output</* @Nullable */ Integer> downlinkJitterMs() {
         return this.downlinkJitterMs;
     }
     @Export(name="downlinkLossPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkLossPercent;
 
-    public Output</* @Nullable */ Integer> getDownlinkLossPercent() {
+    public Output</* @Nullable */ Integer> downlinkLossPercent() {
         return this.downlinkLossPercent;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     @Export(name="tags", type=List.class, parameters={NetworkProfileTag.class})
     private Output</* @Nullable */ List<NetworkProfileTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkProfileTag>> getTags() {
+    public Output</* @Nullable */ List<NetworkProfileTag>> tags() {
         return this.tags;
     }
     @Export(name="uplinkBandwidthBits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkBandwidthBits;
 
-    public Output</* @Nullable */ Integer> getUplinkBandwidthBits() {
+    public Output</* @Nullable */ Integer> uplinkBandwidthBits() {
         return this.uplinkBandwidthBits;
     }
     @Export(name="uplinkDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkDelayMs;
 
-    public Output</* @Nullable */ Integer> getUplinkDelayMs() {
+    public Output</* @Nullable */ Integer> uplinkDelayMs() {
         return this.uplinkDelayMs;
     }
     @Export(name="uplinkJitterMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkJitterMs;
 
-    public Output</* @Nullable */ Integer> getUplinkJitterMs() {
+    public Output</* @Nullable */ Integer> uplinkJitterMs() {
         return this.uplinkJitterMs;
     }
     @Export(name="uplinkLossPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkLossPercent;
 
-    public Output</* @Nullable */ Integer> getUplinkLossPercent() {
+    public Output</* @Nullable */ Integer> uplinkLossPercent() {
         return this.uplinkLossPercent;
     }
 

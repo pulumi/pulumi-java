@@ -27,7 +27,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource", required=true)
       private final Output<VariableDataSource> dataSource;
 
-    public Output<VariableDataSource> getDataSource() {
+    public Output<VariableDataSource> dataSource() {
         return this.dataSource;
     }
 
@@ -38,7 +38,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataType", required=true)
       private final Output<VariableDataType> dataType;
 
-    public Output<VariableDataType> getDataType() {
+    public Output<VariableDataType> dataType() {
         return this.dataType;
     }
 
@@ -49,7 +49,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultValue", required=true)
       private final Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue;
     }
 
@@ -60,7 +60,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<VariableTagArgs>> tags;
 
-    public Output<List<VariableTagArgs>> getTags() {
+    public Output<List<VariableTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variableType")
       private final @Nullable Output<VariableType> variableType;
 
-    public Output<VariableType> getVariableType() {
+    public Output<VariableType> variableType() {
         return this.variableType == null ? Codegen.empty() : this.variableType;
     }
 

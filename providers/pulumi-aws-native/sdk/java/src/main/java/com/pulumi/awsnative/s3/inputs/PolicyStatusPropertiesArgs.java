@@ -25,7 +25,7 @@ public final class PolicyStatusPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="isPublic", required=true)
       private final Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
 
-    public Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> getIsPublic() {
+    public Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic() {
         return this.isPublic;
     }
 

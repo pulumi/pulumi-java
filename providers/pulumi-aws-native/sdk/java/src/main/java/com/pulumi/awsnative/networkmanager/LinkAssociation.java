@@ -29,7 +29,7 @@ public class LinkAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the device
      * 
      */
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
     /**
@@ -43,7 +43,7 @@ public class LinkAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -57,7 +57,7 @@ public class LinkAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the link
      * 
      */
-    public Output<String> getLinkId() {
+    public Output<String> linkId() {
         return this.linkId;
     }
 

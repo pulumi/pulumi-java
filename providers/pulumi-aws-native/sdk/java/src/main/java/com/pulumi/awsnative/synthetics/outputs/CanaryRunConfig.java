@@ -50,28 +50,28 @@ public final class CanaryRunConfig {
      * Enable active tracing if set to true
      * 
     */
-    public Optional<Boolean> getActiveTracing() {
+    public Optional<Boolean> activeTracing() {
         return Optional.ofNullable(this.activeTracing);
     }
     /**
      * Environment variable key-value pairs.
      * 
     */
-    public Optional<Object> getEnvironmentVariables() {
+    public Optional<Object> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
     /**
      * Provide maximum memory available for canary in MB
      * 
     */
-    public Optional<Integer> getMemoryInMB() {
+    public Optional<Integer> memoryInMB() {
         return Optional.ofNullable(this.memoryInMB);
     }
     /**
      * Provide maximum canary timeout per run in seconds
      * 
     */
-    public Optional<Integer> getTimeoutInSeconds() {
+    public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
 

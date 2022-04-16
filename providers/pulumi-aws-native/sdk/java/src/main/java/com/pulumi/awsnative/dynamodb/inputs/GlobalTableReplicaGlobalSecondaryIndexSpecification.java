@@ -19,21 +19,21 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification extends c
     @Import(name="contributorInsightsSpecification")
       private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
 
-    public Optional<GlobalTableContributorInsightsSpecification> getContributorInsightsSpecification() {
+    public Optional<GlobalTableContributorInsightsSpecification> contributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Optional.empty() : Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
     @Import(name="indexName", required=true)
       private final String indexName;
 
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
 
     @Import(name="readProvisionedThroughputSettings")
       private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
-    public Optional<GlobalTableReadProvisionedThroughputSettings> getReadProvisionedThroughputSettings() {
+    public Optional<GlobalTableReadProvisionedThroughputSettings> readProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
 

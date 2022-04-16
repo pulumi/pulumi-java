@@ -18,28 +18,28 @@ public final class TopicRuleAssetPropertyVariantArgs extends com.pulumi.resource
     @Import(name="booleanValue")
       private final @Nullable Output<String> booleanValue;
 
-    public Output<String> getBooleanValue() {
+    public Output<String> booleanValue() {
         return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<String> doubleValue;
 
-    public Output<String> getDoubleValue() {
+    public Output<String> doubleValue() {
         return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
-    public Output<String> getIntegerValue() {
+    public Output<String> integerValue() {
         return this.integerValue == null ? Codegen.empty() : this.integerValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 

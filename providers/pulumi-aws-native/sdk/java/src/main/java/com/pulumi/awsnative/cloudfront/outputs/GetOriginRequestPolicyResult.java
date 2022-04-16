@@ -26,13 +26,13 @@ public final class GetOriginRequestPolicyResult {
         this.originRequestPolicyConfig = originRequestPolicyConfig;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
-    public Optional<OriginRequestPolicyConfig> getOriginRequestPolicyConfig() {
+    public Optional<OriginRequestPolicyConfig> originRequestPolicyConfig() {
         return Optional.ofNullable(this.originRequestPolicyConfig);
     }
 

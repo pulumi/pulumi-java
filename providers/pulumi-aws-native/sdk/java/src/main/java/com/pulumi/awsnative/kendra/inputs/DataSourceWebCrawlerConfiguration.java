@@ -23,63 +23,63 @@ public final class DataSourceWebCrawlerConfiguration extends com.pulumi.resource
     @Import(name="authenticationConfiguration")
       private final @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration;
 
-    public Optional<DataSourceWebCrawlerAuthenticationConfiguration> getAuthenticationConfiguration() {
+    public Optional<DataSourceWebCrawlerAuthenticationConfiguration> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
     }
 
     @Import(name="crawlDepth")
       private final @Nullable Integer crawlDepth;
 
-    public Optional<Integer> getCrawlDepth() {
+    public Optional<Integer> crawlDepth() {
         return this.crawlDepth == null ? Optional.empty() : Optional.ofNullable(this.crawlDepth);
     }
 
     @Import(name="maxContentSizePerPageInMegaBytes")
       private final @Nullable Double maxContentSizePerPageInMegaBytes;
 
-    public Optional<Double> getMaxContentSizePerPageInMegaBytes() {
+    public Optional<Double> maxContentSizePerPageInMegaBytes() {
         return this.maxContentSizePerPageInMegaBytes == null ? Optional.empty() : Optional.ofNullable(this.maxContentSizePerPageInMegaBytes);
     }
 
     @Import(name="maxLinksPerPage")
       private final @Nullable Integer maxLinksPerPage;
 
-    public Optional<Integer> getMaxLinksPerPage() {
+    public Optional<Integer> maxLinksPerPage() {
         return this.maxLinksPerPage == null ? Optional.empty() : Optional.ofNullable(this.maxLinksPerPage);
     }
 
     @Import(name="maxUrlsPerMinuteCrawlRate")
       private final @Nullable Integer maxUrlsPerMinuteCrawlRate;
 
-    public Optional<Integer> getMaxUrlsPerMinuteCrawlRate() {
+    public Optional<Integer> maxUrlsPerMinuteCrawlRate() {
         return this.maxUrlsPerMinuteCrawlRate == null ? Optional.empty() : Optional.ofNullable(this.maxUrlsPerMinuteCrawlRate);
     }
 
     @Import(name="proxyConfiguration")
       private final @Nullable DataSourceProxyConfiguration proxyConfiguration;
 
-    public Optional<DataSourceProxyConfiguration> getProxyConfiguration() {
+    public Optional<DataSourceProxyConfiguration> proxyConfiguration() {
         return this.proxyConfiguration == null ? Optional.empty() : Optional.ofNullable(this.proxyConfiguration);
     }
 
     @Import(name="urlExclusionPatterns")
       private final @Nullable List<String> urlExclusionPatterns;
 
-    public List<String> getUrlExclusionPatterns() {
+    public List<String> urlExclusionPatterns() {
         return this.urlExclusionPatterns == null ? List.of() : this.urlExclusionPatterns;
     }
 
     @Import(name="urlInclusionPatterns")
       private final @Nullable List<String> urlInclusionPatterns;
 
-    public List<String> getUrlInclusionPatterns() {
+    public List<String> urlInclusionPatterns() {
         return this.urlInclusionPatterns == null ? List.of() : this.urlInclusionPatterns;
     }
 
     @Import(name="urls", required=true)
       private final DataSourceWebCrawlerUrls urls;
 
-    public DataSourceWebCrawlerUrls getUrls() {
+    public DataSourceWebCrawlerUrls urls() {
         return this.urls;
     }
 

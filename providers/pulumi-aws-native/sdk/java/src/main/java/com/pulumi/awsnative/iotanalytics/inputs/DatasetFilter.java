@@ -17,7 +17,7 @@ public final class DatasetFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="deltaTime")
       private final @Nullable DatasetDeltaTime deltaTime;
 
-    public Optional<DatasetDeltaTime> getDeltaTime() {
+    public Optional<DatasetDeltaTime> deltaTime() {
         return this.deltaTime == null ? Optional.empty() : Optional.ofNullable(this.deltaTime);
     }
 

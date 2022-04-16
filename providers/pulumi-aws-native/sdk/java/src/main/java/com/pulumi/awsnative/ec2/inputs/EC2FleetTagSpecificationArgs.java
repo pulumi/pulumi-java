@@ -20,14 +20,14 @@ public final class EC2FleetTagSpecificationArgs extends com.pulumi.resources.Res
     @Import(name="resourceType")
       private final @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType;
 
-    public Output<EC2FleetTagSpecificationResourceType> getPropResourceType() {
+    public Output<EC2FleetTagSpecificationResourceType> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<EC2FleetTagArgs>> tags;
 
-    public Output<List<EC2FleetTagArgs>> getTags() {
+    public Output<List<EC2FleetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

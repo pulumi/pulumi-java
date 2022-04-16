@@ -18,7 +18,7 @@ public final class DistributionS3OriginConfigArgs extends com.pulumi.resources.R
     @Import(name="originAccessIdentity")
       private final @Nullable Output<String> originAccessIdentity;
 
-    public Output<String> getOriginAccessIdentity() {
+    public Output<String> originAccessIdentity() {
         return this.originAccessIdentity == null ? Codegen.empty() : this.originAccessIdentity;
     }
 

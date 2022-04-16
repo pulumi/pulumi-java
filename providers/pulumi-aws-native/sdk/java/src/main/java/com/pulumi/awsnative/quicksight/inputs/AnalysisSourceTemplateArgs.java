@@ -27,7 +27,7 @@ public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="dataSetReferences", required=true)
       private final Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
 
-    public Output<List<AnalysisDataSetReferenceArgs>> getDataSetReferences() {
+    public Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences() {
         return this.dataSetReferences;
     }
 

@@ -22,7 +22,7 @@ public final class RecipeDataCatalogInputDefinition extends com.pulumi.resources
     @Import(name="catalogId")
       private final @Nullable String catalogId;
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
@@ -33,7 +33,7 @@ public final class RecipeDataCatalogInputDefinition extends com.pulumi.resources
     @Import(name="databaseName")
       private final @Nullable String databaseName;
 
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
@@ -44,14 +44,14 @@ public final class RecipeDataCatalogInputDefinition extends com.pulumi.resources
     @Import(name="tableName")
       private final @Nullable String tableName;
 
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
     }
 
     @Import(name="tempDirectory")
       private final @Nullable RecipeS3Location tempDirectory;
 
-    public Optional<RecipeS3Location> getTempDirectory() {
+    public Optional<RecipeS3Location> tempDirectory() {
         return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
     }
 

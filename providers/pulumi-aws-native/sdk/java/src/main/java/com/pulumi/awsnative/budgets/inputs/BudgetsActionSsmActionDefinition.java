@@ -17,21 +17,21 @@ public final class BudgetsActionSsmActionDefinition extends com.pulumi.resources
     @Import(name="instanceIds", required=true)
       private final List<String> instanceIds;
 
-    public List<String> getInstanceIds() {
+    public List<String> instanceIds() {
         return this.instanceIds;
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
     @Import(name="subtype", required=true)
       private final BudgetsActionSsmActionDefinitionSubtype subtype;
 
-    public BudgetsActionSsmActionDefinitionSubtype getSubtype() {
+    public BudgetsActionSsmActionDefinitionSubtype subtype() {
         return this.subtype;
     }
 

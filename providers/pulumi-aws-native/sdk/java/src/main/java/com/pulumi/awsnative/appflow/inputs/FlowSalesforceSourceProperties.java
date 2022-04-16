@@ -18,21 +18,21 @@ public final class FlowSalesforceSourceProperties extends com.pulumi.resources.I
     @Import(name="enableDynamicFieldUpdate")
       private final @Nullable Boolean enableDynamicFieldUpdate;
 
-    public Optional<Boolean> getEnableDynamicFieldUpdate() {
+    public Optional<Boolean> enableDynamicFieldUpdate() {
         return this.enableDynamicFieldUpdate == null ? Optional.empty() : Optional.ofNullable(this.enableDynamicFieldUpdate);
     }
 
     @Import(name="includeDeletedRecords")
       private final @Nullable Boolean includeDeletedRecords;
 
-    public Optional<Boolean> getIncludeDeletedRecords() {
+    public Optional<Boolean> includeDeletedRecords() {
         return this.includeDeletedRecords == null ? Optional.empty() : Optional.ofNullable(this.includeDeletedRecords);
     }
 
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

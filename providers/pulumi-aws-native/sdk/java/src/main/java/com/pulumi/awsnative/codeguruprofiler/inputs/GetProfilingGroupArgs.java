@@ -19,7 +19,7 @@ public final class GetProfilingGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="profilingGroupName", required=true)
       private final String profilingGroupName;
 
-    public String getProfilingGroupName() {
+    public String profilingGroupName() {
         return this.profilingGroupName;
     }
 

@@ -26,7 +26,7 @@ public class VirtualCluster extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -40,7 +40,7 @@ public class VirtualCluster extends com.pulumi.resources.CustomResource {
      * @return Container provider of the virtual cluster.
      * 
      */
-    public Output<VirtualClusterContainerProvider> getContainerProvider() {
+    public Output<VirtualClusterContainerProvider> containerProvider() {
         return this.containerProvider;
     }
     /**
@@ -54,7 +54,7 @@ public class VirtualCluster extends com.pulumi.resources.CustomResource {
      * @return Name of the virtual cluster.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +68,7 @@ public class VirtualCluster extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this virtual cluster.
      * 
      */
-    public Output</* @Nullable */ List<VirtualClusterTag>> getTags() {
+    public Output</* @Nullable */ List<VirtualClusterTag>> tags() {
         return this.tags;
     }
 

@@ -25,7 +25,7 @@ public final class LocationS3S3ConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="bucketAccessRoleArn", required=true)
       private final Output<String> bucketAccessRoleArn;
 
-    public Output<String> getBucketAccessRoleArn() {
+    public Output<String> bucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
     }
 

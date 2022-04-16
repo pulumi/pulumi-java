@@ -27,7 +27,7 @@ public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceA
     @Import(name="concurrentExecutions", required=true)
       private final Output<Integer> concurrentExecutions;
 
-    public Output<Integer> getConcurrentExecutions() {
+    public Output<Integer> concurrentExecutions() {
         return this.concurrentExecutions;
     }
 
@@ -42,7 +42,7 @@ public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceA
     @Import(name="launchPath", required=true)
       private final Output<String> launchPath;
 
-    public Output<String> getLaunchPath() {
+    public Output<String> launchPath() {
         return this.launchPath;
     }
 
@@ -53,7 +53,7 @@ public final class FleetServerProcessArgs extends com.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

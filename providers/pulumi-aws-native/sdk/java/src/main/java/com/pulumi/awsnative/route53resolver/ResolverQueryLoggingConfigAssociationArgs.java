@@ -22,7 +22,7 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends com.pulumi.
     @Import(name="resolverQueryLogConfigId")
       private final @Nullable Output<String> resolverQueryLogConfigId;
 
-    public Output<String> getResolverQueryLogConfigId() {
+    public Output<String> resolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId == null ? Codegen.empty() : this.resolverQueryLogConfigId;
     }
 
@@ -33,7 +33,7 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends com.pulumi.
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

@@ -25,31 +25,31 @@ public class ServiceAction extends com.pulumi.resources.CustomResource {
     @Export(name="acceptLanguage", type=ServiceActionAcceptLanguage.class, parameters={})
     private Output</* @Nullable */ ServiceActionAcceptLanguage> acceptLanguage;
 
-    public Output</* @Nullable */ ServiceActionAcceptLanguage> getAcceptLanguage() {
+    public Output</* @Nullable */ ServiceActionAcceptLanguage> acceptLanguage() {
         return this.acceptLanguage;
     }
     @Export(name="definition", type=List.class, parameters={ServiceActionDefinitionParameter.class})
     private Output<List<ServiceActionDefinitionParameter>> definition;
 
-    public Output<List<ServiceActionDefinitionParameter>> getDefinition() {
+    public Output<List<ServiceActionDefinitionParameter>> definition() {
         return this.definition;
     }
     @Export(name="definitionType", type=ServiceActionDefinitionType.class, parameters={})
     private Output<ServiceActionDefinitionType> definitionType;
 
-    public Output<ServiceActionDefinitionType> getDefinitionType() {
+    public Output<ServiceActionDefinitionType> definitionType() {
         return this.definitionType;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

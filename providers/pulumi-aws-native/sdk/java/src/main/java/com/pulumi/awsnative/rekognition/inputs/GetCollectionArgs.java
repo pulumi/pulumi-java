@@ -15,7 +15,7 @@ public final class GetCollectionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="collectionId", required=true)
       private final String collectionId;
 
-    public String getCollectionId() {
+    public String collectionId() {
         return this.collectionId;
     }
 

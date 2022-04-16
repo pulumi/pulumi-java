@@ -16,7 +16,7 @@ public final class MonitoringScheduleMonitoringOutput {
         this.s3Output = s3Output;
     }
 
-    public MonitoringScheduleS3Output getS3Output() {
+    public MonitoringScheduleS3Output s3Output() {
         return this.s3Output;
     }
 

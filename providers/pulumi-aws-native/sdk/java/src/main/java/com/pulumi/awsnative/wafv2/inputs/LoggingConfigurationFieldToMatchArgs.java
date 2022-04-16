@@ -28,7 +28,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="jsonBody")
       private final @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
 
-    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> getJsonBody() {
+    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody() {
         return this.jsonBody == null ? Codegen.empty() : this.jsonBody;
     }
 
@@ -39,7 +39,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="method")
       private final @Nullable Output<Object> method;
 
-    public Output<Object> getMethod() {
+    public Output<Object> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -50,7 +50,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="queryString")
       private final @Nullable Output<Object> queryString;
 
-    public Output<Object> getQueryString() {
+    public Output<Object> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -61,7 +61,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="singleHeader")
       private final @Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
-    public Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
+    public Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -72,7 +72,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="uriPath")
       private final @Nullable Output<Object> uriPath;
 
-    public Output<Object> getUriPath() {
+    public Output<Object> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

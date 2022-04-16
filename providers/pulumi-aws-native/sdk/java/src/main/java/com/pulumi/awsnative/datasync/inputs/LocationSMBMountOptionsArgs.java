@@ -26,7 +26,7 @@ public final class LocationSMBMountOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="version")
       private final @Nullable Output<LocationSMBMountOptionsVersion> version;
 
-    public Output<LocationSMBMountOptionsVersion> getVersion() {
+    public Output<LocationSMBMountOptionsVersion> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

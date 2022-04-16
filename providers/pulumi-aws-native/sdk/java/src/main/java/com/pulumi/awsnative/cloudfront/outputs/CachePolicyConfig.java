@@ -36,22 +36,22 @@ public final class CachePolicyConfig {
         this.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
     }
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
-    public Double getDefaultTTL() {
+    public Double defaultTTL() {
         return this.defaultTTL;
     }
-    public Double getMaxTTL() {
+    public Double maxTTL() {
         return this.maxTTL;
     }
-    public Double getMinTTL() {
+    public Double minTTL() {
         return this.minTTL;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public CachePolicyParametersInCacheKeyAndForwardedToOrigin getParametersInCacheKeyAndForwardedToOrigin() {
+    public CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 

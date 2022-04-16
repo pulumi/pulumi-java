@@ -27,14 +27,14 @@ public final class GetConnectorResult {
         this.connectorArn = connectorArn;
     }
 
-    public Optional<ConnectorCapacity> getCapacity() {
+    public Optional<ConnectorCapacity> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Amazon Resource Name for the created Connector.
      * 
     */
-    public Optional<String> getConnectorArn() {
+    public Optional<String> connectorArn() {
         return Optional.ofNullable(this.connectorArn);
     }
 

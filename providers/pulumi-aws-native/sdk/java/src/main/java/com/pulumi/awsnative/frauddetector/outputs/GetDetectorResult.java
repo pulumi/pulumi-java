@@ -96,69 +96,69 @@ public final class GetDetectorResult {
      * The ARN of the detector.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The models to associate with this detector.
      * 
     */
-    public List<DetectorModel> getAssociatedModels() {
+    public List<DetectorModel> associatedModels() {
         return this.associatedModels == null ? List.of() : this.associatedModels;
     }
     /**
      * The time when the detector was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the detector.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The active version ID of the detector
      * 
     */
-    public Optional<String> getDetectorVersionId() {
+    public Optional<String> detectorVersionId() {
         return Optional.ofNullable(this.detectorVersionId);
     }
     /**
      * The desired detector version status for the detector
      * 
     */
-    public Optional<DetectorVersionStatus> getDetectorVersionStatus() {
+    public Optional<DetectorVersionStatus> detectorVersionStatus() {
         return Optional.ofNullable(this.detectorVersionStatus);
     }
     /**
      * The event type to associate this detector with.
      * 
     */
-    public Optional<DetectorEventType> getEventType() {
+    public Optional<DetectorEventType> eventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
      * The time when the detector was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-    public Optional<DetectorRuleExecutionMode> getRuleExecutionMode() {
+    public Optional<DetectorRuleExecutionMode> ruleExecutionMode() {
         return Optional.ofNullable(this.ruleExecutionMode);
     }
-    public List<DetectorRule> getRules() {
+    public List<DetectorRule> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Tags associated with this detector.
      * 
     */
-    public List<DetectorTag> getTags() {
+    public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

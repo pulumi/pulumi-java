@@ -27,7 +27,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudWatchLogsLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogsLogGroupArn;
 
-    public Output<String> getCloudWatchLogsLogGroupArn() {
+    public Output<String> cloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn == null ? Codegen.empty() : this.cloudWatchLogsLogGroupArn;
     }
 
@@ -38,7 +38,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudWatchLogsRoleArn")
       private final @Nullable Output<String> cloudWatchLogsRoleArn;
 
-    public Output<String> getCloudWatchLogsRoleArn() {
+    public Output<String> cloudWatchLogsRoleArn() {
         return this.cloudWatchLogsRoleArn == null ? Codegen.empty() : this.cloudWatchLogsRoleArn;
     }
 
@@ -49,7 +49,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableLogFileValidation")
       private final @Nullable Output<Boolean> enableLogFileValidation;
 
-    public Output<Boolean> getEnableLogFileValidation() {
+    public Output<Boolean> enableLogFileValidation() {
         return this.enableLogFileValidation == null ? Codegen.empty() : this.enableLogFileValidation;
     }
 
@@ -60,7 +60,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventSelectors")
       private final @Nullable Output<List<TrailEventSelectorArgs>> eventSelectors;
 
-    public Output<List<TrailEventSelectorArgs>> getEventSelectors() {
+    public Output<List<TrailEventSelectorArgs>> eventSelectors() {
         return this.eventSelectors == null ? Codegen.empty() : this.eventSelectors;
     }
 
@@ -71,7 +71,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="includeGlobalServiceEvents")
       private final @Nullable Output<Boolean> includeGlobalServiceEvents;
 
-    public Output<Boolean> getIncludeGlobalServiceEvents() {
+    public Output<Boolean> includeGlobalServiceEvents() {
         return this.includeGlobalServiceEvents == null ? Codegen.empty() : this.includeGlobalServiceEvents;
     }
 
@@ -82,7 +82,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="insightSelectors")
       private final @Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors;
 
-    public Output<List<TrailInsightSelectorArgs>> getInsightSelectors() {
+    public Output<List<TrailInsightSelectorArgs>> insightSelectors() {
         return this.insightSelectors == null ? Codegen.empty() : this.insightSelectors;
     }
 
@@ -93,7 +93,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isLogging", required=true)
       private final Output<Boolean> isLogging;
 
-    public Output<Boolean> getIsLogging() {
+    public Output<Boolean> isLogging() {
         return this.isLogging;
     }
 
@@ -104,7 +104,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isMultiRegionTrail")
       private final @Nullable Output<Boolean> isMultiRegionTrail;
 
-    public Output<Boolean> getIsMultiRegionTrail() {
+    public Output<Boolean> isMultiRegionTrail() {
         return this.isMultiRegionTrail == null ? Codegen.empty() : this.isMultiRegionTrail;
     }
 
@@ -115,7 +115,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isOrganizationTrail")
       private final @Nullable Output<Boolean> isOrganizationTrail;
 
-    public Output<Boolean> getIsOrganizationTrail() {
+    public Output<Boolean> isOrganizationTrail() {
         return this.isOrganizationTrail == null ? Codegen.empty() : this.isOrganizationTrail;
     }
 
@@ -126,7 +126,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kMSKeyId")
       private final @Nullable Output<String> kMSKeyId;
 
-    public Output<String> getKMSKeyId() {
+    public Output<String> kMSKeyId() {
         return this.kMSKeyId == null ? Codegen.empty() : this.kMSKeyId;
     }
 
@@ -137,7 +137,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName;
     }
 
@@ -148,7 +148,7 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
@@ -159,21 +159,21 @@ public final class TrailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snsTopicName")
       private final @Nullable Output<String> snsTopicName;
 
-    public Output<String> getSnsTopicName() {
+    public Output<String> snsTopicName() {
         return this.snsTopicName == null ? Codegen.empty() : this.snsTopicName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TrailTagArgs>> tags;
 
-    public Output<List<TrailTagArgs>> getTags() {
+    public Output<List<TrailTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="trailName")
       private final @Nullable Output<String> trailName;
 
-    public Output<String> getTrailName() {
+    public Output<String> trailName() {
         return this.trailName == null ? Codegen.empty() : this.trailName;
     }
 

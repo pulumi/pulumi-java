@@ -23,10 +23,10 @@ public final class GetJobTemplateResult {
         this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<JobExecutionsRetryConfigProperties> getJobExecutionsRetryConfig() {
+    public Optional<JobExecutionsRetryConfigProperties> jobExecutionsRetryConfig() {
         return Optional.ofNullable(this.jobExecutionsRetryConfig);
     }
 

@@ -26,7 +26,7 @@ public final class MonitoringScheduleVpcConfigArgs extends com.pulumi.resources.
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -37,7 +37,7 @@ public final class MonitoringScheduleVpcConfigArgs extends com.pulumi.resources.
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 

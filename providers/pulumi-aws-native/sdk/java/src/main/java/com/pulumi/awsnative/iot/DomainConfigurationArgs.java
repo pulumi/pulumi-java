@@ -23,56 +23,56 @@ public final class DomainConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="authorizerConfig")
       private final @Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
 
-    public Output<DomainConfigurationAuthorizerConfigArgs> getAuthorizerConfig() {
+    public Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig() {
         return this.authorizerConfig == null ? Codegen.empty() : this.authorizerConfig;
     }
 
     @Import(name="domainConfigurationName")
       private final @Nullable Output<String> domainConfigurationName;
 
-    public Output<String> getDomainConfigurationName() {
+    public Output<String> domainConfigurationName() {
         return this.domainConfigurationName == null ? Codegen.empty() : this.domainConfigurationName;
     }
 
     @Import(name="domainConfigurationStatus")
       private final @Nullable Output<DomainConfigurationStatus> domainConfigurationStatus;
 
-    public Output<DomainConfigurationStatus> getDomainConfigurationStatus() {
+    public Output<DomainConfigurationStatus> domainConfigurationStatus() {
         return this.domainConfigurationStatus == null ? Codegen.empty() : this.domainConfigurationStatus;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     @Import(name="serverCertificateArns")
       private final @Nullable Output<List<String>> serverCertificateArns;
 
-    public Output<List<String>> getServerCertificateArns() {
+    public Output<List<String>> serverCertificateArns() {
         return this.serverCertificateArns == null ? Codegen.empty() : this.serverCertificateArns;
     }
 
     @Import(name="serviceType")
       private final @Nullable Output<DomainConfigurationServiceType> serviceType;
 
-    public Output<DomainConfigurationServiceType> getServiceType() {
+    public Output<DomainConfigurationServiceType> serviceType() {
         return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DomainConfigurationTagArgs>> tags;
 
-    public Output<List<DomainConfigurationTagArgs>> getTags() {
+    public Output<List<DomainConfigurationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="validationCertificateArn")
       private final @Nullable Output<String> validationCertificateArn;
 
-    public Output<String> getValidationCertificateArn() {
+    public Output<String> validationCertificateArn() {
         return this.validationCertificateArn == null ? Codegen.empty() : this.validationCertificateArn;
     }
 

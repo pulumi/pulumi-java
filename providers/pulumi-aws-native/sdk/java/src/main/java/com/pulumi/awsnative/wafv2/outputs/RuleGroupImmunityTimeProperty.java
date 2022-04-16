@@ -16,7 +16,7 @@ public final class RuleGroupImmunityTimeProperty {
         this.immunityTime = immunityTime;
     }
 
-    public Integer getImmunityTime() {
+    public Integer immunityTime() {
         return this.immunityTime;
     }
 

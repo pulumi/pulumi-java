@@ -21,7 +21,7 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends com.pulumi
     @Import(name="s3Configuration", required=true)
       private final Output<ScheduledQueryS3ConfigurationArgs> s3Configuration;
 
-    public Output<ScheduledQueryS3ConfigurationArgs> getS3Configuration() {
+    public Output<ScheduledQueryS3ConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 

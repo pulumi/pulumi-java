@@ -22,10 +22,10 @@ public final class IntegrationS3SourceProperties {
         this.bucketPrefix = bucketPrefix;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
 

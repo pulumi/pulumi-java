@@ -17,7 +17,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
         this.source = source;
     }
 
-    public List<String> getSource() {
+    public List<String> source() {
         return this.source;
     }
 

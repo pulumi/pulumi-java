@@ -25,14 +25,14 @@ public final class BucketDataExport {
         this.outputSchemaVersion = outputSchemaVersion;
     }
 
-    public BucketDestination getDestination() {
+    public BucketDestination destination() {
         return this.destination;
     }
     /**
      * The version of the output schema to use when exporting data.
      * 
     */
-    public String getOutputSchemaVersion() {
+    public String outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 

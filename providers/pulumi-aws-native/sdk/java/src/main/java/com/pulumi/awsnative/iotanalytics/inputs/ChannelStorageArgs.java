@@ -19,14 +19,14 @@ public final class ChannelStorageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customerManagedS3")
       private final @Nullable Output<ChannelCustomerManagedS3Args> customerManagedS3;
 
-    public Output<ChannelCustomerManagedS3Args> getCustomerManagedS3() {
+    public Output<ChannelCustomerManagedS3Args> customerManagedS3() {
         return this.customerManagedS3 == null ? Codegen.empty() : this.customerManagedS3;
     }
 
     @Import(name="serviceManagedS3")
       private final @Nullable Output<ChannelServiceManagedS3Args> serviceManagedS3;
 
-    public Output<ChannelServiceManagedS3Args> getServiceManagedS3() {
+    public Output<ChannelServiceManagedS3Args> serviceManagedS3() {
         return this.serviceManagedS3 == null ? Codegen.empty() : this.serviceManagedS3;
     }
 

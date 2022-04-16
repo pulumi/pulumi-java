@@ -15,14 +15,14 @@ public final class DistributionOriginCustomHeader extends com.pulumi.resources.I
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
     @Import(name="headerValue", required=true)
       private final String headerValue;
 
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
 

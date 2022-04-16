@@ -19,7 +19,7 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hoursOfOperationArn", required=true)
       private final String hoursOfOperationArn;
 
-    public String getHoursOfOperationArn() {
+    public String hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
 

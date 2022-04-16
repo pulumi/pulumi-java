@@ -28,7 +28,7 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="dimensionList")
       private final @Nullable Output<List<String>> dimensionList;
 
-    public Output<List<String>> getDimensionList() {
+    public Output<List<String>> dimensionList() {
         return this.dimensionList == null ? Codegen.empty() : this.dimensionList;
     }
 
@@ -39,7 +39,7 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricList", required=true)
       private final Output<List<AnomalyDetectorMetricArgs>> metricList;
 
-    public Output<List<AnomalyDetectorMetricArgs>> getMetricList() {
+    public Output<List<AnomalyDetectorMetricArgs>> metricList() {
         return this.metricList;
     }
 
@@ -50,7 +50,7 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricSetDescription")
       private final @Nullable Output<String> metricSetDescription;
 
-    public Output<String> getMetricSetDescription() {
+    public Output<String> metricSetDescription() {
         return this.metricSetDescription == null ? Codegen.empty() : this.metricSetDescription;
     }
 
@@ -61,7 +61,7 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricSetFrequency")
       private final @Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency;
 
-    public Output<AnomalyDetectorMetricSetMetricSetFrequency> getMetricSetFrequency() {
+    public Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency() {
         return this.metricSetFrequency == null ? Codegen.empty() : this.metricSetFrequency;
     }
 
@@ -72,14 +72,14 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="metricSetName", required=true)
       private final Output<String> metricSetName;
 
-    public Output<String> getMetricSetName() {
+    public Output<String> metricSetName() {
         return this.metricSetName;
     }
 
     @Import(name="metricSource", required=true)
       private final Output<AnomalyDetectorMetricSourceArgs> metricSource;
 
-    public Output<AnomalyDetectorMetricSourceArgs> getMetricSource() {
+    public Output<AnomalyDetectorMetricSourceArgs> metricSource() {
         return this.metricSource;
     }
 
@@ -90,21 +90,21 @@ public final class AnomalyDetectorMetricSetArgs extends com.pulumi.resources.Res
     @Import(name="offset")
       private final @Nullable Output<Integer> offset;
 
-    public Output<Integer> getOffset() {
+    public Output<Integer> offset() {
         return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     @Import(name="timestampColumn")
       private final @Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn;
 
-    public Output<AnomalyDetectorTimestampColumnArgs> getTimestampColumn() {
+    public Output<AnomalyDetectorTimestampColumnArgs> timestampColumn() {
         return this.timestampColumn == null ? Codegen.empty() : this.timestampColumn;
     }
 
     @Import(name="timezone")
       private final @Nullable Output<String> timezone;
 
-    public Output<String> getTimezone() {
+    public Output<String> timezone() {
         return this.timezone == null ? Codegen.empty() : this.timezone;
     }
 

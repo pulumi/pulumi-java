@@ -35,7 +35,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The ARN of the ApplicationInsights application.
      * 
      */
-    public Output<String> getApplicationARN() {
+    public Output<String> applicationARN() {
         return this.applicationARN;
     }
     /**
@@ -49,7 +49,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return If set to true, application will be configured with recommended monitoring configuration.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoConfigurationEnabled() {
+    public Output</* @Nullable */ Boolean> autoConfigurationEnabled() {
         return this.autoConfigurationEnabled;
     }
     /**
@@ -63,7 +63,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Indicates whether Application Insights can listen to CloudWatch events for the application resources.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCWEMonitorEnabled() {
+    public Output</* @Nullable */ Boolean> cWEMonitorEnabled() {
         return this.cWEMonitorEnabled;
     }
     /**
@@ -77,7 +77,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The monitoring settings of the components.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationComponentMonitoringSetting>> getComponentMonitoringSettings() {
+    public Output</* @Nullable */ List<ApplicationComponentMonitoringSetting>> componentMonitoringSettings() {
         return this.componentMonitoringSettings;
     }
     /**
@@ -91,7 +91,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The custom grouped components.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationCustomComponent>> getCustomComponents() {
+    public Output</* @Nullable */ List<ApplicationCustomComponent>> customComponents() {
         return this.customComponents;
     }
     /**
@@ -105,7 +105,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The log pattern sets.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationLogPatternSet>> getLogPatternSets() {
+    public Output</* @Nullable */ List<ApplicationLogPatternSet>> logPatternSets() {
         return this.logPatternSets;
     }
     /**
@@ -119,7 +119,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return When set to true, creates opsItems for any problems detected on an application.
      * 
      */
-    public Output</* @Nullable */ Boolean> getOpsCenterEnabled() {
+    public Output</* @Nullable */ Boolean> opsCenterEnabled() {
         return this.opsCenterEnabled;
     }
     /**
@@ -133,7 +133,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The SNS topic provided to Application Insights that is associated to the created opsItem.
      * 
      */
-    public Output</* @Nullable */ String> getOpsItemSNSTopicArn() {
+    public Output</* @Nullable */ String> opsItemSNSTopicArn() {
         return this.opsItemSNSTopicArn;
     }
     /**
@@ -147,7 +147,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The name of the resource group.
      * 
      */
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
@@ -161,7 +161,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The tags of Application Insights application.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationTag>> getTags() {
+    public Output</* @Nullable */ List<ApplicationTag>> tags() {
         return this.tags;
     }
 

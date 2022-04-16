@@ -18,7 +18,7 @@ public final class ConfigTrackingConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="autotrack")
       private final @Nullable Output<ConfigTrackingConfigAutotrack> autotrack;
 
-    public Output<ConfigTrackingConfigAutotrack> getAutotrack() {
+    public Output<ConfigTrackingConfigAutotrack> autotrack() {
         return this.autotrack == null ? Codegen.empty() : this.autotrack;
     }
 

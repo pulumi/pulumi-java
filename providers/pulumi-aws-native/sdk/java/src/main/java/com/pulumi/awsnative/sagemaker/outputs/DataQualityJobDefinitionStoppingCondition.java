@@ -24,7 +24,7 @@ public final class DataQualityJobDefinitionStoppingCondition {
      * The maximum runtime allowed in seconds.
      * 
     */
-    public Integer getMaxRuntimeInSeconds() {
+    public Integer maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
 

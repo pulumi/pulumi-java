@@ -21,7 +21,7 @@ public final class CanaryS3Encryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionMode")
       private final @Nullable String encryptionMode;
 
-    public Optional<String> getEncryptionMode() {
+    public Optional<String> encryptionMode() {
         return this.encryptionMode == null ? Optional.empty() : Optional.ofNullable(this.encryptionMode);
     }
 
@@ -32,7 +32,7 @@ public final class CanaryS3Encryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable String kmsKeyArn;
 
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyArn);
     }
 

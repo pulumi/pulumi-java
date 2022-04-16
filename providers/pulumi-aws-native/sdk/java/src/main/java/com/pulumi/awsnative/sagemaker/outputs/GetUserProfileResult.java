@@ -35,14 +35,14 @@ public final class GetUserProfileResult {
      * The user profile Amazon Resource Name (ARN).
      * 
     */
-    public Optional<String> getUserProfileArn() {
+    public Optional<String> userProfileArn() {
         return Optional.ofNullable(this.userProfileArn);
     }
     /**
      * A collection of settings.
      * 
     */
-    public Optional<UserProfileUserSettings> getUserSettings() {
+    public Optional<UserProfileUserSettings> userSettings() {
         return Optional.ofNullable(this.userSettings);
     }
 

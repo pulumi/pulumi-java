@@ -27,7 +27,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorized")
       private final @Nullable Output<Boolean> authorized;
 
-    public Output<Boolean> getAuthorized() {
+    public Output<Boolean> authorized() {
         return this.authorized == null ? Codegen.empty() : this.authorized;
     }
 
@@ -38,7 +38,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="latencyMode")
       private final @Nullable Output<ChannelLatencyMode> latencyMode;
 
-    public Output<ChannelLatencyMode> getLatencyMode() {
+    public Output<ChannelLatencyMode> latencyMode() {
         return this.latencyMode == null ? Codegen.empty() : this.latencyMode;
     }
 
@@ -49,7 +49,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recordingConfigurationArn")
       private final @Nullable Output<String> recordingConfigurationArn;
 
-    public Output<String> getRecordingConfigurationArn() {
+    public Output<String> recordingConfigurationArn() {
         return this.recordingConfigurationArn == null ? Codegen.empty() : this.recordingConfigurationArn;
     }
 
@@ -71,7 +71,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Output<List<ChannelTagArgs>> getTags() {
+    public Output<List<ChannelTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -82,7 +82,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<ChannelType> type;
 
-    public Output<ChannelType> getType() {
+    public Output<ChannelType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -65,42 +65,42 @@ public final class GetFlowEntitlementResult {
      * A description of the entitlement.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The type of encryption that will be used on the output that is associated with this entitlement.
      * 
     */
-    public Optional<FlowEntitlementEncryption> getEncryption() {
+    public Optional<FlowEntitlementEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The ARN of the entitlement.
      * 
     */
-    public Optional<String> getEntitlementArn() {
+    public Optional<String> entitlementArn() {
         return Optional.ofNullable(this.entitlementArn);
     }
     /**
      *  An indication of whether the entitlement is enabled.
      * 
     */
-    public Optional<FlowEntitlementEntitlementStatus> getEntitlementStatus() {
+    public Optional<FlowEntitlementEntitlementStatus> entitlementStatus() {
         return Optional.ofNullable(this.entitlementStatus);
     }
     /**
      * The ARN of the flow.
      * 
     */
-    public Optional<String> getFlowArn() {
+    public Optional<String> flowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
      * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
      * 
     */
-    public List<String> getSubscribers() {
+    public List<String> subscribers() {
         return this.subscribers == null ? List.of() : this.subscribers;
     }
 

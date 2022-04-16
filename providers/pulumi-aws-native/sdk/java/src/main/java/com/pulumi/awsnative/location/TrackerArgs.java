@@ -20,42 +20,42 @@ public final class TrackerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="positionFiltering")
       private final @Nullable Output<TrackerPositionFiltering> positionFiltering;
 
-    public Output<TrackerPositionFiltering> getPositionFiltering() {
+    public Output<TrackerPositionFiltering> positionFiltering() {
         return this.positionFiltering == null ? Codegen.empty() : this.positionFiltering;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<TrackerPricingPlan> pricingPlan;
 
-    public Output<TrackerPricingPlan> getPricingPlan() {
+    public Output<TrackerPricingPlan> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     @Import(name="pricingPlanDataSource")
       private final @Nullable Output<String> pricingPlanDataSource;
 
-    public Output<String> getPricingPlanDataSource() {
+    public Output<String> pricingPlanDataSource() {
         return this.pricingPlanDataSource == null ? Codegen.empty() : this.pricingPlanDataSource;
     }
 
     @Import(name="trackerName")
       private final @Nullable Output<String> trackerName;
 
-    public Output<String> getTrackerName() {
+    public Output<String> trackerName() {
         return this.trackerName == null ? Codegen.empty() : this.trackerName;
     }
 

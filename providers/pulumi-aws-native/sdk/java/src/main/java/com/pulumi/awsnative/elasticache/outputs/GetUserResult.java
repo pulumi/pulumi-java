@@ -34,14 +34,14 @@ public final class GetUserResult {
      * The Amazon Resource Name (ARN) of the user account.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates the user status. Can be "active", "modifying" or "deleting".
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

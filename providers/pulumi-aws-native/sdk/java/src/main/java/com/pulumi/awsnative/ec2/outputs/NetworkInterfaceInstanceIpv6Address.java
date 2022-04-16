@@ -16,7 +16,7 @@ public final class NetworkInterfaceInstanceIpv6Address {
         this.ipv6Address = ipv6Address;
     }
 
-    public String getIpv6Address() {
+    public String ipv6Address() {
         return this.ipv6Address;
     }
 

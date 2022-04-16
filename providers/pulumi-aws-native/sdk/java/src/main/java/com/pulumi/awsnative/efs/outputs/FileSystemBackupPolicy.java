@@ -16,7 +16,7 @@ public final class FileSystemBackupPolicy {
         this.status = status;
     }
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

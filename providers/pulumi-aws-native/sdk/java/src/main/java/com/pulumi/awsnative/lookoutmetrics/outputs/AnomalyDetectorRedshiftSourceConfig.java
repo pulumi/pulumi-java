@@ -40,28 +40,28 @@ public final class AnomalyDetectorRedshiftSourceConfig {
         this.vpcConfiguration = vpcConfiguration;
     }
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
-    public String getDatabaseHost() {
+    public String databaseHost() {
         return this.databaseHost;
     }
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public Integer getDatabasePort() {
+    public Integer databasePort() {
         return this.databasePort;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getSecretManagerArn() {
+    public String secretManagerArn() {
         return this.secretManagerArn;
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
-    public AnomalyDetectorVpcConfiguration getVpcConfiguration() {
+    public AnomalyDetectorVpcConfiguration vpcConfiguration() {
         return this.vpcConfiguration;
     }
 

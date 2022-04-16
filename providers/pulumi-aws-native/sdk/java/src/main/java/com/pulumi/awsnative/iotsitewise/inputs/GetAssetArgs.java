@@ -19,7 +19,7 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assetId", required=true)
       private final String assetId;
 
-    public String getAssetId() {
+    public String assetId() {
         return this.assetId;
     }
 

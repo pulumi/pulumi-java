@@ -28,7 +28,7 @@ public final class ContainerPublicEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerPublicEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerPublicEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="healthCheckConfig")
       private final @Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig;
 
-    public Output<ContainerHealthCheckConfigArgs> getHealthCheckConfig() {
+    public Output<ContainerHealthCheckConfigArgs> healthCheckConfig() {
         return this.healthCheckConfig == null ? Codegen.empty() : this.healthCheckConfig;
     }
 

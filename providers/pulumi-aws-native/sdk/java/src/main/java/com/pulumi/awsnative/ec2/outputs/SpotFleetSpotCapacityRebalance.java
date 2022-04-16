@@ -23,10 +23,10 @@ public final class SpotFleetSpotCapacityRebalance {
         this.terminationDelay = terminationDelay;
     }
 
-    public Optional<SpotFleetSpotCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
+    public Optional<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy() {
         return Optional.ofNullable(this.replacementStrategy);
     }
-    public Optional<Integer> getTerminationDelay() {
+    public Optional<Integer> terminationDelay() {
         return Optional.ofNullable(this.terminationDelay);
     }
 

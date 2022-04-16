@@ -25,7 +25,7 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -47,7 +47,7 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
     @Import(name="iotThingName")
       private final @Nullable String iotThingName;
 
-    public Optional<String> getIotThingName() {
+    public Optional<String> iotThingName() {
         return this.iotThingName == null ? Optional.empty() : Optional.ofNullable(this.iotThingName);
     }
 

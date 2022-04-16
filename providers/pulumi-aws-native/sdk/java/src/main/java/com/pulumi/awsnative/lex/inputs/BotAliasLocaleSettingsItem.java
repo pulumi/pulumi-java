@@ -20,7 +20,7 @@ public final class BotAliasLocaleSettingsItem extends com.pulumi.resources.Invok
     @Import(name="botAliasLocaleSetting", required=true)
       private final BotAliasLocaleSettings botAliasLocaleSetting;
 
-    public BotAliasLocaleSettings getBotAliasLocaleSetting() {
+    public BotAliasLocaleSettings botAliasLocaleSetting() {
         return this.botAliasLocaleSetting;
     }
 
@@ -31,7 +31,7 @@ public final class BotAliasLocaleSettingsItem extends com.pulumi.resources.Invok
     @Import(name="localeId", required=true)
       private final String localeId;
 
-    public String getLocaleId() {
+    public String localeId() {
         return this.localeId;
     }
 

@@ -27,7 +27,7 @@ public final class ReplicationConfigurationReplicationRule extends com.pulumi.re
     @Import(name="destinations", required=true)
       private final List<ReplicationConfigurationReplicationDestination> destinations;
 
-    public List<ReplicationConfigurationReplicationDestination> getDestinations() {
+    public List<ReplicationConfigurationReplicationDestination> destinations() {
         return this.destinations;
     }
 
@@ -38,7 +38,7 @@ public final class ReplicationConfigurationReplicationRule extends com.pulumi.re
     @Import(name="repositoryFilters")
       private final @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
 
-    public List<ReplicationConfigurationRepositoryFilter> getRepositoryFilters() {
+    public List<ReplicationConfigurationRepositoryFilter> repositoryFilters() {
         return this.repositoryFilters == null ? List.of() : this.repositoryFilters;
     }
 

@@ -26,49 +26,49 @@ public final class ScheduledQueryTimestreamConfigurationArgs extends com.pulumi.
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="dimensionMappings", required=true)
       private final Output<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings;
 
-    public Output<List<ScheduledQueryDimensionMappingArgs>> getDimensionMappings() {
+    public Output<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings() {
         return this.dimensionMappings;
     }
 
     @Import(name="measureNameColumn")
       private final @Nullable Output<String> measureNameColumn;
 
-    public Output<String> getMeasureNameColumn() {
+    public Output<String> measureNameColumn() {
         return this.measureNameColumn == null ? Codegen.empty() : this.measureNameColumn;
     }
 
     @Import(name="mixedMeasureMappings")
       private final @Nullable Output<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings;
 
-    public Output<List<ScheduledQueryMixedMeasureMappingArgs>> getMixedMeasureMappings() {
+    public Output<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings() {
         return this.mixedMeasureMappings == null ? Codegen.empty() : this.mixedMeasureMappings;
     }
 
     @Import(name="multiMeasureMappings")
       private final @Nullable Output<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings;
 
-    public Output<ScheduledQueryMultiMeasureMappingsArgs> getMultiMeasureMappings() {
+    public Output<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings() {
         return this.multiMeasureMappings == null ? Codegen.empty() : this.multiMeasureMappings;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
     @Import(name="timeColumn", required=true)
       private final Output<String> timeColumn;
 
-    public Output<String> getTimeColumn() {
+    public Output<String> timeColumn() {
         return this.timeColumn;
     }
 

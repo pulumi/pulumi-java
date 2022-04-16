@@ -20,14 +20,14 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PackageTagArgs>> tags;
 
-    public Output<List<PackageTagArgs>> getTags() {
+    public Output<List<PackageTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

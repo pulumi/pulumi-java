@@ -24,14 +24,14 @@ public final class RecipeAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="operation", required=true)
       private final String operation;
 
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
 
     @Import(name="parameters")
       private final @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
 
-    public Either<RecipeParameters,RecipeParameterMap> getParameters() {
+    public Either<RecipeParameters,RecipeParameterMap> parameters() {
         return this.parameters == null ? null : this.parameters;
     }
 

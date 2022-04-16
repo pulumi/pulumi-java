@@ -19,14 +19,14 @@ public final class DomainConfigurationAuthorizerConfigArgs extends com.pulumi.re
     @Import(name="allowAuthorizerOverride")
       private final @Nullable Output<Boolean> allowAuthorizerOverride;
 
-    public Output<Boolean> getAllowAuthorizerOverride() {
+    public Output<Boolean> allowAuthorizerOverride() {
         return this.allowAuthorizerOverride == null ? Codegen.empty() : this.allowAuthorizerOverride;
     }
 
     @Import(name="defaultAuthorizerName")
       private final @Nullable Output<String> defaultAuthorizerName;
 
-    public Output<String> getDefaultAuthorizerName() {
+    public Output<String> defaultAuthorizerName() {
         return this.defaultAuthorizerName == null ? Codegen.empty() : this.defaultAuthorizerName;
     }
 

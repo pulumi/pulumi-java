@@ -16,7 +16,7 @@ public final class GetRegionResult {
         this.region = region;
     }
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

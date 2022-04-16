@@ -21,10 +21,10 @@ public final class RuleGroupCustomAction {
         this.actionName = actionName;
     }
 
-    public RuleGroupActionDefinition getActionDefinition() {
+    public RuleGroupActionDefinition actionDefinition() {
         return this.actionDefinition;
     }
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 

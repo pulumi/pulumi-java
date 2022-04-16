@@ -34,14 +34,14 @@ public final class StudioComponentScriptParameterKeyValue {
      * <p>A script parameter key.</p>
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * <p>A script parameter value.</p>
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

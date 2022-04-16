@@ -25,7 +25,7 @@ public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.R
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

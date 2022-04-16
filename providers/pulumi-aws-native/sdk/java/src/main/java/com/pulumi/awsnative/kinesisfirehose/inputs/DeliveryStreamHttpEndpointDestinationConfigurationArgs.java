@@ -25,63 +25,63 @@ public final class DeliveryStreamHttpEndpointDestinationConfigurationArgs extend
     @Import(name="bufferingHints")
       private final @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
-    public Output<DeliveryStreamBufferingHintsArgs> getBufferingHints() {
+    public Output<DeliveryStreamBufferingHintsArgs> bufferingHints() {
         return this.bufferingHints == null ? Codegen.empty() : this.bufferingHints;
     }
 
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
+    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="endpointConfiguration", required=true)
       private final Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<DeliveryStreamHttpEndpointConfigurationArgs> getEndpointConfiguration() {
+    public Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration() {
         return this.endpointConfiguration;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
+    public Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="requestConfiguration")
       private final @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration;
 
-    public Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> getRequestConfiguration() {
+    public Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration() {
         return this.requestConfiguration == null ? Codegen.empty() : this.requestConfiguration;
     }
 
     @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamRetryOptionsArgs> getRetryOptions() {
+    public Output<DeliveryStreamRetryOptionsArgs> retryOptions() {
         return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
     }
 
     @Import(name="roleARN")
       private final @Nullable Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN == null ? Codegen.empty() : this.roleARN;
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
-    public Output<String> getS3BackupMode() {
+    public Output<String> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
     @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 

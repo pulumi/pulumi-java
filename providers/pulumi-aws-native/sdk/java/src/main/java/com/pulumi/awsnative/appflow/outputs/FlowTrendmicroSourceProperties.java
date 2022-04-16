@@ -16,7 +16,7 @@ public final class FlowTrendmicroSourceProperties {
         this.object = object;
     }
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

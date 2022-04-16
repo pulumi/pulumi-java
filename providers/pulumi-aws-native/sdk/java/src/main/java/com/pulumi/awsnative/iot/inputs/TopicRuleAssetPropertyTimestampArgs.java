@@ -18,14 +18,14 @@ public final class TopicRuleAssetPropertyTimestampArgs extends com.pulumi.resour
     @Import(name="offsetInNanos")
       private final @Nullable Output<String> offsetInNanos;
 
-    public Output<String> getOffsetInNanos() {
+    public Output<String> offsetInNanos() {
         return this.offsetInNanos == null ? Codegen.empty() : this.offsetInNanos;
     }
 
     @Import(name="timeInSeconds", required=true)
       private final Output<String> timeInSeconds;
 
-    public Output<String> getTimeInSeconds() {
+    public Output<String> timeInSeconds() {
         return this.timeInSeconds;
     }
 

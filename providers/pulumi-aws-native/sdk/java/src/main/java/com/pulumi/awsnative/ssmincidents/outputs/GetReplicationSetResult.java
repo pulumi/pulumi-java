@@ -40,17 +40,17 @@ public final class GetReplicationSetResult {
      * The ARN of the ReplicationSet.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<Boolean> getDeletionProtected() {
+    public Optional<Boolean> deletionProtected() {
         return Optional.ofNullable(this.deletionProtected);
     }
     /**
      * The ReplicationSet configuration.
      * 
     */
-    public List<ReplicationSetReplicationRegion> getRegions() {
+    public List<ReplicationSetReplicationRegion> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 

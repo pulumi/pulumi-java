@@ -33,19 +33,19 @@ public final class GetFunctionResult {
         this.stage = stage;
     }
 
-    public Optional<String> getFunctionARN() {
+    public Optional<String> functionARN() {
         return Optional.ofNullable(this.functionARN);
     }
-    public Optional<FunctionConfig> getFunctionConfig() {
+    public Optional<FunctionConfig> functionConfig() {
         return Optional.ofNullable(this.functionConfig);
     }
-    public Optional<FunctionMetadata> getFunctionMetadata() {
+    public Optional<FunctionMetadata> functionMetadata() {
         return Optional.ofNullable(this.functionMetadata);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getStage() {
+    public Optional<String> stage() {
         return Optional.ofNullable(this.stage);
     }
 

@@ -37,7 +37,7 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return Dataset format
      * 
      */
-    public Output</* @Nullable */ DatasetFormat> getFormat() {
+    public Output</* @Nullable */ DatasetFormat> format() {
         return this.format;
     }
     /**
@@ -51,7 +51,7 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return Format options for dataset
      * 
      */
-    public Output</* @Nullable */ DatasetFormatOptions> getFormatOptions() {
+    public Output</* @Nullable */ DatasetFormatOptions> formatOptions() {
         return this.formatOptions;
     }
     /**
@@ -65,7 +65,7 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return Input
      * 
      */
-    public Output<DatasetInput> getInput() {
+    public Output<DatasetInput> input() {
         return this.input;
     }
     /**
@@ -79,7 +79,7 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return Dataset name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -93,13 +93,13 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return PathOptions
      * 
      */
-    public Output</* @Nullable */ DatasetPathOptions> getPathOptions() {
+    public Output</* @Nullable */ DatasetPathOptions> pathOptions() {
         return this.pathOptions;
     }
     @Export(name="tags", type=List.class, parameters={DatasetTag.class})
     private Output</* @Nullable */ List<DatasetTag>> tags;
 
-    public Output</* @Nullable */ List<DatasetTag>> getTags() {
+    public Output</* @Nullable */ List<DatasetTag>> tags() {
         return this.tags;
     }
 

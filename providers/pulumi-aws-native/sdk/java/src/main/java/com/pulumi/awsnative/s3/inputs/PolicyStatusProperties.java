@@ -23,7 +23,7 @@ public final class PolicyStatusProperties extends com.pulumi.resources.InvokeArg
     @Import(name="isPublic", required=true)
       private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 
-    public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic getIsPublic() {
+    public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic() {
         return this.isPublic;
     }
 

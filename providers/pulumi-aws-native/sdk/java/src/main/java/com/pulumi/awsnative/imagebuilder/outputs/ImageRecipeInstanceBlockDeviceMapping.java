@@ -49,28 +49,28 @@ public final class ImageRecipeInstanceBlockDeviceMapping {
      * The device to which these mappings apply.
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Use to manage Amazon EBS-specific configuration for this mapping.
      * 
     */
-    public Optional<ImageRecipeEbsInstanceBlockDeviceSpecification> getEbs() {
+    public Optional<ImageRecipeEbsInstanceBlockDeviceSpecification> ebs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Use to remove a mapping from the parent image.
      * 
     */
-    public Optional<String> getNoDevice() {
+    public Optional<String> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * Use to manage instance ephemeral devices.
      * 
     */
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

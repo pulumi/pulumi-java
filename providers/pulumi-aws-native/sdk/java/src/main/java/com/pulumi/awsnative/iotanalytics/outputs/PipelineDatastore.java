@@ -20,10 +20,10 @@ public final class PipelineDatastore {
         this.name = name;
     }
 
-    public String getDatastoreName() {
+    public String datastoreName() {
         return this.datastoreName;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

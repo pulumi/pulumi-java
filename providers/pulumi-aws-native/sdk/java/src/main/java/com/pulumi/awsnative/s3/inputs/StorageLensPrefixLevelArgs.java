@@ -21,7 +21,7 @@ public final class StorageLensPrefixLevelArgs extends com.pulumi.resources.Resou
     @Import(name="storageMetrics", required=true)
       private final Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
 
-    public Output<StorageLensPrefixLevelStorageMetricsArgs> getStorageMetrics() {
+    public Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics() {
         return this.storageMetrics;
     }
 

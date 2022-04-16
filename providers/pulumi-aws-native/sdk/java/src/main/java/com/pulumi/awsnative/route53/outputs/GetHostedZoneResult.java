@@ -49,7 +49,7 @@ public final class GetHostedZoneResult {
         this.vPCs = vPCs;
     }
 
-    public Optional<HostedZoneConfig> getHostedZoneConfig() {
+    public Optional<HostedZoneConfig> hostedZoneConfig() {
         return Optional.ofNullable(this.hostedZoneConfig);
     }
     /**
@@ -58,23 +58,23 @@ public final class GetHostedZoneResult {
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
      * 
     */
-    public List<HostedZoneTag> getHostedZoneTags() {
+    public List<HostedZoneTag> hostedZoneTags() {
         return this.hostedZoneTags == null ? List.of() : this.hostedZoneTags;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers == null ? List.of() : this.nameServers;
     }
-    public Optional<HostedZoneQueryLoggingConfig> getQueryLoggingConfig() {
+    public Optional<HostedZoneQueryLoggingConfig> queryLoggingConfig() {
         return Optional.ofNullable(this.queryLoggingConfig);
     }
     /**
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
      * 
     */
-    public List<HostedZoneVPC> getVPCs() {
+    public List<HostedZoneVPC> vPCs() {
         return this.vPCs == null ? List.of() : this.vPCs;
     }
 

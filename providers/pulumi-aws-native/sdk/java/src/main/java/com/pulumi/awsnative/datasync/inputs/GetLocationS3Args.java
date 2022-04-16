@@ -19,7 +19,7 @@ public final class GetLocationS3Args extends com.pulumi.resources.InvokeArgs {
     @Import(name="locationArn", required=true)
       private final String locationArn;
 
-    public String getLocationArn() {
+    public String locationArn() {
         return this.locationArn;
     }
 

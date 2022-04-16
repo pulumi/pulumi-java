@@ -31,10 +31,10 @@ public final class DataSourceErrorInfo {
      * <p>Error message.</p>
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<DataSourceErrorInfoType> getType() {
+    public Optional<DataSourceErrorInfoType> type() {
         return Optional.ofNullable(this.type);
     }
 

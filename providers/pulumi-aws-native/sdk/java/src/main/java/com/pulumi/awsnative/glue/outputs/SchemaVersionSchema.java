@@ -41,21 +41,21 @@ public final class SchemaVersionSchema {
      * Name of the registry to identify where the Schema is located.
      * 
     */
-    public Optional<String> getRegistryName() {
+    public Optional<String> registryName() {
         return Optional.ofNullable(this.registryName);
     }
     /**
      * Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
      * 
     */
-    public Optional<String> getSchemaArn() {
+    public Optional<String> schemaArn() {
         return Optional.ofNullable(this.schemaArn);
     }
     /**
      * Name of the schema. This parameter requires RegistryName to be provided.
      * 
     */
-    public Optional<String> getSchemaName() {
+    public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
 

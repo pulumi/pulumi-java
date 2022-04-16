@@ -15,14 +15,14 @@ public final class GetProfilePermissionArgs extends com.pulumi.resources.InvokeA
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 
     @Import(name="statementId", required=true)
       private final String statementId;
 
-    public String getStatementId() {
+    public String statementId() {
         return this.statementId;
     }
 

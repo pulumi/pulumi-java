@@ -16,7 +16,7 @@ public final class RecordingConfigurationS3DestinationConfiguration {
         this.bucketName = bucketName;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 

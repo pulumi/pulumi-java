@@ -42,28 +42,28 @@ public final class DataQualityJobDefinitionEndpointInput {
         this.s3InputMode = s3InputMode;
     }
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
     /**
      * Path to the filesystem where the endpoint data is available to the container.
      * 
     */
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
     /**
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
      * 
     */
-    public Optional<DataQualityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
+    public Optional<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
     /**
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
      * 
     */
-    public Optional<DataQualityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
+    public Optional<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }
 

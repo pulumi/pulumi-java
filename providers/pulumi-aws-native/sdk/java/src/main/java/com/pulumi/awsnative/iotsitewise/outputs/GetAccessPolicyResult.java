@@ -57,35 +57,35 @@ public final class GetAccessPolicyResult {
      * The ARN of the access policy.
      * 
     */
-    public Optional<String> getAccessPolicyArn() {
+    public Optional<String> accessPolicyArn() {
         return Optional.ofNullable(this.accessPolicyArn);
     }
     /**
      * The ID of the access policy.
      * 
     */
-    public Optional<String> getAccessPolicyId() {
+    public Optional<String> accessPolicyId() {
         return Optional.ofNullable(this.accessPolicyId);
     }
     /**
      * The identity for this access policy. Choose either a user or a group but not both.
      * 
     */
-    public Optional<AccessPolicyIdentity> getAccessPolicyIdentity() {
+    public Optional<AccessPolicyIdentity> accessPolicyIdentity() {
         return Optional.ofNullable(this.accessPolicyIdentity);
     }
     /**
      * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
     */
-    public Optional<String> getAccessPolicyPermission() {
+    public Optional<String> accessPolicyPermission() {
         return Optional.ofNullable(this.accessPolicyPermission);
     }
     /**
      * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
     */
-    public Optional<AccessPolicyResource> getAccessPolicyResource() {
+    public Optional<AccessPolicyResource> accessPolicyResource() {
         return Optional.ofNullable(this.accessPolicyResource);
     }
 

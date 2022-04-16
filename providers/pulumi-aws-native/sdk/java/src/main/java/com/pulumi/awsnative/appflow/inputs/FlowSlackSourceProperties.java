@@ -15,7 +15,7 @@ public final class FlowSlackSourceProperties extends com.pulumi.resources.Invoke
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

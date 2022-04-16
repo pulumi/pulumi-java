@@ -31,7 +31,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name for the created Registry.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +45,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return A description of the registry. If description is not provided, there will not be any default value for this.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return List of tags to tag the Registry
      * 
      */
-    public Output</* @Nullable */ List<RegistryTag>> getTags() {
+    public Output</* @Nullable */ List<RegistryTag>> tags() {
         return this.tags;
     }
 

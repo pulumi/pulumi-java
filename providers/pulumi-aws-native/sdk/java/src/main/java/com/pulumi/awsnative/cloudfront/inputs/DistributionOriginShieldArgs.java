@@ -19,14 +19,14 @@ public final class DistributionOriginShieldArgs extends com.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="originShieldRegion")
       private final @Nullable Output<String> originShieldRegion;
 
-    public Output<String> getOriginShieldRegion() {
+    public Output<String> originShieldRegion() {
         return this.originShieldRegion == null ? Codegen.empty() : this.originShieldRegion;
     }
 

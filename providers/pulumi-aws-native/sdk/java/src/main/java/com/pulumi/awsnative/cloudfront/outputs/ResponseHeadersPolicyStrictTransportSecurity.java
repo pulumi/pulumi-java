@@ -29,16 +29,16 @@ public final class ResponseHeadersPolicyStrictTransportSecurity {
         this.preload = preload;
     }
 
-    public Integer getAccessControlMaxAgeSec() {
+    public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
-    public Optional<Boolean> getIncludeSubdomains() {
+    public Optional<Boolean> includeSubdomains() {
         return Optional.ofNullable(this.includeSubdomains);
     }
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
-    public Optional<Boolean> getPreload() {
+    public Optional<Boolean> preload() {
         return Optional.ofNullable(this.preload);
     }
 

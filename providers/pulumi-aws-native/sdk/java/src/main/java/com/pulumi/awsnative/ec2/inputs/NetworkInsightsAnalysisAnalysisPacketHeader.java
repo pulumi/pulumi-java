@@ -19,35 +19,35 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader extends com.pulum
     @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
     @Import(name="destinationPortRanges")
       private final @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges;
 
-    public List<NetworkInsightsAnalysisPortRange> getDestinationPortRanges() {
+    public List<NetworkInsightsAnalysisPortRange> destinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
 
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
     @Import(name="sourcePortRanges")
       private final @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
 
-    public List<NetworkInsightsAnalysisPortRange> getSourcePortRanges() {
+    public List<NetworkInsightsAnalysisPortRange> sourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
 

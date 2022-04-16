@@ -25,13 +25,13 @@ public final class RuleGroupIPSetForwardedIPConfiguration {
         this.position = position;
     }
 
-    public RuleGroupIPSetForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
+    public RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
-    public RuleGroupIPSetForwardedIPConfigurationPosition getPosition() {
+    public RuleGroupIPSetForwardedIPConfigurationPosition position() {
         return this.position;
     }
 

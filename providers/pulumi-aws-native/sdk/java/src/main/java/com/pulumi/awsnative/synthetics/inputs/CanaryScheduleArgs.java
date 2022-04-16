@@ -18,14 +18,14 @@ public final class CanaryScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="durationInSeconds")
       private final @Nullable Output<String> durationInSeconds;
 
-    public Output<String> getDurationInSeconds() {
+    public Output<String> durationInSeconds() {
         return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
     }
 
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 

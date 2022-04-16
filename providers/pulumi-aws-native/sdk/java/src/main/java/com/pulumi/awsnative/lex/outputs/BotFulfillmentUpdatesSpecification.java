@@ -43,20 +43,20 @@ public final class BotFulfillmentUpdatesSpecification {
      * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
      * 
     */
-    public Boolean getActive() {
+    public Boolean active() {
         return this.active;
     }
-    public Optional<BotFulfillmentStartResponseSpecification> getStartResponse() {
+    public Optional<BotFulfillmentStartResponseSpecification> startResponse() {
         return Optional.ofNullable(this.startResponse);
     }
     /**
      * The length of time that the fulfillment Lambda function should run before it times out.
      * 
     */
-    public Optional<Integer> getTimeoutInSeconds() {
+    public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
-    public Optional<BotFulfillmentUpdateResponseSpecification> getUpdateResponse() {
+    public Optional<BotFulfillmentUpdateResponseSpecification> updateResponse() {
         return Optional.ofNullable(this.updateResponse);
     }
 

@@ -19,7 +19,7 @@ public final class GetCompositeAlarmArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="alarmName", required=true)
       private final String alarmName;
 
-    public String getAlarmName() {
+    public String alarmName() {
         return this.alarmName;
     }
 

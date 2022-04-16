@@ -15,7 +15,7 @@ public final class GetInAppTemplateArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="templateName", required=true)
       private final String templateName;
 
-    public String getTemplateName() {
+    public String templateName() {
         return this.templateName;
     }
 

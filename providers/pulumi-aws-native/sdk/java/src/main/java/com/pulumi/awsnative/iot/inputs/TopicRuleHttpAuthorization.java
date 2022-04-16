@@ -17,7 +17,7 @@ public final class TopicRuleHttpAuthorization extends com.pulumi.resources.Invok
     @Import(name="sigv4")
       private final @Nullable TopicRuleSigV4Authorization sigv4;
 
-    public Optional<TopicRuleSigV4Authorization> getSigv4() {
+    public Optional<TopicRuleSigV4Authorization> sigv4() {
         return this.sigv4 == null ? Optional.empty() : Optional.ofNullable(this.sigv4);
     }
 

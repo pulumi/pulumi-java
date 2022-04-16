@@ -27,7 +27,7 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="hostedZoneArn")
       private final @Nullable Output<String> hostedZoneArn;
 
-    public Output<String> getHostedZoneArn() {
+    public Output<String> hostedZoneArn() {
         return this.hostedZoneArn == null ? Codegen.empty() : this.hostedZoneArn;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="recordSetId")
       private final @Nullable Output<String> recordSetId;
 
-    public Output<String> getRecordSetId() {
+    public Output<String> recordSetId() {
         return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
     }
 
@@ -60,14 +60,14 @@ public final class ResourceSetDNSTargetResourceArgs extends com.pulumi.resources
     @Import(name="recordType")
       private final @Nullable Output<String> recordType;
 
-    public Output<String> getRecordType() {
+    public Output<String> recordType() {
         return this.recordType == null ? Codegen.empty() : this.recordType;
     }
 
     @Import(name="targetResource")
       private final @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
 
-    public Output<ResourceSetTargetResourceArgs> getTargetResource() {
+    public Output<ResourceSetTargetResourceArgs> targetResource() {
         return this.targetResource == null ? Codegen.empty() : this.targetResource;
     }
 

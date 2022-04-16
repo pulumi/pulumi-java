@@ -18,14 +18,14 @@ public final class IndexUserTokenConfiguration extends com.pulumi.resources.Invo
     @Import(name="jsonTokenTypeConfiguration")
       private final @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration;
 
-    public Optional<IndexJsonTokenTypeConfiguration> getJsonTokenTypeConfiguration() {
+    public Optional<IndexJsonTokenTypeConfiguration> jsonTokenTypeConfiguration() {
         return this.jsonTokenTypeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.jsonTokenTypeConfiguration);
     }
 
     @Import(name="jwtTokenTypeConfiguration")
       private final @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration;
 
-    public Optional<IndexJwtTokenTypeConfiguration> getJwtTokenTypeConfiguration() {
+    public Optional<IndexJwtTokenTypeConfiguration> jwtTokenTypeConfiguration() {
         return this.jwtTokenTypeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.jwtTokenTypeConfiguration);
     }
 

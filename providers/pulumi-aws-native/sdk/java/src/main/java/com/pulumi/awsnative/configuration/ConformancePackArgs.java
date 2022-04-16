@@ -24,7 +24,7 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="conformancePackInputParameters")
       private final @Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
 
-    public Output<List<ConformancePackInputParameterArgs>> getConformancePackInputParameters() {
+    public Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? Codegen.empty() : this.conformancePackInputParameters;
     }
 
@@ -35,7 +35,7 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="conformancePackName")
       private final @Nullable Output<String> conformancePackName;
 
-    public Output<String> getConformancePackName() {
+    public Output<String> conformancePackName() {
         return this.conformancePackName == null ? Codegen.empty() : this.conformancePackName;
     }
 
@@ -46,7 +46,7 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
 
-    public Output<String> getDeliveryS3Bucket() {
+    public Output<String> deliveryS3Bucket() {
         return this.deliveryS3Bucket == null ? Codegen.empty() : this.deliveryS3Bucket;
     }
 
@@ -57,7 +57,7 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
 
-    public Output<String> getDeliveryS3KeyPrefix() {
+    public Output<String> deliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix == null ? Codegen.empty() : this.deliveryS3KeyPrefix;
     }
 
@@ -68,7 +68,7 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
@@ -79,7 +79,7 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;
 
-    public Output<String> getTemplateS3Uri() {
+    public Output<String> templateS3Uri() {
         return this.templateS3Uri == null ? Codegen.empty() : this.templateS3Uri;
     }
 

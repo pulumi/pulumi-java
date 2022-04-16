@@ -23,37 +23,37 @@ public class Certificate extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="cACertificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> cACertificatePem;
 
-    public Output</* @Nullable */ String> getCACertificatePem() {
+    public Output</* @Nullable */ String> cACertificatePem() {
         return this.cACertificatePem;
     }
     @Export(name="certificateMode", type=CertificateMode.class, parameters={})
     private Output</* @Nullable */ CertificateMode> certificateMode;
 
-    public Output</* @Nullable */ CertificateMode> getCertificateMode() {
+    public Output</* @Nullable */ CertificateMode> certificateMode() {
         return this.certificateMode;
     }
     @Export(name="certificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificatePem;
 
-    public Output</* @Nullable */ String> getCertificatePem() {
+    public Output</* @Nullable */ String> certificatePem() {
         return this.certificatePem;
     }
     @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateSigningRequest;
 
-    public Output</* @Nullable */ String> getCertificateSigningRequest() {
+    public Output</* @Nullable */ String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     @Export(name="status", type=CertificateStatus.class, parameters={})
     private Output<CertificateStatus> status;
 
-    public Output<CertificateStatus> getStatus() {
+    public Output<CertificateStatus> status() {
         return this.status;
     }
 

@@ -58,35 +58,35 @@ public final class GetDomainResult {
      * The ARN of the domain.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The name of the domain. This field is used for GetAtt
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The 12-digit account ID of the AWS account that owns the domain. This field is used for GetAtt
      * 
     */
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * The access control resource policy on the provided domain.
      * 
     */
-    public Optional<Object> getPermissionsPolicyDocument() {
+    public Optional<Object> permissionsPolicyDocument() {
         return Optional.ofNullable(this.permissionsPolicyDocument);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<DomainTag> getTags() {
+    public List<DomainTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

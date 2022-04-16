@@ -23,10 +23,10 @@ public final class AssessmentReportsDestination {
         this.destinationType = destinationType;
     }
 
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
-    public Optional<AssessmentReportDestinationType> getDestinationType() {
+    public Optional<AssessmentReportDestinationType> destinationType() {
         return Optional.ofNullable(this.destinationType);
     }
 

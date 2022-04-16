@@ -26,16 +26,16 @@ public final class TopicRuleCloudwatchAlarmAction {
         this.stateValue = stateValue;
     }
 
-    public String getAlarmName() {
+    public String alarmName() {
         return this.alarmName;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getStateReason() {
+    public String stateReason() {
         return this.stateReason;
     }
-    public String getStateValue() {
+    public String stateValue() {
         return this.stateValue;
     }
 

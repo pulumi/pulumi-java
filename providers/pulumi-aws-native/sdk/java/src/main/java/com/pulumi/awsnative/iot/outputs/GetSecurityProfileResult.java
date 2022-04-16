@@ -74,49 +74,49 @@ public final class GetSecurityProfileResult {
      * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
      * 
     */
-    public List<SecurityProfileMetricToRetain> getAdditionalMetricsToRetainV2() {
+    public List<SecurityProfileMetricToRetain> additionalMetricsToRetainV2() {
         return this.additionalMetricsToRetainV2 == null ? List.of() : this.additionalMetricsToRetainV2;
     }
     /**
      * Specifies the destinations to which alerts are sent.
      * 
     */
-    public Optional<Object> getAlertTargets() {
+    public Optional<Object> alertTargets() {
         return Optional.ofNullable(this.alertTargets);
     }
     /**
      * Specifies the behaviors that, when violated by a device (thing), cause an alert.
      * 
     */
-    public List<SecurityProfileBehavior> getBehaviors() {
+    public List<SecurityProfileBehavior> behaviors() {
         return this.behaviors == null ? List.of() : this.behaviors;
     }
     /**
      * The ARN (Amazon resource name) of the created security profile.
      * 
     */
-    public Optional<String> getSecurityProfileArn() {
+    public Optional<String> securityProfileArn() {
         return Optional.ofNullable(this.securityProfileArn);
     }
     /**
      * A description of the security profile.
      * 
     */
-    public Optional<String> getSecurityProfileDescription() {
+    public Optional<String> securityProfileDescription() {
         return Optional.ofNullable(this.securityProfileDescription);
     }
     /**
      * Metadata that can be used to manage the security profile.
      * 
     */
-    public List<SecurityProfileTag> getTags() {
+    public List<SecurityProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A set of target ARNs that the security profile is attached to.
      * 
     */
-    public List<String> getTargetArns() {
+    public List<String> targetArns() {
         return this.targetArns == null ? List.of() : this.targetArns;
     }
 

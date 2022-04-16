@@ -42,7 +42,7 @@ public final class SafetyRuleGatingRule {
      * The gating controls for the gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
      * 
     */
-    public List<String> getGatingControls() {
+    public List<String> gatingControls() {
         return this.gatingControls;
     }
     /**
@@ -50,14 +50,14 @@ public final class SafetyRuleGatingRule {
      * In other words, your ability to change the routing controls that you have specified as TargetControls is gated by the rule that you set for the routing controls in GatingControls.
      * 
     */
-    public List<String> getTargetControls() {
+    public List<String> targetControls() {
         return this.targetControls;
     }
     /**
      * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
      * 
     */
-    public Integer getWaitPeriodMs() {
+    public Integer waitPeriodMs() {
         return this.waitPeriodMs;
     }
 

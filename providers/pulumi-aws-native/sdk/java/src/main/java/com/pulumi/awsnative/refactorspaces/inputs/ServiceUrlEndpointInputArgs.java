@@ -18,14 +18,14 @@ public final class ServiceUrlEndpointInputArgs extends com.pulumi.resources.Reso
     @Import(name="healthUrl")
       private final @Nullable Output<String> healthUrl;
 
-    public Output<String> getHealthUrl() {
+    public Output<String> healthUrl() {
         return this.healthUrl == null ? Codegen.empty() : this.healthUrl;
     }
 
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

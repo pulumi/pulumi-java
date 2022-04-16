@@ -18,14 +18,14 @@ public final class OriginRequestPolicyHeadersConfig extends com.pulumi.resources
     @Import(name="headerBehavior", required=true)
       private final String headerBehavior;
 
-    public String getHeaderBehavior() {
+    public String headerBehavior() {
         return this.headerBehavior;
     }
 
     @Import(name="headers")
       private final @Nullable List<String> headers;
 
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 

@@ -18,7 +18,7 @@ public final class WebACLCaptchaConfig {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 
-    public Optional<WebACLImmunityTimeProperty> getImmunityTimeProperty() {
+    public Optional<WebACLImmunityTimeProperty> immunityTimeProperty() {
         return Optional.ofNullable(this.immunityTimeProperty);
     }
 

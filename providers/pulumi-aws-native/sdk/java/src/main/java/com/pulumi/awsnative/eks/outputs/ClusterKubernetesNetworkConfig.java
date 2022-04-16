@@ -42,21 +42,21 @@ public final class ClusterKubernetesNetworkConfig {
      * Ipv4 or Ipv6. You can only specify ipv6 for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on
      * 
     */
-    public Optional<ClusterKubernetesNetworkConfigIpFamily> getIpFamily() {
+    public Optional<ClusterKubernetesNetworkConfigIpFamily> ipFamily() {
         return Optional.ofNullable(this.ipFamily);
     }
     /**
      * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
      * 
     */
-    public Optional<String> getServiceIpv4Cidr() {
+    public Optional<String> serviceIpv4Cidr() {
         return Optional.ofNullable(this.serviceIpv4Cidr);
     }
     /**
      * The CIDR block to assign Kubernetes service IP addresses from.
      * 
     */
-    public Optional<String> getServiceIpv6Cidr() {
+    public Optional<String> serviceIpv6Cidr() {
         return Optional.ofNullable(this.serviceIpv6Cidr);
     }
 

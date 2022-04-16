@@ -19,7 +19,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userArn", required=true)
       private final String userArn;
 
-    public String getUserArn() {
+    public String userArn() {
         return this.userArn;
     }
 

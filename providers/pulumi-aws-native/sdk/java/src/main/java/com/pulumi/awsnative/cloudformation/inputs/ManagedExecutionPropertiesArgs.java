@@ -22,7 +22,7 @@ public final class ManagedExecutionPropertiesArgs extends com.pulumi.resources.R
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 

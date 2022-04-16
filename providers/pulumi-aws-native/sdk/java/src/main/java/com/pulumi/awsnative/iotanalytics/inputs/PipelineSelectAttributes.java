@@ -18,21 +18,21 @@ public final class PipelineSelectAttributes extends com.pulumi.resources.InvokeA
     @Import(name="attributes", required=true)
       private final List<String> attributes;
 
-    public List<String> getAttributes() {
+    public List<String> attributes() {
         return this.attributes;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable String next;
 
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 

@@ -23,10 +23,10 @@ public final class WebACLIPSetReferenceStatement {
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public Optional<WebACLIPSetForwardedIPConfiguration> getIPSetForwardedIPConfig() {
+    public Optional<WebACLIPSetForwardedIPConfiguration> iPSetForwardedIPConfig() {
         return Optional.ofNullable(this.iPSetForwardedIPConfig);
     }
 

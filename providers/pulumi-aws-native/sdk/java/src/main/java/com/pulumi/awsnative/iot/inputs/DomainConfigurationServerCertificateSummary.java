@@ -18,21 +18,21 @@ public final class DomainConfigurationServerCertificateSummary extends com.pulum
     @Import(name="serverCertificateArn")
       private final @Nullable String serverCertificateArn;
 
-    public Optional<String> getServerCertificateArn() {
+    public Optional<String> serverCertificateArn() {
         return this.serverCertificateArn == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateArn);
     }
 
     @Import(name="serverCertificateStatus")
       private final @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
 
-    public Optional<DomainConfigurationServerCertificateSummaryServerCertificateStatus> getServerCertificateStatus() {
+    public Optional<DomainConfigurationServerCertificateSummaryServerCertificateStatus> serverCertificateStatus() {
         return this.serverCertificateStatus == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateStatus);
     }
 
     @Import(name="serverCertificateStatusDetail")
       private final @Nullable String serverCertificateStatusDetail;
 
-    public Optional<String> getServerCertificateStatusDetail() {
+    public Optional<String> serverCertificateStatusDetail() {
         return this.serverCertificateStatusDetail == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateStatusDetail);
     }
 

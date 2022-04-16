@@ -19,7 +19,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="taskArn", required=true)
       private final String taskArn;
 
-    public String getTaskArn() {
+    public String taskArn() {
         return this.taskArn;
     }
 

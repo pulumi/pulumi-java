@@ -20,10 +20,10 @@ public final class RuleGroupPortRange {
         this.toPort = toPort;
     }
 
-    public Integer getFromPort() {
+    public Integer fromPort() {
         return this.fromPort;
     }
-    public Integer getToPort() {
+    public Integer toPort() {
         return this.toPort;
     }
 

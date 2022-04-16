@@ -18,42 +18,42 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule extends com.
     @Import(name="cidr")
       private final @Nullable String cidr;
 
-    public Optional<String> getCidr() {
+    public Optional<String> cidr() {
         return this.cidr == null ? Optional.empty() : Optional.ofNullable(this.cidr);
     }
 
     @Import(name="direction")
       private final @Nullable String direction;
 
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
     }
 
     @Import(name="portRange")
       private final @Nullable NetworkInsightsAnalysisPortRange portRange;
 
-    public Optional<NetworkInsightsAnalysisPortRange> getPortRange() {
+    public Optional<NetworkInsightsAnalysisPortRange> portRange() {
         return this.portRange == null ? Optional.empty() : Optional.ofNullable(this.portRange);
     }
 
     @Import(name="prefixListId")
       private final @Nullable String prefixListId;
 
-    public Optional<String> getPrefixListId() {
+    public Optional<String> prefixListId() {
         return this.prefixListId == null ? Optional.empty() : Optional.ofNullable(this.prefixListId);
     }
 
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
     @Import(name="securityGroupId")
       private final @Nullable String securityGroupId;
 
-    public Optional<String> getSecurityGroupId() {
+    public Optional<String> securityGroupId() {
         return this.securityGroupId == null ? Optional.empty() : Optional.ofNullable(this.securityGroupId);
     }
 

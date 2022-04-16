@@ -19,14 +19,14 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration extends com.pu
     @Import(name="commonAttributes")
       private final @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
 
-    public List<DeliveryStreamHttpEndpointCommonAttribute> getCommonAttributes() {
+    public List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes() {
         return this.commonAttributes == null ? List.of() : this.commonAttributes;
     }
 
     @Import(name="contentEncoding")
       private final @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
 
-    public Optional<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {
+    public Optional<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding() {
         return this.contentEncoding == null ? Optional.empty() : Optional.ofNullable(this.contentEncoding);
     }
 

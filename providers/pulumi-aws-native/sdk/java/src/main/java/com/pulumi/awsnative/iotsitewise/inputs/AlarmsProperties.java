@@ -25,7 +25,7 @@ public final class AlarmsProperties extends com.pulumi.resources.InvokeArgs {
     @Import(name="alarmRoleArn")
       private final @Nullable String alarmRoleArn;
 
-    public Optional<String> getAlarmRoleArn() {
+    public Optional<String> alarmRoleArn() {
         return this.alarmRoleArn == null ? Optional.empty() : Optional.ofNullable(this.alarmRoleArn);
     }
 
@@ -36,7 +36,7 @@ public final class AlarmsProperties extends com.pulumi.resources.InvokeArgs {
     @Import(name="notificationLambdaArn")
       private final @Nullable String notificationLambdaArn;
 
-    public Optional<String> getNotificationLambdaArn() {
+    public Optional<String> notificationLambdaArn() {
         return this.notificationLambdaArn == null ? Optional.empty() : Optional.ofNullable(this.notificationLambdaArn);
     }
 

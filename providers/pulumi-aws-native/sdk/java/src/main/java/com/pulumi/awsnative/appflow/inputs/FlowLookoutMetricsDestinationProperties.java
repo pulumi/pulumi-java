@@ -17,7 +17,7 @@ public final class FlowLookoutMetricsDestinationProperties extends com.pulumi.re
     @Import(name="object")
       private final @Nullable String object;
 
-    public Optional<String> getObject() {
+    public Optional<String> object() {
         return this.object == null ? Optional.empty() : Optional.ofNullable(this.object);
     }
 

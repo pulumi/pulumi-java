@@ -27,7 +27,7 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
     @Export(name="assertionRule", type=SafetyRuleAssertionRule.class, parameters={})
     private Output</* @Nullable */ SafetyRuleAssertionRule> assertionRule;
 
-    public Output</* @Nullable */ SafetyRuleAssertionRule> getAssertionRule() {
+    public Output</* @Nullable */ SafetyRuleAssertionRule> assertionRule() {
         return this.assertionRule;
     }
     /**
@@ -41,25 +41,25 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    public Output</* @Nullable */ String> getControlPanelArn() {
+    public Output</* @Nullable */ String> controlPanelArn() {
         return this.controlPanelArn;
     }
     @Export(name="gatingRule", type=SafetyRuleGatingRule.class, parameters={})
     private Output</* @Nullable */ SafetyRuleGatingRule> gatingRule;
 
-    public Output</* @Nullable */ SafetyRuleGatingRule> getGatingRule() {
+    public Output</* @Nullable */ SafetyRuleGatingRule> gatingRule() {
         return this.gatingRule;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="ruleConfig", type=SafetyRuleRuleConfig.class, parameters={})
     private Output</* @Nullable */ SafetyRuleRuleConfig> ruleConfig;
 
-    public Output</* @Nullable */ SafetyRuleRuleConfig> getRuleConfig() {
+    public Output</* @Nullable */ SafetyRuleRuleConfig> ruleConfig() {
         return this.ruleConfig;
     }
     /**
@@ -73,7 +73,7 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the safety rule.
      * 
      */
-    public Output<String> getSafetyRuleArn() {
+    public Output<String> safetyRuleArn() {
         return this.safetyRuleArn;
     }
     /**
@@ -87,7 +87,7 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    public Output<SafetyRuleStatus> getStatus() {
+    public Output<SafetyRuleStatus> status() {
         return this.status;
     }
     /**
@@ -101,7 +101,7 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<SafetyRuleTag>> getTags() {
+    public Output</* @Nullable */ List<SafetyRuleTag>> tags() {
         return this.tags;
     }
 

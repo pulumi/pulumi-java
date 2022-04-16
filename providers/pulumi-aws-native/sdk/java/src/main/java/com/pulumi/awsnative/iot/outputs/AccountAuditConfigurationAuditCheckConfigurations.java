@@ -58,46 +58,46 @@ public final class AccountAuditConfigurationAuditCheckConfigurations {
         this.unauthenticatedCognitoRoleOverlyPermissiveCheck = unauthenticatedCognitoRoleOverlyPermissiveCheck;
     }
 
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getAuthenticatedCognitoRoleOverlyPermissiveCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> authenticatedCognitoRoleOverlyPermissiveCheck() {
         return Optional.ofNullable(this.authenticatedCognitoRoleOverlyPermissiveCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getCaCertificateExpiringCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> caCertificateExpiringCheck() {
         return Optional.ofNullable(this.caCertificateExpiringCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getCaCertificateKeyQualityCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> caCertificateKeyQualityCheck() {
         return Optional.ofNullable(this.caCertificateKeyQualityCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getConflictingClientIdsCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> conflictingClientIdsCheck() {
         return Optional.ofNullable(this.conflictingClientIdsCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getDeviceCertificateExpiringCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> deviceCertificateExpiringCheck() {
         return Optional.ofNullable(this.deviceCertificateExpiringCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getDeviceCertificateKeyQualityCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> deviceCertificateKeyQualityCheck() {
         return Optional.ofNullable(this.deviceCertificateKeyQualityCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getDeviceCertificateSharedCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> deviceCertificateSharedCheck() {
         return Optional.ofNullable(this.deviceCertificateSharedCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getIotPolicyOverlyPermissiveCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> iotPolicyOverlyPermissiveCheck() {
         return Optional.ofNullable(this.iotPolicyOverlyPermissiveCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getIotRoleAliasAllowsAccessToUnusedServicesCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> iotRoleAliasAllowsAccessToUnusedServicesCheck() {
         return Optional.ofNullable(this.iotRoleAliasAllowsAccessToUnusedServicesCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getIotRoleAliasOverlyPermissiveCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> iotRoleAliasOverlyPermissiveCheck() {
         return Optional.ofNullable(this.iotRoleAliasOverlyPermissiveCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getLoggingDisabledCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> loggingDisabledCheck() {
         return Optional.ofNullable(this.loggingDisabledCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getRevokedCaCertificateStillActiveCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> revokedCaCertificateStillActiveCheck() {
         return Optional.ofNullable(this.revokedCaCertificateStillActiveCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getRevokedDeviceCertificateStillActiveCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> revokedDeviceCertificateStillActiveCheck() {
         return Optional.ofNullable(this.revokedDeviceCertificateStillActiveCheck);
     }
-    public Optional<AccountAuditConfigurationAuditCheckConfiguration> getUnauthenticatedCognitoRoleOverlyPermissiveCheck() {
+    public Optional<AccountAuditConfigurationAuditCheckConfiguration> unauthenticatedCognitoRoleOverlyPermissiveCheck() {
         return Optional.ofNullable(this.unauthenticatedCognitoRoleOverlyPermissiveCheck);
     }
 

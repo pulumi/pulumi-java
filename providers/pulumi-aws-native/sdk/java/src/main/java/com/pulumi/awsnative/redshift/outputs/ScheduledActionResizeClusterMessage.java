@@ -33,19 +33,19 @@ public final class ScheduledActionResizeClusterMessage {
         this.numberOfNodes = numberOfNodes;
     }
 
-    public Optional<Boolean> getClassic() {
+    public Optional<Boolean> classic() {
         return Optional.ofNullable(this.classic);
     }
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
-    public Optional<String> getClusterType() {
+    public Optional<String> clusterType() {
         return Optional.ofNullable(this.clusterType);
     }
-    public Optional<String> getNodeType() {
+    public Optional<String> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
-    public Optional<Integer> getNumberOfNodes() {
+    public Optional<Integer> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
 

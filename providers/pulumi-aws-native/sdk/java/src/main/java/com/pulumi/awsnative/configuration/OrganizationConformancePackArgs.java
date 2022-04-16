@@ -24,7 +24,7 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="conformancePackInputParameters")
       private final @Nullable Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters;
 
-    public Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> getConformancePackInputParameters() {
+    public Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? Codegen.empty() : this.conformancePackInputParameters;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
 
-    public Output<String> getDeliveryS3Bucket() {
+    public Output<String> deliveryS3Bucket() {
         return this.deliveryS3Bucket == null ? Codegen.empty() : this.deliveryS3Bucket;
     }
 
@@ -46,7 +46,7 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
 
-    public Output<String> getDeliveryS3KeyPrefix() {
+    public Output<String> deliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix == null ? Codegen.empty() : this.deliveryS3KeyPrefix;
     }
 
@@ -57,7 +57,7 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
-    public Output<List<String>> getExcludedAccounts() {
+    public Output<List<String>> excludedAccounts() {
         return this.excludedAccounts == null ? Codegen.empty() : this.excludedAccounts;
     }
 
@@ -68,7 +68,7 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="organizationConformancePackName")
       private final @Nullable Output<String> organizationConformancePackName;
 
-    public Output<String> getOrganizationConformancePackName() {
+    public Output<String> organizationConformancePackName() {
         return this.organizationConformancePackName == null ? Codegen.empty() : this.organizationConformancePackName;
     }
 
@@ -79,7 +79,7 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
@@ -90,7 +90,7 @@ public final class OrganizationConformancePackArgs extends com.pulumi.resources.
     @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;
 
-    public Output<String> getTemplateS3Uri() {
+    public Output<String> templateS3Uri() {
         return this.templateS3Uri == null ? Codegen.empty() : this.templateS3Uri;
     }
 

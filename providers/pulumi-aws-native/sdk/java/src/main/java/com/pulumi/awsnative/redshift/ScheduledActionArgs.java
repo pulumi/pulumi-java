@@ -24,7 +24,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -35,7 +35,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -46,7 +46,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="iamRole")
       private final @Nullable Output<String> iamRole;
 
-    public Output<String> getIamRole() {
+    public Output<String> iamRole() {
         return this.iamRole == null ? Codegen.empty() : this.iamRole;
     }
 
@@ -57,7 +57,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -68,7 +68,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduledActionDescription")
       private final @Nullable Output<String> scheduledActionDescription;
 
-    public Output<String> getScheduledActionDescription() {
+    public Output<String> scheduledActionDescription() {
         return this.scheduledActionDescription == null ? Codegen.empty() : this.scheduledActionDescription;
     }
 
@@ -79,7 +79,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduledActionName")
       private final @Nullable Output<String> scheduledActionName;
 
-    public Output<String> getScheduledActionName() {
+    public Output<String> scheduledActionName() {
         return this.scheduledActionName == null ? Codegen.empty() : this.scheduledActionName;
     }
 
@@ -90,7 +90,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -101,7 +101,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetAction")
       private final @Nullable Output<ScheduledActionTypeArgs> targetAction;
 
-    public Output<ScheduledActionTypeArgs> getTargetAction() {
+    public Output<ScheduledActionTypeArgs> targetAction() {
         return this.targetAction == null ? Codegen.empty() : this.targetAction;
     }
 

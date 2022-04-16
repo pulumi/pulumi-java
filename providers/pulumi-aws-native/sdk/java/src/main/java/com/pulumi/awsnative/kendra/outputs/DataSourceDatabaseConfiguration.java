@@ -39,22 +39,22 @@ public final class DataSourceDatabaseConfiguration {
         this.vpcConfiguration = vpcConfiguration;
     }
 
-    public Optional<DataSourceAclConfiguration> getAclConfiguration() {
+    public Optional<DataSourceAclConfiguration> aclConfiguration() {
         return Optional.ofNullable(this.aclConfiguration);
     }
-    public DataSourceColumnConfiguration getColumnConfiguration() {
+    public DataSourceColumnConfiguration columnConfiguration() {
         return this.columnConfiguration;
     }
-    public DataSourceConnectionConfiguration getConnectionConfiguration() {
+    public DataSourceConnectionConfiguration connectionConfiguration() {
         return this.connectionConfiguration;
     }
-    public DataSourceDatabaseEngineType getDatabaseEngineType() {
+    public DataSourceDatabaseEngineType databaseEngineType() {
         return this.databaseEngineType;
     }
-    public Optional<DataSourceSqlConfiguration> getSqlConfiguration() {
+    public Optional<DataSourceSqlConfiguration> sqlConfiguration() {
         return Optional.ofNullable(this.sqlConfiguration);
     }
-    public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {
+    public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
 

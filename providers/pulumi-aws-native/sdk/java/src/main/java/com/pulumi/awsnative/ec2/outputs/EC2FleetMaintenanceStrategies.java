@@ -18,7 +18,7 @@ public final class EC2FleetMaintenanceStrategies {
         this.capacityRebalance = capacityRebalance;
     }
 
-    public Optional<EC2FleetCapacityRebalance> getCapacityRebalance() {
+    public Optional<EC2FleetCapacityRebalance> capacityRebalance() {
         return Optional.ofNullable(this.capacityRebalance);
     }
 

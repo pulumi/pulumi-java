@@ -21,7 +21,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     @Import(name="endpointInput", required=true)
       private final Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
 
-    public Output<ModelExplainabilityJobDefinitionEndpointInputArgs> getEndpointInput() {
+    public Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 

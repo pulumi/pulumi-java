@@ -22,28 +22,28 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiGatewayProxy")
       private final @Nullable Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
 
-    public Output<ApplicationApiGatewayProxyInputArgs> getApiGatewayProxy() {
+    public Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy() {
         return this.apiGatewayProxy == null ? Codegen.empty() : this.apiGatewayProxy;
     }
 
     @Import(name="environmentIdentifier")
       private final @Nullable Output<String> environmentIdentifier;
 
-    public Output<String> getEnvironmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier == null ? Codegen.empty() : this.environmentIdentifier;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="proxyType")
       private final @Nullable Output<ApplicationProxyType> proxyType;
 
-    public Output<ApplicationProxyType> getProxyType() {
+    public Output<ApplicationProxyType> proxyType() {
         return this.proxyType == null ? Codegen.empty() : this.proxyType;
     }
 
@@ -54,14 +54,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> getTags() {
+    public Output<List<ApplicationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

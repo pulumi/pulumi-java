@@ -23,37 +23,37 @@ public class VPCEConfiguration extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="serviceDnsName", type=String.class, parameters={})
     private Output<String> serviceDnsName;
 
-    public Output<String> getServiceDnsName() {
+    public Output<String> serviceDnsName() {
         return this.serviceDnsName;
     }
     @Export(name="tags", type=List.class, parameters={VPCEConfigurationTag.class})
     private Output</* @Nullable */ List<VPCEConfigurationTag>> tags;
 
-    public Output</* @Nullable */ List<VPCEConfigurationTag>> getTags() {
+    public Output</* @Nullable */ List<VPCEConfigurationTag>> tags() {
         return this.tags;
     }
     @Export(name="vpceConfigurationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpceConfigurationDescription;
 
-    public Output</* @Nullable */ String> getVpceConfigurationDescription() {
+    public Output</* @Nullable */ String> vpceConfigurationDescription() {
         return this.vpceConfigurationDescription;
     }
     @Export(name="vpceConfigurationName", type=String.class, parameters={})
     private Output<String> vpceConfigurationName;
 
-    public Output<String> getVpceConfigurationName() {
+    public Output<String> vpceConfigurationName() {
         return this.vpceConfigurationName;
     }
     @Export(name="vpceServiceName", type=String.class, parameters={})
     private Output<String> vpceServiceName;
 
-    public Output<String> getVpceServiceName() {
+    public Output<String> vpceServiceName() {
         return this.vpceServiceName;
     }
 

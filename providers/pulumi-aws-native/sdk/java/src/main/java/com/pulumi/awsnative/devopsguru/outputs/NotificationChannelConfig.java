@@ -18,7 +18,7 @@ public final class NotificationChannelConfig {
         this.sns = sns;
     }
 
-    public Optional<NotificationChannelSnsChannelConfig> getSns() {
+    public Optional<NotificationChannelSnsChannelConfig> sns() {
         return Optional.ofNullable(this.sns);
     }
 

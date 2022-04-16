@@ -18,14 +18,14 @@ public final class FileSystemLifecyclePolicyArgs extends com.pulumi.resources.Re
     @Import(name="transitionToIA")
       private final @Nullable Output<String> transitionToIA;
 
-    public Output<String> getTransitionToIA() {
+    public Output<String> transitionToIA() {
         return this.transitionToIA == null ? Codegen.empty() : this.transitionToIA;
     }
 
     @Import(name="transitionToPrimaryStorageClass")
       private final @Nullable Output<String> transitionToPrimaryStorageClass;
 
-    public Output<String> getTransitionToPrimaryStorageClass() {
+    public Output<String> transitionToPrimaryStorageClass() {
         return this.transitionToPrimaryStorageClass == null ? Codegen.empty() : this.transitionToPrimaryStorageClass;
     }
 

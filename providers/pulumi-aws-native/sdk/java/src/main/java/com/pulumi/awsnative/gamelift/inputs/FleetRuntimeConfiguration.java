@@ -31,7 +31,7 @@ public final class FleetRuntimeConfiguration extends com.pulumi.resources.Invoke
     @Import(name="gameSessionActivationTimeoutSeconds")
       private final @Nullable Integer gameSessionActivationTimeoutSeconds;
 
-    public Optional<Integer> getGameSessionActivationTimeoutSeconds() {
+    public Optional<Integer> gameSessionActivationTimeoutSeconds() {
         return this.gameSessionActivationTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
 
@@ -42,7 +42,7 @@ public final class FleetRuntimeConfiguration extends com.pulumi.resources.Invoke
     @Import(name="maxConcurrentGameSessionActivations")
       private final @Nullable Integer maxConcurrentGameSessionActivations;
 
-    public Optional<Integer> getMaxConcurrentGameSessionActivations() {
+    public Optional<Integer> maxConcurrentGameSessionActivations() {
         return this.maxConcurrentGameSessionActivations == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
 
@@ -53,7 +53,7 @@ public final class FleetRuntimeConfiguration extends com.pulumi.resources.Invoke
     @Import(name="serverProcesses")
       private final @Nullable List<FleetServerProcess> serverProcesses;
 
-    public List<FleetServerProcess> getServerProcesses() {
+    public List<FleetServerProcess> serverProcesses() {
         return this.serverProcesses == null ? List.of() : this.serverProcesses;
     }
 

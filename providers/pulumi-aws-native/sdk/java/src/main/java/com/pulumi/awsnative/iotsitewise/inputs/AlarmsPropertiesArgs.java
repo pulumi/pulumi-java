@@ -26,7 +26,7 @@ public final class AlarmsPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="alarmRoleArn")
       private final @Nullable Output<String> alarmRoleArn;
 
-    public Output<String> getAlarmRoleArn() {
+    public Output<String> alarmRoleArn() {
         return this.alarmRoleArn == null ? Codegen.empty() : this.alarmRoleArn;
     }
 
@@ -37,7 +37,7 @@ public final class AlarmsPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notificationLambdaArn")
       private final @Nullable Output<String> notificationLambdaArn;
 
-    public Output<String> getNotificationLambdaArn() {
+    public Output<String> notificationLambdaArn() {
         return this.notificationLambdaArn == null ? Codegen.empty() : this.notificationLambdaArn;
     }
 

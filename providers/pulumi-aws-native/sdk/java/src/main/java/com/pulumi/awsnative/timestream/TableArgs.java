@@ -26,7 +26,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -37,7 +37,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="magneticStoreWriteProperties")
       private final @Nullable Output<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties;
 
-    public Output<MagneticStoreWritePropertiesPropertiesArgs> getMagneticStoreWriteProperties() {
+    public Output<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties == null ? Codegen.empty() : this.magneticStoreWriteProperties;
     }
 
@@ -48,7 +48,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionProperties")
       private final @Nullable Output<RetentionPropertiesPropertiesArgs> retentionProperties;
 
-    public Output<RetentionPropertiesPropertiesArgs> getRetentionProperties() {
+    public Output<RetentionPropertiesPropertiesArgs> retentionProperties() {
         return this.retentionProperties == null ? Codegen.empty() : this.retentionProperties;
     }
 
@@ -59,7 +59,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
@@ -70,7 +70,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TableTagArgs>> tags;
 
-    public Output<List<TableTagArgs>> getTags() {
+    public Output<List<TableTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -22,7 +22,7 @@ public final class ResolverQueryLoggingConfigArgs extends com.pulumi.resources.R
     @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
     }
 
@@ -33,7 +33,7 @@ public final class ResolverQueryLoggingConfigArgs extends com.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

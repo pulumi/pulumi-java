@@ -17,7 +17,7 @@ public final class OriginRequestPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="originRequestPolicyConfig", required=true)
       private final Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
 
-    public Output<OriginRequestPolicyConfigArgs> getOriginRequestPolicyConfig() {
+    public Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig() {
         return this.originRequestPolicyConfig;
     }
 

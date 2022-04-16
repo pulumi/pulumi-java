@@ -29,7 +29,7 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
 
-    public Optional<BucketAbortIncompleteMultipartUpload> getAbortIncompleteMultipartUpload() {
+    public Optional<BucketAbortIncompleteMultipartUpload> abortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Optional.empty() : Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
 
@@ -40,7 +40,7 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationDate")
       private final @Nullable String expirationDate;
 
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
     }
 
@@ -51,7 +51,7 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationInDays")
       private final @Nullable Integer expirationInDays;
 
-    public Optional<Integer> getExpirationInDays() {
+    public Optional<Integer> expirationInDays() {
         return this.expirationInDays == null ? Optional.empty() : Optional.ofNullable(this.expirationInDays);
     }
 
@@ -62,7 +62,7 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="filter")
       private final @Nullable BucketRuleFilterProperties filter;
 
-    public Optional<BucketRuleFilterProperties> getFilter() {
+    public Optional<BucketRuleFilterProperties> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -73,14 +73,14 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @Import(name="status")
       private final @Nullable BucketRuleStatus status;
 
-    public Optional<BucketRuleStatus> getStatus() {
+    public Optional<BucketRuleStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

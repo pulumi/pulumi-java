@@ -32,7 +32,7 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Specifies the unique Amazon Resource Name (ARN) for the workflow.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return A textual description for the workflow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowStep>> getOnExceptionSteps() {
+    public Output</* @Nullable */ List<WorkflowStep>> onExceptionSteps() {
         return this.onExceptionSteps;
     }
     /**
@@ -74,7 +74,7 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Specifies the details for the steps that are in the specified workflow.
      * 
      */
-    public Output<List<WorkflowStep>> getSteps() {
+    public Output<List<WorkflowStep>> steps() {
         return this.steps;
     }
     /**
@@ -88,7 +88,7 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowTag>> getTags() {
+    public Output</* @Nullable */ List<WorkflowTag>> tags() {
         return this.tags;
     }
     /**
@@ -102,7 +102,7 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the workflow.
      * 
      */
-    public Output<String> getWorkflowId() {
+    public Output<String> workflowId() {
         return this.workflowId;
     }
 

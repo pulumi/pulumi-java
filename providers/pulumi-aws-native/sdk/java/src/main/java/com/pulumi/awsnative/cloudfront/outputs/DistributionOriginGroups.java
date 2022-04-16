@@ -23,10 +23,10 @@ public final class DistributionOriginGroups {
         this.quantity = quantity;
     }
 
-    public List<DistributionOriginGroup> getItems() {
+    public List<DistributionOriginGroup> items() {
         return this.items == null ? List.of() : this.items;
     }
-    public Integer getQuantity() {
+    public Integer quantity() {
         return this.quantity;
     }
 

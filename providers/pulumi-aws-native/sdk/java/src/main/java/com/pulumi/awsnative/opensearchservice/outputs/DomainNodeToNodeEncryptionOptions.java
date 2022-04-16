@@ -18,7 +18,7 @@ public final class DomainNodeToNodeEncryptionOptions {
         this.enabled = enabled;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

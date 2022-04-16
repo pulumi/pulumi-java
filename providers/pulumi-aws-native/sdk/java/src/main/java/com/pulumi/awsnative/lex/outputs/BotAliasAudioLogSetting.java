@@ -21,10 +21,10 @@ public final class BotAliasAudioLogSetting {
         this.enabled = enabled;
     }
 
-    public BotAliasAudioLogDestination getDestination() {
+    public BotAliasAudioLogDestination destination() {
         return this.destination;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

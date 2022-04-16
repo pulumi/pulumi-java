@@ -40,21 +40,21 @@ public final class DataSourceMySqlParameters {
      * <p>Database.</p>
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * <p>Host.</p>
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * <p>Port.</p>
      * 
     */
-    public Double getPort() {
+    public Double port() {
         return this.port;
     }
 

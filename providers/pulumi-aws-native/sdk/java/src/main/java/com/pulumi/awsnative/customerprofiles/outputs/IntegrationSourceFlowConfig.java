@@ -31,16 +31,16 @@ public final class IntegrationSourceFlowConfig {
         this.sourceConnectorProperties = sourceConnectorProperties;
     }
 
-    public Optional<String> getConnectorProfileName() {
+    public Optional<String> connectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
-    public IntegrationConnectorType getConnectorType() {
+    public IntegrationConnectorType connectorType() {
         return this.connectorType;
     }
-    public Optional<IntegrationIncrementalPullConfig> getIncrementalPullConfig() {
+    public Optional<IntegrationIncrementalPullConfig> incrementalPullConfig() {
         return Optional.ofNullable(this.incrementalPullConfig);
     }
-    public IntegrationSourceConnectorProperties getSourceConnectorProperties() {
+    public IntegrationSourceConnectorProperties sourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }
 

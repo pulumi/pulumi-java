@@ -24,7 +24,7 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<NetworkAclTagArgs>> tags;
 
-    public Output<List<NetworkAclTagArgs>> getTags() {
+    public Output<List<NetworkAclTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

@@ -18,14 +18,14 @@ public final class BackupPlanAdvancedBackupSettingResourceTypeArgs extends com.p
     @Import(name="backupOptions", required=true)
       private final Output<Object> backupOptions;
 
-    public Output<Object> getBackupOptions() {
+    public Output<Object> backupOptions() {
         return this.backupOptions;
     }
 
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 

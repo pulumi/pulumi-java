@@ -42,21 +42,21 @@ public final class GlobalReplicationGroupMember {
      * Regionally unique identifier for the member i.e. ReplicationGroupId.
      * 
     */
-    public Optional<String> getReplicationGroupId() {
+    public Optional<String> replicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
     /**
      * The AWS region of the Global Datastore member.
      * 
     */
-    public Optional<String> getReplicationGroupRegion() {
+    public Optional<String> replicationGroupRegion() {
         return Optional.ofNullable(this.replicationGroupRegion);
     }
     /**
      * Indicates the role of the member, primary or secondary.
      * 
     */
-    public Optional<GlobalReplicationGroupMemberRole> getRole() {
+    public Optional<GlobalReplicationGroupMemberRole> role() {
         return Optional.ofNullable(this.role);
     }
 

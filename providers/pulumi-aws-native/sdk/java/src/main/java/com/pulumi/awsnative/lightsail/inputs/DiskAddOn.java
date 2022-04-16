@@ -27,14 +27,14 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
     @Import(name="addOnType", required=true)
       private final String addOnType;
 
-    public String getAddOnType() {
+    public String addOnType() {
         return this.addOnType;
     }
 
     @Import(name="autoSnapshotAddOnRequest")
       private final @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest;
 
-    public Optional<DiskAutoSnapshotAddOn> getAutoSnapshotAddOnRequest() {
+    public Optional<DiskAutoSnapshotAddOn> autoSnapshotAddOnRequest() {
         return this.autoSnapshotAddOnRequest == null ? Optional.empty() : Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
 
@@ -45,7 +45,7 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable DiskAddOnStatus status;
 
-    public Optional<DiskAddOnStatus> getStatus() {
+    public Optional<DiskAddOnStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

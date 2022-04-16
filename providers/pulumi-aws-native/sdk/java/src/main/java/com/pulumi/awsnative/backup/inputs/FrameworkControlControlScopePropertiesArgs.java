@@ -28,7 +28,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends com.pulumi
     @Import(name="complianceResourceIds")
       private final @Nullable Output<List<String>> complianceResourceIds;
 
-    public Output<List<String>> getComplianceResourceIds() {
+    public Output<List<String>> complianceResourceIds() {
         return this.complianceResourceIds == null ? Codegen.empty() : this.complianceResourceIds;
     }
 
@@ -39,7 +39,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends com.pulumi
     @Import(name="complianceResourceTypes")
       private final @Nullable Output<List<String>> complianceResourceTypes;
 
-    public Output<List<String>> getComplianceResourceTypes() {
+    public Output<List<String>> complianceResourceTypes() {
         return this.complianceResourceTypes == null ? Codegen.empty() : this.complianceResourceTypes;
     }
 
@@ -50,7 +50,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends com.pulumi
     @Import(name="tags")
       private final @Nullable Output<List<FrameworkTagArgs>> tags;
 
-    public Output<List<FrameworkTagArgs>> getTags() {
+    public Output<List<FrameworkTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

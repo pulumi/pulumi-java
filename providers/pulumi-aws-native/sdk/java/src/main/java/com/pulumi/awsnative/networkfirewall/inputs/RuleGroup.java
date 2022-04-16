@@ -19,21 +19,21 @@ public final class RuleGroup extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleVariables")
       private final @Nullable RuleGroupRuleVariables ruleVariables;
 
-    public Optional<RuleGroupRuleVariables> getRuleVariables() {
+    public Optional<RuleGroupRuleVariables> ruleVariables() {
         return this.ruleVariables == null ? Optional.empty() : Optional.ofNullable(this.ruleVariables);
     }
 
     @Import(name="rulesSource", required=true)
       private final RuleGroupRulesSource rulesSource;
 
-    public RuleGroupRulesSource getRulesSource() {
+    public RuleGroupRulesSource rulesSource() {
         return this.rulesSource;
     }
 
     @Import(name="statefulRuleOptions")
       private final @Nullable RuleGroupStatefulRuleOptions statefulRuleOptions;
 
-    public Optional<RuleGroupStatefulRuleOptions> getStatefulRuleOptions() {
+    public Optional<RuleGroupStatefulRuleOptions> statefulRuleOptions() {
         return this.statefulRuleOptions == null ? Optional.empty() : Optional.ofNullable(this.statefulRuleOptions);
     }
 

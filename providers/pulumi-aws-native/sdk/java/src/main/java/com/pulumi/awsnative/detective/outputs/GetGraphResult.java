@@ -32,10 +32,10 @@ public final class GetGraphResult {
      * The Detective graph ARN
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<GraphTag> getTags() {
+    public List<GraphTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

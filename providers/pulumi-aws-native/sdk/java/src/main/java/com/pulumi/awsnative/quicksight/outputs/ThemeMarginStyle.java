@@ -26,7 +26,7 @@ public final class ThemeMarginStyle {
      * <p>This Boolean value controls whether to display sheet margins.</p>
      * 
     */
-    public Optional<Boolean> getShow() {
+    public Optional<Boolean> show() {
         return Optional.ofNullable(this.show);
     }
 

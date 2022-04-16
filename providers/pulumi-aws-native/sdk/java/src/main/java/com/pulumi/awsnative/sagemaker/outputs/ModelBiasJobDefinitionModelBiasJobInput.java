@@ -21,10 +21,10 @@ public final class ModelBiasJobDefinitionModelBiasJobInput {
         this.groundTruthS3Input = groundTruthS3Input;
     }
 
-    public ModelBiasJobDefinitionEndpointInput getEndpointInput() {
+    public ModelBiasJobDefinitionEndpointInput endpointInput() {
         return this.endpointInput;
     }
-    public ModelBiasJobDefinitionMonitoringGroundTruthS3Input getGroundTruthS3Input() {
+    public ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input() {
         return this.groundTruthS3Input;
     }
 

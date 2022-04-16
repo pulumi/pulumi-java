@@ -19,7 +19,7 @@ public final class GetDBProxyEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="dBProxyEndpointName", required=true)
       private final String dBProxyEndpointName;
 
-    public String getDBProxyEndpointName() {
+    public String dBProxyEndpointName() {
         return this.dBProxyEndpointName;
     }
 

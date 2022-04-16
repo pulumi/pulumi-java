@@ -22,7 +22,7 @@ public final class WorkflowInputFileLocationArgs extends com.pulumi.resources.Re
     @Import(name="s3FileLocation")
       private final @Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation;
 
-    public Output<WorkflowS3InputFileLocationArgs> getS3FileLocation() {
+    public Output<WorkflowS3InputFileLocationArgs> s3FileLocation() {
         return this.s3FileLocation == null ? Codegen.empty() : this.s3FileLocation;
     }
 

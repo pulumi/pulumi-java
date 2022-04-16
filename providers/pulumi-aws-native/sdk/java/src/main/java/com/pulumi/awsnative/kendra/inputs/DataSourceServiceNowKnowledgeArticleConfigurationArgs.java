@@ -21,49 +21,49 @@ public final class DataSourceServiceNowKnowledgeArticleConfigurationArgs extends
     @Import(name="crawlAttachments")
       private final @Nullable Output<Boolean> crawlAttachments;
 
-    public Output<Boolean> getCrawlAttachments() {
+    public Output<Boolean> crawlAttachments() {
         return this.crawlAttachments == null ? Codegen.empty() : this.crawlAttachments;
     }
 
     @Import(name="documentDataFieldName", required=true)
       private final Output<String> documentDataFieldName;
 
-    public Output<String> getDocumentDataFieldName() {
+    public Output<String> documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
       private final @Nullable Output<String> documentTitleFieldName;
 
-    public Output<String> getDocumentTitleFieldName() {
+    public Output<String> documentTitleFieldName() {
         return this.documentTitleFieldName == null ? Codegen.empty() : this.documentTitleFieldName;
     }
 
     @Import(name="excludeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> excludeAttachmentFilePatterns;
 
-    public Output<List<String>> getExcludeAttachmentFilePatterns() {
+    public Output<List<String>> excludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? Codegen.empty() : this.excludeAttachmentFilePatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="filterQuery")
       private final @Nullable Output<String> filterQuery;
 
-    public Output<String> getFilterQuery() {
+    public Output<String> filterQuery() {
         return this.filterQuery == null ? Codegen.empty() : this.filterQuery;
     }
 
     @Import(name="includeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> includeAttachmentFilePatterns;
 
-    public Output<List<String>> getIncludeAttachmentFilePatterns() {
+    public Output<List<String>> includeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? Codegen.empty() : this.includeAttachmentFilePatterns;
     }
 

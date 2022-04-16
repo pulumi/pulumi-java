@@ -24,7 +24,7 @@ public final class StackSetStackInstances extends com.pulumi.resources.InvokeArg
     @Import(name="deploymentTargets", required=true)
       private final StackSetDeploymentTargets deploymentTargets;
 
-    public StackSetDeploymentTargets getDeploymentTargets() {
+    public StackSetDeploymentTargets deploymentTargets() {
         return this.deploymentTargets;
     }
 
@@ -35,7 +35,7 @@ public final class StackSetStackInstances extends com.pulumi.resources.InvokeArg
     @Import(name="parameterOverrides")
       private final @Nullable List<StackSetParameter> parameterOverrides;
 
-    public List<StackSetParameter> getParameterOverrides() {
+    public List<StackSetParameter> parameterOverrides() {
         return this.parameterOverrides == null ? List.of() : this.parameterOverrides;
     }
 
@@ -46,7 +46,7 @@ public final class StackSetStackInstances extends com.pulumi.resources.InvokeArg
     @Import(name="regions", required=true)
       private final List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions;
     }
 

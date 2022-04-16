@@ -55,37 +55,37 @@ public final class GetApplicationInstanceResult {
         this.tags = tags;
     }
 
-    public Optional<String> getApplicationInstanceId() {
+    public Optional<String> applicationInstanceId() {
         return Optional.ofNullable(this.applicationInstanceId);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<Integer> getCreatedTime() {
+    public Optional<Integer> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<String> getDefaultRuntimeContextDeviceName() {
+    public Optional<String> defaultRuntimeContextDeviceName() {
         return Optional.ofNullable(this.defaultRuntimeContextDeviceName);
     }
-    public Optional<String> getDeviceId() {
+    public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
-    public Optional<ApplicationInstanceHealthStatus> getHealthStatus() {
+    public Optional<ApplicationInstanceHealthStatus> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
-    public Optional<Integer> getLastUpdatedTime() {
+    public Optional<Integer> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-    public Optional<ApplicationInstanceStatus> getStatus() {
+    public Optional<ApplicationInstanceStatus> status() {
         return Optional.ofNullable(this.status);
     }
-    public Optional<String> getStatusDescription() {
+    public Optional<String> statusDescription() {
         return Optional.ofNullable(this.statusDescription);
     }
-    public Optional<ApplicationInstanceStatusFilter> getStatusFilter() {
+    public Optional<ApplicationInstanceStatusFilter> statusFilter() {
         return Optional.ofNullable(this.statusFilter);
     }
-    public List<ApplicationInstanceTag> getTags() {
+    public List<ApplicationInstanceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

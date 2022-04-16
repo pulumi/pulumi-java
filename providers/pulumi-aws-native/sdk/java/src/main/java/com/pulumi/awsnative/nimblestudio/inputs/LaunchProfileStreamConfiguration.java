@@ -26,7 +26,7 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="clipboardMode", required=true)
       private final LaunchProfileStreamingClipboardMode clipboardMode;
 
-    public LaunchProfileStreamingClipboardMode getClipboardMode() {
+    public LaunchProfileStreamingClipboardMode clipboardMode() {
         return this.clipboardMode;
     }
 
@@ -38,7 +38,7 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="ec2InstanceTypes", required=true)
       private final List<LaunchProfileStreamingInstanceType> ec2InstanceTypes;
 
-    public List<LaunchProfileStreamingInstanceType> getEc2InstanceTypes() {
+    public List<LaunchProfileStreamingInstanceType> ec2InstanceTypes() {
         return this.ec2InstanceTypes;
     }
 
@@ -52,7 +52,7 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="maxSessionLengthInMinutes")
       private final @Nullable Double maxSessionLengthInMinutes;
 
-    public Optional<Double> getMaxSessionLengthInMinutes() {
+    public Optional<Double> maxSessionLengthInMinutes() {
         return this.maxSessionLengthInMinutes == null ? Optional.empty() : Optional.ofNullable(this.maxSessionLengthInMinutes);
     }
 
@@ -72,14 +72,14 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="maxStoppedSessionLengthInMinutes")
       private final @Nullable Double maxStoppedSessionLengthInMinutes;
 
-    public Optional<Double> getMaxStoppedSessionLengthInMinutes() {
+    public Optional<Double> maxStoppedSessionLengthInMinutes() {
         return this.maxStoppedSessionLengthInMinutes == null ? Optional.empty() : Optional.ofNullable(this.maxStoppedSessionLengthInMinutes);
     }
 
     @Import(name="sessionStorage")
       private final @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage;
 
-    public Optional<LaunchProfileStreamConfigurationSessionStorage> getSessionStorage() {
+    public Optional<LaunchProfileStreamConfigurationSessionStorage> sessionStorage() {
         return this.sessionStorage == null ? Optional.empty() : Optional.ofNullable(this.sessionStorage);
     }
 
@@ -91,7 +91,7 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="streamingImageIds", required=true)
       private final List<String> streamingImageIds;
 
-    public List<String> getStreamingImageIds() {
+    public List<String> streamingImageIds() {
         return this.streamingImageIds;
     }
 

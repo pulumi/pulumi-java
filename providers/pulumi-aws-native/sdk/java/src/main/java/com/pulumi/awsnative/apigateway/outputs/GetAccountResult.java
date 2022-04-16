@@ -34,14 +34,14 @@ public final class GetAccountResult {
      * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
      * 
     */
-    public Optional<String> getCloudWatchRoleArn() {
+    public Optional<String> cloudWatchRoleArn() {
         return Optional.ofNullable(this.cloudWatchRoleArn);
     }
     /**
      * Primary identifier which is manually generated.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

@@ -15,14 +15,14 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
-    public String getAwsAccountId() {
+    public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dashboardId", required=true)
       private final String dashboardId;
 
-    public String getDashboardId() {
+    public String dashboardId() {
         return this.dashboardId;
     }
 

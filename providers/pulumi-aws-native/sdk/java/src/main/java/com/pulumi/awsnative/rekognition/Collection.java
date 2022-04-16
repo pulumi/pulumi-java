@@ -23,13 +23,13 @@ public class Collection extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="collectionId", type=String.class, parameters={})
     private Output<String> collectionId;
 
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
     /**
@@ -43,7 +43,7 @@ public class Collection extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<CollectionTag>> getTags() {
+    public Output</* @Nullable */ List<CollectionTag>> tags() {
         return this.tags;
     }
 

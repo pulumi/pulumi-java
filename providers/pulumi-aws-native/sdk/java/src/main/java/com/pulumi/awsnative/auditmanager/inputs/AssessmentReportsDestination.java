@@ -22,14 +22,14 @@ public final class AssessmentReportsDestination extends com.pulumi.resources.Inv
     @Import(name="destination")
       private final @Nullable String destination;
 
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
     @Import(name="destinationType")
       private final @Nullable AssessmentReportDestinationType destinationType;
 
-    public Optional<AssessmentReportDestinationType> getDestinationType() {
+    public Optional<AssessmentReportDestinationType> destinationType() {
         return this.destinationType == null ? Optional.empty() : Optional.ofNullable(this.destinationType);
     }
 

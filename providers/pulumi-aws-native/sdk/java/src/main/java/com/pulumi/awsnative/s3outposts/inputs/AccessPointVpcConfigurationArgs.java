@@ -22,7 +22,7 @@ public final class AccessPointVpcConfigurationArgs extends com.pulumi.resources.
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

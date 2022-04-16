@@ -16,7 +16,7 @@ public final class StorageLensPrefixLevel {
         this.storageMetrics = storageMetrics;
     }
 
-    public StorageLensPrefixLevelStorageMetrics getStorageMetrics() {
+    public StorageLensPrefixLevelStorageMetrics storageMetrics() {
         return this.storageMetrics;
     }
 

@@ -21,28 +21,28 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends c
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="inputFormatConfiguration")
       private final @Nullable Output<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration;
 
-    public Output<DeliveryStreamInputFormatConfigurationArgs> getInputFormatConfiguration() {
+    public Output<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration() {
         return this.inputFormatConfiguration == null ? Codegen.empty() : this.inputFormatConfiguration;
     }
 
     @Import(name="outputFormatConfiguration")
       private final @Nullable Output<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration;
 
-    public Output<DeliveryStreamOutputFormatConfigurationArgs> getOutputFormatConfiguration() {
+    public Output<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration() {
         return this.outputFormatConfiguration == null ? Codegen.empty() : this.outputFormatConfiguration;
     }
 
     @Import(name="schemaConfiguration")
       private final @Nullable Output<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration;
 
-    public Output<DeliveryStreamSchemaConfigurationArgs> getSchemaConfiguration() {
+    public Output<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration() {
         return this.schemaConfiguration == null ? Codegen.empty() : this.schemaConfiguration;
     }
 

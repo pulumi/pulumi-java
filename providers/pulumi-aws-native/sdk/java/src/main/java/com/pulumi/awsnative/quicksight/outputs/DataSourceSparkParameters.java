@@ -33,14 +33,14 @@ public final class DataSourceSparkParameters {
      * <p>Host.</p>
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * <p>Port.</p>
      * 
     */
-    public Double getPort() {
+    public Double port() {
         return this.port;
     }
 

@@ -28,16 +28,16 @@ public final class BudgetsActionIamActionDefinition {
         this.users = users;
     }
 
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
-    public String getPolicyArn() {
+    public String policyArn() {
         return this.policyArn;
     }
-    public List<String> getRoles() {
+    public List<String> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
-    public List<String> getUsers() {
+    public List<String> users() {
         return this.users == null ? List.of() : this.users;
     }
 

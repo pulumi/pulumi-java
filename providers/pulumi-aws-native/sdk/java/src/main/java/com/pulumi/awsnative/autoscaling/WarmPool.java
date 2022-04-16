@@ -23,31 +23,31 @@ public class WarmPool extends com.pulumi.resources.CustomResource {
     @Export(name="autoScalingGroupName", type=String.class, parameters={})
     private Output<String> autoScalingGroupName;
 
-    public Output<String> getAutoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
     @Export(name="instanceReusePolicy", type=WarmPoolInstanceReusePolicy.class, parameters={})
     private Output</* @Nullable */ WarmPoolInstanceReusePolicy> instanceReusePolicy;
 
-    public Output</* @Nullable */ WarmPoolInstanceReusePolicy> getInstanceReusePolicy() {
+    public Output</* @Nullable */ WarmPoolInstanceReusePolicy> instanceReusePolicy() {
         return this.instanceReusePolicy;
     }
     @Export(name="maxGroupPreparedCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxGroupPreparedCapacity;
 
-    public Output</* @Nullable */ Integer> getMaxGroupPreparedCapacity() {
+    public Output</* @Nullable */ Integer> maxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity;
     }
     @Export(name="minSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSize;
 
-    public Output</* @Nullable */ Integer> getMinSize() {
+    public Output</* @Nullable */ Integer> minSize() {
         return this.minSize;
     }
     @Export(name="poolState", type=String.class, parameters={})
     private Output</* @Nullable */ String> poolState;
 
-    public Output</* @Nullable */ String> getPoolState() {
+    public Output</* @Nullable */ String> poolState() {
         return this.poolState;
     }
 

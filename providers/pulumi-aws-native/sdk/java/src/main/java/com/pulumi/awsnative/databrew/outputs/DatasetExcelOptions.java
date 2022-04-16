@@ -28,13 +28,13 @@ public final class DatasetExcelOptions {
         this.sheetNames = sheetNames;
     }
 
-    public Optional<Boolean> getHeaderRow() {
+    public Optional<Boolean> headerRow() {
         return Optional.ofNullable(this.headerRow);
     }
-    public List<Integer> getSheetIndexes() {
+    public List<Integer> sheetIndexes() {
         return this.sheetIndexes == null ? List.of() : this.sheetIndexes;
     }
-    public List<String> getSheetNames() {
+    public List<String> sheetNames() {
         return this.sheetNames == null ? List.of() : this.sheetNames;
     }
 

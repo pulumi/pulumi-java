@@ -27,13 +27,13 @@ public final class DashboardPublishOptions {
         this.sheetControlsOption = sheetControlsOption;
     }
 
-    public Optional<DashboardAdHocFilteringOption> getAdHocFilteringOption() {
+    public Optional<DashboardAdHocFilteringOption> adHocFilteringOption() {
         return Optional.ofNullable(this.adHocFilteringOption);
     }
-    public Optional<DashboardExportToCSVOption> getExportToCSVOption() {
+    public Optional<DashboardExportToCSVOption> exportToCSVOption() {
         return Optional.ofNullable(this.exportToCSVOption);
     }
-    public Optional<DashboardSheetControlsOption> getSheetControlsOption() {
+    public Optional<DashboardSheetControlsOption> sheetControlsOption() {
         return Optional.ofNullable(this.sheetControlsOption);
     }
 

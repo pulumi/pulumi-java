@@ -31,16 +31,16 @@ public final class AssetModelPropertyType {
         this.typeName = typeName;
     }
 
-    public Optional<AssetModelAttribute> getAttribute() {
+    public Optional<AssetModelAttribute> attribute() {
         return Optional.ofNullable(this.attribute);
     }
-    public Optional<AssetModelMetric> getMetric() {
+    public Optional<AssetModelMetric> metric() {
         return Optional.ofNullable(this.metric);
     }
-    public Optional<AssetModelTransform> getTransform() {
+    public Optional<AssetModelTransform> transform() {
         return Optional.ofNullable(this.transform);
     }
-    public AssetModelTypeName getTypeName() {
+    public AssetModelTypeName typeName() {
         return this.typeName;
     }
 

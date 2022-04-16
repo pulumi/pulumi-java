@@ -43,25 +43,25 @@ public final class ConfigData {
         this.uplinkEchoConfig = uplinkEchoConfig;
     }
 
-    public Optional<ConfigAntennaDownlinkConfig> getAntennaDownlinkConfig() {
+    public Optional<ConfigAntennaDownlinkConfig> antennaDownlinkConfig() {
         return Optional.ofNullable(this.antennaDownlinkConfig);
     }
-    public Optional<ConfigAntennaDownlinkDemodDecodeConfig> getAntennaDownlinkDemodDecodeConfig() {
+    public Optional<ConfigAntennaDownlinkDemodDecodeConfig> antennaDownlinkDemodDecodeConfig() {
         return Optional.ofNullable(this.antennaDownlinkDemodDecodeConfig);
     }
-    public Optional<ConfigAntennaUplinkConfig> getAntennaUplinkConfig() {
+    public Optional<ConfigAntennaUplinkConfig> antennaUplinkConfig() {
         return Optional.ofNullable(this.antennaUplinkConfig);
     }
-    public Optional<ConfigDataflowEndpointConfig> getDataflowEndpointConfig() {
+    public Optional<ConfigDataflowEndpointConfig> dataflowEndpointConfig() {
         return Optional.ofNullable(this.dataflowEndpointConfig);
     }
-    public Optional<ConfigS3RecordingConfig> getS3RecordingConfig() {
+    public Optional<ConfigS3RecordingConfig> s3RecordingConfig() {
         return Optional.ofNullable(this.s3RecordingConfig);
     }
-    public Optional<ConfigTrackingConfig> getTrackingConfig() {
+    public Optional<ConfigTrackingConfig> trackingConfig() {
         return Optional.ofNullable(this.trackingConfig);
     }
-    public Optional<ConfigUplinkEchoConfig> getUplinkEchoConfig() {
+    public Optional<ConfigUplinkEchoConfig> uplinkEchoConfig() {
         return Optional.ofNullable(this.uplinkEchoConfig);
     }
 

@@ -43,21 +43,21 @@ public final class InstanceHardware {
      * CPU count of the Instance.
      * 
     */
-    public Optional<Integer> getCpuCount() {
+    public Optional<Integer> cpuCount() {
         return Optional.ofNullable(this.cpuCount);
     }
     /**
      * Disks attached to the Instance.
      * 
     */
-    public List<InstanceDisk> getDisks() {
+    public List<InstanceDisk> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * RAM Size of the Instance.
      * 
     */
-    public Optional<Integer> getRamSizeInGb() {
+    public Optional<Integer> ramSizeInGb() {
         return Optional.ofNullable(this.ramSizeInGb);
     }
 

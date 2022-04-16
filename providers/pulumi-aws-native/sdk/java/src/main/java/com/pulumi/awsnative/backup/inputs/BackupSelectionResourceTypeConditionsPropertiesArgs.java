@@ -19,28 +19,28 @@ public final class BackupSelectionResourceTypeConditionsPropertiesArgs extends c
     @Import(name="stringEquals")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringEquals;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> getStringEquals() {
+    public Output<List<BackupSelectionConditionParameterArgs>> stringEquals() {
         return this.stringEquals == null ? Codegen.empty() : this.stringEquals;
     }
 
     @Import(name="stringLike")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringLike;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> getStringLike() {
+    public Output<List<BackupSelectionConditionParameterArgs>> stringLike() {
         return this.stringLike == null ? Codegen.empty() : this.stringLike;
     }
 
     @Import(name="stringNotEquals")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> getStringNotEquals() {
+    public Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals() {
         return this.stringNotEquals == null ? Codegen.empty() : this.stringNotEquals;
     }
 
     @Import(name="stringNotLike")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotLike;
 
-    public Output<List<BackupSelectionConditionParameterArgs>> getStringNotLike() {
+    public Output<List<BackupSelectionConditionParameterArgs>> stringNotLike() {
         return this.stringNotLike == null ? Codegen.empty() : this.stringNotLike;
     }
 

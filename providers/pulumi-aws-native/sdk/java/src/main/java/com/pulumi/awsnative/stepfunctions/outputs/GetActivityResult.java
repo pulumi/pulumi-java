@@ -24,10 +24,10 @@ public final class GetActivityResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<ActivityTagsEntry> getTags() {
+    public List<ActivityTagsEntry> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

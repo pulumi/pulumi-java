@@ -72,49 +72,49 @@ public final class GetContactFlowResult {
      * The identifier of the contact flow (ARN).
      * 
     */
-    public Optional<String> getContactFlowArn() {
+    public Optional<String> contactFlowArn() {
         return Optional.ofNullable(this.contactFlowArn);
     }
     /**
      * The content of the contact flow in JSON format.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The description of the contact flow.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The identifier of the Amazon Connect instance (ARN).
      * 
     */
-    public Optional<String> getInstanceArn() {
+    public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the contact flow.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The state of the contact flow.
      * 
     */
-    public Optional<ContactFlowState> getState() {
+    public Optional<ContactFlowState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * One or more tags.
      * 
     */
-    public List<ContactFlowTag> getTags() {
+    public List<ContactFlowTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

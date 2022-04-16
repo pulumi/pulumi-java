@@ -16,7 +16,7 @@ public final class BucketOwnershipControls extends com.pulumi.resources.InvokeAr
     @Import(name="rules", required=true)
       private final List<BucketOwnershipControlsRule> rules;
 
-    public List<BucketOwnershipControlsRule> getRules() {
+    public List<BucketOwnershipControlsRule> rules() {
         return this.rules;
     }
 

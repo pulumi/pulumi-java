@@ -21,7 +21,7 @@ public final class DatasetJsonOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="multiLine")
       private final @Nullable Boolean multiLine;
 
-    public Optional<Boolean> getMultiLine() {
+    public Optional<Boolean> multiLine() {
         return this.multiLine == null ? Optional.empty() : Optional.ofNullable(this.multiLine);
     }
 

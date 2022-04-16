@@ -26,14 +26,14 @@ public final class StreamingImageEncryptionConfiguration extends com.pulumi.reso
     @Import(name="keyArn")
       private final @Nullable String keyArn;
 
-    public Optional<String> getKeyArn() {
+    public Optional<String> keyArn() {
         return this.keyArn == null ? Optional.empty() : Optional.ofNullable(this.keyArn);
     }
 
     @Import(name="keyType", required=true)
       private final StreamingImageEncryptionConfigurationKeyType keyType;
 
-    public StreamingImageEncryptionConfigurationKeyType getKeyType() {
+    public StreamingImageEncryptionConfigurationKeyType keyType() {
         return this.keyType;
     }
 

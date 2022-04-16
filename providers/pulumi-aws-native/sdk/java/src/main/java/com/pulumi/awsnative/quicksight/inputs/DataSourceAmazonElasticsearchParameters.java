@@ -23,7 +23,7 @@ public final class DataSourceAmazonElasticsearchParameters extends com.pulumi.re
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 

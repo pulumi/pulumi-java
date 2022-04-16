@@ -22,7 +22,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
@@ -33,7 +33,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,14 +44,14 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
 
-    public Output<List<TemplateResourcePermissionArgs>> getPermissions() {
+    public Output<List<TemplateResourcePermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="sourceEntity", required=true)
       private final Output<TemplateSourceEntityArgs> sourceEntity;
 
-    public Output<TemplateSourceEntityArgs> getSourceEntity() {
+    public Output<TemplateSourceEntityArgs> sourceEntity() {
         return this.sourceEntity;
     }
 
@@ -62,14 +62,14 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TemplateTagArgs>> tags;
 
-    public Output<List<TemplateTagArgs>> getTags() {
+    public Output<List<TemplateTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="templateId", required=true)
       private final Output<String> templateId;
 
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId;
     }
 
@@ -83,7 +83,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
-    public Output<String> getVersionDescription() {
+    public Output<String> versionDescription() {
         return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
     }
 

@@ -21,19 +21,19 @@ public class ServiceActionAssociation extends com.pulumi.resources.CustomResourc
     @Export(name="productId", type=String.class, parameters={})
     private Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
     @Export(name="provisioningArtifactId", type=String.class, parameters={})
     private Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
     @Export(name="serviceActionId", type=String.class, parameters={})
     private Output<String> serviceActionId;
 
-    public Output<String> getServiceActionId() {
+    public Output<String> serviceActionId() {
         return this.serviceActionId;
     }
 

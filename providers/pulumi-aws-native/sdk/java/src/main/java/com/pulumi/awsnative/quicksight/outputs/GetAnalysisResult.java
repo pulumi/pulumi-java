@@ -86,35 +86,35 @@ public final class GetAnalysisResult {
      * <p>The Amazon Resource Name (ARN) of the analysis.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The time that the analysis was created.</p>
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * <p>The ARNs of the datasets of the analysis.</p>
      * 
     */
-    public List<String> getDataSetArns() {
+    public List<String> dataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
      * <p>Errors associated with the analysis.</p>
      * 
     */
-    public List<AnalysisError> getErrors() {
+    public List<AnalysisError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * <p>The descriptive name of the analysis.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -126,7 +126,7 @@ public final class GetAnalysisResult {
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
      * 
     */
-    public List<AnalysisResourcePermission> getPermissions() {
+    public List<AnalysisResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
@@ -134,14 +134,14 @@ public final class GetAnalysisResult {
      *             analysis.</p>
      * 
     */
-    public List<AnalysisTag> getTags() {
+    public List<AnalysisTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * <p>The ARN of the theme of the analysis.</p>
      * 
     */
-    public Optional<String> getThemeArn() {
+    public Optional<String> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }
 

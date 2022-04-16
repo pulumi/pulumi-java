@@ -18,56 +18,56 @@ public final class DomainServiceSoftwareOptions extends com.pulumi.resources.Inv
     @Import(name="automatedUpdateDate")
       private final @Nullable String automatedUpdateDate;
 
-    public Optional<String> getAutomatedUpdateDate() {
+    public Optional<String> automatedUpdateDate() {
         return this.automatedUpdateDate == null ? Optional.empty() : Optional.ofNullable(this.automatedUpdateDate);
     }
 
     @Import(name="cancellable")
       private final @Nullable Boolean cancellable;
 
-    public Optional<Boolean> getCancellable() {
+    public Optional<Boolean> cancellable() {
         return this.cancellable == null ? Optional.empty() : Optional.ofNullable(this.cancellable);
     }
 
     @Import(name="currentVersion")
       private final @Nullable String currentVersion;
 
-    public Optional<String> getCurrentVersion() {
+    public Optional<String> currentVersion() {
         return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
     }
 
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @Import(name="newVersion")
       private final @Nullable String newVersion;
 
-    public Optional<String> getNewVersion() {
+    public Optional<String> newVersion() {
         return this.newVersion == null ? Optional.empty() : Optional.ofNullable(this.newVersion);
     }
 
     @Import(name="optionalDeployment")
       private final @Nullable Boolean optionalDeployment;
 
-    public Optional<Boolean> getOptionalDeployment() {
+    public Optional<Boolean> optionalDeployment() {
         return this.optionalDeployment == null ? Optional.empty() : Optional.ofNullable(this.optionalDeployment);
     }
 
     @Import(name="updateAvailable")
       private final @Nullable Boolean updateAvailable;
 
-    public Optional<Boolean> getUpdateAvailable() {
+    public Optional<Boolean> updateAvailable() {
         return this.updateAvailable == null ? Optional.empty() : Optional.ofNullable(this.updateAvailable);
     }
 
     @Import(name="updateStatus")
       private final @Nullable String updateStatus;
 
-    public Optional<String> getUpdateStatus() {
+    public Optional<String> updateStatus() {
         return this.updateStatus == null ? Optional.empty() : Optional.ofNullable(this.updateStatus);
     }
 

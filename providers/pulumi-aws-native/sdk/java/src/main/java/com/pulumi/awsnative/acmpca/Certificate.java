@@ -31,7 +31,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
      * 
      */
-    public Output</* @Nullable */ CertificateApiPassthrough> getApiPassthrough() {
+    public Output</* @Nullable */ CertificateApiPassthrough> apiPassthrough() {
         return this.apiPassthrough;
     }
     /**
@@ -45,7 +45,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The ARN of the issued certificate.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The issued certificate in base 64 PEM-encoded format.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -73,7 +73,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the private CA to issue the certificate.
      * 
      */
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
@@ -87,7 +87,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The certificate signing request (CSR) for the Certificate.
      * 
      */
-    public Output<String> getCertificateSigningRequest() {
+    public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
@@ -101,7 +101,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The name of the algorithm that will be used to sign the Certificate.
      * 
      */
-    public Output<String> getSigningAlgorithm() {
+    public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
     /**
@@ -115,7 +115,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateArn() {
+    public Output</* @Nullable */ String> templateArn() {
         return this.templateArn;
     }
     /**
@@ -129,7 +129,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The time before which the Certificate will be valid.
      * 
      */
-    public Output<CertificateValidity> getValidity() {
+    public Output<CertificateValidity> validity() {
         return this.validity;
     }
     /**
@@ -143,7 +143,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The time after which the Certificate will be valid.
      * 
      */
-    public Output</* @Nullable */ CertificateValidity> getValidityNotBefore() {
+    public Output</* @Nullable */ CertificateValidity> validityNotBefore() {
         return this.validityNotBefore;
     }
 

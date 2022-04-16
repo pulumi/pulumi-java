@@ -32,14 +32,14 @@ public final class HealthCheckTag {
      * The key name of the tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value for the tag.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

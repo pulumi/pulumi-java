@@ -23,10 +23,10 @@ public final class StreamKinesisConfiguration {
         this.streamArn = streamArn;
     }
 
-    public Optional<Boolean> getAggregationEnabled() {
+    public Optional<Boolean> aggregationEnabled() {
         return Optional.ofNullable(this.aggregationEnabled);
     }
-    public Optional<String> getStreamArn() {
+    public Optional<String> streamArn() {
         return Optional.ofNullable(this.streamArn);
     }
 

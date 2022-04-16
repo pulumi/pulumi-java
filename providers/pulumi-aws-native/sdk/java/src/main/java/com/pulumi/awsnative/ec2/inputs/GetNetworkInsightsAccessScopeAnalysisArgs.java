@@ -15,7 +15,7 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends com.pulumi.
     @Import(name="networkInsightsAccessScopeAnalysisId", required=true)
       private final String networkInsightsAccessScopeAnalysisId;
 
-    public String getNetworkInsightsAccessScopeAnalysisId() {
+    public String networkInsightsAccessScopeAnalysisId() {
         return this.networkInsightsAccessScopeAnalysisId;
     }
 

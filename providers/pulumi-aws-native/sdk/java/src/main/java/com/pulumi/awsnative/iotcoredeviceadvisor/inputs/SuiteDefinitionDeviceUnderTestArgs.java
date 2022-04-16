@@ -18,14 +18,14 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends com.pulumi.resourc
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     @Import(name="thingArn")
       private final @Nullable Output<String> thingArn;
 
-    public Output<String> getThingArn() {
+    public Output<String> thingArn() {
         return this.thingArn == null ? Codegen.empty() : this.thingArn;
     }
 

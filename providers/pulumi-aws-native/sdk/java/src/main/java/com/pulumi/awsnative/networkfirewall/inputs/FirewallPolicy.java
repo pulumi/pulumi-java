@@ -22,49 +22,49 @@ public final class FirewallPolicy extends com.pulumi.resources.InvokeArgs {
     @Import(name="statefulDefaultActions")
       private final @Nullable List<String> statefulDefaultActions;
 
-    public List<String> getStatefulDefaultActions() {
+    public List<String> statefulDefaultActions() {
         return this.statefulDefaultActions == null ? List.of() : this.statefulDefaultActions;
     }
 
     @Import(name="statefulEngineOptions")
       private final @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions;
 
-    public Optional<FirewallPolicyStatefulEngineOptions> getStatefulEngineOptions() {
+    public Optional<FirewallPolicyStatefulEngineOptions> statefulEngineOptions() {
         return this.statefulEngineOptions == null ? Optional.empty() : Optional.ofNullable(this.statefulEngineOptions);
     }
 
     @Import(name="statefulRuleGroupReferences")
       private final @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences;
 
-    public List<FirewallPolicyStatefulRuleGroupReference> getStatefulRuleGroupReferences() {
+    public List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences() {
         return this.statefulRuleGroupReferences == null ? List.of() : this.statefulRuleGroupReferences;
     }
 
     @Import(name="statelessCustomActions")
       private final @Nullable List<FirewallPolicyCustomAction> statelessCustomActions;
 
-    public List<FirewallPolicyCustomAction> getStatelessCustomActions() {
+    public List<FirewallPolicyCustomAction> statelessCustomActions() {
         return this.statelessCustomActions == null ? List.of() : this.statelessCustomActions;
     }
 
     @Import(name="statelessDefaultActions", required=true)
       private final List<String> statelessDefaultActions;
 
-    public List<String> getStatelessDefaultActions() {
+    public List<String> statelessDefaultActions() {
         return this.statelessDefaultActions;
     }
 
     @Import(name="statelessFragmentDefaultActions", required=true)
       private final List<String> statelessFragmentDefaultActions;
 
-    public List<String> getStatelessFragmentDefaultActions() {
+    public List<String> statelessFragmentDefaultActions() {
         return this.statelessFragmentDefaultActions;
     }
 
     @Import(name="statelessRuleGroupReferences")
       private final @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
 
-    public List<FirewallPolicyStatelessRuleGroupReference> getStatelessRuleGroupReferences() {
+    public List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences() {
         return this.statelessRuleGroupReferences == null ? List.of() : this.statelessRuleGroupReferences;
     }
 

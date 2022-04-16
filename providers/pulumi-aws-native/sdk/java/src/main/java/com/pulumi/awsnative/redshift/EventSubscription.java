@@ -36,7 +36,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The name of the Amazon Redshift event notification subscription.
      * 
      */
-    public Output<String> getCustSubscriptionId() {
+    public Output<String> custSubscriptionId() {
         return this.custSubscriptionId;
     }
     /**
@@ -50,7 +50,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The AWS account associated with the Amazon Redshift event notification subscription.
      * 
      */
-    public Output<String> getCustomerAwsId() {
+    public Output<String> customerAwsId() {
         return this.customerAwsId;
     }
     /**
@@ -64,7 +64,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A boolean value; set to true to activate the subscription, and set to false to create the subscription but not activate it.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -78,7 +78,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Specifies the Amazon Redshift event categories to be published by the event notification subscription.
      * 
      */
-    public Output</* @Nullable */ List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
+    public Output</* @Nullable */ List<EventSubscriptionEventCategoriesItem>> eventCategories() {
         return this.eventCategories;
     }
     /**
@@ -92,7 +92,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The list of Amazon Redshift event categories specified in the event notification subscription.
      * 
      */
-    public Output<List<String>> getEventCategoriesList() {
+    public Output<List<String>> eventCategoriesList() {
         return this.eventCategoriesList;
     }
     /**
@@ -106,7 +106,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Specifies the Amazon Redshift event severity to be published by the event notification subscription.
      * 
      */
-    public Output</* @Nullable */ EventSubscriptionSeverity> getSeverity() {
+    public Output</* @Nullable */ EventSubscriptionSeverity> severity() {
         return this.severity;
     }
     /**
@@ -120,7 +120,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
      * 
      */
-    public Output</* @Nullable */ String> getSnsTopicArn() {
+    public Output</* @Nullable */ String> snsTopicArn() {
         return this.snsTopicArn;
     }
     /**
@@ -134,7 +134,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A list of one or more identifiers of Amazon Redshift source objects.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSourceIds() {
+    public Output</* @Nullable */ List<String>> sourceIds() {
         return this.sourceIds;
     }
     /**
@@ -148,7 +148,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A list of the sources that publish events to the Amazon Redshift event notification subscription.
      * 
      */
-    public Output<List<String>> getSourceIdsList() {
+    public Output<List<String>> sourceIdsList() {
         return this.sourceIdsList;
     }
     /**
@@ -162,7 +162,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The type of source that will be generating the events.
      * 
      */
-    public Output</* @Nullable */ EventSubscriptionSourceType> getSourceType() {
+    public Output</* @Nullable */ EventSubscriptionSourceType> sourceType() {
         return this.sourceType;
     }
     /**
@@ -176,7 +176,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The status of the Amazon Redshift event notification subscription.
      * 
      */
-    public Output<EventSubscriptionStatus> getStatus() {
+    public Output<EventSubscriptionStatus> status() {
         return this.status;
     }
     /**
@@ -190,7 +190,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The date and time the Amazon Redshift event notification subscription was created.
      * 
      */
-    public Output<String> getSubscriptionCreationTime() {
+    public Output<String> subscriptionCreationTime() {
         return this.subscriptionCreationTime;
     }
     /**
@@ -204,7 +204,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The name of the Amazon Redshift event notification subscription
      * 
      */
-    public Output<String> getSubscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
     /**
@@ -218,7 +218,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<EventSubscriptionTag>> getTags() {
+    public Output</* @Nullable */ List<EventSubscriptionTag>> tags() {
         return this.tags;
     }
 

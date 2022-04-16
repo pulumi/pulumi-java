@@ -26,7 +26,7 @@ public final class StudioComponentComputeFarmConfigurationArgs extends com.pulum
     @Import(name="activeDirectoryUser")
       private final @Nullable Output<String> activeDirectoryUser;
 
-    public Output<String> getActiveDirectoryUser() {
+    public Output<String> activeDirectoryUser() {
         return this.activeDirectoryUser == null ? Codegen.empty() : this.activeDirectoryUser;
     }
 
@@ -37,7 +37,7 @@ public final class StudioComponentComputeFarmConfigurationArgs extends com.pulum
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 

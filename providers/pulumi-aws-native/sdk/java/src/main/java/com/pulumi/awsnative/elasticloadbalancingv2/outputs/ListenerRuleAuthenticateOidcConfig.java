@@ -55,40 +55,40 @@ public final class ListenerRuleAuthenticateOidcConfig {
         this.userInfoEndpoint = userInfoEndpoint;
     }
 
-    public Optional<Object> getAuthenticationRequestExtraParams() {
+    public Optional<Object> authenticationRequestExtraParams() {
         return Optional.ofNullable(this.authenticationRequestExtraParams);
     }
-    public String getAuthorizationEndpoint() {
+    public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
-    public Optional<String> getOnUnauthenticatedRequest() {
+    public Optional<String> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
-    public Optional<String> getSessionCookieName() {
+    public Optional<String> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
-    public Optional<Integer> getSessionTimeout() {
+    public Optional<Integer> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
-    public String getTokenEndpoint() {
+    public String tokenEndpoint() {
         return this.tokenEndpoint;
     }
-    public Optional<Boolean> getUseExistingClientSecret() {
+    public Optional<Boolean> useExistingClientSecret() {
         return Optional.ofNullable(this.useExistingClientSecret);
     }
-    public String getUserInfoEndpoint() {
+    public String userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 

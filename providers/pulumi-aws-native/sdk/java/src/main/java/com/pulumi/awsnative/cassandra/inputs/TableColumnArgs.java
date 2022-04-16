@@ -17,14 +17,14 @@ public final class TableColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columnName", required=true)
       private final Output<String> columnName;
 
-    public Output<String> getColumnName() {
+    public Output<String> columnName() {
         return this.columnName;
     }
 
     @Import(name="columnType", required=true)
       private final Output<String> columnType;
 
-    public Output<String> getColumnType() {
+    public Output<String> columnType() {
         return this.columnType;
     }
 

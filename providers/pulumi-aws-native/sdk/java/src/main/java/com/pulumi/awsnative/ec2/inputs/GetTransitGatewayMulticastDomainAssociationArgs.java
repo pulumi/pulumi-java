@@ -19,7 +19,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 
@@ -30,7 +30,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
     @Import(name="transitGatewayAttachmentId", required=true)
       private final String transitGatewayAttachmentId;
 
-    public String getTransitGatewayAttachmentId() {
+    public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -41,7 +41,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final String transitGatewayMulticastDomainId;
 
-    public String getTransitGatewayMulticastDomainId() {
+    public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

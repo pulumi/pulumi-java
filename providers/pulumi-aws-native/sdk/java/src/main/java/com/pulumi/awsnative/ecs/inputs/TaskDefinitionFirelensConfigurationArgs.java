@@ -19,14 +19,14 @@ public final class TaskDefinitionFirelensConfigurationArgs extends com.pulumi.re
     @Import(name="options")
       private final @Nullable Output<Object> options;
 
-    public Output<Object> getOptions() {
+    public Output<Object> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

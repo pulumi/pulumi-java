@@ -16,7 +16,7 @@ public final class GetPartitionResult {
         this.partition = partition;
     }
 
-    public String getPartition() {
+    public String partition() {
         return this.partition;
     }
 

@@ -22,10 +22,10 @@ public final class EC2FleetMemoryGiBPerVCpuRequest {
         this.min = min;
     }
 
-    public Optional<Double> getMax() {
+    public Optional<Double> max() {
         return Optional.ofNullable(this.max);
     }
-    public Optional<Double> getMin() {
+    public Optional<Double> min() {
         return Optional.ofNullable(this.min);
     }
 

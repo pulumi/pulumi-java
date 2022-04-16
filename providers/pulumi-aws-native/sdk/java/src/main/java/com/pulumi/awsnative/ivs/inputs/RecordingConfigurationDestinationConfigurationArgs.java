@@ -21,7 +21,7 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends co
     @Import(name="s3", required=true)
       private final Output<RecordingConfigurationS3DestinationConfigurationArgs> s3;
 
-    public Output<RecordingConfigurationS3DestinationConfigurationArgs> getS3() {
+    public Output<RecordingConfigurationS3DestinationConfigurationArgs> s3() {
         return this.s3;
     }
 

@@ -22,42 +22,42 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="ruleGroup")
       private final @Nullable Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
 
-    public Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> getRuleGroup() {
+    public Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup() {
         return this.ruleGroup == null ? Codegen.empty() : this.ruleGroup;
     }
 
     @Import(name="ruleGroupName")
       private final @Nullable Output<String> ruleGroupName;
 
-    public Output<String> getRuleGroupName() {
+    public Output<String> ruleGroupName() {
         return this.ruleGroupName == null ? Codegen.empty() : this.ruleGroupName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<RuleGroupTagArgs>> tags;
 
-    public Output<List<RuleGroupTagArgs>> getTags() {
+    public Output<List<RuleGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="type", required=true)
       private final Output<RuleGroupTypeEnum> type;
 
-    public Output<RuleGroupTypeEnum> getType() {
+    public Output<RuleGroupTypeEnum> type() {
         return this.type;
     }
 

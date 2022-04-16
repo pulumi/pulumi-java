@@ -26,13 +26,13 @@ public final class GetCertificateResult {
         this.status = status;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<CertificateStatus> getStatus() {
+    public Optional<CertificateStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

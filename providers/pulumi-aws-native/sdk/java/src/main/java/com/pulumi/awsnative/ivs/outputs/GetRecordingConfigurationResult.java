@@ -44,21 +44,21 @@ public final class GetRecordingConfigurationResult {
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Recording Configuration State.
      * 
     */
-    public Optional<RecordingConfigurationState> getState() {
+    public Optional<RecordingConfigurationState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
     */
-    public List<RecordingConfigurationTag> getTags() {
+    public List<RecordingConfigurationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

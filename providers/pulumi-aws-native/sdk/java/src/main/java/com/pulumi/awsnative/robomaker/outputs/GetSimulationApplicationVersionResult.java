@@ -22,10 +22,10 @@ public final class GetSimulationApplicationVersionResult {
         this.arn = arn;
     }
 
-    public Optional<String> getApplicationVersion() {
+    public Optional<String> applicationVersion() {
         return Optional.ofNullable(this.applicationVersion);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
 

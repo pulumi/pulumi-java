@@ -22,10 +22,10 @@ public final class AssetModelVariableValue {
         this.propertyLogicalId = propertyLogicalId;
     }
 
-    public Optional<String> getHierarchyLogicalId() {
+    public Optional<String> hierarchyLogicalId() {
         return Optional.ofNullable(this.hierarchyLogicalId);
     }
-    public String getPropertyLogicalId() {
+    public String propertyLogicalId() {
         return this.propertyLogicalId;
     }
 

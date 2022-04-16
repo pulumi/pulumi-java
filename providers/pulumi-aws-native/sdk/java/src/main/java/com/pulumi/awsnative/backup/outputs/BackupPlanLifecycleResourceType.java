@@ -22,10 +22,10 @@ public final class BackupPlanLifecycleResourceType {
         this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
     }
 
-    public Optional<Double> getDeleteAfterDays() {
+    public Optional<Double> deleteAfterDays() {
         return Optional.ofNullable(this.deleteAfterDays);
     }
-    public Optional<Double> getMoveToColdStorageAfterDays() {
+    public Optional<Double> moveToColdStorageAfterDays() {
         return Optional.ofNullable(this.moveToColdStorageAfterDays);
     }
 

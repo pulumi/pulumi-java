@@ -22,7 +22,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliasName")
       private final @Nullable Output<String> aliasName;
 
-    public Output<String> getAliasName() {
+    public Output<String> aliasName() {
         return this.aliasName == null ? Codegen.empty() : this.aliasName;
     }
 
@@ -33,7 +33,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetKeyId", required=true)
       private final Output<String> targetKeyId;
 
-    public Output<String> getTargetKeyId() {
+    public Output<String> targetKeyId() {
         return this.targetKeyId;
     }
 

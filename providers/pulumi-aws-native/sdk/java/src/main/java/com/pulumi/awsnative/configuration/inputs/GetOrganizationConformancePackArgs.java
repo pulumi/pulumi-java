@@ -19,7 +19,7 @@ public final class GetOrganizationConformancePackArgs extends com.pulumi.resourc
     @Import(name="organizationConformancePackName", required=true)
       private final String organizationConformancePackName;
 
-    public String getOrganizationConformancePackName() {
+    public String organizationConformancePackName() {
         return this.organizationConformancePackName;
     }
 

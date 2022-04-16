@@ -27,7 +27,7 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,21 +38,21 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="intents")
       private final @Nullable Output<List<BotIntentArgs>> intents;
 
-    public Output<List<BotIntentArgs>> getIntents() {
+    public Output<List<BotIntentArgs>> intents() {
         return this.intents == null ? Codegen.empty() : this.intents;
     }
 
     @Import(name="localeId", required=true)
       private final Output<String> localeId;
 
-    public Output<String> getLocaleId() {
+    public Output<String> localeId() {
         return this.localeId;
     }
 
     @Import(name="nluConfidenceThreshold", required=true)
       private final Output<Double> nluConfidenceThreshold;
 
-    public Output<Double> getNluConfidenceThreshold() {
+    public Output<Double> nluConfidenceThreshold() {
         return this.nluConfidenceThreshold;
     }
 
@@ -63,14 +63,14 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slotTypes")
       private final @Nullable Output<List<BotSlotTypeArgs>> slotTypes;
 
-    public Output<List<BotSlotTypeArgs>> getSlotTypes() {
+    public Output<List<BotSlotTypeArgs>> slotTypes() {
         return this.slotTypes == null ? Codegen.empty() : this.slotTypes;
     }
 
     @Import(name="voiceSettings")
       private final @Nullable Output<BotVoiceSettingsArgs> voiceSettings;
 
-    public Output<BotVoiceSettingsArgs> getVoiceSettings() {
+    public Output<BotVoiceSettingsArgs> voiceSettings() {
         return this.voiceSettings == null ? Codegen.empty() : this.voiceSettings;
     }
 

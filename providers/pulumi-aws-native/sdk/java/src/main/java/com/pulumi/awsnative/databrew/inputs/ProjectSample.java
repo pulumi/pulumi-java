@@ -22,7 +22,7 @@ public final class ProjectSample extends com.pulumi.resources.InvokeArgs {
     @Import(name="size")
       private final @Nullable Integer size;
 
-    public Optional<Integer> getSize() {
+    public Optional<Integer> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
@@ -33,7 +33,7 @@ public final class ProjectSample extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final ProjectSampleType type;
 
-    public ProjectSampleType getType() {
+    public ProjectSampleType type() {
         return this.type;
     }
 

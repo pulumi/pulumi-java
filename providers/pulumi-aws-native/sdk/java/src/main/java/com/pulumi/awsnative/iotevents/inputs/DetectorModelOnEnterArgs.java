@@ -27,7 +27,7 @@ public final class DetectorModelOnEnterArgs extends com.pulumi.resources.Resourc
     @Import(name="events")
       private final @Nullable Output<List<DetectorModelEventArgs>> events;
 
-    public Output<List<DetectorModelEventArgs>> getEvents() {
+    public Output<List<DetectorModelEventArgs>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 

@@ -20,21 +20,21 @@ public final class FlowS3OutputFormatConfigArgs extends com.pulumi.resources.Res
     @Import(name="aggregationConfig")
       private final @Nullable Output<FlowAggregationConfigArgs> aggregationConfig;
 
-    public Output<FlowAggregationConfigArgs> getAggregationConfig() {
+    public Output<FlowAggregationConfigArgs> aggregationConfig() {
         return this.aggregationConfig == null ? Codegen.empty() : this.aggregationConfig;
     }
 
     @Import(name="fileType")
       private final @Nullable Output<FlowFileType> fileType;
 
-    public Output<FlowFileType> getFileType() {
+    public Output<FlowFileType> fileType() {
         return this.fileType == null ? Codegen.empty() : this.fileType;
     }
 
     @Import(name="prefixConfig")
       private final @Nullable Output<FlowPrefixConfigArgs> prefixConfig;
 
-    public Output<FlowPrefixConfigArgs> getPrefixConfig() {
+    public Output<FlowPrefixConfigArgs> prefixConfig() {
         return this.prefixConfig == null ? Codegen.empty() : this.prefixConfig;
     }
 

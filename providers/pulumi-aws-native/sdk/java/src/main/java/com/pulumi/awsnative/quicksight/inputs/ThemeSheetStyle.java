@@ -22,14 +22,14 @@ public final class ThemeSheetStyle extends com.pulumi.resources.InvokeArgs {
     @Import(name="tile")
       private final @Nullable ThemeTileStyle tile;
 
-    public Optional<ThemeTileStyle> getTile() {
+    public Optional<ThemeTileStyle> tile() {
         return this.tile == null ? Optional.empty() : Optional.ofNullable(this.tile);
     }
 
     @Import(name="tileLayout")
       private final @Nullable ThemeTileLayoutStyle tileLayout;
 
-    public Optional<ThemeTileLayoutStyle> getTileLayout() {
+    public Optional<ThemeTileLayoutStyle> tileLayout() {
         return this.tileLayout == null ? Optional.empty() : Optional.ofNullable(this.tileLayout);
     }
 

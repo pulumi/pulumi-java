@@ -29,7 +29,7 @@ public class UserHierarchyGroup extends com.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -43,7 +43,7 @@ public class UserHierarchyGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the user hierarchy group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class UserHierarchyGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the parent user hierarchy group.
      * 
      */
-    public Output</* @Nullable */ String> getParentGroupArn() {
+    public Output</* @Nullable */ String> parentGroupArn() {
         return this.parentGroupArn;
     }
     /**
@@ -71,7 +71,7 @@ public class UserHierarchyGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the user hierarchy group.
      * 
      */
-    public Output<String> getUserHierarchyGroupArn() {
+    public Output<String> userHierarchyGroupArn() {
         return this.userHierarchyGroupArn;
     }
 

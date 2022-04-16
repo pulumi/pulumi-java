@@ -21,14 +21,14 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
 
     @Import(name="secretKey", required=true)
       private final Output<String> secretKey;
 
-    public Output<String> getSecretKey() {
+    public Output<String> secretKey() {
         return this.secretKey;
     }
 

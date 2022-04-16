@@ -16,7 +16,7 @@ public final class DetectorModelClearTimer {
         this.timerName = timerName;
     }
 
-    public String getTimerName() {
+    public String timerName() {
         return this.timerName;
     }
 

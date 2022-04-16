@@ -28,13 +28,13 @@ public final class GetConnectionAliasResult {
         this.connectionAliasState = connectionAliasState;
     }
 
-    public Optional<String> getAliasId() {
+    public Optional<String> aliasId() {
         return Optional.ofNullable(this.aliasId);
     }
-    public List<ConnectionAliasAssociation> getAssociations() {
+    public List<ConnectionAliasAssociation> associations() {
         return this.associations == null ? List.of() : this.associations;
     }
-    public Optional<ConnectionAliasState> getConnectionAliasState() {
+    public Optional<ConnectionAliasState> connectionAliasState() {
         return Optional.ofNullable(this.connectionAliasState);
     }
 

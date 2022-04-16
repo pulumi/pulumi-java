@@ -22,7 +22,7 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appMonitorConfiguration")
       private final @Nullable Output<AppMonitorConfigurationArgs> appMonitorConfiguration;
 
-    public Output<AppMonitorConfigurationArgs> getAppMonitorConfiguration() {
+    public Output<AppMonitorConfigurationArgs> appMonitorConfiguration() {
         return this.appMonitorConfiguration == null ? Codegen.empty() : this.appMonitorConfiguration;
     }
 
@@ -33,7 +33,7 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cwLogEnabled")
       private final @Nullable Output<Boolean> cwLogEnabled;
 
-    public Output<Boolean> getCwLogEnabled() {
+    public Output<Boolean> cwLogEnabled() {
         return this.cwLogEnabled == null ? Codegen.empty() : this.cwLogEnabled;
     }
 
@@ -44,7 +44,7 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -55,14 +55,14 @@ public final class AppMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AppMonitorTagArgs>> tags;
 
-    public Output<List<AppMonitorTagArgs>> getTags() {
+    public Output<List<AppMonitorTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

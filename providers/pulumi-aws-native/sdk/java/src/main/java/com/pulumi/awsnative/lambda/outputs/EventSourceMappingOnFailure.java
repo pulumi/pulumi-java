@@ -26,7 +26,7 @@ public final class EventSourceMappingOnFailure {
      * The Amazon Resource Name (ARN) of the destination resource.
      * 
     */
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
 

@@ -21,21 +21,21 @@ public final class DatasetExcelOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="headerRow")
       private final @Nullable Output<Boolean> headerRow;
 
-    public Output<Boolean> getHeaderRow() {
+    public Output<Boolean> headerRow() {
         return this.headerRow == null ? Codegen.empty() : this.headerRow;
     }
 
     @Import(name="sheetIndexes")
       private final @Nullable Output<List<Integer>> sheetIndexes;
 
-    public Output<List<Integer>> getSheetIndexes() {
+    public Output<List<Integer>> sheetIndexes() {
         return this.sheetIndexes == null ? Codegen.empty() : this.sheetIndexes;
     }
 
     @Import(name="sheetNames")
       private final @Nullable Output<List<String>> sheetNames;
 
-    public Output<List<String>> getSheetNames() {
+    public Output<List<String>> sheetNames() {
         return this.sheetNames == null ? Codegen.empty() : this.sheetNames;
     }
 

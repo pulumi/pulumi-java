@@ -30,7 +30,7 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * @return The configuration data for the extension, in this account and region.
      * 
      */
-    public Output</* @Nullable */ String> getConfiguration() {
+    public Output</* @Nullable */ String> configuration() {
         return this.configuration;
     }
     /**
@@ -44,7 +44,7 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * @return An alias by which to refer to this extension configuration data.
      * 
      */
-    public Output</* @Nullable */ HookTypeConfigConfigurationAlias> getConfigurationAlias() {
+    public Output</* @Nullable */ HookTypeConfigConfigurationAlias> configurationAlias() {
         return this.configurationAlias;
     }
     /**
@@ -58,7 +58,7 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the configuration data, in this account and region.
      * 
      */
-    public Output<String> getConfigurationArn() {
+    public Output<String> configurationArn() {
         return this.configurationArn;
     }
     /**
@@ -72,7 +72,7 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    public Output</* @Nullable */ String> getTypeArn() {
+    public Output</* @Nullable */ String> typeArn() {
         return this.typeArn;
     }
     /**
@@ -90,7 +90,7 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
 

@@ -29,7 +29,7 @@ public class TransitGatewayRegistration extends com.pulumi.resources.CustomResou
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -43,7 +43,7 @@ public class TransitGatewayRegistration extends com.pulumi.resources.CustomResou
      * @return The Amazon Resource Name (ARN) of the transit gateway.
      * 
      */
-    public Output<String> getTransitGatewayArn() {
+    public Output<String> transitGatewayArn() {
         return this.transitGatewayArn;
     }
 

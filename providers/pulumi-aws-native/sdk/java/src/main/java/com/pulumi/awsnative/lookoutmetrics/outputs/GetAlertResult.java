@@ -26,7 +26,7 @@ public final class GetAlertResult {
      * ARN assigned to the alert.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
 

@@ -23,7 +23,7 @@ public final class BucketSseKmsEncryptedObjects extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
       private final BucketSseKmsEncryptedObjectsStatus status;
 
-    public BucketSseKmsEncryptedObjectsStatus getStatus() {
+    public BucketSseKmsEncryptedObjectsStatus status() {
         return this.status;
     }
 

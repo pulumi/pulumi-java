@@ -32,7 +32,7 @@ public class MultiRegionAccessPoint extends com.pulumi.resources.CustomResource 
      * @return The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -46,7 +46,7 @@ public class MultiRegionAccessPoint extends com.pulumi.resources.CustomResource 
      * @return The timestamp of the when the Multi Region Access Point is created
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -60,7 +60,7 @@ public class MultiRegionAccessPoint extends com.pulumi.resources.CustomResource 
      * @return The name you want to assign to this Multi Region Access Point.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class MultiRegionAccessPoint extends com.pulumi.resources.CustomResource 
      * @return The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    public Output</* @Nullable */ MultiRegionAccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
+    public Output</* @Nullable */ MultiRegionAccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration;
     }
     /**
@@ -88,7 +88,7 @@ public class MultiRegionAccessPoint extends com.pulumi.resources.CustomResource 
      * @return The list of buckets that you want to associate this Multi Region Access Point with.
      * 
      */
-    public Output<List<MultiRegionAccessPointRegion>> getRegions() {
+    public Output<List<MultiRegionAccessPointRegion>> regions() {
         return this.regions;
     }
 

@@ -29,126 +29,126 @@ public final class SpotFleetLaunchSpecificationArgs extends com.pulumi.resources
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Output<List<SpotFleetBlockDeviceMappingArgs>> getBlockDeviceMappings() {
+    public Output<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings() {
         return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile;
 
-    public Output<SpotFleetIamInstanceProfileSpecificationArgs> getIamInstanceProfile() {
+    public Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile() {
         return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
     @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
     @Import(name="instanceRequirements")
       private final @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
 
-    public Output<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
+    public Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements() {
         return this.instanceRequirements == null ? Codegen.empty() : this.instanceRequirements;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
-    public Output<String> getKernelId() {
+    public Output<String> kernelId() {
         return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     @Import(name="monitoring")
       private final @Nullable Output<SpotFleetMonitoringArgs> monitoring;
 
-    public Output<SpotFleetMonitoringArgs> getMonitoring() {
+    public Output<SpotFleetMonitoringArgs> monitoring() {
         return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces;
 
-    public Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> getNetworkInterfaces() {
+    public Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     @Import(name="placement")
       private final @Nullable Output<SpotFleetSpotPlacementArgs> placement;
 
-    public Output<SpotFleetSpotPlacementArgs> getPlacement() {
+    public Output<SpotFleetSpotPlacementArgs> placement() {
         return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     @Import(name="ramdiskId")
       private final @Nullable Output<String> ramdiskId;
 
-    public Output<String> getRamdiskId() {
+    public Output<String> ramdiskId() {
         return this.ramdiskId == null ? Codegen.empty() : this.ramdiskId;
     }
 
     @Import(name="securityGroups")
       private final @Nullable Output<List<SpotFleetGroupIdentifierArgs>> securityGroups;
 
-    public Output<List<SpotFleetGroupIdentifierArgs>> getSecurityGroups() {
+    public Output<List<SpotFleetGroupIdentifierArgs>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
+    public Output<String> spotPrice() {
         return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     @Import(name="tagSpecifications")
       private final @Nullable Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications;
 
-    public Output<List<SpotFleetTagSpecificationArgs>> getTagSpecifications() {
+    public Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications() {
         return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
-    public Output<Double> getWeightedCapacity() {
+    public Output<Double> weightedCapacity() {
         return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 

@@ -23,7 +23,7 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
@@ -34,7 +34,7 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
-    public Output<String> getFailureReason() {
+    public Output<String> failureReason() {
         return this.failureReason == null ? Codegen.empty() : this.failureReason;
     }
 
@@ -45,21 +45,21 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="lastMonitoringExecutionSummary")
       private final @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
 
-    public Output<MonitoringScheduleMonitoringExecutionSummaryArgs> getLastMonitoringExecutionSummary() {
+    public Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary() {
         return this.lastMonitoringExecutionSummary == null ? Codegen.empty() : this.lastMonitoringExecutionSummary;
     }
 
     @Import(name="monitoringScheduleConfig", required=true)
       private final Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
 
-    public Output<MonitoringScheduleConfigArgs> getMonitoringScheduleConfig() {
+    public Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
 
     @Import(name="monitoringScheduleName")
       private final @Nullable Output<String> monitoringScheduleName;
 
-    public Output<String> getMonitoringScheduleName() {
+    public Output<String> monitoringScheduleName() {
         return this.monitoringScheduleName == null ? Codegen.empty() : this.monitoringScheduleName;
     }
 
@@ -70,7 +70,7 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="monitoringScheduleStatus")
       private final @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
 
-    public Output<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
+    public Output<MonitoringScheduleStatus> monitoringScheduleStatus() {
         return this.monitoringScheduleStatus == null ? Codegen.empty() : this.monitoringScheduleStatus;
     }
 
@@ -81,7 +81,7 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
 
-    public Output<List<MonitoringScheduleTagArgs>> getTags() {
+    public Output<List<MonitoringScheduleTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

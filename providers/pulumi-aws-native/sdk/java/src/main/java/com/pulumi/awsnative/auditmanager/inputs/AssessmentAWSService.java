@@ -21,7 +21,7 @@ public final class AssessmentAWSService extends com.pulumi.resources.InvokeArgs 
     @Import(name="serviceName")
       private final @Nullable String serviceName;
 
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
     }
 

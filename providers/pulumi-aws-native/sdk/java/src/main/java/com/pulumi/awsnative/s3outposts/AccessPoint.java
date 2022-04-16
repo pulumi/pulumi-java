@@ -31,7 +31,7 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified AccessPoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +45,7 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -59,7 +59,7 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return A name for the AccessPoint.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return The access point policy associated with this access point.
      * 
      */
-    public Output</* @Nullable */ Object> getPolicy() {
+    public Output</* @Nullable */ Object> policy() {
         return this.policy;
     }
     /**
@@ -87,7 +87,7 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
      * 
      */
-    public Output<AccessPointVpcConfiguration> getVpcConfiguration() {
+    public Output<AccessPointVpcConfiguration> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 

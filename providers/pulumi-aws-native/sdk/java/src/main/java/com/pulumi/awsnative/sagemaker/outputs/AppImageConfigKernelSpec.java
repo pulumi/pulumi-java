@@ -34,14 +34,14 @@ public final class AppImageConfigKernelSpec {
      * The display name of the kernel.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The name of the kernel.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

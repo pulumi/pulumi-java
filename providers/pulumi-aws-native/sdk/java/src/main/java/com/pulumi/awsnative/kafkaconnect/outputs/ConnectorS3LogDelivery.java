@@ -42,21 +42,21 @@ public final class ConnectorS3LogDelivery {
      * The name of the S3 bucket that is the destination for log delivery.
      * 
     */
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
      * Specifies whether the logs get sent to the specified Amazon S3 destination.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The S3 prefix that is the destination for log delivery.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

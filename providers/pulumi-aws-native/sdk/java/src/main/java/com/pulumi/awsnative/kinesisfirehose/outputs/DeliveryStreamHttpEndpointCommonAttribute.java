@@ -20,10 +20,10 @@ public final class DeliveryStreamHttpEndpointCommonAttribute {
         this.attributeValue = attributeValue;
     }
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
-    public String getAttributeValue() {
+    public String attributeValue() {
         return this.attributeValue;
     }
 

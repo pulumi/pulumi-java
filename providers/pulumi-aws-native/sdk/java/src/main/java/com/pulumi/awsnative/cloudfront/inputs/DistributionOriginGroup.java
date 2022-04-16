@@ -17,21 +17,21 @@ public final class DistributionOriginGroup extends com.pulumi.resources.InvokeAr
     @Import(name="failoverCriteria", required=true)
       private final DistributionOriginGroupFailoverCriteria failoverCriteria;
 
-    public DistributionOriginGroupFailoverCriteria getFailoverCriteria() {
+    public DistributionOriginGroupFailoverCriteria failoverCriteria() {
         return this.failoverCriteria;
     }
 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
     @Import(name="members", required=true)
       private final DistributionOriginGroupMembers members;
 
-    public DistributionOriginGroupMembers getMembers() {
+    public DistributionOriginGroupMembers members() {
         return this.members;
     }
 

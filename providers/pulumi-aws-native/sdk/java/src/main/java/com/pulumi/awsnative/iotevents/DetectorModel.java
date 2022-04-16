@@ -25,7 +25,7 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
     @Export(name="detectorModelDefinition", type=DetectorModelDefinition.class, parameters={})
     private Output<DetectorModelDefinition> detectorModelDefinition;
 
-    public Output<DetectorModelDefinition> getDetectorModelDefinition() {
+    public Output<DetectorModelDefinition> detectorModelDefinition() {
         return this.detectorModelDefinition;
     }
     /**
@@ -39,7 +39,7 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * @return A brief description of the detector model.
      * 
      */
-    public Output</* @Nullable */ String> getDetectorModelDescription() {
+    public Output</* @Nullable */ String> detectorModelDescription() {
         return this.detectorModelDescription;
     }
     /**
@@ -53,7 +53,7 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * @return The name of the detector model.
      * 
      */
-    public Output</* @Nullable */ String> getDetectorModelName() {
+    public Output</* @Nullable */ String> detectorModelName() {
         return this.detectorModelName;
     }
     /**
@@ -67,7 +67,7 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * @return Information about the order in which events are evaluated and how actions are executed.
      * 
      */
-    public Output</* @Nullable */ DetectorModelEvaluationMethod> getEvaluationMethod() {
+    public Output</* @Nullable */ DetectorModelEvaluationMethod> evaluationMethod() {
         return this.evaluationMethod;
     }
     /**
@@ -85,7 +85,7 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
      * 
      */
-    public Output</* @Nullable */ String> getKey() {
+    public Output</* @Nullable */ String> key() {
         return this.key;
     }
     /**
@@ -99,7 +99,7 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * @return The ARN of the role that grants permission to AWS IoT Events to perform its operations.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -117,7 +117,7 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
      */
-    public Output</* @Nullable */ List<DetectorModelTag>> getTags() {
+    public Output</* @Nullable */ List<DetectorModelTag>> tags() {
         return this.tags;
     }
 

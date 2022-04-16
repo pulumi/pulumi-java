@@ -22,7 +22,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetHierarchies")
       private final @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies;
 
-    public Output<List<AssetHierarchyArgs>> getAssetHierarchies() {
+    public Output<List<AssetHierarchyArgs>> assetHierarchies() {
         return this.assetHierarchies == null ? Codegen.empty() : this.assetHierarchies;
     }
 
@@ -33,7 +33,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelId", required=true)
       private final Output<String> assetModelId;
 
-    public Output<String> getAssetModelId() {
+    public Output<String> assetModelId() {
         return this.assetModelId;
     }
 
@@ -44,14 +44,14 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetName")
       private final @Nullable Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName == null ? Codegen.empty() : this.assetName;
     }
 
     @Import(name="assetProperties")
       private final @Nullable Output<List<AssetPropertyArgs>> assetProperties;
 
-    public Output<List<AssetPropertyArgs>> getAssetProperties() {
+    public Output<List<AssetPropertyArgs>> assetProperties() {
         return this.assetProperties == null ? Codegen.empty() : this.assetProperties;
     }
 
@@ -62,7 +62,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AssetTagArgs>> tags;
 
-    public Output<List<AssetTagArgs>> getTags() {
+    public Output<List<AssetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

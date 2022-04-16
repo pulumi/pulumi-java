@@ -31,7 +31,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Edge Device you want to register against a device fleet
      * 
      */
-    public Output</* @Nullable */ com.pulumi.awsnative.sagemaker.outputs.Device> getDevice() {
+    public Output</* @Nullable */ com.pulumi.awsnative.sagemaker.outputs.Device> device() {
         return this.device;
     }
     /**
@@ -45,7 +45,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The name of the edge device fleet
      * 
      */
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
     /**
@@ -59,7 +59,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return Associate tags with the resource
      * 
      */
-    public Output</* @Nullable */ List<DeviceTag>> getTags() {
+    public Output</* @Nullable */ List<DeviceTag>> tags() {
         return this.tags;
     }
 

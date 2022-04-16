@@ -24,10 +24,10 @@ public final class CertificateAuthorityCsrExtensions {
         this.subjectInformationAccess = subjectInformationAccess;
     }
 
-    public Optional<CertificateAuthorityKeyUsage> getKeyUsage() {
+    public Optional<CertificateAuthorityKeyUsage> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
-    public List<CertificateAuthorityAccessDescription> getSubjectInformationAccess() {
+    public List<CertificateAuthorityAccessDescription> subjectInformationAccess() {
         return this.subjectInformationAccess == null ? List.of() : this.subjectInformationAccess;
     }
 

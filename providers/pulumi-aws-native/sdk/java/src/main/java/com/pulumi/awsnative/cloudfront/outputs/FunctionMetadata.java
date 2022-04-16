@@ -18,7 +18,7 @@ public final class FunctionMetadata {
         this.functionARN = functionARN;
     }
 
-    public Optional<String> getFunctionARN() {
+    public Optional<String> functionARN() {
         return Optional.ofNullable(this.functionARN);
     }
 

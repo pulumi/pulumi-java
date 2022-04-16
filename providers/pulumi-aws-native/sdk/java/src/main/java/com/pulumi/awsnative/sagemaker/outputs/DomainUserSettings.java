@@ -59,35 +59,35 @@ public final class DomainUserSettings {
      * The user profile Amazon Resource Name (ARN).
      * 
     */
-    public Optional<String> getExecutionRole() {
+    public Optional<String> executionRole() {
         return Optional.ofNullable(this.executionRole);
     }
     /**
      * The Jupyter server's app settings.
      * 
     */
-    public Optional<DomainJupyterServerAppSettings> getJupyterServerAppSettings() {
+    public Optional<DomainJupyterServerAppSettings> jupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
     /**
      * The kernel gateway app settings.
      * 
     */
-    public Optional<DomainKernelGatewayAppSettings> getKernelGatewayAppSettings() {
+    public Optional<DomainKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
     /**
      * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
     */
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
      * The sharing settings.
      * 
     */
-    public Optional<DomainSharingSettings> getSharingSettings() {
+    public Optional<DomainSharingSettings> sharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
 

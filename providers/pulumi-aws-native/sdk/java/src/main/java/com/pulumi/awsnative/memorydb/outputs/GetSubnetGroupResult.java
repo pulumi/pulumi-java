@@ -50,28 +50,28 @@ public final class GetSubnetGroupResult {
      * The Amazon Resource Name (ARN) of the subnet group.
      * 
     */
-    public Optional<String> getARN() {
+    public Optional<String> aRN() {
         return Optional.ofNullable(this.aRN);
     }
     /**
      * An optional description of the subnet group.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of VPC subnet IDs for the subnet group.
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
     /**
      * An array of key-value pairs to apply to this subnet group.
      * 
     */
-    public List<SubnetGroupTag> getTags() {
+    public List<SubnetGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

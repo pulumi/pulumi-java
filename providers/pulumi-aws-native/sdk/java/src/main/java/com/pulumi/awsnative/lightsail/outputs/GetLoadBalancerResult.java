@@ -61,38 +61,38 @@ public final class GetLoadBalancerResult {
      * The names of the instances attached to the load balancer.
      * 
     */
-    public List<String> getAttachedInstances() {
+    public List<String> attachedInstances() {
         return this.attachedInstances == null ? List.of() : this.attachedInstances;
     }
     /**
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
      * 
     */
-    public Optional<String> getHealthCheckPath() {
+    public Optional<String> healthCheckPath() {
         return Optional.ofNullable(this.healthCheckPath);
     }
-    public Optional<String> getLoadBalancerArn() {
+    public Optional<String> loadBalancerArn() {
         return Optional.ofNullable(this.loadBalancerArn);
     }
     /**
      * Configuration option to enable session stickiness.
      * 
     */
-    public Optional<Boolean> getSessionStickinessEnabled() {
+    public Optional<Boolean> sessionStickinessEnabled() {
         return Optional.ofNullable(this.sessionStickinessEnabled);
     }
     /**
      * Configuration option to adjust session stickiness cookie duration parameter.
      * 
     */
-    public Optional<String> getSessionStickinessLBCookieDurationSeconds() {
+    public Optional<String> sessionStickinessLBCookieDurationSeconds() {
         return Optional.ofNullable(this.sessionStickinessLBCookieDurationSeconds);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<LoadBalancerTag> getTags() {
+    public List<LoadBalancerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

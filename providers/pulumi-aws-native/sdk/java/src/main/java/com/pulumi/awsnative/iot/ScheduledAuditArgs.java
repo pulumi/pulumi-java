@@ -26,7 +26,7 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dayOfMonth")
       private final @Nullable Output<String> dayOfMonth;
 
-    public Output<String> getDayOfMonth() {
+    public Output<String> dayOfMonth() {
         return this.dayOfMonth == null ? Codegen.empty() : this.dayOfMonth;
     }
 
@@ -37,7 +37,7 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dayOfWeek")
       private final @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek;
 
-    public Output<ScheduledAuditDayOfWeek> getDayOfWeek() {
+    public Output<ScheduledAuditDayOfWeek> dayOfWeek() {
         return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
     }
 
@@ -48,7 +48,7 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frequency", required=true)
       private final Output<ScheduledAuditFrequency> frequency;
 
-    public Output<ScheduledAuditFrequency> getFrequency() {
+    public Output<ScheduledAuditFrequency> frequency() {
         return this.frequency;
     }
 
@@ -59,7 +59,7 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scheduledAuditName")
       private final @Nullable Output<String> scheduledAuditName;
 
-    public Output<String> getScheduledAuditName() {
+    public Output<String> scheduledAuditName() {
         return this.scheduledAuditName == null ? Codegen.empty() : this.scheduledAuditName;
     }
 
@@ -70,7 +70,7 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<ScheduledAuditTagArgs>> tags;
 
-    public Output<List<ScheduledAuditTagArgs>> getTags() {
+    public Output<List<ScheduledAuditTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -81,7 +81,7 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetCheckNames", required=true)
       private final Output<List<String>> targetCheckNames;
 
-    public Output<List<String>> getTargetCheckNames() {
+    public Output<List<String>> targetCheckNames() {
         return this.targetCheckNames;
     }
 

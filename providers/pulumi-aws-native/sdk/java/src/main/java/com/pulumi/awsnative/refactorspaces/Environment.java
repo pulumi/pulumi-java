@@ -24,31 +24,31 @@ public class Environment extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
 
-    public Output<String> getEnvironmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="networkFabricType", type=EnvironmentNetworkFabricType.class, parameters={})
     private Output</* @Nullable */ EnvironmentNetworkFabricType> networkFabricType;
 
-    public Output</* @Nullable */ EnvironmentNetworkFabricType> getNetworkFabricType() {
+    public Output</* @Nullable */ EnvironmentNetworkFabricType> networkFabricType() {
         return this.networkFabricType;
     }
     /**
@@ -62,13 +62,13 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<EnvironmentTag>> getTags() {
+    public Output</* @Nullable */ List<EnvironmentTag>> tags() {
         return this.tags;
     }
     @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 

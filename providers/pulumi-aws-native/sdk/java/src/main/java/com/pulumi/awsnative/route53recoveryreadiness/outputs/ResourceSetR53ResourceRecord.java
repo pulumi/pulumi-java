@@ -34,14 +34,14 @@ public final class ResourceSetR53ResourceRecord {
      * The DNS target domain name.
      * 
     */
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * The Resource Record set id.
      * 
     */
-    public Optional<String> getRecordSetId() {
+    public Optional<String> recordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
 

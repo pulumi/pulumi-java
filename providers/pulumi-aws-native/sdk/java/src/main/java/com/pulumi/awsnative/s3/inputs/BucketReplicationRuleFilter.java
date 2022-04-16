@@ -19,21 +19,21 @@ public final class BucketReplicationRuleFilter extends com.pulumi.resources.Invo
     @Import(name="and")
       private final @Nullable BucketReplicationRuleAndOperator and;
 
-    public Optional<BucketReplicationRuleAndOperator> getAnd() {
+    public Optional<BucketReplicationRuleAndOperator> and() {
         return this.and == null ? Optional.empty() : Optional.ofNullable(this.and);
     }
 
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @Import(name="tagFilter")
       private final @Nullable BucketTagFilter tagFilter;
 
-    public Optional<BucketTagFilter> getTagFilter() {
+    public Optional<BucketTagFilter> tagFilter() {
         return this.tagFilter == null ? Optional.empty() : Optional.ofNullable(this.tagFilter);
     }
 

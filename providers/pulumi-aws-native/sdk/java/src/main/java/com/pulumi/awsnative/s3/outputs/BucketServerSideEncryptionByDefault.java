@@ -31,10 +31,10 @@ public final class BucketServerSideEncryptionByDefault {
      * "KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.
      * 
     */
-    public Optional<String> getKMSMasterKeyID() {
+    public Optional<String> kMSMasterKeyID() {
         return Optional.ofNullable(this.kMSMasterKeyID);
     }
-    public BucketServerSideEncryptionByDefaultSSEAlgorithm getSSEAlgorithm() {
+    public BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm() {
         return this.sSEAlgorithm;
     }
 

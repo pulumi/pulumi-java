@@ -31,16 +31,16 @@ public final class ThemeConfiguration {
         this.uIColorPalette = uIColorPalette;
     }
 
-    public Optional<ThemeDataColorPalette> getDataColorPalette() {
+    public Optional<ThemeDataColorPalette> dataColorPalette() {
         return Optional.ofNullable(this.dataColorPalette);
     }
-    public Optional<ThemeSheetStyle> getSheet() {
+    public Optional<ThemeSheetStyle> sheet() {
         return Optional.ofNullable(this.sheet);
     }
-    public Optional<ThemeTypography> getTypography() {
+    public Optional<ThemeTypography> typography() {
         return Optional.ofNullable(this.typography);
     }
-    public Optional<ThemeUIColorPalette> getUIColorPalette() {
+    public Optional<ThemeUIColorPalette> uIColorPalette() {
         return Optional.ofNullable(this.uIColorPalette);
     }
 

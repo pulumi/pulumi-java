@@ -24,14 +24,14 @@ public final class DatasetFilterValue {
         this.valueReference = valueReference;
     }
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
     /**
      * Variable name
      * 
     */
-    public String getValueReference() {
+    public String valueReference() {
         return this.valueReference;
     }
 

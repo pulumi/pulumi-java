@@ -20,7 +20,7 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -31,7 +31,7 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -42,7 +42,7 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scope", required=true)
       private final RegexPatternSetScope scope;
 
-    public RegexPatternSetScope getScope() {
+    public RegexPatternSetScope scope() {
         return this.scope;
     }
 

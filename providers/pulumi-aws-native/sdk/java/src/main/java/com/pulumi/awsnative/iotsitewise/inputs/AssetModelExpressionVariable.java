@@ -20,7 +20,7 @@ public final class AssetModelExpressionVariable extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -31,7 +31,7 @@ public final class AssetModelExpressionVariable extends com.pulumi.resources.Inv
     @Import(name="value", required=true)
       private final AssetModelVariableValue value;
 
-    public AssetModelVariableValue getValue() {
+    public AssetModelVariableValue value() {
         return this.value;
     }
 

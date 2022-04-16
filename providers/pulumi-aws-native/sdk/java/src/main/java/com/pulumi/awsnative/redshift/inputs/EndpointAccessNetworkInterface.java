@@ -25,7 +25,7 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
@@ -36,7 +36,7 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
 
-    public Optional<String> getNetworkInterfaceId() {
+    public Optional<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
     }
 
@@ -47,7 +47,7 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
@@ -58,7 +58,7 @@ public final class EndpointAccessNetworkInterface extends com.pulumi.resources.I
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 

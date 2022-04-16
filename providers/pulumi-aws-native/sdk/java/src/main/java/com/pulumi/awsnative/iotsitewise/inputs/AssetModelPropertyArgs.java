@@ -29,7 +29,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataType", required=true)
       private final Output<AssetModelDataType> dataType;
 
-    public Output<AssetModelDataType> getDataType() {
+    public Output<AssetModelDataType> dataType() {
         return this.dataType;
     }
 
@@ -40,7 +40,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataTypeSpec")
       private final @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
 
-    public Output<AssetModelDataTypeSpec> getDataTypeSpec() {
+    public Output<AssetModelDataTypeSpec> dataTypeSpec() {
         return this.dataTypeSpec == null ? Codegen.empty() : this.dataTypeSpec;
     }
 
@@ -51,7 +51,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
 
-    public Output<String> getLogicalId() {
+    public Output<String> logicalId() {
         return this.logicalId;
     }
 
@@ -62,7 +62,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,7 +73,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<AssetModelPropertyTypeArgs> type;
 
-    public Output<AssetModelPropertyTypeArgs> getType() {
+    public Output<AssetModelPropertyTypeArgs> type() {
         return this.type;
     }
 
@@ -84,7 +84,7 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 

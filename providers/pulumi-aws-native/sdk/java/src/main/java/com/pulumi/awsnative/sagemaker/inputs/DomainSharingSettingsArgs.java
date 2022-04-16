@@ -27,7 +27,7 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="notebookOutputOption")
       private final @Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption;
 
-    public Output<DomainSharingSettingsNotebookOutputOption> getNotebookOutputOption() {
+    public Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption() {
         return this.notebookOutputOption == null ? Codegen.empty() : this.notebookOutputOption;
     }
 
@@ -38,7 +38,7 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="s3KmsKeyId")
       private final @Nullable Output<String> s3KmsKeyId;
 
-    public Output<String> getS3KmsKeyId() {
+    public Output<String> s3KmsKeyId() {
         return this.s3KmsKeyId == null ? Codegen.empty() : this.s3KmsKeyId;
     }
 
@@ -49,7 +49,7 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="s3OutputPath")
       private final @Nullable Output<String> s3OutputPath;
 
-    public Output<String> getS3OutputPath() {
+    public Output<String> s3OutputPath() {
         return this.s3OutputPath == null ? Codegen.empty() : this.s3OutputPath;
     }
 

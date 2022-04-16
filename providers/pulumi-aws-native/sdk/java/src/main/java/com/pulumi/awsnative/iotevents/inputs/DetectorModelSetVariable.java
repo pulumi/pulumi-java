@@ -23,7 +23,7 @@ public final class DetectorModelSetVariable extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 
@@ -34,7 +34,7 @@ public final class DetectorModelSetVariable extends com.pulumi.resources.InvokeA
     @Import(name="variableName", required=true)
       private final String variableName;
 
-    public String getVariableName() {
+    public String variableName() {
         return this.variableName;
     }
 

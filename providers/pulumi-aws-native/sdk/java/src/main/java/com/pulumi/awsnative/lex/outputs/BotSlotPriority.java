@@ -25,14 +25,14 @@ public final class BotSlotPriority {
         this.slotName = slotName;
     }
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * The name of the slot.
      * 
     */
-    public String getSlotName() {
+    public String slotName() {
         return this.slotName;
     }
 

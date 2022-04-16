@@ -18,14 +18,14 @@ public final class ThemeValues extends com.pulumi.resources.InvokeArgs {
     @Import(name="key")
       private final @Nullable String key;
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
       private final @Nullable ThemeValue value;
 
-    public Optional<ThemeValue> getValue() {
+    public Optional<ThemeValue> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

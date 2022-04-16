@@ -26,13 +26,13 @@ public final class DomainAdvancedSecurityOptionsInput {
         this.masterUserOptions = masterUserOptions;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<Boolean> getInternalUserDatabaseEnabled() {
+    public Optional<Boolean> internalUserDatabaseEnabled() {
         return Optional.ofNullable(this.internalUserDatabaseEnabled);
     }
-    public Optional<DomainMasterUserOptions> getMasterUserOptions() {
+    public Optional<DomainMasterUserOptions> masterUserOptions() {
         return Optional.ofNullable(this.masterUserOptions);
     }
 

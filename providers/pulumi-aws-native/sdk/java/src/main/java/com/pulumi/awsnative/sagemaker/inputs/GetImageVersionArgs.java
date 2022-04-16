@@ -15,7 +15,7 @@ public final class GetImageVersionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageVersionArn", required=true)
       private final String imageVersionArn;
 
-    public String getImageVersionArn() {
+    public String imageVersionArn() {
         return this.imageVersionArn;
     }
 

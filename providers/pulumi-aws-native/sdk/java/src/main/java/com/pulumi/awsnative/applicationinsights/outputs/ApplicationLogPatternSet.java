@@ -34,14 +34,14 @@ public final class ApplicationLogPatternSet {
      * The log patterns of a set.
      * 
     */
-    public List<ApplicationLogPattern> getLogPatterns() {
+    public List<ApplicationLogPattern> logPatterns() {
         return this.logPatterns;
     }
     /**
      * The name of the log pattern set.
      * 
     */
-    public String getPatternSetName() {
+    public String patternSetName() {
         return this.patternSetName;
     }
 

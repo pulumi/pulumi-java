@@ -26,7 +26,7 @@ public final class FunctionDeadLetterConfig {
      * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
      * 
     */
-    public Optional<String> getTargetArn() {
+    public Optional<String> targetArn() {
         return Optional.ofNullable(this.targetArn);
     }
 

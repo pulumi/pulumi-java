@@ -24,7 +24,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activationKey", required=true)
       private final Output<String> activationKey;
 
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey;
     }
 
@@ -35,7 +35,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentName")
       private final @Nullable Output<String> agentName;
 
-    public Output<String> getAgentName() {
+    public Output<String> agentName() {
         return this.agentName == null ? Codegen.empty() : this.agentName;
     }
 
@@ -46,7 +46,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns == null ? Codegen.empty() : this.securityGroupArns;
     }
 
@@ -57,7 +57,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetArns")
       private final @Nullable Output<List<String>> subnetArns;
 
-    public Output<List<String>> getSubnetArns() {
+    public Output<List<String>> subnetArns() {
         return this.subnetArns == null ? Codegen.empty() : this.subnetArns;
     }
 
@@ -68,7 +68,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AgentTagArgs>> tags;
 
-    public Output<List<AgentTagArgs>> getTags() {
+    public Output<List<AgentTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 

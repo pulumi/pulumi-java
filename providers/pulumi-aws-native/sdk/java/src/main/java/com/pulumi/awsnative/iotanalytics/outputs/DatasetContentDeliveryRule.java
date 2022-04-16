@@ -23,10 +23,10 @@ public final class DatasetContentDeliveryRule {
         this.entryName = entryName;
     }
 
-    public DatasetContentDeliveryRuleDestination getDestination() {
+    public DatasetContentDeliveryRuleDestination destination() {
         return this.destination;
     }
-    public Optional<String> getEntryName() {
+    public Optional<String> entryName() {
         return Optional.ofNullable(this.entryName);
     }
 

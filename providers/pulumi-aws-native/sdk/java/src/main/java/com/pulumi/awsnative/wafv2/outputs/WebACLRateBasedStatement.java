@@ -31,16 +31,16 @@ public final class WebACLRateBasedStatement {
         this.scopeDownStatement = scopeDownStatement;
     }
 
-    public WebACLRateBasedStatementAggregateKeyType getAggregateKeyType() {
+    public WebACLRateBasedStatementAggregateKeyType aggregateKeyType() {
         return this.aggregateKeyType;
     }
-    public Optional<WebACLForwardedIPConfiguration> getForwardedIPConfig() {
+    public Optional<WebACLForwardedIPConfiguration> forwardedIPConfig() {
         return Optional.ofNullable(this.forwardedIPConfig);
     }
-    public Integer getLimit() {
+    public Integer limit() {
         return this.limit;
     }
-    public Optional<WebACLStatement> getScopeDownStatement() {
+    public Optional<WebACLStatement> scopeDownStatement() {
         return Optional.ofNullable(this.scopeDownStatement);
     }
 

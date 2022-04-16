@@ -36,31 +36,31 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return The time at which the project was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     @Export(name="projectDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectDescription;
 
-    public Output</* @Nullable */ String> getProjectDescription() {
+    public Output</* @Nullable */ String> projectDescription() {
         return this.projectDescription;
     }
     @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
     /**
@@ -74,7 +74,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return The status of a project.
      * 
      */
-    public Output<ProjectStatus> getProjectStatus() {
+    public Output<ProjectStatus> projectStatus() {
         return this.projectStatus;
     }
     /**
@@ -88,7 +88,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Provisioned ServiceCatalog  Details
      * 
      */
-    public Output<ServiceCatalogProvisionedProductDetailsProperties> getServiceCatalogProvisionedProductDetails() {
+    public Output<ServiceCatalogProvisionedProductDetailsProperties> serviceCatalogProvisionedProductDetails() {
         return this.serviceCatalogProvisionedProductDetails;
     }
     /**
@@ -102,7 +102,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Input ServiceCatalog Provisioning Details
      * 
      */
-    public Output<ServiceCatalogProvisioningDetailsProperties> getServiceCatalogProvisioningDetails() {
+    public Output<ServiceCatalogProvisioningDetailsProperties> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
     /**
@@ -116,7 +116,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ProjectTag>> getTags() {
+    public Output</* @Nullable */ List<ProjectTag>> tags() {
         return this.tags;
     }
 

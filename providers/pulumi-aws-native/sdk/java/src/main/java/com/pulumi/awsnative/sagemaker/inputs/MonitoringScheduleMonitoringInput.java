@@ -19,7 +19,7 @@ public final class MonitoringScheduleMonitoringInput extends com.pulumi.resource
     @Import(name="endpointInput", required=true)
       private final MonitoringScheduleEndpointInput endpointInput;
 
-    public MonitoringScheduleEndpointInput getEndpointInput() {
+    public MonitoringScheduleEndpointInput endpointInput() {
         return this.endpointInput;
     }
 

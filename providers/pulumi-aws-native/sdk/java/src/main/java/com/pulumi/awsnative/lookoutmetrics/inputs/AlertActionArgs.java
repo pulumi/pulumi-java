@@ -19,14 +19,14 @@ public final class AlertActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaConfiguration")
       private final @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
 
-    public Output<AlertLambdaConfigurationArgs> getLambdaConfiguration() {
+    public Output<AlertLambdaConfigurationArgs> lambdaConfiguration() {
         return this.lambdaConfiguration == null ? Codegen.empty() : this.lambdaConfiguration;
     }
 
     @Import(name="sNSConfiguration")
       private final @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
 
-    public Output<AlertSNSConfigurationArgs> getSNSConfiguration() {
+    public Output<AlertSNSConfigurationArgs> sNSConfiguration() {
         return this.sNSConfiguration == null ? Codegen.empty() : this.sNSConfiguration;
     }
 

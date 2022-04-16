@@ -50,34 +50,34 @@ public final class DeliveryStreamOrcSerDe {
         this.stripeSizeBytes = stripeSizeBytes;
     }
 
-    public Optional<Integer> getBlockSizeBytes() {
+    public Optional<Integer> blockSizeBytes() {
         return Optional.ofNullable(this.blockSizeBytes);
     }
-    public List<String> getBloomFilterColumns() {
+    public List<String> bloomFilterColumns() {
         return this.bloomFilterColumns == null ? List.of() : this.bloomFilterColumns;
     }
-    public Optional<Double> getBloomFilterFalsePositiveProbability() {
+    public Optional<Double> bloomFilterFalsePositiveProbability() {
         return Optional.ofNullable(this.bloomFilterFalsePositiveProbability);
     }
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
-    public Optional<Double> getDictionaryKeyThreshold() {
+    public Optional<Double> dictionaryKeyThreshold() {
         return Optional.ofNullable(this.dictionaryKeyThreshold);
     }
-    public Optional<Boolean> getEnablePadding() {
+    public Optional<Boolean> enablePadding() {
         return Optional.ofNullable(this.enablePadding);
     }
-    public Optional<String> getFormatVersion() {
+    public Optional<String> formatVersion() {
         return Optional.ofNullable(this.formatVersion);
     }
-    public Optional<Double> getPaddingTolerance() {
+    public Optional<Double> paddingTolerance() {
         return Optional.ofNullable(this.paddingTolerance);
     }
-    public Optional<Integer> getRowIndexStride() {
+    public Optional<Integer> rowIndexStride() {
         return Optional.ofNullable(this.rowIndexStride);
     }
-    public Optional<Integer> getStripeSizeBytes() {
+    public Optional<Integer> stripeSizeBytes() {
         return Optional.ofNullable(this.stripeSizeBytes);
     }
 

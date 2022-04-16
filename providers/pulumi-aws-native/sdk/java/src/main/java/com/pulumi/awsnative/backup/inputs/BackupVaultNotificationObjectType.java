@@ -16,14 +16,14 @@ public final class BackupVaultNotificationObjectType extends com.pulumi.resource
     @Import(name="backupVaultEvents", required=true)
       private final List<String> backupVaultEvents;
 
-    public List<String> getBackupVaultEvents() {
+    public List<String> backupVaultEvents() {
         return this.backupVaultEvents;
     }
 
     @Import(name="sNSTopicArn", required=true)
       private final String sNSTopicArn;
 
-    public String getSNSTopicArn() {
+    public String sNSTopicArn() {
         return this.sNSTopicArn;
     }
 

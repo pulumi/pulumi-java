@@ -23,7 +23,7 @@ public final class AggregationAuthorizationTag extends com.pulumi.resources.Invo
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -34,7 +34,7 @@ public final class AggregationAuthorizationTag extends com.pulumi.resources.Invo
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

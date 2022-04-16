@@ -23,10 +23,10 @@ public final class DatasetVersioningConfiguration {
         this.unlimited = unlimited;
     }
 
-    public Optional<Integer> getMaxVersions() {
+    public Optional<Integer> maxVersions() {
         return Optional.ofNullable(this.maxVersions);
     }
-    public Optional<Boolean> getUnlimited() {
+    public Optional<Boolean> unlimited() {
         return Optional.ofNullable(this.unlimited);
     }
 

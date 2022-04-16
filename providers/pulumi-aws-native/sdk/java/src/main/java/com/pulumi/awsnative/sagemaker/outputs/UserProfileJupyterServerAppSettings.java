@@ -18,7 +18,7 @@ public final class UserProfileJupyterServerAppSettings {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 
-    public Optional<UserProfileResourceSpec> getDefaultResourceSpec() {
+    public Optional<UserProfileResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
 

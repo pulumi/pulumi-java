@@ -17,21 +17,21 @@ public final class TopicRuleSnsAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="messageFormat")
       private final @Nullable String messageFormat;
 
-    public Optional<String> getMessageFormat() {
+    public Optional<String> messageFormat() {
         return this.messageFormat == null ? Optional.empty() : Optional.ofNullable(this.messageFormat);
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="targetArn", required=true)
       private final String targetArn;
 
-    public String getTargetArn() {
+    public String targetArn() {
         return this.targetArn;
     }
 

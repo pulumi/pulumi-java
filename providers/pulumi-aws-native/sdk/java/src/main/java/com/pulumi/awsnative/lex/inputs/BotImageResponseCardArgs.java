@@ -28,7 +28,7 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="buttons")
       private final @Nullable Output<List<BotButtonArgs>> buttons;
 
-    public Output<List<BotButtonArgs>> getButtons() {
+    public Output<List<BotButtonArgs>> buttons() {
         return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
@@ -39,7 +39,7 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="imageUrl")
       private final @Nullable Output<String> imageUrl;
 
-    public Output<String> getImageUrl() {
+    public Output<String> imageUrl() {
         return this.imageUrl == null ? Codegen.empty() : this.imageUrl;
     }
 
@@ -50,7 +50,7 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
+    public Output<String> subtitle() {
         return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
@@ -61,7 +61,7 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

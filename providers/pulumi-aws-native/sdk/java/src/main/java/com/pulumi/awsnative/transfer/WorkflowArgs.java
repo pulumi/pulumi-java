@@ -25,7 +25,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="onExceptionSteps")
       private final @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
 
-    public Output<List<WorkflowStepArgs>> getOnExceptionSteps() {
+    public Output<List<WorkflowStepArgs>> onExceptionSteps() {
         return this.onExceptionSteps == null ? Codegen.empty() : this.onExceptionSteps;
     }
 
@@ -47,7 +47,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="steps", required=true)
       private final Output<List<WorkflowStepArgs>> steps;
 
-    public Output<List<WorkflowStepArgs>> getSteps() {
+    public Output<List<WorkflowStepArgs>> steps() {
         return this.steps;
     }
 
@@ -58,7 +58,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<WorkflowTagArgs>> tags;
 
-    public Output<List<WorkflowTagArgs>> getTags() {
+    public Output<List<WorkflowTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

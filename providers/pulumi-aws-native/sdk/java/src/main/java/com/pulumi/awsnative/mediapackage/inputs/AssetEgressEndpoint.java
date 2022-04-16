@@ -23,7 +23,7 @@ public final class AssetEgressEndpoint extends com.pulumi.resources.InvokeArgs {
     @Import(name="packagingConfigurationId", required=true)
       private final String packagingConfigurationId;
 
-    public String getPackagingConfigurationId() {
+    public String packagingConfigurationId() {
         return this.packagingConfigurationId;
     }
 
@@ -34,7 +34,7 @@ public final class AssetEgressEndpoint extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

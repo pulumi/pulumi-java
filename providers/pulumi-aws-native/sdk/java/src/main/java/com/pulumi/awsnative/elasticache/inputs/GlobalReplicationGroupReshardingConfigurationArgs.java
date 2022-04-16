@@ -23,7 +23,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends com
     @Import(name="nodeGroupId")
       private final @Nullable Output<String> nodeGroupId;
 
-    public Output<String> getNodeGroupId() {
+    public Output<String> nodeGroupId() {
         return this.nodeGroupId == null ? Codegen.empty() : this.nodeGroupId;
     }
 
@@ -34,7 +34,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends com
     @Import(name="preferredAvailabilityZones")
       private final @Nullable Output<List<String>> preferredAvailabilityZones;
 
-    public Output<List<String>> getPreferredAvailabilityZones() {
+    public Output<List<String>> preferredAvailabilityZones() {
         return this.preferredAvailabilityZones == null ? Codegen.empty() : this.preferredAvailabilityZones;
     }
 

@@ -22,7 +22,7 @@ public final class ResolverDNSSECConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

@@ -17,14 +17,14 @@ public final class ServiceDeploymentCircuitBreakerArgs extends com.pulumi.resour
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 
     @Import(name="rollback", required=true)
       private final Output<Boolean> rollback;
 
-    public Output<Boolean> getRollback() {
+    public Output<Boolean> rollback() {
         return this.rollback;
     }
 

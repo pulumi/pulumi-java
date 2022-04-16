@@ -31,16 +31,16 @@ public final class GetProjectResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<Integer> getDefaultJobTimeoutMinutes() {
+    public Optional<Integer> defaultJobTimeoutMinutes() {
         return Optional.ofNullable(this.defaultJobTimeoutMinutes);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public List<ProjectTag> getTags() {
+    public List<ProjectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

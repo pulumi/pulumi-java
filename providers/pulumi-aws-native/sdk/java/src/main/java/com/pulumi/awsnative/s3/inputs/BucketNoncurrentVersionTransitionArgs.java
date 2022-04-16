@@ -27,7 +27,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
     @Import(name="newerNoncurrentVersions")
       private final @Nullable Output<Integer> newerNoncurrentVersions;
 
-    public Output<Integer> getNewerNoncurrentVersions() {
+    public Output<Integer> newerNoncurrentVersions() {
         return this.newerNoncurrentVersions == null ? Codegen.empty() : this.newerNoncurrentVersions;
     }
 
@@ -38,7 +38,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
     @Import(name="storageClass", required=true)
       private final Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
 
-    public Output<BucketNoncurrentVersionTransitionStorageClass> getStorageClass() {
+    public Output<BucketNoncurrentVersionTransitionStorageClass> storageClass() {
         return this.storageClass;
     }
 
@@ -49,7 +49,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
     @Import(name="transitionInDays", required=true)
       private final Output<Integer> transitionInDays;
 
-    public Output<Integer> getTransitionInDays() {
+    public Output<Integer> transitionInDays() {
         return this.transitionInDays;
     }
 

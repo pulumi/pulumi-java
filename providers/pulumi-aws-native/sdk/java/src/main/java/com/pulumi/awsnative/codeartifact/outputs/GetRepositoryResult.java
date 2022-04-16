@@ -72,49 +72,49 @@ public final class GetRepositoryResult {
      * The ARN of the repository.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A text description of the repository.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of external connections associated with the repository.
      * 
     */
-    public List<String> getExternalConnections() {
+    public List<String> externalConnections() {
         return this.externalConnections == null ? List.of() : this.externalConnections;
     }
     /**
      * The name of the repository. This is used for GetAtt
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The access control resource policy on the provided repository.
      * 
     */
-    public Optional<Object> getPermissionsPolicyDocument() {
+    public Optional<Object> permissionsPolicyDocument() {
         return Optional.ofNullable(this.permissionsPolicyDocument);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<RepositoryTag> getTags() {
+    public List<RepositoryTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A list of upstream repositories associated with the repository.
      * 
     */
-    public List<String> getUpstreams() {
+    public List<String> upstreams() {
         return this.upstreams == null ? List.of() : this.upstreams;
     }
 

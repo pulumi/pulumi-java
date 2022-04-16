@@ -23,42 +23,42 @@ public final class ExperimentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="actions")
       private final @Nullable Output<ExperimentTemplateActionMapArgs> actions;
 
-    public Output<ExperimentTemplateActionMapArgs> getActions() {
+    public Output<ExperimentTemplateActionMapArgs> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stopConditions", required=true)
       private final Output<List<ExperimentTemplateStopConditionArgs>> stopConditions;
 
-    public Output<List<ExperimentTemplateStopConditionArgs>> getStopConditions() {
+    public Output<List<ExperimentTemplateStopConditionArgs>> stopConditions() {
         return this.stopConditions;
     }
 
     @Import(name="tags", required=true)
       private final Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags;
     }
 
     @Import(name="targets", required=true)
       private final Output<ExperimentTemplateTargetMapArgs> targets;
 
-    public Output<ExperimentTemplateTargetMapArgs> getTargets() {
+    public Output<ExperimentTemplateTargetMapArgs> targets() {
         return this.targets;
     }
 

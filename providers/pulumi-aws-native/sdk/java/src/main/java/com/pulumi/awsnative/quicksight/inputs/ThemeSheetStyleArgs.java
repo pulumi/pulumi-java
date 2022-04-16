@@ -23,14 +23,14 @@ public final class ThemeSheetStyleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tile")
       private final @Nullable Output<ThemeTileStyleArgs> tile;
 
-    public Output<ThemeTileStyleArgs> getTile() {
+    public Output<ThemeTileStyleArgs> tile() {
         return this.tile == null ? Codegen.empty() : this.tile;
     }
 
     @Import(name="tileLayout")
       private final @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
 
-    public Output<ThemeTileLayoutStyleArgs> getTileLayout() {
+    public Output<ThemeTileLayoutStyleArgs> tileLayout() {
         return this.tileLayout == null ? Codegen.empty() : this.tileLayout;
     }
 

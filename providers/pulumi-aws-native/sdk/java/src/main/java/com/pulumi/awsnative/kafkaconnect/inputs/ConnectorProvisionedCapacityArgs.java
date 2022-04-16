@@ -26,7 +26,7 @@ public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources
     @Import(name="mcuCount")
       private final @Nullable Output<Integer> mcuCount;
 
-    public Output<Integer> getMcuCount() {
+    public Output<Integer> mcuCount() {
         return this.mcuCount == null ? Codegen.empty() : this.mcuCount;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources
     @Import(name="workerCount", required=true)
       private final Output<Integer> workerCount;
 
-    public Output<Integer> getWorkerCount() {
+    public Output<Integer> workerCount() {
         return this.workerCount;
     }
 

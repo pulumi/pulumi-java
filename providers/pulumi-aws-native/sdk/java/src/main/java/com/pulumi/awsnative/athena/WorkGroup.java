@@ -37,7 +37,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return The date and time the workgroup was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -51,7 +51,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return The workgroup description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -65,7 +65,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return The workGroup name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -79,7 +79,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return The option to delete the workgroup and its contents even if the workgroup contains any named queries.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRecursiveDeleteOption() {
+    public Output</* @Nullable */ Boolean> recursiveDeleteOption() {
         return this.recursiveDeleteOption;
     }
     /**
@@ -93,7 +93,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return The state of the workgroup: ENABLED or DISABLED.
      * 
      */
-    public Output</* @Nullable */ WorkGroupState> getState() {
+    public Output</* @Nullable */ WorkGroupState> state() {
         return this.state;
     }
     /**
@@ -107,7 +107,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return One or more tags, separated by commas, that you want to attach to the workgroup as you create it
      * 
      */
-    public Output</* @Nullable */ List<WorkGroupTag>> getTags() {
+    public Output</* @Nullable */ List<WorkGroupTag>> tags() {
         return this.tags;
     }
     /**
@@ -121,7 +121,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return The workgroup configuration
      * 
      */
-    public Output</* @Nullable */ WorkGroupConfiguration> getWorkGroupConfiguration() {
+    public Output</* @Nullable */ WorkGroupConfiguration> workGroupConfiguration() {
         return this.workGroupConfiguration;
     }
     /**
@@ -135,7 +135,7 @@ public class WorkGroup extends com.pulumi.resources.CustomResource {
      * @return The workgroup configuration update object
      * 
      */
-    public Output</* @Nullable */ WorkGroupConfigurationUpdates> getWorkGroupConfigurationUpdates() {
+    public Output</* @Nullable */ WorkGroupConfigurationUpdates> workGroupConfigurationUpdates() {
         return this.workGroupConfigurationUpdates;
     }
 

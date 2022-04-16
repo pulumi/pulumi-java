@@ -18,7 +18,7 @@ public final class ThemeTileStyle {
         this.border = border;
     }
 
-    public Optional<ThemeBorderStyle> getBorder() {
+    public Optional<ThemeBorderStyle> border() {
         return Optional.ofNullable(this.border);
     }
 

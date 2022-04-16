@@ -37,22 +37,22 @@ public final class BackupSelectionResourceType {
         this.selectionName = selectionName;
     }
 
-    public Optional<BackupSelectionResourceTypeConditionsProperties> getConditions() {
+    public Optional<BackupSelectionResourceTypeConditionsProperties> conditions() {
         return Optional.ofNullable(this.conditions);
     }
-    public String getIamRoleArn() {
+    public String iamRoleArn() {
         return this.iamRoleArn;
     }
-    public List<BackupSelectionConditionResourceType> getListOfTags() {
+    public List<BackupSelectionConditionResourceType> listOfTags() {
         return this.listOfTags == null ? List.of() : this.listOfTags;
     }
-    public List<String> getNotResources() {
+    public List<String> notResources() {
         return this.notResources == null ? List.of() : this.notResources;
     }
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
-    public String getSelectionName() {
+    public String selectionName() {
         return this.selectionName;
     }
 

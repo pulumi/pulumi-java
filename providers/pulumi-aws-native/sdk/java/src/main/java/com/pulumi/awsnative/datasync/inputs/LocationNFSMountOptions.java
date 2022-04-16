@@ -25,7 +25,7 @@ public final class LocationNFSMountOptions extends com.pulumi.resources.InvokeAr
     @Import(name="version")
       private final @Nullable LocationNFSMountOptionsVersion version;
 
-    public Optional<LocationNFSMountOptionsVersion> getVersion() {
+    public Optional<LocationNFSMountOptionsVersion> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

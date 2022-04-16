@@ -15,7 +15,7 @@ public final class SpotFleetGroupIdentifier extends com.pulumi.resources.InvokeA
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 

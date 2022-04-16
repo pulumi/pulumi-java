@@ -29,7 +29,7 @@ public class SchemaVersionMetadata extends com.pulumi.resources.CustomResource {
      * @return Metadata key
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -43,7 +43,7 @@ public class SchemaVersionMetadata extends com.pulumi.resources.CustomResource {
      * @return Represents the version ID associated with the schema version.
      * 
      */
-    public Output<String> getSchemaVersionId() {
+    public Output<String> schemaVersionId() {
         return this.schemaVersionId;
     }
     /**
@@ -57,7 +57,7 @@ public class SchemaVersionMetadata extends com.pulumi.resources.CustomResource {
      * @return Metadata value
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

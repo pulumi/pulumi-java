@@ -20,28 +20,28 @@ public final class AppBlockScriptDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="executableParameters")
       private final @Nullable Output<String> executableParameters;
 
-    public Output<String> getExecutableParameters() {
+    public Output<String> executableParameters() {
         return this.executableParameters == null ? Codegen.empty() : this.executableParameters;
     }
 
     @Import(name="executablePath", required=true)
       private final Output<String> executablePath;
 
-    public Output<String> getExecutablePath() {
+    public Output<String> executablePath() {
         return this.executablePath;
     }
 
     @Import(name="scriptS3Location", required=true)
       private final Output<AppBlockS3LocationArgs> scriptS3Location;
 
-    public Output<AppBlockS3LocationArgs> getScriptS3Location() {
+    public Output<AppBlockS3LocationArgs> scriptS3Location() {
         return this.scriptS3Location;
     }
 
     @Import(name="timeoutInSeconds", required=true)
       private final Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 

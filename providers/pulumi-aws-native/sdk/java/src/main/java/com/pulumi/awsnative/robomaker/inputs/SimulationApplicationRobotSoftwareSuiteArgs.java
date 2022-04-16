@@ -27,7 +27,7 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends com.pulum
     @Import(name="name", required=true)
       private final Output<SimulationApplicationRobotSoftwareSuiteName> name;
 
-    public Output<SimulationApplicationRobotSoftwareSuiteName> getName() {
+    public Output<SimulationApplicationRobotSoftwareSuiteName> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends com.pulum
     @Import(name="version")
       private final @Nullable Output<SimulationApplicationRobotSoftwareSuiteVersion> version;
 
-    public Output<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {
+    public Output<SimulationApplicationRobotSoftwareSuiteVersion> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

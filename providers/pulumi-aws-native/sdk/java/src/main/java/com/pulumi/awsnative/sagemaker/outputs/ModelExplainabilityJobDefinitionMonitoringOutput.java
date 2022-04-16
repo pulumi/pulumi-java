@@ -16,7 +16,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutput {
         this.s3Output = s3Output;
     }
 
-    public ModelExplainabilityJobDefinitionS3Output getS3Output() {
+    public ModelExplainabilityJobDefinitionS3Output s3Output() {
         return this.s3Output;
     }
 

@@ -22,49 +22,49 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends com.pulumi.resources.
     @Import(name="abpV10x")
       private final @Nullable Output<WirelessDeviceAbpV10xArgs> abpV10x;
 
-    public Output<WirelessDeviceAbpV10xArgs> getAbpV10x() {
+    public Output<WirelessDeviceAbpV10xArgs> abpV10x() {
         return this.abpV10x == null ? Codegen.empty() : this.abpV10x;
     }
 
     @Import(name="abpV11")
       private final @Nullable Output<WirelessDeviceAbpV11Args> abpV11;
 
-    public Output<WirelessDeviceAbpV11Args> getAbpV11() {
+    public Output<WirelessDeviceAbpV11Args> abpV11() {
         return this.abpV11 == null ? Codegen.empty() : this.abpV11;
     }
 
     @Import(name="devEui")
       private final @Nullable Output<String> devEui;
 
-    public Output<String> getDevEui() {
+    public Output<String> devEui() {
         return this.devEui == null ? Codegen.empty() : this.devEui;
     }
 
     @Import(name="deviceProfileId")
       private final @Nullable Output<String> deviceProfileId;
 
-    public Output<String> getDeviceProfileId() {
+    public Output<String> deviceProfileId() {
         return this.deviceProfileId == null ? Codegen.empty() : this.deviceProfileId;
     }
 
     @Import(name="otaaV10x")
       private final @Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x;
 
-    public Output<WirelessDeviceOtaaV10xArgs> getOtaaV10x() {
+    public Output<WirelessDeviceOtaaV10xArgs> otaaV10x() {
         return this.otaaV10x == null ? Codegen.empty() : this.otaaV10x;
     }
 
     @Import(name="otaaV11")
       private final @Nullable Output<WirelessDeviceOtaaV11Args> otaaV11;
 
-    public Output<WirelessDeviceOtaaV11Args> getOtaaV11() {
+    public Output<WirelessDeviceOtaaV11Args> otaaV11() {
         return this.otaaV11 == null ? Codegen.empty() : this.otaaV11;
     }
 
     @Import(name="serviceProfileId")
       private final @Nullable Output<String> serviceProfileId;
 
-    public Output<String> getServiceProfileId() {
+    public Output<String> serviceProfileId() {
         return this.serviceProfileId == null ? Codegen.empty() : this.serviceProfileId;
     }
 

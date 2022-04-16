@@ -31,7 +31,7 @@ public class ExtensionResource extends com.pulumi.resources.CustomResource {
      * @return Dictionary of the extension resource attributes.
      * 
      */
-    public Output<Map<String,Object>> getOutputs() {
+    public Output<Map<String,Object>> outputs() {
         return this.outputs;
     }
 

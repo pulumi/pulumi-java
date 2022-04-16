@@ -51,28 +51,28 @@ public final class GetDistributionConfigurationResult {
      * The Amazon Resource Name (ARN) of the distribution configuration.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The description of the distribution configuration.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The distributions of the distribution configuration.
      * 
     */
-    public List<DistributionConfigurationDistribution> getDistributions() {
+    public List<DistributionConfigurationDistribution> distributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
     /**
      * The tags associated with the component.
      * 
     */
-    public Optional<Object> getTags() {
+    public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
 

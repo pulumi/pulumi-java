@@ -20,14 +20,14 @@ public final class JobEntityDetectorConfigurationArgs extends com.pulumi.resourc
     @Import(name="allowedStatistics")
       private final @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
 
-    public Output<JobAllowedStatisticsArgs> getAllowedStatistics() {
+    public Output<JobAllowedStatisticsArgs> allowedStatistics() {
         return this.allowedStatistics == null ? Codegen.empty() : this.allowedStatistics;
     }
 
     @Import(name="entityTypes", required=true)
       private final Output<List<String>> entityTypes;
 
-    public Output<List<String>> getEntityTypes() {
+    public Output<List<String>> entityTypes() {
         return this.entityTypes;
     }
 

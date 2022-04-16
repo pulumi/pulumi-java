@@ -22,10 +22,10 @@ public final class ClusterEndpoint {
         this.port = port;
     }
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
 

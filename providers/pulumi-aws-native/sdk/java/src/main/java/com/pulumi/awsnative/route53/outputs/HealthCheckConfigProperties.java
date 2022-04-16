@@ -73,55 +73,55 @@ public final class HealthCheckConfigProperties {
         this.type = type;
     }
 
-    public Optional<HealthCheckAlarmIdentifier> getAlarmIdentifier() {
+    public Optional<HealthCheckAlarmIdentifier> alarmIdentifier() {
         return Optional.ofNullable(this.alarmIdentifier);
     }
-    public List<String> getChildHealthChecks() {
+    public List<String> childHealthChecks() {
         return this.childHealthChecks == null ? List.of() : this.childHealthChecks;
     }
-    public Optional<Boolean> getEnableSNI() {
+    public Optional<Boolean> enableSNI() {
         return Optional.ofNullable(this.enableSNI);
     }
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
-    public Optional<String> getFullyQualifiedDomainName() {
+    public Optional<String> fullyQualifiedDomainName() {
         return Optional.ofNullable(this.fullyQualifiedDomainName);
     }
-    public Optional<Integer> getHealthThreshold() {
+    public Optional<Integer> healthThreshold() {
         return Optional.ofNullable(this.healthThreshold);
     }
-    public Optional<String> getIPAddress() {
+    public Optional<String> iPAddress() {
         return Optional.ofNullable(this.iPAddress);
     }
-    public Optional<HealthCheckConfigPropertiesInsufficientDataHealthStatus> getInsufficientDataHealthStatus() {
+    public Optional<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus() {
         return Optional.ofNullable(this.insufficientDataHealthStatus);
     }
-    public Optional<Boolean> getInverted() {
+    public Optional<Boolean> inverted() {
         return Optional.ofNullable(this.inverted);
     }
-    public Optional<Boolean> getMeasureLatency() {
+    public Optional<Boolean> measureLatency() {
         return Optional.ofNullable(this.measureLatency);
     }
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
-    public Optional<Integer> getRequestInterval() {
+    public Optional<Integer> requestInterval() {
         return Optional.ofNullable(this.requestInterval);
     }
-    public Optional<String> getResourcePath() {
+    public Optional<String> resourcePath() {
         return Optional.ofNullable(this.resourcePath);
     }
-    public Optional<String> getRoutingControlArn() {
+    public Optional<String> routingControlArn() {
         return Optional.ofNullable(this.routingControlArn);
     }
-    public Optional<String> getSearchString() {
+    public Optional<String> searchString() {
         return Optional.ofNullable(this.searchString);
     }
-    public HealthCheckConfigPropertiesType getType() {
+    public HealthCheckConfigPropertiesType type() {
         return this.type;
     }
 

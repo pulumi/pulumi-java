@@ -24,7 +24,7 @@ public final class ApplicationSubComponentTypeConfiguration extends com.pulumi.r
     @Import(name="subComponentConfigurationDetails", required=true)
       private final ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails;
 
-    public ApplicationSubComponentConfigurationDetails getSubComponentConfigurationDetails() {
+    public ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationSubComponentTypeConfiguration extends com.pulumi.r
     @Import(name="subComponentType", required=true)
       private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
 
-    public ApplicationSubComponentTypeConfigurationSubComponentType getSubComponentType() {
+    public ApplicationSubComponentTypeConfigurationSubComponentType subComponentType() {
         return this.subComponentType;
     }
 

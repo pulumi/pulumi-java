@@ -21,10 +21,10 @@ public final class DatasetPathParameter {
         this.pathParameterName = pathParameterName;
     }
 
-    public DatasetParameter getDatasetParameter() {
+    public DatasetParameter datasetParameter() {
         return this.datasetParameter;
     }
-    public String getPathParameterName() {
+    public String pathParameterName() {
         return this.pathParameterName;
     }
 

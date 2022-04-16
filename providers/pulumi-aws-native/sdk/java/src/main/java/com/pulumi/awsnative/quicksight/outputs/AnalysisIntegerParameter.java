@@ -34,14 +34,14 @@ public final class AnalysisIntegerParameter {
      * <p>The name of the integer parameter.</p>
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * <p>The values for the integer parameter.</p>
      * 
     */
-    public List<Double> getValues() {
+    public List<Double> values() {
         return this.values;
     }
 

@@ -16,7 +16,7 @@ public final class GetUrlSuffixResult {
         this.urlSuffix = urlSuffix;
     }
 
-    public String getUrlSuffix() {
+    public String urlSuffix() {
         return this.urlSuffix;
     }
 

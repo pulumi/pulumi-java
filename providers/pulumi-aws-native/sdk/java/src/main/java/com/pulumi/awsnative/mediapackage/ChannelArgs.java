@@ -25,7 +25,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="egressAccessLogs")
       private final @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs;
 
-    public Output<ChannelLogConfigurationArgs> getEgressAccessLogs() {
+    public Output<ChannelLogConfigurationArgs> egressAccessLogs() {
         return this.egressAccessLogs == null ? Codegen.empty() : this.egressAccessLogs;
     }
 
@@ -47,7 +47,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingressAccessLogs")
       private final @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs;
 
-    public Output<ChannelLogConfigurationArgs> getIngressAccessLogs() {
+    public Output<ChannelLogConfigurationArgs> ingressAccessLogs() {
         return this.ingressAccessLogs == null ? Codegen.empty() : this.ingressAccessLogs;
     }
 
@@ -58,7 +58,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Output<List<ChannelTagArgs>> getTags() {
+    public Output<List<ChannelTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

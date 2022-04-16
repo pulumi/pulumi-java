@@ -18,14 +18,14 @@ public final class ChannelRetentionPeriod extends com.pulumi.resources.InvokeArg
     @Import(name="numberOfDays")
       private final @Nullable Integer numberOfDays;
 
-    public Optional<Integer> getNumberOfDays() {
+    public Optional<Integer> numberOfDays() {
         return this.numberOfDays == null ? Optional.empty() : Optional.ofNullable(this.numberOfDays);
     }
 
     @Import(name="unlimited")
       private final @Nullable Boolean unlimited;
 
-    public Optional<Boolean> getUnlimited() {
+    public Optional<Boolean> unlimited() {
         return this.unlimited == null ? Optional.empty() : Optional.ofNullable(this.unlimited);
     }
 

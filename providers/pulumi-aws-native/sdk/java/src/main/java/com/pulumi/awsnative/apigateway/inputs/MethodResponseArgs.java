@@ -23,7 +23,7 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="responseModels")
       private final @Nullable Output<Object> responseModels;
 
-    public Output<Object> getResponseModels() {
+    public Output<Object> responseModels() {
         return this.responseModels == null ? Codegen.empty() : this.responseModels;
     }
 
@@ -34,7 +34,7 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="responseParameters")
       private final @Nullable Output<Object> responseParameters;
 
-    public Output<Object> getResponseParameters() {
+    public Output<Object> responseParameters() {
         return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
@@ -45,7 +45,7 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 

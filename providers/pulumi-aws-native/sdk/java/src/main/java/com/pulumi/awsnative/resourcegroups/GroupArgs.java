@@ -22,7 +22,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
 
-    public Output<List<GroupConfigurationItemArgs>> getConfiguration() {
+    public Output<List<GroupConfigurationItemArgs>> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -33,7 +33,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,28 +44,28 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="resourceQuery")
       private final @Nullable Output<GroupResourceQueryArgs> resourceQuery;
 
-    public Output<GroupResourceQueryArgs> getResourceQuery() {
+    public Output<GroupResourceQueryArgs> resourceQuery() {
         return this.resourceQuery == null ? Codegen.empty() : this.resourceQuery;
     }
 
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<GroupTagArgs>> tags;
 
-    public Output<List<GroupTagArgs>> getTags() {
+    public Output<List<GroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

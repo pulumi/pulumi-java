@@ -21,7 +21,7 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
     @Import(name="addSubnetIds")
       private final @Nullable Output<List<String>> addSubnetIds;
 
-    public Output<List<String>> getAddSubnetIds() {
+    public Output<List<String>> addSubnetIds() {
         return this.addSubnetIds == null ? Codegen.empty() : this.addSubnetIds;
     }
 
@@ -32,42 +32,42 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
     @Import(name="options")
       private final @Nullable Output<OptionsPropertiesArgs> options;
 
-    public Output<OptionsPropertiesArgs> getOptions() {
+    public Output<OptionsPropertiesArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="removeSubnetIds")
       private final @Nullable Output<List<String>> removeSubnetIds;
 
-    public Output<List<String>> getRemoveSubnetIds() {
+    public Output<List<String>> removeSubnetIds() {
         return this.removeSubnetIds == null ? Codegen.empty() : this.removeSubnetIds;
     }
 
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags;
 
-    public Output<List<TransitGatewayVpcAttachmentTagArgs>> getTags() {
+    public Output<List<TransitGatewayVpcAttachmentTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

@@ -22,10 +22,10 @@ public final class RepositoryLifecyclePolicy {
         this.registryId = registryId;
     }
 
-    public Optional<String> getLifecyclePolicyText() {
+    public Optional<String> lifecyclePolicyText() {
         return Optional.ofNullable(this.lifecyclePolicyText);
     }
-    public Optional<String> getRegistryId() {
+    public Optional<String> registryId() {
         return Optional.ofNullable(this.registryId);
     }
 

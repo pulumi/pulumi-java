@@ -18,14 +18,14 @@ public final class DeliveryStreamEncryptionConfigurationInput extends com.pulumi
     @Import(name="keyARN")
       private final @Nullable String keyARN;
 
-    public Optional<String> getKeyARN() {
+    public Optional<String> keyARN() {
         return this.keyARN == null ? Optional.empty() : Optional.ofNullable(this.keyARN);
     }
 
     @Import(name="keyType", required=true)
       private final DeliveryStreamEncryptionConfigurationInputKeyType keyType;
 
-    public DeliveryStreamEncryptionConfigurationInputKeyType getKeyType() {
+    public DeliveryStreamEncryptionConfigurationInputKeyType keyType() {
         return this.keyType;
     }
 

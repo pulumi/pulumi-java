@@ -24,10 +24,10 @@ public final class EC2FleetTagSpecification {
         this.tags = tags;
     }
 
-    public Optional<EC2FleetTagSpecificationResourceType> getPropResourceType() {
+    public Optional<EC2FleetTagSpecificationResourceType> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
-    public List<EC2FleetTag> getTags() {
+    public List<EC2FleetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

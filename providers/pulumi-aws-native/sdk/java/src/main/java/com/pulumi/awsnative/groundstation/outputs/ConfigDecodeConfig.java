@@ -18,7 +18,7 @@ public final class ConfigDecodeConfig {
         this.unvalidatedJSON = unvalidatedJSON;
     }
 
-    public Optional<String> getUnvalidatedJSON() {
+    public Optional<String> unvalidatedJSON() {
         return Optional.ofNullable(this.unvalidatedJSON);
     }
 

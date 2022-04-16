@@ -22,10 +22,10 @@ public final class TaskDefinitionContainerDependency {
         this.containerName = containerName;
     }
 
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
 

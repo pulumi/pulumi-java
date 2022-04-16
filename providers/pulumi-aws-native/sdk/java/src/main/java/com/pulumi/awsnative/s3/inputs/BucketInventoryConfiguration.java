@@ -23,7 +23,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     @Import(name="destination", required=true)
       private final BucketDestination destination;
 
-    public BucketDestination getDestination() {
+    public BucketDestination destination() {
         return this.destination;
     }
 
@@ -34,7 +34,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -45,7 +45,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -56,7 +56,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     @Import(name="includedObjectVersions", required=true)
       private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
 
-    public BucketInventoryConfigurationIncludedObjectVersions getIncludedObjectVersions() {
+    public BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions() {
         return this.includedObjectVersions;
     }
 
@@ -67,7 +67,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     @Import(name="optionalFields")
       private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
 
-    public List<BucketInventoryConfigurationOptionalFieldsItem> getOptionalFields() {
+    public List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields() {
         return this.optionalFields == null ? List.of() : this.optionalFields;
     }
 
@@ -78,7 +78,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
@@ -89,7 +89,7 @@ public final class BucketInventoryConfiguration extends com.pulumi.resources.Inv
     @Import(name="scheduleFrequency", required=true)
       private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
 
-    public BucketInventoryConfigurationScheduleFrequency getScheduleFrequency() {
+    public BucketInventoryConfigurationScheduleFrequency scheduleFrequency() {
         return this.scheduleFrequency;
     }
 

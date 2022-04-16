@@ -27,7 +27,7 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
     @Import(name="actions")
       private final @Nullable List<DetectorModelAction> actions;
 
-    public List<DetectorModelAction> getActions() {
+    public List<DetectorModelAction> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
     @Import(name="condition")
       private final @Nullable String condition;
 
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
     }
 
@@ -49,7 +49,7 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventName", required=true)
       private final String eventName;
 
-    public String getEventName() {
+    public String eventName() {
         return this.eventName;
     }
 

@@ -19,7 +19,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

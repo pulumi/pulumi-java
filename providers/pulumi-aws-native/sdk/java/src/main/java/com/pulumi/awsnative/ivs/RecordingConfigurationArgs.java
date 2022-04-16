@@ -22,7 +22,7 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="destinationConfiguration", required=true)
       private final Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
 
-    public Output<RecordingConfigurationDestinationConfigurationArgs> getDestinationConfiguration() {
+    public Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration() {
         return this.destinationConfiguration;
     }
 
@@ -33,7 +33,7 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,14 +44,14 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
 
-    public Output<List<RecordingConfigurationTagArgs>> getTags() {
+    public Output<List<RecordingConfigurationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="thumbnailConfiguration")
       private final @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
 
-    public Output<RecordingConfigurationThumbnailConfigurationArgs> getThumbnailConfiguration() {
+    public Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration() {
         return this.thumbnailConfiguration == null ? Codegen.empty() : this.thumbnailConfiguration;
     }
 

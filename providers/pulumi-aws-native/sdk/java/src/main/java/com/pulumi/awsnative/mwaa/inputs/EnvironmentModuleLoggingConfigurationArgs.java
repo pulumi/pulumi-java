@@ -24,21 +24,21 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends com.pulumi.
     @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
-    public Output<String> getCloudWatchLogGroupArn() {
+    public Output<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn == null ? Codegen.empty() : this.cloudWatchLogGroupArn;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logLevel")
       private final @Nullable Output<EnvironmentLoggingLevel> logLevel;
 
-    public Output<EnvironmentLoggingLevel> getLogLevel() {
+    public Output<EnvironmentLoggingLevel> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 

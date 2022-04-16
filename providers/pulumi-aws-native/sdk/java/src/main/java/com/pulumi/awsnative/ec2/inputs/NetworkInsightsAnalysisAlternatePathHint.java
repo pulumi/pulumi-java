@@ -17,14 +17,14 @@ public final class NetworkInsightsAnalysisAlternatePathHint extends com.pulumi.r
     @Import(name="componentArn")
       private final @Nullable String componentArn;
 
-    public Optional<String> getComponentArn() {
+    public Optional<String> componentArn() {
         return this.componentArn == null ? Optional.empty() : Optional.ofNullable(this.componentArn);
     }
 
     @Import(name="componentId")
       private final @Nullable String componentId;
 
-    public Optional<String> getComponentId() {
+    public Optional<String> componentId() {
         return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
     }
 

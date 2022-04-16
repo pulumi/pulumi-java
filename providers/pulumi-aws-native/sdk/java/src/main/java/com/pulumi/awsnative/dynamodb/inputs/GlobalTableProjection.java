@@ -18,14 +18,14 @@ public final class GlobalTableProjection extends com.pulumi.resources.InvokeArgs
     @Import(name="nonKeyAttributes")
       private final @Nullable List<String> nonKeyAttributes;
 
-    public List<String> getNonKeyAttributes() {
+    public List<String> nonKeyAttributes() {
         return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
     }
 
     @Import(name="projectionType")
       private final @Nullable String projectionType;
 
-    public Optional<String> getProjectionType() {
+    public Optional<String> projectionType() {
         return this.projectionType == null ? Optional.empty() : Optional.ofNullable(this.projectionType);
     }
 

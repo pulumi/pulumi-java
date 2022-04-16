@@ -29,154 +29,154 @@ public final class SpotFleetRequestConfigData extends com.pulumi.resources.Invok
     @Import(name="allocationStrategy")
       private final @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy;
 
-    public Optional<SpotFleetRequestConfigDataAllocationStrategy> getAllocationStrategy() {
+    public Optional<SpotFleetRequestConfigDataAllocationStrategy> allocationStrategy() {
         return this.allocationStrategy == null ? Optional.empty() : Optional.ofNullable(this.allocationStrategy);
     }
 
     @Import(name="context")
       private final @Nullable String context;
 
-    public Optional<String> getContext() {
+    public Optional<String> context() {
         return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
     }
 
     @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy;
 
-    public Optional<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
+    public Optional<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Optional.empty() : Optional.ofNullable(this.excessCapacityTerminationPolicy);
     }
 
     @Import(name="iamFleetRole", required=true)
       private final String iamFleetRole;
 
-    public String getIamFleetRole() {
+    public String iamFleetRole() {
         return this.iamFleetRole;
     }
 
     @Import(name="instanceInterruptionBehavior")
       private final @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior;
 
-    public Optional<SpotFleetRequestConfigDataInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
+    public Optional<SpotFleetRequestConfigDataInstanceInterruptionBehavior> instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Optional.empty() : Optional.ofNullable(this.instanceInterruptionBehavior);
     }
 
     @Import(name="instancePoolsToUseCount")
       private final @Nullable Integer instancePoolsToUseCount;
 
-    public Optional<Integer> getInstancePoolsToUseCount() {
+    public Optional<Integer> instancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Optional.empty() : Optional.ofNullable(this.instancePoolsToUseCount);
     }
 
     @Import(name="launchSpecifications")
       private final @Nullable List<SpotFleetLaunchSpecification> launchSpecifications;
 
-    public List<SpotFleetLaunchSpecification> getLaunchSpecifications() {
+    public List<SpotFleetLaunchSpecification> launchSpecifications() {
         return this.launchSpecifications == null ? List.of() : this.launchSpecifications;
     }
 
     @Import(name="launchTemplateConfigs")
       private final @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs;
 
-    public List<SpotFleetLaunchTemplateConfig> getLaunchTemplateConfigs() {
+    public List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs() {
         return this.launchTemplateConfigs == null ? List.of() : this.launchTemplateConfigs;
     }
 
     @Import(name="loadBalancersConfig")
       private final @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig;
 
-    public Optional<SpotFleetLoadBalancersConfig> getLoadBalancersConfig() {
+    public Optional<SpotFleetLoadBalancersConfig> loadBalancersConfig() {
         return this.loadBalancersConfig == null ? Optional.empty() : Optional.ofNullable(this.loadBalancersConfig);
     }
 
     @Import(name="onDemandAllocationStrategy")
       private final @Nullable String onDemandAllocationStrategy;
 
-    public Optional<String> getOnDemandAllocationStrategy() {
+    public Optional<String> onDemandAllocationStrategy() {
         return this.onDemandAllocationStrategy == null ? Optional.empty() : Optional.ofNullable(this.onDemandAllocationStrategy);
     }
 
     @Import(name="onDemandMaxTotalPrice")
       private final @Nullable String onDemandMaxTotalPrice;
 
-    public Optional<String> getOnDemandMaxTotalPrice() {
+    public Optional<String> onDemandMaxTotalPrice() {
         return this.onDemandMaxTotalPrice == null ? Optional.empty() : Optional.ofNullable(this.onDemandMaxTotalPrice);
     }
 
     @Import(name="onDemandTargetCapacity")
       private final @Nullable Integer onDemandTargetCapacity;
 
-    public Optional<Integer> getOnDemandTargetCapacity() {
+    public Optional<Integer> onDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.onDemandTargetCapacity);
     }
 
     @Import(name="replaceUnhealthyInstances")
       private final @Nullable Boolean replaceUnhealthyInstances;
 
-    public Optional<Boolean> getReplaceUnhealthyInstances() {
+    public Optional<Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Optional.empty() : Optional.ofNullable(this.replaceUnhealthyInstances);
     }
 
     @Import(name="spotMaintenanceStrategies")
       private final @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies;
 
-    public Optional<SpotFleetSpotMaintenanceStrategies> getSpotMaintenanceStrategies() {
+    public Optional<SpotFleetSpotMaintenanceStrategies> spotMaintenanceStrategies() {
         return this.spotMaintenanceStrategies == null ? Optional.empty() : Optional.ofNullable(this.spotMaintenanceStrategies);
     }
 
     @Import(name="spotMaxTotalPrice")
       private final @Nullable String spotMaxTotalPrice;
 
-    public Optional<String> getSpotMaxTotalPrice() {
+    public Optional<String> spotMaxTotalPrice() {
         return this.spotMaxTotalPrice == null ? Optional.empty() : Optional.ofNullable(this.spotMaxTotalPrice);
     }
 
     @Import(name="spotPrice")
       private final @Nullable String spotPrice;
 
-    public Optional<String> getSpotPrice() {
+    public Optional<String> spotPrice() {
         return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
     }
 
     @Import(name="targetCapacity", required=true)
       private final Integer targetCapacity;
 
-    public Integer getTargetCapacity() {
+    public Integer targetCapacity() {
         return this.targetCapacity;
     }
 
     @Import(name="targetCapacityUnitType")
       private final @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType;
 
-    public Optional<SpotFleetRequestConfigDataTargetCapacityUnitType> getTargetCapacityUnitType() {
+    public Optional<SpotFleetRequestConfigDataTargetCapacityUnitType> targetCapacityUnitType() {
         return this.targetCapacityUnitType == null ? Optional.empty() : Optional.ofNullable(this.targetCapacityUnitType);
     }
 
     @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Boolean terminateInstancesWithExpiration;
 
-    public Optional<Boolean> getTerminateInstancesWithExpiration() {
+    public Optional<Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Optional.empty() : Optional.ofNullable(this.terminateInstancesWithExpiration);
     }
 
     @Import(name="type")
       private final @Nullable SpotFleetRequestConfigDataType type;
 
-    public Optional<SpotFleetRequestConfigDataType> getType() {
+    public Optional<SpotFleetRequestConfigDataType> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
     @Import(name="validFrom")
       private final @Nullable String validFrom;
 
-    public Optional<String> getValidFrom() {
+    public Optional<String> validFrom() {
         return this.validFrom == null ? Optional.empty() : Optional.ofNullable(this.validFrom);
     }
 
     @Import(name="validUntil")
       private final @Nullable String validUntil;
 
-    public Optional<String> getValidUntil() {
+    public Optional<String> validUntil() {
         return this.validUntil == null ? Optional.empty() : Optional.ofNullable(this.validUntil);
     }
 

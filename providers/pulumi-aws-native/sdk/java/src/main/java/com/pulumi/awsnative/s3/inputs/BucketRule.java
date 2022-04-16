@@ -30,112 +30,112 @@ public final class BucketRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
 
-    public Optional<BucketAbortIncompleteMultipartUpload> getAbortIncompleteMultipartUpload() {
+    public Optional<BucketAbortIncompleteMultipartUpload> abortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Optional.empty() : Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
 
     @Import(name="expirationDate")
       private final @Nullable String expirationDate;
 
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
     }
 
     @Import(name="expirationInDays")
       private final @Nullable Integer expirationInDays;
 
-    public Optional<Integer> getExpirationInDays() {
+    public Optional<Integer> expirationInDays() {
         return this.expirationInDays == null ? Optional.empty() : Optional.ofNullable(this.expirationInDays);
     }
 
     @Import(name="expiredObjectDeleteMarker")
       private final @Nullable Boolean expiredObjectDeleteMarker;
 
-    public Optional<Boolean> getExpiredObjectDeleteMarker() {
+    public Optional<Boolean> expiredObjectDeleteMarker() {
         return this.expiredObjectDeleteMarker == null ? Optional.empty() : Optional.ofNullable(this.expiredObjectDeleteMarker);
     }
 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @Import(name="noncurrentVersionExpiration")
       private final @Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration;
 
-    public Optional<BucketNoncurrentVersionExpiration> getNoncurrentVersionExpiration() {
+    public Optional<BucketNoncurrentVersionExpiration> noncurrentVersionExpiration() {
         return this.noncurrentVersionExpiration == null ? Optional.empty() : Optional.ofNullable(this.noncurrentVersionExpiration);
     }
 
     @Import(name="noncurrentVersionExpirationInDays")
       private final @Nullable Integer noncurrentVersionExpirationInDays;
 
-    public Optional<Integer> getNoncurrentVersionExpirationInDays() {
+    public Optional<Integer> noncurrentVersionExpirationInDays() {
         return this.noncurrentVersionExpirationInDays == null ? Optional.empty() : Optional.ofNullable(this.noncurrentVersionExpirationInDays);
     }
 
     @Import(name="noncurrentVersionTransition")
       private final @Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition;
 
-    public Optional<BucketNoncurrentVersionTransition> getNoncurrentVersionTransition() {
+    public Optional<BucketNoncurrentVersionTransition> noncurrentVersionTransition() {
         return this.noncurrentVersionTransition == null ? Optional.empty() : Optional.ofNullable(this.noncurrentVersionTransition);
     }
 
     @Import(name="noncurrentVersionTransitions")
       private final @Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions;
 
-    public List<BucketNoncurrentVersionTransition> getNoncurrentVersionTransitions() {
+    public List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? List.of() : this.noncurrentVersionTransitions;
     }
 
     @Import(name="objectSizeGreaterThan")
       private final @Nullable String objectSizeGreaterThan;
 
-    public Optional<String> getObjectSizeGreaterThan() {
+    public Optional<String> objectSizeGreaterThan() {
         return this.objectSizeGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.objectSizeGreaterThan);
     }
 
     @Import(name="objectSizeLessThan")
       private final @Nullable String objectSizeLessThan;
 
-    public Optional<String> getObjectSizeLessThan() {
+    public Optional<String> objectSizeLessThan() {
         return this.objectSizeLessThan == null ? Optional.empty() : Optional.ofNullable(this.objectSizeLessThan);
     }
 
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @Import(name="status", required=true)
       private final BucketRuleStatus status;
 
-    public BucketRuleStatus getStatus() {
+    public BucketRuleStatus status() {
         return this.status;
     }
 
     @Import(name="tagFilters")
       private final @Nullable List<BucketTagFilter> tagFilters;
 
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 
     @Import(name="transition")
       private final @Nullable BucketTransition transition;
 
-    public Optional<BucketTransition> getTransition() {
+    public Optional<BucketTransition> transition() {
         return this.transition == null ? Optional.empty() : Optional.ofNullable(this.transition);
     }
 
     @Import(name="transitions")
       private final @Nullable List<BucketTransition> transitions;
 
-    public List<BucketTransition> getTransitions() {
+    public List<BucketTransition> transitions() {
         return this.transitions == null ? List.of() : this.transitions;
     }
 

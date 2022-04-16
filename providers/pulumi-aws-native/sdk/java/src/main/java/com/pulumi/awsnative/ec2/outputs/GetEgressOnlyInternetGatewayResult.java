@@ -26,7 +26,7 @@ public final class GetEgressOnlyInternetGatewayResult {
      * Service Generated ID of the EgressOnlyInternetGateway
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

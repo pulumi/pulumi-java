@@ -21,7 +21,7 @@ public final class ResponsePlanAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="ssmAutomation")
       private final @Nullable ResponsePlanSsmAutomation ssmAutomation;
 
-    public Optional<ResponsePlanSsmAutomation> getSsmAutomation() {
+    public Optional<ResponsePlanSsmAutomation> ssmAutomation() {
         return this.ssmAutomation == null ? Optional.empty() : Optional.ofNullable(this.ssmAutomation);
     }
 

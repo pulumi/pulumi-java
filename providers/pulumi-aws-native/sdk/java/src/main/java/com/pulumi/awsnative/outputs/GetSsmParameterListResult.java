@@ -17,7 +17,7 @@ public final class GetSsmParameterListResult {
         this.value = value;
     }
 
-    public List<String> getValue() {
+    public List<String> value() {
         return this.value;
     }
 

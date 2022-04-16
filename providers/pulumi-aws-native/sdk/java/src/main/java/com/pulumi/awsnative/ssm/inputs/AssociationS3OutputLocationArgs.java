@@ -18,21 +18,21 @@ public final class AssociationS3OutputLocationArgs extends com.pulumi.resources.
     @Import(name="outputS3BucketName")
       private final @Nullable Output<String> outputS3BucketName;
 
-    public Output<String> getOutputS3BucketName() {
+    public Output<String> outputS3BucketName() {
         return this.outputS3BucketName == null ? Codegen.empty() : this.outputS3BucketName;
     }
 
     @Import(name="outputS3KeyPrefix")
       private final @Nullable Output<String> outputS3KeyPrefix;
 
-    public Output<String> getOutputS3KeyPrefix() {
+    public Output<String> outputS3KeyPrefix() {
         return this.outputS3KeyPrefix == null ? Codegen.empty() : this.outputS3KeyPrefix;
     }
 
     @Import(name="outputS3Region")
       private final @Nullable Output<String> outputS3Region;
 
-    public Output<String> getOutputS3Region() {
+    public Output<String> outputS3Region() {
         return this.outputS3Region == null ? Codegen.empty() : this.outputS3Region;
     }
 

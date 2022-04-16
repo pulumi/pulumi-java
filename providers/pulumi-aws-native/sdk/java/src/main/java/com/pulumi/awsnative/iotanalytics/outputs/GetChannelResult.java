@@ -32,16 +32,16 @@ public final class GetChannelResult {
         this.tags = tags;
     }
 
-    public Optional<ChannelStorage> getChannelStorage() {
+    public Optional<ChannelStorage> channelStorage() {
         return Optional.ofNullable(this.channelStorage);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<ChannelRetentionPeriod> getRetentionPeriod() {
+    public Optional<ChannelRetentionPeriod> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
-    public List<ChannelTag> getTags() {
+    public List<ChannelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -23,7 +23,7 @@ public final class LoggingConfigurationConditionArgs extends com.pulumi.resource
     @Import(name="actionCondition")
       private final @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
 
-    public Output<LoggingConfigurationConditionActionConditionPropertiesArgs> getActionCondition() {
+    public Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition() {
         return this.actionCondition == null ? Codegen.empty() : this.actionCondition;
     }
 
@@ -34,7 +34,7 @@ public final class LoggingConfigurationConditionArgs extends com.pulumi.resource
     @Import(name="labelNameCondition")
       private final @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
 
-    public Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> getLabelNameCondition() {
+    public Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition() {
         return this.labelNameCondition == null ? Codegen.empty() : this.labelNameCondition;
     }
 

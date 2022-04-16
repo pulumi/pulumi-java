@@ -18,21 +18,21 @@ public final class DistributionLogging extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="includeCookies")
       private final @Nullable Boolean includeCookies;
 
-    public Optional<Boolean> getIncludeCookies() {
+    public Optional<Boolean> includeCookies() {
         return this.includeCookies == null ? Optional.empty() : Optional.ofNullable(this.includeCookies);
     }
 
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 

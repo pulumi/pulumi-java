@@ -23,10 +23,10 @@ public final class AlertAction {
         this.sNSConfiguration = sNSConfiguration;
     }
 
-    public Optional<AlertLambdaConfiguration> getLambdaConfiguration() {
+    public Optional<AlertLambdaConfiguration> lambdaConfiguration() {
         return Optional.ofNullable(this.lambdaConfiguration);
     }
-    public Optional<AlertSNSConfiguration> getSNSConfiguration() {
+    public Optional<AlertSNSConfiguration> sNSConfiguration() {
         return Optional.ofNullable(this.sNSConfiguration);
     }
 

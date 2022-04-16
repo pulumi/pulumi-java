@@ -49,27 +49,27 @@ public final class GetConnectionResult {
      * The arn of the connection resource.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<AuthParametersProperties> getAuthParameters() {
+    public Optional<AuthParametersProperties> authParameters() {
         return Optional.ofNullable(this.authParameters);
     }
-    public Optional<ConnectionAuthorizationType> getAuthorizationType() {
+    public Optional<ConnectionAuthorizationType> authorizationType() {
         return Optional.ofNullable(this.authorizationType);
     }
     /**
      * Description of the connection.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The arn of the secrets manager secret created in the customer account.
      * 
     */
-    public Optional<String> getSecretArn() {
+    public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
 

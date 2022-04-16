@@ -25,7 +25,7 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
     @Export(name="accountAggregationSources", type=List.class, parameters={ConfigurationAggregatorAccountAggregationSource.class})
     private Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSources;
 
-    public Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> getAccountAggregationSources() {
+    public Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSources() {
         return this.accountAggregationSources;
     }
     /**
@@ -39,7 +39,7 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return The Amazon Resource Name (ARN) of the aggregator.
      * 
      */
-    public Output<String> getConfigurationAggregatorArn() {
+    public Output<String> configurationAggregatorArn() {
         return this.configurationAggregatorArn;
     }
     /**
@@ -53,13 +53,13 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return The name of the aggregator.
      * 
      */
-    public Output</* @Nullable */ String> getConfigurationAggregatorName() {
+    public Output</* @Nullable */ String> configurationAggregatorName() {
         return this.configurationAggregatorName;
     }
     @Export(name="organizationAggregationSource", type=ConfigurationAggregatorOrganizationAggregationSource.class, parameters={})
     private Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource;
 
-    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> getOrganizationAggregationSource() {
+    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource() {
         return this.organizationAggregationSource;
     }
     /**
@@ -73,7 +73,7 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return The tags for the configuration aggregator.
      * 
      */
-    public Output</* @Nullable */ List<ConfigurationAggregatorTag>> getTags() {
+    public Output</* @Nullable */ List<ConfigurationAggregatorTag>> tags() {
         return this.tags;
     }
 

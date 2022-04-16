@@ -16,7 +16,7 @@ public final class BucketReplicationTimeValue {
         this.minutes = minutes;
     }
 
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
 

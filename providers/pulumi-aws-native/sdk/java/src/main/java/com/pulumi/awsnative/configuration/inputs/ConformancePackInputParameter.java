@@ -19,14 +19,14 @@ public final class ConformancePackInputParameter extends com.pulumi.resources.In
     @Import(name="parameterName", required=true)
       private final String parameterName;
 
-    public String getParameterName() {
+    public String parameterName() {
         return this.parameterName;
     }
 
     @Import(name="parameterValue", required=true)
       private final String parameterValue;
 
-    public String getParameterValue() {
+    public String parameterValue() {
         return this.parameterValue;
     }
 

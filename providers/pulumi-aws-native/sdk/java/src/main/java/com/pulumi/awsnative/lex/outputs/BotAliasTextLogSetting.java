@@ -23,10 +23,10 @@ public final class BotAliasTextLogSetting {
         this.enabled = enabled;
     }
 
-    public Optional<BotAliasTextLogDestination> getDestination() {
+    public Optional<BotAliasTextLogDestination> destination() {
         return Optional.ofNullable(this.destination);
     }
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

@@ -15,14 +15,14 @@ public final class NotificationRuleTarget extends com.pulumi.resources.InvokeArg
     @Import(name="targetAddress", required=true)
       private final String targetAddress;
 
-    public String getTargetAddress() {
+    public String targetAddress() {
         return this.targetAddress;
     }
 
     @Import(name="targetType", required=true)
       private final String targetType;
 
-    public String getTargetType() {
+    public String targetType() {
         return this.targetType;
     }
 

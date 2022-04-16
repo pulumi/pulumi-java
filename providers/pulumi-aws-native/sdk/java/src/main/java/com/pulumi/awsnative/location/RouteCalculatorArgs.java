@@ -19,28 +19,28 @@ public final class RouteCalculatorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="calculatorName", required=true)
       private final Output<String> calculatorName;
 
-    public Output<String> getCalculatorName() {
+    public Output<String> calculatorName() {
         return this.calculatorName;
     }
 
     @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<RouteCalculatorPricingPlan> pricingPlan;
 
-    public Output<RouteCalculatorPricingPlan> getPricingPlan() {
+    public Output<RouteCalculatorPricingPlan> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 

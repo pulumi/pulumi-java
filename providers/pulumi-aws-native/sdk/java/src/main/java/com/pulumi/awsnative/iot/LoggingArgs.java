@@ -22,7 +22,7 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultLogLevel", required=true)
       private final Output<LoggingDefaultLogLevel> defaultLogLevel;
 
-    public Output<LoggingDefaultLogLevel> getDefaultLogLevel() {
+    public Output<LoggingDefaultLogLevel> defaultLogLevel() {
         return this.defaultLogLevel;
     }
 
@@ -44,7 +44,7 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

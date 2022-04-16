@@ -26,7 +26,7 @@ public final class AccessPolicyUser {
      * The AWS SSO ID of the user.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

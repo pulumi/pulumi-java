@@ -21,7 +21,7 @@ public final class FuotaTaskLoRaWAN extends com.pulumi.resources.InvokeArgs {
     @Import(name="rfRegion", required=true)
       private final String rfRegion;
 
-    public String getRfRegion() {
+    public String rfRegion() {
         return this.rfRegion;
     }
 
@@ -32,7 +32,7 @@ public final class FuotaTaskLoRaWAN extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

@@ -22,25 +22,25 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
     @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
-    public Output</* @Nullable */ String> getIpAddress() {
+    public Output</* @Nullable */ String> ipAddress() {
         return this.ipAddress;
     }
     @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

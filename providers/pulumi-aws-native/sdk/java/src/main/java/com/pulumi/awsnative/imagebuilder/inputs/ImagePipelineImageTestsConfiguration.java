@@ -26,7 +26,7 @@ public final class ImagePipelineImageTestsConfiguration extends com.pulumi.resou
     @Import(name="imageTestsEnabled")
       private final @Nullable Boolean imageTestsEnabled;
 
-    public Optional<Boolean> getImageTestsEnabled() {
+    public Optional<Boolean> imageTestsEnabled() {
         return this.imageTestsEnabled == null ? Optional.empty() : Optional.ofNullable(this.imageTestsEnabled);
     }
 
@@ -37,7 +37,7 @@ public final class ImagePipelineImageTestsConfiguration extends com.pulumi.resou
     @Import(name="timeoutMinutes")
       private final @Nullable Integer timeoutMinutes;
 
-    public Optional<Integer> getTimeoutMinutes() {
+    public Optional<Integer> timeoutMinutes() {
         return this.timeoutMinutes == null ? Optional.empty() : Optional.ofNullable(this.timeoutMinutes);
     }
 

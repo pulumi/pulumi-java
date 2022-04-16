@@ -20,14 +20,14 @@ public final class WebACLGeoMatchStatementArgs extends com.pulumi.resources.Reso
     @Import(name="countryCodes")
       private final @Nullable Output<List<String>> countryCodes;
 
-    public Output<List<String>> getCountryCodes() {
+    public Output<List<String>> countryCodes() {
         return this.countryCodes == null ? Codegen.empty() : this.countryCodes;
     }
 
     @Import(name="forwardedIPConfig")
       private final @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Output<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
+    public Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig() {
         return this.forwardedIPConfig == null ? Codegen.empty() : this.forwardedIPConfig;
     }
 

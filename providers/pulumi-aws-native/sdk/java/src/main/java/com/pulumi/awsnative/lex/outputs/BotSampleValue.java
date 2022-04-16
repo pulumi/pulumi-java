@@ -24,7 +24,7 @@ public final class BotSampleValue {
      * The value that can be used for a slot type.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

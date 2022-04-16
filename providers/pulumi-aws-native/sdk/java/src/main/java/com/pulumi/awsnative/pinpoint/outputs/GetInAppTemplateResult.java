@@ -38,22 +38,22 @@ public final class GetInAppTemplateResult {
         this.templateDescription = templateDescription;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<InAppTemplateInAppMessageContent> getContent() {
+    public List<InAppTemplateInAppMessageContent> content() {
         return this.content == null ? List.of() : this.content;
     }
-    public Optional<Object> getCustomConfig() {
+    public Optional<Object> customConfig() {
         return Optional.ofNullable(this.customConfig);
     }
-    public Optional<InAppTemplateLayout> getLayout() {
+    public Optional<InAppTemplateLayout> layout() {
         return Optional.ofNullable(this.layout);
     }
-    public Optional<Object> getTags() {
+    public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
-    public Optional<String> getTemplateDescription() {
+    public Optional<String> templateDescription() {
         return Optional.ofNullable(this.templateDescription);
     }
 

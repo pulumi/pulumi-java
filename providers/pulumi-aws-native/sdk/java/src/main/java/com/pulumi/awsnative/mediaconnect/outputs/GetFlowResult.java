@@ -50,28 +50,28 @@ public final class GetFlowResult {
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
     */
-    public Optional<String> getFlowArn() {
+    public Optional<String> flowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
      * 
     */
-    public Optional<String> getFlowAvailabilityZone() {
+    public Optional<String> flowAvailabilityZone() {
         return Optional.ofNullable(this.flowAvailabilityZone);
     }
     /**
      * The source of the flow.
      * 
     */
-    public Optional<FlowSource> getSource() {
+    public Optional<FlowSource> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The source failover config of the flow.
      * 
     */
-    public Optional<FlowFailoverConfig> getSourceFailoverConfig() {
+    public Optional<FlowFailoverConfig> sourceFailoverConfig() {
         return Optional.ofNullable(this.sourceFailoverConfig);
     }
 

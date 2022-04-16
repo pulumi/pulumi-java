@@ -23,10 +23,10 @@ public final class StorageLensBucketLevel {
         this.prefixLevel = prefixLevel;
     }
 
-    public Optional<StorageLensActivityMetrics> getActivityMetrics() {
+    public Optional<StorageLensActivityMetrics> activityMetrics() {
         return Optional.ofNullable(this.activityMetrics);
     }
-    public Optional<StorageLensPrefixLevel> getPrefixLevel() {
+    public Optional<StorageLensPrefixLevel> prefixLevel() {
         return Optional.ofNullable(this.prefixLevel);
     }
 

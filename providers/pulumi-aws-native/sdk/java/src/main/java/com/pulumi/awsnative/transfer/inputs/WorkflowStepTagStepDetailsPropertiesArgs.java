@@ -28,7 +28,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -39,7 +39,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<List<WorkflowS3TagArgs>> tags;
 
-    public Output<List<WorkflowS3TagArgs>> getTags() {
+    public Output<List<WorkflowS3TagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

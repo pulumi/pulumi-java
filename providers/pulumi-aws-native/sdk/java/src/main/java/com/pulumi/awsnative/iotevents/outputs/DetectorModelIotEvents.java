@@ -31,10 +31,10 @@ public final class DetectorModelIotEvents {
      * The name of the AWS IoT Events input where the data is sent.
      * 
     */
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return Optional.ofNullable(this.payload);
     }
 

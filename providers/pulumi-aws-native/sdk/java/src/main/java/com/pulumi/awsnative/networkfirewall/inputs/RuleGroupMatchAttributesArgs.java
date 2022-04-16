@@ -22,42 +22,42 @@ public final class RuleGroupMatchAttributesArgs extends com.pulumi.resources.Res
     @Import(name="destinationPorts")
       private final @Nullable Output<List<RuleGroupPortRangeArgs>> destinationPorts;
 
-    public Output<List<RuleGroupPortRangeArgs>> getDestinationPorts() {
+    public Output<List<RuleGroupPortRangeArgs>> destinationPorts() {
         return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
     @Import(name="destinations")
       private final @Nullable Output<List<RuleGroupAddressArgs>> destinations;
 
-    public Output<List<RuleGroupAddressArgs>> getDestinations() {
+    public Output<List<RuleGroupAddressArgs>> destinations() {
         return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
     @Import(name="protocols")
       private final @Nullable Output<List<Integer>> protocols;
 
-    public Output<List<Integer>> getProtocols() {
+    public Output<List<Integer>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
     @Import(name="sourcePorts")
       private final @Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts;
 
-    public Output<List<RuleGroupPortRangeArgs>> getSourcePorts() {
+    public Output<List<RuleGroupPortRangeArgs>> sourcePorts() {
         return this.sourcePorts == null ? Codegen.empty() : this.sourcePorts;
     }
 
     @Import(name="sources")
       private final @Nullable Output<List<RuleGroupAddressArgs>> sources;
 
-    public Output<List<RuleGroupAddressArgs>> getSources() {
+    public Output<List<RuleGroupAddressArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     @Import(name="tCPFlags")
       private final @Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags;
 
-    public Output<List<RuleGroupTCPFlagFieldArgs>> getTCPFlags() {
+    public Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags() {
         return this.tCPFlags == null ? Codegen.empty() : this.tCPFlags;
     }
 

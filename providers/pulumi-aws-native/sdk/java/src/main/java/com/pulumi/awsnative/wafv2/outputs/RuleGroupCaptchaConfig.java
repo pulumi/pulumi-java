@@ -18,7 +18,7 @@ public final class RuleGroupCaptchaConfig {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 
-    public Optional<RuleGroupImmunityTimeProperty> getImmunityTimeProperty() {
+    public Optional<RuleGroupImmunityTimeProperty> immunityTimeProperty() {
         return Optional.ofNullable(this.immunityTimeProperty);
     }
 

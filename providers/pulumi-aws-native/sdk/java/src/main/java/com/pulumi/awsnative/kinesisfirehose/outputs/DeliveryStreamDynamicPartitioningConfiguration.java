@@ -23,10 +23,10 @@ public final class DeliveryStreamDynamicPartitioningConfiguration {
         this.retryOptions = retryOptions;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<DeliveryStreamRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamRetryOptions> retryOptions() {
         return Optional.ofNullable(this.retryOptions);
     }
 

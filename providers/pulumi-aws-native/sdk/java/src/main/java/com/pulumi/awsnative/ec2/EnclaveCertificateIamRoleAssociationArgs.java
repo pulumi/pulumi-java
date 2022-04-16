@@ -21,7 +21,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends com.pulumi.r
     @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
 
@@ -32,7 +32,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends com.pulumi.r
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

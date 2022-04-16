@@ -18,7 +18,7 @@ public final class TopicRuleHttpAuthorization {
         this.sigv4 = sigv4;
     }
 
-    public Optional<TopicRuleSigV4Authorization> getSigv4() {
+    public Optional<TopicRuleSigV4Authorization> sigv4() {
         return Optional.ofNullable(this.sigv4);
     }
 

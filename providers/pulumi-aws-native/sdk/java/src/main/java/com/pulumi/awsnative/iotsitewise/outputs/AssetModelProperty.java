@@ -65,42 +65,42 @@ public final class AssetModelProperty {
      * The data type of the asset model property.
      * 
     */
-    public AssetModelDataType getDataType() {
+    public AssetModelDataType dataType() {
         return this.dataType;
     }
     /**
      * The data type of the structure for this property.
      * 
     */
-    public Optional<AssetModelDataTypeSpec> getDataTypeSpec() {
+    public Optional<AssetModelDataTypeSpec> dataTypeSpec() {
         return Optional.ofNullable(this.dataTypeSpec);
     }
     /**
      * Customer provided ID for property.
      * 
     */
-    public String getLogicalId() {
+    public String logicalId() {
         return this.logicalId;
     }
     /**
      * The name of the asset model property.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The property type
      * 
     */
-    public AssetModelPropertyType getType() {
+    public AssetModelPropertyType type() {
         return this.type;
     }
     /**
      * The unit of the asset model property, such as Newtons or RPM.
      * 
     */
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
 

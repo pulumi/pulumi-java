@@ -22,21 +22,21 @@ public final class ClusterExecuteCommandConfiguration extends com.pulumi.resourc
     @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="logConfiguration")
       private final @Nullable ClusterExecuteCommandLogConfiguration logConfiguration;
 
-    public Optional<ClusterExecuteCommandLogConfiguration> getLogConfiguration() {
+    public Optional<ClusterExecuteCommandLogConfiguration> logConfiguration() {
         return this.logConfiguration == null ? Optional.empty() : Optional.ofNullable(this.logConfiguration);
     }
 
     @Import(name="logging")
       private final @Nullable String logging;
 
-    public Optional<String> getLogging() {
+    public Optional<String> logging() {
         return this.logging == null ? Optional.empty() : Optional.ofNullable(this.logging);
     }
 

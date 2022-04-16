@@ -18,28 +18,28 @@ public final class BudgetsActionIamActionDefinition extends com.pulumi.resources
     @Import(name="groups")
       private final @Nullable List<String> groups;
 
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
 
     @Import(name="policyArn", required=true)
       private final String policyArn;
 
-    public String getPolicyArn() {
+    public String policyArn() {
         return this.policyArn;
     }
 
     @Import(name="roles")
       private final @Nullable List<String> roles;
 
-    public List<String> getRoles() {
+    public List<String> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
 
     @Import(name="users")
       private final @Nullable List<String> users;
 
-    public List<String> getUsers() {
+    public List<String> users() {
         return this.users == null ? List.of() : this.users;
     }
 

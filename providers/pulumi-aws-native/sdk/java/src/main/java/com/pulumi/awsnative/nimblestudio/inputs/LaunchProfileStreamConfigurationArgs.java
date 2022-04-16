@@ -27,7 +27,7 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     @Import(name="clipboardMode", required=true)
       private final Output<LaunchProfileStreamingClipboardMode> clipboardMode;
 
-    public Output<LaunchProfileStreamingClipboardMode> getClipboardMode() {
+    public Output<LaunchProfileStreamingClipboardMode> clipboardMode() {
         return this.clipboardMode;
     }
 
@@ -39,7 +39,7 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     @Import(name="ec2InstanceTypes", required=true)
       private final Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes;
 
-    public Output<List<LaunchProfileStreamingInstanceType>> getEc2InstanceTypes() {
+    public Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes() {
         return this.ec2InstanceTypes;
     }
 
@@ -53,7 +53,7 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     @Import(name="maxSessionLengthInMinutes")
       private final @Nullable Output<Double> maxSessionLengthInMinutes;
 
-    public Output<Double> getMaxSessionLengthInMinutes() {
+    public Output<Double> maxSessionLengthInMinutes() {
         return this.maxSessionLengthInMinutes == null ? Codegen.empty() : this.maxSessionLengthInMinutes;
     }
 
@@ -73,14 +73,14 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     @Import(name="maxStoppedSessionLengthInMinutes")
       private final @Nullable Output<Double> maxStoppedSessionLengthInMinutes;
 
-    public Output<Double> getMaxStoppedSessionLengthInMinutes() {
+    public Output<Double> maxStoppedSessionLengthInMinutes() {
         return this.maxStoppedSessionLengthInMinutes == null ? Codegen.empty() : this.maxStoppedSessionLengthInMinutes;
     }
 
     @Import(name="sessionStorage")
       private final @Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage;
 
-    public Output<LaunchProfileStreamConfigurationSessionStorageArgs> getSessionStorage() {
+    public Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage() {
         return this.sessionStorage == null ? Codegen.empty() : this.sessionStorage;
     }
 
@@ -92,7 +92,7 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     @Import(name="streamingImageIds", required=true)
       private final Output<List<String>> streamingImageIds;
 
-    public Output<List<String>> getStreamingImageIds() {
+    public Output<List<String>> streamingImageIds() {
         return this.streamingImageIds;
     }
 

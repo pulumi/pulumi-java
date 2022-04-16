@@ -27,7 +27,7 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends com.pulumi.res
     @Import(name="name", required=true)
       private final Output<RobotApplicationRobotSoftwareSuiteName> name;
 
-    public Output<RobotApplicationRobotSoftwareSuiteName> getName() {
+    public Output<RobotApplicationRobotSoftwareSuiteName> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends com.pulumi.res
     @Import(name="version")
       private final @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version;
 
-    public Output<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
+    public Output<RobotApplicationRobotSoftwareSuiteVersion> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

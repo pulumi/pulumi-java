@@ -20,49 +20,49 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
     @Import(name="applicationHostUrl")
       private final @Nullable Output<String> applicationHostUrl;
 
-    public Output<String> getApplicationHostUrl() {
+    public Output<String> applicationHostUrl() {
         return this.applicationHostUrl == null ? Codegen.empty() : this.applicationHostUrl;
     }
 
     @Import(name="applicationServicePath")
       private final @Nullable Output<String> applicationServicePath;
 
-    public Output<String> getApplicationServicePath() {
+    public Output<String> applicationServicePath() {
         return this.applicationServicePath == null ? Codegen.empty() : this.applicationServicePath;
     }
 
     @Import(name="clientNumber")
       private final @Nullable Output<String> clientNumber;
 
-    public Output<String> getClientNumber() {
+    public Output<String> clientNumber() {
         return this.clientNumber == null ? Codegen.empty() : this.clientNumber;
     }
 
     @Import(name="logonLanguage")
       private final @Nullable Output<String> logonLanguage;
 
-    public Output<String> getLogonLanguage() {
+    public Output<String> logonLanguage() {
         return this.logonLanguage == null ? Codegen.empty() : this.logonLanguage;
     }
 
     @Import(name="oAuthProperties")
       private final @Nullable Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
 
-    public Output<ConnectorProfileOAuthPropertiesArgs> getOAuthProperties() {
+    public Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties() {
         return this.oAuthProperties == null ? Codegen.empty() : this.oAuthProperties;
     }
 
     @Import(name="portNumber")
       private final @Nullable Output<Integer> portNumber;
 
-    public Output<Integer> getPortNumber() {
+    public Output<Integer> portNumber() {
         return this.portNumber == null ? Codegen.empty() : this.portNumber;
     }
 
     @Import(name="privateLinkServiceName")
       private final @Nullable Output<String> privateLinkServiceName;
 
-    public Output<String> getPrivateLinkServiceName() {
+    public Output<String> privateLinkServiceName() {
         return this.privateLinkServiceName == null ? Codegen.empty() : this.privateLinkServiceName;
     }
 

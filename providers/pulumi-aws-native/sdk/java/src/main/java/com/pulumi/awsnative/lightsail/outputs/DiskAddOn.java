@@ -39,17 +39,17 @@ public final class DiskAddOn {
      * The add-on type
      * 
     */
-    public String getAddOnType() {
+    public String addOnType() {
         return this.addOnType;
     }
-    public Optional<DiskAutoSnapshotAddOn> getAutoSnapshotAddOnRequest() {
+    public Optional<DiskAutoSnapshotAddOn> autoSnapshotAddOnRequest() {
         return Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
     /**
      * Status of the Addon
      * 
     */
-    public Optional<DiskAddOnStatus> getStatus() {
+    public Optional<DiskAddOnStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

@@ -28,7 +28,7 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="eventLevels", required=true)
       private final Output<List<ApplicationEventLevel>> eventLevels;
 
-    public Output<List<ApplicationEventLevel>> getEventLevels() {
+    public Output<List<ApplicationEventLevel>> eventLevels() {
         return this.eventLevels;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="eventName", required=true)
       private final Output<String> eventName;
 
-    public Output<String> getEventName() {
+    public Output<String> eventName() {
         return this.eventName;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="patternSet")
       private final @Nullable Output<String> patternSet;
 
-    public Output<String> getPatternSet() {
+    public Output<String> patternSet() {
         return this.patternSet == null ? Codegen.empty() : this.patternSet;
     }
 

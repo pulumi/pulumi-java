@@ -32,19 +32,19 @@ public final class CapacityProviderManagedScaling {
         this.targetCapacity = targetCapacity;
     }
 
-    public Optional<Integer> getInstanceWarmupPeriod() {
+    public Optional<Integer> instanceWarmupPeriod() {
         return Optional.ofNullable(this.instanceWarmupPeriod);
     }
-    public Optional<Integer> getMaximumScalingStepSize() {
+    public Optional<Integer> maximumScalingStepSize() {
         return Optional.ofNullable(this.maximumScalingStepSize);
     }
-    public Optional<Integer> getMinimumScalingStepSize() {
+    public Optional<Integer> minimumScalingStepSize() {
         return Optional.ofNullable(this.minimumScalingStepSize);
     }
-    public Optional<CapacityProviderManagedScalingStatus> getStatus() {
+    public Optional<CapacityProviderManagedScalingStatus> status() {
         return Optional.ofNullable(this.status);
     }
-    public Optional<Integer> getTargetCapacity() {
+    public Optional<Integer> targetCapacity() {
         return Optional.ofNullable(this.targetCapacity);
     }
 

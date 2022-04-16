@@ -20,14 +20,14 @@ public final class WebACLTextTransformation extends com.pulumi.resources.InvokeA
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
       private final WebACLTextTransformationType type;
 
-    public WebACLTextTransformationType getType() {
+    public WebACLTextTransformationType type() {
         return this.type;
     }
 

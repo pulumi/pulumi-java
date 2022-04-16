@@ -27,14 +27,14 @@ public final class RecipeStep {
         this.conditionExpressions = conditionExpressions;
     }
 
-    public RecipeAction getAction() {
+    public RecipeAction action() {
         return this.action;
     }
     /**
      * Condition expressions applied to the step action
      * 
     */
-    public List<RecipeConditionExpression> getConditionExpressions() {
+    public List<RecipeConditionExpression> conditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
     }
 

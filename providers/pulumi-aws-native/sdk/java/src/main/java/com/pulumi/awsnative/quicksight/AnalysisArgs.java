@@ -24,14 +24,14 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="analysisId", required=true)
       private final Output<String> analysisId;
 
-    public Output<String> getAnalysisId() {
+    public Output<String> analysisId() {
         return this.analysisId;
     }
 
     @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
@@ -42,7 +42,7 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="errors")
       private final @Nullable Output<List<AnalysisErrorArgs>> errors;
 
-    public Output<List<AnalysisErrorArgs>> getErrors() {
+    public Output<List<AnalysisErrorArgs>> errors() {
         return this.errors == null ? Codegen.empty() : this.errors;
     }
 
@@ -53,14 +53,14 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="parameters")
       private final @Nullable Output<AnalysisParametersArgs> parameters;
 
-    public Output<AnalysisParametersArgs> getParameters() {
+    public Output<AnalysisParametersArgs> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -76,14 +76,14 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
 
-    public Output<List<AnalysisResourcePermissionArgs>> getPermissions() {
+    public Output<List<AnalysisResourcePermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="sourceEntity", required=true)
       private final Output<AnalysisSourceEntityArgs> sourceEntity;
 
-    public Output<AnalysisSourceEntityArgs> getSourceEntity() {
+    public Output<AnalysisSourceEntityArgs> sourceEntity() {
         return this.sourceEntity;
     }
 
@@ -95,7 +95,7 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AnalysisTagArgs>> tags;
 
-    public Output<List<AnalysisTagArgs>> getTags() {
+    public Output<List<AnalysisTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -106,7 +106,7 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="themeArn")
       private final @Nullable Output<String> themeArn;
 
-    public Output<String> getThemeArn() {
+    public Output<String> themeArn() {
         return this.themeArn == null ? Codegen.empty() : this.themeArn;
     }
 

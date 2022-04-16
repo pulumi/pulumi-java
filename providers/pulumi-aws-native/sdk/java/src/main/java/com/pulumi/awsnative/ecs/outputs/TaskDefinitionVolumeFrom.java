@@ -23,10 +23,10 @@ public final class TaskDefinitionVolumeFrom {
         this.sourceContainer = sourceContainer;
     }
 
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
-    public Optional<String> getSourceContainer() {
+    public Optional<String> sourceContainer() {
         return Optional.ofNullable(this.sourceContainer);
     }
 

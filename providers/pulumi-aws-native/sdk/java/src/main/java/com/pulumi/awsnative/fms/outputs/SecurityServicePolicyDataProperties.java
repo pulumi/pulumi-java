@@ -23,10 +23,10 @@ public final class SecurityServicePolicyDataProperties {
         this.type = type;
     }
 
-    public Optional<String> getManagedServiceData() {
+    public Optional<String> managedServiceData() {
         return Optional.ofNullable(this.managedServiceData);
     }
-    public PolicySecurityServicePolicyDataPropertiesType getType() {
+    public PolicySecurityServicePolicyDataPropertiesType type() {
         return this.type;
     }
 

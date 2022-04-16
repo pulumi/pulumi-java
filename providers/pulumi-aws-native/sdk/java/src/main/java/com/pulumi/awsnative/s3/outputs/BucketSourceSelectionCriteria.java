@@ -35,14 +35,14 @@ public final class BucketSourceSelectionCriteria {
      * A filter that you can specify for selection for modifications on replicas.
      * 
     */
-    public Optional<BucketReplicaModifications> getReplicaModifications() {
+    public Optional<BucketReplicaModifications> replicaModifications() {
         return Optional.ofNullable(this.replicaModifications);
     }
     /**
      * A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.
      * 
     */
-    public Optional<BucketSseKmsEncryptedObjects> getSseKmsEncryptedObjects() {
+    public Optional<BucketSseKmsEncryptedObjects> sseKmsEncryptedObjects() {
         return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
 

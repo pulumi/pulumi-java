@@ -20,56 +20,56 @@ public final class ListenerRuleAuthenticateCognitoConfigArgs extends com.pulumi.
     @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Object> authenticationRequestExtraParams;
 
-    public Output<Object> getAuthenticationRequestExtraParams() {
+    public Output<Object> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Codegen.empty() : this.authenticationRequestExtraParams;
     }
 
     @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
-    public Output<String> getOnUnauthenticatedRequest() {
+    public Output<String> onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Codegen.empty() : this.onUnauthenticatedRequest;
     }
 
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
-    public Output<String> getSessionCookieName() {
+    public Output<String> sessionCookieName() {
         return this.sessionCookieName == null ? Codegen.empty() : this.sessionCookieName;
     }
 
     @Import(name="sessionTimeout")
       private final @Nullable Output<Integer> sessionTimeout;
 
-    public Output<Integer> getSessionTimeout() {
+    public Output<Integer> sessionTimeout() {
         return this.sessionTimeout == null ? Codegen.empty() : this.sessionTimeout;
     }
 
     @Import(name="userPoolArn", required=true)
       private final Output<String> userPoolArn;
 
-    public Output<String> getUserPoolArn() {
+    public Output<String> userPoolArn() {
         return this.userPoolArn;
     }
 
     @Import(name="userPoolClientId", required=true)
       private final Output<String> userPoolClientId;
 
-    public Output<String> getUserPoolClientId() {
+    public Output<String> userPoolClientId() {
         return this.userPoolClientId;
     }
 
     @Import(name="userPoolDomain", required=true)
       private final Output<String> userPoolDomain;
 
-    public Output<String> getUserPoolDomain() {
+    public Output<String> userPoolDomain() {
         return this.userPoolDomain;
     }
 

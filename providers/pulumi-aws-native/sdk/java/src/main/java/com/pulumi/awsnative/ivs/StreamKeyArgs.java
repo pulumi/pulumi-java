@@ -24,7 +24,7 @@ public final class StreamKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelArn", required=true)
       private final Output<String> channelArn;
 
-    public Output<String> getChannelArn() {
+    public Output<String> channelArn() {
         return this.channelArn;
     }
 
@@ -35,7 +35,7 @@ public final class StreamKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StreamKeyTagArgs>> tags;
 
-    public Output<List<StreamKeyTagArgs>> getTags() {
+    public Output<List<StreamKeyTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

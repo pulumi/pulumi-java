@@ -21,28 +21,28 @@ public final class DataSourceSalesforceChatterFeedConfigurationArgs extends com.
     @Import(name="documentDataFieldName", required=true)
       private final Output<String> documentDataFieldName;
 
-    public Output<String> getDocumentDataFieldName() {
+    public Output<String> documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
       private final @Nullable Output<String> documentTitleFieldName;
 
-    public Output<String> getDocumentTitleFieldName() {
+    public Output<String> documentTitleFieldName() {
         return this.documentTitleFieldName == null ? Codegen.empty() : this.documentTitleFieldName;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="includeFilterTypes")
       private final @Nullable Output<List<DataSourceSalesforceChatterFeedIncludeFilterType>> includeFilterTypes;
 
-    public Output<List<DataSourceSalesforceChatterFeedIncludeFilterType>> getIncludeFilterTypes() {
+    public Output<List<DataSourceSalesforceChatterFeedIncludeFilterType>> includeFilterTypes() {
         return this.includeFilterTypes == null ? Codegen.empty() : this.includeFilterTypes;
     }
 

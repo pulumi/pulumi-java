@@ -17,7 +17,7 @@ public final class BucketCorsConfiguration {
         this.corsRules = corsRules;
     }
 
-    public List<BucketCorsRule> getCorsRules() {
+    public List<BucketCorsRule> corsRules() {
         return this.corsRules;
     }
 

@@ -34,7 +34,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The filter expression defining criteria by which to group traces.
      * 
      */
-    public Output</* @Nullable */ String> getFilterExpression() {
+    public Output</* @Nullable */ String> filterExpression() {
         return this.filterExpression;
     }
     /**
@@ -48,7 +48,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The ARN of the group that was generated on creation.
      * 
      */
-    public Output<String> getGroupARN() {
+    public Output<String> groupARN() {
         return this.groupARN;
     }
     /**
@@ -62,19 +62,19 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The case-sensitive name of the new group. Names must be unique.
      * 
      */
-    public Output</* @Nullable */ String> getGroupName() {
+    public Output</* @Nullable */ String> groupName() {
         return this.groupName;
     }
     @Export(name="insightsConfiguration", type=GroupInsightsConfiguration.class, parameters={})
     private Output</* @Nullable */ GroupInsightsConfiguration> insightsConfiguration;
 
-    public Output</* @Nullable */ GroupInsightsConfiguration> getInsightsConfiguration() {
+    public Output</* @Nullable */ GroupInsightsConfiguration> insightsConfiguration() {
         return this.insightsConfiguration;
     }
     @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
-    public Output</* @Nullable */ List<TagsItemProperties>> getTags() {
+    public Output</* @Nullable */ List<TagsItemProperties>> tags() {
         return this.tags;
     }
 

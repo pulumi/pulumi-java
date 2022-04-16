@@ -20,10 +20,10 @@ public final class ConnectionBasicAuthParameters {
         this.username = username;
     }
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

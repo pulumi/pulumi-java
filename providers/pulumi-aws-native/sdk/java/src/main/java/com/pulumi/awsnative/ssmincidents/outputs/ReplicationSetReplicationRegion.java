@@ -23,10 +23,10 @@ public final class ReplicationSetReplicationRegion {
         this.regionName = regionName;
     }
 
-    public Optional<ReplicationSetRegionConfiguration> getRegionConfiguration() {
+    public Optional<ReplicationSetRegionConfiguration> regionConfiguration() {
         return Optional.ofNullable(this.regionConfiguration);
     }
-    public Optional<String> getRegionName() {
+    public Optional<String> regionName() {
         return Optional.ofNullable(this.regionName);
     }
 

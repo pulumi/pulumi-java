@@ -22,10 +22,10 @@ public final class TaskDefinitionHostEntry {
         this.ipAddress = ipAddress;
     }
 
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
 

@@ -40,22 +40,22 @@ public final class GetDomainConfigurationResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<DomainConfigurationAuthorizerConfig> getAuthorizerConfig() {
+    public Optional<DomainConfigurationAuthorizerConfig> authorizerConfig() {
         return Optional.ofNullable(this.authorizerConfig);
     }
-    public Optional<DomainConfigurationStatus> getDomainConfigurationStatus() {
+    public Optional<DomainConfigurationStatus> domainConfigurationStatus() {
         return Optional.ofNullable(this.domainConfigurationStatus);
     }
-    public Optional<DomainConfigurationDomainType> getDomainType() {
+    public Optional<DomainConfigurationDomainType> domainType() {
         return Optional.ofNullable(this.domainType);
     }
-    public List<DomainConfigurationServerCertificateSummary> getServerCertificates() {
+    public List<DomainConfigurationServerCertificateSummary> serverCertificates() {
         return this.serverCertificates == null ? List.of() : this.serverCertificates;
     }
-    public List<DomainConfigurationTag> getTags() {
+    public List<DomainConfigurationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

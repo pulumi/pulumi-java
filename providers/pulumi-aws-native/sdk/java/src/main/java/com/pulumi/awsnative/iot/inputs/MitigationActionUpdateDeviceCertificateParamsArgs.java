@@ -21,7 +21,7 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends com
     @Import(name="action", required=true)
       private final Output<MitigationActionUpdateDeviceCertificateParamsAction> action;
 
-    public Output<MitigationActionUpdateDeviceCertificateParamsAction> getAction() {
+    public Output<MitigationActionUpdateDeviceCertificateParamsAction> action() {
         return this.action;
     }
 

@@ -22,70 +22,70 @@ public final class DeliveryStreamOrcSerDeArgs extends com.pulumi.resources.Resou
     @Import(name="blockSizeBytes")
       private final @Nullable Output<Integer> blockSizeBytes;
 
-    public Output<Integer> getBlockSizeBytes() {
+    public Output<Integer> blockSizeBytes() {
         return this.blockSizeBytes == null ? Codegen.empty() : this.blockSizeBytes;
     }
 
     @Import(name="bloomFilterColumns")
       private final @Nullable Output<List<String>> bloomFilterColumns;
 
-    public Output<List<String>> getBloomFilterColumns() {
+    public Output<List<String>> bloomFilterColumns() {
         return this.bloomFilterColumns == null ? Codegen.empty() : this.bloomFilterColumns;
     }
 
     @Import(name="bloomFilterFalsePositiveProbability")
       private final @Nullable Output<Double> bloomFilterFalsePositiveProbability;
 
-    public Output<Double> getBloomFilterFalsePositiveProbability() {
+    public Output<Double> bloomFilterFalsePositiveProbability() {
         return this.bloomFilterFalsePositiveProbability == null ? Codegen.empty() : this.bloomFilterFalsePositiveProbability;
     }
 
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     @Import(name="dictionaryKeyThreshold")
       private final @Nullable Output<Double> dictionaryKeyThreshold;
 
-    public Output<Double> getDictionaryKeyThreshold() {
+    public Output<Double> dictionaryKeyThreshold() {
         return this.dictionaryKeyThreshold == null ? Codegen.empty() : this.dictionaryKeyThreshold;
     }
 
     @Import(name="enablePadding")
       private final @Nullable Output<Boolean> enablePadding;
 
-    public Output<Boolean> getEnablePadding() {
+    public Output<Boolean> enablePadding() {
         return this.enablePadding == null ? Codegen.empty() : this.enablePadding;
     }
 
     @Import(name="formatVersion")
       private final @Nullable Output<String> formatVersion;
 
-    public Output<String> getFormatVersion() {
+    public Output<String> formatVersion() {
         return this.formatVersion == null ? Codegen.empty() : this.formatVersion;
     }
 
     @Import(name="paddingTolerance")
       private final @Nullable Output<Double> paddingTolerance;
 
-    public Output<Double> getPaddingTolerance() {
+    public Output<Double> paddingTolerance() {
         return this.paddingTolerance == null ? Codegen.empty() : this.paddingTolerance;
     }
 
     @Import(name="rowIndexStride")
       private final @Nullable Output<Integer> rowIndexStride;
 
-    public Output<Integer> getRowIndexStride() {
+    public Output<Integer> rowIndexStride() {
         return this.rowIndexStride == null ? Codegen.empty() : this.rowIndexStride;
     }
 
     @Import(name="stripeSizeBytes")
       private final @Nullable Output<Integer> stripeSizeBytes;
 
-    public Output<Integer> getStripeSizeBytes() {
+    public Output<Integer> stripeSizeBytes() {
         return this.stripeSizeBytes == null ? Codegen.empty() : this.stripeSizeBytes;
     }
 

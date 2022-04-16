@@ -26,7 +26,7 @@ public final class ContainerRecipeComponentConfiguration {
      * The Amazon Resource Name (ARN) of the component.
      * 
     */
-    public Optional<String> getComponentArn() {
+    public Optional<String> componentArn() {
         return Optional.ofNullable(this.componentArn);
     }
 

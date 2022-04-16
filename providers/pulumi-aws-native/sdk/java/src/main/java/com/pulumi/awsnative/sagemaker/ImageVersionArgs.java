@@ -17,14 +17,14 @@ public final class ImageVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="baseImage", required=true)
       private final Output<String> baseImage;
 
-    public Output<String> getBaseImage() {
+    public Output<String> baseImage() {
         return this.baseImage;
     }
 
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 

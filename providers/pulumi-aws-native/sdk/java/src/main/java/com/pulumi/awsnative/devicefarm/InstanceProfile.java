@@ -24,43 +24,43 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="excludeAppPackagesFromCleanup", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanup;
 
-    public Output</* @Nullable */ List<String>> getExcludeAppPackagesFromCleanup() {
+    public Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanup() {
         return this.excludeAppPackagesFromCleanup;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="packageCleanup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> packageCleanup;
 
-    public Output</* @Nullable */ Boolean> getPackageCleanup() {
+    public Output</* @Nullable */ Boolean> packageCleanup() {
         return this.packageCleanup;
     }
     @Export(name="rebootAfterUse", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rebootAfterUse;
 
-    public Output</* @Nullable */ Boolean> getRebootAfterUse() {
+    public Output</* @Nullable */ Boolean> rebootAfterUse() {
         return this.rebootAfterUse;
     }
     @Export(name="tags", type=List.class, parameters={InstanceProfileTag.class})
     private Output</* @Nullable */ List<InstanceProfileTag>> tags;
 
-    public Output</* @Nullable */ List<InstanceProfileTag>> getTags() {
+    public Output</* @Nullable */ List<InstanceProfileTag>> tags() {
         return this.tags;
     }
 

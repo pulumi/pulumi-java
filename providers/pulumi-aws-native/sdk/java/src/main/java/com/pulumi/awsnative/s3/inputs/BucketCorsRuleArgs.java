@@ -29,7 +29,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedHeaders")
       private final @Nullable Output<List<String>> allowedHeaders;
 
-    public Output<List<String>> getAllowedHeaders() {
+    public Output<List<String>> allowedHeaders() {
         return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
     }
 
@@ -40,7 +40,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedMethods", required=true)
       private final Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
 
-    public Output<List<BucketCorsRuleAllowedMethodsItem>> getAllowedMethods() {
+    public Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods() {
         return this.allowedMethods;
     }
 
@@ -51,7 +51,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedOrigins", required=true)
       private final Output<List<String>> allowedOrigins;
 
-    public Output<List<String>> getAllowedOrigins() {
+    public Output<List<String>> allowedOrigins() {
         return this.allowedOrigins;
     }
 
@@ -62,7 +62,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exposedHeaders")
       private final @Nullable Output<List<String>> exposedHeaders;
 
-    public Output<List<String>> getExposedHeaders() {
+    public Output<List<String>> exposedHeaders() {
         return this.exposedHeaders == null ? Codegen.empty() : this.exposedHeaders;
     }
 
@@ -73,7 +73,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -84,7 +84,7 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
-    public Output<Integer> getMaxAge() {
+    public Output<Integer> maxAge() {
         return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 

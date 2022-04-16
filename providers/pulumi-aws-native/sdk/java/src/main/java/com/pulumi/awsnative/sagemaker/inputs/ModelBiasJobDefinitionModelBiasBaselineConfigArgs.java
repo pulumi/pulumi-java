@@ -23,14 +23,14 @@ public final class ModelBiasJobDefinitionModelBiasBaselineConfigArgs extends com
     @Import(name="baseliningJobName")
       private final @Nullable Output<String> baseliningJobName;
 
-    public Output<String> getBaseliningJobName() {
+    public Output<String> baseliningJobName() {
         return this.baseliningJobName == null ? Codegen.empty() : this.baseliningJobName;
     }
 
     @Import(name="constraintsResource")
       private final @Nullable Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource;
 
-    public Output<ModelBiasJobDefinitionConstraintsResourceArgs> getConstraintsResource() {
+    public Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource() {
         return this.constraintsResource == null ? Codegen.empty() : this.constraintsResource;
     }
 

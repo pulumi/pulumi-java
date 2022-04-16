@@ -26,13 +26,13 @@ public final class GetKeyGroupResult {
         this.lastModifiedTime = lastModifiedTime;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<KeyGroupConfig> getKeyGroupConfig() {
+    public Optional<KeyGroupConfig> keyGroupConfig() {
         return Optional.ofNullable(this.keyGroupConfig);
     }
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
 

@@ -20,21 +20,21 @@ public final class SAMLProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="samlMetadataDocument", required=true)
       private final Output<String> samlMetadataDocument;
 
-    public Output<String> getSamlMetadataDocument() {
+    public Output<String> samlMetadataDocument() {
         return this.samlMetadataDocument;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<SAMLProviderTagArgs>> tags;
 
-    public Output<List<SAMLProviderTagArgs>> getTags() {
+    public Output<List<SAMLProviderTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

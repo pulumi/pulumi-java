@@ -34,14 +34,14 @@ public final class DocumentRequires {
      * The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The document version required by the current document.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -23,7 +23,7 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="loggingConfig")
       private final @Nullable Output<ResourceVersionLoggingConfigArgs> loggingConfig;
 
-    public Output<ResourceVersionLoggingConfigArgs> getLoggingConfig() {
+    public Output<ResourceVersionLoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -47,7 +47,7 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="schemaHandlerPackage", required=true)
       private final Output<String> schemaHandlerPackage;
 
-    public Output<String> getSchemaHandlerPackage() {
+    public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
 
@@ -60,7 +60,7 @@ public final class ResourceVersionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="typeName", required=true)
       private final Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
 

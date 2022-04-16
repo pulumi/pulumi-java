@@ -28,14 +28,14 @@ public final class WebACLJsonMatchPatternArgs extends com.pulumi.resources.Resou
     @Import(name="all")
       private final @Nullable Output<Object> all;
 
-    public Output<Object> getAll() {
+    public Output<Object> all() {
         return this.all == null ? Codegen.empty() : this.all;
     }
 
     @Import(name="includedPaths")
       private final @Nullable Output<List<String>> includedPaths;
 
-    public Output<List<String>> getIncludedPaths() {
+    public Output<List<String>> includedPaths() {
         return this.includedPaths == null ? Codegen.empty() : this.includedPaths;
     }
 

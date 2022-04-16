@@ -17,21 +17,21 @@ public final class TopicRuleSigV4AuthorizationArgs extends com.pulumi.resources.
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
     @Import(name="signingRegion", required=true)
       private final Output<String> signingRegion;
 
-    public Output<String> getSigningRegion() {
+    public Output<String> signingRegion() {
         return this.signingRegion;
     }
 

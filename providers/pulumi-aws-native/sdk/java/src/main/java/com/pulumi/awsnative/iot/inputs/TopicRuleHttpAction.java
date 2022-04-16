@@ -20,28 +20,28 @@ public final class TopicRuleHttpAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="auth")
       private final @Nullable TopicRuleHttpAuthorization auth;
 
-    public Optional<TopicRuleHttpAuthorization> getAuth() {
+    public Optional<TopicRuleHttpAuthorization> auth() {
         return this.auth == null ? Optional.empty() : Optional.ofNullable(this.auth);
     }
 
     @Import(name="confirmationUrl")
       private final @Nullable String confirmationUrl;
 
-    public Optional<String> getConfirmationUrl() {
+    public Optional<String> confirmationUrl() {
         return this.confirmationUrl == null ? Optional.empty() : Optional.ofNullable(this.confirmationUrl);
     }
 
     @Import(name="headers")
       private final @Nullable List<TopicRuleHttpActionHeader> headers;
 
-    public List<TopicRuleHttpActionHeader> getHeaders() {
+    public List<TopicRuleHttpActionHeader> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -79,56 +79,56 @@ public final class GetResolverQueryLoggingConfigResult {
      * Arn
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Count
      * 
     */
-    public Optional<Integer> getAssociationCount() {
+    public Optional<Integer> associationCount() {
         return Optional.ofNullable(this.associationCount);
     }
     /**
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The id of the creator request.
      * 
     */
-    public Optional<String> getCreatorRequestId() {
+    public Optional<String> creatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
      * ResourceId
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * AccountId
      * 
     */
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
     */
-    public Optional<ResolverQueryLoggingConfigShareStatus> getShareStatus() {
+    public Optional<ResolverQueryLoggingConfigShareStatus> shareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
     /**
      * ResolverQueryLogConfigStatus, possible values are CREATING, CREATED, DELETED AND FAILED.
      * 
     */
-    public Optional<ResolverQueryLoggingConfigStatus> getStatus() {
+    public Optional<ResolverQueryLoggingConfigStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

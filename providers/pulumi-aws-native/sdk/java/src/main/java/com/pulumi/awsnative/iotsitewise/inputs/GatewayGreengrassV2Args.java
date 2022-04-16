@@ -25,7 +25,7 @@ public final class GatewayGreengrassV2Args extends com.pulumi.resources.Resource
     @Import(name="coreDeviceThingName", required=true)
       private final Output<String> coreDeviceThingName;
 
-    public Output<String> getCoreDeviceThingName() {
+    public Output<String> coreDeviceThingName() {
         return this.coreDeviceThingName;
     }
 

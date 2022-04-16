@@ -23,7 +23,7 @@ public final class HostedZoneVPC extends com.pulumi.resources.InvokeArgs {
     @Import(name="vPCId", required=true)
       private final String vPCId;
 
-    public String getVPCId() {
+    public String vPCId() {
         return this.vPCId;
     }
 
@@ -34,7 +34,7 @@ public final class HostedZoneVPC extends com.pulumi.resources.InvokeArgs {
     @Import(name="vPCRegion", required=true)
       private final String vPCRegion;
 
-    public String getVPCRegion() {
+    public String vPCRegion() {
         return this.vPCRegion;
     }
 

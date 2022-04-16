@@ -71,53 +71,53 @@ public final class EventTypeEventVariable {
         this.variableType = variableType;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<EventTypeEventVariableDataSource> getDataSource() {
+    public Optional<EventTypeEventVariableDataSource> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
-    public Optional<EventTypeEventVariableDataType> getDataType() {
+    public Optional<EventTypeEventVariableDataType> dataType() {
         return Optional.ofNullable(this.dataType);
     }
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Boolean> getInline() {
+    public Optional<Boolean> inline() {
         return Optional.ofNullable(this.inline);
     }
     /**
      * The time when the event type was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tags associated with this event type.
      * 
     */
-    public List<EventTypeTag> getTags() {
+    public List<EventTypeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<EventTypeEventVariableVariableType> getVariableType() {
+    public Optional<EventTypeEventVariableVariableType> variableType() {
         return Optional.ofNullable(this.variableType);
     }
 

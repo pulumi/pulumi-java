@@ -50,34 +50,34 @@ public final class GetFirewallResult {
         this.tags = tags;
     }
 
-    public Optional<Boolean> getDeleteProtection() {
+    public Optional<Boolean> deleteProtection() {
         return Optional.ofNullable(this.deleteProtection);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<String> getEndpointIds() {
+    public List<String> endpointIds() {
         return this.endpointIds == null ? List.of() : this.endpointIds;
     }
-    public Optional<String> getFirewallArn() {
+    public Optional<String> firewallArn() {
         return Optional.ofNullable(this.firewallArn);
     }
-    public Optional<String> getFirewallId() {
+    public Optional<String> firewallId() {
         return Optional.ofNullable(this.firewallId);
     }
-    public Optional<String> getFirewallPolicyArn() {
+    public Optional<String> firewallPolicyArn() {
         return Optional.ofNullable(this.firewallPolicyArn);
     }
-    public Optional<Boolean> getFirewallPolicyChangeProtection() {
+    public Optional<Boolean> firewallPolicyChangeProtection() {
         return Optional.ofNullable(this.firewallPolicyChangeProtection);
     }
-    public Optional<Boolean> getSubnetChangeProtection() {
+    public Optional<Boolean> subnetChangeProtection() {
         return Optional.ofNullable(this.subnetChangeProtection);
     }
-    public List<FirewallSubnetMapping> getSubnetMappings() {
+    public List<FirewallSubnetMapping> subnetMappings() {
         return this.subnetMappings == null ? List.of() : this.subnetMappings;
     }
-    public List<FirewallTag> getTags() {
+    public List<FirewallTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

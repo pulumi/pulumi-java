@@ -20,42 +20,42 @@ public final class InAppTemplateInAppMessageContent extends com.pulumi.resources
     @Import(name="backgroundColor")
       private final @Nullable String backgroundColor;
 
-    public Optional<String> getBackgroundColor() {
+    public Optional<String> backgroundColor() {
         return this.backgroundColor == null ? Optional.empty() : Optional.ofNullable(this.backgroundColor);
     }
 
     @Import(name="bodyConfig")
       private final @Nullable InAppTemplateBodyConfig bodyConfig;
 
-    public Optional<InAppTemplateBodyConfig> getBodyConfig() {
+    public Optional<InAppTemplateBodyConfig> bodyConfig() {
         return this.bodyConfig == null ? Optional.empty() : Optional.ofNullable(this.bodyConfig);
     }
 
     @Import(name="headerConfig")
       private final @Nullable InAppTemplateHeaderConfig headerConfig;
 
-    public Optional<InAppTemplateHeaderConfig> getHeaderConfig() {
+    public Optional<InAppTemplateHeaderConfig> headerConfig() {
         return this.headerConfig == null ? Optional.empty() : Optional.ofNullable(this.headerConfig);
     }
 
     @Import(name="imageUrl")
       private final @Nullable String imageUrl;
 
-    public Optional<String> getImageUrl() {
+    public Optional<String> imageUrl() {
         return this.imageUrl == null ? Optional.empty() : Optional.ofNullable(this.imageUrl);
     }
 
     @Import(name="primaryBtn")
       private final @Nullable InAppTemplateButtonConfig primaryBtn;
 
-    public Optional<InAppTemplateButtonConfig> getPrimaryBtn() {
+    public Optional<InAppTemplateButtonConfig> primaryBtn() {
         return this.primaryBtn == null ? Optional.empty() : Optional.ofNullable(this.primaryBtn);
     }
 
     @Import(name="secondaryBtn")
       private final @Nullable InAppTemplateButtonConfig secondaryBtn;
 
-    public Optional<InAppTemplateButtonConfig> getSecondaryBtn() {
+    public Optional<InAppTemplateButtonConfig> secondaryBtn() {
         return this.secondaryBtn == null ? Optional.empty() : Optional.ofNullable(this.secondaryBtn);
     }
 

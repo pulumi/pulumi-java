@@ -23,13 +23,13 @@ public class AttributeGroup extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="attributes", type=Object.class, parameters={})
     private Output<Object> attributes;
 
-    public Output<Object> getAttributes() {
+    public Output<Object> attributes() {
         return this.attributes;
     }
     /**
@@ -43,7 +43,7 @@ public class AttributeGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the attribute group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,13 +57,13 @@ public class AttributeGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the attribute group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=AttributeGroupTags.class, parameters={})
     private Output</* @Nullable */ AttributeGroupTags> tags;
 
-    public Output</* @Nullable */ AttributeGroupTags> getTags() {
+    public Output</* @Nullable */ AttributeGroupTags> tags() {
         return this.tags;
     }
 

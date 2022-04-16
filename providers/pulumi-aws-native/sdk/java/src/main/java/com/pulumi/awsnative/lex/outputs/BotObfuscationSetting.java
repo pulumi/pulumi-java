@@ -24,7 +24,7 @@ public final class BotObfuscationSetting {
      * Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
      * 
     */
-    public BotObfuscationSettingObfuscationSettingType getObfuscationSettingType() {
+    public BotObfuscationSettingObfuscationSettingType obfuscationSettingType() {
         return this.obfuscationSettingType;
     }
 

@@ -45,22 +45,22 @@ public final class GetIPSetResult {
      * List of IPAddresses.
      * 
     */
-    public List<String> getAddresses() {
+    public List<String> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<IPSetIPAddressVersion> getIPAddressVersion() {
+    public Optional<IPSetIPAddressVersion> iPAddressVersion() {
         return Optional.ofNullable(this.iPAddressVersion);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public List<IPSetTag> getTags() {
+    public List<IPSetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

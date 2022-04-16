@@ -26,7 +26,7 @@ public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<ServiceSourceCodeVersionType> type;
 
-    public Output<ServiceSourceCodeVersionType> getType() {
+    public Output<ServiceSourceCodeVersionType> type() {
         return this.type;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.Res
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

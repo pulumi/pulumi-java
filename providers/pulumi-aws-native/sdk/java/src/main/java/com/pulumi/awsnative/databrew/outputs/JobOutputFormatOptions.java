@@ -18,7 +18,7 @@ public final class JobOutputFormatOptions {
         this.csv = csv;
     }
 
-    public Optional<JobCsvOutputOptions> getCsv() {
+    public Optional<JobCsvOutputOptions> csv() {
         return Optional.ofNullable(this.csv);
     }
 

@@ -24,7 +24,7 @@ public final class ServiceCodeRepositoryArgs extends com.pulumi.resources.Resour
     @Import(name="codeConfiguration")
       private final @Nullable Output<ServiceCodeConfigurationArgs> codeConfiguration;
 
-    public Output<ServiceCodeConfigurationArgs> getCodeConfiguration() {
+    public Output<ServiceCodeConfigurationArgs> codeConfiguration() {
         return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
@@ -35,14 +35,14 @@ public final class ServiceCodeRepositoryArgs extends com.pulumi.resources.Resour
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
     @Import(name="sourceCodeVersion", required=true)
       private final Output<ServiceSourceCodeVersionArgs> sourceCodeVersion;
 
-    public Output<ServiceSourceCodeVersionArgs> getSourceCodeVersion() {
+    public Output<ServiceSourceCodeVersionArgs> sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 

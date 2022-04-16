@@ -33,13 +33,13 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
      * @return Data Location Constraint of the Policy.
      * 
      */
-    public Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
+    public Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> dataLocationConstraint() {
         return this.dataLocationConstraint;
     }
     @Export(name="policy", type=ResiliencyPolicyPolicyMap.class, parameters={})
     private Output<ResiliencyPolicyPolicyMap> policy;
 
-    public Output<ResiliencyPolicyPolicyMap> getPolicy() {
+    public Output<ResiliencyPolicyPolicyMap> policy() {
         return this.policy;
     }
     /**
@@ -53,7 +53,7 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
     /**
@@ -67,7 +67,7 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
      * @return Description of Resiliency Policy.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyDescription() {
+    public Output</* @Nullable */ String> policyDescription() {
         return this.policyDescription;
     }
     /**
@@ -81,13 +81,13 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
      * @return Name of Resiliency Policy.
      * 
      */
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
     @Export(name="tags", type=ResiliencyPolicyTagMap.class, parameters={})
     private Output</* @Nullable */ ResiliencyPolicyTagMap> tags;
 
-    public Output</* @Nullable */ ResiliencyPolicyTagMap> getTags() {
+    public Output</* @Nullable */ ResiliencyPolicyTagMap> tags() {
         return this.tags;
     }
     /**
@@ -101,7 +101,7 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
      * @return Resiliency Policy Tier.
      * 
      */
-    public Output<ResiliencyPolicyTier> getTier() {
+    public Output<ResiliencyPolicyTier> tier() {
         return this.tier;
     }
 

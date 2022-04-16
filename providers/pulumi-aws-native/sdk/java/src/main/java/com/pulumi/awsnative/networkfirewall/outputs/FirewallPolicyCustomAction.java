@@ -21,10 +21,10 @@ public final class FirewallPolicyCustomAction {
         this.actionName = actionName;
     }
 
-    public FirewallPolicyActionDefinition getActionDefinition() {
+    public FirewallPolicyActionDefinition actionDefinition() {
         return this.actionDefinition;
     }
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 

@@ -18,7 +18,7 @@ public final class ResponsePlanNotificationTargetItem {
         this.snsTopicArn = snsTopicArn;
     }
 
-    public Optional<String> getSnsTopicArn() {
+    public Optional<String> snsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
 

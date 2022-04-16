@@ -23,10 +23,10 @@ public final class TableEncryptionSpecification {
         this.kmsKeyIdentifier = kmsKeyIdentifier;
     }
 
-    public TableEncryptionType getEncryptionType() {
+    public TableEncryptionType encryptionType() {
         return this.encryptionType;
     }
-    public Optional<String> getKmsKeyIdentifier() {
+    public Optional<String> kmsKeyIdentifier() {
         return Optional.ofNullable(this.kmsKeyIdentifier);
     }
 

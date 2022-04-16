@@ -49,31 +49,31 @@ public final class DeliveryStreamSplunkDestinationConfiguration {
         this.s3Configuration = s3Configuration;
     }
 
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
-    public Optional<Integer> getHECAcknowledgmentTimeoutInSeconds() {
+    public Optional<Integer> hECAcknowledgmentTimeoutInSeconds() {
         return Optional.ofNullable(this.hECAcknowledgmentTimeoutInSeconds);
     }
-    public String getHECEndpoint() {
+    public String hECEndpoint() {
         return this.hECEndpoint;
     }
-    public DeliveryStreamSplunkDestinationConfigurationHECEndpointType getHECEndpointType() {
+    public DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType() {
         return this.hECEndpointType;
     }
-    public String getHECToken() {
+    public String hECToken() {
         return this.hECToken;
     }
-    public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
-    public Optional<DeliveryStreamSplunkRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamSplunkRetryOptions> retryOptions() {
         return Optional.ofNullable(this.retryOptions);
     }
-    public Optional<String> getS3BackupMode() {
+    public Optional<String> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
-    public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
+    public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
 

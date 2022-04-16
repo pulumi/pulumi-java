@@ -26,7 +26,7 @@ public final class EnvironmentSuperuserParametersArgs extends com.pulumi.resourc
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
@@ -37,7 +37,7 @@ public final class EnvironmentSuperuserParametersArgs extends com.pulumi.resourc
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
@@ -48,7 +48,7 @@ public final class EnvironmentSuperuserParametersArgs extends com.pulumi.resourc
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 

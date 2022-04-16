@@ -28,14 +28,14 @@ public final class GetFargateProfileResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<FargateProfileTag> getTags() {
+    public List<FargateProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

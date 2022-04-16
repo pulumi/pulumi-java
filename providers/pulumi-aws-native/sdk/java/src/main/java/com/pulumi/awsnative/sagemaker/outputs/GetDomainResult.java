@@ -63,42 +63,42 @@ public final class GetDomainResult {
      * The default user settings.
      * 
     */
-    public Optional<DomainUserSettings> getDefaultUserSettings() {
+    public Optional<DomainUserSettings> defaultUserSettings() {
         return Optional.ofNullable(this.defaultUserSettings);
     }
     /**
      * The Amazon Resource Name (ARN) of the created domain.
      * 
     */
-    public Optional<String> getDomainArn() {
+    public Optional<String> domainArn() {
         return Optional.ofNullable(this.domainArn);
     }
     /**
      * The domain name.
      * 
     */
-    public Optional<String> getDomainId() {
+    public Optional<String> domainId() {
         return Optional.ofNullable(this.domainId);
     }
     /**
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
     */
-    public Optional<String> getHomeEfsFileSystemId() {
+    public Optional<String> homeEfsFileSystemId() {
         return Optional.ofNullable(this.homeEfsFileSystemId);
     }
     /**
      * The SSO managed application instance ID.
      * 
     */
-    public Optional<String> getSingleSignOnManagedApplicationInstanceId() {
+    public Optional<String> singleSignOnManagedApplicationInstanceId() {
         return Optional.ofNullable(this.singleSignOnManagedApplicationInstanceId);
     }
     /**
      * The URL to the created domain.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

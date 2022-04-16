@@ -22,21 +22,21 @@ public final class BotOutputContextArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="timeToLiveInSeconds", required=true)
       private final Output<Integer> timeToLiveInSeconds;
 
-    public Output<Integer> getTimeToLiveInSeconds() {
+    public Output<Integer> timeToLiveInSeconds() {
         return this.timeToLiveInSeconds;
     }
 
     @Import(name="turnsToLive", required=true)
       private final Output<Integer> turnsToLive;
 
-    public Output<Integer> getTurnsToLive() {
+    public Output<Integer> turnsToLive() {
         return this.turnsToLive;
     }
 

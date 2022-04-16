@@ -28,13 +28,13 @@ public final class DatasetPathOptions {
         this.parameters = parameters;
     }
 
-    public Optional<DatasetFilesLimit> getFilesLimit() {
+    public Optional<DatasetFilesLimit> filesLimit() {
         return Optional.ofNullable(this.filesLimit);
     }
-    public Optional<DatasetFilterExpression> getLastModifiedDateCondition() {
+    public Optional<DatasetFilterExpression> lastModifiedDateCondition() {
         return Optional.ofNullable(this.lastModifiedDateCondition);
     }
-    public List<DatasetPathParameter> getParameters() {
+    public List<DatasetPathParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 

@@ -21,10 +21,10 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
         this.value = value;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue getValue() {
+    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value() {
         return this.value;
     }
 

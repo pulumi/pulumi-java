@@ -94,70 +94,70 @@ public final class GetUserResult {
      * The identifier of the user account in the directory used for identity management.
      * 
     */
-    public Optional<String> getDirectoryUserId() {
+    public Optional<String> directoryUserId() {
         return Optional.ofNullable(this.directoryUserId);
     }
     /**
      * The identifier of the hierarchy group for the user.
      * 
     */
-    public Optional<String> getHierarchyGroupArn() {
+    public Optional<String> hierarchyGroupArn() {
         return Optional.ofNullable(this.hierarchyGroupArn);
     }
     /**
      * The information about the identity of the user.
      * 
     */
-    public Optional<UserIdentityInfo> getIdentityInfo() {
+    public Optional<UserIdentityInfo> identityInfo() {
         return Optional.ofNullable(this.identityInfo);
     }
     /**
      * The identifier of the Amazon Connect instance.
      * 
     */
-    public Optional<String> getInstanceArn() {
+    public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The phone settings for the user.
      * 
     */
-    public Optional<UserPhoneConfig> getPhoneConfig() {
+    public Optional<UserPhoneConfig> phoneConfig() {
         return Optional.ofNullable(this.phoneConfig);
     }
     /**
      * The identifier of the routing profile for the user.
      * 
     */
-    public Optional<String> getRoutingProfileArn() {
+    public Optional<String> routingProfileArn() {
         return Optional.ofNullable(this.routingProfileArn);
     }
     /**
      * One or more security profile arns for the user
      * 
     */
-    public List<String> getSecurityProfileArns() {
+    public List<String> securityProfileArns() {
         return this.securityProfileArns == null ? List.of() : this.securityProfileArns;
     }
     /**
      * One or more tags.
      * 
     */
-    public List<UserTag> getTags() {
+    public List<UserTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The Amazon Resource Name (ARN) for the user.
      * 
     */
-    public Optional<String> getUserArn() {
+    public Optional<String> userArn() {
         return Optional.ofNullable(this.userArn);
     }
     /**
      * The user name for the account.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

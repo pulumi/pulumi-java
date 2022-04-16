@@ -32,7 +32,7 @@ public class DistributionConfiguration extends com.pulumi.resources.CustomResour
      * @return The Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class DistributionConfiguration extends com.pulumi.resources.CustomResour
      * @return The description of the distribution configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class DistributionConfiguration extends com.pulumi.resources.CustomResour
      * @return The distributions of the distribution configuration.
      * 
      */
-    public Output<List<DistributionConfigurationDistribution>> getDistributions() {
+    public Output<List<DistributionConfigurationDistribution>> distributions() {
         return this.distributions;
     }
     /**
@@ -74,7 +74,7 @@ public class DistributionConfiguration extends com.pulumi.resources.CustomResour
      * @return The name of the distribution configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class DistributionConfiguration extends com.pulumi.resources.CustomResour
      * @return The tags associated with the component.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
 

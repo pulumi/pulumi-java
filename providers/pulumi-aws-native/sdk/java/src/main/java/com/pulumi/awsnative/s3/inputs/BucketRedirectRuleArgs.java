@@ -27,7 +27,7 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -38,7 +38,7 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="httpRedirectCode")
       private final @Nullable Output<String> httpRedirectCode;
 
-    public Output<String> getHttpRedirectCode() {
+    public Output<String> httpRedirectCode() {
         return this.httpRedirectCode == null ? Codegen.empty() : this.httpRedirectCode;
     }
 
@@ -49,7 +49,7 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="protocol")
       private final @Nullable Output<BucketRedirectRuleProtocol> protocol;
 
-    public Output<BucketRedirectRuleProtocol> getProtocol() {
+    public Output<BucketRedirectRuleProtocol> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -60,7 +60,7 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="replaceKeyPrefixWith")
       private final @Nullable Output<String> replaceKeyPrefixWith;
 
-    public Output<String> getReplaceKeyPrefixWith() {
+    public Output<String> replaceKeyPrefixWith() {
         return this.replaceKeyPrefixWith == null ? Codegen.empty() : this.replaceKeyPrefixWith;
     }
 
@@ -71,7 +71,7 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="replaceKeyWith")
       private final @Nullable Output<String> replaceKeyWith;
 
-    public Output<String> getReplaceKeyWith() {
+    public Output<String> replaceKeyWith() {
         return this.replaceKeyWith == null ? Codegen.empty() : this.replaceKeyWith;
     }
 

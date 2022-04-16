@@ -27,7 +27,7 @@ public final class EnvironmentFederationParametersArgs extends com.pulumi.resour
     @Import(name="applicationCallBackURL")
       private final @Nullable Output<String> applicationCallBackURL;
 
-    public Output<String> getApplicationCallBackURL() {
+    public Output<String> applicationCallBackURL() {
         return this.applicationCallBackURL == null ? Codegen.empty() : this.applicationCallBackURL;
     }
 
@@ -38,7 +38,7 @@ public final class EnvironmentFederationParametersArgs extends com.pulumi.resour
     @Import(name="attributeMap")
       private final @Nullable Output<Object> attributeMap;
 
-    public Output<Object> getAttributeMap() {
+    public Output<Object> attributeMap() {
         return this.attributeMap == null ? Codegen.empty() : this.attributeMap;
     }
 
@@ -49,7 +49,7 @@ public final class EnvironmentFederationParametersArgs extends com.pulumi.resour
     @Import(name="federationProviderName")
       private final @Nullable Output<String> federationProviderName;
 
-    public Output<String> getFederationProviderName() {
+    public Output<String> federationProviderName() {
         return this.federationProviderName == null ? Codegen.empty() : this.federationProviderName;
     }
 
@@ -60,7 +60,7 @@ public final class EnvironmentFederationParametersArgs extends com.pulumi.resour
     @Import(name="federationURN")
       private final @Nullable Output<String> federationURN;
 
-    public Output<String> getFederationURN() {
+    public Output<String> federationURN() {
         return this.federationURN == null ? Codegen.empty() : this.federationURN;
     }
 
@@ -71,7 +71,7 @@ public final class EnvironmentFederationParametersArgs extends com.pulumi.resour
     @Import(name="samlMetadataDocument")
       private final @Nullable Output<String> samlMetadataDocument;
 
-    public Output<String> getSamlMetadataDocument() {
+    public Output<String> samlMetadataDocument() {
         return this.samlMetadataDocument == null ? Codegen.empty() : this.samlMetadataDocument;
     }
 
@@ -82,7 +82,7 @@ public final class EnvironmentFederationParametersArgs extends com.pulumi.resour
     @Import(name="samlMetadataURL")
       private final @Nullable Output<String> samlMetadataURL;
 
-    public Output<String> getSamlMetadataURL() {
+    public Output<String> samlMetadataURL() {
         return this.samlMetadataURL == null ? Codegen.empty() : this.samlMetadataURL;
     }
 

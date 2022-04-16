@@ -26,7 +26,7 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="domainName")
       private final @Nullable String domainName;
 
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
     }
 
@@ -37,7 +37,7 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="hostedZoneArn")
       private final @Nullable String hostedZoneArn;
 
-    public Optional<String> getHostedZoneArn() {
+    public Optional<String> hostedZoneArn() {
         return this.hostedZoneArn == null ? Optional.empty() : Optional.ofNullable(this.hostedZoneArn);
     }
 
@@ -48,7 +48,7 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="recordSetId")
       private final @Nullable String recordSetId;
 
-    public Optional<String> getRecordSetId() {
+    public Optional<String> recordSetId() {
         return this.recordSetId == null ? Optional.empty() : Optional.ofNullable(this.recordSetId);
     }
 
@@ -59,14 +59,14 @@ public final class ResourceSetDNSTargetResource extends com.pulumi.resources.Inv
     @Import(name="recordType")
       private final @Nullable String recordType;
 
-    public Optional<String> getRecordType() {
+    public Optional<String> recordType() {
         return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
     }
 
     @Import(name="targetResource")
       private final @Nullable ResourceSetTargetResource targetResource;
 
-    public Optional<ResourceSetTargetResource> getTargetResource() {
+    public Optional<ResourceSetTargetResource> targetResource() {
         return this.targetResource == null ? Optional.empty() : Optional.ofNullable(this.targetResource);
     }
 

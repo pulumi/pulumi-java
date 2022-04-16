@@ -19,14 +19,14 @@ public final class ConfigEirpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="units")
       private final @Nullable Output<ConfigEirpUnits> units;
 
-    public Output<ConfigEirpUnits> getUnits() {
+    public Output<ConfigEirpUnits> units() {
         return this.units == null ? Codegen.empty() : this.units;
     }
 
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

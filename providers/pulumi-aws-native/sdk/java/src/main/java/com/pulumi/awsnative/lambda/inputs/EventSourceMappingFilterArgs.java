@@ -26,7 +26,7 @@ public final class EventSourceMappingFilterArgs extends com.pulumi.resources.Res
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 

@@ -58,40 +58,40 @@ public final class BucketReplicationRule {
         this.status = status;
     }
 
-    public Optional<BucketDeleteMarkerReplication> getDeleteMarkerReplication() {
+    public Optional<BucketDeleteMarkerReplication> deleteMarkerReplication() {
         return Optional.ofNullable(this.deleteMarkerReplication);
     }
-    public BucketReplicationDestination getDestination() {
+    public BucketReplicationDestination destination() {
         return this.destination;
     }
-    public Optional<BucketReplicationRuleFilter> getFilter() {
+    public Optional<BucketReplicationRuleFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * A unique identifier for the rule.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An object key name prefix that identifies the object or objects to which the rule applies.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
-    public Optional<BucketSourceSelectionCriteria> getSourceSelectionCriteria() {
+    public Optional<BucketSourceSelectionCriteria> sourceSelectionCriteria() {
         return Optional.ofNullable(this.sourceSelectionCriteria);
     }
     /**
      * Specifies whether the rule is enabled.
      * 
     */
-    public BucketReplicationRuleStatus getStatus() {
+    public BucketReplicationRuleStatus status() {
         return this.status;
     }
 

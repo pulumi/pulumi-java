@@ -32,16 +32,16 @@ public final class ComponentVersionLambdaContainerParams {
         this.volumes = volumes;
     }
 
-    public List<ComponentVersionLambdaDeviceMount> getDevices() {
+    public List<ComponentVersionLambdaDeviceMount> devices() {
         return this.devices == null ? List.of() : this.devices;
     }
-    public Optional<Integer> getMemorySizeInKB() {
+    public Optional<Integer> memorySizeInKB() {
         return Optional.ofNullable(this.memorySizeInKB);
     }
-    public Optional<Boolean> getMountROSysfs() {
+    public Optional<Boolean> mountROSysfs() {
         return Optional.ofNullable(this.mountROSysfs);
     }
-    public List<ComponentVersionLambdaVolumeMount> getVolumes() {
+    public List<ComponentVersionLambdaVolumeMount> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

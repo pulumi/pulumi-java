@@ -17,14 +17,14 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends com.pul
     @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
-    public Output<String> getAttributeName() {
+    public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeValue", required=true)
       private final Output<String> attributeValue;
 
-    public Output<String> getAttributeValue() {
+    public Output<String> attributeValue() {
         return this.attributeValue;
     }
 

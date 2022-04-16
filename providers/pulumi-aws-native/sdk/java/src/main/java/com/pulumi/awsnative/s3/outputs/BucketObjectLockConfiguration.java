@@ -23,10 +23,10 @@ public final class BucketObjectLockConfiguration {
         this.rule = rule;
     }
 
-    public Optional<String> getObjectLockEnabled() {
+    public Optional<String> objectLockEnabled() {
         return Optional.ofNullable(this.objectLockEnabled);
     }
-    public Optional<BucketObjectLockRule> getRule() {
+    public Optional<BucketObjectLockRule> rule() {
         return Optional.ofNullable(this.rule);
     }
 

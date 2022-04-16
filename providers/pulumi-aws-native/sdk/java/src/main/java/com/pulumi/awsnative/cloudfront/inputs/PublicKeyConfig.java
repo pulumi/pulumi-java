@@ -17,28 +17,28 @@ public final class PublicKeyConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="callerReference", required=true)
       private final String callerReference;
 
-    public String getCallerReference() {
+    public String callerReference() {
         return this.callerReference;
     }
 
     @Import(name="comment")
       private final @Nullable String comment;
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @Import(name="encodedKey", required=true)
       private final String encodedKey;
 
-    public String getEncodedKey() {
+    public String encodedKey() {
         return this.encodedKey;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -26,13 +26,13 @@ public final class KeyGroupConfig {
         this.name = name;
     }
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -27,7 +27,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentBasedDeduplication")
       private final @Nullable Output<Boolean> contentBasedDeduplication;
 
-    public Output<Boolean> getContentBasedDeduplication() {
+    public Output<Boolean> contentBasedDeduplication() {
         return this.contentBasedDeduplication == null ? Codegen.empty() : this.contentBasedDeduplication;
     }
 
@@ -38,7 +38,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deduplicationScope")
       private final @Nullable Output<String> deduplicationScope;
 
-    public Output<String> getDeduplicationScope() {
+    public Output<String> deduplicationScope() {
         return this.deduplicationScope == null ? Codegen.empty() : this.deduplicationScope;
     }
 
@@ -49,7 +49,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="delaySeconds")
       private final @Nullable Output<Integer> delaySeconds;
 
-    public Output<Integer> getDelaySeconds() {
+    public Output<Integer> delaySeconds() {
         return this.delaySeconds == null ? Codegen.empty() : this.delaySeconds;
     }
 
@@ -60,7 +60,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fifoQueue")
       private final @Nullable Output<Boolean> fifoQueue;
 
-    public Output<Boolean> getFifoQueue() {
+    public Output<Boolean> fifoQueue() {
         return this.fifoQueue == null ? Codegen.empty() : this.fifoQueue;
     }
 
@@ -71,7 +71,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fifoThroughputLimit")
       private final @Nullable Output<String> fifoThroughputLimit;
 
-    public Output<String> getFifoThroughputLimit() {
+    public Output<String> fifoThroughputLimit() {
         return this.fifoThroughputLimit == null ? Codegen.empty() : this.fifoThroughputLimit;
     }
 
@@ -82,7 +82,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsDataKeyReusePeriodSeconds")
       private final @Nullable Output<Integer> kmsDataKeyReusePeriodSeconds;
 
-    public Output<Integer> getKmsDataKeyReusePeriodSeconds() {
+    public Output<Integer> kmsDataKeyReusePeriodSeconds() {
         return this.kmsDataKeyReusePeriodSeconds == null ? Codegen.empty() : this.kmsDataKeyReusePeriodSeconds;
     }
 
@@ -93,7 +93,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsMasterKeyId")
       private final @Nullable Output<String> kmsMasterKeyId;
 
-    public Output<String> getKmsMasterKeyId() {
+    public Output<String> kmsMasterKeyId() {
         return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
     }
 
@@ -104,7 +104,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximumMessageSize")
       private final @Nullable Output<Integer> maximumMessageSize;
 
-    public Output<Integer> getMaximumMessageSize() {
+    public Output<Integer> maximumMessageSize() {
         return this.maximumMessageSize == null ? Codegen.empty() : this.maximumMessageSize;
     }
 
@@ -115,7 +115,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionPeriod")
       private final @Nullable Output<Integer> messageRetentionPeriod;
 
-    public Output<Integer> getMessageRetentionPeriod() {
+    public Output<Integer> messageRetentionPeriod() {
         return this.messageRetentionPeriod == null ? Codegen.empty() : this.messageRetentionPeriod;
     }
 
@@ -126,7 +126,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
-    public Output<String> getQueueName() {
+    public Output<String> queueName() {
         return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
@@ -137,7 +137,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="receiveMessageWaitTimeSeconds")
       private final @Nullable Output<Integer> receiveMessageWaitTimeSeconds;
 
-    public Output<Integer> getReceiveMessageWaitTimeSeconds() {
+    public Output<Integer> receiveMessageWaitTimeSeconds() {
         return this.receiveMessageWaitTimeSeconds == null ? Codegen.empty() : this.receiveMessageWaitTimeSeconds;
     }
 
@@ -148,7 +148,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="redriveAllowPolicy")
       private final @Nullable Output<Object> redriveAllowPolicy;
 
-    public Output<Object> getRedriveAllowPolicy() {
+    public Output<Object> redriveAllowPolicy() {
         return this.redriveAllowPolicy == null ? Codegen.empty() : this.redriveAllowPolicy;
     }
 
@@ -159,7 +159,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="redrivePolicy")
       private final @Nullable Output<Object> redrivePolicy;
 
-    public Output<Object> getRedrivePolicy() {
+    public Output<Object> redrivePolicy() {
         return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
     }
 
@@ -170,7 +170,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<QueueTagArgs>> tags;
 
-    public Output<List<QueueTagArgs>> getTags() {
+    public Output<List<QueueTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -181,7 +181,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="visibilityTimeout")
       private final @Nullable Output<Integer> visibilityTimeout;
 
-    public Output<Integer> getVisibilityTimeout() {
+    public Output<Integer> visibilityTimeout() {
         return this.visibilityTimeout == null ? Codegen.empty() : this.visibilityTimeout;
     }
 

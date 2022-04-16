@@ -18,7 +18,7 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends com.pulumi
     @Import(name="deserializer")
       private final @Nullable Output<DeliveryStreamDeserializerArgs> deserializer;
 
-    public Output<DeliveryStreamDeserializerArgs> getDeserializer() {
+    public Output<DeliveryStreamDeserializerArgs> deserializer() {
         return this.deserializer == null ? Codegen.empty() : this.deserializer;
     }
 

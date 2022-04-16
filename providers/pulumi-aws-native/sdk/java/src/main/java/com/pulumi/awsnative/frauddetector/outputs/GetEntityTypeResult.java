@@ -57,35 +57,35 @@ public final class GetEntityTypeResult {
      * The entity type ARN.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The timestamp when the entity type was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The entity type description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The timestamp when the entity type was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this entity type.
      * 
     */
-    public List<EntityTypeTag> getTags() {
+    public List<EntityTypeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -32,7 +32,7 @@ public class AppImageConfig extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AppImageConfig.
      * 
      */
-    public Output<String> getAppImageConfigArn() {
+    public Output<String> appImageConfigArn() {
         return this.appImageConfigArn;
     }
     /**
@@ -46,7 +46,7 @@ public class AppImageConfig extends com.pulumi.resources.CustomResource {
      * @return The Name of the AppImageConfig.
      * 
      */
-    public Output<String> getAppImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
     /**
@@ -60,7 +60,7 @@ public class AppImageConfig extends com.pulumi.resources.CustomResource {
      * @return The KernelGatewayImageConfig.
      * 
      */
-    public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
+    public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig;
     }
     /**
@@ -74,7 +74,7 @@ public class AppImageConfig extends com.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the AppImageConfig.
      * 
      */
-    public Output</* @Nullable */ List<AppImageConfigTag>> getTags() {
+    public Output</* @Nullable */ List<AppImageConfigTag>> tags() {
         return this.tags;
     }
 

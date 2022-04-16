@@ -17,7 +17,7 @@ public final class GetAzsResult {
         this.azs = azs;
     }
 
-    public List<String> getAzs() {
+    public List<String> azs() {
         return this.azs;
     }
 

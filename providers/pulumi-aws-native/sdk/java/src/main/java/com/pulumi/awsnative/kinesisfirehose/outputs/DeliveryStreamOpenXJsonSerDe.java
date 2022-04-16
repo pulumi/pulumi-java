@@ -26,13 +26,13 @@ public final class DeliveryStreamOpenXJsonSerDe {
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
     }
 
-    public Optional<Boolean> getCaseInsensitive() {
+    public Optional<Boolean> caseInsensitive() {
         return Optional.ofNullable(this.caseInsensitive);
     }
-    public Optional<Object> getColumnToJsonKeyMappings() {
+    public Optional<Object> columnToJsonKeyMappings() {
         return Optional.ofNullable(this.columnToJsonKeyMappings);
     }
-    public Optional<Boolean> getConvertDotsInJsonKeysToUnderscores() {
+    public Optional<Boolean> convertDotsInJsonKeysToUnderscores() {
         return Optional.ofNullable(this.convertDotsInJsonKeysToUnderscores);
     }
 

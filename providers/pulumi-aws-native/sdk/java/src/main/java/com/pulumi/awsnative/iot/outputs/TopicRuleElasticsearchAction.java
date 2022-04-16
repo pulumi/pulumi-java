@@ -29,19 +29,19 @@ public final class TopicRuleElasticsearchAction {
         this.type = type;
     }
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIndex() {
+    public String index() {
         return this.index;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

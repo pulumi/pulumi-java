@@ -32,16 +32,16 @@ public final class CertificateExtensions {
         this.subjectAlternativeNames = subjectAlternativeNames;
     }
 
-    public List<CertificatePolicyInformation> getCertificatePolicies() {
+    public List<CertificatePolicyInformation> certificatePolicies() {
         return this.certificatePolicies == null ? List.of() : this.certificatePolicies;
     }
-    public List<CertificateExtendedKeyUsage> getExtendedKeyUsage() {
+    public List<CertificateExtendedKeyUsage> extendedKeyUsage() {
         return this.extendedKeyUsage == null ? List.of() : this.extendedKeyUsage;
     }
-    public Optional<CertificateKeyUsage> getKeyUsage() {
+    public Optional<CertificateKeyUsage> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
-    public List<CertificateGeneralName> getSubjectAlternativeNames() {
+    public List<CertificateGeneralName> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? List.of() : this.subjectAlternativeNames;
     }
 

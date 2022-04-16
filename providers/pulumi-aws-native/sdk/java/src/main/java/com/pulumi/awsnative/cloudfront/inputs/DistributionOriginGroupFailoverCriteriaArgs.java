@@ -17,7 +17,7 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends com.pulum
     @Import(name="statusCodes", required=true)
       private final Output<DistributionStatusCodesArgs> statusCodes;
 
-    public Output<DistributionStatusCodesArgs> getStatusCodes() {
+    public Output<DistributionStatusCodesArgs> statusCodes() {
         return this.statusCodes;
     }
 

@@ -38,22 +38,22 @@ public final class IntegrationFlowDefinition {
         this.triggerConfig = triggerConfig;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public String getFlowName() {
+    public String flowName() {
         return this.flowName;
     }
-    public String getKmsArn() {
+    public String kmsArn() {
         return this.kmsArn;
     }
-    public IntegrationSourceFlowConfig getSourceFlowConfig() {
+    public IntegrationSourceFlowConfig sourceFlowConfig() {
         return this.sourceFlowConfig;
     }
-    public List<IntegrationTask> getTasks() {
+    public List<IntegrationTask> tasks() {
         return this.tasks;
     }
-    public IntegrationTriggerConfig getTriggerConfig() {
+    public IntegrationTriggerConfig triggerConfig() {
         return this.triggerConfig;
     }
 

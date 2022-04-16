@@ -16,14 +16,14 @@ public final class LicenseBorrowConfiguration extends com.pulumi.resources.Invok
     @Import(name="allowEarlyCheckIn", required=true)
       private final Boolean allowEarlyCheckIn;
 
-    public Boolean getAllowEarlyCheckIn() {
+    public Boolean allowEarlyCheckIn() {
         return this.allowEarlyCheckIn;
     }
 
     @Import(name="maxTimeToLiveInMinutes", required=true)
       private final Integer maxTimeToLiveInMinutes;
 
-    public Integer getMaxTimeToLiveInMinutes() {
+    public Integer maxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 

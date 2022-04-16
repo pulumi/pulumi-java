@@ -21,19 +21,19 @@ public class RobotApplicationVersion extends com.pulumi.resources.CustomResource
     @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     @Export(name="applicationVersion", type=String.class, parameters={})
     private Output<String> applicationVersion;
 
-    public Output<String> getApplicationVersion() {
+    public Output<String> applicationVersion() {
         return this.applicationVersion;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +47,7 @@ public class RobotApplicationVersion extends com.pulumi.resources.CustomResource
      * @return The revision ID of robot application.
      * 
      */
-    public Output</* @Nullable */ String> getCurrentRevisionId() {
+    public Output</* @Nullable */ String> currentRevisionId() {
         return this.currentRevisionId;
     }
 

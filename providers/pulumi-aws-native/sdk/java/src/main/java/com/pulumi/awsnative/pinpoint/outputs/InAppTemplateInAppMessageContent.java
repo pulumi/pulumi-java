@@ -37,22 +37,22 @@ public final class InAppTemplateInAppMessageContent {
         this.secondaryBtn = secondaryBtn;
     }
 
-    public Optional<String> getBackgroundColor() {
+    public Optional<String> backgroundColor() {
         return Optional.ofNullable(this.backgroundColor);
     }
-    public Optional<InAppTemplateBodyConfig> getBodyConfig() {
+    public Optional<InAppTemplateBodyConfig> bodyConfig() {
         return Optional.ofNullable(this.bodyConfig);
     }
-    public Optional<InAppTemplateHeaderConfig> getHeaderConfig() {
+    public Optional<InAppTemplateHeaderConfig> headerConfig() {
         return Optional.ofNullable(this.headerConfig);
     }
-    public Optional<String> getImageUrl() {
+    public Optional<String> imageUrl() {
         return Optional.ofNullable(this.imageUrl);
     }
-    public Optional<InAppTemplateButtonConfig> getPrimaryBtn() {
+    public Optional<InAppTemplateButtonConfig> primaryBtn() {
         return Optional.ofNullable(this.primaryBtn);
     }
-    public Optional<InAppTemplateButtonConfig> getSecondaryBtn() {
+    public Optional<InAppTemplateButtonConfig> secondaryBtn() {
         return Optional.ofNullable(this.secondaryBtn);
     }
 

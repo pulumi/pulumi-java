@@ -23,10 +23,10 @@ public final class ThemeTileLayoutStyle {
         this.margin = margin;
     }
 
-    public Optional<ThemeGutterStyle> getGutter() {
+    public Optional<ThemeGutterStyle> gutter() {
         return Optional.ofNullable(this.gutter);
     }
-    public Optional<ThemeMarginStyle> getMargin() {
+    public Optional<ThemeMarginStyle> margin() {
         return Optional.ofNullable(this.margin);
     }
 

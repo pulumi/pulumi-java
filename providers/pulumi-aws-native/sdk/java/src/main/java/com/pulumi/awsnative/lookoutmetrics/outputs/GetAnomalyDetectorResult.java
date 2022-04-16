@@ -54,31 +54,31 @@ public final class GetAnomalyDetectorResult {
      * Configuration options for the AnomalyDetector
      * 
     */
-    public Optional<AnomalyDetectorConfig> getAnomalyDetectorConfig() {
+    public Optional<AnomalyDetectorConfig> anomalyDetectorConfig() {
         return Optional.ofNullable(this.anomalyDetectorConfig);
     }
     /**
      * A description for the AnomalyDetector.
      * 
     */
-    public Optional<String> getAnomalyDetectorDescription() {
+    public Optional<String> anomalyDetectorDescription() {
         return Optional.ofNullable(this.anomalyDetectorDescription);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * KMS key used to encrypt the AnomalyDetector data
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * List of metric sets for anomaly detection
      * 
     */
-    public List<AnomalyDetectorMetricSet> getMetricSetList() {
+    public List<AnomalyDetectorMetricSet> metricSetList() {
         return this.metricSetList == null ? List.of() : this.metricSetList;
     }
 

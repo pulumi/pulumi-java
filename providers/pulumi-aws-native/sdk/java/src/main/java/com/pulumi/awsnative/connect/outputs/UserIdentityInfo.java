@@ -25,13 +25,13 @@ public final class UserIdentityInfo {
         this.lastName = lastName;
     }
 
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
-    public Optional<String> getFirstName() {
+    public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
-    public Optional<String> getLastName() {
+    public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
 

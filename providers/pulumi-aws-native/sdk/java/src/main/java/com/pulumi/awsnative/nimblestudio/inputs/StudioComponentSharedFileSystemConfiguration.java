@@ -25,7 +25,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="endpoint")
       private final @Nullable String endpoint;
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
@@ -36,7 +36,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="fileSystemId")
       private final @Nullable String fileSystemId;
 
-    public Optional<String> getFileSystemId() {
+    public Optional<String> fileSystemId() {
         return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
     }
 
@@ -47,7 +47,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="linuxMountPoint")
       private final @Nullable String linuxMountPoint;
 
-    public Optional<String> getLinuxMountPoint() {
+    public Optional<String> linuxMountPoint() {
         return this.linuxMountPoint == null ? Optional.empty() : Optional.ofNullable(this.linuxMountPoint);
     }
 
@@ -58,7 +58,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="shareName")
       private final @Nullable String shareName;
 
-    public Optional<String> getShareName() {
+    public Optional<String> shareName() {
         return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
     }
 
@@ -69,7 +69,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
     @Import(name="windowsMountDrive")
       private final @Nullable String windowsMountDrive;
 
-    public Optional<String> getWindowsMountDrive() {
+    public Optional<String> windowsMountDrive() {
         return this.windowsMountDrive == null ? Optional.empty() : Optional.ofNullable(this.windowsMountDrive);
     }
 

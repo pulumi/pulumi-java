@@ -27,14 +27,14 @@ public final class DataSourceErrorInfoArgs extends com.pulumi.resources.Resource
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="type")
       private final @Nullable Output<DataSourceErrorInfoType> type;
 
-    public Output<DataSourceErrorInfoType> getType() {
+    public Output<DataSourceErrorInfoType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

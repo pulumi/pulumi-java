@@ -25,7 +25,7 @@ public final class BucketEncryptionConfigurationArgs extends com.pulumi.resource
     @Import(name="replicaKmsKeyID", required=true)
       private final Output<String> replicaKmsKeyID;
 
-    public Output<String> getReplicaKmsKeyID() {
+    public Output<String> replicaKmsKeyID() {
         return this.replicaKmsKeyID;
     }
 

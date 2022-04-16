@@ -19,14 +19,14 @@ public final class DeliveryStreamDeserializerArgs extends com.pulumi.resources.R
     @Import(name="hiveJsonSerDe")
       private final @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
 
-    public Output<DeliveryStreamHiveJsonSerDeArgs> getHiveJsonSerDe() {
+    public Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe() {
         return this.hiveJsonSerDe == null ? Codegen.empty() : this.hiveJsonSerDe;
     }
 
     @Import(name="openXJsonSerDe")
       private final @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
 
-    public Output<DeliveryStreamOpenXJsonSerDeArgs> getOpenXJsonSerDe() {
+    public Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe() {
         return this.openXJsonSerDe == null ? Codegen.empty() : this.openXJsonSerDe;
     }
 

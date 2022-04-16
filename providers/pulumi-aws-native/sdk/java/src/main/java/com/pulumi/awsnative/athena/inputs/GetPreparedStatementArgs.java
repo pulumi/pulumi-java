@@ -19,7 +19,7 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
     @Import(name="statementName", required=true)
       private final String statementName;
 
-    public String getStatementName() {
+    public String statementName() {
         return this.statementName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
     @Import(name="workGroup", required=true)
       private final String workGroup;
 
-    public String getWorkGroup() {
+    public String workGroup() {
         return this.workGroup;
     }
 

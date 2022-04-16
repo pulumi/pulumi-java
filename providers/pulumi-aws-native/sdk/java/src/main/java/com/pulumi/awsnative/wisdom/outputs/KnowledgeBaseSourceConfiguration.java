@@ -18,7 +18,7 @@ public final class KnowledgeBaseSourceConfiguration {
         this.appIntegrations = appIntegrations;
     }
 
-    public Optional<KnowledgeBaseAppIntegrationsConfiguration> getAppIntegrations() {
+    public Optional<KnowledgeBaseAppIntegrationsConfiguration> appIntegrations() {
         return Optional.ofNullable(this.appIntegrations);
     }
 

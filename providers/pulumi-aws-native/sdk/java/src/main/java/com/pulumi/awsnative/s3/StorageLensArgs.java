@@ -20,7 +20,7 @@ public final class StorageLensArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLensConfiguration", required=true)
       private final Output<StorageLensConfigurationArgs> storageLensConfiguration;
 
-    public Output<StorageLensConfigurationArgs> getStorageLensConfiguration() {
+    public Output<StorageLensConfigurationArgs> storageLensConfiguration() {
         return this.storageLensConfiguration;
     }
 
@@ -31,7 +31,7 @@ public final class StorageLensArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StorageLensTagArgs>> tags;
 
-    public Output<List<StorageLensTagArgs>> getTags() {
+    public Output<List<StorageLensTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

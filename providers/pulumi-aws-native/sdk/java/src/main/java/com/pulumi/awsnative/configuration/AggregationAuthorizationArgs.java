@@ -24,7 +24,7 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
     @Import(name="authorizedAccountId", required=true)
       private final Output<String> authorizedAccountId;
 
-    public Output<String> getAuthorizedAccountId() {
+    public Output<String> authorizedAccountId() {
         return this.authorizedAccountId;
     }
 
@@ -35,7 +35,7 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
     @Import(name="authorizedAwsRegion", required=true)
       private final Output<String> authorizedAwsRegion;
 
-    public Output<String> getAuthorizedAwsRegion() {
+    public Output<String> authorizedAwsRegion() {
         return this.authorizedAwsRegion;
     }
 
@@ -46,7 +46,7 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
 
-    public Output<List<AggregationAuthorizationTagArgs>> getTags() {
+    public Output<List<AggregationAuthorizationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

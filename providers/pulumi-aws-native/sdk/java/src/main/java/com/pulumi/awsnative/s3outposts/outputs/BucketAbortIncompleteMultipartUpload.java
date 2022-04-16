@@ -24,7 +24,7 @@ public final class BucketAbortIncompleteMultipartUpload {
      * Specifies the number of days after which Amazon S3Outposts aborts an incomplete multipart upload.
      * 
     */
-    public Integer getDaysAfterInitiation() {
+    public Integer daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 

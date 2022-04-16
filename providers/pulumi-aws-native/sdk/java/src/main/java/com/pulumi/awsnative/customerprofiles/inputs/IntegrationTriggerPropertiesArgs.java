@@ -18,7 +18,7 @@ public final class IntegrationTriggerPropertiesArgs extends com.pulumi.resources
     @Import(name="scheduled")
       private final @Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled;
 
-    public Output<IntegrationScheduledTriggerPropertiesArgs> getScheduled() {
+    public Output<IntegrationScheduledTriggerPropertiesArgs> scheduled() {
         return this.scheduled == null ? Codegen.empty() : this.scheduled;
     }
 

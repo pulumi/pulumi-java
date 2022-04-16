@@ -19,7 +19,7 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetFargateProfileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="fargateProfileName", required=true)
       private final String fargateProfileName;
 
-    public String getFargateProfileName() {
+    public String fargateProfileName() {
         return this.fargateProfileName;
     }
 

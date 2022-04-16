@@ -31,14 +31,14 @@ public final class DataSourceCredentialsArgs extends com.pulumi.resources.Resour
     @Import(name="copySourceArn")
       private final @Nullable Output<String> copySourceArn;
 
-    public Output<String> getCopySourceArn() {
+    public Output<String> copySourceArn() {
         return this.copySourceArn == null ? Codegen.empty() : this.copySourceArn;
     }
 
     @Import(name="credentialPair")
       private final @Nullable Output<DataSourceCredentialPairArgs> credentialPair;
 
-    public Output<DataSourceCredentialPairArgs> getCredentialPair() {
+    public Output<DataSourceCredentialPairArgs> credentialPair() {
         return this.credentialPair == null ? Codegen.empty() : this.credentialPair;
     }
 

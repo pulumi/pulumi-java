@@ -28,13 +28,13 @@ public final class TaskDefinitionLogConfiguration {
         this.secretOptions = secretOptions;
     }
 
-    public String getLogDriver() {
+    public String logDriver() {
         return this.logDriver;
     }
-    public Optional<Object> getOptions() {
+    public Optional<Object> options() {
         return Optional.ofNullable(this.options);
     }
-    public List<TaskDefinitionSecret> getSecretOptions() {
+    public List<TaskDefinitionSecret> secretOptions() {
         return this.secretOptions == null ? List.of() : this.secretOptions;
     }
 

@@ -24,7 +24,7 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="certificateAlternativeNames")
       private final @Nullable Output<List<String>> certificateAlternativeNames;
 
-    public Output<List<String>> getCertificateAlternativeNames() {
+    public Output<List<String>> certificateAlternativeNames() {
         return this.certificateAlternativeNames == null ? Codegen.empty() : this.certificateAlternativeNames;
     }
 
@@ -35,7 +35,7 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="certificateDomainName", required=true)
       private final Output<String> certificateDomainName;
 
-    public Output<String> getCertificateDomainName() {
+    public Output<String> certificateDomainName() {
         return this.certificateDomainName;
     }
 
@@ -46,7 +46,7 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="certificateName", required=true)
       private final Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -57,7 +57,7 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="isAttached")
       private final @Nullable Output<Boolean> isAttached;
 
-    public Output<Boolean> getIsAttached() {
+    public Output<Boolean> isAttached() {
         return this.isAttached == null ? Codegen.empty() : this.isAttached;
     }
 
@@ -68,7 +68,7 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
     @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 

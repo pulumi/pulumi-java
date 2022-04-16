@@ -32,14 +32,14 @@ public final class AgentTag {
      * The key for an AWS resource tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value for an AWS resource tag.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

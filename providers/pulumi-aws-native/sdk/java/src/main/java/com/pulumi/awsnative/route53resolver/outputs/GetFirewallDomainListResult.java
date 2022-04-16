@@ -94,70 +94,70 @@ public final class GetFirewallDomainListResult {
      * Arn
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The id of the creator request.
      * 
     */
-    public Optional<String> getCreatorRequestId() {
+    public Optional<String> creatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
      * Count
      * 
     */
-    public Optional<Integer> getDomainCount() {
+    public Optional<Integer> domainCount() {
         return Optional.ofNullable(this.domainCount);
     }
     /**
      * ResourceId
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * ServicePrincipal
      * 
     */
-    public Optional<String> getManagedOwnerName() {
+    public Optional<String> managedOwnerName() {
         return Optional.ofNullable(this.managedOwnerName);
     }
     /**
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getModificationTime() {
+    public Optional<String> modificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
      * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
     */
-    public Optional<FirewallDomainListStatus> getStatus() {
+    public Optional<FirewallDomainListStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * FirewallDomainListAssociationStatus
      * 
     */
-    public Optional<String> getStatusMessage() {
+    public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
      * Tags
      * 
     */
-    public List<FirewallDomainListTag> getTags() {
+    public List<FirewallDomainListTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

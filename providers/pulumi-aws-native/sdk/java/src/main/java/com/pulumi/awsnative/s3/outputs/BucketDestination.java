@@ -49,28 +49,28 @@ public final class BucketDestination {
      * The account ID that owns the destination S3 bucket.
      * 
     */
-    public Optional<String> getBucketAccountId() {
+    public Optional<String> bucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
     /**
      * The Amazon Resource Name (ARN) of the bucket to which data is exported.
      * 
     */
-    public String getBucketArn() {
+    public String bucketArn() {
         return this.bucketArn;
     }
     /**
      * Specifies the file format used when exporting data to Amazon S3.
      * 
     */
-    public BucketDestinationFormat getFormat() {
+    public BucketDestinationFormat format() {
         return this.format;
     }
     /**
      * The prefix to use when exporting data. The prefix is prepended to all results.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

@@ -77,51 +77,51 @@ public final class AnomalyDetectorMetricSet {
      * Dimensions for this MetricSet.
      * 
     */
-    public List<String> getDimensionList() {
+    public List<String> dimensionList() {
         return this.dimensionList == null ? List.of() : this.dimensionList;
     }
     /**
      * Metrics captured by this MetricSet.
      * 
     */
-    public List<AnomalyDetectorMetric> getMetricList() {
+    public List<AnomalyDetectorMetric> metricList() {
         return this.metricList;
     }
     /**
      * A description for the MetricSet.
      * 
     */
-    public Optional<String> getMetricSetDescription() {
+    public Optional<String> metricSetDescription() {
         return Optional.ofNullable(this.metricSetDescription);
     }
     /**
      * A frequency period to aggregate the data
      * 
     */
-    public Optional<AnomalyDetectorMetricSetMetricSetFrequency> getMetricSetFrequency() {
+    public Optional<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency() {
         return Optional.ofNullable(this.metricSetFrequency);
     }
     /**
      * The name of the MetricSet.
      * 
     */
-    public String getMetricSetName() {
+    public String metricSetName() {
         return this.metricSetName;
     }
-    public AnomalyDetectorMetricSource getMetricSource() {
+    public AnomalyDetectorMetricSource metricSource() {
         return this.metricSource;
     }
     /**
      * Offset, in seconds, between the frequency interval and the time at which the metrics are available.
      * 
     */
-    public Optional<Integer> getOffset() {
+    public Optional<Integer> offset() {
         return Optional.ofNullable(this.offset);
     }
-    public Optional<AnomalyDetectorTimestampColumn> getTimestampColumn() {
+    public Optional<AnomalyDetectorTimestampColumn> timestampColumn() {
         return Optional.ofNullable(this.timestampColumn);
     }
-    public Optional<String> getTimezone() {
+    public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
     }
 

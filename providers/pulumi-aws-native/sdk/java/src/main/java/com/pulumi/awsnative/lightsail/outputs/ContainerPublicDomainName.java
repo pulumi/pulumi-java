@@ -27,14 +27,14 @@ public final class ContainerPublicDomainName {
         this.domainNames = domainNames;
     }
 
-    public Optional<String> getCertificateName() {
+    public Optional<String> certificateName() {
         return Optional.ofNullable(this.certificateName);
     }
     /**
      * An object that describes the configuration for the containers of the deployment.
      * 
     */
-    public List<String> getDomainNames() {
+    public List<String> domainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;
     }
 

@@ -24,21 +24,21 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
     @Import(name="auditCheckConfigurations", required=true)
       private final Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> getAuditCheckConfigurations() {
+    public Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations() {
         return this.auditCheckConfigurations;
     }
 
     @Import(name="auditNotificationTargetConfigurations")
       private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
 
-    public Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> getAuditNotificationTargetConfigurations() {
+    public Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations() {
         return this.auditNotificationTargetConfigurations == null ? Codegen.empty() : this.auditNotificationTargetConfigurations;
     }
 
@@ -49,7 +49,7 @@ public final class AccountAuditConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

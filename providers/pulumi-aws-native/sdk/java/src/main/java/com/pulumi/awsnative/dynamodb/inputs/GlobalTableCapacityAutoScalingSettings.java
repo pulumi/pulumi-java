@@ -18,28 +18,28 @@ public final class GlobalTableCapacityAutoScalingSettings extends com.pulumi.res
     @Import(name="maxCapacity", required=true)
       private final Integer maxCapacity;
 
-    public Integer getMaxCapacity() {
+    public Integer maxCapacity() {
         return this.maxCapacity;
     }
 
     @Import(name="minCapacity", required=true)
       private final Integer minCapacity;
 
-    public Integer getMinCapacity() {
+    public Integer minCapacity() {
         return this.minCapacity;
     }
 
     @Import(name="seedCapacity")
       private final @Nullable Integer seedCapacity;
 
-    public Optional<Integer> getSeedCapacity() {
+    public Optional<Integer> seedCapacity() {
         return this.seedCapacity == null ? Optional.empty() : Optional.ofNullable(this.seedCapacity);
     }
 
     @Import(name="targetTrackingScalingPolicyConfiguration", required=true)
       private final GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
 
-    public GlobalTableTargetTrackingScalingPolicyConfiguration getTargetTrackingScalingPolicyConfiguration() {
+    public GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration() {
         return this.targetTrackingScalingPolicyConfiguration;
     }
 

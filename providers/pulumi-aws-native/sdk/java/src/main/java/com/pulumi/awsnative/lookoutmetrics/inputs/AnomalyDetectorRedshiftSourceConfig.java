@@ -17,56 +17,56 @@ public final class AnomalyDetectorRedshiftSourceConfig extends com.pulumi.resour
     @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @Import(name="databaseHost", required=true)
       private final String databaseHost;
 
-    public String getDatabaseHost() {
+    public String databaseHost() {
         return this.databaseHost;
     }
 
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databasePort", required=true)
       private final Integer databasePort;
 
-    public Integer getDatabasePort() {
+    public Integer databasePort() {
         return this.databasePort;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="secretManagerArn", required=true)
       private final String secretManagerArn;
 
-    public String getSecretManagerArn() {
+    public String secretManagerArn() {
         return this.secretManagerArn;
     }
 
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 
     @Import(name="vpcConfiguration", required=true)
       private final AnomalyDetectorVpcConfiguration vpcConfiguration;
 
-    public AnomalyDetectorVpcConfiguration getVpcConfiguration() {
+    public AnomalyDetectorVpcConfiguration vpcConfiguration() {
         return this.vpcConfiguration;
     }
 

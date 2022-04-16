@@ -21,7 +21,7 @@ public final class GroupInsightsConfiguration extends com.pulumi.resources.Invok
     @Import(name="insightsEnabled")
       private final @Nullable Boolean insightsEnabled;
 
-    public Optional<Boolean> getInsightsEnabled() {
+    public Optional<Boolean> insightsEnabled() {
         return this.insightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.insightsEnabled);
     }
 
@@ -32,7 +32,7 @@ public final class GroupInsightsConfiguration extends com.pulumi.resources.Invok
     @Import(name="notificationsEnabled")
       private final @Nullable Boolean notificationsEnabled;
 
-    public Optional<Boolean> getNotificationsEnabled() {
+    public Optional<Boolean> notificationsEnabled() {
         return this.notificationsEnabled == null ? Optional.empty() : Optional.ofNullable(this.notificationsEnabled);
     }
 

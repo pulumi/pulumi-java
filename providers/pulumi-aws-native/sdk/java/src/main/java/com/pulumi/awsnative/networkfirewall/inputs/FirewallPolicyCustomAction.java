@@ -16,14 +16,14 @@ public final class FirewallPolicyCustomAction extends com.pulumi.resources.Invok
     @Import(name="actionDefinition", required=true)
       private final FirewallPolicyActionDefinition actionDefinition;
 
-    public FirewallPolicyActionDefinition getActionDefinition() {
+    public FirewallPolicyActionDefinition actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
       private final String actionName;
 
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 

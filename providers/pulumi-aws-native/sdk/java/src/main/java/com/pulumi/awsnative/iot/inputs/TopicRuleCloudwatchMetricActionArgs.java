@@ -18,42 +18,42 @@ public final class TopicRuleCloudwatchMetricActionArgs extends com.pulumi.resour
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
     @Import(name="metricNamespace", required=true)
       private final Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
+    public Output<String> metricNamespace() {
         return this.metricNamespace;
     }
 
     @Import(name="metricTimestamp")
       private final @Nullable Output<String> metricTimestamp;
 
-    public Output<String> getMetricTimestamp() {
+    public Output<String> metricTimestamp() {
         return this.metricTimestamp == null ? Codegen.empty() : this.metricTimestamp;
     }
 
     @Import(name="metricUnit", required=true)
       private final Output<String> metricUnit;
 
-    public Output<String> getMetricUnit() {
+    public Output<String> metricUnit() {
         return this.metricUnit;
     }
 
     @Import(name="metricValue", required=true)
       private final Output<String> metricValue;
 
-    public Output<String> getMetricValue() {
+    public Output<String> metricValue() {
         return this.metricValue;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

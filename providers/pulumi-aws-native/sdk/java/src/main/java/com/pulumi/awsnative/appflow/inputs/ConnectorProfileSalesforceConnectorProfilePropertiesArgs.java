@@ -23,14 +23,14 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
     @Import(name="instanceUrl")
       private final @Nullable Output<String> instanceUrl;
 
-    public Output<String> getInstanceUrl() {
+    public Output<String> instanceUrl() {
         return this.instanceUrl == null ? Codegen.empty() : this.instanceUrl;
     }
 
     @Import(name="isSandboxEnvironment")
       private final @Nullable Output<Boolean> isSandboxEnvironment;
 
-    public Output<Boolean> getIsSandboxEnvironment() {
+    public Output<Boolean> isSandboxEnvironment() {
         return this.isSandboxEnvironment == null ? Codegen.empty() : this.isSandboxEnvironment;
     }
 

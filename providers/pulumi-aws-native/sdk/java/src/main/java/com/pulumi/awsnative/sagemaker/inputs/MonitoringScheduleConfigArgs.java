@@ -25,7 +25,7 @@ public final class MonitoringScheduleConfigArgs extends com.pulumi.resources.Res
     @Import(name="monitoringJobDefinition")
       private final @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
 
-    public Output<MonitoringScheduleMonitoringJobDefinitionArgs> getMonitoringJobDefinition() {
+    public Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition() {
         return this.monitoringJobDefinition == null ? Codegen.empty() : this.monitoringJobDefinition;
     }
 
@@ -36,21 +36,21 @@ public final class MonitoringScheduleConfigArgs extends com.pulumi.resources.Res
     @Import(name="monitoringJobDefinitionName")
       private final @Nullable Output<String> monitoringJobDefinitionName;
 
-    public Output<String> getMonitoringJobDefinitionName() {
+    public Output<String> monitoringJobDefinitionName() {
         return this.monitoringJobDefinitionName == null ? Codegen.empty() : this.monitoringJobDefinitionName;
     }
 
     @Import(name="monitoringType")
       private final @Nullable Output<MonitoringScheduleMonitoringType> monitoringType;
 
-    public Output<MonitoringScheduleMonitoringType> getMonitoringType() {
+    public Output<MonitoringScheduleMonitoringType> monitoringType() {
         return this.monitoringType == null ? Codegen.empty() : this.monitoringType;
     }
 
     @Import(name="scheduleConfig")
       private final @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
 
-    public Output<MonitoringScheduleScheduleConfigArgs> getScheduleConfig() {
+    public Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig() {
         return this.scheduleConfig == null ? Codegen.empty() : this.scheduleConfig;
     }
 

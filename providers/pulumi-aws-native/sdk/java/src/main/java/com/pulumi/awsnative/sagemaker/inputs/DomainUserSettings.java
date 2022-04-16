@@ -29,7 +29,7 @@ public final class DomainUserSettings extends com.pulumi.resources.InvokeArgs {
     @Import(name="executionRole")
       private final @Nullable String executionRole;
 
-    public Optional<String> getExecutionRole() {
+    public Optional<String> executionRole() {
         return this.executionRole == null ? Optional.empty() : Optional.ofNullable(this.executionRole);
     }
 
@@ -40,7 +40,7 @@ public final class DomainUserSettings extends com.pulumi.resources.InvokeArgs {
     @Import(name="jupyterServerAppSettings")
       private final @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings;
 
-    public Optional<DomainJupyterServerAppSettings> getJupyterServerAppSettings() {
+    public Optional<DomainJupyterServerAppSettings> jupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Optional.empty() : Optional.ofNullable(this.jupyterServerAppSettings);
     }
 
@@ -51,7 +51,7 @@ public final class DomainUserSettings extends com.pulumi.resources.InvokeArgs {
     @Import(name="kernelGatewayAppSettings")
       private final @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings;
 
-    public Optional<DomainKernelGatewayAppSettings> getKernelGatewayAppSettings() {
+    public Optional<DomainKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Optional.empty() : Optional.ofNullable(this.kernelGatewayAppSettings);
     }
 
@@ -62,7 +62,7 @@ public final class DomainUserSettings extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityGroups")
       private final @Nullable List<String> securityGroups;
 
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
 
@@ -73,7 +73,7 @@ public final class DomainUserSettings extends com.pulumi.resources.InvokeArgs {
     @Import(name="sharingSettings")
       private final @Nullable DomainSharingSettings sharingSettings;
 
-    public Optional<DomainSharingSettings> getSharingSettings() {
+    public Optional<DomainSharingSettings> sharingSettings() {
         return this.sharingSettings == null ? Optional.empty() : Optional.ofNullable(this.sharingSettings);
     }
 

@@ -49,28 +49,28 @@ public final class ConnectorProfileZendeskConnectorProfileCredentials {
      * The credentials used to access protected resources.
      * 
     */
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * The identiﬁer for the desired client.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The client secret used by the oauth client to authenticate to the authorization server.
      * 
     */
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
     /**
      * The oauth needed to request security tokens from the connector endpoint.
      * 
     */
-    public Optional<ConnectorProfileConnectorOAuthRequest> getConnectorOAuthRequest() {
+    public Optional<ConnectorProfileConnectorOAuthRequest> connectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);
     }
 

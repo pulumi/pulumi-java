@@ -21,7 +21,7 @@ public final class JobCsvOutputOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="delimiter")
       private final @Nullable String delimiter;
 
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
     }
 

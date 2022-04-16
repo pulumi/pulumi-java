@@ -22,21 +22,21 @@ public final class UserIdentityInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 

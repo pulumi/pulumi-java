@@ -22,14 +22,14 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountOptions")
       private final @Nullable Output<LocationNFSMountOptionsArgs> mountOptions;
 
-    public Output<LocationNFSMountOptionsArgs> getMountOptions() {
+    public Output<LocationNFSMountOptionsArgs> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     @Import(name="onPremConfig", required=true)
       private final Output<LocationNFSOnPremConfigArgs> onPremConfig;
 
-    public Output<LocationNFSOnPremConfigArgs> getOnPremConfig() {
+    public Output<LocationNFSOnPremConfigArgs> onPremConfig() {
         return this.onPremConfig;
     }
 
@@ -40,7 +40,7 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
 
@@ -51,7 +51,7 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
 
@@ -62,7 +62,7 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LocationNFSTagArgs>> tags;
 
-    public Output<List<LocationNFSTagArgs>> getTags() {
+    public Output<List<LocationNFSTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

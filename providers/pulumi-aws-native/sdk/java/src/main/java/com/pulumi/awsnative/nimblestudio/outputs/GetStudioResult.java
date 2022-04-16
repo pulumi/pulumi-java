@@ -69,48 +69,48 @@ public final class GetStudioResult {
      * <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
      * 
     */
-    public Optional<String> getAdminRoleArn() {
+    public Optional<String> adminRoleArn() {
         return Optional.ofNullable(this.adminRoleArn);
     }
     /**
      * <p>A friendly name for the studio.</p>
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * <p>The Amazon Web Services Region where the studio resource is located.</p>
      * 
     */
-    public Optional<String> getHomeRegion() {
+    public Optional<String> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
     /**
      * <p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.</p>
      * 
     */
-    public Optional<String> getSsoClientId() {
+    public Optional<String> ssoClientId() {
         return Optional.ofNullable(this.ssoClientId);
     }
-    public Optional<StudioEncryptionConfiguration> getStudioEncryptionConfiguration() {
+    public Optional<StudioEncryptionConfiguration> studioEncryptionConfiguration() {
         return Optional.ofNullable(this.studioEncryptionConfiguration);
     }
-    public Optional<String> getStudioId() {
+    public Optional<String> studioId() {
         return Optional.ofNullable(this.studioId);
     }
     /**
      * <p>The address of the web page for the studio.</p>
      * 
     */
-    public Optional<String> getStudioUrl() {
+    public Optional<String> studioUrl() {
         return Optional.ofNullable(this.studioUrl);
     }
     /**
      * <p>The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>
      * 
     */
-    public Optional<String> getUserRoleArn() {
+    public Optional<String> userRoleArn() {
         return Optional.ofNullable(this.userRoleArn);
     }
 

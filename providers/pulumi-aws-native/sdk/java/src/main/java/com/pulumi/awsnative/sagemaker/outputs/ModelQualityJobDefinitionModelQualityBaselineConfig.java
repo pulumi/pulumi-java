@@ -23,10 +23,10 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfig {
         this.constraintsResource = constraintsResource;
     }
 
-    public Optional<String> getBaseliningJobName() {
+    public Optional<String> baseliningJobName() {
         return Optional.ofNullable(this.baseliningJobName);
     }
-    public Optional<ModelQualityJobDefinitionConstraintsResource> getConstraintsResource() {
+    public Optional<ModelQualityJobDefinitionConstraintsResource> constraintsResource() {
         return Optional.ofNullable(this.constraintsResource);
     }
 

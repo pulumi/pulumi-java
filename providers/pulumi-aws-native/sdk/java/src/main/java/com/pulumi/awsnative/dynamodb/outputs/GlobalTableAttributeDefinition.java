@@ -20,10 +20,10 @@ public final class GlobalTableAttributeDefinition {
         this.attributeType = attributeType;
     }
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
-    public String getAttributeType() {
+    public String attributeType() {
         return this.attributeType;
     }
 

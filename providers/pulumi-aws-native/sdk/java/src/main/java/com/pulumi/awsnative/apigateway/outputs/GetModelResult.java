@@ -35,14 +35,14 @@ public final class GetModelResult {
      * A description that identifies this model.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
      * 
     */
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
 

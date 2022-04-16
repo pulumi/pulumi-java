@@ -17,7 +17,7 @@ public final class DeliveryStreamKMSEncryptionConfigArgs extends com.pulumi.reso
     @Import(name="aWSKMSKeyARN", required=true)
       private final Output<String> aWSKMSKeyARN;
 
-    public Output<String> getAWSKMSKeyARN() {
+    public Output<String> aWSKMSKeyARN() {
         return this.aWSKMSKeyARN;
     }
 

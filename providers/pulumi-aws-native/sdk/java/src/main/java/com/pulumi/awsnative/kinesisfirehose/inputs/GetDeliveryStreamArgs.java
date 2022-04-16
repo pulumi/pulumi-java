@@ -15,7 +15,7 @@ public final class GetDeliveryStreamArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="deliveryStreamName", required=true)
       private final String deliveryStreamName;
 
-    public String getDeliveryStreamName() {
+    public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
 

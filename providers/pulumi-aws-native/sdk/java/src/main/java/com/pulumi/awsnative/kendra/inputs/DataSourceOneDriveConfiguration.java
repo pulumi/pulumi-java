@@ -21,49 +21,49 @@ public final class DataSourceOneDriveConfiguration extends com.pulumi.resources.
     @Import(name="disableLocalGroups")
       private final @Nullable Boolean disableLocalGroups;
 
-    public Optional<Boolean> getDisableLocalGroups() {
+    public Optional<Boolean> disableLocalGroups() {
         return this.disableLocalGroups == null ? Optional.empty() : Optional.ofNullable(this.disableLocalGroups);
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @Import(name="oneDriveUsers", required=true)
       private final DataSourceOneDriveUsers oneDriveUsers;
 
-    public DataSourceOneDriveUsers getOneDriveUsers() {
+    public DataSourceOneDriveUsers oneDriveUsers() {
         return this.oneDriveUsers;
     }
 
     @Import(name="secretArn", required=true)
       private final String secretArn;
 
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="tenantDomain", required=true)
       private final String tenantDomain;
 
-    public String getTenantDomain() {
+    public String tenantDomain() {
         return this.tenantDomain;
     }
 

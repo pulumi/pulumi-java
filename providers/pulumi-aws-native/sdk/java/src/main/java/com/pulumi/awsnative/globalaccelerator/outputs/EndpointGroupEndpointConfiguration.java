@@ -43,21 +43,21 @@ public final class EndpointGroupEndpointConfiguration {
      * true if client ip should be preserved
      * 
     */
-    public Optional<Boolean> getClientIPPreservationEnabled() {
+    public Optional<Boolean> clientIPPreservationEnabled() {
         return Optional.ofNullable(this.clientIPPreservationEnabled);
     }
     /**
      * Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
      * 
     */
-    public String getEndpointId() {
+    public String endpointId() {
         return this.endpointId;
     }
     /**
      * The weight for the endpoint.
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

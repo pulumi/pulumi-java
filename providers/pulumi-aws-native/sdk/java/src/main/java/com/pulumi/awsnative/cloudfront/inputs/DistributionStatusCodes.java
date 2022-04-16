@@ -16,14 +16,14 @@ public final class DistributionStatusCodes extends com.pulumi.resources.InvokeAr
     @Import(name="items", required=true)
       private final List<Integer> items;
 
-    public List<Integer> getItems() {
+    public List<Integer> items() {
         return this.items;
     }
 
     @Import(name="quantity", required=true)
       private final Integer quantity;
 
-    public Integer getQuantity() {
+    public Integer quantity() {
         return this.quantity;
     }
 

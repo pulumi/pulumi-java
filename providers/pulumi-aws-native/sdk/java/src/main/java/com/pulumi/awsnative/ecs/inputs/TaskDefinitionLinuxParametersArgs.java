@@ -23,49 +23,49 @@ public final class TaskDefinitionLinuxParametersArgs extends com.pulumi.resource
     @Import(name="capabilities")
       private final @Nullable Output<TaskDefinitionKernelCapabilitiesArgs> capabilities;
 
-    public Output<TaskDefinitionKernelCapabilitiesArgs> getCapabilities() {
+    public Output<TaskDefinitionKernelCapabilitiesArgs> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="devices")
       private final @Nullable Output<List<TaskDefinitionDeviceArgs>> devices;
 
-    public Output<List<TaskDefinitionDeviceArgs>> getDevices() {
+    public Output<List<TaskDefinitionDeviceArgs>> devices() {
         return this.devices == null ? Codegen.empty() : this.devices;
     }
 
     @Import(name="initProcessEnabled")
       private final @Nullable Output<Boolean> initProcessEnabled;
 
-    public Output<Boolean> getInitProcessEnabled() {
+    public Output<Boolean> initProcessEnabled() {
         return this.initProcessEnabled == null ? Codegen.empty() : this.initProcessEnabled;
     }
 
     @Import(name="maxSwap")
       private final @Nullable Output<Integer> maxSwap;
 
-    public Output<Integer> getMaxSwap() {
+    public Output<Integer> maxSwap() {
         return this.maxSwap == null ? Codegen.empty() : this.maxSwap;
     }
 
     @Import(name="sharedMemorySize")
       private final @Nullable Output<Integer> sharedMemorySize;
 
-    public Output<Integer> getSharedMemorySize() {
+    public Output<Integer> sharedMemorySize() {
         return this.sharedMemorySize == null ? Codegen.empty() : this.sharedMemorySize;
     }
 
     @Import(name="swappiness")
       private final @Nullable Output<Integer> swappiness;
 
-    public Output<Integer> getSwappiness() {
+    public Output<Integer> swappiness() {
         return this.swappiness == null ? Codegen.empty() : this.swappiness;
     }
 
     @Import(name="tmpfs")
       private final @Nullable Output<List<TaskDefinitionTmpfsArgs>> tmpfs;
 
-    public Output<List<TaskDefinitionTmpfsArgs>> getTmpfs() {
+    public Output<List<TaskDefinitionTmpfsArgs>> tmpfs() {
         return this.tmpfs == null ? Codegen.empty() : this.tmpfs;
     }
 

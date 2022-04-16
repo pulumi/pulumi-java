@@ -17,35 +17,35 @@ public final class PackageStorageLocation extends com.pulumi.resources.InvokeArg
     @Import(name="binaryPrefixLocation")
       private final @Nullable String binaryPrefixLocation;
 
-    public Optional<String> getBinaryPrefixLocation() {
+    public Optional<String> binaryPrefixLocation() {
         return this.binaryPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.binaryPrefixLocation);
     }
 
     @Import(name="bucket")
       private final @Nullable String bucket;
 
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
     }
 
     @Import(name="generatedPrefixLocation")
       private final @Nullable String generatedPrefixLocation;
 
-    public Optional<String> getGeneratedPrefixLocation() {
+    public Optional<String> generatedPrefixLocation() {
         return this.generatedPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.generatedPrefixLocation);
     }
 
     @Import(name="manifestPrefixLocation")
       private final @Nullable String manifestPrefixLocation;
 
-    public Optional<String> getManifestPrefixLocation() {
+    public Optional<String> manifestPrefixLocation() {
         return this.manifestPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.manifestPrefixLocation);
     }
 
     @Import(name="repoPrefixLocation")
       private final @Nullable String repoPrefixLocation;
 
-    public Optional<String> getRepoPrefixLocation() {
+    public Optional<String> repoPrefixLocation() {
         return this.repoPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.repoPrefixLocation);
     }
 

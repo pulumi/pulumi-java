@@ -20,21 +20,21 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
     @Import(name="contributorInsightsSpecification")
       private final @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
-    public Output<GlobalTableContributorInsightsSpecificationArgs> getContributorInsightsSpecification() {
+    public Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Codegen.empty() : this.contributorInsightsSpecification;
     }
 
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="readProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
-    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> getReadProvisionedThroughputSettings() {
+    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Codegen.empty() : this.readProvisionedThroughputSettings;
     }
 

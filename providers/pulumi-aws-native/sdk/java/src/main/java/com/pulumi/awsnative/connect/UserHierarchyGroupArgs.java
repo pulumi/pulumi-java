@@ -22,7 +22,7 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -33,7 +33,7 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="parentGroupArn")
       private final @Nullable Output<String> parentGroupArn;
 
-    public Output<String> getParentGroupArn() {
+    public Output<String> parentGroupArn() {
         return this.parentGroupArn == null ? Codegen.empty() : this.parentGroupArn;
     }
 

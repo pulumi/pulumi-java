@@ -27,14 +27,14 @@ public final class InstanceAddOn extends com.pulumi.resources.InvokeArgs {
     @Import(name="addOnType", required=true)
       private final String addOnType;
 
-    public String getAddOnType() {
+    public String addOnType() {
         return this.addOnType;
     }
 
     @Import(name="autoSnapshotAddOnRequest")
       private final @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest;
 
-    public Optional<InstanceAutoSnapshotAddOn> getAutoSnapshotAddOnRequest() {
+    public Optional<InstanceAutoSnapshotAddOn> autoSnapshotAddOnRequest() {
         return this.autoSnapshotAddOnRequest == null ? Optional.empty() : Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
 
@@ -45,7 +45,7 @@ public final class InstanceAddOn extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable InstanceAddOnStatus status;
 
-    public Optional<InstanceAddOnStatus> getStatus() {
+    public Optional<InstanceAddOnStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

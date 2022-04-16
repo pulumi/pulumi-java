@@ -27,14 +27,14 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
     @Import(name="port")
       private final @Nullable String port;
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @Import(name="runtimeEnvironmentVariables")
       private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
 
-    public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
+    public List<ServiceKeyValuePair> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
     @Import(name="startCommand")
       private final @Nullable String startCommand;
 
-    public Optional<String> getStartCommand() {
+    public Optional<String> startCommand() {
         return this.startCommand == null ? Optional.empty() : Optional.ofNullable(this.startCommand);
     }
 

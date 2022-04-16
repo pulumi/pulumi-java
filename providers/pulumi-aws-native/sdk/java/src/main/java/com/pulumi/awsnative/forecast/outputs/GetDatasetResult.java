@@ -55,37 +55,37 @@ public final class GetDatasetResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
     */
-    public Optional<String> getDataFrequency() {
+    public Optional<String> dataFrequency() {
         return Optional.ofNullable(this.dataFrequency);
     }
     /**
      * The dataset type
      * 
     */
-    public Optional<DatasetType> getDatasetType() {
+    public Optional<DatasetType> datasetType() {
         return Optional.ofNullable(this.datasetType);
     }
     /**
      * The domain associated with the dataset
      * 
     */
-    public Optional<DatasetDomain> getDomain() {
+    public Optional<DatasetDomain> domain() {
         return Optional.ofNullable(this.domain);
     }
-    public Optional<EncryptionConfigProperties> getEncryptionConfig() {
+    public Optional<EncryptionConfigProperties> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
-    public Optional<SchemaProperties> getSchema() {
+    public Optional<SchemaProperties> schema() {
         return Optional.ofNullable(this.schema);
     }
-    public List<TagsItemProperties> getTags() {
+    public List<TagsItemProperties> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

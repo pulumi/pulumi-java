@@ -106,80 +106,80 @@ public final class GetLocationHDFSResult {
      * ARN(s) of the agent(s) to use for an HDFS location.
      * 
     */
-    public List<String> getAgentArns() {
+    public List<String> agentArns() {
         return this.agentArns == null ? List.of() : this.agentArns;
     }
     /**
      * The authentication mode used to determine identity of user.
      * 
     */
-    public Optional<LocationHDFSAuthenticationType> getAuthenticationType() {
+    public Optional<LocationHDFSAuthenticationType> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
      * 
     */
-    public Optional<Integer> getBlockSize() {
+    public Optional<Integer> blockSize() {
         return Optional.ofNullable(this.blockSize);
     }
     /**
      * The unique identity, or principal, to which Kerberos can assign tickets.
      * 
     */
-    public Optional<String> getKerberosPrincipal() {
+    public Optional<String> kerberosPrincipal() {
         return Optional.ofNullable(this.kerberosPrincipal);
     }
     /**
      * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
      * 
     */
-    public Optional<String> getKmsKeyProviderUri() {
+    public Optional<String> kmsKeyProviderUri() {
         return Optional.ofNullable(this.kmsKeyProviderUri);
     }
     /**
      * The Amazon Resource Name (ARN) of the HDFS location.
      * 
     */
-    public Optional<String> getLocationArn() {
+    public Optional<String> locationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
      * The URL of the HDFS location that was described.
      * 
     */
-    public Optional<String> getLocationUri() {
+    public Optional<String> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
     /**
      * An array of Name Node(s) of the HDFS location.
      * 
     */
-    public List<LocationHDFSNameNode> getNameNodes() {
+    public List<LocationHDFSNameNode> nameNodes() {
         return this.nameNodes == null ? List.of() : this.nameNodes;
     }
-    public Optional<LocationHDFSQopConfiguration> getQopConfiguration() {
+    public Optional<LocationHDFSQopConfiguration> qopConfiguration() {
         return Optional.ofNullable(this.qopConfiguration);
     }
     /**
      * Number of copies of each block that exists inside the HDFS cluster.
      * 
     */
-    public Optional<Integer> getReplicationFactor() {
+    public Optional<Integer> replicationFactor() {
         return Optional.ofNullable(this.replicationFactor);
     }
     /**
      * The user name that has read and write permissions on the specified HDFS cluster.
      * 
     */
-    public Optional<String> getSimpleUser() {
+    public Optional<String> simpleUser() {
         return Optional.ofNullable(this.simpleUser);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<LocationHDFSTag> getTags() {
+    public List<LocationHDFSTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

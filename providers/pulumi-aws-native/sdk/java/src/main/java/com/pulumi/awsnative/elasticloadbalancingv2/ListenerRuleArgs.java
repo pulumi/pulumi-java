@@ -21,28 +21,28 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<ListenerRuleActionArgs>> actions;
 
-    public Output<List<ListenerRuleActionArgs>> getActions() {
+    public Output<List<ListenerRuleActionArgs>> actions() {
         return this.actions;
     }
 
     @Import(name="conditions", required=true)
       private final Output<List<ListenerRuleRuleConditionArgs>> conditions;
 
-    public Output<List<ListenerRuleRuleConditionArgs>> getConditions() {
+    public Output<List<ListenerRuleRuleConditionArgs>> conditions() {
         return this.conditions;
     }
 
     @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 

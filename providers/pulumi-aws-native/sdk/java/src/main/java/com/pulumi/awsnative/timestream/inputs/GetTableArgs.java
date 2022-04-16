@@ -19,7 +19,7 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

@@ -23,10 +23,10 @@ public final class SchedulingPolicyShareAttributes {
         this.weightFactor = weightFactor;
     }
 
-    public Optional<String> getShareIdentifier() {
+    public Optional<String> shareIdentifier() {
         return Optional.ofNullable(this.shareIdentifier);
     }
-    public Optional<Double> getWeightFactor() {
+    public Optional<Double> weightFactor() {
         return Optional.ofNullable(this.weightFactor);
     }
 

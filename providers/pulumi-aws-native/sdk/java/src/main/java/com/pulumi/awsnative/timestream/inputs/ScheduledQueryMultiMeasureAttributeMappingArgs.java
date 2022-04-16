@@ -23,21 +23,21 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends com.pu
     @Import(name="measureValueType", required=true)
       private final Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType;
 
-    public Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> getMeasureValueType() {
+    public Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType() {
         return this.measureValueType;
     }
 
     @Import(name="sourceColumn", required=true)
       private final Output<String> sourceColumn;
 
-    public Output<String> getSourceColumn() {
+    public Output<String> sourceColumn() {
         return this.sourceColumn;
     }
 
     @Import(name="targetMultiMeasureAttributeName")
       private final @Nullable Output<String> targetMultiMeasureAttributeName;
 
-    public Output<String> getTargetMultiMeasureAttributeName() {
+    public Output<String> targetMultiMeasureAttributeName() {
         return this.targetMultiMeasureAttributeName == null ? Codegen.empty() : this.targetMultiMeasureAttributeName;
     }
 

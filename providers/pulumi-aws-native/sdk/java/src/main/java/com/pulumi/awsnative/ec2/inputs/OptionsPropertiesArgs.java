@@ -26,7 +26,7 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="applianceModeSupport")
       private final @Nullable Output<String> applianceModeSupport;
 
-    public Output<String> getApplianceModeSupport() {
+    public Output<String> applianceModeSupport() {
         return this.applianceModeSupport == null ? Codegen.empty() : this.applianceModeSupport;
     }
 
@@ -37,7 +37,7 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
-    public Output<String> getDnsSupport() {
+    public Output<String> dnsSupport() {
         return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
     }
 
@@ -48,7 +48,7 @@ public final class OptionsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6Support")
       private final @Nullable Output<String> ipv6Support;
 
-    public Output<String> getIpv6Support() {
+    public Output<String> ipv6Support() {
         return this.ipv6Support == null ? Codegen.empty() : this.ipv6Support;
     }
 

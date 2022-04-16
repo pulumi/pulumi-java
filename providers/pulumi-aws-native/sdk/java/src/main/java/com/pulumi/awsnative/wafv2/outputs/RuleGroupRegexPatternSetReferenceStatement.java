@@ -26,13 +26,13 @@ public final class RuleGroupRegexPatternSetReferenceStatement {
         this.textTransformations = textTransformations;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

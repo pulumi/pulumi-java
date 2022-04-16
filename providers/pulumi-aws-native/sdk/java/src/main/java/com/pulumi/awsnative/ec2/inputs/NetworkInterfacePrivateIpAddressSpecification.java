@@ -16,14 +16,14 @@ public final class NetworkInterfacePrivateIpAddressSpecification extends com.pul
     @Import(name="primary", required=true)
       private final Boolean primary;
 
-    public Boolean getPrimary() {
+    public Boolean primary() {
         return this.primary;
     }
 
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 

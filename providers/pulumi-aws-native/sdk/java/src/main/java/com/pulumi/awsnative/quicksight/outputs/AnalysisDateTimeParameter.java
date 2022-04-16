@@ -33,14 +33,14 @@ public final class AnalysisDateTimeParameter {
      * <p>A display name for the date-time parameter.</p>
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * <p>The values for the date-time parameter.</p>
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

@@ -16,7 +16,7 @@ public final class ConnectorKafkaCluster {
         this.apacheKafkaCluster = apacheKafkaCluster;
     }
 
-    public ConnectorApacheKafkaCluster getApacheKafkaCluster() {
+    public ConnectorApacheKafkaCluster apacheKafkaCluster() {
         return this.apacheKafkaCluster;
     }
 

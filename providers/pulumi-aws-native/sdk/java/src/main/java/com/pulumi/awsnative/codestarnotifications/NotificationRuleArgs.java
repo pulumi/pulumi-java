@@ -23,70 +23,70 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     @Import(name="detailType", required=true)
       private final Output<NotificationRuleDetailType> detailType;
 
-    public Output<NotificationRuleDetailType> getDetailType() {
+    public Output<NotificationRuleDetailType> detailType() {
         return this.detailType;
     }
 
     @Import(name="eventTypeId")
       private final @Nullable Output<String> eventTypeId;
 
-    public Output<String> getEventTypeId() {
+    public Output<String> eventTypeId() {
         return this.eventTypeId == null ? Codegen.empty() : this.eventTypeId;
     }
 
     @Import(name="eventTypeIds", required=true)
       private final Output<List<String>> eventTypeIds;
 
-    public Output<List<String>> getEventTypeIds() {
+    public Output<List<String>> eventTypeIds() {
         return this.eventTypeIds;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
     @Import(name="status")
       private final @Nullable Output<NotificationRuleStatus> status;
 
-    public Output<NotificationRuleStatus> getStatus() {
+    public Output<NotificationRuleStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="targetAddress")
       private final @Nullable Output<String> targetAddress;
 
-    public Output<String> getTargetAddress() {
+    public Output<String> targetAddress() {
         return this.targetAddress == null ? Codegen.empty() : this.targetAddress;
     }
 
     @Import(name="targets", required=true)
       private final Output<List<NotificationRuleTargetArgs>> targets;
 
-    public Output<List<NotificationRuleTargetArgs>> getTargets() {
+    public Output<List<NotificationRuleTargetArgs>> targets() {
         return this.targets;
     }
 

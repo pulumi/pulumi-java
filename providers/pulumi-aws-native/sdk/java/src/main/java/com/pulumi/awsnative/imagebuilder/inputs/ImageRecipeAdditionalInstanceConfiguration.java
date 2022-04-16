@@ -26,7 +26,7 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends com.pulumi
     @Import(name="systemsManagerAgent")
       private final @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
 
-    public Optional<ImageRecipeSystemsManagerAgent> getSystemsManagerAgent() {
+    public Optional<ImageRecipeSystemsManagerAgent> systemsManagerAgent() {
         return this.systemsManagerAgent == null ? Optional.empty() : Optional.ofNullable(this.systemsManagerAgent);
     }
 
@@ -37,7 +37,7 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends com.pulumi
     @Import(name="userDataOverride")
       private final @Nullable String userDataOverride;
 
-    public Optional<String> getUserDataOverride() {
+    public Optional<String> userDataOverride() {
         return this.userDataOverride == null ? Optional.empty() : Optional.ofNullable(this.userDataOverride);
     }
 

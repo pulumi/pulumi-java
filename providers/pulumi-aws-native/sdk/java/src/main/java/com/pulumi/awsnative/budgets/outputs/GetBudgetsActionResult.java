@@ -43,25 +43,25 @@ public final class GetBudgetsActionResult {
         this.subscribers = subscribers;
     }
 
-    public Optional<String> getActionId() {
+    public Optional<String> actionId() {
         return Optional.ofNullable(this.actionId);
     }
-    public Optional<BudgetsActionActionThreshold> getActionThreshold() {
+    public Optional<BudgetsActionActionThreshold> actionThreshold() {
         return Optional.ofNullable(this.actionThreshold);
     }
-    public Optional<BudgetsActionApprovalModel> getApprovalModel() {
+    public Optional<BudgetsActionApprovalModel> approvalModel() {
         return Optional.ofNullable(this.approvalModel);
     }
-    public Optional<BudgetsActionDefinition> getDefinition() {
+    public Optional<BudgetsActionDefinition> definition() {
         return Optional.ofNullable(this.definition);
     }
-    public Optional<String> getExecutionRoleArn() {
+    public Optional<String> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
-    public Optional<BudgetsActionNotificationType> getNotificationType() {
+    public Optional<BudgetsActionNotificationType> notificationType() {
         return Optional.ofNullable(this.notificationType);
     }
-    public List<BudgetsActionSubscriber> getSubscribers() {
+    public List<BudgetsActionSubscriber> subscribers() {
         return this.subscribers == null ? List.of() : this.subscribers;
     }
 

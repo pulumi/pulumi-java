@@ -22,14 +22,14 @@ public final class BotAliasAudioLogSettingArgs extends com.pulumi.resources.Reso
     @Import(name="destination", required=true)
       private final Output<BotAliasAudioLogDestinationArgs> destination;
 
-    public Output<BotAliasAudioLogDestinationArgs> getDestination() {
+    public Output<BotAliasAudioLogDestinationArgs> destination() {
         return this.destination;
     }
 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

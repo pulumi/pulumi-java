@@ -20,14 +20,14 @@ public final class ListenerRuleForwardConfigArgs extends com.pulumi.resources.Re
     @Import(name="targetGroupStickinessConfig")
       private final @Nullable Output<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
 
-    public Output<ListenerRuleTargetGroupStickinessConfigArgs> getTargetGroupStickinessConfig() {
+    public Output<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig() {
         return this.targetGroupStickinessConfig == null ? Codegen.empty() : this.targetGroupStickinessConfig;
     }
 
     @Import(name="targetGroups")
       private final @Nullable Output<List<ListenerRuleTargetGroupTupleArgs>> targetGroups;
 
-    public Output<List<ListenerRuleTargetGroupTupleArgs>> getTargetGroups() {
+    public Output<List<ListenerRuleTargetGroupTupleArgs>> targetGroups() {
         return this.targetGroups == null ? Codegen.empty() : this.targetGroups;
     }
 

@@ -18,21 +18,21 @@ public final class FlowS3DestinationProperties extends com.pulumi.resources.Invo
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable String bucketPrefix;
 
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="s3OutputFormatConfig")
       private final @Nullable FlowS3OutputFormatConfig s3OutputFormatConfig;
 
-    public Optional<FlowS3OutputFormatConfig> getS3OutputFormatConfig() {
+    public Optional<FlowS3OutputFormatConfig> s3OutputFormatConfig() {
         return this.s3OutputFormatConfig == null ? Optional.empty() : Optional.ofNullable(this.s3OutputFormatConfig);
     }
 

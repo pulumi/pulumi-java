@@ -23,10 +23,10 @@ public final class JobStatisticsConfiguration {
         this.overrides = overrides;
     }
 
-    public List<String> getIncludedStatistics() {
+    public List<String> includedStatistics() {
         return this.includedStatistics == null ? List.of() : this.includedStatistics;
     }
-    public List<JobStatisticOverride> getOverrides() {
+    public List<JobStatisticOverride> overrides() {
         return this.overrides == null ? List.of() : this.overrides;
     }
 

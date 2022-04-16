@@ -29,16 +29,16 @@ public final class AnomalyDetectorS3SourceConfig {
         this.templatedPathList = templatedPathList;
     }
 
-    public AnomalyDetectorFileFormatDescriptor getFileFormatDescriptor() {
+    public AnomalyDetectorFileFormatDescriptor fileFormatDescriptor() {
         return this.fileFormatDescriptor;
     }
-    public List<String> getHistoricalDataPathList() {
+    public List<String> historicalDataPathList() {
         return this.historicalDataPathList == null ? List.of() : this.historicalDataPathList;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public List<String> getTemplatedPathList() {
+    public List<String> templatedPathList() {
         return this.templatedPathList == null ? List.of() : this.templatedPathList;
     }
 

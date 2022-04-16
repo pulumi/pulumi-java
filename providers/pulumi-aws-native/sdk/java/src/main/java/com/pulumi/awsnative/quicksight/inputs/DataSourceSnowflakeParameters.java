@@ -23,7 +23,7 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
     @Import(name="database", required=true)
       private final String database;
 
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -45,7 +45,7 @@ public final class DataSourceSnowflakeParameters extends com.pulumi.resources.In
     @Import(name="warehouse", required=true)
       private final String warehouse;
 
-    public String getWarehouse() {
+    public String warehouse() {
         return this.warehouse;
     }
 

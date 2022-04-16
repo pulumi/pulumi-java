@@ -65,48 +65,48 @@ public final class GetStudioComponentResult {
         this.type = type;
     }
 
-    public Optional<StudioComponentConfiguration> getConfiguration() {
+    public Optional<StudioComponentConfiguration> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * <p>The description.</p>
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>The EC2 security groups that control access to the studio component.</p>
      * 
     */
-    public List<String> getEc2SecurityGroupIds() {
+    public List<String> ec2SecurityGroupIds() {
         return this.ec2SecurityGroupIds == null ? List.of() : this.ec2SecurityGroupIds;
     }
     /**
      * <p>Initialization scripts for studio components.</p>
      * 
     */
-    public List<StudioComponentInitializationScript> getInitializationScripts() {
+    public List<StudioComponentInitializationScript> initializationScripts() {
         return this.initializationScripts == null ? List.of() : this.initializationScripts;
     }
     /**
      * <p>The name for the studio component.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>Parameters for the studio component scripts.</p>
      * 
     */
-    public List<StudioComponentScriptParameterKeyValue> getScriptParameters() {
+    public List<StudioComponentScriptParameterKeyValue> scriptParameters() {
         return this.scriptParameters == null ? List.of() : this.scriptParameters;
     }
-    public Optional<String> getStudioComponentId() {
+    public Optional<String> studioComponentId() {
         return Optional.ofNullable(this.studioComponentId);
     }
-    public Optional<StudioComponentType> getType() {
+    public Optional<StudioComponentType> type() {
         return Optional.ofNullable(this.type);
     }
 

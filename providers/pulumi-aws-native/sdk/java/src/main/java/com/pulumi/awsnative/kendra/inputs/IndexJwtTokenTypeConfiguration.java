@@ -18,49 +18,49 @@ public final class IndexJwtTokenTypeConfiguration extends com.pulumi.resources.I
     @Import(name="claimRegex")
       private final @Nullable String claimRegex;
 
-    public Optional<String> getClaimRegex() {
+    public Optional<String> claimRegex() {
         return this.claimRegex == null ? Optional.empty() : Optional.ofNullable(this.claimRegex);
     }
 
     @Import(name="groupAttributeField")
       private final @Nullable String groupAttributeField;
 
-    public Optional<String> getGroupAttributeField() {
+    public Optional<String> groupAttributeField() {
         return this.groupAttributeField == null ? Optional.empty() : Optional.ofNullable(this.groupAttributeField);
     }
 
     @Import(name="issuer")
       private final @Nullable String issuer;
 
-    public Optional<String> getIssuer() {
+    public Optional<String> issuer() {
         return this.issuer == null ? Optional.empty() : Optional.ofNullable(this.issuer);
     }
 
     @Import(name="keyLocation", required=true)
       private final IndexKeyLocation keyLocation;
 
-    public IndexKeyLocation getKeyLocation() {
+    public IndexKeyLocation keyLocation() {
         return this.keyLocation;
     }
 
     @Import(name="secretManagerArn")
       private final @Nullable String secretManagerArn;
 
-    public Optional<String> getSecretManagerArn() {
+    public Optional<String> secretManagerArn() {
         return this.secretManagerArn == null ? Optional.empty() : Optional.ofNullable(this.secretManagerArn);
     }
 
     @Import(name="uRL")
       private final @Nullable String uRL;
 
-    public Optional<String> getURL() {
+    public Optional<String> uRL() {
         return this.uRL == null ? Optional.empty() : Optional.ofNullable(this.uRL);
     }
 
     @Import(name="userNameAttributeField")
       private final @Nullable String userNameAttributeField;
 
-    public Optional<String> getUserNameAttributeField() {
+    public Optional<String> userNameAttributeField() {
         return this.userNameAttributeField == null ? Optional.empty() : Optional.ofNullable(this.userNameAttributeField);
     }
 

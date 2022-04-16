@@ -34,22 +34,22 @@ public final class DeliveryStreamSchemaConfiguration {
         this.versionId = versionId;
     }
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
-    public Optional<String> getRoleARN() {
+    public Optional<String> roleARN() {
         return Optional.ofNullable(this.roleARN);
     }
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
 

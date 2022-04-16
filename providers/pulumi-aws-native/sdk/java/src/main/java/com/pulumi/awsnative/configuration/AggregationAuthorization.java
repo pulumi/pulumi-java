@@ -31,7 +31,7 @@ public class AggregationAuthorization extends com.pulumi.resources.CustomResourc
      * @return The ARN of the AggregationAuthorization.
      * 
      */
-    public Output<String> getAggregationAuthorizationArn() {
+    public Output<String> aggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
     }
     /**
@@ -45,7 +45,7 @@ public class AggregationAuthorization extends com.pulumi.resources.CustomResourc
      * @return The 12-digit account ID of the account authorized to aggregate data.
      * 
      */
-    public Output<String> getAuthorizedAccountId() {
+    public Output<String> authorizedAccountId() {
         return this.authorizedAccountId;
     }
     /**
@@ -59,7 +59,7 @@ public class AggregationAuthorization extends com.pulumi.resources.CustomResourc
      * @return The region authorized to collect aggregated data.
      * 
      */
-    public Output<String> getAuthorizedAwsRegion() {
+    public Output<String> authorizedAwsRegion() {
         return this.authorizedAwsRegion;
     }
     /**
@@ -73,7 +73,7 @@ public class AggregationAuthorization extends com.pulumi.resources.CustomResourc
      * @return The tags for the AggregationAuthorization.
      * 
      */
-    public Output</* @Nullable */ List<AggregationAuthorizationTag>> getTags() {
+    public Output</* @Nullable */ List<AggregationAuthorizationTag>> tags() {
         return this.tags;
     }
 

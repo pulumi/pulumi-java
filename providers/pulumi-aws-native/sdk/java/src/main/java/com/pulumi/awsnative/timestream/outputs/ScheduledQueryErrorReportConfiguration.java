@@ -16,7 +16,7 @@ public final class ScheduledQueryErrorReportConfiguration {
         this.s3Configuration = s3Configuration;
     }
 
-    public ScheduledQueryS3Configuration getS3Configuration() {
+    public ScheduledQueryS3Configuration s3Configuration() {
         return this.s3Configuration;
     }
 

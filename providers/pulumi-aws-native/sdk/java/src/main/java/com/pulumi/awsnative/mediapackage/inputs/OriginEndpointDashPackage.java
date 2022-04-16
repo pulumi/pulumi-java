@@ -36,21 +36,21 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="adTriggers")
       private final @Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers;
 
-    public List<OriginEndpointDashPackageAdTriggersItem> getAdTriggers() {
+    public List<OriginEndpointDashPackageAdTriggersItem> adTriggers() {
         return this.adTriggers == null ? List.of() : this.adTriggers;
     }
 
     @Import(name="adsOnDeliveryRestrictions")
       private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
 
-    public Optional<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
+    public Optional<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
         return this.adsOnDeliveryRestrictions == null ? Optional.empty() : Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
 
     @Import(name="encryption")
       private final @Nullable OriginEndpointDashEncryption encryption;
 
-    public Optional<OriginEndpointDashEncryption> getEncryption() {
+    public Optional<OriginEndpointDashEncryption> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -61,7 +61,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="manifestLayout")
       private final @Nullable OriginEndpointDashPackageManifestLayout manifestLayout;
 
-    public Optional<OriginEndpointDashPackageManifestLayout> getManifestLayout() {
+    public Optional<OriginEndpointDashPackageManifestLayout> manifestLayout() {
         return this.manifestLayout == null ? Optional.empty() : Optional.ofNullable(this.manifestLayout);
     }
 
@@ -72,7 +72,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="manifestWindowSeconds")
       private final @Nullable Integer manifestWindowSeconds;
 
-    public Optional<Integer> getManifestWindowSeconds() {
+    public Optional<Integer> manifestWindowSeconds() {
         return this.manifestWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.manifestWindowSeconds);
     }
 
@@ -83,7 +83,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="minBufferTimeSeconds")
       private final @Nullable Integer minBufferTimeSeconds;
 
-    public Optional<Integer> getMinBufferTimeSeconds() {
+    public Optional<Integer> minBufferTimeSeconds() {
         return this.minBufferTimeSeconds == null ? Optional.empty() : Optional.ofNullable(this.minBufferTimeSeconds);
     }
 
@@ -94,7 +94,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="minUpdatePeriodSeconds")
       private final @Nullable Integer minUpdatePeriodSeconds;
 
-    public Optional<Integer> getMinUpdatePeriodSeconds() {
+    public Optional<Integer> minUpdatePeriodSeconds() {
         return this.minUpdatePeriodSeconds == null ? Optional.empty() : Optional.ofNullable(this.minUpdatePeriodSeconds);
     }
 
@@ -105,7 +105,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="periodTriggers")
       private final @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers;
 
-    public List<OriginEndpointDashPackagePeriodTriggersItem> getPeriodTriggers() {
+    public List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers() {
         return this.periodTriggers == null ? List.of() : this.periodTriggers;
     }
 
@@ -116,7 +116,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="profile")
       private final @Nullable OriginEndpointDashPackageProfile profile;
 
-    public Optional<OriginEndpointDashPackageProfile> getProfile() {
+    public Optional<OriginEndpointDashPackageProfile> profile() {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
     }
 
@@ -127,7 +127,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
@@ -138,14 +138,14 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="segmentTemplateFormat")
       private final @Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat;
 
-    public Optional<OriginEndpointDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {
+    public Optional<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat() {
         return this.segmentTemplateFormat == null ? Optional.empty() : Optional.ofNullable(this.segmentTemplateFormat);
     }
 
     @Import(name="streamSelection")
       private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    public Optional<OriginEndpointStreamSelection> getStreamSelection() {
+    public Optional<OriginEndpointStreamSelection> streamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 
@@ -156,7 +156,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="suggestedPresentationDelaySeconds")
       private final @Nullable Integer suggestedPresentationDelaySeconds;
 
-    public Optional<Integer> getSuggestedPresentationDelaySeconds() {
+    public Optional<Integer> suggestedPresentationDelaySeconds() {
         return this.suggestedPresentationDelaySeconds == null ? Optional.empty() : Optional.ofNullable(this.suggestedPresentationDelaySeconds);
     }
 
@@ -167,7 +167,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="utcTiming")
       private final @Nullable OriginEndpointDashPackageUtcTiming utcTiming;
 
-    public Optional<OriginEndpointDashPackageUtcTiming> getUtcTiming() {
+    public Optional<OriginEndpointDashPackageUtcTiming> utcTiming() {
         return this.utcTiming == null ? Optional.empty() : Optional.ofNullable(this.utcTiming);
     }
 
@@ -178,7 +178,7 @@ public final class OriginEndpointDashPackage extends com.pulumi.resources.Invoke
     @Import(name="utcTimingUri")
       private final @Nullable String utcTimingUri;
 
-    public Optional<String> getUtcTimingUri() {
+    public Optional<String> utcTimingUri() {
         return this.utcTimingUri == null ? Optional.empty() : Optional.ofNullable(this.utcTimingUri);
     }
 

@@ -34,14 +34,14 @@ public final class GetGatewayRouteTableAssociationResult {
      * The route table association ID.
      * 
     */
-    public Optional<String> getAssociationId() {
+    public Optional<String> associationId() {
         return Optional.ofNullable(this.associationId);
     }
     /**
      * The ID of the route table.
      * 
     */
-    public Optional<String> getRouteTableId() {
+    public Optional<String> routeTableId() {
         return Optional.ofNullable(this.routeTableId);
     }
 

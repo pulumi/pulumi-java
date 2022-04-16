@@ -57,37 +57,37 @@ public final class GetGlobalTableResult {
         this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<GlobalTableAttributeDefinition> getAttributeDefinitions() {
+    public List<GlobalTableAttributeDefinition> attributeDefinitions() {
         return this.attributeDefinitions == null ? List.of() : this.attributeDefinitions;
     }
-    public Optional<String> getBillingMode() {
+    public Optional<String> billingMode() {
         return Optional.ofNullable(this.billingMode);
     }
-    public List<GlobalTableGlobalSecondaryIndex> getGlobalSecondaryIndexes() {
+    public List<GlobalTableGlobalSecondaryIndex> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? List.of() : this.globalSecondaryIndexes;
     }
-    public List<GlobalTableReplicaSpecification> getReplicas() {
+    public List<GlobalTableReplicaSpecification> replicas() {
         return this.replicas == null ? List.of() : this.replicas;
     }
-    public Optional<GlobalTableSSESpecification> getSSESpecification() {
+    public Optional<GlobalTableSSESpecification> sSESpecification() {
         return Optional.ofNullable(this.sSESpecification);
     }
-    public Optional<String> getStreamArn() {
+    public Optional<String> streamArn() {
         return Optional.ofNullable(this.streamArn);
     }
-    public Optional<GlobalTableStreamSpecification> getStreamSpecification() {
+    public Optional<GlobalTableStreamSpecification> streamSpecification() {
         return Optional.ofNullable(this.streamSpecification);
     }
-    public Optional<String> getTableId() {
+    public Optional<String> tableId() {
         return Optional.ofNullable(this.tableId);
     }
-    public Optional<GlobalTableTimeToLiveSpecification> getTimeToLiveSpecification() {
+    public Optional<GlobalTableTimeToLiveSpecification> timeToLiveSpecification() {
         return Optional.ofNullable(this.timeToLiveSpecification);
     }
-    public Optional<GlobalTableWriteProvisionedThroughputSettings> getWriteProvisionedThroughputSettings() {
+    public Optional<GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings() {
         return Optional.ofNullable(this.writeProvisionedThroughputSettings);
     }
 

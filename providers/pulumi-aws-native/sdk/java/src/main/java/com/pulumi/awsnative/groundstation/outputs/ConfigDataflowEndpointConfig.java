@@ -22,10 +22,10 @@ public final class ConfigDataflowEndpointConfig {
         this.dataflowEndpointRegion = dataflowEndpointRegion;
     }
 
-    public Optional<String> getDataflowEndpointName() {
+    public Optional<String> dataflowEndpointName() {
         return Optional.ofNullable(this.dataflowEndpointName);
     }
-    public Optional<String> getDataflowEndpointRegion() {
+    public Optional<String> dataflowEndpointRegion() {
         return Optional.ofNullable(this.dataflowEndpointRegion);
     }
 

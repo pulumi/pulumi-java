@@ -28,79 +28,79 @@ public class NetworkInsightsAnalysis extends com.pulumi.resources.CustomResource
     @Export(name="alternatePathHints", type=List.class, parameters={NetworkInsightsAnalysisAlternatePathHint.class})
     private Output<List<NetworkInsightsAnalysisAlternatePathHint>> alternatePathHints;
 
-    public Output<List<NetworkInsightsAnalysisAlternatePathHint>> getAlternatePathHints() {
+    public Output<List<NetworkInsightsAnalysisAlternatePathHint>> alternatePathHints() {
         return this.alternatePathHints;
     }
     @Export(name="explanations", type=List.class, parameters={NetworkInsightsAnalysisExplanation.class})
     private Output<List<NetworkInsightsAnalysisExplanation>> explanations;
 
-    public Output<List<NetworkInsightsAnalysisExplanation>> getExplanations() {
+    public Output<List<NetworkInsightsAnalysisExplanation>> explanations() {
         return this.explanations;
     }
     @Export(name="filterInArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> filterInArns;
 
-    public Output</* @Nullable */ List<String>> getFilterInArns() {
+    public Output</* @Nullable */ List<String>> filterInArns() {
         return this.filterInArns;
     }
     @Export(name="forwardPathComponents", type=List.class, parameters={NetworkInsightsAnalysisPathComponent.class})
     private Output<List<NetworkInsightsAnalysisPathComponent>> forwardPathComponents;
 
-    public Output<List<NetworkInsightsAnalysisPathComponent>> getForwardPathComponents() {
+    public Output<List<NetworkInsightsAnalysisPathComponent>> forwardPathComponents() {
         return this.forwardPathComponents;
     }
     @Export(name="networkInsightsAnalysisArn", type=String.class, parameters={})
     private Output<String> networkInsightsAnalysisArn;
 
-    public Output<String> getNetworkInsightsAnalysisArn() {
+    public Output<String> networkInsightsAnalysisArn() {
         return this.networkInsightsAnalysisArn;
     }
     @Export(name="networkInsightsAnalysisId", type=String.class, parameters={})
     private Output<String> networkInsightsAnalysisId;
 
-    public Output<String> getNetworkInsightsAnalysisId() {
+    public Output<String> networkInsightsAnalysisId() {
         return this.networkInsightsAnalysisId;
     }
     @Export(name="networkInsightsPathId", type=String.class, parameters={})
     private Output<String> networkInsightsPathId;
 
-    public Output<String> getNetworkInsightsPathId() {
+    public Output<String> networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
     @Export(name="networkPathFound", type=Boolean.class, parameters={})
     private Output<Boolean> networkPathFound;
 
-    public Output<Boolean> getNetworkPathFound() {
+    public Output<Boolean> networkPathFound() {
         return this.networkPathFound;
     }
     @Export(name="returnPathComponents", type=List.class, parameters={NetworkInsightsAnalysisPathComponent.class})
     private Output<List<NetworkInsightsAnalysisPathComponent>> returnPathComponents;
 
-    public Output<List<NetworkInsightsAnalysisPathComponent>> getReturnPathComponents() {
+    public Output<List<NetworkInsightsAnalysisPathComponent>> returnPathComponents() {
         return this.returnPathComponents;
     }
     @Export(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate;
     }
     @Export(name="status", type=NetworkInsightsAnalysisStatus.class, parameters={})
     private Output<NetworkInsightsAnalysisStatus> status;
 
-    public Output<NetworkInsightsAnalysisStatus> getStatus() {
+    public Output<NetworkInsightsAnalysisStatus> status() {
         return this.status;
     }
     @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     @Export(name="tags", type=List.class, parameters={NetworkInsightsAnalysisTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAnalysisTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsAnalysisTag>> getTags() {
+    public Output</* @Nullable */ List<NetworkInsightsAnalysisTag>> tags() {
         return this.tags;
     }
 

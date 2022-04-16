@@ -18,7 +18,7 @@ public final class AccountExpiryEventsConfiguration {
         this.daysBeforeExpiry = daysBeforeExpiry;
     }
 
-    public Optional<Integer> getDaysBeforeExpiry() {
+    public Optional<Integer> daysBeforeExpiry() {
         return Optional.ofNullable(this.daysBeforeExpiry);
     }
 

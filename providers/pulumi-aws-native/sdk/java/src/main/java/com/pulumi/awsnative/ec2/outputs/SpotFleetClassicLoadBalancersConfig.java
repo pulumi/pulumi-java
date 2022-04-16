@@ -17,7 +17,7 @@ public final class SpotFleetClassicLoadBalancersConfig {
         this.classicLoadBalancers = classicLoadBalancers;
     }
 
-    public List<SpotFleetClassicLoadBalancer> getClassicLoadBalancers() {
+    public List<SpotFleetClassicLoadBalancer> classicLoadBalancers() {
         return this.classicLoadBalancers;
     }
 

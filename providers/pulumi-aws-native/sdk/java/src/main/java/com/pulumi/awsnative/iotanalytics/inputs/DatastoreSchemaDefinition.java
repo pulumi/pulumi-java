@@ -18,7 +18,7 @@ public final class DatastoreSchemaDefinition extends com.pulumi.resources.Invoke
     @Import(name="columns")
       private final @Nullable List<DatastoreColumn> columns;
 
-    public List<DatastoreColumn> getColumns() {
+    public List<DatastoreColumn> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
 

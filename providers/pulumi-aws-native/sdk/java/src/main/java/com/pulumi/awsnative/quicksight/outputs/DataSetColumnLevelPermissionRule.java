@@ -22,10 +22,10 @@ public final class DataSetColumnLevelPermissionRule {
         this.principals = principals;
     }
 
-    public List<String> getColumnNames() {
+    public List<String> columnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
-    public List<String> getPrincipals() {
+    public List<String> principals() {
         return this.principals == null ? List.of() : this.principals;
     }
 

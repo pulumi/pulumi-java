@@ -18,14 +18,14 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends com
     @Import(name="primary", required=true)
       private final Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
+    public Output<Boolean> primary() {
         return this.primary;
     }
 
     @Import(name="privateIpAddress", required=true)
       private final Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
 

@@ -32,13 +32,13 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains information about the health check.
      * 
      */
-    public Output<HealthCheckConfigProperties> getHealthCheckConfig() {
+    public Output<HealthCheckConfigProperties> healthCheckConfig() {
         return this.healthCheckConfig;
     }
     @Export(name="healthCheckId", type=String.class, parameters={})
     private Output<String> healthCheckId;
 
-    public Output<String> getHealthCheckId() {
+    public Output<String> healthCheckId() {
         return this.healthCheckId;
     }
     /**
@@ -52,7 +52,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<HealthCheckTag>> getHealthCheckTags() {
+    public Output</* @Nullable */ List<HealthCheckTag>> healthCheckTags() {
         return this.healthCheckTags;
     }
 

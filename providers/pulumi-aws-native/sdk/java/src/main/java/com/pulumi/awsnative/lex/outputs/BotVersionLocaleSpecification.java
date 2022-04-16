@@ -21,10 +21,10 @@ public final class BotVersionLocaleSpecification {
         this.localeId = localeId;
     }
 
-    public BotVersionLocaleDetails getBotVersionLocaleDetails() {
+    public BotVersionLocaleDetails botVersionLocaleDetails() {
         return this.botVersionLocaleDetails;
     }
-    public String getLocaleId() {
+    public String localeId() {
         return this.localeId;
     }
 

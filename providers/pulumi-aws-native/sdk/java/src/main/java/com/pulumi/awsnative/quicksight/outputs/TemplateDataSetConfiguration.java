@@ -40,17 +40,17 @@ public final class TemplateDataSetConfiguration {
      * <p>A structure containing the list of column group schemas.</p>
      * 
     */
-    public List<TemplateColumnGroupSchema> getColumnGroupSchemaList() {
+    public List<TemplateColumnGroupSchema> columnGroupSchemaList() {
         return this.columnGroupSchemaList == null ? List.of() : this.columnGroupSchemaList;
     }
-    public Optional<TemplateDataSetSchema> getDataSetSchema() {
+    public Optional<TemplateDataSetSchema> dataSetSchema() {
         return Optional.ofNullable(this.dataSetSchema);
     }
     /**
      * <p>Placeholder.</p>
      * 
     */
-    public Optional<String> getPlaceholder() {
+    public Optional<String> placeholder() {
         return Optional.ofNullable(this.placeholder);
     }
 

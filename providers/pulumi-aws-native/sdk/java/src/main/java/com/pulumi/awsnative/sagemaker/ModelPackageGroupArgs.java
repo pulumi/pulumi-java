@@ -21,21 +21,21 @@ public final class ModelPackageGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="modelPackageGroupDescription")
       private final @Nullable Output<String> modelPackageGroupDescription;
 
-    public Output<String> getModelPackageGroupDescription() {
+    public Output<String> modelPackageGroupDescription() {
         return this.modelPackageGroupDescription == null ? Codegen.empty() : this.modelPackageGroupDescription;
     }
 
     @Import(name="modelPackageGroupName")
       private final @Nullable Output<String> modelPackageGroupName;
 
-    public Output<String> getModelPackageGroupName() {
+    public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName == null ? Codegen.empty() : this.modelPackageGroupName;
     }
 
     @Import(name="modelPackageGroupPolicy")
       private final @Nullable Output<Object> modelPackageGroupPolicy;
 
-    public Output<Object> getModelPackageGroupPolicy() {
+    public Output<Object> modelPackageGroupPolicy() {
         return this.modelPackageGroupPolicy == null ? Codegen.empty() : this.modelPackageGroupPolicy;
     }
 
@@ -46,7 +46,7 @@ public final class ModelPackageGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
 
-    public Output<List<ModelPackageGroupTagArgs>> getTags() {
+    public Output<List<ModelPackageGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -21,28 +21,28 @@ public final class AuthParametersPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="apiKeyAuthParameters")
       private final @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
 
-    public Output<ConnectionApiKeyAuthParametersArgs> getApiKeyAuthParameters() {
+    public Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters() {
         return this.apiKeyAuthParameters == null ? Codegen.empty() : this.apiKeyAuthParameters;
     }
 
     @Import(name="basicAuthParameters")
       private final @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters;
 
-    public Output<ConnectionBasicAuthParametersArgs> getBasicAuthParameters() {
+    public Output<ConnectionBasicAuthParametersArgs> basicAuthParameters() {
         return this.basicAuthParameters == null ? Codegen.empty() : this.basicAuthParameters;
     }
 
     @Import(name="invocationHttpParameters")
       private final @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters;
 
-    public Output<ConnectionHttpParametersArgs> getInvocationHttpParameters() {
+    public Output<ConnectionHttpParametersArgs> invocationHttpParameters() {
         return this.invocationHttpParameters == null ? Codegen.empty() : this.invocationHttpParameters;
     }
 
     @Import(name="oAuthParameters")
       private final @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters;
 
-    public Output<ConnectionOAuthParametersArgs> getOAuthParameters() {
+    public Output<ConnectionOAuthParametersArgs> oAuthParameters() {
         return this.oAuthParameters == null ? Codegen.empty() : this.oAuthParameters;
     }
 

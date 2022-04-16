@@ -27,7 +27,7 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
@@ -38,7 +38,7 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ipRange", required=true)
       private final Output<String> ipRange;
 
-    public Output<String> getIpRange() {
+    public Output<String> ipRange() {
         return this.ipRange;
     }
 
@@ -49,7 +49,7 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="protocol", required=true)
       private final Output<FleetIpPermissionProtocol> protocol;
 
-    public Output<FleetIpPermissionProtocol> getProtocol() {
+    public Output<FleetIpPermissionProtocol> protocol() {
         return this.protocol;
     }
 
@@ -60,7 +60,7 @@ public final class FleetIpPermissionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort;
     }
 

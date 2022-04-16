@@ -22,10 +22,10 @@ public final class DatastoreTimestampPartition {
         this.timestampFormat = timestampFormat;
     }
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
-    public Optional<String> getTimestampFormat() {
+    public Optional<String> timestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
     }
 

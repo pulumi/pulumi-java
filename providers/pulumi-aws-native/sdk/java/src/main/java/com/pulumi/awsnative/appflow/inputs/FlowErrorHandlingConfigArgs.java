@@ -19,21 +19,21 @@ public final class FlowErrorHandlingConfigArgs extends com.pulumi.resources.Reso
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="failOnFirstError")
       private final @Nullable Output<Boolean> failOnFirstError;
 
-    public Output<Boolean> getFailOnFirstError() {
+    public Output<Boolean> failOnFirstError() {
         return this.failOnFirstError == null ? Codegen.empty() : this.failOnFirstError;
     }
 
