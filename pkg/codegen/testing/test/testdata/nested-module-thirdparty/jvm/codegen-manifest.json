@@ -3,10 +3,10 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/foobar/Provider.java",
-    "src/main/java/io/pulumi/foobar/ProviderArgs.java",
-    "src/main/java/io/pulumi/foobar/Utilities.java",
-    "src/main/java/io/pulumi/foobar/deeply_nested_module/Resource.java",
-    "src/main/java/io/pulumi/foobar/deeply_nested_module/ResourceArgs.java"
+    "src/main/java/com/pulumi/foobar/Provider.java",
+    "src/main/java/com/pulumi/foobar/ProviderArgs.java",
+    "src/main/java/com/pulumi/foobar/Utilities.java",
+    "src/main/java/com/pulumi/foobar/deeply_nested_module/Resource.java",
+    "src/main/java/com/pulumi/foobar/deeply_nested_module/ResourceArgs.java"
   ]
 }
