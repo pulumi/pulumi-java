@@ -22,7 +22,7 @@ public final class RouteSpecTcpRouteActionWeightedTargetArgs extends com.pulumi.
     @Import(name="virtualNode", required=true)
       private final Output<String> virtualNode;
 
-    public Output<String> getVirtualNode() {
+    public Output<String> virtualNode() {
         return this.virtualNode;
     }
 
@@ -33,7 +33,7 @@ public final class RouteSpecTcpRouteActionWeightedTargetArgs extends com.pulumi.
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 

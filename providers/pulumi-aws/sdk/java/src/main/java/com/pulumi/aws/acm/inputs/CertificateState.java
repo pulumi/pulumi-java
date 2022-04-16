@@ -26,7 +26,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityArn")
       private final @Nullable Output<String> certificateAuthorityArn;
 
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn == null ? Codegen.empty() : this.certificateAuthorityArn;
     }
 
@@ -48,7 +48,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
-    public Output<String> getCertificateBody() {
+    public Output<String> certificateBody() {
         return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
@@ -71,7 +71,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -82,7 +82,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainValidationOptions")
       private final @Nullable Output<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions;
 
-    public Output<List<CertificateDomainValidationOptionGetArgs>> getDomainValidationOptions() {
+    public Output<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions() {
         return this.domainValidationOptions == null ? Codegen.empty() : this.domainValidationOptions;
     }
 
@@ -94,7 +94,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<CertificateOptionsGetArgs> options;
 
-    public Output<CertificateOptionsGetArgs> getOptions() {
+    public Output<CertificateOptionsGetArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -105,7 +105,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -116,7 +116,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -127,7 +127,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Output<List<String>> getSubjectAlternativeNames() {
+    public Output<List<String>> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -138,7 +138,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -149,7 +149,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -160,7 +160,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationEmails")
       private final @Nullable Output<List<String>> validationEmails;
 
-    public Output<List<String>> getValidationEmails() {
+    public Output<List<String>> validationEmails() {
         return this.validationEmails == null ? Codegen.empty() : this.validationEmails;
     }
 
@@ -171,7 +171,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationMethod")
       private final @Nullable Output<String> validationMethod;
 
-    public Output<String> getValidationMethod() {
+    public Output<String> validationMethod() {
         return this.validationMethod == null ? Codegen.empty() : this.validationMethod;
     }
 

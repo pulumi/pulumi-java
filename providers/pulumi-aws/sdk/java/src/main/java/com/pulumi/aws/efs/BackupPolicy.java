@@ -42,7 +42,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return A backup_policy object (documented below).
      * 
      */
-    public Output<BackupPolicyBackupPolicy> getBackupPolicy() {
+    public Output<BackupPolicyBackupPolicy> backupPolicy() {
         return this.backupPolicy;
     }
     /**
@@ -56,7 +56,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return The ID of the EFS file system.
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 

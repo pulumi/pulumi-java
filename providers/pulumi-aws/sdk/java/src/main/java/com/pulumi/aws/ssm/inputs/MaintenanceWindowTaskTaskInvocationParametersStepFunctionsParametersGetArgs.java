@@ -22,7 +22,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     @Import(name="input")
       private final @Nullable Output<String> input;
 
-    public Output<String> getInput() {
+    public Output<String> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -33,7 +33,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

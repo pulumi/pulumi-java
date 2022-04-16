@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecLoggingArgs extends com.pulumi.resources.Re
     @Import(name="accessLog")
       private final @Nullable Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
 
-    public Output<VirtualGatewaySpecLoggingAccessLogArgs> getAccessLog() {
+    public Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog() {
         return this.accessLog == null ? Codegen.empty() : this.accessLog;
     }
 

@@ -23,7 +23,7 @@ public final class SigningJobSignedObjectArgs extends com.pulumi.resources.Resou
     @Import(name="s3s")
       private final @Nullable Output<List<SigningJobSignedObjectS3Args>> s3s;
 
-    public Output<List<SigningJobSignedObjectS3Args>> getS3s() {
+    public Output<List<SigningJobSignedObjectS3Args>> s3s() {
         return this.s3s == null ? Codegen.empty() : this.s3s;
     }
 

@@ -22,7 +22,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encoding", required=true)
       private final Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding;
     }
 
@@ -33,7 +33,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey", required=true)
       private final Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
 
@@ -44,7 +44,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -55,7 +55,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

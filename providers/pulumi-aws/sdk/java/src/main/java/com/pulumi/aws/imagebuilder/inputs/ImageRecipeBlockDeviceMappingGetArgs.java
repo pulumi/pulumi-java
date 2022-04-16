@@ -24,7 +24,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends com.pulumi.resou
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -35,7 +35,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends com.pulumi.resou
     @Import(name="ebs")
       private final @Nullable Output<ImageRecipeBlockDeviceMappingEbsGetArgs> ebs;
 
-    public Output<ImageRecipeBlockDeviceMappingEbsGetArgs> getEbs() {
+    public Output<ImageRecipeBlockDeviceMappingEbsGetArgs> ebs() {
         return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
@@ -46,7 +46,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends com.pulumi.resou
     @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
-    public Output<Boolean> getNoDevice() {
+    public Output<Boolean> noDevice() {
         return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
@@ -57,7 +57,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends com.pulumi.resou
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 

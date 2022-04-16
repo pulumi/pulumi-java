@@ -37,7 +37,7 @@ public class AccessPointPolicy extends com.pulumi.resources.CustomResource {
      * @return The ARN of the access point that you want to associate with the specified policy.
      * 
      */
-    public Output<String> getAccessPointArn() {
+    public Output<String> accessPointArn() {
         return this.accessPointArn;
     }
     /**
@@ -51,7 +51,7 @@ public class AccessPointPolicy extends com.pulumi.resources.CustomResource {
      * @return Indicates whether this access point currently has a policy that allows public access.
      * 
      */
-    public Output<Boolean> getHasPublicAccessPolicy() {
+    public Output<Boolean> hasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy;
     }
     /**
@@ -65,7 +65,7 @@ public class AccessPointPolicy extends com.pulumi.resources.CustomResource {
      * @return The policy that you want to apply to the specified access point.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

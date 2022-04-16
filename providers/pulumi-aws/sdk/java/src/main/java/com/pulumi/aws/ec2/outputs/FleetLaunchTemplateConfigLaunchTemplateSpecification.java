@@ -41,21 +41,21 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecification {
      * ID of the launch template.
      * 
     */
-    public Optional<String> getLaunchTemplateId() {
+    public Optional<String> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
     /**
      * Name of the launch template.
      * 
     */
-    public Optional<String> getLaunchTemplateName() {
+    public Optional<String> launchTemplateName() {
         return Optional.ofNullable(this.launchTemplateName);
     }
     /**
      * Version number of the launch template.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

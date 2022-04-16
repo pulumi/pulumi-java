@@ -26,16 +26,16 @@ public final class GetProxyAuth {
         this.secretArn = secretArn;
     }
 
-    public String getAuthScheme() {
+    public String authScheme() {
         return this.authScheme;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getIamAuth() {
+    public String iamAuth() {
         return this.iamAuth;
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 

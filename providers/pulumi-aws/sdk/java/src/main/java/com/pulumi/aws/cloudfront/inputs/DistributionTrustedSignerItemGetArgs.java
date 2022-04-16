@@ -23,7 +23,7 @@ public final class DistributionTrustedSignerItemGetArgs extends com.pulumi.resou
     @Import(name="awsAccountNumber")
       private final @Nullable Output<String> awsAccountNumber;
 
-    public Output<String> getAwsAccountNumber() {
+    public Output<String> awsAccountNumber() {
         return this.awsAccountNumber == null ? Codegen.empty() : this.awsAccountNumber;
     }
 
@@ -34,7 +34,7 @@ public final class DistributionTrustedSignerItemGetArgs extends com.pulumi.resou
     @Import(name="keyPairIds")
       private final @Nullable Output<List<String>> keyPairIds;
 
-    public Output<List<String>> getKeyPairIds() {
+    public Output<List<String>> keyPairIds() {
         return this.keyPairIds == null ? Codegen.empty() : this.keyPairIds;
     }
 

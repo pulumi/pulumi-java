@@ -23,7 +23,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
@@ -34,7 +34,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="matchAttributes", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesGetArgs> matchAttributes;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesGetArgs> getMatchAttributes() {
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesGetArgs> matchAttributes() {
         return this.matchAttributes;
     }
 

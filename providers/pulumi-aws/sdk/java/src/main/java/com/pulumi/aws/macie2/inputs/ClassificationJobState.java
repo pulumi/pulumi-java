@@ -29,7 +29,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -40,7 +40,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="customDataIdentifierIds")
       private final @Nullable Output<List<String>> customDataIdentifierIds;
 
-    public Output<List<String>> getCustomDataIdentifierIds() {
+    public Output<List<String>> customDataIdentifierIds() {
         return this.customDataIdentifierIds == null ? Codegen.empty() : this.customDataIdentifierIds;
     }
 
@@ -51,7 +51,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,21 +62,21 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="initialRun")
       private final @Nullable Output<Boolean> initialRun;
 
-    public Output<Boolean> getInitialRun() {
+    public Output<Boolean> initialRun() {
         return this.initialRun == null ? Codegen.empty() : this.initialRun;
     }
 
     @Import(name="jobArn")
       private final @Nullable Output<String> jobArn;
 
-    public Output<String> getJobArn() {
+    public Output<String> jobArn() {
         return this.jobArn == null ? Codegen.empty() : this.jobArn;
     }
 
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
@@ -87,7 +87,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="jobStatus")
       private final @Nullable Output<String> jobStatus;
 
-    public Output<String> getJobStatus() {
+    public Output<String> jobStatus() {
         return this.jobStatus == null ? Codegen.empty() : this.jobStatus;
     }
 
@@ -98,14 +98,14 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="jobType")
       private final @Nullable Output<String> jobType;
 
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType == null ? Codegen.empty() : this.jobType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -116,7 +116,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -127,7 +127,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="s3JobDefinition")
       private final @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
 
-    public Output<ClassificationJobS3JobDefinitionGetArgs> getS3JobDefinition() {
+    public Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition() {
         return this.s3JobDefinition == null ? Codegen.empty() : this.s3JobDefinition;
     }
 
@@ -138,7 +138,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="samplingPercentage")
       private final @Nullable Output<Integer> samplingPercentage;
 
-    public Output<Integer> getSamplingPercentage() {
+    public Output<Integer> samplingPercentage() {
         return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
     }
 
@@ -149,7 +149,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="scheduleFrequency")
       private final @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
 
-    public Output<ClassificationJobScheduleFrequencyGetArgs> getScheduleFrequency() {
+    public Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency() {
         return this.scheduleFrequency == null ? Codegen.empty() : this.scheduleFrequency;
     }
 
@@ -160,14 +160,14 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -178,7 +178,7 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="userPausedDetails")
       private final @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
 
-    public Output<List<ClassificationJobUserPausedDetailGetArgs>> getUserPausedDetails() {
+    public Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails() {
         return this.userPausedDetails == null ? Codegen.empty() : this.userPausedDetails;
     }
 

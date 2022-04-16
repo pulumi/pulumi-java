@@ -23,7 +23,7 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -34,7 +34,7 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -45,7 +45,7 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="senderId")
       private final @Nullable Output<String> senderId;
 
-    public Output<String> getSenderId() {
+    public Output<String> senderId() {
         return this.senderId == null ? Codegen.empty() : this.senderId;
     }
 
@@ -56,7 +56,7 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortCode")
       private final @Nullable Output<String> shortCode;
 
-    public Output<String> getShortCode() {
+    public Output<String> shortCode() {
         return this.shortCode == null ? Codegen.empty() : this.shortCode;
     }
 

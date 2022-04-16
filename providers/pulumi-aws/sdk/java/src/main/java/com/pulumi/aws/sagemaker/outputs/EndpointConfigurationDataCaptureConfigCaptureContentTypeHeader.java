@@ -34,14 +34,14 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * The CSV content type headers to capture.
      * 
     */
-    public List<String> getCsvContentTypes() {
+    public List<String> csvContentTypes() {
         return this.csvContentTypes == null ? List.of() : this.csvContentTypes;
     }
     /**
      * The JSON content type headers to capture.
      * 
     */
-    public List<String> getJsonContentTypes() {
+    public List<String> jsonContentTypes() {
         return this.jsonContentTypes == null ? List.of() : this.jsonContentTypes;
     }
 

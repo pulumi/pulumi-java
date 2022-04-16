@@ -23,7 +23,7 @@ public final class ServiceLoadBalancerGetArgs extends com.pulumi.resources.Resou
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceLoadBalancerGetArgs extends com.pulumi.resources.Resou
     @Import(name="containerPort", required=true)
       private final Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceLoadBalancerGetArgs extends com.pulumi.resources.Resou
     @Import(name="elbName")
       private final @Nullable Output<String> elbName;
 
-    public Output<String> getElbName() {
+    public Output<String> elbName() {
         return this.elbName == null ? Codegen.empty() : this.elbName;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceLoadBalancerGetArgs extends com.pulumi.resources.Resou
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 

@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesAr
     @Import(name="match", required=true)
       private final Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match;
 
-    public Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> getMatch() {
+    public Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match() {
         return this.match;
     }
 

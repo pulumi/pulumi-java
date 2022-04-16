@@ -23,7 +23,7 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -45,7 +45,7 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -56,7 +56,7 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

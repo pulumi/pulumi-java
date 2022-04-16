@@ -22,7 +22,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
@@ -33,7 +33,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -55,7 +55,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 

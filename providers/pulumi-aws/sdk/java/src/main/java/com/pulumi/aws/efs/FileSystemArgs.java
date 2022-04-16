@@ -26,7 +26,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> getAvailabilityZoneName() {
+    public Output<String> availabilityZoneName() {
         return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
     }
 
@@ -40,7 +40,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationToken")
       private final @Nullable Output<String> creationToken;
 
-    public Output<String> getCreationToken() {
+    public Output<String> creationToken() {
         return this.creationToken == null ? Codegen.empty() : this.creationToken;
     }
 
@@ -51,7 +51,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -62,7 +62,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -73,7 +73,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecyclePolicy")
       private final @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy;
 
-    public Output<FileSystemLifecyclePolicyArgs> getLifecyclePolicy() {
+    public Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy() {
         return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
     }
 
@@ -84,7 +84,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="performanceMode")
       private final @Nullable Output<String> performanceMode;
 
-    public Output<String> getPerformanceMode() {
+    public Output<String> performanceMode() {
         return this.performanceMode == null ? Codegen.empty() : this.performanceMode;
     }
 
@@ -95,7 +95,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisionedThroughputInMibps")
       private final @Nullable Output<Double> provisionedThroughputInMibps;
 
-    public Output<Double> getProvisionedThroughputInMibps() {
+    public Output<Double> provisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps == null ? Codegen.empty() : this.provisionedThroughputInMibps;
     }
 
@@ -106,7 +106,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -117,7 +117,7 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="throughputMode")
       private final @Nullable Output<String> throughputMode;
 
-    public Output<String> getThroughputMode() {
+    public Output<String> throughputMode() {
         return this.throughputMode == null ? Codegen.empty() : this.throughputMode;
     }
 

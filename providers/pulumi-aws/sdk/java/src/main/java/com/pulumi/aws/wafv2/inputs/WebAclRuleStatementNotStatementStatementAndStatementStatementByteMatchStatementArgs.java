@@ -25,7 +25,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="positionalConstraint", required=true)
       private final Output<String> positionalConstraint;
 
-    public Output<String> getPositionalConstraint() {
+    public Output<String> positionalConstraint() {
         return this.positionalConstraint;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="searchString", required=true)
       private final Output<String> searchString;
 
-    public Output<String> getSearchString() {
+    public Output<String> searchString() {
         return this.searchString;
     }
 
@@ -58,7 +58,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

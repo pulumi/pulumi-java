@@ -23,7 +23,7 @@ public final class BgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
 
@@ -35,7 +35,7 @@ public final class BgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
-    public Output<String> getAmazonAddress() {
+    public Output<String> amazonAddress() {
         return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
@@ -46,7 +46,7 @@ public final class BgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bgpAsn", required=true)
       private final Output<Integer> bgpAsn;
 
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn;
     }
 
@@ -57,7 +57,7 @@ public final class BgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> getBgpAuthKey() {
+    public Output<String> bgpAuthKey() {
         return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
@@ -69,7 +69,7 @@ public final class BgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
-    public Output<String> getCustomerAddress() {
+    public Output<String> customerAddress() {
         return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
@@ -80,7 +80,7 @@ public final class BgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 

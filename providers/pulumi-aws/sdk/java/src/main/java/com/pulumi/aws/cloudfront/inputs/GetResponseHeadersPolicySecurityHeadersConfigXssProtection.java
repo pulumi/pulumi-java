@@ -20,7 +20,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="modeBlock", required=true)
       private final Boolean modeBlock;
 
-    public Boolean getModeBlock() {
+    public Boolean modeBlock() {
         return this.modeBlock;
     }
 
@@ -31,7 +31,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
@@ -42,7 +42,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="protection", required=true)
       private final Boolean protection;
 
-    public Boolean getProtection() {
+    public Boolean protection() {
         return this.protection;
     }
 
@@ -53,7 +53,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="reportUri", required=true)
       private final String reportUri;
 
-    public String getReportUri() {
+    public String reportUri() {
         return this.reportUri;
     }
 

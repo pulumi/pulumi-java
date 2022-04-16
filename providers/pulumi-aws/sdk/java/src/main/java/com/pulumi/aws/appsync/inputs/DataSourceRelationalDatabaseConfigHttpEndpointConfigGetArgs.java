@@ -22,7 +22,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="awsSecretStoreArn", required=true)
       private final Output<String> awsSecretStoreArn;
 
-    public Output<String> getAwsSecretStoreArn() {
+    public Output<String> awsSecretStoreArn() {
         return this.awsSecretStoreArn;
     }
 
@@ -33,7 +33,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -44,7 +44,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -55,7 +55,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -66,7 +66,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 

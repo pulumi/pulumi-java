@@ -26,7 +26,7 @@ public final class BotAbortStatementArgs extends com.pulumi.resources.ResourceAr
     @Import(name="messages", required=true)
       private final Output<List<BotAbortStatementMessageArgs>> messages;
 
-    public Output<List<BotAbortStatementMessageArgs>> getMessages() {
+    public Output<List<BotAbortStatementMessageArgs>> messages() {
         return this.messages;
     }
 
@@ -39,7 +39,7 @@ public final class BotAbortStatementArgs extends com.pulumi.resources.ResourceAr
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 

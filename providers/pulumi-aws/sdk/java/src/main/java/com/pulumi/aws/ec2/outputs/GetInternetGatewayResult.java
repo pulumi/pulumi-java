@@ -56,33 +56,33 @@ public final class GetInternetGatewayResult {
      * The ARN of the Internet Gateway.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<GetInternetGatewayAttachment> getAttachments() {
+    public List<GetInternetGatewayAttachment> attachments() {
         return this.attachments;
     }
-    public List<GetInternetGatewayFilter> getFilters() {
+    public List<GetInternetGatewayFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInternetGatewayId() {
+    public String internetGatewayId() {
         return this.internetGatewayId;
     }
     /**
      * The ID of the AWS account that owns the internet gateway.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

@@ -45,7 +45,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the image.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Date the image was created.
      * 
      */
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated;
     }
     /**
@@ -73,7 +73,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDistributionConfigurationArn() {
+    public Output</* @Nullable */ String> distributionConfigurationArn() {
         return this.distributionConfigurationArn;
     }
     /**
@@ -87,7 +87,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Whether additional information about the image being created is collected. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnhancedImageMetadataEnabled() {
+    public Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled;
     }
     /**
@@ -101,7 +101,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
      * 
      */
-    public Output<String> getImageRecipeArn() {
+    public Output<String> imageRecipeArn() {
         return this.imageRecipeArn;
     }
     /**
@@ -115,7 +115,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Configuration block with image tests configuration. Detailed below.
      * 
      */
-    public Output<ImageImageTestsConfiguration> getImageTestsConfiguration() {
+    public Output<ImageImageTestsConfiguration> imageTestsConfiguration() {
         return this.imageTestsConfiguration;
     }
     /**
@@ -129,7 +129,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
      * 
      */
-    public Output<String> getInfrastructureConfigurationArn() {
+    public Output<String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
     /**
@@ -143,7 +143,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Name of the AMI.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +157,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Operating System version of the image.
      * 
      */
-    public Output<String> getOsVersion() {
+    public Output<String> osVersion() {
         return this.osVersion;
     }
     /**
@@ -171,7 +171,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return List of objects with resources created by the image.
      * 
      */
-    public Output<List<ImageOutputResource>> getOutputResources() {
+    public Output<List<ImageOutputResource>> outputResources() {
         return this.outputResources;
     }
     /**
@@ -185,7 +185,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Platform of the image.
      * 
      */
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     /**
@@ -199,7 +199,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the Image Builder Image. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -213,7 +213,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -227,7 +227,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Version of the image.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

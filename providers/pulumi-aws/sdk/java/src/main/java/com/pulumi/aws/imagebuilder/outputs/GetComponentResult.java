@@ -118,105 +118,105 @@ public final class GetComponentResult {
         this.version = version;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Change description of the component.
      * 
     */
-    public String getChangeDescription() {
+    public String changeDescription() {
         return this.changeDescription;
     }
     /**
      * Data of the component.
      * 
     */
-    public String getData() {
+    public String data() {
         return this.data;
     }
     /**
      * Date the component was created.
      * 
     */
-    public String getDateCreated() {
+    public String dateCreated() {
         return this.dateCreated;
     }
     /**
      * Description of the component.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Encryption status of the component.
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * Name of the component.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Owner of the component.
      * 
     */
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
     /**
      * Platform of the component.
      * 
     */
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
     /**
      * Operating Systems (OSes) supported by the component.
      * 
     */
-    public List<String> getSupportedOsVersions() {
+    public List<String> supportedOsVersions() {
         return this.supportedOsVersions;
     }
     /**
      * Key-value map of resource tags for the component.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Type of the component.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Version of the component.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

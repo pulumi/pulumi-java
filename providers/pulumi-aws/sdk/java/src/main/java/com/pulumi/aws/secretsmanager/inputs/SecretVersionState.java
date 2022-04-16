@@ -23,7 +23,7 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="secretBinary")
       private final @Nullable Output<String> secretBinary;
 
-    public Output<String> getSecretBinary() {
+    public Output<String> secretBinary() {
         return this.secretBinary == null ? Codegen.empty() : this.secretBinary;
     }
 
@@ -45,7 +45,7 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="secretId")
       private final @Nullable Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId == null ? Codegen.empty() : this.secretId;
     }
 
@@ -56,7 +56,7 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="secretString")
       private final @Nullable Output<String> secretString;
 
-    public Output<String> getSecretString() {
+    public Output<String> secretString() {
         return this.secretString == null ? Codegen.empty() : this.secretString;
     }
 
@@ -67,7 +67,7 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
@@ -78,7 +78,7 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="versionStages")
       private final @Nullable Output<List<String>> versionStages;
 
-    public Output<List<String>> getVersionStages() {
+    public Output<List<String>> versionStages() {
         return this.versionStages == null ? Codegen.empty() : this.versionStages;
     }
 

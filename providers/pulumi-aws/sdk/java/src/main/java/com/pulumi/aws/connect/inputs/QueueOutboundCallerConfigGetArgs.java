@@ -22,7 +22,7 @@ public final class QueueOutboundCallerConfigGetArgs extends com.pulumi.resources
     @Import(name="outboundCallerIdName")
       private final @Nullable Output<String> outboundCallerIdName;
 
-    public Output<String> getOutboundCallerIdName() {
+    public Output<String> outboundCallerIdName() {
         return this.outboundCallerIdName == null ? Codegen.empty() : this.outboundCallerIdName;
     }
 
@@ -33,7 +33,7 @@ public final class QueueOutboundCallerConfigGetArgs extends com.pulumi.resources
     @Import(name="outboundCallerIdNumberId")
       private final @Nullable Output<String> outboundCallerIdNumberId;
 
-    public Output<String> getOutboundCallerIdNumberId() {
+    public Output<String> outboundCallerIdNumberId() {
         return this.outboundCallerIdNumberId == null ? Codegen.empty() : this.outboundCallerIdNumberId;
     }
 
@@ -44,7 +44,7 @@ public final class QueueOutboundCallerConfigGetArgs extends com.pulumi.resources
     @Import(name="outboundFlowId")
       private final @Nullable Output<String> outboundFlowId;
 
-    public Output<String> getOutboundFlowId() {
+    public Output<String> outboundFlowId() {
         return this.outboundFlowId == null ? Codegen.empty() : this.outboundFlowId;
     }
 

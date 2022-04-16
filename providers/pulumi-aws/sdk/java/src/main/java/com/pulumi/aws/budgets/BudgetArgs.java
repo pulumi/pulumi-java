@@ -26,7 +26,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -37,7 +37,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetType", required=true)
       private final Output<String> budgetType;
 
-    public Output<String> getBudgetType() {
+    public Output<String> budgetType() {
         return this.budgetType;
     }
 
@@ -48,7 +48,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="costFilters")
       private final @Nullable Output<Map<String,String>> costFilters;
 
-    public Output<Map<String,String>> getCostFilters() {
+    public Output<Map<String,String>> costFilters() {
         return this.costFilters == null ? Codegen.empty() : this.costFilters;
     }
 
@@ -59,7 +59,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="costTypes")
       private final @Nullable Output<BudgetCostTypesArgs> costTypes;
 
-    public Output<BudgetCostTypesArgs> getCostTypes() {
+    public Output<BudgetCostTypesArgs> costTypes() {
         return this.costTypes == null ? Codegen.empty() : this.costTypes;
     }
 
@@ -70,7 +70,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limitAmount", required=true)
       private final Output<String> limitAmount;
 
-    public Output<String> getLimitAmount() {
+    public Output<String> limitAmount() {
         return this.limitAmount;
     }
 
@@ -81,7 +81,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limitUnit", required=true)
       private final Output<String> limitUnit;
 
-    public Output<String> getLimitUnit() {
+    public Output<String> limitUnit() {
         return this.limitUnit;
     }
 
@@ -92,7 +92,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -114,7 +114,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
       private final @Nullable Output<List<BudgetNotificationArgs>> notifications;
 
-    public Output<List<BudgetNotificationArgs>> getNotifications() {
+    public Output<List<BudgetNotificationArgs>> notifications() {
         return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
@@ -125,7 +125,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePeriodEnd")
       private final @Nullable Output<String> timePeriodEnd;
 
-    public Output<String> getTimePeriodEnd() {
+    public Output<String> timePeriodEnd() {
         return this.timePeriodEnd == null ? Codegen.empty() : this.timePeriodEnd;
     }
 
@@ -136,7 +136,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePeriodStart")
       private final @Nullable Output<String> timePeriodStart;
 
-    public Output<String> getTimePeriodStart() {
+    public Output<String> timePeriodStart() {
         return this.timePeriodStart == null ? Codegen.empty() : this.timePeriodStart;
     }
 
@@ -147,7 +147,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeUnit", required=true)
       private final Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit;
     }
 

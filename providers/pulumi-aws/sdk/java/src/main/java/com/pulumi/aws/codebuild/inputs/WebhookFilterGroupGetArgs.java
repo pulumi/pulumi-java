@@ -23,7 +23,7 @@ public final class WebhookFilterGroupGetArgs extends com.pulumi.resources.Resour
     @Import(name="filters")
       private final @Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters;
 
-    public Output<List<WebhookFilterGroupFilterGetArgs>> getFilters() {
+    public Output<List<WebhookFilterGroupFilterGetArgs>> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 

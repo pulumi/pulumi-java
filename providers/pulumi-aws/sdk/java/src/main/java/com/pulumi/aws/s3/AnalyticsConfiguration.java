@@ -42,7 +42,7 @@ public class AnalyticsConfiguration extends com.pulumi.resources.CustomResource 
      * @return The name of the bucket this analytics configuration is associated with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -56,7 +56,7 @@ public class AnalyticsConfiguration extends com.pulumi.resources.CustomResource 
      * @return Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    public Output</* @Nullable */ AnalyticsConfigurationFilter> getFilter() {
+    public Output</* @Nullable */ AnalyticsConfigurationFilter> filter() {
         return this.filter;
     }
     /**
@@ -70,7 +70,7 @@ public class AnalyticsConfiguration extends com.pulumi.resources.CustomResource 
      * @return Unique identifier of the analytics configuration for the bucket.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class AnalyticsConfiguration extends com.pulumi.resources.CustomResource 
      * @return Configuration for the analytics data export (documented below).
      * 
      */
-    public Output</* @Nullable */ AnalyticsConfigurationStorageClassAnalysis> getStorageClassAnalysis() {
+    public Output</* @Nullable */ AnalyticsConfigurationStorageClassAnalysis> storageClassAnalysis() {
         return this.storageClassAnalysis;
     }
 

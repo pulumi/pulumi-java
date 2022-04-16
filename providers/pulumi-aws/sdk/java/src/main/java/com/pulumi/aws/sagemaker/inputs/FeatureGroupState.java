@@ -27,7 +27,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTimeFeatureName")
       private final @Nullable Output<String> eventTimeFeatureName;
 
-    public Output<String> getEventTimeFeatureName() {
+    public Output<String> eventTimeFeatureName() {
         return this.eventTimeFeatureName == null ? Codegen.empty() : this.eventTimeFeatureName;
     }
 
@@ -60,7 +60,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureDefinitions")
       private final @Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
 
-    public Output<List<FeatureGroupFeatureDefinitionGetArgs>> getFeatureDefinitions() {
+    public Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions() {
         return this.featureDefinitions == null ? Codegen.empty() : this.featureDefinitions;
     }
 
@@ -71,7 +71,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureGroupName")
       private final @Nullable Output<String> featureGroupName;
 
-    public Output<String> getFeatureGroupName() {
+    public Output<String> featureGroupName() {
         return this.featureGroupName == null ? Codegen.empty() : this.featureGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="offlineStoreConfig")
       private final @Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
 
-    public Output<FeatureGroupOfflineStoreConfigGetArgs> getOfflineStoreConfig() {
+    public Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig() {
         return this.offlineStoreConfig == null ? Codegen.empty() : this.offlineStoreConfig;
     }
 
@@ -93,7 +93,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="onlineStoreConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
 
-    public Output<FeatureGroupOnlineStoreConfigGetArgs> getOnlineStoreConfig() {
+    public Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig() {
         return this.onlineStoreConfig == null ? Codegen.empty() : this.onlineStoreConfig;
     }
 
@@ -104,7 +104,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="recordIdentifierFeatureName")
       private final @Nullable Output<String> recordIdentifierFeatureName;
 
-    public Output<String> getRecordIdentifierFeatureName() {
+    public Output<String> recordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName == null ? Codegen.empty() : this.recordIdentifierFeatureName;
     }
 
@@ -115,7 +115,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -126,7 +126,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -137,7 +137,7 @@ public final class FeatureGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

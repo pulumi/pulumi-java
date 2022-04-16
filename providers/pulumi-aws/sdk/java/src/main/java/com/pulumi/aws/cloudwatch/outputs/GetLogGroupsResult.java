@@ -43,24 +43,24 @@ public final class GetLogGroupsResult {
      * Set of ARNs of the Cloudwatch log groups
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLogGroupNamePrefix() {
+    public String logGroupNamePrefix() {
         return this.logGroupNamePrefix;
     }
     /**
      * Set of names of the Cloudwatch log groups
      * 
     */
-    public List<String> getLogGroupNames() {
+    public List<String> logGroupNames() {
         return this.logGroupNames;
     }
 

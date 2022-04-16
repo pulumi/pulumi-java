@@ -36,14 +36,14 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
      * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch> getFieldToMatch() {
+    public Optional<WebAclRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
     /**
      * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
     */
-    public List<WebAclRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation> getTextTransformations() {
+    public List<WebAclRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

@@ -19,14 +19,14 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends c
     @Import(name="cloudwatchEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> cloudwatchEncryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> getCloudwatchEncryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> cloudwatchEncryption() {
         return this.cloudwatchEncryption;
     }
 
     @Import(name="jobBookmarksEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> getJobBookmarksEncryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption() {
         return this.jobBookmarksEncryption;
     }
 
@@ -37,7 +37,7 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends c
     @Import(name="s3Encryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> getS3Encryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption() {
         return this.s3Encryption;
     }
 

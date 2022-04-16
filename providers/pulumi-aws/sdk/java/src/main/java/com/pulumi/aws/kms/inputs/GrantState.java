@@ -25,7 +25,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="constraints")
       private final @Nullable Output<List<GrantConstraintGetArgs>> constraints;
 
-    public Output<List<GrantConstraintGetArgs>> getConstraints() {
+    public Output<List<GrantConstraintGetArgs>> constraints() {
         return this.constraints == null ? Codegen.empty() : this.constraints;
     }
 
@@ -36,7 +36,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="grantCreationTokens")
       private final @Nullable Output<List<String>> grantCreationTokens;
 
-    public Output<List<String>> getGrantCreationTokens() {
+    public Output<List<String>> grantCreationTokens() {
         return this.grantCreationTokens == null ? Codegen.empty() : this.grantCreationTokens;
     }
 
@@ -47,7 +47,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="grantId")
       private final @Nullable Output<String> grantId;
 
-    public Output<String> getGrantId() {
+    public Output<String> grantId() {
         return this.grantId == null ? Codegen.empty() : this.grantId;
     }
 
@@ -58,7 +58,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="grantToken")
       private final @Nullable Output<String> grantToken;
 
-    public Output<String> getGrantToken() {
+    public Output<String> grantToken() {
         return this.grantToken == null ? Codegen.empty() : this.grantToken;
     }
 
@@ -69,7 +69,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="granteePrincipal")
       private final @Nullable Output<String> granteePrincipal;
 
-    public Output<String> getGranteePrincipal() {
+    public Output<String> granteePrincipal() {
         return this.granteePrincipal == null ? Codegen.empty() : this.granteePrincipal;
     }
 
@@ -80,7 +80,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -91,7 +91,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -102,7 +102,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="operations")
       private final @Nullable Output<List<String>> operations;
 
-    public Output<List<String>> getOperations() {
+    public Output<List<String>> operations() {
         return this.operations == null ? Codegen.empty() : this.operations;
     }
 
@@ -114,7 +114,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="retireOnDelete")
       private final @Nullable Output<Boolean> retireOnDelete;
 
-    public Output<Boolean> getRetireOnDelete() {
+    public Output<Boolean> retireOnDelete() {
         return this.retireOnDelete == null ? Codegen.empty() : this.retireOnDelete;
     }
 
@@ -125,7 +125,7 @@ public final class GrantState extends com.pulumi.resources.ResourceArgs {
     @Import(name="retiringPrincipal")
       private final @Nullable Output<String> retiringPrincipal;
 
-    public Output<String> getRetiringPrincipal() {
+    public Output<String> retiringPrincipal() {
         return this.retiringPrincipal == null ? Codegen.empty() : this.retiringPrincipal;
     }
 

@@ -24,7 +24,7 @@ public final class RuleGroupRuleStatementGeoMatchStatementGetArgs extends com.pu
     @Import(name="countryCodes", required=true)
       private final Output<List<String>> countryCodes;
 
-    public Output<List<String>> getCountryCodes() {
+    public Output<List<String>> countryCodes() {
         return this.countryCodes;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleStatementGeoMatchStatementGetArgs extends com.pu
     @Import(name="forwardedIpConfig")
       private final @Nullable Output<RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
 
-    public Output<RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigGetArgs> getForwardedIpConfig() {
+    public Output<RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig() {
         return this.forwardedIpConfig == null ? Codegen.empty() : this.forwardedIpConfig;
     }
 

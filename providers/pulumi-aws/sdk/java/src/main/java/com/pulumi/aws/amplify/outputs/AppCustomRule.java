@@ -48,28 +48,28 @@ public final class AppCustomRule {
      * The condition for a URL rewrite or redirect rule, such as a country code.
      * 
     */
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
      * The source pattern for a URL rewrite or redirect rule.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The target pattern for a URL rewrite or redirect rule.
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

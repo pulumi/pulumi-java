@@ -38,7 +38,7 @@ public class DomainIdentityVerification extends com.pulumi.resources.CustomResou
      * @return The ARN of the domain identity.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -52,7 +52,7 @@ public class DomainIdentityVerification extends com.pulumi.resources.CustomResou
      * @return The domain name of the SES domain identity to verify.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 

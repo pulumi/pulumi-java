@@ -22,7 +22,7 @@ public final class VirtualNodeSpecListenerTimeoutTcpGetArgs extends com.pulumi.r
     @Import(name="idle")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle;
 
-    public Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> getIdle() {
+    public Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle() {
         return this.idle == null ? Codegen.empty() : this.idle;
     }
 

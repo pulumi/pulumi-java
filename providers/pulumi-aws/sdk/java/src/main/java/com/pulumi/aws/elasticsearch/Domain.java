@@ -53,13 +53,13 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return IAM policy document specifying the access policies for the domain.
      * 
      */
-    public Output<String> getAccessPolicies() {
+    public Output<String> accessPolicies() {
         return this.accessPolicies;
     }
     @Export(name="advancedOptions", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> advancedOptions;
 
-    public Output<Map<String,String>> getAdvancedOptions() {
+    public Output<Map<String,String>> advancedOptions() {
         return this.advancedOptions;
     }
     /**
@@ -73,7 +73,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
      * 
      */
-    public Output<DomainAdvancedSecurityOptions> getAdvancedSecurityOptions() {
+    public Output<DomainAdvancedSecurityOptions> advancedSecurityOptions() {
         return this.advancedSecurityOptions;
     }
     /**
@@ -87,7 +87,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return ARN of the domain.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -101,7 +101,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the Auto-Tune options of the domain. Detailed below.
      * 
      */
-    public Output<DomainAutoTuneOptions> getAutoTuneOptions() {
+    public Output<DomainAutoTuneOptions> autoTuneOptions() {
         return this.autoTuneOptions;
     }
     /**
@@ -115,7 +115,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the cluster of the domain. Detailed below.
      * 
      */
-    public Output<DomainClusterConfig> getClusterConfig() {
+    public Output<DomainClusterConfig> clusterConfig() {
         return this.clusterConfig;
     }
     /**
@@ -129,7 +129,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for authenticating Kibana with Cognito. Detailed below.
      * 
      */
-    public Output</* @Nullable */ DomainCognitoOptions> getCognitoOptions() {
+    public Output</* @Nullable */ DomainCognitoOptions> cognitoOptions() {
         return this.cognitoOptions;
     }
     /**
@@ -143,7 +143,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for domain endpoint HTTP(S) related options. Detailed below.
      * 
      */
-    public Output<DomainDomainEndpointOptions> getDomainEndpointOptions() {
+    public Output<DomainDomainEndpointOptions> domainEndpointOptions() {
         return this.domainEndpointOptions;
     }
     /**
@@ -157,7 +157,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Unique identifier for the domain.
      * 
      */
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
     /**
@@ -171,7 +171,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -185,7 +185,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
      * 
      */
-    public Output<DomainEbsOptions> getEbsOptions() {
+    public Output<DomainEbsOptions> ebsOptions() {
         return this.ebsOptions;
     }
     /**
@@ -199,7 +199,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Version of Elasticsearch to deploy. Defaults to `1.5`.
      * 
      */
-    public Output</* @Nullable */ String> getElasticsearchVersion() {
+    public Output</* @Nullable */ String> elasticsearchVersion() {
         return this.elasticsearchVersion;
     }
     /**
@@ -213,7 +213,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
      * 
      */
-    public Output<DomainEncryptAtRest> getEncryptAtRest() {
+    public Output<DomainEncryptAtRest> encryptAtRest() {
         return this.encryptAtRest;
     }
     /**
@@ -227,7 +227,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Domain-specific endpoint used to submit index, search, and data upload requests.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -241,7 +241,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Domain-specific endpoint for kibana without https scheme.
      * 
      */
-    public Output<String> getKibanaEndpoint() {
+    public Output<String> kibanaEndpoint() {
         return this.kibanaEndpoint;
     }
     /**
@@ -255,7 +255,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<DomainLogPublishingOption>> getLogPublishingOptions() {
+    public Output</* @Nullable */ List<DomainLogPublishingOption>> logPublishingOptions() {
         return this.logPublishingOptions;
     }
     /**
@@ -269,7 +269,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for node-to-node encryption options. Detailed below.
      * 
      */
-    public Output<DomainNodeToNodeEncryption> getNodeToNodeEncryption() {
+    public Output<DomainNodeToNodeEncryption> nodeToNodeEncryption() {
         return this.nodeToNodeEncryption;
     }
     /**
@@ -283,7 +283,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
      * 
      */
-    public Output</* @Nullable */ DomainSnapshotOptions> getSnapshotOptions() {
+    public Output</* @Nullable */ DomainSnapshotOptions> snapshotOptions() {
         return this.snapshotOptions;
     }
     /**
@@ -297,13 +297,13 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -317,7 +317,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
      * 
      */
-    public Output</* @Nullable */ DomainVpcOptions> getVpcOptions() {
+    public Output</* @Nullable */ DomainVpcOptions> vpcOptions() {
         return this.vpcOptions;
     }
 

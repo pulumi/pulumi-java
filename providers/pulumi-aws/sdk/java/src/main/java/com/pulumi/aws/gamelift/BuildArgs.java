@@ -24,7 +24,7 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operatingSystem", required=true)
       private final Output<String> operatingSystem;
 
-    public Output<String> getOperatingSystem() {
+    public Output<String> operatingSystem() {
         return this.operatingSystem;
     }
 
@@ -46,7 +46,7 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLocation", required=true)
       private final Output<BuildStorageLocationArgs> storageLocation;
 
-    public Output<BuildStorageLocationArgs> getStorageLocation() {
+    public Output<BuildStorageLocationArgs> storageLocation() {
         return this.storageLocation;
     }
 
@@ -57,7 +57,7 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

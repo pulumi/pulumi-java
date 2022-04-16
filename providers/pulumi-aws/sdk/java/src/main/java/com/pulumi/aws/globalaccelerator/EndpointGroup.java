@@ -45,7 +45,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the endpoint group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The list of endpoint objects. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> getEndpointConfigurations() {
+    public Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> endpointConfigurations() {
         return this.endpointConfigurations;
     }
     /**
@@ -73,7 +73,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the AWS Region where the endpoint group is located.
      * 
      */
-    public Output<String> getEndpointGroupRegion() {
+    public Output<String> endpointGroupRegion() {
         return this.endpointGroupRegion;
     }
     /**
@@ -87,7 +87,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
      * 
      */
-    public Output</* @Nullable */ Integer> getHealthCheckIntervalSeconds() {
+    public Output</* @Nullable */ Integer> healthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds;
     }
     /**
@@ -101,7 +101,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (`/`). the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    public Output<String> getHealthCheckPath() {
+    public Output<String> healthCheckPath() {
         return this.healthCheckPath;
     }
     /**
@@ -117,7 +117,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    public Output<Integer> getHealthCheckPort() {
+    public Output<Integer> healthCheckPort() {
         return this.healthCheckPort;
     }
     /**
@@ -131,7 +131,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
      * 
      */
-    public Output</* @Nullable */ String> getHealthCheckProtocol() {
+    public Output</* @Nullable */ String> healthCheckProtocol() {
         return this.healthCheckProtocol;
     }
     /**
@@ -145,7 +145,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the listener.
      * 
      */
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
     /**
@@ -159,7 +159,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ List<EndpointGroupPortOverride>> getPortOverrides() {
+    public Output</* @Nullable */ List<EndpointGroupPortOverride>> portOverrides() {
         return this.portOverrides;
     }
     /**
@@ -173,7 +173,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
      * 
      */
-    public Output</* @Nullable */ Integer> getThresholdCount() {
+    public Output</* @Nullable */ Integer> thresholdCount() {
         return this.thresholdCount;
     }
     /**
@@ -187,7 +187,7 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
      * 
      */
-    public Output</* @Nullable */ Double> getTrafficDialPercentage() {
+    public Output</* @Nullable */ Double> trafficDialPercentage() {
         return this.trafficDialPercentage;
     }
 

@@ -22,7 +22,7 @@ public final class GetPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="grantTokens")
       private final @Nullable List<String> grantTokens;
 
-    public List<String> getGrantTokens() {
+    public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
 
@@ -37,7 +37,7 @@ public final class GetPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
       private final String keyId;
 
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
 

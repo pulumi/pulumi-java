@@ -24,7 +24,7 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
     }
 
@@ -35,7 +35,7 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="policyAttributes")
       private final @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
 
-    public Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> getPolicyAttributes() {
+    public Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes() {
         return this.policyAttributes == null ? Codegen.empty() : this.policyAttributes;
     }
 
@@ -46,7 +46,7 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -57,7 +57,7 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="policyTypeName")
       private final @Nullable Output<String> policyTypeName;
 
-    public Output<String> getPolicyTypeName() {
+    public Output<String> policyTypeName() {
         return this.policyTypeName == null ? Codegen.empty() : this.policyTypeName;
     }
 

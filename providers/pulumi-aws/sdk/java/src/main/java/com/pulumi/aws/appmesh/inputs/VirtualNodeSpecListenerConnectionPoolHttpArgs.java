@@ -22,7 +22,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpArgs extends com.pul
     @Import(name="maxConnections", required=true)
       private final Output<Integer> maxConnections;
 
-    public Output<Integer> getMaxConnections() {
+    public Output<Integer> maxConnections() {
         return this.maxConnections;
     }
 
@@ -33,7 +33,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpArgs extends com.pul
     @Import(name="maxPendingRequests")
       private final @Nullable Output<Integer> maxPendingRequests;
 
-    public Output<Integer> getMaxPendingRequests() {
+    public Output<Integer> maxPendingRequests() {
         return this.maxPendingRequests == null ? Codegen.empty() : this.maxPendingRequests;
     }
 

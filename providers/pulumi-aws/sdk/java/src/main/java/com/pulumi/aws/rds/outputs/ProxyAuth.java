@@ -48,28 +48,28 @@ public final class ProxyAuth {
      * The type of authentication that the proxy uses for connections from the proxy to the underlying database. One of `SECRETS`.
      * 
     */
-    public Optional<String> getAuthScheme() {
+    public Optional<String> authScheme() {
         return Optional.ofNullable(this.authScheme);
     }
     /**
      * A user-specified description about the authentication used by a proxy to log in as a specific database user.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy. One of `DISABLED`, `REQUIRED`.
      * 
     */
-    public Optional<String> getIamAuth() {
+    public Optional<String> iamAuth() {
         return Optional.ofNullable(this.iamAuth);
     }
     /**
      * The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
      * 
     */
-    public Optional<String> getSecretArn() {
+    public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
 

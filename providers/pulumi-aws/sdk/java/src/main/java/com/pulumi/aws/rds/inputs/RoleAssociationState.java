@@ -22,7 +22,7 @@ public final class RoleAssociationState extends com.pulumi.resources.ResourceArg
     @Import(name="dbInstanceIdentifier")
       private final @Nullable Output<String> dbInstanceIdentifier;
 
-    public Output<String> getDbInstanceIdentifier() {
+    public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier == null ? Codegen.empty() : this.dbInstanceIdentifier;
     }
 
@@ -33,7 +33,7 @@ public final class RoleAssociationState extends com.pulumi.resources.ResourceArg
     @Import(name="featureName")
       private final @Nullable Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName == null ? Codegen.empty() : this.featureName;
     }
 
@@ -44,7 +44,7 @@ public final class RoleAssociationState extends com.pulumi.resources.ResourceArg
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

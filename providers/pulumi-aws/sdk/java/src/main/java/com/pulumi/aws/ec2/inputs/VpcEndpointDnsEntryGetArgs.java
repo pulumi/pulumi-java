@@ -22,7 +22,7 @@ public final class VpcEndpointDnsEntryGetArgs extends com.pulumi.resources.Resou
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -33,7 +33,7 @@ public final class VpcEndpointDnsEntryGetArgs extends com.pulumi.resources.Resou
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 

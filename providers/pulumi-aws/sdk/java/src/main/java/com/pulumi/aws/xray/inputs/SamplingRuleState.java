@@ -25,7 +25,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -47,7 +47,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedRate")
       private final @Nullable Output<Double> fixedRate;
 
-    public Output<Double> getFixedRate() {
+    public Output<Double> fixedRate() {
         return this.fixedRate == null ? Codegen.empty() : this.fixedRate;
     }
 
@@ -58,7 +58,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -69,7 +69,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -80,7 +80,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -91,7 +91,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservoirSize")
       private final @Nullable Output<Integer> reservoirSize;
 
-    public Output<Integer> getReservoirSize() {
+    public Output<Integer> reservoirSize() {
         return this.reservoirSize == null ? Codegen.empty() : this.reservoirSize;
     }
 
@@ -102,7 +102,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
@@ -113,7 +113,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -124,7 +124,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -135,7 +135,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceType")
       private final @Nullable Output<String> serviceType;
 
-    public Output<String> getServiceType() {
+    public Output<String> serviceType() {
         return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
@@ -146,7 +146,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -157,7 +157,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -168,7 +168,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="urlPath")
       private final @Nullable Output<String> urlPath;
 
-    public Output<String> getUrlPath() {
+    public Output<String> urlPath() {
         return this.urlPath == null ? Codegen.empty() : this.urlPath;
     }
 
@@ -179,7 +179,7 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

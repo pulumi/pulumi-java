@@ -24,7 +24,7 @@ public final class GetDomainNodeToNodeEncryption {
      * Whether node to node encryption is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

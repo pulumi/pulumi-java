@@ -22,7 +22,7 @@ public final class IntegrationTlsConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="insecureSkipVerification")
       private final @Nullable Output<Boolean> insecureSkipVerification;
 
-    public Output<Boolean> getInsecureSkipVerification() {
+    public Output<Boolean> insecureSkipVerification() {
         return this.insecureSkipVerification == null ? Codegen.empty() : this.insecureSkipVerification;
     }
 

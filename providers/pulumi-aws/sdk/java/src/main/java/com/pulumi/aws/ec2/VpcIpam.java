@@ -44,7 +44,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of IPAM
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * @return A description for the IPAM.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * @return Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
      * 
      */
-    public Output<List<VpcIpamOperatingRegion>> getOperatingRegions() {
+    public Output<List<VpcIpamOperatingRegion>> operatingRegions() {
         return this.operatingRegions;
     }
     /**
@@ -86,7 +86,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * @return The ID of the IPAM's private scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private IP space. The public scope is intended for all internet-routable IP space.
      * 
      */
-    public Output<String> getPrivateDefaultScopeId() {
+    public Output<String> privateDefaultScopeId() {
         return this.privateDefaultScopeId;
     }
     /**
@@ -102,7 +102,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * IP space. The public scope is intended for all internet-routable IP space.
      * 
      */
-    public Output<String> getPublicDefaultScopeId() {
+    public Output<String> publicDefaultScopeId() {
         return this.publicDefaultScopeId;
     }
     /**
@@ -116,7 +116,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * @return The number of scopes in the IPAM.
      * 
      */
-    public Output<Integer> getScopeCount() {
+    public Output<Integer> scopeCount() {
         return this.scopeCount;
     }
     /**
@@ -130,7 +130,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class VpcIpam extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

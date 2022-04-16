@@ -21,7 +21,7 @@ public final class OrganizationConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="autoEnable", required=true)
       private final Output<Boolean> autoEnable;
 
-    public Output<Boolean> getAutoEnable() {
+    public Output<Boolean> autoEnable() {
         return this.autoEnable;
     }
 

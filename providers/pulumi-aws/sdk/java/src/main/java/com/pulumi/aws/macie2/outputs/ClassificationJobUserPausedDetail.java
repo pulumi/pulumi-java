@@ -25,13 +25,13 @@ public final class ClassificationJobUserPausedDetail {
         this.jobPausedAt = jobPausedAt;
     }
 
-    public Optional<String> getJobExpiresAt() {
+    public Optional<String> jobExpiresAt() {
         return Optional.ofNullable(this.jobExpiresAt);
     }
-    public Optional<String> getJobImminentExpirationHealthEventArn() {
+    public Optional<String> jobImminentExpirationHealthEventArn() {
         return Optional.ofNullable(this.jobImminentExpirationHealthEventArn);
     }
-    public Optional<String> getJobPausedAt() {
+    public Optional<String> jobPausedAt() {
         return Optional.ofNullable(this.jobPausedAt);
     }
 

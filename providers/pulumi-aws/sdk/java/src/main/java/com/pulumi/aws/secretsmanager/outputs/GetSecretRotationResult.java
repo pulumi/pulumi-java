@@ -52,31 +52,31 @@ public final class GetSecretRotationResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ARN of the secret.
      * 
     */
-    public Boolean getRotationEnabled() {
+    public Boolean rotationEnabled() {
         return this.rotationEnabled;
     }
     /**
      * The decrypted part of the protected secret information that was originally provided as a string.
      * 
     */
-    public String getRotationLambdaArn() {
+    public String rotationLambdaArn() {
         return this.rotationLambdaArn;
     }
     /**
      * The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
      * 
     */
-    public List<GetSecretRotationRotationRule> getRotationRules() {
+    public List<GetSecretRotationRotationRule> rotationRules() {
         return this.rotationRules;
     }
-    public String getSecretId() {
+    public String secretId() {
         return this.secretId;
     }
 

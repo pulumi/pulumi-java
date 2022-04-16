@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The ARN of the destination delivery stream to write to.
      * 
     */
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 

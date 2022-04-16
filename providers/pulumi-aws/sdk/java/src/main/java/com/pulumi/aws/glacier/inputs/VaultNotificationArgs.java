@@ -22,7 +22,7 @@ public final class VaultNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="events", required=true)
       private final Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events;
     }
 
@@ -33,7 +33,7 @@ public final class VaultNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="snsTopic", required=true)
       private final Output<String> snsTopic;
 
-    public Output<String> getSnsTopic() {
+    public Output<String> snsTopic() {
         return this.snsTopic;
     }
 

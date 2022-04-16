@@ -21,7 +21,7 @@ public final class TableAttributeGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,7 +32,7 @@ public final class TableAttributeGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

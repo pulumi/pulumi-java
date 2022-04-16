@@ -45,31 +45,31 @@ public final class GetLocalGatewayVirtualInterfaceGroupsResult {
         this.tags = tags;
     }
 
-    public List<GetLocalGatewayVirtualInterfaceGroupsFilter> getFilters() {
+    public List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of EC2 Local Gateway Virtual Interface Group identifiers.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
     /**
      * Set of EC2 Local Gateway Virtual Interface identifiers.
      * 
     */
-    public List<String> getLocalGatewayVirtualInterfaceIds() {
+    public List<String> localGatewayVirtualInterfaceIds() {
         return this.localGatewayVirtualInterfaceIds;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

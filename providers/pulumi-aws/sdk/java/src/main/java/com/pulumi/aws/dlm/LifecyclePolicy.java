@@ -42,7 +42,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return A description for the DLM lifecycle policy.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return The ARN of an IAM role that is able to be assumed by the DLM service.
      * 
      */
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -84,7 +84,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return See the `policy_details` configuration block. Max of 1.
      * 
      */
-    public Output<LifecyclePolicyPolicyDetails> getPolicyDetails() {
+    public Output<LifecyclePolicyPolicyDetails> policyDetails() {
         return this.policyDetails;
     }
     /**
@@ -98,7 +98,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -112,7 +112,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -126,7 +126,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -24,7 +24,7 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deliveryOptions")
       private final @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
 
-    public Output<ConfigurationSetDeliveryOptionsArgs> getDeliveryOptions() {
+    public Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions() {
         return this.deliveryOptions == null ? Codegen.empty() : this.deliveryOptions;
     }
 
@@ -35,7 +35,7 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="reputationMetricsEnabled")
       private final @Nullable Output<Boolean> reputationMetricsEnabled;
 
-    public Output<Boolean> getReputationMetricsEnabled() {
+    public Output<Boolean> reputationMetricsEnabled() {
         return this.reputationMetricsEnabled == null ? Codegen.empty() : this.reputationMetricsEnabled;
     }
 
@@ -57,7 +57,7 @@ public final class ConfigurationSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sendingEnabled")
       private final @Nullable Output<Boolean> sendingEnabled;
 
-    public Output<Boolean> getSendingEnabled() {
+    public Output<Boolean> sendingEnabled() {
         return this.sendingEnabled == null ? Codegen.empty() : this.sendingEnabled;
     }
 

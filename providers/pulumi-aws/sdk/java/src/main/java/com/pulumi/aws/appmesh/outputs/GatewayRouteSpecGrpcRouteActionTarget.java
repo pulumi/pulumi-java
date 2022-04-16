@@ -24,7 +24,7 @@ public final class GatewayRouteSpecGrpcRouteActionTarget {
      * The virtual service gateway route target.
      * 
     */
-    public GatewayRouteSpecGrpcRouteActionTargetVirtualService getVirtualService() {
+    public GatewayRouteSpecGrpcRouteActionTargetVirtualService virtualService() {
         return this.virtualService;
     }
 

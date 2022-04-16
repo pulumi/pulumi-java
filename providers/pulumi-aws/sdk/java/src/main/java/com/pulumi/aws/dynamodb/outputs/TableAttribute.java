@@ -32,14 +32,14 @@ public final class TableAttribute {
      * The name of the index
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Attribute type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -15,14 +15,14 @@ public final class GetTableReplica extends com.pulumi.resources.InvokeArgs {
     @Import(name="kmsKeyArn", required=true)
       private final String kmsKeyArn;
 
-    public String getKmsKeyArn() {
+    public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
 
     @Import(name="regionName", required=true)
       private final String regionName;
 
-    public String getRegionName() {
+    public String regionName() {
         return this.regionName;
     }
 

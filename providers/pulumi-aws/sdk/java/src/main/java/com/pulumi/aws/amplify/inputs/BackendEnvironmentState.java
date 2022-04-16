@@ -22,7 +22,7 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -33,7 +33,7 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -44,7 +44,7 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="deploymentArtifacts")
       private final @Nullable Output<String> deploymentArtifacts;
 
-    public Output<String> getDeploymentArtifacts() {
+    public Output<String> deploymentArtifacts() {
         return this.deploymentArtifacts == null ? Codegen.empty() : this.deploymentArtifacts;
     }
 
@@ -55,7 +55,7 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName == null ? Codegen.empty() : this.environmentName;
     }
 
@@ -66,7 +66,7 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="stackName")
       private final @Nullable Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName == null ? Codegen.empty() : this.stackName;
     }
 

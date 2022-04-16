@@ -23,7 +23,7 @@ public final class ModelPackageGroupState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ModelPackageGroupState extends com.pulumi.resources.ResourceA
     @Import(name="modelPackageGroupDescription")
       private final @Nullable Output<String> modelPackageGroupDescription;
 
-    public Output<String> getModelPackageGroupDescription() {
+    public Output<String> modelPackageGroupDescription() {
         return this.modelPackageGroupDescription == null ? Codegen.empty() : this.modelPackageGroupDescription;
     }
 
@@ -45,7 +45,7 @@ public final class ModelPackageGroupState extends com.pulumi.resources.ResourceA
     @Import(name="modelPackageGroupName")
       private final @Nullable Output<String> modelPackageGroupName;
 
-    public Output<String> getModelPackageGroupName() {
+    public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName == null ? Codegen.empty() : this.modelPackageGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ModelPackageGroupState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class ModelPackageGroupState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

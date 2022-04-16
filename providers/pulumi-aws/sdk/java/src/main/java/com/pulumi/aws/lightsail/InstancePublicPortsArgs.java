@@ -23,7 +23,7 @@ public final class InstancePublicPortsArgs extends com.pulumi.resources.Resource
     @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -34,7 +34,7 @@ public final class InstancePublicPortsArgs extends com.pulumi.resources.Resource
     @Import(name="portInfos", required=true)
       private final Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
 
-    public Output<List<InstancePublicPortsPortInfoArgs>> getPortInfos() {
+    public Output<List<InstancePublicPortsPortInfoArgs>> portInfos() {
         return this.portInfos;
     }
 

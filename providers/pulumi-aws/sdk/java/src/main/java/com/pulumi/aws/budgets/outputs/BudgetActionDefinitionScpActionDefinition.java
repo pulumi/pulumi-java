@@ -33,14 +33,14 @@ public final class BudgetActionDefinitionScpActionDefinition {
      * The policy ID attached.
      * 
     */
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
     /**
      * A list of target IDs.
      * 
     */
-    public List<String> getTargetIds() {
+    public List<String> targetIds() {
         return this.targetIds;
     }
 

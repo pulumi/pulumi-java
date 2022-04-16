@@ -24,10 +24,10 @@ public final class PhpAppLayerCloudwatchConfiguration {
         this.logStreams = logStreams;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public List<PhpAppLayerCloudwatchConfigurationLogStream> getLogStreams() {
+    public List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams() {
         return this.logStreams == null ? List.of() : this.logStreams;
     }
 

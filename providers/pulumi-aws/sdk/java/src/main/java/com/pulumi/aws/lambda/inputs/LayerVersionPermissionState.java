@@ -23,7 +23,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -34,7 +34,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="layerName")
       private final @Nullable Output<String> layerName;
 
-    public Output<String> getLayerName() {
+    public Output<String> layerName() {
         return this.layerName == null ? Codegen.empty() : this.layerName;
     }
 
@@ -45,7 +45,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId == null ? Codegen.empty() : this.organizationId;
     }
 
@@ -56,7 +56,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -67,7 +67,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 
@@ -78,7 +78,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
@@ -89,7 +89,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="statementId")
       private final @Nullable Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId == null ? Codegen.empty() : this.statementId;
     }
 
@@ -100,7 +100,7 @@ public final class LayerVersionPermissionState extends com.pulumi.resources.Reso
     @Import(name="versionNumber")
       private final @Nullable Output<Integer> versionNumber;
 
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
     }
 

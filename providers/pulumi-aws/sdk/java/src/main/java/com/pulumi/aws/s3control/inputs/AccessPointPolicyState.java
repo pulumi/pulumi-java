@@ -23,7 +23,7 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
     @Import(name="accessPointArn")
       private final @Nullable Output<String> accessPointArn;
 
-    public Output<String> getAccessPointArn() {
+    public Output<String> accessPointArn() {
         return this.accessPointArn == null ? Codegen.empty() : this.accessPointArn;
     }
 
@@ -34,7 +34,7 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
     @Import(name="hasPublicAccessPolicy")
       private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
-    public Output<Boolean> getHasPublicAccessPolicy() {
+    public Output<Boolean> hasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
     }
 
@@ -45,7 +45,7 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

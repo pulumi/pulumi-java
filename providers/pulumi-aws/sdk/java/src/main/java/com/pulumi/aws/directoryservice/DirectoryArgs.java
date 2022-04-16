@@ -26,7 +26,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -37,7 +37,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectSettings")
       private final @Nullable Output<DirectoryConnectSettingsArgs> connectSettings;
 
-    public Output<DirectoryConnectSettingsArgs> getConnectSettings() {
+    public Output<DirectoryConnectSettingsArgs> connectSettings() {
         return this.connectSettings == null ? Codegen.empty() : this.connectSettings;
     }
 
@@ -48,7 +48,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="edition")
       private final @Nullable Output<String> edition;
 
-    public Output<String> getEdition() {
+    public Output<String> edition() {
         return this.edition == null ? Codegen.empty() : this.edition;
     }
 
@@ -70,7 +70,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableSso")
       private final @Nullable Output<Boolean> enableSso;
 
-    public Output<Boolean> getEnableSso() {
+    public Output<Boolean> enableSso() {
         return this.enableSso == null ? Codegen.empty() : this.enableSso;
     }
 
@@ -81,7 +81,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -92,7 +92,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -103,7 +103,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
@@ -114,7 +114,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -125,7 +125,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -136,7 +136,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -147,7 +147,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSettings")
       private final @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings;
 
-    public Output<DirectoryVpcSettingsArgs> getVpcSettings() {
+    public Output<DirectoryVpcSettingsArgs> vpcSettings() {
         return this.vpcSettings == null ? Codegen.empty() : this.vpcSettings;
     }
 

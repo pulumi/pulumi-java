@@ -23,7 +23,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -34,7 +34,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
     @Import(name="intervalUnit")
       private final @Nullable Output<String> intervalUnit;
 
-    public Output<String> getIntervalUnit() {
+    public Output<String> intervalUnit() {
         return this.intervalUnit == null ? Codegen.empty() : this.intervalUnit;
     }
 
@@ -45,7 +45,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
     @Import(name="times")
       private final @Nullable Output<String> times;
 
-    public Output<String> getTimes() {
+    public Output<String> times() {
         return this.times == null ? Codegen.empty() : this.times;
     }
 

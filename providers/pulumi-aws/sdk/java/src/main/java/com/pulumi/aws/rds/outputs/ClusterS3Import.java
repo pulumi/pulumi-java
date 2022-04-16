@@ -55,35 +55,35 @@ public final class ClusterS3Import {
      * The bucket name where your backup is stored
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * Can be blank, but is the path to your backup
      * 
     */
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
      * Role applied to load the data.
      * 
     */
-    public String getIngestionRole() {
+    public String ingestionRole() {
         return this.ingestionRole;
     }
     /**
      * Source engine for the backup
      * 
     */
-    public String getSourceEngine() {
+    public String sourceEngine() {
         return this.sourceEngine;
     }
     /**
      * Version of the source engine used to make the backup
      * 
     */
-    public String getSourceEngineVersion() {
+    public String sourceEngineVersion() {
         return this.sourceEngineVersion;
     }
 

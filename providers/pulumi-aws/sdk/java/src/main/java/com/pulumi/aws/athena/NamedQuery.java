@@ -40,7 +40,7 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The database to which the query belongs.
      * 
      */
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
     /**
@@ -54,7 +54,7 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return A brief explanation of the query. Maximum length of 1024.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +68,7 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The plain language name for the query. Maximum length of 128.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -82,7 +82,7 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The text of the query itself. In other words, all query statements. Maximum length of 262144.
      * 
      */
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
     /**
@@ -96,7 +96,7 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The workgroup to which the query belongs. Defaults to `primary`
      * 
      */
-    public Output</* @Nullable */ String> getWorkgroup() {
+    public Output</* @Nullable */ String> workgroup() {
         return this.workgroup;
     }
 

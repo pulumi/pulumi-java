@@ -41,7 +41,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS to the autoscaling schedule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return The name or Amazon Resource Name (ARN) of the Auto Scaling group.
      * 
      */
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
     /**
@@ -69,7 +69,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
      * 
      */
-    public Output<Integer> getDesiredCapacity() {
+    public Output<Integer> desiredCapacity() {
         return this.desiredCapacity;
     }
     /**
@@ -85,7 +85,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -101,7 +101,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * Set to -1 if you don't want to change the maximum size at the scheduled time.
      * 
      */
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize;
     }
     /**
@@ -117,7 +117,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * Set to -1 if you don't want to change the minimum size at the scheduled time.
      * 
      */
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize;
     }
     /**
@@ -131,7 +131,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
      * 
      */
-    public Output<String> getRecurrence() {
+    public Output<String> recurrence() {
         return this.recurrence;
     }
     /**
@@ -145,7 +145,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return The name of this scaling action.
      * 
      */
-    public Output<String> getScheduledActionName() {
+    public Output<String> scheduledActionName() {
         return this.scheduledActionName;
     }
     /**
@@ -161,7 +161,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -175,7 +175,7 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

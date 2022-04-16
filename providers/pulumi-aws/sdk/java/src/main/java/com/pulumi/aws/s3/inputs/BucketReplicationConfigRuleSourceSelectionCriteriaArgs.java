@@ -23,7 +23,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
     @Import(name="replicaModifications")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications;
 
-    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> getReplicaModifications() {
+    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications() {
         return this.replicaModifications == null ? Codegen.empty() : this.replicaModifications;
     }
 
@@ -34,7 +34,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
     @Import(name="sseKmsEncryptedObjects")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
-    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
+    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects() {
         return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
     }
 

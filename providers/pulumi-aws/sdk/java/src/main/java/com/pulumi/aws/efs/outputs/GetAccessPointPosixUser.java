@@ -41,14 +41,14 @@ public final class GetAccessPointPosixUser {
      * Group ID
      * 
     */
-    public Integer getGid() {
+    public Integer gid() {
         return this.gid;
     }
     /**
      * Secondary group IDs
      * 
     */
-    public List<Integer> getSecondaryGids() {
+    public List<Integer> secondaryGids() {
         return this.secondaryGids;
     }
     /**
@@ -56,7 +56,7 @@ public final class GetAccessPointPosixUser {
      * * `root_directory`- Single element list containing information on the directory on the Amazon EFS file system that the access point provides access to.
      * 
     */
-    public Integer getUid() {
+    public Integer uid() {
         return this.uid;
     }
 

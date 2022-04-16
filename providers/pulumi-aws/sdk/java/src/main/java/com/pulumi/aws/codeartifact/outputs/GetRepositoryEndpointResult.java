@@ -40,30 +40,30 @@ public final class GetRepositoryEndpointResult {
         this.repositoryEndpoint = repositoryEndpoint;
     }
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
-    public String getDomainOwner() {
+    public String domainOwner() {
         return this.domainOwner;
     }
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getRepository() {
+    public String repository() {
         return this.repository;
     }
     /**
      * The URL of the returned endpoint.
      * 
     */
-    public String getRepositoryEndpoint() {
+    public String repositoryEndpoint() {
         return this.repositoryEndpoint;
     }
 

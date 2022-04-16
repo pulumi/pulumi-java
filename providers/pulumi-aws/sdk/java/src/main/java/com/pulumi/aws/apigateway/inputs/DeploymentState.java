@@ -23,7 +23,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -34,7 +34,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionArn")
       private final @Nullable Output<String> executionArn;
 
-    public Output<String> getExecutionArn() {
+    public Output<String> executionArn() {
         return this.executionArn == null ? Codegen.empty() : this.executionArn;
     }
 
@@ -59,7 +59,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invokeUrl")
       private final @Nullable Output<String> invokeUrl;
 
-    public Output<String> getInvokeUrl() {
+    public Output<String> invokeUrl() {
         return this.invokeUrl == null ? Codegen.empty() : this.invokeUrl;
     }
 
@@ -70,7 +70,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
@@ -81,7 +81,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageDescription")
       private final @Nullable Output<String> stageDescription;
 
-    public Output<String> getStageDescription() {
+    public Output<String> stageDescription() {
         return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
     }
 
@@ -92,7 +92,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
@@ -103,7 +103,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
+    public Output<Map<String,String>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
@@ -114,7 +114,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> getVariables() {
+    public Output<Map<String,String>> variables() {
         return this.variables == null ? Codegen.empty() : this.variables;
     }
 

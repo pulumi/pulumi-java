@@ -59,37 +59,37 @@ public final class GetUserResult {
      * A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
      * 
     */
-    public Optional<String> getAccessString() {
+    public Optional<String> accessString() {
         return Optional.ofNullable(this.accessString);
     }
-    public Optional<String> getEngine() {
+    public Optional<String> engine() {
         return Optional.ofNullable(this.engine);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getNoPasswordRequired() {
+    public Optional<Boolean> noPasswordRequired() {
         return Optional.ofNullable(this.noPasswordRequired);
     }
-    public List<String> getPasswords() {
+    public List<String> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
     /**
      * The identifier for the user.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
     /**
      * The user name of the user.
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

@@ -25,7 +25,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="detailType")
       private final @Nullable Output<String> detailType;
 
-    public Output<String> getDetailType() {
+    public Output<String> detailType() {
         return this.detailType == null ? Codegen.empty() : this.detailType;
     }
 
@@ -48,7 +48,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="eventTypeIds")
       private final @Nullable Output<List<String>> eventTypeIds;
 
-    public Output<List<String>> getEventTypeIds() {
+    public Output<List<String>> eventTypeIds() {
         return this.eventTypeIds == null ? Codegen.empty() : this.eventTypeIds;
     }
 
@@ -59,7 +59,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 
@@ -81,7 +81,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -92,7 +92,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -114,7 +114,7 @@ public final class NotificationRuleState extends com.pulumi.resources.ResourceAr
     @Import(name="targets")
       private final @Nullable Output<List<NotificationRuleTargetGetArgs>> targets;
 
-    public Output<List<NotificationRuleTargetGetArgs>> getTargets() {
+    public Output<List<NotificationRuleTargetGetArgs>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 

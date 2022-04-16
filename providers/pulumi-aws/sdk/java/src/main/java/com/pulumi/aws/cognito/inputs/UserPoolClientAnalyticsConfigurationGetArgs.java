@@ -23,7 +23,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
     @Import(name="applicationArn")
       private final @Nullable Output<String> applicationArn;
 
-    public Output<String> getApplicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn == null ? Codegen.empty() : this.applicationArn;
     }
 
@@ -34,7 +34,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -45,7 +45,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
@@ -56,7 +56,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -67,7 +67,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
     @Import(name="userDataShared")
       private final @Nullable Output<Boolean> userDataShared;
 
-    public Output<Boolean> getUserDataShared() {
+    public Output<Boolean> userDataShared() {
         return this.userDataShared == null ? Codegen.empty() : this.userDataShared;
     }
 

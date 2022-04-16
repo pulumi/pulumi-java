@@ -22,7 +22,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
     @Import(name="s3EncryptionMode")
       private final @Nullable Output<String> s3EncryptionMode;
 
-    public Output<String> getS3EncryptionMode() {
+    public Output<String> s3EncryptionMode() {
         return this.s3EncryptionMode == null ? Codegen.empty() : this.s3EncryptionMode;
     }
 

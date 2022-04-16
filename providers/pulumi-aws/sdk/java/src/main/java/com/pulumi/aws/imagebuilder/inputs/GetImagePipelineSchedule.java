@@ -19,7 +19,7 @@ public final class GetImagePipelineSchedule extends com.pulumi.resources.InvokeA
     @Import(name="pipelineExecutionStartCondition", required=true)
       private final String pipelineExecutionStartCondition;
 
-    public String getPipelineExecutionStartCondition() {
+    public String pipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition;
     }
 
@@ -30,7 +30,7 @@ public final class GetImagePipelineSchedule extends com.pulumi.resources.InvokeA
     @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;
 
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 

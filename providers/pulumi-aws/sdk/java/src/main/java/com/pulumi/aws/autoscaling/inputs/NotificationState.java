@@ -23,7 +23,7 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupNames")
       private final @Nullable Output<List<String>> groupNames;
 
-    public Output<List<String>> getGroupNames() {
+    public Output<List<String>> groupNames() {
         return this.groupNames == null ? Codegen.empty() : this.groupNames;
     }
 
@@ -35,7 +35,7 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
       private final @Nullable Output<List<String>> notifications;
 
-    public Output<List<String>> getNotifications() {
+    public Output<List<String>> notifications() {
         return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
@@ -46,7 +46,7 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 

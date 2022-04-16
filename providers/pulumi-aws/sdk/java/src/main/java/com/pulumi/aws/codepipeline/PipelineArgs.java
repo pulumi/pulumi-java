@@ -26,7 +26,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactStore", required=true)
       private final Output<PipelineArtifactStoreArgs> artifactStore;
 
-    public Output<PipelineArtifactStoreArgs> getArtifactStore() {
+    public Output<PipelineArtifactStoreArgs> artifactStore() {
         return this.artifactStore;
     }
 
@@ -37,7 +37,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -59,7 +59,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stages", required=true)
       private final Output<List<PipelineStageArgs>> stages;
 
-    public Output<List<PipelineStageArgs>> getStages() {
+    public Output<List<PipelineStageArgs>> stages() {
         return this.stages;
     }
 
@@ -70,7 +70,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

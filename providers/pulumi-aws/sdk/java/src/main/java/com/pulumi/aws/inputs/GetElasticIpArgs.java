@@ -24,7 +24,7 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetElasticIpFilter> filters;
 
-    public List<GetElasticIpFilter> getFilters() {
+    public List<GetElasticIpFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -46,7 +46,7 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicIp")
       private final @Nullable String publicIp;
 
-    public Optional<String> getPublicIp() {
+    public Optional<String> publicIp() {
         return this.publicIp == null ? Optional.empty() : Optional.ofNullable(this.publicIp);
     }
 
@@ -57,7 +57,7 @@ public final class GetElasticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

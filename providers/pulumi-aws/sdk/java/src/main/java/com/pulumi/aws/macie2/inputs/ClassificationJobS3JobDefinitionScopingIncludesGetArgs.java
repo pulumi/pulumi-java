@@ -23,7 +23,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesGetArgs extend
     @Import(name="ands")
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs>> ands;
 
-    public Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs>> getAnds() {
+    public Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs>> ands() {
         return this.ands == null ? Codegen.empty() : this.ands;
     }
 

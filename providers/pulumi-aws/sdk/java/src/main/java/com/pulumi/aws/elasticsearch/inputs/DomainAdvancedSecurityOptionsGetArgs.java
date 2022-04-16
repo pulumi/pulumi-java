@@ -23,7 +23,7 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends com.pulumi.resou
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -34,7 +34,7 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends com.pulumi.resou
     @Import(name="internalUserDatabaseEnabled")
       private final @Nullable Output<Boolean> internalUserDatabaseEnabled;
 
-    public Output<Boolean> getInternalUserDatabaseEnabled() {
+    public Output<Boolean> internalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled == null ? Codegen.empty() : this.internalUserDatabaseEnabled;
     }
 
@@ -45,7 +45,7 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends com.pulumi.resou
     @Import(name="masterUserOptions")
       private final @Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions;
 
-    public Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> getMasterUserOptions() {
+    public Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions() {
         return this.masterUserOptions == null ? Codegen.empty() : this.masterUserOptions;
     }
 

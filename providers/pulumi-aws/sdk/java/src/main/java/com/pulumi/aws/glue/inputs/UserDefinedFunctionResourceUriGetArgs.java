@@ -21,7 +21,7 @@ public final class UserDefinedFunctionResourceUriGetArgs extends com.pulumi.reso
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -32,7 +32,7 @@ public final class UserDefinedFunctionResourceUriGetArgs extends com.pulumi.reso
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

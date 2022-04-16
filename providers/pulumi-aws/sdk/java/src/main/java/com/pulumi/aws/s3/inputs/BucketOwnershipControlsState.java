@@ -23,7 +23,7 @@ public final class BucketOwnershipControlsState extends com.pulumi.resources.Res
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class BucketOwnershipControlsState extends com.pulumi.resources.Res
     @Import(name="rule")
       private final @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
 
-    public Output<BucketOwnershipControlsRuleGetArgs> getRule() {
+    public Output<BucketOwnershipControlsRuleGetArgs> rule() {
         return this.rule == null ? Codegen.empty() : this.rule;
     }
 

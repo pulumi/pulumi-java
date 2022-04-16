@@ -25,7 +25,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfigurations")
       private final @Nullable Output<List<SnapshotClusterConfigurationGetArgs>> clusterConfigurations;
 
-    public Output<List<SnapshotClusterConfigurationGetArgs>> getClusterConfigurations() {
+    public Output<List<SnapshotClusterConfigurationGetArgs>> clusterConfigurations() {
         return this.clusterConfigurations == null ? Codegen.empty() : this.clusterConfigurations;
     }
 
@@ -47,7 +47,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -58,7 +58,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -69,7 +69,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -91,7 +91,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -102,7 +102,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

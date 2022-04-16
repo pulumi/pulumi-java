@@ -19,7 +19,7 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends com.pul
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -30,7 +30,7 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends com.pul
     @Import(name="stringValue", required=true)
       private final String stringValue;
 
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

@@ -41,7 +41,7 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return The name of the request validator
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -55,7 +55,7 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return The ID of the associated Rest API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -69,7 +69,7 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return Boolean whether to validate request body. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getValidateRequestBody() {
+    public Output</* @Nullable */ Boolean> validateRequestBody() {
         return this.validateRequestBody;
     }
     /**
@@ -83,7 +83,7 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return Boolean whether to validate request parameters. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getValidateRequestParameters() {
+    public Output</* @Nullable */ Boolean> validateRequestParameters() {
         return this.validateRequestParameters;
     }
 

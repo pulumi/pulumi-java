@@ -35,14 +35,14 @@ public final class WebAclLoggingConfiguration {
      * Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
      * 
     */
-    public String getLogDestination() {
+    public String logDestination() {
         return this.logDestination;
     }
     /**
      * Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
      * 
     */
-    public Optional<WebAclLoggingConfigurationRedactedFields> getRedactedFields() {
+    public Optional<WebAclLoggingConfigurationRedactedFields> redactedFields() {
         return Optional.ofNullable(this.redactedFields);
     }
 

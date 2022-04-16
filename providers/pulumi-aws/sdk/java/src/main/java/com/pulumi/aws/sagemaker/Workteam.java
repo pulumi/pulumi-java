@@ -44,7 +44,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Workteam.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return A description of the work team.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
      * 
      */
-    public Output<List<WorkteamMemberDefinition>> getMemberDefinitions() {
+    public Output<List<WorkteamMemberDefinition>> memberDefinitions() {
         return this.memberDefinitions;
     }
     /**
@@ -86,7 +86,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
      * 
      */
-    public Output</* @Nullable */ WorkteamNotificationConfiguration> getNotificationConfiguration() {
+    public Output</* @Nullable */ WorkteamNotificationConfiguration> notificationConfiguration() {
         return this.notificationConfiguration;
     }
     /**
@@ -100,7 +100,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return The subdomain for your OIDC Identity Provider.
      * 
      */
-    public Output<String> getSubdomain() {
+    public Output<String> subdomain() {
         return this.subdomain;
     }
     /**
@@ -114,7 +114,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +128,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -142,7 +142,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return The name of the Workteam (must be unique).
      * 
      */
-    public Output<String> getWorkforceName() {
+    public Output<String> workforceName() {
         return this.workforceName;
     }
     /**
@@ -156,7 +156,7 @@ public class Workteam extends com.pulumi.resources.CustomResource {
      * @return The name of the workforce.
      * 
      */
-    public Output<String> getWorkteamName() {
+    public Output<String> workteamName() {
         return this.workteamName;
     }
 

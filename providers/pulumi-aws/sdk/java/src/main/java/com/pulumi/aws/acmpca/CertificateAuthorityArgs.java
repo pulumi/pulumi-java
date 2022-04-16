@@ -27,7 +27,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="certificateAuthorityConfiguration", required=true)
       private final Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
 
-    public Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> getCertificateAuthorityConfiguration() {
+    public Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration() {
         return this.certificateAuthorityConfiguration;
     }
 
@@ -38,7 +38,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="permanentDeletionTimeInDays")
       private final @Nullable Output<Integer> permanentDeletionTimeInDays;
 
-    public Output<Integer> getPermanentDeletionTimeInDays() {
+    public Output<Integer> permanentDeletionTimeInDays() {
         return this.permanentDeletionTimeInDays == null ? Codegen.empty() : this.permanentDeletionTimeInDays;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="revocationConfiguration")
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
+    public Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration() {
         return this.revocationConfiguration == null ? Codegen.empty() : this.revocationConfiguration;
     }
 
@@ -71,7 +71,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -82,7 +82,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

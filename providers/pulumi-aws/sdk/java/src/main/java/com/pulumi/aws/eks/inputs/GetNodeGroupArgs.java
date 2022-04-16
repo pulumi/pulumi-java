@@ -22,7 +22,7 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -33,7 +33,7 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="nodeGroupName", required=true)
       private final String nodeGroupName;
 
-    public String getNodeGroupName() {
+    public String nodeGroupName() {
         return this.nodeGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

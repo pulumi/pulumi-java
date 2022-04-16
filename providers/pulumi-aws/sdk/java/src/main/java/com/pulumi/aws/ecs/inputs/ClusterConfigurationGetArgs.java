@@ -22,7 +22,7 @@ public final class ClusterConfigurationGetArgs extends com.pulumi.resources.Reso
     @Import(name="executeCommandConfiguration")
       private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
 
-    public Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> getExecuteCommandConfiguration() {
+    public Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration() {
         return this.executeCommandConfiguration == null ? Codegen.empty() : this.executeCommandConfiguration;
     }
 

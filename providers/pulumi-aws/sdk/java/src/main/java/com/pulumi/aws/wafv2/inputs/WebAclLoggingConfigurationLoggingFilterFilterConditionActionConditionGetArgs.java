@@ -21,7 +21,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 

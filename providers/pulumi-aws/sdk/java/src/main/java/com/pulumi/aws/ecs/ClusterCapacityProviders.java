@@ -38,7 +38,7 @@ public class ClusterCapacityProviders extends com.pulumi.resources.CustomResourc
      * @return Set of names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCapacityProviders() {
+    public Output</* @Nullable */ List<String>> capacityProviders() {
         return this.capacityProviders;
     }
     /**
@@ -52,7 +52,7 @@ public class ClusterCapacityProviders extends com.pulumi.resources.CustomResourc
      * @return Name of the ECS cluster to manage capacity providers for.
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -66,7 +66,7 @@ public class ClusterCapacityProviders extends com.pulumi.resources.CustomResourc
      * @return Set of capacity provider strategies to use by default for the cluster. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ClusterCapacityProvidersDefaultCapacityProviderStrategy>> getDefaultCapacityProviderStrategies() {
+    public Output</* @Nullable */ List<ClusterCapacityProvidersDefaultCapacityProviderStrategy>> defaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies;
     }
 

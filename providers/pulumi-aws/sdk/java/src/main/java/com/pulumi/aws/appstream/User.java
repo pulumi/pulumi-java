@@ -41,7 +41,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return ARN of the appstream user.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Authentication type for the user. You must specify USERPOOL. Valid values: `API`, `SAML`, `USERPOOL`
      * 
      */
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
     /**
@@ -69,7 +69,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Date and time, in UTC and extended RFC 3339 format, when the user was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -83,7 +83,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the user in the user pool is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -97,7 +97,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return First name, or given name, of the user.
      * 
      */
-    public Output</* @Nullable */ String> getFirstName() {
+    public Output</* @Nullable */ String> firstName() {
         return this.firstName;
     }
     /**
@@ -111,7 +111,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Last name, or surname, of the user.
      * 
      */
-    public Output</* @Nullable */ String> getLastName() {
+    public Output</* @Nullable */ String> lastName() {
         return this.lastName;
     }
     /**
@@ -125,7 +125,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Send an email notification.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSendEmailNotification() {
+    public Output</* @Nullable */ Boolean> sendEmailNotification() {
         return this.sendEmailNotification;
     }
     /**
@@ -139,7 +139,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Email address of the user.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

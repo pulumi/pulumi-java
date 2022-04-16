@@ -25,7 +25,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -36,7 +36,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitors")
       private final @Nullable Output<List<EnvironmentMonitorArgs>> monitors;
 
-    public Output<List<EnvironmentMonitorArgs>> getMonitors() {
+    public Output<List<EnvironmentMonitorArgs>> monitors() {
         return this.monitors == null ? Codegen.empty() : this.monitors;
     }
 
@@ -58,7 +58,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

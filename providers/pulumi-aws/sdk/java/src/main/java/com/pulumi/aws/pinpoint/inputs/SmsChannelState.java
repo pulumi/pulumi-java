@@ -24,7 +24,7 @@ public final class SmsChannelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -35,7 +35,7 @@ public final class SmsChannelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -46,7 +46,7 @@ public final class SmsChannelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="promotionalMessagesPerSecond")
       private final @Nullable Output<Integer> promotionalMessagesPerSecond;
 
-    public Output<Integer> getPromotionalMessagesPerSecond() {
+    public Output<Integer> promotionalMessagesPerSecond() {
         return this.promotionalMessagesPerSecond == null ? Codegen.empty() : this.promotionalMessagesPerSecond;
     }
 
@@ -57,7 +57,7 @@ public final class SmsChannelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="senderId")
       private final @Nullable Output<String> senderId;
 
-    public Output<String> getSenderId() {
+    public Output<String> senderId() {
         return this.senderId == null ? Codegen.empty() : this.senderId;
     }
 
@@ -68,7 +68,7 @@ public final class SmsChannelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortCode")
       private final @Nullable Output<String> shortCode;
 
-    public Output<String> getShortCode() {
+    public Output<String> shortCode() {
         return this.shortCode == null ? Codegen.empty() : this.shortCode;
     }
 
@@ -79,7 +79,7 @@ public final class SmsChannelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="transactionalMessagesPerSecond")
       private final @Nullable Output<Integer> transactionalMessagesPerSecond;
 
-    public Output<Integer> getTransactionalMessagesPerSecond() {
+    public Output<Integer> transactionalMessagesPerSecond() {
         return this.transactionalMessagesPerSecond == null ? Codegen.empty() : this.transactionalMessagesPerSecond;
     }
 

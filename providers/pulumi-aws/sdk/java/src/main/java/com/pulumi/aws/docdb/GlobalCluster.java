@@ -57,7 +57,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return Global Cluster Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return Name for an automatically created database on cluster creation.
      * 
      */
-    public Output</* @Nullable */ String> getDatabaseName() {
+    public Output</* @Nullable */ String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -85,13 +85,13 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeletionProtection() {
+    public Output</* @Nullable */ Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     @Export(name="engine", type=String.class, parameters={})
     private Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     /**
@@ -107,7 +107,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * * **NOTE:** Upgrading major versions is not supported.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -121,7 +121,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return The global cluster identifier.
      * 
      */
-    public Output<String> getGlobalClusterIdentifier() {
+    public Output<String> globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
     /**
@@ -135,7 +135,7 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return Set of objects containing Global Cluster members.
      * 
      */
-    public Output<List<GlobalClusterGlobalClusterMember>> getGlobalClusterMembers() {
+    public Output<List<GlobalClusterGlobalClusterMember>> globalClusterMembers() {
         return this.globalClusterMembers;
     }
     /**
@@ -149,25 +149,25 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed.
      * 
      */
-    public Output<String> getGlobalClusterResourceId() {
+    public Output<String> globalClusterResourceId() {
         return this.globalClusterResourceId;
     }
     @Export(name="sourceDbClusterIdentifier", type=String.class, parameters={})
     private Output<String> sourceDbClusterIdentifier;
 
-    public Output<String> getSourceDbClusterIdentifier() {
+    public Output<String> sourceDbClusterIdentifier() {
         return this.sourceDbClusterIdentifier;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     @Export(name="storageEncrypted", type=Boolean.class, parameters={})
     private Output<Boolean> storageEncrypted;
 
-    public Output<Boolean> getStorageEncrypted() {
+    public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
 

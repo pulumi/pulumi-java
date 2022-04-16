@@ -19,7 +19,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterArn", required=true)
       private final String clusterArn;
 
-    public String getClusterArn() {
+    public String clusterArn() {
         return this.clusterArn;
     }
 
@@ -30,7 +30,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

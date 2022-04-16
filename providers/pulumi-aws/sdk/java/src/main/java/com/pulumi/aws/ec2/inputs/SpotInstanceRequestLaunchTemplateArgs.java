@@ -22,7 +22,7 @@ public final class SpotInstanceRequestLaunchTemplateArgs extends com.pulumi.reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -33,7 +33,7 @@ public final class SpotInstanceRequestLaunchTemplateArgs extends com.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class SpotInstanceRequestLaunchTemplateArgs extends com.pulumi.reso
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

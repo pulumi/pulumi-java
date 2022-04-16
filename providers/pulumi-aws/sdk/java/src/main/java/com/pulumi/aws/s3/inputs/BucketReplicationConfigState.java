@@ -24,7 +24,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -46,7 +46,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
     @Import(name="rules")
       private final @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
 
-    public Output<List<BucketReplicationConfigRuleGetArgs>> getRules() {
+    public Output<List<BucketReplicationConfigRuleGetArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

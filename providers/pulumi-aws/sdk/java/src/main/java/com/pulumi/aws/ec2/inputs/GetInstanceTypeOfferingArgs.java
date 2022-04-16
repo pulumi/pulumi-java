@@ -23,7 +23,7 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
     @Import(name="filters")
       private final @Nullable List<GetInstanceTypeOfferingFilter> filters;
 
-    public List<GetInstanceTypeOfferingFilter> getFilters() {
+    public List<GetInstanceTypeOfferingFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -34,7 +34,7 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
     @Import(name="locationType")
       private final @Nullable String locationType;
 
-    public Optional<String> getLocationType() {
+    public Optional<String> locationType() {
         return this.locationType == null ? Optional.empty() : Optional.ofNullable(this.locationType);
     }
 
@@ -45,7 +45,7 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
     @Import(name="preferredInstanceTypes")
       private final @Nullable List<String> preferredInstanceTypes;
 
-    public List<String> getPreferredInstanceTypes() {
+    public List<String> preferredInstanceTypes() {
         return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;
     }
 

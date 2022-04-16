@@ -70,55 +70,55 @@ public final class GetAccessPointResult {
         this.tags = tags;
     }
 
-    public String getAccessPointId() {
+    public String accessPointId() {
         return this.accessPointId;
     }
     /**
      * Amazon Resource Name of the file system.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Amazon Resource Name of the file system.
      * 
     */
-    public String getFileSystemArn() {
+    public String fileSystemArn() {
         return this.fileSystemArn;
     }
     /**
      * The ID of the file system for which the access point is intended.
      * 
     */
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * Single element list containing operating system user and group applied to all file system requests made using the access point.
      * 
     */
-    public List<GetAccessPointPosixUser> getPosixUsers() {
+    public List<GetAccessPointPosixUser> posixUsers() {
         return this.posixUsers;
     }
-    public List<GetAccessPointRootDirectory> getRootDirectories() {
+    public List<GetAccessPointRootDirectory> rootDirectories() {
         return this.rootDirectories;
     }
     /**
      * Key-value mapping of resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

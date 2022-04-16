@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends com.pulum
     @Import(name="ipSet", required=true)
       private final Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet;
 
-    public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> getIpSet() {
+    public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet() {
         return this.ipSet;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends com.pulum
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 

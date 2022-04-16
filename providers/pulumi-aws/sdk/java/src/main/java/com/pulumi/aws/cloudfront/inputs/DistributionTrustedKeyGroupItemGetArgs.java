@@ -23,7 +23,7 @@ public final class DistributionTrustedKeyGroupItemGetArgs extends com.pulumi.res
     @Import(name="keyGroupId")
       private final @Nullable Output<String> keyGroupId;
 
-    public Output<String> getKeyGroupId() {
+    public Output<String> keyGroupId() {
         return this.keyGroupId == null ? Codegen.empty() : this.keyGroupId;
     }
 
@@ -34,7 +34,7 @@ public final class DistributionTrustedKeyGroupItemGetArgs extends com.pulumi.res
     @Import(name="keyPairIds")
       private final @Nullable Output<List<String>> keyPairIds;
 
-    public Output<List<String>> getKeyPairIds() {
+    public Output<List<String>> keyPairIds() {
         return this.keyPairIds == null ? Codegen.empty() : this.keyPairIds;
     }
 

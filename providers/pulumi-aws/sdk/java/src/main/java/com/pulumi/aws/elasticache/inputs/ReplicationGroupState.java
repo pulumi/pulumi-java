@@ -27,7 +27,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
     }
 
@@ -38,7 +38,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -49,7 +49,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="atRestEncryptionEnabled")
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Output<Boolean> getAtRestEncryptionEnabled() {
+    public Output<Boolean> atRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled == null ? Codegen.empty() : this.atRestEncryptionEnabled;
     }
 
@@ -60,7 +60,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
-    public Output<String> getAuthToken() {
+    public Output<String> authToken() {
         return this.authToken == null ? Codegen.empty() : this.authToken;
     }
 
@@ -71,7 +71,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> getAutoMinorVersionUpgrade() {
+    public Output<Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
     }
 
@@ -82,7 +82,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="automaticFailoverEnabled")
       private final @Nullable Output<Boolean> automaticFailoverEnabled;
 
-    public Output<Boolean> getAutomaticFailoverEnabled() {
+    public Output<Boolean> automaticFailoverEnabled() {
         return this.automaticFailoverEnabled == null ? Codegen.empty() : this.automaticFailoverEnabled;
     }
 
@@ -93,7 +93,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -104,7 +104,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="clusterEnabled")
       private final @Nullable Output<Boolean> clusterEnabled;
 
-    public Output<Boolean> getClusterEnabled() {
+    public Output<Boolean> clusterEnabled() {
         return this.clusterEnabled == null ? Codegen.empty() : this.clusterEnabled;
     }
 
@@ -115,7 +115,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="clusterMode")
       private final @Nullable Output<ReplicationGroupClusterModeGetArgs> clusterMode;
 
-    public Output<ReplicationGroupClusterModeGetArgs> getClusterMode() {
+    public Output<ReplicationGroupClusterModeGetArgs> clusterMode() {
         return this.clusterMode == null ? Codegen.empty() : this.clusterMode;
     }
 
@@ -126,7 +126,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="configurationEndpointAddress")
       private final @Nullable Output<String> configurationEndpointAddress;
 
-    public Output<String> getConfigurationEndpointAddress() {
+    public Output<String> configurationEndpointAddress() {
         return this.configurationEndpointAddress == null ? Codegen.empty() : this.configurationEndpointAddress;
     }
 
@@ -137,7 +137,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="dataTieringEnabled")
       private final @Nullable Output<Boolean> dataTieringEnabled;
 
-    public Output<Boolean> getDataTieringEnabled() {
+    public Output<Boolean> dataTieringEnabled() {
         return this.dataTieringEnabled == null ? Codegen.empty() : this.dataTieringEnabled;
     }
 
@@ -148,7 +148,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
@@ -159,7 +159,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -170,7 +170,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="engineVersionActual")
       private final @Nullable Output<String> engineVersionActual;
 
-    public Output<String> getEngineVersionActual() {
+    public Output<String> engineVersionActual() {
         return this.engineVersionActual == null ? Codegen.empty() : this.engineVersionActual;
     }
 
@@ -181,7 +181,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="finalSnapshotIdentifier")
       private final @Nullable Output<String> finalSnapshotIdentifier;
 
-    public Output<String> getFinalSnapshotIdentifier() {
+    public Output<String> finalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier == null ? Codegen.empty() : this.finalSnapshotIdentifier;
     }
 
@@ -192,7 +192,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="globalReplicationGroupId")
       private final @Nullable Output<String> globalReplicationGroupId;
 
-    public Output<String> getGlobalReplicationGroupId() {
+    public Output<String> globalReplicationGroupId() {
         return this.globalReplicationGroupId == null ? Codegen.empty() : this.globalReplicationGroupId;
     }
 
@@ -203,7 +203,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -214,7 +214,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -225,7 +225,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="memberClusters")
       private final @Nullable Output<List<String>> memberClusters;
 
-    public Output<List<String>> getMemberClusters() {
+    public Output<List<String>> memberClusters() {
         return this.memberClusters == null ? Codegen.empty() : this.memberClusters;
     }
 
@@ -236,7 +236,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="multiAzEnabled")
       private final @Nullable Output<Boolean> multiAzEnabled;
 
-    public Output<Boolean> getMultiAzEnabled() {
+    public Output<Boolean> multiAzEnabled() {
         return this.multiAzEnabled == null ? Codegen.empty() : this.multiAzEnabled;
     }
 
@@ -247,7 +247,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
@@ -258,7 +258,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="notificationTopicArn")
       private final @Nullable Output<String> notificationTopicArn;
 
-    public Output<String> getNotificationTopicArn() {
+    public Output<String> notificationTopicArn() {
         return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
     }
 
@@ -269,7 +269,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="numberCacheClusters")
       private final @Nullable Output<Integer> numberCacheClusters;
 
-    public Output<Integer> getNumberCacheClusters() {
+    public Output<Integer> numberCacheClusters() {
         return this.numberCacheClusters == null ? Codegen.empty() : this.numberCacheClusters;
     }
 
@@ -280,7 +280,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
     }
 
@@ -291,7 +291,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -302,7 +302,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="primaryEndpointAddress")
       private final @Nullable Output<String> primaryEndpointAddress;
 
-    public Output<String> getPrimaryEndpointAddress() {
+    public Output<String> primaryEndpointAddress() {
         return this.primaryEndpointAddress == null ? Codegen.empty() : this.primaryEndpointAddress;
     }
 
@@ -313,7 +313,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="readerEndpointAddress")
       private final @Nullable Output<String> readerEndpointAddress;
 
-    public Output<String> getReaderEndpointAddress() {
+    public Output<String> readerEndpointAddress() {
         return this.readerEndpointAddress == null ? Codegen.empty() : this.readerEndpointAddress;
     }
 
@@ -324,7 +324,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="replicationGroupDescription")
       private final @Nullable Output<String> replicationGroupDescription;
 
-    public Output<String> getReplicationGroupDescription() {
+    public Output<String> replicationGroupDescription() {
         return this.replicationGroupDescription == null ? Codegen.empty() : this.replicationGroupDescription;
     }
 
@@ -335,7 +335,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
 
-    public Output<String> getReplicationGroupId() {
+    public Output<String> replicationGroupId() {
         return this.replicationGroupId == null ? Codegen.empty() : this.replicationGroupId;
     }
 
@@ -346,7 +346,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -357,7 +357,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="securityGroupNames")
       private final @Nullable Output<List<String>> securityGroupNames;
 
-    public Output<List<String>> getSecurityGroupNames() {
+    public Output<List<String>> securityGroupNames() {
         return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
     }
 
@@ -368,7 +368,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="snapshotArns")
       private final @Nullable Output<List<String>> snapshotArns;
 
-    public Output<List<String>> getSnapshotArns() {
+    public Output<List<String>> snapshotArns() {
         return this.snapshotArns == null ? Codegen.empty() : this.snapshotArns;
     }
 
@@ -379,7 +379,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
-    public Output<String> getSnapshotName() {
+    public Output<String> snapshotName() {
         return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 
@@ -390,7 +390,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="snapshotRetentionLimit")
       private final @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Output<Integer> getSnapshotRetentionLimit() {
+    public Output<Integer> snapshotRetentionLimit() {
         return this.snapshotRetentionLimit == null ? Codegen.empty() : this.snapshotRetentionLimit;
     }
 
@@ -401,7 +401,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="snapshotWindow")
       private final @Nullable Output<String> snapshotWindow;
 
-    public Output<String> getSnapshotWindow() {
+    public Output<String> snapshotWindow() {
         return this.snapshotWindow == null ? Codegen.empty() : this.snapshotWindow;
     }
 
@@ -412,21 +412,21 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -437,7 +437,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="transitEncryptionEnabled")
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Output<Boolean> getTransitEncryptionEnabled() {
+    public Output<Boolean> transitEncryptionEnabled() {
         return this.transitEncryptionEnabled == null ? Codegen.empty() : this.transitEncryptionEnabled;
     }
 
@@ -448,7 +448,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     @Import(name="userGroupIds")
       private final @Nullable Output<List<String>> userGroupIds;
 
-    public Output<List<String>> getUserGroupIds() {
+    public Output<List<String>> userGroupIds() {
         return this.userGroupIds == null ? Codegen.empty() : this.userGroupIds;
     }
 

@@ -24,7 +24,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -46,7 +46,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
@@ -68,7 +68,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<CustomPluginLocationGetArgs> location;
 
-    public Output<CustomPluginLocationGetArgs> getLocation() {
+    public Output<CustomPluginLocationGetArgs> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,7 +79,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

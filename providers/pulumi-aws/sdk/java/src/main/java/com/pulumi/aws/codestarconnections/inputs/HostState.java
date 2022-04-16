@@ -23,7 +23,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerEndpoint")
       private final @Nullable Output<String> providerEndpoint;
 
-    public Output<String> getProviderEndpoint() {
+    public Output<String> providerEndpoint() {
         return this.providerEndpoint == null ? Codegen.empty() : this.providerEndpoint;
     }
 
@@ -56,7 +56,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
@@ -67,7 +67,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -78,7 +78,7 @@ public final class HostState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
       private final @Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration;
 
-    public Output<HostVpcConfigurationGetArgs> getVpcConfiguration() {
+    public Output<HostVpcConfigurationGetArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

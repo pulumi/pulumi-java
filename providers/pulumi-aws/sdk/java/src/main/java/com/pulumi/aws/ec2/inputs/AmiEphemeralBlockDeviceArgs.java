@@ -21,7 +21,7 @@ public final class AmiEphemeralBlockDeviceArgs extends com.pulumi.resources.Reso
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -33,7 +33,7 @@ public final class AmiEphemeralBlockDeviceArgs extends com.pulumi.resources.Reso
     @Import(name="virtualName", required=true)
       private final Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName;
     }
 

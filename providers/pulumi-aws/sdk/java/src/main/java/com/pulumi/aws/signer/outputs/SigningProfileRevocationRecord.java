@@ -25,13 +25,13 @@ public final class SigningProfileRevocationRecord {
         this.revokedBy = revokedBy;
     }
 
-    public Optional<String> getRevocationEffectiveFrom() {
+    public Optional<String> revocationEffectiveFrom() {
         return Optional.ofNullable(this.revocationEffectiveFrom);
     }
-    public Optional<String> getRevokedAt() {
+    public Optional<String> revokedAt() {
         return Optional.ofNullable(this.revokedAt);
     }
-    public Optional<String> getRevokedBy() {
+    public Optional<String> revokedBy() {
         return Optional.ofNullable(this.revokedBy);
     }
 

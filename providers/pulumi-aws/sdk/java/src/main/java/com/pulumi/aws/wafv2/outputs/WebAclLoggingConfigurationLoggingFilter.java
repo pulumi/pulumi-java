@@ -34,14 +34,14 @@ public final class WebAclLoggingConfigurationLoggingFilter {
      * Default handling for logs that don't match any of the specified filtering conditions. Valid values: `KEEP` or `DROP`.
      * 
     */
-    public String getDefaultBehavior() {
+    public String defaultBehavior() {
         return this.defaultBehavior;
     }
     /**
      * Filter(s) that you want to apply to the logs. See Filter below for more details.
      * 
     */
-    public List<WebAclLoggingConfigurationLoggingFilterFilter> getFilters() {
+    public List<WebAclLoggingConfigurationLoggingFilterFilter> filters() {
         return this.filters;
     }
 

@@ -22,7 +22,7 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
     @Import(name="encryptionOption")
       private final @Nullable Output<String> encryptionOption;
 
-    public Output<String> getEncryptionOption() {
+    public Output<String> encryptionOption() {
         return this.encryptionOption == null ? Codegen.empty() : this.encryptionOption;
     }
 
@@ -33,7 +33,7 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 

@@ -23,7 +23,7 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ciphertextBlob")
       private final @Nullable Output<String> ciphertextBlob;
 
-    public Output<String> getCiphertextBlob() {
+    public Output<String> ciphertextBlob() {
         return this.ciphertextBlob == null ? Codegen.empty() : this.ciphertextBlob;
     }
 
@@ -34,7 +34,7 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<Map<String,String>> context;
 
-    public Output<Map<String,String>> getContext() {
+    public Output<Map<String,String>> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -45,7 +45,7 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -56,7 +56,7 @@ public final class CiphertextState extends com.pulumi.resources.ResourceArgs {
     @Import(name="plaintext")
       private final @Nullable Output<String> plaintext;
 
-    public Output<String> getPlaintext() {
+    public Output<String> plaintext() {
         return this.plaintext == null ? Codegen.empty() : this.plaintext;
     }
 

@@ -28,7 +28,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceOverwriteReplicaSecret")
       private final @Nullable Output<Boolean> forceOverwriteReplicaSecret;
 
-    public Output<Boolean> getForceOverwriteReplicaSecret() {
+    public Output<Boolean> forceOverwriteReplicaSecret() {
         return this.forceOverwriteReplicaSecret == null ? Codegen.empty() : this.forceOverwriteReplicaSecret;
     }
 
@@ -50,7 +50,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -61,7 +61,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,7 +72,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -83,7 +83,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -94,7 +94,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recoveryWindowInDays")
       private final @Nullable Output<Integer> recoveryWindowInDays;
 
-    public Output<Integer> getRecoveryWindowInDays() {
+    public Output<Integer> recoveryWindowInDays() {
         return this.recoveryWindowInDays == null ? Codegen.empty() : this.recoveryWindowInDays;
     }
 
@@ -105,7 +105,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicas")
       private final @Nullable Output<List<SecretReplicaArgs>> replicas;
 
-    public Output<List<SecretReplicaArgs>> getReplicas() {
+    public Output<List<SecretReplicaArgs>> replicas() {
         return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
@@ -121,7 +121,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rotationLambdaArn;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-    public Output<String> getRotationLambdaArn() {
+    public Output<String> rotationLambdaArn() {
         return this.rotationLambdaArn == null ? Codegen.empty() : this.rotationLambdaArn;
     }
 
@@ -137,7 +137,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecretRotationRulesArgs> rotationRules;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-    public Output<SecretRotationRulesArgs> getRotationRules() {
+    public Output<SecretRotationRulesArgs> rotationRules() {
         return this.rotationRules == null ? Codegen.empty() : this.rotationRules;
     }
 
@@ -148,7 +148,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

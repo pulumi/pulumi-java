@@ -22,7 +22,7 @@ public final class ImagePipelineScheduleGetArgs extends com.pulumi.resources.Res
     @Import(name="pipelineExecutionStartCondition")
       private final @Nullable Output<String> pipelineExecutionStartCondition;
 
-    public Output<String> getPipelineExecutionStartCondition() {
+    public Output<String> pipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition == null ? Codegen.empty() : this.pipelineExecutionStartCondition;
     }
 
@@ -33,7 +33,7 @@ public final class ImagePipelineScheduleGetArgs extends com.pulumi.resources.Res
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 

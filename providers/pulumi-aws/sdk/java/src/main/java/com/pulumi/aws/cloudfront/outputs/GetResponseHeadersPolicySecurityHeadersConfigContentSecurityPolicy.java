@@ -33,14 +33,14 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentSecurityP
      * The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
      * 
     */
-    public String getContentSecurityPolicy() {
+    public String contentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
     /**
      * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
     */
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

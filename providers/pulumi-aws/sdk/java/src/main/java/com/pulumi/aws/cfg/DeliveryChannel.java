@@ -43,7 +43,7 @@ public class DeliveryChannel extends com.pulumi.resources.CustomResource {
      * @return The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class DeliveryChannel extends com.pulumi.resources.CustomResource {
      * @return The name of the S3 bucket used to store the configuration history.
      * 
      */
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName;
     }
     /**
@@ -71,7 +71,7 @@ public class DeliveryChannel extends com.pulumi.resources.CustomResource {
      * @return The prefix for the specified S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> getS3KeyPrefix() {
+    public Output</* @Nullable */ String> s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
     /**
@@ -85,7 +85,7 @@ public class DeliveryChannel extends com.pulumi.resources.CustomResource {
      * @return The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> getS3KmsKeyArn() {
+    public Output</* @Nullable */ String> s3KmsKeyArn() {
         return this.s3KmsKeyArn;
     }
     /**
@@ -99,7 +99,7 @@ public class DeliveryChannel extends com.pulumi.resources.CustomResource {
      * @return Options for how AWS Config delivers configuration snapshots. See below
      * 
      */
-    public Output</* @Nullable */ DeliveryChannelSnapshotDeliveryProperties> getSnapshotDeliveryProperties() {
+    public Output</* @Nullable */ DeliveryChannelSnapshotDeliveryProperties> snapshotDeliveryProperties() {
         return this.snapshotDeliveryProperties;
     }
     /**
@@ -113,7 +113,7 @@ public class DeliveryChannel extends com.pulumi.resources.CustomResource {
      * @return The ARN of the SNS topic that AWS Config delivers notifications to.
      * 
      */
-    public Output</* @Nullable */ String> getSnsTopicArn() {
+    public Output</* @Nullable */ String> snsTopicArn() {
         return this.snsTopicArn;
     }
 

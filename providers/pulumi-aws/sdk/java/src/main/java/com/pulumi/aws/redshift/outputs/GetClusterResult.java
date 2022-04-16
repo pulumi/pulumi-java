@@ -236,213 +236,213 @@ public final class GetClusterResult {
      * Whether major version upgrades can be applied during maintenance period
      * 
     */
-    public Boolean getAllowVersionUpgrade() {
+    public Boolean allowVersionUpgrade() {
         return this.allowVersionUpgrade;
     }
     /**
      * The backup retention period
      * 
     */
-    public Integer getAutomatedSnapshotRetentionPeriod() {
+    public Integer automatedSnapshotRetentionPeriod() {
         return this.automatedSnapshotRetentionPeriod;
     }
     /**
      * The availability zone of the cluster
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
      * The name of the S3 bucket where the log files are to be stored
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * The cluster identifier
      * 
     */
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
      * The name of the parameter group to be associated with this cluster
      * 
     */
-    public String getClusterParameterGroupName() {
+    public String clusterParameterGroupName() {
         return this.clusterParameterGroupName;
     }
     /**
      * The public key for the cluster
      * 
     */
-    public String getClusterPublicKey() {
+    public String clusterPublicKey() {
         return this.clusterPublicKey;
     }
     /**
      * The cluster revision number
      * 
     */
-    public String getClusterRevisionNumber() {
+    public String clusterRevisionNumber() {
         return this.clusterRevisionNumber;
     }
     /**
      * The security groups associated with the cluster
      * 
     */
-    public List<String> getClusterSecurityGroups() {
+    public List<String> clusterSecurityGroups() {
         return this.clusterSecurityGroups;
     }
     /**
      * The name of a cluster subnet group to be associated with this cluster
      * 
     */
-    public String getClusterSubnetGroupName() {
+    public String clusterSubnetGroupName() {
         return this.clusterSubnetGroupName;
     }
     /**
      * The cluster type
      * 
     */
-    public String getClusterType() {
+    public String clusterType() {
         return this.clusterType;
     }
-    public String getClusterVersion() {
+    public String clusterVersion() {
         return this.clusterVersion;
     }
     /**
      * The name of the default database in the cluster
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * The Elastic IP of the cluster
      * 
     */
-    public String getElasticIp() {
+    public String elasticIp() {
         return this.elasticIp;
     }
     /**
      * Whether cluster logging is enabled
      * 
     */
-    public Boolean getEnableLogging() {
+    public Boolean enableLogging() {
         return this.enableLogging;
     }
     /**
      * Whether the cluster data is encrypted
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
     /**
      * The cluster endpoint
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * Whether enhanced VPC routing is enabled
      * 
     */
-    public Boolean getEnhancedVpcRouting() {
+    public Boolean enhancedVpcRouting() {
         return this.enhancedVpcRouting;
     }
     /**
      * The IAM roles associated to the cluster
      * 
     */
-    public List<String> getIamRoles() {
+    public List<String> iamRoles() {
         return this.iamRoles;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The KMS encryption key associated to the cluster
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * Username for the master DB user
      * 
     */
-    public String getMasterUsername() {
+    public String masterUsername() {
         return this.masterUsername;
     }
     /**
      * The cluster node type
      * 
     */
-    public String getNodeType() {
+    public String nodeType() {
         return this.nodeType;
     }
     /**
      * The number of nodes in the cluster
      * 
     */
-    public Integer getNumberOfNodes() {
+    public Integer numberOfNodes() {
         return this.numberOfNodes;
     }
     /**
      * The port the cluster responds on
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * The maintenance window
      * 
     */
-    public String getPreferredMaintenanceWindow() {
+    public String preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
      * Whether the cluster is publicly accessible
      * 
     */
-    public Boolean getPubliclyAccessible() {
+    public Boolean publiclyAccessible() {
         return this.publiclyAccessible;
     }
     /**
      * The folder inside the S3 bucket where the log files are stored
      * 
     */
-    public String getS3KeyPrefix() {
+    public String s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
     /**
      * The tags associated to the cluster
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The VPC Id associated with the cluster
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
     /**
      * The VPC security group Ids associated with the cluster
      * 
     */
-    public List<String> getVpcSecurityGroupIds() {
+    public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 

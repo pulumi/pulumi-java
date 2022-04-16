@@ -75,49 +75,49 @@ public final class ApplicationApplicationConfiguration {
      * The code location and type parameters for the application.
      * 
     */
-    public ApplicationApplicationConfigurationApplicationCodeConfiguration getApplicationCodeConfiguration() {
+    public ApplicationApplicationConfigurationApplicationCodeConfiguration applicationCodeConfiguration() {
         return this.applicationCodeConfiguration;
     }
     /**
      * Describes whether snapshots are enabled for a Flink-based application.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationApplicationSnapshotConfiguration> getApplicationSnapshotConfiguration() {
+    public Optional<ApplicationApplicationConfigurationApplicationSnapshotConfiguration> applicationSnapshotConfiguration() {
         return Optional.ofNullable(this.applicationSnapshotConfiguration);
     }
     /**
      * Describes execution properties for a Flink-based application.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationEnvironmentProperties> getEnvironmentProperties() {
+    public Optional<ApplicationApplicationConfigurationEnvironmentProperties> environmentProperties() {
         return Optional.ofNullable(this.environmentProperties);
     }
     /**
      * The configuration of a Flink-based application.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfiguration> getFlinkApplicationConfiguration() {
+    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfiguration> flinkApplicationConfiguration() {
         return Optional.ofNullable(this.flinkApplicationConfiguration);
     }
     /**
      * Describes the starting properties for a Flink-based application.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationRunConfiguration> getRunConfiguration() {
+    public Optional<ApplicationApplicationConfigurationRunConfiguration> runConfiguration() {
         return Optional.ofNullable(this.runConfiguration);
     }
     /**
      * The configuration of a SQL-based application.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationSqlApplicationConfiguration> getSqlApplicationConfiguration() {
+    public Optional<ApplicationApplicationConfigurationSqlApplicationConfiguration> sqlApplicationConfiguration() {
         return Optional.ofNullable(this.sqlApplicationConfiguration);
     }
     /**
      * The VPC configuration of a Flink-based application.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationVpcConfiguration> getVpcConfiguration() {
+    public Optional<ApplicationApplicationConfigurationVpcConfiguration> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
 

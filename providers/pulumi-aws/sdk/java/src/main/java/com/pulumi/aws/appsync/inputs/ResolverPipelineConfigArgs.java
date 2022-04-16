@@ -23,7 +23,7 @@ public final class ResolverPipelineConfigArgs extends com.pulumi.resources.Resou
     @Import(name="functions")
       private final @Nullable Output<List<String>> functions;
 
-    public Output<List<String>> getFunctions() {
+    public Output<List<String>> functions() {
         return this.functions == null ? Codegen.empty() : this.functions;
     }
 

@@ -17,14 +17,14 @@ public final class GetListenerDefaultActionForward extends com.pulumi.resources.
     @Import(name="stickinesses", required=true)
       private final List<GetListenerDefaultActionForwardStickiness> stickinesses;
 
-    public List<GetListenerDefaultActionForwardStickiness> getStickinesses() {
+    public List<GetListenerDefaultActionForwardStickiness> stickinesses() {
         return this.stickinesses;
     }
 
     @Import(name="targetGroups", required=true)
       private final List<GetListenerDefaultActionForwardTargetGroup> targetGroups;
 
-    public List<GetListenerDefaultActionForwardTargetGroup> getTargetGroups() {
+    public List<GetListenerDefaultActionForwardTargetGroup> targetGroups() {
         return this.targetGroups;
     }
 

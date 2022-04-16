@@ -25,7 +25,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -36,7 +36,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="cookiesConfig")
       private final @Nullable Output<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig;
 
-    public Output<OriginRequestPolicyCookiesConfigGetArgs> getCookiesConfig() {
+    public Output<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig() {
         return this.cookiesConfig == null ? Codegen.empty() : this.cookiesConfig;
     }
 
@@ -47,7 +47,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -58,7 +58,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="headersConfig")
       private final @Nullable Output<OriginRequestPolicyHeadersConfigGetArgs> headersConfig;
 
-    public Output<OriginRequestPolicyHeadersConfigGetArgs> getHeadersConfig() {
+    public Output<OriginRequestPolicyHeadersConfigGetArgs> headersConfig() {
         return this.headersConfig == null ? Codegen.empty() : this.headersConfig;
     }
 
@@ -69,7 +69,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class OriginRequestPolicyState extends com.pulumi.resources.Resourc
     @Import(name="queryStringsConfig")
       private final @Nullable Output<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig;
 
-    public Output<OriginRequestPolicyQueryStringsConfigGetArgs> getQueryStringsConfig() {
+    public Output<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig() {
         return this.queryStringsConfig == null ? Codegen.empty() : this.queryStringsConfig;
     }
 

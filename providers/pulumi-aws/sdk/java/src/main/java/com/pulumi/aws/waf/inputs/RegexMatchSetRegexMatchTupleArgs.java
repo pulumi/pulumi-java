@@ -22,7 +22,7 @@ public final class RegexMatchSetRegexMatchTupleArgs extends com.pulumi.resources
     @Import(name="fieldToMatch", required=true)
       private final Output<RegexMatchSetRegexMatchTupleFieldToMatchArgs> fieldToMatch;
 
-    public Output<RegexMatchSetRegexMatchTupleFieldToMatchArgs> getFieldToMatch() {
+    public Output<RegexMatchSetRegexMatchTupleFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -33,7 +33,7 @@ public final class RegexMatchSetRegexMatchTupleArgs extends com.pulumi.resources
     @Import(name="regexPatternSetId", required=true)
       private final Output<String> regexPatternSetId;
 
-    public Output<String> getRegexPatternSetId() {
+    public Output<String> regexPatternSetId() {
         return this.regexPatternSetId;
     }
 
@@ -47,7 +47,7 @@ public final class RegexMatchSetRegexMatchTupleArgs extends com.pulumi.resources
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 

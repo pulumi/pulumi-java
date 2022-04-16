@@ -16,14 +16,14 @@ public final class GetBrokerEncryptionOption extends com.pulumi.resources.Invoke
     @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
 
     @Import(name="useAwsOwnedKey", required=true)
       private final Boolean useAwsOwnedKey;
 
-    public Boolean getUseAwsOwnedKey() {
+    public Boolean useAwsOwnedKey() {
         return this.useAwsOwnedKey;
     }
 

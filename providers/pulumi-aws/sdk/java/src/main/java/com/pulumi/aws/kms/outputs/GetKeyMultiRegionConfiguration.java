@@ -26,13 +26,13 @@ public final class GetKeyMultiRegionConfiguration {
         this.replicaKeys = replicaKeys;
     }
 
-    public String getMultiRegionKeyType() {
+    public String multiRegionKeyType() {
         return this.multiRegionKeyType;
     }
-    public List<GetKeyMultiRegionConfigurationPrimaryKey> getPrimaryKeys() {
+    public List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys() {
         return this.primaryKeys;
     }
-    public List<GetKeyMultiRegionConfigurationReplicaKey> getReplicaKeys() {
+    public List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys() {
         return this.replicaKeys;
     }
 

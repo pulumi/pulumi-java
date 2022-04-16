@@ -34,14 +34,14 @@ public final class ManagedPrefixListEntry {
      * CIDR block of this entry.
      * 
     */
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
     /**
      * Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 

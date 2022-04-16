@@ -23,7 +23,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="nameRegex")
       private final @Nullable String nameRegex;
 
-    public Optional<String> getNameRegex() {
+    public Optional<String> nameRegex() {
         return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
     }
 
@@ -34,7 +34,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="pathPrefix")
       private final @Nullable String pathPrefix;
 
-    public Optional<String> getPathPrefix() {
+    public Optional<String> pathPrefix() {
         return this.pathPrefix == null ? Optional.empty() : Optional.ofNullable(this.pathPrefix);
     }
 

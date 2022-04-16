@@ -45,7 +45,7 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return The AWS ARN associated with the parameter group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return The family of the ElastiCache parameter group.
      * 
      */
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
     /**
@@ -87,7 +87,7 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the ElastiCache parameter.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return A list of ElastiCache parameters to apply.
      * 
      */
-    public Output</* @Nullable */ List<ParameterGroupParameter>> getParameters() {
+    public Output</* @Nullable */ List<ParameterGroupParameter>> parameters() {
         return this.parameters;
     }
     /**
@@ -115,7 +115,7 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

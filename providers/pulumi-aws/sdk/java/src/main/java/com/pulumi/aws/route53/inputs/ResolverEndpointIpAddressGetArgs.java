@@ -22,14 +22,14 @@ public final class ResolverEndpointIpAddressGetArgs extends com.pulumi.resources
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     @Import(name="ipId")
       private final @Nullable Output<String> ipId;
 
-    public Output<String> getIpId() {
+    public Output<String> ipId() {
         return this.ipId == null ? Codegen.empty() : this.ipId;
     }
 
@@ -40,7 +40,7 @@ public final class ResolverEndpointIpAddressGetArgs extends com.pulumi.resources
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

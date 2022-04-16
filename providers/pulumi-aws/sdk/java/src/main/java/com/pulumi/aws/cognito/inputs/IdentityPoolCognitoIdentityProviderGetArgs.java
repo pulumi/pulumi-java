@@ -23,7 +23,7 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends com.pulumi
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -34,7 +34,7 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends com.pulumi
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
@@ -45,7 +45,7 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends com.pulumi
     @Import(name="serverSideTokenCheck")
       private final @Nullable Output<Boolean> serverSideTokenCheck;
 
-    public Output<Boolean> getServerSideTokenCheck() {
+    public Output<Boolean> serverSideTokenCheck() {
         return this.serverSideTokenCheck == null ? Codegen.empty() : this.serverSideTokenCheck;
     }
 

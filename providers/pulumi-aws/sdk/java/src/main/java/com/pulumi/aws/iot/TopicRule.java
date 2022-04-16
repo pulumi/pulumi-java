@@ -57,19 +57,19 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return The ARN of the topic rule
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="cloudwatchAlarm", type=TopicRuleCloudwatchAlarm.class, parameters={})
     private Output</* @Nullable */ TopicRuleCloudwatchAlarm> cloudwatchAlarm;
 
-    public Output</* @Nullable */ TopicRuleCloudwatchAlarm> getCloudwatchAlarm() {
+    public Output</* @Nullable */ TopicRuleCloudwatchAlarm> cloudwatchAlarm() {
         return this.cloudwatchAlarm;
     }
     @Export(name="cloudwatchMetric", type=TopicRuleCloudwatchMetric.class, parameters={})
     private Output</* @Nullable */ TopicRuleCloudwatchMetric> cloudwatchMetric;
 
-    public Output</* @Nullable */ TopicRuleCloudwatchMetric> getCloudwatchMetric() {
+    public Output</* @Nullable */ TopicRuleCloudwatchMetric> cloudwatchMetric() {
         return this.cloudwatchMetric;
     }
     /**
@@ -83,25 +83,25 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return The description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="dynamodb", type=TopicRuleDynamodb.class, parameters={})
     private Output</* @Nullable */ TopicRuleDynamodb> dynamodb;
 
-    public Output</* @Nullable */ TopicRuleDynamodb> getDynamodb() {
+    public Output</* @Nullable */ TopicRuleDynamodb> dynamodb() {
         return this.dynamodb;
     }
     @Export(name="dynamodbv2s", type=List.class, parameters={TopicRuleDynamodbv2.class})
     private Output</* @Nullable */ List<TopicRuleDynamodbv2>> dynamodbv2s;
 
-    public Output</* @Nullable */ List<TopicRuleDynamodbv2>> getDynamodbv2s() {
+    public Output</* @Nullable */ List<TopicRuleDynamodbv2>> dynamodbv2s() {
         return this.dynamodbv2s;
     }
     @Export(name="elasticsearch", type=TopicRuleElasticsearch.class, parameters={})
     private Output</* @Nullable */ TopicRuleElasticsearch> elasticsearch;
 
-    public Output</* @Nullable */ TopicRuleElasticsearch> getElasticsearch() {
+    public Output</* @Nullable */ TopicRuleElasticsearch> elasticsearch() {
         return this.elasticsearch;
     }
     /**
@@ -115,7 +115,7 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the rule is enabled.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -129,37 +129,37 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
-    public Output</* @Nullable */ TopicRuleErrorAction> getErrorAction() {
+    public Output</* @Nullable */ TopicRuleErrorAction> errorAction() {
         return this.errorAction;
     }
     @Export(name="firehose", type=TopicRuleFirehose.class, parameters={})
     private Output</* @Nullable */ TopicRuleFirehose> firehose;
 
-    public Output</* @Nullable */ TopicRuleFirehose> getFirehose() {
+    public Output</* @Nullable */ TopicRuleFirehose> firehose() {
         return this.firehose;
     }
     @Export(name="iotAnalytics", type=List.class, parameters={TopicRuleIotAnalytic.class})
     private Output</* @Nullable */ List<TopicRuleIotAnalytic>> iotAnalytics;
 
-    public Output</* @Nullable */ List<TopicRuleIotAnalytic>> getIotAnalytics() {
+    public Output</* @Nullable */ List<TopicRuleIotAnalytic>> iotAnalytics() {
         return this.iotAnalytics;
     }
     @Export(name="iotEvents", type=List.class, parameters={TopicRuleIotEvent.class})
     private Output</* @Nullable */ List<TopicRuleIotEvent>> iotEvents;
 
-    public Output</* @Nullable */ List<TopicRuleIotEvent>> getIotEvents() {
+    public Output</* @Nullable */ List<TopicRuleIotEvent>> iotEvents() {
         return this.iotEvents;
     }
     @Export(name="kinesis", type=TopicRuleKinesis.class, parameters={})
     private Output</* @Nullable */ TopicRuleKinesis> kinesis;
 
-    public Output</* @Nullable */ TopicRuleKinesis> getKinesis() {
+    public Output</* @Nullable */ TopicRuleKinesis> kinesis() {
         return this.kinesis;
     }
     @Export(name="lambda", type=TopicRuleLambda.class, parameters={})
     private Output</* @Nullable */ TopicRuleLambda> lambda;
 
-    public Output</* @Nullable */ TopicRuleLambda> getLambda() {
+    public Output</* @Nullable */ TopicRuleLambda> lambda() {
         return this.lambda;
     }
     /**
@@ -173,25 +173,25 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return The name of the rule.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="republish", type=TopicRuleRepublish.class, parameters={})
     private Output</* @Nullable */ TopicRuleRepublish> republish;
 
-    public Output</* @Nullable */ TopicRuleRepublish> getRepublish() {
+    public Output</* @Nullable */ TopicRuleRepublish> republish() {
         return this.republish;
     }
     @Export(name="s3", type=TopicRuleS3.class, parameters={})
     private Output</* @Nullable */ TopicRuleS3> s3;
 
-    public Output</* @Nullable */ TopicRuleS3> getS3() {
+    public Output</* @Nullable */ TopicRuleS3> s3() {
         return this.s3;
     }
     @Export(name="sns", type=TopicRuleSns.class, parameters={})
     private Output</* @Nullable */ TopicRuleSns> sns;
 
-    public Output</* @Nullable */ TopicRuleSns> getSns() {
+    public Output</* @Nullable */ TopicRuleSns> sns() {
         return this.sns;
     }
     /**
@@ -205,7 +205,7 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
      * 
      */
-    public Output<String> getSql() {
+    public Output<String> sql() {
         return this.sql;
     }
     /**
@@ -219,19 +219,19 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return The version of the SQL rules engine to use when evaluating the rule.
      * 
      */
-    public Output<String> getSqlVersion() {
+    public Output<String> sqlVersion() {
         return this.sqlVersion;
     }
     @Export(name="sqs", type=TopicRuleSqs.class, parameters={})
     private Output</* @Nullable */ TopicRuleSqs> sqs;
 
-    public Output</* @Nullable */ TopicRuleSqs> getSqs() {
+    public Output</* @Nullable */ TopicRuleSqs> sqs() {
         return this.sqs;
     }
     @Export(name="stepFunctions", type=List.class, parameters={TopicRuleStepFunction.class})
     private Output</* @Nullable */ List<TopicRuleStepFunction>> stepFunctions;
 
-    public Output</* @Nullable */ List<TopicRuleStepFunction>> getStepFunctions() {
+    public Output</* @Nullable */ List<TopicRuleStepFunction>> stepFunctions() {
         return this.stepFunctions;
     }
     /**
@@ -245,7 +245,7 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -259,7 +259,7 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

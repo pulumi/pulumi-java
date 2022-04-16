@@ -22,7 +22,7 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiMappingKey")
       private final @Nullable Output<String> apiMappingKey;
 
-    public Output<String> getApiMappingKey() {
+    public Output<String> apiMappingKey() {
         return this.apiMappingKey == null ? Codegen.empty() : this.apiMappingKey;
     }
 
@@ -44,7 +44,7 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -55,7 +55,7 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stage", required=true)
       private final Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 

@@ -22,7 +22,7 @@ public final class ZoneAssociationState extends com.pulumi.resources.ResourceArg
     @Import(name="owningAccount")
       private final @Nullable Output<String> owningAccount;
 
-    public Output<String> getOwningAccount() {
+    public Output<String> owningAccount() {
         return this.owningAccount == null ? Codegen.empty() : this.owningAccount;
     }
 
@@ -33,7 +33,7 @@ public final class ZoneAssociationState extends com.pulumi.resources.ResourceArg
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
@@ -44,7 +44,7 @@ public final class ZoneAssociationState extends com.pulumi.resources.ResourceArg
     @Import(name="vpcRegion")
       private final @Nullable Output<String> vpcRegion;
 
-    public Output<String> getVpcRegion() {
+    public Output<String> vpcRegion() {
         return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
     }
 
@@ -55,7 +55,7 @@ public final class ZoneAssociationState extends com.pulumi.resources.ResourceArg
     @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 

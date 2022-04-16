@@ -37,7 +37,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountRecoverySetting")
       private final @Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
 
-    public Output<UserPoolAccountRecoverySettingGetArgs> getAccountRecoverySetting() {
+    public Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting() {
         return this.accountRecoverySetting == null ? Codegen.empty() : this.accountRecoverySetting;
     }
 
@@ -48,7 +48,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminCreateUserConfig")
       private final @Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
 
-    public Output<UserPoolAdminCreateUserConfigGetArgs> getAdminCreateUserConfig() {
+    public Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig() {
         return this.adminCreateUserConfig == null ? Codegen.empty() : this.adminCreateUserConfig;
     }
 
@@ -59,7 +59,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliasAttributes")
       private final @Nullable Output<List<String>> aliasAttributes;
 
-    public Output<List<String>> getAliasAttributes() {
+    public Output<List<String>> aliasAttributes() {
         return this.aliasAttributes == null ? Codegen.empty() : this.aliasAttributes;
     }
 
@@ -70,7 +70,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -81,7 +81,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoVerifiedAttributes")
       private final @Nullable Output<List<String>> autoVerifiedAttributes;
 
-    public Output<List<String>> getAutoVerifiedAttributes() {
+    public Output<List<String>> autoVerifiedAttributes() {
         return this.autoVerifiedAttributes == null ? Codegen.empty() : this.autoVerifiedAttributes;
     }
 
@@ -92,7 +92,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -103,7 +103,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDomain")
       private final @Nullable Output<String> customDomain;
 
-    public Output<String> getCustomDomain() {
+    public Output<String> customDomain() {
         return this.customDomain == null ? Codegen.empty() : this.customDomain;
     }
 
@@ -114,7 +114,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceConfiguration")
       private final @Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
 
-    public Output<UserPoolDeviceConfigurationGetArgs> getDeviceConfiguration() {
+    public Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration() {
         return this.deviceConfiguration == null ? Codegen.empty() : this.deviceConfiguration;
     }
 
@@ -125,7 +125,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -136,7 +136,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailConfiguration")
       private final @Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration;
 
-    public Output<UserPoolEmailConfigurationGetArgs> getEmailConfiguration() {
+    public Output<UserPoolEmailConfigurationGetArgs> emailConfiguration() {
         return this.emailConfiguration == null ? Codegen.empty() : this.emailConfiguration;
     }
 
@@ -147,7 +147,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailVerificationMessage")
       private final @Nullable Output<String> emailVerificationMessage;
 
-    public Output<String> getEmailVerificationMessage() {
+    public Output<String> emailVerificationMessage() {
         return this.emailVerificationMessage == null ? Codegen.empty() : this.emailVerificationMessage;
     }
 
@@ -158,7 +158,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailVerificationSubject")
       private final @Nullable Output<String> emailVerificationSubject;
 
-    public Output<String> getEmailVerificationSubject() {
+    public Output<String> emailVerificationSubject() {
         return this.emailVerificationSubject == null ? Codegen.empty() : this.emailVerificationSubject;
     }
 
@@ -169,7 +169,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -180,7 +180,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="estimatedNumberOfUsers")
       private final @Nullable Output<Integer> estimatedNumberOfUsers;
 
-    public Output<Integer> getEstimatedNumberOfUsers() {
+    public Output<Integer> estimatedNumberOfUsers() {
         return this.estimatedNumberOfUsers == null ? Codegen.empty() : this.estimatedNumberOfUsers;
     }
 
@@ -191,7 +191,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaConfig")
       private final @Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig;
 
-    public Output<UserPoolLambdaConfigGetArgs> getLambdaConfig() {
+    public Output<UserPoolLambdaConfigGetArgs> lambdaConfig() {
         return this.lambdaConfig == null ? Codegen.empty() : this.lambdaConfig;
     }
 
@@ -202,7 +202,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
     }
 
@@ -213,7 +213,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mfaConfiguration")
       private final @Nullable Output<String> mfaConfiguration;
 
-    public Output<String> getMfaConfiguration() {
+    public Output<String> mfaConfiguration() {
         return this.mfaConfiguration == null ? Codegen.empty() : this.mfaConfiguration;
     }
 
@@ -224,7 +224,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -235,7 +235,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="passwordPolicy")
       private final @Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy;
 
-    public Output<UserPoolPasswordPolicyGetArgs> getPasswordPolicy() {
+    public Output<UserPoolPasswordPolicyGetArgs> passwordPolicy() {
         return this.passwordPolicy == null ? Codegen.empty() : this.passwordPolicy;
     }
 
@@ -246,7 +246,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemas")
       private final @Nullable Output<List<UserPoolSchemaGetArgs>> schemas;
 
-    public Output<List<UserPoolSchemaGetArgs>> getSchemas() {
+    public Output<List<UserPoolSchemaGetArgs>> schemas() {
         return this.schemas == null ? Codegen.empty() : this.schemas;
     }
 
@@ -257,7 +257,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smsAuthenticationMessage")
       private final @Nullable Output<String> smsAuthenticationMessage;
 
-    public Output<String> getSmsAuthenticationMessage() {
+    public Output<String> smsAuthenticationMessage() {
         return this.smsAuthenticationMessage == null ? Codegen.empty() : this.smsAuthenticationMessage;
     }
 
@@ -268,7 +268,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smsConfiguration")
       private final @Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration;
 
-    public Output<UserPoolSmsConfigurationGetArgs> getSmsConfiguration() {
+    public Output<UserPoolSmsConfigurationGetArgs> smsConfiguration() {
         return this.smsConfiguration == null ? Codegen.empty() : this.smsConfiguration;
     }
 
@@ -279,7 +279,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smsVerificationMessage")
       private final @Nullable Output<String> smsVerificationMessage;
 
-    public Output<String> getSmsVerificationMessage() {
+    public Output<String> smsVerificationMessage() {
         return this.smsVerificationMessage == null ? Codegen.empty() : this.smsVerificationMessage;
     }
 
@@ -290,7 +290,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="softwareTokenMfaConfiguration")
       private final @Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
 
-    public Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> getSoftwareTokenMfaConfiguration() {
+    public Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration() {
         return this.softwareTokenMfaConfiguration == null ? Codegen.empty() : this.softwareTokenMfaConfiguration;
     }
 
@@ -301,7 +301,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -312,7 +312,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -323,7 +323,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userPoolAddOns")
       private final @Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
 
-    public Output<UserPoolUserPoolAddOnsGetArgs> getUserPoolAddOns() {
+    public Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns() {
         return this.userPoolAddOns == null ? Codegen.empty() : this.userPoolAddOns;
     }
 
@@ -334,7 +334,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="usernameAttributes")
       private final @Nullable Output<List<String>> usernameAttributes;
 
-    public Output<List<String>> getUsernameAttributes() {
+    public Output<List<String>> usernameAttributes() {
         return this.usernameAttributes == null ? Codegen.empty() : this.usernameAttributes;
     }
 
@@ -345,7 +345,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="usernameConfiguration")
       private final @Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
 
-    public Output<UserPoolUsernameConfigurationGetArgs> getUsernameConfiguration() {
+    public Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration() {
         return this.usernameConfiguration == null ? Codegen.empty() : this.usernameConfiguration;
     }
 
@@ -356,7 +356,7 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="verificationMessageTemplate")
       private final @Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
 
-    public Output<UserPoolVerificationMessageTemplateGetArgs> getVerificationMessageTemplate() {
+    public Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate() {
         return this.verificationMessageTemplate == null ? Codegen.empty() : this.verificationMessageTemplate;
     }
 

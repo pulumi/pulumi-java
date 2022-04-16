@@ -30,7 +30,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="brokerNodeGroupInfo", required=true)
       private final Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
 
-    public Output<ClusterBrokerNodeGroupInfoArgs> getBrokerNodeGroupInfo() {
+    public Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo() {
         return this.brokerNodeGroupInfo;
     }
 
@@ -41,7 +41,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientAuthentication")
       private final @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication;
 
-    public Output<ClusterClientAuthenticationArgs> getClientAuthentication() {
+    public Output<ClusterClientAuthenticationArgs> clientAuthentication() {
         return this.clientAuthentication == null ? Codegen.empty() : this.clientAuthentication;
     }
 
@@ -52,7 +52,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -63,7 +63,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationInfo")
       private final @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo;
 
-    public Output<ClusterConfigurationInfoArgs> getConfigurationInfo() {
+    public Output<ClusterConfigurationInfoArgs> configurationInfo() {
         return this.configurationInfo == null ? Codegen.empty() : this.configurationInfo;
     }
 
@@ -74,7 +74,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionInfo")
       private final @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo;
 
-    public Output<ClusterEncryptionInfoArgs> getEncryptionInfo() {
+    public Output<ClusterEncryptionInfoArgs> encryptionInfo() {
         return this.encryptionInfo == null ? Codegen.empty() : this.encryptionInfo;
     }
 
@@ -85,7 +85,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enhancedMonitoring")
       private final @Nullable Output<String> enhancedMonitoring;
 
-    public Output<String> getEnhancedMonitoring() {
+    public Output<String> enhancedMonitoring() {
         return this.enhancedMonitoring == null ? Codegen.empty() : this.enhancedMonitoring;
     }
 
@@ -96,7 +96,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaVersion", required=true)
       private final Output<String> kafkaVersion;
 
-    public Output<String> getKafkaVersion() {
+    public Output<String> kafkaVersion() {
         return this.kafkaVersion;
     }
 
@@ -107,7 +107,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingInfo")
       private final @Nullable Output<ClusterLoggingInfoArgs> loggingInfo;
 
-    public Output<ClusterLoggingInfoArgs> getLoggingInfo() {
+    public Output<ClusterLoggingInfoArgs> loggingInfo() {
         return this.loggingInfo == null ? Codegen.empty() : this.loggingInfo;
     }
 
@@ -118,7 +118,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfBrokerNodes", required=true)
       private final Output<Integer> numberOfBrokerNodes;
 
-    public Output<Integer> getNumberOfBrokerNodes() {
+    public Output<Integer> numberOfBrokerNodes() {
         return this.numberOfBrokerNodes;
     }
 
@@ -129,7 +129,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="openMonitoring")
       private final @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring;
 
-    public Output<ClusterOpenMonitoringArgs> getOpenMonitoring() {
+    public Output<ClusterOpenMonitoringArgs> openMonitoring() {
         return this.openMonitoring == null ? Codegen.empty() : this.openMonitoring;
     }
 
@@ -140,7 +140,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

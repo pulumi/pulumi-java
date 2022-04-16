@@ -15,7 +15,7 @@ public final class GetFunctionDeadLetterConfig extends com.pulumi.resources.Invo
     @Import(name="targetArn", required=true)
       private final String targetArn;
 
-    public String getTargetArn() {
+    public String targetArn() {
         return this.targetArn;
     }
 

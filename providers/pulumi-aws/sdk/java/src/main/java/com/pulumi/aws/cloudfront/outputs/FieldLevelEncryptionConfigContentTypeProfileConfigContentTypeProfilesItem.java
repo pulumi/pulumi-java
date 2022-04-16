@@ -41,21 +41,21 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * he content type for a field-level encryption content type-profile mapping. Valid value is `application/x-www-form-urlencoded`.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * The format for a field-level encryption content type-profile mapping. Valid value is `URLEncoded`.
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
     /**
      * ID of profile to use for field-level encryption query argument-profile mapping
      * 
     */
-    public Optional<String> getProfileId() {
+    public Optional<String> profileId() {
         return Optional.ofNullable(this.profileId);
     }
 

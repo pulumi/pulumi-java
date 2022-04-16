@@ -26,7 +26,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="activeDirectoryConfiguration")
       private final @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
 
-    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> getActiveDirectoryConfiguration() {
+    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Codegen.empty() : this.activeDirectoryConfiguration;
     }
 
@@ -37,7 +37,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="endpoints")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
 
-    public Output<List<OntapStorageVirtualMachineEndpointGetArgs>> getEndpoints() {
+    public Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -59,7 +59,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -70,7 +70,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="rootVolumeSecurityStyle")
       private final @Nullable Output<String> rootVolumeSecurityStyle;
 
-    public Output<String> getRootVolumeSecurityStyle() {
+    public Output<String> rootVolumeSecurityStyle() {
         return this.rootVolumeSecurityStyle == null ? Codegen.empty() : this.rootVolumeSecurityStyle;
     }
 
@@ -92,14 +92,14 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="subtype")
       private final @Nullable Output<String> subtype;
 
-    public Output<String> getSubtype() {
+    public Output<String> subtype() {
         return this.subtype == null ? Codegen.empty() : this.subtype;
     }
 
     @Import(name="svmAdminPassword")
       private final @Nullable Output<String> svmAdminPassword;
 
-    public Output<String> getSvmAdminPassword() {
+    public Output<String> svmAdminPassword() {
         return this.svmAdminPassword == null ? Codegen.empty() : this.svmAdminPassword;
     }
 
@@ -110,7 +110,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -121,7 +121,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -132,7 +132,7 @@ public final class OntapStorageVirtualMachineState extends com.pulumi.resources.
     @Import(name="uuid")
       private final @Nullable Output<String> uuid;
 
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid == null ? Codegen.empty() : this.uuid;
     }
 

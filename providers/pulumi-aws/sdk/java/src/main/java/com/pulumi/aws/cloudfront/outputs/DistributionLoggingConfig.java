@@ -46,7 +46,7 @@ public final class DistributionLoggingConfig {
      * example, `myawslogbucket.s3.amazonaws.com`.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
@@ -54,7 +54,7 @@ public final class DistributionLoggingConfig {
      * include cookies in access logs (default: `false`).
      * 
     */
-    public Optional<Boolean> getIncludeCookies() {
+    public Optional<Boolean> includeCookies() {
         return Optional.ofNullable(this.includeCookies);
     }
     /**
@@ -62,7 +62,7 @@ public final class DistributionLoggingConfig {
      * to the access log filenames for this distribution, for example, `myprefix/`.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

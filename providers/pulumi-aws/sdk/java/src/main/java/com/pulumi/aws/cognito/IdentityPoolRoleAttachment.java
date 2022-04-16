@@ -43,7 +43,7 @@ public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResou
      * @return An identity pool ID in the format REGION:GUID.
      * 
      */
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
     /**
@@ -57,7 +57,7 @@ public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResou
      * @return A List of Role Mapping.
      * 
      */
-    public Output</* @Nullable */ List<IdentityPoolRoleAttachmentRoleMapping>> getRoleMappings() {
+    public Output</* @Nullable */ List<IdentityPoolRoleAttachmentRoleMapping>> roleMappings() {
         return this.roleMappings;
     }
     /**
@@ -71,7 +71,7 @@ public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResou
      * @return The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
      * 
      */
-    public Output<Map<String,String>> getRoles() {
+    public Output<Map<String,String>> roles() {
         return this.roles;
     }
 

@@ -23,7 +23,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
     @Import(name="capacityReservationPreference")
       private final @Nullable Output<String> capacityReservationPreference;
 
-    public Output<String> getCapacityReservationPreference() {
+    public Output<String> capacityReservationPreference() {
         return this.capacityReservationPreference == null ? Codegen.empty() : this.capacityReservationPreference;
     }
 
@@ -34,7 +34,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
     @Import(name="capacityReservationTarget")
       private final @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
-    public Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> getCapacityReservationTarget() {
+    public Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget() {
         return this.capacityReservationTarget == null ? Codegen.empty() : this.capacityReservationTarget;
     }
 

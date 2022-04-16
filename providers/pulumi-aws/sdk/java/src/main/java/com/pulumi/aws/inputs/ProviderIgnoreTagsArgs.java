@@ -19,14 +19,14 @@ public final class ProviderIgnoreTagsArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyPrefixes")
       private final @Nullable Output<List<String>> keyPrefixes;
 
-    public Output<List<String>> getKeyPrefixes() {
+    public Output<List<String>> keyPrefixes() {
         return this.keyPrefixes == null ? Codegen.empty() : this.keyPrefixes;
     }
 
     @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> getKeys() {
+    public Output<List<String>> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 

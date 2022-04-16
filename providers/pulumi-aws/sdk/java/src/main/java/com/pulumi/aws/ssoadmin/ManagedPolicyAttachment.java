@@ -40,7 +40,7 @@ public class ManagedPolicyAttachment extends com.pulumi.resources.CustomResource
      * @return The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -54,7 +54,7 @@ public class ManagedPolicyAttachment extends com.pulumi.resources.CustomResource
      * @return The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
      * 
      */
-    public Output<String> getManagedPolicyArn() {
+    public Output<String> managedPolicyArn() {
         return this.managedPolicyArn;
     }
     /**
@@ -68,7 +68,7 @@ public class ManagedPolicyAttachment extends com.pulumi.resources.CustomResource
      * @return The name of the IAM Managed Policy.
      * 
      */
-    public Output<String> getManagedPolicyName() {
+    public Output<String> managedPolicyName() {
         return this.managedPolicyName;
     }
     /**
@@ -82,7 +82,7 @@ public class ManagedPolicyAttachment extends com.pulumi.resources.CustomResource
      * @return The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 

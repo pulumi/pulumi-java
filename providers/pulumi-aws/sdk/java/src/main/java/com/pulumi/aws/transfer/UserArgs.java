@@ -26,7 +26,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectory")
       private final @Nullable Output<String> homeDirectory;
 
-    public Output<String> getHomeDirectory() {
+    public Output<String> homeDirectory() {
         return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
     }
 
@@ -37,7 +37,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryMappings")
       private final @Nullable Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
-    public Output<List<UserHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
+    public Output<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings() {
         return this.homeDirectoryMappings == null ? Codegen.empty() : this.homeDirectoryMappings;
     }
 
@@ -48,7 +48,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryType")
       private final @Nullable Output<String> homeDirectoryType;
 
-    public Output<String> getHomeDirectoryType() {
+    public Output<String> homeDirectoryType() {
         return this.homeDirectoryType == null ? Codegen.empty() : this.homeDirectoryType;
     }
 
@@ -59,7 +59,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -70,7 +70,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixProfile")
       private final @Nullable Output<UserPosixProfileArgs> posixProfile;
 
-    public Output<UserPosixProfileArgs> getPosixProfile() {
+    public Output<UserPosixProfileArgs> posixProfile() {
         return this.posixProfile == null ? Codegen.empty() : this.posixProfile;
     }
 
@@ -81,7 +81,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -92,7 +92,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverId", required=true)
       private final Output<String> serverId;
 
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 
@@ -103,7 +103,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

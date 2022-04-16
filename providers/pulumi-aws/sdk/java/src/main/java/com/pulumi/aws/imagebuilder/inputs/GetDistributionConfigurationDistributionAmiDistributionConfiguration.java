@@ -22,7 +22,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="amiTags", required=true)
       private final Map<String,String> amiTags;
 
-    public Map<String,String> getAmiTags() {
+    public Map<String,String> amiTags() {
         return this.amiTags;
     }
 
@@ -33,7 +33,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -44,7 +44,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
 
@@ -55,7 +55,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="launchPermissions", required=true)
       private final List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions;
 
-    public List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> getLaunchPermissions() {
+    public List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions() {
         return this.launchPermissions;
     }
 
@@ -66,7 +66,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -77,7 +77,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="targetAccountIds", required=true)
       private final List<String> targetAccountIds;
 
-    public List<String> getTargetAccountIds() {
+    public List<String> targetAccountIds() {
         return this.targetAccountIds;
     }
 

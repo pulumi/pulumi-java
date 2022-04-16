@@ -16,14 +16,14 @@ public final class GetJobQueueComputeEnvironmentOrder extends com.pulumi.resourc
     @Import(name="computeEnvironment", required=true)
       private final String computeEnvironment;
 
-    public String getComputeEnvironment() {
+    public String computeEnvironment() {
         return this.computeEnvironment;
     }
 
     @Import(name="order", required=true)
       private final Integer order;
 
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 

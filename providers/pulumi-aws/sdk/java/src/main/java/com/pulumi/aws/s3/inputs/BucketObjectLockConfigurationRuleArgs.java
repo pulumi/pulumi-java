@@ -21,7 +21,7 @@ public final class BucketObjectLockConfigurationRuleArgs extends com.pulumi.reso
     @Import(name="defaultRetention", required=true)
       private final Output<BucketObjectLockConfigurationRuleDefaultRetentionArgs> defaultRetention;
 
-    public Output<BucketObjectLockConfigurationRuleDefaultRetentionArgs> getDefaultRetention() {
+    public Output<BucketObjectLockConfigurationRuleDefaultRetentionArgs> defaultRetention() {
         return this.defaultRetention;
     }
 

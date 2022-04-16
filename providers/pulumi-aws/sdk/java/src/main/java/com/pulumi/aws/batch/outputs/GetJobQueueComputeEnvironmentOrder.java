@@ -21,10 +21,10 @@ public final class GetJobQueueComputeEnvironmentOrder {
         this.order = order;
     }
 
-    public String getComputeEnvironment() {
+    public String computeEnvironment() {
         return this.computeEnvironment;
     }
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 

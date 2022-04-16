@@ -23,7 +23,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compatibility", required=true)
       private final Output<String> compatibility;
 
-    public Output<String> getCompatibility() {
+    public Output<String> compatibility() {
         return this.compatibility;
     }
 
@@ -34,7 +34,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataFormat", required=true)
       private final Output<String> dataFormat;
 
-    public Output<String> getDataFormat() {
+    public Output<String> dataFormat() {
         return this.dataFormat;
     }
 
@@ -45,7 +45,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryArn")
       private final @Nullable Output<String> registryArn;
 
-    public Output<String> getRegistryArn() {
+    public Output<String> registryArn() {
         return this.registryArn == null ? Codegen.empty() : this.registryArn;
     }
 
@@ -67,7 +67,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaDefinition", required=true)
       private final Output<String> schemaDefinition;
 
-    public Output<String> getSchemaDefinition() {
+    public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
 
@@ -78,7 +78,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -89,7 +89,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

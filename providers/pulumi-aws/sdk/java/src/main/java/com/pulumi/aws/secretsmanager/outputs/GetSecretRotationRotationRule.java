@@ -16,7 +16,7 @@ public final class GetSecretRotationRotationRule {
         this.automaticallyAfterDays = automaticallyAfterDays;
     }
 
-    public Integer getAutomaticallyAfterDays() {
+    public Integer automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 

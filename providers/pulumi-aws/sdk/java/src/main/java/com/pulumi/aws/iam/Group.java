@@ -40,7 +40,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS for this group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The group's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are not distinguished by case. For example, you cannot create groups named both "ADMINS" and "admins".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +68,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Path in which to create the group.
      * 
      */
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     /**
@@ -82,7 +82,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The [unique ID][1] assigned by AWS.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 

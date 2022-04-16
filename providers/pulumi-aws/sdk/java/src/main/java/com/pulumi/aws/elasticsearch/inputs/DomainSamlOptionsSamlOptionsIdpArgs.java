@@ -21,7 +21,7 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends com.pulumi.resour
     @Import(name="entityId", required=true)
       private final Output<String> entityId;
 
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
 
@@ -32,7 +32,7 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends com.pulumi.resour
     @Import(name="metadataContent", required=true)
       private final Output<String> metadataContent;
 
-    public Output<String> getMetadataContent() {
+    public Output<String> metadataContent() {
         return this.metadataContent;
     }
 

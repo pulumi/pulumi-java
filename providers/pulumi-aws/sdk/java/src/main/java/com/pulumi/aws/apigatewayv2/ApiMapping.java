@@ -41,7 +41,7 @@ public class ApiMapping extends com.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -55,7 +55,7 @@ public class ApiMapping extends com.pulumi.resources.CustomResource {
      * @return The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
      * 
      */
-    public Output</* @Nullable */ String> getApiMappingKey() {
+    public Output</* @Nullable */ String> apiMappingKey() {
         return this.apiMappingKey;
     }
     /**
@@ -69,7 +69,7 @@ public class ApiMapping extends com.pulumi.resources.CustomResource {
      * @return The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -83,7 +83,7 @@ public class ApiMapping extends com.pulumi.resources.CustomResource {
      * @return The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
      * 
      */
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 

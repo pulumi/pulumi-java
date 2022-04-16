@@ -26,7 +26,7 @@ public final class ThingGroupPropertiesAttributePayload {
      * Key-value map.
      * 
     */
-    public Map<String,String> getAttributes() {
+    public Map<String,String> attributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
 

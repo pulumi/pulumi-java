@@ -26,7 +26,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfigurations")
       private final @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
 
-    public Output<List<RepositoryEncryptionConfigurationGetArgs>> getEncryptionConfigurations() {
+    public Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations() {
         return this.encryptionConfigurations == null ? Codegen.empty() : this.encryptionConfigurations;
     }
 
@@ -48,7 +48,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageScanningConfiguration")
       private final @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
 
-    public Output<RepositoryImageScanningConfigurationGetArgs> getImageScanningConfiguration() {
+    public Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration() {
         return this.imageScanningConfiguration == null ? Codegen.empty() : this.imageScanningConfiguration;
     }
 
@@ -59,7 +59,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTagMutability")
       private final @Nullable Output<String> imageTagMutability;
 
-    public Output<String> getImageTagMutability() {
+    public Output<String> imageTagMutability() {
         return this.imageTagMutability == null ? Codegen.empty() : this.imageTagMutability;
     }
 
@@ -70,7 +70,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
@@ -92,7 +92,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryUrl")
       private final @Nullable Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl == null ? Codegen.empty() : this.repositoryUrl;
     }
 
@@ -103,7 +103,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

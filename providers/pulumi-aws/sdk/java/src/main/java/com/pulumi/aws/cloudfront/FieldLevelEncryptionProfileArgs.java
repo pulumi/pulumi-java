@@ -23,7 +23,7 @@ public final class FieldLevelEncryptionProfileArgs extends com.pulumi.resources.
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -34,7 +34,7 @@ public final class FieldLevelEncryptionProfileArgs extends com.pulumi.resources.
     @Import(name="encryptionEntities", required=true)
       private final Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
 
-    public Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> getEncryptionEntities() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities() {
         return this.encryptionEntities;
     }
 
@@ -45,7 +45,7 @@ public final class FieldLevelEncryptionProfileArgs extends com.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

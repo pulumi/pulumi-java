@@ -23,7 +23,7 @@ public final class ImageOutputResourceGetArgs extends com.pulumi.resources.Resou
     @Import(name="amis")
       private final @Nullable Output<List<ImageOutputResourceAmiGetArgs>> amis;
 
-    public Output<List<ImageOutputResourceAmiGetArgs>> getAmis() {
+    public Output<List<ImageOutputResourceAmiGetArgs>> amis() {
         return this.amis == null ? Codegen.empty() : this.amis;
     }
 

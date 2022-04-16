@@ -19,7 +19,7 @@ public final class GetRegexPatternSetRegularExpression extends com.pulumi.resour
     @Import(name="regexString", required=true)
       private final String regexString;
 
-    public String getRegexString() {
+    public String regexString() {
         return this.regexString;
     }
 

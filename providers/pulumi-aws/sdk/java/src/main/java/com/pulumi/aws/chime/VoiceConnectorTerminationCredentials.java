@@ -44,7 +44,7 @@ public class VoiceConnectorTerminationCredentials extends com.pulumi.resources.C
      * @return List of termination SIP credentials.
      * 
      */
-    public Output<List<VoiceConnectorTerminationCredentialsCredential>> getCredentials() {
+    public Output<List<VoiceConnectorTerminationCredentialsCredential>> credentials() {
         return this.credentials;
     }
     /**
@@ -58,7 +58,7 @@ public class VoiceConnectorTerminationCredentials extends com.pulumi.resources.C
      * @return Amazon Chime Voice Connector ID.
      * 
      */
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

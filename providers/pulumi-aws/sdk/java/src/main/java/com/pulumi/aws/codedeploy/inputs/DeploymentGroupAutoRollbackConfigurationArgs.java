@@ -24,7 +24,7 @@ public final class DeploymentGroupAutoRollbackConfigurationArgs extends com.pulu
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentGroupAutoRollbackConfigurationArgs extends com.pulu
     @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 

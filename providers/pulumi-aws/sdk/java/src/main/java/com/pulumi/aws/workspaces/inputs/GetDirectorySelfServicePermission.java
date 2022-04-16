@@ -19,7 +19,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="changeComputeType", required=true)
       private final Boolean changeComputeType;
 
-    public Boolean getChangeComputeType() {
+    public Boolean changeComputeType() {
         return this.changeComputeType;
     }
 
@@ -30,7 +30,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="increaseVolumeSize", required=true)
       private final Boolean increaseVolumeSize;
 
-    public Boolean getIncreaseVolumeSize() {
+    public Boolean increaseVolumeSize() {
         return this.increaseVolumeSize;
     }
 
@@ -41,7 +41,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="rebuildWorkspace", required=true)
       private final Boolean rebuildWorkspace;
 
-    public Boolean getRebuildWorkspace() {
+    public Boolean rebuildWorkspace() {
         return this.rebuildWorkspace;
     }
 
@@ -52,7 +52,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="restartWorkspace", required=true)
       private final Boolean restartWorkspace;
 
-    public Boolean getRestartWorkspace() {
+    public Boolean restartWorkspace() {
         return this.restartWorkspace;
     }
 
@@ -63,7 +63,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
     @Import(name="switchRunningMode", required=true)
       private final Boolean switchRunningMode;
 
-    public Boolean getSwitchRunningMode() {
+    public Boolean switchRunningMode() {
         return this.switchRunningMode;
     }
 

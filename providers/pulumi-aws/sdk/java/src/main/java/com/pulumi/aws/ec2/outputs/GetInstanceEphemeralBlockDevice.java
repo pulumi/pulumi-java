@@ -42,21 +42,21 @@ public final class GetInstanceEphemeralBlockDevice {
      * The physical name of the device.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * Whether the specified device included in the device mapping was suppressed or not (Boolean).
      * 
     */
-    public Optional<Boolean> getNoDevice() {
+    public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * The virtual device name.
      * 
     */
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

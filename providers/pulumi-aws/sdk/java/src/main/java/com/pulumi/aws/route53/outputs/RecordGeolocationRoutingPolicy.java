@@ -41,21 +41,21 @@ public final class RecordGeolocationRoutingPolicy {
      * A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
      * 
     */
-    public Optional<String> getContinent() {
+    public Optional<String> continent() {
         return Optional.ofNullable(this.continent);
     }
     /**
      * A two-character country code or `*` to indicate a default resource record set.
      * 
     */
-    public Optional<String> getCountry() {
+    public Optional<String> country() {
         return Optional.ofNullable(this.country);
     }
     /**
      * A subdivision code for a country.
      * 
     */
-    public Optional<String> getSubdivision() {
+    public Optional<String> subdivision() {
         return Optional.ofNullable(this.subdivision);
     }
 

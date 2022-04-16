@@ -27,7 +27,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingConfigurationArn")
       private final @Nullable Output<String> autoScalingConfigurationArn;
 
-    public Output<String> getAutoScalingConfigurationArn() {
+    public Output<String> autoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn == null ? Codegen.empty() : this.autoScalingConfigurationArn;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Output<ServiceEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
+    public Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -60,7 +60,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckConfiguration")
       private final @Nullable Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration;
 
-    public Output<ServiceHealthCheckConfigurationGetArgs> getHealthCheckConfiguration() {
+    public Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration() {
         return this.healthCheckConfiguration == null ? Codegen.empty() : this.healthCheckConfiguration;
     }
 
@@ -71,7 +71,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceConfiguration")
       private final @Nullable Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration;
 
-    public Output<ServiceInstanceConfigurationGetArgs> getInstanceConfiguration() {
+    public Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration() {
         return this.instanceConfiguration == null ? Codegen.empty() : this.instanceConfiguration;
     }
 
@@ -82,7 +82,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId == null ? Codegen.empty() : this.serviceId;
     }
 
@@ -93,7 +93,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -104,7 +104,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;
 
-    public Output<String> getServiceUrl() {
+    public Output<String> serviceUrl() {
         return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
     }
 
@@ -115,7 +115,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationGetArgs> sourceConfiguration;
 
-    public Output<ServiceSourceConfigurationGetArgs> getSourceConfiguration() {
+    public Output<ServiceSourceConfigurationGetArgs> sourceConfiguration() {
         return this.sourceConfiguration == null ? Codegen.empty() : this.sourceConfiguration;
     }
 
@@ -126,7 +126,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -137,7 +137,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -148,7 +148,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -23,7 +23,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -34,7 +34,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
     @Import(name="layerName", required=true)
       private final Output<String> layerName;
 
-    public Output<String> getLayerName() {
+    public Output<String> layerName() {
         return this.layerName;
     }
 
@@ -45,7 +45,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
     @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId == null ? Codegen.empty() : this.organizationId;
     }
 
@@ -56,7 +56,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -67,7 +67,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
     @Import(name="statementId", required=true)
       private final Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 
@@ -78,7 +78,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
     @Import(name="versionNumber", required=true)
       private final Output<Integer> versionNumber;
 
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber;
     }
 

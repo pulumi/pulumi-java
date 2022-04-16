@@ -22,7 +22,7 @@ public final class AppCampaignHookGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="lambdaFunctionName")
       private final @Nullable Output<String> lambdaFunctionName;
 
-    public Output<String> getLambdaFunctionName() {
+    public Output<String> lambdaFunctionName() {
         return this.lambdaFunctionName == null ? Codegen.empty() : this.lambdaFunctionName;
     }
 
@@ -33,7 +33,7 @@ public final class AppCampaignHookGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -44,7 +44,7 @@ public final class AppCampaignHookGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="webUrl")
       private final @Nullable Output<String> webUrl;
 
-    public Output<String> getWebUrl() {
+    public Output<String> webUrl() {
         return this.webUrl == null ? Codegen.empty() : this.webUrl;
     }
 

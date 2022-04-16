@@ -22,7 +22,7 @@ public final class UserPoolClientTokenValidityUnitsGetArgs extends com.pulumi.re
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolClientTokenValidityUnitsGetArgs extends com.pulumi.re
     @Import(name="idToken")
       private final @Nullable Output<String> idToken;
 
-    public Output<String> getIdToken() {
+    public Output<String> idToken() {
         return this.idToken == null ? Codegen.empty() : this.idToken;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolClientTokenValidityUnitsGetArgs extends com.pulumi.re
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
+    public Output<String> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 

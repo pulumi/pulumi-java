@@ -19,14 +19,14 @@ public final class StackApplicationSettingsArgs extends com.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="settingsGroup")
       private final @Nullable Output<String> settingsGroup;
 
-    public Output<String> getSettingsGroup() {
+    public Output<String> settingsGroup() {
         return this.settingsGroup == null ? Codegen.empty() : this.settingsGroup;
     }
 

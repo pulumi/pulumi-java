@@ -24,7 +24,7 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetVpcEndpointFilter> filters;
 
-    public List<GetVpcEndpointFilter> getFilters() {
+    public List<GetVpcEndpointFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -46,7 +46,7 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName")
       private final @Nullable String serviceName;
 
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
     }
 
@@ -57,7 +57,7 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -69,7 +69,7 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class GetVpcEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId")
       private final @Nullable String vpcId;
 
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
     }
 

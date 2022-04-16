@@ -23,7 +23,7 @@ public final class ChannelHlsIngestArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ingestEndpoints")
       private final @Nullable Output<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints;
 
-    public Output<List<ChannelHlsIngestIngestEndpointArgs>> getIngestEndpoints() {
+    public Output<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints() {
         return this.ingestEndpoints == null ? Codegen.empty() : this.ingestEndpoints;
     }
 

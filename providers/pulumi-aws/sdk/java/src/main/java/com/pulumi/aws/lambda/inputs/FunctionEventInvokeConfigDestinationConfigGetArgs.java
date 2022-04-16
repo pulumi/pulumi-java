@@ -23,7 +23,7 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends com
     @Import(name="onFailure")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> getOnFailure() {
+    public Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure() {
         return this.onFailure == null ? Codegen.empty() : this.onFailure;
     }
 
@@ -34,7 +34,7 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends com
     @Import(name="onSuccess")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> getOnSuccess() {
+    public Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess() {
         return this.onSuccess == null ? Codegen.empty() : this.onSuccess;
     }
 

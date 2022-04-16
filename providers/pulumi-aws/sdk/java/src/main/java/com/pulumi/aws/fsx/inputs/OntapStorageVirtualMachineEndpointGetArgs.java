@@ -26,7 +26,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends com.pulumi.
     @Import(name="iscses")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseGetArgs>> iscses;
 
-    public Output<List<OntapStorageVirtualMachineEndpointIscseGetArgs>> getIscses() {
+    public Output<List<OntapStorageVirtualMachineEndpointIscseGetArgs>> iscses() {
         return this.iscses == null ? Codegen.empty() : this.iscses;
     }
 
@@ -37,7 +37,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends com.pulumi.
     @Import(name="managements")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> managements;
 
-    public Output<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> getManagements() {
+    public Output<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> managements() {
         return this.managements == null ? Codegen.empty() : this.managements;
     }
 
@@ -48,7 +48,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends com.pulumi.
     @Import(name="nfs")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointNfGetArgs>> nfs;
 
-    public Output<List<OntapStorageVirtualMachineEndpointNfGetArgs>> getNfs() {
+    public Output<List<OntapStorageVirtualMachineEndpointNfGetArgs>> nfs() {
         return this.nfs == null ? Codegen.empty() : this.nfs;
     }
 
@@ -59,7 +59,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends com.pulumi.
     @Import(name="smbs")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> smbs;
 
-    public Output<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> getSmbs() {
+    public Output<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> smbs() {
         return this.smbs == null ? Codegen.empty() : this.smbs;
     }
 

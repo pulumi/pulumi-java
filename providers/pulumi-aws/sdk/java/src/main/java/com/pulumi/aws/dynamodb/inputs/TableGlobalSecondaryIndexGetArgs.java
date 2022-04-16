@@ -25,7 +25,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="hashKey", required=true)
       private final Output<String> hashKey;
 
-    public Output<String> getHashKey() {
+    public Output<String> hashKey() {
         return this.hashKey;
     }
 
@@ -36,7 +36,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="nonKeyAttributes")
       private final @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Output<List<String>> getNonKeyAttributes() {
+    public Output<List<String>> nonKeyAttributes() {
         return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
     }
 
@@ -64,7 +64,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="projectionType", required=true)
       private final Output<String> projectionType;
 
-    public Output<String> getProjectionType() {
+    public Output<String> projectionType() {
         return this.projectionType;
     }
 
@@ -75,7 +75,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
-    public Output<String> getRangeKey() {
+    public Output<String> rangeKey() {
         return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
     }
 
@@ -86,7 +86,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="readCapacity")
       private final @Nullable Output<Integer> readCapacity;
 
-    public Output<Integer> getReadCapacity() {
+    public Output<Integer> readCapacity() {
         return this.readCapacity == null ? Codegen.empty() : this.readCapacity;
     }
 
@@ -97,7 +97,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="writeCapacity")
       private final @Nullable Output<Integer> writeCapacity;
 
-    public Output<Integer> getWriteCapacity() {
+    public Output<Integer> writeCapacity() {
         return this.writeCapacity == null ? Codegen.empty() : this.writeCapacity;
     }
 

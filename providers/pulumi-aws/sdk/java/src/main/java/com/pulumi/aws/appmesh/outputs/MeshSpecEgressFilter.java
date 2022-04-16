@@ -28,7 +28,7 @@ public final class MeshSpecEgressFilter {
      * Valid values are `ALLOW_ALL` and `DROP_ALL`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

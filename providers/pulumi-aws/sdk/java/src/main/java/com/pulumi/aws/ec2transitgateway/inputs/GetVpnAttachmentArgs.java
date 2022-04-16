@@ -24,7 +24,7 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="filters")
       private final @Nullable List<GetVpnAttachmentFilter> filters;
 
-    public List<GetVpnAttachmentFilter> getFilters() {
+    public List<GetVpnAttachmentFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -46,7 +46,7 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="transitGatewayId")
       private final @Nullable String transitGatewayId;
 
-    public Optional<String> getTransitGatewayId() {
+    public Optional<String> transitGatewayId() {
         return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
     }
 
@@ -57,7 +57,7 @@ public final class GetVpnAttachmentArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="vpnConnectionId")
       private final @Nullable String vpnConnectionId;
 
-    public Optional<String> getVpnConnectionId() {
+    public Optional<String> vpnConnectionId() {
         return this.vpnConnectionId == null ? Optional.empty() : Optional.ofNullable(this.vpnConnectionId);
     }
 

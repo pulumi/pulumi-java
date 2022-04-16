@@ -20,7 +20,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
 
@@ -31,7 +31,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="main", required=true)
       private final Boolean main;
 
-    public Boolean getMain() {
+    public Boolean main() {
         return this.main;
     }
 
@@ -42,7 +42,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="routeTableAssociationId", required=true)
       private final String routeTableAssociationId;
 
-    public String getRouteTableAssociationId() {
+    public String routeTableAssociationId() {
         return this.routeTableAssociationId;
     }
 
@@ -53,7 +53,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="routeTableId", required=true)
       private final String routeTableId;
 
-    public String getRouteTableId() {
+    public String routeTableId() {
         return this.routeTableId;
     }
 
@@ -64,7 +64,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

@@ -16,7 +16,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="secrets", required=true)
       private final List<GetSecretSecret> secrets;
 
-    public List<GetSecretSecret> getSecrets() {
+    public List<GetSecretSecret> secrets() {
         return this.secrets;
     }
 

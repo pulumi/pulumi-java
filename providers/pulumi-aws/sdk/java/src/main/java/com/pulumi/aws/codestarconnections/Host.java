@@ -43,7 +43,7 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return The CodeStar Host ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return The name of the host to be created. The name must be unique in the calling AWS account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return The endpoint of the infrastructure to be represented by the host after it is created.
      * 
      */
-    public Output<String> getProviderEndpoint() {
+    public Output<String> providerEndpoint() {
         return this.providerEndpoint;
     }
     /**
@@ -85,7 +85,7 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return The name of the external provider where your third-party code repository is configured.
      * 
      */
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
     /**
@@ -99,7 +99,7 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return The CodeStar Host status. Possible values are `PENDING`, `AVAILABLE`, `VPC_CONFIG_DELETING`, `VPC_CONFIG_INITIALIZING`, and `VPC_CONFIG_FAILED_INITIALIZATION`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -113,7 +113,7 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
      * 
      */
-    public Output</* @Nullable */ HostVpcConfiguration> getVpcConfiguration() {
+    public Output</* @Nullable */ HostVpcConfiguration> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 

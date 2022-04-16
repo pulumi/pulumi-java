@@ -21,7 +21,7 @@ public final class DomainNameEndpointConfigurationGetArgs extends com.pulumi.res
     @Import(name="types", required=true)
       private final Output<String> types;
 
-    public Output<String> getTypes() {
+    public Output<String> types() {
         return this.types;
     }
 

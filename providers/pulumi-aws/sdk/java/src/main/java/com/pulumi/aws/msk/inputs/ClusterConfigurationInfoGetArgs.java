@@ -22,7 +22,7 @@ public final class ClusterConfigurationInfoGetArgs extends com.pulumi.resources.
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterConfigurationInfoGetArgs extends com.pulumi.resources.
     @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
 

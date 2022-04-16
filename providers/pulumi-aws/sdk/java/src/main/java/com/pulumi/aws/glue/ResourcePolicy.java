@@ -32,7 +32,7 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
     @Export(name="enableHybrid", type=String.class, parameters={})
     private Output</* @Nullable */ String> enableHybrid;
 
-    public Output</* @Nullable */ String> getEnableHybrid() {
+    public Output</* @Nullable */ String> enableHybrid() {
         return this.enableHybrid;
     }
     /**
@@ -46,7 +46,7 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
      * @return The policy to be applied to the aws glue data catalog.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

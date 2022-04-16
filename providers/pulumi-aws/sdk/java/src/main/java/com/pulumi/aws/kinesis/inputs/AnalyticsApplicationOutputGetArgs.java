@@ -26,7 +26,7 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="kinesisFirehose")
       private final @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
 
-    public Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> getKinesisFirehose() {
+    public Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose() {
         return this.kinesisFirehose == null ? Codegen.empty() : this.kinesisFirehose;
     }
 
@@ -50,7 +50,7 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="kinesisStream")
       private final @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
 
-    public Output<AnalyticsApplicationOutputKinesisStreamGetArgs> getKinesisStream() {
+    public Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream() {
         return this.kinesisStream == null ? Codegen.empty() : this.kinesisStream;
     }
 
@@ -61,7 +61,7 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="lambda")
       private final @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
 
-    public Output<AnalyticsApplicationOutputLambdaGetArgs> getLambda() {
+    public Output<AnalyticsApplicationOutputLambdaGetArgs> lambda() {
         return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
@@ -72,7 +72,7 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -83,7 +83,7 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationOutputSchemaGetArgs> schema;
 
-    public Output<AnalyticsApplicationOutputSchemaGetArgs> getSchema() {
+    public Output<AnalyticsApplicationOutputSchemaGetArgs> schema() {
         return this.schema;
     }
 

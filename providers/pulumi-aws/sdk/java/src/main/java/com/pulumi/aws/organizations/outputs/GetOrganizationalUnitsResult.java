@@ -37,17 +37,17 @@ public final class GetOrganizationalUnitsResult {
      * List of child organizational units, which have the following attributes:
      * 
     */
-    public List<GetOrganizationalUnitsChildren> getChildrens() {
+    public List<GetOrganizationalUnitsChildren> childrens() {
         return this.childrens;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getParentId() {
+    public String parentId() {
         return this.parentId;
     }
 

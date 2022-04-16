@@ -62,51 +62,51 @@ public final class GetPermissionSetResult {
         this.tags = tags;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The description of the Permission Set.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceArn() {
+    public String instanceArn() {
         return this.instanceArn;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The relay state URL used to redirect users within the application during the federation authentication process.
      * 
     */
-    public String getRelayState() {
+    public String relayState() {
         return this.relayState;
     }
     /**
      * The length of time that the application user sessions are valid in the ISO-8601 standard.
      * 
     */
-    public String getSessionDuration() {
+    public String sessionDuration() {
         return this.sessionDuration;
     }
     /**
      * Key-value map of resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

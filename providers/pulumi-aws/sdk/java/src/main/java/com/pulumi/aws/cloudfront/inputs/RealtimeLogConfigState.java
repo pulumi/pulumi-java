@@ -25,7 +25,7 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
     @Import(name="endpoint")
       private final @Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint;
 
-    public Output<RealtimeLogConfigEndpointGetArgs> getEndpoint() {
+    public Output<RealtimeLogConfigEndpointGetArgs> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -47,7 +47,7 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
     @Import(name="fields")
       private final @Nullable Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -58,7 +58,7 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class RealtimeLogConfigState extends com.pulumi.resources.ResourceA
     @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> getSamplingRate() {
+    public Output<Integer> samplingRate() {
         return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 

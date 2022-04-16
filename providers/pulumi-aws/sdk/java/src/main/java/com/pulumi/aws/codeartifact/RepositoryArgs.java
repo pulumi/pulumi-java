@@ -26,7 +26,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -48,7 +48,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainOwner")
       private final @Nullable Output<String> domainOwner;
 
-    public Output<String> getDomainOwner() {
+    public Output<String> domainOwner() {
         return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
     }
 
@@ -59,7 +59,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalConnections")
       private final @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections;
 
-    public Output<RepositoryExternalConnectionsArgs> getExternalConnections() {
+    public Output<RepositoryExternalConnectionsArgs> externalConnections() {
         return this.externalConnections == null ? Codegen.empty() : this.externalConnections;
     }
 
@@ -70,7 +70,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repository", required=true)
       private final Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -81,7 +81,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upstreams")
       private final @Nullable Output<List<RepositoryUpstreamArgs>> upstreams;
 
-    public Output<List<RepositoryUpstreamArgs>> getUpstreams() {
+    public Output<List<RepositoryUpstreamArgs>> upstreams() {
         return this.upstreams == null ? Codegen.empty() : this.upstreams;
     }
 

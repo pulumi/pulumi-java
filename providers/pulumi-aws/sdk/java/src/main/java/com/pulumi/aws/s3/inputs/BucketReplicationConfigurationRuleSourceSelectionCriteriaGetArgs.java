@@ -23,7 +23,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaGetA
     @Import(name="sseKmsEncryptedObjects")
       private final @Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> sseKmsEncryptedObjects;
 
-    public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> getSseKmsEncryptedObjects() {
+    public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> sseKmsEncryptedObjects() {
         return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
     }
 

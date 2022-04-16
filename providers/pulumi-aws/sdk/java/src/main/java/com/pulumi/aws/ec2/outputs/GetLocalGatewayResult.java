@@ -48,34 +48,34 @@ public final class GetLocalGatewayResult {
         this.tags = tags;
     }
 
-    public List<GetLocalGatewayFilter> getFilters() {
+    public List<GetLocalGatewayFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Amazon Resource Name (ARN) of Outpost
      * 
     */
-    public String getOutpostArn() {
+    public String outpostArn() {
         return this.outpostArn;
     }
     /**
      * AWS account identifier that owns the Local Gateway.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * State of the local gateway.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

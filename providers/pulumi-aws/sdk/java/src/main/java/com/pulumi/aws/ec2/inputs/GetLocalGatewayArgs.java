@@ -24,7 +24,7 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetLocalGatewayFilter> filters;
 
-    public List<GetLocalGatewayFilter> getFilters() {
+    public List<GetLocalGatewayFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -47,7 +47,7 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -59,7 +59,7 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

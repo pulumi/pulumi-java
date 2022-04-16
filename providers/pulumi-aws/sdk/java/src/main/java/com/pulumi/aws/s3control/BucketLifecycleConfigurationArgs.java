@@ -23,7 +23,7 @@ public final class BucketLifecycleConfigurationArgs extends com.pulumi.resources
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class BucketLifecycleConfigurationArgs extends com.pulumi.resources
     @Import(name="rules", required=true)
       private final Output<List<BucketLifecycleConfigurationRuleArgs>> rules;
 
-    public Output<List<BucketLifecycleConfigurationRuleArgs>> getRules() {
+    public Output<List<BucketLifecycleConfigurationRuleArgs>> rules() {
         return this.rules;
     }
 

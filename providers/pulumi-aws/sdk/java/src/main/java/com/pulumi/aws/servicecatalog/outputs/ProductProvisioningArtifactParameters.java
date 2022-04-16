@@ -63,42 +63,42 @@ public final class ProductProvisioningArtifactParameters {
      * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
      * 
     */
-    public Optional<Boolean> getDisableTemplateValidation() {
+    public Optional<Boolean> disableTemplateValidation() {
         return Optional.ofNullable(this.disableTemplateValidation);
     }
     /**
      * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
      * 
     */
-    public Optional<String> getTemplatePhysicalId() {
+    public Optional<String> templatePhysicalId() {
         return Optional.ofNullable(this.templatePhysicalId);
     }
     /**
      * Template source as URL of the CloudFormation template in Amazon S3.
      * 
     */
-    public Optional<String> getTemplateUrl() {
+    public Optional<String> templateUrl() {
         return Optional.ofNullable(this.templateUrl);
     }
     /**
      * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -51,28 +51,28 @@ public final class ProjectBuildBatchConfig {
      * Specifies if the build artifacts for the batch build should be combined into a single artifact location.
      * 
     */
-    public Optional<Boolean> getCombineArtifacts() {
+    public Optional<Boolean> combineArtifacts() {
         return Optional.ofNullable(this.combineArtifacts);
     }
     /**
      * Specifies the restrictions for the batch build.
      * 
     */
-    public Optional<ProjectBuildBatchConfigRestrictions> getRestrictions() {
+    public Optional<ProjectBuildBatchConfigRestrictions> restrictions() {
         return Optional.ofNullable(this.restrictions);
     }
     /**
      * Specifies the service role ARN for the batch build project.
      * 
     */
-    public String getServiceRole() {
+    public String serviceRole() {
         return this.serviceRole;
     }
     /**
      * Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
      * 
     */
-    public Optional<Integer> getTimeoutInMins() {
+    public Optional<Integer> timeoutInMins() {
         return Optional.ofNullable(this.timeoutInMins);
     }
 

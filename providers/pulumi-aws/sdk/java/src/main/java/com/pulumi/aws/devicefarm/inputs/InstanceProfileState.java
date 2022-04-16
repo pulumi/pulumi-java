@@ -25,7 +25,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="excludeAppPackagesFromCleanups")
       private final @Nullable Output<List<String>> excludeAppPackagesFromCleanups;
 
-    public Output<List<String>> getExcludeAppPackagesFromCleanups() {
+    public Output<List<String>> excludeAppPackagesFromCleanups() {
         return this.excludeAppPackagesFromCleanups == null ? Codegen.empty() : this.excludeAppPackagesFromCleanups;
     }
 
@@ -58,7 +58,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="packageCleanup")
       private final @Nullable Output<Boolean> packageCleanup;
 
-    public Output<Boolean> getPackageCleanup() {
+    public Output<Boolean> packageCleanup() {
         return this.packageCleanup == null ? Codegen.empty() : this.packageCleanup;
     }
 
@@ -80,7 +80,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="rebootAfterUse")
       private final @Nullable Output<Boolean> rebootAfterUse;
 
-    public Output<Boolean> getRebootAfterUse() {
+    public Output<Boolean> rebootAfterUse() {
         return this.rebootAfterUse == null ? Codegen.empty() : this.rebootAfterUse;
     }
 
@@ -91,7 +91,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -24,7 +24,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authMode", required=true)
       private final Output<String> authMode;
 
-    public Output<String> getAuthMode() {
+    public Output<String> authMode() {
         return this.authMode;
     }
 
@@ -35,7 +35,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultS3Location", required=true)
       private final Output<String> defaultS3Location;
 
-    public Output<String> getDefaultS3Location() {
+    public Output<String> defaultS3Location() {
         return this.defaultS3Location;
     }
 
@@ -46,7 +46,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineSecurityGroupId", required=true)
       private final Output<String> engineSecurityGroupId;
 
-    public Output<String> getEngineSecurityGroupId() {
+    public Output<String> engineSecurityGroupId() {
         return this.engineSecurityGroupId;
     }
 
@@ -68,7 +68,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="idpAuthUrl")
       private final @Nullable Output<String> idpAuthUrl;
 
-    public Output<String> getIdpAuthUrl() {
+    public Output<String> idpAuthUrl() {
         return this.idpAuthUrl == null ? Codegen.empty() : this.idpAuthUrl;
     }
 
@@ -79,7 +79,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="idpRelayStateParameterName")
       private final @Nullable Output<String> idpRelayStateParameterName;
 
-    public Output<String> getIdpRelayStateParameterName() {
+    public Output<String> idpRelayStateParameterName() {
         return this.idpRelayStateParameterName == null ? Codegen.empty() : this.idpRelayStateParameterName;
     }
 
@@ -90,7 +90,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole", required=true)
       private final Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
 
@@ -112,7 +112,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -123,14 +123,14 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -141,7 +141,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userRole")
       private final @Nullable Output<String> userRole;
 
-    public Output<String> getUserRole() {
+    public Output<String> userRole() {
         return this.userRole == null ? Codegen.empty() : this.userRole;
     }
 
@@ -152,7 +152,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -163,7 +163,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceSecurityGroupId", required=true)
       private final Output<String> workspaceSecurityGroupId;
 
-    public Output<String> getWorkspaceSecurityGroupId() {
+    public Output<String> workspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId;
     }
 

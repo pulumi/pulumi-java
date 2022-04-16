@@ -22,7 +22,7 @@ public final class QueueReservationPlanSettingsArgs extends com.pulumi.resources
     @Import(name="commitment", required=true)
       private final Output<String> commitment;
 
-    public Output<String> getCommitment() {
+    public Output<String> commitment() {
         return this.commitment;
     }
 
@@ -33,7 +33,7 @@ public final class QueueReservationPlanSettingsArgs extends com.pulumi.resources
     @Import(name="renewalType", required=true)
       private final Output<String> renewalType;
 
-    public Output<String> getRenewalType() {
+    public Output<String> renewalType() {
         return this.renewalType;
     }
 
@@ -44,7 +44,7 @@ public final class QueueReservationPlanSettingsArgs extends com.pulumi.resources
     @Import(name="reservedSlots", required=true)
       private final Output<Integer> reservedSlots;
 
-    public Output<Integer> getReservedSlots() {
+    public Output<Integer> reservedSlots() {
         return this.reservedSlots;
     }
 

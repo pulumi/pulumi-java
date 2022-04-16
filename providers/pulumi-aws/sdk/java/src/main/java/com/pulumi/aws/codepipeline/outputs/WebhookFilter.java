@@ -32,14 +32,14 @@ public final class WebhookFilter {
      * The [JSON path](https://github.com/json-path/JsonPath) to filter on.
      * 
     */
-    public String getJsonPath() {
+    public String jsonPath() {
         return this.jsonPath;
     }
     /**
      * The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
      * 
     */
-    public String getMatchEquals() {
+    public String matchEquals() {
         return this.matchEquals;
     }
 

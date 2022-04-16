@@ -30,7 +30,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalAuthenticationProviders")
       private final @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders;
 
-    public Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>> getAdditionalAuthenticationProviders() {
+    public Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders() {
         return this.additionalAuthenticationProviders == null ? Codegen.empty() : this.additionalAuthenticationProviders;
     }
 
@@ -41,7 +41,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -52,7 +52,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaAuthorizerConfig")
       private final @Nullable Output<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
 
-    public Output<GraphQLApiLambdaAuthorizerConfigArgs> getLambdaAuthorizerConfig() {
+    public Output<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig() {
         return this.lambdaAuthorizerConfig == null ? Codegen.empty() : this.lambdaAuthorizerConfig;
     }
 
@@ -63,7 +63,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
       private final @Nullable Output<GraphQLApiLogConfigArgs> logConfig;
 
-    public Output<GraphQLApiLogConfigArgs> getLogConfig() {
+    public Output<GraphQLApiLogConfigArgs> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -74,7 +74,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="openidConnectConfig")
       private final @Nullable Output<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig;
 
-    public Output<GraphQLApiOpenidConnectConfigArgs> getOpenidConnectConfig() {
+    public Output<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig() {
         return this.openidConnectConfig == null ? Codegen.empty() : this.openidConnectConfig;
     }
 
@@ -96,7 +96,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -107,7 +107,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -118,7 +118,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userPoolConfig")
       private final @Nullable Output<GraphQLApiUserPoolConfigArgs> userPoolConfig;
 
-    public Output<GraphQLApiUserPoolConfigArgs> getUserPoolConfig() {
+    public Output<GraphQLApiUserPoolConfigArgs> userPoolConfig() {
         return this.userPoolConfig == null ? Codegen.empty() : this.userPoolConfig;
     }
 
@@ -129,7 +129,7 @@ public final class GraphQLApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xrayEnabled")
       private final @Nullable Output<Boolean> xrayEnabled;
 
-    public Output<Boolean> getXrayEnabled() {
+    public Output<Boolean> xrayEnabled() {
         return this.xrayEnabled == null ? Codegen.empty() : this.xrayEnabled;
     }
 

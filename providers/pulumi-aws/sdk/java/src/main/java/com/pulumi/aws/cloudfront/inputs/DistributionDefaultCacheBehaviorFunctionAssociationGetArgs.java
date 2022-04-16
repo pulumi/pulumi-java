@@ -22,7 +22,7 @@ public final class DistributionDefaultCacheBehaviorFunctionAssociationGetArgs ex
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -33,7 +33,7 @@ public final class DistributionDefaultCacheBehaviorFunctionAssociationGetArgs ex
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 

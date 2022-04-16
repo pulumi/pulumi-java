@@ -42,7 +42,7 @@ public class ResourceShare extends com.pulumi.resources.CustomResource {
      * @return Indicates whether principals outside your organization can be associated with a resource share.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowExternalPrincipals() {
+    public Output</* @Nullable */ Boolean> allowExternalPrincipals() {
         return this.allowExternalPrincipals;
     }
     /**
@@ -56,7 +56,7 @@ public class ResourceShare extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the resource share.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +70,7 @@ public class ResourceShare extends com.pulumi.resources.CustomResource {
      * @return The name of the resource share.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ResourceShare extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +98,7 @@ public class ResourceShare extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

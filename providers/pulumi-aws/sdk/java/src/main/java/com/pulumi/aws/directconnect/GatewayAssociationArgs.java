@@ -23,7 +23,7 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowedPrefixes")
       private final @Nullable Output<List<String>> allowedPrefixes;
 
-    public Output<List<String>> getAllowedPrefixes() {
+    public Output<List<String>> allowedPrefixes() {
         return this.allowedPrefixes == null ? Codegen.empty() : this.allowedPrefixes;
     }
 
@@ -35,7 +35,7 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="associatedGatewayId")
       private final @Nullable Output<String> associatedGatewayId;
 
-    public Output<String> getAssociatedGatewayId() {
+    public Output<String> associatedGatewayId() {
         return this.associatedGatewayId == null ? Codegen.empty() : this.associatedGatewayId;
     }
 
@@ -47,7 +47,7 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="associatedGatewayOwnerAccountId")
       private final @Nullable Output<String> associatedGatewayOwnerAccountId;
 
-    public Output<String> getAssociatedGatewayOwnerAccountId() {
+    public Output<String> associatedGatewayOwnerAccountId() {
         return this.associatedGatewayOwnerAccountId == null ? Codegen.empty() : this.associatedGatewayOwnerAccountId;
     }
 
@@ -58,7 +58,7 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
 
@@ -70,7 +70,7 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="proposalId")
       private final @Nullable Output<String> proposalId;
 
-    public Output<String> getProposalId() {
+    public Output<String> proposalId() {
         return this.proposalId == null ? Codegen.empty() : this.proposalId;
     }
 
@@ -84,7 +84,7 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
       private final @Nullable Output<String> vpnGatewayId;
 
     @Deprecated /* use 'associated_gateway_id' argument instead */
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
     }
 

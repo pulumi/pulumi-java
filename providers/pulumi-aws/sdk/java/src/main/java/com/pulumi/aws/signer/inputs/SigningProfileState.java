@@ -26,7 +26,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -59,7 +59,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="platformDisplayName")
       private final @Nullable Output<String> platformDisplayName;
 
-    public Output<String> getPlatformDisplayName() {
+    public Output<String> platformDisplayName() {
         return this.platformDisplayName == null ? Codegen.empty() : this.platformDisplayName;
     }
 
@@ -70,7 +70,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="platformId")
       private final @Nullable Output<String> platformId;
 
-    public Output<String> getPlatformId() {
+    public Output<String> platformId() {
         return this.platformId == null ? Codegen.empty() : this.platformId;
     }
 
@@ -81,7 +81,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="revocationRecords")
       private final @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
 
-    public Output<List<SigningProfileRevocationRecordGetArgs>> getRevocationRecords() {
+    public Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords() {
         return this.revocationRecords == null ? Codegen.empty() : this.revocationRecords;
     }
 
@@ -92,7 +92,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="signatureValidityPeriod")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
 
-    public Output<SigningProfileSignatureValidityPeriodGetArgs> getSignatureValidityPeriod() {
+    public Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod() {
         return this.signatureValidityPeriod == null ? Codegen.empty() : this.signatureValidityPeriod;
     }
 
@@ -103,7 +103,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -114,7 +114,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -125,7 +125,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -136,7 +136,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -147,7 +147,7 @@ public final class SigningProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="versionArn")
       private final @Nullable Output<String> versionArn;
 
-    public Output<String> getVersionArn() {
+    public Output<String> versionArn() {
         return this.versionArn == null ? Codegen.empty() : this.versionArn;
     }
 

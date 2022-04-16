@@ -25,7 +25,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -36,7 +36,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="locationUri", required=true)
       private final Output<String> locationUri;
 
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
 
@@ -58,7 +58,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="retrievalRoleArn")
       private final @Nullable Output<String> retrievalRoleArn;
 
-    public Output<String> getRetrievalRoleArn() {
+    public Output<String> retrievalRoleArn() {
         return this.retrievalRoleArn == null ? Codegen.empty() : this.retrievalRoleArn;
     }
 
@@ -80,7 +80,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="validators")
       private final @Nullable Output<List<ConfigurationProfileValidatorArgs>> validators;
 
-    public Output<List<ConfigurationProfileValidatorArgs>> getValidators() {
+    public Output<List<ConfigurationProfileValidatorArgs>> validators() {
         return this.validators == null ? Codegen.empty() : this.validators;
     }
 

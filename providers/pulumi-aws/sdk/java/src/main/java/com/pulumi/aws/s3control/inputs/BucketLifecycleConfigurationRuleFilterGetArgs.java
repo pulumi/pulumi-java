@@ -23,7 +23,7 @@ public final class BucketLifecycleConfigurationRuleFilterGetArgs extends com.pul
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -34,7 +34,7 @@ public final class BucketLifecycleConfigurationRuleFilterGetArgs extends com.pul
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

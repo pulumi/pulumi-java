@@ -65,41 +65,41 @@ public final class GetOriginRequestPolicyResult {
      * Comment to describe the origin request policy.
      * 
     */
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
     /**
      * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
      * 
     */
-    public List<GetOriginRequestPolicyCookiesConfig> getCookiesConfigs() {
+    public List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs() {
         return this.cookiesConfigs;
     }
     /**
      * The current version of the origin request policy.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
      * 
     */
-    public List<GetOriginRequestPolicyHeadersConfig> getHeadersConfigs() {
+    public List<GetOriginRequestPolicyHeadersConfig> headersConfigs() {
         return this.headersConfigs;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
      * 
     */
-    public List<GetOriginRequestPolicyQueryStringsConfig> getQueryStringsConfigs() {
+    public List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs() {
         return this.queryStringsConfigs;
     }
 

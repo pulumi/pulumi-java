@@ -18,14 +18,14 @@ public final class SigningProfileSignatureValidityPeriodGetArgs extends com.pulu
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 

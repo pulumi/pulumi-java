@@ -23,7 +23,7 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
 
@@ -45,7 +45,7 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

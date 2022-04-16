@@ -32,7 +32,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="andStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementGetArgs> andStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementGetArgs> getAndStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementGetArgs> andStatement() {
         return this.andStatement == null ? Codegen.empty() : this.andStatement;
     }
 
@@ -43,7 +43,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="byteMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementGetArgs> getByteMatchStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementGetArgs> byteMatchStatement() {
         return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
     }
 
@@ -54,7 +54,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="geoMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementGetArgs> geoMatchStatement() {
         return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
     }
 
@@ -65,7 +65,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="ipSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Codegen.empty() : this.ipSetReferenceStatement;
     }
 
@@ -76,7 +76,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="labelMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementLabelMatchStatementGetArgs> labelMatchStatement() {
         return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
     }
 
@@ -87,7 +87,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="notStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementGetArgs> notStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementGetArgs> getNotStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementGetArgs> notStatement() {
         return this.notStatement == null ? Codegen.empty() : this.notStatement;
     }
 
@@ -98,7 +98,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="orStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementGetArgs> orStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementGetArgs> getOrStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementGetArgs> orStatement() {
         return this.orStatement == null ? Codegen.empty() : this.orStatement;
     }
 
@@ -109,7 +109,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
     }
 
@@ -120,7 +120,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="sizeConstraintStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
     }
 
@@ -131,7 +131,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="sqliMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement() {
         return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
     }
 
@@ -142,7 +142,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     @Import(name="xssMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementGetArgs> getXssMatchStatement() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementGetArgs> xssMatchStatement() {
         return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
     }
 

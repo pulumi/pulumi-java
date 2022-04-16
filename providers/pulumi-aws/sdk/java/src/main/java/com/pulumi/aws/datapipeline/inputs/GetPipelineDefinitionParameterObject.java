@@ -17,7 +17,7 @@ public final class GetPipelineDefinitionParameterObject extends com.pulumi.resou
     @Import(name="attributes", required=true)
       private final List<GetPipelineDefinitionParameterObjectAttribute> attributes;
 
-    public List<GetPipelineDefinitionParameterObjectAttribute> getAttributes() {
+    public List<GetPipelineDefinitionParameterObjectAttribute> attributes() {
         return this.attributes;
     }
 
@@ -28,7 +28,7 @@ public final class GetPipelineDefinitionParameterObject extends com.pulumi.resou
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

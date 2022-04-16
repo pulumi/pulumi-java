@@ -23,7 +23,7 @@ public final class TrafficMirrorTargetState extends com.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class TrafficMirrorTargetState extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class TrafficMirrorTargetState extends com.pulumi.resources.Resourc
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -56,7 +56,7 @@ public final class TrafficMirrorTargetState extends com.pulumi.resources.Resourc
     @Import(name="networkLoadBalancerArn")
       private final @Nullable Output<String> networkLoadBalancerArn;
 
-    public Output<String> getNetworkLoadBalancerArn() {
+    public Output<String> networkLoadBalancerArn() {
         return this.networkLoadBalancerArn == null ? Codegen.empty() : this.networkLoadBalancerArn;
     }
 
@@ -67,7 +67,7 @@ public final class TrafficMirrorTargetState extends com.pulumi.resources.Resourc
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -78,7 +78,7 @@ public final class TrafficMirrorTargetState extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -89,7 +89,7 @@ public final class TrafficMirrorTargetState extends com.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -43,7 +43,7 @@ public class RecorderStatus extends com.pulumi.resources.CustomResource {
      * @return Whether the configuration recorder should be enabled or disabled.
      * 
      */
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -57,7 +57,7 @@ public class RecorderStatus extends com.pulumi.resources.CustomResource {
      * @return The name of the recorder
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -23,7 +23,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="blackhole")
       private final @Nullable Output<Boolean> blackhole;
 
-    public Output<Boolean> getBlackhole() {
+    public Output<Boolean> blackhole() {
         return this.blackhole == null ? Codegen.empty() : this.blackhole;
     }
 
@@ -34,7 +34,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
@@ -45,7 +45,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
@@ -56,7 +56,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayRouteTableId")
       private final @Nullable Output<String> transitGatewayRouteTableId;
 
-    public Output<String> getTransitGatewayRouteTableId() {
+    public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId == null ? Codegen.empty() : this.transitGatewayRouteTableId;
     }
 

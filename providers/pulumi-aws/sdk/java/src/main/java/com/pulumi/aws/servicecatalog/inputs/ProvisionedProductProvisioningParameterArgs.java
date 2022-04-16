@@ -23,7 +23,7 @@ public final class ProvisionedProductProvisioningParameterArgs extends com.pulum
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -34,7 +34,7 @@ public final class ProvisionedProductProvisioningParameterArgs extends com.pulum
     @Import(name="usePreviousValue")
       private final @Nullable Output<Boolean> usePreviousValue;
 
-    public Output<Boolean> getUsePreviousValue() {
+    public Output<Boolean> usePreviousValue() {
         return this.usePreviousValue == null ? Codegen.empty() : this.usePreviousValue;
     }
 
@@ -45,7 +45,7 @@ public final class ProvisionedProductProvisioningParameterArgs extends com.pulum
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

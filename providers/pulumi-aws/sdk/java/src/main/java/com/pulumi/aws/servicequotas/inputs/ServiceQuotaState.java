@@ -24,7 +24,7 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="adjustable")
       private final @Nullable Output<Boolean> adjustable;
 
-    public Output<Boolean> getAdjustable() {
+    public Output<Boolean> adjustable() {
         return this.adjustable == null ? Codegen.empty() : this.adjustable;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultValue")
       private final @Nullable Output<Double> defaultValue;
 
-    public Output<Double> getDefaultValue() {
+    public Output<Double> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -57,7 +57,7 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="quotaCode")
       private final @Nullable Output<String> quotaCode;
 
-    public Output<String> getQuotaCode() {
+    public Output<String> quotaCode() {
         return this.quotaCode == null ? Codegen.empty() : this.quotaCode;
     }
 
@@ -68,21 +68,21 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="quotaName")
       private final @Nullable Output<String> quotaName;
 
-    public Output<String> getQuotaName() {
+    public Output<String> quotaName() {
         return this.quotaName == null ? Codegen.empty() : this.quotaName;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="requestStatus")
       private final @Nullable Output<String> requestStatus;
 
-    public Output<String> getRequestStatus() {
+    public Output<String> requestStatus() {
         return this.requestStatus == null ? Codegen.empty() : this.requestStatus;
     }
 
@@ -93,7 +93,7 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceCode")
       private final @Nullable Output<String> serviceCode;
 
-    public Output<String> getServiceCode() {
+    public Output<String> serviceCode() {
         return this.serviceCode == null ? Codegen.empty() : this.serviceCode;
     }
 
@@ -104,7 +104,7 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -115,7 +115,7 @@ public final class ServiceQuotaState extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

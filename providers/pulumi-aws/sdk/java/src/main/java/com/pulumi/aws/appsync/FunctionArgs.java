@@ -24,7 +24,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -35,7 +35,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
 
@@ -46,7 +46,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion")
       private final @Nullable Output<String> functionVersion;
 
-    public Output<String> getFunctionVersion() {
+    public Output<String> functionVersion() {
         return this.functionVersion == null ? Codegen.empty() : this.functionVersion;
     }
 
@@ -68,7 +68,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBatchSize")
       private final @Nullable Output<Integer> maxBatchSize;
 
-    public Output<Integer> getMaxBatchSize() {
+    public Output<Integer> maxBatchSize() {
         return this.maxBatchSize == null ? Codegen.empty() : this.maxBatchSize;
     }
 
@@ -79,7 +79,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestMappingTemplate", required=true)
       private final Output<String> requestMappingTemplate;
 
-    public Output<String> getRequestMappingTemplate() {
+    public Output<String> requestMappingTemplate() {
         return this.requestMappingTemplate;
     }
 
@@ -101,7 +101,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseMappingTemplate", required=true)
       private final Output<String> responseMappingTemplate;
 
-    public Output<String> getResponseMappingTemplate() {
+    public Output<String> responseMappingTemplate() {
         return this.responseMappingTemplate;
     }
 
@@ -112,7 +112,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncConfig")
       private final @Nullable Output<FunctionSyncConfigArgs> syncConfig;
 
-    public Output<FunctionSyncConfigArgs> getSyncConfig() {
+    public Output<FunctionSyncConfigArgs> syncConfig() {
         return this.syncConfig == null ? Codegen.empty() : this.syncConfig;
     }
 

@@ -22,7 +22,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionGetArgs extends c
     @Import(name="groups", required=true)
       private final Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups;
     }
 

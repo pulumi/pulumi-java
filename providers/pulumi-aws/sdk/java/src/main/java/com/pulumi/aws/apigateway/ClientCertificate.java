@@ -41,7 +41,7 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return The date when the client certificate was created.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -69,7 +69,7 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return The description of the client certificate.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -83,7 +83,7 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return The date when the client certificate will expire.
      * 
      */
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -97,7 +97,7 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return The PEM-encoded public key of the client certificate.
      * 
      */
-    public Output<String> getPemEncodedCertificate() {
+    public Output<String> pemEncodedCertificate() {
         return this.pemEncodedCertificate;
     }
     /**
@@ -111,7 +111,7 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -125,7 +125,7 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

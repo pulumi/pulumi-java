@@ -22,7 +22,7 @@ public final class ResolverFirewallConfigState extends com.pulumi.resources.Reso
     @Import(name="firewallFailOpen")
       private final @Nullable Output<String> firewallFailOpen;
 
-    public Output<String> getFirewallFailOpen() {
+    public Output<String> firewallFailOpen() {
         return this.firewallFailOpen == null ? Codegen.empty() : this.firewallFailOpen;
     }
 
@@ -33,7 +33,7 @@ public final class ResolverFirewallConfigState extends com.pulumi.resources.Reso
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -44,7 +44,7 @@ public final class ResolverFirewallConfigState extends com.pulumi.resources.Reso
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

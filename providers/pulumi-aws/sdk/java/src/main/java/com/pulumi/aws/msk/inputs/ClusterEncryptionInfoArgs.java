@@ -23,7 +23,7 @@ public final class ClusterEncryptionInfoArgs extends com.pulumi.resources.Resour
     @Import(name="encryptionAtRestKmsKeyArn")
       private final @Nullable Output<String> encryptionAtRestKmsKeyArn;
 
-    public Output<String> getEncryptionAtRestKmsKeyArn() {
+    public Output<String> encryptionAtRestKmsKeyArn() {
         return this.encryptionAtRestKmsKeyArn == null ? Codegen.empty() : this.encryptionAtRestKmsKeyArn;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterEncryptionInfoArgs extends com.pulumi.resources.Resour
     @Import(name="encryptionInTransit")
       private final @Nullable Output<ClusterEncryptionInfoEncryptionInTransitArgs> encryptionInTransit;
 
-    public Output<ClusterEncryptionInfoEncryptionInTransitArgs> getEncryptionInTransit() {
+    public Output<ClusterEncryptionInfoEncryptionInTransitArgs> encryptionInTransit() {
         return this.encryptionInTransit == null ? Codegen.empty() : this.encryptionInTransit;
     }
 

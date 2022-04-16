@@ -32,14 +32,14 @@ public final class WebAclDefaultActionBlockCustomResponseResponseHeader {
      * The label string.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The value of the custom header.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

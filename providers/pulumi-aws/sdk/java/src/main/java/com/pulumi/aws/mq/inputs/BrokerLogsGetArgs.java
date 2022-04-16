@@ -22,7 +22,7 @@ public final class BrokerLogsGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="audit")
       private final @Nullable Output<Boolean> audit;
 
-    public Output<Boolean> getAudit() {
+    public Output<Boolean> audit() {
         return this.audit == null ? Codegen.empty() : this.audit;
     }
 
@@ -33,7 +33,7 @@ public final class BrokerLogsGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="general")
       private final @Nullable Output<Boolean> general;
 
-    public Output<Boolean> getGeneral() {
+    public Output<Boolean> general() {
         return this.general == null ? Codegen.empty() : this.general;
     }
 

@@ -34,14 +34,14 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      * Encryption mode to use for CloudWatch data. Valid values: `DISABLED`, `SSE-KMS`. Default value: `DISABLED`.
      * 
     */
-    public Optional<String> getCloudwatchEncryptionMode() {
+    public Optional<String> cloudwatchEncryptionMode() {
         return Optional.ofNullable(this.cloudwatchEncryptionMode);
     }
     /**
      * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
 

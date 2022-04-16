@@ -24,7 +24,7 @@ public final class DomainAutoTuneOptionsGetArgs extends com.pulumi.resources.Res
     @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState;
     }
 
@@ -35,7 +35,7 @@ public final class DomainAutoTuneOptionsGetArgs extends com.pulumi.resources.Res
     @Import(name="maintenanceSchedules")
       private final @Nullable Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> maintenanceSchedules;
 
-    public Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> getMaintenanceSchedules() {
+    public Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> maintenanceSchedules() {
         return this.maintenanceSchedules == null ? Codegen.empty() : this.maintenanceSchedules;
     }
 
@@ -46,7 +46,7 @@ public final class DomainAutoTuneOptionsGetArgs extends com.pulumi.resources.Res
     @Import(name="rollbackOnDisable")
       private final @Nullable Output<String> rollbackOnDisable;
 
-    public Output<String> getRollbackOnDisable() {
+    public Output<String> rollbackOnDisable() {
         return this.rollbackOnDisable == null ? Codegen.empty() : this.rollbackOnDisable;
     }
 

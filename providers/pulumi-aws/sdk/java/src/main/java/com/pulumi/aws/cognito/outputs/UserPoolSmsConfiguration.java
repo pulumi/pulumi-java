@@ -32,14 +32,14 @@ public final class UserPoolSmsConfiguration {
      * External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
      * 
     */
-    public String getExternalId() {
+    public String externalId() {
         return this.externalId;
     }
     /**
      * ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
      * 
     */
-    public String getSnsCallerArn() {
+    public String snsCallerArn() {
         return this.snsCallerArn;
     }
 

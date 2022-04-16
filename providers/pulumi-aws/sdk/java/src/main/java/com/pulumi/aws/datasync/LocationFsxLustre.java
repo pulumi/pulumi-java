@@ -42,7 +42,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return The time that the FSx for Lustre location was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -70,7 +70,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the FSx for Lustre file system.
      * 
      */
-    public Output<String> getFsxFilesystemArn() {
+    public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
     /**
@@ -84,7 +84,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
      * 
      */
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
@@ -98,7 +98,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return Subdirectory to perform actions as source or destination.
      * 
      */
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -112,7 +112,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -126,7 +126,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -140,7 +140,7 @@ public class LocationFsxLustre extends com.pulumi.resources.CustomResource {
      * @return The URL of the FSx for Lustre location that was described.
      * 
      */
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

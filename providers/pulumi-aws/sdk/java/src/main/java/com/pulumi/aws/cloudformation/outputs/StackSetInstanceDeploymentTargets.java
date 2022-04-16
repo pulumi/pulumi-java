@@ -18,7 +18,7 @@ public final class StackSetInstanceDeploymentTargets {
         this.organizationalUnitIds = organizationalUnitIds;
     }
 
-    public List<String> getOrganizationalUnitIds() {
+    public List<String> organizationalUnitIds() {
         return this.organizationalUnitIds == null ? List.of() : this.organizationalUnitIds;
     }
 

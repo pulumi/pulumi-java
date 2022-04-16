@@ -38,17 +38,17 @@ public final class CatalogTablePartitionIndex {
      * Name of the partition index.
      * 
     */
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
-    public Optional<String> getIndexStatus() {
+    public Optional<String> indexStatus() {
         return Optional.ofNullable(this.indexStatus);
     }
     /**
      * Keys for the partition index.
      * 
     */
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys;
     }
 

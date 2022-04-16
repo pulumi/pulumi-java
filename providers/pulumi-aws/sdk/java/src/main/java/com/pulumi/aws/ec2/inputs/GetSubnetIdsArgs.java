@@ -24,7 +24,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetSubnetIdsFilter> filters;
 
-    public List<GetSubnetIdsFilter> getFilters() {
+    public List<GetSubnetIdsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -36,7 +36,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -47,7 +47,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId", required=true)
       private final String vpcId;
 
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

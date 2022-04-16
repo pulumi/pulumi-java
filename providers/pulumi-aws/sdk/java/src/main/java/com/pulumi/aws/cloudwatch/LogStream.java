@@ -40,7 +40,7 @@ public class LogStream extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) specifying the log stream.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class LogStream extends com.pulumi.resources.CustomResource {
      * @return The name of the log group under which the log stream is to be created.
      * 
      */
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
     /**
@@ -68,7 +68,7 @@ public class LogStream extends com.pulumi.resources.CustomResource {
      * @return The name of the log stream. Must not be longer than 512 characters and must not contain `:`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

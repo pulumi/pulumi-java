@@ -24,7 +24,7 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class GlobalTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicas")
       private final @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas;
 
-    public Output<List<GlobalTableReplicaGetArgs>> getReplicas() {
+    public Output<List<GlobalTableReplicaGetArgs>> replicas() {
         return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 

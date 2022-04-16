@@ -24,7 +24,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activationKey")
       private final @Nullable Output<String> activationKey;
 
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey == null ? Codegen.empty() : this.activationKey;
     }
 
@@ -35,7 +35,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -46,7 +46,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkEndpoint")
       private final @Nullable Output<String> privateLinkEndpoint;
 
-    public Output<String> getPrivateLinkEndpoint() {
+    public Output<String> privateLinkEndpoint() {
         return this.privateLinkEndpoint == null ? Codegen.empty() : this.privateLinkEndpoint;
     }
 
@@ -68,7 +68,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns == null ? Codegen.empty() : this.securityGroupArns;
     }
 
@@ -79,7 +79,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetArns")
       private final @Nullable Output<List<String>> subnetArns;
 
-    public Output<List<String>> getSubnetArns() {
+    public Output<List<String>> subnetArns() {
         return this.subnetArns == null ? Codegen.empty() : this.subnetArns;
     }
 
@@ -90,7 +90,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 

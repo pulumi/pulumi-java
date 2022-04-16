@@ -26,7 +26,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -37,7 +37,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
@@ -48,7 +48,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -59,7 +59,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointDetails")
       private final @Nullable Output<ServerEndpointDetailsArgs> endpointDetails;
 
-    public Output<ServerEndpointDetailsArgs> getEndpointDetails() {
+    public Output<ServerEndpointDetailsArgs> endpointDetails() {
         return this.endpointDetails == null ? Codegen.empty() : this.endpointDetails;
     }
 
@@ -70,7 +70,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType")
       private final @Nullable Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
@@ -81,7 +81,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -92,7 +92,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="function")
       private final @Nullable Output<String> function;
 
-    public Output<String> getFunction() {
+    public Output<String> function() {
         return this.function == null ? Codegen.empty() : this.function;
     }
 
@@ -103,7 +103,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostKey")
       private final @Nullable Output<String> hostKey;
 
-    public Output<String> getHostKey() {
+    public Output<String> hostKey() {
         return this.hostKey == null ? Codegen.empty() : this.hostKey;
     }
 
@@ -114,7 +114,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityProviderType")
       private final @Nullable Output<String> identityProviderType;
 
-    public Output<String> getIdentityProviderType() {
+    public Output<String> identityProviderType() {
         return this.identityProviderType == null ? Codegen.empty() : this.identityProviderType;
     }
 
@@ -125,7 +125,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="invocationRole")
       private final @Nullable Output<String> invocationRole;
 
-    public Output<String> getInvocationRole() {
+    public Output<String> invocationRole() {
         return this.invocationRole == null ? Codegen.empty() : this.invocationRole;
     }
 
@@ -136,7 +136,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingRole")
       private final @Nullable Output<String> loggingRole;
 
-    public Output<String> getLoggingRole() {
+    public Output<String> loggingRole() {
         return this.loggingRole == null ? Codegen.empty() : this.loggingRole;
     }
 
@@ -150,7 +150,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocols")
       private final @Nullable Output<List<String>> protocols;
 
-    public Output<List<String>> getProtocols() {
+    public Output<List<String>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
@@ -161,7 +161,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityPolicyName")
       private final @Nullable Output<String> securityPolicyName;
 
-    public Output<String> getSecurityPolicyName() {
+    public Output<String> securityPolicyName() {
         return this.securityPolicyName == null ? Codegen.empty() : this.securityPolicyName;
     }
 
@@ -172,7 +172,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -183,7 +183,7 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

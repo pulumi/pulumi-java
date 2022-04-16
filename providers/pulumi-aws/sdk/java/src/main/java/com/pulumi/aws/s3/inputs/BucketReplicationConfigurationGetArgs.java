@@ -23,7 +23,7 @@ public final class BucketReplicationConfigurationGetArgs extends com.pulumi.reso
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -34,7 +34,7 @@ public final class BucketReplicationConfigurationGetArgs extends com.pulumi.reso
     @Import(name="rules", required=true)
       private final Output<List<BucketReplicationConfigurationRuleGetArgs>> rules;
 
-    public Output<List<BucketReplicationConfigurationRuleGetArgs>> getRules() {
+    public Output<List<BucketReplicationConfigurationRuleGetArgs>> rules() {
         return this.rules;
     }
 

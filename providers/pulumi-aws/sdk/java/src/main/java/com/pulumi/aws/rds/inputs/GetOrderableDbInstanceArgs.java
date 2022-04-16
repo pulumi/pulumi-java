@@ -23,7 +23,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="availabilityZoneGroup")
       private final @Nullable String availabilityZoneGroup;
 
-    public Optional<String> getAvailabilityZoneGroup() {
+    public Optional<String> availabilityZoneGroup() {
         return this.availabilityZoneGroup == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneGroup);
     }
 
@@ -34,7 +34,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="engine", required=true)
       private final String engine;
 
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
 
@@ -45,7 +45,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="engineVersion")
       private final @Nullable String engineVersion;
 
-    public Optional<String> getEngineVersion() {
+    public Optional<String> engineVersion() {
         return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
     }
 
@@ -56,7 +56,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="instanceClass")
       private final @Nullable String instanceClass;
 
-    public Optional<String> getInstanceClass() {
+    public Optional<String> instanceClass() {
         return this.instanceClass == null ? Optional.empty() : Optional.ofNullable(this.instanceClass);
     }
 
@@ -67,7 +67,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="licenseModel")
       private final @Nullable String licenseModel;
 
-    public Optional<String> getLicenseModel() {
+    public Optional<String> licenseModel() {
         return this.licenseModel == null ? Optional.empty() : Optional.ofNullable(this.licenseModel);
     }
 
@@ -78,7 +78,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="preferredEngineVersions")
       private final @Nullable List<String> preferredEngineVersions;
 
-    public List<String> getPreferredEngineVersions() {
+    public List<String> preferredEngineVersions() {
         return this.preferredEngineVersions == null ? List.of() : this.preferredEngineVersions;
     }
 
@@ -89,7 +89,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="preferredInstanceClasses")
       private final @Nullable List<String> preferredInstanceClasses;
 
-    public List<String> getPreferredInstanceClasses() {
+    public List<String> preferredInstanceClasses() {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
     }
 
@@ -100,7 +100,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="storageType")
       private final @Nullable String storageType;
 
-    public Optional<String> getStorageType() {
+    public Optional<String> storageType() {
         return this.storageType == null ? Optional.empty() : Optional.ofNullable(this.storageType);
     }
 
@@ -111,7 +111,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsEnhancedMonitoring")
       private final @Nullable Boolean supportsEnhancedMonitoring;
 
-    public Optional<Boolean> getSupportsEnhancedMonitoring() {
+    public Optional<Boolean> supportsEnhancedMonitoring() {
         return this.supportsEnhancedMonitoring == null ? Optional.empty() : Optional.ofNullable(this.supportsEnhancedMonitoring);
     }
 
@@ -122,7 +122,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsGlobalDatabases")
       private final @Nullable Boolean supportsGlobalDatabases;
 
-    public Optional<Boolean> getSupportsGlobalDatabases() {
+    public Optional<Boolean> supportsGlobalDatabases() {
         return this.supportsGlobalDatabases == null ? Optional.empty() : Optional.ofNullable(this.supportsGlobalDatabases);
     }
 
@@ -133,7 +133,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsIamDatabaseAuthentication")
       private final @Nullable Boolean supportsIamDatabaseAuthentication;
 
-    public Optional<Boolean> getSupportsIamDatabaseAuthentication() {
+    public Optional<Boolean> supportsIamDatabaseAuthentication() {
         return this.supportsIamDatabaseAuthentication == null ? Optional.empty() : Optional.ofNullable(this.supportsIamDatabaseAuthentication);
     }
 
@@ -144,7 +144,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsIops")
       private final @Nullable Boolean supportsIops;
 
-    public Optional<Boolean> getSupportsIops() {
+    public Optional<Boolean> supportsIops() {
         return this.supportsIops == null ? Optional.empty() : Optional.ofNullable(this.supportsIops);
     }
 
@@ -155,7 +155,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsKerberosAuthentication")
       private final @Nullable Boolean supportsKerberosAuthentication;
 
-    public Optional<Boolean> getSupportsKerberosAuthentication() {
+    public Optional<Boolean> supportsKerberosAuthentication() {
         return this.supportsKerberosAuthentication == null ? Optional.empty() : Optional.ofNullable(this.supportsKerberosAuthentication);
     }
 
@@ -166,7 +166,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsPerformanceInsights")
       private final @Nullable Boolean supportsPerformanceInsights;
 
-    public Optional<Boolean> getSupportsPerformanceInsights() {
+    public Optional<Boolean> supportsPerformanceInsights() {
         return this.supportsPerformanceInsights == null ? Optional.empty() : Optional.ofNullable(this.supportsPerformanceInsights);
     }
 
@@ -177,7 +177,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsStorageAutoscaling")
       private final @Nullable Boolean supportsStorageAutoscaling;
 
-    public Optional<Boolean> getSupportsStorageAutoscaling() {
+    public Optional<Boolean> supportsStorageAutoscaling() {
         return this.supportsStorageAutoscaling == null ? Optional.empty() : Optional.ofNullable(this.supportsStorageAutoscaling);
     }
 
@@ -188,7 +188,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="supportsStorageEncryption")
       private final @Nullable Boolean supportsStorageEncryption;
 
-    public Optional<Boolean> getSupportsStorageEncryption() {
+    public Optional<Boolean> supportsStorageEncryption() {
         return this.supportsStorageEncryption == null ? Optional.empty() : Optional.ofNullable(this.supportsStorageEncryption);
     }
 
@@ -199,7 +199,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="vpc")
       private final @Nullable Boolean vpc;
 
-    public Optional<Boolean> getVpc() {
+    public Optional<Boolean> vpc() {
         return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);
     }
 

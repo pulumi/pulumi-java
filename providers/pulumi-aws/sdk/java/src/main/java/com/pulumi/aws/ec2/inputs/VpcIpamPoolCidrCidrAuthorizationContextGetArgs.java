@@ -22,7 +22,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends com.pu
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -33,7 +33,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends com.pu
     @Import(name="signature")
       private final @Nullable Output<String> signature;
 
-    public Output<String> getSignature() {
+    public Output<String> signature() {
         return this.signature == null ? Codegen.empty() : this.signature;
     }
 

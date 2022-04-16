@@ -22,7 +22,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -33,7 +33,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
     @Import(name="recursive")
       private final @Nullable Boolean recursive;
 
-    public Optional<Boolean> getRecursive() {
+    public Optional<Boolean> recursive() {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
@@ -44,7 +44,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
     @Import(name="withDecryption")
       private final @Nullable Boolean withDecryption;
 
-    public Optional<Boolean> getWithDecryption() {
+    public Optional<Boolean> withDecryption() {
         return this.withDecryption == null ? Optional.empty() : Optional.ofNullable(this.withDecryption);
     }
 

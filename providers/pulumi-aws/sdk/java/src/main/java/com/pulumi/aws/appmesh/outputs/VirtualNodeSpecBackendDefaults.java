@@ -26,7 +26,7 @@ public final class VirtualNodeSpecBackendDefaults {
      * The default client policy for virtual service backends. See above for details.
      * 
     */
-    public Optional<VirtualNodeSpecBackendDefaultsClientPolicy> getClientPolicy() {
+    public Optional<VirtualNodeSpecBackendDefaultsClientPolicy> clientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }
 

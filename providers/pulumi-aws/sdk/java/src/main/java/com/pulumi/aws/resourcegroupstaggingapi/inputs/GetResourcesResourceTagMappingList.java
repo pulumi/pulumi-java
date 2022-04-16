@@ -22,7 +22,7 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
     @Import(name="complianceDetails", required=true)
       private final List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
 
-    public List<GetResourcesResourceTagMappingListComplianceDetail> getComplianceDetails() {
+    public List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails() {
         return this.complianceDetails;
     }
 
@@ -33,7 +33,7 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
     @Import(name="resourceArn", required=true)
       private final String resourceArn;
 
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 
@@ -44,7 +44,7 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
     @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

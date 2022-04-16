@@ -22,10 +22,10 @@ public final class EnvironmentLastUpdatedError {
         this.errorMessage = errorMessage;
     }
 
-    public Optional<String> getErrorCode() {
+    public Optional<String> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
 

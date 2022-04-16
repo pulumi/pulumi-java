@@ -28,7 +28,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -39,7 +39,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -50,7 +50,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoBranchCreationConfig")
       private final @Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
 
-    public Output<AppAutoBranchCreationConfigGetArgs> getAutoBranchCreationConfig() {
+    public Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig() {
         return this.autoBranchCreationConfig == null ? Codegen.empty() : this.autoBranchCreationConfig;
     }
 
@@ -61,7 +61,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoBranchCreationPatterns")
       private final @Nullable Output<List<String>> autoBranchCreationPatterns;
 
-    public Output<List<String>> getAutoBranchCreationPatterns() {
+    public Output<List<String>> autoBranchCreationPatterns() {
         return this.autoBranchCreationPatterns == null ? Codegen.empty() : this.autoBranchCreationPatterns;
     }
 
@@ -72,7 +72,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="basicAuthCredentials")
       private final @Nullable Output<String> basicAuthCredentials;
 
-    public Output<String> getBasicAuthCredentials() {
+    public Output<String> basicAuthCredentials() {
         return this.basicAuthCredentials == null ? Codegen.empty() : this.basicAuthCredentials;
     }
 
@@ -83,7 +83,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
-    public Output<String> getBuildSpec() {
+    public Output<String> buildSpec() {
         return this.buildSpec == null ? Codegen.empty() : this.buildSpec;
     }
 
@@ -94,7 +94,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customRules")
       private final @Nullable Output<List<AppCustomRuleGetArgs>> customRules;
 
-    public Output<List<AppCustomRuleGetArgs>> getCustomRules() {
+    public Output<List<AppCustomRuleGetArgs>> customRules() {
         return this.customRules == null ? Codegen.empty() : this.customRules;
     }
 
@@ -105,7 +105,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultDomain")
       private final @Nullable Output<String> defaultDomain;
 
-    public Output<String> getDefaultDomain() {
+    public Output<String> defaultDomain() {
         return this.defaultDomain == null ? Codegen.empty() : this.defaultDomain;
     }
 
@@ -116,7 +116,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -127,7 +127,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableAutoBranchCreation")
       private final @Nullable Output<Boolean> enableAutoBranchCreation;
 
-    public Output<Boolean> getEnableAutoBranchCreation() {
+    public Output<Boolean> enableAutoBranchCreation() {
         return this.enableAutoBranchCreation == null ? Codegen.empty() : this.enableAutoBranchCreation;
     }
 
@@ -138,7 +138,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBasicAuth")
       private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> getEnableBasicAuth() {
+    public Output<Boolean> enableBasicAuth() {
         return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
     }
 
@@ -149,7 +149,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBranchAutoBuild")
       private final @Nullable Output<Boolean> enableBranchAutoBuild;
 
-    public Output<Boolean> getEnableBranchAutoBuild() {
+    public Output<Boolean> enableBranchAutoBuild() {
         return this.enableBranchAutoBuild == null ? Codegen.empty() : this.enableBranchAutoBuild;
     }
 
@@ -160,7 +160,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBranchAutoDeletion")
       private final @Nullable Output<Boolean> enableBranchAutoDeletion;
 
-    public Output<Boolean> getEnableBranchAutoDeletion() {
+    public Output<Boolean> enableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion == null ? Codegen.empty() : this.enableBranchAutoDeletion;
     }
 
@@ -171,7 +171,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -182,7 +182,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamServiceRoleArn")
       private final @Nullable Output<String> iamServiceRoleArn;
 
-    public Output<String> getIamServiceRoleArn() {
+    public Output<String> iamServiceRoleArn() {
         return this.iamServiceRoleArn == null ? Codegen.empty() : this.iamServiceRoleArn;
     }
 
@@ -193,7 +193,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -204,7 +204,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="oauthToken")
       private final @Nullable Output<String> oauthToken;
 
-    public Output<String> getOauthToken() {
+    public Output<String> oauthToken() {
         return this.oauthToken == null ? Codegen.empty() : this.oauthToken;
     }
 
@@ -215,7 +215,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -226,7 +226,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="productionBranches")
       private final @Nullable Output<List<AppProductionBranchGetArgs>> productionBranches;
 
-    public Output<List<AppProductionBranchGetArgs>> getProductionBranches() {
+    public Output<List<AppProductionBranchGetArgs>> productionBranches() {
         return this.productionBranches == null ? Codegen.empty() : this.productionBranches;
     }
 
@@ -237,7 +237,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repository")
       private final @Nullable Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 
@@ -248,7 +248,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -259,7 +259,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

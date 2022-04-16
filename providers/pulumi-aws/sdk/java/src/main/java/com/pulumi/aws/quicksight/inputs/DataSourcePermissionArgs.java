@@ -22,7 +22,7 @@ public final class DataSourcePermissionArgs extends com.pulumi.resources.Resourc
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
@@ -33,7 +33,7 @@ public final class DataSourcePermissionArgs extends com.pulumi.resources.Resourc
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 

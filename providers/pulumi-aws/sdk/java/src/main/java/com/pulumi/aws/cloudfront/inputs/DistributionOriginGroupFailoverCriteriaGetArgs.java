@@ -22,7 +22,7 @@ public final class DistributionOriginGroupFailoverCriteriaGetArgs extends com.pu
     @Import(name="statusCodes", required=true)
       private final Output<List<Integer>> statusCodes;
 
-    public Output<List<Integer>> getStatusCodes() {
+    public Output<List<Integer>> statusCodes() {
         return this.statusCodes;
     }
 

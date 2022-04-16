@@ -27,7 +27,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigGetArgs extends com
     @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
-    public Output<String> getBidPrice() {
+    public Output<String> bidPrice() {
         return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigGetArgs extends com
     @Import(name="bidPriceAsPercentageOfOnDemandPrice")
       private final @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
 
-    public Output<Double> getBidPriceAsPercentageOfOnDemandPrice() {
+    public Output<Double> bidPriceAsPercentageOfOnDemandPrice() {
         return this.bidPriceAsPercentageOfOnDemandPrice == null ? Codegen.empty() : this.bidPriceAsPercentageOfOnDemandPrice;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigGetArgs extends com
     @Import(name="configurations")
       private final @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations;
 
-    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArgs>> getConfigurations() {
+    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations() {
         return this.configurations == null ? Codegen.empty() : this.configurations;
     }
 
@@ -60,7 +60,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigGetArgs extends com
     @Import(name="ebsConfigs")
       private final @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigGetArgs>> ebsConfigs;
 
-    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigGetArgs>> getEbsConfigs() {
+    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigGetArgs>> ebsConfigs() {
         return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
@@ -71,7 +71,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigGetArgs extends com
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -82,7 +82,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigGetArgs extends com
     @Import(name="weightedCapacity")
       private final @Nullable Output<Integer> weightedCapacity;
 
-    public Output<Integer> getWeightedCapacity() {
+    public Output<Integer> weightedCapacity() {
         return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 

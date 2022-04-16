@@ -24,7 +24,7 @@ public final class BackupPolicyBackupPolicy {
      * A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

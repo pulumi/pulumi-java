@@ -91,7 +91,7 @@ public final class AnalyticsApplicationInputs {
      * The ARN of the Kinesis Analytics Application.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -99,7 +99,7 @@ public final class AnalyticsApplicationInputs {
      * See Kinesis Firehose below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationInputsKinesisFirehose> getKinesisFirehose() {
+    public Optional<AnalyticsApplicationInputsKinesisFirehose> kinesisFirehose() {
         return Optional.ofNullable(this.kinesisFirehose);
     }
     /**
@@ -107,14 +107,14 @@ public final class AnalyticsApplicationInputs {
      * See Kinesis Stream below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationInputsKinesisStream> getKinesisStream() {
+    public Optional<AnalyticsApplicationInputsKinesisStream> kinesisStream() {
         return Optional.ofNullable(this.kinesisStream);
     }
     /**
      * The Name Prefix to use when creating an in-application stream.
      * 
     */
-    public String getNamePrefix() {
+    public String namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -122,7 +122,7 @@ public final class AnalyticsApplicationInputs {
      * See Parallelism below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationInputsParallelism> getParallelism() {
+    public Optional<AnalyticsApplicationInputsParallelism> parallelism() {
         return Optional.ofNullable(this.parallelism);
     }
     /**
@@ -130,14 +130,14 @@ public final class AnalyticsApplicationInputs {
      * See Processing Configuration below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationInputsProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<AnalyticsApplicationInputsProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
      * The Schema format of the data in the streaming source. See Source Schema below for more details.
      * 
     */
-    public AnalyticsApplicationInputsSchema getSchema() {
+    public AnalyticsApplicationInputsSchema schema() {
         return this.schema;
     }
     /**
@@ -145,10 +145,10 @@ public final class AnalyticsApplicationInputs {
      * See Starting Position Configuration below for more details.
      * 
     */
-    public List<AnalyticsApplicationInputsStartingPositionConfiguration> getStartingPositionConfigurations() {
+    public List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations() {
         return this.startingPositionConfigurations == null ? List.of() : this.startingPositionConfigurations;
     }
-    public List<String> getStreamNames() {
+    public List<String> streamNames() {
         return this.streamNames == null ? List.of() : this.streamNames;
     }
 

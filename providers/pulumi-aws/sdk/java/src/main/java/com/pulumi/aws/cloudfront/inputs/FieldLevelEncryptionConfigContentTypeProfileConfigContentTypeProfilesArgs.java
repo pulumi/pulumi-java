@@ -18,7 +18,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     @Import(name="items", required=true)
       private final Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items;
 
-    public Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> getItems() {
+    public Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items() {
         return this.items;
     }
 

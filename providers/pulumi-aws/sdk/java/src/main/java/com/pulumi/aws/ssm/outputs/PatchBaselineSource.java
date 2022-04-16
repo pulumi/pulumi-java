@@ -40,21 +40,21 @@ public final class PatchBaselineSource {
      * The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
      * 
     */
-    public String getConfiguration() {
+    public String configuration() {
         return this.configuration;
     }
     /**
      * The name specified to identify the patch source.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
      * 
     */
-    public List<String> getProducts() {
+    public List<String> products() {
         return this.products;
     }
 

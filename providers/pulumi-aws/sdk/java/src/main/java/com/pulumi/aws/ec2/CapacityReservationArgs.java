@@ -29,7 +29,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
 
@@ -40,7 +40,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
@@ -51,7 +51,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
@@ -62,7 +62,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="endDateType")
       private final @Nullable Output<String> endDateType;
 
-    public Output<String> getEndDateType() {
+    public Output<String> endDateType() {
         return this.endDateType == null ? Codegen.empty() : this.endDateType;
     }
 
@@ -73,7 +73,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="ephemeralStorage")
       private final @Nullable Output<Boolean> ephemeralStorage;
 
-    public Output<Boolean> getEphemeralStorage() {
+    public Output<Boolean> ephemeralStorage() {
         return this.ephemeralStorage == null ? Codegen.empty() : this.ephemeralStorage;
     }
 
@@ -84,7 +84,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="instanceCount", required=true)
       private final Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount;
     }
 
@@ -95,7 +95,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="instanceMatchCriteria")
       private final @Nullable Output<String> instanceMatchCriteria;
 
-    public Output<String> getInstanceMatchCriteria() {
+    public Output<String> instanceMatchCriteria() {
         return this.instanceMatchCriteria == null ? Codegen.empty() : this.instanceMatchCriteria;
     }
 
@@ -106,7 +106,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="instancePlatform", required=true)
       private final Output<Either<String,InstancePlatform>> instancePlatform;
 
-    public Output<Either<String,InstancePlatform>> getInstancePlatform() {
+    public Output<Either<String,InstancePlatform>> instancePlatform() {
         return this.instancePlatform;
     }
 
@@ -117,7 +117,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="instanceType", required=true)
       private final Output<Either<String,InstanceType>> instanceType;
 
-    public Output<Either<String,InstanceType>> getInstanceType() {
+    public Output<Either<String,InstanceType>> instanceType() {
         return this.instanceType;
     }
 
@@ -128,7 +128,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
@@ -139,7 +139,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -150,7 +150,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="tenancy")
       private final @Nullable Output<Either<String,Tenancy>> tenancy;
 
-    public Output<Either<String,Tenancy>> getTenancy() {
+    public Output<Either<String,Tenancy>> tenancy() {
         return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 

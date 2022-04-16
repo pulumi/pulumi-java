@@ -24,7 +24,7 @@ public final class VirtualNodeSpecListenerConnectionPoolTcp {
      * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
      * 
     */
-    public Integer getMaxConnections() {
+    public Integer maxConnections() {
         return this.maxConnections;
     }
 

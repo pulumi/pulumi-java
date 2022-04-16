@@ -24,7 +24,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="amazonSideAsn")
       private final @Nullable Output<Integer> amazonSideAsn;
 
-    public Output<Integer> getAmazonSideAsn() {
+    public Output<Integer> amazonSideAsn() {
         return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
@@ -35,7 +35,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="associationDefaultRouteTableId")
       private final @Nullable Output<String> associationDefaultRouteTableId;
 
-    public Output<String> getAssociationDefaultRouteTableId() {
+    public Output<String> associationDefaultRouteTableId() {
         return this.associationDefaultRouteTableId == null ? Codegen.empty() : this.associationDefaultRouteTableId;
     }
 
@@ -57,7 +57,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="autoAcceptSharedAttachments")
       private final @Nullable Output<String> autoAcceptSharedAttachments;
 
-    public Output<String> getAutoAcceptSharedAttachments() {
+    public Output<String> autoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments == null ? Codegen.empty() : this.autoAcceptSharedAttachments;
     }
 
@@ -68,7 +68,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultRouteTableAssociation")
       private final @Nullable Output<String> defaultRouteTableAssociation;
 
-    public Output<String> getDefaultRouteTableAssociation() {
+    public Output<String> defaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation == null ? Codegen.empty() : this.defaultRouteTableAssociation;
     }
 
@@ -79,7 +79,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultRouteTablePropagation")
       private final @Nullable Output<String> defaultRouteTablePropagation;
 
-    public Output<String> getDefaultRouteTablePropagation() {
+    public Output<String> defaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation == null ? Codegen.empty() : this.defaultRouteTablePropagation;
     }
 
@@ -90,7 +90,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
-    public Output<String> getDnsSupport() {
+    public Output<String> dnsSupport() {
         return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
     }
 
@@ -112,7 +112,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -123,7 +123,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="propagationDefaultRouteTableId")
       private final @Nullable Output<String> propagationDefaultRouteTableId;
 
-    public Output<String> getPropagationDefaultRouteTableId() {
+    public Output<String> propagationDefaultRouteTableId() {
         return this.propagationDefaultRouteTableId == null ? Codegen.empty() : this.propagationDefaultRouteTableId;
     }
 
@@ -134,7 +134,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -145,7 +145,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -156,7 +156,7 @@ public final class TransitGatewayState extends com.pulumi.resources.ResourceArgs
     @Import(name="vpnEcmpSupport")
       private final @Nullable Output<String> vpnEcmpSupport;
 
-    public Output<String> getVpnEcmpSupport() {
+    public Output<String> vpnEcmpSupport() {
         return this.vpnEcmpSupport == null ? Codegen.empty() : this.vpnEcmpSupport;
     }
 

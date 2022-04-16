@@ -23,13 +23,13 @@ public final class GetBrokerMaintenanceWindowStartTime {
         this.timeZone = timeZone;
     }
 
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
-    public String getTimeOfDay() {
+    public String timeOfDay() {
         return this.timeOfDay;
     }
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
 

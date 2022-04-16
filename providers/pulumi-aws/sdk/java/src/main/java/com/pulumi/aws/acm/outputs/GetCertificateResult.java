@@ -66,43 +66,43 @@ public final class GetCertificateResult {
      * Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<String> getKeyTypes() {
+    public List<String> keyTypes() {
         return this.keyTypes == null ? List.of() : this.keyTypes;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
      * Status of the found certificate.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public List<String> getStatuses() {
+    public List<String> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * A mapping of tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types == null ? List.of() : this.types;
     }
 

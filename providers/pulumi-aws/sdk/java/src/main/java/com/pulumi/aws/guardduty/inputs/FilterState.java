@@ -25,7 +25,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -36,7 +36,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
@@ -69,7 +69,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="findingCriteria")
       private final @Nullable Output<FilterFindingCriteriaGetArgs> findingCriteria;
 
-    public Output<FilterFindingCriteriaGetArgs> getFindingCriteria() {
+    public Output<FilterFindingCriteriaGetArgs> findingCriteria() {
         return this.findingCriteria == null ? Codegen.empty() : this.findingCriteria;
     }
 
@@ -80,7 +80,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rank")
       private final @Nullable Output<Integer> rank;
 
-    public Output<Integer> getRank() {
+    public Output<Integer> rank() {
         return this.rank == null ? Codegen.empty() : this.rank;
     }
 
@@ -102,7 +102,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class FilterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

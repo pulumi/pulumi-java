@@ -59,7 +59,7 @@ public final class ByteMatchSetByteMatchTuple {
      * The part of a web request that you want to search, such as a specified header or a query string.
      * 
     */
-    public ByteMatchSetByteMatchTupleFieldToMatch getFieldToMatch() {
+    public ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
@@ -70,7 +70,7 @@ public final class ByteMatchSetByteMatchTuple {
      * for all supported values.
      * 
     */
-    public String getPositionalConstraint() {
+    public String positionalConstraint() {
         return this.positionalConstraint;
     }
     /**
@@ -79,7 +79,7 @@ public final class ByteMatchSetByteMatchTuple {
      * for all supported values.
      * 
     */
-    public Optional<String> getTargetString() {
+    public Optional<String> targetString() {
         return Optional.ofNullable(this.targetString);
     }
     /**
@@ -90,7 +90,7 @@ public final class ByteMatchSetByteMatchTuple {
      * for all supported values.
      * 
     */
-    public String getTextTransformation() {
+    public String textTransformation() {
         return this.textTransformation;
     }
 

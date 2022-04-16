@@ -24,7 +24,7 @@ public final class DomainSnapshotOptions {
      * Hour during which the service takes an automated daily snapshot of the indices in the domain.
      * 
     */
-    public Integer getAutomatedSnapshotStartHour() {
+    public Integer automatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour;
     }
 

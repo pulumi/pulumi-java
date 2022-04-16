@@ -50,7 +50,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this model.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -64,7 +64,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
      * 
      */
-    public Output</* @Nullable */ List<ModelContainer>> getContainers() {
+    public Output</* @Nullable */ List<ModelContainer>> containers() {
         return this.containers;
     }
     /**
@@ -78,7 +78,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableNetworkIsolation() {
+    public Output</* @Nullable */ Boolean> enableNetworkIsolation() {
         return this.enableNetworkIsolation;
     }
     /**
@@ -92,7 +92,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return A role that SageMaker can assume to access model artifacts and docker images for deployment.
      * 
      */
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -106,7 +106,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
      * 
      */
-    public Output<ModelInferenceExecutionConfig> getInferenceExecutionConfig() {
+    public Output<ModelInferenceExecutionConfig> inferenceExecutionConfig() {
         return this.inferenceExecutionConfig;
     }
     /**
@@ -120,7 +120,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return The name of the model (must be unique). If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -134,7 +134,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
      * 
      */
-    public Output</* @Nullable */ ModelPrimaryContainer> getPrimaryContainer() {
+    public Output</* @Nullable */ ModelPrimaryContainer> primaryContainer() {
         return this.primaryContainer;
     }
     /**
@@ -148,7 +148,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -162,7 +162,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -176,7 +176,7 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
      * 
      */
-    public Output</* @Nullable */ ModelVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ ModelVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 

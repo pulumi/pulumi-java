@@ -22,7 +22,7 @@ public final class AssociationOutputLocationGetArgs extends com.pulumi.resources
     @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName;
     }
 
@@ -33,7 +33,7 @@ public final class AssociationOutputLocationGetArgs extends com.pulumi.resources
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
@@ -44,7 +44,7 @@ public final class AssociationOutputLocationGetArgs extends com.pulumi.resources
     @Import(name="s3Region")
       private final @Nullable Output<String> s3Region;
 
-    public Output<String> getS3Region() {
+    public Output<String> s3Region() {
         return this.s3Region == null ? Codegen.empty() : this.s3Region;
     }
 

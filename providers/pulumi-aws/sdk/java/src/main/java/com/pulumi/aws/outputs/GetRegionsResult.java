@@ -39,24 +39,24 @@ public final class GetRegionsResult {
         this.names = names;
     }
 
-    public Optional<Boolean> getAllRegions() {
+    public Optional<Boolean> allRegions() {
         return Optional.ofNullable(this.allRegions);
     }
-    public List<GetRegionsFilter> getFilters() {
+    public List<GetRegionsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Names of regions that meets the criteria.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
 

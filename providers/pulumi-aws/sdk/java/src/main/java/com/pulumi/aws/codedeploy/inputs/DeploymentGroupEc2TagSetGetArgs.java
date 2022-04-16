@@ -23,7 +23,7 @@ public final class DeploymentGroupEc2TagSetGetArgs extends com.pulumi.resources.
     @Import(name="ec2TagFilters")
       private final @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters;
 
-    public Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> getEc2TagFilters() {
+    public Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters() {
         return this.ec2TagFilters == null ? Codegen.empty() : this.ec2TagFilters;
     }
 

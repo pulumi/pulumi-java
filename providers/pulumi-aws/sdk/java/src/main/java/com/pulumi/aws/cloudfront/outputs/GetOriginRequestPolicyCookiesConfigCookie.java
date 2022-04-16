@@ -17,7 +17,7 @@ public final class GetOriginRequestPolicyCookiesConfigCookie {
         this.items = items;
     }
 
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items;
     }
 

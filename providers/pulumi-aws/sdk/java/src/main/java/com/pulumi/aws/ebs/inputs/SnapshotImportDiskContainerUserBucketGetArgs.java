@@ -21,7 +21,7 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends com.pulu
     @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
 
@@ -32,7 +32,7 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends com.pulu
     @Import(name="s3Key", required=true)
       private final Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key;
     }
 

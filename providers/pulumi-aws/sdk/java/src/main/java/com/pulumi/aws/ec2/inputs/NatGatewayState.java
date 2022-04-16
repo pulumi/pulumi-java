@@ -23,7 +23,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId == null ? Codegen.empty() : this.allocationId;
     }
 
@@ -34,7 +34,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectivityType")
       private final @Nullable Output<String> connectivityType;
 
-    public Output<String> getConnectivityType() {
+    public Output<String> connectivityType() {
         return this.connectivityType == null ? Codegen.empty() : this.connectivityType;
     }
 
@@ -45,7 +45,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -56,7 +56,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp == null ? Codegen.empty() : this.privateIp;
     }
 
@@ -67,7 +67,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp == null ? Codegen.empty() : this.publicIp;
     }
 
@@ -78,7 +78,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -89,7 +89,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -100,7 +100,7 @@ public final class NatGatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -54,35 +54,35 @@ public final class GetLaunchTemplateMetadataOption {
      * The state of the metadata service: `enabled`, `disabled`.
      * 
     */
-    public String getHttpEndpoint() {
+    public String httpEndpoint() {
         return this.httpEndpoint;
     }
     /**
      * The state of IPv6 endpoint for the instance metadata service: `enabled`, `disabled`.
      * 
     */
-    public String getHttpProtocolIpv6() {
+    public String httpProtocolIpv6() {
         return this.httpProtocolIpv6;
     }
     /**
      * The desired HTTP PUT response hop limit for instance metadata requests.
      * 
     */
-    public Integer getHttpPutResponseHopLimit() {
+    public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
     }
     /**
      * If session tokens are required: `optional`, `required`.
      * 
     */
-    public String getHttpTokens() {
+    public String httpTokens() {
         return this.httpTokens;
     }
     /**
      * If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
      * 
     */
-    public String getInstanceMetadataTags() {
+    public String instanceMetadataTags() {
         return this.instanceMetadataTags;
     }
 

@@ -24,7 +24,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="authenticationStrategy")
       private final @Nullable Output<String> authenticationStrategy;
 
-    public Output<String> getAuthenticationStrategy() {
+    public Output<String> authenticationStrategy() {
         return this.authenticationStrategy == null ? Codegen.empty() : this.authenticationStrategy;
     }
 
@@ -46,7 +46,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -57,7 +57,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="engineType")
       private final @Nullable Output<String> engineType;
 
-    public Output<String> getEngineType() {
+    public Output<String> engineType() {
         return this.engineType == null ? Codegen.empty() : this.engineType;
     }
 
@@ -79,7 +79,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -90,7 +90,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
@@ -101,7 +101,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -112,7 +112,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -123,7 +123,7 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

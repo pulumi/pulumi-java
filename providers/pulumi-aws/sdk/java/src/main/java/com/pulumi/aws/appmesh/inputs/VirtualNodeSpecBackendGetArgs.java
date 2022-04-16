@@ -21,7 +21,7 @@ public final class VirtualNodeSpecBackendGetArgs extends com.pulumi.resources.Re
     @Import(name="virtualService", required=true)
       private final Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceGetArgs> getVirtualService() {
+    public Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService() {
         return this.virtualService;
     }
 

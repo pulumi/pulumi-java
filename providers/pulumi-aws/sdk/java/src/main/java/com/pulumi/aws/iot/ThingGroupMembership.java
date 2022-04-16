@@ -41,7 +41,7 @@ public class ThingGroupMembership extends com.pulumi.resources.CustomResource {
      * @return Override dynamic thing groups with static thing groups when 10-group limit is reached. If a thing belongs to 10 thing groups, and one or more of those groups are dynamic thing groups, adding a thing to a static group removes the thing from the last dynamic group.
      * 
      */
-    public Output</* @Nullable */ Boolean> getOverrideDynamicGroup() {
+    public Output</* @Nullable */ Boolean> overrideDynamicGroup() {
         return this.overrideDynamicGroup;
     }
     /**
@@ -55,7 +55,7 @@ public class ThingGroupMembership extends com.pulumi.resources.CustomResource {
      * @return The name of the group to which you are adding a thing.
      * 
      */
-    public Output<String> getThingGroupName() {
+    public Output<String> thingGroupName() {
         return this.thingGroupName;
     }
     /**
@@ -69,7 +69,7 @@ public class ThingGroupMembership extends com.pulumi.resources.CustomResource {
      * @return The name of the thing to add to a group.
      * 
      */
-    public Output<String> getThingName() {
+    public Output<String> thingName() {
         return this.thingName;
     }
 

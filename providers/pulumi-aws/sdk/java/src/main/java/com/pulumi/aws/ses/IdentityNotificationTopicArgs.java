@@ -23,7 +23,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     @Import(name="identity", required=true)
       private final Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
 
@@ -34,7 +34,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     @Import(name="includeOriginalHeaders")
       private final @Nullable Output<Boolean> includeOriginalHeaders;
 
-    public Output<Boolean> getIncludeOriginalHeaders() {
+    public Output<Boolean> includeOriginalHeaders() {
         return this.includeOriginalHeaders == null ? Codegen.empty() : this.includeOriginalHeaders;
     }
 
@@ -45,7 +45,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
 
@@ -56,7 +56,7 @@ public final class IdentityNotificationTopicArgs extends com.pulumi.resources.Re
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 

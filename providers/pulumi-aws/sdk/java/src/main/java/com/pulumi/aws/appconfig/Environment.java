@@ -43,7 +43,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The AppConfig application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -57,7 +57,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AppConfig Environment.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The description of the environment. Can be at most 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The AppConfig environment ID.
      * 
      */
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -99,7 +99,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
      * 
      */
-    public Output</* @Nullable */ List<EnvironmentMonitor>> getMonitors() {
+    public Output</* @Nullable */ List<EnvironmentMonitor>> monitors() {
         return this.monitors;
     }
     /**
@@ -113,13 +113,13 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The name for the environment. Must be between 1 and 64 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -133,7 +133,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -147,7 +147,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -33,14 +33,14 @@ public final class GetAutoscalingGroupsFilter {
      * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:<tag name>`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The value of the filter.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

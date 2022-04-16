@@ -46,7 +46,7 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * The heredoc syntax or `file` function is helpful here. Use the [Glacier Developer Guide](https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html) for more information on Glacier Vault Policy
      * 
      */
-    public Output</* @Nullable */ String> getAccessPolicy() {
+    public Output</* @Nullable */ String> accessPolicy() {
         return this.accessPolicy;
     }
     /**
@@ -60,7 +60,7 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return The ARN of the vault.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -74,7 +74,7 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return The URI of the vault that was created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), and '.' (period).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return The notifications for the Vault. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ VaultNotification> getNotification() {
+    public Output</* @Nullable */ VaultNotification> notification() {
         return this.notification;
     }
     /**
@@ -116,7 +116,7 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +130,7 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

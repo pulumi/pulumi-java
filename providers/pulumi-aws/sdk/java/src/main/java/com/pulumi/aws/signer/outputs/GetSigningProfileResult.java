@@ -95,73 +95,73 @@ public final class GetSigningProfileResult {
      * The Amazon Resource Name (ARN) for the signing profile.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A human-readable name for the signing platform associated with the signing profile.
      * 
     */
-    public String getPlatformDisplayName() {
+    public String platformDisplayName() {
         return this.platformDisplayName;
     }
     /**
      * The ID of the platform that is used by the target signing profile.
      * 
     */
-    public String getPlatformId() {
+    public String platformId() {
         return this.platformId;
     }
     /**
      * Revocation information for a signing profile.
      * 
     */
-    public List<GetSigningProfileRevocationRecord> getRevocationRecords() {
+    public List<GetSigningProfileRevocationRecord> revocationRecords() {
         return this.revocationRecords;
     }
     /**
      * The validity period for a signing job.
      * 
     */
-    public List<GetSigningProfileSignatureValidityPeriod> getSignatureValidityPeriods() {
+    public List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods() {
         return this.signatureValidityPeriods;
     }
     /**
      * The status of the target signing profile.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * A list of tags associated with the signing profile.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The current version of the signing profile.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * The signing profile ARN, including the profile version.
      * 
     */
-    public String getVersionArn() {
+    public String versionArn() {
         return this.versionArn;
     }
 

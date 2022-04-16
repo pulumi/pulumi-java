@@ -23,7 +23,7 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -34,7 +34,7 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
     @Import(name="contentHandlingStrategy")
       private final @Nullable Output<String> contentHandlingStrategy;
 
-    public Output<String> getContentHandlingStrategy() {
+    public Output<String> contentHandlingStrategy() {
         return this.contentHandlingStrategy == null ? Codegen.empty() : this.contentHandlingStrategy;
     }
 
@@ -45,7 +45,7 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
     @Import(name="integrationId")
       private final @Nullable Output<String> integrationId;
 
-    public Output<String> getIntegrationId() {
+    public Output<String> integrationId() {
         return this.integrationId == null ? Codegen.empty() : this.integrationId;
     }
 
@@ -56,7 +56,7 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
     @Import(name="integrationResponseKey")
       private final @Nullable Output<String> integrationResponseKey;
 
-    public Output<String> getIntegrationResponseKey() {
+    public Output<String> integrationResponseKey() {
         return this.integrationResponseKey == null ? Codegen.empty() : this.integrationResponseKey;
     }
 
@@ -67,7 +67,7 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
     @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> getResponseTemplates() {
+    public Output<Map<String,String>> responseTemplates() {
         return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
@@ -78,7 +78,7 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
     @Import(name="templateSelectionExpression")
       private final @Nullable Output<String> templateSelectionExpression;
 
-    public Output<String> getTemplateSelectionExpression() {
+    public Output<String> templateSelectionExpression() {
         return this.templateSelectionExpression == null ? Codegen.empty() : this.templateSelectionExpression;
     }
 

@@ -23,7 +23,7 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetPrefixListFilter> filters;
 
-    public List<GetPrefixListFilter> getFilters() {
+    public List<GetPrefixListFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -34,7 +34,7 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -45,7 +45,7 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="prefixListId")
       private final @Nullable String prefixListId;
 
-    public Optional<String> getPrefixListId() {
+    public Optional<String> prefixListId() {
         return this.prefixListId == null ? Optional.empty() : Optional.ofNullable(this.prefixListId);
     }
 

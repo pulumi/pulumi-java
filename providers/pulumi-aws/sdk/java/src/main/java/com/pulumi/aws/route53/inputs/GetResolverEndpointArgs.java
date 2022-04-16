@@ -25,7 +25,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
     @Import(name="filters")
       private final @Nullable List<GetResolverEndpointFilter> filters;
 
-    public List<GetResolverEndpointFilter> getFilters() {
+    public List<GetResolverEndpointFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -36,7 +36,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resolverEndpointId")
       private final @Nullable String resolverEndpointId;
 
-    public Optional<String> getResolverEndpointId() {
+    public Optional<String> resolverEndpointId() {
         return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
     }
 

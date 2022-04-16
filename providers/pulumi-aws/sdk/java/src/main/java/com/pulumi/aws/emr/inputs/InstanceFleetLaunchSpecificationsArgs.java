@@ -24,7 +24,7 @@ public final class InstanceFleetLaunchSpecificationsArgs extends com.pulumi.reso
     @Import(name="onDemandSpecifications")
       private final @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> getOnDemandSpecifications() {
+    public Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications() {
         return this.onDemandSpecifications == null ? Codegen.empty() : this.onDemandSpecifications;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceFleetLaunchSpecificationsArgs extends com.pulumi.reso
     @Import(name="spotSpecifications")
       private final @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> getSpotSpecifications() {
+    public Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications() {
         return this.spotSpecifications == null ? Codegen.empty() : this.spotSpecifications;
     }
 

@@ -27,7 +27,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<String>> cidrBlocks;
 
-    public Output<List<String>> getCidrBlocks() {
+    public Output<List<String>> cidrBlocks() {
         return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
@@ -38,7 +38,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort == null ? Codegen.empty() : this.fromPort;
     }
 
@@ -60,7 +60,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="ipv6CidrBlocks")
       private final @Nullable Output<List<String>> ipv6CidrBlocks;
 
-    public Output<List<String>> getIpv6CidrBlocks() {
+    public Output<List<String>> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks == null ? Codegen.empty() : this.ipv6CidrBlocks;
     }
 
@@ -71,7 +71,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="prefixListIds")
       private final @Nullable Output<List<String>> prefixListIds;
 
-    public Output<List<String>> getPrefixListIds() {
+    public Output<List<String>> prefixListIds() {
         return this.prefixListIds == null ? Codegen.empty() : this.prefixListIds;
     }
 
@@ -82,7 +82,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ProtocolType>> protocol;
 
-    public Output<Either<String,ProtocolType>> getProtocol() {
+    public Output<Either<String,ProtocolType>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -93,7 +93,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
     }
 
@@ -104,7 +104,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="self")
       private final @Nullable Output<Boolean> self;
 
-    public Output<Boolean> getSelf() {
+    public Output<Boolean> self() {
         return this.self == null ? Codegen.empty() : this.self;
     }
 
@@ -115,7 +115,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="sourceSecurityGroupId")
       private final @Nullable Output<String> sourceSecurityGroupId;
 
-    public Output<String> getSourceSecurityGroupId() {
+    public Output<String> sourceSecurityGroupId() {
         return this.sourceSecurityGroupId == null ? Codegen.empty() : this.sourceSecurityGroupId;
     }
 
@@ -126,7 +126,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort == null ? Codegen.empty() : this.toPort;
     }
 
@@ -138,7 +138,7 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

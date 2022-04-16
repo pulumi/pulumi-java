@@ -43,29 +43,29 @@ public final class GetLocalGatewayRouteTableResult {
         this.tags = tags;
     }
 
-    public List<GetLocalGatewayRouteTableFilter> getFilters() {
+    public List<GetLocalGatewayRouteTableFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLocalGatewayId() {
+    public String localGatewayId() {
         return this.localGatewayId;
     }
-    public String getLocalGatewayRouteTableId() {
+    public String localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
-    public String getOutpostArn() {
+    public String outpostArn() {
         return this.outpostArn;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

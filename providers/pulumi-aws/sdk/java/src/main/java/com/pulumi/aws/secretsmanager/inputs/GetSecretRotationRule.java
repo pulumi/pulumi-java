@@ -15,7 +15,7 @@ public final class GetSecretRotationRule extends com.pulumi.resources.InvokeArgs
     @Import(name="automaticallyAfterDays", required=true)
       private final Integer automaticallyAfterDays;
 
-    public Integer getAutomaticallyAfterDays() {
+    public Integer automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 

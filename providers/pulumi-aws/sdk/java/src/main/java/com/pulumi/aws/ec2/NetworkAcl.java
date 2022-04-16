@@ -51,7 +51,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return The ARN of the network ACL
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -65,7 +65,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return Specifies an egress rule. Parameters defined below.
      * 
      */
-    public Output<List<NetworkAclEgress>> getEgress() {
+    public Output<List<NetworkAclEgress>> egress() {
         return this.egress;
     }
     /**
@@ -79,7 +79,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return Specifies an ingress rule. Parameters defined below.
      * 
      */
-    public Output<List<NetworkAclIngress>> getIngress() {
+    public Output<List<NetworkAclIngress>> ingress() {
         return this.ingress;
     }
     /**
@@ -93,7 +93,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the network ACL.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -107,7 +107,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return A list of Subnet IDs to apply the ACL to
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -121,7 +121,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -135,7 +135,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -149,7 +149,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return The ID of the associated VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

@@ -24,7 +24,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
-    public Output<String> getAwsDevice() {
+    public Output<String> awsDevice() {
         return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
     }
 
@@ -35,7 +35,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="bandwidth")
       private final @Nullable Output<String> bandwidth;
 
-    public Output<String> getBandwidth() {
+    public Output<String> bandwidth() {
         return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
@@ -46,7 +46,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -57,7 +57,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="hasLogicalRedundancy")
       private final @Nullable Output<String> hasLogicalRedundancy;
 
-    public Output<String> getHasLogicalRedundancy() {
+    public Output<String> hasLogicalRedundancy() {
         return this.hasLogicalRedundancy == null ? Codegen.empty() : this.hasLogicalRedundancy;
     }
 
@@ -68,7 +68,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> getJumboFrameCapable() {
+    public Output<Boolean> jumboFrameCapable() {
         return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
     }
 
@@ -79,7 +79,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="lagId")
       private final @Nullable Output<String> lagId;
 
-    public Output<String> getLagId() {
+    public Output<String> lagId() {
         return this.lagId == null ? Codegen.empty() : this.lagId;
     }
 
@@ -90,7 +90,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="loaIssueTime")
       private final @Nullable Output<String> loaIssueTime;
 
-    public Output<String> getLoaIssueTime() {
+    public Output<String> loaIssueTime() {
         return this.loaIssueTime == null ? Codegen.empty() : this.loaIssueTime;
     }
 
@@ -101,7 +101,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -112,7 +112,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -123,7 +123,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
@@ -134,7 +134,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
@@ -145,7 +145,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
@@ -156,7 +156,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -167,7 +167,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -178,7 +178,7 @@ public final class HostedConnectionState extends com.pulumi.resources.ResourceAr
     @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan == null ? Codegen.empty() : this.vlan;
     }
 

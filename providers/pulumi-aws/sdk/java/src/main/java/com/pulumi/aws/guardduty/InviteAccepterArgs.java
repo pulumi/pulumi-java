@@ -21,7 +21,7 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -32,7 +32,7 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="masterAccountId", required=true)
       private final Output<String> masterAccountId;
 
-    public Output<String> getMasterAccountId() {
+    public Output<String> masterAccountId() {
         return this.masterAccountId;
     }
 

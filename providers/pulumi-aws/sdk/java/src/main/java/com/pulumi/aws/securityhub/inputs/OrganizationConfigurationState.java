@@ -22,7 +22,7 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
     @Import(name="autoEnable")
       private final @Nullable Output<Boolean> autoEnable;
 
-    public Output<Boolean> getAutoEnable() {
+    public Output<Boolean> autoEnable() {
         return this.autoEnable == null ? Codegen.empty() : this.autoEnable;
     }
 

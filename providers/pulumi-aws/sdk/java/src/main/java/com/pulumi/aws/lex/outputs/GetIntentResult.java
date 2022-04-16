@@ -87,7 +87,7 @@ public final class GetIntentResult {
      * The ARN of the Lex intent.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
@@ -95,42 +95,42 @@ public final class GetIntentResult {
      * included as an argument because the resource will add it automatically when updating the intent.
      * 
     */
-    public String getChecksum() {
+    public String checksum() {
         return this.checksum;
     }
     /**
      * The date when the intent version was created.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * A description of the intent.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The date when the $LATEST version of this intent was updated.
      * 
     */
-    public String getLastUpdatedDate() {
+    public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
      * The name of the intent, not case sensitive.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -140,14 +140,14 @@ public final class GetIntentResult {
      * in the Alexa Skills Kit.
      * 
     */
-    public String getParentIntentSignature() {
+    public String parentIntentSignature() {
         return this.parentIntentSignature;
     }
     /**
      * The version of the bot.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

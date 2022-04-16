@@ -21,7 +21,7 @@ public final class ApplicationSnapshotArgs extends com.pulumi.resources.Resource
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -32,7 +32,7 @@ public final class ApplicationSnapshotArgs extends com.pulumi.resources.Resource
     @Import(name="snapshotName", required=true)
       private final Output<String> snapshotName;
 
-    public Output<String> getSnapshotName() {
+    public Output<String> snapshotName() {
         return this.snapshotName;
     }
 

@@ -21,7 +21,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -32,7 +32,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     @Import(name="filterType", required=true)
       private final Output<String> filterType;
 
-    public Output<String> getFilterType() {
+    public Output<String> filterType() {
         return this.filterType;
     }
 

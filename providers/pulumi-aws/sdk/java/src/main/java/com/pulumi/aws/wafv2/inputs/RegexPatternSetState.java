@@ -25,7 +25,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,14 +36,14 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="lockToken")
       private final @Nullable Output<String> lockToken;
 
-    public Output<String> getLockToken() {
+    public Output<String> lockToken() {
         return this.lockToken == null ? Codegen.empty() : this.lockToken;
     }
 
@@ -54,7 +54,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
     @Import(name="regularExpressions")
       private final @Nullable Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions;
 
-    public Output<List<RegexPatternSetRegularExpressionGetArgs>> getRegularExpressions() {
+    public Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions() {
         return this.regularExpressions == null ? Codegen.empty() : this.regularExpressions;
     }
 
@@ -76,7 +76,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -87,7 +87,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -98,7 +98,7 @@ public final class RegexPatternSetState extends com.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

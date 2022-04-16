@@ -24,7 +24,7 @@ public final class ResolverCachingConfigGetArgs extends com.pulumi.resources.Res
     @Import(name="cachingKeys")
       private final @Nullable Output<List<String>> cachingKeys;
 
-    public Output<List<String>> getCachingKeys() {
+    public Output<List<String>> cachingKeys() {
         return this.cachingKeys == null ? Codegen.empty() : this.cachingKeys;
     }
 
@@ -35,7 +35,7 @@ public final class ResolverCachingConfigGetArgs extends com.pulumi.resources.Res
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

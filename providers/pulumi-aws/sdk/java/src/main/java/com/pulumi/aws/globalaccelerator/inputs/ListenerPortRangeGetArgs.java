@@ -22,7 +22,7 @@ public final class ListenerPortRangeGetArgs extends com.pulumi.resources.Resourc
     @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort == null ? Codegen.empty() : this.fromPort;
     }
 
@@ -33,7 +33,7 @@ public final class ListenerPortRangeGetArgs extends com.pulumi.resources.Resourc
     @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort == null ? Codegen.empty() : this.toPort;
     }
 

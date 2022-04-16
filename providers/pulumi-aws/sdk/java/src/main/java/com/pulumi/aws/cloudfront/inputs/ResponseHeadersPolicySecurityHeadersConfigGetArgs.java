@@ -27,7 +27,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="contentSecurityPolicy")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> getContentSecurityPolicy() {
+    public Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Codegen.empty() : this.contentSecurityPolicy;
     }
 
@@ -38,7 +38,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="contentTypeOptions")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> getContentTypeOptions() {
+    public Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions() {
         return this.contentTypeOptions == null ? Codegen.empty() : this.contentTypeOptions;
     }
 
@@ -49,7 +49,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="frameOptions")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> getFrameOptions() {
+    public Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions() {
         return this.frameOptions == null ? Codegen.empty() : this.frameOptions;
     }
 
@@ -60,7 +60,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="referrerPolicy")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> getReferrerPolicy() {
+    public Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy() {
         return this.referrerPolicy == null ? Codegen.empty() : this.referrerPolicy;
     }
 
@@ -71,7 +71,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="strictTransportSecurity")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> getStrictTransportSecurity() {
+    public Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity() {
         return this.strictTransportSecurity == null ? Codegen.empty() : this.strictTransportSecurity;
     }
 
@@ -82,7 +82,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="xssProtection")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> getXssProtection() {
+    public Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection() {
         return this.xssProtection == null ? Codegen.empty() : this.xssProtection;
     }
 

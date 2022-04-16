@@ -23,7 +23,7 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
     @Import(name="backupVaultArn")
       private final @Nullable Output<String> backupVaultArn;
 
-    public Output<String> getBackupVaultArn() {
+    public Output<String> backupVaultArn() {
         return this.backupVaultArn == null ? Codegen.empty() : this.backupVaultArn;
     }
 
@@ -34,7 +34,7 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
     @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
     }
 
@@ -45,7 +45,7 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
     @Import(name="changeableForDays")
       private final @Nullable Output<Integer> changeableForDays;
 
-    public Output<Integer> getChangeableForDays() {
+    public Output<Integer> changeableForDays() {
         return this.changeableForDays == null ? Codegen.empty() : this.changeableForDays;
     }
 
@@ -56,7 +56,7 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
     @Import(name="maxRetentionDays")
       private final @Nullable Output<Integer> maxRetentionDays;
 
-    public Output<Integer> getMaxRetentionDays() {
+    public Output<Integer> maxRetentionDays() {
         return this.maxRetentionDays == null ? Codegen.empty() : this.maxRetentionDays;
     }
 
@@ -67,7 +67,7 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
     @Import(name="minRetentionDays")
       private final @Nullable Output<Integer> minRetentionDays;
 
-    public Output<Integer> getMinRetentionDays() {
+    public Output<Integer> minRetentionDays() {
         return this.minRetentionDays == null ? Codegen.empty() : this.minRetentionDays;
     }
 

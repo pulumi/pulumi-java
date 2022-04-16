@@ -23,7 +23,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchRoleArn")
       private final @Nullable Output<String> cloudwatchRoleArn;
 
-    public Output<String> getCloudwatchRoleArn() {
+    public Output<String> cloudwatchRoleArn() {
         return this.cloudwatchRoleArn == null ? Codegen.empty() : this.cloudwatchRoleArn;
     }
 
@@ -34,7 +34,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="throttleSettings")
       private final @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings;
 
-    public Output<AccountThrottleSettingsGetArgs> getThrottleSettings() {
+    public Output<AccountThrottleSettingsGetArgs> throttleSettings() {
         return this.throttleSettings == null ? Codegen.empty() : this.throttleSettings;
     }
 

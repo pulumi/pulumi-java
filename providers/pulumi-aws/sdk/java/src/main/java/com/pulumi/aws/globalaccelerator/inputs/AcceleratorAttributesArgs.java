@@ -23,7 +23,7 @@ public final class AcceleratorAttributesArgs extends com.pulumi.resources.Resour
     @Import(name="flowLogsEnabled")
       private final @Nullable Output<Boolean> flowLogsEnabled;
 
-    public Output<Boolean> getFlowLogsEnabled() {
+    public Output<Boolean> flowLogsEnabled() {
         return this.flowLogsEnabled == null ? Codegen.empty() : this.flowLogsEnabled;
     }
 
@@ -34,7 +34,7 @@ public final class AcceleratorAttributesArgs extends com.pulumi.resources.Resour
     @Import(name="flowLogsS3Bucket")
       private final @Nullable Output<String> flowLogsS3Bucket;
 
-    public Output<String> getFlowLogsS3Bucket() {
+    public Output<String> flowLogsS3Bucket() {
         return this.flowLogsS3Bucket == null ? Codegen.empty() : this.flowLogsS3Bucket;
     }
 
@@ -45,7 +45,7 @@ public final class AcceleratorAttributesArgs extends com.pulumi.resources.Resour
     @Import(name="flowLogsS3Prefix")
       private final @Nullable Output<String> flowLogsS3Prefix;
 
-    public Output<String> getFlowLogsS3Prefix() {
+    public Output<String> flowLogsS3Prefix() {
         return this.flowLogsS3Prefix == null ? Codegen.empty() : this.flowLogsS3Prefix;
     }
 

@@ -22,7 +22,7 @@ public final class PlanRuleCopyActionLifecycleGetArgs extends com.pulumi.resourc
     @Import(name="coldStorageAfter")
       private final @Nullable Output<Integer> coldStorageAfter;
 
-    public Output<Integer> getColdStorageAfter() {
+    public Output<Integer> coldStorageAfter() {
         return this.coldStorageAfter == null ? Codegen.empty() : this.coldStorageAfter;
     }
 
@@ -33,7 +33,7 @@ public final class PlanRuleCopyActionLifecycleGetArgs extends com.pulumi.resourc
     @Import(name="deleteAfter")
       private final @Nullable Output<Integer> deleteAfter;
 
-    public Output<Integer> getDeleteAfter() {
+    public Output<Integer> deleteAfter() {
         return this.deleteAfter == null ? Codegen.empty() : this.deleteAfter;
     }
 

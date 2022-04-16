@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="deserializer", required=true)
       private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> getDeserializer() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer() {
         return this.deserializer;
     }
 

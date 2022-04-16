@@ -21,7 +21,7 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends com.p
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +32,7 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends com.p
     @Import(name="accountPassword", required=true)
       private final Output<String> accountPassword;
 
-    public Output<String> getAccountPassword() {
+    public Output<String> accountPassword() {
         return this.accountPassword;
     }
 

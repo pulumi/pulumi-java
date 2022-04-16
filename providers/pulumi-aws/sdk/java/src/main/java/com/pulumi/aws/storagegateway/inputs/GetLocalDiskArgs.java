@@ -21,7 +21,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskNode")
       private final @Nullable String diskNode;
 
-    public Optional<String> getDiskNode() {
+    public Optional<String> diskNode() {
         return this.diskNode == null ? Optional.empty() : Optional.ofNullable(this.diskNode);
     }
 
@@ -32,7 +32,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskPath")
       private final @Nullable String diskPath;
 
-    public Optional<String> getDiskPath() {
+    public Optional<String> diskPath() {
         return this.diskPath == null ? Optional.empty() : Optional.ofNullable(this.diskPath);
     }
 
@@ -43,7 +43,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayArn", required=true)
       private final String gatewayArn;
 
-    public String getGatewayArn() {
+    public String gatewayArn() {
         return this.gatewayArn;
     }
 

@@ -26,7 +26,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfiguration {
      * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
      * 
     */
-    public Optional<String> getStartingPosition() {
+    public Optional<String> startingPosition() {
         return Optional.ofNullable(this.startingPosition);
     }
 

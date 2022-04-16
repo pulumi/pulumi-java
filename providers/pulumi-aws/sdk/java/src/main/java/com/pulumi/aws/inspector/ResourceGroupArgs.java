@@ -22,7 +22,7 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags", required=true)
       private final Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
 

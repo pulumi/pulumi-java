@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcmArgs extends com.p
     @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
 

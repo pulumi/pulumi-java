@@ -71,7 +71,7 @@ public final class GetOriginAccessIdentityResult {
      * updates to the origin access identity.
      * 
     */
-    public String getCallerReference() {
+    public String callerReference() {
         return this.callerReference;
     }
     /**
@@ -79,14 +79,14 @@ public final class GetOriginAccessIdentityResult {
      * origin access identity to use in CloudFront, see below.
      * 
     */
-    public String getCloudfrontAccessIdentityPath() {
+    public String cloudfrontAccessIdentityPath() {
         return this.cloudfrontAccessIdentityPath;
     }
     /**
      * An optional comment for the origin access identity.
      * 
     */
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
     /**
@@ -94,7 +94,7 @@ public final class GetOriginAccessIdentityResult {
      * For example: `E2QWRUHAPOMQZL`.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
@@ -103,10 +103,10 @@ public final class GetOriginAccessIdentityResult {
      * E2QWRUHAPOMQZL`.
      * 
     */
-    public String getIamArn() {
+    public String iamArn() {
         return this.iamArn;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -115,7 +115,7 @@ public final class GetOriginAccessIdentityResult {
      * permission to an object in Amazon S3.
      * 
     */
-    public String getS3CanonicalUserId() {
+    public String s3CanonicalUserId() {
         return this.s3CanonicalUserId;
     }
 

@@ -41,7 +41,7 @@ public class PrivateDnsNamespace extends com.pulumi.resources.CustomResource {
      * @return The ARN that Amazon Route 53 assigns to the namespace when you create it.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class PrivateDnsNamespace extends com.pulumi.resources.CustomResource {
      * @return The description that you specify for the namespace when you create it.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +69,7 @@ public class PrivateDnsNamespace extends com.pulumi.resources.CustomResource {
      * @return The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
      * 
      */
-    public Output<String> getHostedZone() {
+    public Output<String> hostedZone() {
         return this.hostedZone;
     }
     /**
@@ -83,7 +83,7 @@ public class PrivateDnsNamespace extends com.pulumi.resources.CustomResource {
      * @return The name of the namespace.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +97,7 @@ public class PrivateDnsNamespace extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the namespace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -111,7 +111,7 @@ public class PrivateDnsNamespace extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -125,7 +125,7 @@ public class PrivateDnsNamespace extends com.pulumi.resources.CustomResource {
      * @return The ID of VPC that you want to associate the namespace with.
      * 
      */
-    public Output<String> getVpc() {
+    public Output<String> vpc() {
         return this.vpc;
     }
 

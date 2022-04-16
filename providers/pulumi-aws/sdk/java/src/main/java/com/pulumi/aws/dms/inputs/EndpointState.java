@@ -29,7 +29,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -40,7 +40,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -51,7 +51,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticsearchSettings")
       private final @Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
 
-    public Output<EndpointElasticsearchSettingsGetArgs> getElasticsearchSettings() {
+    public Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings() {
         return this.elasticsearchSettings == null ? Codegen.empty() : this.elasticsearchSettings;
     }
 
@@ -62,7 +62,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointArn")
       private final @Nullable Output<String> endpointArn;
 
-    public Output<String> getEndpointArn() {
+    public Output<String> endpointArn() {
         return this.endpointArn == null ? Codegen.empty() : this.endpointArn;
     }
 
@@ -73,7 +73,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
-    public Output<String> getEndpointId() {
+    public Output<String> endpointId() {
         return this.endpointId == null ? Codegen.empty() : this.endpointId;
     }
 
@@ -84,7 +84,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType")
       private final @Nullable Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
@@ -95,7 +95,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineName")
       private final @Nullable Output<String> engineName;
 
-    public Output<String> getEngineName() {
+    public Output<String> engineName() {
         return this.engineName == null ? Codegen.empty() : this.engineName;
     }
 
@@ -106,7 +106,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="extraConnectionAttributes")
       private final @Nullable Output<String> extraConnectionAttributes;
 
-    public Output<String> getExtraConnectionAttributes() {
+    public Output<String> extraConnectionAttributes() {
         return this.extraConnectionAttributes == null ? Codegen.empty() : this.extraConnectionAttributes;
     }
 
@@ -117,7 +117,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaSettings")
       private final @Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings;
 
-    public Output<EndpointKafkaSettingsGetArgs> getKafkaSettings() {
+    public Output<EndpointKafkaSettingsGetArgs> kafkaSettings() {
         return this.kafkaSettings == null ? Codegen.empty() : this.kafkaSettings;
     }
 
@@ -128,7 +128,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kinesisSettings")
       private final @Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings;
 
-    public Output<EndpointKinesisSettingsGetArgs> getKinesisSettings() {
+    public Output<EndpointKinesisSettingsGetArgs> kinesisSettings() {
         return this.kinesisSettings == null ? Codegen.empty() : this.kinesisSettings;
     }
 
@@ -139,7 +139,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -150,7 +150,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mongodbSettings")
       private final @Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings;
 
-    public Output<EndpointMongodbSettingsGetArgs> getMongodbSettings() {
+    public Output<EndpointMongodbSettingsGetArgs> mongodbSettings() {
         return this.mongodbSettings == null ? Codegen.empty() : this.mongodbSettings;
     }
 
@@ -161,7 +161,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -172,7 +172,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -183,7 +183,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Settings")
       private final @Nullable Output<EndpointS3SettingsGetArgs> s3Settings;
 
-    public Output<EndpointS3SettingsGetArgs> getS3Settings() {
+    public Output<EndpointS3SettingsGetArgs> s3Settings() {
         return this.s3Settings == null ? Codegen.empty() : this.s3Settings;
     }
 
@@ -194,7 +194,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretsManagerAccessRoleArn")
       private final @Nullable Output<String> secretsManagerAccessRoleArn;
 
-    public Output<String> getSecretsManagerAccessRoleArn() {
+    public Output<String> secretsManagerAccessRoleArn() {
         return this.secretsManagerAccessRoleArn == null ? Codegen.empty() : this.secretsManagerAccessRoleArn;
     }
 
@@ -205,7 +205,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretsManagerArn")
       private final @Nullable Output<String> secretsManagerArn;
 
-    public Output<String> getSecretsManagerArn() {
+    public Output<String> secretsManagerArn() {
         return this.secretsManagerArn == null ? Codegen.empty() : this.secretsManagerArn;
     }
 
@@ -216,7 +216,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
@@ -227,7 +227,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccessRole")
       private final @Nullable Output<String> serviceAccessRole;
 
-    public Output<String> getServiceAccessRole() {
+    public Output<String> serviceAccessRole() {
         return this.serviceAccessRole == null ? Codegen.empty() : this.serviceAccessRole;
     }
 
@@ -238,7 +238,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslMode")
       private final @Nullable Output<String> sslMode;
 
-    public Output<String> getSslMode() {
+    public Output<String> sslMode() {
         return this.sslMode == null ? Codegen.empty() : this.sslMode;
     }
 
@@ -249,7 +249,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -260,7 +260,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -271,7 +271,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

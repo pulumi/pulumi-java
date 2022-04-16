@@ -39,7 +39,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
      * 
      */
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString;
     }
     /**
@@ -53,7 +53,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The ARN of the created ElastiCache User.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +67,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The current supported value is `REDIS`.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     /**
@@ -81,7 +81,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Indicates a password is not required for this user.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNoPasswordRequired() {
+    public Output</* @Nullable */ Boolean> noPasswordRequired() {
         return this.noPasswordRequired;
     }
     /**
@@ -95,7 +95,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Passwords used for this user. You can create up to two passwords for each user.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPasswords() {
+    public Output</* @Nullable */ List<String>> passwords() {
         return this.passwords;
     }
     /**
@@ -109,13 +109,13 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return A list of tags to be added to this resource. A tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -129,7 +129,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The ID of the user.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
     /**
@@ -143,7 +143,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The username of the user.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

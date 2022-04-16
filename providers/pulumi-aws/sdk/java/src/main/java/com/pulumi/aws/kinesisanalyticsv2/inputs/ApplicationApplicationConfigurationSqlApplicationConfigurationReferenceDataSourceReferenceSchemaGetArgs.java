@@ -25,7 +25,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordColumns", required=true)
       private final Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnGetArgs>> recordColumns;
 
-    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnGetArgs>> getRecordColumns() {
+    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnGetArgs>> recordColumns() {
         return this.recordColumns;
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordEncoding")
       private final @Nullable Output<String> recordEncoding;
 
-    public Output<String> getRecordEncoding() {
+    public Output<String> recordEncoding() {
         return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordFormat", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatGetArgs> recordFormat;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatGetArgs> getRecordFormat() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatGetArgs> recordFormat() {
         return this.recordFormat;
     }
 

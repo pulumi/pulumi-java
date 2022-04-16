@@ -65,42 +65,42 @@ public final class TriggerAction {
      * Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.
      * 
     */
-    public Map<String,String> getArguments() {
+    public Map<String,String> arguments() {
         return this.arguments == null ? Map.of() : this.arguments;
     }
     /**
      * The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
      * 
     */
-    public Optional<String> getCrawlerName() {
+    public Optional<String> crawlerName() {
         return Optional.ofNullable(this.crawlerName);
     }
     /**
      * The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
      * 
     */
-    public Optional<String> getJobName() {
+    public Optional<String> jobName() {
         return Optional.ofNullable(this.jobName);
     }
     /**
      * Specifies configuration properties of a job run notification. See Notification Property details below.
      * 
     */
-    public Optional<TriggerActionNotificationProperty> getNotificationProperty() {
+    public Optional<TriggerActionNotificationProperty> notificationProperty() {
         return Optional.ofNullable(this.notificationProperty);
     }
     /**
      * The name of the Security Configuration structure to be used with this action.
      * 
     */
-    public Optional<String> getSecurityConfiguration() {
+    public Optional<String> securityConfiguration() {
         return Optional.ofNullable(this.securityConfiguration);
     }
     /**
      * The job run timeout in minutes. It overrides the timeout value of the job.
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

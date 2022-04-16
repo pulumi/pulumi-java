@@ -29,10 +29,10 @@ public final class GetListenerDefaultActionForwardTargetGroup {
      * ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

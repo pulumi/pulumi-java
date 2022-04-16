@@ -23,21 +23,21 @@ public final class GetResourcesResourceTagMappingListComplianceDetail extends co
     @Import(name="complianceStatus", required=true)
       private final Boolean complianceStatus;
 
-    public Boolean getComplianceStatus() {
+    public Boolean complianceStatus() {
         return this.complianceStatus;
     }
 
     @Import(name="keysWithNoncompliantValues", required=true)
       private final List<String> keysWithNoncompliantValues;
 
-    public List<String> getKeysWithNoncompliantValues() {
+    public List<String> keysWithNoncompliantValues() {
         return this.keysWithNoncompliantValues;
     }
 
     @Import(name="nonCompliantKeys", required=true)
       private final List<String> nonCompliantKeys;
 
-    public List<String> getNonCompliantKeys() {
+    public List<String> nonCompliantKeys() {
         return this.nonCompliantKeys;
     }
 

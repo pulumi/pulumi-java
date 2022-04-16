@@ -22,7 +22,7 @@ public final class ProtectionHealthCheckAssociationState extends com.pulumi.reso
     @Import(name="healthCheckArn")
       private final @Nullable Output<String> healthCheckArn;
 
-    public Output<String> getHealthCheckArn() {
+    public Output<String> healthCheckArn() {
         return this.healthCheckArn == null ? Codegen.empty() : this.healthCheckArn;
     }
 
@@ -33,7 +33,7 @@ public final class ProtectionHealthCheckAssociationState extends com.pulumi.reso
     @Import(name="shieldProtectionId")
       private final @Nullable Output<String> shieldProtectionId;
 
-    public Output<String> getShieldProtectionId() {
+    public Output<String> shieldProtectionId() {
         return this.shieldProtectionId == null ? Codegen.empty() : this.shieldProtectionId;
     }
 

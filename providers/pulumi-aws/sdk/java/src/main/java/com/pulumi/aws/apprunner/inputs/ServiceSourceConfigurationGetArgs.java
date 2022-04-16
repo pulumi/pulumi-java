@@ -25,7 +25,7 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
-    public Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
+    public Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="autoDeploymentsEnabled")
       private final @Nullable Output<Boolean> autoDeploymentsEnabled;
 
-    public Output<Boolean> getAutoDeploymentsEnabled() {
+    public Output<Boolean> autoDeploymentsEnabled() {
         return this.autoDeploymentsEnabled == null ? Codegen.empty() : this.autoDeploymentsEnabled;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="codeRepository")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository;
 
-    public Output<ServiceSourceConfigurationCodeRepositoryGetArgs> getCodeRepository() {
+    public Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository() {
         return this.codeRepository == null ? Codegen.empty() : this.codeRepository;
     }
 
@@ -58,7 +58,7 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="imageRepository")
       private final @Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository;
 
-    public Output<ServiceSourceConfigurationImageRepositoryGetArgs> getImageRepository() {
+    public Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository() {
         return this.imageRepository == null ? Codegen.empty() : this.imageRepository;
     }
 

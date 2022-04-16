@@ -23,7 +23,7 @@ public final class PolicyIncludeMapGetArgs extends com.pulumi.resources.Resource
     @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> getAccounts() {
+    public Output<List<String>> accounts() {
         return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
@@ -34,7 +34,7 @@ public final class PolicyIncludeMapGetArgs extends com.pulumi.resources.Resource
     @Import(name="orgunits")
       private final @Nullable Output<List<String>> orgunits;
 
-    public Output<List<String>> getOrgunits() {
+    public Output<List<String>> orgunits() {
         return this.orgunits == null ? Codegen.empty() : this.orgunits;
     }
 

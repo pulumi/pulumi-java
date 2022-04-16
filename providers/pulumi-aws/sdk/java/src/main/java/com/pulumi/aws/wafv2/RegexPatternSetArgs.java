@@ -25,7 +25,7 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="regularExpressions")
       private final @Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions;
 
-    public Output<List<RegexPatternSetRegularExpressionArgs>> getRegularExpressions() {
+    public Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions() {
         return this.regularExpressions == null ? Codegen.empty() : this.regularExpressions;
     }
 
@@ -58,7 +58,7 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -69,7 +69,7 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

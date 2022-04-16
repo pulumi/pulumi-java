@@ -33,14 +33,14 @@ public final class CrawlerCatalogTarget {
      * The name of the Glue database to be synchronized.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * A list of catalog tables to be synchronized.
      * 
     */
-    public List<String> getTables() {
+    public List<String> tables() {
         return this.tables;
     }
 

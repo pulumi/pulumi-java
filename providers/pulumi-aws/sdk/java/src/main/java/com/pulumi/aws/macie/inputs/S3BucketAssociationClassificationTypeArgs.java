@@ -23,7 +23,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends com.pulumi.
     @Import(name="continuous")
       private final @Nullable Output<String> continuous;
 
-    public Output<String> getContinuous() {
+    public Output<String> continuous() {
         return this.continuous == null ? Codegen.empty() : this.continuous;
     }
 
@@ -35,7 +35,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends com.pulumi.
     @Import(name="oneTime")
       private final @Nullable Output<String> oneTime;
 
-    public Output<String> getOneTime() {
+    public Output<String> oneTime() {
         return this.oneTime == null ? Codegen.empty() : this.oneTime;
     }
 

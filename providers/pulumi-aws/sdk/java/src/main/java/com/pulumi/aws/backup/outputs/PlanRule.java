@@ -89,63 +89,63 @@ public final class PlanRule {
      * The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
      * 
     */
-    public Optional<Integer> getCompletionWindow() {
+    public Optional<Integer> completionWindow() {
         return Optional.ofNullable(this.completionWindow);
     }
     /**
      * Configuration block(s) with copy operation settings. Detailed below.
      * 
     */
-    public List<PlanRuleCopyAction> getCopyActions() {
+    public List<PlanRuleCopyAction> copyActions() {
         return this.copyActions == null ? List.of() : this.copyActions;
     }
     /**
      * Enable continuous backups for supported resources.
      * 
     */
-    public Optional<Boolean> getEnableContinuousBackup() {
+    public Optional<Boolean> enableContinuousBackup() {
         return Optional.ofNullable(this.enableContinuousBackup);
     }
     /**
      * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
      * 
     */
-    public Optional<PlanRuleLifecycle> getLifecycle() {
+    public Optional<PlanRuleLifecycle> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
     /**
      * Metadata that you can assign to help organize the resources that you create.
      * 
     */
-    public Map<String,String> getRecoveryPointTags() {
+    public Map<String,String> recoveryPointTags() {
         return this.recoveryPointTags == null ? Map.of() : this.recoveryPointTags;
     }
     /**
      * An display name for a backup rule.
      * 
     */
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
     /**
      * A CRON expression specifying when AWS Backup initiates a backup job.
      * 
     */
-    public Optional<String> getSchedule() {
+    public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The amount of time in minutes before beginning a backup.
      * 
     */
-    public Optional<Integer> getStartWindow() {
+    public Optional<Integer> startWindow() {
         return Optional.ofNullable(this.startWindow);
     }
     /**
      * The name of a logical container where backups are stored.
      * 
     */
-    public String getTargetVaultName() {
+    public String targetVaultName() {
         return this.targetVaultName;
     }
 

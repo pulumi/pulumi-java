@@ -22,7 +22,7 @@ public final class PolicySecurityServicePolicyDataGetArgs extends com.pulumi.res
     @Import(name="managedServiceData")
       private final @Nullable Output<String> managedServiceData;
 
-    public Output<String> getManagedServiceData() {
+    public Output<String> managedServiceData() {
         return this.managedServiceData == null ? Codegen.empty() : this.managedServiceData;
     }
 
@@ -33,7 +33,7 @@ public final class PolicySecurityServicePolicyDataGetArgs extends com.pulumi.res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

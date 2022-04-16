@@ -22,7 +22,7 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
     @Import(name="authType", required=true)
       private final Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
 
@@ -33,7 +33,7 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverType", required=true)
       private final Output<String> serverType;
 
-    public Output<String> getServerType() {
+    public Output<String> serverType() {
         return this.serverType;
     }
 
@@ -44,7 +44,7 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
     @Import(name="token", required=true)
       private final Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token;
     }
 
@@ -55,7 +55,7 @@ public final class SourceCredentialArgs extends com.pulumi.resources.ResourceArg
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

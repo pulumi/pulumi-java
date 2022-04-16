@@ -22,7 +22,7 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingArgs extends com
     @Import(name="insertHeaders", required=true)
       private final Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
 
-    public Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderArgs>> getInsertHeaders() {
+    public Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 

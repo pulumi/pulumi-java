@@ -34,14 +34,14 @@ public final class FleetVpcConfig {
      * Identifiers of the security groups for the fleet or image builder.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * Identifiers of the subnets to which a network interface is attached from the fleet instance or image builder instance.
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
 

@@ -29,7 +29,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -41,7 +41,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="kinesisFirehose")
       private final @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose;
 
-    public Output<AnalyticsApplicationInputsKinesisFirehoseArgs> getKinesisFirehose() {
+    public Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose() {
         return this.kinesisFirehose == null ? Codegen.empty() : this.kinesisFirehose;
     }
 
@@ -53,7 +53,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="kinesisStream")
       private final @Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream;
 
-    public Output<AnalyticsApplicationInputsKinesisStreamArgs> getKinesisStream() {
+    public Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream() {
         return this.kinesisStream == null ? Codegen.empty() : this.kinesisStream;
     }
 
@@ -64,7 +64,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="namePrefix", required=true)
       private final Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
 
@@ -76,7 +76,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="parallelism")
       private final @Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism;
 
-    public Output<AnalyticsApplicationInputsParallelismArgs> getParallelism() {
+    public Output<AnalyticsApplicationInputsParallelismArgs> parallelism() {
         return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
@@ -88,7 +88,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="processingConfiguration")
       private final @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<AnalyticsApplicationInputsProcessingConfigurationArgs> getProcessingConfiguration() {
+    public Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
@@ -99,7 +99,7 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationInputsSchemaArgs> schema;
 
-    public Output<AnalyticsApplicationInputsSchemaArgs> getSchema() {
+    public Output<AnalyticsApplicationInputsSchemaArgs> schema() {
         return this.schema;
     }
 
@@ -111,14 +111,14 @@ public final class AnalyticsApplicationInputsArgs extends com.pulumi.resources.R
     @Import(name="startingPositionConfigurations")
       private final @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations;
 
-    public Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> getStartingPositionConfigurations() {
+    public Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations() {
         return this.startingPositionConfigurations == null ? Codegen.empty() : this.startingPositionConfigurations;
     }
 
     @Import(name="streamNames")
       private final @Nullable Output<List<String>> streamNames;
 
-    public Output<List<String>> getStreamNames() {
+    public Output<List<String>> streamNames() {
         return this.streamNames == null ? Codegen.empty() : this.streamNames;
     }
 

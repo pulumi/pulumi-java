@@ -22,7 +22,7 @@ public final class DomainDefaultUserSettingsSharingSettingsArgs extends com.pulu
     @Import(name="notebookOutputOption")
       private final @Nullable Output<String> notebookOutputOption;
 
-    public Output<String> getNotebookOutputOption() {
+    public Output<String> notebookOutputOption() {
         return this.notebookOutputOption == null ? Codegen.empty() : this.notebookOutputOption;
     }
 
@@ -33,7 +33,7 @@ public final class DomainDefaultUserSettingsSharingSettingsArgs extends com.pulu
     @Import(name="s3KmsKeyId")
       private final @Nullable Output<String> s3KmsKeyId;
 
-    public Output<String> getS3KmsKeyId() {
+    public Output<String> s3KmsKeyId() {
         return this.s3KmsKeyId == null ? Codegen.empty() : this.s3KmsKeyId;
     }
 
@@ -44,7 +44,7 @@ public final class DomainDefaultUserSettingsSharingSettingsArgs extends com.pulu
     @Import(name="s3OutputPath")
       private final @Nullable Output<String> s3OutputPath;
 
-    public Output<String> getS3OutputPath() {
+    public Output<String> s3OutputPath() {
         return this.s3OutputPath == null ? Codegen.empty() : this.s3OutputPath;
     }
 

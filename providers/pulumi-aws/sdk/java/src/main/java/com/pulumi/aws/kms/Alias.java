@@ -42,7 +42,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the key alias.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -86,7 +86,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the target key identifier.
      * 
      */
-    public Output<String> getTargetKeyArn() {
+    public Output<String> targetKeyArn() {
         return this.targetKeyArn;
     }
     /**
@@ -100,7 +100,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return Identifier for the key for which the alias is for, can be either an ARN or key_id.
      * 
      */
-    public Output<String> getTargetKeyId() {
+    public Output<String> targetKeyId() {
         return this.targetKeyId;
     }
 

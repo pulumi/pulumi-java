@@ -25,7 +25,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
     @Import(name="clientIpPreservationEnabled")
       private final @Nullable Output<Boolean> clientIpPreservationEnabled;
 
-    public Output<Boolean> getClientIpPreservationEnabled() {
+    public Output<Boolean> clientIpPreservationEnabled() {
         return this.clientIpPreservationEnabled == null ? Codegen.empty() : this.clientIpPreservationEnabled;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
     @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
-    public Output<String> getEndpointId() {
+    public Output<String> endpointId() {
         return this.endpointId == null ? Codegen.empty() : this.endpointId;
     }
 
@@ -47,7 +47,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

@@ -23,7 +23,7 @@ public final class ReceiptRuleS3ActionArgs extends com.pulumi.resources.Resource
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -34,7 +34,7 @@ public final class ReceiptRuleS3ActionArgs extends com.pulumi.resources.Resource
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -45,7 +45,7 @@ public final class ReceiptRuleS3ActionArgs extends com.pulumi.resources.Resource
     @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
-    public Output<String> getObjectKeyPrefix() {
+    public Output<String> objectKeyPrefix() {
         return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
     }
 
@@ -56,7 +56,7 @@ public final class ReceiptRuleS3ActionArgs extends com.pulumi.resources.Resource
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -67,7 +67,7 @@ public final class ReceiptRuleS3ActionArgs extends com.pulumi.resources.Resource
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 

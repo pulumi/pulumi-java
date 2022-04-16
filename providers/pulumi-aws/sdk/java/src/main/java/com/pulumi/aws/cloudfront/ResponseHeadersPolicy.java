@@ -46,7 +46,7 @@ public class ResponseHeadersPolicy extends com.pulumi.resources.CustomResource {
      * @return A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -60,7 +60,7 @@ public class ResponseHeadersPolicy extends com.pulumi.resources.CustomResource {
      * @return A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
      * 
      */
-    public Output</* @Nullable */ ResponseHeadersPolicyCorsConfig> getCorsConfig() {
+    public Output</* @Nullable */ ResponseHeadersPolicyCorsConfig> corsConfig() {
         return this.corsConfig;
     }
     /**
@@ -74,7 +74,7 @@ public class ResponseHeadersPolicy extends com.pulumi.resources.CustomResource {
      * @return Object that contains an attribute `items` that contains a list of custom headers. See Custom Header for more information.
      * 
      */
-    public Output</* @Nullable */ ResponseHeadersPolicyCustomHeadersConfig> getCustomHeadersConfig() {
+    public Output</* @Nullable */ ResponseHeadersPolicyCustomHeadersConfig> customHeadersConfig() {
         return this.customHeadersConfig;
     }
     /**
@@ -88,7 +88,7 @@ public class ResponseHeadersPolicy extends com.pulumi.resources.CustomResource {
      * @return The current version of the response headers policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -102,7 +102,7 @@ public class ResponseHeadersPolicy extends com.pulumi.resources.CustomResource {
      * @return A unique name to identify the response headers policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class ResponseHeadersPolicy extends com.pulumi.resources.CustomResource {
      * @return A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
      * 
      */
-    public Output</* @Nullable */ ResponseHeadersPolicySecurityHeadersConfig> getSecurityHeadersConfig() {
+    public Output</* @Nullable */ ResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfig() {
         return this.securityHeadersConfig;
     }
 

@@ -21,7 +21,7 @@ public final class ClusterOpenMonitoringPrometheusNodeExporterArgs extends com.p
     @Import(name="enabledInBroker", required=true)
       private final Output<Boolean> enabledInBroker;
 
-    public Output<Boolean> getEnabledInBroker() {
+    public Output<Boolean> enabledInBroker() {
         return this.enabledInBroker;
     }
 

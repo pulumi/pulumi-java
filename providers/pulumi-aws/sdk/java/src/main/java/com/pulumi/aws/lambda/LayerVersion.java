@@ -44,7 +44,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return ARN of the Lambda Layer with version.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
      * 
      */
-    public Output</* @Nullable */ Archive> getCode() {
+    public Output</* @Nullable */ Archive> code() {
         return this.code;
     }
     /**
@@ -72,7 +72,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return List of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCompatibleArchitectures() {
+    public Output</* @Nullable */ List<String>> compatibleArchitectures() {
         return this.compatibleArchitectures;
     }
     /**
@@ -86,7 +86,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return List of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCompatibleRuntimes() {
+    public Output</* @Nullable */ List<String>> compatibleRuntimes() {
         return this.compatibleRuntimes;
     }
     /**
@@ -100,7 +100,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Date this resource was created.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -114,7 +114,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Description of what your Lambda Layer does.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -128,7 +128,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return ARN of the Lambda Layer without version.
      * 
      */
-    public Output<String> getLayerArn() {
+    public Output<String> layerArn() {
         return this.layerArn;
     }
     /**
@@ -142,7 +142,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Unique name for your Lambda Layer
      * 
      */
-    public Output<String> getLayerName() {
+    public Output<String> layerName() {
         return this.layerName;
     }
     /**
@@ -156,7 +156,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
      * 
      */
-    public Output</* @Nullable */ String> getLicenseInfo() {
+    public Output</* @Nullable */ String> licenseInfo() {
         return this.licenseInfo;
     }
     /**
@@ -170,7 +170,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
      * 
      */
-    public Output</* @Nullable */ String> getS3Bucket() {
+    public Output</* @Nullable */ String> s3Bucket() {
         return this.s3Bucket;
     }
     /**
@@ -184,7 +184,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return S3 key of an object containing the function's deployment package. Conflicts with `filename`.
      * 
      */
-    public Output</* @Nullable */ String> getS3Key() {
+    public Output</* @Nullable */ String> s3Key() {
         return this.s3Key;
     }
     /**
@@ -198,7 +198,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Object version containing the function's deployment package. Conflicts with `filename`.
      * 
      */
-    public Output</* @Nullable */ String> getS3ObjectVersion() {
+    public Output</* @Nullable */ String> s3ObjectVersion() {
         return this.s3ObjectVersion;
     }
     /**
@@ -212,7 +212,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return ARN of a signing job.
      * 
      */
-    public Output<String> getSigningJobArn() {
+    public Output<String> signingJobArn() {
         return this.signingJobArn;
     }
     /**
@@ -226,7 +226,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return ARN for a signing profile version.
      * 
      */
-    public Output<String> getSigningProfileVersionArn() {
+    public Output<String> signingProfileVersionArn() {
         return this.signingProfileVersionArn;
     }
     /**
@@ -240,13 +240,13 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Whether to retain the old version of a previously deployed Lambda Layer. Default is `false`. When this is not set to `true`, changing any of `compatible_architectures`, `compatible_runtimes`, `description`, `filename`, `layer_name`, `license_info`, `s3_bucket`, `s3_key`, `s3_object_version`, or `source_code_hash` forces deletion of the existing layer version and creation of a new layer version.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipDestroy() {
+    public Output</* @Nullable */ Boolean> skipDestroy() {
         return this.skipDestroy;
     }
     @Export(name="sourceCodeHash", type=String.class, parameters={})
     private Output<String> sourceCodeHash;
 
-    public Output<String> getSourceCodeHash() {
+    public Output<String> sourceCodeHash() {
         return this.sourceCodeHash;
     }
     /**
@@ -260,7 +260,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Size in bytes of the function .zip file.
      * 
      */
-    public Output<Integer> getSourceCodeSize() {
+    public Output<Integer> sourceCodeSize() {
         return this.sourceCodeSize;
     }
     /**
@@ -274,7 +274,7 @@ public class LayerVersion extends com.pulumi.resources.CustomResource {
      * @return Lambda Layer version.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

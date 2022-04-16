@@ -19,7 +19,7 @@ public final class GetRepositoryEncryptionConfiguration extends com.pulumi.resou
     @Import(name="encryptionType", required=true)
       private final String encryptionType;
 
-    public String getEncryptionType() {
+    public String encryptionType() {
         return this.encryptionType;
     }
 
@@ -30,7 +30,7 @@ public final class GetRepositoryEncryptionConfiguration extends com.pulumi.resou
     @Import(name="kmsKey", required=true)
       private final String kmsKey;
 
-    public String getKmsKey() {
+    public String kmsKey() {
         return this.kmsKey;
     }
 

@@ -25,7 +25,7 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="combineArtifacts")
       private final @Nullable Output<Boolean> combineArtifacts;
 
-    public Output<Boolean> getCombineArtifacts() {
+    public Output<Boolean> combineArtifacts() {
         return this.combineArtifacts == null ? Codegen.empty() : this.combineArtifacts;
     }
 
@@ -36,7 +36,7 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="restrictions")
       private final @Nullable Output<ProjectBuildBatchConfigRestrictionsArgs> restrictions;
 
-    public Output<ProjectBuildBatchConfigRestrictionsArgs> getRestrictions() {
+    public Output<ProjectBuildBatchConfigRestrictionsArgs> restrictions() {
         return this.restrictions == null ? Codegen.empty() : this.restrictions;
     }
 
@@ -47,7 +47,7 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="serviceRole", required=true)
       private final Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
 
@@ -58,7 +58,7 @@ public final class ProjectBuildBatchConfigArgs extends com.pulumi.resources.Reso
     @Import(name="timeoutInMins")
       private final @Nullable Output<Integer> timeoutInMins;
 
-    public Output<Integer> getTimeoutInMins() {
+    public Output<Integer> timeoutInMins() {
         return this.timeoutInMins == null ? Codegen.empty() : this.timeoutInMins;
     }
 

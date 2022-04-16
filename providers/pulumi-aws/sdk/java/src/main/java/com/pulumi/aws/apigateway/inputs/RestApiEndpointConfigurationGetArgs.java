@@ -23,7 +23,7 @@ public final class RestApiEndpointConfigurationGetArgs extends com.pulumi.resour
     @Import(name="types", required=true)
       private final Output<String> types;
 
-    public Output<String> getTypes() {
+    public Output<String> types() {
         return this.types;
     }
 
@@ -34,7 +34,7 @@ public final class RestApiEndpointConfigurationGetArgs extends com.pulumi.resour
     @Import(name="vpcEndpointIds")
       private final @Nullable Output<List<String>> vpcEndpointIds;
 
-    public Output<List<String>> getVpcEndpointIds() {
+    public Output<List<String>> vpcEndpointIds() {
         return this.vpcEndpointIds == null ? Codegen.empty() : this.vpcEndpointIds;
     }
 

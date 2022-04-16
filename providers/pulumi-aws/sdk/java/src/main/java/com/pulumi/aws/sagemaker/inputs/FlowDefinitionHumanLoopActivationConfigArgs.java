@@ -22,7 +22,7 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends com.pulum
     @Import(name="humanLoopActivationConditionsConfig")
       private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
 
-    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> getHumanLoopActivationConditionsConfig() {
+    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig() {
         return this.humanLoopActivationConditionsConfig == null ? Codegen.empty() : this.humanLoopActivationConditionsConfig;
     }
 

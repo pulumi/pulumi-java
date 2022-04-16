@@ -24,7 +24,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
-    public Output<String> getAwsDevice() {
+    public Output<String> awsDevice() {
         return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
     }
 
@@ -46,7 +46,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bandwidth")
       private final @Nullable Output<String> bandwidth;
 
-    public Output<String> getBandwidth() {
+    public Output<String> bandwidth() {
         return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
@@ -57,7 +57,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasLogicalRedundancy")
       private final @Nullable Output<String> hasLogicalRedundancy;
 
-    public Output<String> getHasLogicalRedundancy() {
+    public Output<String> hasLogicalRedundancy() {
         return this.hasLogicalRedundancy == null ? Codegen.empty() : this.hasLogicalRedundancy;
     }
 
@@ -68,7 +68,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> getJumboFrameCapable() {
+    public Output<Boolean> jumboFrameCapable() {
         return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
     }
 
@@ -79,7 +79,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -90,7 +90,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
@@ -112,7 +112,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
@@ -123,7 +123,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -134,7 +134,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

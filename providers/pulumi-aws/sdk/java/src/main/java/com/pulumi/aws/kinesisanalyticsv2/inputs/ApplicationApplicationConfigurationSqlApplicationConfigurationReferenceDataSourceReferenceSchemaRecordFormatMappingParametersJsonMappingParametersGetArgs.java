@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordRowPath", required=true)
       private final Output<String> recordRowPath;
 
-    public Output<String> getRecordRowPath() {
+    public Output<String> recordRowPath() {
         return this.recordRowPath;
     }
 

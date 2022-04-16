@@ -27,7 +27,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<ListenerRuleActionArgs>> actions;
 
-    public Output<List<ListenerRuleActionArgs>> getActions() {
+    public Output<List<ListenerRuleActionArgs>> actions() {
         return this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions", required=true)
       private final Output<List<ListenerRuleConditionArgs>> conditions;
 
-    public Output<List<ListenerRuleConditionArgs>> getConditions() {
+    public Output<List<ListenerRuleConditionArgs>> conditions() {
         return this.conditions;
     }
 
@@ -49,7 +49,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
@@ -60,7 +60,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -71,7 +71,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

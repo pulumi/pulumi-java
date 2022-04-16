@@ -25,7 +25,7 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Output<ServiceSourceConfigurationAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
+    public Output<ServiceSourceConfigurationAuthenticationConfigurationArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="autoDeploymentsEnabled")
       private final @Nullable Output<Boolean> autoDeploymentsEnabled;
 
-    public Output<Boolean> getAutoDeploymentsEnabled() {
+    public Output<Boolean> autoDeploymentsEnabled() {
         return this.autoDeploymentsEnabled == null ? Codegen.empty() : this.autoDeploymentsEnabled;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="codeRepository")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryArgs> codeRepository;
 
-    public Output<ServiceSourceConfigurationCodeRepositoryArgs> getCodeRepository() {
+    public Output<ServiceSourceConfigurationCodeRepositoryArgs> codeRepository() {
         return this.codeRepository == null ? Codegen.empty() : this.codeRepository;
     }
 
@@ -58,7 +58,7 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="imageRepository")
       private final @Nullable Output<ServiceSourceConfigurationImageRepositoryArgs> imageRepository;
 
-    public Output<ServiceSourceConfigurationImageRepositoryArgs> getImageRepository() {
+    public Output<ServiceSourceConfigurationImageRepositoryArgs> imageRepository() {
         return this.imageRepository == null ? Codegen.empty() : this.imageRepository;
     }
 

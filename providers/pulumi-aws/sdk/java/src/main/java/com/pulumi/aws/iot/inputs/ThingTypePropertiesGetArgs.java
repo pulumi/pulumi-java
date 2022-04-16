@@ -23,7 +23,7 @@ public final class ThingTypePropertiesGetArgs extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class ThingTypePropertiesGetArgs extends com.pulumi.resources.Resou
     @Import(name="searchableAttributes")
       private final @Nullable Output<List<String>> searchableAttributes;
 
-    public Output<List<String>> getSearchableAttributes() {
+    public Output<List<String>> searchableAttributes() {
         return this.searchableAttributes == null ? Codegen.empty() : this.searchableAttributes;
     }
 

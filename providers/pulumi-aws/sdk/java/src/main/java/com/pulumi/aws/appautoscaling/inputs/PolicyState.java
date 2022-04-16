@@ -24,7 +24,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyType")
       private final @Nullable Output<String> policyType;
 
-    public Output<String> getPolicyType() {
+    public Output<String> policyType() {
         return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 
@@ -57,7 +57,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -68,7 +68,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalableDimension")
       private final @Nullable Output<String> scalableDimension;
 
-    public Output<String> getScalableDimension() {
+    public Output<String> scalableDimension() {
         return this.scalableDimension == null ? Codegen.empty() : this.scalableDimension;
     }
 
@@ -79,7 +79,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;
 
-    public Output<String> getServiceNamespace() {
+    public Output<String> serviceNamespace() {
         return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
     }
 
@@ -90,7 +90,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepScalingPolicyConfiguration")
       private final @Nullable Output<PolicyStepScalingPolicyConfigurationGetArgs> stepScalingPolicyConfiguration;
 
-    public Output<PolicyStepScalingPolicyConfigurationGetArgs> getStepScalingPolicyConfiguration() {
+    public Output<PolicyStepScalingPolicyConfigurationGetArgs> stepScalingPolicyConfiguration() {
         return this.stepScalingPolicyConfiguration == null ? Codegen.empty() : this.stepScalingPolicyConfiguration;
     }
 
@@ -101,7 +101,7 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetTrackingScalingPolicyConfiguration")
       private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationGetArgs> targetTrackingScalingPolicyConfiguration;
 
-    public Output<PolicyTargetTrackingScalingPolicyConfigurationGetArgs> getTargetTrackingScalingPolicyConfiguration() {
+    public Output<PolicyTargetTrackingScalingPolicyConfigurationGetArgs> targetTrackingScalingPolicyConfiguration() {
         return this.targetTrackingScalingPolicyConfiguration == null ? Codegen.empty() : this.targetTrackingScalingPolicyConfiguration;
     }
 

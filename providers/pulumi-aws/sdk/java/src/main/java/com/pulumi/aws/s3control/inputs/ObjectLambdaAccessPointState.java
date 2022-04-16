@@ -19,7 +19,7 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -30,7 +30,7 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -41,7 +41,7 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     @Import(name="configuration")
       private final @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
 
-    public Output<ObjectLambdaAccessPointConfigurationGetArgs> getConfiguration() {
+    public Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -52,7 +52,7 @@ public final class ObjectLambdaAccessPointState extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

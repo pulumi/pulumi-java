@@ -19,7 +19,7 @@ public final class GetBundleRootStorage extends com.pulumi.resources.InvokeArgs 
     @Import(name="capacity", required=true)
       private final String capacity;
 
-    public String getCapacity() {
+    public String capacity() {
         return this.capacity;
     }
 

@@ -24,7 +24,7 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -35,7 +35,7 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dlqEventQueueArn")
       private final @Nullable Output<String> dlqEventQueueArn;
 
-    public Output<String> getDlqEventQueueArn() {
+    public Output<String> dlqEventQueueArn() {
         return this.dlqEventQueueArn == null ? Codegen.empty() : this.dlqEventQueueArn;
     }
 
@@ -46,7 +46,7 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="eventQueueArn")
       private final @Nullable Output<String> eventQueueArn;
 
-    public Output<String> getEventQueueArn() {
+    public Output<String> eventQueueArn() {
         return this.eventQueueArn == null ? Codegen.empty() : this.eventQueueArn;
     }
 
@@ -57,7 +57,7 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="exclusions")
       private final @Nullable Output<List<String>> exclusions;
 
-    public Output<List<String>> getExclusions() {
+    public Output<List<String>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -68,7 +68,7 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -79,7 +79,7 @@ public final class CrawlerS3TargetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
 
-    public Output<Integer> getSampleSize() {
+    public Output<Integer> sampleSize() {
         return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 

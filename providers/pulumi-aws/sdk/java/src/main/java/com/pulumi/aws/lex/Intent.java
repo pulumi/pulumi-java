@@ -50,7 +50,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Lex intent.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -66,7 +66,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * included as an argument because the resource will add it automatically when updating the intent.
      * 
      */
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum;
     }
     /**
@@ -88,7 +88,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * mutually exclusive. You can specify only one. Attributes are documented under statement.
      * 
      */
-    public Output</* @Nullable */ IntentConclusionStatement> getConclusionStatement() {
+    public Output</* @Nullable */ IntentConclusionStatement> conclusionStatement() {
         return this.conclusionStatement;
     }
     /**
@@ -106,7 +106,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * or neither. Attributes are documented under prompt.
      * 
      */
-    public Output</* @Nullable */ IntentConfirmationPrompt> getConfirmationPrompt() {
+    public Output</* @Nullable */ IntentConfirmationPrompt> confirmationPrompt() {
         return this.confirmationPrompt;
     }
     /**
@@ -122,7 +122,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * resource is created and on each update. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCreateVersion() {
+    public Output</* @Nullable */ Boolean> createVersion() {
         return this.createVersion;
     }
     /**
@@ -136,7 +136,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * @return The date when the intent version was created.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -150,7 +150,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * @return A description of the bot. Must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -166,7 +166,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
      * 
      */
-    public Output</* @Nullable */ IntentDialogCodeHook> getDialogCodeHook() {
+    public Output</* @Nullable */ IntentDialogCodeHook> dialogCodeHook() {
         return this.dialogCodeHook;
     }
     /**
@@ -186,7 +186,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
      * 
      */
-    public Output</* @Nullable */ IntentFollowUpPrompt> getFollowUpPrompt() {
+    public Output</* @Nullable */ IntentFollowUpPrompt> followUpPrompt() {
         return this.followUpPrompt;
     }
     /**
@@ -204,7 +204,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * places an order with a local pizza store. Attributes are documented under fulfillment_activity.
      * 
      */
-    public Output<IntentFulfillmentActivity> getFulfillmentActivity() {
+    public Output<IntentFulfillmentActivity> fulfillmentActivity() {
         return this.fulfillmentActivity;
     }
     /**
@@ -218,7 +218,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * @return The date when the $LATEST version of this intent was updated.
      * 
      */
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
@@ -232,7 +232,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * @return The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -252,7 +252,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * in the Alexa Skills Kit.
      * 
      */
-    public Output</* @Nullable */ String> getParentIntentSignature() {
+    public Output</* @Nullable */ String> parentIntentSignature() {
         return this.parentIntentSignature;
     }
     /**
@@ -270,7 +270,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * documented below under statement.
      * 
      */
-    public Output</* @Nullable */ IntentRejectionStatement> getRejectionStatement() {
+    public Output</* @Nullable */ IntentRejectionStatement> rejectionStatement() {
         return this.rejectionStatement;
     }
     /**
@@ -288,7 +288,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSampleUtterances() {
+    public Output</* @Nullable */ List<String>> sampleUtterances() {
         return this.sampleUtterances;
     }
     /**
@@ -304,7 +304,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * from the user using prompts defined in the slots. Attributes are documented under slot.
      * 
      */
-    public Output</* @Nullable */ List<IntentSlot>> getSlots() {
+    public Output</* @Nullable */ List<IntentSlot>> slots() {
         return this.slots;
     }
     /**
@@ -318,7 +318,7 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * @return The version of the bot.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

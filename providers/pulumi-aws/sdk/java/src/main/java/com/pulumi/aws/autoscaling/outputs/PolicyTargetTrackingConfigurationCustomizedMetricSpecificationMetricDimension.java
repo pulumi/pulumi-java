@@ -32,14 +32,14 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * The name of the dimension.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The value of the dimension.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

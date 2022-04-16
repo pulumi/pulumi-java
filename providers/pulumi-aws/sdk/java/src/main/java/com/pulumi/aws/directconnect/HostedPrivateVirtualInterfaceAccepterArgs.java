@@ -23,7 +23,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends com.pulumi.
     @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
     }
 
@@ -34,7 +34,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends com.pulumi.
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -45,7 +45,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends com.pulumi.
     @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 
@@ -56,7 +56,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends com.pulumi.
     @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
     }
 

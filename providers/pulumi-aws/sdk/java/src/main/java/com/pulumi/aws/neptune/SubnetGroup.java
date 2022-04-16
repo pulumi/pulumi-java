@@ -42,7 +42,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN of the neptune subnet group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the neptune subnet group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the neptune subnet group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -98,7 +98,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return A list of VPC subnet IDs.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -112,7 +112,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -126,7 +126,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

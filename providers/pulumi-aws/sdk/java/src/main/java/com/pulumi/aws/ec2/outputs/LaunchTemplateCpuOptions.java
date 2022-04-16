@@ -35,7 +35,7 @@ public final class LaunchTemplateCpuOptions {
      * The number of CPU cores for the instance.
      * 
     */
-    public Optional<Integer> getCoreCount() {
+    public Optional<Integer> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
     /**
@@ -43,7 +43,7 @@ public final class LaunchTemplateCpuOptions {
      * Otherwise, specify the default value of 2.
      * 
     */
-    public Optional<Integer> getThreadsPerCore() {
+    public Optional<Integer> threadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }
 

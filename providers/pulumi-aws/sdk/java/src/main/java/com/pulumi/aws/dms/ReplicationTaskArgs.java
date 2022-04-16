@@ -23,7 +23,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="cdcStartPosition")
       private final @Nullable Output<String> cdcStartPosition;
 
-    public Output<String> getCdcStartPosition() {
+    public Output<String> cdcStartPosition() {
         return this.cdcStartPosition == null ? Codegen.empty() : this.cdcStartPosition;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="cdcStartTime")
       private final @Nullable Output<String> cdcStartTime;
 
-    public Output<String> getCdcStartTime() {
+    public Output<String> cdcStartTime() {
         return this.cdcStartTime == null ? Codegen.empty() : this.cdcStartTime;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="migrationType", required=true)
       private final Output<String> migrationType;
 
-    public Output<String> getMigrationType() {
+    public Output<String> migrationType() {
         return this.migrationType;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="replicationInstanceArn", required=true)
       private final Output<String> replicationInstanceArn;
 
-    public Output<String> getReplicationInstanceArn() {
+    public Output<String> replicationInstanceArn() {
         return this.replicationInstanceArn;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="replicationTaskId", required=true)
       private final Output<String> replicationTaskId;
 
-    public Output<String> getReplicationTaskId() {
+    public Output<String> replicationTaskId() {
         return this.replicationTaskId;
     }
 
@@ -78,7 +78,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="replicationTaskSettings")
       private final @Nullable Output<String> replicationTaskSettings;
 
-    public Output<String> getReplicationTaskSettings() {
+    public Output<String> replicationTaskSettings() {
         return this.replicationTaskSettings == null ? Codegen.empty() : this.replicationTaskSettings;
     }
 
@@ -89,7 +89,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceEndpointArn", required=true)
       private final Output<String> sourceEndpointArn;
 
-    public Output<String> getSourceEndpointArn() {
+    public Output<String> sourceEndpointArn() {
         return this.sourceEndpointArn;
     }
 
@@ -100,7 +100,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tableMappings", required=true)
       private final Output<String> tableMappings;
 
-    public Output<String> getTableMappings() {
+    public Output<String> tableMappings() {
         return this.tableMappings;
     }
 
@@ -111,7 +111,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -122,7 +122,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetEndpointArn", required=true)
       private final Output<String> targetEndpointArn;
 
-    public Output<String> getTargetEndpointArn() {
+    public Output<String> targetEndpointArn() {
         return this.targetEndpointArn;
     }
 

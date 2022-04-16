@@ -23,7 +23,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs 
     @Import(name="notificationConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> getNotificationConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs 
     @Import(name="s3OutputPath", required=true)
       private final Output<String> s3OutputPath;
 
-    public Output<String> getS3OutputPath() {
+    public Output<String> s3OutputPath() {
         return this.s3OutputPath;
     }
 

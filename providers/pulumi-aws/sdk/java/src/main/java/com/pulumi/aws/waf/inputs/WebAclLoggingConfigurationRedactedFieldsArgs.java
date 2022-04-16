@@ -22,7 +22,7 @@ public final class WebAclLoggingConfigurationRedactedFieldsArgs extends com.pulu
     @Import(name="fieldToMatches", required=true)
       private final Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> fieldToMatches;
 
-    public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> getFieldToMatches() {
+    public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> fieldToMatches() {
         return this.fieldToMatches;
     }
 

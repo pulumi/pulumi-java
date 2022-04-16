@@ -34,14 +34,14 @@ public final class VpcIpamPoolCidrCidrAuthorizationContext {
      * The plain-text authorization message for the prefix and account.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The signed authorization message for the prefix and account.
      * 
     */
-    public Optional<String> getSignature() {
+    public Optional<String> signature() {
         return Optional.ofNullable(this.signature);
     }
 

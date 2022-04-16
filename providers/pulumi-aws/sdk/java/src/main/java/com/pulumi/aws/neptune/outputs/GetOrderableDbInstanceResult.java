@@ -154,130 +154,130 @@ public final class GetOrderableDbInstanceResult {
      * Availability zones where the instance is available.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
-    public Optional<String> getEngine() {
+    public Optional<String> engine() {
         return Optional.ofNullable(this.engine);
     }
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceClass() {
+    public String instanceClass() {
         return this.instanceClass;
     }
-    public Optional<String> getLicenseModel() {
+    public Optional<String> licenseModel() {
         return Optional.ofNullable(this.licenseModel);
     }
     /**
      * Maximum total provisioned IOPS for a DB instance.
      * 
     */
-    public Integer getMaxIopsPerDbInstance() {
+    public Integer maxIopsPerDbInstance() {
         return this.maxIopsPerDbInstance;
     }
     /**
      * Maximum provisioned IOPS per GiB for a DB instance.
      * 
     */
-    public Double getMaxIopsPerGib() {
+    public Double maxIopsPerGib() {
         return this.maxIopsPerGib;
     }
     /**
      * Maximum storage size for a DB instance.
      * 
     */
-    public Integer getMaxStorageSize() {
+    public Integer maxStorageSize() {
         return this.maxStorageSize;
     }
     /**
      * Minimum total provisioned IOPS for a DB instance.
      * 
     */
-    public Integer getMinIopsPerDbInstance() {
+    public Integer minIopsPerDbInstance() {
         return this.minIopsPerDbInstance;
     }
     /**
      * Minimum provisioned IOPS per GiB for a DB instance.
      * 
     */
-    public Double getMinIopsPerGib() {
+    public Double minIopsPerGib() {
         return this.minIopsPerGib;
     }
     /**
      * Minimum storage size for a DB instance.
      * 
     */
-    public Integer getMinStorageSize() {
+    public Integer minStorageSize() {
         return this.minStorageSize;
     }
     /**
      * Whether a DB instance is Multi-AZ capable.
      * 
     */
-    public Boolean getMultiAzCapable() {
+    public Boolean multiAzCapable() {
         return this.multiAzCapable;
     }
-    public List<String> getPreferredInstanceClasses() {
+    public List<String> preferredInstanceClasses() {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
     }
     /**
      * Whether a DB instance can have a read replica.
      * 
     */
-    public Boolean getReadReplicaCapable() {
+    public Boolean readReplicaCapable() {
         return this.readReplicaCapable;
     }
     /**
      * The storage type for a DB instance.
      * 
     */
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
     /**
      * Whether a DB instance supports Enhanced Monitoring at intervals from 1 to 60 seconds.
      * 
     */
-    public Boolean getSupportsEnhancedMonitoring() {
+    public Boolean supportsEnhancedMonitoring() {
         return this.supportsEnhancedMonitoring;
     }
     /**
      * Whether a DB instance supports IAM database authentication.
      * 
     */
-    public Boolean getSupportsIamDatabaseAuthentication() {
+    public Boolean supportsIamDatabaseAuthentication() {
         return this.supportsIamDatabaseAuthentication;
     }
     /**
      * Whether a DB instance supports provisioned IOPS.
      * 
     */
-    public Boolean getSupportsIops() {
+    public Boolean supportsIops() {
         return this.supportsIops;
     }
     /**
      * Whether a DB instance supports Performance Insights.
      * 
     */
-    public Boolean getSupportsPerformanceInsights() {
+    public Boolean supportsPerformanceInsights() {
         return this.supportsPerformanceInsights;
     }
     /**
      * Whether a DB instance supports encrypted storage.
      * 
     */
-    public Boolean getSupportsStorageEncryption() {
+    public Boolean supportsStorageEncryption() {
         return this.supportsStorageEncryption;
     }
-    public Boolean getVpc() {
+    public Boolean vpc() {
         return this.vpc;
     }
 

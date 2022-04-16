@@ -25,7 +25,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends c
     @Import(name="customImages")
       private final @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
 
-    public Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> getCustomImages() {
+    public Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages() {
         return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
@@ -36,7 +36,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends c
     @Import(name="defaultResourceSpec", required=true)
       private final Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
-    public Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
@@ -47,7 +47,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends c
     @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> getLifecycleConfigArns() {
+    public Output<List<String>> lifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 

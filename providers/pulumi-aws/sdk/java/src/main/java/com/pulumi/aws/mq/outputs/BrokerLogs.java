@@ -34,14 +34,14 @@ public final class BrokerLogs {
      * Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getAudit() {
+    public Optional<Boolean> audit() {
         return Optional.ofNullable(this.audit);
     }
     /**
      * Enables general logging via CloudWatch. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getGeneral() {
+    public Optional<Boolean> general() {
         return Optional.ofNullable(this.general);
     }
 

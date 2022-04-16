@@ -22,7 +22,7 @@ public final class InventoryFilterGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

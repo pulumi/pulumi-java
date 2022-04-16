@@ -22,7 +22,7 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
     @Import(name="dbClusterIdentifier")
       private final @Nullable Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier == null ? Codegen.empty() : this.dbClusterIdentifier;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
     @Import(name="featureName")
       private final @Nullable Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName == null ? Codegen.empty() : this.featureName;
     }
 
@@ -44,7 +44,7 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

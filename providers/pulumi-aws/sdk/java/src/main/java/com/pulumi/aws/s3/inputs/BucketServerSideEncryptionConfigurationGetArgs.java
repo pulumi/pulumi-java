@@ -21,7 +21,7 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends com.pu
     @Import(name="rule", required=true)
       private final Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule;
 
-    public Output<BucketServerSideEncryptionConfigurationRuleGetArgs> getRule() {
+    public Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule() {
         return this.rule;
     }
 

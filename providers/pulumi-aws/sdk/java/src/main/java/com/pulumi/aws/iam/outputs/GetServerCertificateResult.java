@@ -54,41 +54,41 @@ public final class GetServerCertificateResult {
         this.uploadDate = uploadDate;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getCertificateBody() {
+    public String certificateBody() {
         return this.certificateBody;
     }
-    public String getCertificateChain() {
+    public String certificateChain() {
         return this.certificateChain;
     }
-    public String getExpirationDate() {
+    public String expirationDate() {
         return this.expirationDate;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getLatest() {
+    public Optional<Boolean> latest() {
         return Optional.ofNullable(this.latest);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNamePrefix() {
+    public Optional<String> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
-    public Optional<String> getPathPrefix() {
+    public Optional<String> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
-    public String getUploadDate() {
+    public String uploadDate() {
         return this.uploadDate;
     }
 

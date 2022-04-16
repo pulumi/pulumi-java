@@ -52,31 +52,31 @@ public final class DomainDomainEndpointOptions {
      * Fully qualified domain for your custom endpoint.
      * 
     */
-    public Optional<String> getCustomEndpoint() {
+    public Optional<String> customEndpoint() {
         return Optional.ofNullable(this.customEndpoint);
     }
     /**
      * ACM certificate ARN for your custom endpoint.
      * 
     */
-    public Optional<String> getCustomEndpointCertificateArn() {
+    public Optional<String> customEndpointCertificateArn() {
         return Optional.ofNullable(this.customEndpointCertificateArn);
     }
     /**
      * Whether to enable custom endpoint for the Elasticsearch domain.
      * 
     */
-    public Optional<Boolean> getCustomEndpointEnabled() {
+    public Optional<Boolean> customEndpointEnabled() {
         return Optional.ofNullable(this.customEndpointEnabled);
     }
     /**
      * Whether or not to require HTTPS. Defaults to `true`.
      * 
     */
-    public Optional<Boolean> getEnforceHttps() {
+    public Optional<Boolean> enforceHttps() {
         return Optional.ofNullable(this.enforceHttps);
     }
-    public Optional<String> getTlsSecurityPolicy() {
+    public Optional<String> tlsSecurityPolicy() {
         return Optional.ofNullable(this.tlsSecurityPolicy);
     }
 

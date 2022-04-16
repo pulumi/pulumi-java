@@ -22,7 +22,7 @@ public final class CustomPluginLocationS3Args extends com.pulumi.resources.Resou
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -33,7 +33,7 @@ public final class CustomPluginLocationS3Args extends com.pulumi.resources.Resou
     @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
-    public Output<String> getFileKey() {
+    public Output<String> fileKey() {
         return this.fileKey;
     }
 
@@ -44,7 +44,7 @@ public final class CustomPluginLocationS3Args extends com.pulumi.resources.Resou
     @Import(name="objectVersion")
       private final @Nullable Output<String> objectVersion;
 
-    public Output<String> getObjectVersion() {
+    public Output<String> objectVersion() {
         return this.objectVersion == null ? Codegen.empty() : this.objectVersion;
     }
 

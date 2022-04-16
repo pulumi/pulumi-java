@@ -20,7 +20,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="applicationArn", required=true)
       private final String applicationArn;
 
-    public String getApplicationArn() {
+    public String applicationArn() {
         return this.applicationArn;
     }
 
@@ -31,7 +31,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="applicationId", required=true)
       private final String applicationId;
 
-    public String getApplicationId() {
+    public String applicationId() {
         return this.applicationId;
     }
 
@@ -42,7 +42,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="externalId", required=true)
       private final String externalId;
 
-    public String getExternalId() {
+    public String externalId() {
         return this.externalId;
     }
 
@@ -54,14 +54,14 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="userDataShared", required=true)
       private final Boolean userDataShared;
 
-    public Boolean getUserDataShared() {
+    public Boolean userDataShared() {
         return this.userDataShared;
     }
 

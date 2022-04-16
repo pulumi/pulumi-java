@@ -42,7 +42,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS for this provider.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
      * 
      */
-    public Output<List<String>> getClientIdLists() {
+    public Output<List<String>> clientIdLists() {
         return this.clientIdLists;
     }
     /**
@@ -70,7 +70,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags for the IAM OIDC provider. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -84,7 +84,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -98,7 +98,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
      * 
      */
-    public Output<List<String>> getThumbprintLists() {
+    public Output<List<String>> thumbprintLists() {
         return this.thumbprintLists;
     }
     /**
@@ -112,7 +112,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return The URL of the identity provider. Corresponds to the _iss_ claim.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

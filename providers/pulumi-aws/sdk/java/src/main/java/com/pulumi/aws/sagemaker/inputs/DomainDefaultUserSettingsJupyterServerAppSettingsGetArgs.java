@@ -24,7 +24,7 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs exte
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
+    public Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
@@ -35,7 +35,7 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs exte
     @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> getLifecycleConfigArns() {
+    public Output<List<String>> lifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 

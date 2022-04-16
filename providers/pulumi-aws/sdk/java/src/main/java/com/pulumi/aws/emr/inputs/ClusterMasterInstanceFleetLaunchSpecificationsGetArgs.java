@@ -24,7 +24,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsGetArgs extends
     @Import(name="onDemandSpecifications")
       private final @Nullable Output<List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications;
 
-    public Output<List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> getOnDemandSpecifications() {
+    public Output<List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications() {
         return this.onDemandSpecifications == null ? Codegen.empty() : this.onDemandSpecifications;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsGetArgs extends
     @Import(name="spotSpecifications")
       private final @Nullable Output<List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications;
 
-    public Output<List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> getSpotSpecifications() {
+    public Output<List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications() {
         return this.spotSpecifications == null ? Codegen.empty() : this.spotSpecifications;
     }
 

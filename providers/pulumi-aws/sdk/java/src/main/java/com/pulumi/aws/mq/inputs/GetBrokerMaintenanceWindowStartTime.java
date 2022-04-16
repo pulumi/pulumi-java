@@ -15,21 +15,21 @@ public final class GetBrokerMaintenanceWindowStartTime extends com.pulumi.resour
     @Import(name="dayOfWeek", required=true)
       private final String dayOfWeek;
 
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
 
     @Import(name="timeOfDay", required=true)
       private final String timeOfDay;
 
-    public String getTimeOfDay() {
+    public String timeOfDay() {
         return this.timeOfDay;
     }
 
     @Import(name="timeZone", required=true)
       private final String timeZone;
 
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
 

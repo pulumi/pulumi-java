@@ -25,7 +25,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
 
@@ -36,7 +36,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationDefaultNetmaskLength")
       private final @Nullable Output<Integer> allocationDefaultNetmaskLength;
 
-    public Output<Integer> getAllocationDefaultNetmaskLength() {
+    public Output<Integer> allocationDefaultNetmaskLength() {
         return this.allocationDefaultNetmaskLength == null ? Codegen.empty() : this.allocationDefaultNetmaskLength;
     }
 
@@ -47,7 +47,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationMaxNetmaskLength")
       private final @Nullable Output<Integer> allocationMaxNetmaskLength;
 
-    public Output<Integer> getAllocationMaxNetmaskLength() {
+    public Output<Integer> allocationMaxNetmaskLength() {
         return this.allocationMaxNetmaskLength == null ? Codegen.empty() : this.allocationMaxNetmaskLength;
     }
 
@@ -58,7 +58,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationMinNetmaskLength")
       private final @Nullable Output<Integer> allocationMinNetmaskLength;
 
-    public Output<Integer> getAllocationMinNetmaskLength() {
+    public Output<Integer> allocationMinNetmaskLength() {
         return this.allocationMinNetmaskLength == null ? Codegen.empty() : this.allocationMinNetmaskLength;
     }
 
@@ -69,7 +69,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationResourceTags")
       private final @Nullable Output<Map<String,String>> allocationResourceTags;
 
-    public Output<Map<String,String>> getAllocationResourceTags() {
+    public Output<Map<String,String>> allocationResourceTags() {
         return this.allocationResourceTags == null ? Codegen.empty() : this.allocationResourceTags;
     }
 
@@ -81,7 +81,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoImport")
       private final @Nullable Output<Boolean> autoImport;
 
-    public Output<Boolean> getAutoImport() {
+    public Output<Boolean> autoImport() {
         return this.autoImport == null ? Codegen.empty() : this.autoImport;
     }
 
@@ -92,7 +92,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsService")
       private final @Nullable Output<String> awsService;
 
-    public Output<String> getAwsService() {
+    public Output<String> awsService() {
         return this.awsService == null ? Codegen.empty() : this.awsService;
     }
 
@@ -103,7 +103,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -114,7 +114,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipamScopeId", required=true)
       private final Output<String> ipamScopeId;
 
-    public Output<String> getIpamScopeId() {
+    public Output<String> ipamScopeId() {
         return this.ipamScopeId;
     }
 
@@ -125,7 +125,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locale")
       private final @Nullable Output<String> locale;
 
-    public Output<String> getLocale() {
+    public Output<String> locale() {
         return this.locale == null ? Codegen.empty() : this.locale;
     }
 
@@ -136,7 +136,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publiclyAdvertisable")
       private final @Nullable Output<Boolean> publiclyAdvertisable;
 
-    public Output<Boolean> getPubliclyAdvertisable() {
+    public Output<Boolean> publiclyAdvertisable() {
         return this.publiclyAdvertisable == null ? Codegen.empty() : this.publiclyAdvertisable;
     }
 
@@ -147,7 +147,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceIpamPoolId")
       private final @Nullable Output<String> sourceIpamPoolId;
 
-    public Output<String> getSourceIpamPoolId() {
+    public Output<String> sourceIpamPoolId() {
         return this.sourceIpamPoolId == null ? Codegen.empty() : this.sourceIpamPoolId;
     }
 
@@ -158,7 +158,7 @@ public final class VpcIpamPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -40,20 +40,20 @@ public final class GetKafkaVersionResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<String> getPreferredVersions() {
+    public List<String> preferredVersions() {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
     /**
      * Status of the MSK Kafka version eg. `ACTIVE` or `DEPRECATED`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

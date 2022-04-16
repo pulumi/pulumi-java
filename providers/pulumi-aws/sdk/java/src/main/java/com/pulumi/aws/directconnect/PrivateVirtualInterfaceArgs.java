@@ -25,7 +25,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
 
@@ -36,7 +36,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
-    public Output<String> getAmazonAddress() {
+    public Output<String> amazonAddress() {
         return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
@@ -47,7 +47,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="bgpAsn", required=true)
       private final Output<Integer> bgpAsn;
 
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn;
     }
 
@@ -58,7 +58,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> getBgpAuthKey() {
+    public Output<String> bgpAuthKey() {
         return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
@@ -69,7 +69,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -80,7 +80,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
-    public Output<String> getCustomerAddress() {
+    public Output<String> customerAddress() {
         return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
@@ -91,7 +91,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
     }
 
@@ -103,7 +103,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
@@ -114,14 +114,14 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="sitelinkEnabled")
       private final @Nullable Output<Boolean> sitelinkEnabled;
 
-    public Output<Boolean> getSitelinkEnabled() {
+    public Output<Boolean> sitelinkEnabled() {
         return this.sitelinkEnabled == null ? Codegen.empty() : this.sitelinkEnabled;
     }
 
@@ -132,7 +132,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -143,7 +143,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 
@@ -154,7 +154,7 @@ public final class PrivateVirtualInterfaceArgs extends com.pulumi.resources.Reso
     @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
     }
 

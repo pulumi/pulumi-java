@@ -43,7 +43,7 @@ public class SnapshotCopyGrant extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of snapshot copy grant
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class SnapshotCopyGrant extends com.pulumi.resources.CustomResource {
      * @return The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -71,7 +71,7 @@ public class SnapshotCopyGrant extends com.pulumi.resources.CustomResource {
      * @return A friendly name for identifying the grant.
      * 
      */
-    public Output<String> getSnapshotCopyGrantName() {
+    public Output<String> snapshotCopyGrantName() {
         return this.snapshotCopyGrantName;
     }
     /**
@@ -85,7 +85,7 @@ public class SnapshotCopyGrant extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +99,7 @@ public class SnapshotCopyGrant extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

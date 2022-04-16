@@ -23,13 +23,13 @@ public final class GetListenerDefaultActionFixedResponse {
         this.statusCode = statusCode;
     }
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
-    public String getMessageBody() {
+    public String messageBody() {
         return this.messageBody;
     }
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

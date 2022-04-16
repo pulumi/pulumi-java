@@ -18,7 +18,7 @@ public final class FilterFindingCriteriaGetArgs extends com.pulumi.resources.Res
     @Import(name="criterions", required=true)
       private final Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions;
 
-    public Output<List<FilterFindingCriteriaCriterionGetArgs>> getCriterions() {
+    public Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions() {
         return this.criterions;
     }
 

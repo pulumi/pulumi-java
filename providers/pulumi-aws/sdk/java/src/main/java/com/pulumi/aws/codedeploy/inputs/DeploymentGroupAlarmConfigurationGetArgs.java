@@ -24,7 +24,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends com.pulumi.r
     @Import(name="alarms")
       private final @Nullable Output<List<String>> alarms;
 
-    public Output<List<String>> getAlarms() {
+    public Output<List<String>> alarms() {
         return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends com.pulumi.r
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -48,7 +48,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends com.pulumi.r
     @Import(name="ignorePollAlarmFailure")
       private final @Nullable Output<Boolean> ignorePollAlarmFailure;
 
-    public Output<Boolean> getIgnorePollAlarmFailure() {
+    public Output<Boolean> ignorePollAlarmFailure() {
         return this.ignorePollAlarmFailure == null ? Codegen.empty() : this.ignorePollAlarmFailure;
     }
 

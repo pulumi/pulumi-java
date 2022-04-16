@@ -47,7 +47,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The directory alias.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -61,7 +61,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The user name for the service account.
      * 
      */
-    public Output<String> getCustomerUserName() {
+    public Output<String> customerUserName() {
         return this.customerUserName;
     }
     /**
@@ -75,7 +75,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The directory identifier for registration in WorkSpaces service.
      * 
      */
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
     /**
@@ -89,7 +89,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The name of the directory.
      * 
      */
-    public Output<String> getDirectoryName() {
+    public Output<String> directoryName() {
         return this.directoryName;
     }
     /**
@@ -103,7 +103,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The directory type.
      * 
      */
-    public Output<String> getDirectoryType() {
+    public Output<String> directoryType() {
         return this.directoryType;
     }
     /**
@@ -117,7 +117,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The IP addresses of the DNS servers for the directory.
      * 
      */
-    public Output<List<String>> getDnsIpAddresses() {
+    public Output<List<String>> dnsIpAddresses() {
         return this.dnsIpAddresses;
     }
     /**
@@ -131,7 +131,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
      * 
      */
-    public Output<String> getIamRoleId() {
+    public Output<String> iamRoleId() {
         return this.iamRoleId;
     }
     /**
@@ -145,7 +145,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The identifiers of the IP access control groups associated with the directory.
      * 
      */
-    public Output<List<String>> getIpGroupIds() {
+    public Output<List<String>> ipGroupIds() {
         return this.ipGroupIds;
     }
     /**
@@ -159,7 +159,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
      * 
      */
-    public Output<String> getRegistrationCode() {
+    public Output<String> registrationCode() {
         return this.registrationCode;
     }
     /**
@@ -173,7 +173,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return Permissions to enable or disable self-service capabilities. Defined below.
      * 
      */
-    public Output<DirectorySelfServicePermissions> getSelfServicePermissions() {
+    public Output<DirectorySelfServicePermissions> selfServicePermissions() {
         return this.selfServicePermissions;
     }
     /**
@@ -187,7 +187,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The identifiers of the subnets where the directory resides.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -201,7 +201,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -215,7 +215,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -229,7 +229,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
      * 
      */
-    public Output<DirectoryWorkspaceAccessProperties> getWorkspaceAccessProperties() {
+    public Output<DirectoryWorkspaceAccessProperties> workspaceAccessProperties() {
         return this.workspaceAccessProperties;
     }
     /**
@@ -243,7 +243,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return Default properties that are used for creating WorkSpaces. Defined below.
      * 
      */
-    public Output<DirectoryWorkspaceCreationProperties> getWorkspaceCreationProperties() {
+    public Output<DirectoryWorkspaceCreationProperties> workspaceCreationProperties() {
         return this.workspaceCreationProperties;
     }
     /**
@@ -257,7 +257,7 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The identifier of the security group that is assigned to new WorkSpaces.
      * 
      */
-    public Output<String> getWorkspaceSecurityGroupId() {
+    public Output<String> workspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId;
     }
 

@@ -22,7 +22,7 @@ public final class RepositoryEncryptionConfigurationGetArgs extends com.pulumi.r
     @Import(name="encryptionType")
       private final @Nullable Output<String> encryptionType;
 
-    public Output<String> getEncryptionType() {
+    public Output<String> encryptionType() {
         return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
     }
 
@@ -33,7 +33,7 @@ public final class RepositoryEncryptionConfigurationGetArgs extends com.pulumi.r
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 

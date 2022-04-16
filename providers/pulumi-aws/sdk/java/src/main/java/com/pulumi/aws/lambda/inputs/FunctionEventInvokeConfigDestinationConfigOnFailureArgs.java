@@ -21,7 +21,7 @@ public final class FunctionEventInvokeConfigDestinationConfigOnFailureArgs exten
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 

@@ -45,7 +45,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return SCM configuration of the app as described below.
      * 
      */
-    public Output<List<ApplicationAppSource>> getAppSources() {
+    public Output<List<ApplicationAppSource>> appSources() {
         return this.appSources;
     }
     /**
@@ -59,7 +59,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Run bundle install when deploying for application of type `rails`.
      * 
      */
-    public Output</* @Nullable */ String> getAutoBundleOnDeploy() {
+    public Output</* @Nullable */ String> autoBundleOnDeploy() {
         return this.autoBundleOnDeploy;
     }
     /**
@@ -73,7 +73,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specify activity and workflow workers for your app using the aws-flow gem.
      * 
      */
-    public Output</* @Nullable */ String> getAwsFlowRubySettings() {
+    public Output</* @Nullable */ String> awsFlowRubySettings() {
         return this.awsFlowRubySettings;
     }
     /**
@@ -87,7 +87,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The data source's ARN.
      * 
      */
-    public Output</* @Nullable */ String> getDataSourceArn() {
+    public Output</* @Nullable */ String> dataSourceArn() {
         return this.dataSourceArn;
     }
     /**
@@ -101,7 +101,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The database name.
      * 
      */
-    public Output</* @Nullable */ String> getDataSourceDatabaseName() {
+    public Output</* @Nullable */ String> dataSourceDatabaseName() {
         return this.dataSourceDatabaseName;
     }
     /**
@@ -115,7 +115,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
      * 
      */
-    public Output</* @Nullable */ String> getDataSourceType() {
+    public Output</* @Nullable */ String> dataSourceType() {
         return this.dataSourceType;
     }
     /**
@@ -129,7 +129,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A description of the app.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -143,7 +143,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Subfolder for the document root for application of type `rails`.
      * 
      */
-    public Output</* @Nullable */ String> getDocumentRoot() {
+    public Output</* @Nullable */ String> documentRoot() {
         return this.documentRoot;
     }
     /**
@@ -157,7 +157,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A list of virtual host alias.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDomains() {
+    public Output</* @Nullable */ List<String>> domains() {
         return this.domains;
     }
     /**
@@ -171,7 +171,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableSsl() {
+    public Output</* @Nullable */ Boolean> enableSsl() {
         return this.enableSsl;
     }
     /**
@@ -185,7 +185,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Object to define environment variables.  Object is described below.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationEnvironment>> getEnvironments() {
+    public Output</* @Nullable */ List<ApplicationEnvironment>> environments() {
         return this.environments;
     }
     /**
@@ -199,7 +199,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A human-readable name for the application.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -213,7 +213,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The name of the Rails environment for application of type `rails`.
      * 
      */
-    public Output</* @Nullable */ String> getRailsEnv() {
+    public Output</* @Nullable */ String> railsEnv() {
         return this.railsEnv;
     }
     /**
@@ -227,7 +227,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
     /**
@@ -241,7 +241,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The SSL configuration of the app. Object is described below.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationSslConfiguration>> getSslConfigurations() {
+    public Output</* @Nullable */ List<ApplicationSslConfiguration>> sslConfigurations() {
         return this.sslConfigurations;
     }
     /**
@@ -255,7 +255,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The id of the stack the application will belong to.
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
     /**
@@ -269,7 +269,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

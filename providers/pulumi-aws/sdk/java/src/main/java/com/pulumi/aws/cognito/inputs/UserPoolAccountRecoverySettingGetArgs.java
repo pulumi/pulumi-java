@@ -22,7 +22,7 @@ public final class UserPoolAccountRecoverySettingGetArgs extends com.pulumi.reso
     @Import(name="recoveryMechanisms", required=true)
       private final Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
 
-    public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> getRecoveryMechanisms() {
+    public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms() {
         return this.recoveryMechanisms;
     }
 

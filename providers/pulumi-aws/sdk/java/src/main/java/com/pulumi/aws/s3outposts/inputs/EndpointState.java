@@ -24,7 +24,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
 
-    public Output<List<EndpointNetworkInterfaceGetArgs>> getNetworkInterfaces() {
+    public Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
@@ -68,7 +68,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="outpostId")
       private final @Nullable Output<String> outpostId;
 
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId == null ? Codegen.empty() : this.outpostId;
     }
 
@@ -79,7 +79,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
     }
 
@@ -90,7 +90,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

@@ -22,7 +22,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeAndroid")
       private final @Nullable Output<String> deviceTypeAndroid;
 
-    public Output<String> getDeviceTypeAndroid() {
+    public Output<String> deviceTypeAndroid() {
         return this.deviceTypeAndroid == null ? Codegen.empty() : this.deviceTypeAndroid;
     }
 
@@ -33,7 +33,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeChromeos")
       private final @Nullable Output<String> deviceTypeChromeos;
 
-    public Output<String> getDeviceTypeChromeos() {
+    public Output<String> deviceTypeChromeos() {
         return this.deviceTypeChromeos == null ? Codegen.empty() : this.deviceTypeChromeos;
     }
 
@@ -44,7 +44,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeIos")
       private final @Nullable Output<String> deviceTypeIos;
 
-    public Output<String> getDeviceTypeIos() {
+    public Output<String> deviceTypeIos() {
         return this.deviceTypeIos == null ? Codegen.empty() : this.deviceTypeIos;
     }
 
@@ -55,7 +55,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeLinux")
       private final @Nullable Output<String> deviceTypeLinux;
 
-    public Output<String> getDeviceTypeLinux() {
+    public Output<String> deviceTypeLinux() {
         return this.deviceTypeLinux == null ? Codegen.empty() : this.deviceTypeLinux;
     }
 
@@ -66,7 +66,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeOsx")
       private final @Nullable Output<String> deviceTypeOsx;
 
-    public Output<String> getDeviceTypeOsx() {
+    public Output<String> deviceTypeOsx() {
         return this.deviceTypeOsx == null ? Codegen.empty() : this.deviceTypeOsx;
     }
 
@@ -77,7 +77,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeWeb")
       private final @Nullable Output<String> deviceTypeWeb;
 
-    public Output<String> getDeviceTypeWeb() {
+    public Output<String> deviceTypeWeb() {
         return this.deviceTypeWeb == null ? Codegen.empty() : this.deviceTypeWeb;
     }
 
@@ -88,7 +88,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeWindows")
       private final @Nullable Output<String> deviceTypeWindows;
 
-    public Output<String> getDeviceTypeWindows() {
+    public Output<String> deviceTypeWindows() {
         return this.deviceTypeWindows == null ? Codegen.empty() : this.deviceTypeWindows;
     }
 
@@ -99,7 +99,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends com.pulumi.
     @Import(name="deviceTypeZeroclient")
       private final @Nullable Output<String> deviceTypeZeroclient;
 
-    public Output<String> getDeviceTypeZeroclient() {
+    public Output<String> deviceTypeZeroclient() {
         return this.deviceTypeZeroclient == null ? Codegen.empty() : this.deviceTypeZeroclient;
     }
 

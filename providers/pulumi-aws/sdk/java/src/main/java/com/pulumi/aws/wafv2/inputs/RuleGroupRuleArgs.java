@@ -28,7 +28,7 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<RuleGroupRuleActionArgs> action;
 
-    public Output<RuleGroupRuleActionArgs> getAction() {
+    public Output<RuleGroupRuleActionArgs> action() {
         return this.action;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleLabels")
       private final @Nullable Output<List<RuleGroupRuleRuleLabelArgs>> ruleLabels;
 
-    public Output<List<RuleGroupRuleRuleLabelArgs>> getRuleLabels() {
+    public Output<List<RuleGroupRuleRuleLabelArgs>> ruleLabels() {
         return this.ruleLabels == null ? Codegen.empty() : this.ruleLabels;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="statement", required=true)
       private final Output<RuleGroupRuleStatementArgs> statement;
 
-    public Output<RuleGroupRuleStatementArgs> getStatement() {
+    public Output<RuleGroupRuleStatementArgs> statement() {
         return this.statement;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="visibilityConfig", required=true)
       private final Output<RuleGroupRuleVisibilityConfigArgs> visibilityConfig;
 
-    public Output<RuleGroupRuleVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<RuleGroupRuleVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 

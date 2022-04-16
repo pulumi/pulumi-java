@@ -55,35 +55,35 @@ public final class DocumentationPartLocation {
      * The HTTP verb of a method. The default value is `*` for any method.
      * 
     */
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * The name of the targeted API entity.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The URL path of the target. The default value is `/` for the root resource.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The HTTP status code of a response. The default value is `*` for any status code.
      * 
     */
-    public Optional<String> getStatusCode() {
+    public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
     /**
      * The type of API entity to which the documentation content appliesE.g., `API`, `METHOD` or `REQUEST_BODY`
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

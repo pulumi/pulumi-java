@@ -53,7 +53,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Kinesis Analytics Appliation.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -69,7 +69,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * See CloudWatch Logging Options below for more details.
      * 
      */
-    public Output</* @Nullable */ AnalyticsApplicationCloudwatchLoggingOptions> getCloudwatchLoggingOptions() {
+    public Output</* @Nullable */ AnalyticsApplicationCloudwatchLoggingOptions> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions;
     }
     /**
@@ -83,7 +83,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return SQL Code to transform input data, and generate output.
      * 
      */
-    public Output</* @Nullable */ String> getCode() {
+    public Output</* @Nullable */ String> code() {
         return this.code;
     }
     /**
@@ -97,7 +97,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return The Timestamp when the application version was created.
      * 
      */
-    public Output<String> getCreateTimestamp() {
+    public Output<String> createTimestamp() {
         return this.createTimestamp;
     }
     /**
@@ -111,7 +111,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Description of the application.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -125,7 +125,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Input configuration of the application. See Inputs below for more details.
      * 
      */
-    public Output</* @Nullable */ AnalyticsApplicationInputs> getInputs() {
+    public Output</* @Nullable */ AnalyticsApplicationInputs> inputs() {
         return this.inputs;
     }
     /**
@@ -139,7 +139,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return The Timestamp when the application was last updated.
      * 
      */
-    public Output<String> getLastUpdateTimestamp() {
+    public Output<String> lastUpdateTimestamp() {
         return this.lastUpdateTimestamp;
     }
     /**
@@ -153,7 +153,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Name of the Kinesis Analytics Application.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -167,7 +167,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Output destination configuration of the application. See Outputs below for more details.
      * 
      */
-    public Output</* @Nullable */ List<AnalyticsApplicationOutput>> getOutputs() {
+    public Output</* @Nullable */ List<AnalyticsApplicationOutput>> outputs() {
         return this.outputs;
     }
     /**
@@ -183,7 +183,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * See Reference Data Sources below for more details.
      * 
      */
-    public Output</* @Nullable */ AnalyticsApplicationReferenceDataSources> getReferenceDataSources() {
+    public Output</* @Nullable */ AnalyticsApplicationReferenceDataSources> referenceDataSources() {
         return this.referenceDataSources;
     }
     /**
@@ -199,7 +199,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStartApplication() {
+    public Output</* @Nullable */ Boolean> startApplication() {
         return this.startApplication;
     }
     /**
@@ -213,7 +213,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return The Status of the application.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -227,7 +227,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -241,7 +241,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -255,7 +255,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return The Version of the application.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

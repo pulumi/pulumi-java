@@ -20,7 +20,7 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetCoipPoolFilter> filters;
 
-    public List<GetCoipPoolFilter> getFilters() {
+    public List<GetCoipPoolFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -31,7 +31,7 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="localGatewayRouteTableId")
       private final @Nullable String localGatewayRouteTableId;
 
-    public Optional<String> getLocalGatewayRouteTableId() {
+    public Optional<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayRouteTableId);
     }
 
@@ -42,7 +42,7 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="poolId")
       private final @Nullable String poolId;
 
-    public Optional<String> getPoolId() {
+    public Optional<String> poolId() {
         return this.poolId == null ? Optional.empty() : Optional.ofNullable(this.poolId);
     }
 
@@ -54,7 +54,7 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

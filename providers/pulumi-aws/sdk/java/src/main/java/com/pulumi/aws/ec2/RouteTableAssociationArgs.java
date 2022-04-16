@@ -22,7 +22,7 @@ public final class RouteTableAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
@@ -33,7 +33,7 @@ public final class RouteTableAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -44,7 +44,7 @@ public final class RouteTableAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

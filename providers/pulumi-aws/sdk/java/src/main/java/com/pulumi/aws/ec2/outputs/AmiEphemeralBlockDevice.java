@@ -33,7 +33,7 @@ public final class AmiEphemeralBlockDevice {
      * The path at which the device is exposed to created instances.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
@@ -41,7 +41,7 @@ public final class AmiEphemeralBlockDevice {
      * *N* is a volume number starting from zero.
      * 
     */
-    public String getVirtualName() {
+    public String virtualName() {
         return this.virtualName;
     }
 

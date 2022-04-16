@@ -46,32 +46,32 @@ public final class GetParametersByPathResult {
         this.withDecryption = withDecryption;
     }
 
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
-    public Optional<Boolean> getRecursive() {
+    public Optional<Boolean> recursive() {
         return Optional.ofNullable(this.recursive);
     }
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
-    public Optional<Boolean> getWithDecryption() {
+    public Optional<Boolean> withDecryption() {
         return Optional.ofNullable(this.withDecryption);
     }
 

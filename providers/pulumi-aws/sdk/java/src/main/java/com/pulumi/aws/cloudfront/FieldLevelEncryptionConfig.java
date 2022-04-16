@@ -42,7 +42,7 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
      * @return Internal value used by CloudFront to allow future updates to the Field Level Encryption Config.
      * 
      */
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference;
     }
     /**
@@ -56,7 +56,7 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
      * @return An optional comment about the Field Level Encryption Config.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -70,7 +70,7 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
      * @return Content Type Profile Config specifies when to forward content if a content type isn't recognized and profiles to use as by default in a request if a query argument doesn't specify a profile to use.
      * 
      */
-    public Output<FieldLevelEncryptionConfigContentTypeProfileConfig> getContentTypeProfileConfig() {
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfig> contentTypeProfileConfig() {
         return this.contentTypeProfileConfig;
     }
     /**
@@ -84,7 +84,7 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
      * @return The current version of the Field Level Encryption Config. For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -98,7 +98,7 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
      * @return Query Arg Profile Config that specifies when to forward content if a profile isn't found and the profile that can be provided as a query argument in a request.
      * 
      */
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfig> getQueryArgProfileConfig() {
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfig> queryArgProfileConfig() {
         return this.queryArgProfileConfig;
     }
 

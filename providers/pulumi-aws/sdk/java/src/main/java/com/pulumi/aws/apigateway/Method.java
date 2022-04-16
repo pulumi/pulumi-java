@@ -44,7 +44,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return Specify if the method requires an API key
      * 
      */
-    public Output</* @Nullable */ Boolean> getApiKeyRequired() {
+    public Output</* @Nullable */ Boolean> apiKeyRequired() {
         return this.apiKeyRequired;
     }
     /**
@@ -58,7 +58,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
      * 
      */
-    public Output<String> getAuthorization() {
+    public Output<String> authorization() {
         return this.authorization;
     }
     /**
@@ -72,7 +72,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
      * 
      */
-    public Output</* @Nullable */ List<String>> getAuthorizationScopes() {
+    public Output</* @Nullable */ List<String>> authorizationScopes() {
         return this.authorizationScopes;
     }
     /**
@@ -86,7 +86,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizerId() {
+    public Output</* @Nullable */ String> authorizerId() {
         return this.authorizerId;
     }
     /**
@@ -100,7 +100,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -114,7 +114,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
      * 
      */
-    public Output</* @Nullable */ String> getOperationName() {
+    public Output</* @Nullable */ String> operationName() {
         return this.operationName;
     }
     /**
@@ -132,7 +132,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getRequestModels() {
+    public Output</* @Nullable */ Map<String,String>> requestModels() {
         return this.requestModels;
     }
     /**
@@ -148,7 +148,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
      * 
      */
-    public Output</* @Nullable */ Map<String,Boolean>> getRequestParameters() {
+    public Output</* @Nullable */ Map<String,Boolean>> requestParameters() {
         return this.requestParameters;
     }
     /**
@@ -162,7 +162,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The ID of a `aws.apigateway.RequestValidator`
      * 
      */
-    public Output</* @Nullable */ String> getRequestValidatorId() {
+    public Output</* @Nullable */ String> requestValidatorId() {
         return this.requestValidatorId;
     }
     /**
@@ -176,7 +176,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The API resource ID
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -190,7 +190,7 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 

@@ -28,7 +28,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="deleteMarkerReplication")
       private final @Nullable Output<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> deleteMarkerReplication;
 
-    public Output<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> getDeleteMarkerReplication() {
+    public Output<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> deleteMarkerReplication() {
         return this.deleteMarkerReplication == null ? Codegen.empty() : this.deleteMarkerReplication;
     }
 
@@ -39,7 +39,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="destination", required=true)
       private final Output<BucketReplicationConfigRuleDestinationArgs> destination;
 
-    public Output<BucketReplicationConfigRuleDestinationArgs> getDestination() {
+    public Output<BucketReplicationConfigRuleDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -50,7 +50,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="existingObjectReplication")
       private final @Nullable Output<BucketReplicationConfigRuleExistingObjectReplicationArgs> existingObjectReplication;
 
-    public Output<BucketReplicationConfigRuleExistingObjectReplicationArgs> getExistingObjectReplication() {
+    public Output<BucketReplicationConfigRuleExistingObjectReplicationArgs> existingObjectReplication() {
         return this.existingObjectReplication == null ? Codegen.empty() : this.existingObjectReplication;
     }
 
@@ -61,7 +61,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="filter")
       private final @Nullable Output<BucketReplicationConfigRuleFilterArgs> filter;
 
-    public Output<BucketReplicationConfigRuleFilterArgs> getFilter() {
+    public Output<BucketReplicationConfigRuleFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -72,7 +72,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -83,7 +83,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -94,7 +94,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -105,7 +105,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="sourceSelectionCriteria")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria;
 
-    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> getSourceSelectionCriteria() {
+    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria() {
         return this.sourceSelectionCriteria == null ? Codegen.empty() : this.sourceSelectionCriteria;
     }
 
@@ -116,7 +116,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

@@ -20,7 +20,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="userGroups", required=true)
       private final List<String> userGroups;
 
-    public List<String> getUserGroups() {
+    public List<String> userGroups() {
         return this.userGroups;
     }
 
@@ -31,7 +31,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="userIds", required=true)
       private final List<String> userIds;
 
-    public List<String> getUserIds() {
+    public List<String> userIds() {
         return this.userIds;
     }
 

@@ -26,7 +26,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -37,7 +37,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
-    public Output<String> getComputeType() {
+    public Output<String> computeType() {
         return this.computeType;
     }
 
@@ -48,7 +48,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="environmentVariables")
       private final @Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables;
 
-    public Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> getEnvironmentVariables() {
+    public Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -59,7 +59,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -70,7 +70,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="imagePullCredentialsType")
       private final @Nullable Output<String> imagePullCredentialsType;
 
-    public Output<String> getImagePullCredentialsType() {
+    public Output<String> imagePullCredentialsType() {
         return this.imagePullCredentialsType == null ? Codegen.empty() : this.imagePullCredentialsType;
     }
 
@@ -81,7 +81,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="privilegedMode")
       private final @Nullable Output<Boolean> privilegedMode;
 
-    public Output<Boolean> getPrivilegedMode() {
+    public Output<Boolean> privilegedMode() {
         return this.privilegedMode == null ? Codegen.empty() : this.privilegedMode;
     }
 
@@ -92,7 +92,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="registryCredential")
       private final @Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential;
 
-    public Output<ProjectEnvironmentRegistryCredentialGetArgs> getRegistryCredential() {
+    public Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential() {
         return this.registryCredential == null ? Codegen.empty() : this.registryCredential;
     }
 
@@ -103,7 +103,7 @@ public final class ProjectEnvironmentGetArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

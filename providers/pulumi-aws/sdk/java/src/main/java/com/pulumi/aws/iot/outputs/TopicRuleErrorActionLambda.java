@@ -24,7 +24,7 @@ public final class TopicRuleErrorActionLambda {
      * The ARN of the Lambda function.
      * 
     */
-    public String getFunctionArn() {
+    public String functionArn() {
         return this.functionArn;
     }
 

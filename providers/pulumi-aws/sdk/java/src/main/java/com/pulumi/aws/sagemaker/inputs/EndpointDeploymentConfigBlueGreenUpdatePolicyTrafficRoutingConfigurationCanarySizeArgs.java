@@ -22,7 +22,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -33,7 +33,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 

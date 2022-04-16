@@ -21,7 +21,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
     @Import(name="deleteOnTermination", required=true)
       private final Boolean deleteOnTermination;
 
-    public Boolean getDeleteOnTermination() {
+    public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
 
@@ -32,7 +32,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
     @Import(name="encrypted", required=true)
       private final Boolean encrypted;
 
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
 
@@ -43,7 +43,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
     @Import(name="iops", required=true)
       private final Integer iops;
 
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
 
@@ -54,7 +54,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
     @Import(name="throughput", required=true)
       private final Boolean throughput;
 
-    public Boolean getThroughput() {
+    public Boolean throughput() {
         return this.throughput;
     }
 
@@ -65,7 +65,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
     @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
 
@@ -76,7 +76,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends com.pulumi.reso
     @Import(name="volumeType", required=true)
       private final String volumeType;
 
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

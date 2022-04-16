@@ -23,7 +23,7 @@ public final class WebAclRuleOverrideActionArgs extends com.pulumi.resources.Res
     @Import(name="count")
       private final @Nullable Output<WebAclRuleOverrideActionCountArgs> count;
 
-    public Output<WebAclRuleOverrideActionCountArgs> getCount() {
+    public Output<WebAclRuleOverrideActionCountArgs> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -34,7 +34,7 @@ public final class WebAclRuleOverrideActionArgs extends com.pulumi.resources.Res
     @Import(name="none")
       private final @Nullable Output<WebAclRuleOverrideActionNoneArgs> none;
 
-    public Output<WebAclRuleOverrideActionNoneArgs> getNone() {
+    public Output<WebAclRuleOverrideActionNoneArgs> none() {
         return this.none == null ? Codegen.empty() : this.none;
     }
 

@@ -84,63 +84,63 @@ public final class DomainIndexField {
      * The analysis scheme you want to use for a `text` field. The analysis scheme specifies the language-specific text processing options that are used during indexing.
      * 
     */
-    public Optional<String> getAnalysisScheme() {
+    public Optional<String> analysisScheme() {
         return Optional.ofNullable(this.analysisScheme);
     }
     /**
      * The default value for the field. This value is used when no value is specified for the field in the document data.
      * 
     */
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * You can get facet information by enabling this.
      * 
     */
-    public Optional<Boolean> getFacet() {
+    public Optional<Boolean> facet() {
         return Optional.ofNullable(this.facet);
     }
     /**
      * You can highlight information.
      * 
     */
-    public Optional<Boolean> getHighlight() {
+    public Optional<Boolean> highlight() {
         return Optional.ofNullable(this.highlight);
     }
     /**
      * A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * You can enable returning the value of all searchable fields.
      * 
     */
-    public Optional<Boolean> getReturn_() {
+    public Optional<Boolean> return_() {
         return Optional.ofNullable(this.return_);
     }
     /**
      * You can set whether this index should be searchable or not.
      * 
     */
-    public Optional<Boolean> getSearch() {
+    public Optional<Boolean> search() {
         return Optional.ofNullable(this.search);
     }
     /**
      * You can enable the property to be sortable.
      * 
     */
-    public Optional<Boolean> getSort() {
+    public Optional<Boolean> sort() {
         return Optional.ofNullable(this.sort);
     }
     /**
      * The field type. Valid values: `date`, `date-array`, `double`, `double-array`, `int`, `int-array`, `literal`, `literal-array`, `text`, `text-array`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

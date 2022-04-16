@@ -45,7 +45,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * @return VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
      * 
      */
-    public Output<List<String>> getAllowedPrefixes() {
+    public Output<List<String>> allowedPrefixes() {
         return this.allowedPrefixes;
     }
     /**
@@ -61,7 +61,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * Used for single account Direct Connect gateway associations.
      * 
      */
-    public Output<String> getAssociatedGatewayId() {
+    public Output<String> associatedGatewayId() {
         return this.associatedGatewayId;
     }
     /**
@@ -77,7 +77,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * Used for cross-account Direct Connect gateway associations.
      * 
      */
-    public Output<String> getAssociatedGatewayOwnerAccountId() {
+    public Output<String> associatedGatewayOwnerAccountId() {
         return this.associatedGatewayOwnerAccountId;
     }
     /**
@@ -91,7 +91,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * @return The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
      * 
      */
-    public Output<String> getAssociatedGatewayType() {
+    public Output<String> associatedGatewayType() {
         return this.associatedGatewayType;
     }
     /**
@@ -105,7 +105,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the Direct Connect gateway association.
      * 
      */
-    public Output<String> getDxGatewayAssociationId() {
+    public Output<String> dxGatewayAssociationId() {
         return this.dxGatewayAssociationId;
     }
     /**
@@ -119,7 +119,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the Direct Connect gateway.
      * 
      */
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
     /**
@@ -133,7 +133,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the Direct Connect gateway.
      * 
      */
-    public Output<String> getDxGatewayOwnerAccountId() {
+    public Output<String> dxGatewayOwnerAccountId() {
         return this.dxGatewayOwnerAccountId;
     }
     /**
@@ -149,7 +149,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * Used for cross-account Direct Connect gateway associations.
      * 
      */
-    public Output</* @Nullable */ String> getProposalId() {
+    public Output</* @Nullable */ String> proposalId() {
         return this.proposalId;
     }
     /**
@@ -161,7 +161,7 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
     @Export(name="vpnGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnGatewayId;
 
-    public Output</* @Nullable */ String> getVpnGatewayId() {
+    public Output</* @Nullable */ String> vpnGatewayId() {
         return this.vpnGatewayId;
     }
 

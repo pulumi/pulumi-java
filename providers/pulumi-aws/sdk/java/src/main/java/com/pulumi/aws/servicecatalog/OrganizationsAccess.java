@@ -34,7 +34,7 @@ public class OrganizationsAccess extends com.pulumi.resources.CustomResource {
      * @return Whether to enable AWS Organizations access.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

@@ -24,7 +24,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -57,7 +57,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -68,7 +68,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="packetLength")
       private final @Nullable Output<Integer> packetLength;
 
-    public Output<Integer> getPacketLength() {
+    public Output<Integer> packetLength() {
         return this.packetLength == null ? Codegen.empty() : this.packetLength;
     }
 
@@ -79,7 +79,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="sessionNumber")
       private final @Nullable Output<Integer> sessionNumber;
 
-    public Output<Integer> getSessionNumber() {
+    public Output<Integer> sessionNumber() {
         return this.sessionNumber == null ? Codegen.empty() : this.sessionNumber;
     }
 
@@ -90,7 +90,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -112,7 +112,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="trafficMirrorFilterId")
       private final @Nullable Output<String> trafficMirrorFilterId;
 
-    public Output<String> getTrafficMirrorFilterId() {
+    public Output<String> trafficMirrorFilterId() {
         return this.trafficMirrorFilterId == null ? Codegen.empty() : this.trafficMirrorFilterId;
     }
 
@@ -123,7 +123,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="trafficMirrorTargetId")
       private final @Nullable Output<String> trafficMirrorTargetId;
 
-    public Output<String> getTrafficMirrorTargetId() {
+    public Output<String> trafficMirrorTargetId() {
         return this.trafficMirrorTargetId == null ? Codegen.empty() : this.trafficMirrorTargetId;
     }
 
@@ -134,7 +134,7 @@ public final class TrafficMirrorSessionState extends com.pulumi.resources.Resour
     @Import(name="virtualNetworkId")
       private final @Nullable Output<Integer> virtualNetworkId;
 
-    public Output<Integer> getVirtualNetworkId() {
+    public Output<Integer> virtualNetworkId() {
         return this.virtualNetworkId == null ? Codegen.empty() : this.virtualNetworkId;
     }
 

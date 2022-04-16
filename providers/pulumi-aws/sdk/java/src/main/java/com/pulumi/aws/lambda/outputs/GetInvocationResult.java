@@ -39,27 +39,27 @@ public final class GetInvocationResult {
         this.result = result;
     }
 
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInput() {
+    public String input() {
         return this.input;
     }
-    public Optional<String> getQualifier() {
+    public Optional<String> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }
     /**
      * String result of the lambda function invocation.
      * 
     */
-    public String getResult() {
+    public String result() {
         return this.result;
     }
 

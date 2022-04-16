@@ -20,14 +20,14 @@ public final class HaproxyLayerCloudwatchConfigurationArgs extends com.pulumi.re
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<HaproxyLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
-    public Output<List<HaproxyLayerCloudwatchConfigurationLogStreamArgs>> getLogStreams() {
+    public Output<List<HaproxyLayerCloudwatchConfigurationLogStreamArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

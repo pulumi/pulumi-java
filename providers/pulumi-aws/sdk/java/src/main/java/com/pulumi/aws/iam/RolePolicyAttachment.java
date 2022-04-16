@@ -44,7 +44,7 @@ public class RolePolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The ARN of the policy you want to apply
      * 
      */
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
     /**
@@ -58,7 +58,7 @@ public class RolePolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The name of the IAM role to which the policy should be applied
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

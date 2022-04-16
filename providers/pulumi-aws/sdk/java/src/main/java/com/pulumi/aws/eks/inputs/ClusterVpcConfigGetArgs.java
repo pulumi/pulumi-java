@@ -24,7 +24,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="clusterSecurityGroupId")
       private final @Nullable Output<String> clusterSecurityGroupId;
 
-    public Output<String> getClusterSecurityGroupId() {
+    public Output<String> clusterSecurityGroupId() {
         return this.clusterSecurityGroupId == null ? Codegen.empty() : this.clusterSecurityGroupId;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="endpointPrivateAccess")
       private final @Nullable Output<Boolean> endpointPrivateAccess;
 
-    public Output<Boolean> getEndpointPrivateAccess() {
+    public Output<Boolean> endpointPrivateAccess() {
         return this.endpointPrivateAccess == null ? Codegen.empty() : this.endpointPrivateAccess;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="endpointPublicAccess")
       private final @Nullable Output<Boolean> endpointPublicAccess;
 
-    public Output<Boolean> getEndpointPublicAccess() {
+    public Output<Boolean> endpointPublicAccess() {
         return this.endpointPublicAccess == null ? Codegen.empty() : this.endpointPublicAccess;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="publicAccessCidrs")
       private final @Nullable Output<List<String>> publicAccessCidrs;
 
-    public Output<List<String>> getPublicAccessCidrs() {
+    public Output<List<String>> publicAccessCidrs() {
         return this.publicAccessCidrs == null ? Codegen.empty() : this.publicAccessCidrs;
     }
 
@@ -68,7 +68,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -79,7 +79,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -90,7 +90,7 @@ public final class ClusterVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

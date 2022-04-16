@@ -22,7 +22,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
       private final String functionName;
 
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
 
@@ -33,14 +33,14 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="qualifier")
       private final @Nullable String qualifier;
 
-    public Optional<String> getQualifier() {
+    public Optional<String> qualifier() {
         return this.qualifier == null ? Optional.empty() : Optional.ofNullable(this.qualifier);
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

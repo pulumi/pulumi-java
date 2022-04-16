@@ -23,7 +23,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowSelfManagement")
       private final @Nullable Output<Boolean> allowSelfManagement;
 
-    public Output<Boolean> getAllowSelfManagement() {
+    public Output<Boolean> allowSelfManagement() {
         return this.allowSelfManagement == null ? Codegen.empty() : this.allowSelfManagement;
     }
 
@@ -34,7 +34,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKey")
       private final @Nullable Output<String> sshPublicKey;
 
-    public Output<String> getSshPublicKey() {
+    public Output<String> sshPublicKey() {
         return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
     }
 
@@ -45,7 +45,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshUsername", required=true)
       private final Output<String> sshUsername;
 
-    public Output<String> getSshUsername() {
+    public Output<String> sshUsername() {
         return this.sshUsername;
     }
 
@@ -56,7 +56,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 

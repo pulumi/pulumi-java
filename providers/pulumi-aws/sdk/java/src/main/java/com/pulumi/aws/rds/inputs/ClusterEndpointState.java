@@ -24,7 +24,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="clusterEndpointIdentifier")
       private final @Nullable Output<String> clusterEndpointIdentifier;
 
-    public Output<String> getClusterEndpointIdentifier() {
+    public Output<String> clusterEndpointIdentifier() {
         return this.clusterEndpointIdentifier == null ? Codegen.empty() : this.clusterEndpointIdentifier;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="customEndpointType")
       private final @Nullable Output<String> customEndpointType;
 
-    public Output<String> getCustomEndpointType() {
+    public Output<String> customEndpointType() {
         return this.customEndpointType == null ? Codegen.empty() : this.customEndpointType;
     }
 
@@ -68,7 +68,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -79,7 +79,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="excludedMembers")
       private final @Nullable Output<List<String>> excludedMembers;
 
-    public Output<List<String>> getExcludedMembers() {
+    public Output<List<String>> excludedMembers() {
         return this.excludedMembers == null ? Codegen.empty() : this.excludedMembers;
     }
 
@@ -90,7 +90,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="staticMembers")
       private final @Nullable Output<List<String>> staticMembers;
 
-    public Output<List<String>> getStaticMembers() {
+    public Output<List<String>> staticMembers() {
         return this.staticMembers == null ? Codegen.empty() : this.staticMembers;
     }
 
@@ -101,7 +101,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -112,7 +112,7 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

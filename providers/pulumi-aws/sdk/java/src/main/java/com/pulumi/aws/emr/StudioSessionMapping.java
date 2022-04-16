@@ -40,7 +40,7 @@ public class StudioSessionMapping extends com.pulumi.resources.CustomResource {
      * @return The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    public Output<String> getIdentityId() {
+    public Output<String> identityId() {
         return this.identityId;
     }
     /**
@@ -54,7 +54,7 @@ public class StudioSessionMapping extends com.pulumi.resources.CustomResource {
      * @return The name of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    public Output<String> getIdentityName() {
+    public Output<String> identityName() {
         return this.identityName;
     }
     /**
@@ -68,7 +68,7 @@ public class StudioSessionMapping extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the identity to map to the Amazon EMR Studio is a `USER` or a `GROUP`.
      * 
      */
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType;
     }
     /**
@@ -82,7 +82,7 @@ public class StudioSessionMapping extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should specify the ARN for the session policy that you want to apply, not the ARN of your user role.
      * 
      */
-    public Output<String> getSessionPolicyArn() {
+    public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
     }
     /**
@@ -96,7 +96,7 @@ public class StudioSessionMapping extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 

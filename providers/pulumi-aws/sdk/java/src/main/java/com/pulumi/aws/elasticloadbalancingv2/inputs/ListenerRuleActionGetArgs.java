@@ -28,7 +28,7 @@ public final class ListenerRuleActionGetArgs extends com.pulumi.resources.Resour
     @Import(name="authenticateCognito")
       private final @Nullable Output<ListenerRuleActionAuthenticateCognitoGetArgs> authenticateCognito;
 
-    public Output<ListenerRuleActionAuthenticateCognitoGetArgs> getAuthenticateCognito() {
+    public Output<ListenerRuleActionAuthenticateCognitoGetArgs> authenticateCognito() {
         return this.authenticateCognito == null ? Codegen.empty() : this.authenticateCognito;
     }
 
@@ -39,7 +39,7 @@ public final class ListenerRuleActionGetArgs extends com.pulumi.resources.Resour
     @Import(name="authenticateOidc")
       private final @Nullable Output<ListenerRuleActionAuthenticateOidcGetArgs> authenticateOidc;
 
-    public Output<ListenerRuleActionAuthenticateOidcGetArgs> getAuthenticateOidc() {
+    public Output<ListenerRuleActionAuthenticateOidcGetArgs> authenticateOidc() {
         return this.authenticateOidc == null ? Codegen.empty() : this.authenticateOidc;
     }
 
@@ -50,7 +50,7 @@ public final class ListenerRuleActionGetArgs extends com.pulumi.resources.Resour
     @Import(name="fixedResponse")
       private final @Nullable Output<ListenerRuleActionFixedResponseGetArgs> fixedResponse;
 
-    public Output<ListenerRuleActionFixedResponseGetArgs> getFixedResponse() {
+    public Output<ListenerRuleActionFixedResponseGetArgs> fixedResponse() {
         return this.fixedResponse == null ? Codegen.empty() : this.fixedResponse;
     }
 
@@ -61,14 +61,14 @@ public final class ListenerRuleActionGetArgs extends com.pulumi.resources.Resour
     @Import(name="forward")
       private final @Nullable Output<ListenerRuleActionForwardGetArgs> forward;
 
-    public Output<ListenerRuleActionForwardGetArgs> getForward() {
+    public Output<ListenerRuleActionForwardGetArgs> forward() {
         return this.forward == null ? Codegen.empty() : this.forward;
     }
 
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -79,7 +79,7 @@ public final class ListenerRuleActionGetArgs extends com.pulumi.resources.Resour
     @Import(name="redirect")
       private final @Nullable Output<ListenerRuleActionRedirectGetArgs> redirect;
 
-    public Output<ListenerRuleActionRedirectGetArgs> getRedirect() {
+    public Output<ListenerRuleActionRedirectGetArgs> redirect() {
         return this.redirect == null ? Codegen.empty() : this.redirect;
     }
 
@@ -90,7 +90,7 @@ public final class ListenerRuleActionGetArgs extends com.pulumi.resources.Resour
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
@@ -101,7 +101,7 @@ public final class ListenerRuleActionGetArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

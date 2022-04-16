@@ -21,7 +21,7 @@ public final class DefaultKmsKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyArn", required=true)
       private final Output<String> keyArn;
 
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn;
     }
 

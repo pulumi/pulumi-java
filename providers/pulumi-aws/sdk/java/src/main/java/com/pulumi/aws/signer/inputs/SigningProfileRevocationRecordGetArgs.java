@@ -18,21 +18,21 @@ public final class SigningProfileRevocationRecordGetArgs extends com.pulumi.reso
     @Import(name="revocationEffectiveFrom")
       private final @Nullable Output<String> revocationEffectiveFrom;
 
-    public Output<String> getRevocationEffectiveFrom() {
+    public Output<String> revocationEffectiveFrom() {
         return this.revocationEffectiveFrom == null ? Codegen.empty() : this.revocationEffectiveFrom;
     }
 
     @Import(name="revokedAt")
       private final @Nullable Output<String> revokedAt;
 
-    public Output<String> getRevokedAt() {
+    public Output<String> revokedAt() {
         return this.revokedAt == null ? Codegen.empty() : this.revokedAt;
     }
 
     @Import(name="revokedBy")
       private final @Nullable Output<String> revokedBy;
 
-    public Output<String> getRevokedBy() {
+    public Output<String> revokedBy() {
         return this.revokedBy == null ? Codegen.empty() : this.revokedBy;
     }
 

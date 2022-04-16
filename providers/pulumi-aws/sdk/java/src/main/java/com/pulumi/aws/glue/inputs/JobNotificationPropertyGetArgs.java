@@ -22,7 +22,7 @@ public final class JobNotificationPropertyGetArgs extends com.pulumi.resources.R
     @Import(name="notifyDelayAfter")
       private final @Nullable Output<Integer> notifyDelayAfter;
 
-    public Output<Integer> getNotifyDelayAfter() {
+    public Output<Integer> notifyDelayAfter() {
         return this.notifyDelayAfter == null ? Codegen.empty() : this.notifyDelayAfter;
     }
 

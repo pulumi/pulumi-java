@@ -38,7 +38,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * See CSV Mapping Parameters below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv> getCsv() {
+    public Optional<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv> csv() {
         return Optional.ofNullable(this.csv);
     }
     /**
@@ -46,7 +46,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * See JSON Mapping Parameters below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson> getJson() {
+    public Optional<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson> json() {
         return Optional.ofNullable(this.json);
     }
 

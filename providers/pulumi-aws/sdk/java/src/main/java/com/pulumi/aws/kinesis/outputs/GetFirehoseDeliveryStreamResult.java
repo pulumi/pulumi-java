@@ -35,17 +35,17 @@ public final class GetFirehoseDeliveryStreamResult {
      * The Amazon Resource Name (ARN) of the Kinesis Stream (same as id).
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

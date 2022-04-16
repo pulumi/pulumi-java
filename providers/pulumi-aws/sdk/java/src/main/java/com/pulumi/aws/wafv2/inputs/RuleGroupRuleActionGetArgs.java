@@ -24,7 +24,7 @@ public final class RuleGroupRuleActionGetArgs extends com.pulumi.resources.Resou
     @Import(name="allow")
       private final @Nullable Output<RuleGroupRuleActionAllowGetArgs> allow;
 
-    public Output<RuleGroupRuleActionAllowGetArgs> getAllow() {
+    public Output<RuleGroupRuleActionAllowGetArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleActionGetArgs extends com.pulumi.resources.Resou
     @Import(name="block")
       private final @Nullable Output<RuleGroupRuleActionBlockGetArgs> block;
 
-    public Output<RuleGroupRuleActionBlockGetArgs> getBlock() {
+    public Output<RuleGroupRuleActionBlockGetArgs> block() {
         return this.block == null ? Codegen.empty() : this.block;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupRuleActionGetArgs extends com.pulumi.resources.Resou
     @Import(name="count")
       private final @Nullable Output<RuleGroupRuleActionCountGetArgs> count;
 
-    public Output<RuleGroupRuleActionCountGetArgs> getCount() {
+    public Output<RuleGroupRuleActionCountGetArgs> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 

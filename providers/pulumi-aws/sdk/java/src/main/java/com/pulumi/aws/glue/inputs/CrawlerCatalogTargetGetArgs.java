@@ -22,7 +22,7 @@ public final class CrawlerCatalogTargetGetArgs extends com.pulumi.resources.Reso
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -33,7 +33,7 @@ public final class CrawlerCatalogTargetGetArgs extends com.pulumi.resources.Reso
     @Import(name="tables", required=true)
       private final Output<List<String>> tables;
 
-    public Output<List<String>> getTables() {
+    public Output<List<String>> tables() {
         return this.tables;
     }
 

@@ -22,7 +22,7 @@ public final class ListenerCertificateState extends com.pulumi.resources.Resourc
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -33,7 +33,7 @@ public final class ListenerCertificateState extends com.pulumi.resources.Resourc
     @Import(name="listenerArn")
       private final @Nullable Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn == null ? Codegen.empty() : this.listenerArn;
     }
 

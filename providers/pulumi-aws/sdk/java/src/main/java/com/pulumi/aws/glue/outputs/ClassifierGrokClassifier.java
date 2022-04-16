@@ -41,21 +41,21 @@ public final class ClassifierGrokClassifier {
      * An identifier of the data format that the classifier matches.
      * 
     */
-    public String getClassification() {
+    public String classification() {
         return this.classification;
     }
     /**
      * Custom grok patterns used by this classifier.
      * 
     */
-    public Optional<String> getCustomPatterns() {
+    public Optional<String> customPatterns() {
         return Optional.ofNullable(this.customPatterns);
     }
     /**
      * The grok pattern used by this classifier.
      * 
     */
-    public String getGrokPattern() {
+    public String grokPattern() {
         return this.grokPattern;
     }
 

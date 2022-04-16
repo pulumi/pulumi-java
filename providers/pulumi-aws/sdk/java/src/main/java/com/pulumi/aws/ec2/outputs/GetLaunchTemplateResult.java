@@ -254,14 +254,14 @@ public final class GetLaunchTemplateResult {
      * Amazon Resource Name (ARN) of the launch template.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Specify volumes to attach to the instance besides the volumes specified by the AMI.
      * 
     */
-    public List<GetLaunchTemplateBlockDeviceMapping> getBlockDeviceMappings() {
+    public List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
@@ -269,21 +269,21 @@ public final class GetLaunchTemplateResult {
      * Specification below for more details.
      * 
     */
-    public List<GetLaunchTemplateCreditSpecification> getCreditSpecifications() {
+    public List<GetLaunchTemplateCreditSpecification> creditSpecifications() {
         return this.creditSpecifications;
     }
     /**
      * The default version of the launch template.
      * 
     */
-    public Integer getDefaultVersion() {
+    public Integer defaultVersion() {
         return this.defaultVersion;
     }
     /**
      * Description of the launch template.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
@@ -291,14 +291,14 @@ public final class GetLaunchTemplateResult {
      * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
      * 
     */
-    public Boolean getDisableApiTermination() {
+    public Boolean disableApiTermination() {
         return this.disableApiTermination;
     }
     /**
      * If `true`, the launched EC2 instance will be EBS-optimized.
      * 
     */
-    public String getEbsOptimized() {
+    public String ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
@@ -306,24 +306,24 @@ public final class GetLaunchTemplateResult {
      * below for more details.
      * 
     */
-    public List<GetLaunchTemplateElasticGpuSpecification> getElasticGpuSpecifications() {
+    public List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications() {
         return this.elasticGpuSpecifications;
     }
     /**
      * The enclave options of the Instance.
      * 
     */
-    public List<GetLaunchTemplateEnclaveOption> getEnclaveOptions() {
+    public List<GetLaunchTemplateEnclaveOption> enclaveOptions() {
         return this.enclaveOptions;
     }
-    public List<GetLaunchTemplateFilter> getFilters() {
+    public List<GetLaunchTemplateFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The hibernation options for the instance.
      * 
     */
-    public List<GetLaunchTemplateHibernationOption> getHibernationOptions() {
+    public List<GetLaunchTemplateHibernationOption> hibernationOptions() {
         return this.hibernationOptions;
     }
     /**
@@ -331,21 +331,21 @@ public final class GetLaunchTemplateResult {
      * below for more details.
      * 
     */
-    public List<GetLaunchTemplateIamInstanceProfile> getIamInstanceProfiles() {
+    public List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles() {
         return this.iamInstanceProfiles;
     }
     /**
      * The ID of the launch template.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The AMI from which to launch the instance.
      * 
     */
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
     /**
@@ -353,7 +353,7 @@ public final class GetLaunchTemplateResult {
      * (Default: `stop`).
      * 
     */
-    public String getInstanceInitiatedShutdownBehavior() {
+    public String instanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior;
     }
     /**
@@ -361,52 +361,52 @@ public final class GetLaunchTemplateResult {
      * below for details.
      * 
     */
-    public List<GetLaunchTemplateInstanceMarketOption> getInstanceMarketOptions() {
+    public List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions() {
         return this.instanceMarketOptions;
     }
     /**
      * The type of the instance.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The kernel ID.
      * 
     */
-    public String getKernelId() {
+    public String kernelId() {
         return this.kernelId;
     }
     /**
      * The key name to use for the instance.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * The latest version of the launch template.
      * 
     */
-    public Integer getLatestVersion() {
+    public Integer latestVersion() {
         return this.latestVersion;
     }
     /**
      * The metadata options for the instance.
      * 
     */
-    public List<GetLaunchTemplateMetadataOption> getMetadataOptions() {
+    public List<GetLaunchTemplateMetadataOption> metadataOptions() {
         return this.metadataOptions;
     }
     /**
      * The monitoring option for the instance.
      * 
     */
-    public List<GetLaunchTemplateMonitoring> getMonitorings() {
+    public List<GetLaunchTemplateMonitoring> monitorings() {
         return this.monitorings;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -414,21 +414,21 @@ public final class GetLaunchTemplateResult {
      * Interfaces below for more details.
      * 
     */
-    public List<GetLaunchTemplateNetworkInterface> getNetworkInterfaces() {
+    public List<GetLaunchTemplateNetworkInterface> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * The placement of the instance.
      * 
     */
-    public List<GetLaunchTemplatePlacement> getPlacements() {
+    public List<GetLaunchTemplatePlacement> placements() {
         return this.placements;
     }
     /**
      * The ID of the RAM disk.
      * 
     */
-    public String getRamDiskId() {
+    public String ramDiskId() {
         return this.ramDiskId;
     }
     /**
@@ -436,35 +436,35 @@ public final class GetLaunchTemplateResult {
      * `vpc_security_group_ids` instead.
      * 
     */
-    public List<String> getSecurityGroupNames() {
+    public List<String> securityGroupNames() {
         return this.securityGroupNames;
     }
     /**
      * The tags to apply to the resources during launch.
      * 
     */
-    public List<GetLaunchTemplateTagSpecification> getTagSpecifications() {
+    public List<GetLaunchTemplateTagSpecification> tagSpecifications() {
         return this.tagSpecifications;
     }
     /**
      * (Optional) A map of tags to assign to the launch template.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The Base64-encoded user data to provide when launching the instance.
      * 
     */
-    public String getUserData() {
+    public String userData() {
         return this.userData;
     }
     /**
      * A list of security group IDs to associate with.
      * 
     */
-    public List<String> getVpcSecurityGroupIds() {
+    public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 

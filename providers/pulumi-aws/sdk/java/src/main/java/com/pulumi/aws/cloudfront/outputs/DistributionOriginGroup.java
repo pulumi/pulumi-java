@@ -42,21 +42,21 @@ public final class DistributionOriginGroup {
      * The failover criteria for when to failover to the secondary origin
      * 
     */
-    public DistributionOriginGroupFailoverCriteria getFailoverCriteria() {
+    public DistributionOriginGroupFailoverCriteria failoverCriteria() {
         return this.failoverCriteria;
     }
     /**
      * Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
      * 
     */
-    public List<DistributionOriginGroupMember> getMembers() {
+    public List<DistributionOriginGroupMember> members() {
         return this.members;
     }
     /**
      * The unique identifier of the member origin
      * 
     */
-    public String getOriginId() {
+    public String originId() {
         return this.originId;
     }
 

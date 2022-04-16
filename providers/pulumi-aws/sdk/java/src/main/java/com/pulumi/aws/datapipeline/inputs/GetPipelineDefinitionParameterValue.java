@@ -19,7 +19,7 @@ public final class GetPipelineDefinitionParameterValue extends com.pulumi.resour
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -30,7 +30,7 @@ public final class GetPipelineDefinitionParameterValue extends com.pulumi.resour
     @Import(name="stringValue", required=true)
       private final String stringValue;
 
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

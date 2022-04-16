@@ -24,7 +24,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Map<String,String>> authenticationRequestExtraParams;
 
-    public Output<Map<String,String>> getAuthenticationRequestExtraParams() {
+    public Output<Map<String,String>> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Codegen.empty() : this.authenticationRequestExtraParams;
     }
 
@@ -35,7 +35,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
-    public Output<String> getOnUnauthenticatedRequest() {
+    public Output<String> onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Codegen.empty() : this.onUnauthenticatedRequest;
     }
 
@@ -46,7 +46,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -57,7 +57,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
-    public Output<String> getSessionCookieName() {
+    public Output<String> sessionCookieName() {
         return this.sessionCookieName == null ? Codegen.empty() : this.sessionCookieName;
     }
 
@@ -68,7 +68,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="sessionTimeout")
       private final @Nullable Output<Integer> sessionTimeout;
 
-    public Output<Integer> getSessionTimeout() {
+    public Output<Integer> sessionTimeout() {
         return this.sessionTimeout == null ? Codegen.empty() : this.sessionTimeout;
     }
 
@@ -79,7 +79,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="userPoolArn", required=true)
       private final Output<String> userPoolArn;
 
-    public Output<String> getUserPoolArn() {
+    public Output<String> userPoolArn() {
         return this.userPoolArn;
     }
 
@@ -90,7 +90,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="userPoolClientId", required=true)
       private final Output<String> userPoolClientId;
 
-    public Output<String> getUserPoolClientId() {
+    public Output<String> userPoolClientId() {
         return this.userPoolClientId;
     }
 
@@ -101,7 +101,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends com.pulumi.
     @Import(name="userPoolDomain", required=true)
       private final Output<String> userPoolDomain;
 
-    public Output<String> getUserPoolDomain() {
+    public Output<String> userPoolDomain() {
         return this.userPoolDomain;
     }
 

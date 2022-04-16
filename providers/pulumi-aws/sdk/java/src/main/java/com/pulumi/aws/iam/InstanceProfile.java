@@ -41,7 +41,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return ARN assigned by AWS to the instance profile.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return Creation timestamp of the instance profile.
      * 
      */
-    public Output<String> getCreateDate() {
+    public Output<String> createDate() {
         return this.createDate;
     }
     /**
@@ -69,7 +69,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +83,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -97,7 +97,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
      * 
      */
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     /**
@@ -111,7 +111,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return Name of the role to add to the profile.
      * 
      */
-    public Output</* @Nullable */ String> getRole() {
+    public Output</* @Nullable */ String> role() {
         return this.role;
     }
     /**
@@ -125,7 +125,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags for the IAM Instance Profile. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -139,7 +139,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -153,7 +153,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return [Unique ID][1] assigned by AWS.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 

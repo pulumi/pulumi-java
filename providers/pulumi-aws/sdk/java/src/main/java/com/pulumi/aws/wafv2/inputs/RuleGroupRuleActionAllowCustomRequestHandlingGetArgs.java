@@ -22,7 +22,7 @@ public final class RuleGroupRuleActionAllowCustomRequestHandlingGetArgs extends 
     @Import(name="insertHeaders", required=true)
       private final Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
-    public Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> getInsertHeaders() {
+    public Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 

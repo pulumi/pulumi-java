@@ -38,24 +38,24 @@ public final class GetLaunchPathsResult {
         this.summaries = summaries;
     }
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
     /**
      * Block with information about the launch path. See details below.
      * 
     */
-    public List<GetLaunchPathsSummary> getSummaries() {
+    public List<GetLaunchPathsSummary> summaries() {
         return this.summaries;
     }
 

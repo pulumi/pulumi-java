@@ -42,21 +42,21 @@ public final class ServiceHealthCheckConfig {
      * The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.
      * 
     */
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * The path that you want Route 53 to request when performing health checks. Route 53 automatically adds the DNS name for the service. If you don't specify a value, the default value is /.
      * 
     */
-    public Optional<String> getResourcePath() {
+    public Optional<String> resourcePath() {
         return Optional.ofNullable(this.resourcePath);
     }
     /**
      * The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

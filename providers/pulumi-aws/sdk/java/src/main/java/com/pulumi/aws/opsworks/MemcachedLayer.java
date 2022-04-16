@@ -38,7 +38,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
      * 
      */
-    public Output</* @Nullable */ Integer> getAllocatedMemory() {
+    public Output</* @Nullable */ Integer> allocatedMemory() {
         return this.allocatedMemory;
     }
     /**
@@ -52,7 +52,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name(ARN) of the layer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -66,7 +66,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to automatically assign an elastic IP address to the layer's instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoAssignElasticIps() {
+    public Output</* @Nullable */ Boolean> autoAssignElasticIps() {
         return this.autoAssignElasticIps;
     }
     /**
@@ -80,7 +80,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoAssignPublicIps() {
+    public Output</* @Nullable */ Boolean> autoAssignPublicIps() {
         return this.autoAssignPublicIps;
     }
     /**
@@ -94,25 +94,25 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to enable auto-healing for the layer.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoHealing() {
+    public Output</* @Nullable */ Boolean> autoHealing() {
         return this.autoHealing;
     }
     @Export(name="cloudwatchConfiguration", type=MemcachedLayerCloudwatchConfiguration.class, parameters={})
     private Output</* @Nullable */ MemcachedLayerCloudwatchConfiguration> cloudwatchConfiguration;
 
-    public Output</* @Nullable */ MemcachedLayerCloudwatchConfiguration> getCloudwatchConfiguration() {
+    public Output</* @Nullable */ MemcachedLayerCloudwatchConfiguration> cloudwatchConfiguration() {
         return this.cloudwatchConfiguration;
     }
     @Export(name="customConfigureRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customConfigureRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomConfigureRecipes() {
+    public Output</* @Nullable */ List<String>> customConfigureRecipes() {
         return this.customConfigureRecipes;
     }
     @Export(name="customDeployRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customDeployRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomDeployRecipes() {
+    public Output</* @Nullable */ List<String>> customDeployRecipes() {
         return this.customDeployRecipes;
     }
     /**
@@ -126,7 +126,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return The ARN of an IAM profile that will be used for the layer's instances.
      * 
      */
-    public Output</* @Nullable */ String> getCustomInstanceProfileArn() {
+    public Output</* @Nullable */ String> customInstanceProfileArn() {
         return this.customInstanceProfileArn;
     }
     /**
@@ -140,7 +140,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Custom JSON attributes to apply to the layer.
      * 
      */
-    public Output</* @Nullable */ String> getCustomJson() {
+    public Output</* @Nullable */ String> customJson() {
         return this.customJson;
     }
     /**
@@ -154,25 +154,25 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Ids for a set of security groups to apply to the layer's instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomSecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> customSecurityGroupIds() {
         return this.customSecurityGroupIds;
     }
     @Export(name="customSetupRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customSetupRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomSetupRecipes() {
+    public Output</* @Nullable */ List<String>> customSetupRecipes() {
         return this.customSetupRecipes;
     }
     @Export(name="customShutdownRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customShutdownRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomShutdownRecipes() {
+    public Output</* @Nullable */ List<String>> customShutdownRecipes() {
         return this.customShutdownRecipes;
     }
     @Export(name="customUndeployRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customUndeployRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomUndeployRecipes() {
+    public Output</* @Nullable */ List<String>> customUndeployRecipes() {
         return this.customUndeployRecipes;
     }
     /**
@@ -186,7 +186,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to enable Elastic Load Balancing connection draining.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDrainElbOnShutdown() {
+    public Output</* @Nullable */ Boolean> drainElbOnShutdown() {
         return this.drainElbOnShutdown;
     }
     /**
@@ -200,7 +200,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
      * 
      */
-    public Output</* @Nullable */ List<MemcachedLayerEbsVolume>> getEbsVolumes() {
+    public Output</* @Nullable */ List<MemcachedLayerEbsVolume>> ebsVolumes() {
         return this.ebsVolumes;
     }
     /**
@@ -214,7 +214,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Name of an Elastic Load Balancer to attach to this layer
      * 
      */
-    public Output</* @Nullable */ String> getElasticLoadBalancer() {
+    public Output</* @Nullable */ String> elasticLoadBalancer() {
         return this.elasticLoadBalancer;
     }
     /**
@@ -228,7 +228,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to install OS and package updates on each instance when it boots.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInstallUpdatesOnBoot() {
+    public Output</* @Nullable */ Boolean> installUpdatesOnBoot() {
         return this.installUpdatesOnBoot;
     }
     /**
@@ -242,7 +242,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
      * 
      */
-    public Output</* @Nullable */ Integer> getInstanceShutdownTimeout() {
+    public Output</* @Nullable */ Integer> instanceShutdownTimeout() {
         return this.instanceShutdownTimeout;
     }
     /**
@@ -256,7 +256,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return A human-readable name for the layer.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -270,7 +270,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return The id of the stack the layer will belong to.
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
     /**
@@ -284,7 +284,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Names of a set of system packages to install on the layer's instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSystemPackages() {
+    public Output</* @Nullable */ List<String>> systemPackages() {
         return this.systemPackages;
     }
     /**
@@ -298,7 +298,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -312,7 +312,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -326,7 +326,7 @@ public class MemcachedLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to use EBS-optimized instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseEbsOptimizedInstances() {
+    public Output</* @Nullable */ Boolean> useEbsOptimizedInstances() {
         return this.useEbsOptimizedInstances;
     }
 

@@ -27,7 +27,7 @@ public final class ResolverEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="direction", required=true)
       private final Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
 
@@ -39,7 +39,7 @@ public final class ResolverEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipAddresses", required=true)
       private final Output<List<ResolverEndpointIpAddressArgs>> ipAddresses;
 
-    public Output<List<ResolverEndpointIpAddressArgs>> getIpAddresses() {
+    public Output<List<ResolverEndpointIpAddressArgs>> ipAddresses() {
         return this.ipAddresses;
     }
 
@@ -50,7 +50,7 @@ public final class ResolverEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ResolverEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -72,7 +72,7 @@ public final class ResolverEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

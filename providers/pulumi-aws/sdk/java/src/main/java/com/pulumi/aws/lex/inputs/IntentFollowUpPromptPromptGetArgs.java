@@ -25,7 +25,7 @@ public final class IntentFollowUpPromptPromptGetArgs extends com.pulumi.resource
     @Import(name="maxAttempts", required=true)
       private final Output<Integer> maxAttempts;
 
-    public Output<Integer> getMaxAttempts() {
+    public Output<Integer> maxAttempts() {
         return this.maxAttempts;
     }
 
@@ -38,7 +38,7 @@ public final class IntentFollowUpPromptPromptGetArgs extends com.pulumi.resource
     @Import(name="messages", required=true)
       private final Output<List<IntentFollowUpPromptPromptMessageGetArgs>> messages;
 
-    public Output<List<IntentFollowUpPromptPromptMessageGetArgs>> getMessages() {
+    public Output<List<IntentFollowUpPromptPromptMessageGetArgs>> messages() {
         return this.messages;
     }
 
@@ -51,7 +51,7 @@ public final class IntentFollowUpPromptPromptGetArgs extends com.pulumi.resource
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 

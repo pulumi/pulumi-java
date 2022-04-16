@@ -22,7 +22,7 @@ public final class LogStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class LogStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class LogStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

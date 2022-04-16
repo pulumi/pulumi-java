@@ -30,10 +30,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * The object property to use in the condition.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

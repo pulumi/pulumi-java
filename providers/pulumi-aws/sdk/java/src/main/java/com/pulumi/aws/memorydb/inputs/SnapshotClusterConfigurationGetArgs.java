@@ -23,7 +23,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -45,7 +45,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -56,7 +56,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
@@ -78,7 +78,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="numShards")
       private final @Nullable Output<Integer> numShards;
 
-    public Output<Integer> getNumShards() {
+    public Output<Integer> numShards() {
         return this.numShards == null ? Codegen.empty() : this.numShards;
     }
 
@@ -89,7 +89,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -111,7 +111,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="snapshotRetentionLimit")
       private final @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Output<Integer> getSnapshotRetentionLimit() {
+    public Output<Integer> snapshotRetentionLimit() {
         return this.snapshotRetentionLimit == null ? Codegen.empty() : this.snapshotRetentionLimit;
     }
 
@@ -122,7 +122,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="snapshotWindow")
       private final @Nullable Output<String> snapshotWindow;
 
-    public Output<String> getSnapshotWindow() {
+    public Output<String> snapshotWindow() {
         return this.snapshotWindow == null ? Codegen.empty() : this.snapshotWindow;
     }
 
@@ -133,7 +133,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
@@ -144,7 +144,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
@@ -155,7 +155,7 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

@@ -27,7 +27,7 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<AmiFromInstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
+    public Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
@@ -51,7 +51,7 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
+    public Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
@@ -62,7 +62,7 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="snapshotWithoutReboot")
       private final @Nullable Output<Boolean> snapshotWithoutReboot;
 
-    public Output<Boolean> getSnapshotWithoutReboot() {
+    public Output<Boolean> snapshotWithoutReboot() {
         return this.snapshotWithoutReboot == null ? Codegen.empty() : this.snapshotWithoutReboot;
     }
 
@@ -87,7 +87,7 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceInstanceId", required=true)
       private final Output<String> sourceInstanceId;
 
-    public Output<String> getSourceInstanceId() {
+    public Output<String> sourceInstanceId() {
         return this.sourceInstanceId;
     }
 
@@ -98,7 +98,7 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

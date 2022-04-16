@@ -32,14 +32,14 @@ public final class QuickConnectQuickConnectConfigQueueConfig {
      * Specifies the identifier of the contact flow.
      * 
     */
-    public String getContactFlowId() {
+    public String contactFlowId() {
         return this.contactFlowId;
     }
     /**
      * Specifies the identifier for the queue.
      * 
     */
-    public String getQueueId() {
+    public String queueId() {
         return this.queueId;
     }
 

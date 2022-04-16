@@ -23,7 +23,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificatePem")
       private final @Nullable Output<String> certificatePem;
 
-    public Output<String> getCertificatePem() {
+    public Output<String> certificatePem() {
         return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="csr")
       private final @Nullable Output<String> csr;
 
-    public Output<String> getCsr() {
+    public Output<String> csr() {
         return this.csr == null ? Codegen.empty() : this.csr;
     }
 
@@ -71,7 +71,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -82,7 +82,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 

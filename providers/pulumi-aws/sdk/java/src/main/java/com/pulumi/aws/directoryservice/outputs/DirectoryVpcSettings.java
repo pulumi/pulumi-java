@@ -33,21 +33,21 @@ public final class DirectoryVpcSettings {
         this.vpcId = vpcId;
     }
 
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
     /**
      * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
      * The identifier of the VPC that the directory is in.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

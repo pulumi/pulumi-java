@@ -24,7 +24,7 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends com.pulum
     @Import(name="launchTemplateSpecification", required=true)
       private final Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
-    public Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
+    public Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
 
@@ -35,7 +35,7 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends com.pulum
     @Import(name="overrides")
       private final @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides;
 
-    public Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> getOverrides() {
+    public Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 

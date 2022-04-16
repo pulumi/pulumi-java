@@ -32,7 +32,7 @@ public class ConnectionAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the connection.
      * 
      */
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -46,7 +46,7 @@ public class ConnectionAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the LAG with which to associate the connection.
      * 
      */
-    public Output<String> getLagId() {
+    public Output<String> lagId() {
         return this.lagId;
     }
 

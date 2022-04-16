@@ -27,7 +27,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -38,7 +38,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="eventbridge")
       private final @Nullable Output<Boolean> eventbridge;
 
-    public Output<Boolean> getEventbridge() {
+    public Output<Boolean> eventbridge() {
         return this.eventbridge == null ? Codegen.empty() : this.eventbridge;
     }
 
@@ -49,7 +49,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="lambdaFunctions")
       private final @Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
 
-    public Output<List<BucketNotificationLambdaFunctionGetArgs>> getLambdaFunctions() {
+    public Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions() {
         return this.lambdaFunctions == null ? Codegen.empty() : this.lambdaFunctions;
     }
 
@@ -60,7 +60,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="queues")
       private final @Nullable Output<List<BucketNotificationQueueGetArgs>> queues;
 
-    public Output<List<BucketNotificationQueueGetArgs>> getQueues() {
+    public Output<List<BucketNotificationQueueGetArgs>> queues() {
         return this.queues == null ? Codegen.empty() : this.queues;
     }
 
@@ -71,7 +71,7 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="topics")
       private final @Nullable Output<List<BucketNotificationTopicGetArgs>> topics;
 
-    public Output<List<BucketNotificationTopicGetArgs>> getTopics() {
+    public Output<List<BucketNotificationTopicGetArgs>> topics() {
         return this.topics == null ? Codegen.empty() : this.topics;
     }
 

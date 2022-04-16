@@ -29,7 +29,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -40,7 +40,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthority")
       private final @Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority;
 
-    public Output<ClusterCertificateAuthorityGetArgs> getCertificateAuthority() {
+    public Output<ClusterCertificateAuthorityGetArgs> certificateAuthority() {
         return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
     }
 
@@ -51,7 +51,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -62,7 +62,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledClusterLogTypes")
       private final @Nullable Output<List<String>> enabledClusterLogTypes;
 
-    public Output<List<String>> getEnabledClusterLogTypes() {
+    public Output<List<String>> enabledClusterLogTypes() {
         return this.enabledClusterLogTypes == null ? Codegen.empty() : this.enabledClusterLogTypes;
     }
 
@@ -73,7 +73,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig;
 
-    public Output<ClusterEncryptionConfigGetArgs> getEncryptionConfig() {
+    public Output<ClusterEncryptionConfigGetArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -84,7 +84,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -95,7 +95,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identities")
       private final @Nullable Output<List<ClusterIdentityGetArgs>> identities;
 
-    public Output<List<ClusterIdentityGetArgs>> getIdentities() {
+    public Output<List<ClusterIdentityGetArgs>> identities() {
         return this.identities == null ? Codegen.empty() : this.identities;
     }
 
@@ -106,7 +106,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubernetesNetworkConfig")
       private final @Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
 
-    public Output<ClusterKubernetesNetworkConfigGetArgs> getKubernetesNetworkConfig() {
+    public Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig == null ? Codegen.empty() : this.kubernetesNetworkConfig;
     }
 
@@ -117,7 +117,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -128,7 +128,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
+    public Output<String> platformVersion() {
         return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
@@ -139,7 +139,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -150,7 +150,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -161,7 +161,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -172,7 +172,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -183,7 +183,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -194,7 +194,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<ClusterVpcConfigGetArgs> vpcConfig;
 
-    public Output<ClusterVpcConfigGetArgs> getVpcConfig() {
+    public Output<ClusterVpcConfigGetArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

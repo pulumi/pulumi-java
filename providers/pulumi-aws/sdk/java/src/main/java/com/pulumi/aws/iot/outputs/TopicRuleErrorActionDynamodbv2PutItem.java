@@ -24,7 +24,7 @@ public final class TopicRuleErrorActionDynamodbv2PutItem {
      * The name of the DynamoDB table.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

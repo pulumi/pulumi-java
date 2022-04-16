@@ -50,7 +50,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -64,7 +64,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> getEncryptionType() {
+    public Output</* @Nullable */ String> encryptionType() {
         return this.encryptionType;
     }
     /**
@@ -78,7 +78,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnforceConsumerDeletion() {
+    public Output</* @Nullable */ Boolean> enforceConsumerDeletion() {
         return this.enforceConsumerDeletion;
     }
     /**
@@ -92,7 +92,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -106,7 +106,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -120,7 +120,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionPeriod() {
+    public Output</* @Nullable */ Integer> retentionPeriod() {
         return this.retentionPeriod;
     }
     /**
@@ -136,7 +136,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
      * 
      */
-    public Output</* @Nullable */ Integer> getShardCount() {
+    public Output</* @Nullable */ Integer> shardCount() {
         return this.shardCount;
     }
     /**
@@ -150,7 +150,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
      * 
      */
-    public Output</* @Nullable */ List<String>> getShardLevelMetrics() {
+    public Output</* @Nullable */ List<String>> shardLevelMetrics() {
         return this.shardLevelMetrics;
     }
     /**
@@ -164,7 +164,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return Indicates the [capacity mode](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-size-a-stream.html) of the data stream. Detailed below.
      * 
      */
-    public Output<StreamStreamModeDetails> getStreamModeDetails() {
+    public Output<StreamStreamModeDetails> streamModeDetails() {
         return this.streamModeDetails;
     }
     /**
@@ -178,7 +178,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -192,7 +192,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

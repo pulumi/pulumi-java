@@ -20,7 +20,7 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
     @Import(name="deltaSyncConfig")
       private final @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig;
 
-    public Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> getDeltaSyncConfig() {
+    public Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig() {
         return this.deltaSyncConfig == null ? Codegen.empty() : this.deltaSyncConfig;
     }
 
@@ -31,7 +31,7 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -42,7 +42,7 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -53,14 +53,14 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
     @Import(name="useCallerCredentials")
       private final @Nullable Output<Boolean> useCallerCredentials;
 
-    public Output<Boolean> getUseCallerCredentials() {
+    public Output<Boolean> useCallerCredentials() {
         return this.useCallerCredentials == null ? Codegen.empty() : this.useCallerCredentials;
     }
 
     @Import(name="versioned")
       private final @Nullable Output<Boolean> versioned;
 
-    public Output<Boolean> getVersioned() {
+    public Output<Boolean> versioned() {
         return this.versioned == null ? Codegen.empty() : this.versioned;
     }
 

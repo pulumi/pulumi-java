@@ -22,7 +22,7 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
     @Import(name="identityId")
       private final @Nullable Output<String> identityId;
 
-    public Output<String> getIdentityId() {
+    public Output<String> identityId() {
         return this.identityId == null ? Codegen.empty() : this.identityId;
     }
 
@@ -33,7 +33,7 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
     @Import(name="identityName")
       private final @Nullable Output<String> identityName;
 
-    public Output<String> getIdentityName() {
+    public Output<String> identityName() {
         return this.identityName == null ? Codegen.empty() : this.identityName;
     }
 
@@ -44,7 +44,7 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
     @Import(name="identityType")
       private final @Nullable Output<String> identityType;
 
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 
@@ -55,7 +55,7 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
     @Import(name="sessionPolicyArn")
       private final @Nullable Output<String> sessionPolicyArn;
 
-    public Output<String> getSessionPolicyArn() {
+    public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn == null ? Codegen.empty() : this.sessionPolicyArn;
     }
 
@@ -66,7 +66,7 @@ public final class StudioSessionMappingState extends com.pulumi.resources.Resour
     @Import(name="studioId")
       private final @Nullable Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId == null ? Codegen.empty() : this.studioId;
     }
 

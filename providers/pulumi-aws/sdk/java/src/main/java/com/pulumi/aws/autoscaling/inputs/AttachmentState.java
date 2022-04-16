@@ -22,7 +22,7 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="albTargetGroupArn")
       private final @Nullable Output<String> albTargetGroupArn;
 
-    public Output<String> getAlbTargetGroupArn() {
+    public Output<String> albTargetGroupArn() {
         return this.albTargetGroupArn == null ? Codegen.empty() : this.albTargetGroupArn;
     }
 
@@ -33,7 +33,7 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="elb")
       private final @Nullable Output<String> elb;
 
-    public Output<String> getElb() {
+    public Output<String> elb() {
         return this.elb == null ? Codegen.empty() : this.elb;
     }
 

@@ -28,7 +28,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
@@ -40,7 +40,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Output<Integer> getDeletionWindowInDays() {
+    public Output<Integer> deletionWindowInDays() {
         return this.deletionWindowInDays == null ? Codegen.empty() : this.deletionWindowInDays;
     }
 
@@ -51,7 +51,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,14 +62,14 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -80,7 +80,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryKeyArn", required=true)
       private final Output<String> primaryKeyArn;
 
-    public Output<String> getPrimaryKeyArn() {
+    public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
     }
 
@@ -91,7 +91,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

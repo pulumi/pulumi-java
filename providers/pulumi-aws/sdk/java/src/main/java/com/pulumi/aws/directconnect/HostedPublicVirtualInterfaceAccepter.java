@@ -42,7 +42,7 @@ public class HostedPublicVirtualInterfaceAccepter extends com.pulumi.resources.C
      * @return The ARN of the virtual interface.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class HostedPublicVirtualInterfaceAccepter extends com.pulumi.resources.C
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -70,7 +70,7 @@ public class HostedPublicVirtualInterfaceAccepter extends com.pulumi.resources.C
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -84,7 +84,7 @@ public class HostedPublicVirtualInterfaceAccepter extends com.pulumi.resources.C
      * @return The ID of the Direct Connect virtual interface to accept.
      * 
      */
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 

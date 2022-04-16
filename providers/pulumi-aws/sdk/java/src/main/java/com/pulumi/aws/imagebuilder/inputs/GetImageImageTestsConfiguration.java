@@ -20,7 +20,7 @@ public final class GetImageImageTestsConfiguration extends com.pulumi.resources.
     @Import(name="imageTestsEnabled", required=true)
       private final Boolean imageTestsEnabled;
 
-    public Boolean getImageTestsEnabled() {
+    public Boolean imageTestsEnabled() {
         return this.imageTestsEnabled;
     }
 
@@ -31,7 +31,7 @@ public final class GetImageImageTestsConfiguration extends com.pulumi.resources.
     @Import(name="timeoutMinutes", required=true)
       private final Integer timeoutMinutes;
 
-    public Integer getTimeoutMinutes() {
+    public Integer timeoutMinutes() {
         return this.timeoutMinutes;
     }
 

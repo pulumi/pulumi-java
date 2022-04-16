@@ -22,7 +22,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -33,7 +33,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
-    public String getInstanceArn() {
+    public String instanceArn() {
         return this.instanceArn;
     }
 
@@ -44,7 +44,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -55,7 +55,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

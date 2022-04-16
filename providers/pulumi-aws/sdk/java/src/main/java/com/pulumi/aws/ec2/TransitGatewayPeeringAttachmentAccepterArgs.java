@@ -23,7 +23,7 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends com.pulum
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -34,7 +34,7 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends com.pulum
     @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 

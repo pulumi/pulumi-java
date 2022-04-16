@@ -43,21 +43,21 @@ public final class FleetRuntimeConfiguration {
      * Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
      * 
     */
-    public Optional<Integer> getGameSessionActivationTimeoutSeconds() {
+    public Optional<Integer> gameSessionActivationTimeoutSeconds() {
         return Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
     /**
      * Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
      * 
     */
-    public Optional<Integer> getMaxConcurrentGameSessionActivations() {
+    public Optional<Integer> maxConcurrentGameSessionActivations() {
         return Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
     /**
      * Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
      * 
     */
-    public List<FleetRuntimeConfigurationServerProcess> getServerProcesses() {
+    public List<FleetRuntimeConfigurationServerProcess> serverProcesses() {
         return this.serverProcesses == null ? List.of() : this.serverProcesses;
     }
 

@@ -20,14 +20,14 @@ public final class RailsAppLayerCloudwatchConfigurationArgs extends com.pulumi.r
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<RailsAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
-    public Output<List<RailsAppLayerCloudwatchConfigurationLogStreamArgs>> getLogStreams() {
+    public Output<List<RailsAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

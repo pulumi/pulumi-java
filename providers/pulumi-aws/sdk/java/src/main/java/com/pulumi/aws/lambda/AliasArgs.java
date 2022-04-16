@@ -23,7 +23,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -45,7 +45,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion", required=true)
       private final Output<String> functionVersion;
 
-    public Output<String> getFunctionVersion() {
+    public Output<String> functionVersion() {
         return this.functionVersion;
     }
 
@@ -56,7 +56,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
       private final @Nullable Output<AliasRoutingConfigArgs> routingConfig;
 
-    public Output<AliasRoutingConfigArgs> getRoutingConfig() {
+    public Output<AliasRoutingConfigArgs> routingConfig() {
         return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
     }
 

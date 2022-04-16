@@ -24,7 +24,7 @@ public final class WebAclRuleActionGetArgs extends com.pulumi.resources.Resource
     @Import(name="allow")
       private final @Nullable Output<WebAclRuleActionAllowGetArgs> allow;
 
-    public Output<WebAclRuleActionAllowGetArgs> getAllow() {
+    public Output<WebAclRuleActionAllowGetArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleActionGetArgs extends com.pulumi.resources.Resource
     @Import(name="block")
       private final @Nullable Output<WebAclRuleActionBlockGetArgs> block;
 
-    public Output<WebAclRuleActionBlockGetArgs> getBlock() {
+    public Output<WebAclRuleActionBlockGetArgs> block() {
         return this.block == null ? Codegen.empty() : this.block;
     }
 
@@ -46,7 +46,7 @@ public final class WebAclRuleActionGetArgs extends com.pulumi.resources.Resource
     @Import(name="count")
       private final @Nullable Output<WebAclRuleActionCountGetArgs> count;
 
-    public Output<WebAclRuleActionCountGetArgs> getCount() {
+    public Output<WebAclRuleActionCountGetArgs> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 

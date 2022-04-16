@@ -22,7 +22,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
     @Import(name="listenerArns", required=true)
       private final Output<List<String>> listenerArns;
 
-    public Output<List<String>> getListenerArns() {
+    public Output<List<String>> listenerArns() {
         return this.listenerArns;
     }
 

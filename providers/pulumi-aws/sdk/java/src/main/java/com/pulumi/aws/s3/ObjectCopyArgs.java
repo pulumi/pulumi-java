@@ -26,7 +26,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acl")
       private final @Nullable Output<String> acl;
 
-    public Output<String> getAcl() {
+    public Output<String> acl() {
         return this.acl == null ? Codegen.empty() : this.acl;
     }
 
@@ -37,14 +37,14 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> getBucketKeyEnabled() {
+    public Output<Boolean> bucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Codegen.empty() : this.bucketKeyEnabled;
     }
 
@@ -55,7 +55,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
 
-    public Output<String> getCacheControl() {
+    public Output<String> cacheControl() {
         return this.cacheControl == null ? Codegen.empty() : this.cacheControl;
     }
 
@@ -66,7 +66,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
 
-    public Output<String> getContentDisposition() {
+    public Output<String> contentDisposition() {
         return this.contentDisposition == null ? Codegen.empty() : this.contentDisposition;
     }
 
@@ -77,7 +77,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
-    public Output<String> getContentEncoding() {
+    public Output<String> contentEncoding() {
         return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 
@@ -88,7 +88,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
 
-    public Output<String> getContentLanguage() {
+    public Output<String> contentLanguage() {
         return this.contentLanguage == null ? Codegen.empty() : this.contentLanguage;
     }
 
@@ -99,7 +99,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -110,7 +110,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyIfMatch")
       private final @Nullable Output<String> copyIfMatch;
 
-    public Output<String> getCopyIfMatch() {
+    public Output<String> copyIfMatch() {
         return this.copyIfMatch == null ? Codegen.empty() : this.copyIfMatch;
     }
 
@@ -121,7 +121,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyIfModifiedSince")
       private final @Nullable Output<String> copyIfModifiedSince;
 
-    public Output<String> getCopyIfModifiedSince() {
+    public Output<String> copyIfModifiedSince() {
         return this.copyIfModifiedSince == null ? Codegen.empty() : this.copyIfModifiedSince;
     }
 
@@ -132,7 +132,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyIfNoneMatch")
       private final @Nullable Output<String> copyIfNoneMatch;
 
-    public Output<String> getCopyIfNoneMatch() {
+    public Output<String> copyIfNoneMatch() {
         return this.copyIfNoneMatch == null ? Codegen.empty() : this.copyIfNoneMatch;
     }
 
@@ -143,7 +143,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyIfUnmodifiedSince")
       private final @Nullable Output<String> copyIfUnmodifiedSince;
 
-    public Output<String> getCopyIfUnmodifiedSince() {
+    public Output<String> copyIfUnmodifiedSince() {
         return this.copyIfUnmodifiedSince == null ? Codegen.empty() : this.copyIfUnmodifiedSince;
     }
 
@@ -154,7 +154,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerAlgorithm")
       private final @Nullable Output<String> customerAlgorithm;
 
-    public Output<String> getCustomerAlgorithm() {
+    public Output<String> customerAlgorithm() {
         return this.customerAlgorithm == null ? Codegen.empty() : this.customerAlgorithm;
     }
 
@@ -165,7 +165,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerKey")
       private final @Nullable Output<String> customerKey;
 
-    public Output<String> getCustomerKey() {
+    public Output<String> customerKey() {
         return this.customerKey == null ? Codegen.empty() : this.customerKey;
     }
 
@@ -176,7 +176,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerKeyMd5")
       private final @Nullable Output<String> customerKeyMd5;
 
-    public Output<String> getCustomerKeyMd5() {
+    public Output<String> customerKeyMd5() {
         return this.customerKeyMd5 == null ? Codegen.empty() : this.customerKeyMd5;
     }
 
@@ -187,7 +187,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expectedBucketOwner")
       private final @Nullable Output<String> expectedBucketOwner;
 
-    public Output<String> getExpectedBucketOwner() {
+    public Output<String> expectedBucketOwner() {
         return this.expectedBucketOwner == null ? Codegen.empty() : this.expectedBucketOwner;
     }
 
@@ -198,7 +198,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expectedSourceBucketOwner")
       private final @Nullable Output<String> expectedSourceBucketOwner;
 
-    public Output<String> getExpectedSourceBucketOwner() {
+    public Output<String> expectedSourceBucketOwner() {
         return this.expectedSourceBucketOwner == null ? Codegen.empty() : this.expectedSourceBucketOwner;
     }
 
@@ -209,7 +209,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expires")
       private final @Nullable Output<String> expires;
 
-    public Output<String> getExpires() {
+    public Output<String> expires() {
         return this.expires == null ? Codegen.empty() : this.expires;
     }
 
@@ -220,7 +220,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -231,7 +231,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="grants")
       private final @Nullable Output<List<ObjectCopyGrantArgs>> grants;
 
-    public Output<List<ObjectCopyGrantArgs>> getGrants() {
+    public Output<List<ObjectCopyGrantArgs>> grants() {
         return this.grants == null ? Codegen.empty() : this.grants;
     }
 
@@ -242,7 +242,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -253,7 +253,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsEncryptionContext")
       private final @Nullable Output<String> kmsEncryptionContext;
 
-    public Output<String> getKmsEncryptionContext() {
+    public Output<String> kmsEncryptionContext() {
         return this.kmsEncryptionContext == null ? Codegen.empty() : this.kmsEncryptionContext;
     }
 
@@ -264,7 +264,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -275,7 +275,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -286,7 +286,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataDirective")
       private final @Nullable Output<String> metadataDirective;
 
-    public Output<String> getMetadataDirective() {
+    public Output<String> metadataDirective() {
         return this.metadataDirective == null ? Codegen.empty() : this.metadataDirective;
     }
 
@@ -297,7 +297,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectLockLegalHoldStatus")
       private final @Nullable Output<String> objectLockLegalHoldStatus;
 
-    public Output<String> getObjectLockLegalHoldStatus() {
+    public Output<String> objectLockLegalHoldStatus() {
         return this.objectLockLegalHoldStatus == null ? Codegen.empty() : this.objectLockLegalHoldStatus;
     }
 
@@ -308,7 +308,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectLockMode")
       private final @Nullable Output<String> objectLockMode;
 
-    public Output<String> getObjectLockMode() {
+    public Output<String> objectLockMode() {
         return this.objectLockMode == null ? Codegen.empty() : this.objectLockMode;
     }
 
@@ -319,7 +319,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectLockRetainUntilDate")
       private final @Nullable Output<String> objectLockRetainUntilDate;
 
-    public Output<String> getObjectLockRetainUntilDate() {
+    public Output<String> objectLockRetainUntilDate() {
         return this.objectLockRetainUntilDate == null ? Codegen.empty() : this.objectLockRetainUntilDate;
     }
 
@@ -330,7 +330,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestPayer")
       private final @Nullable Output<String> requestPayer;
 
-    public Output<String> getRequestPayer() {
+    public Output<String> requestPayer() {
         return this.requestPayer == null ? Codegen.empty() : this.requestPayer;
     }
 
@@ -341,7 +341,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryption")
       private final @Nullable Output<String> serverSideEncryption;
 
-    public Output<String> getServerSideEncryption() {
+    public Output<String> serverSideEncryption() {
         return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
     }
 
@@ -352,7 +352,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -363,7 +363,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceCustomerAlgorithm")
       private final @Nullable Output<String> sourceCustomerAlgorithm;
 
-    public Output<String> getSourceCustomerAlgorithm() {
+    public Output<String> sourceCustomerAlgorithm() {
         return this.sourceCustomerAlgorithm == null ? Codegen.empty() : this.sourceCustomerAlgorithm;
     }
 
@@ -374,7 +374,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceCustomerKey")
       private final @Nullable Output<String> sourceCustomerKey;
 
-    public Output<String> getSourceCustomerKey() {
+    public Output<String> sourceCustomerKey() {
         return this.sourceCustomerKey == null ? Codegen.empty() : this.sourceCustomerKey;
     }
 
@@ -385,7 +385,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceCustomerKeyMd5")
       private final @Nullable Output<String> sourceCustomerKeyMd5;
 
-    public Output<String> getSourceCustomerKeyMd5() {
+    public Output<String> sourceCustomerKeyMd5() {
         return this.sourceCustomerKeyMd5 == null ? Codegen.empty() : this.sourceCustomerKeyMd5;
     }
 
@@ -396,7 +396,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
@@ -407,7 +407,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taggingDirective")
       private final @Nullable Output<String> taggingDirective;
 
-    public Output<String> getTaggingDirective() {
+    public Output<String> taggingDirective() {
         return this.taggingDirective == null ? Codegen.empty() : this.taggingDirective;
     }
 
@@ -418,7 +418,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -429,7 +429,7 @@ public final class ObjectCopyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="websiteRedirect")
       private final @Nullable Output<String> websiteRedirect;
 
-    public Output<String> getWebsiteRedirect() {
+    public Output<String> websiteRedirect() {
         return this.websiteRedirect == null ? Codegen.empty() : this.websiteRedirect;
     }
 

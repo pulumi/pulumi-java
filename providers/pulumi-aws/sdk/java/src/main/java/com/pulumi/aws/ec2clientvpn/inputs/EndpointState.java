@@ -27,7 +27,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationOptions")
       private final @Nullable Output<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions;
 
-    public Output<List<EndpointAuthenticationOptionGetArgs>> getAuthenticationOptions() {
+    public Output<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions() {
         return this.authenticationOptions == null ? Codegen.empty() : this.authenticationOptions;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCidrBlock")
       private final @Nullable Output<String> clientCidrBlock;
 
-    public Output<String> getClientCidrBlock() {
+    public Output<String> clientCidrBlock() {
         return this.clientCidrBlock == null ? Codegen.empty() : this.clientCidrBlock;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionLogOptions")
       private final @Nullable Output<EndpointConnectionLogOptionsGetArgs> connectionLogOptions;
 
-    public Output<EndpointConnectionLogOptionsGetArgs> getConnectionLogOptions() {
+    public Output<EndpointConnectionLogOptionsGetArgs> connectionLogOptions() {
         return this.connectionLogOptions == null ? Codegen.empty() : this.connectionLogOptions;
     }
 
@@ -71,7 +71,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -93,7 +93,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -104,7 +104,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfServicePortal")
       private final @Nullable Output<String> selfServicePortal;
 
-    public Output<String> getSelfServicePortal() {
+    public Output<String> selfServicePortal() {
         return this.selfServicePortal == null ? Codegen.empty() : this.selfServicePortal;
     }
 
@@ -115,7 +115,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverCertificateArn")
       private final @Nullable Output<String> serverCertificateArn;
 
-    public Output<String> getServerCertificateArn() {
+    public Output<String> serverCertificateArn() {
         return this.serverCertificateArn == null ? Codegen.empty() : this.serverCertificateArn;
     }
 
@@ -126,7 +126,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="splitTunnel")
       private final @Nullable Output<Boolean> splitTunnel;
 
-    public Output<Boolean> getSplitTunnel() {
+    public Output<Boolean> splitTunnel() {
         return this.splitTunnel == null ? Codegen.empty() : this.splitTunnel;
     }
 
@@ -137,7 +137,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -148,7 +148,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -159,7 +159,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -170,7 +170,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="transportProtocol")
       private final @Nullable Output<String> transportProtocol;
 
-    public Output<String> getTransportProtocol() {
+    public Output<String> transportProtocol() {
         return this.transportProtocol == null ? Codegen.empty() : this.transportProtocol;
     }
 

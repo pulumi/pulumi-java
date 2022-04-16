@@ -25,7 +25,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -36,7 +36,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="corsConfig")
       private final @Nullable Output<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig;
 
-    public Output<ResponseHeadersPolicyCorsConfigGetArgs> getCorsConfig() {
+    public Output<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig() {
         return this.corsConfig == null ? Codegen.empty() : this.corsConfig;
     }
 
@@ -47,7 +47,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="customHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig;
 
-    public Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> getCustomHeadersConfig() {
+    public Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig() {
         return this.customHeadersConfig == null ? Codegen.empty() : this.customHeadersConfig;
     }
 
@@ -58,7 +58,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -69,7 +69,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="securityHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> getSecurityHeadersConfig() {
+    public Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig() {
         return this.securityHeadersConfig == null ? Codegen.empty() : this.securityHeadersConfig;
     }
 

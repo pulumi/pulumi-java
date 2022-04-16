@@ -25,7 +25,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dbProxyEndpointName")
       private final @Nullable Output<String> dbProxyEndpointName;
 
-    public Output<String> getDbProxyEndpointName() {
+    public Output<String> dbProxyEndpointName() {
         return this.dbProxyEndpointName == null ? Codegen.empty() : this.dbProxyEndpointName;
     }
 
@@ -47,7 +47,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dbProxyName")
       private final @Nullable Output<String> dbProxyName;
 
-    public Output<String> getDbProxyName() {
+    public Output<String> dbProxyName() {
         return this.dbProxyName == null ? Codegen.empty() : this.dbProxyName;
     }
 
@@ -58,7 +58,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -69,7 +69,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
@@ -80,14 +80,14 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -98,7 +98,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetRole")
       private final @Nullable Output<String> targetRole;
 
-    public Output<String> getTargetRole() {
+    public Output<String> targetRole() {
         return this.targetRole == null ? Codegen.empty() : this.targetRole;
     }
 
@@ -109,7 +109,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
@@ -120,7 +120,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
@@ -131,7 +131,7 @@ public final class ProxyEndpointState extends com.pulumi.resources.ResourceArgs 
     @Import(name="vpcSubnetIds")
       private final @Nullable Output<List<String>> vpcSubnetIds;
 
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds == null ? Codegen.empty() : this.vpcSubnetIds;
     }
 

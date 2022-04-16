@@ -23,7 +23,7 @@ public final class ClusterEncryptionConfigGetArgs extends com.pulumi.resources.R
     @Import(name="provider", required=true)
       private final Output<ClusterEncryptionConfigProviderGetArgs> provider;
 
-    public Output<ClusterEncryptionConfigProviderGetArgs> getProvider() {
+    public Output<ClusterEncryptionConfigProviderGetArgs> provider() {
         return this.provider;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterEncryptionConfigGetArgs extends com.pulumi.resources.R
     @Import(name="resources", required=true)
       private final Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources;
     }
 

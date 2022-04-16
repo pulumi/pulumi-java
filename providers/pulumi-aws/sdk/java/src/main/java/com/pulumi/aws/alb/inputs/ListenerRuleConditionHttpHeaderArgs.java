@@ -22,7 +22,7 @@ public final class ListenerRuleConditionHttpHeaderArgs extends com.pulumi.resour
     @Import(name="httpHeaderName", required=true)
       private final Output<String> httpHeaderName;
 
-    public Output<String> getHttpHeaderName() {
+    public Output<String> httpHeaderName() {
         return this.httpHeaderName;
     }
 
@@ -33,7 +33,7 @@ public final class ListenerRuleConditionHttpHeaderArgs extends com.pulumi.resour
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

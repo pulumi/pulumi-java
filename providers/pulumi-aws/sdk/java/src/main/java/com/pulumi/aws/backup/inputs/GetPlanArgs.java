@@ -22,7 +22,7 @@ public final class GetPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="planId", required=true)
       private final String planId;
 
-    public String getPlanId() {
+    public String planId() {
         return this.planId;
     }
 
@@ -33,7 +33,7 @@ public final class GetPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

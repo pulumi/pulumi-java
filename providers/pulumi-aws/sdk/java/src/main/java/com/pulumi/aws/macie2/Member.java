@@ -42,7 +42,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The AWS account ID for the account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -56,7 +56,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The AWS account ID for the administrator account.
      * 
      */
-    public Output<String> getAdministratorAccountId() {
+    public Output<String> administratorAccountId() {
         return this.administratorAccountId;
     }
     /**
@@ -70,7 +70,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the account.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -84,7 +84,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The email address for the account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -98,7 +98,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    public Output</* @Nullable */ String> getInvitationDisableEmailNotification() {
+    public Output</* @Nullable */ String> invitationDisableEmailNotification() {
         return this.invitationDisableEmailNotification;
     }
     /**
@@ -112,7 +112,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
      * 
      */
-    public Output</* @Nullable */ String> getInvitationMessage() {
+    public Output</* @Nullable */ String> invitationMessage() {
         return this.invitationMessage;
     }
     /**
@@ -126,7 +126,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Send an invitation to a member
      * 
      */
-    public Output<Boolean> getInvite() {
+    public Output<Boolean> invite() {
         return this.invite;
     }
     /**
@@ -140,13 +140,13 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
      * 
      */
-    public Output<String> getInvitedAt() {
+    public Output<String> invitedAt() {
         return this.invitedAt;
     }
     @Export(name="masterAccountId", type=String.class, parameters={})
     private Output<String> masterAccountId;
 
-    public Output<String> getMasterAccountId() {
+    public Output<String> masterAccountId() {
         return this.masterAccountId;
     }
     /**
@@ -160,7 +160,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The current status of the relationship between the account and the administrator account.
      * 
      */
-    public Output<String> getRelationshipStatus() {
+    public Output<String> relationshipStatus() {
         return this.relationshipStatus;
     }
     /**
@@ -174,7 +174,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -188,13 +188,13 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -208,7 +208,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the relationship between the account and the administrator account.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 

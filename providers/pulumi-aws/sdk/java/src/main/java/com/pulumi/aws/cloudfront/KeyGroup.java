@@ -39,7 +39,7 @@ public class KeyGroup extends com.pulumi.resources.CustomResource {
      * @return A comment to describe the key group..
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -53,7 +53,7 @@ public class KeyGroup extends com.pulumi.resources.CustomResource {
      * @return The identifier for this version of the key group.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -67,7 +67,7 @@ public class KeyGroup extends com.pulumi.resources.CustomResource {
      * @return A list of the identifiers of the public keys in the key group.
      * 
      */
-    public Output<List<String>> getItems() {
+    public Output<List<String>> items() {
         return this.items;
     }
     /**
@@ -81,7 +81,7 @@ public class KeyGroup extends com.pulumi.resources.CustomResource {
      * @return A name to identify the key group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -22,7 +22,7 @@ public final class LambdaFunctionAssociationState extends com.pulumi.resources.R
     @Import(name="functionArn")
       private final @Nullable Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn == null ? Codegen.empty() : this.functionArn;
     }
 
@@ -33,7 +33,7 @@ public final class LambdaFunctionAssociationState extends com.pulumi.resources.R
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 

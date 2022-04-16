@@ -39,7 +39,7 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The group(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> getGroups() {
+    public Output</* @Nullable */ List<String>> groups() {
         return this.groups;
     }
     /**
@@ -53,7 +53,7 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The name of the attachment. This cannot be an empty string.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -67,7 +67,7 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The ARN of the policy you want to apply
      * 
      */
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
     /**
@@ -81,7 +81,7 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The role(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> getRoles() {
+    public Output</* @Nullable */ List<String>> roles() {
         return this.roles;
     }
     /**
@@ -95,7 +95,7 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The user(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> getUsers() {
+    public Output</* @Nullable */ List<String>> users() {
         return this.users;
     }
 

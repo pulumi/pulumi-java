@@ -73,59 +73,59 @@ public final class GetWorkspaceResult {
         this.workspaceProperties = workspaceProperties;
     }
 
-    public String getBundleId() {
+    public String bundleId() {
         return this.bundleId;
     }
     /**
      * The name of the WorkSpace, as seen by the operating system.
      * 
     */
-    public String getComputerName() {
+    public String computerName() {
         return this.computerName;
     }
-    public String getDirectoryId() {
+    public String directoryId() {
         return this.directoryId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The IP address of the WorkSpace.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
-    public Boolean getRootVolumeEncryptionEnabled() {
+    public Boolean rootVolumeEncryptionEnabled() {
         return this.rootVolumeEncryptionEnabled;
     }
     /**
      * The operational state of the WorkSpace.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
-    public Boolean getUserVolumeEncryptionEnabled() {
+    public Boolean userVolumeEncryptionEnabled() {
         return this.userVolumeEncryptionEnabled;
     }
-    public String getVolumeEncryptionKey() {
+    public String volumeEncryptionKey() {
         return this.volumeEncryptionKey;
     }
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
-    public List<GetWorkspaceWorkspaceProperty> getWorkspaceProperties() {
+    public List<GetWorkspaceWorkspaceProperty> workspaceProperties() {
         return this.workspaceProperties;
     }
 

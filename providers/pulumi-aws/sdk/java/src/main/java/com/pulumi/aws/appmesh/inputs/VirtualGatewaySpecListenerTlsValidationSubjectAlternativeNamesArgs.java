@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     @Import(name="match", required=true)
       private final Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> getMatch() {
+    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match() {
         return this.match;
     }
 

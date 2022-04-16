@@ -22,7 +22,7 @@ public final class ProjectFileSystemLocationGetArgs extends com.pulumi.resources
     @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
@@ -33,7 +33,7 @@ public final class ProjectFileSystemLocationGetArgs extends com.pulumi.resources
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -44,7 +44,7 @@ public final class ProjectFileSystemLocationGetArgs extends com.pulumi.resources
     @Import(name="mountOptions")
       private final @Nullable Output<String> mountOptions;
 
-    public Output<String> getMountOptions() {
+    public Output<String> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
@@ -55,7 +55,7 @@ public final class ProjectFileSystemLocationGetArgs extends com.pulumi.resources
     @Import(name="mountPoint")
       private final @Nullable Output<String> mountPoint;
 
-    public Output<String> getMountPoint() {
+    public Output<String> mountPoint() {
         return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
     }
 
@@ -66,7 +66,7 @@ public final class ProjectFileSystemLocationGetArgs extends com.pulumi.resources
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

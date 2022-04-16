@@ -18,7 +18,7 @@ public final class RegistryPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -29,7 +29,7 @@ public final class RegistryPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 

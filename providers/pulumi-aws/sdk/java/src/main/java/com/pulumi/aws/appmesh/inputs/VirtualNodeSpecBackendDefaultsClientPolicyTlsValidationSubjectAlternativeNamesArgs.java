@@ -21,7 +21,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
     @Import(name="match", required=true)
       private final Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs> match;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs> getMatch() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs> match() {
         return this.match;
     }
 

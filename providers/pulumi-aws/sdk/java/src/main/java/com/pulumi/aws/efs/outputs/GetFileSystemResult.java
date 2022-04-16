@@ -117,69 +117,69 @@ public final class GetFileSystemResult {
      * Amazon Resource Name of the file system.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
      * 
     */
-    public String getAvailabilityZoneId() {
+    public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * The Availability Zone name in which the file system's One Zone storage classes exist.
      * 
     */
-    public String getAvailabilityZoneName() {
+    public String availabilityZoneName() {
         return this.availabilityZoneName;
     }
-    public String getCreationToken() {
+    public String creationToken() {
         return this.creationToken;
     }
     /**
      * The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
     */
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
     /**
      * Whether EFS is encrypted.
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object.
      * 
     */
-    public GetFileSystemLifecyclePolicy getLifecyclePolicy() {
+    public GetFileSystemLifecyclePolicy lifecyclePolicy() {
         return this.lifecyclePolicy;
     }
     /**
      * The file system performance mode.
      * 
     */
-    public String getPerformanceMode() {
+    public String performanceMode() {
         return this.performanceMode;
     }
     /**
@@ -187,24 +187,24 @@ public final class GetFileSystemResult {
      * * `tags` -A map of tags to assign to the file system.
      * 
     */
-    public Double getProvisionedThroughputInMibps() {
+    public Double provisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps;
     }
     /**
      * The current byte count used by the file system.
      * 
     */
-    public Integer getSizeInBytes() {
+    public Integer sizeInBytes() {
         return this.sizeInBytes;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Throughput mode for the file system.
      * 
     */
-    public String getThroughputMode() {
+    public String throughputMode() {
         return this.throughputMode;
     }
 

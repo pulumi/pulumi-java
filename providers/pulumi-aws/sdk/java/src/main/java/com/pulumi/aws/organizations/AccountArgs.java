@@ -23,7 +23,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -34,7 +34,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamUserAccessToBilling")
       private final @Nullable Output<String> iamUserAccessToBilling;
 
-    public Output<String> getIamUserAccessToBilling() {
+    public Output<String> iamUserAccessToBilling() {
         return this.iamUserAccessToBilling == null ? Codegen.empty() : this.iamUserAccessToBilling;
     }
 
@@ -45,7 +45,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId == null ? Codegen.empty() : this.parentId;
     }
 
@@ -67,7 +67,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
@@ -78,7 +78,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

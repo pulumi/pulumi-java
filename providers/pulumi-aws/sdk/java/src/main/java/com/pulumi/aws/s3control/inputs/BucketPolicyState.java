@@ -22,7 +22,7 @@ public final class BucketPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -33,7 +33,7 @@ public final class BucketPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

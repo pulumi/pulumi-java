@@ -19,7 +19,7 @@ public final class GetNodeGroupsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 

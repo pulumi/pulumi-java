@@ -65,52 +65,52 @@ public final class GetPortfolioResult {
         this.tags = tags;
     }
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
      * Portfolio ARN.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Time the portfolio was created.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Description of the portfolio
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Portfolio name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Name of the person or organization who owns the portfolio.
      * 
     */
-    public String getProviderName() {
+    public String providerName() {
         return this.providerName;
     }
     /**
      * Tags applied to the portfolio.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

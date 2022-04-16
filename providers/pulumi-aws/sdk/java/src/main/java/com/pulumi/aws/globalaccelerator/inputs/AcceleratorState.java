@@ -27,7 +27,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<AcceleratorAttributesGetArgs> attributes;
 
-    public Output<AcceleratorAttributesGetArgs> getAttributes() {
+    public Output<AcceleratorAttributesGetArgs> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -41,7 +41,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -52,14 +52,14 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
@@ -70,7 +70,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
 
-    public Output<String> getIpAddressType() {
+    public Output<String> ipAddressType() {
         return this.ipAddressType == null ? Codegen.empty() : this.ipAddressType;
     }
 
@@ -81,7 +81,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipSets")
       private final @Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets;
 
-    public Output<List<AcceleratorIpSetGetArgs>> getIpSets() {
+    public Output<List<AcceleratorIpSetGetArgs>> ipSets() {
         return this.ipSets == null ? Codegen.empty() : this.ipSets;
     }
 
@@ -92,7 +92,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class AcceleratorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

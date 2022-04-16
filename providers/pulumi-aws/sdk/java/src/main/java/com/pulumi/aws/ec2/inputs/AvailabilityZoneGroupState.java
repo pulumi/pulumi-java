@@ -22,7 +22,7 @@ public final class AvailabilityZoneGroupState extends com.pulumi.resources.Resou
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
@@ -33,7 +33,7 @@ public final class AvailabilityZoneGroupState extends com.pulumi.resources.Resou
     @Import(name="optInStatus")
       private final @Nullable Output<String> optInStatus;
 
-    public Output<String> getOptInStatus() {
+    public Output<String> optInStatus() {
         return this.optInStatus == null ? Codegen.empty() : this.optInStatus;
     }
 

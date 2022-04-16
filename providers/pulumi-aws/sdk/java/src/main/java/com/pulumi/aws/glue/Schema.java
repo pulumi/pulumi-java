@@ -42,7 +42,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the schema.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The compatibility mode of the schema. Values values are: `NONE`, `DISABLED`, `BACKWARD`, `BACKWARD_ALL`, `FORWARD`, `FORWARD_ALL`, `FULL`, and `FULL_ALL`.
      * 
      */
-    public Output<String> getCompatibility() {
+    public Output<String> compatibility() {
         return this.compatibility;
     }
     /**
@@ -70,7 +70,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The data format of the schema definition. Valid values are `AVRO` and `JSON`.
      * 
      */
-    public Output<String> getDataFormat() {
+    public Output<String> dataFormat() {
         return this.dataFormat;
     }
     /**
@@ -84,7 +84,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return A description of the schema.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -98,7 +98,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The latest version of the schema associated with the returned schema definition.
      * 
      */
-    public Output<Integer> getLatestSchemaVersion() {
+    public Output<Integer> latestSchemaVersion() {
         return this.latestSchemaVersion;
     }
     /**
@@ -112,7 +112,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The next version of the schema associated with the returned schema definition.
      * 
      */
-    public Output<Integer> getNextSchemaVersion() {
+    public Output<Integer> nextSchemaVersion() {
         return this.nextSchemaVersion;
     }
     /**
@@ -126,7 +126,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Glue Registry to create the schema in.
      * 
      */
-    public Output<String> getRegistryArn() {
+    public Output<String> registryArn() {
         return this.registryArn;
     }
     /**
@@ -140,7 +140,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The name of the Glue Registry.
      * 
      */
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
     /**
@@ -154,7 +154,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The version number of the checkpoint (the last time the compatibility mode was changed).
      * 
      */
-    public Output<Integer> getSchemaCheckpoint() {
+    public Output<Integer> schemaCheckpoint() {
         return this.schemaCheckpoint;
     }
     /**
@@ -168,7 +168,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The schema definition using the `data_format` setting for `schema_name`.
      * 
      */
-    public Output<String> getSchemaDefinition() {
+    public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
     /**
@@ -182,7 +182,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return The Name of the schema.
      * 
      */
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
     /**
@@ -196,7 +196,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -210,7 +210,7 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -21,7 +21,7 @@ public final class QuickConnectQuickConnectConfigQueueConfigArgs extends com.pul
     @Import(name="contactFlowId", required=true)
       private final Output<String> contactFlowId;
 
-    public Output<String> getContactFlowId() {
+    public Output<String> contactFlowId() {
         return this.contactFlowId;
     }
 
@@ -32,7 +32,7 @@ public final class QuickConnectQuickConnectConfigQueueConfigArgs extends com.pul
     @Import(name="queueId", required=true)
       private final Output<String> queueId;
 
-    public Output<String> getQueueId() {
+    public Output<String> queueId() {
         return this.queueId;
     }
 

@@ -39,7 +39,7 @@ public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.Cus
      * the session cookie should be considered stale, expressed in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getCookieExpirationPeriod() {
+    public Output</* @Nullable */ Integer> cookieExpirationPeriod() {
         return this.cookieExpirationPeriod;
     }
     /**
@@ -57,7 +57,7 @@ public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.Cus
      * balancer.
      * 
      */
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
     /**
@@ -73,7 +73,7 @@ public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.Cus
      * should be attached.
      * 
      */
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
     /**
@@ -87,7 +87,7 @@ public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.Cus
      * @return The name of the stickiness policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

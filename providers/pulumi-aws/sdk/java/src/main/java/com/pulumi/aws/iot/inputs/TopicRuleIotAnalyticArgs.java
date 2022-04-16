@@ -21,7 +21,7 @@ public final class TopicRuleIotAnalyticArgs extends com.pulumi.resources.Resourc
     @Import(name="channelName", required=true)
       private final Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
@@ -32,7 +32,7 @@ public final class TopicRuleIotAnalyticArgs extends com.pulumi.resources.Resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

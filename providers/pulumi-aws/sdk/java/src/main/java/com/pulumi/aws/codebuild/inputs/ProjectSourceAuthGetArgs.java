@@ -27,7 +27,7 @@ public final class ProjectSourceAuthGetArgs extends com.pulumi.resources.Resourc
       private final @Nullable Output<String> resource;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 
@@ -43,7 +43,7 @@ public final class ProjectSourceAuthGetArgs extends com.pulumi.resources.Resourc
       private final Output<String> type;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -21,7 +21,7 @@ public final class EventStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -32,7 +32,7 @@ public final class EventStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationStreamArn", required=true)
       private final Output<String> destinationStreamArn;
 
-    public Output<String> getDestinationStreamArn() {
+    public Output<String> destinationStreamArn() {
         return this.destinationStreamArn;
     }
 
@@ -43,7 +43,7 @@ public final class EventStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

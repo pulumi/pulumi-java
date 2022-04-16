@@ -80,65 +80,65 @@ public final class GetTargetGroupResult {
         this.vpcId = vpcId;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getArnSuffix() {
+    public String arnSuffix() {
         return this.arnSuffix;
     }
-    public Boolean getConnectionTermination() {
+    public Boolean connectionTermination() {
         return this.connectionTermination;
     }
-    public Integer getDeregistrationDelay() {
+    public Integer deregistrationDelay() {
         return this.deregistrationDelay;
     }
-    public GetTargetGroupHealthCheck getHealthCheck() {
+    public GetTargetGroupHealthCheck healthCheck() {
         return this.healthCheck;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Boolean getLambdaMultiValueHeadersEnabled() {
+    public Boolean lambdaMultiValueHeadersEnabled() {
         return this.lambdaMultiValueHeadersEnabled;
     }
-    public String getLoadBalancingAlgorithmType() {
+    public String loadBalancingAlgorithmType() {
         return this.loadBalancingAlgorithmType;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public String getPreserveClientIp() {
+    public String preserveClientIp() {
         return this.preserveClientIp;
     }
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
-    public String getProtocolVersion() {
+    public String protocolVersion() {
         return this.protocolVersion;
     }
-    public Boolean getProxyProtocolV2() {
+    public Boolean proxyProtocolV2() {
         return this.proxyProtocolV2;
     }
-    public Integer getSlowStart() {
+    public Integer slowStart() {
         return this.slowStart;
     }
-    public GetTargetGroupStickiness getStickiness() {
+    public GetTargetGroupStickiness stickiness() {
         return this.stickiness;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getTargetType() {
+    public String targetType() {
         return this.targetType;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

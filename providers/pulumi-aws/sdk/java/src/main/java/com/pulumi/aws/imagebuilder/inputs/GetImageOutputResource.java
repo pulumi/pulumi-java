@@ -20,7 +20,7 @@ public final class GetImageOutputResource extends com.pulumi.resources.InvokeArg
     @Import(name="amis", required=true)
       private final List<GetImageOutputResourceAmi> amis;
 
-    public List<GetImageOutputResourceAmi> getAmis() {
+    public List<GetImageOutputResourceAmi> amis() {
         return this.amis;
     }
 

@@ -26,7 +26,7 @@ public final class VirtualRouterSpec {
      * Currently only one listener is supported per virtual router.
      * 
     */
-    public VirtualRouterSpecListener getListener() {
+    public VirtualRouterSpecListener listener() {
         return this.listener;
     }
 

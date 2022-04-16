@@ -26,7 +26,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<Archive> code;
 
-    public Output<Archive> getCode() {
+    public Output<Archive> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -48,7 +48,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="compatibleArchitectures")
       private final @Nullable Output<List<String>> compatibleArchitectures;
 
-    public Output<List<String>> getCompatibleArchitectures() {
+    public Output<List<String>> compatibleArchitectures() {
         return this.compatibleArchitectures == null ? Codegen.empty() : this.compatibleArchitectures;
     }
 
@@ -59,7 +59,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="compatibleRuntimes")
       private final @Nullable Output<List<String>> compatibleRuntimes;
 
-    public Output<List<String>> getCompatibleRuntimes() {
+    public Output<List<String>> compatibleRuntimes() {
         return this.compatibleRuntimes == null ? Codegen.empty() : this.compatibleRuntimes;
     }
 
@@ -70,7 +70,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -81,7 +81,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -92,7 +92,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="layerArn")
       private final @Nullable Output<String> layerArn;
 
-    public Output<String> getLayerArn() {
+    public Output<String> layerArn() {
         return this.layerArn == null ? Codegen.empty() : this.layerArn;
     }
 
@@ -103,7 +103,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="layerName")
       private final @Nullable Output<String> layerName;
 
-    public Output<String> getLayerName() {
+    public Output<String> layerName() {
         return this.layerName == null ? Codegen.empty() : this.layerName;
     }
 
@@ -114,7 +114,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseInfo")
       private final @Nullable Output<String> licenseInfo;
 
-    public Output<String> getLicenseInfo() {
+    public Output<String> licenseInfo() {
         return this.licenseInfo == null ? Codegen.empty() : this.licenseInfo;
     }
 
@@ -125,7 +125,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -136,7 +136,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
@@ -147,7 +147,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> getS3ObjectVersion() {
+    public Output<String> s3ObjectVersion() {
         return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 
@@ -158,7 +158,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="signingJobArn")
       private final @Nullable Output<String> signingJobArn;
 
-    public Output<String> getSigningJobArn() {
+    public Output<String> signingJobArn() {
         return this.signingJobArn == null ? Codegen.empty() : this.signingJobArn;
     }
 
@@ -169,7 +169,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="signingProfileVersionArn")
       private final @Nullable Output<String> signingProfileVersionArn;
 
-    public Output<String> getSigningProfileVersionArn() {
+    public Output<String> signingProfileVersionArn() {
         return this.signingProfileVersionArn == null ? Codegen.empty() : this.signingProfileVersionArn;
     }
 
@@ -180,14 +180,14 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipDestroy")
       private final @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> getSkipDestroy() {
+    public Output<Boolean> skipDestroy() {
         return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
     }
 
     @Import(name="sourceCodeHash")
       private final @Nullable Output<String> sourceCodeHash;
 
-    public Output<String> getSourceCodeHash() {
+    public Output<String> sourceCodeHash() {
         return this.sourceCodeHash == null ? Codegen.empty() : this.sourceCodeHash;
     }
 
@@ -198,7 +198,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceCodeSize")
       private final @Nullable Output<Integer> sourceCodeSize;
 
-    public Output<Integer> getSourceCodeSize() {
+    public Output<Integer> sourceCodeSize() {
         return this.sourceCodeSize == null ? Codegen.empty() : this.sourceCodeSize;
     }
 
@@ -209,7 +209,7 @@ public final class LayerVersionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

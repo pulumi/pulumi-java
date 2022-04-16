@@ -34,14 +34,14 @@ public final class GetNodeGroupResource {
      * List of objects containing information about AutoScaling Groups.
      * 
     */
-    public List<GetNodeGroupResourceAutoscalingGroup> getAutoscalingGroups() {
+    public List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups() {
         return this.autoscalingGroups;
     }
     /**
      * Identifier of the remote access EC2 Security Group.
      * 
     */
-    public String getRemoteAccessSecurityGroupId() {
+    public String remoteAccessSecurityGroupId() {
         return this.remoteAccessSecurityGroupId;
     }
 

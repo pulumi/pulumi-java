@@ -60,37 +60,37 @@ public final class GetKeyPairResult {
      * The ARN of the Key Pair.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<GetKeyPairFilter> getFilters() {
+    public List<GetKeyPairFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The SHA-1 digest of the DER encoded private key.
      * 
     */
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
-    public Optional<String> getKeyPairId() {
+    public Optional<String> keyPairId() {
         return Optional.ofNullable(this.keyPairId);
     }
     /**
      * Any tags assigned to the Key Pair.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

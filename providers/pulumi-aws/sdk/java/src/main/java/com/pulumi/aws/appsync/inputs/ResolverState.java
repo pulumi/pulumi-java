@@ -26,7 +26,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -37,7 +37,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cachingConfig")
       private final @Nullable Output<ResolverCachingConfigGetArgs> cachingConfig;
 
-    public Output<ResolverCachingConfigGetArgs> getCachingConfig() {
+    public Output<ResolverCachingConfigGetArgs> cachingConfig() {
         return this.cachingConfig == null ? Codegen.empty() : this.cachingConfig;
     }
 
@@ -59,7 +59,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource")
       private final @Nullable Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
@@ -70,7 +70,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -81,7 +81,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -92,7 +92,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBatchSize")
       private final @Nullable Output<Integer> maxBatchSize;
 
-    public Output<Integer> getMaxBatchSize() {
+    public Output<Integer> maxBatchSize() {
         return this.maxBatchSize == null ? Codegen.empty() : this.maxBatchSize;
     }
 
@@ -103,7 +103,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineConfig")
       private final @Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig;
 
-    public Output<ResolverPipelineConfigGetArgs> getPipelineConfig() {
+    public Output<ResolverPipelineConfigGetArgs> pipelineConfig() {
         return this.pipelineConfig == null ? Codegen.empty() : this.pipelineConfig;
     }
 
@@ -114,7 +114,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestTemplate")
       private final @Nullable Output<String> requestTemplate;
 
-    public Output<String> getRequestTemplate() {
+    public Output<String> requestTemplate() {
         return this.requestTemplate == null ? Codegen.empty() : this.requestTemplate;
     }
 
@@ -125,7 +125,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseTemplate")
       private final @Nullable Output<String> responseTemplate;
 
-    public Output<String> getResponseTemplate() {
+    public Output<String> responseTemplate() {
         return this.responseTemplate == null ? Codegen.empty() : this.responseTemplate;
     }
 
@@ -136,7 +136,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncConfig")
       private final @Nullable Output<ResolverSyncConfigGetArgs> syncConfig;
 
-    public Output<ResolverSyncConfigGetArgs> getSyncConfig() {
+    public Output<ResolverSyncConfigGetArgs> syncConfig() {
         return this.syncConfig == null ? Codegen.empty() : this.syncConfig;
     }
 
@@ -147,7 +147,7 @@ public final class ResolverState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

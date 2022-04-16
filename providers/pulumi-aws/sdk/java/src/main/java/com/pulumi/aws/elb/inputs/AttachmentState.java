@@ -22,7 +22,7 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="elb")
       private final @Nullable Output<String> elb;
 
-    public Output<String> getElb() {
+    public Output<String> elb() {
         return this.elb == null ? Codegen.empty() : this.elb;
     }
 
@@ -33,7 +33,7 @@ public final class AttachmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 

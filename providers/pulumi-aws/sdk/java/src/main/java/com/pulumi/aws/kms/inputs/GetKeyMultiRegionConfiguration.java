@@ -18,21 +18,21 @@ public final class GetKeyMultiRegionConfiguration extends com.pulumi.resources.I
     @Import(name="multiRegionKeyType", required=true)
       private final String multiRegionKeyType;
 
-    public String getMultiRegionKeyType() {
+    public String multiRegionKeyType() {
         return this.multiRegionKeyType;
     }
 
     @Import(name="primaryKeys", required=true)
       private final List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
 
-    public List<GetKeyMultiRegionConfigurationPrimaryKey> getPrimaryKeys() {
+    public List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys() {
         return this.primaryKeys;
     }
 
     @Import(name="replicaKeys", required=true)
       private final List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
 
-    public List<GetKeyMultiRegionConfigurationReplicaKey> getReplicaKeys() {
+    public List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys() {
         return this.replicaKeys;
     }
 

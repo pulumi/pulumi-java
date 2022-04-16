@@ -17,7 +17,7 @@ public final class GetCertificateAuthorityRevocationConfiguration {
         this.crlConfigurations = crlConfigurations;
     }
 
-    public List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> getCrlConfigurations() {
+    public List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations() {
         return this.crlConfigurations;
     }
 

@@ -24,7 +24,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="defaultVersionId")
       private final @Nullable Output<String> defaultVersionId;
 
-    public Output<String> getDefaultVersionId() {
+    public Output<String> defaultVersionId() {
         return this.defaultVersionId == null ? Codegen.empty() : this.defaultVersionId;
     }
 
@@ -46,7 +46,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="deprecatedStatus")
       private final @Nullable Output<String> deprecatedStatus;
 
-    public Output<String> getDeprecatedStatus() {
+    public Output<String> deprecatedStatus() {
         return this.deprecatedStatus == null ? Codegen.empty() : this.deprecatedStatus;
     }
 
@@ -57,7 +57,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="documentationUrl")
       private final @Nullable Output<String> documentationUrl;
 
-    public Output<String> getDocumentationUrl() {
+    public Output<String> documentationUrl() {
         return this.documentationUrl == null ? Codegen.empty() : this.documentationUrl;
     }
 
@@ -79,7 +79,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -90,7 +90,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="isDefaultVersion")
       private final @Nullable Output<Boolean> isDefaultVersion;
 
-    public Output<Boolean> getIsDefaultVersion() {
+    public Output<Boolean> isDefaultVersion() {
         return this.isDefaultVersion == null ? Codegen.empty() : this.isDefaultVersion;
     }
 
@@ -101,7 +101,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="loggingConfig")
       private final @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
 
-    public Output<CloudFormationTypeLoggingConfigGetArgs> getLoggingConfig() {
+    public Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -112,7 +112,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="provisioningType")
       private final @Nullable Output<String> provisioningType;
 
-    public Output<String> getProvisioningType() {
+    public Output<String> provisioningType() {
         return this.provisioningType == null ? Codegen.empty() : this.provisioningType;
     }
 
@@ -123,7 +123,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -134,7 +134,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="schemaHandlerPackage")
       private final @Nullable Output<String> schemaHandlerPackage;
 
-    public Output<String> getSchemaHandlerPackage() {
+    public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage == null ? Codegen.empty() : this.schemaHandlerPackage;
     }
 
@@ -145,7 +145,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="sourceUrl")
       private final @Nullable Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
+    public Output<String> sourceUrl() {
         return this.sourceUrl == null ? Codegen.empty() : this.sourceUrl;
     }
 
@@ -156,7 +156,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -167,7 +167,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="typeArn")
       private final @Nullable Output<String> typeArn;
 
-    public Output<String> getTypeArn() {
+    public Output<String> typeArn() {
         return this.typeArn == null ? Codegen.empty() : this.typeArn;
     }
 
@@ -178,7 +178,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
@@ -189,7 +189,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
@@ -200,7 +200,7 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
     @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
-    public Output<String> getVisibility() {
+    public Output<String> visibility() {
         return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 

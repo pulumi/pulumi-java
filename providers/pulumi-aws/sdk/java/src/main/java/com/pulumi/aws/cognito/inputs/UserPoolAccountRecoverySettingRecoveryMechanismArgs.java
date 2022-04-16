@@ -22,7 +22,7 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismArgs extends c
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismArgs extends c
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 

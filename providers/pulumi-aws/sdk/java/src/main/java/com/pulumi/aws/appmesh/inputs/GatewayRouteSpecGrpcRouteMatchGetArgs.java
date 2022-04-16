@@ -21,7 +21,7 @@ public final class GatewayRouteSpecGrpcRouteMatchGetArgs extends com.pulumi.reso
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

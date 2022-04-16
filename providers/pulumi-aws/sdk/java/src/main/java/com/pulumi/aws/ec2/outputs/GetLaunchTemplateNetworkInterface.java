@@ -68,53 +68,53 @@ public final class GetLaunchTemplateNetworkInterface {
         this.subnetId = subnetId;
     }
 
-    public String getAssociateCarrierIpAddress() {
+    public String associateCarrierIpAddress() {
         return this.associateCarrierIpAddress;
     }
-    public Optional<Boolean> getAssociatePublicIpAddress() {
+    public Optional<Boolean> associatePublicIpAddress() {
         return Optional.ofNullable(this.associatePublicIpAddress);
     }
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
      * Description of the launch template.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public Integer getDeviceIndex() {
+    public Integer deviceIndex() {
         return this.deviceIndex;
     }
-    public String getInterfaceType() {
+    public String interfaceType() {
         return this.interfaceType;
     }
-    public Integer getIpv4AddressCount() {
+    public Integer ipv4AddressCount() {
         return this.ipv4AddressCount;
     }
-    public List<String> getIpv4Addresses() {
+    public List<String> ipv4Addresses() {
         return this.ipv4Addresses;
     }
-    public Integer getIpv6AddressCount() {
+    public Integer ipv6AddressCount() {
         return this.ipv6AddressCount;
     }
-    public List<String> getIpv6Addresses() {
+    public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }
-    public Optional<Integer> getNetworkCardIndex() {
+    public Optional<Integer> networkCardIndex() {
         return Optional.ofNullable(this.networkCardIndex);
     }
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

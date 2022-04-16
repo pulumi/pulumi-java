@@ -41,21 +41,21 @@ public final class TopicRuleFirehose {
      * The delivery stream name.
      * 
     */
-    public String getDeliveryStreamName() {
+    public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
     /**
      * The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
      * 
     */
-    public Optional<String> getSeparator() {
+    public Optional<String> separator() {
         return Optional.ofNullable(this.separator);
     }
 

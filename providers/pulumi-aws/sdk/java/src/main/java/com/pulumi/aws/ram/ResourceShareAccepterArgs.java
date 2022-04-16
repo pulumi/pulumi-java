@@ -21,7 +21,7 @@ public final class ResourceShareAccepterArgs extends com.pulumi.resources.Resour
     @Import(name="shareArn", required=true)
       private final Output<String> shareArn;
 
-    public Output<String> getShareArn() {
+    public Output<String> shareArn() {
         return this.shareArn;
     }
 

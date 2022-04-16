@@ -23,7 +23,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends com.pulumi.resou
     @Import(name="endpointUri", required=true)
       private final Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends com.pulumi.resou
     @Import(name="errorRetryDuration")
       private final @Nullable Output<Integer> errorRetryDuration;
 
-    public Output<Integer> getErrorRetryDuration() {
+    public Output<Integer> errorRetryDuration() {
         return this.errorRetryDuration == null ? Codegen.empty() : this.errorRetryDuration;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends com.pulumi.resou
     @Import(name="fullLoadErrorPercentage")
       private final @Nullable Output<Integer> fullLoadErrorPercentage;
 
-    public Output<Integer> getFullLoadErrorPercentage() {
+    public Output<Integer> fullLoadErrorPercentage() {
         return this.fullLoadErrorPercentage == null ? Codegen.empty() : this.fullLoadErrorPercentage;
     }
 
@@ -56,7 +56,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends com.pulumi.resou
     @Import(name="serviceAccessRoleArn", required=true)
       private final Output<String> serviceAccessRoleArn;
 
-    public Output<String> getServiceAccessRoleArn() {
+    public Output<String> serviceAccessRoleArn() {
         return this.serviceAccessRoleArn;
     }
 

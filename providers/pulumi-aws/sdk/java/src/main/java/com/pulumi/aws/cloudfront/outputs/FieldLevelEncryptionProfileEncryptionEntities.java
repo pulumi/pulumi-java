@@ -18,7 +18,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntities {
         this.items = items;
     }
 
-    public List<FieldLevelEncryptionProfileEncryptionEntitiesItem> getItems() {
+    public List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items() {
         return this.items == null ? List.of() : this.items;
     }
 

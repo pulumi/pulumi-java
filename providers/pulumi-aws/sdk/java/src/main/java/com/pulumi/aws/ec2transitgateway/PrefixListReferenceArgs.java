@@ -23,7 +23,7 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="blackhole")
       private final @Nullable Output<Boolean> blackhole;
 
-    public Output<Boolean> getBlackhole() {
+    public Output<Boolean> blackhole() {
         return this.blackhole == null ? Codegen.empty() : this.blackhole;
     }
 
@@ -34,7 +34,7 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="prefixListId", required=true)
       private final Output<String> prefixListId;
 
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
 
@@ -45,7 +45,7 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
@@ -56,7 +56,7 @@ public final class PrefixListReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="transitGatewayRouteTableId", required=true)
       private final Output<String> transitGatewayRouteTableId;
 
-    public Output<String> getTransitGatewayRouteTableId() {
+    public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 

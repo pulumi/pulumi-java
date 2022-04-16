@@ -22,7 +22,7 @@ public final class ConnectionConfirmationState extends com.pulumi.resources.Reso
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 

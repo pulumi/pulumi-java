@@ -23,7 +23,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="analysisScheme")
       private final @Nullable Output<String> analysisScheme;
 
-    public Output<String> getAnalysisScheme() {
+    public Output<String> analysisScheme() {
         return this.analysisScheme == null ? Codegen.empty() : this.analysisScheme;
     }
 
@@ -34,7 +34,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -45,7 +45,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="facet")
       private final @Nullable Output<Boolean> facet;
 
-    public Output<Boolean> getFacet() {
+    public Output<Boolean> facet() {
         return this.facet == null ? Codegen.empty() : this.facet;
     }
 
@@ -56,7 +56,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="highlight")
       private final @Nullable Output<Boolean> highlight;
 
-    public Output<Boolean> getHighlight() {
+    public Output<Boolean> highlight() {
         return this.highlight == null ? Codegen.empty() : this.highlight;
     }
 
@@ -67,7 +67,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -78,7 +78,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="return")
       private final @Nullable Output<Boolean> return_;
 
-    public Output<Boolean> getReturn_() {
+    public Output<Boolean> return_() {
         return this.return_ == null ? Codegen.empty() : this.return_;
     }
 
@@ -89,7 +89,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="search")
       private final @Nullable Output<Boolean> search;
 
-    public Output<Boolean> getSearch() {
+    public Output<Boolean> search() {
         return this.search == null ? Codegen.empty() : this.search;
     }
 
@@ -100,7 +100,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sort")
       private final @Nullable Output<Boolean> sort;
 
-    public Output<Boolean> getSort() {
+    public Output<Boolean> sort() {
         return this.sort == null ? Codegen.empty() : this.sort;
     }
 
@@ -111,7 +111,7 @@ public final class DomainIndexFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGet
     @Import(name="mappingParameters")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> mappingParameters;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> getMappingParameters() {
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> mappingParameters() {
         return this.mappingParameters == null ? Codegen.empty() : this.mappingParameters;
     }
 
@@ -35,7 +35,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGet
     @Import(name="recordFormatType")
       private final @Nullable Output<String> recordFormatType;
 
-    public Output<String> getRecordFormatType() {
+    public Output<String> recordFormatType() {
         return this.recordFormatType == null ? Codegen.empty() : this.recordFormatType;
     }
 

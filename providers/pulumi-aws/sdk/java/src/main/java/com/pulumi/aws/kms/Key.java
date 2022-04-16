@@ -43,7 +43,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the key.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -63,7 +63,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck;
     }
     /**
@@ -79,7 +79,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIST_P256`, `ECC_NIST_P384`, `ECC_NIST_P521`, or `ECC_SECG_P256K1`. Defaults to `SYMMETRIC_DEFAULT`. For help with choosing a key spec, see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html).
      * 
      */
-    public Output</* @Nullable */ String> getCustomerMasterKeySpec() {
+    public Output</* @Nullable */ String> customerMasterKeySpec() {
         return this.customerMasterKeySpec;
     }
     /**
@@ -97,7 +97,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its replica keys is deleted. Otherwise, the waiting period begins immediately.
      * 
      */
-    public Output</* @Nullable */ Integer> getDeletionWindowInDays() {
+    public Output</* @Nullable */ Integer> deletionWindowInDays() {
         return this.deletionWindowInDays;
     }
     /**
@@ -111,7 +111,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The description of the key as viewed in AWS console.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -125,7 +125,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableKeyRotation() {
+    public Output</* @Nullable */ Boolean> enableKeyRotation() {
         return this.enableKeyRotation;
     }
     /**
@@ -139,7 +139,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the key is enabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -153,7 +153,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The globally unique identifier for the key.
      * 
      */
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
     /**
@@ -169,7 +169,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * Defaults to `ENCRYPT_DECRYPT`.
      * 
      */
-    public Output</* @Nullable */ String> getKeyUsage() {
+    public Output</* @Nullable */ String> keyUsage() {
         return this.keyUsage;
     }
     /**
@@ -183,7 +183,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
      * 
      */
-    public Output<Boolean> getMultiRegion() {
+    public Output<Boolean> multiRegion() {
         return this.multiRegion;
     }
     /**
@@ -197,7 +197,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return A valid policy JSON document. Although this is a key policy, not an IAM policy, an `aws.iam.getPolicyDocument`, in the form that designates a principal, can be used.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -211,7 +211,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -225,7 +225,7 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

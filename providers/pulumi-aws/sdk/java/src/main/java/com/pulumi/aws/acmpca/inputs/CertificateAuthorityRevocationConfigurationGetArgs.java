@@ -22,7 +22,7 @@ public final class CertificateAuthorityRevocationConfigurationGetArgs extends co
     @Import(name="crlConfiguration")
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> crlConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> getCrlConfiguration() {
+    public Output<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> crlConfiguration() {
         return this.crlConfiguration == null ? Codegen.empty() : this.crlConfiguration;
     }
 

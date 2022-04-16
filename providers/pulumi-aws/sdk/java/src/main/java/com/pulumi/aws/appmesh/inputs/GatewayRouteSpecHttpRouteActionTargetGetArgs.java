@@ -21,7 +21,7 @@ public final class GatewayRouteSpecHttpRouteActionTargetGetArgs extends com.pulu
     @Import(name="virtualService", required=true)
       private final Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
 
-    public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> getVirtualService() {
+    public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService() {
         return this.virtualService;
     }
 

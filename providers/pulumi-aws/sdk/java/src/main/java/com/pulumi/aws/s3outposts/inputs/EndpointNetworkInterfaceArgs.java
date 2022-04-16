@@ -22,7 +22,7 @@ public final class EndpointNetworkInterfaceArgs extends com.pulumi.resources.Res
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 

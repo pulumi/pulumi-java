@@ -22,7 +22,7 @@ public final class EventTargetRunCommandTargetGetArgs extends com.pulumi.resourc
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -33,7 +33,7 @@ public final class EventTargetRunCommandTargetGetArgs extends com.pulumi.resourc
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

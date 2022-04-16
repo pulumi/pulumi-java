@@ -20,21 +20,21 @@ public final class GetLaunchTemplateNetworkInterface extends com.pulumi.resource
     @Import(name="associateCarrierIpAddress", required=true)
       private final String associateCarrierIpAddress;
 
-    public String getAssociateCarrierIpAddress() {
+    public String associateCarrierIpAddress() {
         return this.associateCarrierIpAddress;
     }
 
     @Import(name="associatePublicIpAddress")
       private final @Nullable Boolean associatePublicIpAddress;
 
-    public Optional<Boolean> getAssociatePublicIpAddress() {
+    public Optional<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     @Import(name="deleteOnTermination")
       private final @Nullable Boolean deleteOnTermination;
 
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return this.deleteOnTermination == null ? Optional.empty() : Optional.ofNullable(this.deleteOnTermination);
     }
 
@@ -45,84 +45,84 @@ public final class GetLaunchTemplateNetworkInterface extends com.pulumi.resource
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="deviceIndex", required=true)
       private final Integer deviceIndex;
 
-    public Integer getDeviceIndex() {
+    public Integer deviceIndex() {
         return this.deviceIndex;
     }
 
     @Import(name="interfaceType", required=true)
       private final String interfaceType;
 
-    public String getInterfaceType() {
+    public String interfaceType() {
         return this.interfaceType;
     }
 
     @Import(name="ipv4AddressCount", required=true)
       private final Integer ipv4AddressCount;
 
-    public Integer getIpv4AddressCount() {
+    public Integer ipv4AddressCount() {
         return this.ipv4AddressCount;
     }
 
     @Import(name="ipv4Addresses", required=true)
       private final List<String> ipv4Addresses;
 
-    public List<String> getIpv4Addresses() {
+    public List<String> ipv4Addresses() {
         return this.ipv4Addresses;
     }
 
     @Import(name="ipv6AddressCount", required=true)
       private final Integer ipv6AddressCount;
 
-    public Integer getIpv6AddressCount() {
+    public Integer ipv6AddressCount() {
         return this.ipv6AddressCount;
     }
 
     @Import(name="ipv6Addresses", required=true)
       private final List<String> ipv6Addresses;
 
-    public List<String> getIpv6Addresses() {
+    public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }
 
     @Import(name="networkCardIndex")
       private final @Nullable Integer networkCardIndex;
 
-    public Optional<Integer> getNetworkCardIndex() {
+    public Optional<Integer> networkCardIndex() {
         return this.networkCardIndex == null ? Optional.empty() : Optional.ofNullable(this.networkCardIndex);
     }
 
     @Import(name="networkInterfaceId", required=true)
       private final String networkInterfaceId;
 
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
     @Import(name="securityGroups", required=true)
       private final List<String> securityGroups;
 
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
 
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

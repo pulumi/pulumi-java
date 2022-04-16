@@ -23,7 +23,7 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -34,7 +34,7 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
     @Import(name="samlOptions")
       private final @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
-    public Output<DomainSamlOptionsSamlOptionsGetArgs> getSamlOptions() {
+    public Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions() {
         return this.samlOptions == null ? Codegen.empty() : this.samlOptions;
     }
 

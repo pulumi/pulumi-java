@@ -44,7 +44,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly`. Valid values are `PublicInternetOnly` and `VpcOnly`.
      * 
      */
-    public Output</* @Nullable */ String> getAppNetworkAccessType() {
+    public Output</* @Nullable */ String> appNetworkAccessType() {
         return this.appNetworkAccessType;
     }
     /**
@@ -58,7 +58,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Domain.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The mode of authentication that members use to access the domain. Valid values are `IAM` and `SSO`.
      * 
      */
-    public Output<String> getAuthMode() {
+    public Output<String> authMode() {
         return this.authMode;
     }
     /**
@@ -86,7 +86,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The default user settings. See Default User Settings below.
      * 
      */
-    public Output<DomainDefaultUserSettings> getDefaultUserSettings() {
+    public Output<DomainDefaultUserSettings> defaultUserSettings() {
         return this.defaultUserSettings;
     }
     /**
@@ -100,7 +100,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The domain name.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -114,7 +114,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
      */
-    public Output<String> getHomeEfsFileSystemId() {
+    public Output<String> homeEfsFileSystemId() {
         return this.homeEfsFileSystemId;
     }
     /**
@@ -128,7 +128,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -142,7 +142,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
      * 
      */
-    public Output</* @Nullable */ DomainRetentionPolicy> getRetentionPolicy() {
+    public Output</* @Nullable */ DomainRetentionPolicy> retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
@@ -156,7 +156,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The SSO managed application instance ID.
      * 
      */
-    public Output<String> getSingleSignOnManagedApplicationInstanceId() {
+    public Output<String> singleSignOnManagedApplicationInstanceId() {
         return this.singleSignOnManagedApplicationInstanceId;
     }
     /**
@@ -170,7 +170,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The VPC subnets that Studio uses for communication.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -184,7 +184,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -198,7 +198,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -212,7 +212,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The domain's URL.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
     /**
@@ -226,7 +226,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

@@ -26,7 +26,7 @@ public final class WebAclRuleActionAllow {
      * Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
     */
-    public Optional<WebAclRuleActionAllowCustomRequestHandling> getCustomRequestHandling() {
+    public Optional<WebAclRuleActionAllowCustomRequestHandling> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }
 

@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationGetArgs ex
     @Import(name="applicationRestoreConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs> applicationRestoreConfiguration;
 
-    public Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs> getApplicationRestoreConfiguration() {
+    public Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs> applicationRestoreConfiguration() {
         return this.applicationRestoreConfiguration == null ? Codegen.empty() : this.applicationRestoreConfiguration;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationGetArgs ex
     @Import(name="flinkRunConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs> flinkRunConfiguration;
 
-    public Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs> getFlinkRunConfiguration() {
+    public Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs> flinkRunConfiguration() {
         return this.flinkRunConfiguration == null ? Codegen.empty() : this.flinkRunConfiguration;
     }
 

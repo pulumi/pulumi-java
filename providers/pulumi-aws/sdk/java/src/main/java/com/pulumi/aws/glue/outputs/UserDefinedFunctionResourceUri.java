@@ -32,14 +32,14 @@ public final class UserDefinedFunctionResourceUri {
      * The type of the resource. can be one of `JAR`, `FILE`, and `ARCHIVE`.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * The URI for accessing the resource.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

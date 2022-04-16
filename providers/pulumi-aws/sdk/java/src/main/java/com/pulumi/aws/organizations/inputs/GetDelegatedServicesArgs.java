@@ -19,7 +19,7 @@ public final class GetDelegatedServicesArgs extends com.pulumi.resources.InvokeA
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 

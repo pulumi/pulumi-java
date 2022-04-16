@@ -76,55 +76,55 @@ public final class GetCertificateResult {
      * Amazon Resource Name (ARN) of the certificate.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Type of certificate. For example, `CA`.
      * 
     */
-    public String getCertificateType() {
+    public String certificateType() {
         return this.certificateType;
     }
     /**
      * Boolean whether there is an override for the default certificate identifier.
      * 
     */
-    public Boolean getCustomerOverride() {
+    public Boolean customerOverride() {
         return this.customerOverride;
     }
     /**
      * If there is an override for the default certificate identifier, when the override expires.
      * 
     */
-    public String getCustomerOverrideValidTill() {
+    public String customerOverrideValidTill() {
         return this.customerOverrideValidTill;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getLatestValidTill() {
+    public Optional<Boolean> latestValidTill() {
         return Optional.ofNullable(this.latestValidTill);
     }
     /**
      * Thumbprint of the certificate.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
      * 
     */
-    public String getValidFrom() {
+    public String validFrom() {
         return this.validFrom;
     }
     /**
      * [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
      * 
     */
-    public String getValidTill() {
+    public String validTill() {
         return this.validTill;
     }
 

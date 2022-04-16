@@ -22,7 +22,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     @Import(name="cents")
       private final @Nullable Output<Integer> cents;
 
-    public Output<Integer> getCents() {
+    public Output<Integer> cents() {
         return this.cents == null ? Codegen.empty() : this.cents;
     }
 
@@ -33,7 +33,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     @Import(name="dollars")
       private final @Nullable Output<Integer> dollars;
 
-    public Output<Integer> getDollars() {
+    public Output<Integer> dollars() {
         return this.dollars == null ? Codegen.empty() : this.dollars;
     }
 
@@ -44,7 +44,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     @Import(name="tenthFractionsOfACent")
       private final @Nullable Output<Integer> tenthFractionsOfACent;
 
-    public Output<Integer> getTenthFractionsOfACent() {
+    public Output<Integer> tenthFractionsOfACent() {
         return this.tenthFractionsOfACent == null ? Codegen.empty() : this.tenthFractionsOfACent;
     }
 

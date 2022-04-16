@@ -25,7 +25,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataEncryptionKeyId")
       private final @Nullable Output<String> dataEncryptionKeyId;
 
-    public Output<String> getDataEncryptionKeyId() {
+    public Output<String> dataEncryptionKeyId() {
         return this.dataEncryptionKeyId == null ? Codegen.empty() : this.dataEncryptionKeyId;
     }
 
@@ -47,7 +47,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -69,14 +69,14 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
@@ -87,7 +87,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerAlias")
       private final @Nullable Output<String> ownerAlias;
 
-    public Output<String> getOwnerAlias() {
+    public Output<String> ownerAlias() {
         return this.ownerAlias == null ? Codegen.empty() : this.ownerAlias;
     }
 
@@ -98,7 +98,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -109,7 +109,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="permanentRestore")
       private final @Nullable Output<Boolean> permanentRestore;
 
-    public Output<Boolean> getPermanentRestore() {
+    public Output<Boolean> permanentRestore() {
         return this.permanentRestore == null ? Codegen.empty() : this.permanentRestore;
     }
 
@@ -120,7 +120,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRegion")
       private final @Nullable Output<String> sourceRegion;
 
-    public Output<String> getSourceRegion() {
+    public Output<String> sourceRegion() {
         return this.sourceRegion == null ? Codegen.empty() : this.sourceRegion;
     }
 
@@ -131,7 +131,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotId")
       private final @Nullable Output<String> sourceSnapshotId;
 
-    public Output<String> getSourceSnapshotId() {
+    public Output<String> sourceSnapshotId() {
         return this.sourceSnapshotId == null ? Codegen.empty() : this.sourceSnapshotId;
     }
 
@@ -142,14 +142,14 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageTier")
       private final @Nullable Output<String> storageTier;
 
-    public Output<String> getStorageTier() {
+    public Output<String> storageTier() {
         return this.storageTier == null ? Codegen.empty() : this.storageTier;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -160,7 +160,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -171,14 +171,14 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="temporaryRestoreDays")
       private final @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Output<Integer> getTemporaryRestoreDays() {
+    public Output<Integer> temporaryRestoreDays() {
         return this.temporaryRestoreDays == null ? Codegen.empty() : this.temporaryRestoreDays;
     }
 
     @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId == null ? Codegen.empty() : this.volumeId;
     }
 
@@ -189,7 +189,7 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
+    public Output<Integer> volumeSize() {
         return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 

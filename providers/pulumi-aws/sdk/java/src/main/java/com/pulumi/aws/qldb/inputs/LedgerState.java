@@ -24,7 +24,7 @@ public final class LedgerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class LedgerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> getDeletionProtection() {
+    public Output<Boolean> deletionProtection() {
         return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
@@ -46,7 +46,7 @@ public final class LedgerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class LedgerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsMode")
       private final @Nullable Output<String> permissionsMode;
 
-    public Output<String> getPermissionsMode() {
+    public Output<String> permissionsMode() {
         return this.permissionsMode == null ? Codegen.empty() : this.permissionsMode;
     }
 
@@ -68,7 +68,7 @@ public final class LedgerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class LedgerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

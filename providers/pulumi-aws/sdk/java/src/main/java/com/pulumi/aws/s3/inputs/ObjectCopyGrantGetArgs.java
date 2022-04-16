@@ -23,7 +23,7 @@ public final class ObjectCopyGrantGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -34,7 +34,7 @@ public final class ObjectCopyGrantGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -45,7 +45,7 @@ public final class ObjectCopyGrantGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions;
     }
 
@@ -56,7 +56,7 @@ public final class ObjectCopyGrantGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -67,7 +67,7 @@ public final class ObjectCopyGrantGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

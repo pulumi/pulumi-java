@@ -21,7 +21,7 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
     @Import(name="amiDistributionConfigurations", required=true)
       private final List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
 
-    public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> getAmiDistributionConfigurations() {
+    public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations() {
         return this.amiDistributionConfigurations;
     }
 
@@ -32,7 +32,7 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
     @Import(name="licenseConfigurationArns", required=true)
       private final List<String> licenseConfigurationArns;
 
-    public List<String> getLicenseConfigurationArns() {
+    public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns;
     }
 
@@ -43,7 +43,7 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

@@ -22,7 +22,7 @@ public final class IdentityPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="identity")
       private final @Nullable Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -33,7 +33,7 @@ public final class IdentityPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class IdentityPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

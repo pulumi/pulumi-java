@@ -33,14 +33,14 @@ public final class RuleGroupRuleGroupRuleVariablesIpSet {
      * A configuration block that defines a set of IP addresses. See IP Set below for details.
      * 
     */
-    public RuleGroupRuleGroupRuleVariablesIpSetIpSet getIpSet() {
+    public RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet() {
         return this.ipSet;
     }
     /**
      * A unique alphanumeric string to identify the `ip_set`.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

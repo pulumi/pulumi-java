@@ -22,7 +22,7 @@ public final class RolePolicyAttachmentState extends com.pulumi.resources.Resour
     @Import(name="policyArn")
       private final @Nullable Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn == null ? Codegen.empty() : this.policyArn;
     }
 
@@ -33,7 +33,7 @@ public final class RolePolicyAttachmentState extends com.pulumi.resources.Resour
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

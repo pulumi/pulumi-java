@@ -21,7 +21,7 @@ public final class LogServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryId", required=true)
       private final Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
 
@@ -32,7 +32,7 @@ public final class LogServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 

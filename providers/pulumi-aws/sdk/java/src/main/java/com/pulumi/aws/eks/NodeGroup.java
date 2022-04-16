@@ -50,7 +50,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Type of Amazon Machine Image (AMI) associated with the EKS Node Group. See the [AWS documentation](https://docs.aws.amazon.com/eks/latest/APIReference/API_Nodegroup.html#AmazonEKS-Type-Nodegroup-amiType) for valid values. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    public Output<String> getAmiType() {
+    public Output<String> amiType() {
         return this.amiType;
     }
     /**
@@ -64,7 +64,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the EKS Node Group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -78,7 +78,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    public Output<String> getCapacityType() {
+    public Output<String> capacityType() {
         return this.capacityType;
     }
     /**
@@ -92,7 +92,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -106,7 +106,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    public Output<Integer> getDiskSize() {
+    public Output<Integer> diskSize() {
         return this.diskSize;
     }
     /**
@@ -120,7 +120,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceUpdateVersion() {
+    public Output</* @Nullable */ Boolean> forceUpdateVersion() {
         return this.forceUpdateVersion;
     }
     /**
@@ -134,7 +134,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    public Output<List<String>> getInstanceTypes() {
+    public Output<List<String>> instanceTypes() {
         return this.instanceTypes;
     }
     /**
@@ -148,7 +148,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -162,7 +162,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block with Launch Template settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ NodeGroupLaunchTemplate> getLaunchTemplate() {
+    public Output</* @Nullable */ NodeGroupLaunchTemplate> launchTemplate() {
         return this.launchTemplate;
     }
     /**
@@ -176,7 +176,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
      * 
      */
-    public Output<String> getNodeGroupName() {
+    public Output<String> nodeGroupName() {
         return this.nodeGroupName;
     }
     /**
@@ -190,7 +190,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
      * 
      */
-    public Output<String> getNodeGroupNamePrefix() {
+    public Output<String> nodeGroupNamePrefix() {
         return this.nodeGroupNamePrefix;
     }
     /**
@@ -204,7 +204,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
      * 
      */
-    public Output<String> getNodeRoleArn() {
+    public Output<String> nodeRoleArn() {
         return this.nodeRoleArn;
     }
     /**
@@ -218,7 +218,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
      * 
      */
-    public Output<String> getReleaseVersion() {
+    public Output<String> releaseVersion() {
         return this.releaseVersion;
     }
     /**
@@ -232,7 +232,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block with remote access settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ NodeGroupRemoteAccess> getRemoteAccess() {
+    public Output</* @Nullable */ NodeGroupRemoteAccess> remoteAccess() {
         return this.remoteAccess;
     }
     /**
@@ -246,7 +246,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return List of objects containing information about underlying resources.
      * 
      */
-    public Output<List<NodeGroupResource>> getResources() {
+    public Output<List<NodeGroupResource>> resources() {
         return this.resources;
     }
     /**
@@ -260,7 +260,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block with scaling settings. Detailed below.
      * 
      */
-    public Output<NodeGroupScalingConfig> getScalingConfig() {
+    public Output<NodeGroupScalingConfig> scalingConfig() {
         return this.scalingConfig;
     }
     /**
@@ -274,7 +274,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Status of the EKS Node Group.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -288,7 +288,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -302,7 +302,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -316,7 +316,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -330,13 +330,13 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<NodeGroupTaint>> getTaints() {
+    public Output</* @Nullable */ List<NodeGroupTaint>> taints() {
         return this.taints;
     }
     @Export(name="updateConfig", type=NodeGroupUpdateConfig.class, parameters={})
     private Output<NodeGroupUpdateConfig> updateConfig;
 
-    public Output<NodeGroupUpdateConfig> getUpdateConfig() {
+    public Output<NodeGroupUpdateConfig> updateConfig() {
         return this.updateConfig;
     }
     /**
@@ -350,7 +350,7 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return EC2 Launch Template version number. While the API accepts values like `$Default` and `$Latest`, the API will convert the value to the associated version number (e.g. `1`) on read and This provider will show a difference on next plan. Using the `default_version` or `latest_version` attribute of the `aws.ec2.LaunchTemplate` resource or data source is recommended for this argument.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

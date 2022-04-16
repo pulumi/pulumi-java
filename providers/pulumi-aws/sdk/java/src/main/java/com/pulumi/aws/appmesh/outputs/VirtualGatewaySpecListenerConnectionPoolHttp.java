@@ -34,14 +34,14 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttp {
      * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
      * 
     */
-    public Integer getMaxConnections() {
+    public Integer maxConnections() {
         return this.maxConnections;
     }
     /**
      * Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
      * 
     */
-    public Optional<Integer> getMaxPendingRequests() {
+    public Optional<Integer> maxPendingRequests() {
         return Optional.ofNullable(this.maxPendingRequests);
     }
 

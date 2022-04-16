@@ -15,7 +15,7 @@ public final class GetFunctionTracingConfig extends com.pulumi.resources.InvokeA
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

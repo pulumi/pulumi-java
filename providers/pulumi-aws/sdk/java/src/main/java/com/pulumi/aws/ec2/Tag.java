@@ -42,7 +42,7 @@ public class Tag extends com.pulumi.resources.CustomResource {
      * @return The tag name.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -56,7 +56,7 @@ public class Tag extends com.pulumi.resources.CustomResource {
      * @return The ID of the EC2 resource to manage the tag for.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -70,7 +70,7 @@ public class Tag extends com.pulumi.resources.CustomResource {
      * @return The value of the tag.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

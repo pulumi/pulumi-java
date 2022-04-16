@@ -23,7 +23,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
 
-    public Output<Integer> getDesiredCapacity() {
+    public Output<Integer> desiredCapacity() {
         return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
     }
 
@@ -57,7 +57,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -69,7 +69,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
@@ -81,7 +81,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
@@ -92,7 +92,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="recurrence")
       private final @Nullable Output<String> recurrence;
 
-    public Output<String> getRecurrence() {
+    public Output<String> recurrence() {
         return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
@@ -103,7 +103,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduledActionName")
       private final @Nullable Output<String> scheduledActionName;
 
-    public Output<String> getScheduledActionName() {
+    public Output<String> scheduledActionName() {
         return this.scheduledActionName == null ? Codegen.empty() : this.scheduledActionName;
     }
 
@@ -115,7 +115,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -126,7 +126,7 @@ public final class ScheduleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

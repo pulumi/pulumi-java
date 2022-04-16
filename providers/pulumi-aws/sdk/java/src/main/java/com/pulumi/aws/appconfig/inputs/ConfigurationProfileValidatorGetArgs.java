@@ -22,7 +22,7 @@ public final class ConfigurationProfileValidatorGetArgs extends com.pulumi.resou
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -33,7 +33,7 @@ public final class ConfigurationProfileValidatorGetArgs extends com.pulumi.resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

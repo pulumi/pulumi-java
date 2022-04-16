@@ -15,7 +15,7 @@ public final class GetInstanceCreditSpecification extends com.pulumi.resources.I
     @Import(name="cpuCredits", required=true)
       private final String cpuCredits;
 
-    public String getCpuCredits() {
+    public String cpuCredits() {
         return this.cpuCredits;
     }
 

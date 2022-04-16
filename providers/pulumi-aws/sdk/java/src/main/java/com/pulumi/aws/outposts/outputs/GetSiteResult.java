@@ -38,20 +38,20 @@ public final class GetSiteResult {
      * AWS Account identifier.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * Description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

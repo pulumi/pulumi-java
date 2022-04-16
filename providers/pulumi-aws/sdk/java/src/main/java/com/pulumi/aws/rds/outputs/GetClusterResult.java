@@ -109,95 +109,95 @@ public final class GetClusterResult {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
-    public Integer getBacktrackWindow() {
+    public Integer backtrackWindow() {
         return this.backtrackWindow;
     }
-    public Integer getBackupRetentionPeriod() {
+    public Integer backupRetentionPeriod() {
         return this.backupRetentionPeriod;
     }
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
-    public List<String> getClusterMembers() {
+    public List<String> clusterMembers() {
         return this.clusterMembers;
     }
-    public String getClusterResourceId() {
+    public String clusterResourceId() {
         return this.clusterResourceId;
     }
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public String getDbClusterParameterGroupName() {
+    public String dbClusterParameterGroupName() {
         return this.dbClusterParameterGroupName;
     }
-    public String getDbSubnetGroupName() {
+    public String dbSubnetGroupName() {
         return this.dbSubnetGroupName;
     }
-    public List<String> getEnabledCloudwatchLogsExports() {
+    public List<String> enabledCloudwatchLogsExports() {
         return this.enabledCloudwatchLogsExports;
     }
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
-    public String getFinalSnapshotIdentifier() {
+    public String finalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier;
     }
-    public String getHostedZoneId() {
+    public String hostedZoneId() {
         return this.hostedZoneId;
     }
-    public Boolean getIamDatabaseAuthenticationEnabled() {
+    public Boolean iamDatabaseAuthenticationEnabled() {
         return this.iamDatabaseAuthenticationEnabled;
     }
-    public List<String> getIamRoles() {
+    public List<String> iamRoles() {
         return this.iamRoles;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
-    public String getMasterUsername() {
+    public String masterUsername() {
         return this.masterUsername;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public String getPreferredBackupWindow() {
+    public String preferredBackupWindow() {
         return this.preferredBackupWindow;
     }
-    public String getPreferredMaintenanceWindow() {
+    public String preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
-    public String getReaderEndpoint() {
+    public String readerEndpoint() {
         return this.readerEndpoint;
     }
-    public String getReplicationSourceIdentifier() {
+    public String replicationSourceIdentifier() {
         return this.replicationSourceIdentifier;
     }
-    public Boolean getStorageEncrypted() {
+    public Boolean storageEncrypted() {
         return this.storageEncrypted;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public List<String> getVpcSecurityGroupIds() {
+    public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 

@@ -23,7 +23,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -34,7 +34,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
@@ -45,7 +45,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
@@ -56,7 +56,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="icmpCode")
       private final @Nullable Output<Integer> icmpCode;
 
-    public Output<Integer> getIcmpCode() {
+    public Output<Integer> icmpCode() {
         return this.icmpCode == null ? Codegen.empty() : this.icmpCode;
     }
 
@@ -67,7 +67,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="icmpType")
       private final @Nullable Output<Integer> icmpType;
 
-    public Output<Integer> getIcmpType() {
+    public Output<Integer> icmpType() {
         return this.icmpType == null ? Codegen.empty() : this.icmpType;
     }
 
@@ -78,7 +78,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> getIpv6CidrBlock() {
+    public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
@@ -89,7 +89,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -100,7 +100,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="ruleNo", required=true)
       private final Output<Integer> ruleNo;
 
-    public Output<Integer> getRuleNo() {
+    public Output<Integer> ruleNo() {
         return this.ruleNo;
     }
 
@@ -111,7 +111,7 @@ public final class DefaultNetworkAclEgressGetArgs extends com.pulumi.resources.R
     @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort;
     }
 

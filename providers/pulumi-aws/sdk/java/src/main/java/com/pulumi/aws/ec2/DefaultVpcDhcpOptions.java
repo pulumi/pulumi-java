@@ -51,19 +51,19 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The ARN of the DHCP Options Set.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     @Export(name="domainNameServers", type=String.class, parameters={})
     private Output<String> domainNameServers;
 
-    public Output<String> getDomainNameServers() {
+    public Output<String> domainNameServers() {
         return this.domainNameServers;
     }
     /**
@@ -77,7 +77,7 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of NETBIOS name servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetbiosNameServers() {
+    public Output</* @Nullable */ List<String>> netbiosNameServers() {
         return this.netbiosNameServers;
     }
     /**
@@ -91,13 +91,13 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
      */
-    public Output</* @Nullable */ String> getNetbiosNodeType() {
+    public Output</* @Nullable */ String> netbiosNodeType() {
         return this.netbiosNodeType;
     }
     @Export(name="ntpServers", type=String.class, parameters={})
     private Output<String> ntpServers;
 
-    public Output<String> getNtpServers() {
+    public Output<String> ntpServers() {
         return this.ntpServers;
     }
     /**
@@ -111,7 +111,7 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the DHCP options set.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -125,13 +125,13 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

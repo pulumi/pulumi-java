@@ -27,7 +27,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionTermination")
       private final @Nullable Output<Boolean> connectionTermination;
 
-    public Output<Boolean> getConnectionTermination() {
+    public Output<Boolean> connectionTermination() {
         return this.connectionTermination == null ? Codegen.empty() : this.connectionTermination;
     }
 
@@ -38,7 +38,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deregistrationDelay")
       private final @Nullable Output<Integer> deregistrationDelay;
 
-    public Output<Integer> getDeregistrationDelay() {
+    public Output<Integer> deregistrationDelay() {
         return this.deregistrationDelay == null ? Codegen.empty() : this.deregistrationDelay;
     }
 
@@ -49,7 +49,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheck")
       private final @Nullable Output<TargetGroupHealthCheckArgs> healthCheck;
 
-    public Output<TargetGroupHealthCheckArgs> getHealthCheck() {
+    public Output<TargetGroupHealthCheckArgs> healthCheck() {
         return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
@@ -60,7 +60,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaMultiValueHeadersEnabled")
       private final @Nullable Output<Boolean> lambdaMultiValueHeadersEnabled;
 
-    public Output<Boolean> getLambdaMultiValueHeadersEnabled() {
+    public Output<Boolean> lambdaMultiValueHeadersEnabled() {
         return this.lambdaMultiValueHeadersEnabled == null ? Codegen.empty() : this.lambdaMultiValueHeadersEnabled;
     }
 
@@ -71,7 +71,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingAlgorithmType")
       private final @Nullable Output<String> loadBalancingAlgorithmType;
 
-    public Output<String> getLoadBalancingAlgorithmType() {
+    public Output<String> loadBalancingAlgorithmType() {
         return this.loadBalancingAlgorithmType == null ? Codegen.empty() : this.loadBalancingAlgorithmType;
     }
 
@@ -82,7 +82,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -104,7 +104,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -115,7 +115,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preserveClientIp")
       private final @Nullable Output<String> preserveClientIp;
 
-    public Output<String> getPreserveClientIp() {
+    public Output<String> preserveClientIp() {
         return this.preserveClientIp == null ? Codegen.empty() : this.preserveClientIp;
     }
 
@@ -126,7 +126,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -137,7 +137,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocolVersion")
       private final @Nullable Output<String> protocolVersion;
 
-    public Output<String> getProtocolVersion() {
+    public Output<String> protocolVersion() {
         return this.protocolVersion == null ? Codegen.empty() : this.protocolVersion;
     }
 
@@ -148,7 +148,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="proxyProtocolV2")
       private final @Nullable Output<Boolean> proxyProtocolV2;
 
-    public Output<Boolean> getProxyProtocolV2() {
+    public Output<Boolean> proxyProtocolV2() {
         return this.proxyProtocolV2 == null ? Codegen.empty() : this.proxyProtocolV2;
     }
 
@@ -159,7 +159,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slowStart")
       private final @Nullable Output<Integer> slowStart;
 
-    public Output<Integer> getSlowStart() {
+    public Output<Integer> slowStart() {
         return this.slowStart == null ? Codegen.empty() : this.slowStart;
     }
 
@@ -170,7 +170,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stickiness")
       private final @Nullable Output<TargetGroupStickinessArgs> stickiness;
 
-    public Output<TargetGroupStickinessArgs> getStickiness() {
+    public Output<TargetGroupStickinessArgs> stickiness() {
         return this.stickiness == null ? Codegen.empty() : this.stickiness;
     }
 
@@ -181,7 +181,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -192,7 +192,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
@@ -203,7 +203,7 @@ public final class TargetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

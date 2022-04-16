@@ -22,7 +22,7 @@ public final class GetBrokerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="brokerId")
       private final @Nullable String brokerId;
 
-    public Optional<String> getBrokerId() {
+    public Optional<String> brokerId() {
         return this.brokerId == null ? Optional.empty() : Optional.ofNullable(this.brokerId);
     }
 
@@ -33,14 +33,14 @@ public final class GetBrokerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="brokerName")
       private final @Nullable String brokerName;
 
-    public Optional<String> getBrokerName() {
+    public Optional<String> brokerName() {
         return this.brokerName == null ? Optional.empty() : Optional.ofNullable(this.brokerName);
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

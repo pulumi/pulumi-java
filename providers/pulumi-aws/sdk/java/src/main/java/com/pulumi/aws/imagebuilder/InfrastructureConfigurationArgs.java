@@ -26,7 +26,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="instanceProfileName", required=true)
       private final Output<String> instanceProfileName;
 
-    public Output<String> getInstanceProfileName() {
+    public Output<String> instanceProfileName() {
         return this.instanceProfileName;
     }
 
@@ -48,7 +48,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
 
-    public Output<List<String>> getInstanceTypes() {
+    public Output<List<String>> instanceTypes() {
         return this.instanceTypes == null ? Codegen.empty() : this.instanceTypes;
     }
 
@@ -59,7 +59,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
 
-    public Output<String> getKeyPair() {
+    public Output<String> keyPair() {
         return this.keyPair == null ? Codegen.empty() : this.keyPair;
     }
 
@@ -70,7 +70,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="logging")
       private final @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
 
-    public Output<InfrastructureConfigurationLoggingArgs> getLogging() {
+    public Output<InfrastructureConfigurationLoggingArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -81,7 +81,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -92,7 +92,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="resourceTags")
       private final @Nullable Output<Map<String,String>> resourceTags;
 
-    public Output<Map<String,String>> getResourceTags() {
+    public Output<Map<String,String>> resourceTags() {
         return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
     }
 
@@ -103,7 +103,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -114,7 +114,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
@@ -125,7 +125,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -136,7 +136,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -147,7 +147,7 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="terminateInstanceOnFailure")
       private final @Nullable Output<Boolean> terminateInstanceOnFailure;
 
-    public Output<Boolean> getTerminateInstanceOnFailure() {
+    public Output<Boolean> terminateInstanceOnFailure() {
         return this.terminateInstanceOnFailure == null ? Codegen.empty() : this.terminateInstanceOnFailure;
     }
 

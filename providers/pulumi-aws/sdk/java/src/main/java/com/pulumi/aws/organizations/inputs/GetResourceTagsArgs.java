@@ -22,7 +22,7 @@ public final class GetResourceTagsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 
@@ -33,7 +33,7 @@ public final class GetResourceTagsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

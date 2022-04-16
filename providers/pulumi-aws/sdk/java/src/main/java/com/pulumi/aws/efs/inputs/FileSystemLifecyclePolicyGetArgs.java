@@ -22,7 +22,7 @@ public final class FileSystemLifecyclePolicyGetArgs extends com.pulumi.resources
     @Import(name="transitionToIa")
       private final @Nullable Output<String> transitionToIa;
 
-    public Output<String> getTransitionToIa() {
+    public Output<String> transitionToIa() {
         return this.transitionToIa == null ? Codegen.empty() : this.transitionToIa;
     }
 
@@ -33,7 +33,7 @@ public final class FileSystemLifecyclePolicyGetArgs extends com.pulumi.resources
     @Import(name="transitionToPrimaryStorageClass")
       private final @Nullable Output<String> transitionToPrimaryStorageClass;
 
-    public Output<String> getTransitionToPrimaryStorageClass() {
+    public Output<String> transitionToPrimaryStorageClass() {
         return this.transitionToPrimaryStorageClass == null ? Codegen.empty() : this.transitionToPrimaryStorageClass;
     }
 

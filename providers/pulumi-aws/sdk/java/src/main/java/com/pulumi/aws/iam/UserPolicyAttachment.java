@@ -42,7 +42,7 @@ public class UserPolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The ARN of the policy you want to apply
      * 
      */
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
     /**
@@ -56,7 +56,7 @@ public class UserPolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The user the policy should be applied to
      * 
      */
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

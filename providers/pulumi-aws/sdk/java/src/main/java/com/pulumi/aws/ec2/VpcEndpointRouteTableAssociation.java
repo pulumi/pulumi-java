@@ -40,7 +40,7 @@ public class VpcEndpointRouteTableAssociation extends com.pulumi.resources.Custo
      * @return Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     /**
@@ -54,7 +54,7 @@ public class VpcEndpointRouteTableAssociation extends com.pulumi.resources.Custo
      * @return Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
      * 
      */
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 

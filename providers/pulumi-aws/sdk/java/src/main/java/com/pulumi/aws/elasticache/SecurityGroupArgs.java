@@ -23,7 +23,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupNames", required=true)
       private final Output<List<String>> securityGroupNames;
 
-    public Output<List<String>> getSecurityGroupNames() {
+    public Output<List<String>> securityGroupNames() {
         return this.securityGroupNames;
     }
 

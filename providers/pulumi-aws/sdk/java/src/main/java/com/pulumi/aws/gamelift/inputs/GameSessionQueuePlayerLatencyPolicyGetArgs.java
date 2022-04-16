@@ -22,7 +22,7 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends com.pulumi
     @Import(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
       private final Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
 
-    public Output<Integer> getMaximumIndividualPlayerLatencyMilliseconds() {
+    public Output<Integer> maximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
     }
 
@@ -33,7 +33,7 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends com.pulumi
     @Import(name="policyDurationSeconds")
       private final @Nullable Output<Integer> policyDurationSeconds;
 
-    public Output<Integer> getPolicyDurationSeconds() {
+    public Output<Integer> policyDurationSeconds() {
         return this.policyDurationSeconds == null ? Codegen.empty() : this.policyDurationSeconds;
     }
 

@@ -63,42 +63,42 @@ public final class GroupMixedInstancesPolicyInstancesDistribution {
      * Strategy to use when launching on-demand instances. Valid values: `prioritized`. Default: `prioritized`.
      * 
     */
-    public Optional<String> getOnDemandAllocationStrategy() {
+    public Optional<String> onDemandAllocationStrategy() {
         return Optional.ofNullable(this.onDemandAllocationStrategy);
     }
     /**
      * Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: `0`.
      * 
     */
-    public Optional<Integer> getOnDemandBaseCapacity() {
+    public Optional<Integer> onDemandBaseCapacity() {
         return Optional.ofNullable(this.onDemandBaseCapacity);
     }
     /**
      * Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `100`.
      * 
     */
-    public Optional<Integer> getOnDemandPercentageAboveBaseCapacity() {
+    public Optional<Integer> onDemandPercentageAboveBaseCapacity() {
         return Optional.ofNullable(this.onDemandPercentageAboveBaseCapacity);
     }
     /**
      * How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`, `capacity-optimized-prioritized`. Default: `lowest-price`.
      * 
     */
-    public Optional<String> getSpotAllocationStrategy() {
+    public Optional<String> spotAllocationStrategy() {
         return Optional.ofNullable(this.spotAllocationStrategy);
     }
     /**
      * Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Only available with `spot_allocation_strategy` set to `lowest-price`. Otherwise it must be set to `0`, if it has been defined before. Default: `2`.
      * 
     */
-    public Optional<Integer> getSpotInstancePools() {
+    public Optional<Integer> spotInstancePools() {
         return Optional.ofNullable(this.spotInstancePools);
     }
     /**
      * Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.
      * 
     */
-    public Optional<String> getSpotMaxPrice() {
+    public Optional<String> spotMaxPrice() {
         return Optional.ofNullable(this.spotMaxPrice);
     }
 

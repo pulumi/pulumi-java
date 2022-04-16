@@ -33,7 +33,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends com.pu
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> allQueryArguments;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> getAllQueryArguments() {
+    public Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -49,7 +49,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends com.pu
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> body;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> getBody() {
+    public Output<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -60,7 +60,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends com.pu
     @Import(name="method")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> method;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> getMethod() {
+    public Output<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -71,7 +71,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends com.pu
     @Import(name="queryString")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> queryString;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> getQueryString() {
+    public Output<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -82,7 +82,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends com.pu
     @Import(name="singleHeader")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> singleHeader;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> getSingleHeader() {
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -98,7 +98,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends com.pu
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> singleQueryArgument;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> getSingleQueryArgument() {
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -109,7 +109,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends com.pu
     @Import(name="uriPath")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> uriPath;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> getUriPath() {
+    public Output<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

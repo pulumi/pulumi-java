@@ -150,128 +150,128 @@ public final class GetGroupResult {
      * The Amazon Resource Name (ARN) of the Auto Scaling group.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * One or more Availability Zones for the group.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
-    public Integer getDefaultCooldown() {
+    public Integer defaultCooldown() {
         return this.defaultCooldown;
     }
     /**
      * The desired size of the group.
      * 
     */
-    public Integer getDesiredCapacity() {
+    public Integer desiredCapacity() {
         return this.desiredCapacity;
     }
     /**
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service.
      * 
     */
-    public Integer getHealthCheckGracePeriod() {
+    public Integer healthCheckGracePeriod() {
         return this.healthCheckGracePeriod;
     }
     /**
      * The service to use for the health checks. The valid values are EC2 and ELB.
      * 
     */
-    public String getHealthCheckType() {
+    public String healthCheckType() {
         return this.healthCheckType;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the associated launch configuration.
      * 
     */
-    public String getLaunchConfiguration() {
+    public String launchConfiguration() {
         return this.launchConfiguration;
     }
-    public List<GetGroupLaunchTemplate> getLaunchTemplates() {
+    public List<GetGroupLaunchTemplate> launchTemplates() {
         return this.launchTemplates;
     }
     /**
      * One or more load balancers associated with the group.
      * 
     */
-    public List<String> getLoadBalancers() {
+    public List<String> loadBalancers() {
         return this.loadBalancers;
     }
     /**
      * The maximum size of the group.
      * 
     */
-    public Integer getMaxSize() {
+    public Integer maxSize() {
         return this.maxSize;
     }
     /**
      * The minimum size of the group.
      * 
     */
-    public Integer getMinSize() {
+    public Integer minSize() {
         return this.minSize;
     }
     /**
      * Name of the Auto Scaling Group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Boolean getNewInstancesProtectedFromScaleIn() {
+    public Boolean newInstancesProtectedFromScaleIn() {
         return this.newInstancesProtectedFromScaleIn;
     }
     /**
      * The name of the placement group into which to launch your instances, if any. For more information, see Placement Groups (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the Amazon Elastic Compute Cloud User Guide.
      * 
     */
-    public String getPlacementGroup() {
+    public String placementGroup() {
         return this.placementGroup;
     }
     /**
      * The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf.
      * 
     */
-    public String getServiceLinkedRoleArn() {
+    public String serviceLinkedRoleArn() {
         return this.serviceLinkedRoleArn;
     }
     /**
      * The current state of the group when DeleteAutoScalingGroup is in progress.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The Amazon Resource Names (ARN) of the target groups for your load balancer.
      * 
     */
-    public List<String> getTargetGroupArns() {
+    public List<String> targetGroupArns() {
         return this.targetGroupArns;
     }
     /**
      * The termination policies for the group.
      * 
     */
-    public List<String> getTerminationPolicies() {
+    public List<String> terminationPolicies() {
         return this.terminationPolicies;
     }
     /**
      * VPC ID for the group.
      * 
     */
-    public String getVpcZoneIdentifier() {
+    public String vpcZoneIdentifier() {
         return this.vpcZoneIdentifier;
     }
 

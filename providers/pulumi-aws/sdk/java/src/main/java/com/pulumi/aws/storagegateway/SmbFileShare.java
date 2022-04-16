@@ -44,7 +44,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The files and folders on this share will only be visible to users with read access. Default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAccessBasedEnumeration() {
+    public Output</* @Nullable */ Boolean> accessBasedEnumeration() {
         return this.accessBasedEnumeration;
     }
     /**
@@ -58,7 +58,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAdminUserLists() {
+    public Output</* @Nullable */ List<String>> adminUserLists() {
         return this.adminUserLists;
     }
     /**
@@ -72,7 +72,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the SMB File Share.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -86,7 +86,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
      * 
      */
-    public Output</* @Nullable */ String> getAuditDestinationArn() {
+    public Output</* @Nullable */ String> auditDestinationArn() {
         return this.auditDestinationArn;
     }
     /**
@@ -100,7 +100,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
      * 
      */
-    public Output</* @Nullable */ String> getAuthentication() {
+    public Output</* @Nullable */ String> authentication() {
         return this.authentication;
     }
     /**
@@ -114,7 +114,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
      * 
      */
-    public Output</* @Nullable */ String> getBucketRegion() {
+    public Output</* @Nullable */ String> bucketRegion() {
         return this.bucketRegion;
     }
     /**
@@ -128,7 +128,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    public Output</* @Nullable */ SmbFileShareCacheAttributes> getCacheAttributes() {
+    public Output</* @Nullable */ SmbFileShareCacheAttributes> cacheAttributes() {
         return this.cacheAttributes;
     }
     /**
@@ -142,7 +142,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
      * 
      */
-    public Output</* @Nullable */ String> getCaseSensitivity() {
+    public Output</* @Nullable */ String> caseSensitivity() {
         return this.caseSensitivity;
     }
     /**
@@ -156,7 +156,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The default [storage class](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-DefaultStorageClass) for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultStorageClass() {
+    public Output</* @Nullable */ String> defaultStorageClass() {
         return this.defaultStorageClass;
     }
     /**
@@ -170,7 +170,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
      * 
      */
-    public Output<String> getFileShareName() {
+    public Output<String> fileShareName() {
         return this.fileShareName;
     }
     /**
@@ -184,7 +184,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return ID of the SMB File Share.
      * 
      */
-    public Output<String> getFileshareId() {
+    public Output<String> fileshareId() {
         return this.fileshareId;
     }
     /**
@@ -198,7 +198,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the file gateway.
      * 
      */
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
     /**
@@ -212,7 +212,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getGuessMimeTypeEnabled() {
+    public Output</* @Nullable */ Boolean> guessMimeTypeEnabled() {
         return this.guessMimeTypeEnabled;
     }
     /**
@@ -226,7 +226,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInvalidUserLists() {
+    public Output</* @Nullable */ List<String>> invalidUserLists() {
         return this.invalidUserLists;
     }
     /**
@@ -240,7 +240,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getKmsEncrypted() {
+    public Output</* @Nullable */ Boolean> kmsEncrypted() {
         return this.kmsEncrypted;
     }
     /**
@@ -254,7 +254,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyArn() {
+    public Output</* @Nullable */ String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -268,7 +268,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The ARN of the backed storage used for storing file data.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -282,7 +282,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
      * 
      */
-    public Output</* @Nullable */ String> getNotificationPolicy() {
+    public Output</* @Nullable */ String> notificationPolicy() {
         return this.notificationPolicy;
     }
     /**
@@ -296,7 +296,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Access Control List permission for S3 bucket objects. Defaults to `private`.
      * 
      */
-    public Output</* @Nullable */ String> getObjectAcl() {
+    public Output</* @Nullable */ String> objectAcl() {
         return this.objectAcl;
     }
     /**
@@ -310,7 +310,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
      * 
      */
-    public Output<Boolean> getOplocksEnabled() {
+    public Output<Boolean> oplocksEnabled() {
         return this.oplocksEnabled;
     }
     /**
@@ -324,7 +324,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return File share path used by the NFS client to identify the mount point.
      * 
      */
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
     /**
@@ -338,7 +338,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReadOnly() {
+    public Output</* @Nullable */ Boolean> readOnly() {
         return this.readOnly;
     }
     /**
@@ -352,7 +352,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequesterPays() {
+    public Output</* @Nullable */ Boolean> requesterPays() {
         return this.requesterPays;
     }
     /**
@@ -366,7 +366,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -380,7 +380,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSmbAclEnabled() {
+    public Output</* @Nullable */ Boolean> smbAclEnabled() {
         return this.smbAclEnabled;
     }
     /**
@@ -394,7 +394,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -408,7 +408,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -422,7 +422,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return A list of users in the Active Directory that are allowed to access the file share. If you need to specify an Active directory group, add '@' before the name of the group. It will be set on Allowed group in AWS console. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getValidUserLists() {
+    public Output</* @Nullable */ List<String>> validUserLists() {
         return this.validUserLists;
     }
     /**
@@ -436,7 +436,7 @@ public class SmbFileShare extends com.pulumi.resources.CustomResource {
      * @return The DNS name of the VPC endpoint for S3 private link.
      * 
      */
-    public Output</* @Nullable */ String> getVpcEndpointDnsName() {
+    public Output</* @Nullable */ String> vpcEndpointDnsName() {
         return this.vpcEndpointDnsName;
     }
 

@@ -45,7 +45,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The ARN of the service.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The description of the service.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
      * 
      */
-    public Output</* @Nullable */ ServiceDnsConfig> getDnsConfig() {
+    public Output</* @Nullable */ ServiceDnsConfig> dnsConfig() {
         return this.dnsConfig;
     }
     /**
@@ -87,7 +87,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -101,7 +101,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
      * 
      */
-    public Output</* @Nullable */ ServiceHealthCheckConfig> getHealthCheckConfig() {
+    public Output</* @Nullable */ ServiceHealthCheckConfig> healthCheckConfig() {
         return this.healthCheckConfig;
     }
     /**
@@ -115,7 +115,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains settings for ECS managed health checks.
      * 
      */
-    public Output</* @Nullable */ ServiceHealthCheckCustomConfig> getHealthCheckCustomConfig() {
+    public Output</* @Nullable */ ServiceHealthCheckCustomConfig> healthCheckCustomConfig() {
         return this.healthCheckCustomConfig;
     }
     /**
@@ -129,7 +129,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The name of the service.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +143,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The ID of the namespace to use for DNS configuration.
      * 
      */
-    public Output<String> getNamespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId;
     }
     /**
@@ -157,7 +157,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the service. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +171,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

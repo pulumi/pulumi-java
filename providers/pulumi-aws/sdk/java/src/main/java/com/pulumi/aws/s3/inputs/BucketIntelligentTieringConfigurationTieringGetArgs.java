@@ -22,7 +22,7 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends c
     @Import(name="accessTier", required=true)
       private final Output<String> accessTier;
 
-    public Output<String> getAccessTier() {
+    public Output<String> accessTier() {
         return this.accessTier;
     }
 
@@ -33,7 +33,7 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends c
     @Import(name="days", required=true)
       private final Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days;
     }
 

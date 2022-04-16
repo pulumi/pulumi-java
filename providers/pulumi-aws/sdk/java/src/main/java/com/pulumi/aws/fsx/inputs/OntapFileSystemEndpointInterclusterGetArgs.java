@@ -23,7 +23,7 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends com.pulumi
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -34,7 +34,7 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends com.pulumi
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 

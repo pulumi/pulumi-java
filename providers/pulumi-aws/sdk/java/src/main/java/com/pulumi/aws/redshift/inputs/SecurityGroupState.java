@@ -24,7 +24,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ingress")
       private final @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
-    public Output<List<SecurityGroupIngressGetArgs>> getIngress() {
+    public Output<List<SecurityGroupIngressGetArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -46,7 +46,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

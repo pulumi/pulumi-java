@@ -20,14 +20,14 @@ public final class RailsAppLayerCloudwatchConfigurationGetArgs extends com.pulum
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
-    public Output<List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
+    public Output<List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

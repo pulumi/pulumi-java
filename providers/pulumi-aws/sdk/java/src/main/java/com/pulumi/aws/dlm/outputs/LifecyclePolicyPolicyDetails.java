@@ -42,21 +42,21 @@ public final class LifecyclePolicyPolicyDetails {
      * A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
      * 
     */
-    public List<String> getResourceTypes() {
+    public List<String> resourceTypes() {
         return this.resourceTypes;
     }
     /**
      * See the `schedule` configuration block.
      * 
     */
-    public List<LifecyclePolicyPolicyDetailsSchedule> getSchedules() {
+    public List<LifecyclePolicyPolicyDetailsSchedule> schedules() {
         return this.schedules;
     }
     /**
      * A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
      * 
     */
-    public Map<String,String> getTargetTags() {
+    public Map<String,String> targetTags() {
         return this.targetTags;
     }
 

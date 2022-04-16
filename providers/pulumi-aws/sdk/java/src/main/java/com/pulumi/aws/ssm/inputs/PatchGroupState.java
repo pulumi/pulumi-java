@@ -22,7 +22,7 @@ public final class PatchGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="baselineId")
       private final @Nullable Output<String> baselineId;
 
-    public Output<String> getBaselineId() {
+    public Output<String> baselineId() {
         return this.baselineId == null ? Codegen.empty() : this.baselineId;
     }
 
@@ -33,7 +33,7 @@ public final class PatchGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="patchGroup")
       private final @Nullable Output<String> patchGroup;
 
-    public Output<String> getPatchGroup() {
+    public Output<String> patchGroup() {
         return this.patchGroup == null ? Codegen.empty() : this.patchGroup;
     }
 

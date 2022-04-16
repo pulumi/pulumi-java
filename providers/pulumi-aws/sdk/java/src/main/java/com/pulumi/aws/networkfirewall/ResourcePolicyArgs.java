@@ -17,7 +17,7 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -28,7 +28,7 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

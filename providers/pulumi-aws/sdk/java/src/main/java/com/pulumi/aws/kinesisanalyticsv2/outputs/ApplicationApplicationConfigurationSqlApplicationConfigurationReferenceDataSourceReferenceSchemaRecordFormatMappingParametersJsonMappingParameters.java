@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The path to the top-level parent that contains the records.
      * 
     */
-    public String getRecordRowPath() {
+    public String recordRowPath() {
         return this.recordRowPath;
     }
 

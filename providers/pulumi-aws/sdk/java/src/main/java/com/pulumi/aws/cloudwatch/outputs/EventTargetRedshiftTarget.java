@@ -63,42 +63,42 @@ public final class EventTargetRedshiftTarget {
      * The name of the database.
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * The database user name.
      * 
     */
-    public Optional<String> getDbUser() {
+    public Optional<String> dbUser() {
         return Optional.ofNullable(this.dbUser);
     }
     /**
      * The name or ARN of the secret that enables access to the database.
      * 
     */
-    public Optional<String> getSecretsManagerArn() {
+    public Optional<String> secretsManagerArn() {
         return Optional.ofNullable(this.secretsManagerArn);
     }
     /**
      * The SQL statement text to run.
      * 
     */
-    public Optional<String> getSql() {
+    public Optional<String> sql() {
         return Optional.ofNullable(this.sql);
     }
     /**
      * The name of the SQL statement.
      * 
     */
-    public Optional<String> getStatementName() {
+    public Optional<String> statementName() {
         return Optional.ofNullable(this.statementName);
     }
     /**
      * Indicates whether to send an event back to EventBridge after the SQL statement runs.
      * 
     */
-    public Optional<Boolean> getWithEvent() {
+    public Optional<Boolean> withEvent() {
         return Optional.ofNullable(this.withEvent);
     }
 

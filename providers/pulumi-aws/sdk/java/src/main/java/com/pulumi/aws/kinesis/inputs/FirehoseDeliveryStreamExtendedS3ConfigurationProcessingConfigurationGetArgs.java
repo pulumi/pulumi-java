@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     @Import(name="processors")
       private final @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors;
 
-    public Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> getProcessors() {
+    public Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors() {
         return this.processors == null ? Codegen.empty() : this.processors;
     }
 

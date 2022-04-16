@@ -21,7 +21,7 @@ public final class EventPermissionConditionArgs extends com.pulumi.resources.Res
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,7 +32,7 @@ public final class EventPermissionConditionArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -43,7 +43,7 @@ public final class EventPermissionConditionArgs extends com.pulumi.resources.Res
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

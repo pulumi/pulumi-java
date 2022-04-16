@@ -53,35 +53,35 @@ public final class GetOrganizationNonMasterAccount {
      * ARN of the root
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Email of the account
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * Identifier of the root
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the policy type
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The status of the policy type as it relates to the associated root
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

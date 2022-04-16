@@ -23,7 +23,7 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
     @Import(name="replicationConfiguration")
       private final @Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
 
-    public Output<ReplicationConfigurationReplicationConfigurationGetArgs> getReplicationConfiguration() {
+    public Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration() {
         return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
     }
 

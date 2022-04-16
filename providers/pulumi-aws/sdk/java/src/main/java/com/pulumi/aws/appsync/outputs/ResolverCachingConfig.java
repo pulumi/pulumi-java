@@ -36,14 +36,14 @@ public final class ResolverCachingConfig {
      * The list of caching key.
      * 
     */
-    public List<String> getCachingKeys() {
+    public List<String> cachingKeys() {
         return this.cachingKeys == null ? List.of() : this.cachingKeys;
     }
     /**
      * The TTL in seconds.
      * 
     */
-    public Optional<Integer> getTtl() {
+    public Optional<Integer> ttl() {
         return Optional.ofNullable(this.ttl);
     }
 

@@ -35,14 +35,14 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      * Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
      * 
     */
-    public Optional<String> getHeaderBehavior() {
+    public Optional<String> headerBehavior() {
         return Optional.ofNullable(this.headerBehavior);
     }
     /**
      * Object that contains a list of header names. See Items for more information.
      * 
     */
-    public Optional<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders> getHeaders() {
+    public Optional<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders> headers() {
         return Optional.ofNullable(this.headers);
     }
 

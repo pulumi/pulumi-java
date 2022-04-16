@@ -93,73 +93,73 @@ public final class GetRoleResult {
      * The Amazon Resource Name (ARN) specifying the role.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The policy document associated with the role.
      * 
     */
-    public String getAssumeRolePolicy() {
+    public String assumeRolePolicy() {
         return this.assumeRolePolicy;
     }
     /**
      * Creation date of the role in RFC 3339 format.
      * 
     */
-    public String getCreateDate() {
+    public String createDate() {
         return this.createDate;
     }
     /**
      * Description for the role.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Maximum session duration.
      * 
     */
-    public Integer getMaxSessionDuration() {
+    public Integer maxSessionDuration() {
         return this.maxSessionDuration;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The path to the role.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The ARN of the policy that is used to set the permissions boundary for the role.
      * 
     */
-    public String getPermissionsBoundary() {
+    public String permissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
      * The tags attached to the role.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The stable and unique string identifying the role.
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
 

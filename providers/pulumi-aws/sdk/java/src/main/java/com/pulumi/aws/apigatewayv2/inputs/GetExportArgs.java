@@ -22,7 +22,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="apiId", required=true)
       private final String apiId;
 
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="exportVersion")
       private final @Nullable String exportVersion;
 
-    public Optional<String> getExportVersion() {
+    public Optional<String> exportVersion() {
         return this.exportVersion == null ? Optional.empty() : Optional.ofNullable(this.exportVersion);
     }
 
@@ -44,7 +44,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="includeExtensions")
       private final @Nullable Boolean includeExtensions;
 
-    public Optional<Boolean> getIncludeExtensions() {
+    public Optional<Boolean> includeExtensions() {
         return this.includeExtensions == null ? Optional.empty() : Optional.ofNullable(this.includeExtensions);
     }
 
@@ -55,7 +55,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputType", required=true)
       private final String outputType;
 
-    public String getOutputType() {
+    public String outputType() {
         return this.outputType;
     }
 
@@ -66,7 +66,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="specification", required=true)
       private final String specification;
 
-    public String getSpecification() {
+    public String specification() {
         return this.specification;
     }
 
@@ -77,7 +77,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageName")
       private final @Nullable String stageName;
 
-    public Optional<String> getStageName() {
+    public Optional<String> stageName() {
         return this.stageName == null ? Optional.empty() : Optional.ofNullable(this.stageName);
     }
 

@@ -23,7 +23,7 @@ public final class ReadinessCheckState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ReadinessCheckState extends com.pulumi.resources.ResourceArgs
     @Import(name="readinessCheckName")
       private final @Nullable Output<String> readinessCheckName;
 
-    public Output<String> getReadinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName == null ? Codegen.empty() : this.readinessCheckName;
     }
 
@@ -45,7 +45,7 @@ public final class ReadinessCheckState extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
     }
 
@@ -56,7 +56,7 @@ public final class ReadinessCheckState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class ReadinessCheckState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

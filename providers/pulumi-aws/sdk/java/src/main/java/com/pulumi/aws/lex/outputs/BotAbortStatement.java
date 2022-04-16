@@ -42,7 +42,7 @@ public final class BotAbortStatement {
      * are documented under message.
      * 
     */
-    public List<BotAbortStatementMessage> getMessages() {
+    public List<BotAbortStatementMessage> messages() {
         return this.messages;
     }
     /**
@@ -51,7 +51,7 @@ public final class BotAbortStatement {
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
      * 
     */
-    public Optional<String> getResponseCard() {
+    public Optional<String> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
 

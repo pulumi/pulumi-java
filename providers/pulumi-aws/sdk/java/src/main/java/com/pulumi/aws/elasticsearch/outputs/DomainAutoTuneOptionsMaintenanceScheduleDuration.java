@@ -33,14 +33,14 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleDuration {
      * The unit of time specifying the duration of an Auto-Tune maintenance window. Valid values: `HOURS`.
      * 
     */
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
     /**
      * An integer specifying the value of the duration of an Auto-Tune maintenance window.
      * 
     */
-    public Integer getValue() {
+    public Integer value() {
         return this.value;
     }
 

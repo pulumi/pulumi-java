@@ -22,7 +22,7 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessPointId", required=true)
       private final String accessPointId;
 
-    public String getAccessPointId() {
+    public String accessPointId() {
         return this.accessPointId;
     }
 
@@ -33,7 +33,7 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

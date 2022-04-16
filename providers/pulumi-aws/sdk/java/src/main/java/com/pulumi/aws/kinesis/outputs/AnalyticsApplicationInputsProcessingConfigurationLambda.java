@@ -32,14 +32,14 @@ public final class AnalyticsApplicationInputsProcessingConfigurationLambda {
      * The ARN of the Lambda function.
      * 
     */
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
     /**
      * The ARN of the IAM Role used to access the Lambda function.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

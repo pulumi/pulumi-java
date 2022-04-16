@@ -22,7 +22,7 @@ public final class RealtimeLogConfigEndpointGetArgs extends com.pulumi.resources
     @Import(name="kinesisStreamConfig", required=true)
       private final Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig;
 
-    public Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> getKinesisStreamConfig() {
+    public Output<RealtimeLogConfigEndpointKinesisStreamConfigGetArgs> kinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
 
@@ -33,7 +33,7 @@ public final class RealtimeLogConfigEndpointGetArgs extends com.pulumi.resources
     @Import(name="streamType", required=true)
       private final Output<String> streamType;
 
-    public Output<String> getStreamType() {
+    public Output<String> streamType() {
         return this.streamType;
     }
 

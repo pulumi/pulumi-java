@@ -34,14 +34,14 @@ public final class UserPoolDeviceConfiguration {
      * Whether a challenge is required on a new device. Only applicable to a new device.
      * 
     */
-    public Optional<Boolean> getChallengeRequiredOnNewDevice() {
+    public Optional<Boolean> challengeRequiredOnNewDevice() {
         return Optional.ofNullable(this.challengeRequiredOnNewDevice);
     }
     /**
      * Whether a device is only remembered on user prompt. `false` equates to "Always" remember, `true` is "User Opt In," and not using a `device_configuration` block is "No."
      * 
     */
-    public Optional<Boolean> getDeviceOnlyRememberedOnUserPrompt() {
+    public Optional<Boolean> deviceOnlyRememberedOnUserPrompt() {
         return Optional.ofNullable(this.deviceOnlyRememberedOnUserPrompt);
     }
 

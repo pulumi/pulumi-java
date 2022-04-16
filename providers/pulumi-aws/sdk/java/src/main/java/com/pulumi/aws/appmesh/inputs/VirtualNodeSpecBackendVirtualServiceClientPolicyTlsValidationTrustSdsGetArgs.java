@@ -21,7 +21,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 

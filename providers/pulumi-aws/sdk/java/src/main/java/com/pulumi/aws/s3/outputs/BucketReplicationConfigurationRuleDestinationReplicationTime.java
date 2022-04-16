@@ -35,14 +35,14 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTime 
      * Threshold within which objects are to be replicated. The only valid value is `15`.
      * 
     */
-    public Optional<Integer> getMinutes() {
+    public Optional<Integer> minutes() {
         return Optional.ofNullable(this.minutes);
     }
     /**
      * The status of RTC. Either `Enabled` or `Disabled`.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

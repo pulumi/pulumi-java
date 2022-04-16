@@ -23,7 +23,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends com.pulumi.resources
     @Import(name="computeTypeName")
       private final @Nullable Output<String> computeTypeName;
 
-    public Output<String> getComputeTypeName() {
+    public Output<String> computeTypeName() {
         return this.computeTypeName == null ? Codegen.empty() : this.computeTypeName;
     }
 
@@ -34,7 +34,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends com.pulumi.resources
     @Import(name="rootVolumeSizeGib")
       private final @Nullable Output<Integer> rootVolumeSizeGib;
 
-    public Output<Integer> getRootVolumeSizeGib() {
+    public Output<Integer> rootVolumeSizeGib() {
         return this.rootVolumeSizeGib == null ? Codegen.empty() : this.rootVolumeSizeGib;
     }
 
@@ -45,7 +45,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends com.pulumi.resources
     @Import(name="runningMode")
       private final @Nullable Output<String> runningMode;
 
-    public Output<String> getRunningMode() {
+    public Output<String> runningMode() {
         return this.runningMode == null ? Codegen.empty() : this.runningMode;
     }
 
@@ -56,7 +56,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends com.pulumi.resources
     @Import(name="runningModeAutoStopTimeoutInMinutes")
       private final @Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes;
 
-    public Output<Integer> getRunningModeAutoStopTimeoutInMinutes() {
+    public Output<Integer> runningModeAutoStopTimeoutInMinutes() {
         return this.runningModeAutoStopTimeoutInMinutes == null ? Codegen.empty() : this.runningModeAutoStopTimeoutInMinutes;
     }
 
@@ -67,7 +67,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends com.pulumi.resources
     @Import(name="userVolumeSizeGib")
       private final @Nullable Output<Integer> userVolumeSizeGib;
 
-    public Output<Integer> getUserVolumeSizeGib() {
+    public Output<Integer> userVolumeSizeGib() {
         return this.userVolumeSizeGib == null ? Codegen.empty() : this.userVolumeSizeGib;
     }
 

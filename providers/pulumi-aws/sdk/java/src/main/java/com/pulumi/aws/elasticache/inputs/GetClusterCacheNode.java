@@ -16,7 +16,7 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="address", required=true)
       private final String address;
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
 
@@ -27,14 +27,14 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone", required=true)
       private final String availabilityZone;
 
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

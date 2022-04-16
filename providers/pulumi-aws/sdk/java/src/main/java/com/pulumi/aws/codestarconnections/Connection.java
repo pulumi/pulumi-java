@@ -43,7 +43,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The codestar connection ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The codestar connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
      * 
      */
-    public Output<String> getConnectionStatus() {
+    public Output<String> connectionStatus() {
         return this.connectionStatus;
     }
     /**
@@ -71,7 +71,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
      * 
      */
-    public Output</* @Nullable */ String> getHostArn() {
+    public Output</* @Nullable */ String> hostArn() {
         return this.hostArn;
     }
     /**
@@ -85,7 +85,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
      * 
      */
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
     /**
@@ -113,7 +113,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Map of key-value resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +127,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

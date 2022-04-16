@@ -22,7 +22,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends c
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
-    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 

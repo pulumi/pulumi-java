@@ -25,14 +25,14 @@ public final class MaintenanceWindowTaskTarget {
         this.values = values;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The array of strings.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

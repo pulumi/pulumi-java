@@ -15,28 +15,28 @@ public final class GetProxyAuth extends com.pulumi.resources.InvokeArgs {
     @Import(name="authScheme", required=true)
       private final String authScheme;
 
-    public String getAuthScheme() {
+    public String authScheme() {
         return this.authScheme;
     }
 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="iamAuth", required=true)
       private final String iamAuth;
 
-    public String getIamAuth() {
+    public String iamAuth() {
         return this.iamAuth;
     }
 
     @Import(name="secretArn", required=true)
       private final String secretArn;
 
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 

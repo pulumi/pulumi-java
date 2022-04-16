@@ -21,7 +21,7 @@ public final class ReplicationConfigurationReplicationConfigurationArgs extends 
     @Import(name="rule", required=true)
       private final Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule;
 
-    public Output<ReplicationConfigurationReplicationConfigurationRuleArgs> getRule() {
+    public Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule() {
         return this.rule;
     }
 

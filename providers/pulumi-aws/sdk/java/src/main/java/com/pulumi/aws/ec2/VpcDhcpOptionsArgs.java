@@ -24,7 +24,7 @@ public final class VpcDhcpOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -35,7 +35,7 @@ public final class VpcDhcpOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="domainNameServers")
       private final @Nullable Output<List<String>> domainNameServers;
 
-    public Output<List<String>> getDomainNameServers() {
+    public Output<List<String>> domainNameServers() {
         return this.domainNameServers == null ? Codegen.empty() : this.domainNameServers;
     }
 
@@ -46,7 +46,7 @@ public final class VpcDhcpOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
 
-    public Output<List<String>> getNetbiosNameServers() {
+    public Output<List<String>> netbiosNameServers() {
         return this.netbiosNameServers == null ? Codegen.empty() : this.netbiosNameServers;
     }
 
@@ -57,7 +57,7 @@ public final class VpcDhcpOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="netbiosNodeType")
       private final @Nullable Output<String> netbiosNodeType;
 
-    public Output<String> getNetbiosNodeType() {
+    public Output<String> netbiosNodeType() {
         return this.netbiosNodeType == null ? Codegen.empty() : this.netbiosNodeType;
     }
 
@@ -68,7 +68,7 @@ public final class VpcDhcpOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ntpServers")
       private final @Nullable Output<List<String>> ntpServers;
 
-    public Output<List<String>> getNtpServers() {
+    public Output<List<String>> ntpServers() {
         return this.ntpServers == null ? Codegen.empty() : this.ntpServers;
     }
 
@@ -79,7 +79,7 @@ public final class VpcDhcpOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -28,7 +28,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<String> excessCapacityTerminationPolicy;
 
-    public Output<String> getExcessCapacityTerminationPolicy() {
+    public Output<String> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Codegen.empty() : this.excessCapacityTerminationPolicy;
     }
 
@@ -39,7 +39,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchTemplateConfig")
       private final @Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig;
 
-    public Output<FleetLaunchTemplateConfigGetArgs> getLaunchTemplateConfig() {
+    public Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig() {
         return this.launchTemplateConfig == null ? Codegen.empty() : this.launchTemplateConfig;
     }
 
@@ -50,7 +50,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="onDemandOptions")
       private final @Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions;
 
-    public Output<FleetOnDemandOptionsGetArgs> getOnDemandOptions() {
+    public Output<FleetOnDemandOptionsGetArgs> onDemandOptions() {
         return this.onDemandOptions == null ? Codegen.empty() : this.onDemandOptions;
     }
 
@@ -61,7 +61,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
-    public Output<Boolean> getReplaceUnhealthyInstances() {
+    public Output<Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Codegen.empty() : this.replaceUnhealthyInstances;
     }
 
@@ -72,7 +72,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="spotOptions")
       private final @Nullable Output<FleetSpotOptionsGetArgs> spotOptions;
 
-    public Output<FleetSpotOptionsGetArgs> getSpotOptions() {
+    public Output<FleetSpotOptionsGetArgs> spotOptions() {
         return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
     }
 
@@ -83,7 +83,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -94,7 +94,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -105,7 +105,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetCapacitySpecification")
       private final @Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification;
 
-    public Output<FleetTargetCapacitySpecificationGetArgs> getTargetCapacitySpecification() {
+    public Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification() {
         return this.targetCapacitySpecification == null ? Codegen.empty() : this.targetCapacitySpecification;
     }
 
@@ -116,7 +116,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="terminateInstances")
       private final @Nullable Output<Boolean> terminateInstances;
 
-    public Output<Boolean> getTerminateInstances() {
+    public Output<Boolean> terminateInstances() {
         return this.terminateInstances == null ? Codegen.empty() : this.terminateInstances;
     }
 
@@ -127,7 +127,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
-    public Output<Boolean> getTerminateInstancesWithExpiration() {
+    public Output<Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Codegen.empty() : this.terminateInstancesWithExpiration;
     }
 
@@ -138,7 +138,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

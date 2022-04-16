@@ -22,7 +22,7 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="latest")
       private final @Nullable Boolean latest;
 
-    public Optional<Boolean> getLatest() {
+    public Optional<Boolean> latest() {
         return this.latest == null ? Optional.empty() : Optional.ofNullable(this.latest);
     }
 
@@ -33,7 +33,7 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -44,7 +44,7 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="namePrefix")
       private final @Nullable String namePrefix;
 
-    public Optional<String> getNamePrefix() {
+    public Optional<String> namePrefix() {
         return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
     }
 
@@ -55,7 +55,7 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="pathPrefix")
       private final @Nullable String pathPrefix;
 
-    public Optional<String> getPathPrefix() {
+    public Optional<String> pathPrefix() {
         return this.pathPrefix == null ? Optional.empty() : Optional.ofNullable(this.pathPrefix);
     }
 

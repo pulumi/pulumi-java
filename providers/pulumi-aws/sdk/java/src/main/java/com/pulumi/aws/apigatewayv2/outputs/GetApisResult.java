@@ -45,23 +45,23 @@ public final class GetApisResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of API identifiers.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getProtocolType() {
+    public Optional<String> protocolType() {
         return Optional.ofNullable(this.protocolType);
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

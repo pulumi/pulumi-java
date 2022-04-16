@@ -23,7 +23,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends com.pulumi.resources
     @Import(name="acceptedRouteCount")
       private final @Nullable Output<Integer> acceptedRouteCount;
 
-    public Output<Integer> getAcceptedRouteCount() {
+    public Output<Integer> acceptedRouteCount() {
         return this.acceptedRouteCount == null ? Codegen.empty() : this.acceptedRouteCount;
     }
 
@@ -34,7 +34,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends com.pulumi.resources
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -45,7 +45,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends com.pulumi.resources
     @Import(name="lastStatusChange")
       private final @Nullable Output<String> lastStatusChange;
 
-    public Output<String> getLastStatusChange() {
+    public Output<String> lastStatusChange() {
         return this.lastStatusChange == null ? Codegen.empty() : this.lastStatusChange;
     }
 
@@ -56,7 +56,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends com.pulumi.resources
     @Import(name="outsideIpAddress")
       private final @Nullable Output<String> outsideIpAddress;
 
-    public Output<String> getOutsideIpAddress() {
+    public Output<String> outsideIpAddress() {
         return this.outsideIpAddress == null ? Codegen.empty() : this.outsideIpAddress;
     }
 
@@ -67,7 +67,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends com.pulumi.resources
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -78,7 +78,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends com.pulumi.resources
     @Import(name="statusMessage")
       private final @Nullable Output<String> statusMessage;
 
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage == null ? Codegen.empty() : this.statusMessage;
     }
 

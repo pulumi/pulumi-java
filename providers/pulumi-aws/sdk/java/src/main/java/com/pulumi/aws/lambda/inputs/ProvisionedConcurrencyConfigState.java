@@ -23,7 +23,7 @@ public final class ProvisionedConcurrencyConfigState extends com.pulumi.resource
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
@@ -34,7 +34,7 @@ public final class ProvisionedConcurrencyConfigState extends com.pulumi.resource
     @Import(name="provisionedConcurrentExecutions")
       private final @Nullable Output<Integer> provisionedConcurrentExecutions;
 
-    public Output<Integer> getProvisionedConcurrentExecutions() {
+    public Output<Integer> provisionedConcurrentExecutions() {
         return this.provisionedConcurrentExecutions == null ? Codegen.empty() : this.provisionedConcurrentExecutions;
     }
 
@@ -45,7 +45,7 @@ public final class ProvisionedConcurrencyConfigState extends com.pulumi.resource
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 

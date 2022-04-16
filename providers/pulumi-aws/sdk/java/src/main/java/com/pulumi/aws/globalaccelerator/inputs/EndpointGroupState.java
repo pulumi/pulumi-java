@@ -27,7 +27,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpointConfigurations")
       private final @Nullable Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations;
 
-    public Output<List<EndpointGroupEndpointConfigurationGetArgs>> getEndpointConfigurations() {
+    public Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations() {
         return this.endpointConfigurations == null ? Codegen.empty() : this.endpointConfigurations;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpointGroupRegion")
       private final @Nullable Output<String> endpointGroupRegion;
 
-    public Output<String> getEndpointGroupRegion() {
+    public Output<String> endpointGroupRegion() {
         return this.endpointGroupRegion == null ? Codegen.empty() : this.endpointGroupRegion;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="healthCheckIntervalSeconds")
       private final @Nullable Output<Integer> healthCheckIntervalSeconds;
 
-    public Output<Integer> getHealthCheckIntervalSeconds() {
+    public Output<Integer> healthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds == null ? Codegen.empty() : this.healthCheckIntervalSeconds;
     }
 
@@ -71,7 +71,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="healthCheckPath")
       private final @Nullable Output<String> healthCheckPath;
 
-    public Output<String> getHealthCheckPath() {
+    public Output<String> healthCheckPath() {
         return this.healthCheckPath == null ? Codegen.empty() : this.healthCheckPath;
     }
 
@@ -83,7 +83,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="healthCheckPort")
       private final @Nullable Output<Integer> healthCheckPort;
 
-    public Output<Integer> getHealthCheckPort() {
+    public Output<Integer> healthCheckPort() {
         return this.healthCheckPort == null ? Codegen.empty() : this.healthCheckPort;
     }
 
@@ -94,7 +94,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="healthCheckProtocol")
       private final @Nullable Output<String> healthCheckProtocol;
 
-    public Output<String> getHealthCheckProtocol() {
+    public Output<String> healthCheckProtocol() {
         return this.healthCheckProtocol == null ? Codegen.empty() : this.healthCheckProtocol;
     }
 
@@ -105,7 +105,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="listenerArn")
       private final @Nullable Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn == null ? Codegen.empty() : this.listenerArn;
     }
 
@@ -116,7 +116,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="portOverrides")
       private final @Nullable Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides;
 
-    public Output<List<EndpointGroupPortOverrideGetArgs>> getPortOverrides() {
+    public Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides() {
         return this.portOverrides == null ? Codegen.empty() : this.portOverrides;
     }
 
@@ -127,7 +127,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="thresholdCount")
       private final @Nullable Output<Integer> thresholdCount;
 
-    public Output<Integer> getThresholdCount() {
+    public Output<Integer> thresholdCount() {
         return this.thresholdCount == null ? Codegen.empty() : this.thresholdCount;
     }
 
@@ -138,7 +138,7 @@ public final class EndpointGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="trafficDialPercentage")
       private final @Nullable Output<Double> trafficDialPercentage;
 
-    public Output<Double> getTrafficDialPercentage() {
+    public Output<Double> trafficDialPercentage() {
         return this.trafficDialPercentage == null ? Codegen.empty() : this.trafficDialPercentage;
     }
 

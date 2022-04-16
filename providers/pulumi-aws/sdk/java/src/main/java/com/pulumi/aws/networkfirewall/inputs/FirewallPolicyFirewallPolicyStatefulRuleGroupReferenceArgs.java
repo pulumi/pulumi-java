@@ -23,7 +23,7 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -34,7 +34,7 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

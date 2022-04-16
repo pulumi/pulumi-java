@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends com.
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends com.
     @Import(name="header", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> getHeader() {
+    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header() {
         return this.header;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends com.
     @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions() {
         return this.ruleOptions;
     }
 

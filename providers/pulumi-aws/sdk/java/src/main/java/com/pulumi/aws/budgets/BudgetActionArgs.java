@@ -26,7 +26,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -37,7 +37,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionThreshold", required=true)
       private final Output<BudgetActionActionThresholdArgs> actionThreshold;
 
-    public Output<BudgetActionActionThresholdArgs> getActionThreshold() {
+    public Output<BudgetActionActionThresholdArgs> actionThreshold() {
         return this.actionThreshold;
     }
 
@@ -48,7 +48,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType;
     }
 
@@ -59,7 +59,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="approvalModel", required=true)
       private final Output<String> approvalModel;
 
-    public Output<String> getApprovalModel() {
+    public Output<String> approvalModel() {
         return this.approvalModel;
     }
 
@@ -70,7 +70,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetName", required=true)
       private final Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
 
@@ -81,7 +81,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<BudgetActionDefinitionArgs> definition;
 
-    public Output<BudgetActionDefinitionArgs> getDefinition() {
+    public Output<BudgetActionDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -92,7 +92,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
@@ -103,7 +103,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
 
@@ -114,7 +114,7 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscribers", required=true)
       private final Output<List<BudgetActionSubscriberArgs>> subscribers;
 
-    public Output<List<BudgetActionSubscriberArgs>> getSubscribers() {
+    public Output<List<BudgetActionSubscriberArgs>> subscribers() {
         return this.subscribers;
     }
 

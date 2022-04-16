@@ -22,7 +22,7 @@ public final class ConfgurationSetDeliveryOptionsArgs extends com.pulumi.resourc
     @Import(name="tlsPolicy")
       private final @Nullable Output<String> tlsPolicy;
 
-    public Output<String> getTlsPolicy() {
+    public Output<String> tlsPolicy() {
         return this.tlsPolicy == null ? Codegen.empty() : this.tlsPolicy;
     }
 

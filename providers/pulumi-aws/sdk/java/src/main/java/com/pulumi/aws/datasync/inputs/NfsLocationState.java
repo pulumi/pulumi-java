@@ -25,7 +25,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountOptions")
       private final @Nullable Output<NfsLocationMountOptionsGetArgs> mountOptions;
 
-    public Output<NfsLocationMountOptionsGetArgs> getMountOptions() {
+    public Output<NfsLocationMountOptionsGetArgs> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
@@ -47,7 +47,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="onPremConfig")
       private final @Nullable Output<NfsLocationOnPremConfigGetArgs> onPremConfig;
 
-    public Output<NfsLocationOnPremConfigGetArgs> getOnPremConfig() {
+    public Output<NfsLocationOnPremConfigGetArgs> onPremConfig() {
         return this.onPremConfig == null ? Codegen.empty() : this.onPremConfig;
     }
 
@@ -58,7 +58,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname")
       private final @Nullable Output<String> serverHostname;
 
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname == null ? Codegen.empty() : this.serverHostname;
     }
 
@@ -69,7 +69,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -80,7 +80,7 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,14 +91,14 @@ public final class NfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

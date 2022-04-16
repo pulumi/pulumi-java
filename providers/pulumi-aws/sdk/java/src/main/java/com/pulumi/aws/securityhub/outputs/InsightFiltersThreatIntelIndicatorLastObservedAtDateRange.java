@@ -33,14 +33,14 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtDateRange {
      * A date range unit for the date filter. Valid values: `DAYS`.
      * 
     */
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
     /**
      * A date range value for the date filter, provided as an Integer.
      * 
     */
-    public Integer getValue() {
+    public Integer value() {
         return this.value;
     }
 

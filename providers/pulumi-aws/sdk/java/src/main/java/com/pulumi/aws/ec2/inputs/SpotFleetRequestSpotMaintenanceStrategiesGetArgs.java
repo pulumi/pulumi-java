@@ -22,7 +22,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends com.
     @Import(name="capacityRebalance")
       private final @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
-    public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {
+    public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance() {
         return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 

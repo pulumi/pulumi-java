@@ -34,14 +34,14 @@ public final class UserPoolSchemaNumberAttributeConstraints {
      * Maximum value of an attribute that is of the number data type.
      * 
     */
-    public Optional<String> getMaxValue() {
+    public Optional<String> maxValue() {
         return Optional.ofNullable(this.maxValue);
     }
     /**
      * Minimum value of an attribute that is of the number data type.
      * 
     */
-    public Optional<String> getMinValue() {
+    public Optional<String> minValue() {
         return Optional.ofNullable(this.minValue);
     }
 

@@ -23,7 +23,7 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -34,7 +34,7 @@ public final class MultiRegionAccessPointArgs extends com.pulumi.resources.Resou
     @Import(name="details", required=true)
       private final Output<MultiRegionAccessPointDetailsArgs> details;
 
-    public Output<MultiRegionAccessPointDetailsArgs> getDetails() {
+    public Output<MultiRegionAccessPointDetailsArgs> details() {
         return this.details;
     }
 

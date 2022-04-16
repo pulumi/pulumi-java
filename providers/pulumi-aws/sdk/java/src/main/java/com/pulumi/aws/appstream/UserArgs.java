@@ -23,7 +23,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -34,7 +34,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -45,7 +45,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
@@ -56,7 +56,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 
@@ -67,7 +67,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> getSendEmailNotification() {
+    public Output<Boolean> sendEmailNotification() {
         return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
     }
 
@@ -78,7 +78,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

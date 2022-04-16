@@ -23,7 +23,7 @@ public final class SmsPreferencesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultSenderId")
       private final @Nullable Output<String> defaultSenderId;
 
-    public Output<String> getDefaultSenderId() {
+    public Output<String> defaultSenderId() {
         return this.defaultSenderId == null ? Codegen.empty() : this.defaultSenderId;
     }
 
@@ -34,7 +34,7 @@ public final class SmsPreferencesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultSmsType")
       private final @Nullable Output<String> defaultSmsType;
 
-    public Output<String> getDefaultSmsType() {
+    public Output<String> defaultSmsType() {
         return this.defaultSmsType == null ? Codegen.empty() : this.defaultSmsType;
     }
 
@@ -45,7 +45,7 @@ public final class SmsPreferencesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deliveryStatusIamRoleArn")
       private final @Nullable Output<String> deliveryStatusIamRoleArn;
 
-    public Output<String> getDeliveryStatusIamRoleArn() {
+    public Output<String> deliveryStatusIamRoleArn() {
         return this.deliveryStatusIamRoleArn == null ? Codegen.empty() : this.deliveryStatusIamRoleArn;
     }
 
@@ -56,7 +56,7 @@ public final class SmsPreferencesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deliveryStatusSuccessSamplingRate")
       private final @Nullable Output<String> deliveryStatusSuccessSamplingRate;
 
-    public Output<String> getDeliveryStatusSuccessSamplingRate() {
+    public Output<String> deliveryStatusSuccessSamplingRate() {
         return this.deliveryStatusSuccessSamplingRate == null ? Codegen.empty() : this.deliveryStatusSuccessSamplingRate;
     }
 
@@ -67,7 +67,7 @@ public final class SmsPreferencesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="monthlySpendLimit")
       private final @Nullable Output<Integer> monthlySpendLimit;
 
-    public Output<Integer> getMonthlySpendLimit() {
+    public Output<Integer> monthlySpendLimit() {
         return this.monthlySpendLimit == null ? Codegen.empty() : this.monthlySpendLimit;
     }
 
@@ -78,7 +78,7 @@ public final class SmsPreferencesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="usageReportS3Bucket")
       private final @Nullable Output<String> usageReportS3Bucket;
 
-    public Output<String> getUsageReportS3Bucket() {
+    public Output<String> usageReportS3Bucket() {
         return this.usageReportS3Bucket == null ? Codegen.empty() : this.usageReportS3Bucket;
     }
 

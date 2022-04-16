@@ -20,7 +20,7 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     @Import(name="replicationSubnetGroupArn")
       private final @Nullable Output<String> replicationSubnetGroupArn;
 
-    public Output<String> getReplicationSubnetGroupArn() {
+    public Output<String> replicationSubnetGroupArn() {
         return this.replicationSubnetGroupArn == null ? Codegen.empty() : this.replicationSubnetGroupArn;
     }
 
@@ -31,7 +31,7 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     @Import(name="replicationSubnetGroupDescription")
       private final @Nullable Output<String> replicationSubnetGroupDescription;
 
-    public Output<String> getReplicationSubnetGroupDescription() {
+    public Output<String> replicationSubnetGroupDescription() {
         return this.replicationSubnetGroupDescription == null ? Codegen.empty() : this.replicationSubnetGroupDescription;
     }
 
@@ -42,7 +42,7 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     @Import(name="replicationSubnetGroupId")
       private final @Nullable Output<String> replicationSubnetGroupId;
 
-    public Output<String> getReplicationSubnetGroupId() {
+    public Output<String> replicationSubnetGroupId() {
         return this.replicationSubnetGroupId == null ? Codegen.empty() : this.replicationSubnetGroupId;
     }
 
@@ -53,7 +53,7 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -64,7 +64,7 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -75,7 +75,7 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -86,7 +86,7 @@ public final class ReplicationSubnetGroupState extends com.pulumi.resources.Reso
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

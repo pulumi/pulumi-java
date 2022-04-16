@@ -23,7 +23,7 @@ public final class RouteSpecGrpcRouteTimeoutArgs extends com.pulumi.resources.Re
     @Import(name="idle")
       private final @Nullable Output<RouteSpecGrpcRouteTimeoutIdleArgs> idle;
 
-    public Output<RouteSpecGrpcRouteTimeoutIdleArgs> getIdle() {
+    public Output<RouteSpecGrpcRouteTimeoutIdleArgs> idle() {
         return this.idle == null ? Codegen.empty() : this.idle;
     }
 
@@ -34,7 +34,7 @@ public final class RouteSpecGrpcRouteTimeoutArgs extends com.pulumi.resources.Re
     @Import(name="perRequest")
       private final @Nullable Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest;
 
-    public Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> getPerRequest() {
+    public Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest() {
         return this.perRequest == null ? Codegen.empty() : this.perRequest;
     }
 

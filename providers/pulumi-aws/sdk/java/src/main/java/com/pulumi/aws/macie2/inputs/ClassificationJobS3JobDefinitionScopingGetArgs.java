@@ -23,7 +23,7 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends com.pu
     @Import(name="excludes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs> excludes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs> getExcludes() {
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -34,7 +34,7 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends com.pu
     @Import(name="includes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> includes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> getIncludes() {
+    public Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> includes() {
         return this.includes == null ? Codegen.empty() : this.includes;
     }
 

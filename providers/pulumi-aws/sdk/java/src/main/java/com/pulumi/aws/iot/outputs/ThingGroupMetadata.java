@@ -31,17 +31,17 @@ public final class ThingGroupMetadata {
         this.rootToParentGroups = rootToParentGroups;
     }
 
-    public Optional<String> getCreationDate() {
+    public Optional<String> creationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * The name of the parent Thing Group.
      * 
     */
-    public Optional<String> getParentGroupName() {
+    public Optional<String> parentGroupName() {
         return Optional.ofNullable(this.parentGroupName);
     }
-    public List<ThingGroupMetadataRootToParentGroup> getRootToParentGroups() {
+    public List<ThingGroupMetadataRootToParentGroup> rootToParentGroups() {
         return this.rootToParentGroups == null ? List.of() : this.rootToParentGroups;
     }
 

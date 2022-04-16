@@ -46,7 +46,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -60,7 +60,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionId() {
+    public Output</* @Nullable */ String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -74,7 +74,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionType() {
+    public Output</* @Nullable */ String> connectionType() {
         return this.connectionType;
     }
     /**
@@ -88,7 +88,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> getContentHandlingStrategy() {
+    public Output</* @Nullable */ String> contentHandlingStrategy() {
         return this.contentHandlingStrategy;
     }
     /**
@@ -102,7 +102,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The credentials required for the integration, if any.
      * 
      */
-    public Output</* @Nullable */ String> getCredentialsArn() {
+    public Output</* @Nullable */ String> credentialsArn() {
         return this.credentialsArn;
     }
     /**
@@ -116,7 +116,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The description of the integration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -130,7 +130,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
      * 
      */
-    public Output</* @Nullable */ String> getIntegrationMethod() {
+    public Output</* @Nullable */ String> integrationMethod() {
         return this.integrationMethod;
     }
     /**
@@ -144,7 +144,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
      * 
      */
-    public Output<String> getIntegrationResponseSelectionExpression() {
+    public Output<String> integrationResponseSelectionExpression() {
         return this.integrationResponseSelectionExpression;
     }
     /**
@@ -158,7 +158,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getIntegrationSubtype() {
+    public Output</* @Nullable */ String> integrationSubtype() {
         return this.integrationSubtype;
     }
     /**
@@ -174,7 +174,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
      * 
      */
-    public Output<String> getIntegrationType() {
+    public Output<String> integrationType() {
         return this.integrationType;
     }
     /**
@@ -190,7 +190,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
      * 
      */
-    public Output</* @Nullable */ String> getIntegrationUri() {
+    public Output</* @Nullable */ String> integrationUri() {
         return this.integrationUri;
     }
     /**
@@ -206,7 +206,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> getPassthroughBehavior() {
+    public Output</* @Nullable */ String> passthroughBehavior() {
         return this.passthroughBehavior;
     }
     /**
@@ -220,7 +220,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
      * 
      */
-    public Output</* @Nullable */ String> getPayloadFormatVersion() {
+    public Output</* @Nullable */ String> payloadFormatVersion() {
         return this.payloadFormatVersion;
     }
     /**
@@ -240,7 +240,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getRequestParameters() {
+    public Output</* @Nullable */ Map<String,String>> requestParameters() {
         return this.requestParameters;
     }
     /**
@@ -254,7 +254,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getRequestTemplates() {
+    public Output</* @Nullable */ Map<String,String>> requestTemplates() {
         return this.requestTemplates;
     }
     /**
@@ -268,7 +268,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ List<IntegrationResponseParameter>> getResponseParameters() {
+    public Output</* @Nullable */ List<IntegrationResponseParameter>> responseParameters() {
         return this.responseParameters;
     }
     /**
@@ -282,7 +282,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateSelectionExpression() {
+    public Output</* @Nullable */ String> templateSelectionExpression() {
         return this.templateSelectionExpression;
     }
     /**
@@ -300,7 +300,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * this provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    public Output<Integer> getTimeoutMilliseconds() {
+    public Output<Integer> timeoutMilliseconds() {
         return this.timeoutMilliseconds;
     }
     /**
@@ -314,7 +314,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The TLS configuration for a private integration. Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ IntegrationTlsConfig> getTlsConfig() {
+    public Output</* @Nullable */ IntegrationTlsConfig> tlsConfig() {
         return this.tlsConfig;
     }
 

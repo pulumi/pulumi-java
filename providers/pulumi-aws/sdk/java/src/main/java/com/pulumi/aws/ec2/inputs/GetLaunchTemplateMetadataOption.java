@@ -20,7 +20,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpEndpoint", required=true)
       private final String httpEndpoint;
 
-    public String getHttpEndpoint() {
+    public String httpEndpoint() {
         return this.httpEndpoint;
     }
 
@@ -31,7 +31,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpProtocolIpv6", required=true)
       private final String httpProtocolIpv6;
 
-    public String getHttpProtocolIpv6() {
+    public String httpProtocolIpv6() {
         return this.httpProtocolIpv6;
     }
 
@@ -42,7 +42,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpPutResponseHopLimit", required=true)
       private final Integer httpPutResponseHopLimit;
 
-    public Integer getHttpPutResponseHopLimit() {
+    public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
     }
 
@@ -53,7 +53,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpTokens", required=true)
       private final String httpTokens;
 
-    public String getHttpTokens() {
+    public String httpTokens() {
         return this.httpTokens;
     }
 
@@ -64,7 +64,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="instanceMetadataTags", required=true)
       private final String instanceMetadataTags;
 
-    public String getInstanceMetadataTags() {
+    public String instanceMetadataTags() {
         return this.instanceMetadataTags;
     }
 

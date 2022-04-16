@@ -23,7 +23,7 @@ public final class FargateProfileSelectorGetArgs extends com.pulumi.resources.Re
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -34,7 +34,7 @@ public final class FargateProfileSelectorGetArgs extends com.pulumi.resources.Re
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 

@@ -36,16 +36,16 @@ public final class ConfigurationTemplateSetting {
      * A unique name for this Template.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
-    public Optional<String> getResource() {
+    public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

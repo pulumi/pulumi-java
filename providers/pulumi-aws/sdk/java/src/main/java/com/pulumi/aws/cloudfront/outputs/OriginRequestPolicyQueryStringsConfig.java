@@ -23,10 +23,10 @@ public final class OriginRequestPolicyQueryStringsConfig {
         this.queryStrings = queryStrings;
     }
 
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
-    public Optional<OriginRequestPolicyQueryStringsConfigQueryStrings> getQueryStrings() {
+    public Optional<OriginRequestPolicyQueryStringsConfigQueryStrings> queryStrings() {
         return Optional.ofNullable(this.queryStrings);
     }
 

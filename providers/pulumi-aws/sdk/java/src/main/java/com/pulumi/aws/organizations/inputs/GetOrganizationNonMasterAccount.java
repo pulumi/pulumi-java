@@ -19,7 +19,7 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -30,7 +30,7 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -41,7 +41,7 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -52,7 +52,7 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

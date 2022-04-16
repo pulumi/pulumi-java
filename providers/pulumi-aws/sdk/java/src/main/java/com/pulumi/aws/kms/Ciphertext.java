@@ -36,7 +36,7 @@ public class Ciphertext extends com.pulumi.resources.CustomResource {
      * @return Base64 encoded ciphertext
      * 
      */
-    public Output<String> getCiphertextBlob() {
+    public Output<String> ciphertextBlob() {
         return this.ciphertextBlob;
     }
     /**
@@ -50,7 +50,7 @@ public class Ciphertext extends com.pulumi.resources.CustomResource {
      * @return An optional mapping that makes up the encryption context.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getContext() {
+    public Output</* @Nullable */ Map<String,String>> context() {
         return this.context;
     }
     /**
@@ -64,7 +64,7 @@ public class Ciphertext extends com.pulumi.resources.CustomResource {
      * @return Globally unique key ID for the customer master key.
      * 
      */
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
     /**
@@ -78,7 +78,7 @@ public class Ciphertext extends com.pulumi.resources.CustomResource {
      * @return Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
      * 
      */
-    public Output<String> getPlaintext() {
+    public Output<String> plaintext() {
         return this.plaintext;
     }
 

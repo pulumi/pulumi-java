@@ -22,7 +22,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
     @Import(name="instanceType")
       private final @Nullable String instanceType;
 
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
@@ -44,7 +44,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
     @Import(name="preferredInstanceTypes")
       private final @Nullable List<String> preferredInstanceTypes;
 
-    public List<String> getPreferredInstanceTypes() {
+    public List<String> preferredInstanceTypes() {
         return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;
     }
 

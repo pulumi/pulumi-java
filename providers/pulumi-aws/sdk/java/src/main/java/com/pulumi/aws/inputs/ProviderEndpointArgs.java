@@ -18,2107 +18,2107 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accessanalyzer")
       private @Nullable Output<String> accessanalyzer;
 
-    public Output<String> getAccessanalyzer() {
+    public Output<String> accessanalyzer() {
         return this.accessanalyzer == null ? Codegen.empty() : this.accessanalyzer;
     }
 
     @Import(name="account")
       private @Nullable Output<String> account;
 
-    public Output<String> getAccount() {
+    public Output<String> account() {
         return this.account == null ? Codegen.empty() : this.account;
     }
 
     @Import(name="acm")
       private @Nullable Output<String> acm;
 
-    public Output<String> getAcm() {
+    public Output<String> acm() {
         return this.acm == null ? Codegen.empty() : this.acm;
     }
 
     @Import(name="acmpca")
       private @Nullable Output<String> acmpca;
 
-    public Output<String> getAcmpca() {
+    public Output<String> acmpca() {
         return this.acmpca == null ? Codegen.empty() : this.acmpca;
     }
 
     @Import(name="alexaforbusiness")
       private @Nullable Output<String> alexaforbusiness;
 
-    public Output<String> getAlexaforbusiness() {
+    public Output<String> alexaforbusiness() {
         return this.alexaforbusiness == null ? Codegen.empty() : this.alexaforbusiness;
     }
 
     @Import(name="amp")
       private @Nullable Output<String> amp;
 
-    public Output<String> getAmp() {
+    public Output<String> amp() {
         return this.amp == null ? Codegen.empty() : this.amp;
     }
 
     @Import(name="amplify")
       private @Nullable Output<String> amplify;
 
-    public Output<String> getAmplify() {
+    public Output<String> amplify() {
         return this.amplify == null ? Codegen.empty() : this.amplify;
     }
 
     @Import(name="amplifybackend")
       private @Nullable Output<String> amplifybackend;
 
-    public Output<String> getAmplifybackend() {
+    public Output<String> amplifybackend() {
         return this.amplifybackend == null ? Codegen.empty() : this.amplifybackend;
     }
 
     @Import(name="apigateway")
       private @Nullable Output<String> apigateway;
 
-    public Output<String> getApigateway() {
+    public Output<String> apigateway() {
         return this.apigateway == null ? Codegen.empty() : this.apigateway;
     }
 
     @Import(name="apigatewayv2")
       private @Nullable Output<String> apigatewayv2;
 
-    public Output<String> getApigatewayv2() {
+    public Output<String> apigatewayv2() {
         return this.apigatewayv2 == null ? Codegen.empty() : this.apigatewayv2;
     }
 
     @Import(name="appautoscaling")
       private @Nullable Output<String> appautoscaling;
 
-    public Output<String> getAppautoscaling() {
+    public Output<String> appautoscaling() {
         return this.appautoscaling == null ? Codegen.empty() : this.appautoscaling;
     }
 
     @Import(name="appconfig")
       private @Nullable Output<String> appconfig;
 
-    public Output<String> getAppconfig() {
+    public Output<String> appconfig() {
         return this.appconfig == null ? Codegen.empty() : this.appconfig;
     }
 
     @Import(name="appflow")
       private @Nullable Output<String> appflow;
 
-    public Output<String> getAppflow() {
+    public Output<String> appflow() {
         return this.appflow == null ? Codegen.empty() : this.appflow;
     }
 
     @Import(name="appintegrations")
       private @Nullable Output<String> appintegrations;
 
-    public Output<String> getAppintegrations() {
+    public Output<String> appintegrations() {
         return this.appintegrations == null ? Codegen.empty() : this.appintegrations;
     }
 
     @Import(name="appintegrationsservice")
       private @Nullable Output<String> appintegrationsservice;
 
-    public Output<String> getAppintegrationsservice() {
+    public Output<String> appintegrationsservice() {
         return this.appintegrationsservice == null ? Codegen.empty() : this.appintegrationsservice;
     }
 
     @Import(name="applicationautoscaling")
       private @Nullable Output<String> applicationautoscaling;
 
-    public Output<String> getApplicationautoscaling() {
+    public Output<String> applicationautoscaling() {
         return this.applicationautoscaling == null ? Codegen.empty() : this.applicationautoscaling;
     }
 
     @Import(name="applicationcostprofiler")
       private @Nullable Output<String> applicationcostprofiler;
 
-    public Output<String> getApplicationcostprofiler() {
+    public Output<String> applicationcostprofiler() {
         return this.applicationcostprofiler == null ? Codegen.empty() : this.applicationcostprofiler;
     }
 
     @Import(name="applicationdiscovery")
       private @Nullable Output<String> applicationdiscovery;
 
-    public Output<String> getApplicationdiscovery() {
+    public Output<String> applicationdiscovery() {
         return this.applicationdiscovery == null ? Codegen.empty() : this.applicationdiscovery;
     }
 
     @Import(name="applicationdiscoveryservice")
       private @Nullable Output<String> applicationdiscoveryservice;
 
-    public Output<String> getApplicationdiscoveryservice() {
+    public Output<String> applicationdiscoveryservice() {
         return this.applicationdiscoveryservice == null ? Codegen.empty() : this.applicationdiscoveryservice;
     }
 
     @Import(name="applicationinsights")
       private @Nullable Output<String> applicationinsights;
 
-    public Output<String> getApplicationinsights() {
+    public Output<String> applicationinsights() {
         return this.applicationinsights == null ? Codegen.empty() : this.applicationinsights;
     }
 
     @Import(name="appmesh")
       private @Nullable Output<String> appmesh;
 
-    public Output<String> getAppmesh() {
+    public Output<String> appmesh() {
         return this.appmesh == null ? Codegen.empty() : this.appmesh;
     }
 
     @Import(name="appregistry")
       private @Nullable Output<String> appregistry;
 
-    public Output<String> getAppregistry() {
+    public Output<String> appregistry() {
         return this.appregistry == null ? Codegen.empty() : this.appregistry;
     }
 
     @Import(name="apprunner")
       private @Nullable Output<String> apprunner;
 
-    public Output<String> getApprunner() {
+    public Output<String> apprunner() {
         return this.apprunner == null ? Codegen.empty() : this.apprunner;
     }
 
     @Import(name="appstream")
       private @Nullable Output<String> appstream;
 
-    public Output<String> getAppstream() {
+    public Output<String> appstream() {
         return this.appstream == null ? Codegen.empty() : this.appstream;
     }
 
     @Import(name="appsync")
       private @Nullable Output<String> appsync;
 
-    public Output<String> getAppsync() {
+    public Output<String> appsync() {
         return this.appsync == null ? Codegen.empty() : this.appsync;
     }
 
     @Import(name="athena")
       private @Nullable Output<String> athena;
 
-    public Output<String> getAthena() {
+    public Output<String> athena() {
         return this.athena == null ? Codegen.empty() : this.athena;
     }
 
     @Import(name="auditmanager")
       private @Nullable Output<String> auditmanager;
 
-    public Output<String> getAuditmanager() {
+    public Output<String> auditmanager() {
         return this.auditmanager == null ? Codegen.empty() : this.auditmanager;
     }
 
     @Import(name="augmentedairuntime")
       private @Nullable Output<String> augmentedairuntime;
 
-    public Output<String> getAugmentedairuntime() {
+    public Output<String> augmentedairuntime() {
         return this.augmentedairuntime == null ? Codegen.empty() : this.augmentedairuntime;
     }
 
     @Import(name="autoscaling")
       private @Nullable Output<String> autoscaling;
 
-    public Output<String> getAutoscaling() {
+    public Output<String> autoscaling() {
         return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
     @Import(name="autoscalingplans")
       private @Nullable Output<String> autoscalingplans;
 
-    public Output<String> getAutoscalingplans() {
+    public Output<String> autoscalingplans() {
         return this.autoscalingplans == null ? Codegen.empty() : this.autoscalingplans;
     }
 
     @Import(name="backup")
       private @Nullable Output<String> backup;
 
-    public Output<String> getBackup() {
+    public Output<String> backup() {
         return this.backup == null ? Codegen.empty() : this.backup;
     }
 
     @Import(name="batch")
       private @Nullable Output<String> batch;
 
-    public Output<String> getBatch() {
+    public Output<String> batch() {
         return this.batch == null ? Codegen.empty() : this.batch;
     }
 
     @Import(name="braket")
       private @Nullable Output<String> braket;
 
-    public Output<String> getBraket() {
+    public Output<String> braket() {
         return this.braket == null ? Codegen.empty() : this.braket;
     }
 
     @Import(name="budgets")
       private @Nullable Output<String> budgets;
 
-    public Output<String> getBudgets() {
+    public Output<String> budgets() {
         return this.budgets == null ? Codegen.empty() : this.budgets;
     }
 
     @Import(name="chime")
       private @Nullable Output<String> chime;
 
-    public Output<String> getChime() {
+    public Output<String> chime() {
         return this.chime == null ? Codegen.empty() : this.chime;
     }
 
     @Import(name="cloud9")
       private @Nullable Output<String> cloud9;
 
-    public Output<String> getCloud9() {
+    public Output<String> cloud9() {
         return this.cloud9 == null ? Codegen.empty() : this.cloud9;
     }
 
     @Import(name="cloudcontrol")
       private @Nullable Output<String> cloudcontrol;
 
-    public Output<String> getCloudcontrol() {
+    public Output<String> cloudcontrol() {
         return this.cloudcontrol == null ? Codegen.empty() : this.cloudcontrol;
     }
 
     @Import(name="cloudcontrolapi")
       private @Nullable Output<String> cloudcontrolapi;
 
-    public Output<String> getCloudcontrolapi() {
+    public Output<String> cloudcontrolapi() {
         return this.cloudcontrolapi == null ? Codegen.empty() : this.cloudcontrolapi;
     }
 
     @Import(name="clouddirectory")
       private @Nullable Output<String> clouddirectory;
 
-    public Output<String> getClouddirectory() {
+    public Output<String> clouddirectory() {
         return this.clouddirectory == null ? Codegen.empty() : this.clouddirectory;
     }
 
     @Import(name="cloudformation")
       private @Nullable Output<String> cloudformation;
 
-    public Output<String> getCloudformation() {
+    public Output<String> cloudformation() {
         return this.cloudformation == null ? Codegen.empty() : this.cloudformation;
     }
 
     @Import(name="cloudfront")
       private @Nullable Output<String> cloudfront;
 
-    public Output<String> getCloudfront() {
+    public Output<String> cloudfront() {
         return this.cloudfront == null ? Codegen.empty() : this.cloudfront;
     }
 
     @Import(name="cloudhsm")
       private @Nullable Output<String> cloudhsm;
 
-    public Output<String> getCloudhsm() {
+    public Output<String> cloudhsm() {
         return this.cloudhsm == null ? Codegen.empty() : this.cloudhsm;
     }
 
     @Import(name="cloudhsmv2")
       private @Nullable Output<String> cloudhsmv2;
 
-    public Output<String> getCloudhsmv2() {
+    public Output<String> cloudhsmv2() {
         return this.cloudhsmv2 == null ? Codegen.empty() : this.cloudhsmv2;
     }
 
     @Import(name="cloudsearch")
       private @Nullable Output<String> cloudsearch;
 
-    public Output<String> getCloudsearch() {
+    public Output<String> cloudsearch() {
         return this.cloudsearch == null ? Codegen.empty() : this.cloudsearch;
     }
 
     @Import(name="cloudsearchdomain")
       private @Nullable Output<String> cloudsearchdomain;
 
-    public Output<String> getCloudsearchdomain() {
+    public Output<String> cloudsearchdomain() {
         return this.cloudsearchdomain == null ? Codegen.empty() : this.cloudsearchdomain;
     }
 
     @Import(name="cloudtrail")
       private @Nullable Output<String> cloudtrail;
 
-    public Output<String> getCloudtrail() {
+    public Output<String> cloudtrail() {
         return this.cloudtrail == null ? Codegen.empty() : this.cloudtrail;
     }
 
     @Import(name="cloudwatch")
       private @Nullable Output<String> cloudwatch;
 
-    public Output<String> getCloudwatch() {
+    public Output<String> cloudwatch() {
         return this.cloudwatch == null ? Codegen.empty() : this.cloudwatch;
     }
 
     @Import(name="cloudwatchevents")
       private @Nullable Output<String> cloudwatchevents;
 
-    public Output<String> getCloudwatchevents() {
+    public Output<String> cloudwatchevents() {
         return this.cloudwatchevents == null ? Codegen.empty() : this.cloudwatchevents;
     }
 
     @Import(name="cloudwatchlogs")
       private @Nullable Output<String> cloudwatchlogs;
 
-    public Output<String> getCloudwatchlogs() {
+    public Output<String> cloudwatchlogs() {
         return this.cloudwatchlogs == null ? Codegen.empty() : this.cloudwatchlogs;
     }
 
     @Import(name="codeartifact")
       private @Nullable Output<String> codeartifact;
 
-    public Output<String> getCodeartifact() {
+    public Output<String> codeartifact() {
         return this.codeartifact == null ? Codegen.empty() : this.codeartifact;
     }
 
     @Import(name="codebuild")
       private @Nullable Output<String> codebuild;
 
-    public Output<String> getCodebuild() {
+    public Output<String> codebuild() {
         return this.codebuild == null ? Codegen.empty() : this.codebuild;
     }
 
     @Import(name="codecommit")
       private @Nullable Output<String> codecommit;
 
-    public Output<String> getCodecommit() {
+    public Output<String> codecommit() {
         return this.codecommit == null ? Codegen.empty() : this.codecommit;
     }
 
     @Import(name="codedeploy")
       private @Nullable Output<String> codedeploy;
 
-    public Output<String> getCodedeploy() {
+    public Output<String> codedeploy() {
         return this.codedeploy == null ? Codegen.empty() : this.codedeploy;
     }
 
     @Import(name="codeguruprofiler")
       private @Nullable Output<String> codeguruprofiler;
 
-    public Output<String> getCodeguruprofiler() {
+    public Output<String> codeguruprofiler() {
         return this.codeguruprofiler == null ? Codegen.empty() : this.codeguruprofiler;
     }
 
     @Import(name="codegurureviewer")
       private @Nullable Output<String> codegurureviewer;
 
-    public Output<String> getCodegurureviewer() {
+    public Output<String> codegurureviewer() {
         return this.codegurureviewer == null ? Codegen.empty() : this.codegurureviewer;
     }
 
     @Import(name="codepipeline")
       private @Nullable Output<String> codepipeline;
 
-    public Output<String> getCodepipeline() {
+    public Output<String> codepipeline() {
         return this.codepipeline == null ? Codegen.empty() : this.codepipeline;
     }
 
     @Import(name="codestar")
       private @Nullable Output<String> codestar;
 
-    public Output<String> getCodestar() {
+    public Output<String> codestar() {
         return this.codestar == null ? Codegen.empty() : this.codestar;
     }
 
     @Import(name="codestarconnections")
       private @Nullable Output<String> codestarconnections;
 
-    public Output<String> getCodestarconnections() {
+    public Output<String> codestarconnections() {
         return this.codestarconnections == null ? Codegen.empty() : this.codestarconnections;
     }
 
     @Import(name="codestarnotifications")
       private @Nullable Output<String> codestarnotifications;
 
-    public Output<String> getCodestarnotifications() {
+    public Output<String> codestarnotifications() {
         return this.codestarnotifications == null ? Codegen.empty() : this.codestarnotifications;
     }
 
     @Import(name="cognitoidentity")
       private @Nullable Output<String> cognitoidentity;
 
-    public Output<String> getCognitoidentity() {
+    public Output<String> cognitoidentity() {
         return this.cognitoidentity == null ? Codegen.empty() : this.cognitoidentity;
     }
 
     @Import(name="cognitoidentityprovider")
       private @Nullable Output<String> cognitoidentityprovider;
 
-    public Output<String> getCognitoidentityprovider() {
+    public Output<String> cognitoidentityprovider() {
         return this.cognitoidentityprovider == null ? Codegen.empty() : this.cognitoidentityprovider;
     }
 
     @Import(name="cognitoidp")
       private @Nullable Output<String> cognitoidp;
 
-    public Output<String> getCognitoidp() {
+    public Output<String> cognitoidp() {
         return this.cognitoidp == null ? Codegen.empty() : this.cognitoidp;
     }
 
     @Import(name="cognitosync")
       private @Nullable Output<String> cognitosync;
 
-    public Output<String> getCognitosync() {
+    public Output<String> cognitosync() {
         return this.cognitosync == null ? Codegen.empty() : this.cognitosync;
     }
 
     @Import(name="comprehend")
       private @Nullable Output<String> comprehend;
 
-    public Output<String> getComprehend() {
+    public Output<String> comprehend() {
         return this.comprehend == null ? Codegen.empty() : this.comprehend;
     }
 
     @Import(name="comprehendmedical")
       private @Nullable Output<String> comprehendmedical;
 
-    public Output<String> getComprehendmedical() {
+    public Output<String> comprehendmedical() {
         return this.comprehendmedical == null ? Codegen.empty() : this.comprehendmedical;
     }
 
     @Import(name="config")
       private @Nullable Output<String> config;
 
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
     @Import(name="configservice")
       private @Nullable Output<String> configservice;
 
-    public Output<String> getConfigservice() {
+    public Output<String> configservice() {
         return this.configservice == null ? Codegen.empty() : this.configservice;
     }
 
     @Import(name="connect")
       private @Nullable Output<String> connect;
 
-    public Output<String> getConnect() {
+    public Output<String> connect() {
         return this.connect == null ? Codegen.empty() : this.connect;
     }
 
     @Import(name="connectcontactlens")
       private @Nullable Output<String> connectcontactlens;
 
-    public Output<String> getConnectcontactlens() {
+    public Output<String> connectcontactlens() {
         return this.connectcontactlens == null ? Codegen.empty() : this.connectcontactlens;
     }
 
     @Import(name="connectparticipant")
       private @Nullable Output<String> connectparticipant;
 
-    public Output<String> getConnectparticipant() {
+    public Output<String> connectparticipant() {
         return this.connectparticipant == null ? Codegen.empty() : this.connectparticipant;
     }
 
     @Import(name="costandusagereportservice")
       private @Nullable Output<String> costandusagereportservice;
 
-    public Output<String> getCostandusagereportservice() {
+    public Output<String> costandusagereportservice() {
         return this.costandusagereportservice == null ? Codegen.empty() : this.costandusagereportservice;
     }
 
     @Import(name="costexplorer")
       private @Nullable Output<String> costexplorer;
 
-    public Output<String> getCostexplorer() {
+    public Output<String> costexplorer() {
         return this.costexplorer == null ? Codegen.empty() : this.costexplorer;
     }
 
     @Import(name="cur")
       private @Nullable Output<String> cur;
 
-    public Output<String> getCur() {
+    public Output<String> cur() {
         return this.cur == null ? Codegen.empty() : this.cur;
     }
 
     @Import(name="databasemigration")
       private @Nullable Output<String> databasemigration;
 
-    public Output<String> getDatabasemigration() {
+    public Output<String> databasemigration() {
         return this.databasemigration == null ? Codegen.empty() : this.databasemigration;
     }
 
     @Import(name="databasemigrationservice")
       private @Nullable Output<String> databasemigrationservice;
 
-    public Output<String> getDatabasemigrationservice() {
+    public Output<String> databasemigrationservice() {
         return this.databasemigrationservice == null ? Codegen.empty() : this.databasemigrationservice;
     }
 
     @Import(name="dataexchange")
       private @Nullable Output<String> dataexchange;
 
-    public Output<String> getDataexchange() {
+    public Output<String> dataexchange() {
         return this.dataexchange == null ? Codegen.empty() : this.dataexchange;
     }
 
     @Import(name="datapipeline")
       private @Nullable Output<String> datapipeline;
 
-    public Output<String> getDatapipeline() {
+    public Output<String> datapipeline() {
         return this.datapipeline == null ? Codegen.empty() : this.datapipeline;
     }
 
     @Import(name="datasync")
       private @Nullable Output<String> datasync;
 
-    public Output<String> getDatasync() {
+    public Output<String> datasync() {
         return this.datasync == null ? Codegen.empty() : this.datasync;
     }
 
     @Import(name="dax")
       private @Nullable Output<String> dax;
 
-    public Output<String> getDax() {
+    public Output<String> dax() {
         return this.dax == null ? Codegen.empty() : this.dax;
     }
 
     @Import(name="detective")
       private @Nullable Output<String> detective;
 
-    public Output<String> getDetective() {
+    public Output<String> detective() {
         return this.detective == null ? Codegen.empty() : this.detective;
     }
 
     @Import(name="devicefarm")
       private @Nullable Output<String> devicefarm;
 
-    public Output<String> getDevicefarm() {
+    public Output<String> devicefarm() {
         return this.devicefarm == null ? Codegen.empty() : this.devicefarm;
     }
 
     @Import(name="devopsguru")
       private @Nullable Output<String> devopsguru;
 
-    public Output<String> getDevopsguru() {
+    public Output<String> devopsguru() {
         return this.devopsguru == null ? Codegen.empty() : this.devopsguru;
     }
 
     @Import(name="directconnect")
       private @Nullable Output<String> directconnect;
 
-    public Output<String> getDirectconnect() {
+    public Output<String> directconnect() {
         return this.directconnect == null ? Codegen.empty() : this.directconnect;
     }
 
     @Import(name="dlm")
       private @Nullable Output<String> dlm;
 
-    public Output<String> getDlm() {
+    public Output<String> dlm() {
         return this.dlm == null ? Codegen.empty() : this.dlm;
     }
 
     @Import(name="dms")
       private @Nullable Output<String> dms;
 
-    public Output<String> getDms() {
+    public Output<String> dms() {
         return this.dms == null ? Codegen.empty() : this.dms;
     }
 
     @Import(name="docdb")
       private @Nullable Output<String> docdb;
 
-    public Output<String> getDocdb() {
+    public Output<String> docdb() {
         return this.docdb == null ? Codegen.empty() : this.docdb;
     }
 
     @Import(name="ds")
       private @Nullable Output<String> ds;
 
-    public Output<String> getDs() {
+    public Output<String> ds() {
         return this.ds == null ? Codegen.empty() : this.ds;
     }
 
     @Import(name="dynamodb")
       private @Nullable Output<String> dynamodb;
 
-    public Output<String> getDynamodb() {
+    public Output<String> dynamodb() {
         return this.dynamodb == null ? Codegen.empty() : this.dynamodb;
     }
 
     @Import(name="dynamodbstreams")
       private @Nullable Output<String> dynamodbstreams;
 
-    public Output<String> getDynamodbstreams() {
+    public Output<String> dynamodbstreams() {
         return this.dynamodbstreams == null ? Codegen.empty() : this.dynamodbstreams;
     }
 
     @Import(name="ec2")
       private @Nullable Output<String> ec2;
 
-    public Output<String> getEc2() {
+    public Output<String> ec2() {
         return this.ec2 == null ? Codegen.empty() : this.ec2;
     }
 
     @Import(name="ec2instanceconnect")
       private @Nullable Output<String> ec2instanceconnect;
 
-    public Output<String> getEc2instanceconnect() {
+    public Output<String> ec2instanceconnect() {
         return this.ec2instanceconnect == null ? Codegen.empty() : this.ec2instanceconnect;
     }
 
     @Import(name="ecr")
       private @Nullable Output<String> ecr;
 
-    public Output<String> getEcr() {
+    public Output<String> ecr() {
         return this.ecr == null ? Codegen.empty() : this.ecr;
     }
 
     @Import(name="ecrpublic")
       private @Nullable Output<String> ecrpublic;
 
-    public Output<String> getEcrpublic() {
+    public Output<String> ecrpublic() {
         return this.ecrpublic == null ? Codegen.empty() : this.ecrpublic;
     }
 
     @Import(name="ecs")
       private @Nullable Output<String> ecs;
 
-    public Output<String> getEcs() {
+    public Output<String> ecs() {
         return this.ecs == null ? Codegen.empty() : this.ecs;
     }
 
     @Import(name="efs")
       private @Nullable Output<String> efs;
 
-    public Output<String> getEfs() {
+    public Output<String> efs() {
         return this.efs == null ? Codegen.empty() : this.efs;
     }
 
     @Import(name="eks")
       private @Nullable Output<String> eks;
 
-    public Output<String> getEks() {
+    public Output<String> eks() {
         return this.eks == null ? Codegen.empty() : this.eks;
     }
 
     @Import(name="elasticache")
       private @Nullable Output<String> elasticache;
 
-    public Output<String> getElasticache() {
+    public Output<String> elasticache() {
         return this.elasticache == null ? Codegen.empty() : this.elasticache;
     }
 
     @Import(name="elasticbeanstalk")
       private @Nullable Output<String> elasticbeanstalk;
 
-    public Output<String> getElasticbeanstalk() {
+    public Output<String> elasticbeanstalk() {
         return this.elasticbeanstalk == null ? Codegen.empty() : this.elasticbeanstalk;
     }
 
     @Import(name="elasticinference")
       private @Nullable Output<String> elasticinference;
 
-    public Output<String> getElasticinference() {
+    public Output<String> elasticinference() {
         return this.elasticinference == null ? Codegen.empty() : this.elasticinference;
     }
 
     @Import(name="elasticsearch")
       private @Nullable Output<String> elasticsearch;
 
-    public Output<String> getElasticsearch() {
+    public Output<String> elasticsearch() {
         return this.elasticsearch == null ? Codegen.empty() : this.elasticsearch;
     }
 
     @Import(name="elasticsearchservice")
       private @Nullable Output<String> elasticsearchservice;
 
-    public Output<String> getElasticsearchservice() {
+    public Output<String> elasticsearchservice() {
         return this.elasticsearchservice == null ? Codegen.empty() : this.elasticsearchservice;
     }
 
     @Import(name="elastictranscoder")
       private @Nullable Output<String> elastictranscoder;
 
-    public Output<String> getElastictranscoder() {
+    public Output<String> elastictranscoder() {
         return this.elastictranscoder == null ? Codegen.empty() : this.elastictranscoder;
     }
 
     @Import(name="elb")
       private @Nullable Output<String> elb;
 
-    public Output<String> getElb() {
+    public Output<String> elb() {
         return this.elb == null ? Codegen.empty() : this.elb;
     }
 
     @Import(name="elbv2")
       private @Nullable Output<String> elbv2;
 
-    public Output<String> getElbv2() {
+    public Output<String> elbv2() {
         return this.elbv2 == null ? Codegen.empty() : this.elbv2;
     }
 
     @Import(name="emr")
       private @Nullable Output<String> emr;
 
-    public Output<String> getEmr() {
+    public Output<String> emr() {
         return this.emr == null ? Codegen.empty() : this.emr;
     }
 
     @Import(name="emrcontainers")
       private @Nullable Output<String> emrcontainers;
 
-    public Output<String> getEmrcontainers() {
+    public Output<String> emrcontainers() {
         return this.emrcontainers == null ? Codegen.empty() : this.emrcontainers;
     }
 
     @Import(name="es")
       private @Nullable Output<String> es;
 
-    public Output<String> getEs() {
+    public Output<String> es() {
         return this.es == null ? Codegen.empty() : this.es;
     }
 
     @Import(name="eventbridge")
       private @Nullable Output<String> eventbridge;
 
-    public Output<String> getEventbridge() {
+    public Output<String> eventbridge() {
         return this.eventbridge == null ? Codegen.empty() : this.eventbridge;
     }
 
     @Import(name="events")
       private @Nullable Output<String> events;
 
-    public Output<String> getEvents() {
+    public Output<String> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 
     @Import(name="finspace")
       private @Nullable Output<String> finspace;
 
-    public Output<String> getFinspace() {
+    public Output<String> finspace() {
         return this.finspace == null ? Codegen.empty() : this.finspace;
     }
 
     @Import(name="finspacedata")
       private @Nullable Output<String> finspacedata;
 
-    public Output<String> getFinspacedata() {
+    public Output<String> finspacedata() {
         return this.finspacedata == null ? Codegen.empty() : this.finspacedata;
     }
 
     @Import(name="firehose")
       private @Nullable Output<String> firehose;
 
-    public Output<String> getFirehose() {
+    public Output<String> firehose() {
         return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
     @Import(name="fis")
       private @Nullable Output<String> fis;
 
-    public Output<String> getFis() {
+    public Output<String> fis() {
         return this.fis == null ? Codegen.empty() : this.fis;
     }
 
     @Import(name="fms")
       private @Nullable Output<String> fms;
 
-    public Output<String> getFms() {
+    public Output<String> fms() {
         return this.fms == null ? Codegen.empty() : this.fms;
     }
 
     @Import(name="forecast")
       private @Nullable Output<String> forecast;
 
-    public Output<String> getForecast() {
+    public Output<String> forecast() {
         return this.forecast == null ? Codegen.empty() : this.forecast;
     }
 
     @Import(name="forecastquery")
       private @Nullable Output<String> forecastquery;
 
-    public Output<String> getForecastquery() {
+    public Output<String> forecastquery() {
         return this.forecastquery == null ? Codegen.empty() : this.forecastquery;
     }
 
     @Import(name="forecastqueryservice")
       private @Nullable Output<String> forecastqueryservice;
 
-    public Output<String> getForecastqueryservice() {
+    public Output<String> forecastqueryservice() {
         return this.forecastqueryservice == null ? Codegen.empty() : this.forecastqueryservice;
     }
 
     @Import(name="forecastservice")
       private @Nullable Output<String> forecastservice;
 
-    public Output<String> getForecastservice() {
+    public Output<String> forecastservice() {
         return this.forecastservice == null ? Codegen.empty() : this.forecastservice;
     }
 
     @Import(name="frauddetector")
       private @Nullable Output<String> frauddetector;
 
-    public Output<String> getFrauddetector() {
+    public Output<String> frauddetector() {
         return this.frauddetector == null ? Codegen.empty() : this.frauddetector;
     }
 
     @Import(name="fsx")
       private @Nullable Output<String> fsx;
 
-    public Output<String> getFsx() {
+    public Output<String> fsx() {
         return this.fsx == null ? Codegen.empty() : this.fsx;
     }
 
     @Import(name="gamelift")
       private @Nullable Output<String> gamelift;
 
-    public Output<String> getGamelift() {
+    public Output<String> gamelift() {
         return this.gamelift == null ? Codegen.empty() : this.gamelift;
     }
 
     @Import(name="glacier")
       private @Nullable Output<String> glacier;
 
-    public Output<String> getGlacier() {
+    public Output<String> glacier() {
         return this.glacier == null ? Codegen.empty() : this.glacier;
     }
 
     @Import(name="globalaccelerator")
       private @Nullable Output<String> globalaccelerator;
 
-    public Output<String> getGlobalaccelerator() {
+    public Output<String> globalaccelerator() {
         return this.globalaccelerator == null ? Codegen.empty() : this.globalaccelerator;
     }
 
     @Import(name="glue")
       private @Nullable Output<String> glue;
 
-    public Output<String> getGlue() {
+    public Output<String> glue() {
         return this.glue == null ? Codegen.empty() : this.glue;
     }
 
     @Import(name="gluedatabrew")
       private @Nullable Output<String> gluedatabrew;
 
-    public Output<String> getGluedatabrew() {
+    public Output<String> gluedatabrew() {
         return this.gluedatabrew == null ? Codegen.empty() : this.gluedatabrew;
     }
 
     @Import(name="greengrass")
       private @Nullable Output<String> greengrass;
 
-    public Output<String> getGreengrass() {
+    public Output<String> greengrass() {
         return this.greengrass == null ? Codegen.empty() : this.greengrass;
     }
 
     @Import(name="greengrassv2")
       private @Nullable Output<String> greengrassv2;
 
-    public Output<String> getGreengrassv2() {
+    public Output<String> greengrassv2() {
         return this.greengrassv2 == null ? Codegen.empty() : this.greengrassv2;
     }
 
     @Import(name="groundstation")
       private @Nullable Output<String> groundstation;
 
-    public Output<String> getGroundstation() {
+    public Output<String> groundstation() {
         return this.groundstation == null ? Codegen.empty() : this.groundstation;
     }
 
     @Import(name="guardduty")
       private @Nullable Output<String> guardduty;
 
-    public Output<String> getGuardduty() {
+    public Output<String> guardduty() {
         return this.guardduty == null ? Codegen.empty() : this.guardduty;
     }
 
     @Import(name="health")
       private @Nullable Output<String> health;
 
-    public Output<String> getHealth() {
+    public Output<String> health() {
         return this.health == null ? Codegen.empty() : this.health;
     }
 
     @Import(name="healthlake")
       private @Nullable Output<String> healthlake;
 
-    public Output<String> getHealthlake() {
+    public Output<String> healthlake() {
         return this.healthlake == null ? Codegen.empty() : this.healthlake;
     }
 
     @Import(name="honeycode")
       private @Nullable Output<String> honeycode;
 
-    public Output<String> getHoneycode() {
+    public Output<String> honeycode() {
         return this.honeycode == null ? Codegen.empty() : this.honeycode;
     }
 
     @Import(name="iam")
       private @Nullable Output<String> iam;
 
-    public Output<String> getIam() {
+    public Output<String> iam() {
         return this.iam == null ? Codegen.empty() : this.iam;
     }
 
     @Import(name="identitystore")
       private @Nullable Output<String> identitystore;
 
-    public Output<String> getIdentitystore() {
+    public Output<String> identitystore() {
         return this.identitystore == null ? Codegen.empty() : this.identitystore;
     }
 
     @Import(name="imagebuilder")
       private @Nullable Output<String> imagebuilder;
 
-    public Output<String> getImagebuilder() {
+    public Output<String> imagebuilder() {
         return this.imagebuilder == null ? Codegen.empty() : this.imagebuilder;
     }
 
     @Import(name="inspector")
       private @Nullable Output<String> inspector;
 
-    public Output<String> getInspector() {
+    public Output<String> inspector() {
         return this.inspector == null ? Codegen.empty() : this.inspector;
     }
 
     @Import(name="iot")
       private @Nullable Output<String> iot;
 
-    public Output<String> getIot() {
+    public Output<String> iot() {
         return this.iot == null ? Codegen.empty() : this.iot;
     }
 
     @Import(name="iot1clickdevices")
       private @Nullable Output<String> iot1clickdevices;
 
-    public Output<String> getIot1clickdevices() {
+    public Output<String> iot1clickdevices() {
         return this.iot1clickdevices == null ? Codegen.empty() : this.iot1clickdevices;
     }
 
     @Import(name="iot1clickdevicesservice")
       private @Nullable Output<String> iot1clickdevicesservice;
 
-    public Output<String> getIot1clickdevicesservice() {
+    public Output<String> iot1clickdevicesservice() {
         return this.iot1clickdevicesservice == null ? Codegen.empty() : this.iot1clickdevicesservice;
     }
 
     @Import(name="iot1clickprojects")
       private @Nullable Output<String> iot1clickprojects;
 
-    public Output<String> getIot1clickprojects() {
+    public Output<String> iot1clickprojects() {
         return this.iot1clickprojects == null ? Codegen.empty() : this.iot1clickprojects;
     }
 
     @Import(name="iotanalytics")
       private @Nullable Output<String> iotanalytics;
 
-    public Output<String> getIotanalytics() {
+    public Output<String> iotanalytics() {
         return this.iotanalytics == null ? Codegen.empty() : this.iotanalytics;
     }
 
     @Import(name="iotdataplane")
       private @Nullable Output<String> iotdataplane;
 
-    public Output<String> getIotdataplane() {
+    public Output<String> iotdataplane() {
         return this.iotdataplane == null ? Codegen.empty() : this.iotdataplane;
     }
 
     @Import(name="iotdeviceadvisor")
       private @Nullable Output<String> iotdeviceadvisor;
 
-    public Output<String> getIotdeviceadvisor() {
+    public Output<String> iotdeviceadvisor() {
         return this.iotdeviceadvisor == null ? Codegen.empty() : this.iotdeviceadvisor;
     }
 
     @Import(name="iotevents")
       private @Nullable Output<String> iotevents;
 
-    public Output<String> getIotevents() {
+    public Output<String> iotevents() {
         return this.iotevents == null ? Codegen.empty() : this.iotevents;
     }
 
     @Import(name="ioteventsdata")
       private @Nullable Output<String> ioteventsdata;
 
-    public Output<String> getIoteventsdata() {
+    public Output<String> ioteventsdata() {
         return this.ioteventsdata == null ? Codegen.empty() : this.ioteventsdata;
     }
 
     @Import(name="iotfleethub")
       private @Nullable Output<String> iotfleethub;
 
-    public Output<String> getIotfleethub() {
+    public Output<String> iotfleethub() {
         return this.iotfleethub == null ? Codegen.empty() : this.iotfleethub;
     }
 
     @Import(name="iotjobsdataplane")
       private @Nullable Output<String> iotjobsdataplane;
 
-    public Output<String> getIotjobsdataplane() {
+    public Output<String> iotjobsdataplane() {
         return this.iotjobsdataplane == null ? Codegen.empty() : this.iotjobsdataplane;
     }
 
     @Import(name="iotsecuretunneling")
       private @Nullable Output<String> iotsecuretunneling;
 
-    public Output<String> getIotsecuretunneling() {
+    public Output<String> iotsecuretunneling() {
         return this.iotsecuretunneling == null ? Codegen.empty() : this.iotsecuretunneling;
     }
 
     @Import(name="iotsitewise")
       private @Nullable Output<String> iotsitewise;
 
-    public Output<String> getIotsitewise() {
+    public Output<String> iotsitewise() {
         return this.iotsitewise == null ? Codegen.empty() : this.iotsitewise;
     }
 
     @Import(name="iotthingsgraph")
       private @Nullable Output<String> iotthingsgraph;
 
-    public Output<String> getIotthingsgraph() {
+    public Output<String> iotthingsgraph() {
         return this.iotthingsgraph == null ? Codegen.empty() : this.iotthingsgraph;
     }
 
     @Import(name="iotwireless")
       private @Nullable Output<String> iotwireless;
 
-    public Output<String> getIotwireless() {
+    public Output<String> iotwireless() {
         return this.iotwireless == null ? Codegen.empty() : this.iotwireless;
     }
 
     @Import(name="kafka")
       private @Nullable Output<String> kafka;
 
-    public Output<String> getKafka() {
+    public Output<String> kafka() {
         return this.kafka == null ? Codegen.empty() : this.kafka;
     }
 
     @Import(name="kafkaconnect")
       private @Nullable Output<String> kafkaconnect;
 
-    public Output<String> getKafkaconnect() {
+    public Output<String> kafkaconnect() {
         return this.kafkaconnect == null ? Codegen.empty() : this.kafkaconnect;
     }
 
     @Import(name="kendra")
       private @Nullable Output<String> kendra;
 
-    public Output<String> getKendra() {
+    public Output<String> kendra() {
         return this.kendra == null ? Codegen.empty() : this.kendra;
     }
 
     @Import(name="kinesis")
       private @Nullable Output<String> kinesis;
 
-    public Output<String> getKinesis() {
+    public Output<String> kinesis() {
         return this.kinesis == null ? Codegen.empty() : this.kinesis;
     }
 
     @Import(name="kinesisanalytics")
       private @Nullable Output<String> kinesisanalytics;
 
-    public Output<String> getKinesisanalytics() {
+    public Output<String> kinesisanalytics() {
         return this.kinesisanalytics == null ? Codegen.empty() : this.kinesisanalytics;
     }
 
     @Import(name="kinesisanalyticsv2")
       private @Nullable Output<String> kinesisanalyticsv2;
 
-    public Output<String> getKinesisanalyticsv2() {
+    public Output<String> kinesisanalyticsv2() {
         return this.kinesisanalyticsv2 == null ? Codegen.empty() : this.kinesisanalyticsv2;
     }
 
     @Import(name="kinesisvideo")
       private @Nullable Output<String> kinesisvideo;
 
-    public Output<String> getKinesisvideo() {
+    public Output<String> kinesisvideo() {
         return this.kinesisvideo == null ? Codegen.empty() : this.kinesisvideo;
     }
 
     @Import(name="kinesisvideoarchivedmedia")
       private @Nullable Output<String> kinesisvideoarchivedmedia;
 
-    public Output<String> getKinesisvideoarchivedmedia() {
+    public Output<String> kinesisvideoarchivedmedia() {
         return this.kinesisvideoarchivedmedia == null ? Codegen.empty() : this.kinesisvideoarchivedmedia;
     }
 
     @Import(name="kinesisvideomedia")
       private @Nullable Output<String> kinesisvideomedia;
 
-    public Output<String> getKinesisvideomedia() {
+    public Output<String> kinesisvideomedia() {
         return this.kinesisvideomedia == null ? Codegen.empty() : this.kinesisvideomedia;
     }
 
     @Import(name="kinesisvideosignalingchannels")
       private @Nullable Output<String> kinesisvideosignalingchannels;
 
-    public Output<String> getKinesisvideosignalingchannels() {
+    public Output<String> kinesisvideosignalingchannels() {
         return this.kinesisvideosignalingchannels == null ? Codegen.empty() : this.kinesisvideosignalingchannels;
     }
 
     @Import(name="kms")
       private @Nullable Output<String> kms;
 
-    public Output<String> getKms() {
+    public Output<String> kms() {
         return this.kms == null ? Codegen.empty() : this.kms;
     }
 
     @Import(name="lakeformation")
       private @Nullable Output<String> lakeformation;
 
-    public Output<String> getLakeformation() {
+    public Output<String> lakeformation() {
         return this.lakeformation == null ? Codegen.empty() : this.lakeformation;
     }
 
     @Import(name="lambda")
       private @Nullable Output<String> lambda;
 
-    public Output<String> getLambda() {
+    public Output<String> lambda() {
         return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
     @Import(name="lexmodelbuilding")
       private @Nullable Output<String> lexmodelbuilding;
 
-    public Output<String> getLexmodelbuilding() {
+    public Output<String> lexmodelbuilding() {
         return this.lexmodelbuilding == null ? Codegen.empty() : this.lexmodelbuilding;
     }
 
     @Import(name="lexmodelbuildingservice")
       private @Nullable Output<String> lexmodelbuildingservice;
 
-    public Output<String> getLexmodelbuildingservice() {
+    public Output<String> lexmodelbuildingservice() {
         return this.lexmodelbuildingservice == null ? Codegen.empty() : this.lexmodelbuildingservice;
     }
 
     @Import(name="lexmodels")
       private @Nullable Output<String> lexmodels;
 
-    public Output<String> getLexmodels() {
+    public Output<String> lexmodels() {
         return this.lexmodels == null ? Codegen.empty() : this.lexmodels;
     }
 
     @Import(name="lexmodelsv2")
       private @Nullable Output<String> lexmodelsv2;
 
-    public Output<String> getLexmodelsv2() {
+    public Output<String> lexmodelsv2() {
         return this.lexmodelsv2 == null ? Codegen.empty() : this.lexmodelsv2;
     }
 
     @Import(name="lexruntime")
       private @Nullable Output<String> lexruntime;
 
-    public Output<String> getLexruntime() {
+    public Output<String> lexruntime() {
         return this.lexruntime == null ? Codegen.empty() : this.lexruntime;
     }
 
     @Import(name="lexruntimeservice")
       private @Nullable Output<String> lexruntimeservice;
 
-    public Output<String> getLexruntimeservice() {
+    public Output<String> lexruntimeservice() {
         return this.lexruntimeservice == null ? Codegen.empty() : this.lexruntimeservice;
     }
 
     @Import(name="lexruntimev2")
       private @Nullable Output<String> lexruntimev2;
 
-    public Output<String> getLexruntimev2() {
+    public Output<String> lexruntimev2() {
         return this.lexruntimev2 == null ? Codegen.empty() : this.lexruntimev2;
     }
 
     @Import(name="licensemanager")
       private @Nullable Output<String> licensemanager;
 
-    public Output<String> getLicensemanager() {
+    public Output<String> licensemanager() {
         return this.licensemanager == null ? Codegen.empty() : this.licensemanager;
     }
 
     @Import(name="lightsail")
       private @Nullable Output<String> lightsail;
 
-    public Output<String> getLightsail() {
+    public Output<String> lightsail() {
         return this.lightsail == null ? Codegen.empty() : this.lightsail;
     }
 
     @Import(name="location")
       private @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="lookoutequipment")
       private @Nullable Output<String> lookoutequipment;
 
-    public Output<String> getLookoutequipment() {
+    public Output<String> lookoutequipment() {
         return this.lookoutequipment == null ? Codegen.empty() : this.lookoutequipment;
     }
 
     @Import(name="lookoutforvision")
       private @Nullable Output<String> lookoutforvision;
 
-    public Output<String> getLookoutforvision() {
+    public Output<String> lookoutforvision() {
         return this.lookoutforvision == null ? Codegen.empty() : this.lookoutforvision;
     }
 
     @Import(name="lookoutmetrics")
       private @Nullable Output<String> lookoutmetrics;
 
-    public Output<String> getLookoutmetrics() {
+    public Output<String> lookoutmetrics() {
         return this.lookoutmetrics == null ? Codegen.empty() : this.lookoutmetrics;
     }
 
     @Import(name="machinelearning")
       private @Nullable Output<String> machinelearning;
 
-    public Output<String> getMachinelearning() {
+    public Output<String> machinelearning() {
         return this.machinelearning == null ? Codegen.empty() : this.machinelearning;
     }
 
     @Import(name="macie")
       private @Nullable Output<String> macie;
 
-    public Output<String> getMacie() {
+    public Output<String> macie() {
         return this.macie == null ? Codegen.empty() : this.macie;
     }
 
     @Import(name="macie2")
       private @Nullable Output<String> macie2;
 
-    public Output<String> getMacie2() {
+    public Output<String> macie2() {
         return this.macie2 == null ? Codegen.empty() : this.macie2;
     }
 
     @Import(name="managedblockchain")
       private @Nullable Output<String> managedblockchain;
 
-    public Output<String> getManagedblockchain() {
+    public Output<String> managedblockchain() {
         return this.managedblockchain == null ? Codegen.empty() : this.managedblockchain;
     }
 
     @Import(name="marketplacecatalog")
       private @Nullable Output<String> marketplacecatalog;
 
-    public Output<String> getMarketplacecatalog() {
+    public Output<String> marketplacecatalog() {
         return this.marketplacecatalog == null ? Codegen.empty() : this.marketplacecatalog;
     }
 
     @Import(name="marketplacecommerceanalytics")
       private @Nullable Output<String> marketplacecommerceanalytics;
 
-    public Output<String> getMarketplacecommerceanalytics() {
+    public Output<String> marketplacecommerceanalytics() {
         return this.marketplacecommerceanalytics == null ? Codegen.empty() : this.marketplacecommerceanalytics;
     }
 
     @Import(name="marketplaceentitlement")
       private @Nullable Output<String> marketplaceentitlement;
 
-    public Output<String> getMarketplaceentitlement() {
+    public Output<String> marketplaceentitlement() {
         return this.marketplaceentitlement == null ? Codegen.empty() : this.marketplaceentitlement;
     }
 
     @Import(name="marketplaceentitlementservice")
       private @Nullable Output<String> marketplaceentitlementservice;
 
-    public Output<String> getMarketplaceentitlementservice() {
+    public Output<String> marketplaceentitlementservice() {
         return this.marketplaceentitlementservice == null ? Codegen.empty() : this.marketplaceentitlementservice;
     }
 
     @Import(name="marketplacemetering")
       private @Nullable Output<String> marketplacemetering;
 
-    public Output<String> getMarketplacemetering() {
+    public Output<String> marketplacemetering() {
         return this.marketplacemetering == null ? Codegen.empty() : this.marketplacemetering;
     }
 
     @Import(name="mediaconnect")
       private @Nullable Output<String> mediaconnect;
 
-    public Output<String> getMediaconnect() {
+    public Output<String> mediaconnect() {
         return this.mediaconnect == null ? Codegen.empty() : this.mediaconnect;
     }
 
     @Import(name="mediaconvert")
       private @Nullable Output<String> mediaconvert;
 
-    public Output<String> getMediaconvert() {
+    public Output<String> mediaconvert() {
         return this.mediaconvert == null ? Codegen.empty() : this.mediaconvert;
     }
 
     @Import(name="medialive")
       private @Nullable Output<String> medialive;
 
-    public Output<String> getMedialive() {
+    public Output<String> medialive() {
         return this.medialive == null ? Codegen.empty() : this.medialive;
     }
 
     @Import(name="mediapackage")
       private @Nullable Output<String> mediapackage;
 
-    public Output<String> getMediapackage() {
+    public Output<String> mediapackage() {
         return this.mediapackage == null ? Codegen.empty() : this.mediapackage;
     }
 
     @Import(name="mediapackagevod")
       private @Nullable Output<String> mediapackagevod;
 
-    public Output<String> getMediapackagevod() {
+    public Output<String> mediapackagevod() {
         return this.mediapackagevod == null ? Codegen.empty() : this.mediapackagevod;
     }
 
     @Import(name="mediastore")
       private @Nullable Output<String> mediastore;
 
-    public Output<String> getMediastore() {
+    public Output<String> mediastore() {
         return this.mediastore == null ? Codegen.empty() : this.mediastore;
     }
 
     @Import(name="mediastoredata")
       private @Nullable Output<String> mediastoredata;
 
-    public Output<String> getMediastoredata() {
+    public Output<String> mediastoredata() {
         return this.mediastoredata == null ? Codegen.empty() : this.mediastoredata;
     }
 
     @Import(name="mediatailor")
       private @Nullable Output<String> mediatailor;
 
-    public Output<String> getMediatailor() {
+    public Output<String> mediatailor() {
         return this.mediatailor == null ? Codegen.empty() : this.mediatailor;
     }
 
     @Import(name="memorydb")
       private @Nullable Output<String> memorydb;
 
-    public Output<String> getMemorydb() {
+    public Output<String> memorydb() {
         return this.memorydb == null ? Codegen.empty() : this.memorydb;
     }
 
     @Import(name="mgn")
       private @Nullable Output<String> mgn;
 
-    public Output<String> getMgn() {
+    public Output<String> mgn() {
         return this.mgn == null ? Codegen.empty() : this.mgn;
     }
 
     @Import(name="migrationhub")
       private @Nullable Output<String> migrationhub;
 
-    public Output<String> getMigrationhub() {
+    public Output<String> migrationhub() {
         return this.migrationhub == null ? Codegen.empty() : this.migrationhub;
     }
 
     @Import(name="migrationhubconfig")
       private @Nullable Output<String> migrationhubconfig;
 
-    public Output<String> getMigrationhubconfig() {
+    public Output<String> migrationhubconfig() {
         return this.migrationhubconfig == null ? Codegen.empty() : this.migrationhubconfig;
     }
 
     @Import(name="mobile")
       private @Nullable Output<String> mobile;
 
-    public Output<String> getMobile() {
+    public Output<String> mobile() {
         return this.mobile == null ? Codegen.empty() : this.mobile;
     }
 
     @Import(name="mobileanalytics")
       private @Nullable Output<String> mobileanalytics;
 
-    public Output<String> getMobileanalytics() {
+    public Output<String> mobileanalytics() {
         return this.mobileanalytics == null ? Codegen.empty() : this.mobileanalytics;
     }
 
     @Import(name="mq")
       private @Nullable Output<String> mq;
 
-    public Output<String> getMq() {
+    public Output<String> mq() {
         return this.mq == null ? Codegen.empty() : this.mq;
     }
 
     @Import(name="mturk")
       private @Nullable Output<String> mturk;
 
-    public Output<String> getMturk() {
+    public Output<String> mturk() {
         return this.mturk == null ? Codegen.empty() : this.mturk;
     }
 
     @Import(name="mwaa")
       private @Nullable Output<String> mwaa;
 
-    public Output<String> getMwaa() {
+    public Output<String> mwaa() {
         return this.mwaa == null ? Codegen.empty() : this.mwaa;
     }
 
     @Import(name="neptune")
       private @Nullable Output<String> neptune;
 
-    public Output<String> getNeptune() {
+    public Output<String> neptune() {
         return this.neptune == null ? Codegen.empty() : this.neptune;
     }
 
     @Import(name="networkfirewall")
       private @Nullable Output<String> networkfirewall;
 
-    public Output<String> getNetworkfirewall() {
+    public Output<String> networkfirewall() {
         return this.networkfirewall == null ? Codegen.empty() : this.networkfirewall;
     }
 
     @Import(name="networkmanager")
       private @Nullable Output<String> networkmanager;
 
-    public Output<String> getNetworkmanager() {
+    public Output<String> networkmanager() {
         return this.networkmanager == null ? Codegen.empty() : this.networkmanager;
     }
 
     @Import(name="nimblestudio")
       private @Nullable Output<String> nimblestudio;
 
-    public Output<String> getNimblestudio() {
+    public Output<String> nimblestudio() {
         return this.nimblestudio == null ? Codegen.empty() : this.nimblestudio;
     }
 
     @Import(name="opsworks")
       private @Nullable Output<String> opsworks;
 
-    public Output<String> getOpsworks() {
+    public Output<String> opsworks() {
         return this.opsworks == null ? Codegen.empty() : this.opsworks;
     }
 
     @Import(name="opsworkscm")
       private @Nullable Output<String> opsworkscm;
 
-    public Output<String> getOpsworkscm() {
+    public Output<String> opsworkscm() {
         return this.opsworkscm == null ? Codegen.empty() : this.opsworkscm;
     }
 
     @Import(name="organizations")
       private @Nullable Output<String> organizations;
 
-    public Output<String> getOrganizations() {
+    public Output<String> organizations() {
         return this.organizations == null ? Codegen.empty() : this.organizations;
     }
 
     @Import(name="outposts")
       private @Nullable Output<String> outposts;
 
-    public Output<String> getOutposts() {
+    public Output<String> outposts() {
         return this.outposts == null ? Codegen.empty() : this.outposts;
     }
 
     @Import(name="personalize")
       private @Nullable Output<String> personalize;
 
-    public Output<String> getPersonalize() {
+    public Output<String> personalize() {
         return this.personalize == null ? Codegen.empty() : this.personalize;
     }
 
     @Import(name="personalizeevents")
       private @Nullable Output<String> personalizeevents;
 
-    public Output<String> getPersonalizeevents() {
+    public Output<String> personalizeevents() {
         return this.personalizeevents == null ? Codegen.empty() : this.personalizeevents;
     }
 
     @Import(name="personalizeruntime")
       private @Nullable Output<String> personalizeruntime;
 
-    public Output<String> getPersonalizeruntime() {
+    public Output<String> personalizeruntime() {
         return this.personalizeruntime == null ? Codegen.empty() : this.personalizeruntime;
     }
 
     @Import(name="pi")
       private @Nullable Output<String> pi;
 
-    public Output<String> getPi() {
+    public Output<String> pi() {
         return this.pi == null ? Codegen.empty() : this.pi;
     }
 
     @Import(name="pinpoint")
       private @Nullable Output<String> pinpoint;
 
-    public Output<String> getPinpoint() {
+    public Output<String> pinpoint() {
         return this.pinpoint == null ? Codegen.empty() : this.pinpoint;
     }
 
     @Import(name="pinpointemail")
       private @Nullable Output<String> pinpointemail;
 
-    public Output<String> getPinpointemail() {
+    public Output<String> pinpointemail() {
         return this.pinpointemail == null ? Codegen.empty() : this.pinpointemail;
     }
 
     @Import(name="pinpointsmsvoice")
       private @Nullable Output<String> pinpointsmsvoice;
 
-    public Output<String> getPinpointsmsvoice() {
+    public Output<String> pinpointsmsvoice() {
         return this.pinpointsmsvoice == null ? Codegen.empty() : this.pinpointsmsvoice;
     }
 
     @Import(name="polly")
       private @Nullable Output<String> polly;
 
-    public Output<String> getPolly() {
+    public Output<String> polly() {
         return this.polly == null ? Codegen.empty() : this.polly;
     }
 
     @Import(name="pricing")
       private @Nullable Output<String> pricing;
 
-    public Output<String> getPricing() {
+    public Output<String> pricing() {
         return this.pricing == null ? Codegen.empty() : this.pricing;
     }
 
     @Import(name="prometheus")
       private @Nullable Output<String> prometheus;
 
-    public Output<String> getPrometheus() {
+    public Output<String> prometheus() {
         return this.prometheus == null ? Codegen.empty() : this.prometheus;
     }
 
     @Import(name="prometheusservice")
       private @Nullable Output<String> prometheusservice;
 
-    public Output<String> getPrometheusservice() {
+    public Output<String> prometheusservice() {
         return this.prometheusservice == null ? Codegen.empty() : this.prometheusservice;
     }
 
     @Import(name="proton")
       private @Nullable Output<String> proton;
 
-    public Output<String> getProton() {
+    public Output<String> proton() {
         return this.proton == null ? Codegen.empty() : this.proton;
     }
 
     @Import(name="qldb")
       private @Nullable Output<String> qldb;
 
-    public Output<String> getQldb() {
+    public Output<String> qldb() {
         return this.qldb == null ? Codegen.empty() : this.qldb;
     }
 
     @Import(name="qldbsession")
       private @Nullable Output<String> qldbsession;
 
-    public Output<String> getQldbsession() {
+    public Output<String> qldbsession() {
         return this.qldbsession == null ? Codegen.empty() : this.qldbsession;
     }
 
     @Import(name="quicksight")
       private @Nullable Output<String> quicksight;
 
-    public Output<String> getQuicksight() {
+    public Output<String> quicksight() {
         return this.quicksight == null ? Codegen.empty() : this.quicksight;
     }
 
     @Import(name="ram")
       private @Nullable Output<String> ram;
 
-    public Output<String> getRam() {
+    public Output<String> ram() {
         return this.ram == null ? Codegen.empty() : this.ram;
     }
 
     @Import(name="rds")
       private @Nullable Output<String> rds;
 
-    public Output<String> getRds() {
+    public Output<String> rds() {
         return this.rds == null ? Codegen.empty() : this.rds;
     }
 
     @Import(name="rdsdata")
       private @Nullable Output<String> rdsdata;
 
-    public Output<String> getRdsdata() {
+    public Output<String> rdsdata() {
         return this.rdsdata == null ? Codegen.empty() : this.rdsdata;
     }
 
     @Import(name="rdsdataservice")
       private @Nullable Output<String> rdsdataservice;
 
-    public Output<String> getRdsdataservice() {
+    public Output<String> rdsdataservice() {
         return this.rdsdataservice == null ? Codegen.empty() : this.rdsdataservice;
     }
 
     @Import(name="redshift")
       private @Nullable Output<String> redshift;
 
-    public Output<String> getRedshift() {
+    public Output<String> redshift() {
         return this.redshift == null ? Codegen.empty() : this.redshift;
     }
 
     @Import(name="redshiftdata")
       private @Nullable Output<String> redshiftdata;
 
-    public Output<String> getRedshiftdata() {
+    public Output<String> redshiftdata() {
         return this.redshiftdata == null ? Codegen.empty() : this.redshiftdata;
     }
 
     @Import(name="rekognition")
       private @Nullable Output<String> rekognition;
 
-    public Output<String> getRekognition() {
+    public Output<String> rekognition() {
         return this.rekognition == null ? Codegen.empty() : this.rekognition;
     }
 
     @Import(name="resourcegroups")
       private @Nullable Output<String> resourcegroups;
 
-    public Output<String> getResourcegroups() {
+    public Output<String> resourcegroups() {
         return this.resourcegroups == null ? Codegen.empty() : this.resourcegroups;
     }
 
     @Import(name="resourcegroupstagging")
       private @Nullable Output<String> resourcegroupstagging;
 
-    public Output<String> getResourcegroupstagging() {
+    public Output<String> resourcegroupstagging() {
         return this.resourcegroupstagging == null ? Codegen.empty() : this.resourcegroupstagging;
     }
 
     @Import(name="resourcegroupstaggingapi")
       private @Nullable Output<String> resourcegroupstaggingapi;
 
-    public Output<String> getResourcegroupstaggingapi() {
+    public Output<String> resourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi == null ? Codegen.empty() : this.resourcegroupstaggingapi;
     }
 
     @Import(name="robomaker")
       private @Nullable Output<String> robomaker;
 
-    public Output<String> getRobomaker() {
+    public Output<String> robomaker() {
         return this.robomaker == null ? Codegen.empty() : this.robomaker;
     }
 
     @Import(name="route53")
       private @Nullable Output<String> route53;
 
-    public Output<String> getRoute53() {
+    public Output<String> route53() {
         return this.route53 == null ? Codegen.empty() : this.route53;
     }
 
     @Import(name="route53domains")
       private @Nullable Output<String> route53domains;
 
-    public Output<String> getRoute53domains() {
+    public Output<String> route53domains() {
         return this.route53domains == null ? Codegen.empty() : this.route53domains;
     }
 
     @Import(name="route53recoverycontrolconfig")
       private @Nullable Output<String> route53recoverycontrolconfig;
 
-    public Output<String> getRoute53recoverycontrolconfig() {
+    public Output<String> route53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig == null ? Codegen.empty() : this.route53recoverycontrolconfig;
     }
 
     @Import(name="route53recoveryreadiness")
       private @Nullable Output<String> route53recoveryreadiness;
 
-    public Output<String> getRoute53recoveryreadiness() {
+    public Output<String> route53recoveryreadiness() {
         return this.route53recoveryreadiness == null ? Codegen.empty() : this.route53recoveryreadiness;
     }
 
     @Import(name="route53resolver")
       private @Nullable Output<String> route53resolver;
 
-    public Output<String> getRoute53resolver() {
+    public Output<String> route53resolver() {
         return this.route53resolver == null ? Codegen.empty() : this.route53resolver;
     }
 
     @Import(name="s3")
       private @Nullable Output<String> s3;
 
-    public Output<String> getS3() {
+    public Output<String> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="s3control")
       private @Nullable Output<String> s3control;
 
-    public Output<String> getS3control() {
+    public Output<String> s3control() {
         return this.s3control == null ? Codegen.empty() : this.s3control;
     }
 
     @Import(name="s3outposts")
       private @Nullable Output<String> s3outposts;
 
-    public Output<String> getS3outposts() {
+    public Output<String> s3outposts() {
         return this.s3outposts == null ? Codegen.empty() : this.s3outposts;
     }
 
     @Import(name="sagemaker")
       private @Nullable Output<String> sagemaker;
 
-    public Output<String> getSagemaker() {
+    public Output<String> sagemaker() {
         return this.sagemaker == null ? Codegen.empty() : this.sagemaker;
     }
 
     @Import(name="sagemakeredgemanager")
       private @Nullable Output<String> sagemakeredgemanager;
 
-    public Output<String> getSagemakeredgemanager() {
+    public Output<String> sagemakeredgemanager() {
         return this.sagemakeredgemanager == null ? Codegen.empty() : this.sagemakeredgemanager;
     }
 
     @Import(name="sagemakerfeaturestoreruntime")
       private @Nullable Output<String> sagemakerfeaturestoreruntime;
 
-    public Output<String> getSagemakerfeaturestoreruntime() {
+    public Output<String> sagemakerfeaturestoreruntime() {
         return this.sagemakerfeaturestoreruntime == null ? Codegen.empty() : this.sagemakerfeaturestoreruntime;
     }
 
     @Import(name="sagemakerruntime")
       private @Nullable Output<String> sagemakerruntime;
 
-    public Output<String> getSagemakerruntime() {
+    public Output<String> sagemakerruntime() {
         return this.sagemakerruntime == null ? Codegen.empty() : this.sagemakerruntime;
     }
 
     @Import(name="savingsplans")
       private @Nullable Output<String> savingsplans;
 
-    public Output<String> getSavingsplans() {
+    public Output<String> savingsplans() {
         return this.savingsplans == null ? Codegen.empty() : this.savingsplans;
     }
 
     @Import(name="schemas")
       private @Nullable Output<String> schemas;
 
-    public Output<String> getSchemas() {
+    public Output<String> schemas() {
         return this.schemas == null ? Codegen.empty() : this.schemas;
     }
 
     @Import(name="sdb")
       private @Nullable Output<String> sdb;
 
-    public Output<String> getSdb() {
+    public Output<String> sdb() {
         return this.sdb == null ? Codegen.empty() : this.sdb;
     }
 
     @Import(name="secretsmanager")
       private @Nullable Output<String> secretsmanager;
 
-    public Output<String> getSecretsmanager() {
+    public Output<String> secretsmanager() {
         return this.secretsmanager == null ? Codegen.empty() : this.secretsmanager;
     }
 
     @Import(name="securityhub")
       private @Nullable Output<String> securityhub;
 
-    public Output<String> getSecurityhub() {
+    public Output<String> securityhub() {
         return this.securityhub == null ? Codegen.empty() : this.securityhub;
     }
 
     @Import(name="serverlessapplicationrepository")
       private @Nullable Output<String> serverlessapplicationrepository;
 
-    public Output<String> getServerlessapplicationrepository() {
+    public Output<String> serverlessapplicationrepository() {
         return this.serverlessapplicationrepository == null ? Codegen.empty() : this.serverlessapplicationrepository;
     }
 
     @Import(name="serverlessapprepo")
       private @Nullable Output<String> serverlessapprepo;
 
-    public Output<String> getServerlessapprepo() {
+    public Output<String> serverlessapprepo() {
         return this.serverlessapprepo == null ? Codegen.empty() : this.serverlessapprepo;
     }
 
     @Import(name="serverlessrepo")
       private @Nullable Output<String> serverlessrepo;
 
-    public Output<String> getServerlessrepo() {
+    public Output<String> serverlessrepo() {
         return this.serverlessrepo == null ? Codegen.empty() : this.serverlessrepo;
     }
 
     @Import(name="servicecatalog")
       private @Nullable Output<String> servicecatalog;
 
-    public Output<String> getServicecatalog() {
+    public Output<String> servicecatalog() {
         return this.servicecatalog == null ? Codegen.empty() : this.servicecatalog;
     }
 
     @Import(name="servicediscovery")
       private @Nullable Output<String> servicediscovery;
 
-    public Output<String> getServicediscovery() {
+    public Output<String> servicediscovery() {
         return this.servicediscovery == null ? Codegen.empty() : this.servicediscovery;
     }
 
     @Import(name="servicequotas")
       private @Nullable Output<String> servicequotas;
 
-    public Output<String> getServicequotas() {
+    public Output<String> servicequotas() {
         return this.servicequotas == null ? Codegen.empty() : this.servicequotas;
     }
 
     @Import(name="ses")
       private @Nullable Output<String> ses;
 
-    public Output<String> getSes() {
+    public Output<String> ses() {
         return this.ses == null ? Codegen.empty() : this.ses;
     }
 
     @Import(name="sesv2")
       private @Nullable Output<String> sesv2;
 
-    public Output<String> getSesv2() {
+    public Output<String> sesv2() {
         return this.sesv2 == null ? Codegen.empty() : this.sesv2;
     }
 
     @Import(name="sfn")
       private @Nullable Output<String> sfn;
 
-    public Output<String> getSfn() {
+    public Output<String> sfn() {
         return this.sfn == null ? Codegen.empty() : this.sfn;
     }
 
     @Import(name="shield")
       private @Nullable Output<String> shield;
 
-    public Output<String> getShield() {
+    public Output<String> shield() {
         return this.shield == null ? Codegen.empty() : this.shield;
     }
 
     @Import(name="signer")
       private @Nullable Output<String> signer;
 
-    public Output<String> getSigner() {
+    public Output<String> signer() {
         return this.signer == null ? Codegen.empty() : this.signer;
     }
 
     @Import(name="simpledb")
       private @Nullable Output<String> simpledb;
 
-    public Output<String> getSimpledb() {
+    public Output<String> simpledb() {
         return this.simpledb == null ? Codegen.empty() : this.simpledb;
     }
 
     @Import(name="sms")
       private @Nullable Output<String> sms;
 
-    public Output<String> getSms() {
+    public Output<String> sms() {
         return this.sms == null ? Codegen.empty() : this.sms;
     }
 
     @Import(name="snowball")
       private @Nullable Output<String> snowball;
 
-    public Output<String> getSnowball() {
+    public Output<String> snowball() {
         return this.snowball == null ? Codegen.empty() : this.snowball;
     }
 
     @Import(name="sns")
       private @Nullable Output<String> sns;
 
-    public Output<String> getSns() {
+    public Output<String> sns() {
         return this.sns == null ? Codegen.empty() : this.sns;
     }
 
     @Import(name="sqs")
       private @Nullable Output<String> sqs;
 
-    public Output<String> getSqs() {
+    public Output<String> sqs() {
         return this.sqs == null ? Codegen.empty() : this.sqs;
     }
 
     @Import(name="ssm")
       private @Nullable Output<String> ssm;
 
-    public Output<String> getSsm() {
+    public Output<String> ssm() {
         return this.ssm == null ? Codegen.empty() : this.ssm;
     }
 
     @Import(name="ssmcontacts")
       private @Nullable Output<String> ssmcontacts;
 
-    public Output<String> getSsmcontacts() {
+    public Output<String> ssmcontacts() {
         return this.ssmcontacts == null ? Codegen.empty() : this.ssmcontacts;
     }
 
     @Import(name="ssmincidents")
       private @Nullable Output<String> ssmincidents;
 
-    public Output<String> getSsmincidents() {
+    public Output<String> ssmincidents() {
         return this.ssmincidents == null ? Codegen.empty() : this.ssmincidents;
     }
 
     @Import(name="sso")
       private @Nullable Output<String> sso;
 
-    public Output<String> getSso() {
+    public Output<String> sso() {
         return this.sso == null ? Codegen.empty() : this.sso;
     }
 
     @Import(name="ssoadmin")
       private @Nullable Output<String> ssoadmin;
 
-    public Output<String> getSsoadmin() {
+    public Output<String> ssoadmin() {
         return this.ssoadmin == null ? Codegen.empty() : this.ssoadmin;
     }
 
     @Import(name="ssooidc")
       private @Nullable Output<String> ssooidc;
 
-    public Output<String> getSsooidc() {
+    public Output<String> ssooidc() {
         return this.ssooidc == null ? Codegen.empty() : this.ssooidc;
     }
 
     @Import(name="stepfunctions")
       private @Nullable Output<String> stepfunctions;
 
-    public Output<String> getStepfunctions() {
+    public Output<String> stepfunctions() {
         return this.stepfunctions == null ? Codegen.empty() : this.stepfunctions;
     }
 
     @Import(name="storagegateway")
       private @Nullable Output<String> storagegateway;
 
-    public Output<String> getStoragegateway() {
+    public Output<String> storagegateway() {
         return this.storagegateway == null ? Codegen.empty() : this.storagegateway;
     }
 
     @Import(name="sts")
       private @Nullable Output<String> sts;
 
-    public Output<String> getSts() {
+    public Output<String> sts() {
         return this.sts == null ? Codegen.empty() : this.sts;
     }
 
     @Import(name="support")
       private @Nullable Output<String> support;
 
-    public Output<String> getSupport() {
+    public Output<String> support() {
         return this.support == null ? Codegen.empty() : this.support;
     }
 
     @Import(name="swf")
       private @Nullable Output<String> swf;
 
-    public Output<String> getSwf() {
+    public Output<String> swf() {
         return this.swf == null ? Codegen.empty() : this.swf;
     }
 
     @Import(name="synthetics")
       private @Nullable Output<String> synthetics;
 
-    public Output<String> getSynthetics() {
+    public Output<String> synthetics() {
         return this.synthetics == null ? Codegen.empty() : this.synthetics;
     }
 
     @Import(name="textract")
       private @Nullable Output<String> textract;
 
-    public Output<String> getTextract() {
+    public Output<String> textract() {
         return this.textract == null ? Codegen.empty() : this.textract;
     }
 
     @Import(name="timestreamquery")
       private @Nullable Output<String> timestreamquery;
 
-    public Output<String> getTimestreamquery() {
+    public Output<String> timestreamquery() {
         return this.timestreamquery == null ? Codegen.empty() : this.timestreamquery;
     }
 
     @Import(name="timestreamwrite")
       private @Nullable Output<String> timestreamwrite;
 
-    public Output<String> getTimestreamwrite() {
+    public Output<String> timestreamwrite() {
         return this.timestreamwrite == null ? Codegen.empty() : this.timestreamwrite;
     }
 
     @Import(name="transcribe")
       private @Nullable Output<String> transcribe;
 
-    public Output<String> getTranscribe() {
+    public Output<String> transcribe() {
         return this.transcribe == null ? Codegen.empty() : this.transcribe;
     }
 
     @Import(name="transcribeservice")
       private @Nullable Output<String> transcribeservice;
 
-    public Output<String> getTranscribeservice() {
+    public Output<String> transcribeservice() {
         return this.transcribeservice == null ? Codegen.empty() : this.transcribeservice;
     }
 
     @Import(name="transcribestreaming")
       private @Nullable Output<String> transcribestreaming;
 
-    public Output<String> getTranscribestreaming() {
+    public Output<String> transcribestreaming() {
         return this.transcribestreaming == null ? Codegen.empty() : this.transcribestreaming;
     }
 
     @Import(name="transcribestreamingservice")
       private @Nullable Output<String> transcribestreamingservice;
 
-    public Output<String> getTranscribestreamingservice() {
+    public Output<String> transcribestreamingservice() {
         return this.transcribestreamingservice == null ? Codegen.empty() : this.transcribestreamingservice;
     }
 
     @Import(name="transfer")
       private @Nullable Output<String> transfer;
 
-    public Output<String> getTransfer() {
+    public Output<String> transfer() {
         return this.transfer == null ? Codegen.empty() : this.transfer;
     }
 
     @Import(name="translate")
       private @Nullable Output<String> translate;
 
-    public Output<String> getTranslate() {
+    public Output<String> translate() {
         return this.translate == null ? Codegen.empty() : this.translate;
     }
 
     @Import(name="waf")
       private @Nullable Output<String> waf;
 
-    public Output<String> getWaf() {
+    public Output<String> waf() {
         return this.waf == null ? Codegen.empty() : this.waf;
     }
 
     @Import(name="wafregional")
       private @Nullable Output<String> wafregional;
 
-    public Output<String> getWafregional() {
+    public Output<String> wafregional() {
         return this.wafregional == null ? Codegen.empty() : this.wafregional;
     }
 
     @Import(name="wafv2")
       private @Nullable Output<String> wafv2;
 
-    public Output<String> getWafv2() {
+    public Output<String> wafv2() {
         return this.wafv2 == null ? Codegen.empty() : this.wafv2;
     }
 
     @Import(name="wellarchitected")
       private @Nullable Output<String> wellarchitected;
 
-    public Output<String> getWellarchitected() {
+    public Output<String> wellarchitected() {
         return this.wellarchitected == null ? Codegen.empty() : this.wellarchitected;
     }
 
     @Import(name="workdocs")
       private @Nullable Output<String> workdocs;
 
-    public Output<String> getWorkdocs() {
+    public Output<String> workdocs() {
         return this.workdocs == null ? Codegen.empty() : this.workdocs;
     }
 
     @Import(name="worklink")
       private @Nullable Output<String> worklink;
 
-    public Output<String> getWorklink() {
+    public Output<String> worklink() {
         return this.worklink == null ? Codegen.empty() : this.worklink;
     }
 
     @Import(name="workmail")
       private @Nullable Output<String> workmail;
 
-    public Output<String> getWorkmail() {
+    public Output<String> workmail() {
         return this.workmail == null ? Codegen.empty() : this.workmail;
     }
 
     @Import(name="workmailmessageflow")
       private @Nullable Output<String> workmailmessageflow;
 
-    public Output<String> getWorkmailmessageflow() {
+    public Output<String> workmailmessageflow() {
         return this.workmailmessageflow == null ? Codegen.empty() : this.workmailmessageflow;
     }
 
     @Import(name="workspaces")
       private @Nullable Output<String> workspaces;
 
-    public Output<String> getWorkspaces() {
+    public Output<String> workspaces() {
         return this.workspaces == null ? Codegen.empty() : this.workspaces;
     }
 
     @Import(name="xray")
       private @Nullable Output<String> xray;
 
-    public Output<String> getXray() {
+    public Output<String> xray() {
         return this.xray == null ? Codegen.empty() : this.xray;
     }
 

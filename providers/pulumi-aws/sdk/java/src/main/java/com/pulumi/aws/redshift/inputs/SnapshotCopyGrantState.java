@@ -23,7 +23,7 @@ public final class SnapshotCopyGrantState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class SnapshotCopyGrantState extends com.pulumi.resources.ResourceA
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -45,7 +45,7 @@ public final class SnapshotCopyGrantState extends com.pulumi.resources.ResourceA
     @Import(name="snapshotCopyGrantName")
       private final @Nullable Output<String> snapshotCopyGrantName;
 
-    public Output<String> getSnapshotCopyGrantName() {
+    public Output<String> snapshotCopyGrantName() {
         return this.snapshotCopyGrantName == null ? Codegen.empty() : this.snapshotCopyGrantName;
     }
 
@@ -56,7 +56,7 @@ public final class SnapshotCopyGrantState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class SnapshotCopyGrantState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

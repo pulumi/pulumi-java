@@ -30,7 +30,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+    public Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
@@ -41,7 +41,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -52,7 +52,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="inputs")
       private final @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
 
-    public Output<AnalyticsApplicationInputsArgs> getInputs() {
+    public Output<AnalyticsApplicationInputsArgs> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -74,7 +74,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="outputs")
       private final @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
 
-    public Output<List<AnalyticsApplicationOutputArgs>> getOutputs() {
+    public Output<List<AnalyticsApplicationOutputArgs>> outputs() {
         return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
@@ -97,7 +97,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="referenceDataSources")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesArgs> getReferenceDataSources() {
+    public Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources() {
         return this.referenceDataSources == null ? Codegen.empty() : this.referenceDataSources;
     }
 
@@ -109,7 +109,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="startApplication")
       private final @Nullable Output<Boolean> startApplication;
 
-    public Output<Boolean> getStartApplication() {
+    public Output<Boolean> startApplication() {
         return this.startApplication == null ? Codegen.empty() : this.startApplication;
     }
 
@@ -120,7 +120,7 @@ public final class AnalyticsApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

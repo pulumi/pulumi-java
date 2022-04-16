@@ -20,42 +20,42 @@ public final class InstanceEbsBlockDeviceArgs extends com.pulumi.resources.Resou
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> getDeleteOnTermination() {
+    public Output<Boolean> deleteOnTermination() {
         return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
+    public Output<Integer> volumeSize() {
         return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

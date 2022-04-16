@@ -52,33 +52,33 @@ public final class GetOutpostsResult {
      * Set of Amazon Resource Names (ARNs).
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
-    public String getAvailabilityZoneId() {
+    public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of identifiers.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 

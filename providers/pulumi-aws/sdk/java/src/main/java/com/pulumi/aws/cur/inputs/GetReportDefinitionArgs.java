@@ -19,7 +19,7 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="reportName", required=true)
       private final String reportName;
 
-    public String getReportName() {
+    public String reportName() {
         return this.reportName;
     }
 

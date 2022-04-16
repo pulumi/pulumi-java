@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerTlsValidationArgs extends com.pulumi.r
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames;
 
-    public Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs> getSubjectAlternativeNames() {
+    public Output<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerTlsValidationArgs extends com.pulumi.r
     @Import(name="trust", required=true)
       private final Output<VirtualNodeSpecListenerTlsValidationTrustArgs> trust;
 
-    public Output<VirtualNodeSpecListenerTlsValidationTrustArgs> getTrust() {
+    public Output<VirtualNodeSpecListenerTlsValidationTrustArgs> trust() {
         return this.trust;
     }
 

@@ -22,7 +22,7 @@ public final class TriggerActionNotificationPropertyGetArgs extends com.pulumi.r
     @Import(name="notifyDelayAfter")
       private final @Nullable Output<Integer> notifyDelayAfter;
 
-    public Output<Integer> getNotifyDelayAfter() {
+    public Output<Integer> notifyDelayAfter() {
         return this.notifyDelayAfter == null ? Codegen.empty() : this.notifyDelayAfter;
     }
 

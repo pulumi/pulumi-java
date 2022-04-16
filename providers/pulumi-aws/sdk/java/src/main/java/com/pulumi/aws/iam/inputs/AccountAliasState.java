@@ -22,7 +22,7 @@ public final class AccountAliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountAlias")
       private final @Nullable Output<String> accountAlias;
 
-    public Output<String> getAccountAlias() {
+    public Output<String> accountAlias() {
         return this.accountAlias == null ? Codegen.empty() : this.accountAlias;
     }
 

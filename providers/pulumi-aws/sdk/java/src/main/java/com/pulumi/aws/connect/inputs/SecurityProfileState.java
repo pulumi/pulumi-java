@@ -24,7 +24,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -57,7 +57,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="organizationResourceId")
       private final @Nullable Output<String> organizationResourceId;
 
-    public Output<String> getOrganizationResourceId() {
+    public Output<String> organizationResourceId() {
         return this.organizationResourceId == null ? Codegen.empty() : this.organizationResourceId;
     }
 
@@ -79,7 +79,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -90,7 +90,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="securityProfileId")
       private final @Nullable Output<String> securityProfileId;
 
-    public Output<String> getSecurityProfileId() {
+    public Output<String> securityProfileId() {
         return this.securityProfileId == null ? Codegen.empty() : this.securityProfileId;
     }
 
@@ -102,7 +102,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class SecurityProfileState extends com.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -22,7 +22,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="directoryId")
       private final @Nullable String directoryId;
 
-    public Optional<String> getDirectoryId() {
+    public Optional<String> directoryId() {
         return this.directoryId == null ? Optional.empty() : Optional.ofNullable(this.directoryId);
     }
 
@@ -33,7 +33,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -44,7 +44,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 
@@ -55,7 +55,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceId")
       private final @Nullable String workspaceId;
 
-    public Optional<String> getWorkspaceId() {
+    public Optional<String> workspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
     }
 

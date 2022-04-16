@@ -23,7 +23,7 @@ public final class AnalyzerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="analyzerName")
       private final @Nullable Output<String> analyzerName;
 
-    public Output<String> getAnalyzerName() {
+    public Output<String> analyzerName() {
         return this.analyzerName == null ? Codegen.empty() : this.analyzerName;
     }
 
@@ -34,7 +34,7 @@ public final class AnalyzerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -45,7 +45,7 @@ public final class AnalyzerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -56,7 +56,7 @@ public final class AnalyzerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -67,7 +67,7 @@ public final class AnalyzerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

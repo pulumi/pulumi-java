@@ -32,20 +32,20 @@ public final class GetOutpostInstanceTypeResult {
         this.preferredInstanceTypes = preferredInstanceTypes;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
-    public List<String> getPreferredInstanceTypes() {
+    public List<String> preferredInstanceTypes() {
         return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;
     }
 

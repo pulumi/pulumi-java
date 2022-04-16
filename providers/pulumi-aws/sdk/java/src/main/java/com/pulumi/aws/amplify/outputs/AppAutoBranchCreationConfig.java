@@ -92,70 +92,70 @@ public final class AppAutoBranchCreationConfig {
      * The basic authorization credentials for the autocreated branch.
      * 
     */
-    public Optional<String> getBasicAuthCredentials() {
+    public Optional<String> basicAuthCredentials() {
         return Optional.ofNullable(this.basicAuthCredentials);
     }
     /**
      * The build specification (build spec) for the autocreated branch.
      * 
     */
-    public Optional<String> getBuildSpec() {
+    public Optional<String> buildSpec() {
         return Optional.ofNullable(this.buildSpec);
     }
     /**
      * Enables auto building for the autocreated branch.
      * 
     */
-    public Optional<Boolean> getEnableAutoBuild() {
+    public Optional<Boolean> enableAutoBuild() {
         return Optional.ofNullable(this.enableAutoBuild);
     }
     /**
      * Enables basic authorization for the autocreated branch.
      * 
     */
-    public Optional<Boolean> getEnableBasicAuth() {
+    public Optional<Boolean> enableBasicAuth() {
         return Optional.ofNullable(this.enableBasicAuth);
     }
     /**
      * Enables performance mode for the branch.
      * 
     */
-    public Optional<Boolean> getEnablePerformanceMode() {
+    public Optional<Boolean> enablePerformanceMode() {
         return Optional.ofNullable(this.enablePerformanceMode);
     }
     /**
      * Enables pull request previews for the autocreated branch.
      * 
     */
-    public Optional<Boolean> getEnablePullRequestPreview() {
+    public Optional<Boolean> enablePullRequestPreview() {
         return Optional.ofNullable(this.enablePullRequestPreview);
     }
     /**
      * The environment variables for the autocreated branch.
      * 
     */
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * The framework for the autocreated branch.
      * 
     */
-    public Optional<String> getFramework() {
+    public Optional<String> framework() {
         return Optional.ofNullable(this.framework);
     }
     /**
      * The Amplify environment name for the pull request.
      * 
     */
-    public Optional<String> getPullRequestEnvironmentName() {
+    public Optional<String> pullRequestEnvironmentName() {
         return Optional.ofNullable(this.pullRequestEnvironmentName);
     }
     /**
      * Describes the current stage for the autocreated branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
      * 
     */
-    public Optional<String> getStage() {
+    public Optional<String> stage() {
         return Optional.ofNullable(this.stage);
     }
 

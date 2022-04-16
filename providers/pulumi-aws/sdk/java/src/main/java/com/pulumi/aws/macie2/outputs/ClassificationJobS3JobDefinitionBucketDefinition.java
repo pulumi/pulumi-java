@@ -33,14 +33,14 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
      * The unique identifier for the AWS account that owns the buckets.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * An array that lists the names of the buckets.
      * 
     */
-    public List<String> getBuckets() {
+    public List<String> buckets() {
         return this.buckets;
     }
 

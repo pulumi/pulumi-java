@@ -23,7 +23,7 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowSsh")
       private final @Nullable Output<Boolean> allowSsh;
 
-    public Output<Boolean> getAllowSsh() {
+    public Output<Boolean> allowSsh() {
         return this.allowSsh == null ? Codegen.empty() : this.allowSsh;
     }
 
@@ -34,7 +34,7 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowSudo")
       private final @Nullable Output<Boolean> allowSudo;
 
-    public Output<Boolean> getAllowSudo() {
+    public Output<Boolean> allowSudo() {
         return this.allowSudo == null ? Codegen.empty() : this.allowSudo;
     }
 
@@ -45,7 +45,7 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -56,7 +56,7 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId == null ? Codegen.empty() : this.stackId;
     }
 
@@ -67,7 +67,7 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userArn")
       private final @Nullable Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn == null ? Codegen.empty() : this.userArn;
     }
 

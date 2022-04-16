@@ -23,7 +23,7 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="minimumLength")
       private final @Nullable Output<Integer> minimumLength;
 
-    public Output<Integer> getMinimumLength() {
+    public Output<Integer> minimumLength() {
         return this.minimumLength == null ? Codegen.empty() : this.minimumLength;
     }
 
@@ -34,7 +34,7 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireLowercase")
       private final @Nullable Output<Boolean> requireLowercase;
 
-    public Output<Boolean> getRequireLowercase() {
+    public Output<Boolean> requireLowercase() {
         return this.requireLowercase == null ? Codegen.empty() : this.requireLowercase;
     }
 
@@ -45,7 +45,7 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireNumbers")
       private final @Nullable Output<Boolean> requireNumbers;
 
-    public Output<Boolean> getRequireNumbers() {
+    public Output<Boolean> requireNumbers() {
         return this.requireNumbers == null ? Codegen.empty() : this.requireNumbers;
     }
 
@@ -56,7 +56,7 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireSymbols")
       private final @Nullable Output<Boolean> requireSymbols;
 
-    public Output<Boolean> getRequireSymbols() {
+    public Output<Boolean> requireSymbols() {
         return this.requireSymbols == null ? Codegen.empty() : this.requireSymbols;
     }
 
@@ -67,7 +67,7 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireUppercase")
       private final @Nullable Output<Boolean> requireUppercase;
 
-    public Output<Boolean> getRequireUppercase() {
+    public Output<Boolean> requireUppercase() {
         return this.requireUppercase == null ? Codegen.empty() : this.requireUppercase;
     }
 
@@ -78,7 +78,7 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="temporaryPasswordValidityDays")
       private final @Nullable Output<Integer> temporaryPasswordValidityDays;
 
-    public Output<Integer> getTemporaryPasswordValidityDays() {
+    public Output<Integer> temporaryPasswordValidityDays() {
         return this.temporaryPasswordValidityDays == null ? Codegen.empty() : this.temporaryPasswordValidityDays;
     }
 

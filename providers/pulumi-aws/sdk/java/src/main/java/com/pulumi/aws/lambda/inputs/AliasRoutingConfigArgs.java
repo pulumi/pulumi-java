@@ -24,7 +24,7 @@ public final class AliasRoutingConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="additionalVersionWeights")
       private final @Nullable Output<Map<String,Double>> additionalVersionWeights;
 
-    public Output<Map<String,Double>> getAdditionalVersionWeights() {
+    public Output<Map<String,Double>> additionalVersionWeights() {
         return this.additionalVersionWeights == null ? Codegen.empty() : this.additionalVersionWeights;
     }
 

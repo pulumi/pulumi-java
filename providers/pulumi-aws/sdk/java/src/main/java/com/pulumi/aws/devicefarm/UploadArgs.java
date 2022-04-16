@@ -22,7 +22,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -33,7 +33,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectArn", required=true)
       private final Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
 
@@ -55,7 +55,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

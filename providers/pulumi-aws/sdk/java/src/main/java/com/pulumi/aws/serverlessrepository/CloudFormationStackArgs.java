@@ -24,7 +24,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -35,7 +35,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
     @Import(name="capabilities", required=true)
       private final Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
+    public Output<List<String>> capabilities() {
         return this.capabilities;
     }
 
@@ -46,7 +46,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -68,7 +68,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
     @Import(name="semanticVersion")
       private final @Nullable Output<String> semanticVersion;
 
-    public Output<String> getSemanticVersion() {
+    public Output<String> semanticVersion() {
         return this.semanticVersion == null ? Codegen.empty() : this.semanticVersion;
     }
 
@@ -79,7 +79,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

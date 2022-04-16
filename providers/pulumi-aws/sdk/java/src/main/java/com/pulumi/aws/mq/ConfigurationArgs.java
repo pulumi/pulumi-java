@@ -23,7 +23,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationStrategy")
       private final @Nullable Output<String> authenticationStrategy;
 
-    public Output<String> getAuthenticationStrategy() {
+    public Output<String> authenticationStrategy() {
         return this.authenticationStrategy == null ? Codegen.empty() : this.authenticationStrategy;
     }
 
@@ -34,7 +34,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data", required=true)
       private final Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
 
@@ -45,7 +45,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineType", required=true)
       private final Output<String> engineType;
 
-    public Output<String> getEngineType() {
+    public Output<String> engineType() {
         return this.engineType;
     }
 
@@ -67,7 +67,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion", required=true)
       private final Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
 
@@ -78,7 +78,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -44,7 +44,7 @@ public class EgressOnlyInternetGateway extends com.pulumi.resources.CustomResour
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -58,7 +58,7 @@ public class EgressOnlyInternetGateway extends com.pulumi.resources.CustomResour
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -72,7 +72,7 @@ public class EgressOnlyInternetGateway extends com.pulumi.resources.CustomResour
      * @return The VPC ID to create in.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

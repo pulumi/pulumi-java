@@ -41,21 +41,21 @@ public final class PipelineDefinitionPipelineObjectField {
      * Field identifier.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Field value, expressed as the identifier of another object
      * 
     */
-    public Optional<String> getRefValue() {
+    public Optional<String> refValue() {
         return Optional.ofNullable(this.refValue);
     }
     /**
      * Field value, expressed as a String.
      * 
     */
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
 

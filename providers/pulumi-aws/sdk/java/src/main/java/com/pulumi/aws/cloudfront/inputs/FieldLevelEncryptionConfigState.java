@@ -24,7 +24,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
     @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference == null ? Codegen.empty() : this.callerReference;
     }
 
@@ -35,7 +35,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -46,7 +46,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
     @Import(name="contentTypeProfileConfig")
       private final @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
 
-    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> getContentTypeProfileConfig() {
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig() {
         return this.contentTypeProfileConfig == null ? Codegen.empty() : this.contentTypeProfileConfig;
     }
 
@@ -57,7 +57,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -68,7 +68,7 @@ public final class FieldLevelEncryptionConfigState extends com.pulumi.resources.
     @Import(name="queryArgProfileConfig")
       private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
 
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> getQueryArgProfileConfig() {
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig() {
         return this.queryArgProfileConfig == null ? Codegen.empty() : this.queryArgProfileConfig;
     }
 

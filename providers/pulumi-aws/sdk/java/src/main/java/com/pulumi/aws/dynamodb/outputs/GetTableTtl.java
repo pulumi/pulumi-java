@@ -21,10 +21,10 @@ public final class GetTableTtl {
         this.enabled = enabled;
     }
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

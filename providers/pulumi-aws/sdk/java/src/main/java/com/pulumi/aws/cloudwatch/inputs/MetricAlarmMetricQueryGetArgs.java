@@ -24,7 +24,7 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -35,7 +35,7 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression == null ? Codegen.empty() : this.expression;
     }
 
@@ -46,7 +46,7 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -57,7 +57,7 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -68,7 +68,7 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
     @Import(name="metric")
       private final @Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric;
 
-    public Output<MetricAlarmMetricQueryMetricGetArgs> getMetric() {
+    public Output<MetricAlarmMetricQueryMetricGetArgs> metric() {
         return this.metric == null ? Codegen.empty() : this.metric;
     }
 
@@ -79,7 +79,7 @@ public final class MetricAlarmMetricQueryGetArgs extends com.pulumi.resources.Re
     @Import(name="returnData")
       private final @Nullable Output<Boolean> returnData;
 
-    public Output<Boolean> getReturnData() {
+    public Output<Boolean> returnData() {
         return this.returnData == null ? Codegen.empty() : this.returnData;
     }
 

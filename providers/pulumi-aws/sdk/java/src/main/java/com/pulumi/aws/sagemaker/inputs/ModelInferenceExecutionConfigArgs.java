@@ -21,7 +21,7 @@ public final class ModelInferenceExecutionConfigArgs extends com.pulumi.resource
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 

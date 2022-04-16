@@ -26,7 +26,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="memberDefinitions")
       private final @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
 
-    public Output<List<WorkteamMemberDefinitionGetArgs>> getMemberDefinitions() {
+    public Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions() {
         return this.memberDefinitions == null ? Codegen.empty() : this.memberDefinitions;
     }
 
@@ -59,7 +59,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfiguration")
       private final @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
 
-    public Output<WorkteamNotificationConfigurationGetArgs> getNotificationConfiguration() {
+    public Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration() {
         return this.notificationConfiguration == null ? Codegen.empty() : this.notificationConfiguration;
     }
 
@@ -70,7 +70,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
 
-    public Output<String> getSubdomain() {
+    public Output<String> subdomain() {
         return this.subdomain == null ? Codegen.empty() : this.subdomain;
     }
 
@@ -81,7 +81,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -103,7 +103,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workforceName")
       private final @Nullable Output<String> workforceName;
 
-    public Output<String> getWorkforceName() {
+    public Output<String> workforceName() {
         return this.workforceName == null ? Codegen.empty() : this.workforceName;
     }
 
@@ -114,7 +114,7 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workteamName")
       private final @Nullable Output<String> workteamName;
 
-    public Output<String> getWorkteamName() {
+    public Output<String> workteamName() {
         return this.workteamName == null ? Codegen.empty() : this.workteamName;
     }
 

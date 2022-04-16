@@ -36,7 +36,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to `private`. Valid values are `private`, `public-read`, `public-read-write`, `authenticated-read`, `aws-exec-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Conflicts with `grant`.
      * 
      */
-    public Output</* @Nullable */ String> getAcl() {
+    public Output</* @Nullable */ String> acl() {
         return this.acl;
     }
     /**
@@ -50,13 +50,13 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Name of the bucket to put the file in.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     @Export(name="bucketKeyEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> getBucketKeyEnabled() {
+    public Output<Boolean> bucketKeyEnabled() {
         return this.bucketKeyEnabled;
     }
     /**
@@ -70,7 +70,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
      * 
      */
-    public Output<String> getCacheControl() {
+    public Output<String> cacheControl() {
         return this.cacheControl;
     }
     /**
@@ -84,7 +84,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
      * 
      */
-    public Output<String> getContentDisposition() {
+    public Output<String> contentDisposition() {
         return this.contentDisposition;
     }
     /**
@@ -98,7 +98,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
      * 
      */
-    public Output<String> getContentEncoding() {
+    public Output<String> contentEncoding() {
         return this.contentEncoding;
     }
     /**
@@ -112,7 +112,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Language the content is in e.g., en-US or en-GB.
      * 
      */
-    public Output<String> getContentLanguage() {
+    public Output<String> contentLanguage() {
         return this.contentLanguage;
     }
     /**
@@ -126,7 +126,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -140,7 +140,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if its entity tag (ETag) matches the specified tag.
      * 
      */
-    public Output</* @Nullable */ String> getCopyIfMatch() {
+    public Output</* @Nullable */ String> copyIfMatch() {
         return this.copyIfMatch;
     }
     /**
@@ -154,7 +154,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output</* @Nullable */ String> getCopyIfModifiedSince() {
+    public Output</* @Nullable */ String> copyIfModifiedSince() {
         return this.copyIfModifiedSince;
     }
     /**
@@ -168,7 +168,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if its entity tag (ETag) is different than the specified ETag.
      * 
      */
-    public Output</* @Nullable */ String> getCopyIfNoneMatch() {
+    public Output</* @Nullable */ String> copyIfNoneMatch() {
         return this.copyIfNoneMatch;
     }
     /**
@@ -182,7 +182,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if it hasn't been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output</* @Nullable */ String> getCopyIfUnmodifiedSince() {
+    public Output</* @Nullable */ String> copyIfUnmodifiedSince() {
         return this.copyIfUnmodifiedSince;
     }
     /**
@@ -196,7 +196,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the algorithm to use to when encrypting the object (for example, AES256).
      * 
      */
-    public Output<String> getCustomerAlgorithm() {
+    public Output<String> customerAlgorithm() {
         return this.customerAlgorithm;
     }
     /**
@@ -210,7 +210,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
      * 
      */
-    public Output</* @Nullable */ String> getCustomerKey() {
+    public Output</* @Nullable */ String> customerKey() {
         return this.customerKey;
     }
     /**
@@ -224,7 +224,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
      * 
      */
-    public Output<String> getCustomerKeyMd5() {
+    public Output<String> customerKeyMd5() {
         return this.customerKeyMd5;
     }
     /**
@@ -238,7 +238,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return The ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on [Common Response Headers](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html).
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -252,7 +252,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Account id of the expected destination bucket owner. If the destination bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
      * 
      */
-    public Output</* @Nullable */ String> getExpectedBucketOwner() {
+    public Output</* @Nullable */ String> expectedBucketOwner() {
         return this.expectedBucketOwner;
     }
     /**
@@ -266,7 +266,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
      * 
      */
-    public Output</* @Nullable */ String> getExpectedSourceBucketOwner() {
+    public Output</* @Nullable */ String> expectedSourceBucketOwner() {
         return this.expectedSourceBucketOwner;
     }
     /**
@@ -280,7 +280,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return If the object expiration is configured, this attribute will be set.
      * 
      */
-    public Output<String> getExpiration() {
+    public Output<String> expiration() {
         return this.expiration;
     }
     /**
@@ -294,7 +294,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Date and time at which the object is no longer cacheable, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output</* @Nullable */ String> getExpires() {
+    public Output</* @Nullable */ String> expires() {
         return this.expires;
     }
     /**
@@ -308,7 +308,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -322,7 +322,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Configuration block for header grants. Documented below. Conflicts with `acl`.
      * 
      */
-    public Output</* @Nullable */ List<ObjectCopyGrant>> getGrants() {
+    public Output</* @Nullable */ List<ObjectCopyGrant>> grants() {
         return this.grants;
     }
     /**
@@ -336,7 +336,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Name of the object once it is in the bucket.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -350,7 +350,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the AWS KMS Encryption Context to use for object encryption. The value is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.
      * 
      */
-    public Output<String> getKmsEncryptionContext() {
+    public Output<String> kmsEncryptionContext() {
         return this.kmsEncryptionContext;
     }
     /**
@@ -364,7 +364,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the AWS KMS Key ARN to use for object encryption. This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`, use the exported `arn` attribute: `kms_key_id = aws_kms_key.foo.arn`
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -378,7 +378,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Returns the date that the object was last modified, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -392,7 +392,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -406,7 +406,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are `COPY` and `REPLACE`.
      * 
      */
-    public Output</* @Nullable */ String> getMetadataDirective() {
+    public Output</* @Nullable */ String> metadataDirective() {
         return this.metadataDirective;
     }
     /**
@@ -420,7 +420,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
      * 
      */
-    public Output<String> getObjectLockLegalHoldStatus() {
+    public Output<String> objectLockLegalHoldStatus() {
         return this.objectLockLegalHoldStatus;
     }
     /**
@@ -434,7 +434,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
      * 
      */
-    public Output<String> getObjectLockMode() {
+    public Output<String> objectLockMode() {
         return this.objectLockMode;
     }
     /**
@@ -448,7 +448,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
      * 
      */
-    public Output<String> getObjectLockRetainUntilDate() {
+    public Output<String> objectLockRetainUntilDate() {
         return this.objectLockRetainUntilDate;
     }
     /**
@@ -462,7 +462,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return If present, indicates that the requester was successfully charged for the request.
      * 
      */
-    public Output<Boolean> getRequestCharged() {
+    public Output<Boolean> requestCharged() {
         return this.requestCharged;
     }
     /**
@@ -476,7 +476,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is `requester`.
      * 
      */
-    public Output</* @Nullable */ String> getRequestPayer() {
+    public Output</* @Nullable */ String> requestPayer() {
         return this.requestPayer;
     }
     /**
@@ -490,7 +490,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies server-side encryption of the object in S3. Valid values are `AES256` and `aws:kms`.
      * 
      */
-    public Output<String> getServerSideEncryption() {
+    public Output<String> serverSideEncryption() {
         return this.serverSideEncryption;
     }
     /**
@@ -504,7 +504,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (`/`). For example, `testbucket/test1.json`. For objects accessed through access points, specify the Amazon Resource Name (ARN) of the object as accessed through the access point, in the format `arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>`. For example, `arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json`.
      * 
      */
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
     /**
@@ -518,7 +518,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the algorithm to use when decrypting the source object (for example, AES256).
      * 
      */
-    public Output</* @Nullable */ String> getSourceCustomerAlgorithm() {
+    public Output</* @Nullable */ String> sourceCustomerAlgorithm() {
         return this.sourceCustomerAlgorithm;
     }
     /**
@@ -532,7 +532,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
      * 
      */
-    public Output</* @Nullable */ String> getSourceCustomerKey() {
+    public Output</* @Nullable */ String> sourceCustomerKey() {
         return this.sourceCustomerKey;
     }
     /**
@@ -546,7 +546,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
      * 
      */
-    public Output</* @Nullable */ String> getSourceCustomerKeyMd5() {
+    public Output</* @Nullable */ String> sourceCustomerKeyMd5() {
         return this.sourceCustomerKeyMd5;
     }
     /**
@@ -560,7 +560,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Version of the copied object in the source bucket.
      * 
      */
-    public Output<String> getSourceVersionId() {
+    public Output<String> sourceVersionId() {
         return this.sourceVersionId;
     }
     /**
@@ -574,7 +574,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the desired [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html#AmazonS3-CopyObject-request-header-StorageClass) for the object. Defaults to `STANDARD`.
      * 
      */
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
     /**
@@ -588,7 +588,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request. Valid values are `COPY` and `REPLACE`.
      * 
      */
-    public Output</* @Nullable */ String> getTaggingDirective() {
+    public Output</* @Nullable */ String> taggingDirective() {
         return this.taggingDirective;
     }
     /**
@@ -602,7 +602,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -616,7 +616,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -630,7 +630,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Version ID of the newly created copy.
      * 
      */
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
     /**
@@ -644,7 +644,7 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
      * 
      */
-    public Output<String> getWebsiteRedirect() {
+    public Output<String> websiteRedirect() {
         return this.websiteRedirect;
     }
 

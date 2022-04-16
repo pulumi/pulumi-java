@@ -21,7 +21,7 @@ public final class KinesisStreamingDestinationArgs extends com.pulumi.resources.
     @Import(name="streamArn", required=true)
       private final Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
 
@@ -33,7 +33,7 @@ public final class KinesisStreamingDestinationArgs extends com.pulumi.resources.
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

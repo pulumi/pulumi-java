@@ -21,7 +21,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="deleteOnTermination", required=true)
       private final Boolean deleteOnTermination;
 
-    public Boolean getDeleteOnTermination() {
+    public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
 
@@ -32,7 +32,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -43,7 +43,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="encrypted", required=true)
       private final Boolean encrypted;
 
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
 
@@ -54,7 +54,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="iops", required=true)
       private final Integer iops;
 
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
 
@@ -65,7 +65,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="noDevice", required=true)
       private final Boolean noDevice;
 
-    public Boolean getNoDevice() {
+    public Boolean noDevice() {
         return this.noDevice;
     }
 
@@ -76,7 +76,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="snapshotId", required=true)
       private final String snapshotId;
 
-    public String getSnapshotId() {
+    public String snapshotId() {
         return this.snapshotId;
     }
 
@@ -87,7 +87,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="throughput", required=true)
       private final Boolean throughput;
 
-    public Boolean getThroughput() {
+    public Boolean throughput() {
         return this.throughput;
     }
 
@@ -98,7 +98,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
 
@@ -109,7 +109,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends com.pulumi.resou
     @Import(name="volumeType", required=true)
       private final String volumeType;
 
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

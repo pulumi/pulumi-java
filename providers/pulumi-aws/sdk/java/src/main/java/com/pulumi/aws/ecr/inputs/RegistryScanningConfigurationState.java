@@ -24,7 +24,7 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
@@ -35,7 +35,7 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
     @Import(name="rules")
       private final @Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules;
 
-    public Output<List<RegistryScanningConfigurationRuleGetArgs>> getRules() {
+    public Output<List<RegistryScanningConfigurationRuleGetArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -46,7 +46,7 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
     @Import(name="scanType")
       private final @Nullable Output<String> scanType;
 
-    public Output<String> getScanType() {
+    public Output<String> scanType() {
         return this.scanType == null ? Codegen.empty() : this.scanType;
     }
 

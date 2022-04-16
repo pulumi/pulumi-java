@@ -27,7 +27,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -38,7 +38,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -49,7 +49,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="cloudwatchDashboardNames")
       private final @Nullable Output<List<String>> cloudwatchDashboardNames;
 
-    public Output<List<String>> getCloudwatchDashboardNames() {
+    public Output<List<String>> cloudwatchDashboardNames() {
         return this.cloudwatchDashboardNames == null ? Codegen.empty() : this.cloudwatchDashboardNames;
     }
 
@@ -60,7 +60,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -71,7 +71,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="ignoreErrors")
       private final @Nullable Output<Boolean> ignoreErrors;
 
-    public Output<Boolean> getIgnoreErrors() {
+    public Output<Boolean> ignoreErrors() {
         return this.ignoreErrors == null ? Codegen.empty() : this.ignoreErrors;
     }
 
@@ -82,7 +82,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="lastProvisioningRecordId")
       private final @Nullable Output<String> lastProvisioningRecordId;
 
-    public Output<String> getLastProvisioningRecordId() {
+    public Output<String> lastProvisioningRecordId() {
         return this.lastProvisioningRecordId == null ? Codegen.empty() : this.lastProvisioningRecordId;
     }
 
@@ -93,7 +93,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="lastRecordId")
       private final @Nullable Output<String> lastRecordId;
 
-    public Output<String> getLastRecordId() {
+    public Output<String> lastRecordId() {
         return this.lastRecordId == null ? Codegen.empty() : this.lastRecordId;
     }
 
@@ -104,7 +104,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="lastSuccessfulProvisioningRecordId")
       private final @Nullable Output<String> lastSuccessfulProvisioningRecordId;
 
-    public Output<String> getLastSuccessfulProvisioningRecordId() {
+    public Output<String> lastSuccessfulProvisioningRecordId() {
         return this.lastSuccessfulProvisioningRecordId == null ? Codegen.empty() : this.lastSuccessfulProvisioningRecordId;
     }
 
@@ -115,7 +115,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="launchRoleArn")
       private final @Nullable Output<String> launchRoleArn;
 
-    public Output<String> getLaunchRoleArn() {
+    public Output<String> launchRoleArn() {
         return this.launchRoleArn == null ? Codegen.empty() : this.launchRoleArn;
     }
 
@@ -126,7 +126,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -137,7 +137,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> getNotificationArns() {
+    public Output<List<String>> notificationArns() {
         return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
     }
 
@@ -148,7 +148,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
-    public Output<String> getPathId() {
+    public Output<String> pathId() {
         return this.pathId == null ? Codegen.empty() : this.pathId;
     }
 
@@ -159,7 +159,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="pathName")
       private final @Nullable Output<String> pathName;
 
-    public Output<String> getPathName() {
+    public Output<String> pathName() {
         return this.pathName == null ? Codegen.empty() : this.pathName;
     }
 
@@ -170,7 +170,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
@@ -181,7 +181,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName == null ? Codegen.empty() : this.productName;
     }
 
@@ -192,7 +192,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
     }
 
@@ -203,7 +203,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="provisioningArtifactName")
       private final @Nullable Output<String> provisioningArtifactName;
 
-    public Output<String> getProvisioningArtifactName() {
+    public Output<String> provisioningArtifactName() {
         return this.provisioningArtifactName == null ? Codegen.empty() : this.provisioningArtifactName;
     }
 
@@ -214,7 +214,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
 
-    public Output<List<ProvisionedProductProvisioningParameterGetArgs>> getProvisioningParameters() {
+    public Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters() {
         return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
     }
 
@@ -225,7 +225,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="retainPhysicalResources")
       private final @Nullable Output<Boolean> retainPhysicalResources;
 
-    public Output<Boolean> getRetainPhysicalResources() {
+    public Output<Boolean> retainPhysicalResources() {
         return this.retainPhysicalResources == null ? Codegen.empty() : this.retainPhysicalResources;
     }
 
@@ -236,7 +236,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="stackSetProvisioningPreferences")
       private final @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
 
-    public Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> getStackSetProvisioningPreferences() {
+    public Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences() {
         return this.stackSetProvisioningPreferences == null ? Codegen.empty() : this.stackSetProvisioningPreferences;
     }
 
@@ -247,7 +247,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -258,7 +258,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="statusMessage")
       private final @Nullable Output<String> statusMessage;
 
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage == null ? Codegen.empty() : this.statusMessage;
     }
 
@@ -269,7 +269,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -280,7 +280,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -291,7 +291,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

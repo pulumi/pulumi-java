@@ -16,14 +16,14 @@ public final class GetTableTtl extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributeName", required=true)
       private final String attributeName;
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

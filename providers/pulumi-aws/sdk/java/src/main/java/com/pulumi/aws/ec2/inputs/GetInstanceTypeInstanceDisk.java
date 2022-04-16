@@ -16,21 +16,21 @@ public final class GetInstanceTypeInstanceDisk extends com.pulumi.resources.Invo
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
     @Import(name="size", required=true)
       private final Integer size;
 
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

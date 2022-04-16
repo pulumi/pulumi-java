@@ -26,7 +26,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="executableUsers")
       private final @Nullable List<String> executableUsers;
 
-    public List<String> getExecutableUsers() {
+    public List<String> executableUsers() {
         return this.executableUsers == null ? List.of() : this.executableUsers;
     }
 
@@ -39,7 +39,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetAmiFilter> filters;
 
-    public List<GetAmiFilter> getFilters() {
+    public List<GetAmiFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -51,7 +51,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -66,7 +66,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="nameRegex")
       private final @Nullable String nameRegex;
 
-    public Optional<String> getNameRegex() {
+    public Optional<String> nameRegex() {
         return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
     }
 
@@ -77,7 +77,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owners", required=true)
       private final List<String> owners;
 
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners;
     }
 
@@ -90,7 +90,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

@@ -46,7 +46,7 @@ public class ListenerCertificate extends com.pulumi.resources.CustomResource {
      * @return The ARN of the certificate to attach to the listener.
      * 
      */
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -60,7 +60,7 @@ public class ListenerCertificate extends com.pulumi.resources.CustomResource {
      * @return The ARN of the listener to which to attach the certificate.
      * 
      */
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 

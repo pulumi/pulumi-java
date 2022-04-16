@@ -23,7 +23,7 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -34,7 +34,7 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -45,7 +45,7 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
@@ -56,7 +56,7 @@ public final class TargetGroupAttachmentState extends com.pulumi.resources.Resou
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 

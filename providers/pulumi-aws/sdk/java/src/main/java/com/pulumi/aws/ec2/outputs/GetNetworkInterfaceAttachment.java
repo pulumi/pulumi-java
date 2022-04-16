@@ -27,16 +27,16 @@ public final class GetNetworkInterfaceAttachment {
         this.instanceOwnerId = instanceOwnerId;
     }
 
-    public String getAttachmentId() {
+    public String attachmentId() {
         return this.attachmentId;
     }
-    public Integer getDeviceIndex() {
+    public Integer deviceIndex() {
         return this.deviceIndex;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
-    public String getInstanceOwnerId() {
+    public String instanceOwnerId() {
         return this.instanceOwnerId;
     }
 

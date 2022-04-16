@@ -102,80 +102,80 @@ public final class GetRestApiResult {
      * The source of the API key for requests.
      * 
     */
-    public String getApiKeySource() {
+    public String apiKeySource() {
         return this.apiKeySource;
     }
     /**
      * The ARN of the REST API.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The list of binary media types supported by the REST API.
      * 
     */
-    public List<String> getBinaryMediaTypes() {
+    public List<String> binaryMediaTypes() {
         return this.binaryMediaTypes;
     }
     /**
      * The description of the REST API.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The endpoint configuration of this RestApi showing the endpoint types of the API.
      * 
     */
-    public List<GetRestApiEndpointConfiguration> getEndpointConfigurations() {
+    public List<GetRestApiEndpointConfiguration> endpointConfigurations() {
         return this.endpointConfigurations;
     }
     /**
      * The execution ARN part to be used in `lambda_permission`'s `source_arn` when allowing API Gateway to invoke a Lambda function, e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
      * 
     */
-    public String getExecutionArn() {
+    public String executionArn() {
         return this.executionArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Minimum response size to compress for the REST API.
      * 
     */
-    public Integer getMinimumCompressionSize() {
+    public Integer minimumCompressionSize() {
         return this.minimumCompressionSize;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * JSON formatted policy document that controls access to the API Gateway.
      * 
     */
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
     /**
      * Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.
      * 
     */
-    public String getRootResourceId() {
+    public String rootResourceId() {
         return this.rootResourceId;
     }
     /**
      * Key-value map of resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

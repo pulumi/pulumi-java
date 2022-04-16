@@ -24,7 +24,7 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
     @Import(name="filters")
       private final @Nullable List<GetManagedPrefixListFilter> filters;
 
-    public List<GetManagedPrefixListFilter> getFilters() {
+    public List<GetManagedPrefixListFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -46,7 +46,7 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -57,7 +57,7 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

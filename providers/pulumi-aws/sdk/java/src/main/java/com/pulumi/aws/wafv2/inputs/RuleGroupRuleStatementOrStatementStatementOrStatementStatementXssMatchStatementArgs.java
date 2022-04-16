@@ -24,7 +24,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
     @Import(name="fieldToMatch")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

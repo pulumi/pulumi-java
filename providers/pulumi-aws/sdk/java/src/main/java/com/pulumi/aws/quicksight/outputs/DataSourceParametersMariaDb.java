@@ -40,21 +40,21 @@ public final class DataSourceParametersMariaDb {
      * The database to which to connect.
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * The host to which to connect.
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * The port to which to connect.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

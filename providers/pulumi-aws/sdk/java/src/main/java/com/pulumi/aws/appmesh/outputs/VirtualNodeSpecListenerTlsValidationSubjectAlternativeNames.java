@@ -24,7 +24,7 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
      * The criteria for determining a SAN's match.
      * 
     */
-    public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch getMatch() {
+    public VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match() {
         return this.match;
     }
 

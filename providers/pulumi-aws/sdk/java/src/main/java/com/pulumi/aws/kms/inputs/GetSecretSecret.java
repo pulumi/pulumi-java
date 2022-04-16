@@ -19,28 +19,28 @@ public final class GetSecretSecret extends com.pulumi.resources.InvokeArgs {
     @Import(name="context")
       private final @Nullable Map<String,String> context;
 
-    public Map<String,String> getContext() {
+    public Map<String,String> context() {
         return this.context == null ? Map.of() : this.context;
     }
 
     @Import(name="grantTokens")
       private final @Nullable List<String> grantTokens;
 
-    public List<String> getGrantTokens() {
+    public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="payload", required=true)
       private final String payload;
 
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
 

@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustFileGetArgs extends 
     @Import(name="certificateChain", required=true)
       private final Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain;
     }
 

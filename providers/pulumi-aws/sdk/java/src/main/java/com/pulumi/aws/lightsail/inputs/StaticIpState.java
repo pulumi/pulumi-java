@@ -22,7 +22,7 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -44,7 +44,7 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class StaticIpState extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportCode")
       private final @Nullable Output<String> supportCode;
 
-    public Output<String> getSupportCode() {
+    public Output<String> supportCode() {
         return this.supportCode == null ? Codegen.empty() : this.supportCode;
     }
 

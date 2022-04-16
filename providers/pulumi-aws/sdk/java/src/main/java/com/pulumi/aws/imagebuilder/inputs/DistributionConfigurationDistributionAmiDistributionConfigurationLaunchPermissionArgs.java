@@ -23,7 +23,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="userGroups")
       private final @Nullable Output<List<String>> userGroups;
 
-    public Output<List<String>> getUserGroups() {
+    public Output<List<String>> userGroups() {
         return this.userGroups == null ? Codegen.empty() : this.userGroups;
     }
 
@@ -34,7 +34,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> getUserIds() {
+    public Output<List<String>> userIds() {
         return this.userIds == null ? Codegen.empty() : this.userIds;
     }
 

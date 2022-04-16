@@ -23,7 +23,7 @@ public final class RuleScopeGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="complianceResourceId")
       private final @Nullable Output<String> complianceResourceId;
 
-    public Output<String> getComplianceResourceId() {
+    public Output<String> complianceResourceId() {
         return this.complianceResourceId == null ? Codegen.empty() : this.complianceResourceId;
     }
 
@@ -34,7 +34,7 @@ public final class RuleScopeGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="complianceResourceTypes")
       private final @Nullable Output<List<String>> complianceResourceTypes;
 
-    public Output<List<String>> getComplianceResourceTypes() {
+    public Output<List<String>> complianceResourceTypes() {
         return this.complianceResourceTypes == null ? Codegen.empty() : this.complianceResourceTypes;
     }
 
@@ -45,7 +45,7 @@ public final class RuleScopeGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagKey")
       private final @Nullable Output<String> tagKey;
 
-    public Output<String> getTagKey() {
+    public Output<String> tagKey() {
         return this.tagKey == null ? Codegen.empty() : this.tagKey;
     }
 
@@ -56,7 +56,7 @@ public final class RuleScopeGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagValue")
       private final @Nullable Output<String> tagValue;
 
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue == null ? Codegen.empty() : this.tagValue;
     }
 

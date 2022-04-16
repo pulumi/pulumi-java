@@ -23,7 +23,7 @@ public final class DelegationSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName == null ? Codegen.empty() : this.referenceName;
     }
 

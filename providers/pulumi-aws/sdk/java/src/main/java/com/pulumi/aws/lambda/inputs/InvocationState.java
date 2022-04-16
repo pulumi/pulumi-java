@@ -23,7 +23,7 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
@@ -34,7 +34,7 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="input")
       private final @Nullable Output<String> input;
 
-    public Output<String> getInput() {
+    public Output<String> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -45,7 +45,7 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 
@@ -56,14 +56,14 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="result")
       private final @Nullable Output<String> result;
 
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result == null ? Codegen.empty() : this.result;
     }
 
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
+    public Output<Map<String,String>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

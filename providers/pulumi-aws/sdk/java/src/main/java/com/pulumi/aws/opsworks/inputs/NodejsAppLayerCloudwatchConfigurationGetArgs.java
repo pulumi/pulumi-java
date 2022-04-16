@@ -20,14 +20,14 @@ public final class NodejsAppLayerCloudwatchConfigurationGetArgs extends com.pulu
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
-    public Output<List<NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
+    public Output<List<NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

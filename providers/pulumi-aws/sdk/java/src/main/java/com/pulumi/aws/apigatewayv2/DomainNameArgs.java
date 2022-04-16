@@ -25,7 +25,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -36,7 +36,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainNameConfiguration", required=true)
       private final Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
-    public Output<DomainNameDomainNameConfigurationArgs> getDomainNameConfiguration() {
+    public Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration() {
         return this.domainNameConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
-    public Output<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
+    public Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Codegen.empty() : this.mutualTlsAuthentication;
     }
 
@@ -58,7 +58,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

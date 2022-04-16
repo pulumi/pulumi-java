@@ -23,7 +23,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
     @Import(name="nlbResource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> getNlbResource() {
+    public Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource() {
         return this.nlbResource == null ? Codegen.empty() : this.nlbResource;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
     @Import(name="r53Resource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> getR53Resource() {
+    public Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource() {
         return this.r53Resource == null ? Codegen.empty() : this.r53Resource;
     }
 

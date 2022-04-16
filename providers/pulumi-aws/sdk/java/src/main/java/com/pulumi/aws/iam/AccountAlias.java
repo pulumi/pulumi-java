@@ -42,7 +42,7 @@ public class AccountAlias extends com.pulumi.resources.CustomResource {
      * @return The account alias
      * 
      */
-    public Output<String> getAccountAlias() {
+    public Output<String> accountAlias() {
         return this.accountAlias;
     }
 

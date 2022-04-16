@@ -48,27 +48,27 @@ public final class GetRolesResult {
      * Set of ARNs of the matched IAM roles.
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getNameRegex() {
+    public Optional<String> nameRegex() {
         return Optional.ofNullable(this.nameRegex);
     }
     /**
      * Set of Names of the matched IAM roles.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
-    public Optional<String> getPathPrefix() {
+    public Optional<String> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
 

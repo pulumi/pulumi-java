@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     @Import(name="certificateAuthorityArns", required=true)
       private final Output<List<String>> certificateAuthorityArns;
 
-    public Output<List<String>> getCertificateAuthorityArns() {
+    public Output<List<String>> certificateAuthorityArns() {
         return this.certificateAuthorityArns;
     }
 

@@ -24,7 +24,7 @@ public final class TablePointInTimeRecovery {
      * Indicates whether ttl is enabled (true) or disabled (false).
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

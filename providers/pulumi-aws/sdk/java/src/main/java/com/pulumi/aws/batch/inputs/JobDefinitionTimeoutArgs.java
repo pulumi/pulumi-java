@@ -22,7 +22,7 @@ public final class JobDefinitionTimeoutArgs extends com.pulumi.resources.Resourc
     @Import(name="attemptDurationSeconds")
       private final @Nullable Output<Integer> attemptDurationSeconds;
 
-    public Output<Integer> getAttemptDurationSeconds() {
+    public Output<Integer> attemptDurationSeconds() {
         return this.attemptDurationSeconds == null ? Codegen.empty() : this.attemptDurationSeconds;
     }
 

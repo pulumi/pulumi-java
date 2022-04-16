@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputLambdaProcessor", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> getInputLambdaProcessor() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor() {
         return this.inputLambdaProcessor;
     }
 

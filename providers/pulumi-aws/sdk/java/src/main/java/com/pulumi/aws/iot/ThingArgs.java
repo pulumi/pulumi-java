@@ -23,7 +23,7 @@ public final class ThingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -34,7 +34,7 @@ public final class ThingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class ThingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thingTypeName")
       private final @Nullable Output<String> thingTypeName;
 
-    public Output<String> getThingTypeName() {
+    public Output<String> thingTypeName() {
         return this.thingTypeName == null ? Codegen.empty() : this.thingTypeName;
     }
 

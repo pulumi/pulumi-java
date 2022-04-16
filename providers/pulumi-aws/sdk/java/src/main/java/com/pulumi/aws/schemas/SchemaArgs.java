@@ -23,7 +23,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -34,7 +34,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -67,7 +67,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -78,7 +78,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

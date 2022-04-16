@@ -22,7 +22,7 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends com.pulumi
     @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
 
@@ -33,7 +33,7 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends com.pulumi
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -44,7 +44,7 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends com.pulumi
     @Import(name="fleetArn", required=true)
       private final Output<String> fleetArn;
 
-    public Output<String> getFleetArn() {
+    public Output<String> fleetArn() {
         return this.fleetArn;
     }
 

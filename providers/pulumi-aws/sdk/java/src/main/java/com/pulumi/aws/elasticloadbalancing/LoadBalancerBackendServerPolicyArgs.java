@@ -24,7 +24,7 @@ public final class LoadBalancerBackendServerPolicyArgs extends com.pulumi.resour
     @Import(name="instancePort", required=true)
       private final Output<Integer> instancePort;
 
-    public Output<Integer> getInstancePort() {
+    public Output<Integer> instancePort() {
         return this.instancePort;
     }
 
@@ -35,7 +35,7 @@ public final class LoadBalancerBackendServerPolicyArgs extends com.pulumi.resour
     @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -46,7 +46,7 @@ public final class LoadBalancerBackendServerPolicyArgs extends com.pulumi.resour
     @Import(name="policyNames")
       private final @Nullable Output<List<String>> policyNames;
 
-    public Output<List<String>> getPolicyNames() {
+    public Output<List<String>> policyNames() {
         return this.policyNames == null ? Codegen.empty() : this.policyNames;
     }
 

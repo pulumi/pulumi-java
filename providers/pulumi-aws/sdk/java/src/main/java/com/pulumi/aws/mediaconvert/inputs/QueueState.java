@@ -24,7 +24,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pricingPlan")
       private final @Nullable Output<String> pricingPlan;
 
-    public Output<String> getPricingPlan() {
+    public Output<String> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
@@ -68,7 +68,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationPlanSettings")
       private final @Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings;
 
-    public Output<QueueReservationPlanSettingsGetArgs> getReservationPlanSettings() {
+    public Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings() {
         return this.reservationPlanSettings == null ? Codegen.empty() : this.reservationPlanSettings;
     }
 
@@ -79,7 +79,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -90,7 +90,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -24,7 +24,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -35,7 +35,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -46,7 +46,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -68,7 +68,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Output<AccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
+    public Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
     }
 
@@ -79,7 +79,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
       private final @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<AccessPointVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<AccessPointVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

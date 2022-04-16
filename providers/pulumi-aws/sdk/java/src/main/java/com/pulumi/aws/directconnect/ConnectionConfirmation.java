@@ -32,7 +32,7 @@ public class ConnectionConfirmation extends com.pulumi.resources.CustomResource 
      * @return The ID of the hosted connection.
      * 
      */
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 

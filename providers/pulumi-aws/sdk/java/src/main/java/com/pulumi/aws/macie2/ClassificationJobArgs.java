@@ -28,7 +28,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="customDataIdentifierIds")
       private final @Nullable Output<List<String>> customDataIdentifierIds;
 
-    public Output<List<String>> getCustomDataIdentifierIds() {
+    public Output<List<String>> customDataIdentifierIds() {
         return this.customDataIdentifierIds == null ? Codegen.empty() : this.customDataIdentifierIds;
     }
 
@@ -39,7 +39,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="initialRun")
       private final @Nullable Output<Boolean> initialRun;
 
-    public Output<Boolean> getInitialRun() {
+    public Output<Boolean> initialRun() {
         return this.initialRun == null ? Codegen.empty() : this.initialRun;
     }
 
@@ -61,7 +61,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="jobStatus")
       private final @Nullable Output<String> jobStatus;
 
-    public Output<String> getJobStatus() {
+    public Output<String> jobStatus() {
         return this.jobStatus == null ? Codegen.empty() : this.jobStatus;
     }
 
@@ -72,14 +72,14 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="jobType", required=true)
       private final Output<String> jobType;
 
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -101,7 +101,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="s3JobDefinition", required=true)
       private final Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition;
 
-    public Output<ClassificationJobS3JobDefinitionArgs> getS3JobDefinition() {
+    public Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition() {
         return this.s3JobDefinition;
     }
 
@@ -112,7 +112,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="samplingPercentage")
       private final @Nullable Output<Integer> samplingPercentage;
 
-    public Output<Integer> getSamplingPercentage() {
+    public Output<Integer> samplingPercentage() {
         return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
     }
 
@@ -123,7 +123,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scheduleFrequency")
       private final @Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency;
 
-    public Output<ClassificationJobScheduleFrequencyArgs> getScheduleFrequency() {
+    public Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency() {
         return this.scheduleFrequency == null ? Codegen.empty() : this.scheduleFrequency;
     }
 
@@ -134,7 +134,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -17,7 +17,7 @@ public final class DistributionRestrictionsGetArgs extends com.pulumi.resources.
     @Import(name="geoRestriction", required=true)
       private final Output<DistributionRestrictionsGeoRestrictionGetArgs> geoRestriction;
 
-    public Output<DistributionRestrictionsGeoRestrictionGetArgs> getGeoRestriction() {
+    public Output<DistributionRestrictionsGeoRestrictionGetArgs> geoRestriction() {
         return this.geoRestriction;
     }
 

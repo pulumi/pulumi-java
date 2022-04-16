@@ -45,7 +45,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the proxy.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
      * 
      */
-    public Output<List<ProxyAuth>> getAuths() {
+    public Output<List<ProxyAuth>> auths() {
         return this.auths;
     }
     /**
@@ -73,7 +73,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return Whether the proxy includes detailed information about SQL statements in its logs. This information helps you to debug issues involving SQL behavior or the performance and scalability of the proxy connections. The debug information includes the text of SQL statements that you submit through the proxy. Thus, only enable this setting when needed for debugging, and only when you have security measures in place to safeguard any sensitive information that appears in the logs.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDebugLogging() {
+    public Output</* @Nullable */ Boolean> debugLogging() {
         return this.debugLogging;
     }
     /**
@@ -87,7 +87,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -101,7 +101,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. The engine family applies to MySQL and PostgreSQL for both RDS and Aurora. Valid values are `MYSQL` and `POSTGRESQL`.
      * 
      */
-    public Output<String> getEngineFamily() {
+    public Output<String> engineFamily() {
         return this.engineFamily;
     }
     /**
@@ -115,7 +115,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it. You can set this value higher or lower than the connection timeout limit for the associated database.
      * 
      */
-    public Output<Integer> getIdleClientTimeout() {
+    public Output<Integer> idleClientTimeout() {
         return this.idleClientTimeout;
     }
     /**
@@ -129,7 +129,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +143,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy. By enabling this setting, you can enforce encrypted TLS connections to the proxy.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequireTls() {
+    public Output</* @Nullable */ Boolean> requireTls() {
         return this.requireTls;
     }
     /**
@@ -157,7 +157,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -171,7 +171,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -199,7 +199,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return One or more VPC security group IDs to associate with the new proxy.
      * 
      */
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
     /**
@@ -213,7 +213,7 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return One or more VPC subnet IDs to associate with the new proxy.
      * 
      */
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 

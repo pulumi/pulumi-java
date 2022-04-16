@@ -19,7 +19,7 @@ public final class OntapVolumeTieringPolicyArgs extends com.pulumi.resources.Res
     @Import(name="coolingPeriod")
       private final @Nullable Output<Integer> coolingPeriod;
 
-    public Output<Integer> getCoolingPeriod() {
+    public Output<Integer> coolingPeriod() {
         return this.coolingPeriod == null ? Codegen.empty() : this.coolingPeriod;
     }
 
@@ -30,7 +30,7 @@ public final class OntapVolumeTieringPolicyArgs extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

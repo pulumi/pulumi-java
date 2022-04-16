@@ -21,7 +21,7 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -32,7 +32,7 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="ebs", required=true)
       private final List<GetImageRecipeBlockDeviceMappingEb> ebs;
 
-    public List<GetImageRecipeBlockDeviceMappingEb> getEbs() {
+    public List<GetImageRecipeBlockDeviceMappingEb> ebs() {
         return this.ebs;
     }
 
@@ -43,7 +43,7 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="noDevice", required=true)
       private final String noDevice;
 
-    public String getNoDevice() {
+    public String noDevice() {
         return this.noDevice;
     }
 
@@ -54,7 +54,7 @@ public final class GetImageRecipeBlockDeviceMapping extends com.pulumi.resources
     @Import(name="virtualName", required=true)
       private final String virtualName;
 
-    public String getVirtualName() {
+    public String virtualName() {
         return this.virtualName;
     }
 

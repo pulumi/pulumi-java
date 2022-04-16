@@ -22,7 +22,7 @@ public final class GetInstanceEphemeralBlockDevice extends com.pulumi.resources.
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -33,7 +33,7 @@ public final class GetInstanceEphemeralBlockDevice extends com.pulumi.resources.
     @Import(name="noDevice")
       private final @Nullable Boolean noDevice;
 
-    public Optional<Boolean> getNoDevice() {
+    public Optional<Boolean> noDevice() {
         return this.noDevice == null ? Optional.empty() : Optional.ofNullable(this.noDevice);
     }
 
@@ -44,7 +44,7 @@ public final class GetInstanceEphemeralBlockDevice extends com.pulumi.resources.
     @Import(name="virtualName")
       private final @Nullable String virtualName;
 
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return this.virtualName == null ? Optional.empty() : Optional.ofNullable(this.virtualName);
     }
 

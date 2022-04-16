@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
     @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
     @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> body;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> getBody() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
     @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> method;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> getMethod() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
     @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> getQueryString() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
     @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> getUriPath() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

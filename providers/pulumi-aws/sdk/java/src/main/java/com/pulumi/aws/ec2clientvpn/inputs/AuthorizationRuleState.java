@@ -23,7 +23,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
     @Import(name="accessGroupId")
       private final @Nullable Output<String> accessGroupId;
 
-    public Output<String> getAccessGroupId() {
+    public Output<String> accessGroupId() {
         return this.accessGroupId == null ? Codegen.empty() : this.accessGroupId;
     }
 
@@ -34,7 +34,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
     @Import(name="authorizeAllGroups")
       private final @Nullable Output<Boolean> authorizeAllGroups;
 
-    public Output<Boolean> getAuthorizeAllGroups() {
+    public Output<Boolean> authorizeAllGroups() {
         return this.authorizeAllGroups == null ? Codegen.empty() : this.authorizeAllGroups;
     }
 
@@ -45,7 +45,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
     @Import(name="clientVpnEndpointId")
       private final @Nullable Output<String> clientVpnEndpointId;
 
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId == null ? Codegen.empty() : this.clientVpnEndpointId;
     }
 
@@ -56,7 +56,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
     @Import(name="targetNetworkCidr")
       private final @Nullable Output<String> targetNetworkCidr;
 
-    public Output<String> getTargetNetworkCidr() {
+    public Output<String> targetNetworkCidr() {
         return this.targetNetworkCidr == null ? Codegen.empty() : this.targetNetworkCidr;
     }
 

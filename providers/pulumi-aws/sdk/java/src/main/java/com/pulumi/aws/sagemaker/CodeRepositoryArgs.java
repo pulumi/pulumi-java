@@ -24,7 +24,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="codeRepositoryName", required=true)
       private final Output<String> codeRepositoryName;
 
-    public Output<String> getCodeRepositoryName() {
+    public Output<String> codeRepositoryName() {
         return this.codeRepositoryName;
     }
 
@@ -35,7 +35,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="gitConfig", required=true)
       private final Output<CodeRepositoryGitConfigArgs> gitConfig;
 
-    public Output<CodeRepositoryGitConfigArgs> getGitConfig() {
+    public Output<CodeRepositoryGitConfigArgs> gitConfig() {
         return this.gitConfig;
     }
 
@@ -46,7 +46,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

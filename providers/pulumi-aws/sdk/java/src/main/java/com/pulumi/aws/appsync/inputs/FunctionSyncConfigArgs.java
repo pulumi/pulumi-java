@@ -23,7 +23,7 @@ public final class FunctionSyncConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="conflictDetection")
       private final @Nullable Output<String> conflictDetection;
 
-    public Output<String> getConflictDetection() {
+    public Output<String> conflictDetection() {
         return this.conflictDetection == null ? Codegen.empty() : this.conflictDetection;
     }
 
@@ -34,7 +34,7 @@ public final class FunctionSyncConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="conflictHandler")
       private final @Nullable Output<String> conflictHandler;
 
-    public Output<String> getConflictHandler() {
+    public Output<String> conflictHandler() {
         return this.conflictHandler == null ? Codegen.empty() : this.conflictHandler;
     }
 
@@ -45,7 +45,7 @@ public final class FunctionSyncConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="lambdaConflictHandlerConfig")
       private final @Nullable Output<FunctionSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig;
 
-    public Output<FunctionSyncConfigLambdaConflictHandlerConfigArgs> getLambdaConflictHandlerConfig() {
+    public Output<FunctionSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig() {
         return this.lambdaConflictHandlerConfig == null ? Codegen.empty() : this.lambdaConflictHandlerConfig;
     }
 

@@ -34,14 +34,14 @@ public final class DatabaseEncryptionConfiguration {
      * The type of key; one of `SSE_S3`, `SSE_KMS`, `CSE_KMS`
      * 
     */
-    public String getEncryptionOption() {
+    public String encryptionOption() {
         return this.encryptionOption;
     }
     /**
      * The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
      * 
     */
-    public Optional<String> getKmsKey() {
+    public Optional<String> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
 

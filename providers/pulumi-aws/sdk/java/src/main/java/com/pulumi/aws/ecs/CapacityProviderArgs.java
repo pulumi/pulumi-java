@@ -24,7 +24,7 @@ public final class CapacityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="autoScalingGroupProvider", required=true)
       private final Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
 
-    public Output<CapacityProviderAutoScalingGroupProviderArgs> getAutoScalingGroupProvider() {
+    public Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider() {
         return this.autoScalingGroupProvider;
     }
 
@@ -35,7 +35,7 @@ public final class CapacityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class CapacityProviderArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

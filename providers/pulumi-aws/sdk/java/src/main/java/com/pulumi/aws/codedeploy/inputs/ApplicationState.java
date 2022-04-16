@@ -24,7 +24,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
-    public Output<String> getComputePlatform() {
+    public Output<String> computePlatform() {
         return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
@@ -57,7 +57,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="githubAccountName")
       private final @Nullable Output<String> githubAccountName;
 
-    public Output<String> getGithubAccountName() {
+    public Output<String> githubAccountName() {
         return this.githubAccountName == null ? Codegen.empty() : this.githubAccountName;
     }
 
@@ -68,7 +68,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedToGithub")
       private final @Nullable Output<Boolean> linkedToGithub;
 
-    public Output<Boolean> getLinkedToGithub() {
+    public Output<Boolean> linkedToGithub() {
         return this.linkedToGithub == null ? Codegen.empty() : this.linkedToGithub;
     }
 
@@ -79,7 +79,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

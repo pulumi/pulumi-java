@@ -24,7 +24,7 @@ public final class ModelContainerImageConfig {
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
      * 
     */
-    public String getRepositoryAccessMode() {
+    public String repositoryAccessMode() {
         return this.repositoryAccessMode;
     }
 

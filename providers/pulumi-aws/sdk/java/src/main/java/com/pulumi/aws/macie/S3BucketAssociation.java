@@ -37,7 +37,7 @@ public class S3BucketAssociation extends com.pulumi.resources.CustomResource {
      * @return The name of the S3 bucket that you want to associate with Amazon Macie.
      * 
      */
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -51,7 +51,7 @@ public class S3BucketAssociation extends com.pulumi.resources.CustomResource {
      * @return The configuration of how Amazon Macie classifies the S3 objects.
      * 
      */
-    public Output<S3BucketAssociationClassificationType> getClassificationType() {
+    public Output<S3BucketAssociationClassificationType> classificationType() {
         return this.classificationType;
     }
     /**
@@ -65,7 +65,7 @@ public class S3BucketAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
      * 
      */
-    public Output</* @Nullable */ String> getMemberAccountId() {
+    public Output</* @Nullable */ String> memberAccountId() {
         return this.memberAccountId;
     }
     /**
@@ -79,7 +79,7 @@ public class S3BucketAssociation extends com.pulumi.resources.CustomResource {
      * @return Object key prefix identifying one or more S3 objects to which the association applies.
      * 
      */
-    public Output</* @Nullable */ String> getPrefix() {
+    public Output</* @Nullable */ String> prefix() {
         return this.prefix;
     }
 

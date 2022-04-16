@@ -21,7 +21,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="secretId", required=true)
       private final String secretId;
 
-    public String getSecretId() {
+    public String secretId() {
         return this.secretId;
     }
 
@@ -32,7 +32,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="versionId")
       private final @Nullable String versionId;
 
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
     }
 
@@ -43,7 +43,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="versionStage")
       private final @Nullable String versionStage;
 
-    public Optional<String> getVersionStage() {
+    public Optional<String> versionStage() {
         return this.versionStage == null ? Optional.empty() : Optional.ofNullable(this.versionStage);
     }
 

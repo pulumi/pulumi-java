@@ -22,7 +22,7 @@ public final class FleetOnDemandOptionsGetArgs extends com.pulumi.resources.Reso
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 

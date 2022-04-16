@@ -55,41 +55,41 @@ public final class GetPeeringAttachmentResult {
         this.transitGatewayId = transitGatewayId;
     }
 
-    public List<GetPeeringAttachmentFilter> getFilters() {
+    public List<GetPeeringAttachmentFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identifier of the peer AWS account
      * 
     */
-    public String getPeerAccountId() {
+    public String peerAccountId() {
         return this.peerAccountId;
     }
     /**
      * Identifier of the peer AWS region
      * 
     */
-    public String getPeerRegion() {
+    public String peerRegion() {
         return this.peerRegion;
     }
     /**
      * Identifier of the peer EC2 Transit Gateway
      * 
     */
-    public String getPeerTransitGatewayId() {
+    public String peerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Identifier of the local EC2 Transit Gateway
      * 
     */
-    public String getTransitGatewayId() {
+    public String transitGatewayId() {
         return this.transitGatewayId;
     }
 

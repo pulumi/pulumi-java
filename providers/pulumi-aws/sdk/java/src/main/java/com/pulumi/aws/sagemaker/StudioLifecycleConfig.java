@@ -41,7 +41,7 @@ public class StudioLifecycleConfig extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Studio Lifecycle Config.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class StudioLifecycleConfig extends com.pulumi.resources.CustomResource {
      * @return The App type that the Lifecycle Configuration is attached to. Valid values are `JupyterServer` and `KernelGateway`.
      * 
      */
-    public Output<String> getStudioLifecycleConfigAppType() {
+    public Output<String> studioLifecycleConfigAppType() {
         return this.studioLifecycleConfigAppType;
     }
     /**
@@ -69,7 +69,7 @@ public class StudioLifecycleConfig extends com.pulumi.resources.CustomResource {
      * @return The content of your Studio Lifecycle Configuration script. This content must be base64 encoded.
      * 
      */
-    public Output<String> getStudioLifecycleConfigContent() {
+    public Output<String> studioLifecycleConfigContent() {
         return this.studioLifecycleConfigContent;
     }
     /**
@@ -83,7 +83,7 @@ public class StudioLifecycleConfig extends com.pulumi.resources.CustomResource {
      * @return The name of the Studio Lifecycle Configuration to create.
      * 
      */
-    public Output<String> getStudioLifecycleConfigName() {
+    public Output<String> studioLifecycleConfigName() {
         return this.studioLifecycleConfigName;
     }
     /**
@@ -97,7 +97,7 @@ public class StudioLifecycleConfig extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -111,7 +111,7 @@ public class StudioLifecycleConfig extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

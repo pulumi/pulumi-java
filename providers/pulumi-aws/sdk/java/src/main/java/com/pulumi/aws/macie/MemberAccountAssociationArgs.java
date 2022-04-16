@@ -21,7 +21,7 @@ public final class MemberAccountAssociationArgs extends com.pulumi.resources.Res
     @Import(name="memberAccountId", required=true)
       private final Output<String> memberAccountId;
 
-    public Output<String> getMemberAccountId() {
+    public Output<String> memberAccountId() {
         return this.memberAccountId;
     }
 

@@ -41,7 +41,7 @@ public class FieldLevelEncryptionProfile extends com.pulumi.resources.CustomReso
      * @return Internal value used by CloudFront to allow future updates to the Field Level Encryption Profile.
      * 
      */
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference;
     }
     /**
@@ -55,7 +55,7 @@ public class FieldLevelEncryptionProfile extends com.pulumi.resources.CustomReso
      * @return An optional comment about the Field Level Encryption Profile.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -69,7 +69,7 @@ public class FieldLevelEncryptionProfile extends com.pulumi.resources.CustomReso
      * @return The encryption entities config block for field-level encryption profiles that contains an attribute `items` which includes the encryption key and field pattern specifications.
      * 
      */
-    public Output<FieldLevelEncryptionProfileEncryptionEntities> getEncryptionEntities() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntities> encryptionEntities() {
         return this.encryptionEntities;
     }
     /**
@@ -83,7 +83,7 @@ public class FieldLevelEncryptionProfile extends com.pulumi.resources.CustomReso
      * @return The current version of the Field Level Encryption Profile. For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -97,7 +97,7 @@ public class FieldLevelEncryptionProfile extends com.pulumi.resources.CustomReso
      * @return The name of the Field Level Encryption Profile.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

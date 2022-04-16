@@ -22,7 +22,7 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends com.pulumi.
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -33,7 +33,7 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends com.pulumi.
     @Import(name="refValue")
       private final @Nullable Output<String> refValue;
 
-    public Output<String> getRefValue() {
+    public Output<String> refValue() {
         return this.refValue == null ? Codegen.empty() : this.refValue;
     }
 
@@ -44,7 +44,7 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends com.pulumi.
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 

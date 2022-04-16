@@ -47,7 +47,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Audio parameters object (documented below).
      * 
      */
-    public Output</* @Nullable */ PresetAudio> getAudio() {
+    public Output</* @Nullable */ PresetAudio> audio() {
         return this.audio;
     }
     /**
@@ -75,7 +75,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Codec options for the audio parameters (documented below)
      * 
      */
-    public Output</* @Nullable */ PresetAudioCodecOptions> getAudioCodecOptions() {
+    public Output</* @Nullable */ PresetAudioCodecOptions> audioCodecOptions() {
         return this.audioCodecOptions;
     }
     /**
@@ -89,7 +89,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
      * 
      */
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
     /**
@@ -103,7 +103,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return A description of the preset (maximum 255 characters)
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -117,7 +117,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return The name of the preset. (maximum 40 characters)
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,13 +131,13 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Thumbnail parameters object (documented below)
      * 
      */
-    public Output</* @Nullable */ PresetThumbnails> getThumbnails() {
+    public Output</* @Nullable */ PresetThumbnails> thumbnails() {
         return this.thumbnails;
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -151,7 +151,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Video parameters object (documented below)
      * 
      */
-    public Output</* @Nullable */ PresetVideo> getVideo() {
+    public Output</* @Nullable */ PresetVideo> video() {
         return this.video;
     }
     /**
@@ -165,7 +165,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Codec options for the video parameters
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getVideoCodecOptions() {
+    public Output</* @Nullable */ Map<String,String>> videoCodecOptions() {
         return this.videoCodecOptions;
     }
     /**
@@ -179,7 +179,7 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Watermark parameters for the video parameters (documented below)
      * 
      */
-    public Output</* @Nullable */ List<PresetVideoWatermark>> getVideoWatermarks() {
+    public Output</* @Nullable */ List<PresetVideoWatermark>> videoWatermarks() {
         return this.videoWatermarks;
     }
 

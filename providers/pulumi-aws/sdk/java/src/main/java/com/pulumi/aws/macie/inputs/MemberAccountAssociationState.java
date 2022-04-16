@@ -22,7 +22,7 @@ public final class MemberAccountAssociationState extends com.pulumi.resources.Re
     @Import(name="memberAccountId")
       private final @Nullable Output<String> memberAccountId;
 
-    public Output<String> getMemberAccountId() {
+    public Output<String> memberAccountId() {
         return this.memberAccountId == null ? Codegen.empty() : this.memberAccountId;
     }
 

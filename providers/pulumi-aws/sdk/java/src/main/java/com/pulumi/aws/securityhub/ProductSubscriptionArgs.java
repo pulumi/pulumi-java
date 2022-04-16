@@ -21,7 +21,7 @@ public final class ProductSubscriptionArgs extends com.pulumi.resources.Resource
     @Import(name="productArn", required=true)
       private final Output<String> productArn;
 
-    public Output<String> getProductArn() {
+    public Output<String> productArn() {
         return this.productArn;
     }
 

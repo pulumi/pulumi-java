@@ -23,7 +23,7 @@ public final class PrivateDnsNamespaceState extends com.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateDnsNamespaceState extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateDnsNamespaceState extends com.pulumi.resources.Resourc
     @Import(name="hostedZone")
       private final @Nullable Output<String> hostedZone;
 
-    public Output<String> getHostedZone() {
+    public Output<String> hostedZone() {
         return this.hostedZone == null ? Codegen.empty() : this.hostedZone;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateDnsNamespaceState extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class PrivateDnsNamespaceState extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -78,7 +78,7 @@ public final class PrivateDnsNamespaceState extends com.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -89,7 +89,7 @@ public final class PrivateDnsNamespaceState extends com.pulumi.resources.Resourc
     @Import(name="vpc")
       private final @Nullable Output<String> vpc;
 
-    public Output<String> getVpc() {
+    public Output<String> vpc() {
         return this.vpc == null ? Codegen.empty() : this.vpc;
     }
 

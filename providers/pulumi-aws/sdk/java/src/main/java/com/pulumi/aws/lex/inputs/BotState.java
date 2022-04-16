@@ -29,14 +29,14 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="abortStatement")
       private final @Nullable Output<BotAbortStatementGetArgs> abortStatement;
 
-    public Output<BotAbortStatementGetArgs> getAbortStatement() {
+    public Output<BotAbortStatementGetArgs> abortStatement() {
         return this.abortStatement == null ? Codegen.empty() : this.abortStatement;
     }
 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
@@ -59,7 +59,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="childDirected")
       private final @Nullable Output<Boolean> childDirected;
 
-    public Output<Boolean> getChildDirected() {
+    public Output<Boolean> childDirected() {
         return this.childDirected == null ? Codegen.empty() : this.childDirected;
     }
 
@@ -70,7 +70,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clarificationPrompt")
       private final @Nullable Output<BotClarificationPromptGetArgs> clarificationPrompt;
 
-    public Output<BotClarificationPromptGetArgs> getClarificationPrompt() {
+    public Output<BotClarificationPromptGetArgs> clarificationPrompt() {
         return this.clarificationPrompt == null ? Codegen.empty() : this.clarificationPrompt;
     }
 
@@ -81,7 +81,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> getCreateVersion() {
+    public Output<Boolean> createVersion() {
         return this.createVersion == null ? Codegen.empty() : this.createVersion;
     }
 
@@ -92,7 +92,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -103,7 +103,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -114,7 +114,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectSentiment")
       private final @Nullable Output<Boolean> detectSentiment;
 
-    public Output<Boolean> getDetectSentiment() {
+    public Output<Boolean> detectSentiment() {
         return this.detectSentiment == null ? Codegen.empty() : this.detectSentiment;
     }
 
@@ -125,7 +125,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableModelImprovements")
       private final @Nullable Output<Boolean> enableModelImprovements;
 
-    public Output<Boolean> getEnableModelImprovements() {
+    public Output<Boolean> enableModelImprovements() {
         return this.enableModelImprovements == null ? Codegen.empty() : this.enableModelImprovements;
     }
 
@@ -136,7 +136,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
-    public Output<String> getFailureReason() {
+    public Output<String> failureReason() {
         return this.failureReason == null ? Codegen.empty() : this.failureReason;
     }
 
@@ -147,7 +147,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleSessionTtlInSeconds")
       private final @Nullable Output<Integer> idleSessionTtlInSeconds;
 
-    public Output<Integer> getIdleSessionTtlInSeconds() {
+    public Output<Integer> idleSessionTtlInSeconds() {
         return this.idleSessionTtlInSeconds == null ? Codegen.empty() : this.idleSessionTtlInSeconds;
     }
 
@@ -158,7 +158,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="intents")
       private final @Nullable Output<List<BotIntentGetArgs>> intents;
 
-    public Output<List<BotIntentGetArgs>> getIntents() {
+    public Output<List<BotIntentGetArgs>> intents() {
         return this.intents == null ? Codegen.empty() : this.intents;
     }
 
@@ -169,7 +169,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
     }
 
@@ -180,7 +180,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="locale")
       private final @Nullable Output<String> locale;
 
-    public Output<String> getLocale() {
+    public Output<String> locale() {
         return this.locale == null ? Codegen.empty() : this.locale;
     }
 
@@ -191,7 +191,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -202,7 +202,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nluIntentConfidenceThreshold")
       private final @Nullable Output<Double> nluIntentConfidenceThreshold;
 
-    public Output<Double> getNluIntentConfidenceThreshold() {
+    public Output<Double> nluIntentConfidenceThreshold() {
         return this.nluIntentConfidenceThreshold == null ? Codegen.empty() : this.nluIntentConfidenceThreshold;
     }
 
@@ -213,7 +213,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="processBehavior")
       private final @Nullable Output<String> processBehavior;
 
-    public Output<String> getProcessBehavior() {
+    public Output<String> processBehavior() {
         return this.processBehavior == null ? Codegen.empty() : this.processBehavior;
     }
 
@@ -227,7 +227,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -238,7 +238,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -249,7 +249,7 @@ public final class BotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="voiceId")
       private final @Nullable Output<String> voiceId;
 
-    public Output<String> getVoiceId() {
+    public Output<String> voiceId() {
         return this.voiceId == null ? Codegen.empty() : this.voiceId;
     }
 

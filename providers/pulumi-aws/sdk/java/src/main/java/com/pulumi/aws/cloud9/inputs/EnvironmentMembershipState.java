@@ -22,7 +22,7 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -33,7 +33,7 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
     @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -44,7 +44,7 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
     @Import(name="userArn")
       private final @Nullable Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn == null ? Codegen.empty() : this.userArn;
     }
 
@@ -55,7 +55,7 @@ public final class EnvironmentMembershipState extends com.pulumi.resources.Resou
     @Import(name="userId")
       private final @Nullable Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId == null ? Codegen.empty() : this.userId;
     }
 

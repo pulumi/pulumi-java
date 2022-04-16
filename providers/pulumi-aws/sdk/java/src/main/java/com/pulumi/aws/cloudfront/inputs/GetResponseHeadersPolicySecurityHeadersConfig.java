@@ -25,7 +25,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
     @Import(name="contentSecurityPolicies", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
 
-    public List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> getContentSecurityPolicies() {
+    public List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies() {
         return this.contentSecurityPolicies;
     }
 
@@ -36,7 +36,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
     @Import(name="contentTypeOptions", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
 
-    public List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> getContentTypeOptions() {
+    public List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions() {
         return this.contentTypeOptions;
     }
 
@@ -47,7 +47,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
     @Import(name="frameOptions", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
 
-    public List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> getFrameOptions() {
+    public List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions() {
         return this.frameOptions;
     }
 
@@ -58,7 +58,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
     @Import(name="referrerPolicies", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
 
-    public List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> getReferrerPolicies() {
+    public List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies() {
         return this.referrerPolicies;
     }
 
@@ -69,7 +69,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
     @Import(name="strictTransportSecurities", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
 
-    public List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> getStrictTransportSecurities() {
+    public List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities() {
         return this.strictTransportSecurities;
     }
 
@@ -80,7 +80,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
     @Import(name="xssProtections", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
 
-    public List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> getXssProtections() {
+    public List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections() {
         return this.xssProtections;
     }
 

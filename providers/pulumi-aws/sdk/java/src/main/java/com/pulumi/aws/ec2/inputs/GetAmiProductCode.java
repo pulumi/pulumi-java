@@ -15,14 +15,14 @@ public final class GetAmiProductCode extends com.pulumi.resources.InvokeArgs {
     @Import(name="productCodeId", required=true)
       private final String productCodeId;
 
-    public String getProductCodeId() {
+    public String productCodeId() {
         return this.productCodeId;
     }
 
     @Import(name="productCodeType", required=true)
       private final String productCodeType;
 
-    public String getProductCodeType() {
+    public String productCodeType() {
         return this.productCodeType;
     }
 

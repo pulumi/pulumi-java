@@ -26,7 +26,7 @@ public final class FindingsFilterFindingCriteria {
      * A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
      * 
     */
-    public List<FindingsFilterFindingCriteriaCriterion> getCriterions() {
+    public List<FindingsFilterFindingCriteriaCriterion> criterions() {
         return this.criterions == null ? List.of() : this.criterions;
     }
 

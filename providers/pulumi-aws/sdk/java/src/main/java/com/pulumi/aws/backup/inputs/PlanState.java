@@ -26,7 +26,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedBackupSettings")
       private final @Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
 
-    public Output<List<PlanAdvancedBackupSettingGetArgs>> getAdvancedBackupSettings() {
+    public Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings() {
         return this.advancedBackupSettings == null ? Codegen.empty() : this.advancedBackupSettings;
     }
 
@@ -37,7 +37,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<PlanRuleGetArgs>> rules;
 
-    public Output<List<PlanRuleGetArgs>> getRules() {
+    public Output<List<PlanRuleGetArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -70,7 +70,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -81,7 +81,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -92,7 +92,7 @@ public final class PlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -42,7 +42,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ARN of the cluster
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of 5 endpoints in 5 regions that can be used to talk to the cluster. See below.
      * 
      */
-    public Output<List<ClusterClusterEndpoint>> getClusterEndpoints() {
+    public Output<List<ClusterClusterEndpoint>> clusterEndpoints() {
         return this.clusterEndpoints;
     }
     /**
@@ -70,7 +70,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Unique name describing the cluster.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Status of cluster. `PENDING` when it is being created, `PENDING_DELETION` when it is being deleted and `DEPLOYED` otherwise.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

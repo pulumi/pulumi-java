@@ -24,7 +24,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * The criteria for determining a SAN's match.
      * 
     */
-    public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch getMatch() {
+    public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch match() {
         return this.match;
     }
 

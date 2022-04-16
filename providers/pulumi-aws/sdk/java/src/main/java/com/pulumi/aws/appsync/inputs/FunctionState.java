@@ -24,7 +24,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -35,7 +35,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource")
       private final @Nullable Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
@@ -57,7 +57,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionId")
       private final @Nullable Output<String> functionId;
 
-    public Output<String> getFunctionId() {
+    public Output<String> functionId() {
         return this.functionId == null ? Codegen.empty() : this.functionId;
     }
 
@@ -79,7 +79,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion")
       private final @Nullable Output<String> functionVersion;
 
-    public Output<String> getFunctionVersion() {
+    public Output<String> functionVersion() {
         return this.functionVersion == null ? Codegen.empty() : this.functionVersion;
     }
 
@@ -90,7 +90,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBatchSize")
       private final @Nullable Output<Integer> maxBatchSize;
 
-    public Output<Integer> getMaxBatchSize() {
+    public Output<Integer> maxBatchSize() {
         return this.maxBatchSize == null ? Codegen.empty() : this.maxBatchSize;
     }
 
@@ -101,7 +101,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -112,7 +112,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestMappingTemplate")
       private final @Nullable Output<String> requestMappingTemplate;
 
-    public Output<String> getRequestMappingTemplate() {
+    public Output<String> requestMappingTemplate() {
         return this.requestMappingTemplate == null ? Codegen.empty() : this.requestMappingTemplate;
     }
 
@@ -123,7 +123,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseMappingTemplate")
       private final @Nullable Output<String> responseMappingTemplate;
 
-    public Output<String> getResponseMappingTemplate() {
+    public Output<String> responseMappingTemplate() {
         return this.responseMappingTemplate == null ? Codegen.empty() : this.responseMappingTemplate;
     }
 
@@ -134,7 +134,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncConfig")
       private final @Nullable Output<FunctionSyncConfigGetArgs> syncConfig;
 
-    public Output<FunctionSyncConfigGetArgs> getSyncConfig() {
+    public Output<FunctionSyncConfigGetArgs> syncConfig() {
         return this.syncConfig == null ? Codegen.empty() : this.syncConfig;
     }
 

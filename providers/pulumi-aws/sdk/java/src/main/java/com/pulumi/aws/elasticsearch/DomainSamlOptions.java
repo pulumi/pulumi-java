@@ -41,7 +41,7 @@ public class DomainSamlOptions extends com.pulumi.resources.CustomResource {
      * @return Name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -55,7 +55,7 @@ public class DomainSamlOptions extends com.pulumi.resources.CustomResource {
      * @return The SAML authentication options for an AWS Elasticsearch Domain.
      * 
      */
-    public Output</* @Nullable */ DomainSamlOptionsSamlOptions> getSamlOptions() {
+    public Output</* @Nullable */ DomainSamlOptionsSamlOptions> samlOptions() {
         return this.samlOptions;
     }
 

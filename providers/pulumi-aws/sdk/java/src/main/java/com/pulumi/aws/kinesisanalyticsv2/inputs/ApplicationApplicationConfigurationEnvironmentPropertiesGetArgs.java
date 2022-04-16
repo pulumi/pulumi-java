@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
     @Import(name="propertyGroups", required=true)
       private final Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups;
 
-    public Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> getPropertyGroups() {
+    public Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups() {
         return this.propertyGroups;
     }
 

@@ -44,7 +44,7 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of this Device Pool
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The device pool's description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The number of devices that Device Farm can add to your device pool.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxDevices() {
+    public Output</* @Nullable */ Integer> maxDevices() {
         return this.maxDevices;
     }
     /**
@@ -86,7 +86,7 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The name of the Device Pool
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The ARN of the project for the device pool.
      * 
      */
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     /**
@@ -114,7 +114,7 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The device pool's rules. See Rule.
      * 
      */
-    public Output<List<DevicePoolRule>> getRules() {
+    public Output<List<DevicePoolRule>> rules() {
         return this.rules;
     }
     /**
@@ -128,7 +128,7 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,13 +142,13 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

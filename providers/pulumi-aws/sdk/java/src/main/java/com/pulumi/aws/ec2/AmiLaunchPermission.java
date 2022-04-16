@@ -40,7 +40,7 @@ public class AmiLaunchPermission extends com.pulumi.resources.CustomResource {
      * @return An AWS Account ID to add launch permissions.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -54,7 +54,7 @@ public class AmiLaunchPermission extends com.pulumi.resources.CustomResource {
      * @return A region-unique name for the AMI.
      * 
      */
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 

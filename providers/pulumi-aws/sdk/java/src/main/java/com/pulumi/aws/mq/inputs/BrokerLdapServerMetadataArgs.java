@@ -24,7 +24,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="hosts")
       private final @Nullable Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
@@ -35,7 +35,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="roleBase")
       private final @Nullable Output<String> roleBase;
 
-    public Output<String> getRoleBase() {
+    public Output<String> roleBase() {
         return this.roleBase == null ? Codegen.empty() : this.roleBase;
     }
 
@@ -46,7 +46,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
@@ -57,7 +57,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="roleSearchMatching")
       private final @Nullable Output<String> roleSearchMatching;
 
-    public Output<String> getRoleSearchMatching() {
+    public Output<String> roleSearchMatching() {
         return this.roleSearchMatching == null ? Codegen.empty() : this.roleSearchMatching;
     }
 
@@ -68,7 +68,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="roleSearchSubtree")
       private final @Nullable Output<Boolean> roleSearchSubtree;
 
-    public Output<Boolean> getRoleSearchSubtree() {
+    public Output<Boolean> roleSearchSubtree() {
         return this.roleSearchSubtree == null ? Codegen.empty() : this.roleSearchSubtree;
     }
 
@@ -79,7 +79,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="serviceAccountPassword")
       private final @Nullable Output<String> serviceAccountPassword;
 
-    public Output<String> getServiceAccountPassword() {
+    public Output<String> serviceAccountPassword() {
         return this.serviceAccountPassword == null ? Codegen.empty() : this.serviceAccountPassword;
     }
 
@@ -90,7 +90,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="serviceAccountUsername")
       private final @Nullable Output<String> serviceAccountUsername;
 
-    public Output<String> getServiceAccountUsername() {
+    public Output<String> serviceAccountUsername() {
         return this.serviceAccountUsername == null ? Codegen.empty() : this.serviceAccountUsername;
     }
 
@@ -101,7 +101,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="userBase")
       private final @Nullable Output<String> userBase;
 
-    public Output<String> getUserBase() {
+    public Output<String> userBase() {
         return this.userBase == null ? Codegen.empty() : this.userBase;
     }
 
@@ -112,7 +112,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="userRoleName")
       private final @Nullable Output<String> userRoleName;
 
-    public Output<String> getUserRoleName() {
+    public Output<String> userRoleName() {
         return this.userRoleName == null ? Codegen.empty() : this.userRoleName;
     }
 
@@ -123,7 +123,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="userSearchMatching")
       private final @Nullable Output<String> userSearchMatching;
 
-    public Output<String> getUserSearchMatching() {
+    public Output<String> userSearchMatching() {
         return this.userSearchMatching == null ? Codegen.empty() : this.userSearchMatching;
     }
 
@@ -134,7 +134,7 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
     @Import(name="userSearchSubtree")
       private final @Nullable Output<Boolean> userSearchSubtree;
 
-    public Output<Boolean> getUserSearchSubtree() {
+    public Output<Boolean> userSearchSubtree() {
         return this.userSearchSubtree == null ? Codegen.empty() : this.userSearchSubtree;
     }
 

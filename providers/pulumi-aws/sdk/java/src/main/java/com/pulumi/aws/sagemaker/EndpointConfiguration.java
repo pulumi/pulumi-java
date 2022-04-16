@@ -45,7 +45,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return Specifies configuration for how an endpoint performs asynchronous inference.
      * 
      */
-    public Output</* @Nullable */ EndpointConfigurationAsyncInferenceConfig> getAsyncInferenceConfig() {
+    public Output</* @Nullable */ EndpointConfigurationAsyncInferenceConfig> asyncInferenceConfig() {
         return this.asyncInferenceConfig;
     }
     /**
@@ -73,7 +73,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
      * 
      */
-    public Output</* @Nullable */ EndpointConfigurationDataCaptureConfig> getDataCaptureConfig() {
+    public Output</* @Nullable */ EndpointConfigurationDataCaptureConfig> dataCaptureConfig() {
         return this.dataCaptureConfig;
     }
     /**
@@ -87,7 +87,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyArn() {
+    public Output</* @Nullable */ String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -101,7 +101,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return Fields are documented below.
      * 
      */
-    public Output<List<EndpointConfigurationProductionVariant>> getProductionVariants() {
+    public Output<List<EndpointConfigurationProductionVariant>> productionVariants() {
         return this.productionVariants;
     }
     /**
@@ -129,7 +129,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

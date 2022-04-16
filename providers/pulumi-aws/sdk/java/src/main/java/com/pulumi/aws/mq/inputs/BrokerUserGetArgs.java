@@ -24,7 +24,7 @@ public final class BrokerUserGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consoleAccess")
       private final @Nullable Output<Boolean> consoleAccess;
 
-    public Output<Boolean> getConsoleAccess() {
+    public Output<Boolean> consoleAccess() {
         return this.consoleAccess == null ? Codegen.empty() : this.consoleAccess;
     }
 
@@ -35,7 +35,7 @@ public final class BrokerUserGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups == null ? Codegen.empty() : this.groups;
     }
 
@@ -46,7 +46,7 @@ public final class BrokerUserGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -57,7 +57,7 @@ public final class BrokerUserGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

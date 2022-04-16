@@ -28,7 +28,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="connectionAttempts")
       private final @Nullable Output<Integer> connectionAttempts;
 
-    public Output<Integer> getConnectionAttempts() {
+    public Output<Integer> connectionAttempts() {
         return this.connectionAttempts == null ? Codegen.empty() : this.connectionAttempts;
     }
 
@@ -39,7 +39,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="connectionTimeout")
       private final @Nullable Output<Integer> connectionTimeout;
 
-    public Output<Integer> getConnectionTimeout() {
+    public Output<Integer> connectionTimeout() {
         return this.connectionTimeout == null ? Codegen.empty() : this.connectionTimeout;
     }
 
@@ -52,7 +52,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="customHeaders")
       private final @Nullable Output<List<DistributionOriginCustomHeaderGetArgs>> customHeaders;
 
-    public Output<List<DistributionOriginCustomHeaderGetArgs>> getCustomHeaders() {
+    public Output<List<DistributionOriginCustomHeaderGetArgs>> customHeaders() {
         return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
     }
 
@@ -65,7 +65,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="customOriginConfig")
       private final @Nullable Output<DistributionOriginCustomOriginConfigGetArgs> customOriginConfig;
 
-    public Output<DistributionOriginCustomOriginConfigGetArgs> getCustomOriginConfig() {
+    public Output<DistributionOriginCustomOriginConfigGetArgs> customOriginConfig() {
         return this.customOriginConfig == null ? Codegen.empty() : this.customOriginConfig;
     }
 
@@ -77,7 +77,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -88,7 +88,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="originId", required=true)
       private final Output<String> originId;
 
-    public Output<String> getOriginId() {
+    public Output<String> originId() {
         return this.originId;
     }
 
@@ -101,7 +101,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
-    public Output<String> getOriginPath() {
+    public Output<String> originPath() {
         return this.originPath == null ? Codegen.empty() : this.originPath;
     }
 
@@ -113,7 +113,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="originShield")
       private final @Nullable Output<DistributionOriginOriginShieldGetArgs> originShield;
 
-    public Output<DistributionOriginOriginShieldGetArgs> getOriginShield() {
+    public Output<DistributionOriginOriginShieldGetArgs> originShield() {
         return this.originShield == null ? Codegen.empty() : this.originShield;
     }
 
@@ -126,7 +126,7 @@ public final class DistributionOriginGetArgs extends com.pulumi.resources.Resour
     @Import(name="s3OriginConfig")
       private final @Nullable Output<DistributionOriginS3OriginConfigGetArgs> s3OriginConfig;
 
-    public Output<DistributionOriginS3OriginConfigGetArgs> getS3OriginConfig() {
+    public Output<DistributionOriginS3OriginConfigGetArgs> s3OriginConfig() {
         return this.s3OriginConfig == null ? Codegen.empty() : this.s3OriginConfig;
     }
 

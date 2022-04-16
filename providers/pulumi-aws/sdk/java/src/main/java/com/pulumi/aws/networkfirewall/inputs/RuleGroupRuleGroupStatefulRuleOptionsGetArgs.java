@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsGetArgs extends com.pulu
     @Import(name="ruleOrder", required=true)
       private final Output<String> ruleOrder;
 
-    public Output<String> getRuleOrder() {
+    public Output<String> ruleOrder() {
         return this.ruleOrder;
     }
 

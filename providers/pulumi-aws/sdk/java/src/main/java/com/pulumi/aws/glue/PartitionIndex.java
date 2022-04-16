@@ -39,7 +39,7 @@ public class PartitionIndex extends com.pulumi.resources.CustomResource {
      * @return The catalog ID where the table resides.
      * 
      */
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -53,7 +53,7 @@ public class PartitionIndex extends com.pulumi.resources.CustomResource {
      * @return Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -67,7 +67,7 @@ public class PartitionIndex extends com.pulumi.resources.CustomResource {
      * @return Configuration block for a partition index. See `partition_index` below.
      * 
      */
-    public Output<PartitionIndexPartitionIndex> getPartitionIndex() {
+    public Output<PartitionIndexPartitionIndex> partitionIndex() {
         return this.partitionIndex;
     }
     /**
@@ -81,7 +81,7 @@ public class PartitionIndex extends com.pulumi.resources.CustomResource {
      * @return Name of the table. For Hive compatibility, this must be entirely lowercase.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

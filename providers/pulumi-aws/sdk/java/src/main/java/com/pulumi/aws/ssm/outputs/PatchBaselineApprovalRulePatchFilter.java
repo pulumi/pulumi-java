@@ -21,10 +21,10 @@ public final class PatchBaselineApprovalRulePatchFilter {
         this.values = values;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

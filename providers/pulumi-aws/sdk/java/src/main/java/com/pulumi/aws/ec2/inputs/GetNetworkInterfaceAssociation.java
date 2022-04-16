@@ -19,7 +19,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="allocationId", required=true)
       private final String allocationId;
 
-    public String getAllocationId() {
+    public String allocationId() {
         return this.allocationId;
     }
 
@@ -30,7 +30,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="associationId", required=true)
       private final String associationId;
 
-    public String getAssociationId() {
+    public String associationId() {
         return this.associationId;
     }
 
@@ -41,7 +41,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="carrierIp", required=true)
       private final String carrierIp;
 
-    public String getCarrierIp() {
+    public String carrierIp() {
         return this.carrierIp;
     }
 
@@ -52,7 +52,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="customerOwnedIp", required=true)
       private final String customerOwnedIp;
 
-    public String getCustomerOwnedIp() {
+    public String customerOwnedIp() {
         return this.customerOwnedIp;
     }
 
@@ -63,7 +63,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="ipOwnerId", required=true)
       private final String ipOwnerId;
 
-    public String getIpOwnerId() {
+    public String ipOwnerId() {
         return this.ipOwnerId;
     }
 
@@ -74,7 +74,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="publicDnsName", required=true)
       private final String publicDnsName;
 
-    public String getPublicDnsName() {
+    public String publicDnsName() {
         return this.publicDnsName;
     }
 
@@ -85,7 +85,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
     @Import(name="publicIp", required=true)
       private final String publicIp;
 
-    public String getPublicIp() {
+    public String publicIp() {
         return this.publicIp;
     }
 

@@ -43,21 +43,21 @@ public final class BudgetActionDefinition {
      * The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
      * 
     */
-    public Optional<BudgetActionDefinitionIamActionDefinition> getIamActionDefinition() {
+    public Optional<BudgetActionDefinitionIamActionDefinition> iamActionDefinition() {
         return Optional.ofNullable(this.iamActionDefinition);
     }
     /**
      * The service control policies (SCPs) action definition details. See SCP Action Definition.
      * 
     */
-    public Optional<BudgetActionDefinitionScpActionDefinition> getScpActionDefinition() {
+    public Optional<BudgetActionDefinitionScpActionDefinition> scpActionDefinition() {
         return Optional.ofNullable(this.scpActionDefinition);
     }
     /**
      * The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
      * 
     */
-    public Optional<BudgetActionDefinitionSsmActionDefinition> getSsmActionDefinition() {
+    public Optional<BudgetActionDefinitionSsmActionDefinition> ssmActionDefinition() {
         return Optional.ofNullable(this.ssmActionDefinition);
     }
 

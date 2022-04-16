@@ -24,7 +24,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="computeEnvironmentName")
       private final @Nullable Output<String> computeEnvironmentName;
 
-    public Output<String> getComputeEnvironmentName() {
+    public Output<String> computeEnvironmentName() {
         return this.computeEnvironmentName == null ? Codegen.empty() : this.computeEnvironmentName;
     }
 
@@ -46,7 +46,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="computeEnvironmentNamePrefix")
       private final @Nullable Output<String> computeEnvironmentNamePrefix;
 
-    public Output<String> getComputeEnvironmentNamePrefix() {
+    public Output<String> computeEnvironmentNamePrefix() {
         return this.computeEnvironmentNamePrefix == null ? Codegen.empty() : this.computeEnvironmentNamePrefix;
     }
 
@@ -57,7 +57,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="computeResources")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
 
-    public Output<ComputeEnvironmentComputeResourcesGetArgs> getComputeResources() {
+    public Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources() {
         return this.computeResources == null ? Codegen.empty() : this.computeResources;
     }
 
@@ -68,7 +68,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="ecsClusterArn")
       private final @Nullable Output<String> ecsClusterArn;
 
-    public Output<String> getEcsClusterArn() {
+    public Output<String> ecsClusterArn() {
         return this.ecsClusterArn == null ? Codegen.empty() : this.ecsClusterArn;
     }
 
@@ -79,7 +79,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
     }
 
@@ -90,7 +90,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -101,7 +101,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -112,7 +112,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="statusReason")
       private final @Nullable Output<String> statusReason;
 
-    public Output<String> getStatusReason() {
+    public Output<String> statusReason() {
         return this.statusReason == null ? Codegen.empty() : this.statusReason;
     }
 
@@ -123,7 +123,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -134,7 +134,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -145,7 +145,7 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

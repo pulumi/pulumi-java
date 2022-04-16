@@ -22,7 +22,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 

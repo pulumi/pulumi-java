@@ -33,7 +33,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Boolean flag to indicate if the certificate should be active
      * 
      */
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active;
     }
     /**
@@ -47,7 +47,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The ARN of the created certificate.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The certificate data, in PEM format.
      * 
      */
-    public Output<String> getCertificatePem() {
+    public Output<String> certificatePem() {
         return this.certificatePem;
     }
     /**
@@ -83,7 +83,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * for more information on generating keys and a certificate.
      * 
      */
-    public Output</* @Nullable */ String> getCsr() {
+    public Output</* @Nullable */ String> csr() {
         return this.csr;
     }
     /**
@@ -97,7 +97,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return When no CSR is provided, the private key.
      * 
      */
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -111,7 +111,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return When no CSR is provided, the public key.
      * 
      */
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
 

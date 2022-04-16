@@ -41,7 +41,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
      * 
      */
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
@@ -55,7 +55,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return The name of the Availability Zone (AZ) that the mount target resides in.
      * 
      */
-    public Output<String> getAvailabilityZoneName() {
+    public Output<String> availabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
@@ -69,7 +69,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return The DNS name for the EFS file system.
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -83,7 +83,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name of the file system.
      * 
      */
-    public Output<String> getFileSystemArn() {
+    public Output<String> fileSystemArn() {
         return this.fileSystemArn;
     }
     /**
@@ -97,7 +97,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return The ID of the file system for which the mount target is intended.
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     /**
@@ -113,7 +113,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * which the file system may be mounted via the mount target.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -127,7 +127,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
      */
-    public Output<String> getMountTargetDnsName() {
+    public Output<String> mountTargetDnsName() {
         return this.mountTargetDnsName;
     }
     /**
@@ -141,7 +141,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return The ID of the network interface that Amazon EFS created when it created the mount target.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -155,7 +155,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return AWS account ID that owns the resource.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -171,7 +171,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * be for the same VPC as subnet specified) in effect for the mount target.
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -185,7 +185,7 @@ public class MountTarget extends com.pulumi.resources.CustomResource {
      * @return The ID of the subnet to add the mount target in.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

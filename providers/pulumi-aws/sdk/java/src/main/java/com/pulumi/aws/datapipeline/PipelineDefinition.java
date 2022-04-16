@@ -44,7 +44,7 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the parameter objects used in the pipeline definition. See below
      * 
      */
-    public Output</* @Nullable */ List<PipelineDefinitionParameterObject>> getParameterObjects() {
+    public Output</* @Nullable */ List<PipelineDefinitionParameterObject>> parameterObjects() {
         return this.parameterObjects;
     }
     /**
@@ -58,7 +58,7 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the parameter values used in the pipeline definition. See below
      * 
      */
-    public Output</* @Nullable */ List<PipelineDefinitionParameterValue>> getParameterValues() {
+    public Output</* @Nullable */ List<PipelineDefinitionParameterValue>> parameterValues() {
         return this.parameterValues;
     }
     /**
@@ -72,7 +72,7 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @return ID of the pipeline.
      * 
      */
-    public Output<String> getPipelineId() {
+    public Output<String> pipelineId() {
         return this.pipelineId;
     }
     /**
@@ -86,7 +86,7 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the objects that define the pipeline. See below
      * 
      */
-    public Output<List<PipelineDefinitionPipelineObject>> getPipelineObjects() {
+    public Output<List<PipelineDefinitionPipelineObject>> pipelineObjects() {
         return this.pipelineObjects;
     }
 

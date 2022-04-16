@@ -45,7 +45,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) identifying your CloudFront Function.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Source code of the function
      * 
      */
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code;
     }
     /**
@@ -73,7 +73,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Comment.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -87,7 +87,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return ETag hash of the function. This is the value for the `DEVELOPMENT` stage of the function.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -101,7 +101,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return ETag hash of any `LIVE` stage of the function.
      * 
      */
-    public Output<String> getLiveStageEtag() {
+    public Output<String> liveStageEtag() {
         return this.liveStageEtag;
     }
     /**
@@ -115,7 +115,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Unique name for your CloudFront Function.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Whether to publish creation/change as Live CloudFront Function Version. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPublish() {
+    public Output</* @Nullable */ Boolean> publish() {
         return this.publish;
     }
     /**
@@ -143,7 +143,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Identifier of the function's runtime. Currently only `cloudfront-js-1.0` is valid.
      * 
      */
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
     /**
@@ -157,7 +157,7 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Status of the function. Can be `UNPUBLISHED`, `UNASSOCIATED` or `ASSOCIATED`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

@@ -25,7 +25,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
     @Import(name="certificateValidationRecords")
       private final @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
 
-    public Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> getCertificateValidationRecords() {
+    public Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords() {
         return this.certificateValidationRecords == null ? Codegen.empty() : this.certificateValidationRecords;
     }
 
@@ -36,7 +36,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
     @Import(name="dnsTarget")
       private final @Nullable Output<String> dnsTarget;
 
-    public Output<String> getDnsTarget() {
+    public Output<String> dnsTarget() {
         return this.dnsTarget == null ? Codegen.empty() : this.dnsTarget;
     }
 
@@ -47,7 +47,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -58,7 +58,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
     @Import(name="enableWwwSubdomain")
       private final @Nullable Output<Boolean> enableWwwSubdomain;
 
-    public Output<Boolean> getEnableWwwSubdomain() {
+    public Output<Boolean> enableWwwSubdomain() {
         return this.enableWwwSubdomain == null ? Codegen.empty() : this.enableWwwSubdomain;
     }
 
@@ -69,7 +69,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
     @Import(name="serviceArn")
       private final @Nullable Output<String> serviceArn;
 
-    public Output<String> getServiceArn() {
+    public Output<String> serviceArn() {
         return this.serviceArn == null ? Codegen.empty() : this.serviceArn;
     }
 
@@ -80,7 +80,7 @@ public final class CustomDomainAssociationState extends com.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

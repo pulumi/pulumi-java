@@ -23,7 +23,7 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="allRegions")
       private final @Nullable Boolean allRegions;
 
-    public Optional<Boolean> getAllRegions() {
+    public Optional<Boolean> allRegions() {
         return this.allRegions == null ? Optional.empty() : Optional.ofNullable(this.allRegions);
     }
 
@@ -34,7 +34,7 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetRegionsFilter> filters;
 
-    public List<GetRegionsFilter> getFilters() {
+    public List<GetRegionsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

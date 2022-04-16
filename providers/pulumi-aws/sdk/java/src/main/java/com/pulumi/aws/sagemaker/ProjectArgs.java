@@ -24,7 +24,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
-    public Output<String> getProjectDescription() {
+    public Output<String> projectDescription() {
         return this.projectDescription == null ? Codegen.empty() : this.projectDescription;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -46,7 +46,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceCatalogProvisioningDetails", required=true)
       private final Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails;
 
-    public Output<ProjectServiceCatalogProvisioningDetailsArgs> getServiceCatalogProvisioningDetails() {
+    public Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
 
@@ -57,7 +57,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

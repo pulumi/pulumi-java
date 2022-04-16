@@ -25,7 +25,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
     @Import(name="metricIntervalLowerBound")
       private final @Nullable Output<String> metricIntervalLowerBound;
 
-    public Output<String> getMetricIntervalLowerBound() {
+    public Output<String> metricIntervalLowerBound() {
         return this.metricIntervalLowerBound == null ? Codegen.empty() : this.metricIntervalLowerBound;
     }
 
@@ -39,7 +39,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
     @Import(name="metricIntervalUpperBound")
       private final @Nullable Output<String> metricIntervalUpperBound;
 
-    public Output<String> getMetricIntervalUpperBound() {
+    public Output<String> metricIntervalUpperBound() {
         return this.metricIntervalUpperBound == null ? Codegen.empty() : this.metricIntervalUpperBound;
     }
 
@@ -52,7 +52,7 @@ public final class PolicyStepAdjustmentArgs extends com.pulumi.resources.Resourc
     @Import(name="scalingAdjustment", required=true)
       private final Output<Integer> scalingAdjustment;
 
-    public Output<Integer> getScalingAdjustment() {
+    public Output<Integer> scalingAdjustment() {
         return this.scalingAdjustment;
     }
 

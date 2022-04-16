@@ -24,13 +24,13 @@ public final class RulePredicate {
         this.type = type;
     }
 
-    public String getDataId() {
+    public String dataId() {
         return this.dataId;
     }
-    public Boolean getNegated() {
+    public Boolean negated() {
         return this.negated;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

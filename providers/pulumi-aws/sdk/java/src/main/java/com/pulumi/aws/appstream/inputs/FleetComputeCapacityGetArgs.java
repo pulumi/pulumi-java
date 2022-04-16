@@ -22,7 +22,7 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
     @Import(name="available")
       private final @Nullable Output<Integer> available;
 
-    public Output<Integer> getAvailable() {
+    public Output<Integer> available() {
         return this.available == null ? Codegen.empty() : this.available;
     }
 
@@ -33,7 +33,7 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
     @Import(name="desiredInstances", required=true)
       private final Output<Integer> desiredInstances;
 
-    public Output<Integer> getDesiredInstances() {
+    public Output<Integer> desiredInstances() {
         return this.desiredInstances;
     }
 
@@ -44,7 +44,7 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
     @Import(name="inUse")
       private final @Nullable Output<Integer> inUse;
 
-    public Output<Integer> getInUse() {
+    public Output<Integer> inUse() {
         return this.inUse == null ? Codegen.empty() : this.inUse;
     }
 
@@ -55,7 +55,7 @@ public final class FleetComputeCapacityGetArgs extends com.pulumi.resources.Reso
     @Import(name="running")
       private final @Nullable Output<Integer> running;
 
-    public Output<Integer> getRunning() {
+    public Output<Integer> running() {
         return this.running == null ? Codegen.empty() : this.running;
     }
 

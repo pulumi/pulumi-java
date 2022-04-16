@@ -30,7 +30,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -41,7 +41,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviderStrategies")
       private final @Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
-    public Output<List<TaskSetCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
+    public Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies() {
         return this.capacityProviderStrategies == null ? Codegen.empty() : this.capacityProviderStrategies;
     }
 
@@ -52,7 +52,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
@@ -63,14 +63,14 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> getForceDelete() {
+    public Output<Boolean> forceDelete() {
         return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
@@ -81,7 +81,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchType")
       private final @Nullable Output<String> launchType;
 
-    public Output<String> getLaunchType() {
+    public Output<String> launchType() {
         return this.launchType == null ? Codegen.empty() : this.launchType;
     }
 
@@ -92,7 +92,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancers")
       private final @Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
 
-    public Output<List<TaskSetLoadBalancerGetArgs>> getLoadBalancers() {
+    public Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers() {
         return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
@@ -103,7 +103,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfiguration")
       private final @Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
 
-    public Output<TaskSetNetworkConfigurationGetArgs> getNetworkConfiguration() {
+    public Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration() {
         return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
@@ -114,7 +114,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
+    public Output<String> platformVersion() {
         return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
@@ -125,7 +125,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scale")
       private final @Nullable Output<TaskSetScaleGetArgs> scale;
 
-    public Output<TaskSetScaleGetArgs> getScale() {
+    public Output<TaskSetScaleGetArgs> scale() {
         return this.scale == null ? Codegen.empty() : this.scale;
     }
 
@@ -136,7 +136,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -147,7 +147,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRegistries")
       private final @Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries;
 
-    public Output<TaskSetServiceRegistriesGetArgs> getServiceRegistries() {
+    public Output<TaskSetServiceRegistriesGetArgs> serviceRegistries() {
         return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
     }
 
@@ -158,7 +158,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stabilityStatus")
       private final @Nullable Output<String> stabilityStatus;
 
-    public Output<String> getStabilityStatus() {
+    public Output<String> stabilityStatus() {
         return this.stabilityStatus == null ? Codegen.empty() : this.stabilityStatus;
     }
 
@@ -169,7 +169,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -180,7 +180,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -191,7 +191,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -202,7 +202,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskDefinition")
       private final @Nullable Output<String> taskDefinition;
 
-    public Output<String> getTaskDefinition() {
+    public Output<String> taskDefinition() {
         return this.taskDefinition == null ? Codegen.empty() : this.taskDefinition;
     }
 
@@ -213,14 +213,14 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskSetId")
       private final @Nullable Output<String> taskSetId;
 
-    public Output<String> getTaskSetId() {
+    public Output<String> taskSetId() {
         return this.taskSetId == null ? Codegen.empty() : this.taskSetId;
     }
 
     @Import(name="waitUntilStable")
       private final @Nullable Output<Boolean> waitUntilStable;
 
-    public Output<Boolean> getWaitUntilStable() {
+    public Output<Boolean> waitUntilStable() {
         return this.waitUntilStable == null ? Codegen.empty() : this.waitUntilStable;
     }
 
@@ -231,7 +231,7 @@ public final class TaskSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitUntilStableTimeout")
       private final @Nullable Output<String> waitUntilStableTimeout;
 
-    public Output<String> getWaitUntilStableTimeout() {
+    public Output<String> waitUntilStableTimeout() {
         return this.waitUntilStableTimeout == null ? Codegen.empty() : this.waitUntilStableTimeout;
     }
 

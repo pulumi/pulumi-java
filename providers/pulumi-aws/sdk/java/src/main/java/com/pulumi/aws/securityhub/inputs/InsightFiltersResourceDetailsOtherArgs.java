@@ -21,7 +21,7 @@ public final class InsightFiltersResourceDetailsOtherArgs extends com.pulumi.res
     @Import(name="comparison", required=true)
       private final Output<String> comparison;
 
-    public Output<String> getComparison() {
+    public Output<String> comparison() {
         return this.comparison;
     }
 
@@ -32,7 +32,7 @@ public final class InsightFiltersResourceDetailsOtherArgs extends com.pulumi.res
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -43,7 +43,7 @@ public final class InsightFiltersResourceDetailsOtherArgs extends com.pulumi.res
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

@@ -49,28 +49,28 @@ public final class InstanceGroupEbsConfig {
      * The number of I/O operations per second (IOPS) that the volume supports.
      * 
     */
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * The volume type. Valid options are 'gp2', 'io1' and 'standard'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The number of EBS Volumes to attach per instance.
      * 
     */
-    public Optional<Integer> getVolumesPerInstance() {
+    public Optional<Integer> volumesPerInstance() {
         return Optional.ofNullable(this.volumesPerInstance);
     }
 

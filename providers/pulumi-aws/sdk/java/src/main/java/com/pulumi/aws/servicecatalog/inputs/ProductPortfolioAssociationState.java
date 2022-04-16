@@ -22,7 +22,7 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -33,7 +33,7 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
     @Import(name="portfolioId")
       private final @Nullable Output<String> portfolioId;
 
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
     }
 
@@ -44,7 +44,7 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
@@ -55,7 +55,7 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
     @Import(name="sourcePortfolioId")
       private final @Nullable Output<String> sourcePortfolioId;
 
-    public Output<String> getSourcePortfolioId() {
+    public Output<String> sourcePortfolioId() {
         return this.sourcePortfolioId == null ? Codegen.empty() : this.sourcePortfolioId;
     }
 

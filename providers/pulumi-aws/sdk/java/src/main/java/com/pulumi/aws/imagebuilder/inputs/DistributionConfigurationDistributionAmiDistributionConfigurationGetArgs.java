@@ -25,7 +25,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="amiTags")
       private final @Nullable Output<Map<String,String>> amiTags;
 
-    public Output<Map<String,String>> getAmiTags() {
+    public Output<Map<String,String>> amiTags() {
         return this.amiTags == null ? Codegen.empty() : this.amiTags;
     }
 
@@ -36,7 +36,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -58,7 +58,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="launchPermission")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
 
-    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> getLaunchPermission() {
+    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission() {
         return this.launchPermission == null ? Codegen.empty() : this.launchPermission;
     }
 
@@ -69,7 +69,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="targetAccountIds")
       private final @Nullable Output<List<String>> targetAccountIds;
 
-    public Output<List<String>> getTargetAccountIds() {
+    public Output<List<String>> targetAccountIds() {
         return this.targetAccountIds == null ? Codegen.empty() : this.targetAccountIds;
     }
 

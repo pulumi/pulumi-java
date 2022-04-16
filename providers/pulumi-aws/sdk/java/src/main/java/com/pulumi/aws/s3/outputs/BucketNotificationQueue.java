@@ -56,35 +56,35 @@ public final class BucketNotificationQueue {
      * [Event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
      * 
     */
-    public List<String> getEvents() {
+    public List<String> events() {
         return this.events;
     }
     /**
      * Object key name prefix.
      * 
     */
-    public Optional<String> getFilterPrefix() {
+    public Optional<String> filterPrefix() {
         return Optional.ofNullable(this.filterPrefix);
     }
     /**
      * Object key name suffix.
      * 
     */
-    public Optional<String> getFilterSuffix() {
+    public Optional<String> filterSuffix() {
         return Optional.ofNullable(this.filterSuffix);
     }
     /**
      * Unique identifier for each of the notification configurations.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * SQS queue ARN.
      * 
     */
-    public String getQueueArn() {
+    public String queueArn() {
         return this.queueArn;
     }
 

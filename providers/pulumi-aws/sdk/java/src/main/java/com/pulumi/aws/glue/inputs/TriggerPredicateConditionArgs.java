@@ -22,7 +22,7 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="crawlState")
       private final @Nullable Output<String> crawlState;
 
-    public Output<String> getCrawlState() {
+    public Output<String> crawlState() {
         return this.crawlState == null ? Codegen.empty() : this.crawlState;
     }
 
@@ -33,7 +33,7 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="crawlerName")
       private final @Nullable Output<String> crawlerName;
 
-    public Output<String> getCrawlerName() {
+    public Output<String> crawlerName() {
         return this.crawlerName == null ? Codegen.empty() : this.crawlerName;
     }
 
@@ -44,7 +44,7 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
@@ -55,7 +55,7 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="logicalOperator")
       private final @Nullable Output<String> logicalOperator;
 
-    public Output<String> getLogicalOperator() {
+    public Output<String> logicalOperator() {
         return this.logicalOperator == null ? Codegen.empty() : this.logicalOperator;
     }
 
@@ -66,7 +66,7 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

@@ -58,35 +58,35 @@ public final class PolicyStepScalingPolicyConfiguration {
      * Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
      * 
     */
-    public Optional<String> getAdjustmentType() {
+    public Optional<String> adjustmentType() {
         return Optional.ofNullable(this.adjustmentType);
     }
     /**
      * The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
      * 
     */
-    public Optional<Integer> getCooldown() {
+    public Optional<Integer> cooldown() {
         return Optional.ofNullable(this.cooldown);
     }
     /**
      * The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
      * 
     */
-    public Optional<String> getMetricAggregationType() {
+    public Optional<String> metricAggregationType() {
         return Optional.ofNullable(this.metricAggregationType);
     }
     /**
      * The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
      * 
     */
-    public Optional<Integer> getMinAdjustmentMagnitude() {
+    public Optional<Integer> minAdjustmentMagnitude() {
         return Optional.ofNullable(this.minAdjustmentMagnitude);
     }
     /**
      * A set of adjustments that manage scaling. These have the following structure:
      * 
     */
-    public List<PolicyStepScalingPolicyConfigurationStepAdjustment> getStepAdjustments() {
+    public List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments() {
         return this.stepAdjustments == null ? List.of() : this.stepAdjustments;
     }
 

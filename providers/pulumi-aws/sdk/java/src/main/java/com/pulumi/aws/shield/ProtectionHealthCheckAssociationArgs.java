@@ -21,7 +21,7 @@ public final class ProtectionHealthCheckAssociationArgs extends com.pulumi.resou
     @Import(name="healthCheckArn", required=true)
       private final Output<String> healthCheckArn;
 
-    public Output<String> getHealthCheckArn() {
+    public Output<String> healthCheckArn() {
         return this.healthCheckArn;
     }
 
@@ -32,7 +32,7 @@ public final class ProtectionHealthCheckAssociationArgs extends com.pulumi.resou
     @Import(name="shieldProtectionId", required=true)
       private final Output<String> shieldProtectionId;
 
-    public Output<String> getShieldProtectionId() {
+    public Output<String> shieldProtectionId() {
         return this.shieldProtectionId;
     }
 

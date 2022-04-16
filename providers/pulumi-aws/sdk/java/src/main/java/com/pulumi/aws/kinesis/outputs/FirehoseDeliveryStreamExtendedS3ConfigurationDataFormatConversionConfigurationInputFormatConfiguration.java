@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
      * 
     */
-    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer getDeserializer() {
+    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer deserializer() {
         return this.deserializer;
     }
 

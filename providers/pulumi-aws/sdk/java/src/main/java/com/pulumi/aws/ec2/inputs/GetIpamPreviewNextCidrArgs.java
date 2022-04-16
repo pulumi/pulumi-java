@@ -23,7 +23,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
     @Import(name="disallowedCidrs")
       private final @Nullable List<String> disallowedCidrs;
 
-    public List<String> getDisallowedCidrs() {
+    public List<String> disallowedCidrs() {
         return this.disallowedCidrs == null ? List.of() : this.disallowedCidrs;
     }
 
@@ -34,7 +34,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
     @Import(name="ipamPoolId", required=true)
       private final String ipamPoolId;
 
-    public String getIpamPoolId() {
+    public String ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -45,7 +45,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
     @Import(name="netmaskLength")
       private final @Nullable Integer netmaskLength;
 
-    public Optional<Integer> getNetmaskLength() {
+    public Optional<Integer> netmaskLength() {
         return this.netmaskLength == null ? Optional.empty() : Optional.ofNullable(this.netmaskLength);
     }
 

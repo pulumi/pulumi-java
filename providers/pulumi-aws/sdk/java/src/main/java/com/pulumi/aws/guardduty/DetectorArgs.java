@@ -25,7 +25,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasources")
       private final @Nullable Output<DetectorDatasourcesArgs> datasources;
 
-    public Output<DetectorDatasourcesArgs> getDatasources() {
+    public Output<DetectorDatasourcesArgs> datasources() {
         return this.datasources == null ? Codegen.empty() : this.datasources;
     }
 
@@ -36,7 +36,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -47,7 +47,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
       private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> getFindingPublishingFrequency() {
+    public Output<String> findingPublishingFrequency() {
         return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
@@ -58,7 +58,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

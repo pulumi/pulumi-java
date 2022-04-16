@@ -43,21 +43,21 @@ public final class BucketReplicationConfigRuleFilter {
      * A configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details.
      * 
     */
-    public Optional<BucketReplicationConfigRuleFilterAnd> getAnd() {
+    public Optional<BucketReplicationConfigRuleFilterAnd> and() {
         return Optional.ofNullable(this.and);
     }
     /**
      * An object key name prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * A configuration block for specifying a tag key and value documented below.
      * 
     */
-    public Optional<BucketReplicationConfigRuleFilterTag> getTag() {
+    public Optional<BucketReplicationConfigRuleFilterTag> tag() {
         return Optional.ofNullable(this.tag);
     }
 

@@ -16,21 +16,21 @@ public final class GetFunctionVpcConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="vpcId", required=true)
       private final String vpcId;
 
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

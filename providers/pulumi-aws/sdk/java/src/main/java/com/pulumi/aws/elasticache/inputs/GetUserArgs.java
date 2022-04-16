@@ -23,28 +23,28 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessString")
       private final @Nullable String accessString;
 
-    public Optional<String> getAccessString() {
+    public Optional<String> accessString() {
         return this.accessString == null ? Optional.empty() : Optional.ofNullable(this.accessString);
     }
 
     @Import(name="engine")
       private final @Nullable String engine;
 
-    public Optional<String> getEngine() {
+    public Optional<String> engine() {
         return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
     }
 
     @Import(name="noPasswordRequired")
       private final @Nullable Boolean noPasswordRequired;
 
-    public Optional<Boolean> getNoPasswordRequired() {
+    public Optional<Boolean> noPasswordRequired() {
         return this.noPasswordRequired == null ? Optional.empty() : Optional.ofNullable(this.noPasswordRequired);
     }
 
     @Import(name="passwords")
       private final @Nullable List<String> passwords;
 
-    public List<String> getPasswords() {
+    public List<String> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
 
@@ -55,7 +55,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 
@@ -66,7 +66,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

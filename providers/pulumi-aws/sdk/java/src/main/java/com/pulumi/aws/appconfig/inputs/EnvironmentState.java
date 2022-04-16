@@ -25,7 +25,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -36,7 +36,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -69,7 +69,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitors")
       private final @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors;
 
-    public Output<List<EnvironmentMonitorGetArgs>> getMonitors() {
+    public Output<List<EnvironmentMonitorGetArgs>> monitors() {
         return this.monitors == null ? Codegen.empty() : this.monitors;
     }
 
@@ -80,14 +80,14 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -98,7 +98,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -109,7 +109,7 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -27,7 +27,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAction")
       private final @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
 
-    public Output<WebAclDefaultActionGetArgs> getDefaultAction() {
+    public Output<WebAclDefaultActionGetArgs> defaultAction() {
         return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
     }
 
@@ -49,7 +49,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfiguration")
       private final @Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Output<WebAclLoggingConfigurationGetArgs> getLoggingConfiguration() {
+    public Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration() {
         return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
@@ -60,7 +60,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
@@ -71,7 +71,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<WebAclRuleGetArgs>> rules;
 
-    public Output<List<WebAclRuleGetArgs>> getRules() {
+    public Output<List<WebAclRuleGetArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -93,7 +93,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -104,7 +104,7 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

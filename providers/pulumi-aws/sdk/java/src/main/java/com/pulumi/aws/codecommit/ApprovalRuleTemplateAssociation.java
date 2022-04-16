@@ -40,7 +40,7 @@ public class ApprovalRuleTemplateAssociation extends com.pulumi.resources.Custom
      * @return The name for the approval rule template.
      * 
      */
-    public Output<String> getApprovalRuleTemplateName() {
+    public Output<String> approvalRuleTemplateName() {
         return this.approvalRuleTemplateName;
     }
     /**
@@ -54,7 +54,7 @@ public class ApprovalRuleTemplateAssociation extends com.pulumi.resources.Custom
      * @return The name of the repository that you want to associate with the template.
      * 
      */
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 

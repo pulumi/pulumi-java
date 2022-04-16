@@ -73,58 +73,58 @@ public final class GetLocalGatewayVirtualInterfaceResult {
         this.vlan = vlan;
     }
 
-    public List<GetLocalGatewayVirtualInterfaceFilter> getFilters() {
+    public List<GetLocalGatewayVirtualInterfaceFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Local address.
      * 
     */
-    public String getLocalAddress() {
+    public String localAddress() {
         return this.localAddress;
     }
     /**
      * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.
      * 
     */
-    public Integer getLocalBgpAsn() {
+    public Integer localBgpAsn() {
         return this.localBgpAsn;
     }
     /**
      * Identifier of the EC2 Local Gateway.
      * 
     */
-    public String getLocalGatewayId() {
+    public String localGatewayId() {
         return this.localGatewayId;
     }
-    public List<String> getLocalGatewayVirtualInterfaceIds() {
+    public List<String> localGatewayVirtualInterfaceIds() {
         return this.localGatewayVirtualInterfaceIds;
     }
     /**
      * Peer address.
      * 
     */
-    public String getPeerAddress() {
+    public String peerAddress() {
         return this.peerAddress;
     }
     /**
      * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.
      * 
     */
-    public Integer getPeerBgpAsn() {
+    public Integer peerBgpAsn() {
         return this.peerBgpAsn;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Virtual Local Area Network.
      * 
     */
-    public Integer getVlan() {
+    public Integer vlan() {
         return this.vlan;
     }
 

@@ -26,7 +26,7 @@ public final class EventSourceMappingFilterCriteria {
      * A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.
      * 
     */
-    public List<EventSourceMappingFilterCriteriaFilter> getFilters() {
+    public List<EventSourceMappingFilterCriteriaFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

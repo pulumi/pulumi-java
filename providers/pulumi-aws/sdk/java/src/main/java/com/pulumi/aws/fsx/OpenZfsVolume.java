@@ -48,7 +48,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name of the file system.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +62,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCopyTagsToSnapshots() {
+    public Output</* @Nullable */ Boolean> copyTagsToSnapshots() {
         return this.copyTagsToSnapshots;
     }
     /**
@@ -76,7 +76,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don't specify compression option will inherit from parent volume. This option on file system applies to the root volume.
      * 
      */
-    public Output</* @Nullable */ String> getDataCompressionType() {
+    public Output</* @Nullable */ String> dataCompressionType() {
         return this.dataCompressionType;
     }
     /**
@@ -90,7 +90,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return The name of the Volume. You can use a maximum of 203 alphanumeric characters, plus the underscore (_) special character.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
      * 
      */
-    public Output</* @Nullable */ OpenZfsVolumeNfsExports> getNfsExports() {
+    public Output</* @Nullable */ OpenZfsVolumeNfsExports> nfsExports() {
         return this.nfsExports;
     }
     /**
@@ -118,7 +118,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return The ARN of the source snapshot to create the volume from.
      * 
      */
-    public Output</* @Nullable */ OpenZfsVolumeOriginSnapshot> getOriginSnapshot() {
+    public Output</* @Nullable */ OpenZfsVolumeOriginSnapshot> originSnapshot() {
         return this.originSnapshot;
     }
     /**
@@ -132,7 +132,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return The volume id of volume that will be the parent volume for the volume being created, this could be the root volume created from the `aws.fsx.OpenZfsFileSystem` resource with the `root_volume_id` or the `id` property of another `aws.fsx.OpenZfsVolume`.
      * 
      */
-    public Output<String> getParentVolumeId() {
+    public Output<String> parentVolumeId() {
         return this.parentVolumeId;
     }
     /**
@@ -146,7 +146,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return specifies whether the volume is read-only. Default is false.
      * 
      */
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly;
     }
     /**
@@ -160,7 +160,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
      * 
      */
-    public Output<Integer> getStorageCapacityQuotaGib() {
+    public Output<Integer> storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
     /**
@@ -174,7 +174,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return The amount of storage in gibibytes (GiB) to reserve from the parent volume.
      * 
      */
-    public Output<Integer> getStorageCapacityReservationGib() {
+    public Output<Integer> storageCapacityReservationGib() {
         return this.storageCapacityReservationGib;
     }
     /**
@@ -188,7 +188,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -202,7 +202,7 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -216,13 +216,13 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
      * 
      */
-    public Output<List<OpenZfsVolumeUserAndGroupQuota>> getUserAndGroupQuotas() {
+    public Output<List<OpenZfsVolumeUserAndGroupQuota>> userAndGroupQuotas() {
         return this.userAndGroupQuotas;
     }
     @Export(name="volumeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> volumeType;
 
-    public Output</* @Nullable */ String> getVolumeType() {
+    public Output</* @Nullable */ String> volumeType() {
         return this.volumeType;
     }
 

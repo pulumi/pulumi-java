@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -32,7 +32,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="destinationPort", required=true)
       private final Output<String> destinationPort;
 
-    public Output<String> getDestinationPort() {
+    public Output<String> destinationPort() {
         return this.destinationPort;
     }
 
@@ -43,7 +43,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="direction", required=true)
       private final Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
 
@@ -54,7 +54,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -65,7 +65,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -76,7 +76,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="sourcePort", required=true)
       private final Output<String> sourcePort;
 
-    public Output<String> getSourcePort() {
+    public Output<String> sourcePort() {
         return this.sourcePort;
     }
 

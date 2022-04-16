@@ -23,7 +23,7 @@ public final class WebAclDefaultActionArgs extends com.pulumi.resources.Resource
     @Import(name="allow")
       private final @Nullable Output<WebAclDefaultActionAllowArgs> allow;
 
-    public Output<WebAclDefaultActionAllowArgs> getAllow() {
+    public Output<WebAclDefaultActionAllowArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -34,7 +34,7 @@ public final class WebAclDefaultActionArgs extends com.pulumi.resources.Resource
     @Import(name="block")
       private final @Nullable Output<WebAclDefaultActionBlockArgs> block;
 
-    public Output<WebAclDefaultActionBlockArgs> getBlock() {
+    public Output<WebAclDefaultActionBlockArgs> block() {
         return this.block == null ? Codegen.empty() : this.block;
     }
 

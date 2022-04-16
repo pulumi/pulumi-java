@@ -41,7 +41,7 @@ public class UserStackAssociation extends com.pulumi.resources.CustomResource {
      * @return Authentication type for the user.
      * 
      */
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
     /**
@@ -55,7 +55,7 @@ public class UserStackAssociation extends com.pulumi.resources.CustomResource {
      * @return Specifies whether a welcome email is sent to a user after the user is created in the user pool.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSendEmailNotification() {
+    public Output</* @Nullable */ Boolean> sendEmailNotification() {
         return this.sendEmailNotification;
     }
     /**
@@ -69,7 +69,7 @@ public class UserStackAssociation extends com.pulumi.resources.CustomResource {
      * @return Name of the stack that is associated with the user.
      * 
      */
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
     /**
@@ -83,7 +83,7 @@ public class UserStackAssociation extends com.pulumi.resources.CustomResource {
      * @return Email address of the user who is associated with the stack.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

@@ -21,7 +21,7 @@ public final class AlertManagerDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="definition", required=true)
       private final Output<String> definition;
 
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
 
@@ -32,7 +32,7 @@ public final class AlertManagerDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 

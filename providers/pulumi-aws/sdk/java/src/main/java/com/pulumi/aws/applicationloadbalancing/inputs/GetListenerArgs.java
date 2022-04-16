@@ -23,7 +23,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -34,7 +34,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancerArn")
       private final @Nullable String loadBalancerArn;
 
-    public Optional<String> getLoadBalancerArn() {
+    public Optional<String> loadBalancerArn() {
         return this.loadBalancerArn == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerArn);
     }
 
@@ -45,14 +45,14 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

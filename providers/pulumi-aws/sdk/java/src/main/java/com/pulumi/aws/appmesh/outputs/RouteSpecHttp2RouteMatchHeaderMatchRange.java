@@ -32,14 +32,14 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRange {
      * The end of the range.
      * 
     */
-    public Integer getEnd() {
+    public Integer end() {
         return this.end;
     }
     /**
      * The start of the range.
      * 
     */
-    public Integer getStart() {
+    public Integer start() {
         return this.start;
     }
 

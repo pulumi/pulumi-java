@@ -24,7 +24,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -46,7 +46,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="packetLength")
       private final @Nullable Output<Integer> packetLength;
 
-    public Output<Integer> getPacketLength() {
+    public Output<Integer> packetLength() {
         return this.packetLength == null ? Codegen.empty() : this.packetLength;
     }
 
@@ -57,7 +57,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="sessionNumber", required=true)
       private final Output<Integer> sessionNumber;
 
-    public Output<Integer> getSessionNumber() {
+    public Output<Integer> sessionNumber() {
         return this.sessionNumber;
     }
 
@@ -68,7 +68,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="trafficMirrorFilterId", required=true)
       private final Output<String> trafficMirrorFilterId;
 
-    public Output<String> getTrafficMirrorFilterId() {
+    public Output<String> trafficMirrorFilterId() {
         return this.trafficMirrorFilterId;
     }
 
@@ -90,7 +90,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="trafficMirrorTargetId", required=true)
       private final Output<String> trafficMirrorTargetId;
 
-    public Output<String> getTrafficMirrorTargetId() {
+    public Output<String> trafficMirrorTargetId() {
         return this.trafficMirrorTargetId;
     }
 
@@ -101,7 +101,7 @@ public final class TrafficMirrorSessionArgs extends com.pulumi.resources.Resourc
     @Import(name="virtualNetworkId")
       private final @Nullable Output<Integer> virtualNetworkId;
 
-    public Output<Integer> getVirtualNetworkId() {
+    public Output<Integer> virtualNetworkId() {
         return this.virtualNetworkId == null ? Codegen.empty() : this.virtualNetworkId;
     }
 

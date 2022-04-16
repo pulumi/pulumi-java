@@ -58,38 +58,38 @@ public final class GetGroupResult {
      * The Amazon Resource Name (ARN) specifying the iam user.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The stable and unique string identifying the group.
      * 
     */
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The path to the iam user.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * List of objects containing group member information. See supported fields below.
      * 
     */
-    public List<GetGroupUser> getUsers() {
+    public List<GetGroupUser> users() {
         return this.users;
     }
 

@@ -43,7 +43,7 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAgentArns() {
+    public Output</* @Nullable */ List<String>> agentArns() {
         return this.agentArns;
     }
     /**
@@ -57,7 +57,7 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the S3 Bucket.
      * 
      */
-    public Output<String> getS3BucketArn() {
+    public Output<String> s3BucketArn() {
         return this.s3BucketArn;
     }
     /**
@@ -85,7 +85,7 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing information for connecting to S3.
      * 
      */
-    public Output<S3LocationS3Config> getS3Config() {
+    public Output<S3LocationS3Config> s3Config() {
         return this.s3Config;
     }
     /**
@@ -99,7 +99,7 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return The Amazon S3 storage class that you want to store your files in when this location is used as a task destination. [Valid values](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes)
      * 
      */
-    public Output<String> getS3StorageClass() {
+    public Output<String> s3StorageClass() {
         return this.s3StorageClass;
     }
     /**
@@ -113,7 +113,7 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return Prefix to perform actions as source or destination.
      * 
      */
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -127,7 +127,7 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,13 +141,13 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

@@ -21,7 +21,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
     @Import(name="connectionPasswordEncryptions", required=true)
       private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
 
-    public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> getConnectionPasswordEncryptions() {
+    public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions() {
         return this.connectionPasswordEncryptions;
     }
 
@@ -32,7 +32,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
     @Import(name="encryptionAtRests", required=true)
       private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
 
-    public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> getEncryptionAtRests() {
+    public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests() {
         return this.encryptionAtRests;
     }
 

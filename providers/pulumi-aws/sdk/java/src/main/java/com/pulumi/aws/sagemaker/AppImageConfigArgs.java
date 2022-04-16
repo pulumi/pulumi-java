@@ -24,7 +24,7 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
 
-    public Output<String> getAppImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
 
@@ -35,7 +35,7 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kernelGatewayImageConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
-    public Output<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
+    public Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig == null ? Codegen.empty() : this.kernelGatewayImageConfig;
     }
 
@@ -46,7 +46,7 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

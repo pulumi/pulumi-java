@@ -40,7 +40,7 @@ public class EnvironmentMembership extends com.pulumi.resources.CustomResource {
      * @return The ID of the environment that contains the environment member you want to add.
      * 
      */
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -54,7 +54,7 @@ public class EnvironmentMembership extends com.pulumi.resources.CustomResource {
      * @return The type of environment member permissions you want to associate with this environment member. Allowed values are `read-only` and `read-write` .
      * 
      */
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
     /**
@@ -68,7 +68,7 @@ public class EnvironmentMembership extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the environment member you want to add.
      * 
      */
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
     /**
@@ -82,7 +82,7 @@ public class EnvironmentMembership extends com.pulumi.resources.CustomResource {
      * @return he user ID in AWS Identity and Access Management (AWS IAM) of the environment member.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

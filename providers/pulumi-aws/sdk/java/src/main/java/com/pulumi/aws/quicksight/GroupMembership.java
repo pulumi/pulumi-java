@@ -32,7 +32,7 @@ public class GroupMembership extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class GroupMembership extends com.pulumi.resources.CustomResource {
      * @return The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -60,7 +60,7 @@ public class GroupMembership extends com.pulumi.resources.CustomResource {
      * @return The name of the group in which the member will be added.
      * 
      */
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
     /**
@@ -74,7 +74,7 @@ public class GroupMembership extends com.pulumi.resources.CustomResource {
      * @return The name of the member to add to the group.
      * 
      */
-    public Output<String> getMemberName() {
+    public Output<String> memberName() {
         return this.memberName;
     }
     /**
@@ -88,7 +88,7 @@ public class GroupMembership extends com.pulumi.resources.CustomResource {
      * @return The namespace. Defaults to `default`. Currently only `default` is supported.
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
 

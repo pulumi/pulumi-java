@@ -21,7 +21,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -32,7 +32,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -43,7 +43,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -54,7 +54,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ownerId")
       private final @Nullable String ownerId;
 
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
     }
 

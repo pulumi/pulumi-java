@@ -24,7 +24,7 @@ public final class GatewayRouteSpecHttp2RouteMatch {
      * Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
      * 
     */
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
 

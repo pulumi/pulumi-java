@@ -73,52 +73,52 @@ public final class GetClusterResult {
      * The ARN of the ECS Cluster
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The number of pending tasks for the ECS Cluster
      * 
     */
-    public Integer getPendingTasksCount() {
+    public Integer pendingTasksCount() {
         return this.pendingTasksCount;
     }
     /**
      * The number of registered container instances for the ECS Cluster
      * 
     */
-    public Integer getRegisteredContainerInstancesCount() {
+    public Integer registeredContainerInstancesCount() {
         return this.registeredContainerInstancesCount;
     }
     /**
      * The number of running tasks for the ECS Cluster
      * 
     */
-    public Integer getRunningTasksCount() {
+    public Integer runningTasksCount() {
         return this.runningTasksCount;
     }
     /**
      * The settings associated with the ECS Cluster.
      * 
     */
-    public List<GetClusterSetting> getSettings() {
+    public List<GetClusterSetting> settings() {
         return this.settings;
     }
     /**
      * The status of the ECS Cluster
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

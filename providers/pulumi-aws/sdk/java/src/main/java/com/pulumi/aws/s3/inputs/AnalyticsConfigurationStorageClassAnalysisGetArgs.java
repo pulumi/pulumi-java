@@ -21,7 +21,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisGetArgs extends com
     @Import(name="dataExport", required=true)
       private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport;
 
-    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> getDataExport() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport() {
         return this.dataExport;
     }
 

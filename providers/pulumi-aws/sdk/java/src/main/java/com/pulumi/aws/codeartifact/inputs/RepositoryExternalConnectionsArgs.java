@@ -22,21 +22,21 @@ public final class RepositoryExternalConnectionsArgs extends com.pulumi.resource
     @Import(name="externalConnectionName", required=true)
       private final Output<String> externalConnectionName;
 
-    public Output<String> getExternalConnectionName() {
+    public Output<String> externalConnectionName() {
         return this.externalConnectionName;
     }
 
     @Import(name="packageFormat")
       private final @Nullable Output<String> packageFormat;
 
-    public Output<String> getPackageFormat() {
+    public Output<String> packageFormat() {
         return this.packageFormat == null ? Codegen.empty() : this.packageFormat;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

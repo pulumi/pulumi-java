@@ -69,45 +69,45 @@ public final class GetResponseHeadersPolicyCorsConfig {
      * A Boolean value that CloudFront uses as the value for the Access-Control-Allow-Credentials HTTP response header.
      * 
     */
-    public Boolean getAccessControlAllowCredentials() {
+    public Boolean accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
     /**
      * Object that contains an attribute `items` that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.
      * 
     */
-    public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> getAccessControlAllowHeaders() {
+    public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
     /**
      * Object that contains an attribute `items` that contains a list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods HTTP response header. Valid values: `GET` | `POST` | `OPTIONS` | `PUT` | `DELETE` | `HEAD` | `ALL`
      * 
     */
-    public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> getAccessControlAllowMethods() {
+    public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
     /**
      * Object that contains an attribute `items` that contains a list of origins that CloudFront can use as the value for the Access-Control-Allow-Origin HTTP response header.
      * 
     */
-    public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> getAccessControlAllowOrigins() {
+    public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
     /**
      * Object that contains an attribute `items` that contains a list of HTTP headers that CloudFront includes as values for the Access-Control-Expose-Headers HTTP response header.
      * 
     */
-    public List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> getAccessControlExposeHeaders() {
+    public List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders() {
         return this.accessControlExposeHeaders;
     }
     /**
      * A number that CloudFront uses as the value for the max-age directive in the Strict-Transport-Security HTTP response header.
      * 
     */
-    public Integer getAccessControlMaxAgeSec() {
+    public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
-    public Boolean getOriginOverride() {
+    public Boolean originOverride() {
         return this.originOverride;
     }
 

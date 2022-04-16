@@ -48,28 +48,28 @@ public final class MLTransformInputRecordTable {
      * A unique identifier for the AWS Glue Data Catalog.
      * 
     */
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * The name of the connection to the AWS Glue Data Catalog.
      * 
     */
-    public Optional<String> getConnectionName() {
+    public Optional<String> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
     /**
      * A database name in the AWS Glue Data Catalog.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * A table name in the AWS Glue Data Catalog.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

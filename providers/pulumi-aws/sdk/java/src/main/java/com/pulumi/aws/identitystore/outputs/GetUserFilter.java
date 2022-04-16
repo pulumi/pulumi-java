@@ -32,14 +32,14 @@ public final class GetUserFilter {
      * The attribute path that is used to specify which attribute name to search. Currently, `UserName` is the only valid attribute path.
      * 
     */
-    public String getAttributePath() {
+    public String attributePath() {
         return this.attributePath;
     }
     /**
      * The value for an attribute.
      * 
     */
-    public String getAttributeValue() {
+    public String attributeValue() {
         return this.attributeValue;
     }
 

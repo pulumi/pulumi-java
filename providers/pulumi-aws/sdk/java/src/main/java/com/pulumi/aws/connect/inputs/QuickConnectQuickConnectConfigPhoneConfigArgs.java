@@ -21,7 +21,7 @@ public final class QuickConnectQuickConnectConfigPhoneConfigArgs extends com.pul
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 

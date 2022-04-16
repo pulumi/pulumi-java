@@ -25,7 +25,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -36,7 +36,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="certificateVerificationDnsRecord")
       private final @Nullable Output<String> certificateVerificationDnsRecord;
 
-    public Output<String> getCertificateVerificationDnsRecord() {
+    public Output<String> certificateVerificationDnsRecord() {
         return this.certificateVerificationDnsRecord == null ? Codegen.empty() : this.certificateVerificationDnsRecord;
     }
 
@@ -58,7 +58,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -69,7 +69,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="subDomains")
       private final @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
 
-    public Output<List<DomainAssociationSubDomainGetArgs>> getSubDomains() {
+    public Output<List<DomainAssociationSubDomainGetArgs>> subDomains() {
         return this.subDomains == null ? Codegen.empty() : this.subDomains;
     }
 
@@ -80,7 +80,7 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="waitForVerification")
       private final @Nullable Output<Boolean> waitForVerification;
 
-    public Output<Boolean> getWaitForVerification() {
+    public Output<Boolean> waitForVerification() {
         return this.waitForVerification == null ? Codegen.empty() : this.waitForVerification;
     }
 

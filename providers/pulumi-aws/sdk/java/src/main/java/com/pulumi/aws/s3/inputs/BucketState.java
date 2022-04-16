@@ -36,7 +36,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accelerationStatus")
       private final @Nullable Output<String> accelerationStatus;
 
-    public Output<String> getAccelerationStatus() {
+    public Output<String> accelerationStatus() {
         return this.accelerationStatus == null ? Codegen.empty() : this.accelerationStatus;
     }
 
@@ -47,7 +47,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="acl")
       private final @Nullable Output<Either<String,CannedAcl>> acl;
 
-    public Output<Either<String,CannedAcl>> getAcl() {
+    public Output<Either<String,CannedAcl>> acl() {
         return this.acl == null ? Codegen.empty() : this.acl;
     }
 
@@ -58,7 +58,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -69,7 +69,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -80,7 +80,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucketDomainName")
       private final @Nullable Output<String> bucketDomainName;
 
-    public Output<String> getBucketDomainName() {
+    public Output<String> bucketDomainName() {
         return this.bucketDomainName == null ? Codegen.empty() : this.bucketDomainName;
     }
 
@@ -91,7 +91,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
@@ -102,7 +102,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucketRegionalDomainName")
       private final @Nullable Output<String> bucketRegionalDomainName;
 
-    public Output<String> getBucketRegionalDomainName() {
+    public Output<String> bucketRegionalDomainName() {
         return this.bucketRegionalDomainName == null ? Codegen.empty() : this.bucketRegionalDomainName;
     }
 
@@ -113,7 +113,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="corsRules")
       private final @Nullable Output<List<BucketCorsRuleGetArgs>> corsRules;
 
-    public Output<List<BucketCorsRuleGetArgs>> getCorsRules() {
+    public Output<List<BucketCorsRuleGetArgs>> corsRules() {
         return this.corsRules == null ? Codegen.empty() : this.corsRules;
     }
 
@@ -124,7 +124,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -135,7 +135,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="grants")
       private final @Nullable Output<List<BucketGrantGetArgs>> grants;
 
-    public Output<List<BucketGrantGetArgs>> getGrants() {
+    public Output<List<BucketGrantGetArgs>> grants() {
         return this.grants == null ? Codegen.empty() : this.grants;
     }
 
@@ -146,7 +146,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
@@ -157,7 +157,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleRules")
       private final @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
 
-    public Output<List<BucketLifecycleRuleGetArgs>> getLifecycleRules() {
+    public Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules() {
         return this.lifecycleRules == null ? Codegen.empty() : this.lifecycleRules;
     }
 
@@ -168,7 +168,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggings")
       private final @Nullable Output<List<BucketLoggingGetArgs>> loggings;
 
-    public Output<List<BucketLoggingGetArgs>> getLoggings() {
+    public Output<List<BucketLoggingGetArgs>> loggings() {
         return this.loggings == null ? Codegen.empty() : this.loggings;
     }
 
@@ -179,7 +179,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectLockConfiguration")
       private final @Nullable Output<BucketObjectLockConfigurationGetArgs> objectLockConfiguration;
 
-    public Output<BucketObjectLockConfigurationGetArgs> getObjectLockConfiguration() {
+    public Output<BucketObjectLockConfigurationGetArgs> objectLockConfiguration() {
         return this.objectLockConfiguration == null ? Codegen.empty() : this.objectLockConfiguration;
     }
 
@@ -190,7 +190,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -201,7 +201,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -212,7 +212,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationConfiguration")
       private final @Nullable Output<BucketReplicationConfigurationGetArgs> replicationConfiguration;
 
-    public Output<BucketReplicationConfigurationGetArgs> getReplicationConfiguration() {
+    public Output<BucketReplicationConfigurationGetArgs> replicationConfiguration() {
         return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
     }
 
@@ -226,7 +226,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestPayer")
       private final @Nullable Output<String> requestPayer;
 
-    public Output<String> getRequestPayer() {
+    public Output<String> requestPayer() {
         return this.requestPayer == null ? Codegen.empty() : this.requestPayer;
     }
 
@@ -237,7 +237,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<BucketServerSideEncryptionConfigurationGetArgs> serverSideEncryptionConfiguration;
 
-    public Output<BucketServerSideEncryptionConfigurationGetArgs> getServerSideEncryptionConfiguration() {
+    public Output<BucketServerSideEncryptionConfigurationGetArgs> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
     }
 
@@ -248,7 +248,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -259,7 +259,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -270,7 +270,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="versioning")
       private final @Nullable Output<BucketVersioningGetArgs> versioning;
 
-    public Output<BucketVersioningGetArgs> getVersioning() {
+    public Output<BucketVersioningGetArgs> versioning() {
         return this.versioning == null ? Codegen.empty() : this.versioning;
     }
 
@@ -281,7 +281,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="website")
       private final @Nullable Output<BucketWebsiteGetArgs> website;
 
-    public Output<BucketWebsiteGetArgs> getWebsite() {
+    public Output<BucketWebsiteGetArgs> website() {
         return this.website == null ? Codegen.empty() : this.website;
     }
 
@@ -292,7 +292,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="websiteDomain")
       private final @Nullable Output<String> websiteDomain;
 
-    public Output<String> getWebsiteDomain() {
+    public Output<String> websiteDomain() {
         return this.websiteDomain == null ? Codegen.empty() : this.websiteDomain;
     }
 
@@ -303,7 +303,7 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
     @Import(name="websiteEndpoint")
       private final @Nullable Output<String> websiteEndpoint;
 
-    public Output<String> getWebsiteEndpoint() {
+    public Output<String> websiteEndpoint() {
         return this.websiteEndpoint == null ? Codegen.empty() : this.websiteEndpoint;
     }
 

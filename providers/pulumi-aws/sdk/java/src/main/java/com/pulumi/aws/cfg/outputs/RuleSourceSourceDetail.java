@@ -41,21 +41,21 @@ public final class RuleSourceSourceDetail {
      * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
      * 
     */
-    public Optional<String> getEventSource() {
+    public Optional<String> eventSource() {
         return Optional.ofNullable(this.eventSource);
     }
     /**
      * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
     */
-    public Optional<String> getMaximumExecutionFrequency() {
+    public Optional<String> maximumExecutionFrequency() {
         return Optional.ofNullable(this.maximumExecutionFrequency);
     }
     /**
      * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
      * 
     */
-    public Optional<String> getMessageType() {
+    public Optional<String> messageType() {
         return Optional.ofNullable(this.messageType);
     }
 

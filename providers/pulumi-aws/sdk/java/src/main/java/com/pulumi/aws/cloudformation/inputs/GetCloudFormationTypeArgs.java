@@ -21,7 +21,7 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -32,7 +32,7 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -43,7 +43,7 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="typeName")
       private final @Nullable String typeName;
 
-    public Optional<String> getTypeName() {
+    public Optional<String> typeName() {
         return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
     }
 
@@ -54,7 +54,7 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="versionId")
       private final @Nullable String versionId;
 
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
     }
 

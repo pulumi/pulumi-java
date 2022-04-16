@@ -23,7 +23,7 @@ public final class VpcIpamScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,14 +34,14 @@ public final class VpcIpamScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipamId", required=true)
       private final Output<String> ipamId;
 
-    public Output<String> getIpamId() {
+    public Output<String> ipamId() {
         return this.ipamId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

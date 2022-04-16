@@ -23,7 +23,7 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends com.pulumi.reso
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends com.pulumi.reso
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends com.pulumi.reso
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

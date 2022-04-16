@@ -19,7 +19,7 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends com.pulum
     @Import(name="contactFlowId", required=true)
       private final String contactFlowId;
 
-    public String getContactFlowId() {
+    public String contactFlowId() {
         return this.contactFlowId;
     }
 
@@ -30,7 +30,7 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends com.pulum
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

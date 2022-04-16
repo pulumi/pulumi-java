@@ -22,7 +22,7 @@ public final class HostedZoneDnsSecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hostedZoneId", required=true)
       private final Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -33,7 +33,7 @@ public final class HostedZoneDnsSecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="signingStatus")
       private final @Nullable Output<String> signingStatus;
 
-    public Output<String> getSigningStatus() {
+    public Output<String> signingStatus() {
         return this.signingStatus == null ? Codegen.empty() : this.signingStatus;
     }
 

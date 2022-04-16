@@ -42,21 +42,21 @@ public final class EventTargetHttpTarget {
      * Enables you to specify HTTP headers to add to the request.
      * 
     */
-    public Map<String,String> getHeaderParameters() {
+    public Map<String,String> headerParameters() {
         return this.headerParameters == null ? Map.of() : this.headerParameters;
     }
     /**
      * The list of values that correspond sequentially to any path variables in your endpoint ARN (for example `arn:aws:execute-api:us-east-1:123456:myapi/*{@literal /}POST/pets/*`).
      * 
     */
-    public List<String> getPathParameterValues() {
+    public List<String> pathParameterValues() {
         return this.pathParameterValues == null ? List.of() : this.pathParameterValues;
     }
     /**
      * Represents keys/values of query string parameters that are appended to the invoked endpoint.
      * 
     */
-    public Map<String,String> getQueryStringParameters() {
+    public Map<String,String> queryStringParameters() {
         return this.queryStringParameters == null ? Map.of() : this.queryStringParameters;
     }
 

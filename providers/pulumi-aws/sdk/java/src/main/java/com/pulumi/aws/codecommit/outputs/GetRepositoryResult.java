@@ -56,38 +56,38 @@ public final class GetRepositoryResult {
      * The ARN of the repository
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The URL to use for cloning the repository over HTTPS.
      * 
     */
-    public String getCloneUrlHttp() {
+    public String cloneUrlHttp() {
         return this.cloneUrlHttp;
     }
     /**
      * The URL to use for cloning the repository over SSH.
      * 
     */
-    public String getCloneUrlSsh() {
+    public String cloneUrlSsh() {
         return this.cloneUrlSsh;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ID of the repository
      * 
     */
-    public String getRepositoryId() {
+    public String repositoryId() {
         return this.repositoryId;
     }
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 

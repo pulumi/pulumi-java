@@ -44,7 +44,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -58,7 +58,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -72,7 +72,7 @@ public class LifecyclePolicy extends com.pulumi.resources.CustomResource {
      * @return Name of the repository to apply the policy.
      * 
      */
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 

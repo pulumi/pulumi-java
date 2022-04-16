@@ -26,7 +26,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="maxConcurrency")
       private final @Nullable Output<String> maxConcurrency;
 
-    public Output<String> getMaxConcurrency() {
+    public Output<String> maxConcurrency() {
         return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
     }
 
@@ -48,7 +48,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="maxErrors")
       private final @Nullable Output<String> maxErrors;
 
-    public Output<String> getMaxErrors() {
+    public Output<String> maxErrors() {
         return this.maxErrors == null ? Codegen.empty() : this.maxErrors;
     }
 
@@ -59,7 +59,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -81,7 +81,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
@@ -92,7 +92,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="targets")
       private final @Nullable Output<List<MaintenanceWindowTaskTargetGetArgs>> targets;
 
-    public Output<List<MaintenanceWindowTaskTargetGetArgs>> getTargets() {
+    public Output<List<MaintenanceWindowTaskTargetGetArgs>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 
@@ -103,7 +103,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="taskArn")
       private final @Nullable Output<String> taskArn;
 
-    public Output<String> getTaskArn() {
+    public Output<String> taskArn() {
         return this.taskArn == null ? Codegen.empty() : this.taskArn;
     }
 
@@ -114,7 +114,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="taskInvocationParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> taskInvocationParameters;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> getTaskInvocationParameters() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> taskInvocationParameters() {
         return this.taskInvocationParameters == null ? Codegen.empty() : this.taskInvocationParameters;
     }
 
@@ -125,7 +125,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="taskType")
       private final @Nullable Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType == null ? Codegen.empty() : this.taskType;
     }
 
@@ -136,7 +136,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="windowId")
       private final @Nullable Output<String> windowId;
 
-    public Output<String> getWindowId() {
+    public Output<String> windowId() {
         return this.windowId == null ? Codegen.empty() : this.windowId;
     }
 

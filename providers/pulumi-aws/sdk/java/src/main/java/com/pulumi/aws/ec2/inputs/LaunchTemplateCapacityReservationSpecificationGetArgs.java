@@ -23,7 +23,7 @@ public final class LaunchTemplateCapacityReservationSpecificationGetArgs extends
     @Import(name="capacityReservationPreference")
       private final @Nullable Output<String> capacityReservationPreference;
 
-    public Output<String> getCapacityReservationPreference() {
+    public Output<String> capacityReservationPreference() {
         return this.capacityReservationPreference == null ? Codegen.empty() : this.capacityReservationPreference;
     }
 
@@ -34,7 +34,7 @@ public final class LaunchTemplateCapacityReservationSpecificationGetArgs extends
     @Import(name="capacityReservationTarget")
       private final @Nullable Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
-    public Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs> getCapacityReservationTarget() {
+    public Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget() {
         return this.capacityReservationTarget == null ? Codegen.empty() : this.capacityReservationTarget;
     }
 

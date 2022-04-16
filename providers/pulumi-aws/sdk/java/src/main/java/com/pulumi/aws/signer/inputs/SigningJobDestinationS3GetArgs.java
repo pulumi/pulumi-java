@@ -22,7 +22,7 @@ public final class SigningJobDestinationS3GetArgs extends com.pulumi.resources.R
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -33,7 +33,7 @@ public final class SigningJobDestinationS3GetArgs extends com.pulumi.resources.R
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

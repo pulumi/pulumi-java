@@ -25,7 +25,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -47,7 +47,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="destinationPortRange")
       private final @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
 
-    public Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> getDestinationPortRange() {
+    public Output<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange() {
         return this.destinationPortRange == null ? Codegen.empty() : this.destinationPortRange;
     }
 
@@ -58,7 +58,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="protocol")
       private final @Nullable Output<Integer> protocol;
 
-    public Output<Integer> getProtocol() {
+    public Output<Integer> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -69,7 +69,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="ruleAction", required=true)
       private final Output<String> ruleAction;
 
-    public Output<String> getRuleAction() {
+    public Output<String> ruleAction() {
         return this.ruleAction;
     }
 
@@ -80,7 +80,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="ruleNumber", required=true)
       private final Output<Integer> ruleNumber;
 
-    public Output<Integer> getRuleNumber() {
+    public Output<Integer> ruleNumber() {
         return this.ruleNumber;
     }
 
@@ -91,7 +91,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="sourceCidrBlock", required=true)
       private final Output<String> sourceCidrBlock;
 
-    public Output<String> getSourceCidrBlock() {
+    public Output<String> sourceCidrBlock() {
         return this.sourceCidrBlock;
     }
 
@@ -102,7 +102,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="sourcePortRange")
       private final @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
 
-    public Output<TrafficMirrorFilterRuleSourcePortRangeArgs> getSourcePortRange() {
+    public Output<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange() {
         return this.sourcePortRange == null ? Codegen.empty() : this.sourcePortRange;
     }
 
@@ -113,7 +113,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="trafficDirection", required=true)
       private final Output<String> trafficDirection;
 
-    public Output<String> getTrafficDirection() {
+    public Output<String> trafficDirection() {
         return this.trafficDirection;
     }
 
@@ -124,7 +124,7 @@ public final class TrafficMirrorFilterRuleArgs extends com.pulumi.resources.Reso
     @Import(name="trafficMirrorFilterId", required=true)
       private final Output<String> trafficMirrorFilterId;
 
-    public Output<String> getTrafficMirrorFilterId() {
+    public Output<String> trafficMirrorFilterId() {
         return this.trafficMirrorFilterId;
     }
 

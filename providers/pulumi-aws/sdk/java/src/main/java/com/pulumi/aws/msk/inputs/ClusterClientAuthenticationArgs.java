@@ -23,7 +23,7 @@ public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.
     @Import(name="sasl")
       private final @Nullable Output<ClusterClientAuthenticationSaslArgs> sasl;
 
-    public Output<ClusterClientAuthenticationSaslArgs> getSasl() {
+    public Output<ClusterClientAuthenticationSaslArgs> sasl() {
         return this.sasl == null ? Codegen.empty() : this.sasl;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterClientAuthenticationArgs extends com.pulumi.resources.
     @Import(name="tls")
       private final @Nullable Output<ClusterClientAuthenticationTlsArgs> tls;
 
-    public Output<ClusterClientAuthenticationTlsArgs> getTls() {
+    public Output<ClusterClientAuthenticationTlsArgs> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 

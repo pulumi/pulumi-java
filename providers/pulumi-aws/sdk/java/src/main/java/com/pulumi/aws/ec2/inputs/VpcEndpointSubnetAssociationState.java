@@ -22,7 +22,7 @@ public final class VpcEndpointSubnetAssociationState extends com.pulumi.resource
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -33,7 +33,7 @@ public final class VpcEndpointSubnetAssociationState extends com.pulumi.resource
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 

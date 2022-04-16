@@ -22,7 +22,7 @@ public final class EventTargetSqsTargetArgs extends com.pulumi.resources.Resourc
     @Import(name="messageGroupId")
       private final @Nullable Output<String> messageGroupId;
 
-    public Output<String> getMessageGroupId() {
+    public Output<String> messageGroupId() {
         return this.messageGroupId == null ? Codegen.empty() : this.messageGroupId;
     }
 

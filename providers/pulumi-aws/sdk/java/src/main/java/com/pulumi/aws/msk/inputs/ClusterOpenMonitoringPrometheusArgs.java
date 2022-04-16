@@ -23,7 +23,7 @@ public final class ClusterOpenMonitoringPrometheusArgs extends com.pulumi.resour
     @Import(name="jmxExporter")
       private final @Nullable Output<ClusterOpenMonitoringPrometheusJmxExporterArgs> jmxExporter;
 
-    public Output<ClusterOpenMonitoringPrometheusJmxExporterArgs> getJmxExporter() {
+    public Output<ClusterOpenMonitoringPrometheusJmxExporterArgs> jmxExporter() {
         return this.jmxExporter == null ? Codegen.empty() : this.jmxExporter;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterOpenMonitoringPrometheusArgs extends com.pulumi.resour
     @Import(name="nodeExporter")
       private final @Nullable Output<ClusterOpenMonitoringPrometheusNodeExporterArgs> nodeExporter;
 
-    public Output<ClusterOpenMonitoringPrometheusNodeExporterArgs> getNodeExporter() {
+    public Output<ClusterOpenMonitoringPrometheusNodeExporterArgs> nodeExporter() {
         return this.nodeExporter == null ? Codegen.empty() : this.nodeExporter;
     }
 

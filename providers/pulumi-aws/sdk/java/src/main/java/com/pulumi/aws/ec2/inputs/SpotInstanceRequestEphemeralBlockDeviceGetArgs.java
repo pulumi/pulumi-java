@@ -23,7 +23,7 @@ public final class SpotInstanceRequestEphemeralBlockDeviceGetArgs extends com.pu
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -34,7 +34,7 @@ public final class SpotInstanceRequestEphemeralBlockDeviceGetArgs extends com.pu
     @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
-    public Output<Boolean> getNoDevice() {
+    public Output<Boolean> noDevice() {
         return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
@@ -45,7 +45,7 @@ public final class SpotInstanceRequestEphemeralBlockDeviceGetArgs extends com.pu
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 

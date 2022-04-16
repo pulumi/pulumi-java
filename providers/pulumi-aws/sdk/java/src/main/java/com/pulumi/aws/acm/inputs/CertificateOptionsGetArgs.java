@@ -22,7 +22,7 @@ public final class CertificateOptionsGetArgs extends com.pulumi.resources.Resour
     @Import(name="certificateTransparencyLoggingPreference")
       private final @Nullable Output<String> certificateTransparencyLoggingPreference;
 
-    public Output<String> getCertificateTransparencyLoggingPreference() {
+    public Output<String> certificateTransparencyLoggingPreference() {
         return this.certificateTransparencyLoggingPreference == null ? Codegen.empty() : this.certificateTransparencyLoggingPreference;
     }
 

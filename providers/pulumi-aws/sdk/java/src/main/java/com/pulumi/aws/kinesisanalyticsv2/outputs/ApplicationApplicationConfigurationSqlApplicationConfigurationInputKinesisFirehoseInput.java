@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The ARN of the delivery stream.
      * 
     */
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 

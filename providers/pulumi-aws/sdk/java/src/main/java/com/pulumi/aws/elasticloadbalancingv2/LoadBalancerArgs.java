@@ -28,7 +28,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLogs")
       private final @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
 
-    public Output<LoadBalancerAccessLogsArgs> getAccessLogs() {
+    public Output<LoadBalancerAccessLogsArgs> accessLogs() {
         return this.accessLogs == null ? Codegen.empty() : this.accessLogs;
     }
 
@@ -39,7 +39,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Output<String> getCustomerOwnedIpv4Pool() {
+    public Output<String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Codegen.empty() : this.customerOwnedIpv4Pool;
     }
 
@@ -50,7 +50,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="desyncMitigationMode")
       private final @Nullable Output<String> desyncMitigationMode;
 
-    public Output<String> getDesyncMitigationMode() {
+    public Output<String> desyncMitigationMode() {
         return this.desyncMitigationMode == null ? Codegen.empty() : this.desyncMitigationMode;
     }
 
@@ -61,7 +61,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dropInvalidHeaderFields")
       private final @Nullable Output<Boolean> dropInvalidHeaderFields;
 
-    public Output<Boolean> getDropInvalidHeaderFields() {
+    public Output<Boolean> dropInvalidHeaderFields() {
         return this.dropInvalidHeaderFields == null ? Codegen.empty() : this.dropInvalidHeaderFields;
     }
 
@@ -73,7 +73,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableCrossZoneLoadBalancing")
       private final @Nullable Output<Boolean> enableCrossZoneLoadBalancing;
 
-    public Output<Boolean> getEnableCrossZoneLoadBalancing() {
+    public Output<Boolean> enableCrossZoneLoadBalancing() {
         return this.enableCrossZoneLoadBalancing == null ? Codegen.empty() : this.enableCrossZoneLoadBalancing;
     }
 
@@ -85,7 +85,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDeletionProtection")
       private final @Nullable Output<Boolean> enableDeletionProtection;
 
-    public Output<Boolean> getEnableDeletionProtection() {
+    public Output<Boolean> enableDeletionProtection() {
         return this.enableDeletionProtection == null ? Codegen.empty() : this.enableDeletionProtection;
     }
 
@@ -96,7 +96,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableHttp2")
       private final @Nullable Output<Boolean> enableHttp2;
 
-    public Output<Boolean> getEnableHttp2() {
+    public Output<Boolean> enableHttp2() {
         return this.enableHttp2 == null ? Codegen.empty() : this.enableHttp2;
     }
 
@@ -107,7 +107,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableWafFailOpen")
       private final @Nullable Output<Boolean> enableWafFailOpen;
 
-    public Output<Boolean> getEnableWafFailOpen() {
+    public Output<Boolean> enableWafFailOpen() {
         return this.enableWafFailOpen == null ? Codegen.empty() : this.enableWafFailOpen;
     }
 
@@ -118,7 +118,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
-    public Output<Integer> getIdleTimeout() {
+    public Output<Integer> idleTimeout() {
         return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
@@ -129,7 +129,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="internal")
       private final @Nullable Output<Boolean> internal;
 
-    public Output<Boolean> getInternal() {
+    public Output<Boolean> internal() {
         return this.internal == null ? Codegen.empty() : this.internal;
     }
 
@@ -140,7 +140,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
 
-    public Output<String> getIpAddressType() {
+    public Output<String> ipAddressType() {
         return this.ipAddressType == null ? Codegen.empty() : this.ipAddressType;
     }
 
@@ -151,7 +151,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerType")
       private final @Nullable Output<String> loadBalancerType;
 
-    public Output<String> getLoadBalancerType() {
+    public Output<String> loadBalancerType() {
         return this.loadBalancerType == null ? Codegen.empty() : this.loadBalancerType;
     }
 
@@ -164,7 +164,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -175,7 +175,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -186,7 +186,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -197,7 +197,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetMappings")
       private final @Nullable Output<List<LoadBalancerSubnetMappingArgs>> subnetMappings;
 
-    public Output<List<LoadBalancerSubnetMappingArgs>> getSubnetMappings() {
+    public Output<List<LoadBalancerSubnetMappingArgs>> subnetMappings() {
         return this.subnetMappings == null ? Codegen.empty() : this.subnetMappings;
     }
 
@@ -210,7 +210,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnets")
       private final @Nullable Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
@@ -221,7 +221,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

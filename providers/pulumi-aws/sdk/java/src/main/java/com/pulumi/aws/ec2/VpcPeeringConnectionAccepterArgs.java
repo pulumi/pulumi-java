@@ -27,7 +27,7 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
     @Import(name="accepter")
       private final @Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter;
 
-    public Output<VpcPeeringConnectionAccepterAccepterArgs> getAccepter() {
+    public Output<VpcPeeringConnectionAccepterAccepterArgs> accepter() {
         return this.accepter == null ? Codegen.empty() : this.accepter;
     }
 
@@ -38,7 +38,7 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
     @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> getAutoAccept() {
+    public Output<Boolean> autoAccept() {
         return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
     }
 
@@ -50,7 +50,7 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
     @Import(name="requester")
       private final @Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester;
 
-    public Output<VpcPeeringConnectionAccepterRequesterArgs> getRequester() {
+    public Output<VpcPeeringConnectionAccepterRequesterArgs> requester() {
         return this.requester == null ? Codegen.empty() : this.requester;
     }
 
@@ -61,7 +61,7 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -72,7 +72,7 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
     @Import(name="vpcPeeringConnectionId", required=true)
       private final Output<String> vpcPeeringConnectionId;
 
-    public Output<String> getVpcPeeringConnectionId() {
+    public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 

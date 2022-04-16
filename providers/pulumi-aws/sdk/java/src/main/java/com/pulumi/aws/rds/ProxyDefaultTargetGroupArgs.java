@@ -23,7 +23,7 @@ public final class ProxyDefaultTargetGroupArgs extends com.pulumi.resources.Reso
     @Import(name="connectionPoolConfig")
       private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
 
-    public Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> getConnectionPoolConfig() {
+    public Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig() {
         return this.connectionPoolConfig == null ? Codegen.empty() : this.connectionPoolConfig;
     }
 
@@ -34,7 +34,7 @@ public final class ProxyDefaultTargetGroupArgs extends com.pulumi.resources.Reso
     @Import(name="dbProxyName", required=true)
       private final Output<String> dbProxyName;
 
-    public Output<String> getDbProxyName() {
+    public Output<String> dbProxyName() {
         return this.dbProxyName;
     }
 

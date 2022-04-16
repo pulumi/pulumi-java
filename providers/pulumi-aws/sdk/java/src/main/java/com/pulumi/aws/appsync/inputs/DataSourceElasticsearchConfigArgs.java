@@ -22,7 +22,7 @@ public final class DataSourceElasticsearchConfigArgs extends com.pulumi.resource
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -33,7 +33,7 @@ public final class DataSourceElasticsearchConfigArgs extends com.pulumi.resource
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

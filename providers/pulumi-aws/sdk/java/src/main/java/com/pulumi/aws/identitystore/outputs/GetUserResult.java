@@ -39,27 +39,27 @@ public final class GetUserResult {
         this.userName = userName;
     }
 
-    public List<GetUserFilter> getFilters() {
+    public List<GetUserFilter> filters() {
         return this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIdentityStoreId() {
+    public String identityStoreId() {
         return this.identityStoreId;
     }
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
     /**
      * The user's user name value.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

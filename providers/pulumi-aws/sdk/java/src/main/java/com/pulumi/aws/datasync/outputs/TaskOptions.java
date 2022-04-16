@@ -112,91 +112,91 @@ public final class TaskOptions {
      * A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to `BEST_EFFORT`, the DataSync Task attempts to preserve the original (that is, the version before sync `PREPARING` phase) `atime` attribute on all source files. Valid values: `BEST_EFFORT`, `NONE`. Default: `BEST_EFFORT`.
      * 
     */
-    public Optional<String> getAtime() {
+    public Optional<String> atime() {
         return Optional.ofNullable(this.atime);
     }
     /**
      * Limits the bandwidth utilized. For example, to set a maximum of 1 MB, set this value to `1048576`. Value values: `-1` or greater. Default: `-1` (unlimited).
      * 
     */
-    public Optional<Integer> getBytesPerSecond() {
+    public Optional<Integer> bytesPerSecond() {
         return Optional.ofNullable(this.bytesPerSecond);
     }
     /**
      * Group identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
     */
-    public Optional<String> getGid() {
+    public Optional<String> gid() {
         return Optional.ofNullable(this.gid);
     }
     /**
      * Determines the type of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
      * 
     */
-    public Optional<String> getLogLevel() {
+    public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * A file metadata that indicates the last time a file was modified (written to) before the sync `PREPARING` phase. Value values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
      * 
     */
-    public Optional<String> getMtime() {
+    public Optional<String> mtime() {
         return Optional.ofNullable(this.mtime);
     }
     /**
      * Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: `ALWAYS`, `NEVER`. Default: `ALWAYS`.
      * 
     */
-    public Optional<String> getOverwriteMode() {
+    public Optional<String> overwriteMode() {
         return Optional.ofNullable(this.overwriteMode);
     }
     /**
      * Determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file. Valid values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
      * 
     */
-    public Optional<String> getPosixPermissions() {
+    public Optional<String> posixPermissions() {
         return Optional.ofNullable(this.posixPermissions);
     }
     /**
      * Whether files deleted in the source should be removed or preserved in the destination file system. Valid values: `PRESERVE`, `REMOVE`. Default: `PRESERVE`.
      * 
     */
-    public Optional<String> getPreserveDeletedFiles() {
+    public Optional<String> preserveDeletedFiles() {
         return Optional.ofNullable(this.preserveDeletedFiles);
     }
     /**
      * Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: `NONE`, `PRESERVE`. Default: `NONE` (ignore special devices).
      * 
     */
-    public Optional<String> getPreserveDevices() {
+    public Optional<String> preserveDevices() {
         return Optional.ofNullable(this.preserveDevices);
     }
     /**
      * Determines whether tasks should be queued before executing the tasks. Valid values: `ENABLED`, `DISABLED`. Default `ENABLED`.
      * 
     */
-    public Optional<String> getTaskQueueing() {
+    public Optional<String> taskQueueing() {
         return Optional.ofNullable(this.taskQueueing);
     }
     /**
      * Determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location. Valid values: `CHANGED`, `ALL`. Default: `CHANGED`
      * 
     */
-    public Optional<String> getTransferMode() {
+    public Optional<String> transferMode() {
         return Optional.ofNullable(this.transferMode);
     }
     /**
      * User identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
      * Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: `NONE`, `POINT_IN_TIME_CONSISTENT`, `ONLY_FILES_TRANSFERRED`. Default: `POINT_IN_TIME_CONSISTENT`.
      * 
     */
-    public Optional<String> getVerifyMode() {
+    public Optional<String> verifyMode() {
         return Optional.ofNullable(this.verifyMode);
     }
 

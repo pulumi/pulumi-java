@@ -34,21 +34,21 @@ public final class GetInstanceTypesResult {
         this.instanceTypes = instanceTypes;
     }
 
-    public List<GetInstanceTypesFilter> getFilters() {
+    public List<GetInstanceTypesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of EC2 Instance Types.
      * 
     */
-    public List<String> getInstanceTypes() {
+    public List<String> instanceTypes() {
         return this.instanceTypes;
     }
 

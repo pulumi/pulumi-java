@@ -46,7 +46,7 @@ public class BucketLifecycleConfiguration extends com.pulumi.resources.CustomRes
      * @return Amazon Resource Name (ARN) of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -60,7 +60,7 @@ public class BucketLifecycleConfiguration extends com.pulumi.resources.CustomRes
      * @return Configuration block(s) containing lifecycle rules for the bucket.
      * 
      */
-    public Output<List<BucketLifecycleConfigurationRule>> getRules() {
+    public Output<List<BucketLifecycleConfigurationRule>> rules() {
         return this.rules;
     }
 

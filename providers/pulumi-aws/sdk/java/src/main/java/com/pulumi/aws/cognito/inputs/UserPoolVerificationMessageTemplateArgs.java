@@ -22,7 +22,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="defaultEmailOption")
       private final @Nullable Output<String> defaultEmailOption;
 
-    public Output<String> getDefaultEmailOption() {
+    public Output<String> defaultEmailOption() {
         return this.defaultEmailOption == null ? Codegen.empty() : this.defaultEmailOption;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailMessage")
       private final @Nullable Output<String> emailMessage;
 
-    public Output<String> getEmailMessage() {
+    public Output<String> emailMessage() {
         return this.emailMessage == null ? Codegen.empty() : this.emailMessage;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailMessageByLink")
       private final @Nullable Output<String> emailMessageByLink;
 
-    public Output<String> getEmailMessageByLink() {
+    public Output<String> emailMessageByLink() {
         return this.emailMessageByLink == null ? Codegen.empty() : this.emailMessageByLink;
     }
 
@@ -55,7 +55,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
-    public Output<String> getEmailSubject() {
+    public Output<String> emailSubject() {
         return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
     }
 
@@ -66,7 +66,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailSubjectByLink")
       private final @Nullable Output<String> emailSubjectByLink;
 
-    public Output<String> getEmailSubjectByLink() {
+    public Output<String> emailSubjectByLink() {
         return this.emailSubjectByLink == null ? Codegen.empty() : this.emailSubjectByLink;
     }
 
@@ -77,7 +77,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="smsMessage")
       private final @Nullable Output<String> smsMessage;
 
-    public Output<String> getSmsMessage() {
+    public Output<String> smsMessage() {
         return this.smsMessage == null ? Codegen.empty() : this.smsMessage;
     }
 

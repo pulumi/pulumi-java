@@ -88,71 +88,71 @@ public final class GetLoadBalancerResult {
         this.zoneId = zoneId;
     }
 
-    public GetLoadBalancerAccessLogs getAccessLogs() {
+    public GetLoadBalancerAccessLogs accessLogs() {
         return this.accessLogs;
     }
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
-    public Boolean getConnectionDraining() {
+    public Boolean connectionDraining() {
         return this.connectionDraining;
     }
-    public Integer getConnectionDrainingTimeout() {
+    public Integer connectionDrainingTimeout() {
         return this.connectionDrainingTimeout;
     }
-    public Boolean getCrossZoneLoadBalancing() {
+    public Boolean crossZoneLoadBalancing() {
         return this.crossZoneLoadBalancing;
     }
-    public String getDesyncMitigationMode() {
+    public String desyncMitigationMode() {
         return this.desyncMitigationMode;
     }
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
-    public GetLoadBalancerHealthCheck getHealthCheck() {
+    public GetLoadBalancerHealthCheck healthCheck() {
         return this.healthCheck;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Integer getIdleTimeout() {
+    public Integer idleTimeout() {
         return this.idleTimeout;
     }
-    public List<String> getInstances() {
+    public List<String> instances() {
         return this.instances;
     }
-    public Boolean getInternal() {
+    public Boolean internal() {
         return this.internal;
     }
-    public List<GetLoadBalancerListener> getListeners() {
+    public List<GetLoadBalancerListener> listeners() {
         return this.listeners;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
-    public String getSourceSecurityGroup() {
+    public String sourceSecurityGroup() {
         return this.sourceSecurityGroup;
     }
-    public String getSourceSecurityGroupId() {
+    public String sourceSecurityGroupId() {
         return this.sourceSecurityGroupId;
     }
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getZoneId() {
+    public String zoneId() {
         return this.zoneId;
     }
 

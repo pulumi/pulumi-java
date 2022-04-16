@@ -35,7 +35,7 @@ public class Invocation extends com.pulumi.resources.CustomResource {
      * @return Name of the lambda function.
      * 
      */
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
     /**
@@ -49,7 +49,7 @@ public class Invocation extends com.pulumi.resources.CustomResource {
      * @return JSON payload to the lambda function.
      * 
      */
-    public Output<String> getInput() {
+    public Output<String> input() {
         return this.input;
     }
     /**
@@ -63,7 +63,7 @@ public class Invocation extends com.pulumi.resources.CustomResource {
      * @return Qualifier (i.e., version) of the lambda function. Defaults to `$LATEST`.
      * 
      */
-    public Output</* @Nullable */ String> getQualifier() {
+    public Output</* @Nullable */ String> qualifier() {
         return this.qualifier;
     }
     /**
@@ -77,13 +77,13 @@ public class Invocation extends com.pulumi.resources.CustomResource {
      * @return String result of the lambda function invocation.
      * 
      */
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result;
     }
     @Export(name="triggers", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> triggers;
 
-    public Output</* @Nullable */ Map<String,String>> getTriggers() {
+    public Output</* @Nullable */ Map<String,String>> triggers() {
         return this.triggers;
     }
 

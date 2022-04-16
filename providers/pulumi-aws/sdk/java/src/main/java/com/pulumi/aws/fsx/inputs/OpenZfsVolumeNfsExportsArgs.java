@@ -22,7 +22,7 @@ public final class OpenZfsVolumeNfsExportsArgs extends com.pulumi.resources.Reso
     @Import(name="clientConfigurations", required=true)
       private final Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
 
-    public Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> getClientConfigurations() {
+    public Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations() {
         return this.clientConfigurations;
     }
 

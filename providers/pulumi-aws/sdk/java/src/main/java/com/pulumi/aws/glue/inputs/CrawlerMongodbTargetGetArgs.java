@@ -23,7 +23,7 @@ public final class CrawlerMongodbTargetGetArgs extends com.pulumi.resources.Reso
     @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -34,7 +34,7 @@ public final class CrawlerMongodbTargetGetArgs extends com.pulumi.resources.Reso
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -45,7 +45,7 @@ public final class CrawlerMongodbTargetGetArgs extends com.pulumi.resources.Reso
     @Import(name="scanAll")
       private final @Nullable Output<Boolean> scanAll;
 
-    public Output<Boolean> getScanAll() {
+    public Output<Boolean> scanAll() {
         return this.scanAll == null ? Codegen.empty() : this.scanAll;
     }
 

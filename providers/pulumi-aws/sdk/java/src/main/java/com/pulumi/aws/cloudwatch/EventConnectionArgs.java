@@ -23,7 +23,7 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="authParameters", required=true)
       private final Output<EventConnectionAuthParametersArgs> authParameters;
 
-    public Output<EventConnectionAuthParametersArgs> getAuthParameters() {
+    public Output<EventConnectionAuthParametersArgs> authParameters() {
         return this.authParameters;
     }
 
@@ -34,7 +34,7 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="authorizationType", required=true)
       private final Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType;
     }
 
@@ -45,7 +45,7 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

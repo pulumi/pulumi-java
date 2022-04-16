@@ -27,7 +27,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
       private final @Nullable Output<String> architecture;
 
-    public Output<String> getArchitecture() {
+    public Output<String> architecture() {
         return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
@@ -38,7 +38,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<AmiEbsBlockDeviceArgs>> getEbsBlockDevices() {
+    public Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
@@ -61,7 +61,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enaSupport")
       private final @Nullable Output<Boolean> enaSupport;
 
-    public Output<Boolean> getEnaSupport() {
+    public Output<Boolean> enaSupport() {
         return this.enaSupport == null ? Codegen.empty() : this.enaSupport;
     }
 
@@ -73,7 +73,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<AmiEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
+    public Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
@@ -85,7 +85,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageLocation")
       private final @Nullable Output<String> imageLocation;
 
-    public Output<String> getImageLocation() {
+    public Output<String> imageLocation() {
         return this.imageLocation == null ? Codegen.empty() : this.imageLocation;
     }
 
@@ -97,7 +97,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
-    public Output<String> getKernelId() {
+    public Output<String> kernelId() {
         return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
@@ -108,7 +108,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -120,7 +120,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ramdiskId")
       private final @Nullable Output<String> ramdiskId;
 
-    public Output<String> getRamdiskId() {
+    public Output<String> ramdiskId() {
         return this.ramdiskId == null ? Codegen.empty() : this.ramdiskId;
     }
 
@@ -131,7 +131,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootDeviceName")
       private final @Nullable Output<String> rootDeviceName;
 
-    public Output<String> getRootDeviceName() {
+    public Output<String> rootDeviceName() {
         return this.rootDeviceName == null ? Codegen.empty() : this.rootDeviceName;
     }
 
@@ -143,7 +143,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sriovNetSupport")
       private final @Nullable Output<String> sriovNetSupport;
 
-    public Output<String> getSriovNetSupport() {
+    public Output<String> sriovNetSupport() {
         return this.sriovNetSupport == null ? Codegen.empty() : this.sriovNetSupport;
     }
 
@@ -154,7 +154,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -167,7 +167,7 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualizationType")
       private final @Nullable Output<String> virtualizationType;
 
-    public Output<String> getVirtualizationType() {
+    public Output<String> virtualizationType() {
         return this.virtualizationType == null ? Codegen.empty() : this.virtualizationType;
     }
 

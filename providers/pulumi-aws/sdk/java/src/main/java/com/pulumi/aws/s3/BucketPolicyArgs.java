@@ -21,7 +21,7 @@ public final class BucketPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -32,7 +32,7 @@ public final class BucketPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

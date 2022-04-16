@@ -34,14 +34,14 @@ public final class PipelineStage {
      * The action(s) to include in the stage. Defined as an `action` block below
      * 
     */
-    public List<PipelineStageAction> getActions() {
+    public List<PipelineStageAction> actions() {
         return this.actions;
     }
     /**
      * The name of the stage.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

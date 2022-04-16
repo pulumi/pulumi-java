@@ -40,7 +40,7 @@ public class DomainIdentity extends com.pulumi.resources.CustomResource {
      * @return The ARN of the domain identity.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class DomainIdentity extends com.pulumi.resources.CustomResource {
      * @return The domain name to assign to SES
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -80,7 +80,7 @@ public class DomainIdentity extends com.pulumi.resources.CustomResource {
      * docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
      * 
      */
-    public Output<String> getVerificationToken() {
+    public Output<String> verificationToken() {
         return this.verificationToken;
     }
 

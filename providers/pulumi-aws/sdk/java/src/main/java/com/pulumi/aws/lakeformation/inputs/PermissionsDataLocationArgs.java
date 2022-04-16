@@ -22,7 +22,7 @@ public final class PermissionsDataLocationArgs extends com.pulumi.resources.Reso
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class PermissionsDataLocationArgs extends com.pulumi.resources.Reso
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 

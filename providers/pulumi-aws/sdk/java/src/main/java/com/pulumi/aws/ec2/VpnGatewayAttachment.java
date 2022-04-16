@@ -41,7 +41,7 @@ public class VpnGatewayAttachment extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -55,7 +55,7 @@ public class VpnGatewayAttachment extends com.pulumi.resources.CustomResource {
      * @return The ID of the Virtual Private Gateway.
      * 
      */
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId;
     }
 

@@ -44,7 +44,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return (Required) Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) with block device mappings for the the image recipe. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ImageRecipeBlockDeviceMapping>> getBlockDeviceMappings() {
+    public Output</* @Nullable */ List<ImageRecipeBlockDeviceMapping>> blockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
@@ -72,7 +72,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Ordered configuration block(s) with components for the image recipe. Detailed below.
      * 
      */
-    public Output<List<ImageRecipeComponent>> getComponents() {
+    public Output<List<ImageRecipeComponent>> components() {
         return this.components;
     }
     /**
@@ -86,7 +86,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Date the image recipe was created.
      * 
      */
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated;
     }
     /**
@@ -100,7 +100,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Description of the image recipe.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -114,7 +114,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Name of the image recipe.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Owner of the image recipe.
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -142,7 +142,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Platform of the image recipe.
      * 
      */
-    public Output<String> getParentImage() {
+    public Output<String> parentImage() {
         return this.parentImage;
     }
     /**
@@ -156,7 +156,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Platform of the image recipe.
      * 
      */
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     /**
@@ -170,7 +170,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -184,7 +184,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -198,7 +198,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Base64 encoded user data. Use this to provide commands or a command script to run when you launch your build instance.
      * 
      */
-    public Output<String> getUserDataBase64() {
+    public Output<String> userDataBase64() {
         return this.userDataBase64;
     }
     /**
@@ -212,7 +212,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Version of the image recipe.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
     /**
@@ -226,7 +226,7 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return The working directory to be used during build and test workflows.
      * 
      */
-    public Output</* @Nullable */ String> getWorkingDirectory() {
+    public Output</* @Nullable */ String> workingDirectory() {
         return this.workingDirectory;
     }
 

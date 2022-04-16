@@ -54,44 +54,44 @@ public final class GetOutpostResult {
         this.siteId = siteId;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Availability Zone name.
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
      * Availability Zone identifier.
      * 
     */
-    public String getAvailabilityZoneId() {
+    public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * Description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * Site identifier.
      * 
     */
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 

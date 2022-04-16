@@ -25,7 +25,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assertedControls")
       private final @Nullable Output<List<String>> assertedControls;
 
-    public Output<List<String>> getAssertedControls() {
+    public Output<List<String>> assertedControls() {
         return this.assertedControls == null ? Codegen.empty() : this.assertedControls;
     }
 
@@ -36,7 +36,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="controlPanelArn", required=true)
       private final Output<String> controlPanelArn;
 
-    public Output<String> getControlPanelArn() {
+    public Output<String> controlPanelArn() {
         return this.controlPanelArn;
     }
 
@@ -47,7 +47,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatingControls")
       private final @Nullable Output<List<String>> gatingControls;
 
-    public Output<List<String>> getGatingControls() {
+    public Output<List<String>> gatingControls() {
         return this.gatingControls == null ? Codegen.empty() : this.gatingControls;
     }
 
@@ -58,7 +58,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleConfig", required=true)
       private final Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
-    public Output<SafetyRuleRuleConfigArgs> getRuleConfig() {
+    public Output<SafetyRuleRuleConfigArgs> ruleConfig() {
         return this.ruleConfig;
     }
 
@@ -80,7 +80,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetControls")
       private final @Nullable Output<List<String>> targetControls;
 
-    public Output<List<String>> getTargetControls() {
+    public Output<List<String>> targetControls() {
         return this.targetControls == null ? Codegen.empty() : this.targetControls;
     }
 
@@ -91,7 +91,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitPeriodMs", required=true)
       private final Output<Integer> waitPeriodMs;
 
-    public Output<Integer> getWaitPeriodMs() {
+    public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 

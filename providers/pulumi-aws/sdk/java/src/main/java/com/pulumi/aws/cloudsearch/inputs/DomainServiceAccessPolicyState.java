@@ -22,7 +22,7 @@ public final class DomainServiceAccessPolicyState extends com.pulumi.resources.R
     @Import(name="accessPolicy")
       private final @Nullable Output<String> accessPolicy;
 
-    public Output<String> getAccessPolicy() {
+    public Output<String> accessPolicy() {
         return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
@@ -33,7 +33,7 @@ public final class DomainServiceAccessPolicyState extends com.pulumi.resources.R
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 

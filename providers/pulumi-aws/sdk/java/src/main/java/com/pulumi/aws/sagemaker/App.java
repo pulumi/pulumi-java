@@ -42,7 +42,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The name of the app.
      * 
      */
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName;
     }
     /**
@@ -56,7 +56,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The type of app. Valid values are `JupyterServer`, `KernelGateway` and `TensorBoard`.
      * 
      */
-    public Output<String> getAppType() {
+    public Output<String> appType() {
         return this.appType;
     }
     /**
@@ -70,7 +70,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the app.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -84,7 +84,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The domain ID.
      * 
      */
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
     /**
@@ -98,7 +98,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
      * 
      */
-    public Output<AppResourceSpec> getResourceSpec() {
+    public Output<AppResourceSpec> resourceSpec() {
         return this.resourceSpec;
     }
     /**
@@ -112,7 +112,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -126,7 +126,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -140,7 +140,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The user profile name.
      * 
      */
-    public Output<String> getUserProfileName() {
+    public Output<String> userProfileName() {
         return this.userProfileName;
     }
 

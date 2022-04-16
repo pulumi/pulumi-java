@@ -22,7 +22,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     @Import(name="accessPointId")
       private final @Nullable Output<String> accessPointId;
 
-    public Output<String> getAccessPointId() {
+    public Output<String> accessPointId() {
         return this.accessPointId == null ? Codegen.empty() : this.accessPointId;
     }
 
@@ -33,7 +33,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     @Import(name="iam")
       private final @Nullable Output<String> iam;
 
-    public Output<String> getIam() {
+    public Output<String> iam() {
         return this.iam == null ? Codegen.empty() : this.iam;
     }
 

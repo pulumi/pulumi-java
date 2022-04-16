@@ -23,7 +23,7 @@ public final class BackupPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicy")
       private final @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy;
 
-    public Output<BackupPolicyBackupPolicyGetArgs> getBackupPolicy() {
+    public Output<BackupPolicyBackupPolicyGetArgs> backupPolicy() {
         return this.backupPolicy == null ? Codegen.empty() : this.backupPolicy;
     }
 
@@ -34,7 +34,7 @@ public final class BackupPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 

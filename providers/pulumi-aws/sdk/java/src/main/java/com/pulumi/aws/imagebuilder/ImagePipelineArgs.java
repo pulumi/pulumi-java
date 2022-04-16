@@ -26,7 +26,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> getDistributionConfigurationArn() {
+    public Output<String> distributionConfigurationArn() {
         return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
     }
 
@@ -48,7 +48,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> getEnhancedImageMetadataEnabled() {
+    public Output<Boolean> enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
     }
 
@@ -59,7 +59,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageRecipeArn", required=true)
       private final Output<String> imageRecipeArn;
 
-    public Output<String> getImageRecipeArn() {
+    public Output<String> imageRecipeArn() {
         return this.imageRecipeArn;
     }
 
@@ -70,7 +70,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
 
-    public Output<ImagePipelineImageTestsConfigurationArgs> getImageTestsConfiguration() {
+    public Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration() {
         return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
     }
 
@@ -81,7 +81,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfigurationArn", required=true)
       private final Output<String> infrastructureConfigurationArn;
 
-    public Output<String> getInfrastructureConfigurationArn() {
+    public Output<String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
 
@@ -92,7 +92,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ImagePipelineScheduleArgs> schedule;
 
-    public Output<ImagePipelineScheduleArgs> getSchedule() {
+    public Output<ImagePipelineScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -114,7 +114,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -125,7 +125,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

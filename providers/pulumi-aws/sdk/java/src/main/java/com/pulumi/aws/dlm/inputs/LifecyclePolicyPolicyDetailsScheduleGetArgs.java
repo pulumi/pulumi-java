@@ -28,7 +28,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
     @Import(name="copyTags")
       private final @Nullable Output<Boolean> copyTags;
 
-    public Output<Boolean> getCopyTags() {
+    public Output<Boolean> copyTags() {
         return this.copyTags == null ? Codegen.empty() : this.copyTags;
     }
 
@@ -39,7 +39,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
     @Import(name="createRule", required=true)
       private final Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> getCreateRule() {
+    public Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule() {
         return this.createRule;
     }
 
@@ -50,7 +50,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
     @Import(name="crossRegionCopyRules")
       private final @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
 
-    public Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> getCrossRegionCopyRules() {
+    public Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules() {
         return this.crossRegionCopyRules == null ? Codegen.empty() : this.crossRegionCopyRules;
     }
 
@@ -61,7 +61,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
     @Import(name="retainRule", required=true)
       private final Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> getRetainRule() {
+    public Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule() {
         return this.retainRule;
     }
 
@@ -83,7 +83,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends com.pulum
     @Import(name="tagsToAdd")
       private final @Nullable Output<Map<String,String>> tagsToAdd;
 
-    public Output<Map<String,String>> getTagsToAdd() {
+    public Output<Map<String,String>> tagsToAdd() {
         return this.tagsToAdd == null ? Codegen.empty() : this.tagsToAdd;
     }
 

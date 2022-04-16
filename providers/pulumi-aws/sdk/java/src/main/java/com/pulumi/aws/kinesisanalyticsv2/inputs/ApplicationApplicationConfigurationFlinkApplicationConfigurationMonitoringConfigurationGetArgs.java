@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="configurationType", required=true)
       private final Output<String> configurationType;
 
-    public Output<String> getConfigurationType() {
+    public Output<String> configurationType() {
         return this.configurationType;
     }
 
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
-    public Output<String> getLogLevel() {
+    public Output<String> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -44,7 +44,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="metricsLevel")
       private final @Nullable Output<String> metricsLevel;
 
-    public Output<String> getMetricsLevel() {
+    public Output<String> metricsLevel() {
         return this.metricsLevel == null ? Codegen.empty() : this.metricsLevel;
     }
 

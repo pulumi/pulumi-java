@@ -22,7 +22,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetAmiIdsFilter> filters;
 
-    public List<GetAmiIdsFilter> getFilters() {
+    public List<GetAmiIdsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

@@ -44,19 +44,19 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN of the subnet group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -84,7 +84,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return Set of VPC Subnet ID-s for the subnet group. At least one subnet must be provided.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -98,7 +98,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +112,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -126,7 +126,7 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return The VPC in which the subnet group exists.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

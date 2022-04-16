@@ -24,7 +24,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
-    public Output<String> getEventBusName() {
+    public Output<String> eventBusName() {
         return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
     }
 
@@ -57,7 +57,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventPattern")
       private final @Nullable Output<String> eventPattern;
 
-    public Output<String> getEventPattern() {
+    public Output<String> eventPattern() {
         return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
@@ -68,7 +68,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -79,7 +79,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -101,7 +101,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -112,7 +112,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
     }
 
@@ -123,7 +123,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -134,7 +134,7 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

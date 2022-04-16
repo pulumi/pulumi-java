@@ -43,7 +43,7 @@ public class EventConnection extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the connection.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class EventConnection extends com.pulumi.resources.CustomResource {
      * @return Parameters used for authorization. A maximum of 1 are allowed. Documented below.
      * 
      */
-    public Output<EventConnectionAuthParameters> getAuthParameters() {
+    public Output<EventConnectionAuthParameters> authParameters() {
         return this.authParameters;
     }
     /**
@@ -71,7 +71,7 @@ public class EventConnection extends com.pulumi.resources.CustomResource {
      * @return Choose the type of authorization to use for the connection. One of `API_KEY`,`BASIC`,`OAUTH_CLIENT_CREDENTIALS`.
      * 
      */
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType;
     }
     /**
@@ -85,7 +85,7 @@ public class EventConnection extends com.pulumi.resources.CustomResource {
      * @return Enter a description for the connection. Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -99,7 +99,7 @@ public class EventConnection extends com.pulumi.resources.CustomResource {
      * @return The name of the new connection. Maximum of 64 characters consisting of numbers, lower/upper case letters, .,-,_.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class EventConnection extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the secret created from the authorization parameters specified for the connection.
      * 
      */
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 

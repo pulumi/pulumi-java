@@ -24,7 +24,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="filters")
       private final @Nullable List<GetInternetGatewayFilter> filters;
 
-    public List<GetInternetGatewayFilter> getFilters() {
+    public List<GetInternetGatewayFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="internetGatewayId")
       private final @Nullable String internetGatewayId;
 
-    public Optional<String> getInternetGatewayId() {
+    public Optional<String> internetGatewayId() {
         return this.internetGatewayId == null ? Optional.empty() : Optional.ofNullable(this.internetGatewayId);
     }
 
@@ -47,7 +47,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

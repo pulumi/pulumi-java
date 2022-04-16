@@ -21,7 +21,7 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -32,7 +32,7 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="repository", required=true)
       private final Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 

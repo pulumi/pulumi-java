@@ -23,7 +23,7 @@ public final class UserGroupMembershipState extends com.pulumi.resources.Resourc
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups == null ? Codegen.empty() : this.groups;
     }
 
@@ -34,7 +34,7 @@ public final class UserGroupMembershipState extends com.pulumi.resources.Resourc
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

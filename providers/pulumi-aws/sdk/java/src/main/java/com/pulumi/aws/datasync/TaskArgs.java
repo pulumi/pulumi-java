@@ -26,7 +26,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
     }
 
@@ -37,7 +37,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationLocationArn", required=true)
       private final Output<String> destinationLocationArn;
 
-    public Output<String> getDestinationLocationArn() {
+    public Output<String> destinationLocationArn() {
         return this.destinationLocationArn;
     }
 
@@ -48,7 +48,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludes")
       private final @Nullable Output<TaskExcludesArgs> excludes;
 
-    public Output<TaskExcludesArgs> getExcludes() {
+    public Output<TaskExcludesArgs> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -59,7 +59,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<TaskOptionsArgs> options;
 
-    public Output<TaskOptionsArgs> getOptions() {
+    public Output<TaskOptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -81,7 +81,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<TaskScheduleArgs> schedule;
 
-    public Output<TaskScheduleArgs> getSchedule() {
+    public Output<TaskScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -92,7 +92,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceLocationArn", required=true)
       private final Output<String> sourceLocationArn;
 
-    public Output<String> getSourceLocationArn() {
+    public Output<String> sourceLocationArn() {
         return this.sourceLocationArn;
     }
 
@@ -103,7 +103,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

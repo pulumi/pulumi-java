@@ -27,7 +27,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAction", required=true)
       private final Output<WebAclDefaultActionArgs> defaultAction;
 
-    public Output<WebAclDefaultActionArgs> getDefaultAction() {
+    public Output<WebAclDefaultActionArgs> defaultAction() {
         return this.defaultAction;
     }
 
@@ -38,7 +38,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfiguration")
       private final @Nullable Output<WebAclLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<WebAclLoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<WebAclLoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
@@ -49,7 +49,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -60,7 +60,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<WebAclRuleArgs>> rules;
 
-    public Output<List<WebAclRuleArgs>> getRules() {
+    public Output<List<WebAclRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -82,7 +82,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

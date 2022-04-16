@@ -24,7 +24,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="computeEnvironmentName")
       private final @Nullable Output<String> computeEnvironmentName;
 
-    public Output<String> getComputeEnvironmentName() {
+    public Output<String> computeEnvironmentName() {
         return this.computeEnvironmentName == null ? Codegen.empty() : this.computeEnvironmentName;
     }
 
@@ -35,7 +35,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="computeEnvironmentNamePrefix")
       private final @Nullable Output<String> computeEnvironmentNamePrefix;
 
-    public Output<String> getComputeEnvironmentNamePrefix() {
+    public Output<String> computeEnvironmentNamePrefix() {
         return this.computeEnvironmentNamePrefix == null ? Codegen.empty() : this.computeEnvironmentNamePrefix;
     }
 
@@ -46,7 +46,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="computeResources")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesArgs> computeResources;
 
-    public Output<ComputeEnvironmentComputeResourcesArgs> getComputeResources() {
+    public Output<ComputeEnvironmentComputeResourcesArgs> computeResources() {
         return this.computeResources == null ? Codegen.empty() : this.computeResources;
     }
 
@@ -57,7 +57,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
     }
 
@@ -68,7 +68,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -79,7 +79,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class ComputeEnvironmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessString", required=true)
       private final Output<String> accessString;
 
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString;
     }
 
@@ -36,7 +36,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine", required=true)
       private final Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
 
@@ -58,7 +58,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noPasswordRequired")
       private final @Nullable Output<Boolean> noPasswordRequired;
 
-    public Output<Boolean> getNoPasswordRequired() {
+    public Output<Boolean> noPasswordRequired() {
         return this.noPasswordRequired == null ? Codegen.empty() : this.noPasswordRequired;
     }
 
@@ -69,7 +69,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> getPasswords() {
+    public Output<List<String>> passwords() {
         return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 
@@ -80,7 +80,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -102,7 +102,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

@@ -53,35 +53,35 @@ public final class GetImageOutputResourceAmi {
      * Account identifier of the AMI.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * Description of the AMI.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Identifier of the AMI.
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
     /**
      * Name of the AMI.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Region of the AMI.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

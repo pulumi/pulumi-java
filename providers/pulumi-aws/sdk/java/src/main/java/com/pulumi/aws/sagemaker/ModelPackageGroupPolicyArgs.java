@@ -21,14 +21,14 @@ public final class ModelPackageGroupPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="modelPackageGroupName", required=true)
       private final Output<String> modelPackageGroupName;
 
-    public Output<String> getModelPackageGroupName() {
+    public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName;
     }
 
     @Import(name="resourcePolicy", required=true)
       private final Output<String> resourcePolicy;
 
-    public Output<String> getResourcePolicy() {
+    public Output<String> resourcePolicy() {
         return this.resourcePolicy;
     }
 

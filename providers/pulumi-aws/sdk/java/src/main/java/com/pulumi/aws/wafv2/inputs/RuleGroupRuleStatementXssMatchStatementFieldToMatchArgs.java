@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs exten
     @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs exten
     @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchBodyArgs> body;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchBodyArgs> getBody() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchBodyArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs exten
     @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchMethodArgs> method;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchMethodArgs> getMethod() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchMethodArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs exten
     @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs exten
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs exten
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs exten
     @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchUriPathArgs> getUriPath() {
+    public Output<RuleGroupRuleStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

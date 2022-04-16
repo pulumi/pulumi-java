@@ -37,23 +37,23 @@ public final class GetLocalGatewayVirtualInterfaceGroupResult {
         this.tags = tags;
     }
 
-    public List<GetLocalGatewayVirtualInterfaceGroupFilter> getFilters() {
+    public List<GetLocalGatewayVirtualInterfaceGroupFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLocalGatewayId() {
+    public String localGatewayId() {
         return this.localGatewayId;
     }
     /**
      * Set of EC2 Local Gateway Virtual Interface identifiers.
      * 
     */
-    public List<String> getLocalGatewayVirtualInterfaceIds() {
+    public List<String> localGatewayVirtualInterfaceIds() {
         return this.localGatewayVirtualInterfaceIds;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

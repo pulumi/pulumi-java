@@ -27,7 +27,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationOptions", required=true)
       private final Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
 
-    public Output<List<EndpointAuthenticationOptionArgs>> getAuthenticationOptions() {
+    public Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions() {
         return this.authenticationOptions;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCidrBlock", required=true)
       private final Output<String> clientCidrBlock;
 
-    public Output<String> getClientCidrBlock() {
+    public Output<String> clientCidrBlock() {
         return this.clientCidrBlock;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionLogOptions", required=true)
       private final Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
 
-    public Output<EndpointConnectionLogOptionsArgs> getConnectionLogOptions() {
+    public Output<EndpointConnectionLogOptionsArgs> connectionLogOptions() {
         return this.connectionLogOptions;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -82,7 +82,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfServicePortal")
       private final @Nullable Output<String> selfServicePortal;
 
-    public Output<String> getSelfServicePortal() {
+    public Output<String> selfServicePortal() {
         return this.selfServicePortal == null ? Codegen.empty() : this.selfServicePortal;
     }
 
@@ -93,7 +93,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverCertificateArn", required=true)
       private final Output<String> serverCertificateArn;
 
-    public Output<String> getServerCertificateArn() {
+    public Output<String> serverCertificateArn() {
         return this.serverCertificateArn;
     }
 
@@ -104,7 +104,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="splitTunnel")
       private final @Nullable Output<Boolean> splitTunnel;
 
-    public Output<Boolean> getSplitTunnel() {
+    public Output<Boolean> splitTunnel() {
         return this.splitTunnel == null ? Codegen.empty() : this.splitTunnel;
     }
 
@@ -115,7 +115,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -126,7 +126,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transportProtocol")
       private final @Nullable Output<String> transportProtocol;
 
-    public Output<String> getTransportProtocol() {
+    public Output<String> transportProtocol() {
         return this.transportProtocol == null ? Codegen.empty() : this.transportProtocol;
     }
 

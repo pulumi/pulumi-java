@@ -22,7 +22,7 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -33,7 +33,7 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -66,7 +66,7 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workgroup")
       private final @Nullable Output<String> workgroup;
 
-    public Output<String> getWorkgroup() {
+    public Output<String> workgroup() {
         return this.workgroup == null ? Codegen.empty() : this.workgroup;
     }
 

@@ -46,28 +46,28 @@ public final class GetRegionResult {
      * The region's description in this format: "Location (Region name)".
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The EC2 endpoint for the selected region.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the selected region.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

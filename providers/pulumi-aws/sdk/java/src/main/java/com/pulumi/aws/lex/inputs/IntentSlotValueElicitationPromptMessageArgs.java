@@ -23,7 +23,7 @@ public final class IntentSlotValueElicitationPromptMessageArgs extends com.pulum
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -34,7 +34,7 @@ public final class IntentSlotValueElicitationPromptMessageArgs extends com.pulum
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -46,7 +46,7 @@ public final class IntentSlotValueElicitationPromptMessageArgs extends com.pulum
     @Import(name="groupNumber")
       private final @Nullable Output<Integer> groupNumber;
 
-    public Output<Integer> getGroupNumber() {
+    public Output<Integer> groupNumber() {
         return this.groupNumber == null ? Codegen.empty() : this.groupNumber;
     }
 

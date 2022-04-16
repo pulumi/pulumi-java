@@ -36,14 +36,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * Enables or disables data processing.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Array of data processors. More details are given below
      * 
     */
-    public List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor> getProcessors() {
+    public List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor> processors() {
         return this.processors == null ? List.of() : this.processors;
     }
 

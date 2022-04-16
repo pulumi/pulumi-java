@@ -28,7 +28,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customResponseBodies")
       private final @Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies;
 
-    public Output<List<WebAclCustomResponseBodyArgs>> getCustomResponseBodies() {
+    public Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies() {
         return this.customResponseBodies == null ? Codegen.empty() : this.customResponseBodies;
     }
 
@@ -39,7 +39,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAction", required=true)
       private final Output<WebAclDefaultActionArgs> defaultAction;
 
-    public Output<WebAclDefaultActionArgs> getDefaultAction() {
+    public Output<WebAclDefaultActionArgs> defaultAction() {
         return this.defaultAction;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,7 +72,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<WebAclRuleArgs>> rules;
 
-    public Output<List<WebAclRuleArgs>> getRules() {
+    public Output<List<WebAclRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -83,7 +83,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -94,7 +94,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -105,7 +105,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -116,7 +116,7 @@ public final class WebAclArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="visibilityConfig", required=true)
       private final Output<WebAclVisibilityConfigArgs> visibilityConfig;
 
-    public Output<WebAclVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<WebAclVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 

@@ -22,7 +22,7 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationGetArgs 
     @Import(name="accessRoleArn")
       private final @Nullable Output<String> accessRoleArn;
 
-    public Output<String> getAccessRoleArn() {
+    public Output<String> accessRoleArn() {
         return this.accessRoleArn == null ? Codegen.empty() : this.accessRoleArn;
     }
 
@@ -33,7 +33,7 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationGetArgs 
     @Import(name="connectionArn")
       private final @Nullable Output<String> connectionArn;
 
-    public Output<String> getConnectionArn() {
+    public Output<String> connectionArn() {
         return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
     }
 

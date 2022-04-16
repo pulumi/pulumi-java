@@ -34,21 +34,21 @@ public final class NetworkInterfaceAttachment {
         this.instance = instance;
     }
 
-    public Optional<String> getAttachmentId() {
+    public Optional<String> attachmentId() {
         return Optional.ofNullable(this.attachmentId);
     }
     /**
      * Integer to define the devices index.
      * 
     */
-    public Integer getDeviceIndex() {
+    public Integer deviceIndex() {
         return this.deviceIndex;
     }
     /**
      * ID of the instance to attach to.
      * 
     */
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
 

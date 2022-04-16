@@ -42,28 +42,28 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         this.tableName = tableName;
     }
 
-    public Optional<String> getReferenceId() {
+    public Optional<String> referenceId() {
         return Optional.ofNullable(this.referenceId);
     }
     /**
      * Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
      * 
     */
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema getReferenceSchema() {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema() {
         return this.referenceSchema;
     }
     /**
      * Identifies the S3 bucket and object that contains the reference data.
      * 
     */
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource getS3ReferenceDataSource() {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource() {
         return this.s3ReferenceDataSource;
     }
     /**
      * The name of the in-application table to create.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

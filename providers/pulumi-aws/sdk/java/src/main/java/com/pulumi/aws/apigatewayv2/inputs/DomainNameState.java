@@ -25,7 +25,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiMappingSelectionExpression")
       private final @Nullable Output<String> apiMappingSelectionExpression;
 
-    public Output<String> getApiMappingSelectionExpression() {
+    public Output<String> apiMappingSelectionExpression() {
         return this.apiMappingSelectionExpression == null ? Codegen.empty() : this.apiMappingSelectionExpression;
     }
 
@@ -36,7 +36,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -58,7 +58,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainNameConfiguration")
       private final @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
 
-    public Output<DomainNameDomainNameConfigurationGetArgs> getDomainNameConfiguration() {
+    public Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration() {
         return this.domainNameConfiguration == null ? Codegen.empty() : this.domainNameConfiguration;
     }
 
@@ -69,7 +69,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
-    public Output<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
+    public Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Codegen.empty() : this.mutualTlsAuthentication;
     }
 
@@ -80,7 +80,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -28,7 +28,7 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
@@ -40,7 +40,7 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Output<Integer> getDeletionWindowInDays() {
+    public Output<Integer> deletionWindowInDays() {
         return this.deletionWindowInDays == null ? Codegen.empty() : this.deletionWindowInDays;
     }
 
@@ -51,7 +51,7 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -73,14 +73,14 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyMaterialBase64")
       private final @Nullable Output<String> keyMaterialBase64;
 
-    public Output<String> getKeyMaterialBase64() {
+    public Output<String> keyMaterialBase64() {
         return this.keyMaterialBase64 == null ? Codegen.empty() : this.keyMaterialBase64;
     }
 
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -91,7 +91,7 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="primaryKeyArn", required=true)
       private final Output<String> primaryKeyArn;
 
-    public Output<String> getPrimaryKeyArn() {
+    public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
     }
 
@@ -102,7 +102,7 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class ReplicaExternalKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="validTo")
       private final @Nullable Output<String> validTo;
 
-    public Output<String> getValidTo() {
+    public Output<String> validTo() {
         return this.validTo == null ? Codegen.empty() : this.validTo;
     }
 

@@ -22,7 +22,7 @@ public final class ServiceQuotaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quotaCode", required=true)
       private final Output<String> quotaCode;
 
-    public Output<String> getQuotaCode() {
+    public Output<String> quotaCode() {
         return this.quotaCode;
     }
 
@@ -33,7 +33,7 @@ public final class ServiceQuotaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceCode", required=true)
       private final Output<String> serviceCode;
 
-    public Output<String> getServiceCode() {
+    public Output<String> serviceCode() {
         return this.serviceCode;
     }
 
@@ -44,7 +44,7 @@ public final class ServiceQuotaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value;
     }
 

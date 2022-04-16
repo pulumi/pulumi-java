@@ -23,7 +23,7 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="precedence")
       private final @Nullable Output<Integer> precedence;
 
-    public Output<Integer> getPrecedence() {
+    public Output<Integer> precedence() {
         return this.precedence == null ? Codegen.empty() : this.precedence;
     }
 
@@ -56,7 +56,7 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -67,7 +67,7 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

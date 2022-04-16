@@ -19,7 +19,7 @@ public final class GetRepositoryImageScanningConfiguration extends com.pulumi.re
     @Import(name="scanOnPush", required=true)
       private final Boolean scanOnPush;
 
-    public Boolean getScanOnPush() {
+    public Boolean scanOnPush() {
         return this.scanOnPush;
     }
 

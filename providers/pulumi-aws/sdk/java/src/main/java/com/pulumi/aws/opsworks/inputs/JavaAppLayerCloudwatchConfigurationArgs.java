@@ -20,14 +20,14 @@ public final class JavaAppLayerCloudwatchConfigurationArgs extends com.pulumi.re
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
-    public Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> getLogStreams() {
+    public Output<List<JavaAppLayerCloudwatchConfigurationLogStreamArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

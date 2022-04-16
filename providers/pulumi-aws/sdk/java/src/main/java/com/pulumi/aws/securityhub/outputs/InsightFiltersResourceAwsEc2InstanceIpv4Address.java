@@ -24,7 +24,7 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv4Address {
      * A finding's CIDR value.
      * 
     */
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
 

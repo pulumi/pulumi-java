@@ -25,7 +25,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName", required=true)
       private final Output<String> deviceFleetName;
 
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
 
@@ -47,7 +47,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableIotRoleAlias")
       private final @Nullable Output<Boolean> enableIotRoleAlias;
 
-    public Output<Boolean> getEnableIotRoleAlias() {
+    public Output<Boolean> enableIotRoleAlias() {
         return this.enableIotRoleAlias == null ? Codegen.empty() : this.enableIotRoleAlias;
     }
 
@@ -58,7 +58,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputConfig", required=true)
       private final Output<DeviceFleetOutputConfigArgs> outputConfig;
 
-    public Output<DeviceFleetOutputConfigArgs> getOutputConfig() {
+    public Output<DeviceFleetOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 
@@ -69,7 +69,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -80,7 +80,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

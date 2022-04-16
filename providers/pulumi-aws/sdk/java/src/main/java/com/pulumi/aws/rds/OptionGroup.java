@@ -48,7 +48,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN of the db option group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +62,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the engine that this option group should be associated with.
      * 
      */
-    public Output<String> getEngineName() {
+    public Output<String> engineName() {
         return this.engineName;
     }
     /**
@@ -76,7 +76,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies the major version of the engine that this option group should be associated with.
      * 
      */
-    public Output<String> getMajorEngineVersion() {
+    public Output<String> majorEngineVersion() {
         return this.majorEngineVersion;
     }
     /**
@@ -90,7 +90,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return The Name of the setting.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -118,7 +118,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the option group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getOptionGroupDescription() {
+    public Output<String> optionGroupDescription() {
         return this.optionGroupDescription;
     }
     /**
@@ -132,7 +132,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return A list of Options to apply.
      * 
      */
-    public Output</* @Nullable */ List<OptionGroupOption>> getOptions() {
+    public Output</* @Nullable */ List<OptionGroupOption>> options() {
         return this.options;
     }
     /**
@@ -146,7 +146,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -160,7 +160,7 @@ public class OptionGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

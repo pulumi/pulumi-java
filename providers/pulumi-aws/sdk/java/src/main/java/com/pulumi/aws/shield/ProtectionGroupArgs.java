@@ -24,7 +24,7 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="aggregation", required=true)
       private final Output<String> aggregation;
 
-    public Output<String> getAggregation() {
+    public Output<String> aggregation() {
         return this.aggregation;
     }
 
@@ -35,7 +35,7 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -46,7 +46,7 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 
@@ -57,7 +57,7 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="protectionGroupId", required=true)
       private final Output<String> protectionGroupId;
 
-    public Output<String> getProtectionGroupId() {
+    public Output<String> protectionGroupId() {
         return this.protectionGroupId;
     }
 
@@ -68,7 +68,7 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -79,7 +79,7 @@ public final class ProtectionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

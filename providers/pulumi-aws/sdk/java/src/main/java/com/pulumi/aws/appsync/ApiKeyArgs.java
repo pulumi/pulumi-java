@@ -22,7 +22,7 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expires")
       private final @Nullable Output<String> expires;
 
-    public Output<String> getExpires() {
+    public Output<String> expires() {
         return this.expires == null ? Codegen.empty() : this.expires;
     }
 

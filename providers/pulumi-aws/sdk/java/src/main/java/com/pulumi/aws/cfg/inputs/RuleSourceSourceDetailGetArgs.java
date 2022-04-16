@@ -22,7 +22,7 @@ public final class RuleSourceSourceDetailGetArgs extends com.pulumi.resources.Re
     @Import(name="eventSource")
       private final @Nullable Output<String> eventSource;
 
-    public Output<String> getEventSource() {
+    public Output<String> eventSource() {
         return this.eventSource == null ? Codegen.empty() : this.eventSource;
     }
 
@@ -33,7 +33,7 @@ public final class RuleSourceSourceDetailGetArgs extends com.pulumi.resources.Re
     @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> getMaximumExecutionFrequency() {
+    public Output<String> maximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
@@ -44,7 +44,7 @@ public final class RuleSourceSourceDetailGetArgs extends com.pulumi.resources.Re
     @Import(name="messageType")
       private final @Nullable Output<String> messageType;
 
-    public Output<String> getMessageType() {
+    public Output<String> messageType() {
         return this.messageType == null ? Codegen.empty() : this.messageType;
     }
 

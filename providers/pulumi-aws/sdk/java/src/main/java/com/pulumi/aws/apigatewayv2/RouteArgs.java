@@ -26,7 +26,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -37,7 +37,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiKeyRequired")
       private final @Nullable Output<Boolean> apiKeyRequired;
 
-    public Output<Boolean> getApiKeyRequired() {
+    public Output<Boolean> apiKeyRequired() {
         return this.apiKeyRequired == null ? Codegen.empty() : this.apiKeyRequired;
     }
 
@@ -48,7 +48,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizationScopes")
       private final @Nullable Output<List<String>> authorizationScopes;
 
-    public Output<List<String>> getAuthorizationScopes() {
+    public Output<List<String>> authorizationScopes() {
         return this.authorizationScopes == null ? Codegen.empty() : this.authorizationScopes;
     }
 
@@ -62,7 +62,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizationType")
       private final @Nullable Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
@@ -73,7 +73,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerId")
       private final @Nullable Output<String> authorizerId;
 
-    public Output<String> getAuthorizerId() {
+    public Output<String> authorizerId() {
         return this.authorizerId == null ? Codegen.empty() : this.authorizerId;
     }
 
@@ -84,7 +84,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="modelSelectionExpression")
       private final @Nullable Output<String> modelSelectionExpression;
 
-    public Output<String> getModelSelectionExpression() {
+    public Output<String> modelSelectionExpression() {
         return this.modelSelectionExpression == null ? Codegen.empty() : this.modelSelectionExpression;
     }
 
@@ -95,7 +95,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationName")
       private final @Nullable Output<String> operationName;
 
-    public Output<String> getOperationName() {
+    public Output<String> operationName() {
         return this.operationName == null ? Codegen.empty() : this.operationName;
     }
 
@@ -106,7 +106,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestModels")
       private final @Nullable Output<Map<String,String>> requestModels;
 
-    public Output<Map<String,String>> getRequestModels() {
+    public Output<Map<String,String>> requestModels() {
         return this.requestModels == null ? Codegen.empty() : this.requestModels;
     }
 
@@ -117,7 +117,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestParameters")
       private final @Nullable Output<List<RouteRequestParameterArgs>> requestParameters;
 
-    public Output<List<RouteRequestParameterArgs>> getRequestParameters() {
+    public Output<List<RouteRequestParameterArgs>> requestParameters() {
         return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
     }
 
@@ -128,7 +128,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeKey", required=true)
       private final Output<String> routeKey;
 
-    public Output<String> getRouteKey() {
+    public Output<String> routeKey() {
         return this.routeKey;
     }
 
@@ -139,7 +139,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeResponseSelectionExpression")
       private final @Nullable Output<String> routeResponseSelectionExpression;
 
-    public Output<String> getRouteResponseSelectionExpression() {
+    public Output<String> routeResponseSelectionExpression() {
         return this.routeResponseSelectionExpression == null ? Codegen.empty() : this.routeResponseSelectionExpression;
     }
 
@@ -150,7 +150,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

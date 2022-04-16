@@ -30,10 +30,10 @@ public final class GetSecretResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetSecretSecret> getSecrets() {
+    public List<GetSecretSecret> secrets() {
         return this.secrets;
     }
 

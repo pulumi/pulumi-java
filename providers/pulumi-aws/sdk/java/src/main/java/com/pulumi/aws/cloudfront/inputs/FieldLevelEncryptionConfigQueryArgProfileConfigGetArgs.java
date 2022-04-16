@@ -23,7 +23,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
     @Import(name="forwardWhenQueryArgProfileIsUnknown", required=true)
       private final Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
 
-    public Output<Boolean> getForwardWhenQueryArgProfileIsUnknown() {
+    public Output<Boolean> forwardWhenQueryArgProfileIsUnknown() {
         return this.forwardWhenQueryArgProfileIsUnknown;
     }
 
@@ -34,7 +34,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
     @Import(name="queryArgProfiles")
       private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
 
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> getQueryArgProfiles() {
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles() {
         return this.queryArgProfiles == null ? Codegen.empty() : this.queryArgProfiles;
     }
 

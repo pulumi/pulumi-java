@@ -27,7 +27,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteProtection")
       private final @Nullable Output<Boolean> deleteProtection;
 
-    public Output<Boolean> getDeleteProtection() {
+    public Output<Boolean> deleteProtection() {
         return this.deleteProtection == null ? Codegen.empty() : this.deleteProtection;
     }
 
@@ -49,7 +49,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallPolicyArn")
       private final @Nullable Output<String> firewallPolicyArn;
 
-    public Output<String> getFirewallPolicyArn() {
+    public Output<String> firewallPolicyArn() {
         return this.firewallPolicyArn == null ? Codegen.empty() : this.firewallPolicyArn;
     }
 
@@ -71,7 +71,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallPolicyChangeProtection")
       private final @Nullable Output<Boolean> firewallPolicyChangeProtection;
 
-    public Output<Boolean> getFirewallPolicyChangeProtection() {
+    public Output<Boolean> firewallPolicyChangeProtection() {
         return this.firewallPolicyChangeProtection == null ? Codegen.empty() : this.firewallPolicyChangeProtection;
     }
 
@@ -82,7 +82,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallStatuses")
       private final @Nullable Output<List<FirewallFirewallStatusGetArgs>> firewallStatuses;
 
-    public Output<List<FirewallFirewallStatusGetArgs>> getFirewallStatuses() {
+    public Output<List<FirewallFirewallStatusGetArgs>> firewallStatuses() {
         return this.firewallStatuses == null ? Codegen.empty() : this.firewallStatuses;
     }
 
@@ -93,7 +93,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetChangeProtection")
       private final @Nullable Output<Boolean> subnetChangeProtection;
 
-    public Output<Boolean> getSubnetChangeProtection() {
+    public Output<Boolean> subnetChangeProtection() {
         return this.subnetChangeProtection == null ? Codegen.empty() : this.subnetChangeProtection;
     }
 
@@ -115,7 +115,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetMappings")
       private final @Nullable Output<List<FirewallSubnetMappingGetArgs>> subnetMappings;
 
-    public Output<List<FirewallSubnetMappingGetArgs>> getSubnetMappings() {
+    public Output<List<FirewallSubnetMappingGetArgs>> subnetMappings() {
         return this.subnetMappings == null ? Codegen.empty() : this.subnetMappings;
     }
 
@@ -126,7 +126,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -137,7 +137,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -148,7 +148,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateToken")
       private final @Nullable Output<String> updateToken;
 
-    public Output<String> getUpdateToken() {
+    public Output<String> updateToken() {
         return this.updateToken == null ? Codegen.empty() : this.updateToken;
     }
 
@@ -159,7 +159,7 @@ public final class FirewallState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

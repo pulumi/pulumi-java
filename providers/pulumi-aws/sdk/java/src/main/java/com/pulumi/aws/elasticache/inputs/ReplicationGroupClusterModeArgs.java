@@ -22,7 +22,7 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
     @Import(name="numNodeGroups")
       private final @Nullable Output<Integer> numNodeGroups;
 
-    public Output<Integer> getNumNodeGroups() {
+    public Output<Integer> numNodeGroups() {
         return this.numNodeGroups == null ? Codegen.empty() : this.numNodeGroups;
     }
 
@@ -33,7 +33,7 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
     @Import(name="replicasPerNodeGroup", required=true)
       private final Output<Integer> replicasPerNodeGroup;
 
-    public Output<Integer> getReplicasPerNodeGroup() {
+    public Output<Integer> replicasPerNodeGroup() {
         return this.replicasPerNodeGroup;
     }
 

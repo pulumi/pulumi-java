@@ -32,7 +32,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="andStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementArgs> andStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementAndStatementArgs> getAndStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementAndStatementArgs> andStatement() {
         return this.andStatement == null ? Codegen.empty() : this.andStatement;
     }
 
@@ -43,7 +43,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="byteMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementArgs> byteMatchStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementArgs> getByteMatchStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementArgs> byteMatchStatement() {
         return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
     }
 
@@ -54,7 +54,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="geoMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementGeoMatchStatementArgs> geoMatchStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementGeoMatchStatementArgs> getGeoMatchStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementGeoMatchStatementArgs> geoMatchStatement() {
         return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
     }
 
@@ -65,7 +65,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="ipSetReferenceStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementArgs> getIpSetReferenceStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Codegen.empty() : this.ipSetReferenceStatement;
     }
 
@@ -76,7 +76,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="labelMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementLabelMatchStatementArgs> labelMatchStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementLabelMatchStatementArgs> getLabelMatchStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementLabelMatchStatementArgs> labelMatchStatement() {
         return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
     }
 
@@ -87,7 +87,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="notStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementArgs> notStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementNotStatementArgs> getNotStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementNotStatementArgs> notStatement() {
         return this.notStatement == null ? Codegen.empty() : this.notStatement;
     }
 
@@ -98,7 +98,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="orStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementArgs> orStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementOrStatementArgs> getOrStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementOrStatementArgs> orStatement() {
         return this.orStatement == null ? Codegen.empty() : this.orStatement;
     }
 
@@ -109,7 +109,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
     }
 
@@ -120,7 +120,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="sizeConstraintStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementArgs> getSizeConstraintStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
     }
 
@@ -131,7 +131,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="sqliMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs> sqliMatchStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs> getSqliMatchStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs> sqliMatchStatement() {
         return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
     }
 
@@ -142,7 +142,7 @@ public final class RuleGroupRuleStatementOrStatementStatementArgs extends com.pu
     @Import(name="xssMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementXssMatchStatementArgs> xssMatchStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementXssMatchStatementArgs> getXssMatchStatement() {
+    public Output<RuleGroupRuleStatementOrStatementStatementXssMatchStatementArgs> xssMatchStatement() {
         return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
     }
 

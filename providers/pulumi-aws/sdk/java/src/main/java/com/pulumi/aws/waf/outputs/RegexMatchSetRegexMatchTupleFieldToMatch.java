@@ -39,7 +39,7 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatch {
      * If `type` is any other value, omit this field.
      * 
     */
-    public Optional<String> getData() {
+    public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
@@ -49,7 +49,7 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatch {
      * for all supported values.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

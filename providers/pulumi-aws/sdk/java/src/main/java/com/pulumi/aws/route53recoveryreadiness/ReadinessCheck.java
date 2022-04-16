@@ -41,7 +41,7 @@ public class ReadinessCheck extends com.pulumi.resources.CustomResource {
      * @return ARN of the readiness_check
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class ReadinessCheck extends com.pulumi.resources.CustomResource {
      * @return Unique name describing the readiness check.
      * 
      */
-    public Output<String> getReadinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName;
     }
     /**
@@ -69,7 +69,7 @@ public class ReadinessCheck extends com.pulumi.resources.CustomResource {
      * @return Name describing the resource set that will be monitored for readiness.
      * 
      */
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName;
     }
     /**
@@ -83,7 +83,7 @@ public class ReadinessCheck extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -97,7 +97,7 @@ public class ReadinessCheck extends com.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -26,7 +26,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="certificate")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> certificate;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> getCertificate() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="enforce")
       private final @Nullable Output<Boolean> enforce;
 
-    public Output<Boolean> getEnforce() {
+    public Output<Boolean> enforce() {
         return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="ports")
       private final @Nullable Output<List<Integer>> ports;
 
-    public Output<List<Integer>> getPorts() {
+    public Output<List<Integer>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -59,7 +59,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="validation", required=true)
       private final Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> validation;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> getValidation() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> validation() {
         return this.validation;
     }
 

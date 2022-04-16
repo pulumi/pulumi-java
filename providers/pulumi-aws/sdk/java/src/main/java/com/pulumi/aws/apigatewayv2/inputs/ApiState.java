@@ -25,7 +25,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiEndpoint")
       private final @Nullable Output<String> apiEndpoint;
 
-    public Output<String> getApiEndpoint() {
+    public Output<String> apiEndpoint() {
         return this.apiEndpoint == null ? Codegen.empty() : this.apiEndpoint;
     }
 
@@ -38,7 +38,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiKeySelectionExpression")
       private final @Nullable Output<String> apiKeySelectionExpression;
 
-    public Output<String> getApiKeySelectionExpression() {
+    public Output<String> apiKeySelectionExpression() {
         return this.apiKeySelectionExpression == null ? Codegen.empty() : this.apiKeySelectionExpression;
     }
 
@@ -49,7 +49,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -60,7 +60,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -71,7 +71,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="corsConfiguration")
       private final @Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration;
 
-    public Output<ApiCorsConfigurationGetArgs> getCorsConfiguration() {
+    public Output<ApiCorsConfigurationGetArgs> corsConfiguration() {
         return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
     }
 
@@ -82,7 +82,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentialsArn")
       private final @Nullable Output<String> credentialsArn;
 
-    public Output<String> getCredentialsArn() {
+    public Output<String> credentialsArn() {
         return this.credentialsArn == null ? Codegen.empty() : this.credentialsArn;
     }
 
@@ -93,7 +93,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -106,7 +106,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableExecuteApiEndpoint")
       private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
-    public Output<Boolean> getDisableExecuteApiEndpoint() {
+    public Output<Boolean> disableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint == null ? Codegen.empty() : this.disableExecuteApiEndpoint;
     }
 
@@ -119,7 +119,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionArn")
       private final @Nullable Output<String> executionArn;
 
-    public Output<String> getExecutionArn() {
+    public Output<String> executionArn() {
         return this.executionArn == null ? Codegen.empty() : this.executionArn;
     }
 
@@ -130,7 +130,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="failOnWarnings")
       private final @Nullable Output<Boolean> failOnWarnings;
 
-    public Output<Boolean> getFailOnWarnings() {
+    public Output<Boolean> failOnWarnings() {
         return this.failOnWarnings == null ? Codegen.empty() : this.failOnWarnings;
     }
 
@@ -141,7 +141,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -152,7 +152,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocolType")
       private final @Nullable Output<String> protocolType;
 
-    public Output<String> getProtocolType() {
+    public Output<String> protocolType() {
         return this.protocolType == null ? Codegen.empty() : this.protocolType;
     }
 
@@ -163,7 +163,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeKey")
       private final @Nullable Output<String> routeKey;
 
-    public Output<String> getRouteKey() {
+    public Output<String> routeKey() {
         return this.routeKey == null ? Codegen.empty() : this.routeKey;
     }
 
@@ -175,7 +175,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeSelectionExpression")
       private final @Nullable Output<String> routeSelectionExpression;
 
-    public Output<String> getRouteSelectionExpression() {
+    public Output<String> routeSelectionExpression() {
         return this.routeSelectionExpression == null ? Codegen.empty() : this.routeSelectionExpression;
     }
 
@@ -186,7 +186,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -197,7 +197,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -210,7 +210,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -221,7 +221,7 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

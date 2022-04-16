@@ -43,7 +43,7 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return The ARN of the created AWS IoT Thing Type.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return Whether the thing type is deprecated. If true, no new things could be associated with this type.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeprecated() {
+    public Output</* @Nullable */ Boolean> deprecated() {
         return this.deprecated;
     }
     /**
@@ -71,7 +71,7 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return The name of the thing type.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return , Configuration block that can contain the following properties of the thing type:
      * 
      */
-    public Output</* @Nullable */ ThingTypeProperties> getProperties() {
+    public Output</* @Nullable */ ThingTypeProperties> properties() {
         return this.properties;
     }
     /**
@@ -99,7 +99,7 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +113,7 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

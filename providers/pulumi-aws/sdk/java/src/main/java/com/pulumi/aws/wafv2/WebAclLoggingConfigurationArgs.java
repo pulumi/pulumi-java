@@ -25,7 +25,7 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="logDestinationConfigs", required=true)
       private final Output<List<String>> logDestinationConfigs;
 
-    public Output<List<String>> getLogDestinationConfigs() {
+    public Output<List<String>> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="loggingFilter")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterArgs> getLoggingFilter() {
+    public Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter() {
         return this.loggingFilter == null ? Codegen.empty() : this.loggingFilter;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="redactedFields")
       private final @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
 
-    public Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> getRedactedFields() {
+    public Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields() {
         return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
     }
 
@@ -58,7 +58,7 @@ public final class WebAclLoggingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

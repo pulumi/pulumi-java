@@ -23,7 +23,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bandwidth", required=true)
       private final Output<String> bandwidth;
 
-    public Output<String> getBandwidth() {
+    public Output<String> bandwidth() {
         return this.bandwidth;
     }
 
@@ -34,7 +34,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -45,7 +45,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ownerAccountId", required=true)
       private final Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
 
@@ -67,7 +67,7 @@ public final class HostedConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 

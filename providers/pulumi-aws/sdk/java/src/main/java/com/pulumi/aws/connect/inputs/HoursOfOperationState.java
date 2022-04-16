@@ -25,7 +25,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="configs")
       private final @Nullable Output<List<HoursOfOperationConfigGetArgs>> configs;
 
-    public Output<List<HoursOfOperationConfigGetArgs>> getConfigs() {
+    public Output<List<HoursOfOperationConfigGetArgs>> configs() {
         return this.configs == null ? Codegen.empty() : this.configs;
     }
 
@@ -36,7 +36,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="hoursOfOperationArn")
       private final @Nullable Output<String> hoursOfOperationArn;
 
-    public Output<String> getHoursOfOperationArn() {
+    public Output<String> hoursOfOperationArn() {
         return this.hoursOfOperationArn == null ? Codegen.empty() : this.hoursOfOperationArn;
     }
 
@@ -58,7 +58,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="hoursOfOperationId")
       private final @Nullable Output<String> hoursOfOperationId;
 
-    public Output<String> getHoursOfOperationId() {
+    public Output<String> hoursOfOperationId() {
         return this.hoursOfOperationId == null ? Codegen.empty() : this.hoursOfOperationId;
     }
 
@@ -69,7 +69,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -80,7 +80,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -113,7 +113,7 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

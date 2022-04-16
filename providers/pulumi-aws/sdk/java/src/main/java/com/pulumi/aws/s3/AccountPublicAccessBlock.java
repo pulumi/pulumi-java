@@ -45,7 +45,7 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * @return AWS account ID to configure. Defaults to automatically determined account ID of the this provider AWS provider.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -63,7 +63,7 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * PUT Object calls fail if the request includes a public ACL.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBlockPublicAcls() {
+    public Output</* @Nullable */ Boolean> blockPublicAcls() {
         return this.blockPublicAcls;
     }
     /**
@@ -79,7 +79,7 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBlockPublicPolicy() {
+    public Output</* @Nullable */ Boolean> blockPublicPolicy() {
         return this.blockPublicPolicy;
     }
     /**
@@ -95,7 +95,7 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnorePublicAcls() {
+    public Output</* @Nullable */ Boolean> ignorePublicAcls() {
         return this.ignorePublicAcls;
     }
     /**
@@ -111,7 +111,7 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * Only the bucket owner and AWS Services can access buckets with public policies.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRestrictPublicBuckets() {
+    public Output</* @Nullable */ Boolean> restrictPublicBuckets() {
         return this.restrictPublicBuckets;
     }
 

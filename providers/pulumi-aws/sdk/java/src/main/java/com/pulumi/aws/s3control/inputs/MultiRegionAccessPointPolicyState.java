@@ -19,7 +19,7 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -30,7 +30,7 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
     @Import(name="details")
       private final @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details;
 
-    public Output<MultiRegionAccessPointPolicyDetailsGetArgs> getDetails() {
+    public Output<MultiRegionAccessPointPolicyDetailsGetArgs> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
@@ -41,7 +41,7 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
     @Import(name="established")
       private final @Nullable Output<String> established;
 
-    public Output<String> getEstablished() {
+    public Output<String> established() {
         return this.established == null ? Codegen.empty() : this.established;
     }
 
@@ -52,7 +52,7 @@ public final class MultiRegionAccessPointPolicyState extends com.pulumi.resource
     @Import(name="proposed")
       private final @Nullable Output<String> proposed;
 
-    public Output<String> getProposed() {
+    public Output<String> proposed() {
         return this.proposed == null ? Codegen.empty() : this.proposed;
     }
 

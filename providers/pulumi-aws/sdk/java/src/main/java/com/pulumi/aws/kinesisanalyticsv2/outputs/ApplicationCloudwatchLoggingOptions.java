@@ -26,14 +26,14 @@ public final class ApplicationCloudwatchLoggingOptions {
         this.logStreamArn = logStreamArn;
     }
 
-    public Optional<String> getCloudwatchLoggingOptionId() {
+    public Optional<String> cloudwatchLoggingOptionId() {
         return Optional.ofNullable(this.cloudwatchLoggingOptionId);
     }
     /**
      * The ARN of the CloudWatch log stream to receive application messages.
      * 
     */
-    public String getLogStreamArn() {
+    public String logStreamArn() {
         return this.logStreamArn;
     }
 

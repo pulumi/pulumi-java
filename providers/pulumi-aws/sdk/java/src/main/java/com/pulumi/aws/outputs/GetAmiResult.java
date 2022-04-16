@@ -257,28 +257,28 @@ public final class GetAmiResult {
      * The OS architecture of the AMI (ie: `i386` or `x86_64`).
      * 
     */
-    public String getArchitecture() {
+    public String architecture() {
         return this.architecture;
     }
     /**
      * The ARN of the AMI.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Set of objects with block device mappings of the AMI.
      * 
     */
-    public List<GetAmiBlockDeviceMapping> getBlockDeviceMappings() {
+    public List<GetAmiBlockDeviceMapping> blockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
      * The date and time the image was created.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
@@ -286,48 +286,48 @@ public final class GetAmiResult {
      * creation.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Specifies whether enhanced networking with ENA is enabled.
      * 
     */
-    public Boolean getEnaSupport() {
+    public Boolean enaSupport() {
         return this.enaSupport;
     }
-    public List<String> getExecutableUsers() {
+    public List<String> executableUsers() {
         return this.executableUsers == null ? List.of() : this.executableUsers;
     }
-    public List<GetAmiFilter> getFilters() {
+    public List<GetAmiFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The hypervisor type of the image.
      * 
     */
-    public String getHypervisor() {
+    public String hypervisor() {
         return this.hypervisor;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ID of the AMI. Should be the same as the resource `id`.
      * 
     */
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
     /**
      * The location of the AMI.
      * 
     */
-    public String getImageLocation() {
+    public String imageLocation() {
         return this.imageLocation;
     }
     /**
@@ -335,14 +335,14 @@ public final class GetAmiResult {
      * the AWS account ID of the AMI owner.
      * 
     */
-    public String getImageOwnerAlias() {
+    public String imageOwnerAlias() {
         return this.imageOwnerAlias;
     }
     /**
      * The type of image.
      * 
     */
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
     /**
@@ -350,44 +350,44 @@ public final class GetAmiResult {
      * for machine images.
      * 
     */
-    public String getKernelId() {
+    public String kernelId() {
         return this.kernelId;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
      * The name of the AMI that was provided during image creation.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNameRegex() {
+    public Optional<String> nameRegex() {
         return Optional.ofNullable(this.nameRegex);
     }
     /**
      * The AWS account ID of the image owner.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners;
     }
     /**
      * The value is Windows for `Windows` AMIs; otherwise blank.
      * 
     */
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
     /**
      * The platform details associated with the billing code of the AMI.
      * 
     */
-    public String getPlatformDetails() {
+    public String platformDetails() {
         return this.platformDetails;
     }
     /**
@@ -396,14 +396,14 @@ public final class GetAmiResult {
      * * `product_codes.#.product_code_type` - The type of product code.
      * 
     */
-    public List<GetAmiProductCode> getProductCodes() {
+    public List<GetAmiProductCode> productCodes() {
         return this.productCodes;
     }
     /**
      * `true` if the image has public launch permissions.
      * 
     */
-    public Boolean getPublic_() {
+    public Boolean public_() {
         return this.public_;
     }
     /**
@@ -411,21 +411,21 @@ public final class GetAmiResult {
      * for machine images.
      * 
     */
-    public String getRamdiskId() {
+    public String ramdiskId() {
         return this.ramdiskId;
     }
     /**
      * The device name of the root device.
      * 
     */
-    public String getRootDeviceName() {
+    public String rootDeviceName() {
         return this.rootDeviceName;
     }
     /**
      * The type of root device (ie: `ebs` or `instance-store`).
      * 
     */
-    public String getRootDeviceType() {
+    public String rootDeviceType() {
         return this.rootDeviceType;
     }
     /**
@@ -433,14 +433,14 @@ public final class GetAmiResult {
      * (only applies to `ebs` root devices).
      * 
     */
-    public String getRootSnapshotId() {
+    public String rootSnapshotId() {
         return this.rootSnapshotId;
     }
     /**
      * Specifies whether enhanced networking is enabled.
      * 
     */
-    public String getSriovNetSupport() {
+    public String sriovNetSupport() {
         return this.sriovNetSupport;
     }
     /**
@@ -448,7 +448,7 @@ public final class GetAmiResult {
      * is successfully registered and can be used to launch an instance.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
@@ -457,7 +457,7 @@ public final class GetAmiResult {
      * * `state_reason.message` - The message for the state change.
      * 
     */
-    public Map<String,String> getStateReason() {
+    public Map<String,String> stateReason() {
         return this.stateReason;
     }
     /**
@@ -466,14 +466,14 @@ public final class GetAmiResult {
      * * `tags.#.value` - The value of the tag.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      * 
     */
-    public String getUsageOperation() {
+    public String usageOperation() {
         return this.usageOperation;
     }
     /**
@@ -481,7 +481,7 @@ public final class GetAmiResult {
      * `paravirtual`).
      * 
     */
-    public String getVirtualizationType() {
+    public String virtualizationType() {
         return this.virtualizationType;
     }
 

@@ -63,7 +63,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Whether any database modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html).
      * 
      */
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately;
     }
     /**
@@ -77,7 +77,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The ARN of the created ElastiCache Cluster.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -91,7 +91,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -105,7 +105,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
      * 
      */
-    public Output<String> getAzMode() {
+    public Output<String> azMode() {
         return this.azMode;
     }
     /**
@@ -119,7 +119,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of node objects including `id`, `address`, `port` and `availability_zone`.
      * 
      */
-    public Output<List<ClusterCacheNode>> getCacheNodes() {
+    public Output<List<ClusterCacheNode>> cacheNodes() {
         return this.cacheNodes;
     }
     /**
@@ -133,7 +133,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return (Memcached only) DNS name of the cache cluster without the port appended.
      * 
      */
-    public Output<String> getClusterAddress() {
+    public Output<String> clusterAddress() {
         return this.clusterAddress;
     }
     /**
@@ -147,7 +147,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Group identifier. ElastiCache converts this name to lowercase. Changing this value will re-create the resource.
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -161,7 +161,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return (Memcached only) Configuration endpoint to allow host discovery.
      * 
      */
-    public Output<String> getConfigurationEndpoint() {
+    public Output<String> configurationEndpoint() {
         return this.configurationEndpoint;
     }
     /**
@@ -175,7 +175,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     /**
@@ -193,7 +193,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -207,7 +207,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The running version of the cache engine.
      * 
      */
-    public Output<String> getEngineVersionActual() {
+    public Output<String> engineVersionActual() {
         return this.engineVersionActual;
     }
     /**
@@ -221,7 +221,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Name of your final cluster snapshot. If omitted, no final snapshot will be made.
      * 
      */
-    public Output</* @Nullable */ String> getFinalSnapshotIdentifier() {
+    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier;
     }
     /**
@@ -239,7 +239,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`.
      * 
      */
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -253,7 +253,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
      * 
      */
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType;
     }
     /**
@@ -267,7 +267,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`.
      * 
      */
-    public Output</* @Nullable */ String> getNotificationTopicArn() {
+    public Output</* @Nullable */ String> notificationTopicArn() {
         return this.notificationTopicArn;
     }
     /**
@@ -281,7 +281,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
      * 
      */
-    public Output<Integer> getNumCacheNodes() {
+    public Output<Integer> numCacheNodes() {
         return this.numCacheNodes;
     }
     /**
@@ -295,7 +295,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the parameter group to associate with this cache cluster.
      * 
      */
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName;
     }
     /**
@@ -309,7 +309,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -323,7 +323,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPreferredAvailabilityZones() {
+    public Output</* @Nullable */ List<String>> preferredAvailabilityZones() {
         return this.preferredAvailabilityZones;
     }
     /**
@@ -337,7 +337,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
      * 
      */
-    public Output<String> getReplicationGroupId() {
+    public Output<String> replicationGroupId() {
         return this.replicationGroupId;
     }
     /**
@@ -351,7 +351,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return One or more VPC security groups associated with the cache cluster
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -365,7 +365,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
      * 
      */
-    public Output<List<String>> getSecurityGroupNames() {
+    public Output<List<String>> securityGroupNames() {
         return this.securityGroupNames;
     }
     /**
@@ -379,7 +379,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotArns() {
+    public Output</* @Nullable */ String> snapshotArns() {
         return this.snapshotArns;
     }
     /**
@@ -393,7 +393,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotName() {
+    public Output</* @Nullable */ String> snapshotName() {
         return this.snapshotName;
     }
     /**
@@ -407,7 +407,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
      * 
      */
-    public Output</* @Nullable */ Integer> getSnapshotRetentionLimit() {
+    public Output</* @Nullable */ Integer> snapshotRetentionLimit() {
         return this.snapshotRetentionLimit;
     }
     /**
@@ -421,7 +421,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
      * 
      */
-    public Output<String> getSnapshotWindow() {
+    public Output<String> snapshotWindow() {
         return this.snapshotWindow;
     }
     /**
@@ -435,7 +435,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
      * 
      */
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName;
     }
     /**
@@ -449,13 +449,13 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

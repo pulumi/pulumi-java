@@ -20,7 +20,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy e
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
@@ -31,7 +31,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy e
     @Import(name="referrerPolicy", required=true)
       private final String referrerPolicy;
 
-    public String getReferrerPolicy() {
+    public String referrerPolicy() {
         return this.referrerPolicy;
     }
 

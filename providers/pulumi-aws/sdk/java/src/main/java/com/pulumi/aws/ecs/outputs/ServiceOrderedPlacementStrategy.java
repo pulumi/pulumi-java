@@ -40,14 +40,14 @@ public final class ServiceOrderedPlacementStrategy {
      * needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
      * 
     */
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
     /**
      * Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

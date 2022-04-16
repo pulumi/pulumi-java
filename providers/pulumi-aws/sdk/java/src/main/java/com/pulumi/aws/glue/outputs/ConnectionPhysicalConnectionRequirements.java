@@ -42,21 +42,21 @@ public final class ConnectionPhysicalConnectionRequirements {
      * The availability zone of the connection. This field is redundant and implied by `subnet_id`, but is currently an api requirement.
      * 
     */
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The security group ID list used by the connection.
      * 
     */
-    public List<String> getSecurityGroupIdLists() {
+    public List<String> securityGroupIdLists() {
         return this.securityGroupIdLists == null ? List.of() : this.securityGroupIdLists;
     }
     /**
      * The subnet ID used by the connection.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
 

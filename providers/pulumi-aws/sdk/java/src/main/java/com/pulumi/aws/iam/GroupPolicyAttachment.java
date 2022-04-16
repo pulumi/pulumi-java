@@ -42,7 +42,7 @@ public class GroupPolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The group the policy should be applied to
      * 
      */
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
     /**
@@ -56,7 +56,7 @@ public class GroupPolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The ARN of the policy you want to apply
      * 
      */
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 

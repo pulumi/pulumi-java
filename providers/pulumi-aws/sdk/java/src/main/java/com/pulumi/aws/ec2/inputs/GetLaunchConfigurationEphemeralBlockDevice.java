@@ -19,7 +19,7 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends com.pulumi
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends com.pulumi
     @Import(name="virtualName", required=true)
       private final String virtualName;
 
-    public String getVirtualName() {
+    public String virtualName() {
         return this.virtualName;
     }
 

@@ -26,13 +26,13 @@ public final class BrokerInstance {
         this.ipAddress = ipAddress;
     }
 
-    public Optional<String> getConsoleUrl() {
+    public Optional<String> consoleUrl() {
         return Optional.ofNullable(this.consoleUrl);
     }
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
 

@@ -35,14 +35,14 @@ public final class UsagePlanThrottleSettings {
      * The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
      * 
     */
-    public Optional<Integer> getBurstLimit() {
+    public Optional<Integer> burstLimit() {
         return Optional.ofNullable(this.burstLimit);
     }
     /**
      * The API request steady-state rate limit.
      * 
     */
-    public Optional<Double> getRateLimit() {
+    public Optional<Double> rateLimit() {
         return Optional.ofNullable(this.rateLimit);
     }
 

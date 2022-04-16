@@ -22,7 +22,7 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -44,7 +44,7 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn == null ? Codegen.empty() : this.streamArn;
     }
 

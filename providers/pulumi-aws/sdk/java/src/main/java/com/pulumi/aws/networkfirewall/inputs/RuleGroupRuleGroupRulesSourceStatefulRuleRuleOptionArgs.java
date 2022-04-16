@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
     @Import(name="keyword", required=true)
       private final Output<String> keyword;
 
-    public Output<String> getKeyword() {
+    public Output<String> keyword() {
         return this.keyword;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
     @Import(name="settings")
       private final @Nullable Output<List<String>> settings;
 
-    public Output<List<String>> getSettings() {
+    public Output<List<String>> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 

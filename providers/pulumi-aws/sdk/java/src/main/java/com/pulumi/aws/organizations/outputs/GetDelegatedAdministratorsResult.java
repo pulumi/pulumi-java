@@ -39,17 +39,17 @@ public final class GetDelegatedAdministratorsResult {
      * The list of delegated administrators in your organization, which have the following attributes:
      * 
     */
-    public List<GetDelegatedAdministratorsDelegatedAdministrator> getDelegatedAdministrators() {
+    public List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators() {
         return this.delegatedAdministrators;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getServicePrincipal() {
+    public Optional<String> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }
 

@@ -62,42 +62,42 @@ public final class StackCustomCookbooksSource {
      * Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * For sources that are version-aware, the revision to use.
      * 
     */
-    public Optional<String> getRevision() {
+    public Optional<String> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.
      * 
     */
-    public Optional<String> getSshKey() {
+    public Optional<String> sshKey() {
         return Optional.ofNullable(this.sshKey);
     }
     /**
      * The type of source to use. For example, "archive".
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The URL where the cookbooks resource can be found.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
     /**
      * Username to use when authenticating to the source.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

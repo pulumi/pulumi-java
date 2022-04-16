@@ -21,7 +21,7 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends com.pulumi.res
     @Import(name="principalArn", required=true)
       private final Output<String> principalArn;
 
-    public Output<String> getPrincipalArn() {
+    public Output<String> principalArn() {
         return this.principalArn;
     }
 
@@ -32,7 +32,7 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends com.pulumi.res
     @Import(name="vpcEndpointServiceId", required=true)
       private final Output<String> vpcEndpointServiceId;
 
-    public Output<String> getVpcEndpointServiceId() {
+    public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 

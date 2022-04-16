@@ -26,7 +26,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
      * The ID of the Capacity Reservation in which to run the instance.
      * 
     */
-    public Optional<String> getCapacityReservationId() {
+    public Optional<String> capacityReservationId() {
         return Optional.ofNullable(this.capacityReservationId);
     }
 

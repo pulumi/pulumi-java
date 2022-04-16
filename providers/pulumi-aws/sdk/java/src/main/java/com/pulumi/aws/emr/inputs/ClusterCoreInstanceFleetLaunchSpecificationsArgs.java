@@ -24,7 +24,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsArgs extends com.
     @Import(name="onDemandSpecifications")
       private final @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
 
-    public Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> getOnDemandSpecifications() {
+    public Output<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications() {
         return this.onDemandSpecifications == null ? Codegen.empty() : this.onDemandSpecifications;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsArgs extends com.
     @Import(name="spotSpecifications")
       private final @Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
 
-    public Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> getSpotSpecifications() {
+    public Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications() {
         return this.spotSpecifications == null ? Codegen.empty() : this.spotSpecifications;
     }
 

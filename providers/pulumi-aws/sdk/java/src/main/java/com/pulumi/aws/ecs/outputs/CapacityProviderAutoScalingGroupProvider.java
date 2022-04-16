@@ -42,21 +42,21 @@ public final class CapacityProviderAutoScalingGroupProvider {
      * - ARN of the associated auto scaling group.
      * 
     */
-    public String getAutoScalingGroupArn() {
+    public String autoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
     /**
      * - Configuration block defining the parameters of the auto scaling. Detailed below.
      * 
     */
-    public Optional<CapacityProviderAutoScalingGroupProviderManagedScaling> getManagedScaling() {
+    public Optional<CapacityProviderAutoScalingGroupProviderManagedScaling> managedScaling() {
         return Optional.ofNullable(this.managedScaling);
     }
     /**
      * - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
      * 
     */
-    public Optional<String> getManagedTerminationProtection() {
+    public Optional<String> managedTerminationProtection() {
         return Optional.ofNullable(this.managedTerminationProtection);
     }
 

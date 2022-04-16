@@ -22,7 +22,7 @@ public final class PolicyTargetTrackingConfigurationPredefinedMetricSpecificatio
     @Import(name="predefinedMetricType", required=true)
       private final Output<String> predefinedMetricType;
 
-    public Output<String> getPredefinedMetricType() {
+    public Output<String> predefinedMetricType() {
         return this.predefinedMetricType;
     }
 
@@ -33,7 +33,7 @@ public final class PolicyTargetTrackingConfigurationPredefinedMetricSpecificatio
     @Import(name="resourceLabel")
       private final @Nullable Output<String> resourceLabel;
 
-    public Output<String> getResourceLabel() {
+    public Output<String> resourceLabel() {
         return this.resourceLabel == null ? Codegen.empty() : this.resourceLabel;
     }
 

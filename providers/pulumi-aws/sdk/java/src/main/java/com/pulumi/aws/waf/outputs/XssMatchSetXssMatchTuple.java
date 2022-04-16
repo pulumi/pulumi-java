@@ -37,7 +37,7 @@ public final class XssMatchSetXssMatchTuple {
      * Specifies where in a web request to look for cross-site scripting attacks.
      * 
     */
-    public XssMatchSetXssMatchTupleFieldToMatch getFieldToMatch() {
+    public XssMatchSetXssMatchTupleFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
@@ -48,7 +48,7 @@ public final class XssMatchSetXssMatchTuple {
      * for all supported values.
      * 
     */
-    public String getTextTransformation() {
+    public String textTransformation() {
         return this.textTransformation;
     }
 

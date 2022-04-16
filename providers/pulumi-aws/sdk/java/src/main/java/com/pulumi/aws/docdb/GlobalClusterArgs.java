@@ -23,7 +23,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -34,14 +34,14 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> getDeletionProtection() {
+    public Output<Boolean> deletionProtection() {
         return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
@@ -53,7 +53,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -64,21 +64,21 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalClusterIdentifier", required=true)
       private final Output<String> globalClusterIdentifier;
 
-    public Output<String> getGlobalClusterIdentifier() {
+    public Output<String> globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
 
     @Import(name="sourceDbClusterIdentifier")
       private final @Nullable Output<String> sourceDbClusterIdentifier;
 
-    public Output<String> getSourceDbClusterIdentifier() {
+    public Output<String> sourceDbClusterIdentifier() {
         return this.sourceDbClusterIdentifier == null ? Codegen.empty() : this.sourceDbClusterIdentifier;
     }
 
     @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Output<Boolean> getStorageEncrypted() {
+    public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted == null ? Codegen.empty() : this.storageEncrypted;
     }
 

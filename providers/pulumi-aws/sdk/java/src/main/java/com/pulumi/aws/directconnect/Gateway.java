@@ -40,7 +40,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
      * 
      */
-    public Output<String> getAmazonSideAsn() {
+    public Output<String> amazonSideAsn() {
         return this.amazonSideAsn;
     }
     /**
@@ -54,7 +54,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The name of the connection.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +68,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return AWS Account ID of the gateway.
      * 
      */
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
 

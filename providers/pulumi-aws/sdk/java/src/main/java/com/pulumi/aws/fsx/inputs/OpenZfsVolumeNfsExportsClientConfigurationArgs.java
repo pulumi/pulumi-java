@@ -22,7 +22,7 @@ public final class OpenZfsVolumeNfsExportsClientConfigurationArgs extends com.pu
     @Import(name="clients", required=true)
       private final Output<String> clients;
 
-    public Output<String> getClients() {
+    public Output<String> clients() {
         return this.clients;
     }
 
@@ -33,7 +33,7 @@ public final class OpenZfsVolumeNfsExportsClientConfigurationArgs extends com.pu
     @Import(name="options", required=true)
       private final Output<List<String>> options;
 
-    public Output<List<String>> getOptions() {
+    public Output<List<String>> options() {
         return this.options;
     }
 

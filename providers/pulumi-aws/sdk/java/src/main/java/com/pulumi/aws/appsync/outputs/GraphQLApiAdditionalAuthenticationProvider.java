@@ -51,28 +51,28 @@ public final class GraphQLApiAdditionalAuthenticationProvider {
      * The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
      * 
     */
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
     /**
      * Nested argument containing Lambda authorizer configuration. Defined below.
      * 
     */
-    public Optional<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig> getLambdaAuthorizerConfig() {
+    public Optional<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig> lambdaAuthorizerConfig() {
         return Optional.ofNullable(this.lambdaAuthorizerConfig);
     }
     /**
      * Nested argument containing OpenID Connect configuration. Defined below.
      * 
     */
-    public Optional<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig> getOpenidConnectConfig() {
+    public Optional<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig> openidConnectConfig() {
         return Optional.ofNullable(this.openidConnectConfig);
     }
     /**
      * The Amazon Cognito User Pool configuration. Defined below.
      * 
     */
-    public Optional<GraphQLApiAdditionalAuthenticationProviderUserPoolConfig> getUserPoolConfig() {
+    public Optional<GraphQLApiAdditionalAuthenticationProviderUserPoolConfig> userPoolConfig() {
         return Optional.ofNullable(this.userPoolConfig);
     }
 

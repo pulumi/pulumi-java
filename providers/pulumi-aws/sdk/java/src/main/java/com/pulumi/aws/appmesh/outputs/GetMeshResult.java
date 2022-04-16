@@ -76,55 +76,55 @@ public final class GetMeshResult {
      * The ARN of the service mesh.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The creation date of the service mesh.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last update date of the service mesh.
      * 
     */
-    public String getLastUpdatedDate() {
+    public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
-    public String getMeshOwner() {
+    public String meshOwner() {
         return this.meshOwner;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource owner's AWS account ID.
      * 
     */
-    public String getResourceOwner() {
+    public String resourceOwner() {
         return this.resourceOwner;
     }
     /**
      * The service mesh specification.
      * 
     */
-    public List<GetMeshSpec> getSpecs() {
+    public List<GetMeshSpec> specs() {
         return this.specs;
     }
     /**
      * A map of tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

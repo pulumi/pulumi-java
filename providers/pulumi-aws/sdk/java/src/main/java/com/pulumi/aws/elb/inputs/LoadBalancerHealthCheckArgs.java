@@ -22,7 +22,7 @@ public final class LoadBalancerHealthCheckArgs extends com.pulumi.resources.Reso
     @Import(name="healthyThreshold", required=true)
       private final Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
+    public Output<Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
 
@@ -33,7 +33,7 @@ public final class LoadBalancerHealthCheckArgs extends com.pulumi.resources.Reso
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -47,7 +47,7 @@ public final class LoadBalancerHealthCheckArgs extends com.pulumi.resources.Reso
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -58,7 +58,7 @@ public final class LoadBalancerHealthCheckArgs extends com.pulumi.resources.Reso
     @Import(name="timeout", required=true)
       private final Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout;
     }
 
@@ -69,7 +69,7 @@ public final class LoadBalancerHealthCheckArgs extends com.pulumi.resources.Reso
     @Import(name="unhealthyThreshold", required=true)
       private final Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
+    public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

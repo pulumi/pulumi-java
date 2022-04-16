@@ -46,7 +46,7 @@ public class StreamConsumer extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the stream consumer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class StreamConsumer extends com.pulumi.resources.CustomResource {
      * @return Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -74,7 +74,7 @@ public class StreamConsumer extends com.pulumi.resources.CustomResource {
      * @return Name of the stream consumer.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class StreamConsumer extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the data stream the consumer is registered with.
      * 
      */
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
 

@@ -45,7 +45,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name of the volune.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Describes the file system for the volume, e.g. `fs-12345679`
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     /**
@@ -73,7 +73,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the FlexCache endpoint type of the volume, Valid values are `NONE`, `ORIGIN`, `CACHE`. Default value is `NONE`. These can be set by the ONTAP CLI or API and are use with FlexCache feature.
      * 
      */
-    public Output<String> getFlexcacheEndpointType() {
+    public Output<String> flexcacheEndpointType() {
         return this.flexcacheEndpointType;
     }
     /**
@@ -87,7 +87,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the location in the storage virtual machine's namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
      * 
      */
-    public Output<String> getJunctionPath() {
+    public Output<String> junctionPath() {
         return this.junctionPath;
     }
     /**
@@ -101,7 +101,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the type of volume, Valid values are `RW`, `DP`,  and `LS`. Default value is `RW`. These can be set by the ONTAP CLI or API. This setting is used as part of migration and replication [Migrating to Amazon FSx for NetApp ONTAP](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/migrating-fsx-ontap.html)
      * 
      */
-    public Output<String> getOntapVolumeType() {
+    public Output<String> ontapVolumeType() {
         return this.ontapVolumeType;
     }
     /**
@@ -129,7 +129,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. Default value is `UNIX`.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityStyle() {
+    public Output</* @Nullable */ String> securityStyle() {
         return this.securityStyle;
     }
     /**
@@ -143,7 +143,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the size of the volume, in megabytes (MB), that you are creating.
      * 
      */
-    public Output<Integer> getSizeInMegabytes() {
+    public Output<Integer> sizeInMegabytes() {
         return this.sizeInMegabytes;
     }
     /**
@@ -157,7 +157,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Set to true to enable deduplication, compression, and compaction storage efficiency features on the volume.
      * 
      */
-    public Output<Boolean> getStorageEfficiencyEnabled() {
+    public Output<Boolean> storageEfficiencyEnabled() {
         return this.storageEfficiencyEnabled;
     }
     /**
@@ -171,7 +171,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the storage virtual machine in which to create the volume.
      * 
      */
-    public Output<String> getStorageVirtualMachineId() {
+    public Output<String> storageVirtualMachineId() {
         return this.storageVirtualMachineId;
     }
     /**
@@ -185,7 +185,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the volume. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -199,13 +199,13 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     @Export(name="tieringPolicy", type=OntapVolumeTieringPolicy.class, parameters={})
     private Output</* @Nullable */ OntapVolumeTieringPolicy> tieringPolicy;
 
-    public Output</* @Nullable */ OntapVolumeTieringPolicy> getTieringPolicy() {
+    public Output</* @Nullable */ OntapVolumeTieringPolicy> tieringPolicy() {
         return this.tieringPolicy;
     }
     /**
@@ -219,7 +219,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return The Volume's UUID (universally unique identifier).
      * 
      */
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid;
     }
     /**
@@ -233,7 +233,7 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return The type of volume, currently the only valid value is `ONTAP`.
      * 
      */
-    public Output</* @Nullable */ String> getVolumeType() {
+    public Output</* @Nullable */ String> volumeType() {
         return this.volumeType;
     }
 

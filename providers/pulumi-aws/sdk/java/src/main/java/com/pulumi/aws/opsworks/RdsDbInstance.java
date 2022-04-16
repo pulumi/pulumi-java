@@ -32,7 +32,7 @@ public class RdsDbInstance extends com.pulumi.resources.CustomResource {
      * @return A db password
      * 
      */
-    public Output<String> getDbPassword() {
+    public Output<String> dbPassword() {
         return this.dbPassword;
     }
     /**
@@ -46,7 +46,7 @@ public class RdsDbInstance extends com.pulumi.resources.CustomResource {
      * @return A db username
      * 
      */
-    public Output<String> getDbUser() {
+    public Output<String> dbUser() {
         return this.dbUser;
     }
     /**
@@ -60,7 +60,7 @@ public class RdsDbInstance extends com.pulumi.resources.CustomResource {
      * @return The db instance to register for this stack. Changing this will force a new resource.
      * 
      */
-    public Output<String> getRdsDbInstanceArn() {
+    public Output<String> rdsDbInstanceArn() {
         return this.rdsDbInstanceArn;
     }
     /**
@@ -74,7 +74,7 @@ public class RdsDbInstance extends com.pulumi.resources.CustomResource {
      * @return The stack to register a db instance for. Changing this will force a new resource.
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
 

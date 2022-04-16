@@ -24,7 +24,7 @@ public final class LoadBalancerAccessLogsGetArgs extends com.pulumi.resources.Re
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class LoadBalancerAccessLogsGetArgs extends com.pulumi.resources.Re
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
@@ -46,7 +46,7 @@ public final class LoadBalancerAccessLogsGetArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -57,7 +57,7 @@ public final class LoadBalancerAccessLogsGetArgs extends com.pulumi.resources.Re
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 

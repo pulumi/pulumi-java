@@ -18,7 +18,7 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders {
         this.items = items;
     }
 
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items == null ? List.of() : this.items;
     }
 

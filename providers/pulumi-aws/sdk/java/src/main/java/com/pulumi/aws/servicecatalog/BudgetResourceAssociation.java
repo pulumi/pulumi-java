@@ -42,7 +42,7 @@ public class BudgetResourceAssociation extends com.pulumi.resources.CustomResour
      * @return Budget name.
      * 
      */
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
     /**
@@ -56,7 +56,7 @@ public class BudgetResourceAssociation extends com.pulumi.resources.CustomResour
      * @return Resource identifier.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

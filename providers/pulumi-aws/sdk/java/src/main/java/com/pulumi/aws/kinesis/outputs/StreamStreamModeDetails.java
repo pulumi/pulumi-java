@@ -24,7 +24,7 @@ public final class StreamStreamModeDetails {
      * Specifies the capacity mode of the stream. Must be either `PROVISIONED` or `ON_DEMAND`.
      * 
     */
-    public String getStreamMode() {
+    public String streamMode() {
         return this.streamMode;
     }
 

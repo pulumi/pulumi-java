@@ -22,7 +22,7 @@ public final class DeviceDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class DeviceDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -44,7 +44,7 @@ public final class DeviceDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iotThingName")
       private final @Nullable Output<String> iotThingName;
 
-    public Output<String> getIotThingName() {
+    public Output<String> iotThingName() {
         return this.iotThingName == null ? Codegen.empty() : this.iotThingName;
     }
 

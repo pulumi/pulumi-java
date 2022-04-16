@@ -43,21 +43,21 @@ public final class GatewayRouteSpec {
      * The specification of a gRPC gateway route.
      * 
     */
-    public Optional<GatewayRouteSpecGrpcRoute> getGrpcRoute() {
+    public Optional<GatewayRouteSpecGrpcRoute> grpcRoute() {
         return Optional.ofNullable(this.grpcRoute);
     }
     /**
      * The specification of an HTTP/2 gateway route.
      * 
     */
-    public Optional<GatewayRouteSpecHttp2Route> getHttp2Route() {
+    public Optional<GatewayRouteSpecHttp2Route> http2Route() {
         return Optional.ofNullable(this.http2Route);
     }
     /**
      * The specification of an HTTP gateway route.
      * 
     */
-    public Optional<GatewayRouteSpecHttpRoute> getHttpRoute() {
+    public Optional<GatewayRouteSpecHttpRoute> httpRoute() {
         return Optional.ofNullable(this.httpRoute);
     }
 

@@ -23,7 +23,7 @@ public final class PartitionStorageDescriptorSerDeInfoArgs extends com.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class PartitionStorageDescriptorSerDeInfoArgs extends com.pulumi.re
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -45,7 +45,7 @@ public final class PartitionStorageDescriptorSerDeInfoArgs extends com.pulumi.re
     @Import(name="serializationLibrary")
       private final @Nullable Output<String> serializationLibrary;
 
-    public Output<String> getSerializationLibrary() {
+    public Output<String> serializationLibrary() {
         return this.serializationLibrary == null ? Codegen.empty() : this.serializationLibrary;
     }
 

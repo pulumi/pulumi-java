@@ -26,7 +26,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -37,7 +37,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -48,7 +48,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -59,7 +59,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -71,7 +71,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -82,7 +82,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoints")
       private final @Nullable Output<Map<String,String>> endpoints;
 
-    public Output<Map<String,String>> getEndpoints() {
+    public Output<Map<String,String>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -93,7 +93,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasPublicAccessPolicy")
       private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
-    public Output<Boolean> getHasPublicAccessPolicy() {
+    public Output<Boolean> hasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
     }
 
@@ -104,7 +104,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkOrigin")
       private final @Nullable Output<String> networkOrigin;
 
-    public Output<String> getNetworkOrigin() {
+    public Output<String> networkOrigin() {
         return this.networkOrigin == null ? Codegen.empty() : this.networkOrigin;
     }
 
@@ -126,7 +126,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -137,7 +137,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
 
-    public Output<AccessPointPublicAccessBlockConfigurationGetArgs> getPublicAccessBlockConfiguration() {
+    public Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
     }
 
@@ -148,7 +148,7 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
       private final @Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
 
-    public Output<AccessPointVpcConfigurationGetArgs> getVpcConfiguration() {
+    public Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

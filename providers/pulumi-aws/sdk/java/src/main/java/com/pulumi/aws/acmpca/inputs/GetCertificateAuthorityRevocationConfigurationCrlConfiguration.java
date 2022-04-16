@@ -17,35 +17,35 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
     @Import(name="customCname", required=true)
       private final String customCname;
 
-    public String getCustomCname() {
+    public String customCname() {
         return this.customCname;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="expirationInDays", required=true)
       private final Integer expirationInDays;
 
-    public Integer getExpirationInDays() {
+    public Integer expirationInDays() {
         return this.expirationInDays;
     }
 
     @Import(name="s3BucketName", required=true)
       private final String s3BucketName;
 
-    public String getS3BucketName() {
+    public String s3BucketName() {
         return this.s3BucketName;
     }
 
     @Import(name="s3ObjectAcl", required=true)
       private final String s3ObjectAcl;
 
-    public String getS3ObjectAcl() {
+    public String s3ObjectAcl() {
         return this.s3ObjectAcl;
     }
 

@@ -48,28 +48,28 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * The account ID that owns the destination bucket.
      * 
     */
-    public Optional<String> getBucketAccountId() {
+    public Optional<String> bucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
     /**
      * The ARN of the destination bucket.
      * 
     */
-    public String getBucketArn() {
+    public String bucketArn() {
         return this.bucketArn;
     }
     /**
      * The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
      * 
     */
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Object prefix for filtering.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

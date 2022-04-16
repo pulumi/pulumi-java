@@ -16,7 +16,7 @@ public final class GetCertificateAuthorityRevocationConfiguration extends com.pu
     @Import(name="crlConfigurations", required=true)
       private final List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations;
 
-    public List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> getCrlConfigurations() {
+    public List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations() {
         return this.crlConfigurations;
     }
 

@@ -41,7 +41,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends com.pulumi.resource
      * @return The ID of the network interface to attach to.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -55,7 +55,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends com.pulumi.resource
      * @return The ID of the security group.
      * 
      */
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 

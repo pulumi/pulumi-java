@@ -35,17 +35,17 @@ public final class GetServiceResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Code of the service.
      * 
     */
-    public String getServiceCode() {
+    public String serviceCode() {
         return this.serviceCode;
     }
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

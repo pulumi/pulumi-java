@@ -23,7 +23,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends com.pulumi.res
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -34,7 +34,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends com.pulumi.res
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -45,7 +45,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends com.pulumi.res
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -56,7 +56,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends com.pulumi.res
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -67,7 +67,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends com.pulumi.res
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 

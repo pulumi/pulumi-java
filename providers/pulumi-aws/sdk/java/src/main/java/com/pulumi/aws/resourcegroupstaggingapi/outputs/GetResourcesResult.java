@@ -49,33 +49,33 @@ public final class GetResourcesResult {
         this.tagFilters = tagFilters;
     }
 
-    public Optional<Boolean> getExcludeCompliantResources() {
+    public Optional<Boolean> excludeCompliantResources() {
         return Optional.ofNullable(this.excludeCompliantResources);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getIncludeComplianceDetails() {
+    public Optional<Boolean> includeComplianceDetails() {
         return Optional.ofNullable(this.includeComplianceDetails);
     }
-    public List<String> getResourceArnLists() {
+    public List<String> resourceArnLists() {
         return this.resourceArnLists == null ? List.of() : this.resourceArnLists;
     }
     /**
      * List of objects matching the search criteria.
      * 
     */
-    public List<GetResourcesResourceTagMappingList> getResourceTagMappingLists() {
+    public List<GetResourcesResourceTagMappingList> resourceTagMappingLists() {
         return this.resourceTagMappingLists;
     }
-    public List<String> getResourceTypeFilters() {
+    public List<String> resourceTypeFilters() {
         return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
     }
-    public List<GetResourcesTagFilter> getTagFilters() {
+    public List<GetResourcesTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

@@ -23,7 +23,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends com.pulumi
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends com.pulumi
     @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
     }
 
@@ -45,7 +45,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends com.pulumi
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -56,7 +56,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends com.pulumi
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -67,7 +67,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends com.pulumi
     @Import(name="virtualInterfaceId")
       private final @Nullable Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId == null ? Codegen.empty() : this.virtualInterfaceId;
     }
 
@@ -78,7 +78,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends com.pulumi
     @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
     }
 

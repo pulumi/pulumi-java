@@ -40,7 +40,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The date and time, in UTC and extended RFC 3339 format, when the Amazon Macie account was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -54,7 +54,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Specifies how often to publish updates to policy findings for the account. This includes publishing updates to AWS Security Hub and Amazon EventBridge (formerly called Amazon CloudWatch Events). Valid values are `FIFTEEN_MINUTES`, `ONE_HOUR` or `SIX_HOURS`.
      * 
      */
-    public Output<String> getFindingPublishingFrequency() {
+    public Output<String> findingPublishingFrequency() {
         return this.findingPublishingFrequency;
     }
     /**
@@ -68,7 +68,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the service-linked role that allows Macie to monitor and analyze data in AWS resources for the account.
      * 
      */
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
     /**
@@ -82,7 +82,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -96,7 +96,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the Macie account.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 

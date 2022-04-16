@@ -19,7 +19,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 
@@ -30,7 +30,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -41,7 +41,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 
@@ -52,7 +52,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class GetImageOutputResourceAmi extends com.pulumi.resources.Invoke
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

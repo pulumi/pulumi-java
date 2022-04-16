@@ -27,7 +27,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns;
     }
 
@@ -38,7 +38,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -49,7 +49,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blockSize")
       private final @Nullable Output<Integer> blockSize;
 
-    public Output<Integer> getBlockSize() {
+    public Output<Integer> blockSize() {
         return this.blockSize == null ? Codegen.empty() : this.blockSize;
     }
 
@@ -60,7 +60,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKeytab")
       private final @Nullable Output<String> kerberosKeytab;
 
-    public Output<String> getKerberosKeytab() {
+    public Output<String> kerberosKeytab() {
         return this.kerberosKeytab == null ? Codegen.empty() : this.kerberosKeytab;
     }
 
@@ -71,7 +71,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKrb5Conf")
       private final @Nullable Output<String> kerberosKrb5Conf;
 
-    public Output<String> getKerberosKrb5Conf() {
+    public Output<String> kerberosKrb5Conf() {
         return this.kerberosKrb5Conf == null ? Codegen.empty() : this.kerberosKrb5Conf;
     }
 
@@ -82,7 +82,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosPrincipal")
       private final @Nullable Output<String> kerberosPrincipal;
 
-    public Output<String> getKerberosPrincipal() {
+    public Output<String> kerberosPrincipal() {
         return this.kerberosPrincipal == null ? Codegen.empty() : this.kerberosPrincipal;
     }
 
@@ -93,7 +93,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyProviderUri")
       private final @Nullable Output<String> kmsKeyProviderUri;
 
-    public Output<String> getKmsKeyProviderUri() {
+    public Output<String> kmsKeyProviderUri() {
         return this.kmsKeyProviderUri == null ? Codegen.empty() : this.kmsKeyProviderUri;
     }
 
@@ -104,7 +104,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameNodes", required=true)
       private final Output<List<LocationHdfsNameNodeArgs>> nameNodes;
 
-    public Output<List<LocationHdfsNameNodeArgs>> getNameNodes() {
+    public Output<List<LocationHdfsNameNodeArgs>> nameNodes() {
         return this.nameNodes;
     }
 
@@ -115,7 +115,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="qopConfiguration")
       private final @Nullable Output<LocationHdfsQopConfigurationArgs> qopConfiguration;
 
-    public Output<LocationHdfsQopConfigurationArgs> getQopConfiguration() {
+    public Output<LocationHdfsQopConfigurationArgs> qopConfiguration() {
         return this.qopConfiguration == null ? Codegen.empty() : this.qopConfiguration;
     }
 
@@ -126,7 +126,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationFactor")
       private final @Nullable Output<Integer> replicationFactor;
 
-    public Output<Integer> getReplicationFactor() {
+    public Output<Integer> replicationFactor() {
         return this.replicationFactor == null ? Codegen.empty() : this.replicationFactor;
     }
 
@@ -137,7 +137,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="simpleUser")
       private final @Nullable Output<String> simpleUser;
 
-    public Output<String> getSimpleUser() {
+    public Output<String> simpleUser() {
         return this.simpleUser == null ? Codegen.empty() : this.simpleUser;
     }
 
@@ -148,7 +148,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -159,7 +159,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -170,7 +170,7 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -27,7 +27,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildId")
       private final @Nullable Output<String> buildId;
 
-    public Output<String> getBuildId() {
+    public Output<String> buildId() {
         return this.buildId == null ? Codegen.empty() : this.buildId;
     }
 
@@ -49,7 +49,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2InboundPermissions")
       private final @Nullable Output<List<FleetEc2InboundPermissionGetArgs>> ec2InboundPermissions;
 
-    public Output<List<FleetEc2InboundPermissionGetArgs>> getEc2InboundPermissions() {
+    public Output<List<FleetEc2InboundPermissionGetArgs>> ec2InboundPermissions() {
         return this.ec2InboundPermissions == null ? Codegen.empty() : this.ec2InboundPermissions;
     }
 
@@ -71,7 +71,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2InstanceType")
       private final @Nullable Output<String> ec2InstanceType;
 
-    public Output<String> getEc2InstanceType() {
+    public Output<String> ec2InstanceType() {
         return this.ec2InstanceType == null ? Codegen.empty() : this.ec2InstanceType;
     }
 
@@ -82,7 +82,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fleetType")
       private final @Nullable Output<String> fleetType;
 
-    public Output<String> getFleetType() {
+    public Output<String> fleetType() {
         return this.fleetType == null ? Codegen.empty() : this.fleetType;
     }
 
@@ -93,14 +93,14 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceRoleArn")
       private final @Nullable Output<String> instanceRoleArn;
 
-    public Output<String> getInstanceRoleArn() {
+    public Output<String> instanceRoleArn() {
         return this.instanceRoleArn == null ? Codegen.empty() : this.instanceRoleArn;
     }
 
     @Import(name="logPaths")
       private final @Nullable Output<List<String>> logPaths;
 
-    public Output<List<String>> getLogPaths() {
+    public Output<List<String>> logPaths() {
         return this.logPaths == null ? Codegen.empty() : this.logPaths;
     }
 
@@ -111,7 +111,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricGroups")
       private final @Nullable Output<List<String>> metricGroups;
 
-    public Output<List<String>> getMetricGroups() {
+    public Output<List<String>> metricGroups() {
         return this.metricGroups == null ? Codegen.empty() : this.metricGroups;
     }
 
@@ -122,7 +122,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -133,7 +133,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="newGameSessionProtectionPolicy")
       private final @Nullable Output<String> newGameSessionProtectionPolicy;
 
-    public Output<String> getNewGameSessionProtectionPolicy() {
+    public Output<String> newGameSessionProtectionPolicy() {
         return this.newGameSessionProtectionPolicy == null ? Codegen.empty() : this.newGameSessionProtectionPolicy;
     }
 
@@ -144,7 +144,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="operatingSystem")
       private final @Nullable Output<String> operatingSystem;
 
-    public Output<String> getOperatingSystem() {
+    public Output<String> operatingSystem() {
         return this.operatingSystem == null ? Codegen.empty() : this.operatingSystem;
     }
 
@@ -155,7 +155,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceCreationLimitPolicy")
       private final @Nullable Output<FleetResourceCreationLimitPolicyGetArgs> resourceCreationLimitPolicy;
 
-    public Output<FleetResourceCreationLimitPolicyGetArgs> getResourceCreationLimitPolicy() {
+    public Output<FleetResourceCreationLimitPolicyGetArgs> resourceCreationLimitPolicy() {
         return this.resourceCreationLimitPolicy == null ? Codegen.empty() : this.resourceCreationLimitPolicy;
     }
 
@@ -166,7 +166,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeConfiguration")
       private final @Nullable Output<FleetRuntimeConfigurationGetArgs> runtimeConfiguration;
 
-    public Output<FleetRuntimeConfigurationGetArgs> getRuntimeConfiguration() {
+    public Output<FleetRuntimeConfigurationGetArgs> runtimeConfiguration() {
         return this.runtimeConfiguration == null ? Codegen.empty() : this.runtimeConfiguration;
     }
 
@@ -177,7 +177,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -188,7 +188,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

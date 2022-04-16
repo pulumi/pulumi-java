@@ -24,7 +24,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="automaticStopTimeMinutes")
       private final @Nullable Output<Integer> automaticStopTimeMinutes;
 
-    public Output<Integer> getAutomaticStopTimeMinutes() {
+    public Output<Integer> automaticStopTimeMinutes() {
         return this.automaticStopTimeMinutes == null ? Codegen.empty() : this.automaticStopTimeMinutes;
     }
 
@@ -46,7 +46,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -68,7 +68,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="ownerArn")
       private final @Nullable Output<String> ownerArn;
 
-    public Output<String> getOwnerArn() {
+    public Output<String> ownerArn() {
         return this.ownerArn == null ? Codegen.empty() : this.ownerArn;
     }
 
@@ -90,7 +90,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -101,7 +101,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -112,7 +112,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -123,7 +123,7 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

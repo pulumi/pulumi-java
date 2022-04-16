@@ -22,7 +22,7 @@ public final class AppLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="daily")
       private final @Nullable Output<Integer> daily;
 
-    public Output<Integer> getDaily() {
+    public Output<Integer> daily() {
         return this.daily == null ? Codegen.empty() : this.daily;
     }
 
@@ -33,7 +33,7 @@ public final class AppLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximumDuration")
       private final @Nullable Output<Integer> maximumDuration;
 
-    public Output<Integer> getMaximumDuration() {
+    public Output<Integer> maximumDuration() {
         return this.maximumDuration == null ? Codegen.empty() : this.maximumDuration;
     }
 
@@ -44,7 +44,7 @@ public final class AppLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messagesPerSecond")
       private final @Nullable Output<Integer> messagesPerSecond;
 
-    public Output<Integer> getMessagesPerSecond() {
+    public Output<Integer> messagesPerSecond() {
         return this.messagesPerSecond == null ? Codegen.empty() : this.messagesPerSecond;
     }
 
@@ -55,7 +55,7 @@ public final class AppLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="total")
       private final @Nullable Output<Integer> total;
 
-    public Output<Integer> getTotal() {
+    public Output<Integer> total() {
         return this.total == null ? Codegen.empty() : this.total;
     }
 

@@ -24,7 +24,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesArgs extends
     @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> getAccounts() {
+    public Output<List<String>> accounts() {
         return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
@@ -35,7 +35,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesArgs extends
     @Import(name="failureToleranceCount")
       private final @Nullable Output<Integer> failureToleranceCount;
 
-    public Output<Integer> getFailureToleranceCount() {
+    public Output<Integer> failureToleranceCount() {
         return this.failureToleranceCount == null ? Codegen.empty() : this.failureToleranceCount;
     }
 
@@ -46,7 +46,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesArgs extends
     @Import(name="failureTolerancePercentage")
       private final @Nullable Output<Integer> failureTolerancePercentage;
 
-    public Output<Integer> getFailureTolerancePercentage() {
+    public Output<Integer> failureTolerancePercentage() {
         return this.failureTolerancePercentage == null ? Codegen.empty() : this.failureTolerancePercentage;
     }
 
@@ -57,7 +57,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesArgs extends
     @Import(name="maxConcurrencyCount")
       private final @Nullable Output<Integer> maxConcurrencyCount;
 
-    public Output<Integer> getMaxConcurrencyCount() {
+    public Output<Integer> maxConcurrencyCount() {
         return this.maxConcurrencyCount == null ? Codegen.empty() : this.maxConcurrencyCount;
     }
 
@@ -68,7 +68,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesArgs extends
     @Import(name="maxConcurrencyPercentage")
       private final @Nullable Output<Integer> maxConcurrencyPercentage;
 
-    public Output<Integer> getMaxConcurrencyPercentage() {
+    public Output<Integer> maxConcurrencyPercentage() {
         return this.maxConcurrencyPercentage == null ? Codegen.empty() : this.maxConcurrencyPercentage;
     }
 
@@ -79,7 +79,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesArgs extends
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 

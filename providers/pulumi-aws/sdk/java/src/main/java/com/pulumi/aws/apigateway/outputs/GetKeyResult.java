@@ -76,56 +76,56 @@ public final class GetKeyResult {
      * The date and time when the API Key was created.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The description of the API Key.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Specifies whether the API Key is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Set to the ID of the API Key.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The date and time when the API Key was last updated.
      * 
     */
-    public String getLastUpdatedDate() {
+    public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
      * Set to the name of the API Key.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A map of tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Set to the value of the API Key.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

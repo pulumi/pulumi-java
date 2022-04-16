@@ -22,10 +22,10 @@ public final class ThingGroupMetadataRootToParentGroup {
         this.groupName = groupName;
     }
 
-    public Optional<String> getGroupArn() {
+    public Optional<String> groupArn() {
         return Optional.ofNullable(this.groupArn);
     }
-    public Optional<String> getGroupName() {
+    public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
 

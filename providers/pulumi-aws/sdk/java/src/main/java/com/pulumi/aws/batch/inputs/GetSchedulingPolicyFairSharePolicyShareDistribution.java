@@ -20,7 +20,7 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends c
     @Import(name="shareIdentifier", required=true)
       private final String shareIdentifier;
 
-    public String getShareIdentifier() {
+    public String shareIdentifier() {
         return this.shareIdentifier;
     }
 
@@ -31,7 +31,7 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends c
     @Import(name="weightFactor", required=true)
       private final Double weightFactor;
 
-    public Double getWeightFactor() {
+    public Double weightFactor() {
         return this.weightFactor;
     }
 

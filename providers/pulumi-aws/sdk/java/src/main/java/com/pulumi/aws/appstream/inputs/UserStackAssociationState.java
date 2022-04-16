@@ -23,7 +23,7 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
     @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -34,7 +34,7 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
     @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> getSendEmailNotification() {
+    public Output<Boolean> sendEmailNotification() {
         return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
     }
 
@@ -45,7 +45,7 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
     @Import(name="stackName")
       private final @Nullable Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName == null ? Codegen.empty() : this.stackName;
     }
 
@@ -56,7 +56,7 @@ public final class UserStackAssociationState extends com.pulumi.resources.Resour
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

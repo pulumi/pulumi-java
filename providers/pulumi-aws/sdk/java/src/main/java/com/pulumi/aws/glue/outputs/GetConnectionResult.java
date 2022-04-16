@@ -83,62 +83,62 @@ public final class GetConnectionResult {
      * The ARN of the Glue Connection.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The catalog ID of the Glue Connection.
      * 
     */
-    public String getCatalogId() {
+    public String catalogId() {
         return this.catalogId;
     }
-    public Map<String,String> getConnectionProperties() {
+    public Map<String,String> connectionProperties() {
         return this.connectionProperties;
     }
     /**
      * The type of Glue Connection.
      * 
     */
-    public String getConnectionType() {
+    public String connectionType() {
         return this.connectionType;
     }
     /**
      * Description of the connection.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of criteria that can be used in selecting this connection.
      * 
     */
-    public List<String> getMatchCriterias() {
+    public List<String> matchCriterias() {
         return this.matchCriterias;
     }
     /**
      * The name of the Glue Connection.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A map of physical connection requirements, such as VPC and SecurityGroup.
      * 
     */
-    public List<GetConnectionPhysicalConnectionRequirement> getPhysicalConnectionRequirements() {
+    public List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements() {
         return this.physicalConnectionRequirements;
     }
     /**
      * The tags assigned to the resource
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

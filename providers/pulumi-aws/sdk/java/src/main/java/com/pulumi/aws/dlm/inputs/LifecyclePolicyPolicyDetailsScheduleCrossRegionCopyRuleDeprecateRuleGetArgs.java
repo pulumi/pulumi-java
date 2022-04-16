@@ -22,7 +22,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -33,7 +33,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     @Import(name="intervalUnit", required=true)
       private final Output<String> intervalUnit;
 
-    public Output<String> getIntervalUnit() {
+    public Output<String> intervalUnit() {
         return this.intervalUnit;
     }
 

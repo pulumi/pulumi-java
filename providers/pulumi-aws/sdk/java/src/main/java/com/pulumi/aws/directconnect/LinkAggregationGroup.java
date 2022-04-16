@@ -44,7 +44,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN of the LAG.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The ID of an existing dedicated connection to migrate to the LAG.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionId() {
+    public Output</* @Nullable */ String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -72,7 +72,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
      * 
      */
-    public Output<String> getConnectionsBandwidth() {
+    public Output<String> connectionsBandwidth() {
         return this.connectionsBandwidth;
     }
     /**
@@ -86,7 +86,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -100,13 +100,13 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).
      * 
      */
-    public Output<String> getHasLogicalRedundancy() {
+    public Output<String> hasLogicalRedundancy() {
         return this.hasLogicalRedundancy;
     }
     @Export(name="jumboFrameCapable", type=Boolean.class, parameters={})
     private Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> getJumboFrameCapable() {
+    public Output<Boolean> jumboFrameCapable() {
         return this.jumboFrameCapable;
     }
     /**
@@ -120,7 +120,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -134,7 +134,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the LAG.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -148,7 +148,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the LAG.
      * 
      */
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
     /**
@@ -162,7 +162,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the service provider associated with the LAG.
      * 
      */
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
     /**
@@ -176,7 +176,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -190,7 +190,7 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

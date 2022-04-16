@@ -19,7 +19,7 @@ public final class StackSetInstanceDeploymentTargetsArgs extends com.pulumi.reso
     @Import(name="organizationalUnitIds")
       private final @Nullable Output<List<String>> organizationalUnitIds;
 
-    public Output<List<String>> getOrganizationalUnitIds() {
+    public Output<List<String>> organizationalUnitIds() {
         return this.organizationalUnitIds == null ? Codegen.empty() : this.organizationalUnitIds;
     }
 

@@ -35,14 +35,14 @@ public final class RouteSpecGrpcRouteTimeout {
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
     */
-    public Optional<RouteSpecGrpcRouteTimeoutIdle> getIdle() {
+    public Optional<RouteSpecGrpcRouteTimeoutIdle> idle() {
         return Optional.ofNullable(this.idle);
     }
     /**
      * The per request timeout.
      * 
     */
-    public Optional<RouteSpecGrpcRouteTimeoutPerRequest> getPerRequest() {
+    public Optional<RouteSpecGrpcRouteTimeoutPerRequest> perRequest() {
         return Optional.ofNullable(this.perRequest);
     }
 

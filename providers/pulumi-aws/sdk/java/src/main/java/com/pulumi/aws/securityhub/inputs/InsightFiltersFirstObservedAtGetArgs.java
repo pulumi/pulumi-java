@@ -23,7 +23,7 @@ public final class InsightFiltersFirstObservedAtGetArgs extends com.pulumi.resou
     @Import(name="dateRange")
       private final @Nullable Output<InsightFiltersFirstObservedAtDateRangeGetArgs> dateRange;
 
-    public Output<InsightFiltersFirstObservedAtDateRangeGetArgs> getDateRange() {
+    public Output<InsightFiltersFirstObservedAtDateRangeGetArgs> dateRange() {
         return this.dateRange == null ? Codegen.empty() : this.dateRange;
     }
 
@@ -34,7 +34,7 @@ public final class InsightFiltersFirstObservedAtGetArgs extends com.pulumi.resou
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -45,7 +45,7 @@ public final class InsightFiltersFirstObservedAtGetArgs extends com.pulumi.resou
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

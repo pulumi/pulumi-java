@@ -25,7 +25,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends com.pulumi
     @Import(name="customResponseBodyKey")
       private final @Nullable Output<String> customResponseBodyKey;
 
-    public Output<String> getCustomResponseBodyKey() {
+    public Output<String> customResponseBodyKey() {
         return this.customResponseBodyKey == null ? Codegen.empty() : this.customResponseBodyKey;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends com.pulumi
     @Import(name="responseCode", required=true)
       private final Output<Integer> responseCode;
 
-    public Output<Integer> getResponseCode() {
+    public Output<Integer> responseCode() {
         return this.responseCode;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends com.pulumi
     @Import(name="responseHeaders")
       private final @Nullable Output<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
 
-    public Output<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> getResponseHeaders() {
+    public Output<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders() {
         return this.responseHeaders == null ? Codegen.empty() : this.responseHeaders;
     }
 

@@ -32,7 +32,7 @@ public class RegistryPolicy extends com.pulumi.resources.CustomResource {
     @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -46,7 +46,7 @@ public class RegistryPolicy extends com.pulumi.resources.CustomResource {
      * @return The registry ID where the registry was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 

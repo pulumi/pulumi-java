@@ -26,7 +26,7 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="approveAfterDays")
       private final @Nullable Output<Integer> approveAfterDays;
 
-    public Output<Integer> getApproveAfterDays() {
+    public Output<Integer> approveAfterDays() {
         return this.approveAfterDays == null ? Codegen.empty() : this.approveAfterDays;
     }
 
@@ -37,7 +37,7 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="approveUntilDate")
       private final @Nullable Output<String> approveUntilDate;
 
-    public Output<String> getApproveUntilDate() {
+    public Output<String> approveUntilDate() {
         return this.approveUntilDate == null ? Codegen.empty() : this.approveUntilDate;
     }
 
@@ -48,7 +48,7 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="complianceLevel")
       private final @Nullable Output<String> complianceLevel;
 
-    public Output<String> getComplianceLevel() {
+    public Output<String> complianceLevel() {
         return this.complianceLevel == null ? Codegen.empty() : this.complianceLevel;
     }
 
@@ -59,7 +59,7 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="enableNonSecurity")
       private final @Nullable Output<Boolean> enableNonSecurity;
 
-    public Output<Boolean> getEnableNonSecurity() {
+    public Output<Boolean> enableNonSecurity() {
         return this.enableNonSecurity == null ? Codegen.empty() : this.enableNonSecurity;
     }
 
@@ -70,7 +70,7 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="patchFilters", required=true)
       private final Output<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters;
 
-    public Output<List<PatchBaselineApprovalRulePatchFilterArgs>> getPatchFilters() {
+    public Output<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters() {
         return this.patchFilters;
     }
 

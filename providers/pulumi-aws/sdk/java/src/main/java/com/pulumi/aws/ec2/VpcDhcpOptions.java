@@ -49,7 +49,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The ARN of the DHCP Options Set.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -63,7 +63,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
      * 
      */
-    public Output</* @Nullable */ String> getDomainName() {
+    public Output</* @Nullable */ String> domainName() {
         return this.domainName;
     }
     /**
@@ -77,7 +77,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDomainNameServers() {
+    public Output</* @Nullable */ List<String>> domainNameServers() {
         return this.domainNameServers;
     }
     /**
@@ -91,7 +91,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of NETBIOS name servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetbiosNameServers() {
+    public Output</* @Nullable */ List<String>> netbiosNameServers() {
         return this.netbiosNameServers;
     }
     /**
@@ -105,7 +105,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
      */
-    public Output</* @Nullable */ String> getNetbiosNodeType() {
+    public Output</* @Nullable */ String> netbiosNodeType() {
         return this.netbiosNodeType;
     }
     /**
@@ -119,7 +119,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of NTP servers to configure.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNtpServers() {
+    public Output</* @Nullable */ List<String>> ntpServers() {
         return this.ntpServers;
     }
     /**
@@ -133,7 +133,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the DHCP options set.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -147,7 +147,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -161,7 +161,7 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

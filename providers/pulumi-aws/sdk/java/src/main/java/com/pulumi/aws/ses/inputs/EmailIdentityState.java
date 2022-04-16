@@ -22,7 +22,7 @@ public final class EmailIdentityState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class EmailIdentityState extends com.pulumi.resources.ResourceArgs 
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 

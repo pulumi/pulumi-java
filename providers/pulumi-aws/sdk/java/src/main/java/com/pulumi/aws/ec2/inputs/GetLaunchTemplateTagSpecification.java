@@ -16,7 +16,7 @@ public final class GetLaunchTemplateTagSpecification extends com.pulumi.resource
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -27,7 +27,7 @@ public final class GetLaunchTemplateTagSpecification extends com.pulumi.resource
     @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

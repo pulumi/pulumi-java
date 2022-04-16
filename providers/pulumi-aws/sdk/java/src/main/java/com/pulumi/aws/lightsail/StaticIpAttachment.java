@@ -34,7 +34,7 @@ public class StaticIpAttachment extends com.pulumi.resources.CustomResource {
      * @return The name of the Lightsail instance to attach the IP to
      * 
      */
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
     /**
@@ -48,7 +48,7 @@ public class StaticIpAttachment extends com.pulumi.resources.CustomResource {
      * @return The allocated static IP address
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -62,7 +62,7 @@ public class StaticIpAttachment extends com.pulumi.resources.CustomResource {
      * @return The name of the allocated static IP
      * 
      */
-    public Output<String> getStaticIpName() {
+    public Output<String> staticIpName() {
         return this.staticIpName;
     }
 

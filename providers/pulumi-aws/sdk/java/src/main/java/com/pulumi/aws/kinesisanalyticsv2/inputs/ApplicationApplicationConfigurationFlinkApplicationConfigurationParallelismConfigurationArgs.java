@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="autoScalingEnabled")
       private final @Nullable Output<Boolean> autoScalingEnabled;
 
-    public Output<Boolean> getAutoScalingEnabled() {
+    public Output<Boolean> autoScalingEnabled() {
         return this.autoScalingEnabled == null ? Codegen.empty() : this.autoScalingEnabled;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="configurationType", required=true)
       private final Output<String> configurationType;
 
-    public Output<String> getConfigurationType() {
+    public Output<String> configurationType() {
         return this.configurationType;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> getParallelism() {
+    public Output<Integer> parallelism() {
         return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
@@ -57,7 +57,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="parallelismPerKpu")
       private final @Nullable Output<Integer> parallelismPerKpu;
 
-    public Output<Integer> getParallelismPerKpu() {
+    public Output<Integer> parallelismPerKpu() {
         return this.parallelismPerKpu == null ? Codegen.empty() : this.parallelismPerKpu;
     }
 

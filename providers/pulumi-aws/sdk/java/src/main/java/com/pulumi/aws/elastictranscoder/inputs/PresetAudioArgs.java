@@ -22,7 +22,7 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="audioPackingMode")
       private final @Nullable Output<String> audioPackingMode;
 
-    public Output<String> getAudioPackingMode() {
+    public Output<String> audioPackingMode() {
         return this.audioPackingMode == null ? Codegen.empty() : this.audioPackingMode;
     }
 
@@ -33,7 +33,7 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitRate")
       private final @Nullable Output<String> bitRate;
 
-    public Output<String> getBitRate() {
+    public Output<String> bitRate() {
         return this.bitRate == null ? Codegen.empty() : this.bitRate;
     }
 
@@ -44,7 +44,7 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channels")
       private final @Nullable Output<String> channels;
 
-    public Output<String> getChannels() {
+    public Output<String> channels() {
         return this.channels == null ? Codegen.empty() : this.channels;
     }
 
@@ -55,7 +55,7 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="codec")
       private final @Nullable Output<String> codec;
 
-    public Output<String> getCodec() {
+    public Output<String> codec() {
         return this.codec == null ? Codegen.empty() : this.codec;
     }
 
@@ -66,7 +66,7 @@ public final class PresetAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleRate")
       private final @Nullable Output<String> sampleRate;
 
-    public Output<String> getSampleRate() {
+    public Output<String> sampleRate() {
         return this.sampleRate == null ? Codegen.empty() : this.sampleRate;
     }
 

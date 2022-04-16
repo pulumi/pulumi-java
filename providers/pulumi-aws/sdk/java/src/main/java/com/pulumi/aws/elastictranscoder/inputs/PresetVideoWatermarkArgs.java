@@ -22,7 +22,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="horizontalAlign")
       private final @Nullable Output<String> horizontalAlign;
 
-    public Output<String> getHorizontalAlign() {
+    public Output<String> horizontalAlign() {
         return this.horizontalAlign == null ? Codegen.empty() : this.horizontalAlign;
     }
 
@@ -33,7 +33,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="horizontalOffset")
       private final @Nullable Output<String> horizontalOffset;
 
-    public Output<String> getHorizontalOffset() {
+    public Output<String> horizontalOffset() {
         return this.horizontalOffset == null ? Codegen.empty() : this.horizontalOffset;
     }
 
@@ -44,7 +44,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -55,7 +55,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="maxHeight")
       private final @Nullable Output<String> maxHeight;
 
-    public Output<String> getMaxHeight() {
+    public Output<String> maxHeight() {
         return this.maxHeight == null ? Codegen.empty() : this.maxHeight;
     }
 
@@ -66,7 +66,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="maxWidth")
       private final @Nullable Output<String> maxWidth;
 
-    public Output<String> getMaxWidth() {
+    public Output<String> maxWidth() {
         return this.maxWidth == null ? Codegen.empty() : this.maxWidth;
     }
 
@@ -77,7 +77,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="opacity")
       private final @Nullable Output<String> opacity;
 
-    public Output<String> getOpacity() {
+    public Output<String> opacity() {
         return this.opacity == null ? Codegen.empty() : this.opacity;
     }
 
@@ -88,7 +88,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="sizingPolicy")
       private final @Nullable Output<String> sizingPolicy;
 
-    public Output<String> getSizingPolicy() {
+    public Output<String> sizingPolicy() {
         return this.sizingPolicy == null ? Codegen.empty() : this.sizingPolicy;
     }
 
@@ -99,7 +99,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -110,7 +110,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="verticalAlign")
       private final @Nullable Output<String> verticalAlign;
 
-    public Output<String> getVerticalAlign() {
+    public Output<String> verticalAlign() {
         return this.verticalAlign == null ? Codegen.empty() : this.verticalAlign;
     }
 
@@ -121,7 +121,7 @@ public final class PresetVideoWatermarkArgs extends com.pulumi.resources.Resourc
     @Import(name="verticalOffset")
       private final @Nullable Output<String> verticalOffset;
 
-    public Output<String> getVerticalOffset() {
+    public Output<String> verticalOffset() {
         return this.verticalOffset == null ? Codegen.empty() : this.verticalOffset;
     }
 

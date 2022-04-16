@@ -23,7 +23,7 @@ public final class DataRepositoryAssociationS3AutoImportPolicyArgs extends com.p
     @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 

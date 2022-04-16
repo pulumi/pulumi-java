@@ -38,7 +38,7 @@ public final class DeploymentConfigMinimumHealthyHosts {
      * The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
@@ -48,7 +48,7 @@ public final class DeploymentConfigMinimumHealthyHosts {
      * When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
      * 
     */
-    public Optional<Integer> getValue() {
+    public Optional<Integer> value() {
         return Optional.ofNullable(this.value);
     }
 

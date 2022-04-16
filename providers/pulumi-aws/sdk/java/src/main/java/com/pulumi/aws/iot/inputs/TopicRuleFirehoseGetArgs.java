@@ -22,7 +22,7 @@ public final class TopicRuleFirehoseGetArgs extends com.pulumi.resources.Resourc
     @Import(name="deliveryStreamName", required=true)
       private final Output<String> deliveryStreamName;
 
-    public Output<String> getDeliveryStreamName() {
+    public Output<String> deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
@@ -33,7 +33,7 @@ public final class TopicRuleFirehoseGetArgs extends com.pulumi.resources.Resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -44,7 +44,7 @@ public final class TopicRuleFirehoseGetArgs extends com.pulumi.resources.Resourc
     @Import(name="separator")
       private final @Nullable Output<String> separator;
 
-    public Output<String> getSeparator() {
+    public Output<String> separator() {
         return this.separator == null ? Codegen.empty() : this.separator;
     }
 

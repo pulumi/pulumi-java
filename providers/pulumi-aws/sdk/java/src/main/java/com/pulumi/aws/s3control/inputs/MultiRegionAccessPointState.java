@@ -23,7 +23,7 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -34,7 +34,7 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -45,7 +45,7 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -56,7 +56,7 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
     @Import(name="details")
       private final @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details;
 
-    public Output<MultiRegionAccessPointDetailsGetArgs> getDetails() {
+    public Output<MultiRegionAccessPointDetailsGetArgs> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
@@ -67,7 +67,7 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -78,7 +78,7 @@ public final class MultiRegionAccessPointState extends com.pulumi.resources.Reso
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

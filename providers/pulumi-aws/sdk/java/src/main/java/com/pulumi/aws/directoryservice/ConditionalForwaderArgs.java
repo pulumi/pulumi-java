@@ -22,7 +22,7 @@ public final class ConditionalForwaderArgs extends com.pulumi.resources.Resource
     @Import(name="directoryId", required=true)
       private final Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
 
@@ -33,7 +33,7 @@ public final class ConditionalForwaderArgs extends com.pulumi.resources.Resource
     @Import(name="dnsIps", required=true)
       private final Output<List<String>> dnsIps;
 
-    public Output<List<String>> getDnsIps() {
+    public Output<List<String>> dnsIps() {
         return this.dnsIps;
     }
 
@@ -44,7 +44,7 @@ public final class ConditionalForwaderArgs extends com.pulumi.resources.Resource
     @Import(name="remoteDomainName", required=true)
       private final Output<String> remoteDomainName;
 
-    public Output<String> getRemoteDomainName() {
+    public Output<String> remoteDomainName() {
         return this.remoteDomainName;
     }
 

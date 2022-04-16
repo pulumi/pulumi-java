@@ -43,21 +43,21 @@ public final class DeploymentConfigTrafficRoutingConfig {
      * The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
      * 
     */
-    public Optional<DeploymentConfigTrafficRoutingConfigTimeBasedCanary> getTimeBasedCanary() {
+    public Optional<DeploymentConfigTrafficRoutingConfigTimeBasedCanary> timeBasedCanary() {
         return Optional.ofNullable(this.timeBasedCanary);
     }
     /**
      * The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
      * 
     */
-    public Optional<DeploymentConfigTrafficRoutingConfigTimeBasedLinear> getTimeBasedLinear() {
+    public Optional<DeploymentConfigTrafficRoutingConfigTimeBasedLinear> timeBasedLinear() {
         return Optional.ofNullable(this.timeBasedLinear);
     }
     /**
      * Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -96,52 +96,52 @@ public final class GetVpcPeeringConnectionResult {
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
      * 
     */
-    public Map<String,Boolean> getAccepter() {
+    public Map<String,Boolean> accepter() {
         return this.accepter;
     }
     /**
      * A CIDR block associated to the VPC of the specific VPC Peering Connection.
      * 
     */
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
      * List of objects with CIDR blocks of the requester VPC.
      * 
     */
-    public List<GetVpcPeeringConnectionCidrBlockSet> getCidrBlockSets() {
+    public List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets() {
         return this.cidrBlockSets;
     }
-    public List<GetVpcPeeringConnectionFilter> getFilters() {
+    public List<GetVpcPeeringConnectionFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
-    public String getPeerCidrBlock() {
+    public String peerCidrBlock() {
         return this.peerCidrBlock;
     }
     /**
      * List of objects with CIDR blocks of the accepter VPC.
      * 
     */
-    public List<GetVpcPeeringConnectionPeerCidrBlockSet> getPeerCidrBlockSets() {
+    public List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets() {
         return this.peerCidrBlockSets;
     }
-    public String getPeerOwnerId() {
+    public String peerOwnerId() {
         return this.peerOwnerId;
     }
-    public String getPeerRegion() {
+    public String peerRegion() {
         return this.peerRegion;
     }
-    public String getPeerVpcId() {
+    public String peerVpcId() {
         return this.peerVpcId;
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
@@ -149,16 +149,16 @@ public final class GetVpcPeeringConnectionResult {
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
      * 
     */
-    public Map<String,Boolean> getRequester() {
+    public Map<String,Boolean> requester() {
         return this.requester;
     }
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

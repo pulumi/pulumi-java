@@ -23,7 +23,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
     @Import(name="authTtl")
       private final @Nullable Output<Integer> authTtl;
 
-    public Output<Integer> getAuthTtl() {
+    public Output<Integer> authTtl() {
         return this.authTtl == null ? Codegen.empty() : this.authTtl;
     }
 
@@ -34,7 +34,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -45,7 +45,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
     @Import(name="iatTtl")
       private final @Nullable Output<Integer> iatTtl;
 
-    public Output<Integer> getIatTtl() {
+    public Output<Integer> iatTtl() {
         return this.iatTtl == null ? Codegen.empty() : this.iatTtl;
     }
 
@@ -56,7 +56,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends com.pulumi.resource
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 

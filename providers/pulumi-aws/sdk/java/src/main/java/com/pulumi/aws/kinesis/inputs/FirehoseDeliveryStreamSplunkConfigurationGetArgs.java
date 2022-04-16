@@ -25,7 +25,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
+    public Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
@@ -36,7 +36,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecAcknowledgmentTimeout")
       private final @Nullable Output<Integer> hecAcknowledgmentTimeout;
 
-    public Output<Integer> getHecAcknowledgmentTimeout() {
+    public Output<Integer> hecAcknowledgmentTimeout() {
         return this.hecAcknowledgmentTimeout == null ? Codegen.empty() : this.hecAcknowledgmentTimeout;
     }
 
@@ -47,7 +47,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecEndpoint", required=true)
       private final Output<String> hecEndpoint;
 
-    public Output<String> getHecEndpoint() {
+    public Output<String> hecEndpoint() {
         return this.hecEndpoint;
     }
 
@@ -58,7 +58,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecEndpointType")
       private final @Nullable Output<String> hecEndpointType;
 
-    public Output<String> getHecEndpointType() {
+    public Output<String> hecEndpointType() {
         return this.hecEndpointType == null ? Codegen.empty() : this.hecEndpointType;
     }
 
@@ -69,7 +69,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="hecToken", required=true)
       private final Output<String> hecToken;
 
-    public Output<String> getHecToken() {
+    public Output<String> hecToken() {
         return this.hecToken;
     }
 
@@ -80,7 +80,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
-    public Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
+    public Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
@@ -91,7 +91,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
-    public Output<Integer> getRetryDuration() {
+    public Output<Integer> retryDuration() {
         return this.retryDuration == null ? Codegen.empty() : this.retryDuration;
     }
 
@@ -102,7 +102,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends com.
     @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
-    public Output<String> getS3BackupMode() {
+    public Output<String> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 

@@ -105,86 +105,86 @@ public final class GetInstanceResult {
      * The Amazon Resource Name (ARN) of the instance.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public Boolean getAutoResolveBestVoicesEnabled() {
+    public Boolean autoResolveBestVoicesEnabled() {
         return this.autoResolveBestVoicesEnabled;
     }
     /**
      * Specifies Whether contact flow logs are enabled.
      * 
     */
-    public Boolean getContactFlowLogsEnabled() {
+    public Boolean contactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled;
     }
     /**
      * Specifies Whether contact lens is enabled.
      * 
     */
-    public Boolean getContactLensEnabled() {
+    public Boolean contactLensEnabled() {
         return this.contactLensEnabled;
     }
     /**
      * Specifies When the instance was created.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Specifies Whether early media for outbound calls is enabled .
      * 
     */
-    public Boolean getEarlyMediaEnabled() {
+    public Boolean earlyMediaEnabled() {
         return this.earlyMediaEnabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies The identity management type attached to the instance.
      * 
     */
-    public String getIdentityManagementType() {
+    public String identityManagementType() {
         return this.identityManagementType;
     }
     /**
      * Specifies Whether inbound calls are enabled.
      * 
     */
-    public Boolean getInboundCallsEnabled() {
+    public Boolean inboundCallsEnabled() {
         return this.inboundCallsEnabled;
     }
-    public String getInstanceAlias() {
+    public String instanceAlias() {
         return this.instanceAlias;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
      * Specifies Whether outbound calls are enabled.
      * 
     */
-    public Boolean getOutboundCallsEnabled() {
+    public Boolean outboundCallsEnabled() {
         return this.outboundCallsEnabled;
     }
     /**
      * The service role of the instance.
      * 
     */
-    public String getServiceRole() {
+    public String serviceRole() {
         return this.serviceRole;
     }
     /**
      * Specifies The state of the instance.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

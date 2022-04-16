@@ -56,35 +56,35 @@ public final class TriggerTrigger {
      * The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.
      * 
     */
-    public List<String> getBranches() {
+    public List<String> branches() {
         return this.branches == null ? List.of() : this.branches;
     }
     /**
      * Any custom data associated with the trigger that will be included in the information sent to the target of the trigger.
      * 
     */
-    public Optional<String> getCustomData() {
+    public Optional<String> customData() {
         return Optional.ofNullable(this.customData);
     }
     /**
      * The ARN of the resource that is the target for a trigger. For example, the ARN of a topic in Amazon Simple Notification Service (SNS).
      * 
     */
-    public String getDestinationArn() {
+    public String destinationArn() {
         return this.destinationArn;
     }
     /**
      * The repository events that will cause the trigger to run actions in another service, such as sending a notification through Amazon Simple Notification Service (SNS). If no events are specified, the trigger will run for all repository events. Event types include: `all`, `updateReference`, `createReference`, `deleteReference`.
      * 
     */
-    public List<String> getEvents() {
+    public List<String> events() {
         return this.events;
     }
     /**
      * The name of the trigger.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

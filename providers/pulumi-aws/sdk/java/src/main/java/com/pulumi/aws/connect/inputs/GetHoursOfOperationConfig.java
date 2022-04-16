@@ -22,7 +22,7 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
     @Import(name="day", required=true)
       private final String day;
 
-    public String getDay() {
+    public String day() {
         return this.day;
     }
 
@@ -33,7 +33,7 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
     @Import(name="endTimes", required=true)
       private final List<GetHoursOfOperationConfigEndTime> endTimes;
 
-    public List<GetHoursOfOperationConfigEndTime> getEndTimes() {
+    public List<GetHoursOfOperationConfigEndTime> endTimes() {
         return this.endTimes;
     }
 
@@ -44,7 +44,7 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
     @Import(name="startTimes", required=true)
       private final List<GetHoursOfOperationConfigStartTime> startTimes;
 
-    public List<GetHoursOfOperationConfigStartTime> getStartTimes() {
+    public List<GetHoursOfOperationConfigStartTime> startTimes() {
         return this.startTimes;
     }
 

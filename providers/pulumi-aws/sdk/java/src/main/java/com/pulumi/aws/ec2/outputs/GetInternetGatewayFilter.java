@@ -36,7 +36,7 @@ public final class GetInternetGatewayFilter {
      * [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInternetGateways.html).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -44,7 +44,7 @@ public final class GetInternetGatewayFilter {
      * An Internet Gateway will be selected if any one of the given values matches.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

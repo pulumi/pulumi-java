@@ -26,7 +26,7 @@ public final class TriggerActionNotificationProperty {
      * After a job run starts, the number of minutes to wait before sending a job run delay notification.
      * 
     */
-    public Optional<Integer> getNotifyDelayAfter() {
+    public Optional<Integer> notifyDelayAfter() {
         return Optional.ofNullable(this.notifyDelayAfter);
     }
 
