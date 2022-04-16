@@ -110,7 +110,7 @@ jobs:
           build-root-directory: sdk/jvm
     strategy:
       fail-fast: true
-  Run tests:
+  run_tests:
     runs-on: ubuntu-latest
     needs: prerequisites
     timeout-minutes: 30
