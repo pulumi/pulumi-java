@@ -9,5 +9,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.gcp"
+rootProject.name = "com.pulumi.gcp"
 include("lib")
