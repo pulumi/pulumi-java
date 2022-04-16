@@ -22,13 +22,13 @@ public class ClusterCreationRoleProvider extends com.pulumi.resources.ComponentR
     @Export(name="provider", type=Provider.class, parameters={})
     private Output<Provider> provider;
 
-    public Output<Provider> getProvider() {
+    public Output<Provider> provider() {
         return this.provider;
     }
     @Export(name="role", type=Role.class, parameters={})
     private Output<Role> role;
 
-    public Output<Role> getRole() {
+    public Output<Role> role() {
         return this.role;
     }
 

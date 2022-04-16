@@ -36,7 +36,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The AWS resource provider.
      * 
      */
-    public Output<Provider> getAwsProvider() {
+    public Output<Provider> awsProvider() {
         return this.awsProvider;
     }
     /**
@@ -50,7 +50,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The security group for the EKS cluster.
      * 
      */
-    public Output<SecurityGroup> getClusterSecurityGroup() {
+    public Output<SecurityGroup> clusterSecurityGroup() {
         return this.clusterSecurityGroup;
     }
     /**
@@ -64,7 +64,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The EKS cluster and its dependencies.
      * 
      */
-    public Output<CoreData> getCore() {
+    public Output<CoreData> core() {
         return this.core;
     }
     /**
@@ -78,7 +78,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.
      * 
      */
-    public Output</* @Nullable */ NodeGroupData> getDefaultNodeGroup() {
+    public Output</* @Nullable */ NodeGroupData> defaultNodeGroup() {
         return this.defaultNodeGroup;
     }
     /**
@@ -92,7 +92,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The EKS cluster.
      * 
      */
-    public Output<com.pulumi.aws.eks.Cluster> getEksCluster() {
+    public Output<com.pulumi.aws.eks.Cluster> eksCluster() {
         return this.eksCluster;
     }
     /**
@@ -106,7 +106,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The ingress rule that gives node group access to cluster API server.
      * 
      */
-    public Output<SecurityGroupRule> getEksClusterIngressRule() {
+    public Output<SecurityGroupRule> eksClusterIngressRule() {
         return this.eksClusterIngressRule;
     }
     /**
@@ -120,7 +120,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The service roles used by the EKS cluster.
      * 
      */
-    public Output<List<Role>> getInstanceRoles() {
+    public Output<List<Role>> instanceRoles() {
         return this.instanceRoles;
     }
     /**
@@ -134,7 +134,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return A kubeconfig that can be used to connect to the EKS cluster.
      * 
      */
-    public Output<Object> getKubeconfig() {
+    public Output<Object> kubeconfig() {
         return this.kubeconfig;
     }
     /**
@@ -148,7 +148,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The security group for the cluster's nodes.
      * 
      */
-    public Output<SecurityGroup> getNodeSecurityGroup() {
+    public Output<SecurityGroup> nodeSecurityGroup() {
         return this.nodeSecurityGroup;
     }
     /**
@@ -162,7 +162,7 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return A Kubernetes resource provider that can be used to deploy into this cluster.
      * 
      */
-    public Output<com.pulumi.kubernetes.Provider> getProvider() {
+    public Output<com.pulumi.kubernetes.Provider> provider() {
         return this.provider;
     }
 

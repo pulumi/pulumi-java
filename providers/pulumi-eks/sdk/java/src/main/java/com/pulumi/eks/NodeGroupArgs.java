@@ -38,7 +38,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="amiId")
       private final @Nullable Output<String> amiId;
 
-    public Output<String> getAmiId() {
+    public Output<String> amiId() {
         return this.amiId == null ? Codegen.empty() : this.amiId;
     }
 
@@ -53,7 +53,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingGroupTags")
       private final @Nullable Output<Map<String,String>> autoScalingGroupTags;
 
-    public Output<Map<String,String>> getAutoScalingGroupTags() {
+    public Output<Map<String,String>> autoScalingGroupTags() {
         return this.autoScalingGroupTags == null ? Codegen.empty() : this.autoScalingGroupTags;
     }
 
@@ -64,7 +64,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapExtraArgs")
       private final @Nullable Output<String> bootstrapExtraArgs;
 
-    public Output<String> getBootstrapExtraArgs() {
+    public Output<String> bootstrapExtraArgs() {
         return this.bootstrapExtraArgs == null ? Codegen.empty() : this.bootstrapExtraArgs;
     }
 
@@ -77,7 +77,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudFormationTags")
       private final @Nullable Output<Map<String,String>> cloudFormationTags;
 
-    public Output<Map<String,String>> getCloudFormationTags() {
+    public Output<Map<String,String>> cloudFormationTags() {
         return this.cloudFormationTags == null ? Codegen.empty() : this.cloudFormationTags;
     }
 
@@ -88,7 +88,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster", required=true)
       private final Output<CoreDataArgs> cluster;
 
-    public Output<CoreDataArgs> getCluster() {
+    public Output<CoreDataArgs> cluster() {
         return this.cluster;
     }
 
@@ -99,7 +99,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIngressRule")
       private final @Nullable Output<SecurityGroupRule> clusterIngressRule;
 
-    public Output<SecurityGroupRule> getClusterIngressRule() {
+    public Output<SecurityGroupRule> clusterIngressRule() {
         return this.clusterIngressRule == null ? Codegen.empty() : this.clusterIngressRule;
     }
 
@@ -110,7 +110,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
 
-    public Output<Integer> getDesiredCapacity() {
+    public Output<Integer> desiredCapacity() {
         return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
     }
 
@@ -121,7 +121,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptRootBlockDevice")
       private final @Nullable Output<Boolean> encryptRootBlockDevice;
 
-    public Output<Boolean> getEncryptRootBlockDevice() {
+    public Output<Boolean> encryptRootBlockDevice() {
         return this.encryptRootBlockDevice == null ? Codegen.empty() : this.encryptRootBlockDevice;
     }
 
@@ -134,7 +134,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extraNodeSecurityGroups")
       private final @Nullable Output<List<SecurityGroup>> extraNodeSecurityGroups;
 
-    public Output<List<SecurityGroup>> getExtraNodeSecurityGroups() {
+    public Output<List<SecurityGroup>> extraNodeSecurityGroups() {
         return this.extraNodeSecurityGroups == null ? Codegen.empty() : this.extraNodeSecurityGroups;
     }
 
@@ -153,7 +153,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gpu")
       private final @Nullable Output<Boolean> gpu;
 
-    public Output<Boolean> getGpu() {
+    public Output<Boolean> gpu() {
         return this.gpu == null ? Codegen.empty() : this.gpu;
     }
 
@@ -164,7 +164,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceProfile")
       private final @Nullable Output<InstanceProfile> instanceProfile;
 
-    public Output<InstanceProfile> getInstanceProfile() {
+    public Output<InstanceProfile> instanceProfile() {
         return this.instanceProfile == null ? Codegen.empty() : this.instanceProfile;
     }
 
@@ -175,7 +175,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -186,7 +186,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -197,7 +197,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubeletExtraArgs")
       private final @Nullable Output<String> kubeletExtraArgs;
 
-    public Output<String> getKubeletExtraArgs() {
+    public Output<String> kubeletExtraArgs() {
         return this.kubeletExtraArgs == null ? Codegen.empty() : this.kubeletExtraArgs;
     }
 
@@ -208,7 +208,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -219,7 +219,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
@@ -230,7 +230,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
@@ -241,7 +241,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeAssociatePublicIpAddress")
       private final @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
 
-    public Output<Boolean> getNodeAssociatePublicIpAddress() {
+    public Output<Boolean> nodeAssociatePublicIpAddress() {
         return this.nodeAssociatePublicIpAddress == null ? Codegen.empty() : this.nodeAssociatePublicIpAddress;
     }
 
@@ -254,7 +254,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodePublicKey")
       private final @Nullable Output<String> nodePublicKey;
 
-    public Output<String> getNodePublicKey() {
+    public Output<String> nodePublicKey() {
         return this.nodePublicKey == null ? Codegen.empty() : this.nodePublicKey;
     }
 
@@ -265,7 +265,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeRootVolumeSize")
       private final @Nullable Output<Integer> nodeRootVolumeSize;
 
-    public Output<Integer> getNodeRootVolumeSize() {
+    public Output<Integer> nodeRootVolumeSize() {
         return this.nodeRootVolumeSize == null ? Codegen.empty() : this.nodeRootVolumeSize;
     }
 
@@ -283,7 +283,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSecurityGroup")
       private final @Nullable Output<SecurityGroup> nodeSecurityGroup;
 
-    public Output<SecurityGroup> getNodeSecurityGroup() {
+    public Output<SecurityGroup> nodeSecurityGroup() {
         return this.nodeSecurityGroup == null ? Codegen.empty() : this.nodeSecurityGroup;
     }
 
@@ -296,7 +296,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSubnetIds")
       private final @Nullable Output<List<String>> nodeSubnetIds;
 
-    public Output<List<String>> getNodeSubnetIds() {
+    public Output<List<String>> nodeSubnetIds() {
         return this.nodeSubnetIds == null ? Codegen.empty() : this.nodeSubnetIds;
     }
 
@@ -307,7 +307,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeUserData")
       private final @Nullable Output<String> nodeUserData;
 
-    public Output<String> getNodeUserData() {
+    public Output<String> nodeUserData() {
         return this.nodeUserData == null ? Codegen.empty() : this.nodeUserData;
     }
 
@@ -320,7 +320,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeUserDataOverride")
       private final @Nullable Output<String> nodeUserDataOverride;
 
-    public Output<String> getNodeUserDataOverride() {
+    public Output<String> nodeUserDataOverride() {
         return this.nodeUserDataOverride == null ? Codegen.empty() : this.nodeUserDataOverride;
     }
 
@@ -331,7 +331,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
+    public Output<String> spotPrice() {
         return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
@@ -342,7 +342,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taints")
       private final @Nullable Output<Map<String,TaintArgs>> taints;
 
-    public Output<Map<String,TaintArgs>> getTaints() {
+    public Output<Map<String,TaintArgs>> taints() {
         return this.taints == null ? Codegen.empty() : this.taints;
     }
 
@@ -353,7 +353,7 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
