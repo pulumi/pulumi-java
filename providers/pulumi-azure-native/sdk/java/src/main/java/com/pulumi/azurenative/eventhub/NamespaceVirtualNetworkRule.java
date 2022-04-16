@@ -42,7 +42,7 @@ public class NamespaceVirtualNetworkRule extends com.pulumi.resources.CustomReso
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class NamespaceVirtualNetworkRule extends com.pulumi.resources.CustomReso
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -70,7 +70,7 @@ public class NamespaceVirtualNetworkRule extends com.pulumi.resources.CustomReso
      * @return ARM ID of Virtual Network Subnet
      * 
      */
-    public Output</* @Nullable */ String> getVirtualNetworkSubnetId() {
+    public Output</* @Nullable */ String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 

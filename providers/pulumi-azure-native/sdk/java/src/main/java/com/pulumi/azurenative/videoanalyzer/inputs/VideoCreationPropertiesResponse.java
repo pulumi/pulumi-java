@@ -25,7 +25,7 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="retentionPeriod")
       private final @Nullable String retentionPeriod;
 
-    public Optional<String> getRetentionPeriod() {
+    public Optional<String> retentionPeriod() {
         return this.retentionPeriod == null ? Optional.empty() : Optional.ofNullable(this.retentionPeriod);
     }
 
@@ -47,7 +47,7 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="segmentLength")
       private final @Nullable String segmentLength;
 
-    public Optional<String> getSegmentLength() {
+    public Optional<String> segmentLength() {
         return this.segmentLength == null ? Optional.empty() : Optional.ofNullable(this.segmentLength);
     }
 
@@ -58,7 +58,7 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 

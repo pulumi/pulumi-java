@@ -19,7 +19,7 @@ public final class ListChannelWithKeysArgs extends com.pulumi.resources.InvokeAr
     @Import(name="channelName", required=true)
       private final String channelName;
 
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
 
@@ -30,7 +30,7 @@ public final class ListChannelWithKeysArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListChannelWithKeysArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

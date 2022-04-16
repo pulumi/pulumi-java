@@ -27,7 +27,7 @@ public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
+    public Output<Integer> maxRetries() {
         return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
@@ -38,7 +38,7 @@ public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

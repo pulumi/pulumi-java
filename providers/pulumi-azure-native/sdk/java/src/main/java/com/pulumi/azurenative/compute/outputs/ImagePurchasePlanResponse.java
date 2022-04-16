@@ -41,21 +41,21 @@ public final class ImagePurchasePlanResponse {
      * The plan ID.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The product ID.
      * 
     */
-    public Optional<String> getProduct() {
+    public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
      * The publisher ID.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
 

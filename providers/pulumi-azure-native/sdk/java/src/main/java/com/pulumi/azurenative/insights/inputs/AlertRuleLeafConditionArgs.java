@@ -28,7 +28,7 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
     @Import(name="containsAny")
       private final @Nullable Output<List<String>> containsAny;
 
-    public Output<List<String>> getContainsAny() {
+    public Output<List<String>> containsAny() {
         return this.containsAny == null ? Codegen.empty() : this.containsAny;
     }
 
@@ -39,7 +39,7 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
     @Import(name="equals")
       private final @Nullable Output<String> equals;
 
-    public Output<String> getEquals() {
+    public Output<String> equals_() {
         return this.equals == null ? Codegen.empty() : this.equals;
     }
 
@@ -51,7 +51,7 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -105,11 +105,11 @@ public final class AlertRuleLeafConditionArgs extends com.pulumi.resources.Resou
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
-        public Builder equals(@Nullable Output<String> equals) {
+        public Builder equals_(@Nullable Output<String> equals) {
             this.equals = equals;
             return this;
         }
-        public Builder equals(@Nullable String equals) {
+        public Builder equals_(@Nullable String equals) {
             this.equals = Codegen.ofNullable(equals);
             return this;
         }

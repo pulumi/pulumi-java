@@ -45,14 +45,14 @@ public final class AuthPlatformResponse {
      * If the path is relative, base will the site's root directory.
      * 
     */
-    public Optional<String> getConfigFilePath() {
+    public Optional<String> configFilePath() {
         return Optional.ofNullable(this.configFilePath);
     }
     /**
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
@@ -60,7 +60,7 @@ public final class AuthPlatformResponse {
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
     */
-    public Optional<String> getRuntimeVersion() {
+    public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
 

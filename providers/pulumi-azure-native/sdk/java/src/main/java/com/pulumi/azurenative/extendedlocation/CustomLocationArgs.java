@@ -27,7 +27,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authentication")
       private final @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
 
-    public Output<CustomLocationPropertiesAuthenticationArgs> getAuthentication() {
+    public Output<CustomLocationPropertiesAuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -38,7 +38,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterExtensionIds")
       private final @Nullable Output<List<String>> clusterExtensionIds;
 
-    public Output<List<String>> getClusterExtensionIds() {
+    public Output<List<String>> clusterExtensionIds() {
         return this.clusterExtensionIds == null ? Codegen.empty() : this.clusterExtensionIds;
     }
 
@@ -49,7 +49,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostResourceId")
       private final @Nullable Output<String> hostResourceId;
 
-    public Output<String> getHostResourceId() {
+    public Output<String> hostResourceId() {
         return this.hostResourceId == null ? Codegen.empty() : this.hostResourceId;
     }
 
@@ -71,7 +71,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostType")
       private final @Nullable Output<Either<String,HostType>> hostType;
 
-    public Output<Either<String,HostType>> getHostType() {
+    public Output<Either<String,HostType>> hostType() {
         return this.hostType == null ? Codegen.empty() : this.hostType;
     }
 
@@ -82,7 +82,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -93,7 +93,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -104,7 +104,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -115,7 +115,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,7 +126,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -137,7 +137,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

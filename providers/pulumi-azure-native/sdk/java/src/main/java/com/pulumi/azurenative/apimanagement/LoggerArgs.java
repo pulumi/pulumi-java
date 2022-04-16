@@ -27,7 +27,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<Map<String,String>> credentials;
 
-    public Output<Map<String,String>> getCredentials() {
+    public Output<Map<String,String>> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -38,7 +38,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isBuffered")
       private final @Nullable Output<Boolean> isBuffered;
 
-    public Output<Boolean> getIsBuffered() {
+    public Output<Boolean> isBuffered() {
         return this.isBuffered == null ? Codegen.empty() : this.isBuffered;
     }
 
@@ -60,7 +60,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggerId")
       private final @Nullable Output<String> loggerId;
 
-    public Output<String> getLoggerId() {
+    public Output<String> loggerId() {
         return this.loggerId == null ? Codegen.empty() : this.loggerId;
     }
 
@@ -71,7 +71,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggerType", required=true)
       private final Output<Either<String,LoggerType>> loggerType;
 
-    public Output<Either<String,LoggerType>> getLoggerType() {
+    public Output<Either<String,LoggerType>> loggerType() {
         return this.loggerType;
     }
 
@@ -82,7 +82,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -104,7 +104,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

@@ -28,7 +28,7 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
     @Import(name="fqdnTags")
       private final @Nullable Output<List<String>> fqdnTags;
 
-    public Output<List<String>> getFqdnTags() {
+    public Output<List<String>> fqdnTags() {
         return this.fqdnTags == null ? Codegen.empty() : this.fqdnTags;
     }
 
@@ -50,7 +50,7 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
     @Import(name="protocols")
       private final @Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols;
 
-    public Output<List<AzureFirewallApplicationRuleProtocolArgs>> getProtocols() {
+    public Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
@@ -72,7 +72,7 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
+    public Output<List<String>> sourceAddresses() {
         return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
@@ -83,7 +83,7 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
+    public Output<List<String>> sourceIpGroups() {
         return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 
@@ -94,7 +94,7 @@ public final class AzureFirewallApplicationRuleArgs extends com.pulumi.resources
     @Import(name="targetFqdns")
       private final @Nullable Output<List<String>> targetFqdns;
 
-    public Output<List<String>> getTargetFqdns() {
+    public Output<List<String>> targetFqdns() {
         return this.targetFqdns == null ? Codegen.empty() : this.targetFqdns;
     }
 

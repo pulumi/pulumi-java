@@ -19,7 +19,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="gatewayName", required=true)
       private final String gatewayName;
 
-    public String getGatewayName() {
+    public String gatewayName() {
         return this.gatewayName;
     }
 
@@ -30,7 +30,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="routeConfigName", required=true)
       private final String routeConfigName;
 
-    public String getRouteConfigName() {
+    public String routeConfigName() {
         return this.routeConfigName;
     }
 
@@ -52,7 +52,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

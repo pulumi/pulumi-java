@@ -26,7 +26,7 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateEndpoint {
      * The resource id of the private endpoint resource from Microsoft.Network provider.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

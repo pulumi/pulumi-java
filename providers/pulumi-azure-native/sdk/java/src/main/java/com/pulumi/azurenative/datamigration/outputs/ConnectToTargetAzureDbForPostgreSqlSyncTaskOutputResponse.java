@@ -55,35 +55,35 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse {
      * List of databases on target server
      * 
     */
-    public List<String> getDatabases() {
+    public List<String> databases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Target server brand version
      * 
     */
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Version of the target server
      * 
     */
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
     /**
      * Validation errors associated with the task
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

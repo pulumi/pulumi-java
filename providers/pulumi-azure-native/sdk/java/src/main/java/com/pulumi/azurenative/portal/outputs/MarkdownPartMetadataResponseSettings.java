@@ -26,7 +26,7 @@ public final class MarkdownPartMetadataResponseSettings {
      * The content of markdown part.
      * 
     */
-    public Optional<MarkdownPartMetadataResponseContent> getContent() {
+    public Optional<MarkdownPartMetadataResponseContent> content() {
         return Optional.ofNullable(this.content);
     }
 

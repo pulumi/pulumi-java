@@ -27,7 +27,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForInboundDecodedMessages", required=true)
       private final Output<Boolean> enableNRRForInboundDecodedMessages;
 
-    public Output<Boolean> getEnableNRRForInboundDecodedMessages() {
+    public Output<Boolean> enableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
     }
 
@@ -38,7 +38,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForInboundEncodedMessages", required=true)
       private final Output<Boolean> enableNRRForInboundEncodedMessages;
 
-    public Output<Boolean> getEnableNRRForInboundEncodedMessages() {
+    public Output<Boolean> enableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
     }
 
@@ -49,7 +49,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForInboundMDN", required=true)
       private final Output<Boolean> enableNRRForInboundMDN;
 
-    public Output<Boolean> getEnableNRRForInboundMDN() {
+    public Output<Boolean> enableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
     }
 
@@ -60,7 +60,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForOutboundDecodedMessages", required=true)
       private final Output<Boolean> enableNRRForOutboundDecodedMessages;
 
-    public Output<Boolean> getEnableNRRForOutboundDecodedMessages() {
+    public Output<Boolean> enableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
     }
 
@@ -71,7 +71,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForOutboundEncodedMessages", required=true)
       private final Output<Boolean> enableNRRForOutboundEncodedMessages;
 
-    public Output<Boolean> getEnableNRRForOutboundEncodedMessages() {
+    public Output<Boolean> enableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
     }
 
@@ -82,7 +82,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForOutboundMDN", required=true)
       private final Output<Boolean> enableNRRForOutboundMDN;
 
-    public Output<Boolean> getEnableNRRForOutboundMDN() {
+    public Output<Boolean> enableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
     }
 
@@ -93,7 +93,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="encryptionCertificateName")
       private final @Nullable Output<String> encryptionCertificateName;
 
-    public Output<String> getEncryptionCertificateName() {
+    public Output<String> encryptionCertificateName() {
         return this.encryptionCertificateName == null ? Codegen.empty() : this.encryptionCertificateName;
     }
 
@@ -104,7 +104,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="overrideGroupSigningCertificate", required=true)
       private final Output<Boolean> overrideGroupSigningCertificate;
 
-    public Output<Boolean> getOverrideGroupSigningCertificate() {
+    public Output<Boolean> overrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
     }
 
@@ -115,7 +115,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="sha2AlgorithmFormat")
       private final @Nullable Output<String> sha2AlgorithmFormat;
 
-    public Output<String> getSha2AlgorithmFormat() {
+    public Output<String> sha2AlgorithmFormat() {
         return this.sha2AlgorithmFormat == null ? Codegen.empty() : this.sha2AlgorithmFormat;
     }
 
@@ -126,7 +126,7 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="signingCertificateName")
       private final @Nullable Output<String> signingCertificateName;
 
-    public Output<String> getSigningCertificateName() {
+    public Output<String> signingCertificateName() {
         return this.signingCertificateName == null ? Codegen.empty() : this.signingCertificateName;
     }
 

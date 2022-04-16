@@ -25,7 +25,7 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="ip")
       private final @Nullable String ip;
 
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
@@ -36,7 +36,7 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="lastSeenDateTime")
       private final @Nullable String lastSeenDateTime;
 
-    public Optional<String> getLastSeenDateTime() {
+    public Optional<String> lastSeenDateTime() {
         return this.lastSeenDateTime == null ? Optional.empty() : Optional.ofNullable(this.lastSeenDateTime);
     }
 
@@ -47,7 +47,7 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -58,7 +58,7 @@ public final class HybridRunbookWorkerLegacyResponse extends com.pulumi.resource
     @Import(name="registrationTime")
       private final @Nullable String registrationTime;
 
-    public Optional<String> getRegistrationTime() {
+    public Optional<String> registrationTime() {
         return this.registrationTime == null ? Optional.empty() : Optional.ofNullable(this.registrationTime);
     }
 

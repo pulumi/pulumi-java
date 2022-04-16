@@ -35,14 +35,14 @@ public final class SkuResponse {
      * The name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The reference to plan.
      * 
     */
-    public Optional<ResourceReferenceResponse> getPlan() {
+    public Optional<ResourceReferenceResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
 

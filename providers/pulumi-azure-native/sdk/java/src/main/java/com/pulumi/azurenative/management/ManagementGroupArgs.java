@@ -23,7 +23,7 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="details")
       private final @Nullable Output<CreateManagementGroupDetailsArgs> details;
 
-    public Output<CreateManagementGroupDetailsArgs> getDetails() {
+    public Output<CreateManagementGroupDetailsArgs> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
@@ -34,7 +34,7 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -45,7 +45,7 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -56,7 +56,7 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

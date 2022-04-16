@@ -20,14 +20,14 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     @Import(name="authorizations")
       private final @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations;
 
-    public Output<List<LightHouseAuthorizationArgs>> getAuthorizations() {
+    public Output<List<LightHouseAuthorizationArgs>> authorizations() {
         return this.authorizations == null ? Codegen.empty() : this.authorizations;
     }
 
     @Import(name="managedByTenantId")
       private final @Nullable Output<String> managedByTenantId;
 
-    public Output<String> getManagedByTenantId() {
+    public Output<String> managedByTenantId() {
         return this.managedByTenantId == null ? Codegen.empty() : this.managedByTenantId;
     }
 

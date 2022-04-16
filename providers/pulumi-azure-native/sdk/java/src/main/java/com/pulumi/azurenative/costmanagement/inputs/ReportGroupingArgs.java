@@ -27,7 +27,7 @@ public final class ReportGroupingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ReportGroupingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<Either<String,ReportColumnType>> type;
 
-    public Output<Either<String,ReportColumnType>> getType() {
+    public Output<Either<String,ReportColumnType>> type() {
         return this.type;
     }
 

@@ -73,49 +73,49 @@ public final class UpdateConfigurationResponse {
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
      * 
     */
-    public List<String> getAzureVirtualMachines() {
+    public List<String> azureVirtualMachines() {
         return this.azureVirtualMachines == null ? List.of() : this.azureVirtualMachines;
     }
     /**
      * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
      * 
     */
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
     /**
      * Linux specific update configuration.
      * 
     */
-    public Optional<LinuxPropertiesResponse> getLinux() {
+    public Optional<LinuxPropertiesResponse> linux() {
         return Optional.ofNullable(this.linux);
     }
     /**
      * List of names of non-azure machines targeted by the software update configuration.
      * 
     */
-    public List<String> getNonAzureComputerNames() {
+    public List<String> nonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? List.of() : this.nonAzureComputerNames;
     }
     /**
      * operating system of target machines
      * 
     */
-    public String getOperatingSystem() {
+    public String operatingSystem() {
         return this.operatingSystem;
     }
     /**
      * Group targets for the software update configuration.
      * 
     */
-    public Optional<TargetPropertiesResponse> getTargets() {
+    public Optional<TargetPropertiesResponse> targets() {
         return Optional.ofNullable(this.targets);
     }
     /**
      * Windows specific update configuration.
      * 
     */
-    public Optional<WindowsPropertiesResponse> getWindows() {
+    public Optional<WindowsPropertiesResponse> windows() {
         return Optional.ofNullable(this.windows);
     }
 

@@ -27,7 +27,7 @@ public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="destinationPath", required=true)
       private final Output<String> destinationPath;
 
-    public Output<String> getDestinationPath() {
+    public Output<String> destinationPath() {
         return this.destinationPath;
     }
 
@@ -38,7 +38,7 @@ public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class VolumeReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 

@@ -30,7 +30,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="actionSet")
       private final @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
 
-    public Output<ApplicationGatewayRewriteRuleActionSetArgs> getActionSet() {
+    public Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet() {
         return this.actionSet == null ? Codegen.empty() : this.actionSet;
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="conditions")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
 
-    public Output<List<ApplicationGatewayRewriteRuleConditionArgs>> getConditions() {
+    public Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -52,7 +52,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
     @Import(name="ruleSequence")
       private final @Nullable Output<Integer> ruleSequence;
 
-    public Output<Integer> getRuleSequence() {
+    public Output<Integer> ruleSequence() {
         return this.ruleSequence == null ? Codegen.empty() : this.ruleSequence;
     }
 

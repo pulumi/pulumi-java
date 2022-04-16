@@ -28,7 +28,7 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
     @Import(name="linuxOsInfo")
       private final @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
 
-    public Output<LinuxOsInfoArgs> getLinuxOsInfo() {
+    public Output<LinuxOsInfoArgs> linuxOsInfo() {
         return this.linuxOsInfo == null ? Codegen.empty() : this.linuxOsInfo;
     }
 
@@ -39,7 +39,7 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
     @Import(name="sourceVmId")
       private final @Nullable Output<String> sourceVmId;
 
-    public Output<String> getSourceVmId() {
+    public Output<String> sourceVmId() {
         return this.sourceVmId == null ? Codegen.empty() : this.sourceVmId;
     }
 
@@ -50,7 +50,7 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
     @Import(name="windowsOsInfo")
       private final @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;
 
-    public Output<WindowsOsInfoArgs> getWindowsOsInfo() {
+    public Output<WindowsOsInfoArgs> windowsOsInfo() {
         return this.windowsOsInfo == null ? Codegen.empty() : this.windowsOsInfo;
     }
 

@@ -27,7 +27,7 @@ public final class LoginScopesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 

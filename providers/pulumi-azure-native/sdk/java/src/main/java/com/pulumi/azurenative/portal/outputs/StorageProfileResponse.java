@@ -42,21 +42,21 @@ public final class StorageProfileResponse {
      * Size of file share
      * 
     */
-    public Optional<Integer> getDiskSizeInGB() {
+    public Optional<Integer> diskSizeInGB() {
         return Optional.ofNullable(this.diskSizeInGB);
     }
     /**
      * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
      * 
     */
-    public Optional<String> getFileShareName() {
+    public Optional<String> fileShareName() {
         return Optional.ofNullable(this.fileShareName);
     }
     /**
      * Full resource ID of storage account.
      * 
     */
-    public Optional<String> getStorageAccountResourceId() {
+    public Optional<String> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
 

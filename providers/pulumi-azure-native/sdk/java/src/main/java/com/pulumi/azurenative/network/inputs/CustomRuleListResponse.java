@@ -26,7 +26,7 @@ public final class CustomRuleListResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rules")
       private final @Nullable List<CustomRuleResponse> rules;
 
-    public List<CustomRuleResponse> getRules() {
+    public List<CustomRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

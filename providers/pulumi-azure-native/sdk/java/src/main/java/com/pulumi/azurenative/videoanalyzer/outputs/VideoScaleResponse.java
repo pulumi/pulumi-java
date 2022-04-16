@@ -41,21 +41,21 @@ public final class VideoScaleResponse {
      * The desired output video height.
      * 
     */
-    public Optional<String> getHeight() {
+    public Optional<String> height() {
         return Optional.ofNullable(this.height);
     }
     /**
      * Describes the video scaling mode to be applied. Default mode is 'Pad'. If the mode is 'Pad' or 'Stretch' then both width and height must be specified. Else if the mode is 'PreserveAspectRatio' then only one of width or height need be provided.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The desired output video width.
      * 
     */
-    public Optional<String> getWidth() {
+    public Optional<String> width() {
         return Optional.ofNullable(this.width);
     }
 

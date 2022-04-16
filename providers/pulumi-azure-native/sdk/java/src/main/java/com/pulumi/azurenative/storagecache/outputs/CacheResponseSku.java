@@ -26,7 +26,7 @@ public final class CacheResponseSku {
      * SKU name for this Cache.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

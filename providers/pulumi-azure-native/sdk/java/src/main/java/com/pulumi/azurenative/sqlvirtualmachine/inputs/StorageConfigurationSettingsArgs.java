@@ -30,7 +30,7 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="diskConfigurationType")
       private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
-    public Output<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
+    public Output<Either<String,DiskConfigurationType>> diskConfigurationType() {
         return this.diskConfigurationType == null ? Codegen.empty() : this.diskConfigurationType;
     }
 
@@ -41,7 +41,7 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="sqlDataSettings")
       private final @Nullable Output<SQLStorageSettingsArgs> sqlDataSettings;
 
-    public Output<SQLStorageSettingsArgs> getSqlDataSettings() {
+    public Output<SQLStorageSettingsArgs> sqlDataSettings() {
         return this.sqlDataSettings == null ? Codegen.empty() : this.sqlDataSettings;
     }
 
@@ -52,7 +52,7 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="sqlLogSettings")
       private final @Nullable Output<SQLStorageSettingsArgs> sqlLogSettings;
 
-    public Output<SQLStorageSettingsArgs> getSqlLogSettings() {
+    public Output<SQLStorageSettingsArgs> sqlLogSettings() {
         return this.sqlLogSettings == null ? Codegen.empty() : this.sqlLogSettings;
     }
 
@@ -63,7 +63,7 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="sqlTempDbSettings")
       private final @Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings;
 
-    public Output<SQLStorageSettingsArgs> getSqlTempDbSettings() {
+    public Output<SQLStorageSettingsArgs> sqlTempDbSettings() {
         return this.sqlTempDbSettings == null ? Codegen.empty() : this.sqlTempDbSettings;
     }
 
@@ -74,7 +74,7 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="storageWorkloadType")
       private final @Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType;
 
-    public Output<Either<String,StorageWorkloadType>> getStorageWorkloadType() {
+    public Output<Either<String,StorageWorkloadType>> storageWorkloadType() {
         return this.storageWorkloadType == null ? Codegen.empty() : this.storageWorkloadType;
     }
 

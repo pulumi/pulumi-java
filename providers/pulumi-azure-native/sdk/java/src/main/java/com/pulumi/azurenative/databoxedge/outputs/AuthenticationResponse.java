@@ -26,7 +26,7 @@ public final class AuthenticationResponse {
      * Symmetric key for authentication.
      * 
     */
-    public Optional<SymmetricKeyResponse> getSymmetricKey() {
+    public Optional<SymmetricKeyResponse> symmetricKey() {
         return Optional.ofNullable(this.symmetricKey);
     }
 

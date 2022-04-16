@@ -94,28 +94,28 @@ public final class GetPolicyAssignmentArtifactResult {
      * Artifacts which need to be deployed before the specified artifact.
      * 
     */
-    public List<String> getDependsOn() {
+    public List<String> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Multi-line explain this resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -123,42 +123,42 @@ public final class GetPolicyAssignmentArtifactResult {
      * Expected value is 'policyAssignment'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Parameter values for the policy definition.
      * 
     */
-    public Map<String,ParameterValueResponse> getParameters() {
+    public Map<String,ParameterValueResponse> parameters() {
         return this.parameters;
     }
     /**
      * Azure resource ID of the policy definition.
      * 
     */
-    public String getPolicyDefinitionId() {
+    public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
      * Name of the resource group placeholder to which the policy will be assigned.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

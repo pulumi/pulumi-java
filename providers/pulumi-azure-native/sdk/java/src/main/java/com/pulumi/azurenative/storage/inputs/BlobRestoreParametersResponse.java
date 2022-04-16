@@ -25,7 +25,7 @@ public final class BlobRestoreParametersResponse extends com.pulumi.resources.In
     @Import(name="blobRanges", required=true)
       private final List<BlobRestoreRangeResponse> blobRanges;
 
-    public List<BlobRestoreRangeResponse> getBlobRanges() {
+    public List<BlobRestoreRangeResponse> blobRanges() {
         return this.blobRanges;
     }
 
@@ -36,7 +36,7 @@ public final class BlobRestoreParametersResponse extends com.pulumi.resources.In
     @Import(name="timeToRestore", required=true)
       private final String timeToRestore;
 
-    public String getTimeToRestore() {
+    public String timeToRestore() {
         return this.timeToRestore;
     }
 

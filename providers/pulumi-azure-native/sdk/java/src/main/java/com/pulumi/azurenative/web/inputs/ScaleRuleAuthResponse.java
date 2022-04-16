@@ -25,7 +25,7 @@ public final class ScaleRuleAuthResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secretRef")
       private final @Nullable String secretRef;
 
-    public Optional<String> getSecretRef() {
+    public Optional<String> secretRef() {
         return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
     }
 
@@ -36,7 +36,7 @@ public final class ScaleRuleAuthResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="triggerParameter")
       private final @Nullable String triggerParameter;
 
-    public Optional<String> getTriggerParameter() {
+    public Optional<String> triggerParameter() {
         return this.triggerParameter == null ? Optional.empty() : Optional.ofNullable(this.triggerParameter);
     }
 

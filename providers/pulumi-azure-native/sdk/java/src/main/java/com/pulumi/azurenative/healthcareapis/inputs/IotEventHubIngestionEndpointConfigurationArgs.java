@@ -26,7 +26,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
     @Import(name="consumerGroup")
       private final @Nullable Output<String> consumerGroup;
 
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup == null ? Codegen.empty() : this.consumerGroup;
     }
 
@@ -37,7 +37,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
@@ -48,7 +48,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
     @Import(name="fullyQualifiedEventHubNamespace")
       private final @Nullable Output<String> fullyQualifiedEventHubNamespace;
 
-    public Output<String> getFullyQualifiedEventHubNamespace() {
+    public Output<String> fullyQualifiedEventHubNamespace() {
         return this.fullyQualifiedEventHubNamespace == null ? Codegen.empty() : this.fullyQualifiedEventHubNamespace;
     }
 

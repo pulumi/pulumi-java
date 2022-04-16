@@ -50,28 +50,28 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
      * Permission group for validations
      * 
     */
-    public Optional<String> getCheckPermissionsGroup() {
+    public Optional<String> checkPermissionsGroup() {
         return Optional.ofNullable(this.checkPermissionsGroup);
     }
     /**
      * Flag for whether to collect agent jobs from source server.
      * 
     */
-    public Optional<Boolean> getCollectAgentJobs() {
+    public Optional<Boolean> collectAgentJobs() {
         return Optional.ofNullable(this.collectAgentJobs);
     }
     /**
      * Flag for whether to collect logins from source server.
      * 
     */
-    public Optional<Boolean> getCollectLogins() {
+    public Optional<Boolean> collectLogins() {
         return Optional.ofNullable(this.collectLogins);
     }
     /**
      * Connection information for Source SQL Server
      * 
     */
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 

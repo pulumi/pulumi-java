@@ -42,7 +42,7 @@ public class EventHubAuthorizationRule extends com.pulumi.resources.CustomResour
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class EventHubAuthorizationRule extends com.pulumi.resources.CustomResour
      * @return The rights associated with the rule.
      * 
      */
-    public Output<List<String>> getRights() {
+    public Output<List<String>> rights() {
         return this.rights;
     }
     /**
@@ -70,7 +70,7 @@ public class EventHubAuthorizationRule extends com.pulumi.resources.CustomResour
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

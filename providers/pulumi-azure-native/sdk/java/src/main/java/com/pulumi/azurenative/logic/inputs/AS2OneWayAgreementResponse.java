@@ -24,7 +24,7 @@ public final class AS2OneWayAgreementResponse extends com.pulumi.resources.Invok
     @Import(name="protocolSettings", required=true)
       private final AS2ProtocolSettingsResponse protocolSettings;
 
-    public AS2ProtocolSettingsResponse getProtocolSettings() {
+    public AS2ProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
     }
 
@@ -35,7 +35,7 @@ public final class AS2OneWayAgreementResponse extends com.pulumi.resources.Invok
     @Import(name="receiverBusinessIdentity", required=true)
       private final BusinessIdentityResponse receiverBusinessIdentity;
 
-    public BusinessIdentityResponse getReceiverBusinessIdentity() {
+    public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
 
@@ -46,7 +46,7 @@ public final class AS2OneWayAgreementResponse extends com.pulumi.resources.Invok
     @Import(name="senderBusinessIdentity", required=true)
       private final BusinessIdentityResponse senderBusinessIdentity;
 
-    public BusinessIdentityResponse getSenderBusinessIdentity() {
+    public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 

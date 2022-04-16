@@ -84,63 +84,63 @@ public final class RouteResponse {
      * The destination CIDR to which the route applies.
      * 
     */
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
     */
-    public Optional<Boolean> getHasBgpOverride() {
+    public Optional<Boolean> hasBgpOverride() {
         return Optional.ofNullable(this.hasBgpOverride);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
     */
-    public Optional<String> getNextHopIpAddress() {
+    public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
     /**
      * The type of Azure hop the packet should be sent to.
      * 
     */
-    public String getNextHopType() {
+    public String nextHopType() {
         return this.nextHopType;
     }
     /**
      * The provisioning state of the route resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

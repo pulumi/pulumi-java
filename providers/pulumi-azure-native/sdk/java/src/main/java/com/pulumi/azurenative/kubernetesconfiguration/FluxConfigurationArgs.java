@@ -29,7 +29,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -40,7 +40,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
 
-    public Output<String> getClusterResourceName() {
+    public Output<String> clusterResourceName() {
         return this.clusterResourceName;
     }
 
@@ -51,7 +51,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
 
-    public Output<String> getClusterRp() {
+    public Output<String> clusterRp() {
         return this.clusterRp;
     }
 
@@ -62,7 +62,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
-    public Output<Map<String,String>> getConfigurationProtectedSettings() {
+    public Output<Map<String,String>> configurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
     }
 
@@ -73,7 +73,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fluxConfigurationName")
       private final @Nullable Output<String> fluxConfigurationName;
 
-    public Output<String> getFluxConfigurationName() {
+    public Output<String> fluxConfigurationName() {
         return this.fluxConfigurationName == null ? Codegen.empty() : this.fluxConfigurationName;
     }
 
@@ -84,7 +84,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gitRepository")
       private final @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
 
-    public Output<GitRepositoryDefinitionArgs> getGitRepository() {
+    public Output<GitRepositoryDefinitionArgs> gitRepository() {
         return this.gitRepository == null ? Codegen.empty() : this.gitRepository;
     }
 
@@ -95,7 +95,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kustomizations")
       private final @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
 
-    public Output<Map<String,KustomizationDefinitionArgs>> getKustomizations() {
+    public Output<Map<String,KustomizationDefinitionArgs>> kustomizations() {
         return this.kustomizations == null ? Codegen.empty() : this.kustomizations;
     }
 
@@ -106,7 +106,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -117,7 +117,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,7 +128,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scope")
       private final @Nullable Output<Either<String,ScopeType>> scope;
 
-    public Output<Either<String,ScopeType>> getScope() {
+    public Output<Either<String,ScopeType>> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -139,7 +139,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceKind")
       private final @Nullable Output<Either<String,SourceKindType>> sourceKind;
 
-    public Output<Either<String,SourceKindType>> getSourceKind() {
+    public Output<Either<String,SourceKindType>> sourceKind() {
         return this.sourceKind == null ? Codegen.empty() : this.sourceKind;
     }
 
@@ -150,7 +150,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;
 
-    public Output<Boolean> getSuspend() {
+    public Output<Boolean> suspend() {
         return this.suspend == null ? Codegen.empty() : this.suspend;
     }
 

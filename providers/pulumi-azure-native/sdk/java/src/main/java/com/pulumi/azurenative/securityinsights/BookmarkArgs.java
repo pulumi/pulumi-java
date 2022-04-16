@@ -25,7 +25,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bookmarkId")
       private final @Nullable Output<String> bookmarkId;
 
-    public Output<String> getBookmarkId() {
+    public Output<String> bookmarkId() {
         return this.bookmarkId == null ? Codegen.empty() : this.bookmarkId;
     }
 
@@ -36,7 +36,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="created")
       private final @Nullable Output<String> created;
 
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created == null ? Codegen.empty() : this.created;
     }
 
@@ -47,7 +47,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<UserInfoArgs> createdBy;
 
-    public Output<UserInfoArgs> getCreatedBy() {
+    public Output<UserInfoArgs> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
@@ -58,7 +58,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -69,7 +69,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTime")
       private final @Nullable Output<String> eventTime;
 
-    public Output<String> getEventTime() {
+    public Output<String> eventTime() {
         return this.eventTime == null ? Codegen.empty() : this.eventTime;
     }
 
@@ -80,7 +80,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incidentInfo")
       private final @Nullable Output<IncidentInfoArgs> incidentInfo;
 
-    public Output<IncidentInfoArgs> getIncidentInfo() {
+    public Output<IncidentInfoArgs> incidentInfo() {
         return this.incidentInfo == null ? Codegen.empty() : this.incidentInfo;
     }
 
@@ -91,7 +91,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -102,7 +102,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
+    public Output<String> notes() {
         return this.notes == null ? Codegen.empty() : this.notes;
     }
 
@@ -113,7 +113,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -124,7 +124,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryEndTime")
       private final @Nullable Output<String> queryEndTime;
 
-    public Output<String> getQueryEndTime() {
+    public Output<String> queryEndTime() {
         return this.queryEndTime == null ? Codegen.empty() : this.queryEndTime;
     }
 
@@ -135,7 +135,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryResult")
       private final @Nullable Output<String> queryResult;
 
-    public Output<String> getQueryResult() {
+    public Output<String> queryResult() {
         return this.queryResult == null ? Codegen.empty() : this.queryResult;
     }
 
@@ -146,7 +146,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryStartTime")
       private final @Nullable Output<String> queryStartTime;
 
-    public Output<String> getQueryStartTime() {
+    public Output<String> queryStartTime() {
         return this.queryStartTime == null ? Codegen.empty() : this.queryStartTime;
     }
 
@@ -157,7 +157,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -168,7 +168,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updated")
       private final @Nullable Output<String> updated;
 
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated == null ? Codegen.empty() : this.updated;
     }
 
@@ -179,7 +179,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updatedBy")
       private final @Nullable Output<UserInfoArgs> updatedBy;
 
-    public Output<UserInfoArgs> getUpdatedBy() {
+    public Output<UserInfoArgs> updatedBy() {
         return this.updatedBy == null ? Codegen.empty() : this.updatedBy;
     }
 
@@ -190,7 +190,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

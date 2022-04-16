@@ -198,171 +198,171 @@ public final class GetMachineResult {
      * Specifies the AD fully qualified display name.
      * 
     */
-    public String getAdFqdn() {
+    public String adFqdn() {
         return this.adFqdn;
     }
     /**
      * The hybrid machine agent full version.
      * 
     */
-    public String getAgentVersion() {
+    public String agentVersion() {
         return this.agentVersion;
     }
     /**
      * Public Key that the client provides to be used during initial resource onboarding
      * 
     */
-    public Optional<String> getClientPublicKey() {
+    public Optional<String> clientPublicKey() {
         return Optional.ofNullable(this.clientPublicKey);
     }
     /**
      * Specifies the hybrid machine display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Specifies the DNS fully qualified display name.
      * 
     */
-    public String getDnsFqdn() {
+    public String dnsFqdn() {
         return this.dnsFqdn;
     }
     /**
      * Specifies the Windows domain name.
      * 
     */
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
     /**
      * Details about the error state.
      * 
     */
-    public List<ErrorDetailResponse> getErrorDetails() {
+    public List<ErrorDetailResponse> errorDetails() {
         return this.errorDetails;
     }
     /**
      * Machine Extensions information
      * 
     */
-    public List<MachineExtensionInstanceViewResponse> getExtensions() {
+    public List<MachineExtensionInstanceViewResponse> extensions() {
         return this.extensions;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<MachineResponseIdentity> getIdentity() {
+    public Optional<MachineResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The time of the last status change.
      * 
     */
-    public String getLastStatusChange() {
+    public String lastStatusChange() {
         return this.lastStatusChange;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Metadata pertaining to the geographic location of the resource.
      * 
     */
-    public Optional<LocationDataResponse> getLocationData() {
+    public Optional<LocationDataResponse> locationData() {
         return Optional.ofNullable(this.locationData);
     }
     /**
      * Specifies the hybrid machine FQDN.
      * 
     */
-    public String getMachineFqdn() {
+    public String machineFqdn() {
         return this.machineFqdn;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Operating System running on the hybrid machine.
      * 
     */
-    public String getOsName() {
+    public String osName() {
         return this.osName;
     }
     /**
      * Specifies the operating system settings for the hybrid machine.
      * 
     */
-    public Optional<MachinePropertiesResponseOsProfile> getOsProfile() {
+    public Optional<MachinePropertiesResponseOsProfile> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * Specifies the Operating System product SKU.
      * 
     */
-    public String getOsSku() {
+    public String osSku() {
         return this.osSku;
     }
     /**
      * The version of Operating System running on the hybrid machine.
      * 
     */
-    public String getOsVersion() {
+    public String osVersion() {
         return this.osVersion;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the hybrid machine agent.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Specifies the hybrid machine unique ID.
      * 
     */
-    public Optional<String> getVmId() {
+    public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * Specifies the Arc Machine's unique SMBIOS ID
      * 
     */
-    public String getVmUuid() {
+    public String vmUuid() {
         return this.vmUuid;
     }
 

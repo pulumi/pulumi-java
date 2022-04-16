@@ -28,7 +28,7 @@ public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exec")
       private final @Nullable Output<ContainerExecArgs> exec;
 
-    public Output<ContainerExecArgs> getExec() {
+    public Output<ContainerExecArgs> exec() {
         return this.exec == null ? Codegen.empty() : this.exec;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="httpGet")
       private final @Nullable Output<ContainerHttpGetArgs> httpGet;
 
-    public Output<ContainerHttpGetArgs> getHttpGet() {
+    public Output<ContainerHttpGetArgs> httpGet() {
         return this.httpGet == null ? Codegen.empty() : this.httpGet;
     }
 
@@ -61,7 +61,7 @@ public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="initialDelaySeconds")
       private final @Nullable Output<Integer> initialDelaySeconds;
 
-    public Output<Integer> getInitialDelaySeconds() {
+    public Output<Integer> initialDelaySeconds() {
         return this.initialDelaySeconds == null ? Codegen.empty() : this.initialDelaySeconds;
     }
 
@@ -72,7 +72,7 @@ public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="periodSeconds")
       private final @Nullable Output<Integer> periodSeconds;
 
-    public Output<Integer> getPeriodSeconds() {
+    public Output<Integer> periodSeconds() {
         return this.periodSeconds == null ? Codegen.empty() : this.periodSeconds;
     }
 
@@ -83,7 +83,7 @@ public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> getSuccessThreshold() {
+    public Output<Integer> successThreshold() {
         return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
@@ -94,7 +94,7 @@ public final class ContainerProbeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 

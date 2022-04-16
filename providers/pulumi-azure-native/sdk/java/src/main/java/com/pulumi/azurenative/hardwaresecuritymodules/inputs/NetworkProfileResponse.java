@@ -23,7 +23,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="networkInterfaces")
       private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="subnet")
       private final @Nullable ApiEntityReferenceResponse subnet;
 
-    public Optional<ApiEntityReferenceResponse> getSubnet() {
+    public Optional<ApiEntityReferenceResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

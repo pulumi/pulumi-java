@@ -29,7 +29,7 @@ public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
@@ -40,7 +40,7 @@ public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.
     @Import(name="osType", required=true)
       private final Output<Either<String,CustomImageOsType>> osType;
 
-    public Output<Either<String,CustomImageOsType>> getOsType() {
+    public Output<Either<String,CustomImageOsType>> osType() {
         return this.osType;
     }
 
@@ -51,7 +51,7 @@ public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.
     @Import(name="sysPrep")
       private final @Nullable Output<Boolean> sysPrep;
 
-    public Output<Boolean> getSysPrep() {
+    public Output<Boolean> sysPrep() {
         return this.sysPrep == null ? Codegen.empty() : this.sysPrep;
     }
 

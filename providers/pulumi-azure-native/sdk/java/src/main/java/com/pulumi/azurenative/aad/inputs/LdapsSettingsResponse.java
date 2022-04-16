@@ -25,7 +25,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="certificateNotAfter", required=true)
       private final String certificateNotAfter;
 
-    public String getCertificateNotAfter() {
+    public String certificateNotAfter() {
         return this.certificateNotAfter;
     }
 
@@ -36,7 +36,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="certificateThumbprint", required=true)
       private final String certificateThumbprint;
 
-    public String getCertificateThumbprint() {
+    public String certificateThumbprint() {
         return this.certificateThumbprint;
     }
 
@@ -47,7 +47,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="externalAccess")
       private final @Nullable String externalAccess;
 
-    public Optional<String> getExternalAccess() {
+    public Optional<String> externalAccess() {
         return this.externalAccess == null ? Optional.empty() : Optional.ofNullable(this.externalAccess);
     }
 
@@ -58,7 +58,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ldaps")
       private final @Nullable String ldaps;
 
-    public Optional<String> getLdaps() {
+    public Optional<String> ldaps() {
         return this.ldaps == null ? Optional.empty() : Optional.ofNullable(this.ldaps);
     }
 
@@ -69,7 +69,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="pfxCertificate")
       private final @Nullable String pfxCertificate;
 
-    public Optional<String> getPfxCertificate() {
+    public Optional<String> pfxCertificate() {
         return this.pfxCertificate == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificate);
     }
 
@@ -80,7 +80,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="pfxCertificatePassword")
       private final @Nullable String pfxCertificatePassword;
 
-    public Optional<String> getPfxCertificatePassword() {
+    public Optional<String> pfxCertificatePassword() {
         return this.pfxCertificatePassword == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificatePassword);
     }
 
@@ -91,7 +91,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicCertificate", required=true)
       private final String publicCertificate;
 
-    public String getPublicCertificate() {
+    public String publicCertificate() {
         return this.publicCertificate;
     }
 

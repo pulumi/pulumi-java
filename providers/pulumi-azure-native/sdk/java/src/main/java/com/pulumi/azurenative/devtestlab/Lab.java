@@ -45,7 +45,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The properties of any lab announcement associated with this lab
      * 
      */
-    public Output</* @Nullable */ LabAnnouncementPropertiesResponse> getAnnouncement() {
+    public Output</* @Nullable */ LabAnnouncementPropertiesResponse> announcement() {
         return this.announcement;
     }
     /**
@@ -59,7 +59,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The lab's artifact storage account.
      * 
      */
-    public Output<String> getArtifactsStorageAccount() {
+    public Output<String> artifactsStorageAccount() {
         return this.artifactsStorageAccount;
     }
     /**
@@ -73,7 +73,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The creation date of the lab.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -87,7 +87,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The lab's default premium storage account.
      * 
      */
-    public Output<String> getDefaultPremiumStorageAccount() {
+    public Output<String> defaultPremiumStorageAccount() {
         return this.defaultPremiumStorageAccount;
     }
     /**
@@ -101,7 +101,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The lab's default storage account.
      * 
      */
-    public Output<String> getDefaultStorageAccount() {
+    public Output<String> defaultStorageAccount() {
         return this.defaultStorageAccount;
     }
     /**
@@ -115,7 +115,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The access rights to be granted to the user when provisioning an environment
      * 
      */
-    public Output</* @Nullable */ String> getEnvironmentPermission() {
+    public Output</* @Nullable */ String> environmentPermission() {
         return this.environmentPermission;
     }
     /**
@@ -129,7 +129,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return Extended properties of the lab used for experimental features
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getExtendedProperties() {
+    public Output</* @Nullable */ Map<String,String>> extendedProperties() {
         return this.extendedProperties;
     }
     /**
@@ -143,7 +143,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
      * 
      */
-    public Output</* @Nullable */ String> getLabStorageType() {
+    public Output</* @Nullable */ String> labStorageType() {
         return this.labStorageType;
     }
     /**
@@ -157,7 +157,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The load balancer used to for lab VMs that use shared IP address.
      * 
      */
-    public Output<String> getLoadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
     /**
@@ -171,7 +171,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -185,7 +185,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    public Output</* @Nullable */ List<String>> getMandatoryArtifactsResourceIdsLinux() {
+    public Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsLinux() {
         return this.mandatoryArtifactsResourceIdsLinux;
     }
     /**
@@ -199,7 +199,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    public Output</* @Nullable */ List<String>> getMandatoryArtifactsResourceIdsWindows() {
+    public Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsWindows() {
         return this.mandatoryArtifactsResourceIdsWindows;
     }
     /**
@@ -213,7 +213,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -227,7 +227,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
      * 
      */
-    public Output<String> getNetworkSecurityGroupId() {
+    public Output<String> networkSecurityGroupId() {
         return this.networkSecurityGroupId;
     }
     /**
@@ -241,7 +241,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The lab's premium data disk storage account.
      * 
      */
-    public Output<String> getPremiumDataDiskStorageAccount() {
+    public Output<String> premiumDataDiskStorageAccount() {
         return this.premiumDataDiskStorageAccount;
     }
     /**
@@ -259,7 +259,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * When its value is 'Disabled', only creation of standard data disks is allowed.
      * 
      */
-    public Output</* @Nullable */ String> getPremiumDataDisks() {
+    public Output</* @Nullable */ String> premiumDataDisks() {
         return this.premiumDataDisks;
     }
     /**
@@ -273,7 +273,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -287,7 +287,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The public IP address for the lab's load balancer.
      * 
      */
-    public Output<String> getPublicIpId() {
+    public Output<String> publicIpId() {
         return this.publicIpId;
     }
     /**
@@ -301,7 +301,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The properties of any lab support message associated with this lab
      * 
      */
-    public Output</* @Nullable */ LabSupportPropertiesResponse> getSupport() {
+    public Output</* @Nullable */ LabSupportPropertiesResponse> support() {
         return this.support;
     }
     /**
@@ -315,7 +315,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -329,7 +329,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -343,7 +343,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -357,7 +357,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The lab's Key vault.
      * 
      */
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
     /**
@@ -371,7 +371,7 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
      * 
      */
-    public Output<String> getVmCreationResourceGroup() {
+    public Output<String> vmCreationResourceGroup() {
         return this.vmCreationResourceGroup;
     }
 

@@ -29,7 +29,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -40,7 +40,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
     @Import(name="providerSpecificInput")
       private final @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
 
-    public Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> getProviderSpecificInput() {
+    public Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput() {
         return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
     }
 
@@ -51,7 +51,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
     @Import(name="targetProtectionContainerId")
       private final @Nullable Output<String> targetProtectionContainerId;
 
-    public Output<String> getTargetProtectionContainerId() {
+    public Output<String> targetProtectionContainerId() {
         return this.targetProtectionContainerId == null ? Codegen.empty() : this.targetProtectionContainerId;
     }
 

@@ -35,7 +35,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="accountName")
       private final @Nullable Output<Object> accountName;
 
-    public Output<Object> getAccountName() {
+    public Output<Object> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -46,7 +46,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -57,7 +57,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
-    public Output<Object> getAzureCloudType() {
+    public Output<Object> azureCloudType() {
         return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
     }
 
@@ -68,7 +68,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -79,7 +79,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -90,7 +90,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="dataLakeStoreUri", required=true)
       private final Output<Object> dataLakeStoreUri;
 
-    public Output<Object> getDataLakeStoreUri() {
+    public Output<Object> dataLakeStoreUri() {
         return this.dataLakeStoreUri;
     }
 
@@ -101,7 +101,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -112,7 +112,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -123,7 +123,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -134,7 +134,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="resourceGroupName")
       private final @Nullable Output<Object> resourceGroupName;
 
-    public Output<Object> getResourceGroupName() {
+    public Output<Object> resourceGroupName() {
         return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
@@ -145,7 +145,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
@@ -156,7 +156,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
@@ -167,7 +167,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="subscriptionId")
       private final @Nullable Output<Object> subscriptionId;
 
-    public Output<Object> getSubscriptionId() {
+    public Output<Object> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
@@ -178,7 +178,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
-    public Output<Object> getTenant() {
+    public Output<Object> tenant() {
         return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
@@ -190,7 +190,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends com.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

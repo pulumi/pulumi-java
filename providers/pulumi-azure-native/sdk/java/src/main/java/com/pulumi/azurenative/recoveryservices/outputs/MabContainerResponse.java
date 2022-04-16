@@ -113,35 +113,35 @@ public final class MabContainerResponse {
      * Agent version of this container.
      * 
     */
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * Type of backup management for the container.
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Can the container be registered one more time.
      * 
     */
-    public Optional<Boolean> getCanReRegister() {
+    public Optional<Boolean> canReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
     /**
      * Health state of mab container.
      * 
     */
-    public Optional<String> getContainerHealthState() {
+    public Optional<String> containerHealthState() {
         return Optional.ofNullable(this.containerHealthState);
     }
     /**
      * ContainerID represents the container.
      * 
     */
-    public Optional<Double> getContainerId() {
+    public Optional<Double> containerId() {
         return Optional.ofNullable(this.containerId);
     }
     /**
@@ -152,49 +152,49 @@ public final class MabContainerResponse {
      * Expected value is 'Windows'.
      * 
     */
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
     /**
      * Additional information for this container
      * 
     */
-    public Optional<MabContainerExtendedInfoResponse> getExtendedInfo() {
+    public Optional<MabContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
     */
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Health details on this mab container.
      * 
     */
-    public List<MABContainerHealthDetailsResponse> getMabContainerHealthDetails() {
+    public List<MABContainerHealthDetailsResponse> mabContainerHealthDetails() {
         return this.mabContainerHealthDetails == null ? List.of() : this.mabContainerHealthDetails;
     }
     /**
      * Number of items backed up in this container.
      * 
     */
-    public Optional<Double> getProtectedItemCount() {
+    public Optional<Double> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
     */
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
 

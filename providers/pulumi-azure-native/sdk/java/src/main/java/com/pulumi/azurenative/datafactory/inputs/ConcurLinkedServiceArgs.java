@@ -34,7 +34,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="clientId", required=true)
       private final Output<Object> clientId;
 
-    public Output<Object> getClientId() {
+    public Output<Object> clientId() {
         return this.clientId;
     }
 
@@ -56,7 +56,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -67,7 +67,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
-    public Output<Object> getConnectionProperties() {
+    public Output<Object> connectionProperties() {
         return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
@@ -78,7 +78,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -89,7 +89,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -100,7 +100,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -111,7 +111,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -123,7 +123,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -134,7 +134,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Output<Object> getUseEncryptedEndpoints() {
+    public Output<Object> useEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
     }
 
@@ -145,7 +145,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
 
-    public Output<Object> getUseHostVerification() {
+    public Output<Object> useHostVerification() {
         return this.useHostVerification == null ? Codegen.empty() : this.useHostVerification;
     }
 
@@ -156,7 +156,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;
 
-    public Output<Object> getUsePeerVerification() {
+    public Output<Object> usePeerVerification() {
         return this.usePeerVerification == null ? Codegen.empty() : this.usePeerVerification;
     }
 
@@ -167,7 +167,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
     @Import(name="username", required=true)
       private final Output<Object> username;
 
-    public Output<Object> getUsername() {
+    public Output<Object> username() {
         return this.username;
     }
 

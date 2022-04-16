@@ -31,21 +31,21 @@ public final class JitSchedulingPolicyResponse {
         this.type = type;
     }
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * The start time of the request.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The type of JIT schedule.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

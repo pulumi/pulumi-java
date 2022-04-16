@@ -51,21 +51,21 @@ public final class ManagedIdentityResponse {
      * The principal id of the managed identity. This property will only be provided for a system assigned identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The type of managed identity for the resource.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
@@ -73,7 +73,7 @@ public final class ManagedIdentityResponse {
      * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
     */
-    public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
+    public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

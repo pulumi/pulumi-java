@@ -27,7 +27,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="created", required=true)
       private final Double created;
 
-    public Double getCreated() {
+    public Double created() {
         return this.created;
     }
 
@@ -38,7 +38,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -49,7 +49,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="expires")
       private final @Nullable Double expires;
 
-    public Optional<Double> getExpires() {
+    public Optional<Double> expires() {
         return this.expires == null ? Optional.empty() : Optional.ofNullable(this.expires);
     }
 
@@ -60,7 +60,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="notBefore")
       private final @Nullable Double notBefore;
 
-    public Optional<Double> getNotBefore() {
+    public Optional<Double> notBefore() {
         return this.notBefore == null ? Optional.empty() : Optional.ofNullable(this.notBefore);
     }
 
@@ -71,7 +71,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="recoveryLevel", required=true)
       private final String recoveryLevel;
 
-    public String getRecoveryLevel() {
+    public String recoveryLevel() {
         return this.recoveryLevel;
     }
 
@@ -82,7 +82,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="updated", required=true)
       private final Double updated;
 
-    public Double getUpdated() {
+    public Double updated() {
         return this.updated;
     }
 

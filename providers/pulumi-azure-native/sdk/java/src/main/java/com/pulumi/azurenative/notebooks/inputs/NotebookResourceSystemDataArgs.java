@@ -22,42 +22,42 @@ public final class NotebookResourceSystemDataArgs extends com.pulumi.resources.R
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     @Import(name="createdByType")
       private final @Nullable Output<String> createdByType;
 
-    public Output<String> getCreatedByType() {
+    public Output<String> createdByType() {
         return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
     @Import(name="lastModifiedByType")
       private final @Nullable Output<String> lastModifiedByType;
 
-    public Output<String> getLastModifiedByType() {
+    public Output<String> lastModifiedByType() {
         return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 

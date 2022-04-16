@@ -27,7 +27,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
     @Import(name="input")
       private final @Nullable Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input;
 
-    public Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> getInput() {
+    public Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

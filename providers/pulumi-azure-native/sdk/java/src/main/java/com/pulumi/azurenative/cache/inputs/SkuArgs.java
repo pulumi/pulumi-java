@@ -29,7 +29,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
 
@@ -40,7 +40,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
       private final Output<Either<String,SkuFamily>> family;
 
-    public Output<Either<String,SkuFamily>> getFamily() {
+    public Output<Either<String,SkuFamily>> family() {
         return this.family;
     }
 
@@ -51,7 +51,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
 
-    public Output<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 

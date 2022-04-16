@@ -25,7 +25,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="accessKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
 
-    public Output<AsymmetricEncryptedSecretArgs> getAccessKey() {
+    public Output<AsymmetricEncryptedSecretArgs> accessKey() {
         return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
@@ -36,7 +36,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="endPoint", required=true)
       private final Output<String> endPoint;
 
-    public Output<String> getEndPoint() {
+    public Output<String> endPoint() {
         return this.endPoint;
     }
 
@@ -47,7 +47,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -58,7 +58,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -69,7 +69,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="sslStatus", required=true)
       private final Output<SslStatus> sslStatus;
 
-    public Output<SslStatus> getSslStatus() {
+    public Output<SslStatus> sslStatus() {
         return this.sslStatus;
     }
 
@@ -91,7 +91,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="storageAccountCredentialName")
       private final @Nullable Output<String> storageAccountCredentialName;
 
-    public Output<String> getStorageAccountCredentialName() {
+    public Output<String> storageAccountCredentialName() {
         return this.storageAccountCredentialName == null ? Codegen.empty() : this.storageAccountCredentialName;
     }
 

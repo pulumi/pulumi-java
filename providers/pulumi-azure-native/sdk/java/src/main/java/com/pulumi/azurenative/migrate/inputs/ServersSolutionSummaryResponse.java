@@ -26,7 +26,7 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="assessedCount")
       private final @Nullable Integer assessedCount;
 
-    public Optional<Integer> getAssessedCount() {
+    public Optional<Integer> assessedCount() {
         return this.assessedCount == null ? Optional.empty() : Optional.ofNullable(this.assessedCount);
     }
 
@@ -37,7 +37,7 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="discoveredCount")
       private final @Nullable Integer discoveredCount;
 
-    public Optional<Integer> getDiscoveredCount() {
+    public Optional<Integer> discoveredCount() {
         return this.discoveredCount == null ? Optional.empty() : Optional.ofNullable(this.discoveredCount);
     }
 
@@ -49,7 +49,7 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -60,7 +60,7 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="migratedCount")
       private final @Nullable Integer migratedCount;
 
-    public Optional<Integer> getMigratedCount() {
+    public Optional<Integer> migratedCount() {
         return this.migratedCount == null ? Optional.empty() : Optional.ofNullable(this.migratedCount);
     }
 
@@ -71,7 +71,7 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="replicatingCount")
       private final @Nullable Integer replicatingCount;
 
-    public Optional<Integer> getReplicatingCount() {
+    public Optional<Integer> replicatingCount() {
         return this.replicatingCount == null ? Optional.empty() : Optional.ofNullable(this.replicatingCount);
     }
 
@@ -82,7 +82,7 @@ public final class ServersSolutionSummaryResponse extends com.pulumi.resources.I
     @Import(name="testMigratedCount")
       private final @Nullable Integer testMigratedCount;
 
-    public Optional<Integer> getTestMigratedCount() {
+    public Optional<Integer> testMigratedCount() {
         return this.testMigratedCount == null ? Optional.empty() : Optional.ofNullable(this.testMigratedCount);
     }
 

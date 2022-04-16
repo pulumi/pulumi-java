@@ -30,7 +30,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="operator")
       private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
 
-    public Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> getOperator() {
+    public Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -41,7 +41,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="propertyName")
       private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
 
-    public Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> getPropertyName() {
+    public Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName() {
         return this.propertyName == null ? Codegen.empty() : this.propertyName;
     }
 
@@ -52,7 +52,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="propertyValues")
       private final @Nullable Output<List<String>> propertyValues;
 
-    public Output<List<String>> getPropertyValues() {
+    public Output<List<String>> propertyValues() {
         return this.propertyValues == null ? Codegen.empty() : this.propertyValues;
     }
 

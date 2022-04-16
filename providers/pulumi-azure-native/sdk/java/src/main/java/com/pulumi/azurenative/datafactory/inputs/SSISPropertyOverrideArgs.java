@@ -27,7 +27,7 @@ public final class SSISPropertyOverrideArgs extends com.pulumi.resources.Resourc
     @Import(name="isSensitive")
       private final @Nullable Output<Boolean> isSensitive;
 
-    public Output<Boolean> getIsSensitive() {
+    public Output<Boolean> isSensitive() {
         return this.isSensitive == null ? Codegen.empty() : this.isSensitive;
     }
 
@@ -38,7 +38,7 @@ public final class SSISPropertyOverrideArgs extends com.pulumi.resources.Resourc
     @Import(name="value", required=true)
       private final Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value;
     }
 

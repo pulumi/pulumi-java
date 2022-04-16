@@ -27,7 +27,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -38,7 +38,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
     @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> getResourceTypes() {
+    public Output<List<String>> resourceTypes() {
         return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
@@ -49,7 +49,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
     @Import(name="solutions")
       private final @Nullable Output<List<String>> solutions;
 
-    public Output<List<String>> getSolutions() {
+    public Output<List<String>> solutions() {
         return this.solutions == null ? Codegen.empty() : this.solutions;
     }
 

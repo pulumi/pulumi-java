@@ -27,7 +27,7 @@ public final class OrcFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
 
-    public Output<Object> getDeserializer() {
+    public Output<Object> deserializer() {
         return this.deserializer == null ? Codegen.empty() : this.deserializer;
     }
 
@@ -38,7 +38,7 @@ public final class OrcFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
 
-    public Output<Object> getSerializer() {
+    public Output<Object> serializer() {
         return this.serializer == null ? Codegen.empty() : this.serializer;
     }
 
@@ -50,7 +50,7 @@ public final class OrcFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

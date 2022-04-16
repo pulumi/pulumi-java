@@ -27,7 +27,7 @@ public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.Reso
     @Import(name="compute", required=true)
       private final Output<KubernetesRoleComputeArgs> compute;
 
-    public Output<KubernetesRoleComputeArgs> getCompute() {
+    public Output<KubernetesRoleComputeArgs> compute() {
         return this.compute;
     }
 
@@ -38,7 +38,7 @@ public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.Reso
     @Import(name="storage")
       private final @Nullable Output<KubernetesRoleStorageArgs> storage;
 
-    public Output<KubernetesRoleStorageArgs> getStorage() {
+    public Output<KubernetesRoleStorageArgs> storage() {
         return this.storage == null ? Codegen.empty() : this.storage;
     }
 

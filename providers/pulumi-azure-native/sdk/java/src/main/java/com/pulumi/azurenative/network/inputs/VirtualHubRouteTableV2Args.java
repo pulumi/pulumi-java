@@ -28,7 +28,7 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="attachedConnections")
       private final @Nullable Output<List<String>> attachedConnections;
 
-    public Output<List<String>> getAttachedConnections() {
+    public Output<List<String>> attachedConnections() {
         return this.attachedConnections == null ? Codegen.empty() : this.attachedConnections;
     }
 
@@ -39,7 +39,7 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="routes")
       private final @Nullable Output<List<VirtualHubRouteV2Args>> routes;
 
-    public Output<List<VirtualHubRouteV2Args>> getRoutes() {
+    public Output<List<VirtualHubRouteV2Args>> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 

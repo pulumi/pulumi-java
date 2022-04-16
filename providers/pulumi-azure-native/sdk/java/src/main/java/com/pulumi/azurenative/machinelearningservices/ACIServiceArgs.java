@@ -30,7 +30,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
-    public Output<Boolean> getAppInsightsEnabled() {
+    public Output<Boolean> appInsightsEnabled() {
         return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
     }
 
@@ -41,7 +41,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
 
-    public Output<Boolean> getAuthEnabled() {
+    public Output<Boolean> authEnabled() {
         return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
     }
 
@@ -52,7 +52,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cname")
       private final @Nullable Output<String> cname;
 
-    public Output<String> getCname() {
+    public Output<String> cname() {
         return this.cname == null ? Codegen.empty() : this.cname;
     }
 
@@ -64,7 +64,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
-    public Output<String> getComputeType() {
+    public Output<String> computeType() {
         return this.computeType;
     }
 
@@ -75,7 +75,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerResourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
-    public Output<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
+    public Output<ContainerResourceRequirementsArgs> containerResourceRequirements() {
         return this.containerResourceRequirements == null ? Codegen.empty() : this.containerResourceRequirements;
     }
 
@@ -86,7 +86,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataCollection")
       private final @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
 
-    public Output<ACIServiceCreateRequestDataCollectionArgs> getDataCollection() {
+    public Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection() {
         return this.dataCollection == null ? Codegen.empty() : this.dataCollection;
     }
 
@@ -97,7 +97,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -108,7 +108,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsNameLabel")
       private final @Nullable Output<String> dnsNameLabel;
 
-    public Output<String> getDnsNameLabel() {
+    public Output<String> dnsNameLabel() {
         return this.dnsNameLabel == null ? Codegen.empty() : this.dnsNameLabel;
     }
 
@@ -119,7 +119,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionProperties")
       private final @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
 
-    public Output<ACIServiceCreateRequestEncryptionPropertiesArgs> getEncryptionProperties() {
+    public Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties() {
         return this.encryptionProperties == null ? Codegen.empty() : this.encryptionProperties;
     }
 
@@ -130,7 +130,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
+    public Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest() {
         return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
     }
 
@@ -141,7 +141,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Output<CreateServiceRequestKeysArgs> getKeys() {
+    public Output<CreateServiceRequestKeysArgs> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -152,7 +152,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> getKvTags() {
+    public Output<Map<String,String>> kvTags() {
         return this.kvTags == null ? Codegen.empty() : this.kvTags;
     }
 
@@ -163,7 +163,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -174,7 +174,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -185,7 +185,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -196,7 +196,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -207,7 +207,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslCertificate")
       private final @Nullable Output<String> sslCertificate;
 
-    public Output<String> getSslCertificate() {
+    public Output<String> sslCertificate() {
         return this.sslCertificate == null ? Codegen.empty() : this.sslCertificate;
     }
 
@@ -218,7 +218,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslEnabled")
       private final @Nullable Output<Boolean> sslEnabled;
 
-    public Output<Boolean> getSslEnabled() {
+    public Output<Boolean> sslEnabled() {
         return this.sslEnabled == null ? Codegen.empty() : this.sslEnabled;
     }
 
@@ -229,7 +229,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslKey")
       private final @Nullable Output<String> sslKey;
 
-    public Output<String> getSslKey() {
+    public Output<String> sslKey() {
         return this.sslKey == null ? Codegen.empty() : this.sslKey;
     }
 
@@ -240,7 +240,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vnetConfiguration")
       private final @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
 
-    public Output<ACIServiceCreateRequestVnetConfigurationArgs> getVnetConfiguration() {
+    public Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration() {
         return this.vnetConfiguration == null ? Codegen.empty() : this.vnetConfiguration;
     }
 
@@ -251,7 +251,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -25,7 +25,7 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends com.pulumi.res
     @Import(name="maxCapacity")
       private final @Nullable Double maxCapacity;
 
-    public Optional<Double> getMaxCapacity() {
+    public Optional<Double> maxCapacity() {
         return this.maxCapacity == null ? Optional.empty() : Optional.ofNullable(this.maxCapacity);
     }
 
@@ -36,7 +36,7 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends com.pulumi.res
     @Import(name="minCapacity")
       private final @Nullable Double minCapacity;
 
-    public Optional<Double> getMinCapacity() {
+    public Optional<Double> minCapacity() {
         return this.minCapacity == null ? Optional.empty() : Optional.ofNullable(this.minCapacity);
     }
 

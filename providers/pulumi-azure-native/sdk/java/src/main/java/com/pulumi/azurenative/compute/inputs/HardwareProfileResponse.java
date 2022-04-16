@@ -25,7 +25,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="vmSize")
       private final @Nullable String vmSize;
 
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
     }
 

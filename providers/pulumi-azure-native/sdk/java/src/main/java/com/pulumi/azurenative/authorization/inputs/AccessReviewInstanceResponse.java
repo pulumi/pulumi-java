@@ -25,7 +25,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="endDateTime")
       private final @Nullable String endDateTime;
 
-    public Optional<String> getEndDateTime() {
+    public Optional<String> endDateTime() {
         return this.endDateTime == null ? Optional.empty() : Optional.ofNullable(this.endDateTime);
     }
 
@@ -36,7 +36,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -58,7 +58,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="startDateTime")
       private final @Nullable String startDateTime;
 
-    public Optional<String> getStartDateTime() {
+    public Optional<String> startDateTime() {
         return this.startDateTime == null ? Optional.empty() : Optional.ofNullable(this.startDateTime);
     }
 
@@ -69,7 +69,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -80,7 +80,7 @@ public final class AccessReviewInstanceResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

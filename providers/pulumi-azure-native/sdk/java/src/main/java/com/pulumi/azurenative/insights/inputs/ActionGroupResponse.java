@@ -26,7 +26,7 @@ public final class ActionGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actionGroupId", required=true)
       private final String actionGroupId;
 
-    public String getActionGroupId() {
+    public String actionGroupId() {
         return this.actionGroupId;
     }
 
@@ -37,7 +37,7 @@ public final class ActionGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="webhookProperties")
       private final @Nullable Map<String,String> webhookProperties;
 
-    public Map<String,String> getWebhookProperties() {
+    public Map<String,String> webhookProperties() {
         return this.webhookProperties == null ? Map.of() : this.webhookProperties;
     }
 

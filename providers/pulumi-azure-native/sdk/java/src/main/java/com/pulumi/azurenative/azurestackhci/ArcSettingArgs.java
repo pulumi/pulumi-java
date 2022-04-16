@@ -24,7 +24,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arcSettingName")
       private final @Nullable Output<String> arcSettingName;
 
-    public Output<String> getArcSettingName() {
+    public Output<String> arcSettingName() {
         return this.arcSettingName == null ? Codegen.empty() : this.arcSettingName;
     }
 
@@ -35,7 +35,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -46,7 +46,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -57,7 +57,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
@@ -68,7 +68,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> getCreatedByType() {
+    public Output<Either<String,CreatedByType>> createdByType() {
         return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
@@ -79,7 +79,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
@@ -90,7 +90,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
@@ -101,7 +101,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
+    public Output<Either<String,CreatedByType>> lastModifiedByType() {
         return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
@@ -112,7 +112,7 @@ public final class ArcSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

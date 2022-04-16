@@ -22,10 +22,10 @@ public final class InstantRPAdditionalDetailsResponse {
         this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
     }
 
-    public Optional<String> getAzureBackupRGNamePrefix() {
+    public Optional<String> azureBackupRGNamePrefix() {
         return Optional.ofNullable(this.azureBackupRGNamePrefix);
     }
-    public Optional<String> getAzureBackupRGNameSuffix() {
+    public Optional<String> azureBackupRGNameSuffix() {
         return Optional.ofNullable(this.azureBackupRGNameSuffix);
     }
 

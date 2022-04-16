@@ -29,7 +29,7 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endpointType")
       private final @Nullable Output<Either<String,EndpointType>> endpointType;
 
-    public Output<Either<String,EndpointType>> getEndpointType() {
+    public Output<Either<String,EndpointType>> endpointType() {
         return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
@@ -40,7 +40,7 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="remoteVolumeRegion")
       private final @Nullable Output<String> remoteVolumeRegion;
 
-    public Output<String> getRemoteVolumeRegion() {
+    public Output<String> remoteVolumeRegion() {
         return this.remoteVolumeRegion == null ? Codegen.empty() : this.remoteVolumeRegion;
     }
 
@@ -51,7 +51,7 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="remoteVolumeResourceId", required=true)
       private final Output<String> remoteVolumeResourceId;
 
-    public Output<String> getRemoteVolumeResourceId() {
+    public Output<String> remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
 
@@ -62,7 +62,7 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replicationId")
       private final @Nullable Output<String> replicationId;
 
-    public Output<String> getReplicationId() {
+    public Output<String> replicationId() {
         return this.replicationId == null ? Codegen.empty() : this.replicationId;
     }
 
@@ -73,7 +73,7 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replicationSchedule", required=true)
       private final Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
-    public Output<Either<String,ReplicationSchedule>> getReplicationSchedule() {
+    public Output<Either<String,ReplicationSchedule>> replicationSchedule() {
         return this.replicationSchedule;
     }
 

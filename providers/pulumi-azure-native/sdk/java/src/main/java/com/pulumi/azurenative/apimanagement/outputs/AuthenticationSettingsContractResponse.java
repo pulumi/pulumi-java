@@ -35,14 +35,14 @@ public final class AuthenticationSettingsContractResponse {
      * OAuth2 Authentication settings
      * 
     */
-    public Optional<OAuth2AuthenticationSettingsContractResponse> getOAuth2() {
+    public Optional<OAuth2AuthenticationSettingsContractResponse> oAuth2() {
         return Optional.ofNullable(this.oAuth2);
     }
     /**
      * OpenID Connect Authentication Settings
      * 
     */
-    public Optional<OpenIdAuthenticationSettingsContractResponse> getOpenid() {
+    public Optional<OpenIdAuthenticationSettingsContractResponse> openid() {
         return Optional.ofNullable(this.openid);
     }
 

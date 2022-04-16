@@ -26,7 +26,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="dataCollectionEndpointName")
       private final @Nullable Output<String> dataCollectionEndpointName;
 
-    public Output<String> getDataCollectionEndpointName() {
+    public Output<String> dataCollectionEndpointName() {
         return this.dataCollectionEndpointName == null ? Codegen.empty() : this.dataCollectionEndpointName;
     }
 
@@ -37,7 +37,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="immutableId")
       private final @Nullable Output<String> immutableId;
 
-    public Output<String> getImmutableId() {
+    public Output<String> immutableId() {
         return this.immutableId == null ? Codegen.empty() : this.immutableId;
     }
 
@@ -59,7 +59,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
 
-    public Output<Either<String,KnownDataCollectionEndpointResourceKind>> getKind() {
+    public Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -70,7 +70,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,7 +81,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="networkAcls")
       private final @Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls;
 
-    public Output<DataCollectionEndpointNetworkAclsArgs> getNetworkAcls() {
+    public Output<DataCollectionEndpointNetworkAclsArgs> networkAcls() {
         return this.networkAcls == null ? Codegen.empty() : this.networkAcls;
     }
 
@@ -92,7 +92,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

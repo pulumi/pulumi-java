@@ -23,7 +23,7 @@ public final class DomainValidationPropertiesResponse extends com.pulumi.resourc
     @Import(name="expirationDate", required=true)
       private final String expirationDate;
 
-    public String getExpirationDate() {
+    public String expirationDate() {
         return this.expirationDate;
     }
 
@@ -34,7 +34,7 @@ public final class DomainValidationPropertiesResponse extends com.pulumi.resourc
     @Import(name="validationToken", required=true)
       private final String validationToken;
 
-    public String getValidationToken() {
+    public String validationToken() {
         return this.validationToken;
     }
 

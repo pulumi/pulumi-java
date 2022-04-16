@@ -48,7 +48,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAsyncExecution() {
+    public Output</* @Nullable */ Boolean> asyncExecution() {
         return this.asyncExecution;
     }
     /**
@@ -62,7 +62,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Specifies the Azure storage blob where script error stream will be uploaded.
      * 
      */
-    public Output</* @Nullable */ String> getErrorBlobUri() {
+    public Output</* @Nullable */ String> errorBlobUri() {
         return this.errorBlobUri;
     }
     /**
@@ -76,7 +76,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return The virtual machine run command instance view.
      * 
      */
-    public Output<VirtualMachineRunCommandInstanceViewResponse> getInstanceView() {
+    public Output<VirtualMachineRunCommandInstanceViewResponse> instanceView() {
         return this.instanceView;
     }
     /**
@@ -90,7 +90,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -104,7 +104,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Specifies the Azure storage blob where script output stream will be uploaded.
      * 
      */
-    public Output</* @Nullable */ String> getOutputBlobUri() {
+    public Output</* @Nullable */ String> outputBlobUri() {
         return this.outputBlobUri;
     }
     /**
@@ -132,7 +132,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return The parameters used by the script.
      * 
      */
-    public Output</* @Nullable */ List<RunCommandInputParameterResponse>> getParameters() {
+    public Output</* @Nullable */ List<RunCommandInputParameterResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -146,7 +146,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return The parameters used by the script.
      * 
      */
-    public Output</* @Nullable */ List<RunCommandInputParameterResponse>> getProtectedParameters() {
+    public Output</* @Nullable */ List<RunCommandInputParameterResponse>> protectedParameters() {
         return this.protectedParameters;
     }
     /**
@@ -160,7 +160,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -174,7 +174,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Specifies the user account password on the VM when executing the run command.
      * 
      */
-    public Output</* @Nullable */ String> getRunAsPassword() {
+    public Output</* @Nullable */ String> runAsPassword() {
         return this.runAsPassword;
     }
     /**
@@ -188,7 +188,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Specifies the user account on the VM when executing the run command.
      * 
      */
-    public Output</* @Nullable */ String> getRunAsUser() {
+    public Output</* @Nullable */ String> runAsUser() {
         return this.runAsUser;
     }
     /**
@@ -202,7 +202,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return The source of the run command script.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineRunCommandScriptSourceResponse> getSource() {
+    public Output</* @Nullable */ VirtualMachineRunCommandScriptSourceResponse> source() {
         return this.source;
     }
     /**
@@ -216,7 +216,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -230,7 +230,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return The timeout in seconds to execute the run command.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeoutInSeconds() {
+    public Output</* @Nullable */ Integer> timeoutInSeconds() {
         return this.timeoutInSeconds;
     }
     /**
@@ -244,7 +244,7 @@ public class VirtualMachineRunCommandByVirtualMachine extends com.pulumi.resourc
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

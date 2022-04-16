@@ -35,7 +35,7 @@ public final class CustomCopyOptionResponse {
      * Data copied after given timespan
      * 
     */
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
     /**
@@ -43,7 +43,7 @@ public final class CustomCopyOptionResponse {
      * Expected value is 'CustomCopyOption'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

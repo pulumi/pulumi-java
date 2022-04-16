@@ -27,7 +27,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="cognitiveServiceRegion", required=true)
       private final Output<String> cognitiveServiceRegion;
 
-    public Output<String> getCognitiveServiceRegion() {
+    public Output<String> cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
 
@@ -38,7 +38,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="cognitiveServiceSubscriptionKey", required=true)
       private final Output<String> cognitiveServiceSubscriptionKey;
 
-    public Output<String> getCognitiveServiceSubscriptionKey() {
+    public Output<String> cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
 
@@ -49,7 +49,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="customSpeechModelId")
       private final @Nullable Output<String> customSpeechModelId;
 
-    public Output<String> getCustomSpeechModelId() {
+    public Output<String> customSpeechModelId() {
         return this.customSpeechModelId == null ? Codegen.empty() : this.customSpeechModelId;
     }
 
@@ -60,7 +60,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="customVoiceDeploymentId")
       private final @Nullable Output<String> customVoiceDeploymentId;
 
-    public Output<String> getCustomVoiceDeploymentId() {
+    public Output<String> customVoiceDeploymentId() {
         return this.customVoiceDeploymentId == null ? Codegen.empty() : this.customVoiceDeploymentId;
     }
 
@@ -71,7 +71,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="isDefaultBotForCogSvcAccount")
       private final @Nullable Output<Boolean> isDefaultBotForCogSvcAccount;
 
-    public Output<Boolean> getIsDefaultBotForCogSvcAccount() {
+    public Output<Boolean> isDefaultBotForCogSvcAccount() {
         return this.isDefaultBotForCogSvcAccount == null ? Codegen.empty() : this.isDefaultBotForCogSvcAccount;
     }
 
@@ -82,7 +82,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 

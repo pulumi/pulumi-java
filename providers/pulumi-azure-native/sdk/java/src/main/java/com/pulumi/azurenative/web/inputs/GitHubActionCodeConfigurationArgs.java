@@ -26,7 +26,7 @@ public final class GitHubActionCodeConfigurationArgs extends com.pulumi.resource
     @Import(name="runtimeStack")
       private final @Nullable Output<String> runtimeStack;
 
-    public Output<String> getRuntimeStack() {
+    public Output<String> runtimeStack() {
         return this.runtimeStack == null ? Codegen.empty() : this.runtimeStack;
     }
 
@@ -37,7 +37,7 @@ public final class GitHubActionCodeConfigurationArgs extends com.pulumi.resource
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 

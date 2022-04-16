@@ -39,21 +39,21 @@ public final class WorkbookUserAssignedIdentitiesResponse {
      * The client ID of resource.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The principal ID of resource identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

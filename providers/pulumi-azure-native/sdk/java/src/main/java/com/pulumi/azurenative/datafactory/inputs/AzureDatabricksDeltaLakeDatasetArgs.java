@@ -32,7 +32,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -43,7 +43,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="database")
       private final @Nullable Output<Object> database;
 
-    public Output<Object> getDatabase() {
+    public Output<Object> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -54,7 +54,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -65,7 +65,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
+    public Output<DatasetFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -76,7 +76,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -87,7 +87,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -98,7 +98,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
+    public Output<Object> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -109,7 +109,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
+    public Output<Object> structure() {
         return this.structure == null ? Codegen.empty() : this.structure;
     }
 
@@ -120,7 +120,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="table")
       private final @Nullable Output<Object> table;
 
-    public Output<Object> getTable() {
+    public Output<Object> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 
@@ -132,7 +132,7 @@ public final class AzureDatabricksDeltaLakeDatasetArgs extends com.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

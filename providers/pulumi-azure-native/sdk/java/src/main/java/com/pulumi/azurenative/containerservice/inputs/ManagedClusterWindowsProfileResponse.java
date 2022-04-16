@@ -26,7 +26,7 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
     @Import(name="adminPassword")
       private final @Nullable String adminPassword;
 
-    public Optional<String> getAdminPassword() {
+    public Optional<String> adminPassword() {
         return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
     }
 
@@ -37,7 +37,7 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
     @Import(name="adminUsername", required=true)
       private final String adminUsername;
 
-    public String getAdminUsername() {
+    public String adminUsername() {
         return this.adminUsername;
     }
 
@@ -48,7 +48,7 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
     @Import(name="enableCSIProxy")
       private final @Nullable Boolean enableCSIProxy;
 
-    public Optional<Boolean> getEnableCSIProxy() {
+    public Optional<Boolean> enableCSIProxy() {
         return this.enableCSIProxy == null ? Optional.empty() : Optional.ofNullable(this.enableCSIProxy);
     }
 
@@ -59,7 +59,7 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
     @Import(name="licenseType")
       private final @Nullable String licenseType;
 
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 

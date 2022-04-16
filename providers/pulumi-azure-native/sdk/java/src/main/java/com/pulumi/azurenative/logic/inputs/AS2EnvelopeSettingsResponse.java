@@ -24,7 +24,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="autogenerateFileName", required=true)
       private final Boolean autogenerateFileName;
 
-    public Boolean getAutogenerateFileName() {
+    public Boolean autogenerateFileName() {
         return this.autogenerateFileName;
     }
 
@@ -35,7 +35,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="fileNameTemplate", required=true)
       private final String fileNameTemplate;
 
-    public String getFileNameTemplate() {
+    public String fileNameTemplate() {
         return this.fileNameTemplate;
     }
 
@@ -46,7 +46,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="messageContentType", required=true)
       private final String messageContentType;
 
-    public String getMessageContentType() {
+    public String messageContentType() {
         return this.messageContentType;
     }
 
@@ -57,7 +57,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="suspendMessageOnFileNameGenerationError", required=true)
       private final Boolean suspendMessageOnFileNameGenerationError;
 
-    public Boolean getSuspendMessageOnFileNameGenerationError() {
+    public Boolean suspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
     }
 
@@ -68,7 +68,7 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transmitFileNameInMimeHeader", required=true)
       private final Boolean transmitFileNameInMimeHeader;
 
-    public Boolean getTransmitFileNameInMimeHeader() {
+    public Boolean transmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
     }
 

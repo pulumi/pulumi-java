@@ -19,7 +19,7 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="associationName", required=true)
       private final String associationName;
 
-    public String getAssociationName() {
+    public String associationName() {
         return this.associationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

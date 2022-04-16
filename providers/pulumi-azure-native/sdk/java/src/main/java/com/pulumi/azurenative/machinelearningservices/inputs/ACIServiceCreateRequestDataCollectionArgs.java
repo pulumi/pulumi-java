@@ -26,7 +26,7 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends com.pulumi.
     @Import(name="eventHubEnabled")
       private final @Nullable Output<Boolean> eventHubEnabled;
 
-    public Output<Boolean> getEventHubEnabled() {
+    public Output<Boolean> eventHubEnabled() {
         return this.eventHubEnabled == null ? Codegen.empty() : this.eventHubEnabled;
     }
 
@@ -37,7 +37,7 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends com.pulumi.
     @Import(name="storageEnabled")
       private final @Nullable Output<Boolean> storageEnabled;
 
-    public Output<Boolean> getStorageEnabled() {
+    public Output<Boolean> storageEnabled() {
         return this.storageEnabled == null ? Codegen.empty() : this.storageEnabled;
     }
 

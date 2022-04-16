@@ -86,63 +86,63 @@ public final class GetEmailTemplateResult {
      * Email Template Body. This should be a valid XDocument
      * 
     */
-    public String getBody() {
+    public String body() {
         return this.body;
     }
     /**
      * Description of the Email Template.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Whether the template is the default template provided by Api Management or has been edited.
      * 
     */
-    public Boolean getIsDefault() {
+    public Boolean isDefault() {
         return this.isDefault;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Email Template Parameter values.
      * 
     */
-    public List<EmailTemplateParametersContractPropertiesResponse> getParameters() {
+    public List<EmailTemplateParametersContractPropertiesResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Subject of the Template.
      * 
     */
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
     /**
      * Title of the Template.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

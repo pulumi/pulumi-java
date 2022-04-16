@@ -28,7 +28,7 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataset")
       private final @Nullable DatasetReferenceResponse dataset;
 
-    public Optional<DatasetReferenceResponse> getDataset() {
+    public Optional<DatasetReferenceResponse> dataset() {
         return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
     }
 
@@ -39,7 +39,7 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -50,7 +50,7 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="flowlet")
       private final @Nullable DataFlowReferenceResponse flowlet;
 
-    public Optional<DataFlowReferenceResponse> getFlowlet() {
+    public Optional<DataFlowReferenceResponse> flowlet() {
         return this.flowlet == null ? Optional.empty() : Optional.ofNullable(this.flowlet);
     }
 
@@ -61,7 +61,7 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="linkedService")
       private final @Nullable LinkedServiceReferenceResponse linkedService;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> linkedService() {
         return this.linkedService == null ? Optional.empty() : Optional.ofNullable(this.linkedService);
     }
 
@@ -72,7 +72,7 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -83,7 +83,7 @@ public final class DataFlowSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="schemaLinkedService")
       private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
-    public Optional<LinkedServiceReferenceResponse> getSchemaLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> schemaLinkedService() {
         return this.schemaLinkedService == null ? Optional.empty() : Optional.ofNullable(this.schemaLinkedService);
     }
 

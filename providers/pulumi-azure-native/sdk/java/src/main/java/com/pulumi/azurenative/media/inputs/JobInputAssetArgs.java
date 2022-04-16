@@ -34,7 +34,7 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -45,7 +45,7 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="end")
       private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
-    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getEnd() {
+    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -56,7 +56,7 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="files")
       private final @Nullable Output<List<String>> files;
 
-    public Output<List<String>> getFiles() {
+    public Output<List<String>> files() {
         return this.files == null ? Codegen.empty() : this.files;
     }
 
@@ -67,7 +67,7 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputDefinitions")
       private final @Nullable Output<List<Object>> inputDefinitions;
 
-    public Output<List<Object>> getInputDefinitions() {
+    public Output<List<Object>> inputDefinitions() {
         return this.inputDefinitions == null ? Codegen.empty() : this.inputDefinitions;
     }
 
@@ -78,7 +78,7 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -90,7 +90,7 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -101,7 +101,7 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="start")
       private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
-    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getStart() {
+    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

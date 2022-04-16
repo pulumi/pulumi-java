@@ -29,7 +29,7 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
     @Import(name="dataDiskImages")
       private final @Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages;
 
-    public Output<List<GalleryDataDiskImageArgs>> getDataDiskImages() {
+    public Output<List<GalleryDataDiskImageArgs>> dataDiskImages() {
         return this.dataDiskImages == null ? Codegen.empty() : this.dataDiskImages;
     }
 
@@ -40,7 +40,7 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
     @Import(name="osDiskImage")
       private final @Nullable Output<GalleryOSDiskImageArgs> osDiskImage;
 
-    public Output<GalleryOSDiskImageArgs> getOsDiskImage() {
+    public Output<GalleryOSDiskImageArgs> osDiskImage() {
         return this.osDiskImage == null ? Codegen.empty() : this.osDiskImage;
     }
 
@@ -51,7 +51,7 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
     @Import(name="source")
       private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Output<GalleryArtifactVersionSourceArgs> getSource() {
+    public Output<GalleryArtifactVersionSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

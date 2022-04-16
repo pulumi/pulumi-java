@@ -34,14 +34,14 @@ public final class PipelineJobErrorResponse {
      * The error code.
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * The error message.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
 

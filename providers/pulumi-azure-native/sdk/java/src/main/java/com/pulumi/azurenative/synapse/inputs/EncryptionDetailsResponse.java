@@ -26,7 +26,7 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="cmk")
       private final @Nullable CustomerManagedKeyDetailsResponse cmk;
 
-    public Optional<CustomerManagedKeyDetailsResponse> getCmk() {
+    public Optional<CustomerManagedKeyDetailsResponse> cmk() {
         return this.cmk == null ? Optional.empty() : Optional.ofNullable(this.cmk);
     }
 
@@ -37,7 +37,7 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="doubleEncryptionEnabled", required=true)
       private final Boolean doubleEncryptionEnabled;
 
-    public Boolean getDoubleEncryptionEnabled() {
+    public Boolean doubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;
     }
 

@@ -28,7 +28,7 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="code")
       private final @Nullable Output<Integer> code;
 
-    public Output<Integer> getCode() {
+    public Output<Integer> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -39,7 +39,7 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -50,7 +50,7 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="recommendations")
       private final @Nullable Output<List<String>> recommendations;
 
-    public Output<List<String>> getRecommendations() {
+    public Output<List<String>> recommendations() {
         return this.recommendations == null ? Codegen.empty() : this.recommendations;
     }
 
@@ -61,7 +61,7 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

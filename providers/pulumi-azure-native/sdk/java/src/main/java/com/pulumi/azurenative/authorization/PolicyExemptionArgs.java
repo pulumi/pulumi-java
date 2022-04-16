@@ -26,7 +26,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="exemptionCategory", required=true)
       private final Output<Either<String,ExemptionCategory>> exemptionCategory;
 
-    public Output<Either<String,ExemptionCategory>> getExemptionCategory() {
+    public Output<Either<String,ExemptionCategory>> exemptionCategory() {
         return this.exemptionCategory;
     }
 
@@ -59,7 +59,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
 
-    public Output<String> getExpiresOn() {
+    public Output<String> expiresOn() {
         return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
     }
 
@@ -70,7 +70,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -81,7 +81,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policyAssignmentId", required=true)
       private final Output<String> policyAssignmentId;
 
-    public Output<String> getPolicyAssignmentId() {
+    public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
 
@@ -92,7 +92,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policyDefinitionReferenceIds")
       private final @Nullable Output<List<String>> policyDefinitionReferenceIds;
 
-    public Output<List<String>> getPolicyDefinitionReferenceIds() {
+    public Output<List<String>> policyDefinitionReferenceIds() {
         return this.policyDefinitionReferenceIds == null ? Codegen.empty() : this.policyDefinitionReferenceIds;
     }
 
@@ -103,7 +103,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policyExemptionName")
       private final @Nullable Output<String> policyExemptionName;
 
-    public Output<String> getPolicyExemptionName() {
+    public Output<String> policyExemptionName() {
         return this.policyExemptionName == null ? Codegen.empty() : this.policyExemptionName;
     }
 
@@ -114,7 +114,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

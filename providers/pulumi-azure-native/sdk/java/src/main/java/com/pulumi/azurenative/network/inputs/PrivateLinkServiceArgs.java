@@ -34,7 +34,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="autoApproval")
       private final @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
 
-    public Output<PrivateLinkServicePropertiesAutoApprovalArgs> getAutoApproval() {
+    public Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval() {
         return this.autoApproval == null ? Codegen.empty() : this.autoApproval;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableProxyProtocol")
       private final @Nullable Output<Boolean> enableProxyProtocol;
 
-    public Output<Boolean> getEnableProxyProtocol() {
+    public Output<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol == null ? Codegen.empty() : this.enableProxyProtocol;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -67,7 +67,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="fqdns")
       private final @Nullable Output<List<String>> fqdns;
 
-    public Output<List<String>> getFqdns() {
+    public Output<List<String>> fqdns() {
         return this.fqdns == null ? Codegen.empty() : this.fqdns;
     }
 
@@ -78,7 +78,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -89,7 +89,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
 
-    public Output<List<PrivateLinkServiceIpConfigurationArgs>> getIpConfigurations() {
+    public Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
@@ -100,7 +100,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="loadBalancerFrontendIpConfigurations")
       private final @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
 
-    public Output<List<FrontendIPConfigurationArgs>> getLoadBalancerFrontendIpConfigurations() {
+    public Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations == null ? Codegen.empty() : this.loadBalancerFrontendIpConfigurations;
     }
 
@@ -111,7 +111,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -122,7 +122,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -133,7 +133,7 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="visibility")
       private final @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 
-    public Output<PrivateLinkServicePropertiesVisibilityArgs> getVisibility() {
+    public Output<PrivateLinkServicePropertiesVisibilityArgs> visibility() {
         return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 

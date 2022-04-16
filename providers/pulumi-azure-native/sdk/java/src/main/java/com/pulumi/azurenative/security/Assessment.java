@@ -51,7 +51,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Additional data regarding the assessment
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAdditionalData() {
+    public Output</* @Nullable */ Map<String,String>> additionalData() {
         return this.additionalData;
     }
     /**
@@ -65,7 +65,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return User friendly display name of the assessment
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -79,7 +79,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Links relevant to the assessment
      * 
      */
-    public Output<AssessmentLinksResponse> getLinks() {
+    public Output<AssessmentLinksResponse> links() {
         return this.links;
     }
     /**
@@ -93,7 +93,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Describes properties of an assessment metadata.
      * 
      */
-    public Output</* @Nullable */ SecurityAssessmentMetadataPropertiesResponse> getMetadata() {
+    public Output</* @Nullable */ SecurityAssessmentMetadataPropertiesResponse> metadata() {
         return this.metadata;
     }
     /**
@@ -107,7 +107,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -121,7 +121,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Data regarding 3rd party partner integration
      * 
      */
-    public Output</* @Nullable */ SecurityAssessmentPartnerDataResponse> getPartnersData() {
+    public Output</* @Nullable */ SecurityAssessmentPartnerDataResponse> partnersData() {
         return this.partnersData;
     }
     /**
@@ -135,7 +135,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Details of the resource that was assessed
      * 
      */
-    public Output<Object> getResourceDetails() {
+    public Output<Object> resourceDetails() {
         return this.resourceDetails;
     }
     /**
@@ -149,7 +149,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return The result of the assessment
      * 
      */
-    public Output<AssessmentStatusResponse> getStatus() {
+    public Output<AssessmentStatusResponse> status() {
         return this.status;
     }
     /**
@@ -163,7 +163,7 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

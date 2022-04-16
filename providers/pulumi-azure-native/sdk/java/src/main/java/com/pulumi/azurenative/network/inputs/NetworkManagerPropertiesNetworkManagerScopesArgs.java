@@ -27,7 +27,7 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends com.
     @Import(name="managementGroups")
       private final @Nullable Output<List<String>> managementGroups;
 
-    public Output<List<String>> getManagementGroups() {
+    public Output<List<String>> managementGroups() {
         return this.managementGroups == null ? Codegen.empty() : this.managementGroups;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends com.
     @Import(name="subscriptions")
       private final @Nullable Output<List<String>> subscriptions;
 
-    public Output<List<String>> getSubscriptions() {
+    public Output<List<String>> subscriptions() {
         return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
     }
 

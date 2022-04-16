@@ -22,7 +22,7 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
     @Import(name="remediationName", required=true)
       private final String remediationName;
 
-    public String getRemediationName() {
+    public String remediationName() {
         return this.remediationName;
     }
 
@@ -33,7 +33,7 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 
@@ -44,7 +44,7 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
     @Import(name="top")
       private final @Nullable Integer top;
 
-    public Optional<Integer> getTop() {
+    public Optional<Integer> top() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
     }
 

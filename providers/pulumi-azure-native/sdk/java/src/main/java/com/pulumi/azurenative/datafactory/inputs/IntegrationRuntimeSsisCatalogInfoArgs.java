@@ -29,7 +29,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogAdminPassword")
       private final @Nullable Output<SecureStringArgs> catalogAdminPassword;
 
-    public Output<SecureStringArgs> getCatalogAdminPassword() {
+    public Output<SecureStringArgs> catalogAdminPassword() {
         return this.catalogAdminPassword == null ? Codegen.empty() : this.catalogAdminPassword;
     }
 
@@ -40,7 +40,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogAdminUserName")
       private final @Nullable Output<String> catalogAdminUserName;
 
-    public Output<String> getCatalogAdminUserName() {
+    public Output<String> catalogAdminUserName() {
         return this.catalogAdminUserName == null ? Codegen.empty() : this.catalogAdminUserName;
     }
 
@@ -51,7 +51,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogPricingTier")
       private final @Nullable Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier;
 
-    public Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> getCatalogPricingTier() {
+    public Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier() {
         return this.catalogPricingTier == null ? Codegen.empty() : this.catalogPricingTier;
     }
 
@@ -62,7 +62,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogServerEndpoint")
       private final @Nullable Output<String> catalogServerEndpoint;
 
-    public Output<String> getCatalogServerEndpoint() {
+    public Output<String> catalogServerEndpoint() {
         return this.catalogServerEndpoint == null ? Codegen.empty() : this.catalogServerEndpoint;
     }
 
@@ -73,7 +73,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="dualStandbyPairName")
       private final @Nullable Output<String> dualStandbyPairName;
 
-    public Output<String> getDualStandbyPairName() {
+    public Output<String> dualStandbyPairName() {
         return this.dualStandbyPairName == null ? Codegen.empty() : this.dualStandbyPairName;
     }
 

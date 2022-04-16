@@ -45,7 +45,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    public Output</* @Nullable */ List<CustomerSecretResponse>> getCustomerSecrets() {
+    public Output</* @Nullable */ List<CustomerSecretResponse>> customerSecrets() {
         return this.customerSecrets;
     }
     /**
@@ -59,7 +59,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return A generic json used differently by each data service type.
      * 
      */
-    public Output</* @Nullable */ Object> getDataServiceInput() {
+    public Output</* @Nullable */ Object> dataServiceInput() {
         return this.dataServiceInput;
     }
     /**
@@ -73,7 +73,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Data Sink Id associated to the job definition.
      * 
      */
-    public Output<String> getDataSinkId() {
+    public Output<String> dataSinkId() {
         return this.dataSinkId;
     }
     /**
@@ -87,7 +87,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Data Source Id associated to the job definition.
      * 
      */
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
     /**
@@ -101,7 +101,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Last modified time of the job definition.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -115,7 +115,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return This is the preferred geo location for the job to run.
      * 
      */
-    public Output</* @Nullable */ String> getRunLocation() {
+    public Output</* @Nullable */ String> runLocation() {
         return this.runLocation;
     }
     /**
@@ -143,7 +143,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Schedule for running the job definition
      * 
      */
-    public Output</* @Nullable */ List<ScheduleResponse>> getSchedules() {
+    public Output</* @Nullable */ List<ScheduleResponse>> schedules() {
         return this.schedules;
     }
     /**
@@ -157,7 +157,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return State of the job definition.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -171,7 +171,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -185,7 +185,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Enum to detect if user confirmation is required. If not passed will default to NotRequired.
      * 
      */
-    public Output</* @Nullable */ String> getUserConfirmation() {
+    public Output</* @Nullable */ String> userConfirmation() {
         return this.userConfirmation;
     }
 

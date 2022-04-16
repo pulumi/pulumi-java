@@ -25,7 +25,7 @@ public final class ApiConnectionTestLinkResponse extends com.pulumi.resources.In
     @Import(name="method")
       private final @Nullable String method;
 
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
@@ -36,7 +36,7 @@ public final class ApiConnectionTestLinkResponse extends com.pulumi.resources.In
     @Import(name="requestUri")
       private final @Nullable String requestUri;
 
-    public Optional<String> getRequestUri() {
+    public Optional<String> requestUri() {
         return this.requestUri == null ? Optional.empty() : Optional.ofNullable(this.requestUri);
     }
 

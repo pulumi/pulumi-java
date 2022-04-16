@@ -42,21 +42,21 @@ public final class NotificationSettingsResponse {
      * The list of additional recipients
      * 
     */
-    public List<String> getAdditionalRecipients() {
+    public List<String> additionalRecipients() {
         return this.additionalRecipients == null ? List.of() : this.additionalRecipients;
     }
     /**
      * Should domain controller admins be notified
      * 
     */
-    public Optional<String> getNotifyDcAdmins() {
+    public Optional<String> notifyDcAdmins() {
         return Optional.ofNullable(this.notifyDcAdmins);
     }
     /**
      * Should global admins be notified
      * 
     */
-    public Optional<String> getNotifyGlobalAdmins() {
+    public Optional<String> notifyGlobalAdmins() {
         return Optional.ofNullable(this.notifyGlobalAdmins);
     }
 

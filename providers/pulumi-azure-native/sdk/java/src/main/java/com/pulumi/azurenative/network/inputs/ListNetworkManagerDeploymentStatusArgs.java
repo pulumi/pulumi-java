@@ -24,7 +24,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="deploymentTypes")
       private final @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
 
-    public List<Either<String,ConfigurationType>> getDeploymentTypes() {
+    public List<Either<String,ConfigurationType>> deploymentTypes() {
         return this.deploymentTypes == null ? List.of() : this.deploymentTypes;
     }
 
@@ -35,7 +35,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
-    public String getNetworkManagerName() {
+    public String networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -46,7 +46,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="regions")
       private final @Nullable List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
@@ -57,7 +57,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 

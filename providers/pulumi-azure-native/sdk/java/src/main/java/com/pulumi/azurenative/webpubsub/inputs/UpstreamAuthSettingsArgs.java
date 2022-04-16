@@ -29,7 +29,7 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="managedIdentity")
       private final @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
 
-    public Output<ManagedIdentitySettingsArgs> getManagedIdentity() {
+    public Output<ManagedIdentitySettingsArgs> managedIdentity() {
         return this.managedIdentity == null ? Codegen.empty() : this.managedIdentity;
     }
 
@@ -40,7 +40,7 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,UpstreamAuthType>> type;
 
-    public Output<Either<String,UpstreamAuthType>> getType() {
+    public Output<Either<String,UpstreamAuthType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

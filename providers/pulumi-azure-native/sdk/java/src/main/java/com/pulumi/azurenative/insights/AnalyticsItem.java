@@ -43,7 +43,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return The content of this item
      * 
      */
-    public Output</* @Nullable */ String> getContent() {
+    public Output</* @Nullable */ String> content() {
         return this.content;
     }
     /**
@@ -57,7 +57,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return The user-defined name of the item.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
      * 
      */
-    public Output<ApplicationInsightsComponentAnalyticsItemPropertiesResponse> getProperties() {
+    public Output<ApplicationInsightsComponentAnalyticsItemPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -99,7 +99,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return Date and time in UTC when this item was created.
      * 
      */
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -113,7 +113,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return Date and time in UTC of the last modification that was made to this item.
      * 
      */
-    public Output<String> getTimeModified() {
+    public Output<String> timeModified() {
         return this.timeModified;
     }
     /**
@@ -127,7 +127,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return Enum indicating the type of the Analytics item.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -141,7 +141,7 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return This instance's version of the data model. This can change as new features are added.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

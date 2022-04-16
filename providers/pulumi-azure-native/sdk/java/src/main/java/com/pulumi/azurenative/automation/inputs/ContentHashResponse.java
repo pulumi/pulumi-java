@@ -23,7 +23,7 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -34,7 +34,7 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

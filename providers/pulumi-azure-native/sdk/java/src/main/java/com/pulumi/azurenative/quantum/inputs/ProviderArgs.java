@@ -28,7 +28,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
@@ -39,7 +39,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceUri")
       private final @Nullable Output<String> instanceUri;
 
-    public Output<String> getInstanceUri() {
+    public Output<String> instanceUri() {
         return this.instanceUri == null ? Codegen.empty() : this.instanceUri;
     }
 
@@ -50,7 +50,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerId")
       private final @Nullable Output<String> providerId;
 
-    public Output<String> getProviderId() {
+    public Output<String> providerId() {
         return this.providerId == null ? Codegen.empty() : this.providerId;
     }
 
@@ -61,7 +61,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerSku")
       private final @Nullable Output<String> providerSku;
 
-    public Output<String> getProviderSku() {
+    public Output<String> providerSku() {
         return this.providerSku == null ? Codegen.empty() : this.providerSku;
     }
 
@@ -72,7 +72,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,Status>> provisioningState;
 
-    public Output<Either<String,Status>> getProvisioningState() {
+    public Output<Either<String,Status>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -83,7 +83,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUsageId")
       private final @Nullable Output<String> resourceUsageId;
 
-    public Output<String> getResourceUsageId() {
+    public Output<String> resourceUsageId() {
         return this.resourceUsageId == null ? Codegen.empty() : this.resourceUsageId;
     }
 

@@ -42,21 +42,21 @@ public final class PredictionResponseSystemGeneratedEntities {
      * Generated interaction types.
      * 
     */
-    public List<String> getGeneratedInteractionTypes() {
+    public List<String> generatedInteractionTypes() {
         return this.generatedInteractionTypes == null ? List.of() : this.generatedInteractionTypes;
     }
     /**
      * Generated KPIs.
      * 
     */
-    public Map<String,String> getGeneratedKpis() {
+    public Map<String,String> generatedKpis() {
         return this.generatedKpis == null ? Map.of() : this.generatedKpis;
     }
     /**
      * Generated links.
      * 
     */
-    public List<String> getGeneratedLinks() {
+    public List<String> generatedLinks() {
         return this.generatedLinks == null ? List.of() : this.generatedLinks;
     }
 

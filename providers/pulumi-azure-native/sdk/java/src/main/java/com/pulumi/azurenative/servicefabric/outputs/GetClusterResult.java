@@ -264,77 +264,77 @@ public final class GetClusterResult {
      * The list of add-on features to enable in the cluster.
      * 
     */
-    public List<String> getAddOnFeatures() {
+    public List<String> addOnFeatures() {
         return this.addOnFeatures == null ? List.of() : this.addOnFeatures;
     }
     /**
      * The policy used to clean up unused versions.
      * 
     */
-    public Optional<ApplicationTypeVersionsCleanupPolicyResponse> getApplicationTypeVersionsCleanupPolicy() {
+    public Optional<ApplicationTypeVersionsCleanupPolicyResponse> applicationTypeVersionsCleanupPolicy() {
         return Optional.ofNullable(this.applicationTypeVersionsCleanupPolicy);
     }
     /**
      * The Service Fabric runtime versions available for this cluster.
      * 
     */
-    public List<ClusterVersionDetailsResponse> getAvailableClusterVersions() {
+    public List<ClusterVersionDetailsResponse> availableClusterVersions() {
         return this.availableClusterVersions;
     }
     /**
      * The AAD authentication settings of the cluster.
      * 
     */
-    public Optional<AzureActiveDirectoryResponse> getAzureActiveDirectory() {
+    public Optional<AzureActiveDirectoryResponse> azureActiveDirectory() {
         return Optional.ofNullable(this.azureActiveDirectory);
     }
     /**
      * The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
      * 
     */
-    public Optional<CertificateDescriptionResponse> getCertificate() {
+    public Optional<CertificateDescriptionResponse> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
     */
-    public Optional<ServerCertificateCommonNamesResponse> getCertificateCommonNames() {
+    public Optional<ServerCertificateCommonNamesResponse> certificateCommonNames() {
         return Optional.ofNullable(this.certificateCommonNames);
     }
     /**
      * The list of client certificates referenced by common name that are allowed to manage the cluster.
      * 
     */
-    public List<ClientCertificateCommonNameResponse> getClientCertificateCommonNames() {
+    public List<ClientCertificateCommonNameResponse> clientCertificateCommonNames() {
         return this.clientCertificateCommonNames == null ? List.of() : this.clientCertificateCommonNames;
     }
     /**
      * The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
      * 
     */
-    public List<ClientCertificateThumbprintResponse> getClientCertificateThumbprints() {
+    public List<ClientCertificateThumbprintResponse> clientCertificateThumbprints() {
         return this.clientCertificateThumbprints == null ? List.of() : this.clientCertificateThumbprints;
     }
     /**
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
     */
-    public Optional<String> getClusterCodeVersion() {
+    public Optional<String> clusterCodeVersion() {
         return Optional.ofNullable(this.clusterCodeVersion);
     }
     /**
      * The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
      * 
     */
-    public String getClusterEndpoint() {
+    public String clusterEndpoint() {
         return this.clusterEndpoint;
     }
     /**
      * A service generated unique identifier for the cluster resource.
      * 
     */
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
     /**
@@ -352,77 +352,77 @@ public final class GetClusterResult {
      *   - Ready - Indicates that the cluster is in a stable state.
      * 
     */
-    public String getClusterState() {
+    public String clusterState() {
         return this.clusterState;
     }
     /**
      * The storage account information for storing Service Fabric diagnostic logs.
      * 
     */
-    public Optional<DiagnosticsStorageAccountConfigResponse> getDiagnosticsStorageAccountConfig() {
+    public Optional<DiagnosticsStorageAccountConfigResponse> diagnosticsStorageAccountConfig() {
         return Optional.ofNullable(this.diagnosticsStorageAccountConfig);
     }
     /**
      * Azure resource etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Indicates if the event store service is enabled.
      * 
     */
-    public Optional<Boolean> getEventStoreServiceEnabled() {
+    public Optional<Boolean> eventStoreServiceEnabled() {
         return Optional.ofNullable(this.eventStoreServiceEnabled);
     }
     /**
      * The list of custom fabric settings to configure the cluster.
      * 
     */
-    public List<SettingsSectionDescriptionResponse> getFabricSettings() {
+    public List<SettingsSectionDescriptionResponse> fabricSettings() {
         return this.fabricSettings == null ? List.of() : this.fabricSettings;
     }
     /**
      * Azure resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The http management endpoint of the cluster.
      * 
     */
-    public String getManagementEndpoint() {
+    public String managementEndpoint() {
         return this.managementEndpoint;
     }
     /**
      * Azure resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of node types in the cluster.
      * 
     */
-    public List<NodeTypeDescriptionResponse> getNodeTypes() {
+    public List<NodeTypeDescriptionResponse> nodeTypes() {
         return this.nodeTypes;
     }
     /**
      * The provisioning state of the cluster resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -435,42 +435,42 @@ public final class GetClusterResult {
      *   - Platinum - Run the System services with a target replica set count of 9.
      * 
     */
-    public Optional<String> getReliabilityLevel() {
+    public Optional<String> reliabilityLevel() {
         return Optional.ofNullable(this.reliabilityLevel);
     }
     /**
      * The server certificate used by reverse proxy.
      * 
     */
-    public Optional<CertificateDescriptionResponse> getReverseProxyCertificate() {
+    public Optional<CertificateDescriptionResponse> reverseProxyCertificate() {
         return Optional.ofNullable(this.reverseProxyCertificate);
     }
     /**
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
     */
-    public Optional<ServerCertificateCommonNamesResponse> getReverseProxyCertificateCommonNames() {
+    public Optional<ServerCertificateCommonNamesResponse> reverseProxyCertificateCommonNames() {
         return Optional.ofNullable(this.reverseProxyCertificateCommonNames);
     }
     /**
      * Azure resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The policy to use when upgrading the cluster.
      * 
     */
-    public Optional<ClusterUpgradePolicyResponse> getUpgradeDescription() {
+    public Optional<ClusterUpgradePolicyResponse> upgradeDescription() {
         return Optional.ofNullable(this.upgradeDescription);
     }
     /**
@@ -480,14 +480,14 @@ public final class GetClusterResult {
      *   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
      * 
     */
-    public Optional<String> getUpgradeMode() {
+    public Optional<String> upgradeMode() {
         return Optional.ofNullable(this.upgradeMode);
     }
     /**
      * The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
      * 
     */
-    public Optional<String> getVmImage() {
+    public Optional<String> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }
 

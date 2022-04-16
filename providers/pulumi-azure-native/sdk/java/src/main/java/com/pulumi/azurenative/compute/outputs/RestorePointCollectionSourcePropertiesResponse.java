@@ -34,14 +34,14 @@ public final class RestorePointCollectionSourcePropertiesResponse {
      * Resource Id of the source resource used to create this restore point collection
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Location of the source resource used to create this restore point collection.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

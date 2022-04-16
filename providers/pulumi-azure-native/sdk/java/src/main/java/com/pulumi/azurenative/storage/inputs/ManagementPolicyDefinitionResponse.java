@@ -26,7 +26,7 @@ public final class ManagementPolicyDefinitionResponse extends com.pulumi.resourc
     @Import(name="actions", required=true)
       private final ManagementPolicyActionResponse actions;
 
-    public ManagementPolicyActionResponse getActions() {
+    public ManagementPolicyActionResponse actions() {
         return this.actions;
     }
 
@@ -37,7 +37,7 @@ public final class ManagementPolicyDefinitionResponse extends com.pulumi.resourc
     @Import(name="filters")
       private final @Nullable ManagementPolicyFilterResponse filters;
 
-    public Optional<ManagementPolicyFilterResponse> getFilters() {
+    public Optional<ManagementPolicyFilterResponse> filters() {
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
     }
 

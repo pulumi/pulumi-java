@@ -46,28 +46,28 @@ public final class AS2MessageConnectionSettingsResponse {
      * The value indicating whether to ignore mismatch in certificate name.
      * 
     */
-    public Boolean getIgnoreCertificateNameMismatch() {
+    public Boolean ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
     /**
      * The value indicating whether to keep the connection alive.
      * 
     */
-    public Boolean getKeepHttpConnectionAlive() {
+    public Boolean keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
     /**
      * The value indicating whether to support HTTP status code 'CONTINUE'.
      * 
     */
-    public Boolean getSupportHttpStatusCodeContinue() {
+    public Boolean supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
     /**
      * The value indicating whether to unfold the HTTP headers.
      * 
     */
-    public Boolean getUnfoldHttpHeaders() {
+    public Boolean unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
 

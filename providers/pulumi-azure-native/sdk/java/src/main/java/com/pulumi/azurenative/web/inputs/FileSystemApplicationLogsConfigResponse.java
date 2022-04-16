@@ -25,7 +25,7 @@ public final class FileSystemApplicationLogsConfigResponse extends com.pulumi.re
     @Import(name="level")
       private final @Nullable String level;
 
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 

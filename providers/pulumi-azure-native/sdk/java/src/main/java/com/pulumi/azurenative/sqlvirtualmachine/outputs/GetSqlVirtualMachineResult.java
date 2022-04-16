@@ -161,133 +161,133 @@ public final class GetSqlVirtualMachineResult {
      * Auto backup settings for SQL Server.
      * 
     */
-    public Optional<AutoBackupSettingsResponse> getAutoBackupSettings() {
+    public Optional<AutoBackupSettingsResponse> autoBackupSettings() {
         return Optional.ofNullable(this.autoBackupSettings);
     }
     /**
      * Auto patching settings for applying critical security updates to SQL virtual machine.
      * 
     */
-    public Optional<AutoPatchingSettingsResponse> getAutoPatchingSettings() {
+    public Optional<AutoPatchingSettingsResponse> autoPatchingSettings() {
         return Optional.ofNullable(this.autoPatchingSettings);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure Active Directory identity of the server.
      * 
     */
-    public Optional<ResourceIdentityResponse> getIdentity() {
+    public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Key vault credential settings.
      * 
     */
-    public Optional<KeyVaultCredentialSettingsResponse> getKeyVaultCredentialSettings() {
+    public Optional<KeyVaultCredentialSettingsResponse> keyVaultCredentialSettings() {
         return Optional.ofNullable(this.keyVaultCredentialSettings);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state to track the async operation status.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * SQL Server configuration management settings.
      * 
     */
-    public Optional<ServerConfigurationsManagementSettingsResponse> getServerConfigurationsManagementSettings() {
+    public Optional<ServerConfigurationsManagementSettingsResponse> serverConfigurationsManagementSettings() {
         return Optional.ofNullable(this.serverConfigurationsManagementSettings);
     }
     /**
      * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
      * 
     */
-    public Optional<String> getSqlImageOffer() {
+    public Optional<String> sqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
     /**
      * SQL Server edition type.
      * 
     */
-    public Optional<String> getSqlImageSku() {
+    public Optional<String> sqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
     /**
      * SQL Server Management type.
      * 
     */
-    public Optional<String> getSqlManagement() {
+    public Optional<String> sqlManagement() {
         return Optional.ofNullable(this.sqlManagement);
     }
     /**
      * SQL Server license type.
      * 
     */
-    public Optional<String> getSqlServerLicenseType() {
+    public Optional<String> sqlServerLicenseType() {
         return Optional.ofNullable(this.sqlServerLicenseType);
     }
     /**
      * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
      * 
     */
-    public Optional<String> getSqlVirtualMachineGroupResourceId() {
+    public Optional<String> sqlVirtualMachineGroupResourceId() {
         return Optional.ofNullable(this.sqlVirtualMachineGroupResourceId);
     }
     /**
      * Storage Configuration Settings.
      * 
     */
-    public Optional<StorageConfigurationSettingsResponse> getStorageConfigurationSettings() {
+    public Optional<StorageConfigurationSettingsResponse> storageConfigurationSettings() {
         return Optional.ofNullable(this.storageConfigurationSettings);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * ARM Resource id of underlying virtual machine created from SQL marketplace image.
      * 
     */
-    public Optional<String> getVirtualMachineResourceId() {
+    public Optional<String> virtualMachineResourceId() {
         return Optional.ofNullable(this.virtualMachineResourceId);
     }
     /**
      * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
      * 
     */
-    public Optional<WsfcDomainCredentialsResponse> getWsfcDomainCredentials() {
+    public Optional<WsfcDomainCredentialsResponse> wsfcDomainCredentials() {
         return Optional.ofNullable(this.wsfcDomainCredentials);
     }
 

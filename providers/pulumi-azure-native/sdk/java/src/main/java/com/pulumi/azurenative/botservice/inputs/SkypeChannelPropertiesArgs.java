@@ -27,7 +27,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="callingWebHook")
       private final @Nullable Output<String> callingWebHook;
 
-    public Output<String> getCallingWebHook() {
+    public Output<String> callingWebHook() {
         return this.callingWebHook == null ? Codegen.empty() : this.callingWebHook;
     }
 
@@ -38,7 +38,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="enableCalling")
       private final @Nullable Output<Boolean> enableCalling;
 
-    public Output<Boolean> getEnableCalling() {
+    public Output<Boolean> enableCalling() {
         return this.enableCalling == null ? Codegen.empty() : this.enableCalling;
     }
 
@@ -49,7 +49,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="enableGroups")
       private final @Nullable Output<Boolean> enableGroups;
 
-    public Output<Boolean> getEnableGroups() {
+    public Output<Boolean> enableGroups() {
         return this.enableGroups == null ? Codegen.empty() : this.enableGroups;
     }
 
@@ -60,7 +60,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="enableMediaCards")
       private final @Nullable Output<Boolean> enableMediaCards;
 
-    public Output<Boolean> getEnableMediaCards() {
+    public Output<Boolean> enableMediaCards() {
         return this.enableMediaCards == null ? Codegen.empty() : this.enableMediaCards;
     }
 
@@ -71,7 +71,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="enableMessaging")
       private final @Nullable Output<Boolean> enableMessaging;
 
-    public Output<Boolean> getEnableMessaging() {
+    public Output<Boolean> enableMessaging() {
         return this.enableMessaging == null ? Codegen.empty() : this.enableMessaging;
     }
 
@@ -82,7 +82,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="enableScreenSharing")
       private final @Nullable Output<Boolean> enableScreenSharing;
 
-    public Output<Boolean> getEnableScreenSharing() {
+    public Output<Boolean> enableScreenSharing() {
         return this.enableScreenSharing == null ? Codegen.empty() : this.enableScreenSharing;
     }
 
@@ -93,7 +93,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="enableVideo")
       private final @Nullable Output<Boolean> enableVideo;
 
-    public Output<Boolean> getEnableVideo() {
+    public Output<Boolean> enableVideo() {
         return this.enableVideo == null ? Codegen.empty() : this.enableVideo;
     }
 
@@ -104,7 +104,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="groupsMode")
       private final @Nullable Output<String> groupsMode;
 
-    public Output<String> getGroupsMode() {
+    public Output<String> groupsMode() {
         return this.groupsMode == null ? Codegen.empty() : this.groupsMode;
     }
 
@@ -115,7 +115,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="incomingCallRoute")
       private final @Nullable Output<String> incomingCallRoute;
 
-    public Output<String> getIncomingCallRoute() {
+    public Output<String> incomingCallRoute() {
         return this.incomingCallRoute == null ? Codegen.empty() : this.incomingCallRoute;
     }
 
@@ -126,7 +126,7 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 

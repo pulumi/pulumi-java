@@ -46,7 +46,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The reference to the device resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getDevice() {
+    public Output</* @Nullable */ SubResourceResponse> device() {
         return this.device;
     }
     /**
@@ -60,7 +60,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -74,7 +74,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The resource URI of the managed application.
      * 
      */
-    public Output<SubResourceResponse> getManagedApplication() {
+    public Output<SubResourceResponse> managedApplication() {
         return this.managedApplication;
     }
     /**
@@ -102,7 +102,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The parameters for the managed application.
      * 
      */
-    public Output</* @Nullable */ Object> getManagedApplicationParameters() {
+    public Output</* @Nullable */ Object> managedApplicationParameters() {
         return this.managedApplicationParameters;
     }
     /**
@@ -116,7 +116,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The network function configurations from the user.
      * 
      */
-    public Output</* @Nullable */ List<NetworkFunctionUserConfigurationResponse>> getNetworkFunctionUserConfigurations() {
+    public Output</* @Nullable */ List<NetworkFunctionUserConfigurationResponse>> networkFunctionUserConfigurations() {
         return this.networkFunctionUserConfigurations;
     }
     /**
@@ -144,7 +144,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the network function resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -158,7 +158,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The service key for the network function resource.
      * 
      */
-    public Output<String> getServiceKey() {
+    public Output<String> serviceKey() {
         return this.serviceKey;
     }
     /**
@@ -172,7 +172,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The sku name for the network function.
      * 
      */
-    public Output</* @Nullable */ String> getSkuName() {
+    public Output</* @Nullable */ String> skuName() {
         return this.skuName;
     }
     /**
@@ -186,7 +186,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The sku type for the network function.
      * 
      */
-    public Output<String> getSkuType() {
+    public Output<String> skuType() {
         return this.skuType;
     }
     /**
@@ -200,7 +200,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -214,7 +214,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -228,7 +228,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The vendor name for the network function.
      * 
      */
-    public Output</* @Nullable */ String> getVendorName() {
+    public Output</* @Nullable */ String> vendorName() {
         return this.vendorName;
     }
     /**
@@ -242,7 +242,7 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The vendor provisioning state for the network function resource.
      * 
      */
-    public Output<String> getVendorProvisioningState() {
+    public Output<String> vendorProvisioningState() {
         return this.vendorProvisioningState;
     }
 

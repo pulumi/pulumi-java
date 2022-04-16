@@ -25,7 +25,7 @@ public final class TIDataConnectorDataTypesResponse extends com.pulumi.resources
     @Import(name="indicators")
       private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
-    public Optional<TIDataConnectorDataTypesResponseIndicators> getIndicators() {
+    public Optional<TIDataConnectorDataTypesResponseIndicators> indicators() {
         return this.indicators == null ? Optional.empty() : Optional.ofNullable(this.indicators);
     }
 

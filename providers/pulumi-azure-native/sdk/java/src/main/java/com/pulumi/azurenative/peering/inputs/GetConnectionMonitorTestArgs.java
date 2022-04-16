@@ -19,7 +19,7 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
     @Import(name="connectionMonitorTestName", required=true)
       private final String connectionMonitorTestName;
 
-    public String getConnectionMonitorTestName() {
+    public String connectionMonitorTestName() {
         return this.connectionMonitorTestName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
     @Import(name="peeringServiceName", required=true)
       private final String peeringServiceName;
 
-    public String getPeeringServiceName() {
+    public String peeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConnectionMonitorTestArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

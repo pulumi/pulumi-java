@@ -28,7 +28,7 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="defaultTtlAsIso8601")
       private final @Nullable Output<String> defaultTtlAsIso8601;
 
-    public Output<String> getDefaultTtlAsIso8601() {
+    public Output<String> defaultTtlAsIso8601() {
         return this.defaultTtlAsIso8601 == null ? Codegen.empty() : this.defaultTtlAsIso8601;
     }
 
@@ -39,7 +39,7 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="feedback")
       private final @Nullable Output<FeedbackPropertiesArgs> feedback;
 
-    public Output<FeedbackPropertiesArgs> getFeedback() {
+    public Output<FeedbackPropertiesArgs> feedback() {
         return this.feedback == null ? Codegen.empty() : this.feedback;
     }
 
@@ -50,7 +50,7 @@ public final class CloudToDevicePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> getMaxDeliveryCount() {
+    public Output<Integer> maxDeliveryCount() {
         return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
     }
 

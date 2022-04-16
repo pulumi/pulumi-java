@@ -33,14 +33,14 @@ public final class DicomServiceAuthenticationConfigurationResponse {
      * The audiences for the service
      * 
     */
-    public List<String> getAudiences() {
+    public List<String> audiences() {
         return this.audiences;
     }
     /**
      * The authority url for the service
      * 
     */
-    public String getAuthority() {
+    public String authority() {
         return this.authority;
     }
 

@@ -61,42 +61,42 @@ public final class UpdateHistoryPropertyResponse {
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
     */
-    public Integer getImmutabilityPeriodSinceCreationInDays() {
+    public Integer immutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
     }
     /**
      * Returns the Object ID of the user who updated the ImmutabilityPolicy.
      * 
     */
-    public String getObjectIdentifier() {
+    public String objectIdentifier() {
         return this.objectIdentifier;
     }
     /**
      * Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Returns the date and time the ImmutabilityPolicy was updated.
      * 
     */
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
     /**
      * The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
      * 
     */
-    public String getUpdate() {
+    public String update() {
         return this.update;
     }
     /**
      * Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
      * 
     */
-    public String getUpn() {
+    public String upn() {
         return this.upn;
     }
 

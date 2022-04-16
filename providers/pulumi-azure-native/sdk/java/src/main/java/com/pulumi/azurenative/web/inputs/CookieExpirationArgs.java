@@ -27,7 +27,7 @@ public final class CookieExpirationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="convention")
       private final @Nullable Output<CookieExpirationConvention> convention;
 
-    public Output<CookieExpirationConvention> getConvention() {
+    public Output<CookieExpirationConvention> convention() {
         return this.convention == null ? Codegen.empty() : this.convention;
     }
 
@@ -38,7 +38,7 @@ public final class CookieExpirationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeToExpiration")
       private final @Nullable Output<String> timeToExpiration;
 
-    public Output<String> getTimeToExpiration() {
+    public Output<String> timeToExpiration() {
         return this.timeToExpiration == null ? Codegen.empty() : this.timeToExpiration;
     }
 

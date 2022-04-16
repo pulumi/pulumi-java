@@ -115,91 +115,91 @@ public final class SchemaResponse {
      * Table category.
      * 
     */
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories;
     }
     /**
      * A list of table custom columns.
      * 
     */
-    public List<ColumnResponse> getColumns() {
+    public List<ColumnResponse> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * Table description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Table display name.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Table labels.
      * 
     */
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels;
     }
     /**
      * Table name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Parameters of the restore operation that initiated this table.
      * 
     */
-    public RestoredLogsResponse getRestoredLogs() {
+    public RestoredLogsResponse restoredLogs() {
         return this.restoredLogs;
     }
     /**
      * Parameters of the search job that initiated this table.
      * 
     */
-    public SearchResultsResponse getSearchResults() {
+    public SearchResultsResponse searchResults() {
         return this.searchResults;
     }
     /**
      * List of solutions the table is affiliated with
      * 
     */
-    public List<String> getSolutions() {
+    public List<String> solutions() {
         return this.solutions;
     }
     /**
      * Table's creator.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * A list of table standard columns.
      * 
     */
-    public List<ColumnResponse> getStandardColumns() {
+    public List<ColumnResponse> standardColumns() {
         return this.standardColumns;
     }
     /**
      * The subtype describes what APIs can be used to interact with the table, and what features are available against it.
      * 
     */
-    public String getTableSubType() {
+    public String tableSubType() {
         return this.tableSubType;
     }
     /**
      * Table's creator.
      * 
     */
-    public String getTableType() {
+    public String tableType() {
         return this.tableType;
     }
 

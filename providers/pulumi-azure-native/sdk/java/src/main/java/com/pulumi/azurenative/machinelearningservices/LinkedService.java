@@ -44,7 +44,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -58,7 +58,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return location of the linked service.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return Friendly name of the linked service.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return LinkedService specific properties.
      * 
      */
-    public Output<LinkedServicePropsResponse> getProperties() {
+    public Output<LinkedServicePropsResponse> properties() {
         return this.properties;
     }
     /**
@@ -100,7 +100,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return Resource type of linked service.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

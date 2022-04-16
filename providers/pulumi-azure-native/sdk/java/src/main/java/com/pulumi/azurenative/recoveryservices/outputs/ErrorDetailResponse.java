@@ -40,21 +40,21 @@ public final class ErrorDetailResponse {
      * Error code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Error Message related to the Code.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * List of recommendation strings.
      * 
     */
-    public List<String> getRecommendations() {
+    public List<String> recommendations() {
         return this.recommendations;
     }
 

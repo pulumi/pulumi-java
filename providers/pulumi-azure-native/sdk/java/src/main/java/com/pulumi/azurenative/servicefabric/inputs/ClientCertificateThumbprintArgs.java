@@ -26,7 +26,7 @@ public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.
     @Import(name="certificateThumbprint", required=true)
       private final Output<String> certificateThumbprint;
 
-    public Output<String> getCertificateThumbprint() {
+    public Output<String> certificateThumbprint() {
         return this.certificateThumbprint;
     }
 
@@ -37,7 +37,7 @@ public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.
     @Import(name="isAdmin", required=true)
       private final Output<Boolean> isAdmin;
 
-    public Output<Boolean> getIsAdmin() {
+    public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
 

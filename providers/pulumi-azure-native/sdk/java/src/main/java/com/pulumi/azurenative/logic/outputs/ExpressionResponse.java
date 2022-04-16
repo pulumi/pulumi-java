@@ -47,24 +47,24 @@ public final class ExpressionResponse {
      * The azure resource error info.
      * 
     */
-    public Optional<AzureResourceErrorInfoResponse> getError() {
+    public Optional<AzureResourceErrorInfoResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The sub expressions.
      * 
     */
-    public List<ExpressionResponse> getSubexpressions() {
+    public List<ExpressionResponse> subexpressions() {
         return this.subexpressions == null ? List.of() : this.subexpressions;
     }
     /**
      * The text.
      * 
     */
-    public Optional<String> getText() {
+    public Optional<String> text() {
         return Optional.ofNullable(this.text);
     }
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
 

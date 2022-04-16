@@ -19,7 +19,7 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
     @Import(name="environmentName", required=true)
       private final String environmentName;
 
-    public String getEnvironmentName() {
+    public String environmentName() {
         return this.environmentName;
     }
 
@@ -30,7 +30,7 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class ListStaticSiteBuildAppSettingsArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

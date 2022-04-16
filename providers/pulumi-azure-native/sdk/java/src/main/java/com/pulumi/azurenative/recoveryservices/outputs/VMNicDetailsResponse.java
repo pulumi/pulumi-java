@@ -212,189 +212,189 @@ public final class VMNicDetailsResponse {
      * A value indicating whether the NIC has accelerated networking enabled.
      * 
     */
-    public Optional<Boolean> getEnableAcceleratedNetworkingOnRecovery() {
+    public Optional<Boolean> enableAcceleratedNetworkingOnRecovery() {
         return Optional.ofNullable(this.enableAcceleratedNetworkingOnRecovery);
     }
     /**
      * Whether the test failover NIC has accelerated networking enabled.
      * 
     */
-    public Optional<Boolean> getEnableAcceleratedNetworkingOnTfo() {
+    public Optional<Boolean> enableAcceleratedNetworkingOnTfo() {
         return Optional.ofNullable(this.enableAcceleratedNetworkingOnTfo);
     }
     /**
      * Ip address type.
      * 
     */
-    public Optional<String> getIpAddressType() {
+    public Optional<String> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
     /**
      * The nic Id.
      * 
     */
-    public Optional<String> getNicId() {
+    public Optional<String> nicId() {
         return Optional.ofNullable(this.nicId);
     }
     /**
      * Primary nic static IP address.
      * 
     */
-    public Optional<String> getPrimaryNicStaticIPAddress() {
+    public Optional<String> primaryNicStaticIPAddress() {
         return Optional.ofNullable(this.primaryNicStaticIPAddress);
     }
     /**
      * The target backend address pools for the NIC.
      * 
     */
-    public List<String> getRecoveryLBBackendAddressPoolIds() {
+    public List<String> recoveryLBBackendAddressPoolIds() {
         return this.recoveryLBBackendAddressPoolIds == null ? List.of() : this.recoveryLBBackendAddressPoolIds;
     }
     /**
      * The id of the NSG associated with the NIC.
      * 
     */
-    public Optional<String> getRecoveryNetworkSecurityGroupId() {
+    public Optional<String> recoveryNetworkSecurityGroupId() {
         return Optional.ofNullable(this.recoveryNetworkSecurityGroupId);
     }
     /**
      * IP allocation type for recovery VM.
      * 
     */
-    public Optional<String> getRecoveryNicIpAddressType() {
+    public Optional<String> recoveryNicIpAddressType() {
         return Optional.ofNullable(this.recoveryNicIpAddressType);
     }
     /**
      * The name of the NIC to be used when creating target NICs.
      * 
     */
-    public Optional<String> getRecoveryNicName() {
+    public Optional<String> recoveryNicName() {
         return Optional.ofNullable(this.recoveryNicName);
     }
     /**
      * The resource group of the NIC to be used when creating target NICs.
      * 
     */
-    public Optional<String> getRecoveryNicResourceGroupName() {
+    public Optional<String> recoveryNicResourceGroupName() {
         return Optional.ofNullable(this.recoveryNicResourceGroupName);
     }
     /**
      * The id of the public IP address resource associated with the NIC.
      * 
     */
-    public Optional<String> getRecoveryPublicIpAddressId() {
+    public Optional<String> recoveryPublicIpAddressId() {
         return Optional.ofNullable(this.recoveryPublicIpAddressId);
     }
     /**
      * Recovery VM network Id.
      * 
     */
-    public Optional<String> getRecoveryVMNetworkId() {
+    public Optional<String> recoveryVMNetworkId() {
         return Optional.ofNullable(this.recoveryVMNetworkId);
     }
     /**
      * Recovery VM subnet name.
      * 
     */
-    public Optional<String> getRecoveryVMSubnetName() {
+    public Optional<String> recoveryVMSubnetName() {
         return Optional.ofNullable(this.recoveryVMSubnetName);
     }
     /**
      * The replica nic Id.
      * 
     */
-    public Optional<String> getReplicaNicId() {
+    public Optional<String> replicaNicId() {
         return Optional.ofNullable(this.replicaNicId);
     }
     /**
      * Replica nic static IP address.
      * 
     */
-    public Optional<String> getReplicaNicStaticIPAddress() {
+    public Optional<String> replicaNicStaticIPAddress() {
         return Optional.ofNullable(this.replicaNicStaticIPAddress);
     }
     /**
      * A value indicating whether an existing NIC is allowed to be reused during failover subject to availability.
      * 
     */
-    public Optional<Boolean> getReuseExistingNic() {
+    public Optional<Boolean> reuseExistingNic() {
         return Optional.ofNullable(this.reuseExistingNic);
     }
     /**
      * Selection type for failover.
      * 
     */
-    public Optional<String> getSelectionType() {
+    public Optional<String> selectionType() {
         return Optional.ofNullable(this.selectionType);
     }
     /**
      * The source nic ARM Id.
      * 
     */
-    public Optional<String> getSourceNicArmId() {
+    public Optional<String> sourceNicArmId() {
         return Optional.ofNullable(this.sourceNicArmId);
     }
     /**
      * The IP configurations to be used by NIC during test failover.
      * 
     */
-    public List<IPConfigResponse> getTfoIPConfigs() {
+    public List<IPConfigResponse> tfoIPConfigs() {
         return this.tfoIPConfigs == null ? List.of() : this.tfoIPConfigs;
     }
     /**
      * The NSG to be used by NIC during test failover.
      * 
     */
-    public Optional<String> getTfoNetworkSecurityGroupId() {
+    public Optional<String> tfoNetworkSecurityGroupId() {
         return Optional.ofNullable(this.tfoNetworkSecurityGroupId);
     }
     /**
      * The name of the NIC to be used when creating target NICs in TFO.
      * 
     */
-    public Optional<String> getTfoRecoveryNicName() {
+    public Optional<String> tfoRecoveryNicName() {
         return Optional.ofNullable(this.tfoRecoveryNicName);
     }
     /**
      * The resource group of the NIC to be used when creating target NICs in TFO.
      * 
     */
-    public Optional<String> getTfoRecoveryNicResourceGroupName() {
+    public Optional<String> tfoRecoveryNicResourceGroupName() {
         return Optional.ofNullable(this.tfoRecoveryNicResourceGroupName);
     }
     /**
      * A value indicating whether an existing NIC is allowed to be reused during test failover subject to availability.
      * 
     */
-    public Optional<Boolean> getTfoReuseExistingNic() {
+    public Optional<Boolean> tfoReuseExistingNic() {
         return Optional.ofNullable(this.tfoReuseExistingNic);
     }
     /**
      * The network to be used by NIC during test failover.
      * 
     */
-    public Optional<String> getTfoVMNetworkId() {
+    public Optional<String> tfoVMNetworkId() {
         return Optional.ofNullable(this.tfoVMNetworkId);
     }
     /**
      * The subnet to be used by NIC during test failover.
      * 
     */
-    public Optional<String> getTfoVMSubnetName() {
+    public Optional<String> tfoVMSubnetName() {
         return Optional.ofNullable(this.tfoVMSubnetName);
     }
     /**
      * VM network name.
      * 
     */
-    public Optional<String> getVMNetworkName() {
+    public Optional<String> vMNetworkName() {
         return Optional.ofNullable(this.vMNetworkName);
     }
     /**
      * VM subnet name.
      * 
     */
-    public Optional<String> getVMSubnetName() {
+    public Optional<String> vMSubnetName() {
         return Optional.ofNullable(this.vMSubnetName);
     }
 

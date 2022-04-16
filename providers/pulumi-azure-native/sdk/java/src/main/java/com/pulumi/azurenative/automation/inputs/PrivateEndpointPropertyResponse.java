@@ -25,7 +25,7 @@ public final class PrivateEndpointPropertyResponse extends com.pulumi.resources.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 

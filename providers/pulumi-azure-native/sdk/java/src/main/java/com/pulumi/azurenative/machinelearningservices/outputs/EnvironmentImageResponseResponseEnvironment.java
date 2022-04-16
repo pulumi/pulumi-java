@@ -81,56 +81,56 @@ public final class EnvironmentImageResponseResponseEnvironment {
      * The definition of a Docker container.
      * 
     */
-    public Optional<ModelEnvironmentDefinitionResponseResponseDocker> getDocker() {
+    public Optional<ModelEnvironmentDefinitionResponseResponseDocker> docker() {
         return Optional.ofNullable(this.docker);
     }
     /**
      * Definition of environment variables to be defined in the environment.
      * 
     */
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
      * 
     */
-    public Optional<String> getInferencingStackVersion() {
+    public Optional<String> inferencingStackVersion() {
         return Optional.ofNullable(this.inferencingStackVersion);
     }
     /**
      * The name of the environment.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Settings for a Python environment.
      * 
     */
-    public Optional<ModelEnvironmentDefinitionResponseResponsePython> getPython() {
+    public Optional<ModelEnvironmentDefinitionResponseResponsePython> python() {
         return Optional.ofNullable(this.python);
     }
     /**
      * Settings for a R environment.
      * 
     */
-    public Optional<ModelEnvironmentDefinitionResponseResponseR> getR() {
+    public Optional<ModelEnvironmentDefinitionResponseResponseR> r() {
         return Optional.ofNullable(this.r);
     }
     /**
      * The configuration for a Spark environment.
      * 
     */
-    public Optional<ModelEnvironmentDefinitionResponseResponseSpark> getSpark() {
+    public Optional<ModelEnvironmentDefinitionResponseResponseSpark> spark() {
         return Optional.ofNullable(this.spark);
     }
     /**
      * The environment version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

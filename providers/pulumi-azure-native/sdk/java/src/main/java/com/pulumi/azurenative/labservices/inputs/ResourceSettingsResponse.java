@@ -27,7 +27,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="cores", required=true)
       private final Integer cores;
 
-    public Integer getCores() {
+    public Integer cores() {
         return this.cores;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="galleryImageResourceId")
       private final @Nullable String galleryImageResourceId;
 
-    public Optional<String> getGalleryImageResourceId() {
+    public Optional<String> galleryImageResourceId() {
         return this.galleryImageResourceId == null ? Optional.empty() : Optional.ofNullable(this.galleryImageResourceId);
     }
 
@@ -49,7 +49,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -60,7 +60,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="imageName", required=true)
       private final String imageName;
 
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
 
@@ -71,7 +71,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="referenceVm", required=true)
       private final ReferenceVmResponse referenceVm;
 
-    public ReferenceVmResponse getReferenceVm() {
+    public ReferenceVmResponse referenceVm() {
         return this.referenceVm;
     }
 
@@ -82,7 +82,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="size")
       private final @Nullable String size;
 
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 

@@ -50,21 +50,21 @@ public final class FileServerWriteSettingsResponse {
      * The type of copy behavior for copy sink.
      * 
     */
-    public Optional<Object> getCopyBehavior() {
+    public Optional<Object> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
@@ -72,7 +72,7 @@ public final class FileServerWriteSettingsResponse {
      * Expected value is 'FileServerWriteSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

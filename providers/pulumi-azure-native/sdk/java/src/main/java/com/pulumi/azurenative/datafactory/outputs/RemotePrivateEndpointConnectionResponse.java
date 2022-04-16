@@ -39,17 +39,17 @@ public final class RemotePrivateEndpointConnectionResponse {
      * PrivateEndpoint of a remote private endpoint connection
      * 
     */
-    public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
+    public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The state of a private link connection
      * 
     */
-    public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

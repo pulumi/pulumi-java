@@ -44,7 +44,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return HTTP strong entity tag value. Ignored if submitted
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The resource kind. Only 'vm' (the default) is supported.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +72,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +86,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The resource's provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +114,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The public key of the service, used to encrypt secrets sent to the service
      * 
      */
-    public Output</* @Nullable */ String> getPublicKey() {
+    public Output</* @Nullable */ String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -128,7 +128,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Service SKU
      * 
      */
-    public Output</* @Nullable */ ServiceSkuResponse> getSku() {
+    public Output</* @Nullable */ ServiceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -142,7 +142,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +156,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -170,7 +170,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
      * 
      */
-    public Output<String> getVirtualSubnetId() {
+    public Output<String> virtualSubnetId() {
         return this.virtualSubnetId;
     }
 

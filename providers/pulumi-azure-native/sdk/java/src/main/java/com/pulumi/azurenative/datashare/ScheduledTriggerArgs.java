@@ -25,7 +25,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="recurrenceInterval", required=true)
       private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
-    public Output<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
+    public Output<Either<String,RecurrenceInterval>> recurrenceInterval() {
         return this.recurrenceInterval;
     }
 
@@ -59,7 +59,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +70,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -81,7 +81,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="synchronizationMode")
       private final @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
 
-    public Output<Either<String,SynchronizationMode>> getSynchronizationMode() {
+    public Output<Either<String,SynchronizationMode>> synchronizationMode() {
         return this.synchronizationMode == null ? Codegen.empty() : this.synchronizationMode;
     }
 
@@ -92,7 +92,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="synchronizationTime", required=true)
       private final Output<String> synchronizationTime;
 
-    public Output<String> getSynchronizationTime() {
+    public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
 
@@ -103,7 +103,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="triggerName")
       private final @Nullable Output<String> triggerName;
 
-    public Output<String> getTriggerName() {
+    public Output<String> triggerName() {
         return this.triggerName == null ? Codegen.empty() : this.triggerName;
     }
 

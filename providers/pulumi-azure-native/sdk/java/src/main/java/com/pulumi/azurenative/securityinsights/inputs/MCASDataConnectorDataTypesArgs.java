@@ -26,7 +26,7 @@ public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.R
     @Import(name="alerts")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
-    public Output<DataConnectorDataTypeCommonArgs> getAlerts() {
+    public Output<DataConnectorDataTypeCommonArgs> alerts() {
         return this.alerts == null ? Codegen.empty() : this.alerts;
     }
 
@@ -37,7 +37,7 @@ public final class MCASDataConnectorDataTypesArgs extends com.pulumi.resources.R
     @Import(name="discoveryLogs")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
-    public Output<DataConnectorDataTypeCommonArgs> getDiscoveryLogs() {
+    public Output<DataConnectorDataTypeCommonArgs> discoveryLogs() {
         return this.discoveryLogs == null ? Codegen.empty() : this.discoveryLogs;
     }
 

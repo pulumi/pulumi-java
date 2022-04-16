@@ -62,38 +62,38 @@ public final class IngressResponse {
      * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
      * 
     */
-    public Optional<Boolean> getAllowInsecure() {
+    public Optional<Boolean> allowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
     /**
      * Bool indicating if app exposes an external http endpoint
      * 
     */
-    public Optional<Boolean> getExternal() {
+    public Optional<Boolean> external() {
         return Optional.ofNullable(this.external);
     }
     /**
      * Hostname.
      * 
     */
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
     /**
      * Target Port in containers for traffic from ingress
      * 
     */
-    public Optional<Integer> getTargetPort() {
+    public Optional<Integer> targetPort() {
         return Optional.ofNullable(this.targetPort);
     }
-    public List<TrafficWeightResponse> getTraffic() {
+    public List<TrafficWeightResponse> traffic() {
         return this.traffic == null ? List.of() : this.traffic;
     }
     /**
      * Ingress transport protocol
      * 
     */
-    public Optional<String> getTransport() {
+    public Optional<String> transport() {
         return Optional.ofNullable(this.transport);
     }
 

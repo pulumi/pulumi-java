@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse e
     @Import(name="networkInterfaceConfigurations")
       private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
+    public List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }
 

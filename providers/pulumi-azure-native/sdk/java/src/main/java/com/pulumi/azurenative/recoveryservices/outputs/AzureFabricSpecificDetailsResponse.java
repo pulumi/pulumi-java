@@ -43,7 +43,7 @@ public final class AzureFabricSpecificDetailsResponse {
      * The container Ids for the Azure fabric.
      * 
     */
-    public List<String> getContainerIds() {
+    public List<String> containerIds() {
         return this.containerIds == null ? List.of() : this.containerIds;
     }
     /**
@@ -51,14 +51,14 @@ public final class AzureFabricSpecificDetailsResponse {
      * Expected value is 'Azure'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The Location for the Azure fabric.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
 

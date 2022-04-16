@@ -25,7 +25,7 @@ public final class ApplicationGatewayFirewallExclusionArgs extends com.pulumi.re
     @Import(name="matchVariable", required=true)
       private final Output<String> matchVariable;
 
-    public Output<String> getMatchVariable() {
+    public Output<String> matchVariable() {
         return this.matchVariable;
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationGatewayFirewallExclusionArgs extends com.pulumi.re
     @Import(name="selector", required=true)
       private final Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector;
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationGatewayFirewallExclusionArgs extends com.pulumi.re
     @Import(name="selectorMatchOperator", required=true)
       private final Output<String> selectorMatchOperator;
 
-    public Output<String> getSelectorMatchOperator() {
+    public Output<String> selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 

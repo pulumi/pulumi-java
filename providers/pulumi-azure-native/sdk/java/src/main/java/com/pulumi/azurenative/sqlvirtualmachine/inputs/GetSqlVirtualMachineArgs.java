@@ -21,7 +21,7 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
     @Import(name="sqlVirtualMachineName", required=true)
       private final String sqlVirtualMachineName;
 
-    public String getSqlVirtualMachineName() {
+    public String sqlVirtualMachineName() {
         return this.sqlVirtualMachineName;
     }
 

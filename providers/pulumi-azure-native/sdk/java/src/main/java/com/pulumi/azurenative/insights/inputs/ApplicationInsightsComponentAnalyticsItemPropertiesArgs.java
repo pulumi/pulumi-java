@@ -26,7 +26,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
     @Import(name="functionAlias")
       private final @Nullable Output<String> functionAlias;
 
-    public Output<String> getFunctionAlias() {
+    public Output<String> functionAlias() {
         return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
     }
 

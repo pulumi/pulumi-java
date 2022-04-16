@@ -72,49 +72,49 @@ public final class GetRuleResult {
      * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
      * 
     */
-    public Optional<ActionResponse> getAction() {
+    public Optional<ActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Properties of correlationFilter
      * 
     */
-    public Optional<CorrelationFilterResponse> getCorrelationFilter() {
+    public Optional<CorrelationFilterResponse> correlationFilter() {
         return Optional.ofNullable(this.correlationFilter);
     }
     /**
      * Filter type that is evaluated against a BrokeredMessage.
      * 
     */
-    public Optional<String> getFilterType() {
+    public Optional<String> filterType() {
         return Optional.ofNullable(this.filterType);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of sqlFilter
      * 
     */
-    public Optional<SqlFilterResponse> getSqlFilter() {
+    public Optional<SqlFilterResponse> sqlFilter() {
         return Optional.ofNullable(this.sqlFilter);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

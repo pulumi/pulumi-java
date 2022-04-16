@@ -105,84 +105,84 @@ public final class GetDeviceExtendedInformationResult {
      * The name of Channel Integrity Key stored in the Client Key Vault
      * 
     */
-    public Optional<String> getChannelIntegrityKeyName() {
+    public Optional<String> channelIntegrityKeyName() {
         return Optional.ofNullable(this.channelIntegrityKeyName);
     }
     /**
      * The version of Channel Integrity Key stored in the Client Key Vault
      * 
     */
-    public Optional<String> getChannelIntegrityKeyVersion() {
+    public Optional<String> channelIntegrityKeyVersion() {
         return Optional.ofNullable(this.channelIntegrityKeyVersion);
     }
     /**
      * The Key Vault ARM Id for client secrets
      * 
     */
-    public Optional<String> getClientSecretStoreId() {
+    public Optional<String> clientSecretStoreId() {
         return Optional.ofNullable(this.clientSecretStoreId);
     }
     /**
      * The url to access the Client Key Vault
      * 
     */
-    public Optional<String> getClientSecretStoreUrl() {
+    public Optional<String> clientSecretStoreUrl() {
         return Optional.ofNullable(this.clientSecretStoreUrl);
     }
     /**
      * Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
      * 
     */
-    public DeviceSecretsResponse getDeviceSecrets() {
+    public DeviceSecretsResponse deviceSecrets() {
         return this.deviceSecrets;
     }
     /**
      * The public part of the encryption certificate. Client uses this to encrypt any secret.
      * 
     */
-    public Optional<String> getEncryptionKey() {
+    public Optional<String> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * The digital signature of encrypted certificate.
      * 
     */
-    public Optional<String> getEncryptionKeyThumbprint() {
+    public Optional<String> encryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Key vault sync status
      * 
     */
-    public Optional<String> getKeyVaultSyncStatus() {
+    public Optional<String> keyVaultSyncStatus() {
         return Optional.ofNullable(this.keyVaultSyncStatus);
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Resource ID of the Resource.
      * 
     */
-    public String getResourceKey() {
+    public String resourceKey() {
         return this.resourceKey;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

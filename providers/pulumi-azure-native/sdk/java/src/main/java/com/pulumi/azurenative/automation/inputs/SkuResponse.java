@@ -26,7 +26,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -37,7 +37,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family")
       private final @Nullable String family;
 
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
@@ -48,7 +48,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

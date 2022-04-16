@@ -37,7 +37,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -48,7 +48,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="bucketName", required=true)
       private final Object bucketName;
 
-    public Object getBucketName() {
+    public Object bucketName() {
         return this.bucketName;
     }
 
@@ -59,7 +59,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="compression")
       private final @Nullable DatasetCompressionResponse compression;
 
-    public Optional<DatasetCompressionResponse> getCompression() {
+    public Optional<DatasetCompressionResponse> compression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
     }
 
@@ -70,7 +70,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -81,7 +81,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
@@ -92,7 +92,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="format")
       private final @Nullable Object format;
 
-    public Object getFormat() {
+    public Object format() {
         return this.format == null ? null : this.format;
     }
 
@@ -103,7 +103,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="key")
       private final @Nullable Object key;
 
-    public Optional<Object> getKey() {
+    public Optional<Object> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
@@ -114,7 +114,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -125,7 +125,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Object modifiedDatetimeEnd;
 
-    public Optional<Object> getModifiedDatetimeEnd() {
+    public Optional<Object> modifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeEnd);
     }
 
@@ -136,7 +136,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Object modifiedDatetimeStart;
 
-    public Optional<Object> getModifiedDatetimeStart() {
+    public Optional<Object> modifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeStart);
     }
 
@@ -147,7 +147,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -158,7 +158,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="prefix")
       private final @Nullable Object prefix;
 
-    public Optional<Object> getPrefix() {
+    public Optional<Object> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
@@ -169,7 +169,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="schema")
       private final @Nullable Object schema;
 
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
@@ -180,7 +180,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="structure")
       private final @Nullable Object structure;
 
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
@@ -192,7 +192,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -203,7 +203,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version")
       private final @Nullable Object version;
 
-    public Optional<Object> getVersion() {
+    public Optional<Object> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

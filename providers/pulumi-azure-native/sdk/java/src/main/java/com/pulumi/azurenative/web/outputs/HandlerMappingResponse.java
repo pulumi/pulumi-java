@@ -41,21 +41,21 @@ public final class HandlerMappingResponse {
      * Command-line arguments to be passed to the script processor.
      * 
     */
-    public Optional<String> getArguments() {
+    public Optional<String> arguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
      * Requests with this extension will be handled using the specified FastCGI application.
      * 
     */
-    public Optional<String> getExtension() {
+    public Optional<String> extension() {
         return Optional.ofNullable(this.extension);
     }
     /**
      * The absolute path to the FastCGI application.
      * 
     */
-    public Optional<String> getScriptProcessor() {
+    public Optional<String> scriptProcessor() {
         return Optional.ofNullable(this.scriptProcessor);
     }
 

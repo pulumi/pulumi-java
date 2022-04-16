@@ -47,28 +47,28 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationResult {
      * Azure Active Directory only Authentication enabled.
      * 
     */
-    public Boolean getAzureADOnlyAuthentication() {
+    public Boolean azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

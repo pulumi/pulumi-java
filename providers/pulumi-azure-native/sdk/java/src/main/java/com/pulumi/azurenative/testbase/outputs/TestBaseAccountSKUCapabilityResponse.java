@@ -32,14 +32,14 @@ public final class TestBaseAccountSKUCapabilityResponse {
      * An invariant to describe the feature, such as 'SLA'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * An invariant if the feature is measured by quantity, such as 99.9%.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

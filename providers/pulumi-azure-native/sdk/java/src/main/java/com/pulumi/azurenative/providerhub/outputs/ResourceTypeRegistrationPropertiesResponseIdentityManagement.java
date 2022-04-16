@@ -22,10 +22,10 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
         this.type = type;
     }
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

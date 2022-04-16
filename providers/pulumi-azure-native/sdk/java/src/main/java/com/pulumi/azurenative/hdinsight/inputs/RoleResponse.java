@@ -34,7 +34,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="autoscaleConfiguration")
       private final @Nullable AutoscaleResponse autoscaleConfiguration;
 
-    public Optional<AutoscaleResponse> getAutoscaleConfiguration() {
+    public Optional<AutoscaleResponse> autoscaleConfiguration() {
         return this.autoscaleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.autoscaleConfiguration);
     }
 
@@ -45,7 +45,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataDisksGroups")
       private final @Nullable List<DataDisksGroupsResponse> dataDisksGroups;
 
-    public List<DataDisksGroupsResponse> getDataDisksGroups() {
+    public List<DataDisksGroupsResponse> dataDisksGroups() {
         return this.dataDisksGroups == null ? List.of() : this.dataDisksGroups;
     }
 
@@ -56,7 +56,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptDataDisks")
       private final @Nullable Boolean encryptDataDisks;
 
-    public Optional<Boolean> getEncryptDataDisks() {
+    public Optional<Boolean> encryptDataDisks() {
         return this.encryptDataDisks == null ? Optional.empty() : Optional.ofNullable(this.encryptDataDisks);
     }
 
@@ -67,7 +67,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hardwareProfile")
       private final @Nullable HardwareProfileResponse hardwareProfile;
 
-    public Optional<HardwareProfileResponse> getHardwareProfile() {
+    public Optional<HardwareProfileResponse> hardwareProfile() {
         return this.hardwareProfile == null ? Optional.empty() : Optional.ofNullable(this.hardwareProfile);
     }
 
@@ -78,7 +78,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minInstanceCount")
       private final @Nullable Integer minInstanceCount;
 
-    public Optional<Integer> getMinInstanceCount() {
+    public Optional<Integer> minInstanceCount() {
         return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);
     }
 
@@ -89,7 +89,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -100,7 +100,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osProfile")
       private final @Nullable OsProfileResponse osProfile;
 
-    public Optional<OsProfileResponse> getOsProfile() {
+    public Optional<OsProfileResponse> osProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
@@ -111,7 +111,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scriptActions")
       private final @Nullable List<ScriptActionResponse> scriptActions;
 
-    public List<ScriptActionResponse> getScriptActions() {
+    public List<ScriptActionResponse> scriptActions() {
         return this.scriptActions == null ? List.of() : this.scriptActions;
     }
 
@@ -122,7 +122,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetInstanceCount")
       private final @Nullable Integer targetInstanceCount;
 
-    public Optional<Integer> getTargetInstanceCount() {
+    public Optional<Integer> targetInstanceCount() {
         return this.targetInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.targetInstanceCount);
     }
 
@@ -133,7 +133,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vMGroupName")
       private final @Nullable String vMGroupName;
 
-    public Optional<String> getVMGroupName() {
+    public Optional<String> vMGroupName() {
         return this.vMGroupName == null ? Optional.empty() : Optional.ofNullable(this.vMGroupName);
     }
 
@@ -144,7 +144,7 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualNetworkProfile")
       private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
 
-    public Optional<VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
+    public Optional<VirtualNetworkProfileResponse> virtualNetworkProfile() {
         return this.virtualNetworkProfile == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkProfile);
     }
 

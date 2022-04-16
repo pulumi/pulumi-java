@@ -27,7 +27,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="azureResourceId", required=true)
       private final String azureResourceId;
 
-    public String getAzureResourceId() {
+    public String azureResourceId() {
         return this.azureResourceId;
     }
 
@@ -38,7 +38,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="createdBy")
       private final @Nullable UserInfoResponse createdBy;
 
-    public Optional<UserInfoResponse> getCreatedBy() {
+    public Optional<UserInfoResponse> createdBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
@@ -49,7 +49,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -60,7 +60,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="endTimeUtc")
       private final @Nullable String endTimeUtc;
 
-    public Optional<String> getEndTimeUtc() {
+    public Optional<String> endTimeUtc() {
         return this.endTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.endTimeUtc);
     }
 
@@ -71,7 +71,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="eventTime")
       private final @Nullable String eventTime;
 
-    public Optional<String> getEventTime() {
+    public Optional<String> eventTime() {
         return this.eventTime == null ? Optional.empty() : Optional.ofNullable(this.eventTime);
     }
 
@@ -83,7 +83,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -94,7 +94,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="labels")
       private final @Nullable List<String> labels;
 
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
 
@@ -105,7 +105,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="notes")
       private final @Nullable String notes;
 
-    public Optional<String> getNotes() {
+    public Optional<String> notes() {
         return this.notes == null ? Optional.empty() : Optional.ofNullable(this.notes);
     }
 
@@ -116,7 +116,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="startTimeUtc")
       private final @Nullable String startTimeUtc;
 
-    public Optional<String> getStartTimeUtc() {
+    public Optional<String> startTimeUtc() {
         return this.startTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.startTimeUtc);
     }
 

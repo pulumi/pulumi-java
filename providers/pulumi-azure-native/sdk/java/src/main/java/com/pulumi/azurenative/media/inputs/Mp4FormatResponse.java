@@ -27,7 +27,7 @@ public final class Mp4FormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filenamePattern", required=true)
       private final String filenamePattern;
 
-    public String getFilenamePattern() {
+    public String filenamePattern() {
         return this.filenamePattern;
     }
 
@@ -39,7 +39,7 @@ public final class Mp4FormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -50,7 +50,7 @@ public final class Mp4FormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputFiles")
       private final @Nullable List<OutputFileResponse> outputFiles;
 
-    public List<OutputFileResponse> getOutputFiles() {
+    public List<OutputFileResponse> outputFiles() {
         return this.outputFiles == null ? List.of() : this.outputFiles;
     }
 

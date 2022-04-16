@@ -36,14 +36,14 @@ public final class ResourceForestSettingsResponse {
      * Resource Forest
      * 
     */
-    public Optional<String> getResourceForest() {
+    public Optional<String> resourceForest() {
         return Optional.ofNullable(this.resourceForest);
     }
     /**
      * List of settings for Resource Forest
      * 
     */
-    public List<ForestTrustResponse> getSettings() {
+    public List<ForestTrustResponse> settings() {
         return this.settings == null ? List.of() : this.settings;
     }
 

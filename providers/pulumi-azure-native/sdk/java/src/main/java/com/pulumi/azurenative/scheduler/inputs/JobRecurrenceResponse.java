@@ -23,7 +23,7 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="count")
       private final @Nullable Integer count;
 
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -34,7 +34,7 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -45,7 +45,7 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="frequency")
       private final @Nullable String frequency;
 
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
     }
 
@@ -56,14 +56,14 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="interval")
       private final @Nullable Integer interval;
 
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
     @Import(name="schedule")
       private final @Nullable JobRecurrenceScheduleResponse schedule;
 
-    public Optional<JobRecurrenceScheduleResponse> getSchedule() {
+    public Optional<JobRecurrenceScheduleResponse> schedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
     }
 

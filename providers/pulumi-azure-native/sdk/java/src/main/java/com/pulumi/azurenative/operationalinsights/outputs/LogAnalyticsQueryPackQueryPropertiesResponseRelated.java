@@ -41,21 +41,21 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
      * The related categories for the function.
      * 
     */
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
      * The related resource types for the function.
      * 
     */
-    public List<String> getResourceTypes() {
+    public List<String> resourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
     /**
      * The related Log Analytics solutions for the function.
      * 
     */
-    public List<String> getSolutions() {
+    public List<String> solutions() {
         return this.solutions == null ? List.of() : this.solutions;
     }
 

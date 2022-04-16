@@ -70,49 +70,49 @@ public final class SqlTriggerGetPropertiesResponseResource {
      * Body of the Trigger
      * 
     */
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB SQL trigger
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
     */
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
     /**
      * The operation the trigger is associated with
      * 
     */
-    public Optional<String> getTriggerOperation() {
+    public Optional<String> triggerOperation() {
         return Optional.ofNullable(this.triggerOperation);
     }
     /**
      * Type of the Trigger
      * 
     */
-    public Optional<String> getTriggerType() {
+    public Optional<String> triggerType() {
         return Optional.ofNullable(this.triggerType);
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
     */
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

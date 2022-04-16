@@ -26,7 +26,7 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="colocationStatus")
       private final @Nullable Output<InstanceViewStatusArgs> colocationStatus;
 
-    public Output<InstanceViewStatusArgs> getColocationStatus() {
+    public Output<InstanceViewStatusArgs> colocationStatus() {
         return this.colocationStatus == null ? Codegen.empty() : this.colocationStatus;
     }
 
@@ -37,7 +37,7 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -48,7 +48,7 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="proximityPlacementGroupName")
       private final @Nullable Output<String> proximityPlacementGroupName;
 
-    public Output<String> getProximityPlacementGroupName() {
+    public Output<String> proximityPlacementGroupName() {
         return this.proximityPlacementGroupName == null ? Codegen.empty() : this.proximityPlacementGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="proximityPlacementGroupType")
       private final @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
 
-    public Output<Either<String,ProximityPlacementGroupType>> getProximityPlacementGroupType() {
+    public Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType() {
         return this.proximityPlacementGroupType == null ? Codegen.empty() : this.proximityPlacementGroupType;
     }
 
@@ -70,7 +70,7 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

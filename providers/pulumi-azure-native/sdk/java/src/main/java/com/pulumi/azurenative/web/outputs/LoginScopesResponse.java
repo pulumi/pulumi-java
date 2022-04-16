@@ -26,7 +26,7 @@ public final class LoginScopesResponse {
      * A list of the scopes that should be requested while authenticating.
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
 

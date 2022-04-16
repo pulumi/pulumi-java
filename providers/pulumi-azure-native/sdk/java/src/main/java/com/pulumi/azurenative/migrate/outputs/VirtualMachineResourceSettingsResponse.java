@@ -57,35 +57,35 @@ public final class VirtualMachineResourceSettingsResponse {
      * Expected value is 'Microsoft.Compute/virtualMachines'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target availability set id for virtual machines not in an availability set at source.
      * 
     */
-    public Optional<String> getTargetAvailabilitySetId() {
+    public Optional<String> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
     /**
      * Gets or sets the target availability zone.
      * 
     */
-    public Optional<String> getTargetAvailabilityZone() {
+    public Optional<String> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
      * Gets or sets the target virtual machine size.
      * 
     */
-    public Optional<String> getTargetVmSize() {
+    public Optional<String> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
 

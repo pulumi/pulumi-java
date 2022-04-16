@@ -33,7 +33,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="agentConfiguration")
       private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Output<AgentPropertiesArgs> getAgentConfiguration() {
+    public Output<AgentPropertiesArgs> agentConfiguration() {
         return this.agentConfiguration == null ? Codegen.empty() : this.agentConfiguration;
     }
 
@@ -44,7 +44,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
+    public Output<String> agentPoolName() {
         return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
@@ -55,7 +55,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="credentials")
       private final @Nullable Output<CredentialsArgs> credentials;
 
-    public Output<CredentialsArgs> getCredentials() {
+    public Output<CredentialsArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -66,7 +66,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="encodedTaskContent", required=true)
       private final Output<String> encodedTaskContent;
 
-    public Output<String> getEncodedTaskContent() {
+    public Output<String> encodedTaskContent() {
         return this.encodedTaskContent;
     }
 
@@ -77,7 +77,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="encodedValuesContent")
       private final @Nullable Output<String> encodedValuesContent;
 
-    public Output<String> getEncodedValuesContent() {
+    public Output<String> encodedValuesContent() {
         return this.encodedValuesContent == null ? Codegen.empty() : this.encodedValuesContent;
     }
 
@@ -88,7 +88,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Output<Boolean> getIsArchiveEnabled() {
+    public Output<Boolean> isArchiveEnabled() {
         return this.isArchiveEnabled == null ? Codegen.empty() : this.isArchiveEnabled;
     }
 
@@ -99,7 +99,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
 
-    public Output<String> getLogTemplate() {
+    public Output<String> logTemplate() {
         return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
     }
 
@@ -110,7 +110,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="platform", required=true)
       private final Output<PlatformPropertiesArgs> platform;
 
-    public Output<PlatformPropertiesArgs> getPlatform() {
+    public Output<PlatformPropertiesArgs> platform() {
         return this.platform;
     }
 
@@ -122,7 +122,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="sourceLocation")
       private final @Nullable Output<String> sourceLocation;
 
-    public Output<String> getSourceLocation() {
+    public Output<String> sourceLocation() {
         return this.sourceLocation == null ? Codegen.empty() : this.sourceLocation;
     }
 
@@ -133,7 +133,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -145,7 +145,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -156,7 +156,7 @@ public final class EncodedTaskRunRequestArgs extends com.pulumi.resources.Resour
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> getValues() {
+    public Output<List<SetValueArgs>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

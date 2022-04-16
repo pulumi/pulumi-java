@@ -23,7 +23,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties")
       private final @Nullable Output<AddVCenterRequestPropertiesArgs> properties;
 
-    public Output<AddVCenterRequestPropertiesArgs> getProperties() {
+    public Output<AddVCenterRequestPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
     @Import(name="vCenterName")
       private final @Nullable Output<String> vCenterName;
 
-    public Output<String> getVCenterName() {
+    public Output<String> vCenterName() {
         return this.vCenterName == null ? Codegen.empty() : this.vCenterName;
     }
 

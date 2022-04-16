@@ -32,7 +32,7 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="commandLine")
       private final @Nullable String commandLine;
 
-    public Optional<String> getCommandLine() {
+    public Optional<String> commandLine() {
         return this.commandLine == null ? Optional.empty() : Optional.ofNullable(this.commandLine);
     }
 
@@ -43,14 +43,14 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="containerSettings")
       private final @Nullable TaskContainerSettingsResponse containerSettings;
 
-    public Optional<TaskContainerSettingsResponse> getContainerSettings() {
+    public Optional<TaskContainerSettingsResponse> containerSettings() {
         return this.containerSettings == null ? Optional.empty() : Optional.ofNullable(this.containerSettings);
     }
 
     @Import(name="environmentSettings")
       private final @Nullable List<EnvironmentSettingResponse> environmentSettings;
 
-    public List<EnvironmentSettingResponse> getEnvironmentSettings() {
+    public List<EnvironmentSettingResponse> environmentSettings() {
         return this.environmentSettings == null ? List.of() : this.environmentSettings;
     }
 
@@ -61,14 +61,14 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxTaskRetryCount")
       private final @Nullable Integer maxTaskRetryCount;
 
-    public Optional<Integer> getMaxTaskRetryCount() {
+    public Optional<Integer> maxTaskRetryCount() {
         return this.maxTaskRetryCount == null ? Optional.empty() : Optional.ofNullable(this.maxTaskRetryCount);
     }
 
     @Import(name="resourceFiles")
       private final @Nullable List<ResourceFileResponse> resourceFiles;
 
-    public List<ResourceFileResponse> getResourceFiles() {
+    public List<ResourceFileResponse> resourceFiles() {
         return this.resourceFiles == null ? List.of() : this.resourceFiles;
     }
 
@@ -79,7 +79,7 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userIdentity")
       private final @Nullable UserIdentityResponse userIdentity;
 
-    public Optional<UserIdentityResponse> getUserIdentity() {
+    public Optional<UserIdentityResponse> userIdentity() {
         return this.userIdentity == null ? Optional.empty() : Optional.ofNullable(this.userIdentity);
     }
 
@@ -90,7 +90,7 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="waitForSuccess")
       private final @Nullable Boolean waitForSuccess;
 
-    public Optional<Boolean> getWaitForSuccess() {
+    public Optional<Boolean> waitForSuccess() {
         return this.waitForSuccess == null ? Optional.empty() : Optional.ofNullable(this.waitForSuccess);
     }
 

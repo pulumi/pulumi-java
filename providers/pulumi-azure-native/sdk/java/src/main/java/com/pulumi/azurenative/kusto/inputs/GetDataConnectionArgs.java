@@ -19,7 +19,7 @@ public final class GetDataConnectionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataConnectionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="dataConnectionName", required=true)
       private final String dataConnectionName;
 
-    public String getDataConnectionName() {
+    public String dataConnectionName() {
         return this.dataConnectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDataConnectionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -52,7 +52,7 @@ public final class GetDataConnectionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -32,14 +32,14 @@ public final class SelectedCertificateInputResponse {
      * Name of certificate to be exported.
      * 
     */
-    public String getCertificateName() {
+    public String certificateName() {
         return this.certificateName;
     }
     /**
      * Password to use for encrypting the exported certificate.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 

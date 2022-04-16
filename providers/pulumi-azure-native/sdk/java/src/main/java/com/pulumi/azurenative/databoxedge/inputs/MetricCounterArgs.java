@@ -28,7 +28,7 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalDimensions")
       private final @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
 
-    public Output<List<MetricDimensionArgs>> getAdditionalDimensions() {
+    public Output<List<MetricDimensionArgs>> additionalDimensions() {
         return this.additionalDimensions == null ? Codegen.empty() : this.additionalDimensions;
     }
 
@@ -39,7 +39,7 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensionFilter")
       private final @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
 
-    public Output<List<MetricDimensionArgs>> getDimensionFilter() {
+    public Output<List<MetricDimensionArgs>> dimensionFilter() {
         return this.dimensionFilter == null ? Codegen.empty() : this.dimensionFilter;
     }
 
@@ -50,7 +50,7 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
@@ -61,7 +61,7 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

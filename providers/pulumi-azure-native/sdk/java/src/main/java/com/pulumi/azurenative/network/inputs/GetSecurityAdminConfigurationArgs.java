@@ -19,7 +19,7 @@ public final class GetSecurityAdminConfigurationArgs extends com.pulumi.resource
     @Import(name="configurationName", required=true)
       private final String configurationName;
 
-    public String getConfigurationName() {
+    public String configurationName() {
         return this.configurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSecurityAdminConfigurationArgs extends com.pulumi.resource
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
-    public String getNetworkManagerName() {
+    public String networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSecurityAdminConfigurationArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

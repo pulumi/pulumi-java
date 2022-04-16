@@ -26,7 +26,7 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
     @Import(name="inline")
       private final @Nullable List<String> inline;
 
-    public List<String> getInline() {
+    public List<String> inline() {
         return this.inline == null ? List.of() : this.inline;
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
     @Import(name="scriptUri")
       private final @Nullable String scriptUri;
 
-    public Optional<String> getScriptUri() {
+    public Optional<String> scriptUri() {
         return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
     }
 
@@ -59,7 +59,7 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
     @Import(name="sha256Checksum")
       private final @Nullable String sha256Checksum;
 
-    public Optional<String> getSha256Checksum() {
+    public Optional<String> sha256Checksum() {
         return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
     }
 
@@ -71,7 +71,7 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

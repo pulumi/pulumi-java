@@ -25,7 +25,7 @@ public final class PrivateIPAddressResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -36,7 +36,7 @@ public final class PrivateIPAddressResponse extends com.pulumi.resources.InvokeA
     @Import(name="subnetResourceId")
       private final @Nullable String subnetResourceId;
 
-    public Optional<String> getSubnetResourceId() {
+    public Optional<String> subnetResourceId() {
         return this.subnetResourceId == null ? Optional.empty() : Optional.ofNullable(this.subnetResourceId);
     }
 

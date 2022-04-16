@@ -93,70 +93,70 @@ public final class GetHubResult {
      * API endpoint URL of the hub.
      * 
     */
-    public String getApiEndpoint() {
+    public String apiEndpoint() {
         return this.apiEndpoint;
     }
     /**
      * Billing settings of the hub.
      * 
     */
-    public Optional<HubBillingInfoFormatResponse> getHubBillingInfo() {
+    public Optional<HubBillingInfoFormatResponse> hubBillingInfo() {
         return Optional.ofNullable(this.hubBillingInfo);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the hub.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
     */
-    public Optional<Integer> getTenantFeatures() {
+    public Optional<Integer> tenantFeatures() {
         return Optional.ofNullable(this.tenantFeatures);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Web endpoint URL of the hub.
      * 
     */
-    public String getWebEndpoint() {
+    public String webEndpoint() {
         return this.webEndpoint;
     }
 

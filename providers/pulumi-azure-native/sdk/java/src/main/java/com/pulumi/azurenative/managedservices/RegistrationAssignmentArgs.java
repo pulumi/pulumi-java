@@ -23,7 +23,7 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
     @Import(name="properties")
       private final @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
 
-    public Output<RegistrationAssignmentPropertiesArgs> getProperties() {
+    public Output<RegistrationAssignmentPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -34,7 +34,7 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
     @Import(name="registrationAssignmentId")
       private final @Nullable Output<String> registrationAssignmentId;
 
-    public Output<String> getRegistrationAssignmentId() {
+    public Output<String> registrationAssignmentId() {
         return this.registrationAssignmentId == null ? Codegen.empty() : this.registrationAssignmentId;
     }
 
@@ -45,7 +45,7 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

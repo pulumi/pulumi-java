@@ -25,7 +25,7 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="expirationTime")
       private final @Nullable String expirationTime;
 
-    public Optional<String> getExpirationTime() {
+    public Optional<String> expirationTime() {
         return this.expirationTime == null ? Optional.empty() : Optional.ofNullable(this.expirationTime);
     }
 
@@ -36,7 +36,7 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="registrationTokenOperation")
       private final @Nullable String registrationTokenOperation;
 
-    public Optional<String> getRegistrationTokenOperation() {
+    public Optional<String> registrationTokenOperation() {
         return this.registrationTokenOperation == null ? Optional.empty() : Optional.ofNullable(this.registrationTokenOperation);
     }
 
@@ -47,7 +47,7 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="token")
       private final @Nullable String token;
 
-    public Optional<String> getToken() {
+    public Optional<String> token() {
         return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
     }
 

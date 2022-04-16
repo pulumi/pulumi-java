@@ -39,21 +39,21 @@ public final class EncryptionIdentityResponse {
      * The principal identifier associated with the encryption.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant identifier associated with the encryption.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

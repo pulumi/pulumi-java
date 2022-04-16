@@ -26,7 +26,7 @@ public final class KeyVaultKeyResponseAttributes extends com.pulumi.resources.In
     @Import(name="created")
       private final @Nullable Double created;
 
-    public Optional<Double> getCreated() {
+    public Optional<Double> created() {
         return this.created == null ? Optional.empty() : Optional.ofNullable(this.created);
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultKeyResponseAttributes extends com.pulumi.resources.In
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -48,7 +48,7 @@ public final class KeyVaultKeyResponseAttributes extends com.pulumi.resources.In
     @Import(name="updated")
       private final @Nullable Double updated;
 
-    public Optional<Double> getUpdated() {
+    public Optional<Double> updated() {
         return this.updated == null ? Optional.empty() : Optional.ofNullable(this.updated);
     }
 

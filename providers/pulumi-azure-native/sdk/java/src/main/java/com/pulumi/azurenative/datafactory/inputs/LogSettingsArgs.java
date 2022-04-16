@@ -28,7 +28,7 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyActivityLogSettings")
       private final @Nullable Output<CopyActivityLogSettingsArgs> copyActivityLogSettings;
 
-    public Output<CopyActivityLogSettingsArgs> getCopyActivityLogSettings() {
+    public Output<CopyActivityLogSettingsArgs> copyActivityLogSettings() {
         return this.copyActivityLogSettings == null ? Codegen.empty() : this.copyActivityLogSettings;
     }
 
@@ -39,7 +39,7 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableCopyActivityLog")
       private final @Nullable Output<Object> enableCopyActivityLog;
 
-    public Output<Object> getEnableCopyActivityLog() {
+    public Output<Object> enableCopyActivityLog() {
         return this.enableCopyActivityLog == null ? Codegen.empty() : this.enableCopyActivityLog;
     }
 
@@ -50,7 +50,7 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logLocationSettings", required=true)
       private final Output<LogLocationSettingsArgs> logLocationSettings;
 
-    public Output<LogLocationSettingsArgs> getLogLocationSettings() {
+    public Output<LogLocationSettingsArgs> logLocationSettings() {
         return this.logLocationSettings;
     }
 

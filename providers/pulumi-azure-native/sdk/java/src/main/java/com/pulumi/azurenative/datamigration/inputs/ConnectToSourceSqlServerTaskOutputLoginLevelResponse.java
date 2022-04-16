@@ -25,7 +25,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="defaultDatabase", required=true)
       private final String defaultDatabase;
 
-    public String getDefaultDatabase() {
+    public String defaultDatabase() {
         return this.defaultDatabase;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="loginType", required=true)
       private final String loginType;
 
-    public String getLoginType() {
+    public String loginType() {
         return this.loginType;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="migrationEligibility", required=true)
       private final MigrationEligibilityInfoResponse migrationEligibility;
 
-    public MigrationEligibilityInfoResponse getMigrationEligibility() {
+    public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
     }
 
@@ -80,7 +80,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -92,7 +92,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

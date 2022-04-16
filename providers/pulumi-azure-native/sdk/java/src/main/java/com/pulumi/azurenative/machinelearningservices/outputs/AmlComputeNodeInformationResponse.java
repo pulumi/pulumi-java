@@ -61,42 +61,42 @@ public final class AmlComputeNodeInformationResponse {
      * ID of the compute node.
      * 
     */
-    public String getNodeId() {
+    public String nodeId() {
         return this.nodeId;
     }
     /**
      * State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
      * 
     */
-    public String getNodeState() {
+    public String nodeState() {
         return this.nodeState;
     }
     /**
      * SSH port number of the node.
      * 
     */
-    public Double getPort() {
+    public Double port() {
         return this.port;
     }
     /**
      * Private IP address of the compute node.
      * 
     */
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Public IP address of the compute node.
      * 
     */
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
      * ID of the Experiment running on the node, if any else null.
      * 
     */
-    public String getRunId() {
+    public String runId() {
         return this.runId;
     }
 

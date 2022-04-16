@@ -19,7 +19,7 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="experimentName", required=true)
       private final String experimentName;
 
-    public String getExperimentName() {
+    public String experimentName() {
         return this.experimentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

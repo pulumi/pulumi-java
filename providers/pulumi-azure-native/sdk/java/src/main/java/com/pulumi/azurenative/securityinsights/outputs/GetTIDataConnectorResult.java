@@ -78,21 +78,21 @@ public final class GetTIDataConnectorResult {
      * The available data types for the connector.
      * 
     */
-    public Optional<TIDataConnectorDataTypesResponse> getDataTypes() {
+    public Optional<TIDataConnectorDataTypesResponse> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -100,35 +100,35 @@ public final class GetTIDataConnectorResult {
      * Expected value is 'ThreatIntelligence'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The tenant id to connect to, and get the data from.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The lookback period for the feed to be imported.
      * 
     */
-    public Optional<String> getTipLookbackPeriod() {
+    public Optional<String> tipLookbackPeriod() {
         return Optional.ofNullable(this.tipLookbackPeriod);
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class CustomerManagedKeyDetailsResponse extends com.pulumi.resource
     @Import(name="key")
       private final @Nullable WorkspaceKeyDetailsResponse key;
 
-    public Optional<WorkspaceKeyDetailsResponse> getKey() {
+    public Optional<WorkspaceKeyDetailsResponse> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
@@ -37,7 +37,7 @@ public final class CustomerManagedKeyDetailsResponse extends com.pulumi.resource
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

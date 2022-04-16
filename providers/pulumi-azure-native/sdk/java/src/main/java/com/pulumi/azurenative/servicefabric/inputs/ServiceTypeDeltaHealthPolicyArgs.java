@@ -28,7 +28,7 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends com.pulumi.resources
     @Import(name="maxPercentDeltaUnhealthyServices")
       private final @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
 
-    public Output<Integer> getMaxPercentDeltaUnhealthyServices() {
+    public Output<Integer> maxPercentDeltaUnhealthyServices() {
         return this.maxPercentDeltaUnhealthyServices == null ? Codegen.empty() : this.maxPercentDeltaUnhealthyServices;
     }
 

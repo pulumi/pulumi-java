@@ -35,7 +35,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -46,7 +46,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="authHeaders")
       private final @Nullable Output<Object> authHeaders;
 
-    public Output<Object> getAuthHeaders() {
+    public Output<Object> authHeaders() {
         return this.authHeaders == null ? Codegen.empty() : this.authHeaders;
     }
 
@@ -57,7 +57,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,HttpAuthenticationType>> authenticationType;
 
-    public Output<Either<String,HttpAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,HttpAuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -68,7 +68,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="certThumbprint")
       private final @Nullable Output<Object> certThumbprint;
 
-    public Output<Object> getCertThumbprint() {
+    public Output<Object> certThumbprint() {
         return this.certThumbprint == null ? Codegen.empty() : this.certThumbprint;
     }
 
@@ -79,7 +79,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -90,7 +90,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="embeddedCertData")
       private final @Nullable Output<Object> embeddedCertData;
 
-    public Output<Object> getEmbeddedCertData() {
+    public Output<Object> embeddedCertData() {
         return this.embeddedCertData == null ? Codegen.empty() : this.embeddedCertData;
     }
 
@@ -112,7 +112,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enableServerCertificateValidation")
       private final @Nullable Output<Object> enableServerCertificateValidation;
 
-    public Output<Object> getEnableServerCertificateValidation() {
+    public Output<Object> enableServerCertificateValidation() {
         return this.enableServerCertificateValidation == null ? Codegen.empty() : this.enableServerCertificateValidation;
     }
 
@@ -123,7 +123,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -134,7 +134,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -145,7 +145,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -157,7 +157,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +168,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -179,7 +179,7 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

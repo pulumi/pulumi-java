@@ -32,14 +32,14 @@ public final class GetTestResultVideoDownloadURLResult {
      * The download URL.
      * 
     */
-    public String getDownloadUrl() {
+    public String downloadUrl() {
         return this.downloadUrl;
     }
     /**
      * Expiry date of the download URL.
      * 
     */
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 

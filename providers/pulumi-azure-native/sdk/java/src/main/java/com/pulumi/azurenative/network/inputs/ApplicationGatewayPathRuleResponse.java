@@ -27,7 +27,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="backendAddressPool")
       private final @Nullable SubResourceResponse backendAddressPool;
 
-    public Optional<SubResourceResponse> getBackendAddressPool() {
+    public Optional<SubResourceResponse> backendAddressPool() {
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="backendHttpSettings")
       private final @Nullable SubResourceResponse backendHttpSettings;
 
-    public Optional<SubResourceResponse> getBackendHttpSettings() {
+    public Optional<SubResourceResponse> backendHttpSettings() {
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="firewallPolicy")
       private final @Nullable SubResourceResponse firewallPolicy;
 
-    public Optional<SubResourceResponse> getFirewallPolicy() {
+    public Optional<SubResourceResponse> firewallPolicy() {
         return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -93,7 +93,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="paths")
       private final @Nullable List<String> paths;
 
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
 
@@ -104,7 +104,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -115,7 +115,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="redirectConfiguration")
       private final @Nullable SubResourceResponse redirectConfiguration;
 
-    public Optional<SubResourceResponse> getRedirectConfiguration() {
+    public Optional<SubResourceResponse> redirectConfiguration() {
         return this.redirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.redirectConfiguration);
     }
 
@@ -126,7 +126,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="rewriteRuleSet")
       private final @Nullable SubResourceResponse rewriteRuleSet;
 
-    public Optional<SubResourceResponse> getRewriteRuleSet() {
+    public Optional<SubResourceResponse> rewriteRuleSet() {
         return this.rewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.rewriteRuleSet);
     }
 
@@ -137,7 +137,7 @@ public final class ApplicationGatewayPathRuleResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

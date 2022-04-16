@@ -32,7 +32,7 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="channels", required=true)
       private final Output<List<ContactProfileLinkChannelArgs>> channels;
 
-    public Output<List<ContactProfileLinkChannelArgs>> getChannels() {
+    public Output<List<ContactProfileLinkChannelArgs>> channels() {
         return this.channels;
     }
 
@@ -43,7 +43,7 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="direction", required=true)
       private final Output<Either<String,Direction>> direction;
 
-    public Output<Either<String,Direction>> getDirection() {
+    public Output<Either<String,Direction>> direction() {
         return this.direction;
     }
 
@@ -54,7 +54,7 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="eirpdBW")
       private final @Nullable Output<Double> eirpdBW;
 
-    public Output<Double> getEirpdBW() {
+    public Output<Double> eirpdBW() {
         return this.eirpdBW == null ? Codegen.empty() : this.eirpdBW;
     }
 
@@ -65,7 +65,7 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="gainOverTemperature")
       private final @Nullable Output<Double> gainOverTemperature;
 
-    public Output<Double> getGainOverTemperature() {
+    public Output<Double> gainOverTemperature() {
         return this.gainOverTemperature == null ? Codegen.empty() : this.gainOverTemperature;
     }
 
@@ -76,7 +76,7 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
     @Import(name="polarization", required=true)
       private final Output<Either<String,Polarization>> polarization;
 
-    public Output<Either<String,Polarization>> getPolarization() {
+    public Output<Either<String,Polarization>> polarization() {
         return this.polarization;
     }
 

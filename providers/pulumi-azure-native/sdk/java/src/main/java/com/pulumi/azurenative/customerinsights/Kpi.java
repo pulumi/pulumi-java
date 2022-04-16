@@ -48,7 +48,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The aliases.
      * 
      */
-    public Output</* @Nullable */ List<KpiAliasResponse>> getAliases() {
+    public Output</* @Nullable */ List<KpiAliasResponse>> aliases() {
         return this.aliases;
     }
     /**
@@ -62,7 +62,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The calculation window.
      * 
      */
-    public Output<String> getCalculationWindow() {
+    public Output<String> calculationWindow() {
         return this.calculationWindow;
     }
     /**
@@ -76,7 +76,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Name of calculation window field.
      * 
      */
-    public Output</* @Nullable */ String> getCalculationWindowFieldName() {
+    public Output</* @Nullable */ String> calculationWindowFieldName() {
         return this.calculationWindowFieldName;
     }
     /**
@@ -90,7 +90,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Localized description for the KPI.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDescription() {
+    public Output</* @Nullable */ Map<String,String>> description() {
         return this.description;
     }
     /**
@@ -104,7 +104,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Localized display name for the KPI.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -118,7 +118,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The mapping entity type.
      * 
      */
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType;
     }
     /**
@@ -132,7 +132,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The mapping entity name.
      * 
      */
-    public Output<String> getEntityTypeName() {
+    public Output<String> entityTypeName() {
         return this.entityTypeName;
     }
     /**
@@ -146,7 +146,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The computation expression for the KPI.
      * 
      */
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
     /**
@@ -160,7 +160,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The KPI extracts.
      * 
      */
-    public Output</* @Nullable */ List<KpiExtractResponse>> getExtracts() {
+    public Output</* @Nullable */ List<KpiExtractResponse>> extracts() {
         return this.extracts;
     }
     /**
@@ -174,7 +174,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The filter expression for the KPI.
      * 
      */
-    public Output</* @Nullable */ String> getFilter() {
+    public Output</* @Nullable */ String> filter() {
         return this.filter;
     }
     /**
@@ -188,7 +188,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The computation function for the KPI.
      * 
      */
-    public Output<String> getFunction() {
+    public Output<String> function() {
         return this.function;
     }
     /**
@@ -202,7 +202,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return the group by properties for the KPI.
      * 
      */
-    public Output</* @Nullable */ List<String>> getGroupBy() {
+    public Output</* @Nullable */ List<String>> groupBy() {
         return this.groupBy;
     }
     /**
@@ -216,7 +216,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The KPI GroupByMetadata.
      * 
      */
-    public Output<List<KpiGroupByMetadataResponse>> getGroupByMetadata() {
+    public Output<List<KpiGroupByMetadataResponse>> groupByMetadata() {
         return this.groupByMetadata;
     }
     /**
@@ -230,7 +230,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The KPI name.
      * 
      */
-    public Output<String> getKpiName() {
+    public Output<String> kpiName() {
         return this.kpiName;
     }
     /**
@@ -244,7 +244,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -258,7 +258,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The participant profiles.
      * 
      */
-    public Output<List<KpiParticipantProfilesMetadataResponse>> getParticipantProfilesMetadata() {
+    public Output<List<KpiParticipantProfilesMetadataResponse>> participantProfilesMetadata() {
         return this.participantProfilesMetadata;
     }
     /**
@@ -272,7 +272,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -286,7 +286,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -300,7 +300,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The KPI thresholds.
      * 
      */
-    public Output</* @Nullable */ KpiThresholdsResponse> getThresHolds() {
+    public Output</* @Nullable */ KpiThresholdsResponse> thresHolds() {
         return this.thresHolds;
     }
     /**
@@ -314,7 +314,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -328,7 +328,7 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The unit of measurement for the KPI.
      * 
      */
-    public Output</* @Nullable */ String> getUnit() {
+    public Output</* @Nullable */ String> unit() {
         return this.unit;
     }
 

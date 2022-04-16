@@ -28,7 +28,7 @@ public final class DedicatedHostInstanceViewResponse extends com.pulumi.resource
     @Import(name="assetId", required=true)
       private final String assetId;
 
-    public String getAssetId() {
+    public String assetId() {
         return this.assetId;
     }
 
@@ -39,7 +39,7 @@ public final class DedicatedHostInstanceViewResponse extends com.pulumi.resource
     @Import(name="availableCapacity")
       private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
 
-    public Optional<DedicatedHostAvailableCapacityResponse> getAvailableCapacity() {
+    public Optional<DedicatedHostAvailableCapacityResponse> availableCapacity() {
         return this.availableCapacity == null ? Optional.empty() : Optional.ofNullable(this.availableCapacity);
     }
 
@@ -50,7 +50,7 @@ public final class DedicatedHostInstanceViewResponse extends com.pulumi.resource
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 

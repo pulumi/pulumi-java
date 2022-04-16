@@ -23,7 +23,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="blobInventoryPolicyName")
       private final @Nullable Output<String> blobInventoryPolicyName;
 
-    public Output<String> getBlobInventoryPolicyName() {
+    public Output<String> blobInventoryPolicyName() {
         return this.blobInventoryPolicyName == null ? Codegen.empty() : this.blobInventoryPolicyName;
     }
 
@@ -45,7 +45,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="policy", required=true)
       private final Output<BlobInventoryPolicySchemaArgs> policy;
 
-    public Output<BlobInventoryPolicySchemaArgs> getPolicy() {
+    public Output<BlobInventoryPolicySchemaArgs> policy() {
         return this.policy;
     }
 
@@ -56,7 +56,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

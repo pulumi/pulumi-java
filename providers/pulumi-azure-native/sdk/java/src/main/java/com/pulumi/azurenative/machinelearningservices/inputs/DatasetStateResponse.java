@@ -26,7 +26,7 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="deprecatedBy")
       private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
 
-    public Optional<DatasetStateResponseDeprecatedBy> getDeprecatedBy() {
+    public Optional<DatasetStateResponseDeprecatedBy> deprecatedBy() {
         return this.deprecatedBy == null ? Optional.empty() : Optional.ofNullable(this.deprecatedBy);
     }
 
@@ -37,7 +37,7 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -48,7 +48,7 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

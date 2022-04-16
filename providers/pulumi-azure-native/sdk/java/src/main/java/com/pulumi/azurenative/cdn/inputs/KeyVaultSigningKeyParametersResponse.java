@@ -19,7 +19,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -30,7 +30,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="secretName", required=true)
       private final String secretName;
 
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 
@@ -52,7 +52,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="secretVersion", required=true)
       private final String secretVersion;
 
-    public String getSecretVersion() {
+    public String secretVersion() {
         return this.secretVersion;
     }
 
@@ -63,7 +63,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -74,7 +74,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     @Import(name="vaultName", required=true)
       private final String vaultName;
 
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

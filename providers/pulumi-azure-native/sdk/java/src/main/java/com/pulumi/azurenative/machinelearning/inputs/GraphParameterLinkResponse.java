@@ -23,7 +23,7 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
     @Import(name="nodeId", required=true)
       private final String nodeId;
 
-    public String getNodeId() {
+    public String nodeId() {
         return this.nodeId;
     }
 
@@ -34,7 +34,7 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
     @Import(name="parameterKey", required=true)
       private final String parameterKey;
 
-    public String getParameterKey() {
+    public String parameterKey() {
         return this.parameterKey;
     }
 

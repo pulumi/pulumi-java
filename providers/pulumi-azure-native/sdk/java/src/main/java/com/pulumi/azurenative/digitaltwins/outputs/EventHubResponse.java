@@ -91,42 +91,42 @@ public final class EventHubResponse {
      * Specifies the authentication type being used for connecting to the endpoint.
      * 
     */
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getConnectionStringPrimaryKey() {
+    public Optional<String> connectionStringPrimaryKey() {
         return Optional.ofNullable(this.connectionStringPrimaryKey);
     }
     /**
      * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getConnectionStringSecondaryKey() {
+    public Optional<String> connectionStringSecondaryKey() {
         return Optional.ofNullable(this.connectionStringSecondaryKey);
     }
     /**
      * Time when the Endpoint was added to DigitalTwinsInstance.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getDeadLetterSecret() {
+    public Optional<String> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
     /**
      * Dead letter storage URL for identity-based authentication.
      * 
     */
-    public Optional<String> getDeadLetterUri() {
+    public Optional<String> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
     /**
@@ -134,28 +134,28 @@ public final class EventHubResponse {
      * Expected value is 'EventHub'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
      * 
     */
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
      * The EventHub name in the EventHub namespace for identity-based authentication.
      * 
     */
-    public Optional<String> getEntityPath() {
+    public Optional<String> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

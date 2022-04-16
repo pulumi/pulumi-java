@@ -27,7 +27,7 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filteringTags")
       private final @Nullable List<FilteringTagResponse> filteringTags;
 
-    public List<FilteringTagResponse> getFilteringTags() {
+    public List<FilteringTagResponse> filteringTags() {
         return this.filteringTags == null ? List.of() : this.filteringTags;
     }
 
@@ -38,7 +38,7 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sendAadLogs")
       private final @Nullable Boolean sendAadLogs;
 
-    public Optional<Boolean> getSendAadLogs() {
+    public Optional<Boolean> sendAadLogs() {
         return this.sendAadLogs == null ? Optional.empty() : Optional.ofNullable(this.sendAadLogs);
     }
 
@@ -49,7 +49,7 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sendActivityLogs")
       private final @Nullable Boolean sendActivityLogs;
 
-    public Optional<Boolean> getSendActivityLogs() {
+    public Optional<Boolean> sendActivityLogs() {
         return this.sendActivityLogs == null ? Optional.empty() : Optional.ofNullable(this.sendActivityLogs);
     }
 
@@ -60,7 +60,7 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sendSubscriptionLogs")
       private final @Nullable Boolean sendSubscriptionLogs;
 
-    public Optional<Boolean> getSendSubscriptionLogs() {
+    public Optional<Boolean> sendSubscriptionLogs() {
         return this.sendSubscriptionLogs == null ? Optional.empty() : Optional.ofNullable(this.sendSubscriptionLogs);
     }
 

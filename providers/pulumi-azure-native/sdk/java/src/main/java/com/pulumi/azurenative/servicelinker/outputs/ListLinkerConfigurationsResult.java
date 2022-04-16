@@ -26,7 +26,7 @@ public final class ListLinkerConfigurationsResult {
      * The configuration properties for source resource.
      * 
     */
-    public List<SourceConfigurationResponse> getConfigurations() {
+    public List<SourceConfigurationResponse> configurations() {
         return this.configurations == null ? List.of() : this.configurations;
     }
 

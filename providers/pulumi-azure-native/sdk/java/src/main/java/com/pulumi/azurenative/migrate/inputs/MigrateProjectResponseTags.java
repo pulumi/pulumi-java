@@ -21,7 +21,7 @@ public final class MigrateProjectResponseTags extends com.pulumi.resources.Invok
     @Import(name="additionalProperties")
       private final @Nullable String additionalProperties;
 
-    public Optional<String> getAdditionalProperties() {
+    public Optional<String> additionalProperties() {
         return this.additionalProperties == null ? Optional.empty() : Optional.ofNullable(this.additionalProperties);
     }
 

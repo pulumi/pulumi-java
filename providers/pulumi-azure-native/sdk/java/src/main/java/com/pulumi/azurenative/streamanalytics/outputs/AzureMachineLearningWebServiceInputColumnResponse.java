@@ -42,21 +42,21 @@ public final class AzureMachineLearningWebServiceInputColumnResponse {
      * The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * The zero based index of the function parameter this input maps to.
      * 
     */
-    public Optional<Integer> getMapTo() {
+    public Optional<Integer> mapTo() {
         return Optional.ofNullable(this.mapTo);
     }
     /**
      * The name of the input column.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

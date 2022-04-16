@@ -105,84 +105,84 @@ public final class GetBackupResult {
      * UUID v4 used to identify the Backup
      * 
     */
-    public String getBackupId() {
+    public String backupId() {
         return this.backupId;
     }
     /**
      * Type of backup Manual or Scheduled
      * 
     */
-    public String getBackupType() {
+    public String backupType() {
         return this.backupType;
     }
     /**
      * The creation date of the backup
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * Failure reason
      * 
     */
-    public String getFailureReason() {
+    public String failureReason() {
         return this.failureReason;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Label for backup
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Size of backup
      * 
     */
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Volume name
      * 
     */
-    public String getVolumeName() {
+    public String volumeName() {
         return this.volumeName;
     }
 

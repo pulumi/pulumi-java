@@ -27,7 +27,7 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="facilityNames")
       private final @Nullable List<String> facilityNames;
 
-    public List<String> getFacilityNames() {
+    public List<String> facilityNames() {
         return this.facilityNames == null ? List.of() : this.facilityNames;
     }
 
@@ -38,7 +38,7 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="logLevels")
       private final @Nullable List<String> logLevels;
 
-    public List<String> getLogLevels() {
+    public List<String> logLevels() {
         return this.logLevels == null ? List.of() : this.logLevels;
     }
 
@@ -50,7 +50,7 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -62,7 +62,7 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="streams")
       private final @Nullable List<String> streams;
 
-    public List<String> getStreams() {
+    public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
 

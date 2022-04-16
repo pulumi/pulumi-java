@@ -34,7 +34,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
@@ -45,7 +45,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="fabricObjectId")
       private final @Nullable String fabricObjectId;
 
-    public Optional<String> getFabricObjectId() {
+    public Optional<String> fabricObjectId() {
         return this.fabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.fabricObjectId);
     }
 
@@ -56,7 +56,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialPrimaryFabricLocation", required=true)
       private final String initialPrimaryFabricLocation;
 
-    public String getInitialPrimaryFabricLocation() {
+    public String initialPrimaryFabricLocation() {
         return this.initialPrimaryFabricLocation;
     }
 
@@ -67,7 +67,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialPrimaryZone", required=true)
       private final String initialPrimaryZone;
 
-    public String getInitialPrimaryZone() {
+    public String initialPrimaryZone() {
         return this.initialPrimaryZone;
     }
 
@@ -78,7 +78,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialRecoveryFabricLocation", required=true)
       private final String initialRecoveryFabricLocation;
 
-    public String getInitialRecoveryFabricLocation() {
+    public String initialRecoveryFabricLocation() {
         return this.initialRecoveryFabricLocation;
     }
 
@@ -89,7 +89,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialRecoveryZone", required=true)
       private final String initialRecoveryZone;
 
-    public String getInitialRecoveryZone() {
+    public String initialRecoveryZone() {
         return this.initialRecoveryZone;
     }
 
@@ -101,7 +101,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -112,7 +112,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="isReplicationAgentUpdateRequired")
       private final @Nullable Boolean isReplicationAgentUpdateRequired;
 
-    public Optional<Boolean> getIsReplicationAgentUpdateRequired() {
+    public Optional<Boolean> isReplicationAgentUpdateRequired() {
         return this.isReplicationAgentUpdateRequired == null ? Optional.empty() : Optional.ofNullable(this.isReplicationAgentUpdateRequired);
     }
 
@@ -123,7 +123,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
@@ -134,7 +134,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
 
-    public Optional<String> getLastRpoCalculatedTime() {
+    public Optional<String> lastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
@@ -145,7 +145,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="lifecycleId")
       private final @Nullable String lifecycleId;
 
-    public Optional<String> getLifecycleId() {
+    public Optional<String> lifecycleId() {
         return this.lifecycleId == null ? Optional.empty() : Optional.ofNullable(this.lifecycleId);
     }
 
@@ -156,7 +156,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="managementId")
       private final @Nullable String managementId;
 
-    public Optional<String> getManagementId() {
+    public Optional<String> managementId() {
         return this.managementId == null ? Optional.empty() : Optional.ofNullable(this.managementId);
     }
 
@@ -167,7 +167,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="monitoringJobType")
       private final @Nullable String monitoringJobType;
 
-    public Optional<String> getMonitoringJobType() {
+    public Optional<String> monitoringJobType() {
         return this.monitoringJobType == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobType);
     }
 
@@ -178,7 +178,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="monitoringPercentageCompletion")
       private final @Nullable Integer monitoringPercentageCompletion;
 
-    public Optional<Integer> getMonitoringPercentageCompletion() {
+    public Optional<Integer> monitoringPercentageCompletion() {
         return this.monitoringPercentageCompletion == null ? Optional.empty() : Optional.ofNullable(this.monitoringPercentageCompletion);
     }
 
@@ -189,7 +189,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="multiVmGroupCreateOption")
       private final @Nullable String multiVmGroupCreateOption;
 
-    public Optional<String> getMultiVmGroupCreateOption() {
+    public Optional<String> multiVmGroupCreateOption() {
         return this.multiVmGroupCreateOption == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupCreateOption);
     }
 
@@ -200,7 +200,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="multiVmGroupId")
       private final @Nullable String multiVmGroupId;
 
-    public Optional<String> getMultiVmGroupId() {
+    public Optional<String> multiVmGroupId() {
         return this.multiVmGroupId == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupId);
     }
 
@@ -211,7 +211,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="multiVmGroupName")
       private final @Nullable String multiVmGroupName;
 
-    public Optional<String> getMultiVmGroupName() {
+    public Optional<String> multiVmGroupName() {
         return this.multiVmGroupName == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupName);
     }
 
@@ -222,7 +222,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -233,7 +233,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="primaryFabricLocation")
       private final @Nullable String primaryFabricLocation;
 
-    public Optional<String> getPrimaryFabricLocation() {
+    public Optional<String> primaryFabricLocation() {
         return this.primaryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricLocation);
     }
 
@@ -244,7 +244,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="protectedDisks")
       private final @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks;
 
-    public List<A2AProtectedDiskDetailsResponse> getProtectedDisks() {
+    public List<A2AProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
 
@@ -255,7 +255,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="protectedManagedDisks")
       private final @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks;
 
-    public List<A2AProtectedManagedDiskDetailsResponse> getProtectedManagedDisks() {
+    public List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks() {
         return this.protectedManagedDisks == null ? List.of() : this.protectedManagedDisks;
     }
 
@@ -266,7 +266,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAvailabilitySet")
       private final @Nullable String recoveryAvailabilitySet;
 
-    public Optional<String> getRecoveryAvailabilitySet() {
+    public Optional<String> recoveryAvailabilitySet() {
         return this.recoveryAvailabilitySet == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySet);
     }
 
@@ -277,7 +277,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAvailabilityZone")
       private final @Nullable String recoveryAvailabilityZone;
 
-    public Optional<String> getRecoveryAvailabilityZone() {
+    public Optional<String> recoveryAvailabilityZone() {
         return this.recoveryAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilityZone);
     }
 
@@ -288,7 +288,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAzureResourceGroupId")
       private final @Nullable String recoveryAzureResourceGroupId;
 
-    public Optional<String> getRecoveryAzureResourceGroupId() {
+    public Optional<String> recoveryAzureResourceGroupId() {
         return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
 
@@ -299,7 +299,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAzureVMName")
       private final @Nullable String recoveryAzureVMName;
 
-    public Optional<String> getRecoveryAzureVMName() {
+    public Optional<String> recoveryAzureVMName() {
         return this.recoveryAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMName);
     }
 
@@ -310,7 +310,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAzureVMSize")
       private final @Nullable String recoveryAzureVMSize;
 
-    public Optional<String> getRecoveryAzureVMSize() {
+    public Optional<String> recoveryAzureVMSize() {
         return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
     }
 
@@ -321,7 +321,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryBootDiagStorageAccountId")
       private final @Nullable String recoveryBootDiagStorageAccountId;
 
-    public Optional<String> getRecoveryBootDiagStorageAccountId() {
+    public Optional<String> recoveryBootDiagStorageAccountId() {
         return this.recoveryBootDiagStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
     }
 
@@ -332,7 +332,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryCloudService")
       private final @Nullable String recoveryCloudService;
 
-    public Optional<String> getRecoveryCloudService() {
+    public Optional<String> recoveryCloudService() {
         return this.recoveryCloudService == null ? Optional.empty() : Optional.ofNullable(this.recoveryCloudService);
     }
 
@@ -343,7 +343,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryFabricLocation")
       private final @Nullable String recoveryFabricLocation;
 
-    public Optional<String> getRecoveryFabricLocation() {
+    public Optional<String> recoveryFabricLocation() {
         return this.recoveryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricLocation);
     }
 
@@ -354,7 +354,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryFabricObjectId")
       private final @Nullable String recoveryFabricObjectId;
 
-    public Optional<String> getRecoveryFabricObjectId() {
+    public Optional<String> recoveryFabricObjectId() {
         return this.recoveryFabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricObjectId);
     }
 
@@ -365,7 +365,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryProximityPlacementGroupId")
       private final @Nullable String recoveryProximityPlacementGroupId;
 
-    public Optional<String> getRecoveryProximityPlacementGroupId() {
+    public Optional<String> recoveryProximityPlacementGroupId() {
         return this.recoveryProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryProximityPlacementGroupId);
     }
 
@@ -376,7 +376,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
 
-    public Optional<Double> getRpoInSeconds() {
+    public Optional<Double> rpoInSeconds() {
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
     }
 
@@ -387,7 +387,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="selectedRecoveryAzureNetworkId")
       private final @Nullable String selectedRecoveryAzureNetworkId;
 
-    public Optional<String> getSelectedRecoveryAzureNetworkId() {
+    public Optional<String> selectedRecoveryAzureNetworkId() {
         return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
 
@@ -398,7 +398,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="selectedTfoAzureNetworkId")
       private final @Nullable String selectedTfoAzureNetworkId;
 
-    public Optional<String> getSelectedTfoAzureNetworkId() {
+    public Optional<String> selectedTfoAzureNetworkId() {
         return this.selectedTfoAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
 
@@ -409,7 +409,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="testFailoverRecoveryFabricObjectId")
       private final @Nullable String testFailoverRecoveryFabricObjectId;
 
-    public Optional<String> getTestFailoverRecoveryFabricObjectId() {
+    public Optional<String> testFailoverRecoveryFabricObjectId() {
         return this.testFailoverRecoveryFabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.testFailoverRecoveryFabricObjectId);
     }
 
@@ -420,7 +420,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="tfoAzureVMName")
       private final @Nullable String tfoAzureVMName;
 
-    public Optional<String> getTfoAzureVMName() {
+    public Optional<String> tfoAzureVMName() {
         return this.tfoAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.tfoAzureVMName);
     }
 
@@ -431,7 +431,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="unprotectedDisks")
       private final @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks;
 
-    public List<A2AUnprotectedDiskDetailsResponse> getUnprotectedDisks() {
+    public List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks() {
         return this.unprotectedDisks == null ? List.of() : this.unprotectedDisks;
     }
 
@@ -442,7 +442,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmEncryptionType", required=true)
       private final String vmEncryptionType;
 
-    public String getVmEncryptionType() {
+    public String vmEncryptionType() {
         return this.vmEncryptionType;
     }
 
@@ -453,7 +453,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
 
-    public List<VMNicDetailsResponse> getVmNics() {
+    public List<VMNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
@@ -464,7 +464,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
 
-    public Optional<String> getVmProtectionState() {
+    public Optional<String> vmProtectionState() {
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
@@ -475,7 +475,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;
 
-    public Optional<String> getVmProtectionStateDescription() {
+    public Optional<String> vmProtectionStateDescription() {
         return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
     }
 
@@ -486,7 +486,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmSyncedConfigDetails")
       private final @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
 
-    public Optional<AzureToAzureVmSyncedConfigDetailsResponse> getVmSyncedConfigDetails() {
+    public Optional<AzureToAzureVmSyncedConfigDetailsResponse> vmSyncedConfigDetails() {
         return this.vmSyncedConfigDetails == null ? Optional.empty() : Optional.ofNullable(this.vmSyncedConfigDetails);
     }
 

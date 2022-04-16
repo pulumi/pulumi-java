@@ -26,7 +26,7 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="excludedPackageNameMasks")
       private final @Nullable List<String> excludedPackageNameMasks;
 
-    public List<String> getExcludedPackageNameMasks() {
+    public List<String> excludedPackageNameMasks() {
         return this.excludedPackageNameMasks == null ? List.of() : this.excludedPackageNameMasks;
     }
 
@@ -37,7 +37,7 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="includedPackageClassifications")
       private final @Nullable String includedPackageClassifications;
 
-    public Optional<String> getIncludedPackageClassifications() {
+    public Optional<String> includedPackageClassifications() {
         return this.includedPackageClassifications == null ? Optional.empty() : Optional.ofNullable(this.includedPackageClassifications);
     }
 
@@ -48,7 +48,7 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="includedPackageNameMasks")
       private final @Nullable List<String> includedPackageNameMasks;
 
-    public List<String> getIncludedPackageNameMasks() {
+    public List<String> includedPackageNameMasks() {
         return this.includedPackageNameMasks == null ? List.of() : this.includedPackageNameMasks;
     }
 
@@ -59,7 +59,7 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rebootSetting")
       private final @Nullable String rebootSetting;
 
-    public Optional<String> getRebootSetting() {
+    public Optional<String> rebootSetting() {
         return this.rebootSetting == null ? Optional.empty() : Optional.ofNullable(this.rebootSetting);
     }
 

@@ -32,7 +32,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -43,7 +43,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dapr")
       private final @Nullable Output<DaprArgs> dapr;
 
-    public Output<DaprArgs> getDapr() {
+    public Output<DaprArgs> dapr() {
         return this.dapr == null ? Codegen.empty() : this.dapr;
     }
 
@@ -54,7 +54,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revisionSuffix")
       private final @Nullable Output<String> revisionSuffix;
 
-    public Output<String> getRevisionSuffix() {
+    public Output<String> revisionSuffix() {
         return this.revisionSuffix == null ? Codegen.empty() : this.revisionSuffix;
     }
 
@@ -65,7 +65,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scale")
       private final @Nullable Output<ScaleArgs> scale;
 
-    public Output<ScaleArgs> getScale() {
+    public Output<ScaleArgs> scale() {
         return this.scale == null ? Codegen.empty() : this.scale;
     }
 

@@ -21,7 +21,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="natGatewayName", required=true)
       private final String natGatewayName;
 
-    public String getNatGatewayName() {
+    public String natGatewayName() {
         return this.natGatewayName;
     }
 
@@ -43,7 +43,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

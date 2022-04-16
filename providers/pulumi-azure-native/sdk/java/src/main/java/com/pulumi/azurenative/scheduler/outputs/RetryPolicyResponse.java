@@ -42,21 +42,21 @@ public final class RetryPolicyResponse {
      * Gets or sets the number of times a retry should be attempted.
      * 
     */
-    public Optional<Integer> getRetryCount() {
+    public Optional<Integer> retryCount() {
         return Optional.ofNullable(this.retryCount);
     }
     /**
      * Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
      * 
     */
-    public Optional<String> getRetryInterval() {
+    public Optional<String> retryInterval() {
         return Optional.ofNullable(this.retryInterval);
     }
     /**
      * Gets or sets the retry strategy to be used.
      * 
     */
-    public Optional<String> getRetryType() {
+    public Optional<String> retryType() {
         return Optional.ofNullable(this.retryType);
     }
 

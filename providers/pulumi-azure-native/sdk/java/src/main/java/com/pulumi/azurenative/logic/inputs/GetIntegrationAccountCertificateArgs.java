@@ -19,7 +19,7 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
     @Import(name="certificateName", required=true)
       private final String certificateName;
 
-    public String getCertificateName() {
+    public String certificateName() {
         return this.certificateName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

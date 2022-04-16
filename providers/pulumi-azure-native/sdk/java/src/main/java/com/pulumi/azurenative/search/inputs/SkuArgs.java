@@ -26,7 +26,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<SkuName> name;
 
-    public Output<SkuName> getName() {
+    public Output<SkuName> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

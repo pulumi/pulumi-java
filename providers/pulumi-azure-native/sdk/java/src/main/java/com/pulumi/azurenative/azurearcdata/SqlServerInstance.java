@@ -45,7 +45,7 @@ public class SqlServerInstance extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class SqlServerInstance extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class SqlServerInstance extends com.pulumi.resources.CustomResource {
      * @return null
      * 
      */
-    public Output<SqlServerInstancePropertiesResponse> getProperties() {
+    public Output<SqlServerInstancePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -87,7 +87,7 @@ public class SqlServerInstance extends com.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -101,7 +101,7 @@ public class SqlServerInstance extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -115,7 +115,7 @@ public class SqlServerInstance extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -39,7 +39,7 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return List of application settings names.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAppSettingNames() {
+    public Output</* @Nullable */ List<String>> appSettingNames() {
         return this.appSettingNames;
     }
     /**
@@ -53,7 +53,7 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return List of external Azure storage account identifiers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAzureStorageConfigNames() {
+    public Output</* @Nullable */ List<String>> azureStorageConfigNames() {
         return this.azureStorageConfigNames;
     }
     /**
@@ -67,7 +67,7 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return List of connection string names.
      * 
      */
-    public Output</* @Nullable */ List<String>> getConnectionStringNames() {
+    public Output</* @Nullable */ List<String>> connectionStringNames() {
         return this.connectionStringNames;
     }
     /**
@@ -81,7 +81,7 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -95,7 +95,7 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -109,7 +109,7 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -61,42 +61,42 @@ public final class WebChatSiteResponse {
      * Whether this site is enabled for DirectLine channel
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this site is enabled for preview versions of Webchat
      * 
     */
-    public Boolean getIsWebchatPreviewEnabled() {
+    public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
     /**
      * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public String getKey2() {
+    public String key2() {
         return this.key2;
     }
     /**
      * Site Id
      * 
     */
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
     /**
      * Site name
      * 
     */
-    public String getSiteName() {
+    public String siteName() {
         return this.siteName;
     }
 

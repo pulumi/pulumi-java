@@ -30,7 +30,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitLockerKey")
       private final @Nullable Output<String> bitLockerKey;
 
-    public Output<String> getBitLockerKey() {
+    public Output<String> bitLockerKey() {
         return this.bitLockerKey == null ? Codegen.empty() : this.bitLockerKey;
     }
 
@@ -41,7 +41,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bytesSucceeded")
       private final @Nullable Output<Double> bytesSucceeded;
 
-    public Output<Double> getBytesSucceeded() {
+    public Output<Double> bytesSucceeded() {
         return this.bytesSucceeded == null ? Codegen.empty() : this.bytesSucceeded;
     }
 
@@ -52,7 +52,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyStatus")
       private final @Nullable Output<String> copyStatus;
 
-    public Output<String> getCopyStatus() {
+    public Output<String> copyStatus() {
         return this.copyStatus == null ? Codegen.empty() : this.copyStatus;
     }
 
@@ -63,7 +63,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="driveHeaderHash")
       private final @Nullable Output<String> driveHeaderHash;
 
-    public Output<String> getDriveHeaderHash() {
+    public Output<String> driveHeaderHash() {
         return this.driveHeaderHash == null ? Codegen.empty() : this.driveHeaderHash;
     }
 
@@ -74,7 +74,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="driveId")
       private final @Nullable Output<String> driveId;
 
-    public Output<String> getDriveId() {
+    public Output<String> driveId() {
         return this.driveId == null ? Codegen.empty() : this.driveId;
     }
 
@@ -85,7 +85,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="errorLogUri")
       private final @Nullable Output<String> errorLogUri;
 
-    public Output<String> getErrorLogUri() {
+    public Output<String> errorLogUri() {
         return this.errorLogUri == null ? Codegen.empty() : this.errorLogUri;
     }
 
@@ -96,7 +96,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestFile")
       private final @Nullable Output<String> manifestFile;
 
-    public Output<String> getManifestFile() {
+    public Output<String> manifestFile() {
         return this.manifestFile == null ? Codegen.empty() : this.manifestFile;
     }
 
@@ -107,7 +107,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestHash")
       private final @Nullable Output<String> manifestHash;
 
-    public Output<String> getManifestHash() {
+    public Output<String> manifestHash() {
         return this.manifestHash == null ? Codegen.empty() : this.manifestHash;
     }
 
@@ -118,7 +118,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestUri")
       private final @Nullable Output<String> manifestUri;
 
-    public Output<String> getManifestUri() {
+    public Output<String> manifestUri() {
         return this.manifestUri == null ? Codegen.empty() : this.manifestUri;
     }
 
@@ -129,7 +129,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="percentComplete")
       private final @Nullable Output<Integer> percentComplete;
 
-    public Output<Integer> getPercentComplete() {
+    public Output<Integer> percentComplete() {
         return this.percentComplete == null ? Codegen.empty() : this.percentComplete;
     }
 
@@ -140,7 +140,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<Either<String,DriveState>> state;
 
-    public Output<Either<String,DriveState>> getState() {
+    public Output<Either<String,DriveState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -151,7 +151,7 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="verboseLogUri")
       private final @Nullable Output<String> verboseLogUri;
 
-    public Output<String> getVerboseLogUri() {
+    public Output<String> verboseLogUri() {
         return this.verboseLogUri == null ? Codegen.empty() : this.verboseLogUri;
     }
 

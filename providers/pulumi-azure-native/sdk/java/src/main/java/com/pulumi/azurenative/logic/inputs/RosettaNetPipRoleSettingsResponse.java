@@ -26,7 +26,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -37,7 +37,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
     @Import(name="businessDocument", required=true)
       private final RosettaNetPipBusinessDocumentResponse businessDocument;
 
-    public RosettaNetPipBusinessDocumentResponse getBusinessDocument() {
+    public RosettaNetPipBusinessDocumentResponse businessDocument() {
         return this.businessDocument;
     }
 
@@ -48,7 +48,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -59,7 +59,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
     @Import(name="role", required=true)
       private final String role;
 
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 
@@ -70,7 +70,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
     @Import(name="roleType", required=true)
       private final String roleType;
 
-    public String getRoleType() {
+    public String roleType() {
         return this.roleType;
     }
 
@@ -81,7 +81,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 
@@ -92,7 +92,7 @@ public final class RosettaNetPipRoleSettingsResponse extends com.pulumi.resource
     @Import(name="serviceClassification", required=true)
       private final String serviceClassification;
 
-    public String getServiceClassification() {
+    public String serviceClassification() {
         return this.serviceClassification;
     }
 

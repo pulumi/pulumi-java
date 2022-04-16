@@ -28,7 +28,7 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="counterSets", required=true)
       private final Output<List<MetricCounterSetArgs>> counterSets;
 
-    public Output<List<MetricCounterSetArgs>> getCounterSets() {
+    public Output<List<MetricCounterSetArgs>> counterSets() {
         return this.counterSets;
     }
 
@@ -39,7 +39,7 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="mdmAccount")
       private final @Nullable Output<String> mdmAccount;
 
-    public Output<String> getMdmAccount() {
+    public Output<String> mdmAccount() {
         return this.mdmAccount == null ? Codegen.empty() : this.mdmAccount;
     }
 
@@ -50,7 +50,7 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="metricNameSpace")
       private final @Nullable Output<String> metricNameSpace;
 
-    public Output<String> getMetricNameSpace() {
+    public Output<String> metricNameSpace() {
         return this.metricNameSpace == null ? Codegen.empty() : this.metricNameSpace;
     }
 
@@ -61,7 +61,7 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

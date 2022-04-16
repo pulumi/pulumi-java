@@ -19,7 +19,7 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
     @Import(name="ipConfigName", required=true)
       private final String ipConfigName;
 
-    public String getIpConfigName() {
+    public String ipConfigName() {
         return this.ipConfigName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;
 
-    public String getVirtualHubName() {
+    public String virtualHubName() {
         return this.virtualHubName;
     }
 

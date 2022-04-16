@@ -45,7 +45,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Authorization status of spacecraft.
      * 
      */
-    public Output<String> getAuthorizationStatus() {
+    public Output<String> authorizationStatus() {
         return this.authorizationStatus;
     }
     /**
@@ -59,7 +59,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Details of the authorization status.
      * 
      */
-    public Output<String> getAuthorizationStatusExtended() {
+    public Output<String> authorizationStatusExtended() {
         return this.authorizationStatusExtended;
     }
     /**
@@ -73,7 +73,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -87,7 +87,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Links of the Spacecraft
      * 
      */
-    public Output</* @Nullable */ List<SpacecraftLinkResponse>> getLinks() {
+    public Output</* @Nullable */ List<SpacecraftLinkResponse>> links() {
         return this.links;
     }
     /**
@@ -101,7 +101,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return NORAD ID of the spacecraft.
      * 
      */
-    public Output<String> getNoradId() {
+    public Output<String> noradId() {
         return this.noradId;
     }
     /**
@@ -143,7 +143,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -157,7 +157,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +171,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Title line of Two Line Element (TLE).
      * 
      */
-    public Output</* @Nullable */ String> getTitleLine() {
+    public Output</* @Nullable */ String> titleLine() {
         return this.titleLine;
     }
     /**
@@ -185,7 +185,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Line 1 of Two Line Element (TLE).
      * 
      */
-    public Output</* @Nullable */ String> getTleLine1() {
+    public Output</* @Nullable */ String> tleLine1() {
         return this.tleLine1;
     }
     /**
@@ -199,7 +199,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Line 2 of Two Line Element (TLE).
      * 
      */
-    public Output</* @Nullable */ String> getTleLine2() {
+    public Output</* @Nullable */ String> tleLine2() {
         return this.tleLine2;
     }
     /**
@@ -213,7 +213,7 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

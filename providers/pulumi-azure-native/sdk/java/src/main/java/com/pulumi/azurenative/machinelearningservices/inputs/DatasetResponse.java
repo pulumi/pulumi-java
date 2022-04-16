@@ -29,7 +29,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
       private final String createdTime;
 
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
 
@@ -40,7 +40,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
@@ -51,7 +51,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetState")
       private final @Nullable DatasetStateResponse datasetState;
 
-    public Optional<DatasetStateResponse> getDatasetState() {
+    public Optional<DatasetStateResponse> datasetState() {
         return this.datasetState == null ? Optional.empty() : Optional.ofNullable(this.datasetState);
     }
 
@@ -62,7 +62,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetType", required=true)
       private final String datasetType;
 
-    public String getDatasetType() {
+    public String datasetType() {
         return this.datasetType;
     }
 
@@ -73,7 +73,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultCompute", required=true)
       private final String defaultCompute;
 
-    public String getDefaultCompute() {
+    public String defaultCompute() {
         return this.defaultCompute;
     }
 
@@ -84,7 +84,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -95,7 +95,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -106,7 +106,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isVisible", required=true)
       private final Boolean isVisible;
 
-    public Boolean getIsVisible() {
+    public Boolean isVisible() {
         return this.isVisible;
     }
 
@@ -117,7 +117,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="latest")
       private final @Nullable DatasetResponseLatest latest;
 
-    public Optional<DatasetResponseLatest> getLatest() {
+    public Optional<DatasetResponseLatest> latest() {
         return this.latest == null ? Optional.empty() : Optional.ofNullable(this.latest);
     }
 
@@ -128,7 +128,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
 
-    public String getModifiedTime() {
+    public String modifiedTime() {
         return this.modifiedTime;
     }
 
@@ -139,7 +139,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -150,7 +150,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

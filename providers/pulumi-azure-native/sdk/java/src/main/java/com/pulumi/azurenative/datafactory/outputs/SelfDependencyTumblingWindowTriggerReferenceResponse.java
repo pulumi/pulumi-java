@@ -42,14 +42,14 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
      * 
     */
-    public String getOffset() {
+    public String offset() {
         return this.offset;
     }
     /**
      * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
      * 
     */
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
@@ -57,7 +57,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
      * Expected value is 'SelfDependencyTumblingWindowTriggerReference'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

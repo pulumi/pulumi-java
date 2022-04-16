@@ -25,7 +25,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends com.
     @Import(name="authorizationType", required=true)
       private final String authorizationType;
 
-    public String getAuthorizationType() {
+    public String authorizationType() {
         return this.authorizationType;
     }
 
@@ -36,7 +36,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends com.
     @Import(name="key", required=true)
       private final SecureStringResponse key;
 
-    public SecureStringResponse getKey() {
+    public SecureStringResponse key() {
         return this.key;
     }
 

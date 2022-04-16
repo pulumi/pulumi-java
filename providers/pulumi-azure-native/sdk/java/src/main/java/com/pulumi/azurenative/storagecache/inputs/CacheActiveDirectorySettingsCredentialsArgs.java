@@ -25,7 +25,7 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends com.pulum
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -36,7 +36,7 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends com.pulum
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

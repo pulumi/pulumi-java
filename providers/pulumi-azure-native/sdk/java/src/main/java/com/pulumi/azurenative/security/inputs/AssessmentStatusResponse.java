@@ -25,7 +25,7 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="cause")
       private final @Nullable String cause;
 
-    public Optional<String> getCause() {
+    public Optional<String> cause() {
         return this.cause == null ? Optional.empty() : Optional.ofNullable(this.cause);
     }
 
@@ -36,7 +36,7 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -47,7 +47,7 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 

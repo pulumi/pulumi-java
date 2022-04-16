@@ -27,7 +27,7 @@ public final class OriginGroupOverrideActionArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class OriginGroupOverrideActionArgs extends com.pulumi.resources.Re
     @Import(name="parameters", required=true)
       private final Output<OriginGroupOverrideActionParametersArgs> parameters;
 
-    public Output<OriginGroupOverrideActionParametersArgs> getParameters() {
+    public Output<OriginGroupOverrideActionParametersArgs> parameters() {
         return this.parameters;
     }
 

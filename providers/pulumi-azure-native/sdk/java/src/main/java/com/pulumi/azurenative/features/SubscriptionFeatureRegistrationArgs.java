@@ -23,14 +23,14 @@ public final class SubscriptionFeatureRegistrationArgs extends com.pulumi.resour
     @Import(name="featureName")
       private final @Nullable Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName == null ? Codegen.empty() : this.featureName;
     }
 
     @Import(name="properties")
       private final @Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties;
 
-    public Output<SubscriptionFeatureRegistrationPropertiesArgs> getProperties() {
+    public Output<SubscriptionFeatureRegistrationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -41,7 +41,7 @@ public final class SubscriptionFeatureRegistrationArgs extends com.pulumi.resour
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 

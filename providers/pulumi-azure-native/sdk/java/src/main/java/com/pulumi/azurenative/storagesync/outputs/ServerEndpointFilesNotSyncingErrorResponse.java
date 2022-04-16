@@ -40,21 +40,21 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
      * Error code (HResult)
      * 
     */
-    public Integer getErrorCode() {
+    public Integer errorCode() {
         return this.errorCode;
     }
     /**
      * Count of persistent files not syncing with the specified error code
      * 
     */
-    public Double getPersistentCount() {
+    public Double persistentCount() {
         return this.persistentCount;
     }
     /**
      * Count of transient files not syncing with the specified error code
      * 
     */
-    public Double getTransientCount() {
+    public Double transientCount() {
         return this.transientCount;
     }
 

@@ -26,7 +26,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedHeaders")
       private final @Nullable String allowedHeaders;
 
-    public Optional<String> getAllowedHeaders() {
+    public Optional<String> allowedHeaders() {
         return this.allowedHeaders == null ? Optional.empty() : Optional.ofNullable(this.allowedHeaders);
     }
 
@@ -37,7 +37,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedMethods")
       private final @Nullable String allowedMethods;
 
-    public Optional<String> getAllowedMethods() {
+    public Optional<String> allowedMethods() {
         return this.allowedMethods == null ? Optional.empty() : Optional.ofNullable(this.allowedMethods);
     }
 
@@ -48,7 +48,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedOrigins", required=true)
       private final String allowedOrigins;
 
-    public String getAllowedOrigins() {
+    public String allowedOrigins() {
         return this.allowedOrigins;
     }
 
@@ -59,7 +59,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exposedHeaders")
       private final @Nullable String exposedHeaders;
 
-    public Optional<String> getExposedHeaders() {
+    public Optional<String> exposedHeaders() {
         return this.exposedHeaders == null ? Optional.empty() : Optional.ofNullable(this.exposedHeaders);
     }
 
@@ -70,7 +70,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxAgeInSeconds")
       private final @Nullable Double maxAgeInSeconds;
 
-    public Optional<Double> getMaxAgeInSeconds() {
+    public Optional<Double> maxAgeInSeconds() {
         return this.maxAgeInSeconds == null ? Optional.empty() : Optional.ofNullable(this.maxAgeInSeconds);
     }
 

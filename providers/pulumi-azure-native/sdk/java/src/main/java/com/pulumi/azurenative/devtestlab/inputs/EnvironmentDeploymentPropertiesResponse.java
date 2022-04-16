@@ -27,7 +27,7 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
     @Import(name="armTemplateId")
       private final @Nullable String armTemplateId;
 
-    public Optional<String> getArmTemplateId() {
+    public Optional<String> armTemplateId() {
         return this.armTemplateId == null ? Optional.empty() : Optional.ofNullable(this.armTemplateId);
     }
 
@@ -38,7 +38,7 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
     @Import(name="parameters")
       private final @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
 
-    public List<ArmTemplateParameterPropertiesResponse> getParameters() {
+    public List<ArmTemplateParameterPropertiesResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 

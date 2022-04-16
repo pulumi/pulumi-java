@@ -33,7 +33,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="createMode")
       private final @Nullable Output<CreateMode> createMode;
 
-    public Output<CreateMode> getCreateMode() {
+    public Output<CreateMode> createMode() {
         return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
@@ -44,7 +44,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="enablePurgeProtection")
       private final @Nullable Output<Boolean> enablePurgeProtection;
 
-    public Output<Boolean> getEnablePurgeProtection() {
+    public Output<Boolean> enablePurgeProtection() {
         return this.enablePurgeProtection == null ? Codegen.empty() : this.enablePurgeProtection;
     }
 
@@ -55,7 +55,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="enableSoftDelete")
       private final @Nullable Output<Boolean> enableSoftDelete;
 
-    public Output<Boolean> getEnableSoftDelete() {
+    public Output<Boolean> enableSoftDelete() {
         return this.enableSoftDelete == null ? Codegen.empty() : this.enableSoftDelete;
     }
 
@@ -66,7 +66,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="initialAdminObjectIds")
       private final @Nullable Output<List<String>> initialAdminObjectIds;
 
-    public Output<List<String>> getInitialAdminObjectIds() {
+    public Output<List<String>> initialAdminObjectIds() {
         return this.initialAdminObjectIds == null ? Codegen.empty() : this.initialAdminObjectIds;
     }
 
@@ -77,7 +77,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="networkAcls")
       private final @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
 
-    public Output<MHSMNetworkRuleSetArgs> getNetworkAcls() {
+    public Output<MHSMNetworkRuleSetArgs> networkAcls() {
         return this.networkAcls == null ? Codegen.empty() : this.networkAcls;
     }
 
@@ -88,7 +88,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -99,7 +99,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="softDeleteRetentionInDays")
       private final @Nullable Output<Integer> softDeleteRetentionInDays;
 
-    public Output<Integer> getSoftDeleteRetentionInDays() {
+    public Output<Integer> softDeleteRetentionInDays() {
         return this.softDeleteRetentionInDays == null ? Codegen.empty() : this.softDeleteRetentionInDays;
     }
 
@@ -110,7 +110,7 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

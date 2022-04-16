@@ -34,14 +34,14 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
      * Maximum number of scale units deployed for ExpressRoute gateway.
      * 
     */
-    public Optional<Integer> getMax() {
+    public Optional<Integer> max() {
         return Optional.ofNullable(this.max);
     }
     /**
      * Minimum number of scale units deployed for ExpressRoute gateway.
      * 
     */
-    public Optional<Integer> getMin() {
+    public Optional<Integer> min() {
         return Optional.ofNullable(this.min);
     }
 

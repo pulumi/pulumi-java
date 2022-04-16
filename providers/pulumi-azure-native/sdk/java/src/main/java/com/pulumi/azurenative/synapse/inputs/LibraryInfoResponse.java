@@ -25,7 +25,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="containerName")
       private final @Nullable String containerName;
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
@@ -36,7 +36,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="creatorId", required=true)
       private final String creatorId;
 
-    public String getCreatorId() {
+    public String creatorId() {
         return this.creatorId;
     }
 
@@ -47,7 +47,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -58,7 +58,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -69,7 +69,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningStatus", required=true)
       private final String provisioningStatus;
 
-    public String getProvisioningStatus() {
+    public String provisioningStatus() {
         return this.provisioningStatus;
     }
 
@@ -80,7 +80,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -91,7 +91,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uploadedTimestamp", required=true)
       private final String uploadedTimestamp;
 
-    public String getUploadedTimestamp() {
+    public String uploadedTimestamp() {
         return this.uploadedTimestamp;
     }
 

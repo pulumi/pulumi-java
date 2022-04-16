@@ -20,14 +20,14 @@ public final class EnergyServicePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="authAppId")
       private final @Nullable Output<String> authAppId;
 
-    public Output<String> getAuthAppId() {
+    public Output<String> authAppId() {
         return this.authAppId == null ? Codegen.empty() : this.authAppId;
     }
 
     @Import(name="dataPartitionNames")
       private final @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames;
 
-    public Output<List<DataPartitionNamesArgs>> getDataPartitionNames() {
+    public Output<List<DataPartitionNamesArgs>> dataPartitionNames() {
         return this.dataPartitionNames == null ? Codegen.empty() : this.dataPartitionNames;
     }
 

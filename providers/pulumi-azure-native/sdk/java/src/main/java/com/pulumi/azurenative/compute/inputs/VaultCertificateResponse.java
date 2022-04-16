@@ -25,7 +25,7 @@ public final class VaultCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="certificateStore")
       private final @Nullable String certificateStore;
 
-    public Optional<String> getCertificateStore() {
+    public Optional<String> certificateStore() {
         return this.certificateStore == null ? Optional.empty() : Optional.ofNullable(this.certificateStore);
     }
 
@@ -36,7 +36,7 @@ public final class VaultCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="certificateUrl")
       private final @Nullable String certificateUrl;
 
-    public Optional<String> getCertificateUrl() {
+    public Optional<String> certificateUrl() {
         return this.certificateUrl == null ? Optional.empty() : Optional.ofNullable(this.certificateUrl);
     }
 

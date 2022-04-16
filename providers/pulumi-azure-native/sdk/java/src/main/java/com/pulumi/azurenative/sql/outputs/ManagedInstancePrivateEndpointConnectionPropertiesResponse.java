@@ -43,21 +43,21 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse {
      * Private endpoint which the connection belongs to.
      * 
     */
-    public Optional<ManagedInstancePrivateEndpointPropertyResponse> getPrivateEndpoint() {
+    public Optional<ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Connection State of the Private Endpoint Connection.
      * 
     */
-    public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * State of the Private Endpoint Connection.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

@@ -125,105 +125,105 @@ public final class GetRoleAssignmentResult {
      * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
      * 
     */
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
      * Version of the condition. Currently accepted value is '2.0'
      * 
     */
-    public Optional<String> getConditionVersion() {
+    public Optional<String> conditionVersion() {
         return Optional.ofNullable(this.conditionVersion);
     }
     /**
      * Id of the user who created the assignment
      * 
     */
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
     /**
      * Time it was created
      * 
     */
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
     /**
      * Id of the delegated managed identity resource
      * 
     */
-    public Optional<String> getDelegatedManagedIdentityResourceId() {
+    public Optional<String> delegatedManagedIdentityResourceId() {
         return Optional.ofNullable(this.delegatedManagedIdentityResourceId);
     }
     /**
      * Description of role assignment
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The role assignment ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The role assignment name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The principal ID.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The principal type of the assigned principal ID.
      * 
     */
-    public Optional<String> getPrincipalType() {
+    public Optional<String> principalType() {
         return Optional.ofNullable(this.principalType);
     }
     /**
      * The role definition ID.
      * 
     */
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * The role assignment scope.
      * 
     */
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
     /**
      * The role assignment type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Id of the user who updated the assignment
      * 
     */
-    public String getUpdatedBy() {
+    public String updatedBy() {
         return this.updatedBy;
     }
     /**
      * Time it was updated
      * 
     */
-    public String getUpdatedOn() {
+    public String updatedOn() {
         return this.updatedOn;
     }
 

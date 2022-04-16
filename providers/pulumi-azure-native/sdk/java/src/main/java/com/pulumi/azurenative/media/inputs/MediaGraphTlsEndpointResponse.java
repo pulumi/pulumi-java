@@ -28,7 +28,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="credentials")
       private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
-    public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
+    public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
@@ -40,7 +40,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -51,7 +51,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="trustedCertificates")
       private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
 
-    public Optional<MediaGraphPemCertificateListResponse> getTrustedCertificates() {
+    public Optional<MediaGraphPemCertificateListResponse> trustedCertificates() {
         return this.trustedCertificates == null ? Optional.empty() : Optional.ofNullable(this.trustedCertificates);
     }
 
@@ -62,7 +62,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 
@@ -73,7 +73,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="validationOptions")
       private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
-    public Optional<MediaGraphTlsValidationOptionsResponse> getValidationOptions() {
+    public Optional<MediaGraphTlsValidationOptionsResponse> validationOptions() {
         return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);
     }
 

@@ -79,56 +79,56 @@ public final class GetJobScheduleResult {
      * Gets the id of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the id of job schedule.
      * 
     */
-    public Optional<String> getJobScheduleId() {
+    public Optional<String> jobScheduleId() {
         return Optional.ofNullable(this.jobScheduleId);
     }
     /**
      * Gets the name of the variable.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the parameters of the job schedule.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Gets or sets the hybrid worker group that the scheduled job should run on.
      * 
     */
-    public Optional<String> getRunOn() {
+    public Optional<String> runOn() {
         return Optional.ofNullable(this.runOn);
     }
     /**
      * Gets or sets the runbook.
      * 
     */
-    public Optional<RunbookAssociationPropertyResponse> getRunbook() {
+    public Optional<RunbookAssociationPropertyResponse> runbook() {
         return Optional.ofNullable(this.runbook);
     }
     /**
      * Gets or sets the schedule.
      * 
     */
-    public Optional<ScheduleAssociationPropertyResponse> getSchedule() {
+    public Optional<ScheduleAssociationPropertyResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -36,7 +36,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ddosSettings")
       private final @Nullable DdosSettingsResponse ddosSettings;
 
-    public Optional<DdosSettingsResponse> getDdosSettings() {
+    public Optional<DdosSettingsResponse> ddosSettings() {
         return this.ddosSettings == null ? Optional.empty() : Optional.ofNullable(this.ddosSettings);
     }
 
@@ -47,7 +47,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dnsSettings")
       private final @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
 
-    public Optional<PublicIPAddressDnsSettingsResponse> getDnsSettings() {
+    public Optional<PublicIPAddressDnsSettingsResponse> dnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
@@ -58,7 +58,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -69,7 +69,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extendedLocation")
       private final @Nullable ExtendedLocationResponse extendedLocation;
 
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
     }
 
@@ -80,7 +80,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -91,7 +91,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
@@ -102,7 +102,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -113,7 +113,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipConfiguration", required=true)
       private final IPConfigurationResponse ipConfiguration;
 
-    public IPConfigurationResponse getIpConfiguration() {
+    public IPConfigurationResponse ipConfiguration() {
         return this.ipConfiguration;
     }
 
@@ -124,7 +124,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipTags")
       private final @Nullable List<IpTagResponse> ipTags;
 
-    public List<IpTagResponse> getIpTags() {
+    public List<IpTagResponse> ipTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
     }
 
@@ -135,7 +135,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="linkedPublicIPAddress")
       private final @Nullable PublicIPAddressResponse linkedPublicIPAddress;
 
-    public Optional<PublicIPAddressResponse> getLinkedPublicIPAddress() {
+    public Optional<PublicIPAddressResponse> linkedPublicIPAddress() {
         return this.linkedPublicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.linkedPublicIPAddress);
     }
 
@@ -146,7 +146,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -157,7 +157,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="migrationPhase")
       private final @Nullable String migrationPhase;
 
-    public Optional<String> getMigrationPhase() {
+    public Optional<String> migrationPhase() {
         return this.migrationPhase == null ? Optional.empty() : Optional.ofNullable(this.migrationPhase);
     }
 
@@ -168,7 +168,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -179,7 +179,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="natGateway")
       private final @Nullable NatGatewayResponse natGateway;
 
-    public Optional<NatGatewayResponse> getNatGateway() {
+    public Optional<NatGatewayResponse> natGateway() {
         return this.natGateway == null ? Optional.empty() : Optional.ofNullable(this.natGateway);
     }
 
@@ -190,7 +190,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -201,7 +201,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="publicIPAddressVersion")
       private final @Nullable String publicIPAddressVersion;
 
-    public Optional<String> getPublicIPAddressVersion() {
+    public Optional<String> publicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressVersion);
     }
 
@@ -212,7 +212,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="publicIPAllocationMethod")
       private final @Nullable String publicIPAllocationMethod;
 
-    public Optional<String> getPublicIPAllocationMethod() {
+    public Optional<String> publicIPAllocationMethod() {
         return this.publicIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.publicIPAllocationMethod);
     }
 
@@ -223,7 +223,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="publicIPPrefix")
       private final @Nullable SubResourceResponse publicIPPrefix;
 
-    public Optional<SubResourceResponse> getPublicIPPrefix() {
+    public Optional<SubResourceResponse> publicIPPrefix() {
         return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
     }
 
@@ -234,7 +234,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
 
@@ -245,7 +245,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="servicePublicIPAddress")
       private final @Nullable PublicIPAddressResponse servicePublicIPAddress;
 
-    public Optional<PublicIPAddressResponse> getServicePublicIPAddress() {
+    public Optional<PublicIPAddressResponse> servicePublicIPAddress() {
         return this.servicePublicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.servicePublicIPAddress);
     }
 
@@ -256,7 +256,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sku")
       private final @Nullable PublicIPAddressSkuResponse sku;
 
-    public Optional<PublicIPAddressSkuResponse> getSku() {
+    public Optional<PublicIPAddressSkuResponse> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -267,7 +267,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -278,7 +278,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -289,7 +289,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
     @Import(name="zones")
       private final @Nullable List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

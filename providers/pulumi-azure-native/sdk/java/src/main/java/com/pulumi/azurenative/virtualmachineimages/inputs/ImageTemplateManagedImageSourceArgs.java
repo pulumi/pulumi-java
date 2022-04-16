@@ -25,7 +25,7 @@ public final class ImageTemplateManagedImageSourceArgs extends com.pulumi.resour
     @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplateManagedImageSourceArgs extends com.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

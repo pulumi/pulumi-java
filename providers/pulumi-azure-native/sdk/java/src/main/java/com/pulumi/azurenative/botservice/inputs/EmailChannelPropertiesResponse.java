@@ -26,7 +26,7 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="emailAddress", required=true)
       private final String emailAddress;
 
-    public String getEmailAddress() {
+    public String emailAddress() {
         return this.emailAddress;
     }
 
@@ -37,7 +37,7 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 

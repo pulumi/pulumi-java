@@ -44,7 +44,7 @@ public class DeploymentAtManagementGroupScope extends com.pulumi.resources.Custo
      * @return the location of the deployment.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class DeploymentAtManagementGroupScope extends com.pulumi.resources.Custo
      * @return The name of the deployment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class DeploymentAtManagementGroupScope extends com.pulumi.resources.Custo
      * @return Deployment properties.
      * 
      */
-    public Output<DeploymentPropertiesExtendedResponse> getProperties() {
+    public Output<DeploymentPropertiesExtendedResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class DeploymentAtManagementGroupScope extends com.pulumi.resources.Custo
      * @return Deployment tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +100,7 @@ public class DeploymentAtManagementGroupScope extends com.pulumi.resources.Custo
      * @return The type of the deployment.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

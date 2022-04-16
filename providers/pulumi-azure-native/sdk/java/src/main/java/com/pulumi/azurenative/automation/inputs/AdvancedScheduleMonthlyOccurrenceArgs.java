@@ -29,7 +29,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
     @Import(name="day")
       private final @Nullable Output<Either<String,ScheduleDay>> day;
 
-    public Output<Either<String,ScheduleDay>> getDay() {
+    public Output<Either<String,ScheduleDay>> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -40,7 +40,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
     @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;
 
-    public Output<Integer> getOccurrence() {
+    public Output<Integer> occurrence() {
         return this.occurrence == null ? Codegen.empty() : this.occurrence;
     }
 

@@ -26,7 +26,7 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
     @Import(name="dependencyName")
       private final @Nullable Output<String> dependencyName;
 
-    public Output<String> getDependencyName() {
+    public Output<String> dependencyName() {
         return this.dependencyName == null ? Codegen.empty() : this.dependencyName;
     }
 
@@ -37,7 +37,7 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
     @Import(name="minVersion")
       private final @Nullable Output<String> minVersion;
 
-    public Output<String> getMinVersion() {
+    public Output<String> minVersion() {
         return this.minVersion == null ? Codegen.empty() : this.minVersion;
     }
 
@@ -48,7 +48,7 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 

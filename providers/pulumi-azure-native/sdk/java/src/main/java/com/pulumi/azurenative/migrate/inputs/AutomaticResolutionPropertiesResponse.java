@@ -26,7 +26,7 @@ public final class AutomaticResolutionPropertiesResponse extends com.pulumi.reso
     @Import(name="moveResourceId")
       private final @Nullable String moveResourceId;
 
-    public Optional<String> getMoveResourceId() {
+    public Optional<String> moveResourceId() {
         return this.moveResourceId == null ? Optional.empty() : Optional.ofNullable(this.moveResourceId);
     }
 

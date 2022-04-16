@@ -42,21 +42,21 @@ public final class SubnetResourceSettingsResponse {
      * Gets or sets address prefix for the subnet.
      * 
     */
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * Gets or sets the Subnet name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Defines reference to NSG.
      * 
     */
-    public Optional<NsgReferenceResponse> getNetworkSecurityGroup() {
+    public Optional<NsgReferenceResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
 

@@ -28,7 +28,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -39,7 +39,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="error")
       private final @Nullable String error;
 
-    public Optional<String> getError() {
+    public Optional<String> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="executionMessage")
       private final @Nullable String executionMessage;
 
-    public Optional<String> getExecutionMessage() {
+    public Optional<String> executionMessage() {
         return this.executionMessage == null ? Optional.empty() : Optional.ofNullable(this.executionMessage);
     }
 
@@ -61,7 +61,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="executionState")
       private final @Nullable String executionState;
 
-    public Optional<String> getExecutionState() {
+    public Optional<String> executionState() {
         return this.executionState == null ? Optional.empty() : Optional.ofNullable(this.executionState);
     }
 
@@ -72,7 +72,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="exitCode")
       private final @Nullable Integer exitCode;
 
-    public Optional<Integer> getExitCode() {
+    public Optional<Integer> exitCode() {
         return this.exitCode == null ? Optional.empty() : Optional.ofNullable(this.exitCode);
     }
 
@@ -83,7 +83,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="output")
       private final @Nullable String output;
 
-    public Optional<String> getOutput() {
+    public Optional<String> output() {
         return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
     }
 
@@ -94,7 +94,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -105,7 +105,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 

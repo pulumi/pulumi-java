@@ -19,14 +19,14 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
     @Import(name="enableDefaultValidation")
       private final @Nullable Boolean enableDefaultValidation;
 
-    public Optional<Boolean> getEnableDefaultValidation() {
+    public Optional<Boolean> enableDefaultValidation() {
         return this.enableDefaultValidation == null ? Optional.empty() : Optional.ofNullable(this.enableDefaultValidation);
     }
 
     @Import(name="resourceTypesWithCustomValidation")
       private final @Nullable List<String> resourceTypesWithCustomValidation;
 
-    public List<String> getResourceTypesWithCustomValidation() {
+    public List<String> resourceTypesWithCustomValidation() {
         return this.resourceTypesWithCustomValidation == null ? List.of() : this.resourceTypesWithCustomValidation;
     }
 

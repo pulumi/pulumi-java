@@ -23,7 +23,7 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
 
-    public Output<CorsRulesArgs> getCors() {
+    public Output<CorsRulesArgs> cors() {
         return this.cors == null ? Codegen.empty() : this.cors;
     }
 
@@ -45,7 +45,7 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="queueServiceName")
       private final @Nullable Output<String> queueServiceName;
 
-    public Output<String> getQueueServiceName() {
+    public Output<String> queueServiceName() {
         return this.queueServiceName == null ? Codegen.empty() : this.queueServiceName;
     }
 
@@ -56,7 +56,7 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

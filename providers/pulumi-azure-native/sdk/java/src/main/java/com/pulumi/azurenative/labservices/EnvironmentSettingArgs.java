@@ -26,7 +26,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="configurationState")
       private final @Nullable Output<Either<String,ConfigurationState>> configurationState;
 
-    public Output<Either<String,ConfigurationState>> getConfigurationState() {
+    public Output<Either<String,ConfigurationState>> configurationState() {
         return this.configurationState == null ? Codegen.empty() : this.configurationState;
     }
 
@@ -37,7 +37,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="environmentSettingName")
       private final @Nullable Output<String> environmentSettingName;
 
-    public Output<String> getEnvironmentSettingName() {
+    public Output<String> environmentSettingName() {
         return this.environmentSettingName == null ? Codegen.empty() : this.environmentSettingName;
     }
 
@@ -59,7 +59,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
-    public Output<String> getLabAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -70,7 +70,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -81,7 +81,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -92,7 +92,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -103,7 +103,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceSettings", required=true)
       private final Output<ResourceSettingsArgs> resourceSettings;
 
-    public Output<ResourceSettingsArgs> getResourceSettings() {
+    public Output<ResourceSettingsArgs> resourceSettings() {
         return this.resourceSettings;
     }
 
@@ -125,7 +125,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -136,7 +136,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -147,7 +147,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 

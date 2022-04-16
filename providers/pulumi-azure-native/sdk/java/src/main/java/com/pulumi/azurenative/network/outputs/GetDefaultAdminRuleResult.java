@@ -151,63 +151,63 @@ public final class GetDefaultAdminRuleResult {
      * Indicates the access allowed for this particular rule
      * 
     */
-    public String getAccess() {
+    public String access() {
         return this.access;
     }
     /**
      * A description for this rule. Restricted to 140 chars.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The destination port ranges.
      * 
     */
-    public List<String> getDestinationPortRanges() {
+    public List<String> destinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getDestinations() {
+    public List<AddressPrefixItemResponse> destinations() {
         return this.destinations;
     }
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * A friendly name for the rule.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Default rule flag.
      * 
     */
-    public Optional<String> getFlag() {
+    public Optional<String> flag() {
         return Optional.ofNullable(this.flag);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -215,63 +215,63 @@ public final class GetDefaultAdminRuleResult {
      * Expected value is 'Default'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * Network protocol this rule applies to.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The source port ranges.
      * 
     */
-    public List<String> getSourcePortRanges() {
+    public List<String> sourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
      * The CIDR or source IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getSources() {
+    public List<AddressPrefixItemResponse> sources() {
         return this.sources;
     }
     /**
      * The system metadata related to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

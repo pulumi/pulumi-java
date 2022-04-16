@@ -30,7 +30,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caching")
       private final @Nullable String caching;
 
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
@@ -41,7 +41,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createOption", required=true)
       private final String createOption;
 
-    public String getCreateOption() {
+    public String createOption() {
         return this.createOption;
     }
 
@@ -52,7 +52,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
-    public Optional<String> getDeleteOption() {
+    public Optional<String> deleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
     }
 
@@ -63,7 +63,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="detachOption")
       private final @Nullable String detachOption;
 
-    public Optional<String> getDetachOption() {
+    public Optional<String> detachOption() {
         return this.detachOption == null ? Optional.empty() : Optional.ofNullable(this.detachOption);
     }
 
@@ -74,7 +74,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskIOPSReadWrite", required=true)
       private final Double diskIOPSReadWrite;
 
-    public Double getDiskIOPSReadWrite() {
+    public Double diskIOPSReadWrite() {
         return this.diskIOPSReadWrite;
     }
 
@@ -85,7 +85,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskMBpsReadWrite", required=true)
       private final Double diskMBpsReadWrite;
 
-    public Double getDiskMBpsReadWrite() {
+    public Double diskMBpsReadWrite() {
         return this.diskMBpsReadWrite;
     }
 
@@ -96,7 +96,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
@@ -107,7 +107,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="image")
       private final @Nullable VirtualHardDiskResponse image;
 
-    public Optional<VirtualHardDiskResponse> getImage() {
+    public Optional<VirtualHardDiskResponse> image() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
@@ -118,7 +118,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lun", required=true)
       private final Integer lun;
 
-    public Integer getLun() {
+    public Integer lun() {
         return this.lun;
     }
 
@@ -129,7 +129,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managedDisk")
       private final @Nullable ManagedDiskParametersResponse managedDisk;
 
-    public Optional<ManagedDiskParametersResponse> getManagedDisk() {
+    public Optional<ManagedDiskParametersResponse> managedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
     }
 
@@ -140,7 +140,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -151,7 +151,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="toBeDetached")
       private final @Nullable Boolean toBeDetached;
 
-    public Optional<Boolean> getToBeDetached() {
+    public Optional<Boolean> toBeDetached() {
         return this.toBeDetached == null ? Optional.empty() : Optional.ofNullable(this.toBeDetached);
     }
 
@@ -162,7 +162,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vhd")
       private final @Nullable VirtualHardDiskResponse vhd;
 
-    public Optional<VirtualHardDiskResponse> getVhd() {
+    public Optional<VirtualHardDiskResponse> vhd() {
         return this.vhd == null ? Optional.empty() : Optional.ofNullable(this.vhd);
     }
 
@@ -173,7 +173,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeAcceleratorEnabled")
       private final @Nullable Boolean writeAcceleratorEnabled;
 
-    public Optional<Boolean> getWriteAcceleratorEnabled() {
+    public Optional<Boolean> writeAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 

@@ -29,7 +29,7 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureBlobStorage")
       private final @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage;
 
-    public Output<BlobStorageTokenStoreArgs> getAzureBlobStorage() {
+    public Output<BlobStorageTokenStoreArgs> azureBlobStorage() {
         return this.azureBlobStorage == null ? Codegen.empty() : this.azureBlobStorage;
     }
 
@@ -41,7 +41,7 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -52,7 +52,7 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystem")
       private final @Nullable Output<FileSystemTokenStoreArgs> fileSystem;
 
-    public Output<FileSystemTokenStoreArgs> getFileSystem() {
+    public Output<FileSystemTokenStoreArgs> fileSystem() {
         return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
@@ -64,7 +64,7 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenRefreshExtensionHours")
       private final @Nullable Output<Double> tokenRefreshExtensionHours;
 
-    public Output<Double> getTokenRefreshExtensionHours() {
+    public Output<Double> tokenRefreshExtensionHours() {
         return this.tokenRefreshExtensionHours == null ? Codegen.empty() : this.tokenRefreshExtensionHours;
     }
 

@@ -25,7 +25,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -36,7 +36,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
 
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
 
@@ -47,7 +47,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
-    public Output<String> getDataConnectionName() {
+    public Output<String> dataConnectionName() {
         return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
@@ -58,7 +58,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="dataFormat")
       private final @Nullable Output<Either<String,IotHubDataFormat>> dataFormat;
 
-    public Output<Either<String,IotHubDataFormat>> getDataFormat() {
+    public Output<Either<String,IotHubDataFormat>> dataFormat() {
         return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
@@ -69,7 +69,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -80,7 +80,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="eventSystemProperties")
       private final @Nullable Output<List<String>> eventSystemProperties;
 
-    public Output<List<String>> getEventSystemProperties() {
+    public Output<List<String>> eventSystemProperties() {
         return this.eventSystemProperties == null ? Codegen.empty() : this.eventSystemProperties;
     }
 
@@ -91,7 +91,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="iotHubResourceId", required=true)
       private final Output<String> iotHubResourceId;
 
-    public Output<String> getIotHubResourceId() {
+    public Output<String> iotHubResourceId() {
         return this.iotHubResourceId;
     }
 
@@ -103,7 +103,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -114,7 +114,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -125,7 +125,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
 
-    public Output<String> getMappingRuleName() {
+    public Output<String> mappingRuleName() {
         return this.mappingRuleName == null ? Codegen.empty() : this.mappingRuleName;
     }
 
@@ -136,7 +136,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -147,7 +147,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="sharedAccessPolicyName", required=true)
       private final Output<String> sharedAccessPolicyName;
 
-    public Output<String> getSharedAccessPolicyName() {
+    public Output<String> sharedAccessPolicyName() {
         return this.sharedAccessPolicyName;
     }
 
@@ -158,7 +158,7 @@ public final class IotHubDataConnectionArgs extends com.pulumi.resources.Resourc
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 

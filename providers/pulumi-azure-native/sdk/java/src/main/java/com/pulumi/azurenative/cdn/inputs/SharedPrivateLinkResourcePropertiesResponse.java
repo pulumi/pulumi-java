@@ -26,7 +26,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="groupId")
       private final @Nullable String groupId;
 
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
@@ -37,7 +37,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="privateLink")
       private final @Nullable ResourceReferenceResponse privateLink;
 
-    public Optional<ResourceReferenceResponse> getPrivateLink() {
+    public Optional<ResourceReferenceResponse> privateLink() {
         return this.privateLink == null ? Optional.empty() : Optional.ofNullable(this.privateLink);
     }
 
@@ -48,7 +48,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="privateLinkLocation")
       private final @Nullable String privateLinkLocation;
 
-    public Optional<String> getPrivateLinkLocation() {
+    public Optional<String> privateLinkLocation() {
         return this.privateLinkLocation == null ? Optional.empty() : Optional.ofNullable(this.privateLinkLocation);
     }
 
@@ -59,7 +59,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
@@ -70,7 +70,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

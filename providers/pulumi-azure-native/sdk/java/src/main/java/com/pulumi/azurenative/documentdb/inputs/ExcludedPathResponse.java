@@ -21,7 +21,7 @@ public final class ExcludedPathResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

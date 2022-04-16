@@ -34,14 +34,14 @@ public final class HttpErrorRangeParametersResponse {
      * The inclusive start of the http status code range.
      * 
     */
-    public Optional<Integer> getBegin() {
+    public Optional<Integer> begin() {
         return Optional.ofNullable(this.begin);
     }
     /**
      * The inclusive end of the http status code range.
      * 
     */
-    public Optional<Integer> getEnd() {
+    public Optional<Integer> end() {
         return Optional.ofNullable(this.end);
     }
 

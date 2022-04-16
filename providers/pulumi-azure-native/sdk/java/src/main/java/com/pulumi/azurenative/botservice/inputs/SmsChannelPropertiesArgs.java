@@ -27,7 +27,7 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="accountSID", required=true)
       private final Output<String> accountSID;
 
-    public Output<String> getAccountSID() {
+    public Output<String> accountSID() {
         return this.accountSID;
     }
 
@@ -38,7 +38,7 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
-    public Output<String> getAuthToken() {
+    public Output<String> authToken() {
         return this.authToken == null ? Codegen.empty() : this.authToken;
     }
 
@@ -49,7 +49,7 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -60,7 +60,7 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="isValidated")
       private final @Nullable Output<Boolean> isValidated;
 
-    public Output<Boolean> getIsValidated() {
+    public Output<Boolean> isValidated() {
         return this.isValidated == null ? Codegen.empty() : this.isValidated;
     }
 
@@ -71,7 +71,7 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="phone", required=true)
       private final Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone;
     }
 

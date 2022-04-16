@@ -26,7 +26,7 @@ public final class DistcpSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="distcpOptions")
       private final @Nullable Output<Object> distcpOptions;
 
-    public Output<Object> getDistcpOptions() {
+    public Output<Object> distcpOptions() {
         return this.distcpOptions == null ? Codegen.empty() : this.distcpOptions;
     }
 
@@ -37,7 +37,7 @@ public final class DistcpSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceManagerEndpoint", required=true)
       private final Output<Object> resourceManagerEndpoint;
 
-    public Output<Object> getResourceManagerEndpoint() {
+    public Output<Object> resourceManagerEndpoint() {
         return this.resourceManagerEndpoint;
     }
 
@@ -48,7 +48,7 @@ public final class DistcpSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tempScriptPath", required=true)
       private final Output<Object> tempScriptPath;
 
-    public Output<Object> getTempScriptPath() {
+    public Output<Object> tempScriptPath() {
         return this.tempScriptPath;
     }
 

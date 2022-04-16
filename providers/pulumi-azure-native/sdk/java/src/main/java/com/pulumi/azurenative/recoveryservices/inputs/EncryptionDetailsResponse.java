@@ -25,7 +25,7 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="kekCertExpiryDate")
       private final @Nullable String kekCertExpiryDate;
 
-    public Optional<String> getKekCertExpiryDate() {
+    public Optional<String> kekCertExpiryDate() {
         return this.kekCertExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.kekCertExpiryDate);
     }
 
@@ -36,7 +36,7 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="kekCertThumbprint")
       private final @Nullable String kekCertThumbprint;
 
-    public Optional<String> getKekCertThumbprint() {
+    public Optional<String> kekCertThumbprint() {
         return this.kekCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.kekCertThumbprint);
     }
 
@@ -47,7 +47,7 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="kekState")
       private final @Nullable String kekState;
 
-    public Optional<String> getKekState() {
+    public Optional<String> kekState() {
         return this.kekState == null ? Optional.empty() : Optional.ofNullable(this.kekState);
     }
 

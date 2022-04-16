@@ -265,203 +265,203 @@ public final class GetDatabaseResult {
      * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
      * 
     */
-    public Optional<Integer> getAutoPauseDelay() {
+    public Optional<Integer> autoPauseDelay() {
         return Optional.ofNullable(this.autoPauseDelay);
     }
     /**
      * Collation of the metadata catalog.
      * 
     */
-    public Optional<String> getCatalogCollation() {
+    public Optional<String> catalogCollation() {
         return Optional.ofNullable(this.catalogCollation);
     }
     /**
      * The collation of the database.
      * 
     */
-    public Optional<String> getCollation() {
+    public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
      * The creation date of the database (ISO8601 format).
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The storage account type used to store backups for this database.
      * 
     */
-    public String getCurrentBackupStorageRedundancy() {
+    public String currentBackupStorageRedundancy() {
         return this.currentBackupStorageRedundancy;
     }
     /**
      * The current service level objective name of the database.
      * 
     */
-    public String getCurrentServiceObjectiveName() {
+    public String currentServiceObjectiveName() {
         return this.currentServiceObjectiveName;
     }
     /**
      * The name and tier of the SKU.
      * 
     */
-    public SkuResponse getCurrentSku() {
+    public SkuResponse currentSku() {
         return this.currentSku;
     }
     /**
      * The ID of the database.
      * 
     */
-    public String getDatabaseId() {
+    public String databaseId() {
         return this.databaseId;
     }
     /**
      * The default secondary region for this database.
      * 
     */
-    public String getDefaultSecondaryLocation() {
+    public String defaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
     /**
      * This records the earliest start date and time that restore is available for this database (ISO8601 format).
      * 
     */
-    public String getEarliestRestoreDate() {
+    public String earliestRestoreDate() {
         return this.earliestRestoreDate;
     }
     /**
      * The resource identifier of the elastic pool containing this database.
      * 
     */
-    public Optional<String> getElasticPoolId() {
+    public Optional<String> elasticPoolId() {
         return Optional.ofNullable(this.elasticPoolId);
     }
     /**
      * Failover Group resource identifier that this database belongs to.
      * 
     */
-    public String getFailoverGroupId() {
+    public String failoverGroupId() {
         return this.failoverGroupId;
     }
     /**
      * The number of secondary replicas associated with the database that are used to provide high availability.
      * 
     */
-    public Optional<Integer> getHighAvailabilityReplicaCount() {
+    public Optional<Integer> highAvailabilityReplicaCount() {
         return Optional.ofNullable(this.highAvailabilityReplicaCount);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of database. This is metadata used for the Azure portal experience.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
      * 
     */
-    public Optional<String> getMaintenanceConfigurationId() {
+    public Optional<String> maintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
     /**
      * Resource that manages the database.
      * 
     */
-    public String getManagedBy() {
+    public String managedBy() {
         return this.managedBy;
     }
     /**
      * The max log size for this database.
      * 
     */
-    public Double getMaxLogSizeBytes() {
+    public Double maxLogSizeBytes() {
         return this.maxLogSizeBytes;
     }
     /**
      * The max size of the database expressed in bytes.
      * 
     */
-    public Optional<Double> getMaxSizeBytes() {
+    public Optional<Double> maxSizeBytes() {
         return Optional.ofNullable(this.maxSizeBytes);
     }
     /**
      * Minimal capacity that database will always have allocated, if not paused
      * 
     */
-    public Optional<Double> getMinCapacity() {
+    public Optional<Double> minCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
      * 
     */
-    public String getPausedDate() {
+    public String pausedDate() {
         return this.pausedDate;
     }
     /**
      * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
      * 
     */
-    public Optional<String> getReadScale() {
+    public Optional<String> readScale() {
         return Optional.ofNullable(this.readScale);
     }
     /**
      * The storage account type to be used to store backups for this database.
      * 
     */
-    public Optional<String> getRequestedBackupStorageRedundancy() {
+    public Optional<String> requestedBackupStorageRedundancy() {
         return Optional.ofNullable(this.requestedBackupStorageRedundancy);
     }
     /**
      * The requested service level objective name of the database.
      * 
     */
-    public String getRequestedServiceObjectiveName() {
+    public String requestedServiceObjectiveName() {
         return this.requestedServiceObjectiveName;
     }
     /**
      * The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
      * 
     */
-    public String getResumedDate() {
+    public String resumedDate() {
         return this.resumedDate;
     }
     /**
      * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
      * 
     */
-    public Optional<String> getSecondaryType() {
+    public Optional<String> secondaryType() {
         return Optional.ofNullable(this.secondaryType);
     }
     /**
@@ -470,35 +470,35 @@ public final class GetDatabaseResult {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The status of the database.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
      * 
     */
-    public Optional<Boolean> getZoneRedundant() {
+    public Optional<Boolean> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }
 

@@ -25,7 +25,7 @@ public final class PersonalComputeInstanceSettingsResponse extends com.pulumi.re
     @Import(name="assignedUser")
       private final @Nullable AssignedUserResponse assignedUser;
 
-    public Optional<AssignedUserResponse> getAssignedUser() {
+    public Optional<AssignedUserResponse> assignedUser() {
         return this.assignedUser == null ? Optional.empty() : Optional.ofNullable(this.assignedUser);
     }
 

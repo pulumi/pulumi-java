@@ -114,91 +114,91 @@ public final class GetFormulaResult {
      * The author of the formula.
      * 
     */
-    public String getAuthor() {
+    public String author() {
         return this.author;
     }
     /**
      * The creation date of the formula.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The description of the formula.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The content of the formula.
      * 
     */
-    public Optional<LabVirtualMachineCreationParameterResponse> getFormulaContent() {
+    public Optional<LabVirtualMachineCreationParameterResponse> formulaContent() {
         return Optional.ofNullable(this.formulaContent);
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The OS type of the formula.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * Information about a VM from which a formula is to be created.
      * 
     */
-    public Optional<FormulaPropertiesFromVmResponse> getVm() {
+    public Optional<FormulaPropertiesFromVmResponse> vm() {
         return Optional.ofNullable(this.vm);
     }
 

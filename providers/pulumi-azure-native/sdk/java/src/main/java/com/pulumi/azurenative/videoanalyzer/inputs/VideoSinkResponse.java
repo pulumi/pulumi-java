@@ -29,7 +29,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputs", required=true)
       private final List<NodeInputResponse> inputs;
 
-    public List<NodeInputResponse> getInputs() {
+    public List<NodeInputResponse> inputs() {
         return this.inputs;
     }
 
@@ -40,7 +40,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -63,7 +63,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoCreationProperties")
       private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
 
-    public Optional<VideoCreationPropertiesResponse> getVideoCreationProperties() {
+    public Optional<VideoCreationPropertiesResponse> videoCreationProperties() {
         return this.videoCreationProperties == null ? Optional.empty() : Optional.ofNullable(this.videoCreationProperties);
     }
 
@@ -74,7 +74,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoName", required=true)
       private final String videoName;
 
-    public String getVideoName() {
+    public String videoName() {
         return this.videoName;
     }
 
@@ -85,7 +85,7 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoPublishingOptions")
       private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
-    public Optional<VideoPublishingOptionsResponse> getVideoPublishingOptions() {
+    public Optional<VideoPublishingOptionsResponse> videoPublishingOptions() {
         return this.videoPublishingOptions == null ? Optional.empty() : Optional.ofNullable(this.videoPublishingOptions);
     }
 

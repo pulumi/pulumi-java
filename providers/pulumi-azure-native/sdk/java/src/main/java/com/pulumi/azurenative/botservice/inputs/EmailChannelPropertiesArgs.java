@@ -27,7 +27,7 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
 
@@ -38,7 +38,7 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 

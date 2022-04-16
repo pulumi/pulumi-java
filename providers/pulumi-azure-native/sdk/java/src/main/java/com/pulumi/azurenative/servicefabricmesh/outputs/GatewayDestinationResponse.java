@@ -39,21 +39,21 @@ public final class GatewayDestinationResponse {
      * Name of the service fabric Mesh application.
      * 
     */
-    public String getApplicationName() {
+    public String applicationName() {
         return this.applicationName;
     }
     /**
      * name of the endpoint in the service.
      * 
     */
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
     /**
      * service that contains the endpoint.
      * 
     */
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

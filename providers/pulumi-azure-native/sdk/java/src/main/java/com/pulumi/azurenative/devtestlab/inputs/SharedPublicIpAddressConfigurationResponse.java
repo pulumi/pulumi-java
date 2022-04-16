@@ -26,7 +26,7 @@ public final class SharedPublicIpAddressConfigurationResponse extends com.pulumi
     @Import(name="inboundNatRules")
       private final @Nullable List<InboundNatRuleResponse> inboundNatRules;
 
-    public List<InboundNatRuleResponse> getInboundNatRules() {
+    public List<InboundNatRuleResponse> inboundNatRules() {
         return this.inboundNatRules == null ? List.of() : this.inboundNatRules;
     }
 

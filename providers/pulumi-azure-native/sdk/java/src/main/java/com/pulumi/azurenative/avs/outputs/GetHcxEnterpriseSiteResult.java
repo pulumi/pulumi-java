@@ -53,35 +53,35 @@ public final class GetHcxEnterpriseSiteResult {
      * The activation key
      * 
     */
-    public String getActivationKey() {
+    public String activationKey() {
         return this.activationKey;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The status of the HCX Enterprise Site
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

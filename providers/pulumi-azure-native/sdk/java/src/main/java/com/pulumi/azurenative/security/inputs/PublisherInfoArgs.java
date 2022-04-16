@@ -26,7 +26,7 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="binaryName")
       private final @Nullable Output<String> binaryName;
 
-    public Output<String> getBinaryName() {
+    public Output<String> binaryName() {
         return this.binaryName == null ? Codegen.empty() : this.binaryName;
     }
 
@@ -37,7 +37,7 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName == null ? Codegen.empty() : this.productName;
     }
 
@@ -48,7 +48,7 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publisherName")
       private final @Nullable Output<String> publisherName;
 
-    public Output<String> getPublisherName() {
+    public Output<String> publisherName() {
         return this.publisherName == null ? Codegen.empty() : this.publisherName;
     }
 
@@ -59,7 +59,7 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

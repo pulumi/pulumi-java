@@ -35,14 +35,14 @@ public final class MonitoringTagRulesPropertiesResponse {
      * Rules for sending logs.
      * 
     */
-    public Optional<LogRulesResponse> getLogRules() {
+    public Optional<LogRulesResponse> logRules() {
         return Optional.ofNullable(this.logRules);
     }
     /**
      * Provisioning state of the monitoring tag rules.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
 

@@ -19,7 +19,7 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends com.pulumi.r
     @Import(name="softwareUpdateConfigurationName", required=true)
       private final String softwareUpdateConfigurationName;
 
-    public String getSoftwareUpdateConfigurationName() {
+    public String softwareUpdateConfigurationName() {
         return this.softwareUpdateConfigurationName;
     }
 

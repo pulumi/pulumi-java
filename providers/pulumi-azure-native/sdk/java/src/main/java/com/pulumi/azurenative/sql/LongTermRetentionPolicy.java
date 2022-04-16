@@ -43,7 +43,7 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The monthly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> getMonthlyRetention() {
+    public Output</* @Nullable */ String> monthlyRetention() {
         return this.monthlyRetention;
     }
     /**
@@ -57,7 +57,7 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -85,7 +85,7 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The week of year to take the yearly backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ Integer> getWeekOfYear() {
+    public Output</* @Nullable */ Integer> weekOfYear() {
         return this.weekOfYear;
     }
     /**
@@ -99,7 +99,7 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The weekly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> getWeeklyRetention() {
+    public Output</* @Nullable */ String> weeklyRetention() {
         return this.weeklyRetention;
     }
     /**
@@ -113,7 +113,7 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The yearly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> getYearlyRetention() {
+    public Output</* @Nullable */ String> yearlyRetention() {
         return this.yearlyRetention;
     }
 

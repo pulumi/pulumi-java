@@ -36,14 +36,14 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
-    public Output<String> getBackupManagementType() {
+    public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
 
     @Import(name="instantRPDetails")
       private final @Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails;
 
-    public Output<InstantRPAdditionalDetailsArgs> getInstantRPDetails() {
+    public Output<InstantRPAdditionalDetailsArgs> instantRPDetails() {
         return this.instantRPDetails == null ? Codegen.empty() : this.instantRPDetails;
     }
 
@@ -54,7 +54,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
     @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Output<Integer> instantRpRetentionRangeInDays;
 
-    public Output<Integer> getInstantRpRetentionRangeInDays() {
+    public Output<Integer> instantRpRetentionRangeInDays() {
         return this.instantRpRetentionRangeInDays == null ? Codegen.empty() : this.instantRpRetentionRangeInDays;
     }
 
@@ -65,7 +65,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> getProtectedItemsCount() {
+    public Output<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
@@ -76,7 +76,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
     @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
+    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -87,7 +87,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
     @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
 
-    public Output<Object> getSchedulePolicy() {
+    public Output<Object> schedulePolicy() {
         return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 
@@ -98,7 +98,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends com.pulumi.resources.
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

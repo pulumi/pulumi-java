@@ -29,7 +29,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -40,7 +40,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoStorage")
       private final @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage;
 
-    public Output<AutoStorageBasePropertiesArgs> getAutoStorage() {
+    public Output<AutoStorageBasePropertiesArgs> autoStorage() {
         return this.autoStorage == null ? Codegen.empty() : this.autoStorage;
     }
 
@@ -51,7 +51,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
-    public Output<EncryptionPropertiesArgs> getEncryption() {
+    public Output<EncryptionPropertiesArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -62,7 +62,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<BatchAccountIdentityArgs> identity;
 
-    public Output<BatchAccountIdentityArgs> getIdentity() {
+    public Output<BatchAccountIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -73,7 +73,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultReference")
       private final @Nullable Output<KeyVaultReferenceArgs> keyVaultReference;
 
-    public Output<KeyVaultReferenceArgs> getKeyVaultReference() {
+    public Output<KeyVaultReferenceArgs> keyVaultReference() {
         return this.keyVaultReference == null ? Codegen.empty() : this.keyVaultReference;
     }
 
@@ -84,7 +84,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -95,7 +95,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolAllocationMode")
       private final @Nullable Output<PoolAllocationMode> poolAllocationMode;
 
-    public Output<PoolAllocationMode> getPoolAllocationMode() {
+    public Output<PoolAllocationMode> poolAllocationMode() {
         return this.poolAllocationMode == null ? Codegen.empty() : this.poolAllocationMode;
     }
 
@@ -106,7 +106,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<PublicNetworkAccessType> publicNetworkAccess;
 
-    public Output<PublicNetworkAccessType> getPublicNetworkAccess() {
+    public Output<PublicNetworkAccessType> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -117,7 +117,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,7 +128,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

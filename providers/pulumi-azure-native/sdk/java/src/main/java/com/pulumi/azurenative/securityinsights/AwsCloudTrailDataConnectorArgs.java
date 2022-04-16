@@ -23,7 +23,7 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="awsRoleArn")
       private final @Nullable Output<String> awsRoleArn;
 
-    public Output<String> getAwsRoleArn() {
+    public Output<String> awsRoleArn() {
         return this.awsRoleArn == null ? Codegen.empty() : this.awsRoleArn;
     }
 
@@ -34,7 +34,7 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
 
-    public Output<String> getDataConnectorId() {
+    public Output<String> dataConnectorId() {
         return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
     }
 
@@ -45,7 +45,7 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="dataTypes")
       private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
 
-    public Output<AwsCloudTrailDataConnectorDataTypesArgs> getDataTypes() {
+    public Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes() {
         return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
     }
 
@@ -57,7 +57,7 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -68,7 +68,7 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

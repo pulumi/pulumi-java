@@ -25,7 +25,7 @@ public final class LinuxOsInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxOsState")
       private final @Nullable String linuxOsState;
 
-    public Optional<String> getLinuxOsState() {
+    public Optional<String> linuxOsState() {
         return this.linuxOsState == null ? Optional.empty() : Optional.ofNullable(this.linuxOsState);
     }
 

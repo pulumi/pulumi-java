@@ -27,7 +27,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="availabilitySetName")
       private final @Nullable Output<String> availabilitySetName;
 
-    public Output<String> getAvailabilitySetName() {
+    public Output<String> availabilitySetName() {
         return this.availabilitySetName == null ? Codegen.empty() : this.availabilitySetName;
     }
 
@@ -38,7 +38,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="platformFaultDomainCount")
       private final @Nullable Output<Integer> platformFaultDomainCount;
 
-    public Output<Integer> getPlatformFaultDomainCount() {
+    public Output<Integer> platformFaultDomainCount() {
         return this.platformFaultDomainCount == null ? Codegen.empty() : this.platformFaultDomainCount;
     }
 
@@ -60,7 +60,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="platformUpdateDomainCount")
       private final @Nullable Output<Integer> platformUpdateDomainCount;
 
-    public Output<Integer> getPlatformUpdateDomainCount() {
+    public Output<Integer> platformUpdateDomainCount() {
         return this.platformUpdateDomainCount == null ? Codegen.empty() : this.platformUpdateDomainCount;
     }
 
@@ -71,7 +71,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="proximityPlacementGroup")
       private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
-    public Output<SubResourceArgs> getProximityPlacementGroup() {
+    public Output<SubResourceArgs> proximityPlacementGroup() {
         return this.proximityPlacementGroup == null ? Codegen.empty() : this.proximityPlacementGroup;
     }
 
@@ -82,7 +82,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -104,7 +104,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class AvailabilitySetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="virtualMachines")
       private final @Nullable Output<List<SubResourceArgs>> virtualMachines;
 
-    public Output<List<SubResourceArgs>> getVirtualMachines() {
+    public Output<List<SubResourceArgs>> virtualMachines() {
         return this.virtualMachines == null ? Codegen.empty() : this.virtualMachines;
     }
 

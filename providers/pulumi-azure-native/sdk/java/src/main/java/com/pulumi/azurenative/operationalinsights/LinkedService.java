@@ -43,7 +43,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the linked service.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -71,7 +71,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -85,7 +85,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +99,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -113,7 +113,7 @@ public class LinkedService extends com.pulumi.resources.CustomResource {
      * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
      * 
      */
-    public Output</* @Nullable */ String> getWriteAccessResourceId() {
+    public Output</* @Nullable */ String> writeAccessResourceId() {
         return this.writeAccessResourceId;
     }
 

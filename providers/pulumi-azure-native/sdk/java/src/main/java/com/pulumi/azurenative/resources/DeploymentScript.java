@@ -49,7 +49,7 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -63,7 +63,7 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return Type of the script.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -77,7 +77,7 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return The location of the ACI and the storage account for the deployment script.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -91,7 +91,7 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -105,7 +105,7 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -119,7 +119,7 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -133,7 +133,7 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

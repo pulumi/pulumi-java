@@ -28,7 +28,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
     @Import(name="includeChangeDetails")
       private final @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails;
 
-    public Output<Either<String,ChangeDetailsMode>> getIncludeChangeDetails() {
+    public Output<Either<String,ChangeDetailsMode>> includeChangeDetails() {
         return this.includeChangeDetails == null ? Codegen.empty() : this.includeChangeDetails;
     }
 
@@ -39,7 +39,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 
@@ -50,7 +50,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
     @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> getWorkspaceResourceId() {
+    public Output<String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 

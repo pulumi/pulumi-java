@@ -28,7 +28,7 @@ public final class HubPublicIPAddressesArgs extends com.pulumi.resources.Resourc
     @Import(name="addresses")
       private final @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
 
-    public Output<List<AzureFirewallPublicIPAddressArgs>> getAddresses() {
+    public Output<List<AzureFirewallPublicIPAddressArgs>> addresses() {
         return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
@@ -39,7 +39,7 @@ public final class HubPublicIPAddressesArgs extends com.pulumi.resources.Resourc
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 

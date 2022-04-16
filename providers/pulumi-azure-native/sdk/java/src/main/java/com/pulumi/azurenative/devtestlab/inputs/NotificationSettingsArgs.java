@@ -29,7 +29,7 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="emailRecipient")
       private final @Nullable Output<String> emailRecipient;
 
-    public Output<String> getEmailRecipient() {
+    public Output<String> emailRecipient() {
         return this.emailRecipient == null ? Codegen.empty() : this.emailRecipient;
     }
 
@@ -40,7 +40,7 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="notificationLocale")
       private final @Nullable Output<String> notificationLocale;
 
-    public Output<String> getNotificationLocale() {
+    public Output<String> notificationLocale() {
         return this.notificationLocale == null ? Codegen.empty() : this.notificationLocale;
     }
 
@@ -51,7 +51,7 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> getStatus() {
+    public Output<Either<String,EnableStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -62,7 +62,7 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="timeInMinutes")
       private final @Nullable Output<Integer> timeInMinutes;
 
-    public Output<Integer> getTimeInMinutes() {
+    public Output<Integer> timeInMinutes() {
         return this.timeInMinutes == null ? Codegen.empty() : this.timeInMinutes;
     }
 
@@ -73,7 +73,7 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="webhookUrl")
       private final @Nullable Output<String> webhookUrl;
 
-    public Output<String> getWebhookUrl() {
+    public Output<String> webhookUrl() {
         return this.webhookUrl == null ? Codegen.empty() : this.webhookUrl;
     }
 

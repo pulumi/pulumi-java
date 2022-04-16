@@ -31,7 +31,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customization")
       private final @Nullable Output<GuestOSNICCustomizationArgs> customization;
 
-    public Output<GuestOSNICCustomizationArgs> getCustomization() {
+    public Output<GuestOSNICCustomizationArgs> customization() {
         return this.customization == null ? Codegen.empty() : this.customization;
     }
 
@@ -42,7 +42,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
@@ -53,7 +53,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="macAddress")
       private final @Nullable Output<String> macAddress;
 
-    public Output<String> getMacAddress() {
+    public Output<String> macAddress() {
         return this.macAddress == null ? Codegen.empty() : this.macAddress;
     }
 
@@ -64,7 +64,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
       private final Output<VirtualNetworkArgs> network;
 
-    public Output<VirtualNetworkArgs> getNetwork() {
+    public Output<VirtualNetworkArgs> network() {
         return this.network;
     }
 
@@ -75,7 +75,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nicType", required=true)
       private final Output<NICType> nicType;
 
-    public Output<NICType> getNicType() {
+    public Output<NICType> nicType() {
         return this.nicType;
     }
 
@@ -86,7 +86,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="powerOnBoot")
       private final @Nullable Output<Boolean> powerOnBoot;
 
-    public Output<Boolean> getPowerOnBoot() {
+    public Output<Boolean> powerOnBoot() {
         return this.powerOnBoot == null ? Codegen.empty() : this.powerOnBoot;
     }
 
@@ -97,7 +97,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNicId")
       private final @Nullable Output<String> virtualNicId;
 
-    public Output<String> getVirtualNicId() {
+    public Output<String> virtualNicId() {
         return this.virtualNicId == null ? Codegen.empty() : this.virtualNicId;
     }
 

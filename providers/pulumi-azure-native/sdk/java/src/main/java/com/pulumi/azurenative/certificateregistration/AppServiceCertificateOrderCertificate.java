@@ -41,7 +41,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Key Vault resource Id.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultId() {
+    public Output</* @Nullable */ String> keyVaultId() {
         return this.keyVaultId;
     }
     /**
@@ -55,7 +55,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Key Vault secret name.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultSecretName() {
+    public Output</* @Nullable */ String> keyVaultSecretName() {
         return this.keyVaultSecretName;
     }
     /**
@@ -69,7 +69,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -83,7 +83,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -97,7 +97,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -111,7 +111,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Status of the Key Vault secret.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -125,7 +125,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -139,7 +139,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -153,7 +153,7 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

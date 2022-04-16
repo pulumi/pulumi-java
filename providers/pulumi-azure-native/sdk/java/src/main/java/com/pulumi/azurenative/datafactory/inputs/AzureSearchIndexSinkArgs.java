@@ -29,7 +29,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -40,7 +40,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -51,7 +51,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> getSinkRetryCount() {
+    public Output<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
@@ -62,7 +62,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> getSinkRetryWait() {
+    public Output<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
@@ -74,7 +74,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -85,7 +85,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> getWriteBatchSize() {
+    public Output<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
@@ -96,7 +96,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> getWriteBatchTimeout() {
+    public Output<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
@@ -107,7 +107,7 @@ public final class AzureSearchIndexSinkArgs extends com.pulumi.resources.Resourc
     @Import(name="writeBehavior")
       private final @Nullable Output<Either<String,AzureSearchIndexWriteBehaviorType>> writeBehavior;
 
-    public Output<Either<String,AzureSearchIndexWriteBehaviorType>> getWriteBehavior() {
+    public Output<Either<String,AzureSearchIndexWriteBehaviorType>> writeBehavior() {
         return this.writeBehavior == null ? Codegen.empty() : this.writeBehavior;
     }
 

@@ -29,7 +29,7 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
@@ -40,7 +40,7 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,7 +51,7 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -62,7 +62,7 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
     @Import(name="tier", required=true)
       private final Output<Either<String,Tier>> tier;
 
-    public Output<Either<String,Tier>> getTier() {
+    public Output<Either<String,Tier>> tier() {
         return this.tier;
     }
 

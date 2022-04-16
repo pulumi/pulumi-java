@@ -27,7 +27,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frequencyInterval", required=true)
       private final Integer frequencyInterval;
 
-    public Integer getFrequencyInterval() {
+    public Integer frequencyInterval() {
         return this.frequencyInterval;
     }
 
@@ -38,7 +38,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frequencyUnit", required=true)
       private final String frequencyUnit;
 
-    public String getFrequencyUnit() {
+    public String frequencyUnit() {
         return this.frequencyUnit;
     }
 
@@ -49,7 +49,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keepAtLeastOneBackup", required=true)
       private final Boolean keepAtLeastOneBackup;
 
-    public Boolean getKeepAtLeastOneBackup() {
+    public Boolean keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
 
@@ -60,7 +60,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastExecutionTime", required=true)
       private final String lastExecutionTime;
 
-    public String getLastExecutionTime() {
+    public String lastExecutionTime() {
         return this.lastExecutionTime;
     }
 
@@ -71,7 +71,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="retentionPeriodInDays", required=true)
       private final Integer retentionPeriodInDays;
 
-    public Integer getRetentionPeriodInDays() {
+    public Integer retentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 
@@ -82,7 +82,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

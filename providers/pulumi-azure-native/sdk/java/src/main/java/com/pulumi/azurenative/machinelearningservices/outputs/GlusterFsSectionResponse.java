@@ -32,14 +32,14 @@ public final class GlusterFsSectionResponse {
      * The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
      * 
     */
-    public String getServerAddress() {
+    public String serverAddress() {
         return this.serverAddress;
     }
     /**
      * The name of the created GlusterFS volume.
      * 
     */
-    public String getVolumeName() {
+    public String volumeName() {
         return this.volumeName;
     }
 

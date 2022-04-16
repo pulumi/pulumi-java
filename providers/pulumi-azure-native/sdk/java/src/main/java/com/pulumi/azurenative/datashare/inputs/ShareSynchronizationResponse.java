@@ -26,7 +26,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="consumerEmail")
       private final @Nullable String consumerEmail;
 
-    public Optional<String> getConsumerEmail() {
+    public Optional<String> consumerEmail() {
         return this.consumerEmail == null ? Optional.empty() : Optional.ofNullable(this.consumerEmail);
     }
 
@@ -37,7 +37,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="consumerName")
       private final @Nullable String consumerName;
 
-    public Optional<String> getConsumerName() {
+    public Optional<String> consumerName() {
         return this.consumerName == null ? Optional.empty() : Optional.ofNullable(this.consumerName);
     }
 
@@ -48,7 +48,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="consumerTenantName")
       private final @Nullable String consumerTenantName;
 
-    public Optional<String> getConsumerTenantName() {
+    public Optional<String> consumerTenantName() {
         return this.consumerTenantName == null ? Optional.empty() : Optional.ofNullable(this.consumerTenantName);
     }
 
@@ -59,7 +59,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="durationMs")
       private final @Nullable Integer durationMs;
 
-    public Optional<Integer> getDurationMs() {
+    public Optional<Integer> durationMs() {
         return this.durationMs == null ? Optional.empty() : Optional.ofNullable(this.durationMs);
     }
 
@@ -70,7 +70,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -81,7 +81,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -92,7 +92,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -103,7 +103,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -114,7 +114,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="synchronizationId")
       private final @Nullable String synchronizationId;
 
-    public Optional<String> getSynchronizationId() {
+    public Optional<String> synchronizationId() {
         return this.synchronizationId == null ? Optional.empty() : Optional.ofNullable(this.synchronizationId);
     }
 
@@ -125,7 +125,7 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="synchronizationMode", required=true)
       private final String synchronizationMode;
 
-    public String getSynchronizationMode() {
+    public String synchronizationMode() {
         return this.synchronizationMode;
     }
 

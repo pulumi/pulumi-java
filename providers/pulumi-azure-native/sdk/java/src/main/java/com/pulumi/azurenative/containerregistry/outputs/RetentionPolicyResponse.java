@@ -42,21 +42,21 @@ public final class RetentionPolicyResponse {
      * The number of days to retain an untagged manifest after which it gets purged.
      * 
     */
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
      * The timestamp when the policy was last updated.
      * 
     */
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * The value that indicates whether the policy is enabled or not.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

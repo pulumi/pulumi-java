@@ -74,42 +74,42 @@ public final class ManagedIntegrationRuntimeResponse {
      * The compute resource for managed integration runtime.
      * 
     */
-    public Optional<IntegrationRuntimeComputePropertiesResponse> getComputeProperties() {
+    public Optional<IntegrationRuntimeComputePropertiesResponse> computeProperties() {
         return Optional.ofNullable(this.computeProperties);
     }
     /**
      * The name of virtual network to which Azure-SSIS integration runtime will join
      * 
     */
-    public Optional<IntegrationRuntimeCustomerVirtualNetworkResponse> getCustomerVirtualNetwork() {
+    public Optional<IntegrationRuntimeCustomerVirtualNetworkResponse> customerVirtualNetwork() {
         return Optional.ofNullable(this.customerVirtualNetwork);
     }
     /**
      * Integration runtime description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Managed Virtual Network reference.
      * 
     */
-    public Optional<ManagedVirtualNetworkReferenceResponse> getManagedVirtualNetwork() {
+    public Optional<ManagedVirtualNetworkReferenceResponse> managedVirtualNetwork() {
         return Optional.ofNullable(this.managedVirtualNetwork);
     }
     /**
      * SSIS properties for managed integration runtime.
      * 
     */
-    public Optional<IntegrationRuntimeSsisPropertiesResponse> getSsisProperties() {
+    public Optional<IntegrationRuntimeSsisPropertiesResponse> ssisProperties() {
         return Optional.ofNullable(this.ssisProperties);
     }
     /**
      * Integration runtime state, only valid for managed dedicated integration runtime.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
@@ -117,7 +117,7 @@ public final class ManagedIntegrationRuntimeResponse {
      * Expected value is 'Managed'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

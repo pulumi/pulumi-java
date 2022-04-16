@@ -27,7 +27,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cardinality")
       private final @Nullable Output<CardinalityTypes> cardinality;
 
-    public Output<CardinalityTypes> getCardinality() {
+    public Output<CardinalityTypes> cardinality() {
         return this.cardinality == null ? Codegen.empty() : this.cardinality;
     }
 
@@ -38,7 +38,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiryDateTimeUtc")
       private final @Nullable Output<String> expiryDateTimeUtc;
 
-    public Output<String> getExpiryDateTimeUtc() {
+    public Output<String> expiryDateTimeUtc() {
         return this.expiryDateTimeUtc == null ? Codegen.empty() : this.expiryDateTimeUtc;
     }
 
@@ -71,7 +71,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
-    public Output<List<PropertyDefinitionArgs>> getFields() {
+    public Output<List<PropertyDefinitionArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -82,7 +82,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -93,7 +93,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lookupMappings")
       private final @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
 
-    public Output<List<RelationshipTypeMappingArgs>> getLookupMappings() {
+    public Output<List<RelationshipTypeMappingArgs>> lookupMappings() {
         return this.lookupMappings == null ? Codegen.empty() : this.lookupMappings;
     }
 
@@ -104,7 +104,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileType", required=true)
       private final Output<String> profileType;
 
-    public Output<String> getProfileType() {
+    public Output<String> profileType() {
         return this.profileType;
     }
 
@@ -115,7 +115,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relatedProfileType", required=true)
       private final Output<String> relatedProfileType;
 
-    public Output<String> getRelatedProfileType() {
+    public Output<String> relatedProfileType() {
         return this.relatedProfileType;
     }
 
@@ -126,7 +126,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relationshipName")
       private final @Nullable Output<String> relationshipName;
 
-    public Output<String> getRelationshipName() {
+    public Output<String> relationshipName() {
         return this.relationshipName == null ? Codegen.empty() : this.relationshipName;
     }
 
@@ -137,7 +137,7 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

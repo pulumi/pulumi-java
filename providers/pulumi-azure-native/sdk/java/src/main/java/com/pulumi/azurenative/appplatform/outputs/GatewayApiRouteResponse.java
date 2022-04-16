@@ -86,63 +86,63 @@ public final class GatewayApiRouteResponse {
      * A description, will be applied to methods in the generated OpenAPI documentation.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * To modify the request before sending it to the target endpoint, or the received response.
      * 
     */
-    public List<String> getFilters() {
+    public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * Route processing order.
      * 
     */
-    public Optional<Integer> getOrder() {
+    public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
     /**
      * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
      * 
     */
-    public List<String> getPredicates() {
+    public List<String> predicates() {
         return this.predicates == null ? List.of() : this.predicates;
     }
     /**
      * Enable sso validation.
      * 
     */
-    public Optional<Boolean> getSsoEnabled() {
+    public Optional<Boolean> ssoEnabled() {
         return Optional.ofNullable(this.ssoEnabled);
     }
     /**
      * Classification tags, will be applied to methods in the generated OpenAPI documentation.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A title, will be applied to methods in the generated OpenAPI documentation.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Pass currently-authenticated user's identity token to application service, default is 'false'
      * 
     */
-    public Optional<Boolean> getTokenRelay() {
+    public Optional<Boolean> tokenRelay() {
         return Optional.ofNullable(this.tokenRelay);
     }
     /**
      * Full uri, will override `appName`.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

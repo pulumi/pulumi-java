@@ -19,35 +19,35 @@ public final class NotificationRegistrationResponseProperties extends com.pulumi
     @Import(name="includedEvents")
       private final @Nullable List<String> includedEvents;
 
-    public List<String> getIncludedEvents() {
+    public List<String> includedEvents() {
         return this.includedEvents == null ? List.of() : this.includedEvents;
     }
 
     @Import(name="messageScope")
       private final @Nullable String messageScope;
 
-    public Optional<String> getMessageScope() {
+    public Optional<String> messageScope() {
         return this.messageScope == null ? Optional.empty() : Optional.ofNullable(this.messageScope);
     }
 
     @Import(name="notificationEndpoints")
       private final @Nullable List<NotificationEndpointResponse> notificationEndpoints;
 
-    public List<NotificationEndpointResponse> getNotificationEndpoints() {
+    public List<NotificationEndpointResponse> notificationEndpoints() {
         return this.notificationEndpoints == null ? List.of() : this.notificationEndpoints;
     }
 
     @Import(name="notificationMode")
       private final @Nullable String notificationMode;
 
-    public Optional<String> getNotificationMode() {
+    public Optional<String> notificationMode() {
         return this.notificationMode == null ? Optional.empty() : Optional.ofNullable(this.notificationMode);
     }
 
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 

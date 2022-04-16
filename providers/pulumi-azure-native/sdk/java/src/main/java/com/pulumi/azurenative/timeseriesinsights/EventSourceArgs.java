@@ -26,7 +26,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -37,7 +37,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventSourceName")
       private final @Nullable Output<String> eventSourceName;
 
-    public Output<String> getEventSourceName() {
+    public Output<String> eventSourceName() {
         return this.eventSourceName == null ? Codegen.empty() : this.eventSourceName;
     }
 
@@ -48,7 +48,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,EventSourceKind>> kind;
 
-    public Output<Either<String,EventSourceKind>> getKind() {
+    public Output<Either<String,EventSourceKind>> kind() {
         return this.kind;
     }
 
@@ -59,7 +59,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="localTimestamp")
       private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Output<LocalTimestampArgs> getLocalTimestamp() {
+    public Output<LocalTimestampArgs> localTimestamp() {
         return this.localTimestamp == null ? Codegen.empty() : this.localTimestamp;
     }
 
@@ -70,7 +70,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,7 +81,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -18,21 +18,21 @@ public final class EtwEventConfigurationResponse extends com.pulumi.resources.In
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
     @Import(name="id", required=true)
       private final Integer id;
 
-    public Integer getId() {
+    public Integer id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

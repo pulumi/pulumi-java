@@ -19,7 +19,7 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
     @Import(name="diskAccessName", required=true)
       private final String diskAccessName;
 
-    public String getDiskAccessName() {
+    public String diskAccessName() {
         return this.diskAccessName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
-    public String getPrivateEndpointConnectionName() {
+    public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

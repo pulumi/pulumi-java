@@ -44,7 +44,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The applicable schedule for the virtual machine.
      * 
      */
-    public Output<ApplicableScheduleResponse> getApplicableSchedule() {
+    public Output<ApplicableScheduleResponse> applicableSchedule() {
         return this.applicableSchedule;
     }
     /**
@@ -58,7 +58,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The resource id of the environment under which the service fabric resource is present
      * 
      */
-    public Output</* @Nullable */ String> getEnvironmentId() {
+    public Output</* @Nullable */ String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -72,7 +72,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The backing service fabric resource's id
      * 
      */
-    public Output</* @Nullable */ String> getExternalServiceFabricId() {
+    public Output</* @Nullable */ String> externalServiceFabricId() {
         return this.externalServiceFabricId;
     }
     /**
@@ -86,7 +86,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -100,7 +100,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +128,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -156,7 +156,7 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

@@ -26,7 +26,7 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clientRdpAccess")
       private final @Nullable Output<ConnectionType> clientRdpAccess;
 
-    public Output<ConnectionType> getClientRdpAccess() {
+    public Output<ConnectionType> clientRdpAccess() {
         return this.clientRdpAccess == null ? Codegen.empty() : this.clientRdpAccess;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clientSshAccess")
       private final @Nullable Output<ConnectionType> clientSshAccess;
 
-    public Output<ConnectionType> getClientSshAccess() {
+    public Output<ConnectionType> clientSshAccess() {
         return this.clientSshAccess == null ? Codegen.empty() : this.clientSshAccess;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webRdpAccess")
       private final @Nullable Output<ConnectionType> webRdpAccess;
 
-    public Output<ConnectionType> getWebRdpAccess() {
+    public Output<ConnectionType> webRdpAccess() {
         return this.webRdpAccess == null ? Codegen.empty() : this.webRdpAccess;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webSshAccess")
       private final @Nullable Output<ConnectionType> webSshAccess;
 
-    public Output<ConnectionType> getWebSshAccess() {
+    public Output<ConnectionType> webSshAccess() {
         return this.webSshAccess == null ? Codegen.empty() : this.webSshAccess;
     }
 

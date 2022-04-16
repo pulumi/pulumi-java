@@ -35,14 +35,14 @@ public final class KubernetesRoleStorageResponse {
      * Mount points of shares in role(s).
      * 
     */
-    public List<MountPointMapResponse> getEndpoints() {
+    public List<MountPointMapResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * Kubernetes storage class info.
      * 
     */
-    public List<KubernetesRoleStorageClassInfoResponse> getStorageClasses() {
+    public List<KubernetesRoleStorageClassInfoResponse> storageClasses() {
         return this.storageClasses;
     }
 

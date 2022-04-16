@@ -26,7 +26,7 @@ public final class ContainerConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="containerGroupName")
       private final @Nullable Output<String> containerGroupName;
 
-    public Output<String> getContainerGroupName() {
+    public Output<String> containerGroupName() {
         return this.containerGroupName == null ? Codegen.empty() : this.containerGroupName;
     }
 

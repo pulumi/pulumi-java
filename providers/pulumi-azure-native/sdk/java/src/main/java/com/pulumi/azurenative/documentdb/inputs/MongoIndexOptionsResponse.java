@@ -26,7 +26,7 @@ public final class MongoIndexOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="expireAfterSeconds")
       private final @Nullable Integer expireAfterSeconds;
 
-    public Optional<Integer> getExpireAfterSeconds() {
+    public Optional<Integer> expireAfterSeconds() {
         return this.expireAfterSeconds == null ? Optional.empty() : Optional.ofNullable(this.expireAfterSeconds);
     }
 
@@ -37,7 +37,7 @@ public final class MongoIndexOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="unique")
       private final @Nullable Boolean unique;
 
-    public Optional<Boolean> getUnique() {
+    public Optional<Boolean> unique() {
         return this.unique == null ? Optional.empty() : Optional.ofNullable(this.unique);
     }
 

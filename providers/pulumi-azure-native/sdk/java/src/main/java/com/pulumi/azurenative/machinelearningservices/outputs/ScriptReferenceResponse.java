@@ -48,28 +48,28 @@ public final class ScriptReferenceResponse {
      * Optional command line arguments passed to the script to run.
      * 
     */
-    public Optional<String> getScriptArguments() {
+    public Optional<String> scriptArguments() {
         return Optional.ofNullable(this.scriptArguments);
     }
     /**
      * The location of scripts in the mounted volume.
      * 
     */
-    public Optional<String> getScriptData() {
+    public Optional<String> scriptData() {
         return Optional.ofNullable(this.scriptData);
     }
     /**
      * The storage source of the script: inline, workspace.
      * 
     */
-    public Optional<String> getScriptSource() {
+    public Optional<String> scriptSource() {
         return Optional.ofNullable(this.scriptSource);
     }
     /**
      * Optional time period passed to timeout command.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

@@ -27,7 +27,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends com.pulumi.resources.
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends com.pulumi.resources.
     @Import(name="internalDnsNameLabel")
       private final @Nullable Output<String> internalDnsNameLabel;
 
-    public Output<String> getInternalDnsNameLabel() {
+    public Output<String> internalDnsNameLabel() {
         return this.internalDnsNameLabel == null ? Codegen.empty() : this.internalDnsNameLabel;
     }
 

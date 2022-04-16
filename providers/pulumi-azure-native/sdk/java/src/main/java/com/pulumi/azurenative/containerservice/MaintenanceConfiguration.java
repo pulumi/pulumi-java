@@ -45,7 +45,7 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Time slots on which upgrade is not allowed.
      * 
      */
-    public Output</* @Nullable */ List<TimeSpanResponse>> getNotAllowedTime() {
+    public Output</* @Nullable */ List<TimeSpanResponse>> notAllowedTime() {
         return this.notAllowedTime;
     }
     /**
@@ -73,7 +73,7 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -87,7 +87,7 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Weekday time slots allowed to upgrade.
      * 
      */
-    public Output</* @Nullable */ List<TimeInWeekResponse>> getTimeInWeek() {
+    public Output</* @Nullable */ List<TimeInWeekResponse>> timeInWeek() {
         return this.timeInWeek;
     }
     /**
@@ -101,7 +101,7 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class TriggerReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="referenceName", required=true)
       private final String referenceName;
 
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
 
@@ -34,7 +34,7 @@ public final class TriggerReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

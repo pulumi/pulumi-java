@@ -29,7 +29,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
@@ -40,7 +40,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -51,7 +51,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -62,7 +62,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="partitionOption")
       private final @Nullable Object partitionOption;
 
-    public Optional<Object> getPartitionOption() {
+    public Optional<Object> partitionOption() {
         return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
     }
 
@@ -73,7 +73,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="partitionSettings")
       private final @Nullable SqlPartitionSettingsResponse partitionSettings;
 
-    public Optional<SqlPartitionSettingsResponse> getPartitionSettings() {
+    public Optional<SqlPartitionSettingsResponse> partitionSettings() {
         return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
     }
 
@@ -84,7 +84,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="produceAdditionalTypes")
       private final @Nullable Object produceAdditionalTypes;
 
-    public Optional<Object> getProduceAdditionalTypes() {
+    public Optional<Object> produceAdditionalTypes() {
         return this.produceAdditionalTypes == null ? Optional.empty() : Optional.ofNullable(this.produceAdditionalTypes);
     }
 
@@ -95,7 +95,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
-    public Optional<Object> getQueryTimeout() {
+    public Optional<Object> queryTimeout() {
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
@@ -106,7 +106,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
@@ -117,7 +117,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
@@ -128,7 +128,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sqlReaderQuery")
       private final @Nullable Object sqlReaderQuery;
 
-    public Optional<Object> getSqlReaderQuery() {
+    public Optional<Object> sqlReaderQuery() {
         return this.sqlReaderQuery == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderQuery);
     }
 
@@ -139,7 +139,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sqlReaderStoredProcedureName")
       private final @Nullable Object sqlReaderStoredProcedureName;
 
-    public Optional<Object> getSqlReaderStoredProcedureName() {
+    public Optional<Object> sqlReaderStoredProcedureName() {
         return this.sqlReaderStoredProcedureName == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
 
@@ -150,7 +150,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storedProcedureParameters")
       private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
-    public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
+    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
 
@@ -162,7 +162,7 @@ public final class AzureSqlSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

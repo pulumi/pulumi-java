@@ -135,112 +135,112 @@ public final class GetSourceControlResult {
      * Array of source control content types.
      * 
     */
-    public List<String> getContentTypes() {
+    public List<String> contentTypes() {
         return this.contentTypes;
     }
     /**
      * The timestamp of resource creation (UTC).
      * 
     */
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The identity that created the resource.
      * 
     */
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
      * 
     */
-    public Optional<String> getCreatedByType() {
+    public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * A description of the source control
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the source control
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The timestamp of resource last modification (UTC)
      * 
     */
-    public Optional<String> getLastModifiedAt() {
+    public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
      * 
     */
-    public Optional<String> getLastModifiedBy() {
+    public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
      * 
     */
-    public Optional<String> getLastModifiedByType() {
+    public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The repository type of the source control
      * 
     */
-    public String getRepoType() {
+    public String repoType() {
         return this.repoType;
     }
     /**
      * Repository metadata.
      * 
     */
-    public RepositoryResponse getRepository() {
+    public RepositoryResponse repository() {
         return this.repository;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

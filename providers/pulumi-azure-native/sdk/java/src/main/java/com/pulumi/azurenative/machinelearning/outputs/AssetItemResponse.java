@@ -82,56 +82,56 @@ public final class AssetItemResponse {
      * Asset's Id.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Information about the asset's input ports.
      * 
     */
-    public Map<String,InputPortResponse> getInputPorts() {
+    public Map<String,InputPortResponse> inputPorts() {
         return this.inputPorts == null ? Map.of() : this.inputPorts;
     }
     /**
      * Access information for the asset.
      * 
     */
-    public BlobLocationResponse getLocationInfo() {
+    public BlobLocationResponse locationInfo() {
         return this.locationInfo;
     }
     /**
      * If the asset is a custom module, this holds the module's metadata.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * Asset's friendly name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Information about the asset's output ports.
      * 
     */
-    public Map<String,OutputPortResponse> getOutputPorts() {
+    public Map<String,OutputPortResponse> outputPorts() {
         return this.outputPorts == null ? Map.of() : this.outputPorts;
     }
     /**
      * If the asset is a custom module, this holds the module's parameters.
      * 
     */
-    public List<ModuleAssetParameterResponse> getParameters() {
+    public List<ModuleAssetParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Asset's type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -29,7 +29,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.res
     @Import(name="hostServerName")
       private final @Nullable Output<String> hostServerName;
 
-    public Output<String> getHostServerName() {
+    public Output<String> hostServerName() {
         return this.hostServerName == null ? Codegen.empty() : this.hostServerName;
     }
 
@@ -40,7 +40,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.res
     @Import(name="inquiryInfo")
       private final @Nullable Output<InquiryInfoArgs> inquiryInfo;
 
-    public Output<InquiryInfoArgs> getInquiryInfo() {
+    public Output<InquiryInfoArgs> inquiryInfo() {
         return this.inquiryInfo == null ? Codegen.empty() : this.inquiryInfo;
     }
 
@@ -51,7 +51,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends com.pulumi.res
     @Import(name="nodesList")
       private final @Nullable Output<List<DistributedNodesInfoArgs>> nodesList;
 
-    public Output<List<DistributedNodesInfoArgs>> getNodesList() {
+    public Output<List<DistributedNodesInfoArgs>> nodesList() {
         return this.nodesList == null ? Codegen.empty() : this.nodesList;
     }
 

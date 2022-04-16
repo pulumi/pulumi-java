@@ -29,7 +29,7 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterKeys")
       private final @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
 
-    public Output<List<ClusterKeyArgs>> getClusterKeys() {
+    public Output<List<ClusterKeyArgs>> clusterKeys() {
         return this.clusterKeys == null ? Codegen.empty() : this.clusterKeys;
     }
 
@@ -40,7 +40,7 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="columns")
       private final @Nullable Output<List<ColumnArgs>> columns;
 
-    public Output<List<ColumnArgs>> getColumns() {
+    public Output<List<ColumnArgs>> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 
@@ -51,7 +51,7 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="partitionKeys")
       private final @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;
 
-    public Output<List<CassandraPartitionKeyArgs>> getPartitionKeys() {
+    public Output<List<CassandraPartitionKeyArgs>> partitionKeys() {
         return this.partitionKeys == null ? Codegen.empty() : this.partitionKeys;
     }
 

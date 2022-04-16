@@ -25,7 +25,7 @@ public final class AbsoluteDeleteOptionArgs extends com.pulumi.resources.Resourc
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -37,7 +37,7 @@ public final class AbsoluteDeleteOptionArgs extends com.pulumi.resources.Resourc
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 

@@ -22,7 +22,7 @@ public final class DataLakeAnalyticsPropertiesArgs extends com.pulumi.resources.
     @Import(name="dataLakeStoreAccountName")
       private final @Nullable Output<String> dataLakeStoreAccountName;
 
-    public Output<String> getDataLakeStoreAccountName() {
+    public Output<String> dataLakeStoreAccountName() {
         return this.dataLakeStoreAccountName == null ? Codegen.empty() : this.dataLakeStoreAccountName;
     }
 

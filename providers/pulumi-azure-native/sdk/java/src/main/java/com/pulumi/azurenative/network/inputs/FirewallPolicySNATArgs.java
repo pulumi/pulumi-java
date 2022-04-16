@@ -27,7 +27,7 @@ public final class FirewallPolicySNATArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateRanges")
       private final @Nullable Output<List<String>> privateRanges;
 
-    public Output<List<String>> getPrivateRanges() {
+    public Output<List<String>> privateRanges() {
         return this.privateRanges == null ? Codegen.empty() : this.privateRanges;
     }
 

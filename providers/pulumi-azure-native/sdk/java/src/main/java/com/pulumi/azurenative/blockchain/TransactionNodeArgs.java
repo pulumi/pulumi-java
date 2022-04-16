@@ -24,7 +24,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="blockchainMemberName", required=true)
       private final Output<String> blockchainMemberName;
 
-    public Output<String> getBlockchainMemberName() {
+    public Output<String> blockchainMemberName() {
         return this.blockchainMemberName;
     }
 
@@ -35,7 +35,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
-    public Output<List<FirewallRuleArgs>> getFirewallRules() {
+    public Output<List<FirewallRuleArgs>> firewallRules() {
         return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
@@ -46,7 +46,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -68,7 +68,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="transactionNodeName")
       private final @Nullable Output<String> transactionNodeName;
 
-    public Output<String> getTransactionNodeName() {
+    public Output<String> transactionNodeName() {
         return this.transactionNodeName == null ? Codegen.empty() : this.transactionNodeName;
     }
 

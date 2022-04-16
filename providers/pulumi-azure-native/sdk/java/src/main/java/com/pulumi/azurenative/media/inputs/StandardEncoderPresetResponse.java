@@ -44,7 +44,7 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="codecs", required=true)
       private final List<Object> codecs;
 
-    public List<Object> getCodecs() {
+    public List<Object> codecs() {
         return this.codecs;
     }
 
@@ -55,7 +55,7 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="filters")
       private final @Nullable FiltersResponse filters;
 
-    public Optional<FiltersResponse> getFilters() {
+    public Optional<FiltersResponse> filters() {
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
     }
 
@@ -66,7 +66,7 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="formats", required=true)
       private final List<Object> formats;
 
-    public List<Object> getFormats() {
+    public List<Object> formats() {
         return this.formats;
     }
 
@@ -78,7 +78,7 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

@@ -106,63 +106,63 @@ public final class SapBWLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
      * 
     */
-    public Object getClientId() {
+    public Object clientId() {
         return this.clientId;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to access the SAP BW server.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Host name of the SAP BW instance. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getServer() {
+    public Object server() {
         return this.server;
     }
     /**
      * System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
      * 
     */
-    public Object getSystemNumber() {
+    public Object systemNumber() {
         return this.systemNumber;
     }
     /**
@@ -170,14 +170,14 @@ public final class SapBWLinkedServiceResponse {
      * Expected value is 'SapBW'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Username to access the SAP BW server. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
 

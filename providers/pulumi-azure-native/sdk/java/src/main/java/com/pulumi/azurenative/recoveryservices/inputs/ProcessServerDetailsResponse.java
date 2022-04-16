@@ -26,7 +26,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="availableMemoryInBytes", required=true)
       private final Double availableMemoryInBytes;
 
-    public Double getAvailableMemoryInBytes() {
+    public Double availableMemoryInBytes() {
         return this.availableMemoryInBytes;
     }
 
@@ -37,7 +37,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="availableSpaceInBytes", required=true)
       private final Double availableSpaceInBytes;
 
-    public Double getAvailableSpaceInBytes() {
+    public Double availableSpaceInBytes() {
         return this.availableSpaceInBytes;
     }
 
@@ -48,7 +48,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="freeSpacePercentage", required=true)
       private final Double freeSpacePercentage;
 
-    public Double getFreeSpacePercentage() {
+    public Double freeSpacePercentage() {
         return this.freeSpacePercentage;
     }
 
@@ -59,7 +59,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="health", required=true)
       private final String health;
 
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
 
@@ -70,7 +70,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
 
@@ -81,7 +81,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="historicHealth", required=true)
       private final String historicHealth;
 
-    public String getHistoricHealth() {
+    public String historicHealth() {
         return this.historicHealth;
     }
 
@@ -92,7 +92,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -103,7 +103,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
 
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
 
@@ -114,7 +114,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="memoryUsagePercentage", required=true)
       private final Double memoryUsagePercentage;
 
-    public Double getMemoryUsagePercentage() {
+    public Double memoryUsagePercentage() {
         return this.memoryUsagePercentage;
     }
 
@@ -125,7 +125,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -136,7 +136,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="processorUsagePercentage", required=true)
       private final Double processorUsagePercentage;
 
-    public Double getProcessorUsagePercentage() {
+    public Double processorUsagePercentage() {
         return this.processorUsagePercentage;
     }
 
@@ -147,7 +147,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="throughputInBytes", required=true)
       private final Double throughputInBytes;
 
-    public Double getThroughputInBytes() {
+    public Double throughputInBytes() {
         return this.throughputInBytes;
     }
 
@@ -158,7 +158,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="throughputUploadPendingDataInBytes", required=true)
       private final Double throughputUploadPendingDataInBytes;
 
-    public Double getThroughputUploadPendingDataInBytes() {
+    public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
     }
 
@@ -169,7 +169,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="totalMemoryInBytes", required=true)
       private final Double totalMemoryInBytes;
 
-    public Double getTotalMemoryInBytes() {
+    public Double totalMemoryInBytes() {
         return this.totalMemoryInBytes;
     }
 
@@ -180,7 +180,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="totalSpaceInBytes", required=true)
       private final Double totalSpaceInBytes;
 
-    public Double getTotalSpaceInBytes() {
+    public Double totalSpaceInBytes() {
         return this.totalSpaceInBytes;
     }
 
@@ -191,7 +191,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="usedMemoryInBytes", required=true)
       private final Double usedMemoryInBytes;
 
-    public Double getUsedMemoryInBytes() {
+    public Double usedMemoryInBytes() {
         return this.usedMemoryInBytes;
     }
 
@@ -202,7 +202,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="usedSpaceInBytes", required=true)
       private final Double usedSpaceInBytes;
 
-    public Double getUsedSpaceInBytes() {
+    public Double usedSpaceInBytes() {
         return this.usedSpaceInBytes;
     }
 
@@ -213,7 +213,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

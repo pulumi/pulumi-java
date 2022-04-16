@@ -24,7 +24,7 @@ public final class ClientCertificateCommonNameResponse extends com.pulumi.resour
     @Import(name="certificateCommonName", required=true)
       private final String certificateCommonName;
 
-    public String getCertificateCommonName() {
+    public String certificateCommonName() {
         return this.certificateCommonName;
     }
 
@@ -35,7 +35,7 @@ public final class ClientCertificateCommonNameResponse extends com.pulumi.resour
     @Import(name="certificateIssuerThumbprint", required=true)
       private final String certificateIssuerThumbprint;
 
-    public String getCertificateIssuerThumbprint() {
+    public String certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
 
@@ -46,7 +46,7 @@ public final class ClientCertificateCommonNameResponse extends com.pulumi.resour
     @Import(name="isAdmin", required=true)
       private final Boolean isAdmin;
 
-    public Boolean getIsAdmin() {
+    public Boolean isAdmin() {
         return this.isAdmin;
     }
 

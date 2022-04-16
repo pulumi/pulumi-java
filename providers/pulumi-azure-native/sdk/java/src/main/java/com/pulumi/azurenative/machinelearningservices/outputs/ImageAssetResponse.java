@@ -49,28 +49,28 @@ public final class ImageAssetResponse {
      * The Asset Id.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The mime type.
      * 
     */
-    public Optional<String> getMimeType() {
+    public Optional<String> mimeType() {
         return Optional.ofNullable(this.mimeType);
     }
     /**
      * Whether the Asset is unpacked.
      * 
     */
-    public Optional<Boolean> getUnpack() {
+    public Optional<Boolean> unpack() {
         return Optional.ofNullable(this.unpack);
     }
     /**
      * The Url of the Asset.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

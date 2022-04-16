@@ -24,7 +24,7 @@ public final class SubnetResponse {
      * Resource ID of Virtual Network Subnet
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

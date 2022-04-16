@@ -28,7 +28,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -39,7 +39,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="created")
       private final @Nullable Output<String> created;
 
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created == null ? Codegen.empty() : this.created;
     }
 
@@ -50,7 +50,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<WatchlistUserInfoArgs> createdBy;
 
-    public Output<WatchlistUserInfoArgs> getCreatedBy() {
+    public Output<WatchlistUserInfoArgs> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
@@ -61,7 +61,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultDuration")
       private final @Nullable Output<String> defaultDuration;
 
-    public Output<String> getDefaultDuration() {
+    public Output<String> defaultDuration() {
         return this.defaultDuration == null ? Codegen.empty() : this.defaultDuration;
     }
 
@@ -72,7 +72,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -83,7 +83,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -94,7 +94,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isDeleted")
       private final @Nullable Output<Boolean> isDeleted;
 
-    public Output<Boolean> getIsDeleted() {
+    public Output<Boolean> isDeleted() {
         return this.isDeleted == null ? Codegen.empty() : this.isDeleted;
     }
 
@@ -105,7 +105,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="itemsSearchKey", required=true)
       private final Output<String> itemsSearchKey;
 
-    public Output<String> getItemsSearchKey() {
+    public Output<String> itemsSearchKey() {
         return this.itemsSearchKey;
     }
 
@@ -116,7 +116,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -127,7 +127,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfLinesToSkip")
       private final @Nullable Output<Integer> numberOfLinesToSkip;
 
-    public Output<Integer> getNumberOfLinesToSkip() {
+    public Output<Integer> numberOfLinesToSkip() {
         return this.numberOfLinesToSkip == null ? Codegen.empty() : this.numberOfLinesToSkip;
     }
 
@@ -138,7 +138,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -149,7 +149,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provider", required=true)
       private final Output<String> provider;
 
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider;
     }
 
@@ -160,7 +160,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rawContent")
       private final @Nullable Output<String> rawContent;
 
-    public Output<String> getRawContent() {
+    public Output<String> rawContent() {
         return this.rawContent == null ? Codegen.empty() : this.rawContent;
     }
 
@@ -171,7 +171,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -182,7 +182,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<Either<String,Source>> source;
 
-    public Output<Either<String,Source>> getSource() {
+    public Output<Either<String,Source>> source() {
         return this.source;
     }
 
@@ -193,7 +193,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -204,7 +204,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updated")
       private final @Nullable Output<String> updated;
 
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated == null ? Codegen.empty() : this.updated;
     }
 
@@ -215,7 +215,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updatedBy")
       private final @Nullable Output<WatchlistUserInfoArgs> updatedBy;
 
-    public Output<WatchlistUserInfoArgs> getUpdatedBy() {
+    public Output<WatchlistUserInfoArgs> updatedBy() {
         return this.updatedBy == null ? Codegen.empty() : this.updatedBy;
     }
 
@@ -226,7 +226,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uploadStatus")
       private final @Nullable Output<String> uploadStatus;
 
-    public Output<String> getUploadStatus() {
+    public Output<String> uploadStatus() {
         return this.uploadStatus == null ? Codegen.empty() : this.uploadStatus;
     }
 
@@ -237,7 +237,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watchlistAlias")
       private final @Nullable Output<String> watchlistAlias;
 
-    public Output<String> getWatchlistAlias() {
+    public Output<String> watchlistAlias() {
         return this.watchlistAlias == null ? Codegen.empty() : this.watchlistAlias;
     }
 
@@ -248,7 +248,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watchlistId")
       private final @Nullable Output<String> watchlistId;
 
-    public Output<String> getWatchlistId() {
+    public Output<String> watchlistId() {
         return this.watchlistId == null ? Codegen.empty() : this.watchlistId;
     }
 
@@ -259,7 +259,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watchlistItemsCount")
       private final @Nullable Output<Integer> watchlistItemsCount;
 
-    public Output<Integer> getWatchlistItemsCount() {
+    public Output<Integer> watchlistItemsCount() {
         return this.watchlistItemsCount == null ? Codegen.empty() : this.watchlistItemsCount;
     }
 
@@ -270,7 +270,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watchlistType")
       private final @Nullable Output<String> watchlistType;
 
-    public Output<String> getWatchlistType() {
+    public Output<String> watchlistType() {
         return this.watchlistType == null ? Codegen.empty() : this.watchlistType;
     }
 
@@ -281,7 +281,7 @@ public final class WatchlistArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

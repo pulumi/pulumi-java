@@ -27,7 +27,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -38,7 +38,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
-    public Output<Either<String,TlsVersion>> getMinimumTlsVersion() {
+    public Output<Either<String,TlsVersion>> minimumTlsVersion() {
         return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
@@ -60,7 +60,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,7 +71,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
       private final Output<EnterpriseSkuArgs> sku;
 
-    public Output<EnterpriseSkuArgs> getSku() {
+    public Output<EnterpriseSkuArgs> sku() {
         return this.sku;
     }
 
@@ -82,7 +82,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

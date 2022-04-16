@@ -24,7 +24,7 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends com.pulumi.r
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends com.pulumi.r
     @Import(name="ports", required=true)
       private final Output<List<JitNetworkAccessPortRuleArgs>> ports;
 
-    public Output<List<JitNetworkAccessPortRuleArgs>> getPorts() {
+    public Output<List<JitNetworkAccessPortRuleArgs>> ports() {
         return this.ports;
     }
 
@@ -46,7 +46,7 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends com.pulumi.r
     @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
-    public Output<String> getPublicIpAddress() {
+    public Output<String> publicIpAddress() {
         return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 

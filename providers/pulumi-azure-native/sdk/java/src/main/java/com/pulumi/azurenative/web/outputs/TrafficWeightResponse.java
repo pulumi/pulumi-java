@@ -43,21 +43,21 @@ public final class TrafficWeightResponse {
      * Indicates that the traffic weight belongs to a latest stable revision
      * 
     */
-    public Optional<Boolean> getLatestRevision() {
+    public Optional<Boolean> latestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
     /**
      * Name of a revision
      * 
     */
-    public Optional<String> getRevisionName() {
+    public Optional<String> revisionName() {
         return Optional.ofNullable(this.revisionName);
     }
     /**
      * Traffic weight assigned to a revision
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

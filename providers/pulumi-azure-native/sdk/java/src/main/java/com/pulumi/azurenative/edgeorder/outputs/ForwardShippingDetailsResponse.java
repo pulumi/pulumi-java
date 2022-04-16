@@ -46,28 +46,28 @@ public final class ForwardShippingDetailsResponse {
      * Carrier Name for display purpose. Not to be used for any processing.
      * 
     */
-    public String getCarrierDisplayName() {
+    public String carrierDisplayName() {
         return this.carrierDisplayName;
     }
     /**
      * Name of the carrier.
      * 
     */
-    public String getCarrierName() {
+    public String carrierName() {
         return this.carrierName;
     }
     /**
      * TrackingId of the package
      * 
     */
-    public String getTrackingId() {
+    public String trackingId() {
         return this.trackingId;
     }
     /**
      * TrackingUrl of the package.
      * 
     */
-    public String getTrackingUrl() {
+    public String trackingUrl() {
         return this.trackingUrl;
     }
 

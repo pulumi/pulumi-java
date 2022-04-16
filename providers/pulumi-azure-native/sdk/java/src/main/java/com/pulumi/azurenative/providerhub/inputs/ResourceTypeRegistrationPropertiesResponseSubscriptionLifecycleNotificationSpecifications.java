@@ -19,14 +19,14 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
     @Import(name="softDeleteTTL")
       private final @Nullable String softDeleteTTL;
 
-    public Optional<String> getSoftDeleteTTL() {
+    public Optional<String> softDeleteTTL() {
         return this.softDeleteTTL == null ? Optional.empty() : Optional.ofNullable(this.softDeleteTTL);
     }
 
     @Import(name="subscriptionStateOverrideActions")
       private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 
-    public List<SubscriptionStateOverrideActionResponse> getSubscriptionStateOverrideActions() {
+    public List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions() {
         return this.subscriptionStateOverrideActions == null ? List.of() : this.subscriptionStateOverrideActions;
     }
 

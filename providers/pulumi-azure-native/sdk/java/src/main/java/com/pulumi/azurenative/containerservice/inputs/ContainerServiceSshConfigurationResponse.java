@@ -24,7 +24,7 @@ public final class ContainerServiceSshConfigurationResponse extends com.pulumi.r
     @Import(name="publicKeys", required=true)
       private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
 
-    public List<ContainerServiceSshPublicKeyResponse> getPublicKeys() {
+    public List<ContainerServiceSshPublicKeyResponse> publicKeys() {
         return this.publicKeys;
     }
 

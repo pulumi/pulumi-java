@@ -28,7 +28,7 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="days", required=true)
       private final Output<List<DayOfWeek>> days;
 
-    public Output<List<DayOfWeek>> getDays() {
+    public Output<List<DayOfWeek>> days() {
         return this.days;
     }
 
@@ -39,7 +39,7 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rateInMbps", required=true)
       private final Output<Integer> rateInMbps;
 
-    public Output<Integer> getRateInMbps() {
+    public Output<Integer> rateInMbps() {
         return this.rateInMbps;
     }
 
@@ -50,7 +50,7 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="start", required=true)
       private final Output<TimeArgs> start;
 
-    public Output<TimeArgs> getStart() {
+    public Output<TimeArgs> start() {
         return this.start;
     }
 
@@ -61,7 +61,7 @@ public final class BandwidthScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="stop", required=true)
       private final Output<TimeArgs> stop;
 
-    public Output<TimeArgs> getStop() {
+    public Output<TimeArgs> stop() {
         return this.stop;
     }
 

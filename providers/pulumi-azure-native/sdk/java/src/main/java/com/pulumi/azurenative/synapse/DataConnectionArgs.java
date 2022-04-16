@@ -24,7 +24,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
-    public Output<String> getDataConnectionName() {
+    public Output<String> dataConnectionName() {
         return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
@@ -35,7 +35,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -46,7 +46,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectionKind>> kind;
 
-    public Output<Either<String,DataConnectionKind>> getKind() {
+    public Output<Either<String,DataConnectionKind>> kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
-    public Output<String> getKustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -68,7 +68,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,7 +79,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -24,7 +24,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dhGroup", required=true)
       private final String dhGroup;
 
-    public String getDhGroup() {
+    public String dhGroup() {
         return this.dhGroup;
     }
 
@@ -35,7 +35,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ikeEncryption", required=true)
       private final String ikeEncryption;
 
-    public String getIkeEncryption() {
+    public String ikeEncryption() {
         return this.ikeEncryption;
     }
 
@@ -46,7 +46,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ikeIntegrity", required=true)
       private final String ikeIntegrity;
 
-    public String getIkeIntegrity() {
+    public String ikeIntegrity() {
         return this.ikeIntegrity;
     }
 
@@ -57,7 +57,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipsecEncryption", required=true)
       private final String ipsecEncryption;
 
-    public String getIpsecEncryption() {
+    public String ipsecEncryption() {
         return this.ipsecEncryption;
     }
 
@@ -68,7 +68,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipsecIntegrity", required=true)
       private final String ipsecIntegrity;
 
-    public String getIpsecIntegrity() {
+    public String ipsecIntegrity() {
         return this.ipsecIntegrity;
     }
 
@@ -79,7 +79,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pfsGroup", required=true)
       private final String pfsGroup;
 
-    public String getPfsGroup() {
+    public String pfsGroup() {
         return this.pfsGroup;
     }
 
@@ -90,7 +90,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="saDataSizeKilobytes", required=true)
       private final Integer saDataSizeKilobytes;
 
-    public Integer getSaDataSizeKilobytes() {
+    public Integer saDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
     }
 
@@ -101,7 +101,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="saLifeTimeSeconds", required=true)
       private final Integer saLifeTimeSeconds;
 
-    public Integer getSaLifeTimeSeconds() {
+    public Integer saLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
 

@@ -21,7 +21,7 @@ public final class ApplicationUserAssignedIdentityArgs extends com.pulumi.resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,7 +32,7 @@ public final class ApplicationUserAssignedIdentityArgs extends com.pulumi.resour
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 

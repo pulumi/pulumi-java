@@ -51,21 +51,21 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
      * An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.
      * 
     */
-    public List<AlertRuleLeafConditionResponse> getAnyOf() {
+    public List<AlertRuleLeafConditionResponse> anyOf() {
         return this.anyOf == null ? List.of() : this.anyOf;
     }
     /**
      * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
      * 
     */
-    public List<String> getContainsAny() {
+    public List<String> containsAny() {
         return this.containsAny == null ? List.of() : this.containsAny;
     }
     /**
      * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
      * 
     */
-    public Optional<String> getEquals() {
+    public Optional<String> equals_() {
         return Optional.ofNullable(this.equals);
     }
     /**
@@ -73,7 +73,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
      * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
      * 
     */
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
 
@@ -117,7 +117,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
-        public Builder equals(@Nullable String equals) {
+        public Builder equals_(@Nullable String equals) {
             this.equals = equals;
             return this;
         }

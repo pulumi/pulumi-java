@@ -27,7 +27,7 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
     @Import(name="arcAutoProvisioning")
       private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
 
-    public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> getArcAutoProvisioning() {
+    public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> arcAutoProvisioning() {
         return this.arcAutoProvisioning == null ? Optional.empty() : Optional.ofNullable(this.arcAutoProvisioning);
     }
 
@@ -38,7 +38,7 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
     @Import(name="defenderForServers")
       private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
 
-    public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> getDefenderForServers() {
+    public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> defenderForServers() {
         return this.defenderForServers == null ? Optional.empty() : Optional.ofNullable(this.defenderForServers);
     }
 
@@ -49,7 +49,7 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -61,7 +61,7 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
     @Import(name="offeringType", required=true)
       private final String offeringType;
 
-    public String getOfferingType() {
+    public String offeringType() {
         return this.offeringType;
     }
 

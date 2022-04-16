@@ -29,7 +29,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="diskStorageUsedInBytes")
       private final @Nullable Output<String> diskStorageUsedInBytes;
 
-    public Output<String> getDiskStorageUsedInBytes() {
+    public Output<String> diskStorageUsedInBytes() {
         return this.diskStorageUsedInBytes == null ? Codegen.empty() : this.diskStorageUsedInBytes;
     }
 
@@ -40,7 +40,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="isCollocated")
       private final @Nullable Output<Boolean> isCollocated;
 
-    public Output<Boolean> getIsCollocated() {
+    public Output<Boolean> isCollocated() {
         return this.isCollocated == null ? Codegen.empty() : this.isCollocated;
     }
 
@@ -51,7 +51,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="isPresentOnCloud")
       private final @Nullable Output<Boolean> isPresentOnCloud;
 
-    public Output<Boolean> getIsPresentOnCloud() {
+    public Output<Boolean> isPresentOnCloud() {
         return this.isPresentOnCloud == null ? Codegen.empty() : this.isPresentOnCloud;
     }
 
@@ -62,7 +62,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
 
-    public Output<String> getLastBackupStatus() {
+    public Output<String> lastBackupStatus() {
         return this.lastBackupStatus == null ? Codegen.empty() : this.lastBackupStatus;
     }
 
@@ -73,7 +73,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
 
-    public Output<String> getLastRefreshedAt() {
+    public Output<String> lastRefreshedAt() {
         return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
     }
 
@@ -84,7 +84,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="oldestRecoveryPoint")
       private final @Nullable Output<String> oldestRecoveryPoint;
 
-    public Output<String> getOldestRecoveryPoint() {
+    public Output<String> oldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Codegen.empty() : this.oldestRecoveryPoint;
     }
 
@@ -95,7 +95,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="onPremiseLatestRecoveryPoint")
       private final @Nullable Output<String> onPremiseLatestRecoveryPoint;
 
-    public Output<String> getOnPremiseLatestRecoveryPoint() {
+    public Output<String> onPremiseLatestRecoveryPoint() {
         return this.onPremiseLatestRecoveryPoint == null ? Codegen.empty() : this.onPremiseLatestRecoveryPoint;
     }
 
@@ -106,7 +106,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="onPremiseOldestRecoveryPoint")
       private final @Nullable Output<String> onPremiseOldestRecoveryPoint;
 
-    public Output<String> getOnPremiseOldestRecoveryPoint() {
+    public Output<String> onPremiseOldestRecoveryPoint() {
         return this.onPremiseOldestRecoveryPoint == null ? Codegen.empty() : this.onPremiseOldestRecoveryPoint;
     }
 
@@ -117,7 +117,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="onPremiseRecoveryPointCount")
       private final @Nullable Output<Integer> onPremiseRecoveryPointCount;
 
-    public Output<Integer> getOnPremiseRecoveryPointCount() {
+    public Output<Integer> onPremiseRecoveryPointCount() {
         return this.onPremiseRecoveryPointCount == null ? Codegen.empty() : this.onPremiseRecoveryPointCount;
     }
 
@@ -128,7 +128,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="protectableObjectLoadPath")
       private final @Nullable Output<Map<String,String>> protectableObjectLoadPath;
 
-    public Output<Map<String,String>> getProtectableObjectLoadPath() {
+    public Output<Map<String,String>> protectableObjectLoadPath() {
         return this.protectableObjectLoadPath == null ? Codegen.empty() : this.protectableObjectLoadPath;
     }
 
@@ -139,7 +139,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="protected")
       private final @Nullable Output<Boolean> protected_;
 
-    public Output<Boolean> getProtected_() {
+    public Output<Boolean> protected_() {
         return this.protected_ == null ? Codegen.empty() : this.protected_;
     }
 
@@ -150,7 +150,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="protectionGroupName")
       private final @Nullable Output<String> protectionGroupName;
 
-    public Output<String> getProtectionGroupName() {
+    public Output<String> protectionGroupName() {
         return this.protectionGroupName == null ? Codegen.empty() : this.protectionGroupName;
     }
 
@@ -161,7 +161,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="recoveryPointCount")
       private final @Nullable Output<Integer> recoveryPointCount;
 
-    public Output<Integer> getRecoveryPointCount() {
+    public Output<Integer> recoveryPointCount() {
         return this.recoveryPointCount == null ? Codegen.empty() : this.recoveryPointCount;
     }
 
@@ -172,7 +172,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="totalDiskStorageSizeInBytes")
       private final @Nullable Output<String> totalDiskStorageSizeInBytes;
 
-    public Output<String> getTotalDiskStorageSizeInBytes() {
+    public Output<String> totalDiskStorageSizeInBytes() {
         return this.totalDiskStorageSizeInBytes == null ? Codegen.empty() : this.totalDiskStorageSizeInBytes;
     }
 

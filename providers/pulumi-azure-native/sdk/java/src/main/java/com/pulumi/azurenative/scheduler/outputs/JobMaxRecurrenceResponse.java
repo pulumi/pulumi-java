@@ -35,14 +35,14 @@ public final class JobMaxRecurrenceResponse {
      * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
      * 
     */
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * Gets or sets the interval between retries.
      * 
     */
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
 

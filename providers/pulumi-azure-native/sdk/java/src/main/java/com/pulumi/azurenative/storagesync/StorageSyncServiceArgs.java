@@ -25,7 +25,7 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="incomingTrafficPolicy")
       private final @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
 
-    public Output<Either<String,IncomingTrafficPolicy>> getIncomingTrafficPolicy() {
+    public Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy() {
         return this.incomingTrafficPolicy == null ? Codegen.empty() : this.incomingTrafficPolicy;
     }
 
@@ -36,7 +36,7 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="storageSyncServiceName")
       private final @Nullable Output<String> storageSyncServiceName;
 
-    public Output<String> getStorageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName == null ? Codegen.empty() : this.storageSyncServiceName;
     }
 
@@ -69,7 +69,7 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

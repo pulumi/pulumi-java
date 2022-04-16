@@ -26,7 +26,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="accountId")
       private final @Nullable String accountId;
 
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
@@ -37,7 +37,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="compliance")
       private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
 
-    public Optional<ConfigurationProfileAssignmentComplianceResponse> getCompliance() {
+    public Optional<ConfigurationProfileAssignmentComplianceResponse> compliance() {
         return this.compliance == null ? Optional.empty() : Optional.ofNullable(this.compliance);
     }
 
@@ -48,7 +48,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="configurationProfile")
       private final @Nullable String configurationProfile;
 
-    public Optional<String> getConfigurationProfile() {
+    public Optional<String> configurationProfile() {
         return this.configurationProfile == null ? Optional.empty() : Optional.ofNullable(this.configurationProfile);
     }
 
@@ -59,7 +59,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="configurationProfilePreferenceId")
       private final @Nullable String configurationProfilePreferenceId;
 
-    public Optional<String> getConfigurationProfilePreferenceId() {
+    public Optional<String> configurationProfilePreferenceId() {
         return this.configurationProfilePreferenceId == null ? Optional.empty() : Optional.ofNullable(this.configurationProfilePreferenceId);
     }
 
@@ -70,7 +70,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
     @Import(name="targetId")
       private final @Nullable String targetId;
 
-    public Optional<String> getTargetId() {
+    public Optional<String> targetId() {
         return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
     }
 

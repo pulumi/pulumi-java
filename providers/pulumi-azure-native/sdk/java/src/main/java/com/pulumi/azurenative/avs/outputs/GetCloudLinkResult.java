@@ -55,35 +55,35 @@ public final class GetCloudLinkResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identifier of the other private cloud participating in the link.
      * 
     */
-    public Optional<String> getLinkedCloud() {
+    public Optional<String> linkedCloud() {
         return Optional.ofNullable(this.linkedCloud);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the cloud link.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

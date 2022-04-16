@@ -26,7 +26,7 @@ public final class VolumeReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="destinationPath", required=true)
       private final String destinationPath;
 
-    public String getDestinationPath() {
+    public String destinationPath() {
         return this.destinationPath;
     }
 
@@ -37,7 +37,7 @@ public final class VolumeReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class VolumeReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="readOnly")
       private final @Nullable Boolean readOnly;
 
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
     }
 

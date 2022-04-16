@@ -17,21 +17,21 @@ public final class ResourceProviderAuthorizationResponse extends com.pulumi.reso
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
     @Import(name="managedByRoleDefinitionId")
       private final @Nullable String managedByRoleDefinitionId;
 
-    public Optional<String> getManagedByRoleDefinitionId() {
+    public Optional<String> managedByRoleDefinitionId() {
         return this.managedByRoleDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.managedByRoleDefinitionId);
     }
 
     @Import(name="roleDefinitionId")
       private final @Nullable String roleDefinitionId;
 
-    public Optional<String> getRoleDefinitionId() {
+    public Optional<String> roleDefinitionId() {
         return this.roleDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.roleDefinitionId);
     }
 

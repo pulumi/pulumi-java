@@ -209,182 +209,182 @@ public final class GetAppServiceCertificateOrderResult {
      * Reasons why App Service Certificate is not renewable at the current moment.
      * 
     */
-    public List<String> getAppServiceCertificateNotRenewableReasons() {
+    public List<String> appServiceCertificateNotRenewableReasons() {
         return this.appServiceCertificateNotRenewableReasons;
     }
     /**
      * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getAutoRenew() {
+    public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
      * State of the Key Vault secret.
      * 
     */
-    public Map<String,AppServiceCertificateResponse> getCertificates() {
+    public Map<String,AppServiceCertificateResponse> certificates() {
         return this.certificates == null ? Map.of() : this.certificates;
     }
     /**
      * Last CSR that was created for this order.
      * 
     */
-    public Optional<String> getCsr() {
+    public Optional<String> csr() {
         return Optional.ofNullable(this.csr);
     }
     /**
      * Certificate distinguished name.
      * 
     */
-    public Optional<String> getDistinguishedName() {
+    public Optional<String> distinguishedName() {
         return Optional.ofNullable(this.distinguishedName);
     }
     /**
      * Domain verification token.
      * 
     */
-    public String getDomainVerificationToken() {
+    public String domainVerificationToken() {
         return this.domainVerificationToken;
     }
     /**
      * Certificate expiration time.
      * 
     */
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Intermediate certificate.
      * 
     */
-    public CertificateDetailsResponse getIntermediate() {
+    public CertificateDetailsResponse intermediate() {
         return this.intermediate;
     }
     /**
      * <code>true</code> if private key is external; otherwise, <code>false</code>.
      * 
     */
-    public Boolean getIsPrivateKeyExternal() {
+    public Boolean isPrivateKeyExternal() {
         return this.isPrivateKeyExternal;
     }
     /**
      * Certificate key size.
      * 
     */
-    public Optional<Integer> getKeySize() {
+    public Optional<Integer> keySize() {
         return Optional.ofNullable(this.keySize);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Certificate last issuance time.
      * 
     */
-    public String getLastCertificateIssuanceTime() {
+    public String lastCertificateIssuanceTime() {
         return this.lastCertificateIssuanceTime;
     }
     /**
      * Resource Location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Time stamp when the certificate would be auto renewed next
      * 
     */
-    public String getNextAutoRenewalTimeStamp() {
+    public String nextAutoRenewalTimeStamp() {
         return this.nextAutoRenewalTimeStamp;
     }
     /**
      * Certificate product type.
      * 
     */
-    public String getProductType() {
+    public String productType() {
         return this.productType;
     }
     /**
      * Status of certificate order.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Root certificate.
      * 
     */
-    public CertificateDetailsResponse getRoot() {
+    public CertificateDetailsResponse root() {
         return this.root;
     }
     /**
      * Current serial number of the certificate.
      * 
     */
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
     /**
      * Signed certificate.
      * 
     */
-    public CertificateDetailsResponse getSignedCertificate() {
+    public CertificateDetailsResponse signedCertificate() {
         return this.signedCertificate;
     }
     /**
      * Current order status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Duration in years (must be between 1 and 3).
      * 
     */
-    public Optional<Integer> getValidityInYears() {
+    public Optional<Integer> validityInYears() {
         return Optional.ofNullable(this.validityInYears);
     }
 

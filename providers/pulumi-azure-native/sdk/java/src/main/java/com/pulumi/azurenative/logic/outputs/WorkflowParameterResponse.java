@@ -49,28 +49,28 @@ public final class WorkflowParameterResponse {
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The metadata.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The value.
      * 
     */
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
 

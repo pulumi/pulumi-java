@@ -29,7 +29,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="dependsOn")
       private final @Nullable List<DependsOnDefinitionResponse> dependsOn;
 
-    public List<DependsOnDefinitionResponse> getDependsOn() {
+    public List<DependsOnDefinitionResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -40,7 +40,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="force")
       private final @Nullable Boolean force;
 
-    public Optional<Boolean> getForce() {
+    public Optional<Boolean> force() {
         return this.force == null ? Optional.empty() : Optional.ofNullable(this.force);
     }
 
@@ -51,7 +51,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -62,7 +62,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="prune")
       private final @Nullable Boolean prune;
 
-    public Optional<Boolean> getPrune() {
+    public Optional<Boolean> prune() {
         return this.prune == null ? Optional.empty() : Optional.ofNullable(this.prune);
     }
 
@@ -73,7 +73,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="retryIntervalInSeconds")
       private final @Nullable Double retryIntervalInSeconds;
 
-    public Optional<Double> getRetryIntervalInSeconds() {
+    public Optional<Double> retryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalInSeconds);
     }
 
@@ -84,7 +84,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="syncIntervalInSeconds")
       private final @Nullable Double syncIntervalInSeconds;
 
-    public Optional<Double> getSyncIntervalInSeconds() {
+    public Optional<Double> syncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.syncIntervalInSeconds);
     }
 
@@ -95,7 +95,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="timeoutInSeconds")
       private final @Nullable Double timeoutInSeconds;
 
-    public Optional<Double> getTimeoutInSeconds() {
+    public Optional<Double> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
     }
 
@@ -106,7 +106,7 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
     @Import(name="validation")
       private final @Nullable String validation;
 
-    public Optional<String> getValidation() {
+    public Optional<String> validation() {
         return this.validation == null ? Optional.empty() : Optional.ofNullable(this.validation);
     }
 

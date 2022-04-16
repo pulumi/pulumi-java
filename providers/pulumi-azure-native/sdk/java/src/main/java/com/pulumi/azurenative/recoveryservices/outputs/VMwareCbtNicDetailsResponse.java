@@ -83,63 +83,63 @@ public final class VMwareCbtNicDetailsResponse {
      * A value indicating whether this is the primary NIC.
      * 
     */
-    public Optional<String> getIsPrimaryNic() {
+    public Optional<String> isPrimaryNic() {
         return Optional.ofNullable(this.isPrimaryNic);
     }
     /**
      * A value indicating whether this NIC is selected for migration.
      * 
     */
-    public Optional<String> getIsSelectedForMigration() {
+    public Optional<String> isSelectedForMigration() {
         return Optional.ofNullable(this.isSelectedForMigration);
     }
     /**
      * The NIC Id.
      * 
     */
-    public String getNicId() {
+    public String nicId() {
         return this.nicId;
     }
     /**
      * The source IP address.
      * 
     */
-    public String getSourceIPAddress() {
+    public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
     /**
      * The source IP address type.
      * 
     */
-    public String getSourceIPAddressType() {
+    public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
     /**
      * Source network Id.
      * 
     */
-    public String getSourceNetworkId() {
+    public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
     /**
      * The target IP address.
      * 
     */
-    public Optional<String> getTargetIPAddress() {
+    public Optional<String> targetIPAddress() {
         return Optional.ofNullable(this.targetIPAddress);
     }
     /**
      * The target IP address type.
      * 
     */
-    public Optional<String> getTargetIPAddressType() {
+    public Optional<String> targetIPAddressType() {
         return Optional.ofNullable(this.targetIPAddressType);
     }
     /**
      * Target subnet name.
      * 
     */
-    public Optional<String> getTargetSubnetName() {
+    public Optional<String> targetSubnetName() {
         return Optional.ofNullable(this.targetSubnetName);
     }
 

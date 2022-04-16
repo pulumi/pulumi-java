@@ -42,21 +42,21 @@ public final class IoTEdgeAgentInfoResponse {
      * Name of the IoT edge agent image.
      * 
     */
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
     /**
      * Image repository details.
      * 
     */
-    public Optional<ImageRepositoryCredentialResponse> getImageRepository() {
+    public Optional<ImageRepositoryCredentialResponse> imageRepository() {
         return Optional.ofNullable(this.imageRepository);
     }
     /**
      * Image Tag.
      * 
     */
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 

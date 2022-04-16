@@ -26,7 +26,7 @@ public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resource
     @Import(name="accountUrl")
       private final @Nullable Output<String> accountUrl;
 
-    public Output<String> getAccountUrl() {
+    public Output<String> accountUrl() {
         return this.accountUrl == null ? Codegen.empty() : this.accountUrl;
     }
 
@@ -37,7 +37,7 @@ public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resource
     @Import(name="filesystem")
       private final @Nullable Output<String> filesystem;
 
-    public Output<String> getFilesystem() {
+    public Output<String> filesystem() {
         return this.filesystem == null ? Codegen.empty() : this.filesystem;
     }
 

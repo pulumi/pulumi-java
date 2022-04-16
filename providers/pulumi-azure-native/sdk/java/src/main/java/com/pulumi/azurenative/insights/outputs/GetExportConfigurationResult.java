@@ -153,133 +153,133 @@ public final class GetExportConfigurationResult {
      * The name of the Application Insights component.
      * 
     */
-    public String getApplicationName() {
+    public String applicationName() {
         return this.applicationName;
     }
     /**
      * The name of the destination storage container.
      * 
     */
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
     /**
      * The name of destination account.
      * 
     */
-    public String getDestinationAccountId() {
+    public String destinationAccountId() {
         return this.destinationAccountId;
     }
     /**
      * The destination account location ID.
      * 
     */
-    public String getDestinationStorageLocationId() {
+    public String destinationStorageLocationId() {
         return this.destinationStorageLocationId;
     }
     /**
      * The destination storage account subscription ID.
      * 
     */
-    public String getDestinationStorageSubscriptionId() {
+    public String destinationStorageSubscriptionId() {
         return this.destinationStorageSubscriptionId;
     }
     /**
      * The destination type.
      * 
     */
-    public String getDestinationType() {
+    public String destinationType() {
         return this.destinationType;
     }
     /**
      * The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
      * 
     */
-    public String getExportId() {
+    public String exportId() {
         return this.exportId;
     }
     /**
      * This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
      * 
     */
-    public String getExportStatus() {
+    public String exportStatus() {
         return this.exportStatus;
     }
     /**
      * The instrumentation key of the Application Insights component.
      * 
     */
-    public String getInstrumentationKey() {
+    public String instrumentationKey() {
         return this.instrumentationKey;
     }
     /**
      * This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
      * 
     */
-    public String getIsUserEnabled() {
+    public String isUserEnabled() {
         return this.isUserEnabled;
     }
     /**
      * The last time the Continuous Export configuration started failing.
      * 
     */
-    public String getLastGapTime() {
+    public String lastGapTime() {
         return this.lastGapTime;
     }
     /**
      * The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
      * 
     */
-    public String getLastSuccessTime() {
+    public String lastSuccessTime() {
         return this.lastSuccessTime;
     }
     /**
      * Last time the Continuous Export configuration was updated.
      * 
     */
-    public String getLastUserUpdate() {
+    public String lastUserUpdate() {
         return this.lastUserUpdate;
     }
     /**
      * Deprecated
      * 
     */
-    public Optional<String> getNotificationQueueEnabled() {
+    public Optional<String> notificationQueueEnabled() {
         return Optional.ofNullable(this.notificationQueueEnabled);
     }
     /**
      * This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
      * 
     */
-    public String getPermanentErrorReason() {
+    public String permanentErrorReason() {
         return this.permanentErrorReason;
     }
     /**
      * This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
      * 
     */
-    public Optional<String> getRecordTypes() {
+    public Optional<String> recordTypes() {
         return Optional.ofNullable(this.recordTypes);
     }
     /**
      * The resource group of the Application Insights component.
      * 
     */
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
      * The name of the destination storage account.
      * 
     */
-    public String getStorageName() {
+    public String storageName() {
         return this.storageName;
     }
     /**
      * The subscription of the Application Insights component.
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 

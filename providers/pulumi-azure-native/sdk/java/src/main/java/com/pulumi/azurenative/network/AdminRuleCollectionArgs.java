@@ -24,7 +24,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="appliesToGroups")
       private final @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
 
-    public Output<List<NetworkManagerSecurityGroupItemArgs>> getAppliesToGroups() {
+    public Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups() {
         return this.appliesToGroups == null ? Codegen.empty() : this.appliesToGroups;
     }
 
@@ -35,7 +35,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName;
     }
 
@@ -46,7 +46,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -68,7 +68,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -79,7 +79,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
     @Import(name="ruleCollectionName")
       private final @Nullable Output<String> ruleCollectionName;
 
-    public Output<String> getRuleCollectionName() {
+    public Output<String> ruleCollectionName() {
         return this.ruleCollectionName == null ? Codegen.empty() : this.ruleCollectionName;
     }
 

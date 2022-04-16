@@ -27,7 +27,7 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -38,7 +38,7 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<ConnectionStringType> type;
 
-    public Output<ConnectionStringType> getType() {
+    public Output<ConnectionStringType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ApplicationGatewayBackendAddressArgs extends com.pulumi.resou
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewayBackendAddressArgs extends com.pulumi.resou
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 

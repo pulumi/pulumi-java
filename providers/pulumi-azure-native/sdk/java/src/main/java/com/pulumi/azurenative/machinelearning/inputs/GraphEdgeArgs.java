@@ -26,7 +26,7 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceNodeId")
       private final @Nullable Output<String> sourceNodeId;
 
-    public Output<String> getSourceNodeId() {
+    public Output<String> sourceNodeId() {
         return this.sourceNodeId == null ? Codegen.empty() : this.sourceNodeId;
     }
 
@@ -37,7 +37,7 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourcePortId")
       private final @Nullable Output<String> sourcePortId;
 
-    public Output<String> getSourcePortId() {
+    public Output<String> sourcePortId() {
         return this.sourcePortId == null ? Codegen.empty() : this.sourcePortId;
     }
 
@@ -48,7 +48,7 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetNodeId")
       private final @Nullable Output<String> targetNodeId;
 
-    public Output<String> getTargetNodeId() {
+    public Output<String> targetNodeId() {
         return this.targetNodeId == null ? Codegen.empty() : this.targetNodeId;
     }
 
@@ -59,7 +59,7 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetPortId")
       private final @Nullable Output<String> targetPortId;
 
-    public Output<String> getTargetPortId() {
+    public Output<String> targetPortId() {
         return this.targetPortId == null ? Codegen.empty() : this.targetPortId;
     }
 

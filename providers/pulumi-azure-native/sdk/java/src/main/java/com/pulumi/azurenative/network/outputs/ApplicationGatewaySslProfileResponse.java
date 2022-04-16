@@ -80,56 +80,56 @@ public final class ApplicationGatewaySslProfileResponse {
      * Client authentication configuration of the application gateway resource.
      * 
     */
-    public Optional<ApplicationGatewayClientAuthConfigurationResponse> getClientAuthConfiguration() {
+    public Optional<ApplicationGatewayClientAuthConfigurationResponse> clientAuthConfiguration() {
         return Optional.ofNullable(this.clientAuthConfiguration);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the SSL profile that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the HTTP listener resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * SSL policy of the application gateway resource.
      * 
     */
-    public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
+    public Optional<ApplicationGatewaySslPolicyResponse> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
     /**
      * Array of references to application gateway trusted client certificates.
      * 
     */
-    public List<SubResourceResponse> getTrustedClientCertificates() {
+    public List<SubResourceResponse> trustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

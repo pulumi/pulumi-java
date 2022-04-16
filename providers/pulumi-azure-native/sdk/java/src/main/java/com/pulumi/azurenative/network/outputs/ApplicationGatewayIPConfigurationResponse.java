@@ -63,42 +63,42 @@ public final class ApplicationGatewayIPConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the IP configuration that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the application gateway IP configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the subnet resource. A subnet from where application gateway gets its private address.
      * 
     */
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

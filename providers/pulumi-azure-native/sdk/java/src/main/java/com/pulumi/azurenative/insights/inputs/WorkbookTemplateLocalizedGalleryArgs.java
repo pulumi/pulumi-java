@@ -28,7 +28,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resou
     @Import(name="galleries")
       private final @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
-    public Output<List<WorkbookTemplateGalleryArgs>> getGalleries() {
+    public Output<List<WorkbookTemplateGalleryArgs>> galleries() {
         return this.galleries == null ? Codegen.empty() : this.galleries;
     }
 
@@ -39,7 +39,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resou
     @Import(name="templateData")
       private final @Nullable Output<Object> templateData;
 
-    public Output<Object> getTemplateData() {
+    public Output<Object> templateData() {
         return this.templateData == null ? Codegen.empty() : this.templateData;
     }
 

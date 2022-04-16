@@ -100,77 +100,77 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
      * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
      * 
     */
-    public List<String> getAttachedDatabaseNames() {
+    public List<String> attachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
     /**
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * The default principals modification kind
      * 
     */
-    public String getDefaultPrincipalsModificationKind() {
+    public String defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource id of the kusto pool where the databases you would like to attach reside.
      * 
     */
-    public String getKustoPoolResourceId() {
+    public String kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Table level sharing specifications
      * 
     */
-    public Optional<TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
+    public Optional<TableLevelSharingPropertiesResponse> tableLevelSharingProperties() {
         return Optional.ofNullable(this.tableLevelSharingProperties);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

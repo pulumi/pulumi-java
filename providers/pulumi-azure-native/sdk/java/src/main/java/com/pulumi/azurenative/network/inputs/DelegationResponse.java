@@ -26,7 +26,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actions", required=true)
       private final List<String> actions;
 
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions;
     }
 
@@ -37,7 +37,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -48,7 +48,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -59,7 +59,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -70,7 +70,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName")
       private final @Nullable String serviceName;
 
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
     }
 
@@ -92,7 +92,7 @@ public final class DelegationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

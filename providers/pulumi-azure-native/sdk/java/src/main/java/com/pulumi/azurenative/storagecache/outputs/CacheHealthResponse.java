@@ -43,21 +43,21 @@ public final class CacheHealthResponse {
      * Outstanding conditions that need to be investigated and resolved.
      * 
     */
-    public List<ConditionResponse> getConditions() {
+    public List<ConditionResponse> conditions() {
         return this.conditions;
     }
     /**
      * List of Cache health states.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Describes explanation of state.
      * 
     */
-    public Optional<String> getStatusDescription() {
+    public Optional<String> statusDescription() {
         return Optional.ofNullable(this.statusDescription);
     }
 

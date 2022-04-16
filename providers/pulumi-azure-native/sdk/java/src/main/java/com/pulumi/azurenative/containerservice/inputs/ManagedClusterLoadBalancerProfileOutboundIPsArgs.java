@@ -27,7 +27,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends com.
     @Import(name="publicIPs")
       private final @Nullable Output<List<ResourceReferenceArgs>> publicIPs;
 
-    public Output<List<ResourceReferenceArgs>> getPublicIPs() {
+    public Output<List<ResourceReferenceArgs>> publicIPs() {
         return this.publicIPs == null ? Codegen.empty() : this.publicIPs;
     }
 

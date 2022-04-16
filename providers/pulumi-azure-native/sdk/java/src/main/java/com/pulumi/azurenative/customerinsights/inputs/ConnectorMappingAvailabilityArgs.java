@@ -27,7 +27,7 @@ public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources
     @Import(name="frequency")
       private final @Nullable Output<FrequencyTypes> frequency;
 
-    public Output<FrequencyTypes> getFrequency() {
+    public Output<FrequencyTypes> frequency() {
         return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 

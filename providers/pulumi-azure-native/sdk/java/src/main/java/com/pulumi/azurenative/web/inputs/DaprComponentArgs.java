@@ -28,7 +28,7 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<List<DaprMetadataArgs>> metadata;
 
-    public Output<List<DaprMetadataArgs>> getMetadata() {
+    public Output<List<DaprMetadataArgs>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -39,7 +39,7 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -61,7 +61,7 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

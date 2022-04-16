@@ -32,14 +32,14 @@ public final class ReportConfigGroupingResponse {
      * The name of the column to group. This version supports subscription lowest possible grain.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Has type of the column to group.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

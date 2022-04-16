@@ -49,28 +49,28 @@ public final class ApplicationGatewayBackendHealthServerResponse {
      * IP address or FQDN of backend server.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Health of backend server.
      * 
     */
-    public Optional<String> getHealth() {
+    public Optional<String> health() {
         return Optional.ofNullable(this.health);
     }
     /**
      * Health Probe Log.
      * 
     */
-    public Optional<String> getHealthProbeLog() {
+    public Optional<String> healthProbeLog() {
         return Optional.ofNullable(this.healthProbeLog);
     }
     /**
      * Reference to IP configuration of backend server.
      * 
     */
-    public Optional<NetworkInterfaceIPConfigurationResponse> getIpConfiguration() {
+    public Optional<NetworkInterfaceIPConfigurationResponse> ipConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);
     }
 

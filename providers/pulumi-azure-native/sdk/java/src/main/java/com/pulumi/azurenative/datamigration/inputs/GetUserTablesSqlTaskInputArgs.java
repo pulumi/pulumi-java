@@ -27,7 +27,7 @@ public final class GetUserTablesSqlTaskInputArgs extends com.pulumi.resources.Re
     @Import(name="connectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> connectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> connectionInfo() {
         return this.connectionInfo;
     }
 
@@ -38,7 +38,7 @@ public final class GetUserTablesSqlTaskInputArgs extends com.pulumi.resources.Re
     @Import(name="selectedDatabases", required=true)
       private final Output<List<String>> selectedDatabases;
 
-    public Output<List<String>> getSelectedDatabases() {
+    public Output<List<String>> selectedDatabases() {
         return this.selectedDatabases;
     }
 

@@ -27,7 +27,7 @@ public final class DeliveryRuleCacheExpirationActionArgs extends com.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleCacheExpirationActionArgs extends com.pulumi.reso
     @Import(name="parameters", required=true)
       private final Output<CacheExpirationActionParametersArgs> parameters;
 
-    public Output<CacheExpirationActionParametersArgs> getParameters() {
+    public Output<CacheExpirationActionParametersArgs> parameters() {
         return this.parameters;
     }
 

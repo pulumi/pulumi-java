@@ -26,7 +26,7 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="clientApplication")
       private final @Nullable Output<String> clientApplication;
 
-    public Output<String> getClientApplication() {
+    public Output<String> clientApplication() {
         return this.clientApplication == null ? Codegen.empty() : this.clientApplication;
     }
 
@@ -37,7 +37,7 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="clusterApplication")
       private final @Nullable Output<String> clusterApplication;
 
-    public Output<String> getClusterApplication() {
+    public Output<String> clusterApplication() {
         return this.clusterApplication == null ? Codegen.empty() : this.clusterApplication;
     }
 
@@ -48,7 +48,7 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

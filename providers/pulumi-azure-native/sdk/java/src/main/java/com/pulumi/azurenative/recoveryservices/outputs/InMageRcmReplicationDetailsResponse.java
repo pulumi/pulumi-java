@@ -342,70 +342,70 @@ public final class InMageRcmReplicationDetailsResponse {
      * The agent upgrade blocking error information.
      * 
     */
-    public List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> getAgentUpgradeBlockingErrorDetails() {
+    public List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails() {
         return this.agentUpgradeBlockingErrorDetails;
     }
     /**
      * The agent auto upgrade state.
      * 
     */
-    public String getAgentUpgradeState() {
+    public String agentUpgradeState() {
         return this.agentUpgradeState;
     }
     /**
      * The allocated memory in MB.
      * 
     */
-    public Double getAllocatedMemoryInMB() {
+    public Double allocatedMemoryInMB() {
         return this.allocatedMemoryInMB;
     }
     /**
      * The type of the discovered VM.
      * 
     */
-    public String getDiscoveryType() {
+    public String discoveryType() {
         return this.discoveryType;
     }
     /**
      * The ARM Id of the discovered VM.
      * 
     */
-    public String getFabricDiscoveryMachineId() {
+    public String fabricDiscoveryMachineId() {
         return this.fabricDiscoveryMachineId;
     }
     /**
      * The recovery point Id to which the VM was failed over.
      * 
     */
-    public String getFailoverRecoveryPointId() {
+    public String failoverRecoveryPointId() {
         return this.failoverRecoveryPointId;
     }
     /**
      * The firmware type.
      * 
     */
-    public String getFirmwareType() {
+    public String firmwareType() {
         return this.firmwareType;
     }
     /**
      * The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
      * 
     */
-    public Double getInitialReplicationProcessedBytes() {
+    public Double initialReplicationProcessedBytes() {
         return this.initialReplicationProcessedBytes;
     }
     /**
      * The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
      * 
     */
-    public Integer getInitialReplicationProgressPercentage() {
+    public Integer initialReplicationProgressPercentage() {
         return this.initialReplicationProgressPercentage;
     }
     /**
      * The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
      * 
     */
-    public Double getInitialReplicationTransferredBytes() {
+    public Double initialReplicationTransferredBytes() {
         return this.initialReplicationTransferredBytes;
     }
     /**
@@ -413,245 +413,245 @@ public final class InMageRcmReplicationDetailsResponse {
      * Expected value is 'InMageRcm'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The virtual machine internal identifier.
      * 
     */
-    public String getInternalIdentifier() {
+    public String internalIdentifier() {
         return this.internalIdentifier;
     }
     /**
      * A value indicating whether last agent upgrade was successful or not.
      * 
     */
-    public String getIsLastUpgradeSuccessful() {
+    public String isLastUpgradeSuccessful() {
         return this.isLastUpgradeSuccessful;
     }
     /**
      * The last agent upgrade error information.
      * 
     */
-    public List<InMageRcmLastAgentUpgradeErrorDetailsResponse> getLastAgentUpgradeErrorDetails() {
+    public List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails() {
         return this.lastAgentUpgradeErrorDetails;
     }
     /**
      * The last agent upgrade failed or cancelled job Id.
      * 
     */
-    public String getLastAgentUpgradeFailedJobId() {
+    public String lastAgentUpgradeFailedJobId() {
         return this.lastAgentUpgradeFailedJobId;
     }
     /**
      * The last agent upgrade type.
      * 
     */
-    public String getLastAgentUpgradeType() {
+    public String lastAgentUpgradeType() {
         return this.lastAgentUpgradeType;
     }
     /**
      * The last recovery point Id.
      * 
     */
-    public String getLastRecoveryPointId() {
+    public String lastRecoveryPointId() {
         return this.lastRecoveryPointId;
     }
     /**
      * The last recovery point received time.
      * 
     */
-    public String getLastRecoveryPointReceived() {
+    public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
     }
     /**
      * The last recovery point objective calculated time.
      * 
     */
-    public String getLastRpoCalculatedTime() {
+    public String lastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime;
     }
     /**
      * The last recovery point objective value.
      * 
     */
-    public Double getLastRpoInSeconds() {
+    public Double lastRpoInSeconds() {
         return this.lastRpoInSeconds;
     }
     /**
      * License Type of the VM to be used.
      * 
     */
-    public String getLicenseType() {
+    public String licenseType() {
         return this.licenseType;
     }
     /**
      * The mobility agent information.
      * 
     */
-    public InMageRcmMobilityAgentDetailsResponse getMobilityAgentDetails() {
+    public InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails() {
         return this.mobilityAgentDetails;
     }
     /**
      * The multi VM group name.
      * 
     */
-    public String getMultiVmGroupName() {
+    public String multiVmGroupName() {
         return this.multiVmGroupName;
     }
     /**
      * The type of the OS on the VM.
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * The process server Id.
      * 
     */
-    public String getProcessServerId() {
+    public String processServerId() {
         return this.processServerId;
     }
     /**
      * The process server name.
      * 
     */
-    public String getProcessServerName() {
+    public String processServerName() {
         return this.processServerName;
     }
     /**
      * The processor core count.
      * 
     */
-    public Integer getProcessorCoreCount() {
+    public Integer processorCoreCount() {
         return this.processorCoreCount;
     }
     /**
      * The list of protected disks.
      * 
     */
-    public List<InMageRcmProtectedDiskDetailsResponse> getProtectedDisks() {
+    public List<InMageRcmProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks;
     }
     /**
      * The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
      * 
     */
-    public Double getResyncProcessedBytes() {
+    public Double resyncProcessedBytes() {
         return this.resyncProcessedBytes;
     }
     /**
      * The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
      * 
     */
-    public Integer getResyncProgressPercentage() {
+    public Integer resyncProgressPercentage() {
         return this.resyncProgressPercentage;
     }
     /**
      * A value indicating whether resync is required.
      * 
     */
-    public String getResyncRequired() {
+    public String resyncRequired() {
         return this.resyncRequired;
     }
     /**
      * The resync state.
      * 
     */
-    public String getResyncState() {
+    public String resyncState() {
         return this.resyncState;
     }
     /**
      * The resync transferred bytes from source VM to azure for all selected disks on source VM.
      * 
     */
-    public Double getResyncTransferredBytes() {
+    public Double resyncTransferredBytes() {
         return this.resyncTransferredBytes;
     }
     /**
      * The run-as account Id.
      * 
     */
-    public String getRunAsAccountId() {
+    public String runAsAccountId() {
         return this.runAsAccountId;
     }
     /**
      * The target availability set Id.
      * 
     */
-    public String getTargetAvailabilitySetId() {
+    public String targetAvailabilitySetId() {
         return this.targetAvailabilitySetId;
     }
     /**
      * The target availability zone.
      * 
     */
-    public String getTargetAvailabilityZone() {
+    public String targetAvailabilityZone() {
         return this.targetAvailabilityZone;
     }
     /**
      * The target boot diagnostics storage account ARM Id.
      * 
     */
-    public String getTargetBootDiagnosticsStorageAccountId() {
+    public String targetBootDiagnosticsStorageAccountId() {
         return this.targetBootDiagnosticsStorageAccountId;
     }
     /**
      * The target generation.
      * 
     */
-    public String getTargetGeneration() {
+    public String targetGeneration() {
         return this.targetGeneration;
     }
     /**
      * The target network Id.
      * 
     */
-    public String getTargetNetworkId() {
+    public String targetNetworkId() {
         return this.targetNetworkId;
     }
     /**
      * The target proximity placement group Id.
      * 
     */
-    public String getTargetProximityPlacementGroupId() {
+    public String targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId;
     }
     /**
      * The target resource group Id.
      * 
     */
-    public String getTargetResourceGroupId() {
+    public String targetResourceGroupId() {
         return this.targetResourceGroupId;
     }
     /**
      * Target VM name.
      * 
     */
-    public String getTargetVmName() {
+    public String targetVmName() {
         return this.targetVmName;
     }
     /**
      * The target VM size.
      * 
     */
-    public String getTargetVmSize() {
+    public String targetVmSize() {
         return this.targetVmSize;
     }
     /**
      * The test network Id.
      * 
     */
-    public String getTestNetworkId() {
+    public String testNetworkId() {
         return this.testNetworkId;
     }
     /**
      * The network details.
      * 
     */
-    public List<InMageRcmNicDetailsResponse> getVmNics() {
+    public List<InMageRcmNicDetailsResponse> vmNics() {
         return this.vmNics;
     }
 

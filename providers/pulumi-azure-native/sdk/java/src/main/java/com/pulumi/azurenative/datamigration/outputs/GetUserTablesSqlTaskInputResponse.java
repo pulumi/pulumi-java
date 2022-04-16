@@ -34,14 +34,14 @@ public final class GetUserTablesSqlTaskInputResponse {
      * Connection information for SQL Server
      * 
     */
-    public SqlConnectionInfoResponse getConnectionInfo() {
+    public SqlConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
     }
     /**
      * List of database names to collect tables for
      * 
     */
-    public List<String> getSelectedDatabases() {
+    public List<String> selectedDatabases() {
         return this.selectedDatabases;
     }
 

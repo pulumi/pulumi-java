@@ -25,7 +25,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -36,7 +36,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="connectionString")
       private final @Nullable String connectionString;
 
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -47,7 +47,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="endpointUri")
       private final @Nullable String endpointUri;
 
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
@@ -58,7 +58,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="entityPath")
       private final @Nullable String entityPath;
 
-    public Optional<String> getEntityPath() {
+    public Optional<String> entityPath() {
         return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
     }
 
@@ -69,7 +69,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -80,7 +80,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -91,7 +91,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
@@ -102,7 +102,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 

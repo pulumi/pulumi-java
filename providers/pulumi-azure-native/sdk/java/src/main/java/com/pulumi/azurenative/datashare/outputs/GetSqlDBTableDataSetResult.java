@@ -90,21 +90,21 @@ public final class GetSqlDBTableDataSetResult {
      * Unique id for identifying a data set resource
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * Database name of the source data set
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -112,49 +112,49 @@ public final class GetSqlDBTableDataSetResult {
      * Expected value is 'SqlDBTable'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Schema of the table. Default value is dbo.
      * 
     */
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
     /**
      * Resource id of SQL server
      * 
     */
-    public String getSqlServerResourceId() {
+    public String sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * SQL DB table name.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

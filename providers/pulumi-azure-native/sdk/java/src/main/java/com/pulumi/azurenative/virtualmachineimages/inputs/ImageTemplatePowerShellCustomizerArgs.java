@@ -29,7 +29,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="inline")
       private final @Nullable Output<List<String>> inline;
 
-    public Output<List<String>> getInline() {
+    public Output<List<String>> inline() {
         return this.inline == null ? Codegen.empty() : this.inline;
     }
 
@@ -40,7 +40,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="runAsSystem")
       private final @Nullable Output<Boolean> runAsSystem;
 
-    public Output<Boolean> getRunAsSystem() {
+    public Output<Boolean> runAsSystem() {
         return this.runAsSystem == null ? Codegen.empty() : this.runAsSystem;
     }
 
@@ -62,7 +62,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="runElevated")
       private final @Nullable Output<Boolean> runElevated;
 
-    public Output<Boolean> getRunElevated() {
+    public Output<Boolean> runElevated() {
         return this.runElevated == null ? Codegen.empty() : this.runElevated;
     }
 
@@ -73,7 +73,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
 
-    public Output<String> getScriptUri() {
+    public Output<String> scriptUri() {
         return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
     }
 
@@ -84,7 +84,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
-    public Output<String> getSha256Checksum() {
+    public Output<String> sha256Checksum() {
         return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
@@ -96,7 +96,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -107,7 +107,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends com.pulumi.reso
     @Import(name="validExitCodes")
       private final @Nullable Output<List<Integer>> validExitCodes;
 
-    public Output<List<Integer>> getValidExitCodes() {
+    public Output<List<Integer>> validExitCodes() {
         return this.validExitCodes == null ? Codegen.empty() : this.validExitCodes;
     }
 

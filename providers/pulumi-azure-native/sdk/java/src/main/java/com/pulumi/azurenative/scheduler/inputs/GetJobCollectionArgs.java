@@ -19,7 +19,7 @@ public final class GetJobCollectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="jobCollectionName", required=true)
       private final String jobCollectionName;
 
-    public String getJobCollectionName() {
+    public String jobCollectionName() {
         return this.jobCollectionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetJobCollectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

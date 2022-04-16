@@ -26,7 +26,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="assignPermissions")
       private final @Nullable Boolean assignPermissions;
 
-    public Optional<Boolean> getAssignPermissions() {
+    public Optional<Boolean> assignPermissions() {
         return this.assignPermissions == null ? Optional.empty() : Optional.ofNullable(this.assignPermissions);
     }
 
@@ -37,7 +37,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -48,7 +48,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -59,7 +59,7 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="strongType")
       private final @Nullable String strongType;
 
-    public Optional<String> getStrongType() {
+    public Optional<String> strongType() {
         return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
     }
 

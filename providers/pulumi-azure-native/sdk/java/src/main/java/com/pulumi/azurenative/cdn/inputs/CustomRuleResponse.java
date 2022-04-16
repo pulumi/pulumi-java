@@ -28,7 +28,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -39,7 +39,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabledState")
       private final @Nullable String enabledState;
 
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
@@ -50,7 +50,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="matchConditions", required=true)
       private final List<MatchConditionResponse> matchConditions;
 
-    public List<MatchConditionResponse> getMatchConditions() {
+    public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
 
@@ -61,7 +61,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 

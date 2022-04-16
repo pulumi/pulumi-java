@@ -26,7 +26,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
 
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
@@ -37,7 +37,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
-    public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
+    public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 

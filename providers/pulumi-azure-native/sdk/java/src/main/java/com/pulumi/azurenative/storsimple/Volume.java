@@ -43,7 +43,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The IDs of the access control records, associated with the volume.
      * 
      */
-    public Output<List<String>> getAccessControlRecordIds() {
+    public Output<List<String>> accessControlRecordIds() {
         return this.accessControlRecordIds;
     }
     /**
@@ -57,7 +57,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The IDs of the backup policies, in which this volume is part of.
      * 
      */
-    public Output<List<String>> getBackupPolicyIds() {
+    public Output<List<String>> backupPolicyIds() {
         return this.backupPolicyIds;
     }
     /**
@@ -71,7 +71,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The backup status of the volume.
      * 
      */
-    public Output<String> getBackupStatus() {
+    public Output<String> backupStatus() {
         return this.backupStatus;
     }
     /**
@@ -85,7 +85,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -99,7 +99,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The monitoring status of the volume.
      * 
      */
-    public Output<String> getMonitoringStatus() {
+    public Output<String> monitoringStatus() {
         return this.monitoringStatus;
     }
     /**
@@ -113,7 +113,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The operation status on the volume.
      * 
      */
-    public Output<String> getOperationStatus() {
+    public Output<String> operationStatus() {
         return this.operationStatus;
     }
     /**
@@ -141,7 +141,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The size of the volume in bytes.
      * 
      */
-    public Output<Double> getSizeInBytes() {
+    public Output<Double> sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
@@ -155,7 +155,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -169,7 +169,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The ID of the volume container, in which this volume is created.
      * 
      */
-    public Output<String> getVolumeContainerId() {
+    public Output<String> volumeContainerId() {
         return this.volumeContainerId;
     }
     /**
@@ -183,7 +183,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The volume status.
      * 
      */
-    public Output<String> getVolumeStatus() {
+    public Output<String> volumeStatus() {
         return this.volumeStatus;
     }
     /**
@@ -197,7 +197,7 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The type of the volume.
      * 
      */
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType;
     }
 

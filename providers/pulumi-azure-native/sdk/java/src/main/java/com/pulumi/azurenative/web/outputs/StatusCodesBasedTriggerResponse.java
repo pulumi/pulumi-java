@@ -63,42 +63,42 @@ public final class StatusCodesBasedTriggerResponse {
      * Request Count.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Request Path
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * HTTP status code.
      * 
     */
-    public Optional<Integer> getStatus() {
+    public Optional<Integer> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Request Sub Status.
      * 
     */
-    public Optional<Integer> getSubStatus() {
+    public Optional<Integer> subStatus() {
         return Optional.ofNullable(this.subStatus);
     }
     /**
      * Time interval.
      * 
     */
-    public Optional<String> getTimeInterval() {
+    public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
     /**
      * Win32 error code.
      * 
     */
-    public Optional<Integer> getWin32Status() {
+    public Optional<Integer> win32Status() {
         return Optional.ofNullable(this.win32Status);
     }
 

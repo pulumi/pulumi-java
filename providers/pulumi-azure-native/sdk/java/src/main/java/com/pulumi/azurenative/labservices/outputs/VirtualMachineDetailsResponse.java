@@ -60,42 +60,42 @@ public final class VirtualMachineDetailsResponse {
      * Last known compute power state captured in DTL
      * 
     */
-    public String getLastKnownPowerState() {
+    public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
      * PrivateIp address of the compute VM
      * 
     */
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Provisioning state of the Dtl VM
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Connection information for Windows
      * 
     */
-    public String getRdpAuthority() {
+    public String rdpAuthority() {
         return this.rdpAuthority;
     }
     /**
      * Connection information for Linux
      * 
     */
-    public String getSshAuthority() {
+    public String sshAuthority() {
         return this.sshAuthority;
     }
     /**
      * Compute VM login user name
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

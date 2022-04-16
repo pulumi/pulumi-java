@@ -28,7 +28,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionHostName")
       private final @Nullable Output<String> actionHostName;
 
-    public Output<String> getActionHostName() {
+    public Output<String> actionHostName() {
         return this.actionHostName == null ? Codegen.empty() : this.actionHostName;
     }
 
@@ -40,7 +40,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="changeDecisionCallbackUrl")
       private final @Nullable Output<String> changeDecisionCallbackUrl;
 
-    public Output<String> getChangeDecisionCallbackUrl() {
+    public Output<String> changeDecisionCallbackUrl() {
         return this.changeDecisionCallbackUrl == null ? Codegen.empty() : this.changeDecisionCallbackUrl;
     }
 
@@ -51,7 +51,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="changeIntervalInMinutes")
       private final @Nullable Output<Integer> changeIntervalInMinutes;
 
-    public Output<Integer> getChangeIntervalInMinutes() {
+    public Output<Integer> changeIntervalInMinutes() {
         return this.changeIntervalInMinutes == null ? Codegen.empty() : this.changeIntervalInMinutes;
     }
 
@@ -64,7 +64,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="changeStep")
       private final @Nullable Output<Double> changeStep;
 
-    public Output<Double> getChangeStep() {
+    public Output<Double> changeStep() {
         return this.changeStep == null ? Codegen.empty() : this.changeStep;
     }
 
@@ -75,7 +75,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxReroutePercentage")
       private final @Nullable Output<Double> maxReroutePercentage;
 
-    public Output<Double> getMaxReroutePercentage() {
+    public Output<Double> maxReroutePercentage() {
         return this.maxReroutePercentage == null ? Codegen.empty() : this.maxReroutePercentage;
     }
 
@@ -86,7 +86,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minReroutePercentage")
       private final @Nullable Output<Double> minReroutePercentage;
 
-    public Output<Double> getMinReroutePercentage() {
+    public Output<Double> minReroutePercentage() {
         return this.minReroutePercentage == null ? Codegen.empty() : this.minReroutePercentage;
     }
 
@@ -97,7 +97,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -108,7 +108,7 @@ public final class RampUpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reroutePercentage")
       private final @Nullable Output<Double> reroutePercentage;
 
-    public Output<Double> getReroutePercentage() {
+    public Output<Double> reroutePercentage() {
         return this.reroutePercentage == null ? Codegen.empty() : this.reroutePercentage;
     }
 

@@ -29,7 +29,7 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
 
-    public Output<LoginScopesArgs> getLogin() {
+    public Output<LoginScopesArgs> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registration")
       private final @Nullable Output<ClientRegistrationArgs> registration;
 
-    public Output<ClientRegistrationArgs> getRegistration() {
+    public Output<ClientRegistrationArgs> registration() {
         return this.registration == null ? Codegen.empty() : this.registration;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validation")
       private final @Nullable Output<AllowedAudiencesValidationArgs> validation;
 
-    public Output<AllowedAudiencesValidationArgs> getValidation() {
+    public Output<AllowedAudiencesValidationArgs> validation() {
         return this.validation == null ? Codegen.empty() : this.validation;
     }
 

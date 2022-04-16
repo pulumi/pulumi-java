@@ -26,7 +26,7 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="increasingKpi", required=true)
       private final Output<Boolean> increasingKpi;
 
-    public Output<Boolean> getIncreasingKpi() {
+    public Output<Boolean> increasingKpi() {
         return this.increasingKpi;
     }
 
@@ -37,7 +37,7 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lowerLimit", required=true)
       private final Output<Double> lowerLimit;
 
-    public Output<Double> getLowerLimit() {
+    public Output<Double> lowerLimit() {
         return this.lowerLimit;
     }
 
@@ -48,7 +48,7 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upperLimit", required=true)
       private final Output<Double> upperLimit;
 
-    public Output<Double> getUpperLimit() {
+    public Output<Double> upperLimit() {
         return this.upperLimit;
     }
 

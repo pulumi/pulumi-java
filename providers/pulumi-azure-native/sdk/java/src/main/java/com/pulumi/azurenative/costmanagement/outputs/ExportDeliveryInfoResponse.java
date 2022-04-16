@@ -24,7 +24,7 @@ public final class ExportDeliveryInfoResponse {
      * Has destination for the export being delivered.
      * 
     */
-    public ExportDeliveryDestinationResponse getDestination() {
+    public ExportDeliveryDestinationResponse destination() {
         return this.destination;
     }
 

@@ -28,7 +28,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDnsServers")
       private final @Nullable Output<List<String>> customDnsServers;
 
-    public Output<List<String>> getCustomDnsServers() {
+    public Output<List<String>> customDnsServers() {
         return this.customDnsServers == null ? Codegen.empty() : this.customDnsServers;
     }
 
@@ -39,7 +39,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
@@ -50,7 +50,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -61,7 +61,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isRoutingPreferenceInternet")
       private final @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
-    public Output<Boolean> getIsRoutingPreferenceInternet() {
+    public Output<Boolean> isRoutingPreferenceInternet() {
         return this.isRoutingPreferenceInternet == null ? Codegen.empty() : this.isRoutingPreferenceInternet;
     }
 
@@ -72,7 +72,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -83,7 +83,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="p2SConnectionConfigurations")
       private final @Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
 
-    public Output<List<P2SConnectionConfigurationArgs>> getP2SConnectionConfigurations() {
+    public Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations() {
         return this.p2SConnectionConfigurations == null ? Codegen.empty() : this.p2SConnectionConfigurations;
     }
 
@@ -94,7 +94,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -116,7 +116,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> getVirtualHub() {
+    public Output<SubResourceArgs> virtualHub() {
         return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
     }
 
@@ -127,7 +127,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnGatewayScaleUnit")
       private final @Nullable Output<Integer> vpnGatewayScaleUnit;
 
-    public Output<Integer> getVpnGatewayScaleUnit() {
+    public Output<Integer> vpnGatewayScaleUnit() {
         return this.vpnGatewayScaleUnit == null ? Codegen.empty() : this.vpnGatewayScaleUnit;
     }
 
@@ -138,7 +138,7 @@ public final class P2sVpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnServerConfiguration")
       private final @Nullable Output<SubResourceArgs> vpnServerConfiguration;
 
-    public Output<SubResourceArgs> getVpnServerConfiguration() {
+    public Output<SubResourceArgs> vpnServerConfiguration() {
         return this.vpnServerConfiguration == null ? Codegen.empty() : this.vpnServerConfiguration;
     }
 

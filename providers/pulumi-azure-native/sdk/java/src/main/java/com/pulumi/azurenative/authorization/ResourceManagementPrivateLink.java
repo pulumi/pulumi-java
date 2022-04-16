@@ -42,7 +42,7 @@ public class ResourceManagementPrivateLink extends com.pulumi.resources.CustomRe
      * @return the region of the rmpl
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -56,13 +56,13 @@ public class ResourceManagementPrivateLink extends com.pulumi.resources.CustomRe
      * @return The rmpl Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=ResourceManagementPrivateLinkEndpointConnectionsResponse.class, parameters={})
     private Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> properties;
 
-    public Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> getProperties() {
+    public Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> properties() {
         return this.properties;
     }
     /**
@@ -76,7 +76,7 @@ public class ResourceManagementPrivateLink extends com.pulumi.resources.CustomRe
      * @return The operation type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

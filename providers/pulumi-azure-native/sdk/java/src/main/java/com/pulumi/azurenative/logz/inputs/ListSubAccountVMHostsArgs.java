@@ -19,7 +19,7 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
     @Import(name="monitorName", required=true)
       private final String monitorName;
 
-    public String getMonitorName() {
+    public String monitorName() {
         return this.monitorName;
     }
 
@@ -30,7 +30,7 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
     @Import(name="subAccountName", required=true)
       private final String subAccountName;
 
-    public String getSubAccountName() {
+    public String subAccountName() {
         return this.subAccountName;
     }
 

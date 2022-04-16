@@ -26,7 +26,7 @@ public final class KeyForDiskEncryptionSetResponse extends com.pulumi.resources.
     @Import(name="keyUrl", required=true)
       private final String keyUrl;
 
-    public String getKeyUrl() {
+    public String keyUrl() {
         return this.keyUrl;
     }
 
@@ -37,7 +37,7 @@ public final class KeyForDiskEncryptionSetResponse extends com.pulumi.resources.
     @Import(name="sourceVault")
       private final @Nullable SourceVaultResponse sourceVault;
 
-    public Optional<SourceVaultResponse> getSourceVault() {
+    public Optional<SourceVaultResponse> sourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
     }
 

@@ -56,35 +56,35 @@ public final class NotificationSettingsResponse {
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
      * 
     */
-    public Optional<String> getEmailRecipient() {
+    public Optional<String> emailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
     /**
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
      * 
     */
-    public Optional<String> getNotificationLocale() {
+    public Optional<String> notificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
     /**
      * If notifications are enabled for this schedule (i.e. Enabled, Disabled).
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Time in minutes before event at which notification will be sent.
      * 
     */
-    public Optional<Integer> getTimeInMinutes() {
+    public Optional<Integer> timeInMinutes() {
         return Optional.ofNullable(this.timeInMinutes);
     }
     /**
      * The webhook URL to which the notification will be sent.
      * 
     */
-    public Optional<String> getWebhookUrl() {
+    public Optional<String> webhookUrl() {
         return Optional.ofNullable(this.webhookUrl);
     }
 

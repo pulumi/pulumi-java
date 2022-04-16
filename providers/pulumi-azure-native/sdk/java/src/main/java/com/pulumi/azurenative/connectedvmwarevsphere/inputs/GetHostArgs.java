@@ -19,7 +19,7 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostName", required=true)
       private final String hostName;
 
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

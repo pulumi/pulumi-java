@@ -19,7 +19,7 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
     @Import(name="factoryName", required=true)
       private final String factoryName;
 
-    public String getFactoryName() {
+    public String factoryName() {
         return this.factoryName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
     @Import(name="triggerName", required=true)
       private final String triggerName;
 
-    public String getTriggerName() {
+    public String triggerName() {
         return this.triggerName;
     }
 

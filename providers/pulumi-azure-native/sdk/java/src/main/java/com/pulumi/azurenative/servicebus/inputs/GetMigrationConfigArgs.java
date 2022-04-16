@@ -19,7 +19,7 @@ public final class GetMigrationConfigArgs extends com.pulumi.resources.InvokeArg
     @Import(name="configName", required=true)
       private final String configName;
 
-    public String getConfigName() {
+    public String configName() {
         return this.configName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMigrationConfigArgs extends com.pulumi.resources.InvokeArg
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetMigrationConfigArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

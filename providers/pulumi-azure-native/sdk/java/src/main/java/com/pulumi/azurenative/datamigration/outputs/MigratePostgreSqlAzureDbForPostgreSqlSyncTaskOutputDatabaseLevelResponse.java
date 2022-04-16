@@ -140,105 +140,105 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Number of applied changes
      * 
     */
-    public Double getAppliedChanges() {
+    public Double appliedChanges() {
         return this.appliedChanges;
     }
     /**
      * Number of cdc deletes
      * 
     */
-    public Double getCdcDeleteCounter() {
+    public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
     /**
      * Number of cdc inserts
      * 
     */
-    public Double getCdcInsertCounter() {
+    public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
     }
     /**
      * Number of cdc updates
      * 
     */
-    public Double getCdcUpdateCounter() {
+    public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
     /**
      * Name of the database
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Number of tables completed in full load
      * 
     */
-    public Double getFullLoadCompletedTables() {
+    public Double fullLoadCompletedTables() {
         return this.fullLoadCompletedTables;
     }
     /**
      * Number of tables errored in full load
      * 
     */
-    public Double getFullLoadErroredTables() {
+    public Double fullLoadErroredTables() {
         return this.fullLoadErroredTables;
     }
     /**
      * Number of tables loading in full load
      * 
     */
-    public Double getFullLoadLoadingTables() {
+    public Double fullLoadLoadingTables() {
         return this.fullLoadLoadingTables;
     }
     /**
      * Number of tables queued in full load
      * 
     */
-    public Double getFullLoadQueuedTables() {
+    public Double fullLoadQueuedTables() {
         return this.fullLoadQueuedTables;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Number of incoming changes
      * 
     */
-    public Double getIncomingChanges() {
+    public Double incomingChanges() {
         return this.incomingChanges;
     }
     /**
      * Indicates if initial load (full load) has been completed
      * 
     */
-    public Boolean getInitializationCompleted() {
+    public Boolean initializationCompleted() {
         return this.initializationCompleted;
     }
     /**
      * CDC apply latency
      * 
     */
-    public Double getLatency() {
+    public Double latency() {
         return this.latency;
     }
     /**
      * Migration state that this database is in
      * 
     */
-    public String getMigrationState() {
+    public String migrationState() {
         return this.migrationState;
     }
     /**
@@ -246,14 +246,14 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
      * Expected value is 'DatabaseLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 

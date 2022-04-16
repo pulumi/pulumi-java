@@ -27,7 +27,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="managementGroupId", required=true)
       private final Output<String> managementGroupId;
 
-    public Output<String> getManagementGroupId() {
+    public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -60,7 +60,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -71,7 +71,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -82,7 +82,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
+    public Output<Map<String,ParameterDefinitionsValueArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -93,7 +93,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="policyDefinitionName")
       private final @Nullable Output<String> policyDefinitionName;
 
-    public Output<String> getPolicyDefinitionName() {
+    public Output<String> policyDefinitionName() {
         return this.policyDefinitionName == null ? Codegen.empty() : this.policyDefinitionName;
     }
 
@@ -104,7 +104,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="policyRule")
       private final @Nullable Output<Object> policyRule;
 
-    public Output<Object> getPolicyRule() {
+    public Output<Object> policyRule() {
         return this.policyRule == null ? Codegen.empty() : this.policyRule;
     }
 
@@ -115,7 +115,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Output<Either<String,PolicyType>> getPolicyType() {
+    public Output<Either<String,PolicyType>> policyType() {
         return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 

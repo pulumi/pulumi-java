@@ -36,14 +36,14 @@ public final class ListLabVhdsResult {
      * Link for next set of results.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Results of the list operation.
      * 
     */
-    public List<LabVhdResponse> getValue() {
+    public List<LabVhdResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

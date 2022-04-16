@@ -28,7 +28,7 @@ public final class ServiceCorsConfigurationInfoResponse extends com.pulumi.resou
     @Import(name="allowCredentials")
       private final @Nullable Boolean allowCredentials;
 
-    public Optional<Boolean> getAllowCredentials() {
+    public Optional<Boolean> allowCredentials() {
         return this.allowCredentials == null ? Optional.empty() : Optional.ofNullable(this.allowCredentials);
     }
 
@@ -39,7 +39,7 @@ public final class ServiceCorsConfigurationInfoResponse extends com.pulumi.resou
     @Import(name="headers")
       private final @Nullable List<String> headers;
 
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceCorsConfigurationInfoResponse extends com.pulumi.resou
     @Import(name="maxAge")
       private final @Nullable Double maxAge;
 
-    public Optional<Double> getMaxAge() {
+    public Optional<Double> maxAge() {
         return this.maxAge == null ? Optional.empty() : Optional.ofNullable(this.maxAge);
     }
 
@@ -61,7 +61,7 @@ public final class ServiceCorsConfigurationInfoResponse extends com.pulumi.resou
     @Import(name="methods")
       private final @Nullable List<String> methods;
 
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
 
@@ -72,7 +72,7 @@ public final class ServiceCorsConfigurationInfoResponse extends com.pulumi.resou
     @Import(name="origins")
       private final @Nullable List<String> origins;
 
-    public List<String> getOrigins() {
+    public List<String> origins() {
         return this.origins == null ? List.of() : this.origins;
     }
 

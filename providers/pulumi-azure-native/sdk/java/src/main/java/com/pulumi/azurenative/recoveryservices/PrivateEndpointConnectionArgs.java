@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="properties")
       private final @Nullable Output<com.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties;
 
-    public Output<com.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> getProperties() {
+    public Output<com.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -67,7 +67,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -89,7 +89,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 

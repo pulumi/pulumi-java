@@ -44,7 +44,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -55,7 +55,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -66,7 +66,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -77,7 +77,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -88,7 +88,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskName")
       private final @Nullable Output<String> taskName;
 
-    public Output<String> getTaskName() {
+    public Output<String> taskName() {
         return this.taskName == null ? Codegen.empty() : this.taskName;
     }
 

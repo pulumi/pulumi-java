@@ -23,7 +23,7 @@ public final class EdifactAgreementContentResponse extends com.pulumi.resources.
     @Import(name="receiveAgreement", required=true)
       private final EdifactOneWayAgreementResponse receiveAgreement;
 
-    public EdifactOneWayAgreementResponse getReceiveAgreement() {
+    public EdifactOneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -34,7 +34,7 @@ public final class EdifactAgreementContentResponse extends com.pulumi.resources.
     @Import(name="sendAgreement", required=true)
       private final EdifactOneWayAgreementResponse sendAgreement;
 
-    public EdifactOneWayAgreementResponse getSendAgreement() {
+    public EdifactOneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 

@@ -32,14 +32,14 @@ public final class StorageAccountResponse {
      * The Azure Resource Manager ID of the storage account resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The storage account key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

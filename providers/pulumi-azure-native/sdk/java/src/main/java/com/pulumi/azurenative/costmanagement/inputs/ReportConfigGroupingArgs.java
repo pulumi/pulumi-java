@@ -27,7 +27,7 @@ public final class ReportConfigGroupingArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ReportConfigGroupingArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<Either<String,ReportConfigColumnType>> type;
 
-    public Output<Either<String,ReportConfigColumnType>> getType() {
+    public Output<Either<String,ReportConfigColumnType>> type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="extensionId", required=true)
       private final String extensionId;
 
-    public String getExtensionId() {
+    public String extensionId() {
         return this.extensionId;
     }
 
@@ -30,7 +30,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="farmBeatsResourceName", required=true)
       private final String farmBeatsResourceName;
 
-    public String getFarmBeatsResourceName() {
+    public String farmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

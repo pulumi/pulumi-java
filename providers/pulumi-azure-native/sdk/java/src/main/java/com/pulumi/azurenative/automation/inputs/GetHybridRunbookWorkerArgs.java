@@ -19,7 +19,7 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="hybridRunbookWorkerGroupName", required=true)
       private final String hybridRunbookWorkerGroupName;
 
-    public String getHybridRunbookWorkerGroupName() {
+    public String hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="hybridRunbookWorkerId", required=true)
       private final String hybridRunbookWorkerId;
 
-    public String getHybridRunbookWorkerId() {
+    public String hybridRunbookWorkerId() {
         return this.hybridRunbookWorkerId;
     }
 
@@ -52,7 +52,7 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

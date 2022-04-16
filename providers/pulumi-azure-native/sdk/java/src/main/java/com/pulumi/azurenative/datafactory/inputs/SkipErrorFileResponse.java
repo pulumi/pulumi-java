@@ -25,7 +25,7 @@ public final class SkipErrorFileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dataInconsistency")
       private final @Nullable Object dataInconsistency;
 
-    public Optional<Object> getDataInconsistency() {
+    public Optional<Object> dataInconsistency() {
         return this.dataInconsistency == null ? Optional.empty() : Optional.ofNullable(this.dataInconsistency);
     }
 
@@ -36,7 +36,7 @@ public final class SkipErrorFileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="fileMissing")
       private final @Nullable Object fileMissing;
 
-    public Optional<Object> getFileMissing() {
+    public Optional<Object> fileMissing() {
         return this.fileMissing == null ? Optional.empty() : Optional.ofNullable(this.fileMissing);
     }
 

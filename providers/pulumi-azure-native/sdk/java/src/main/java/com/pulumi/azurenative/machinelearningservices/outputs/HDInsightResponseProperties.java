@@ -43,21 +43,21 @@ public final class HDInsightResponseProperties {
      * Public IP address of the master node of the cluster.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Admin credentials for master node of the cluster
      * 
     */
-    public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
+    public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
     /**
      * Port open for ssh connections on the master node of the cluster.
      * 
     */
-    public Optional<Integer> getSshPort() {
+    public Optional<Integer> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }
 

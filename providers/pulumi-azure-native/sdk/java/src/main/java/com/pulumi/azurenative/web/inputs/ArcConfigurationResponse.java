@@ -18,42 +18,42 @@ public final class ArcConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="artifactStorageAccessMode")
       private final @Nullable String artifactStorageAccessMode;
 
-    public Optional<String> getArtifactStorageAccessMode() {
+    public Optional<String> artifactStorageAccessMode() {
         return this.artifactStorageAccessMode == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageAccessMode);
     }
 
     @Import(name="artifactStorageClassName")
       private final @Nullable String artifactStorageClassName;
 
-    public Optional<String> getArtifactStorageClassName() {
+    public Optional<String> artifactStorageClassName() {
         return this.artifactStorageClassName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageClassName);
     }
 
     @Import(name="artifactStorageMountPath")
       private final @Nullable String artifactStorageMountPath;
 
-    public Optional<String> getArtifactStorageMountPath() {
+    public Optional<String> artifactStorageMountPath() {
         return this.artifactStorageMountPath == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageMountPath);
     }
 
     @Import(name="artifactStorageNodeName")
       private final @Nullable String artifactStorageNodeName;
 
-    public Optional<String> getArtifactStorageNodeName() {
+    public Optional<String> artifactStorageNodeName() {
         return this.artifactStorageNodeName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageNodeName);
     }
 
     @Import(name="artifactsStorageType")
       private final @Nullable String artifactsStorageType;
 
-    public Optional<String> getArtifactsStorageType() {
+    public Optional<String> artifactsStorageType() {
         return this.artifactsStorageType == null ? Optional.empty() : Optional.ofNullable(this.artifactsStorageType);
     }
 
     @Import(name="frontEndServiceConfiguration")
       private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 
-    public Optional<FrontEndConfigurationResponse> getFrontEndServiceConfiguration() {
+    public Optional<FrontEndConfigurationResponse> frontEndServiceConfiguration() {
         return this.frontEndServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontEndServiceConfiguration);
     }
 

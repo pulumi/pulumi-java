@@ -43,21 +43,21 @@ public final class EmailNotificationResponse {
      * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
      * 
     */
-    public List<String> getCustomEmails() {
+    public List<String> customEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
     /**
      * a value indicating whether to send email to subscription administrator.
      * 
     */
-    public Optional<Boolean> getSendToSubscriptionAdministrator() {
+    public Optional<Boolean> sendToSubscriptionAdministrator() {
         return Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
     /**
      * a value indicating whether to send email to subscription co-administrators.
      * 
     */
-    public Optional<Boolean> getSendToSubscriptionCoAdministrators() {
+    public Optional<Boolean> sendToSubscriptionCoAdministrators() {
         return Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }
 

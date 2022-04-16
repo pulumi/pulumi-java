@@ -33,7 +33,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dhGroup", required=true)
       private final Output<Either<String,DhGroup>> dhGroup;
 
-    public Output<Either<String,DhGroup>> getDhGroup() {
+    public Output<Either<String,DhGroup>> dhGroup() {
         return this.dhGroup;
     }
 
@@ -44,7 +44,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ikeEncryption", required=true)
       private final Output<Either<String,IkeEncryption>> ikeEncryption;
 
-    public Output<Either<String,IkeEncryption>> getIkeEncryption() {
+    public Output<Either<String,IkeEncryption>> ikeEncryption() {
         return this.ikeEncryption;
     }
 
@@ -55,7 +55,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ikeIntegrity", required=true)
       private final Output<Either<String,IkeIntegrity>> ikeIntegrity;
 
-    public Output<Either<String,IkeIntegrity>> getIkeIntegrity() {
+    public Output<Either<String,IkeIntegrity>> ikeIntegrity() {
         return this.ikeIntegrity;
     }
 
@@ -66,7 +66,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipsecEncryption", required=true)
       private final Output<Either<String,IpsecEncryption>> ipsecEncryption;
 
-    public Output<Either<String,IpsecEncryption>> getIpsecEncryption() {
+    public Output<Either<String,IpsecEncryption>> ipsecEncryption() {
         return this.ipsecEncryption;
     }
 
@@ -77,7 +77,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipsecIntegrity", required=true)
       private final Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
 
-    public Output<Either<String,IpsecIntegrity>> getIpsecIntegrity() {
+    public Output<Either<String,IpsecIntegrity>> ipsecIntegrity() {
         return this.ipsecIntegrity;
     }
 
@@ -88,7 +88,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pfsGroup", required=true)
       private final Output<Either<String,PfsGroup>> pfsGroup;
 
-    public Output<Either<String,PfsGroup>> getPfsGroup() {
+    public Output<Either<String,PfsGroup>> pfsGroup() {
         return this.pfsGroup;
     }
 
@@ -99,7 +99,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="saDataSizeKilobytes", required=true)
       private final Output<Integer> saDataSizeKilobytes;
 
-    public Output<Integer> getSaDataSizeKilobytes() {
+    public Output<Integer> saDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
     }
 
@@ -110,7 +110,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="saLifeTimeSeconds", required=true)
       private final Output<Integer> saLifeTimeSeconds;
 
-    public Output<Integer> getSaLifeTimeSeconds() {
+    public Output<Integer> saLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
 

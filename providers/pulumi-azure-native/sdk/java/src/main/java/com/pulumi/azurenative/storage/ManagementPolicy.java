@@ -43,7 +43,7 @@ public class ManagementPolicy extends com.pulumi.resources.CustomResource {
      * @return Returns the date and time the ManagementPolicies was last modified.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -57,7 +57,7 @@ public class ManagementPolicy extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ManagementPolicy extends com.pulumi.resources.CustomResource {
      * @return The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
      * 
      */
-    public Output<ManagementPolicySchemaResponse> getPolicy() {
+    public Output<ManagementPolicySchemaResponse> policy() {
         return this.policy;
     }
     /**
@@ -85,7 +85,7 @@ public class ManagementPolicy extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

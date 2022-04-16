@@ -27,7 +27,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -38,7 +38,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
     @Import(name="primaryNetworkId")
       private final @Nullable Output<String> primaryNetworkId;
 
-    public Output<String> getPrimaryNetworkId() {
+    public Output<String> primaryNetworkId() {
         return this.primaryNetworkId == null ? Codegen.empty() : this.primaryNetworkId;
     }
 

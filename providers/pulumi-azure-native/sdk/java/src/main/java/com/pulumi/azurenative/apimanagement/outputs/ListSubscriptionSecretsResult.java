@@ -34,14 +34,14 @@ public final class ListSubscriptionSecretsResult {
      * Subscription primary key.
      * 
     */
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Subscription secondary key.
      * 
     */
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
 

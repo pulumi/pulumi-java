@@ -27,7 +27,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="device")
       private final @Nullable Output<SubResourceArgs> device;
 
-    public Output<SubResourceArgs> getDevice() {
+    public Output<SubResourceArgs> device() {
         return this.device == null ? Codegen.empty() : this.device;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="managedApplicationParameters")
       private final @Nullable Output<Object> managedApplicationParameters;
 
-    public Output<Object> getManagedApplicationParameters() {
+    public Output<Object> managedApplicationParameters() {
         return this.managedApplicationParameters == null ? Codegen.empty() : this.managedApplicationParameters;
     }
 
@@ -60,7 +60,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkFunctionName")
       private final @Nullable Output<String> networkFunctionName;
 
-    public Output<String> getNetworkFunctionName() {
+    public Output<String> networkFunctionName() {
         return this.networkFunctionName == null ? Codegen.empty() : this.networkFunctionName;
     }
 
@@ -71,7 +71,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkFunctionUserConfigurations")
       private final @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
-    public Output<List<NetworkFunctionUserConfigurationArgs>> getNetworkFunctionUserConfigurations() {
+    public Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations() {
         return this.networkFunctionUserConfigurations == null ? Codegen.empty() : this.networkFunctionUserConfigurations;
     }
 
@@ -82,7 +82,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="skuName")
       private final @Nullable Output<String> skuName;
 
-    public Output<String> getSkuName() {
+    public Output<String> skuName() {
         return this.skuName == null ? Codegen.empty() : this.skuName;
     }
 
@@ -104,7 +104,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vendorName")
       private final @Nullable Output<String> vendorName;
 
-    public Output<String> getVendorName() {
+    public Output<String> vendorName() {
         return this.vendorName == null ? Codegen.empty() : this.vendorName;
     }
 

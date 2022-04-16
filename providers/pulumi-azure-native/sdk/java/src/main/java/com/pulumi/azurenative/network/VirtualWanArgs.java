@@ -24,7 +24,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowBranchToBranchTraffic")
       private final @Nullable Output<Boolean> allowBranchToBranchTraffic;
 
-    public Output<Boolean> getAllowBranchToBranchTraffic() {
+    public Output<Boolean> allowBranchToBranchTraffic() {
         return this.allowBranchToBranchTraffic == null ? Codegen.empty() : this.allowBranchToBranchTraffic;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowVnetToVnetTraffic")
       private final @Nullable Output<Boolean> allowVnetToVnetTraffic;
 
-    public Output<Boolean> getAllowVnetToVnetTraffic() {
+    public Output<Boolean> allowVnetToVnetTraffic() {
         return this.allowVnetToVnetTraffic == null ? Codegen.empty() : this.allowVnetToVnetTraffic;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableVpnEncryption")
       private final @Nullable Output<Boolean> disableVpnEncryption;
 
-    public Output<Boolean> getDisableVpnEncryption() {
+    public Output<Boolean> disableVpnEncryption() {
         return this.disableVpnEncryption == null ? Codegen.empty() : this.disableVpnEncryption;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -68,7 +68,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,7 +79,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -112,7 +112,7 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualWANName")
       private final @Nullable Output<String> virtualWANName;
 
-    public Output<String> getVirtualWANName() {
+    public Output<String> virtualWANName() {
         return this.virtualWANName == null ? Codegen.empty() : this.virtualWANName;
     }
 

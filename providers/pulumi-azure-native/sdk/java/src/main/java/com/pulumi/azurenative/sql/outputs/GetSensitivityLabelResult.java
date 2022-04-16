@@ -108,87 +108,87 @@ public final class GetSensitivityLabelResult {
      * The column name.
      * 
     */
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The information type.
      * 
     */
-    public Optional<String> getInformationType() {
+    public Optional<String> informationType() {
         return Optional.ofNullable(this.informationType);
     }
     /**
      * The information type ID.
      * 
     */
-    public Optional<String> getInformationTypeId() {
+    public Optional<String> informationTypeId() {
         return Optional.ofNullable(this.informationTypeId);
     }
     /**
      * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
     */
-    public Boolean getIsDisabled() {
+    public Boolean isDisabled() {
         return this.isDisabled;
     }
     /**
      * The label ID.
      * 
     */
-    public Optional<String> getLabelId() {
+    public Optional<String> labelId() {
         return Optional.ofNullable(this.labelId);
     }
     /**
      * The label name.
      * 
     */
-    public Optional<String> getLabelName() {
+    public Optional<String> labelName() {
         return Optional.ofNullable(this.labelName);
     }
     /**
      * Resource that manages the sensitivity label.
      * 
     */
-    public String getManagedBy() {
+    public String managedBy() {
         return this.managedBy;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getRank() {
+    public Optional<String> rank() {
         return Optional.ofNullable(this.rank);
     }
     /**
      * The schema name.
      * 
     */
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
     /**
      * The table name.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

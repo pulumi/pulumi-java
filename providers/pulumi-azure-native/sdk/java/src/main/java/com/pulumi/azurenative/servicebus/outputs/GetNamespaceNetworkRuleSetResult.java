@@ -65,42 +65,42 @@ public final class GetNamespaceNetworkRuleSetResult {
      * Default Action for Network Rule Set
      * 
     */
-    public Optional<String> getDefaultAction() {
+    public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of IpRules
      * 
     */
-    public List<NWRuleSetIpRulesResponse> getIpRules() {
+    public List<NWRuleSetIpRulesResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * List VirtualNetwork Rules
      * 
     */
-    public List<NWRuleSetVirtualNetworkRulesResponse> getVirtualNetworkRules() {
+    public List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
 

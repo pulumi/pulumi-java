@@ -134,77 +134,77 @@ public final class DockerBuildRequestResponse {
      * The machine configuration of the run agent.
      * 
     */
-    public Optional<AgentPropertiesResponse> getAgentConfiguration() {
+    public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
     /**
      * The dedicated agent pool for the run.
      * 
     */
-    public Optional<String> getAgentPoolName() {
+    public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The collection of override arguments to be used when executing the run.
      * 
     */
-    public List<ArgumentResponse> getArguments() {
+    public List<ArgumentResponse> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
     */
-    public Optional<CredentialsResponse> getCredentials() {
+    public Optional<CredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The Docker file path relative to the source location.
      * 
     */
-    public String getDockerFilePath() {
+    public String dockerFilePath() {
         return this.dockerFilePath;
     }
     /**
      * The fully qualified image names including the repository and tag.
      * 
     */
-    public List<String> getImageNames() {
+    public List<String> imageNames() {
         return this.imageNames == null ? List.of() : this.imageNames;
     }
     /**
      * The value that indicates whether archiving is enabled for the run or not.
      * 
     */
-    public Optional<Boolean> getIsArchiveEnabled() {
+    public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
      * The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
     */
-    public Optional<Boolean> getIsPushEnabled() {
+    public Optional<Boolean> isPushEnabled() {
         return Optional.ofNullable(this.isPushEnabled);
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
      * 
     */
-    public Optional<String> getLogTemplate() {
+    public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
      * The value of this property indicates whether the image cache is enabled or not.
      * 
     */
-    public Optional<Boolean> getNoCache() {
+    public Optional<Boolean> noCache() {
         return Optional.ofNullable(this.noCache);
     }
     /**
      * The platform properties against which the run has to happen.
      * 
     */
-    public PlatformPropertiesResponse getPlatform() {
+    public PlatformPropertiesResponse platform() {
         return this.platform;
     }
     /**
@@ -212,21 +212,21 @@ public final class DockerBuildRequestResponse {
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
      * 
     */
-    public Optional<String> getSourceLocation() {
+    public Optional<String> sourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
     /**
      * The name of the target build stage for the docker build.
      * 
     */
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Run timeout in seconds.
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -234,7 +234,7 @@ public final class DockerBuildRequestResponse {
      * Expected value is 'DockerBuildRequest'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

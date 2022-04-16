@@ -19,7 +19,7 @@ public final class GetVideoArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVideoArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVideoArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoName", required=true)
       private final String videoName;
 
-    public String getVideoName() {
+    public String videoName() {
         return this.videoName;
     }
 

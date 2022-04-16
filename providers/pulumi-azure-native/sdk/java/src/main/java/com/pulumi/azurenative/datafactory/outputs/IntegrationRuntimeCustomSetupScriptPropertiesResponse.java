@@ -35,14 +35,14 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse {
      * The URI of the Azure blob container that contains the custom setup script.
      * 
     */
-    public Optional<String> getBlobContainerUri() {
+    public Optional<String> blobContainerUri() {
         return Optional.ofNullable(this.blobContainerUri);
     }
     /**
      * The SAS token of the Azure blob container.
      * 
     */
-    public Optional<SecureStringResponse> getSasToken() {
+    public Optional<SecureStringResponse> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
 

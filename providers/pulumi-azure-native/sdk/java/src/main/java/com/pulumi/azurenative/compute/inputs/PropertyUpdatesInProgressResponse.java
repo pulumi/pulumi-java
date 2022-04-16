@@ -25,7 +25,7 @@ public final class PropertyUpdatesInProgressResponse extends com.pulumi.resource
     @Import(name="targetTier")
       private final @Nullable String targetTier;
 
-    public Optional<String> getTargetTier() {
+    public Optional<String> targetTier() {
         return this.targetTier == null ? Optional.empty() : Optional.ofNullable(this.targetTier);
     }
 

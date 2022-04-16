@@ -97,56 +97,56 @@ public final class AzureMLUpdateResourceActivityResponse {
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
      * 
     */
-    public Object getTrainedModelFilePath() {
+    public Object trainedModelFilePath() {
         return this.trainedModelFilePath;
     }
     /**
      * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
      * 
     */
-    public LinkedServiceReferenceResponse getTrainedModelLinkedServiceName() {
+    public LinkedServiceReferenceResponse trainedModelLinkedServiceName() {
         return this.trainedModelLinkedServiceName;
     }
     /**
      * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getTrainedModelName() {
+    public Object trainedModelName() {
         return this.trainedModelName;
     }
     /**
@@ -154,14 +154,14 @@ public final class AzureMLUpdateResourceActivityResponse {
      * Expected value is 'AzureMLUpdateResource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

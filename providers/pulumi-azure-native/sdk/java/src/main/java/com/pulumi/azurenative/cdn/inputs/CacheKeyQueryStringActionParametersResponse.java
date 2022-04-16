@@ -21,7 +21,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends com.pulum
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -32,7 +32,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends com.pulum
     @Import(name="queryParameters")
       private final @Nullable String queryParameters;
 
-    public Optional<String> getQueryParameters() {
+    public Optional<String> queryParameters() {
         return this.queryParameters == null ? Optional.empty() : Optional.ofNullable(this.queryParameters);
     }
 
@@ -43,7 +43,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends com.pulum
     @Import(name="queryStringBehavior", required=true)
       private final String queryStringBehavior;
 
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
 

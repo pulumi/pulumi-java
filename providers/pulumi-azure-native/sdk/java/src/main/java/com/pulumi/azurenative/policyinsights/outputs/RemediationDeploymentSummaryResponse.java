@@ -39,21 +39,21 @@ public final class RemediationDeploymentSummaryResponse {
      * The number of deployments required by the remediation that have failed.
      * 
     */
-    public Integer getFailedDeployments() {
+    public Integer failedDeployments() {
         return this.failedDeployments;
     }
     /**
      * The number of deployments required by the remediation that have succeeded.
      * 
     */
-    public Integer getSuccessfulDeployments() {
+    public Integer successfulDeployments() {
         return this.successfulDeployments;
     }
     /**
      * The number of deployments required by the remediation.
      * 
     */
-    public Integer getTotalDeployments() {
+    public Integer totalDeployments() {
         return this.totalDeployments;
     }
 

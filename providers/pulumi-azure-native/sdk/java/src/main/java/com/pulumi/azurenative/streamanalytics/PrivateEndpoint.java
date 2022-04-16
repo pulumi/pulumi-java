@@ -43,7 +43,7 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return The properties associated with a private endpoint.
      * 
      */
-    public Output<PrivateEndpointPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -21,7 +21,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     @Import(name="accessResourcePath")
       private final @Nullable String accessResourcePath;
 
-    public Optional<String> getAccessResourcePath() {
+    public Optional<String> accessResourcePath() {
         return this.accessResourcePath == null ? Optional.empty() : Optional.ofNullable(this.accessResourcePath);
     }
 
@@ -32,7 +32,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     @Import(name="expireTime")
       private final @Nullable String expireTime;
 
-    public Optional<String> getExpireTime() {
+    public Optional<String> expireTime() {
         return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
     }
 
@@ -43,7 +43,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     @Import(name="factoryName", required=true)
       private final String factoryName;
 
-    public String getFactoryName() {
+    public String factoryName() {
         return this.factoryName;
     }
 
@@ -54,7 +54,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     @Import(name="permissions")
       private final @Nullable String permissions;
 
-    public Optional<String> getPermissions() {
+    public Optional<String> permissions() {
         return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
     }
 
@@ -65,7 +65,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     @Import(name="profileName")
       private final @Nullable String profileName;
 
-    public Optional<String> getProfileName() {
+    public Optional<String> profileName() {
         return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
     }
 
@@ -76,7 +76,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,7 +87,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

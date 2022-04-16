@@ -34,14 +34,14 @@ public final class ListQueryKeyBySearchServiceResult {
      * Request URL that can be used to query next page of query keys. Returned when the total number of requested query keys exceed maximum page size.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * The query keys for the Azure Cognitive Search service.
      * 
     */
-    public List<QueryKeyResponse> getValue() {
+    public List<QueryKeyResponse> value() {
         return this.value;
     }
 

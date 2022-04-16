@@ -23,7 +23,7 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -34,7 +34,7 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
@@ -45,7 +45,7 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isVerified")
       private final @Nullable Output<Boolean> isVerified;
 
-    public Output<Boolean> getIsVerified() {
+    public Output<Boolean> isVerified() {
         return this.isVerified == null ? Codegen.empty() : this.isVerified;
     }
 
@@ -56,7 +56,7 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="provisioningServiceName", required=true)
       private final Output<String> provisioningServiceName;
 
-    public Output<String> getProvisioningServiceName() {
+    public Output<String> provisioningServiceName() {
         return this.provisioningServiceName;
     }
 
@@ -67,7 +67,7 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

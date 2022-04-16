@@ -25,7 +25,7 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 

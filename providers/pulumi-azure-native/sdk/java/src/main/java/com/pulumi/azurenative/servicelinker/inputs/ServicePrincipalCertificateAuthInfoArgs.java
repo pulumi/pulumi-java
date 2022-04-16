@@ -26,7 +26,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="authType", required=true)
       private final Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
 
@@ -37,7 +37,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
 
@@ -48,7 +48,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -59,7 +59,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 

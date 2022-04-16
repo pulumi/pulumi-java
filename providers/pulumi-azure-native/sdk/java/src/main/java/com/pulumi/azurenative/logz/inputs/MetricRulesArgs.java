@@ -28,7 +28,7 @@ public final class MetricRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filteringTags")
       private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
-    public Output<List<FilteringTagArgs>> getFilteringTags() {
+    public Output<List<FilteringTagArgs>> filteringTags() {
         return this.filteringTags == null ? Codegen.empty() : this.filteringTags;
     }
 
@@ -39,7 +39,7 @@ public final class MetricRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 

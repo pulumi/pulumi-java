@@ -24,7 +24,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -46,7 +46,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="parameters", required=true)
       private final List<String> parameters;
 
-    public List<String> getParameters() {
+    public List<String> parameters() {
         return this.parameters;
     }
 
@@ -57,7 +57,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="time", required=true)
       private final String time;
 
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

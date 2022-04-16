@@ -23,7 +23,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> getKeyType() {
+    public Either<String,KeyType> keyType() {
         return this.keyType == null ? null : this.keyType;
     }
 
@@ -34,7 +34,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="notAfter")
       private final @Nullable String notAfter;
 
-    public Optional<String> getNotAfter() {
+    public Optional<String> notAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
@@ -45,7 +45,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="triggerName", required=true)
       private final String triggerName;
 
-    public String getTriggerName() {
+    public String triggerName() {
         return this.triggerName;
     }
 
@@ -67,7 +67,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="versionId", required=true)
       private final String versionId;
 
-    public String getVersionId() {
+    public String versionId() {
         return this.versionId;
     }
 
@@ -78,7 +78,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="workflowName", required=true)
       private final String workflowName;
 
-    public String getWorkflowName() {
+    public String workflowName() {
         return this.workflowName;
     }
 

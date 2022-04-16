@@ -24,7 +24,7 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludeDisks")
       private final @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
 
-    public Output<List<ApiEntityReferenceArgs>> getExcludeDisks() {
+    public Output<List<ApiEntityReferenceArgs>> excludeDisks() {
         return this.excludeDisks == null ? Codegen.empty() : this.excludeDisks;
     }
 
@@ -35,7 +35,7 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -46,7 +46,7 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorePointCollectionName", required=true)
       private final Output<String> restorePointCollectionName;
 
-    public Output<String> getRestorePointCollectionName() {
+    public Output<String> restorePointCollectionName() {
         return this.restorePointCollectionName;
     }
 
@@ -57,7 +57,7 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorePointName")
       private final @Nullable Output<String> restorePointName;
 
-    public Output<String> getRestorePointName() {
+    public Output<String> restorePointName() {
         return this.restorePointName == null ? Codegen.empty() : this.restorePointName;
     }
 
@@ -68,7 +68,7 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
     }
 

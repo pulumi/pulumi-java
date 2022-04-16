@@ -26,7 +26,7 @@ public final class ScopeClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="releaseNamespace")
       private final @Nullable Output<String> releaseNamespace;
 
-    public Output<String> getReleaseNamespace() {
+    public Output<String> releaseNamespace() {
         return this.releaseNamespace == null ? Codegen.empty() : this.releaseNamespace;
     }
 

@@ -24,7 +24,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -35,7 +35,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentLink", required=true)
       private final Output<ContentLinkArgs> contentLink;
 
-    public Output<ContentLinkArgs> getContentLink() {
+    public Output<ContentLinkArgs> contentLink() {
         return this.contentLink;
     }
 
@@ -46,7 +46,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="moduleName")
       private final @Nullable Output<String> moduleName;
 
-    public Output<String> getModuleName() {
+    public Output<String> moduleName() {
         return this.moduleName == null ? Codegen.empty() : this.moduleName;
     }
 
@@ -68,7 +68,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

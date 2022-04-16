@@ -24,7 +24,7 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse {
      * Number of unused versions per application type to keep.
      * 
     */
-    public Double getMaxUnusedVersionsToKeep() {
+    public Double maxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }
 

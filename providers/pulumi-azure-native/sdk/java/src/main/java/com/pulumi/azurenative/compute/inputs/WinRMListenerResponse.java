@@ -25,7 +25,7 @@ public final class WinRMListenerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="certificateUrl")
       private final @Nullable String certificateUrl;
 
-    public Optional<String> getCertificateUrl() {
+    public Optional<String> certificateUrl() {
         return this.certificateUrl == null ? Optional.empty() : Optional.ofNullable(this.certificateUrl);
     }
 
@@ -36,7 +36,7 @@ public final class WinRMListenerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 

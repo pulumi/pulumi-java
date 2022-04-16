@@ -28,7 +28,7 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="expiry")
       private final @Nullable Output<String> expiry;
 
-    public Output<String> getExpiry() {
+    public Output<String> expiry() {
         return this.expiry == null ? Codegen.empty() : this.expiry;
     }
 
@@ -39,7 +39,7 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="level", required=true)
       private final Output<Either<String,DiagnosticsLevel>> level;
 
-    public Output<Either<String,DiagnosticsLevel>> getLevel() {
+    public Output<Either<String,DiagnosticsLevel>> level() {
         return this.level;
     }
 

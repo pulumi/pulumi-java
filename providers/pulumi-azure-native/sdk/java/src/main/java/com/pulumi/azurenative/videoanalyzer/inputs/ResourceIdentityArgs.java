@@ -25,7 +25,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
+    public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 

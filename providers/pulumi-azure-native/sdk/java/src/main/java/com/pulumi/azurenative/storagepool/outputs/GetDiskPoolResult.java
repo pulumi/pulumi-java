@@ -114,91 +114,91 @@ public final class GetDiskPoolResult {
      * List of additional capabilities for Disk pool.
      * 
     */
-    public List<String> getAdditionalCapabilities() {
+    public List<String> additionalCapabilities() {
         return this.additionalCapabilities == null ? List.of() : this.additionalCapabilities;
     }
     /**
      * Logical zone for Disk pool resource; example: ["1"].
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
     /**
      * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
      * 
     */
-    public List<DiskResponse> getDisks() {
+    public List<DiskResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the operation on the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Operational status of the Disk pool.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Azure Resource ID of a Subnet for the Disk pool.
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
     /**
      * Resource metadata required by ARM RPC
      * 
     */
-    public SystemMetadataResponse getSystemData() {
+    public SystemMetadataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Determines the SKU of VM deployed for Disk pool
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

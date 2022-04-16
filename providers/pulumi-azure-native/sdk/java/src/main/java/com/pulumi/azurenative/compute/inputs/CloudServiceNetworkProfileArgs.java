@@ -28,7 +28,7 @@ public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.R
     @Import(name="loadBalancerConfigurations")
       private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
-    public Output<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
+    public Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? Codegen.empty() : this.loadBalancerConfigurations;
     }
 
@@ -39,7 +39,7 @@ public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.R
     @Import(name="swappableCloudService")
       private final @Nullable Output<SubResourceArgs> swappableCloudService;
 
-    public Output<SubResourceArgs> getSwappableCloudService() {
+    public Output<SubResourceArgs> swappableCloudService() {
         return this.swappableCloudService == null ? Codegen.empty() : this.swappableCloudService;
     }
 

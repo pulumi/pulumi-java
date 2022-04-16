@@ -125,28 +125,28 @@ public final class K8sOnlineDeploymentResponse {
      * If true, enables Application Insights logging.
      * 
     */
-    public Optional<Boolean> getAppInsightsEnabled() {
+    public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
      * Code configuration for the endpoint deployment.
      * 
     */
-    public Optional<CodeConfigurationResponse> getCodeConfiguration() {
+    public Optional<CodeConfigurationResponse> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
      * Resource requirements for each container instance within an online deployment.
      * 
     */
-    public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
+    public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
     /**
      * Description of the endpoint deployment.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -154,63 +154,63 @@ public final class K8sOnlineDeploymentResponse {
      * Expected value is 'K8S'.
      * 
     */
-    public String getEndpointComputeType() {
+    public String endpointComputeType() {
         return this.endpointComputeType;
     }
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
     */
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * Environment variables configuration for the deployment.
      * 
     */
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * Deployment container liveness/readiness probe configuration.
      * 
     */
-    public Optional<ProbeSettingsResponse> getLivenessProbe() {
+    public Optional<ProbeSettingsResponse> livenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
     /**
      * Reference to the model asset for the endpoint deployment.
      * 
     */
-    public Optional<Object> getModel() {
+    public Optional<Object> model() {
         return Optional.ofNullable(this.model);
     }
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Provisioning state for the endpoint deployment.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Online deployment scoring requests configuration.
      * 
     */
-    public Optional<OnlineRequestSettingsResponse> getRequestSettings() {
+    public Optional<OnlineRequestSettingsResponse> requestSettings() {
         return Optional.ofNullable(this.requestSettings);
     }
     /**
      * Online deployment scaling configuration.
      * 
     */
-    public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> getScaleSettings() {
+    public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
 

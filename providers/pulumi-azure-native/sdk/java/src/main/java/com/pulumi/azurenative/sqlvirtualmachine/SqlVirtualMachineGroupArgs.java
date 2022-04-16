@@ -26,7 +26,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -37,7 +37,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -48,7 +48,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="sqlImageOffer")
       private final @Nullable Output<String> sqlImageOffer;
 
-    public Output<String> getSqlImageOffer() {
+    public Output<String> sqlImageOffer() {
         return this.sqlImageOffer == null ? Codegen.empty() : this.sqlImageOffer;
     }
 
@@ -59,7 +59,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="sqlImageSku")
       private final @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku;
 
-    public Output<Either<String,SqlVmGroupImageSku>> getSqlImageSku() {
+    public Output<Either<String,SqlVmGroupImageSku>> sqlImageSku() {
         return this.sqlImageSku == null ? Codegen.empty() : this.sqlImageSku;
     }
 
@@ -70,7 +70,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="sqlVirtualMachineGroupName")
       private final @Nullable Output<String> sqlVirtualMachineGroupName;
 
-    public Output<String> getSqlVirtualMachineGroupName() {
+    public Output<String> sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName == null ? Codegen.empty() : this.sqlVirtualMachineGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
     @Import(name="wsfcDomainProfile")
       private final @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile;
 
-    public Output<WsfcDomainProfileArgs> getWsfcDomainProfile() {
+    public Output<WsfcDomainProfileArgs> wsfcDomainProfile() {
         return this.wsfcDomainProfile == null ? Codegen.empty() : this.wsfcDomainProfile;
     }
 

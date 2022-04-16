@@ -137,112 +137,112 @@ public final class ScheduleResponse {
      * The creation date of the schedule.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
      * 
     */
-    public Optional<DayDetailsResponse> getDailyRecurrence() {
+    public Optional<DayDetailsResponse> dailyRecurrence() {
         return Optional.ofNullable(this.dailyRecurrence);
     }
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
      * 
     */
-    public Optional<HourDetailsResponse> getHourlyRecurrence() {
+    public Optional<HourDetailsResponse> hourlyRecurrence() {
         return Optional.ofNullable(this.hourlyRecurrence);
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Notification settings.
      * 
     */
-    public Optional<NotificationSettingsResponse> getNotificationSettings() {
+    public Optional<NotificationSettingsResponse> notificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource ID to which the schedule belongs
      * 
     */
-    public Optional<String> getTargetResourceId() {
+    public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
      * 
     */
-    public Optional<String> getTaskType() {
+    public Optional<String> taskType() {
         return Optional.ofNullable(this.taskType);
     }
     /**
      * The time zone ID (e.g. Pacific Standard time).
      * 
     */
-    public Optional<String> getTimeZoneId() {
+    public Optional<String> timeZoneId() {
         return Optional.ofNullable(this.timeZoneId);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
      * 
     */
-    public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
+    public Optional<WeekDetailsResponse> weeklyRecurrence() {
         return Optional.ofNullable(this.weeklyRecurrence);
     }
 

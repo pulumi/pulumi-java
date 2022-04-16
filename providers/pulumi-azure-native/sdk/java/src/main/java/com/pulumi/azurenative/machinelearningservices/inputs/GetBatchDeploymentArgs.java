@@ -19,7 +19,7 @@ public final class GetBatchDeploymentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBatchDeploymentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="endpointName", required=true)
       private final String endpointName;
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBatchDeploymentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetBatchDeploymentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

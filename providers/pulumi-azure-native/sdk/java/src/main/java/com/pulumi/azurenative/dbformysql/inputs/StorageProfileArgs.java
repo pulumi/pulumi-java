@@ -30,7 +30,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backupRetentionDays")
       private final @Nullable Output<Integer> backupRetentionDays;
 
-    public Output<Integer> getBackupRetentionDays() {
+    public Output<Integer> backupRetentionDays() {
         return this.backupRetentionDays == null ? Codegen.empty() : this.backupRetentionDays;
     }
 
@@ -41,7 +41,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="geoRedundantBackup")
       private final @Nullable Output<Either<String,GeoRedundantBackup>> geoRedundantBackup;
 
-    public Output<Either<String,GeoRedundantBackup>> getGeoRedundantBackup() {
+    public Output<Either<String,GeoRedundantBackup>> geoRedundantBackup() {
         return this.geoRedundantBackup == null ? Codegen.empty() : this.geoRedundantBackup;
     }
 
@@ -52,7 +52,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageAutogrow")
       private final @Nullable Output<Either<String,StorageAutogrow>> storageAutogrow;
 
-    public Output<Either<String,StorageAutogrow>> getStorageAutogrow() {
+    public Output<Either<String,StorageAutogrow>> storageAutogrow() {
         return this.storageAutogrow == null ? Codegen.empty() : this.storageAutogrow;
     }
 
@@ -63,7 +63,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageMB")
       private final @Nullable Output<Integer> storageMB;
 
-    public Output<Integer> getStorageMB() {
+    public Output<Integer> storageMB() {
         return this.storageMB == null ? Codegen.empty() : this.storageMB;
     }
 

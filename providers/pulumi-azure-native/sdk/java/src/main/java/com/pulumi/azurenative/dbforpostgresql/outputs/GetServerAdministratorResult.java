@@ -67,49 +67,49 @@ public final class GetServerAdministratorResult {
      * The type of administrator.
      * 
     */
-    public String getAdministratorType() {
+    public String administratorType() {
         return this.administratorType;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The server administrator login account name.
      * 
     */
-    public String getLogin() {
+    public String login() {
         return this.login;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The server administrator Sid (Secure ID).
      * 
     */
-    public String getSid() {
+    public String sid() {
         return this.sid;
     }
     /**
      * The server Active Directory Administrator tenant id.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

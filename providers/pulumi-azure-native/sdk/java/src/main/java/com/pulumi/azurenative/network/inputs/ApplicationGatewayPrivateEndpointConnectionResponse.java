@@ -27,7 +27,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="linkIdentifier", required=true)
       private final String linkIdentifier;
 
-    public String getLinkIdentifier() {
+    public String linkIdentifier() {
         return this.linkIdentifier;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="privateEndpoint", required=true)
       private final PrivateEndpointResponse privateEndpoint;
 
-    public PrivateEndpointResponse getPrivateEndpoint() {
+    public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
-    public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
@@ -93,7 +93,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -104,7 +104,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends c
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

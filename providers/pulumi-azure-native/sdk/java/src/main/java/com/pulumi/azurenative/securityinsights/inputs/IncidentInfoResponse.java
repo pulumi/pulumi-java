@@ -25,7 +25,7 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="incidentId")
       private final @Nullable String incidentId;
 
-    public Optional<String> getIncidentId() {
+    public Optional<String> incidentId() {
         return this.incidentId == null ? Optional.empty() : Optional.ofNullable(this.incidentId);
     }
 
@@ -36,7 +36,7 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="relationName")
       private final @Nullable String relationName;
 
-    public Optional<String> getRelationName() {
+    public Optional<String> relationName() {
         return this.relationName == null ? Optional.empty() : Optional.ofNullable(this.relationName);
     }
 
@@ -47,7 +47,7 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="severity")
       private final @Nullable String severity;
 
-    public Optional<String> getSeverity() {
+    public Optional<String> severity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
@@ -58,7 +58,7 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 

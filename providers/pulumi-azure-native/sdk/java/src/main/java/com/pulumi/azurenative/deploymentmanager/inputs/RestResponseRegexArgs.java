@@ -28,7 +28,7 @@ public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceAr
     @Import(name="matchQuantifier")
       private final @Nullable Output<RestMatchQuantifier> matchQuantifier;
 
-    public Output<RestMatchQuantifier> getMatchQuantifier() {
+    public Output<RestMatchQuantifier> matchQuantifier() {
         return this.matchQuantifier == null ? Codegen.empty() : this.matchQuantifier;
     }
 
@@ -39,7 +39,7 @@ public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceAr
     @Import(name="matches")
       private final @Nullable Output<List<String>> matches;
 
-    public Output<List<String>> getMatches() {
+    public Output<List<String>> matches() {
         return this.matches == null ? Codegen.empty() : this.matches;
     }
 

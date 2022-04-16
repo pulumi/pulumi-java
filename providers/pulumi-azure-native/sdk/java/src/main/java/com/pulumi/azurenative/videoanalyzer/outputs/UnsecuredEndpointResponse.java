@@ -51,14 +51,14 @@ public final class UnsecuredEndpointResponse {
      * Credentials to be presented to the endpoint.
      * 
     */
-    public UsernamePasswordCredentialsResponse getCredentials() {
+    public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
     }
     /**
      * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
      * 
     */
-    public Optional<SecureIotDeviceRemoteTunnelResponse> getTunnel() {
+    public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
         return Optional.ofNullable(this.tunnel);
     }
     /**
@@ -66,14 +66,14 @@ public final class UnsecuredEndpointResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.UnsecuredEndpoint'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The endpoint URL for Video Analyzer to connect to.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

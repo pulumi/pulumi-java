@@ -23,7 +23,7 @@ public final class RecommendedActionImplementationInfoResponse extends com.pulum
     @Import(name="method", required=true)
       private final String method;
 
-    public String getMethod() {
+    public String method() {
         return this.method;
     }
 
@@ -34,7 +34,7 @@ public final class RecommendedActionImplementationInfoResponse extends com.pulum
     @Import(name="script", required=true)
       private final String script;
 
-    public String getScript() {
+    public String script() {
         return this.script;
     }
 

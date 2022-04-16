@@ -23,7 +23,7 @@ public final class EdifactMessageFilterResponse extends com.pulumi.resources.Inv
     @Import(name="messageFilterType", required=true)
       private final String messageFilterType;
 
-    public String getMessageFilterType() {
+    public String messageFilterType() {
         return this.messageFilterType;
     }
 

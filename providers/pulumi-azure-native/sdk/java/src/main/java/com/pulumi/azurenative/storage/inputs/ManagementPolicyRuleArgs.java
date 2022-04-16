@@ -30,7 +30,7 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="definition", required=true)
       private final Output<ManagementPolicyDefinitionArgs> definition;
 
-    public Output<ManagementPolicyDefinitionArgs> getDefinition() {
+    public Output<ManagementPolicyDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -41,7 +41,7 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -52,7 +52,7 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<Either<String,RuleType>> type;
 
-    public Output<Either<String,RuleType>> getType() {
+    public Output<Either<String,RuleType>> type() {
         return this.type;
     }
 

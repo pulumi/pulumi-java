@@ -26,7 +26,7 @@ public final class ConfigurationProfileResourcePropertiesArgs extends com.pulumi
     @Import(name="notifications")
       private final @Nullable Output<NotificationSettingsArgs> notifications;
 
-    public Output<NotificationSettingsArgs> getNotifications() {
+    public Output<NotificationSettingsArgs> notifications() {
         return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 

@@ -90,56 +90,56 @@ public final class MappingDataFlowResponse {
      * List of tags that can be used for describing the data flow.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The description of the data flow.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
     */
-    public Optional<DataFlowResponseFolder> getFolder() {
+    public Optional<DataFlowResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * DataFlow script.
      * 
     */
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
      * Data flow script lines.
      * 
     */
-    public List<String> getScriptLines() {
+    public List<String> scriptLines() {
         return this.scriptLines == null ? List.of() : this.scriptLines;
     }
     /**
      * List of sinks in data flow.
      * 
     */
-    public List<DataFlowSinkResponse> getSinks() {
+    public List<DataFlowSinkResponse> sinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }
     /**
      * List of sources in data flow.
      * 
     */
-    public List<DataFlowSourceResponse> getSources() {
+    public List<DataFlowSourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
      * List of transformations in data flow.
      * 
     */
-    public List<TransformationResponse> getTransformations() {
+    public List<TransformationResponse> transformations() {
         return this.transformations == null ? List.of() : this.transformations;
     }
     /**
@@ -147,7 +147,7 @@ public final class MappingDataFlowResponse {
      * Expected value is 'MappingDataFlow'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

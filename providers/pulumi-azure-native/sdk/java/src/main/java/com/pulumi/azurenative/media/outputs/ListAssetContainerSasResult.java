@@ -26,7 +26,7 @@ public final class ListAssetContainerSasResult {
      * The list of Asset container SAS URLs.
      * 
     */
-    public List<String> getAssetContainerSasUrls() {
+    public List<String> assetContainerSasUrls() {
         return this.assetContainerSasUrls == null ? List.of() : this.assetContainerSasUrls;
     }
 

@@ -26,7 +26,7 @@ public final class NetworkFunctionTemplateResponse {
      * An array of network function role definitions.
      * 
     */
-    public List<NetworkFunctionRoleConfigurationResponse> getNetworkFunctionRoleConfigurations() {
+    public List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations() {
         return this.networkFunctionRoleConfigurations == null ? List.of() : this.networkFunctionRoleConfigurations;
     }
 

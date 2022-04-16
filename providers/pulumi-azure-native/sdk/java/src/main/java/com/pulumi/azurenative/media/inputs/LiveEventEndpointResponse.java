@@ -25,7 +25,7 @@ public final class LiveEventEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -36,7 +36,7 @@ public final class LiveEventEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

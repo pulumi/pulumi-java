@@ -29,7 +29,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="clientAuthConfiguration")
       private final @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
 
-    public Optional<ApplicationGatewayClientAuthConfigurationResponse> getClientAuthConfiguration() {
+    public Optional<ApplicationGatewayClientAuthConfigurationResponse> clientAuthConfiguration() {
         return this.clientAuthConfiguration == null ? Optional.empty() : Optional.ofNullable(this.clientAuthConfiguration);
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -62,7 +62,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -73,7 +73,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -84,7 +84,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="sslPolicy")
       private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
-    public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
+    public Optional<ApplicationGatewaySslPolicyResponse> sslPolicy() {
         return this.sslPolicy == null ? Optional.empty() : Optional.ofNullable(this.sslPolicy);
     }
 
@@ -95,7 +95,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="trustedClientCertificates")
       private final @Nullable List<SubResourceResponse> trustedClientCertificates;
 
-    public List<SubResourceResponse> getTrustedClientCertificates() {
+    public List<SubResourceResponse> trustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
     }
 
@@ -106,7 +106,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

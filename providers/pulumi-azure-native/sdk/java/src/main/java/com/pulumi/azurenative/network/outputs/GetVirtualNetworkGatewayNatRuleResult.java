@@ -85,63 +85,63 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The private IP address external mapping for NAT.
      * 
     */
-    public List<VpnNatRuleMappingResponse> getExternalMappings() {
+    public List<VpnNatRuleMappingResponse> externalMappings() {
         return this.externalMappings == null ? List.of() : this.externalMappings;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The private IP address internal mapping for NAT.
      * 
     */
-    public List<VpnNatRuleMappingResponse> getInternalMappings() {
+    public List<VpnNatRuleMappingResponse> internalMappings() {
         return this.internalMappings == null ? List.of() : this.internalMappings;
     }
     /**
      * The IP Configuration ID this NAT rule applies to.
      * 
     */
-    public Optional<String> getIpConfigurationId() {
+    public Optional<String> ipConfigurationId() {
         return Optional.ofNullable(this.ipConfigurationId);
     }
     /**
      * The Source NAT direction of a VPN NAT.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the NAT Rule resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

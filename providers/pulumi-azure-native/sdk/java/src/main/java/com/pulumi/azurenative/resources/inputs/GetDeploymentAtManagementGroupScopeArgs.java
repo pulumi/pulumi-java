@@ -19,7 +19,7 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends com.pulumi.re
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends com.pulumi.re
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 

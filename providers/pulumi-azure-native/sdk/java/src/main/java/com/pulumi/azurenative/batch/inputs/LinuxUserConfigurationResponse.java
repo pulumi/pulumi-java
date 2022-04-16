@@ -22,7 +22,7 @@ public final class LinuxUserConfigurationResponse extends com.pulumi.resources.I
     @Import(name="gid")
       private final @Nullable Integer gid;
 
-    public Optional<Integer> getGid() {
+    public Optional<Integer> gid() {
         return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
     }
 
@@ -33,7 +33,7 @@ public final class LinuxUserConfigurationResponse extends com.pulumi.resources.I
     @Import(name="sshPrivateKey")
       private final @Nullable String sshPrivateKey;
 
-    public Optional<String> getSshPrivateKey() {
+    public Optional<String> sshPrivateKey() {
         return this.sshPrivateKey == null ? Optional.empty() : Optional.ofNullable(this.sshPrivateKey);
     }
 
@@ -44,7 +44,7 @@ public final class LinuxUserConfigurationResponse extends com.pulumi.resources.I
     @Import(name="uid")
       private final @Nullable Integer uid;
 
-    public Optional<Integer> getUid() {
+    public Optional<Integer> uid() {
         return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
     }
 

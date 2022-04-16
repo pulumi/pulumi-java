@@ -42,21 +42,21 @@ public final class ServiceRegistryPropertiesResponse {
      * Collection of instances belong to Service Registry.
      * 
     */
-    public List<ServiceRegistryInstanceResponse> getInstances() {
+    public List<ServiceRegistryInstanceResponse> instances() {
         return this.instances;
     }
     /**
      * State of the Service Registry.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
     */
-    public ServiceRegistryResourceRequestsResponse getResourceRequests() {
+    public ServiceRegistryResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
 

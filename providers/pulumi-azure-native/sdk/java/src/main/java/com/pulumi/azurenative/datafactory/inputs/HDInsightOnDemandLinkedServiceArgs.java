@@ -37,7 +37,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="additionalLinkedServiceNames")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames;
 
-    public Output<List<LinkedServiceReferenceArgs>> getAdditionalLinkedServiceNames() {
+    public Output<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames() {
         return this.additionalLinkedServiceNames == null ? Codegen.empty() : this.additionalLinkedServiceNames;
     }
 
@@ -48,7 +48,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -59,7 +59,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterNamePrefix")
       private final @Nullable Output<Object> clusterNamePrefix;
 
-    public Output<Object> getClusterNamePrefix() {
+    public Output<Object> clusterNamePrefix() {
         return this.clusterNamePrefix == null ? Codegen.empty() : this.clusterNamePrefix;
     }
 
@@ -70,7 +70,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterPassword")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClusterPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword() {
         return this.clusterPassword == null ? Codegen.empty() : this.clusterPassword;
     }
 
@@ -81,7 +81,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterResourceGroup", required=true)
       private final Output<Object> clusterResourceGroup;
 
-    public Output<Object> getClusterResourceGroup() {
+    public Output<Object> clusterResourceGroup() {
         return this.clusterResourceGroup;
     }
 
@@ -92,7 +92,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterSize", required=true)
       private final Output<Object> clusterSize;
 
-    public Output<Object> getClusterSize() {
+    public Output<Object> clusterSize() {
         return this.clusterSize;
     }
 
@@ -103,7 +103,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterSshPassword")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClusterSshPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword() {
         return this.clusterSshPassword == null ? Codegen.empty() : this.clusterSshPassword;
     }
 
@@ -114,7 +114,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterSshUserName")
       private final @Nullable Output<Object> clusterSshUserName;
 
-    public Output<Object> getClusterSshUserName() {
+    public Output<Object> clusterSshUserName() {
         return this.clusterSshUserName == null ? Codegen.empty() : this.clusterSshUserName;
     }
 
@@ -125,7 +125,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterType")
       private final @Nullable Output<Object> clusterType;
 
-    public Output<Object> getClusterType() {
+    public Output<Object> clusterType() {
         return this.clusterType == null ? Codegen.empty() : this.clusterType;
     }
 
@@ -136,7 +136,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterUserName")
       private final @Nullable Output<Object> clusterUserName;
 
-    public Output<Object> getClusterUserName() {
+    public Output<Object> clusterUserName() {
         return this.clusterUserName == null ? Codegen.empty() : this.clusterUserName;
     }
 
@@ -147,7 +147,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -158,7 +158,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="coreConfiguration")
       private final @Nullable Output<Object> coreConfiguration;
 
-    public Output<Object> getCoreConfiguration() {
+    public Output<Object> coreConfiguration() {
         return this.coreConfiguration == null ? Codegen.empty() : this.coreConfiguration;
     }
 
@@ -169,7 +169,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -180,7 +180,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="dataNodeSize")
       private final @Nullable Output<Object> dataNodeSize;
 
-    public Output<Object> getDataNodeSize() {
+    public Output<Object> dataNodeSize() {
         return this.dataNodeSize == null ? Codegen.empty() : this.dataNodeSize;
     }
 
@@ -191,7 +191,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -202,7 +202,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -213,7 +213,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hBaseConfiguration")
       private final @Nullable Output<Object> hBaseConfiguration;
 
-    public Output<Object> getHBaseConfiguration() {
+    public Output<Object> hBaseConfiguration() {
         return this.hBaseConfiguration == null ? Codegen.empty() : this.hBaseConfiguration;
     }
 
@@ -224,7 +224,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hcatalogLinkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName() {
         return this.hcatalogLinkedServiceName == null ? Codegen.empty() : this.hcatalogLinkedServiceName;
     }
 
@@ -235,7 +235,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hdfsConfiguration")
       private final @Nullable Output<Object> hdfsConfiguration;
 
-    public Output<Object> getHdfsConfiguration() {
+    public Output<Object> hdfsConfiguration() {
         return this.hdfsConfiguration == null ? Codegen.empty() : this.hdfsConfiguration;
     }
 
@@ -246,7 +246,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="headNodeSize")
       private final @Nullable Output<Object> headNodeSize;
 
-    public Output<Object> getHeadNodeSize() {
+    public Output<Object> headNodeSize() {
         return this.headNodeSize == null ? Codegen.empty() : this.headNodeSize;
     }
 
@@ -257,7 +257,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hiveConfiguration")
       private final @Nullable Output<Object> hiveConfiguration;
 
-    public Output<Object> getHiveConfiguration() {
+    public Output<Object> hiveConfiguration() {
         return this.hiveConfiguration == null ? Codegen.empty() : this.hiveConfiguration;
     }
 
@@ -268,7 +268,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hostSubscriptionId", required=true)
       private final Output<Object> hostSubscriptionId;
 
-    public Output<Object> getHostSubscriptionId() {
+    public Output<Object> hostSubscriptionId() {
         return this.hostSubscriptionId;
     }
 
@@ -279,7 +279,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -290,7 +290,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="mapReduceConfiguration")
       private final @Nullable Output<Object> mapReduceConfiguration;
 
-    public Output<Object> getMapReduceConfiguration() {
+    public Output<Object> mapReduceConfiguration() {
         return this.mapReduceConfiguration == null ? Codegen.empty() : this.mapReduceConfiguration;
     }
 
@@ -301,7 +301,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="oozieConfiguration")
       private final @Nullable Output<Object> oozieConfiguration;
 
-    public Output<Object> getOozieConfiguration() {
+    public Output<Object> oozieConfiguration() {
         return this.oozieConfiguration == null ? Codegen.empty() : this.oozieConfiguration;
     }
 
@@ -312,7 +312,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -323,7 +323,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="scriptActions")
       private final @Nullable Output<List<ScriptActionArgs>> scriptActions;
 
-    public Output<List<ScriptActionArgs>> getScriptActions() {
+    public Output<List<ScriptActionArgs>> scriptActions() {
         return this.scriptActions == null ? Codegen.empty() : this.scriptActions;
     }
 
@@ -334,7 +334,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
@@ -345,7 +345,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
@@ -356,7 +356,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="sparkVersion")
       private final @Nullable Output<Object> sparkVersion;
 
-    public Output<Object> getSparkVersion() {
+    public Output<Object> sparkVersion() {
         return this.sparkVersion == null ? Codegen.empty() : this.sparkVersion;
     }
 
@@ -367,7 +367,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="stormConfiguration")
       private final @Nullable Output<Object> stormConfiguration;
 
-    public Output<Object> getStormConfiguration() {
+    public Output<Object> stormConfiguration() {
         return this.stormConfiguration == null ? Codegen.empty() : this.stormConfiguration;
     }
 
@@ -378,7 +378,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="subnetName")
       private final @Nullable Output<Object> subnetName;
 
-    public Output<Object> getSubnetName() {
+    public Output<Object> subnetName() {
         return this.subnetName == null ? Codegen.empty() : this.subnetName;
     }
 
@@ -389,7 +389,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="tenant", required=true)
       private final Output<Object> tenant;
 
-    public Output<Object> getTenant() {
+    public Output<Object> tenant() {
         return this.tenant;
     }
 
@@ -400,7 +400,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="timeToLive", required=true)
       private final Output<Object> timeToLive;
 
-    public Output<Object> getTimeToLive() {
+    public Output<Object> timeToLive() {
         return this.timeToLive;
     }
 
@@ -412,7 +412,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -423,7 +423,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="version", required=true)
       private final Output<Object> version;
 
-    public Output<Object> getVersion() {
+    public Output<Object> version() {
         return this.version;
     }
 
@@ -434,7 +434,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="virtualNetworkId")
       private final @Nullable Output<Object> virtualNetworkId;
 
-    public Output<Object> getVirtualNetworkId() {
+    public Output<Object> virtualNetworkId() {
         return this.virtualNetworkId == null ? Codegen.empty() : this.virtualNetworkId;
     }
 
@@ -445,7 +445,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="yarnConfiguration")
       private final @Nullable Output<Object> yarnConfiguration;
 
-    public Output<Object> getYarnConfiguration() {
+    public Output<Object> yarnConfiguration() {
         return this.yarnConfiguration == null ? Codegen.empty() : this.yarnConfiguration;
     }
 
@@ -456,7 +456,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="zookeeperNodeSize")
       private final @Nullable Output<Object> zookeeperNodeSize;
 
-    public Output<Object> getZookeeperNodeSize() {
+    public Output<Object> zookeeperNodeSize() {
         return this.zookeeperNodeSize == null ? Codegen.empty() : this.zookeeperNodeSize;
     }
 

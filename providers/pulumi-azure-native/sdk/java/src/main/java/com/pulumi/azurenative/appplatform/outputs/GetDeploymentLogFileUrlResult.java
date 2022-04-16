@@ -24,7 +24,7 @@ public final class GetDeploymentLogFileUrlResult {
      * URL of the log file
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

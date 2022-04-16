@@ -24,7 +24,7 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -35,7 +35,7 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="countryCodes", required=true)
       private final List<String> countryCodes;
 
-    public List<String> getCountryCodes() {
+    public List<String> countryCodes() {
         return this.countryCodes;
     }
 
@@ -46,7 +46,7 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="relativePath", required=true)
       private final String relativePath;
 
-    public String getRelativePath() {
+    public String relativePath() {
         return this.relativePath;
     }
 

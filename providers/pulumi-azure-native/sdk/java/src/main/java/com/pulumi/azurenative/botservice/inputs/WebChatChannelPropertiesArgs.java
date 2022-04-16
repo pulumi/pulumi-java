@@ -27,7 +27,7 @@ public final class WebChatChannelPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="sites")
       private final @Nullable Output<List<WebChatSiteArgs>> sites;
 
-    public Output<List<WebChatSiteArgs>> getSites() {
+    public Output<List<WebChatSiteArgs>> sites() {
         return this.sites == null ? Codegen.empty() : this.sites;
     }
 

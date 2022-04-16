@@ -23,7 +23,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pulum
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pulum
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pulum
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pulum
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -67,7 +67,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pulum
     @Import(name="subnetResourceId")
       private final @Nullable Output<String> subnetResourceId;
 
-    public Output<String> getSubnetResourceId() {
+    public Output<String> subnetResourceId() {
         return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
     }
 
@@ -78,7 +78,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends com.pulum
     @Import(name="swiftSupported")
       private final @Nullable Output<Boolean> swiftSupported;
 
-    public Output<Boolean> getSwiftSupported() {
+    public Output<Boolean> swiftSupported() {
         return this.swiftSupported == null ? Codegen.empty() : this.swiftSupported;
     }
 

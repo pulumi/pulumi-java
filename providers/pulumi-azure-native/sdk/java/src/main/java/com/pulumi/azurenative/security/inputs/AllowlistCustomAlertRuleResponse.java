@@ -25,7 +25,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="allowlistValues", required=true)
       private final List<String> allowlistValues;
 
-    public List<String> getAllowlistValues() {
+    public List<String> allowlistValues() {
         return this.allowlistValues;
     }
 
@@ -36,7 +36,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -47,7 +47,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -70,7 +70,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 
@@ -81,7 +81,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="valueType", required=true)
       private final String valueType;
 
-    public String getValueType() {
+    public String valueType() {
         return this.valueType;
     }
 

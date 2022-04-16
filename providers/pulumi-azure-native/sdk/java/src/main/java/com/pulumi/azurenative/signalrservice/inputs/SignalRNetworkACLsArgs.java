@@ -31,7 +31,7 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
     @Import(name="defaultAction")
       private final @Nullable Output<Either<String,ACLAction>> defaultAction;
 
-    public Output<Either<String,ACLAction>> getDefaultAction() {
+    public Output<Either<String,ACLAction>> defaultAction() {
         return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
     }
 
@@ -42,7 +42,7 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateEndpoints")
       private final @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
 
-    public Output<List<PrivateEndpointACLArgs>> getPrivateEndpoints() {
+    public Output<List<PrivateEndpointACLArgs>> privateEndpoints() {
         return this.privateEndpoints == null ? Codegen.empty() : this.privateEndpoints;
     }
 
@@ -53,7 +53,7 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
     @Import(name="publicNetwork")
       private final @Nullable Output<NetworkACLArgs> publicNetwork;
 
-    public Output<NetworkACLArgs> getPublicNetwork() {
+    public Output<NetworkACLArgs> publicNetwork() {
         return this.publicNetwork == null ? Codegen.empty() : this.publicNetwork;
     }
 

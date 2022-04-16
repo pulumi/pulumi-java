@@ -25,7 +25,7 @@ public final class AccessReviewReviewerResponse extends com.pulumi.resources.Inv
     @Import(name="principalId")
       private final @Nullable String principalId;
 
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
@@ -36,7 +36,7 @@ public final class AccessReviewReviewerResponse extends com.pulumi.resources.Inv
     @Import(name="principalType", required=true)
       private final String principalType;
 
-    public String getPrincipalType() {
+    public String principalType() {
         return this.principalType;
     }
 

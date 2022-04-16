@@ -28,7 +28,7 @@ public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.R
     @Import(name="config")
       private final @Nullable Output<Map<String,String>> config;
 
-    public Output<Map<String,String>> getConfig() {
+    public Output<Map<String,String>> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.R
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

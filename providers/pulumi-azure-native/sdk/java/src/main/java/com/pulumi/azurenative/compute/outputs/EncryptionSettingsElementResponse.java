@@ -35,14 +35,14 @@ public final class EncryptionSettingsElementResponse {
      * Key Vault Secret Url and vault id of the disk encryption key
      * 
     */
-    public Optional<KeyVaultAndSecretReferenceResponse> getDiskEncryptionKey() {
+    public Optional<KeyVaultAndSecretReferenceResponse> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
     /**
      * Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
      * 
     */
-    public Optional<KeyVaultAndKeyReferenceResponse> getKeyEncryptionKey() {
+    public Optional<KeyVaultAndKeyReferenceResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
 

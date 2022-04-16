@@ -28,7 +28,7 @@ public final class PivotPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -39,7 +39,7 @@ public final class PivotPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<Either<String,PivotTypeType>> type;
 
-    public Output<Either<String,PivotTypeType>> getType() {
+    public Output<Either<String,PivotTypeType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -27,7 +27,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<List<HealthAlertActionArgs>> actions;
 
-    public Output<List<HealthAlertActionArgs>> getActions() {
+    public Output<List<HealthAlertActionArgs>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="criteria", required=true)
       private final Output<HealthAlertCriteriaArgs> criteria;
 
-    public Output<HealthAlertCriteriaArgs> getCriteria() {
+    public Output<HealthAlertCriteriaArgs> criteria() {
         return this.criteria;
     }
 
@@ -49,7 +49,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -60,7 +60,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -71,7 +71,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -104,7 +104,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
@@ -115,7 +115,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

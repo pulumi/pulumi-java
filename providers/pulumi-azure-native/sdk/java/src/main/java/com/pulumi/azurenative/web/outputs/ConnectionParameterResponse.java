@@ -35,14 +35,14 @@ public final class ConnectionParameterResponse {
      * OAuth settings for the connection provider
      * 
     */
-    public Optional<ApiOAuthSettingsResponse> getOAuthSettings() {
+    public Optional<ApiOAuthSettingsResponse> oAuthSettings() {
         return Optional.ofNullable(this.oAuthSettings);
     }
     /**
      * Type of the parameter
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

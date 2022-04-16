@@ -24,7 +24,7 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
      * Remote private endpoint connection ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

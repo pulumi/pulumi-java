@@ -148,126 +148,126 @@ public final class GetCloudConnectorResult {
      * Connector billing model
      * 
     */
-    public Optional<String> getBillingModel() {
+    public Optional<String> billingModel() {
         return Optional.ofNullable(this.billingModel);
     }
     /**
      * Collection information
      * 
     */
-    public ConnectorCollectionInfoResponse getCollectionInfo() {
+    public ConnectorCollectionInfoResponse collectionInfo() {
         return this.collectionInfo;
     }
     /**
      * Connector definition creation datetime
      * 
     */
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
     /**
      * Credentials authentication key (eg AWS ARN)
      * 
     */
-    public Optional<String> getCredentialsKey() {
+    public Optional<String> credentialsKey() {
         return Optional.ofNullable(this.credentialsKey);
     }
     /**
      * Number of days remaining of trial
      * 
     */
-    public Integer getDaysTrialRemaining() {
+    public Integer daysTrialRemaining() {
         return this.daysTrialRemaining;
     }
     /**
      * Default ManagementGroupId
      * 
     */
-    public Optional<String> getDefaultManagementGroupId() {
+    public Optional<String> defaultManagementGroupId() {
         return Optional.ofNullable(this.defaultManagementGroupId);
     }
     /**
      * Connector DisplayName
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Associated ExternalBillingAccountId
      * 
     */
-    public String getExternalBillingAccountId() {
+    public String externalBillingAccountId() {
         return this.externalBillingAccountId;
     }
     /**
      * Connector id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Connector kind (eg aws)
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Connector last modified datetime
      * 
     */
-    public String getModifiedOn() {
+    public String modifiedOn() {
         return this.modifiedOn;
     }
     /**
      * Connector name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The display name of the providerBillingAccountId as defined on the external provider
      * 
     */
-    public String getProviderBillingAccountDisplayName() {
+    public String providerBillingAccountDisplayName() {
         return this.providerBillingAccountDisplayName;
     }
     /**
      * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
      * 
     */
-    public String getProviderBillingAccountId() {
+    public String providerBillingAccountId() {
         return this.providerBillingAccountId;
     }
     /**
      * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
      * 
     */
-    public Optional<String> getReportId() {
+    public Optional<String> reportId() {
         return Optional.ofNullable(this.reportId);
     }
     /**
      * Connector status
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Billing SubscriptionId
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * Connector type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

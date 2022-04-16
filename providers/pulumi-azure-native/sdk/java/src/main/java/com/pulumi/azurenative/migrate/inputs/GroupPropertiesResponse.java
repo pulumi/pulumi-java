@@ -28,7 +28,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="areAssessmentsRunning", required=true)
       private final Boolean areAssessmentsRunning;
 
-    public Boolean getAreAssessmentsRunning() {
+    public Boolean areAssessmentsRunning() {
         return this.areAssessmentsRunning;
     }
 
@@ -39,7 +39,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="assessments", required=true)
       private final List<String> assessments;
 
-    public List<String> getAssessments() {
+    public List<String> assessments() {
         return this.assessments;
     }
 
@@ -50,7 +50,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
 
-    public String getCreatedTimestamp() {
+    public String createdTimestamp() {
         return this.createdTimestamp;
     }
 
@@ -61,7 +61,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupStatus", required=true)
       private final String groupStatus;
 
-    public String getGroupStatus() {
+    public String groupStatus() {
         return this.groupStatus;
     }
 
@@ -72,7 +72,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupType")
       private final @Nullable String groupType;
 
-    public Optional<String> getGroupType() {
+    public Optional<String> groupType() {
         return this.groupType == null ? Optional.empty() : Optional.ofNullable(this.groupType);
     }
 
@@ -83,7 +83,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="machineCount", required=true)
       private final Integer machineCount;
 
-    public Integer getMachineCount() {
+    public Integer machineCount() {
         return this.machineCount;
     }
 
@@ -94,7 +94,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
 
-    public String getUpdatedTimestamp() {
+    public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 

@@ -127,105 +127,105 @@ public final class GetWatcherResult {
      * Gets or sets the creation time.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the etag of the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Gets or sets the frequency at which the watcher is invoked.
      * 
     */
-    public Optional<Double> getExecutionFrequencyInSeconds() {
+    public Optional<Double> executionFrequencyInSeconds() {
         return Optional.ofNullable(this.executionFrequencyInSeconds);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Details of the user who last modified the watcher.
      * 
     */
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
      * 
     */
-    public Optional<String> getScriptName() {
+    public Optional<String> scriptName() {
         return Optional.ofNullable(this.scriptName);
     }
     /**
      * Gets or sets the parameters of the script.
      * 
     */
-    public Map<String,String> getScriptParameters() {
+    public Map<String,String> scriptParameters() {
         return this.scriptParameters == null ? Map.of() : this.scriptParameters;
     }
     /**
      * Gets or sets the name of the hybrid worker group the watcher will run on.
      * 
     */
-    public Optional<String> getScriptRunOn() {
+    public Optional<String> scriptRunOn() {
         return Optional.ofNullable(this.scriptRunOn);
     }
     /**
      * Gets the current status of the watcher.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

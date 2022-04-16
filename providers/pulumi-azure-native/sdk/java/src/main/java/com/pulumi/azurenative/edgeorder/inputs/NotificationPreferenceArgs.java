@@ -28,7 +28,7 @@ public final class NotificationPreferenceArgs extends com.pulumi.resources.Resou
     @Import(name="sendNotification", required=true)
       private final Output<Boolean> sendNotification;
 
-    public Output<Boolean> getSendNotification() {
+    public Output<Boolean> sendNotification() {
         return this.sendNotification;
     }
 
@@ -39,7 +39,7 @@ public final class NotificationPreferenceArgs extends com.pulumi.resources.Resou
     @Import(name="stageName", required=true)
       private final Output<Either<String,NotificationStageName>> stageName;
 
-    public Output<Either<String,NotificationStageName>> getStageName() {
+    public Output<Either<String,NotificationStageName>> stageName() {
         return this.stageName;
     }
 

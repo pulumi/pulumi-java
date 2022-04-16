@@ -26,7 +26,7 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scopeType")
       private final @Nullable String scopeType;
 
-    public Optional<String> getScopeType() {
+    public Optional<String> scopeType() {
         return this.scopeType == null ? Optional.empty() : Optional.ofNullable(this.scopeType);
     }
 
@@ -37,7 +37,7 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

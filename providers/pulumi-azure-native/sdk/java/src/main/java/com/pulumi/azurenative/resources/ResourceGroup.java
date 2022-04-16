@@ -44,7 +44,7 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The ID of the resource that manages this resource group.
      * 
      */
-    public Output</* @Nullable */ String> getManagedBy() {
+    public Output</* @Nullable */ String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -72,7 +72,7 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the resource group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The resource group properties.
      * 
      */
-    public Output<ResourceGroupPropertiesResponse> getProperties() {
+    public Output<ResourceGroupPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -100,7 +100,7 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The tags attached to the resource group.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +114,7 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The type of the resource group.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -22,7 +22,7 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -33,7 +33,7 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
-    public Output<String> getQueueName() {
+    public Output<String> queueName() {
         return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
@@ -44,7 +44,7 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="sasToken")
       private final @Nullable Output<String> sasToken;
 
-    public Output<String> getSasToken() {
+    public Output<String> sasToken() {
         return this.sasToken == null ? Codegen.empty() : this.sasToken;
     }
 
@@ -55,7 +55,7 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="storageAccount")
       private final @Nullable Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
+    public Output<String> storageAccount() {
         return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 

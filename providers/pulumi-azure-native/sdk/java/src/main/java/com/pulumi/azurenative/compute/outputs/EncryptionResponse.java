@@ -34,14 +34,14 @@ public final class EncryptionResponse {
      * ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
     */
-    public Optional<String> getDiskEncryptionSetId() {
+    public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
     /**
      * The type of key used to encrypt the data of the disk.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

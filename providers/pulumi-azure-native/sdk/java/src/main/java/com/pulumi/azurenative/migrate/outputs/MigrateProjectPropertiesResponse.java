@@ -60,35 +60,35 @@ public final class MigrateProjectPropertiesResponse {
      * Gets the last time the project summary was refreshed.
      * 
     */
-    public String getLastSummaryRefreshedTime() {
+    public String lastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime;
     }
     /**
      * Provisioning state of the migrate project.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Gets the refresh summary state.
      * 
     */
-    public String getRefreshSummaryState() {
+    public String refreshSummaryState() {
         return this.refreshSummaryState;
     }
     /**
      * Gets or sets the list of tools registered with the migrate project.
      * 
     */
-    public List<String> getRegisteredTools() {
+    public List<String> registeredTools() {
         return this.registeredTools == null ? List.of() : this.registeredTools;
     }
     /**
      * Gets the summary of the migrate project.
      * 
     */
-    public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> getSummary() {
+    public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary() {
         return this.summary;
     }
 

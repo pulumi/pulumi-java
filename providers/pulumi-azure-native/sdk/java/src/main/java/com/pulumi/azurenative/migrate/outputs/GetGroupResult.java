@@ -56,35 +56,35 @@ public final class GetGroupResult {
      * For optimistic concurrency control.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the group.
      * 
     */
-    public GroupPropertiesResponse getProperties() {
+    public GroupPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

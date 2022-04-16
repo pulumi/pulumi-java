@@ -26,7 +26,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
 
-    public Output<String> getEndIpAddress() {
+    public Output<String> endIpAddress() {
         return this.endIpAddress == null ? Codegen.empty() : this.endIpAddress;
     }
 
@@ -37,7 +37,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -48,7 +48,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
 
-    public Output<String> getStartIpAddress() {
+    public Output<String> startIpAddress() {
         return this.startIpAddress == null ? Codegen.empty() : this.startIpAddress;
     }
 

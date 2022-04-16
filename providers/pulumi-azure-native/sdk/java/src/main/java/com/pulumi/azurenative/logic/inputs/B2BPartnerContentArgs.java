@@ -27,7 +27,7 @@ public final class B2BPartnerContentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="businessIdentities")
       private final @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;
 
-    public Output<List<BusinessIdentityArgs>> getBusinessIdentities() {
+    public Output<List<BusinessIdentityArgs>> businessIdentities() {
         return this.businessIdentities == null ? Codegen.empty() : this.businessIdentities;
     }
 

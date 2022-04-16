@@ -72,49 +72,49 @@ public final class ModelVersionResponse {
      * ARM resource ID of the datastore where the asset is located.
      * 
     */
-    public Optional<String> getDatastoreId() {
+    public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * The asset description text.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Mapping of model flavors to their properties.
      * 
     */
-    public Map<String,FlavorDataResponse> getFlavors() {
+    public Map<String,FlavorDataResponse> flavors() {
         return this.flavors == null ? Map.of() : this.flavors;
     }
     /**
      * If the name version are system generated (anonymous registration).
      * 
     */
-    public Optional<Boolean> getIsAnonymous() {
+    public Optional<Boolean> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
      * The path of the file/directory in the datastore.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The asset property dictionary.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

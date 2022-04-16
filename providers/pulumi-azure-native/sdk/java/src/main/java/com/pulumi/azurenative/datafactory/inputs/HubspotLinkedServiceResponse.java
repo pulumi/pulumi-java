@@ -33,7 +33,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="accessToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccessToken() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken() {
         return this.accessToken == null ? null : this.accessToken;
     }
 
@@ -44,7 +44,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -55,7 +55,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="clientId", required=true)
       private final Object clientId;
 
-    public Object getClientId() {
+    public Object clientId() {
         return this.clientId;
     }
 
@@ -66,7 +66,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="clientSecret")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getClientSecret() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret() {
         return this.clientSecret == null ? null : this.clientSecret;
     }
 
@@ -77,7 +77,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -88,7 +88,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -99,7 +99,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -110,7 +110,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -121,7 +121,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="refreshToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getRefreshToken() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken() {
         return this.refreshToken == null ? null : this.refreshToken;
     }
 
@@ -133,7 +133,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -144,7 +144,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
 
-    public Optional<Object> getUseEncryptedEndpoints() {
+    public Optional<Object> useEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
@@ -155,7 +155,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
 
-    public Optional<Object> getUseHostVerification() {
+    public Optional<Object> useHostVerification() {
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
     }
 
@@ -166,7 +166,7 @@ public final class HubspotLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;
 
-    public Optional<Object> getUsePeerVerification() {
+    public Optional<Object> usePeerVerification() {
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
     }
 

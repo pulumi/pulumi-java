@@ -26,7 +26,7 @@ public final class EncryptionPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="identity")
       private final @Nullable Output<IdentityForCmkArgs> identity;
 
-    public Output<IdentityForCmkArgs> getIdentity() {
+    public Output<IdentityForCmkArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -37,7 +37,7 @@ public final class EncryptionPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyVaultProperties", required=true)
       private final Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties;
     }
 
@@ -48,7 +48,7 @@ public final class EncryptionPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="status", required=true)
       private final Output<Either<String,EncryptionStatus>> status;
 
-    public Output<Either<String,EncryptionStatus>> getStatus() {
+    public Output<Either<String,EncryptionStatus>> status() {
         return this.status;
     }
 

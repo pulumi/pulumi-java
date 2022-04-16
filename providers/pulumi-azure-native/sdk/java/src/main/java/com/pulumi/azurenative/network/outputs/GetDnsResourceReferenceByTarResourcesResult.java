@@ -26,7 +26,7 @@ public final class GetDnsResourceReferenceByTarResourcesResult {
      * The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request
      * 
     */
-    public List<DnsResourceReferenceResponse> getDnsResourceReferences() {
+    public List<DnsResourceReferenceResponse> dnsResourceReferences() {
         return this.dnsResourceReferences == null ? List.of() : this.dnsResourceReferences;
     }
 

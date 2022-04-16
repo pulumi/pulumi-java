@@ -44,7 +44,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Azure location of the key vault resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Name of the key vault resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Properties of the secret
      * 
      */
-    public Output<SecretPropertiesResponse> getProperties() {
+    public Output<SecretPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Tags assigned to the key vault resource.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +100,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Resource type of the key vault resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

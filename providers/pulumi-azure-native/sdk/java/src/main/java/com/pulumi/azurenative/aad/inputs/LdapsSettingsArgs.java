@@ -29,7 +29,7 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalAccess")
       private final @Nullable Output<Either<String,ExternalAccess>> externalAccess;
 
-    public Output<Either<String,ExternalAccess>> getExternalAccess() {
+    public Output<Either<String,ExternalAccess>> externalAccess() {
         return this.externalAccess == null ? Codegen.empty() : this.externalAccess;
     }
 
@@ -40,7 +40,7 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ldaps")
       private final @Nullable Output<Either<String,Ldaps>> ldaps;
 
-    public Output<Either<String,Ldaps>> getLdaps() {
+    public Output<Either<String,Ldaps>> ldaps() {
         return this.ldaps == null ? Codegen.empty() : this.ldaps;
     }
 
@@ -51,7 +51,7 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pfxCertificate")
       private final @Nullable Output<String> pfxCertificate;
 
-    public Output<String> getPfxCertificate() {
+    public Output<String> pfxCertificate() {
         return this.pfxCertificate == null ? Codegen.empty() : this.pfxCertificate;
     }
 
@@ -62,7 +62,7 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pfxCertificatePassword")
       private final @Nullable Output<String> pfxCertificatePassword;
 
-    public Output<String> getPfxCertificatePassword() {
+    public Output<String> pfxCertificatePassword() {
         return this.pfxCertificatePassword == null ? Codegen.empty() : this.pfxCertificatePassword;
     }
 

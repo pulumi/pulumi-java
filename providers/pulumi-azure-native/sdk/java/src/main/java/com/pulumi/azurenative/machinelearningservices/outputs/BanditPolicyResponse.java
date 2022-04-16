@@ -57,35 +57,35 @@ public final class BanditPolicyResponse {
      * Number of intervals by which to delay the first evaluation.
      * 
     */
-    public Optional<Integer> getDelayEvaluation() {
+    public Optional<Integer> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
     /**
      * Interval (number of runs) between policy evaluations.
      * 
     */
-    public Optional<Integer> getEvaluationInterval() {
+    public Optional<Integer> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
      * Expected value is 'Bandit'.
      * 
     */
-    public String getPolicyType() {
+    public String policyType() {
         return this.policyType;
     }
     /**
      * Absolute distance allowed from the best performing run.
      * 
     */
-    public Optional<Double> getSlackAmount() {
+    public Optional<Double> slackAmount() {
         return Optional.ofNullable(this.slackAmount);
     }
     /**
      * Ratio of the allowed distance from the best performing run.
      * 
     */
-    public Optional<Double> getSlackFactor() {
+    public Optional<Double> slackFactor() {
         return Optional.ofNullable(this.slackFactor);
     }
 

@@ -135,112 +135,112 @@ public final class GetLabResult {
      * Object id of the user that created the lab.
      * 
     */
-    public String getCreatedByObjectId() {
+    public String createdByObjectId() {
         return this.createdByObjectId;
     }
     /**
      * Lab creator name
      * 
     */
-    public String getCreatedByUserPrincipalName() {
+    public String createdByUserPrincipalName() {
         return this.createdByUserPrincipalName;
     }
     /**
      * Creation date for the lab
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Invitation code that users can use to join a lab.
      * 
     */
-    public String getInvitationCode() {
+    public String invitationCode() {
         return this.invitationCode;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
     */
-    public LatestOperationResultResponse getLatestOperationResult() {
+    public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Maximum number of users allowed in the lab.
      * 
     */
-    public Optional<Integer> getMaxUsersInLab() {
+    public Optional<Integer> maxUsersInLab() {
         return Optional.ofNullable(this.maxUsersInLab);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public Optional<String> getUniqueIdentifier() {
+    public Optional<String> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
     /**
      * Maximum duration a user can use an environment for in the lab.
      * 
     */
-    public Optional<String> getUsageQuota() {
+    public Optional<String> usageQuota() {
         return Optional.ofNullable(this.usageQuota);
     }
     /**
      * Lab user access mode (open to all vs. restricted to those listed on the lab).
      * 
     */
-    public Optional<String> getUserAccessMode() {
+    public Optional<String> userAccessMode() {
         return Optional.ofNullable(this.userAccessMode);
     }
     /**
      * Maximum value MaxUsersInLab can be set to, as specified by the service
      * 
     */
-    public Integer getUserQuota() {
+    public Integer userQuota() {
         return this.userQuota;
     }
 

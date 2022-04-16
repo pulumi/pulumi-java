@@ -41,21 +41,21 @@ public final class GatewayDetailsResponse {
      * Uri of the DMTS cluster.
      * 
     */
-    public String getDmtsClusterUri() {
+    public String dmtsClusterUri() {
         return this.dmtsClusterUri;
     }
     /**
      * Gateway object id from in the DMTS cluster for the gateway resource.
      * 
     */
-    public String getGatewayObjectId() {
+    public String gatewayObjectId() {
         return this.gatewayObjectId;
     }
     /**
      * Gateway resource to be associated with the server.
      * 
     */
-    public Optional<String> getGatewayResourceId() {
+    public Optional<String> gatewayResourceId() {
         return Optional.ofNullable(this.gatewayResourceId);
     }
 

@@ -25,7 +25,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
     @Import(name="customerSubscriptionDetails")
       private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
-    public Optional<CustomerSubscriptionDetails> getCustomerSubscriptionDetails() {
+    public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
         return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
@@ -36,7 +36,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -47,7 +47,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
     @Import(name="filterableProperties", required=true)
       private final Map<String,List<FilterableProperty>> filterableProperties;
 
-    public Map<String,List<FilterableProperty>> getFilterableProperties() {
+    public Map<String,List<FilterableProperty>> filterableProperties() {
         return this.filterableProperties;
     }
 
@@ -58,7 +58,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 

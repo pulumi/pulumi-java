@@ -27,7 +27,7 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -38,7 +38,7 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
+    public Output<String> memory() {
         return this.memory == null ? Codegen.empty() : this.memory;
     }
 

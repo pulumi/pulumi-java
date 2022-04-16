@@ -27,7 +27,7 @@ public final class VolumeContainerFailoverMetadataResponse extends com.pulumi.re
     @Import(name="volumeContainerId")
       private final @Nullable String volumeContainerId;
 
-    public Optional<String> getVolumeContainerId() {
+    public Optional<String> volumeContainerId() {
         return this.volumeContainerId == null ? Optional.empty() : Optional.ofNullable(this.volumeContainerId);
     }
 
@@ -38,7 +38,7 @@ public final class VolumeContainerFailoverMetadataResponse extends com.pulumi.re
     @Import(name="volumes")
       private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
 
-    public List<VolumeFailoverMetadataResponse> getVolumes() {
+    public List<VolumeFailoverMetadataResponse> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

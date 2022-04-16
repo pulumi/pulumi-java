@@ -42,21 +42,21 @@ public final class KpiGroupByMetadataResponse {
      * The display name.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The name of the field.
      * 
     */
-    public Optional<String> getFieldName() {
+    public Optional<String> fieldName() {
         return Optional.ofNullable(this.fieldName);
     }
     /**
      * The type of the field.
      * 
     */
-    public Optional<String> getFieldType() {
+    public Optional<String> fieldType() {
         return Optional.ofNullable(this.fieldType);
     }
 

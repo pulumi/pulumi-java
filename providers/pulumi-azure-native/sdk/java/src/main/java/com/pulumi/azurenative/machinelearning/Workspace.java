@@ -43,7 +43,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The creation time for this workspace resource.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -57,7 +57,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The key vault identifier used for encrypted workspaces.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultIdentifierId() {
+    public Output</* @Nullable */ String> keyVaultIdentifierId() {
         return this.keyVaultIdentifierId;
     }
     /**
@@ -71,7 +71,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -85,7 +85,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The email id of the owner for this workspace.
      * 
      */
-    public Output<String> getOwnerEmail() {
+    public Output<String> ownerEmail() {
         return this.ownerEmail;
     }
     /**
@@ -113,7 +113,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The regional endpoint for the machine learning studio service which hosts this workspace.
      * 
      */
-    public Output<String> getStudioEndpoint() {
+    public Output<String> studioEndpoint() {
         return this.studioEndpoint;
     }
     /**
@@ -127,7 +127,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -155,7 +155,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The fully qualified arm id of the storage account associated with this workspace.
      * 
      */
-    public Output<String> getUserStorageAccountId() {
+    public Output<String> userStorageAccountId() {
         return this.userStorageAccountId;
     }
     /**
@@ -169,7 +169,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The immutable id associated with this workspace.
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
     /**
@@ -183,7 +183,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The current state of workspace resource.
      * 
      */
-    public Output<String> getWorkspaceState() {
+    public Output<String> workspaceState() {
         return this.workspaceState;
     }
     /**
@@ -197,7 +197,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The type of this workspace.
      * 
      */
-    public Output<String> getWorkspaceType() {
+    public Output<String> workspaceType() {
         return this.workspaceType;
     }
 

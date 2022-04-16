@@ -19,7 +19,7 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
     @Import(name="deviceSecurityGroupName", required=true)
       private final String deviceSecurityGroupName;
 
-    public String getDeviceSecurityGroupName() {
+    public String deviceSecurityGroupName() {
         return this.deviceSecurityGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

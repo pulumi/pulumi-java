@@ -24,7 +24,7 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
     @Import(name="assetName", required=true)
       private final String assetName;
 
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
 
@@ -35,7 +35,7 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
     @Import(name="inputs", required=true)
       private final List<String> inputs;
 
-    public List<String> getInputs() {
+    public List<String> inputs() {
         return this.inputs;
     }
 
@@ -46,7 +46,7 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -58,7 +58,7 @@ public final class MediaGraphAssetSinkResponse extends com.pulumi.resources.Invo
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

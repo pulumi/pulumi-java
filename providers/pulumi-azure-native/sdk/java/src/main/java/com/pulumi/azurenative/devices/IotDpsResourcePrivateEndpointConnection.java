@@ -43,7 +43,7 @@ public class IotDpsResourcePrivateEndpointConnection extends com.pulumi.resource
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class IotDpsResourcePrivateEndpointConnection extends com.pulumi.resource
      * @return The properties of a private endpoint connection
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class IotDpsResourcePrivateEndpointConnection extends com.pulumi.resource
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

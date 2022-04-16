@@ -47,28 +47,28 @@ public final class GetMoveResourceResult {
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the move resource properties.
      * 
     */
-    public MoveResourcePropertiesResponse getProperties() {
+    public MoveResourcePropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

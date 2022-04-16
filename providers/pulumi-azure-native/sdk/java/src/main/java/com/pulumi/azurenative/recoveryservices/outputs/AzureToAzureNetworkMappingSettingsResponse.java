@@ -43,21 +43,21 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
      * Expected value is 'AzureToAzure'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The primary fabric location.
      * 
     */
-    public Optional<String> getPrimaryFabricLocation() {
+    public Optional<String> primaryFabricLocation() {
         return Optional.ofNullable(this.primaryFabricLocation);
     }
     /**
      * The recovery fabric location.
      * 
     */
-    public Optional<String> getRecoveryFabricLocation() {
+    public Optional<String> recoveryFabricLocation() {
         return Optional.ofNullable(this.recoveryFabricLocation);
     }
 

@@ -36,14 +36,14 @@ public final class ModeValueInfoResponse {
      * The interface string name for the nested parameter.
      * 
     */
-    public Optional<String> getInterfaceString() {
+    public Optional<String> interfaceString() {
         return Optional.ofNullable(this.interfaceString);
     }
     /**
      * The definition of the parameter.
      * 
     */
-    public List<ModuleAssetParameterResponse> getParameters() {
+    public List<ModuleAssetParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 

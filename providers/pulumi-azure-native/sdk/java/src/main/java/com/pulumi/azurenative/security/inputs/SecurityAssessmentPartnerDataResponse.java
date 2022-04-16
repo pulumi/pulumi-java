@@ -23,7 +23,7 @@ public final class SecurityAssessmentPartnerDataResponse extends com.pulumi.reso
     @Import(name="partnerName", required=true)
       private final String partnerName;
 
-    public String getPartnerName() {
+    public String partnerName() {
         return this.partnerName;
     }
 
@@ -34,7 +34,7 @@ public final class SecurityAssessmentPartnerDataResponse extends com.pulumi.reso
     @Import(name="secret", required=true)
       private final String secret;
 
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

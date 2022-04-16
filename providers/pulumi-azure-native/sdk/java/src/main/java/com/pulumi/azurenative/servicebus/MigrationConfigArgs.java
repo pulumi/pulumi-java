@@ -22,7 +22,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="configName")
       private final @Nullable Output<String> configName;
 
-    public Output<String> getConfigName() {
+    public Output<String> configName() {
         return this.configName == null ? Codegen.empty() : this.configName;
     }
 
@@ -33,7 +33,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -44,7 +44,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="postMigrationName", required=true)
       private final Output<String> postMigrationName;
 
-    public Output<String> getPostMigrationName() {
+    public Output<String> postMigrationName() {
         return this.postMigrationName;
     }
 
@@ -55,7 +55,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetNamespace", required=true)
       private final Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
+    public Output<String> targetNamespace() {
         return this.targetNamespace;
     }
 

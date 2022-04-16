@@ -55,35 +55,35 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
      * The number of failures to allow before returning an unhealthy status.
      * 
     */
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * The delay before the first probe in seconds.
      * 
     */
-    public Optional<Integer> getInitialDelaySeconds() {
+    public Optional<Integer> initialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
     /**
      * The length of time between probes in seconds.
      * 
     */
-    public Optional<Integer> getPeriodSeconds() {
+    public Optional<Integer> periodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
     /**
      * The number of successful probes before returning a healthy status.
      * 
     */
-    public Optional<Integer> getSuccessThreshold() {
+    public Optional<Integer> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The probe timeout in seconds.
      * 
     */
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
 

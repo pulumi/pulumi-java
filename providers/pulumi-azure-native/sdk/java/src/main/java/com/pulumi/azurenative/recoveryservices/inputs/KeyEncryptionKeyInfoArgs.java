@@ -26,7 +26,7 @@ public final class KeyEncryptionKeyInfoArgs extends com.pulumi.resources.Resourc
     @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;
 
-    public Output<String> getKeyIdentifier() {
+    public Output<String> keyIdentifier() {
         return this.keyIdentifier == null ? Codegen.empty() : this.keyIdentifier;
     }
 
@@ -37,7 +37,7 @@ public final class KeyEncryptionKeyInfoArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVaultResourceArmId")
       private final @Nullable Output<String> keyVaultResourceArmId;
 
-    public Output<String> getKeyVaultResourceArmId() {
+    public Output<String> keyVaultResourceArmId() {
         return this.keyVaultResourceArmId == null ? Codegen.empty() : this.keyVaultResourceArmId;
     }
 

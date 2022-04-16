@@ -68,49 +68,49 @@ public final class ServiceProviderParameterResponse {
      * Default Name for the Service Provider
      * 
     */
-    public String getDefault_() {
+    public String default_() {
         return this.default_;
     }
     /**
      * Description of the Service Provider
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Display Name of the Service Provider
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Help Url for the  Service Provider
      * 
     */
-    public String getHelpUrl() {
+    public String helpUrl() {
         return this.helpUrl;
     }
     /**
      * Meta data for the Service Provider
      * 
     */
-    public ServiceProviderParameterResponseMetadata getMetadata() {
+    public ServiceProviderParameterResponseMetadata metadata() {
         return this.metadata;
     }
     /**
      * Name of the Service Provider
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Type of the Service Provider
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -40,21 +40,21 @@ public final class ClusterJobResponse {
      * Resource ID of the streaming job.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The current execution state of the streaming job.
      * 
     */
-    public String getJobState() {
+    public String jobState() {
         return this.jobState;
     }
     /**
      * The number of streaming units that are used by the streaming job.
      * 
     */
-    public Integer getStreamingUnits() {
+    public Integer streamingUnits() {
         return this.streamingUnits;
     }
 

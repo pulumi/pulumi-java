@@ -27,7 +27,7 @@ public final class LegalHoldPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="hasLegalHold", required=true)
       private final Boolean hasLegalHold;
 
-    public Boolean getHasLegalHold() {
+    public Boolean hasLegalHold() {
         return this.hasLegalHold;
     }
 
@@ -38,7 +38,7 @@ public final class LegalHoldPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="tags")
       private final @Nullable List<TagPropertyResponse> tags;
 
-    public List<TagPropertyResponse> getTags() {
+    public List<TagPropertyResponse> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

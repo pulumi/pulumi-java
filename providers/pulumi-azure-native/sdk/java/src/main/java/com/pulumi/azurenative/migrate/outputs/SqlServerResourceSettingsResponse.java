@@ -34,14 +34,14 @@ public final class SqlServerResourceSettingsResponse {
      * Expected value is 'Microsoft.Sql/servers'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 

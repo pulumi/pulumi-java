@@ -30,7 +30,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -41,7 +41,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -52,7 +52,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
@@ -63,7 +63,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -74,7 +74,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -85,7 +85,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -96,7 +96,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicIpAddresses")
       private final @Nullable List<SubResourceResponse> publicIpAddresses;
 
-    public List<SubResourceResponse> getPublicIpAddresses() {
+    public List<SubResourceResponse> publicIpAddresses() {
         return this.publicIpAddresses == null ? List.of() : this.publicIpAddresses;
     }
 
@@ -107,7 +107,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicIpPrefixes")
       private final @Nullable List<SubResourceResponse> publicIpPrefixes;
 
-    public List<SubResourceResponse> getPublicIpPrefixes() {
+    public List<SubResourceResponse> publicIpPrefixes() {
         return this.publicIpPrefixes == null ? List.of() : this.publicIpPrefixes;
     }
 
@@ -118,7 +118,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
 
@@ -129,7 +129,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sku")
       private final @Nullable NatGatewaySkuResponse sku;
 
-    public Optional<NatGatewaySkuResponse> getSku() {
+    public Optional<NatGatewaySkuResponse> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -140,7 +140,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnets", required=true)
       private final List<SubResourceResponse> subnets;
 
-    public List<SubResourceResponse> getSubnets() {
+    public List<SubResourceResponse> subnets() {
         return this.subnets;
     }
 
@@ -151,7 +151,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -162,7 +162,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -173,7 +173,7 @@ public final class NatGatewayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zones")
       private final @Nullable List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

@@ -145,119 +145,119 @@ public final class GetIotSecuritySolutionResult {
      * List of additional workspaces
      * 
     */
-    public List<AdditionalWorkspacesPropertiesResponse> getAdditionalWorkspaces() {
+    public List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces() {
         return this.additionalWorkspaces == null ? List.of() : this.additionalWorkspaces;
     }
     /**
      * List of resources that were automatically discovered as relevant to the security solution.
      * 
     */
-    public List<String> getAutoDiscoveredResources() {
+    public List<String> autoDiscoveredResources() {
         return this.autoDiscoveredResources;
     }
     /**
      * Disabled data sources. Disabling these data sources compromises the system.
      * 
     */
-    public List<String> getDisabledDataSources() {
+    public List<String> disabledDataSources() {
         return this.disabledDataSources == null ? List.of() : this.disabledDataSources;
     }
     /**
      * Resource display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * List of additional options for exporting to workspace data.
      * 
     */
-    public List<String> getExport() {
+    public List<String> export() {
         return this.export == null ? List.of() : this.export;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * IoT Hub resource IDs
      * 
     */
-    public List<String> getIotHubs() {
+    public List<String> iotHubs() {
         return this.iotHubs;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of the configuration status for each recommendation type.
      * 
     */
-    public List<RecommendationConfigurationPropertiesResponse> getRecommendationsConfiguration() {
+    public List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration() {
         return this.recommendationsConfiguration == null ? List.of() : this.recommendationsConfiguration;
     }
     /**
      * Status of the IoT Security solution.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Unmasked IP address logging status
      * 
     */
-    public Optional<String> getUnmaskedIpLoggingStatus() {
+    public Optional<String> unmaskedIpLoggingStatus() {
         return Optional.ofNullable(this.unmaskedIpLoggingStatus);
     }
     /**
      * Properties of the IoT Security solution's user defined resources.
      * 
     */
-    public Optional<UserDefinedResourcesPropertiesResponse> getUserDefinedResources() {
+    public Optional<UserDefinedResourcesPropertiesResponse> userDefinedResources() {
         return Optional.ofNullable(this.userDefinedResources);
     }
     /**
      * Workspace resource ID
      * 
     */
-    public Optional<String> getWorkspace() {
+    public Optional<String> workspace() {
         return Optional.ofNullable(this.workspace);
     }
 

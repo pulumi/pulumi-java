@@ -51,21 +51,21 @@ public final class AzureKeyVaultSecretReferenceResponse {
      * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getSecretName() {
+    public Object secretName() {
         return this.secretName;
     }
     /**
      * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSecretVersion() {
+    public Optional<Object> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
      * The Azure Key Vault linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getStore() {
+    public LinkedServiceReferenceResponse store() {
         return this.store;
     }
     /**
@@ -73,7 +73,7 @@ public final class AzureKeyVaultSecretReferenceResponse {
      * Expected value is 'AzureKeyVaultSecret'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

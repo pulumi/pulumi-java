@@ -25,7 +25,7 @@ public final class AzureFirewallNatRCActionResponse extends com.pulumi.resources
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

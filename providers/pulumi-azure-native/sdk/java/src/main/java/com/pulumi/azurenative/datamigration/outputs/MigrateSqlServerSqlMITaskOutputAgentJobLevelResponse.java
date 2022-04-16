@@ -85,42 +85,42 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Migration errors and warnings per job
      * 
     */
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The state of the original Agent Job.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * Migration progress message
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Agent Job name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -128,21 +128,21 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
      * Expected value is 'AgentJobLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

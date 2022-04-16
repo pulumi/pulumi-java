@@ -26,7 +26,7 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -37,7 +37,7 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
     @Import(name="primaryZone")
       private final @Nullable String primaryZone;
 
-    public Optional<String> getPrimaryZone() {
+    public Optional<String> primaryZone() {
         return this.primaryZone == null ? Optional.empty() : Optional.ofNullable(this.primaryZone);
     }
 
@@ -48,7 +48,7 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
     @Import(name="recoveryZone")
       private final @Nullable String recoveryZone;
 
-    public Optional<String> getRecoveryZone() {
+    public Optional<String> recoveryZone() {
         return this.recoveryZone == null ? Optional.empty() : Optional.ofNullable(this.recoveryZone);
     }
 

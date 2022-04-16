@@ -26,7 +26,7 @@ public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.Resour
     @Import(name="filePath", required=true)
       private final Output<Object> filePath;
 
-    public Output<Object> getFilePath() {
+    public Output<Object> filePath() {
         return this.filePath;
     }
 
@@ -37,7 +37,7 @@ public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.Resour
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 

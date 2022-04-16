@@ -24,10 +24,10 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
         this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
     }
 
-    public Optional<Boolean> getEnableDefaultValidation() {
+    public Optional<Boolean> enableDefaultValidation() {
         return Optional.ofNullable(this.enableDefaultValidation);
     }
-    public List<String> getResourceTypesWithCustomValidation() {
+    public List<String> resourceTypesWithCustomValidation() {
         return this.resourceTypesWithCustomValidation == null ? List.of() : this.resourceTypesWithCustomValidation;
     }
 

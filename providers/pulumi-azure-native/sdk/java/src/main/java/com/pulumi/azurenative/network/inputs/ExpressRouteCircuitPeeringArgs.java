@@ -37,7 +37,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="azureASN")
       private final @Nullable Output<Integer> azureASN;
 
-    public Output<Integer> getAzureASN() {
+    public Output<Integer> azureASN() {
         return this.azureASN == null ? Codegen.empty() : this.azureASN;
     }
 
@@ -48,7 +48,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="connections")
       private final @Nullable Output<List<ExpressRouteCircuitConnectionArgs>> connections;
 
-    public Output<List<ExpressRouteCircuitConnectionArgs>> getConnections() {
+    public Output<List<ExpressRouteCircuitConnectionArgs>> connections() {
         return this.connections == null ? Codegen.empty() : this.connections;
     }
 
@@ -59,7 +59,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
 
-    public Output<String> getGatewayManagerEtag() {
+    public Output<String> gatewayManagerEtag() {
         return this.gatewayManagerEtag == null ? Codegen.empty() : this.gatewayManagerEtag;
     }
 
@@ -70,7 +70,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -81,7 +81,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="ipv6PeeringConfig")
       private final @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
 
-    public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> getIpv6PeeringConfig() {
+    public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig() {
         return this.ipv6PeeringConfig == null ? Codegen.empty() : this.ipv6PeeringConfig;
     }
 
@@ -92,7 +92,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
-    public Output<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
+    public Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig() {
         return this.microsoftPeeringConfig == null ? Codegen.empty() : this.microsoftPeeringConfig;
     }
 
@@ -103,7 +103,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -114,7 +114,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="peerASN")
       private final @Nullable Output<Double> peerASN;
 
-    public Output<Double> getPeerASN() {
+    public Output<Double> peerASN() {
         return this.peerASN == null ? Codegen.empty() : this.peerASN;
     }
 
@@ -125,7 +125,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="peeringType")
       private final @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
 
-    public Output<Either<String,ExpressRoutePeeringType>> getPeeringType() {
+    public Output<Either<String,ExpressRoutePeeringType>> peeringType() {
         return this.peeringType == null ? Codegen.empty() : this.peeringType;
     }
 
@@ -136,7 +136,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="primaryAzurePort")
       private final @Nullable Output<String> primaryAzurePort;
 
-    public Output<String> getPrimaryAzurePort() {
+    public Output<String> primaryAzurePort() {
         return this.primaryAzurePort == null ? Codegen.empty() : this.primaryAzurePort;
     }
 
@@ -147,7 +147,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
 
-    public Output<String> getPrimaryPeerAddressPrefix() {
+    public Output<String> primaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix == null ? Codegen.empty() : this.primaryPeerAddressPrefix;
     }
 
@@ -158,7 +158,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="routeFilter")
       private final @Nullable Output<SubResourceArgs> routeFilter;
 
-    public Output<SubResourceArgs> getRouteFilter() {
+    public Output<SubResourceArgs> routeFilter() {
         return this.routeFilter == null ? Codegen.empty() : this.routeFilter;
     }
 
@@ -169,7 +169,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="secondaryAzurePort")
       private final @Nullable Output<String> secondaryAzurePort;
 
-    public Output<String> getSecondaryAzurePort() {
+    public Output<String> secondaryAzurePort() {
         return this.secondaryAzurePort == null ? Codegen.empty() : this.secondaryAzurePort;
     }
 
@@ -180,7 +180,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
 
-    public Output<String> getSecondaryPeerAddressPrefix() {
+    public Output<String> secondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix == null ? Codegen.empty() : this.secondaryPeerAddressPrefix;
     }
 
@@ -191,7 +191,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
-    public Output<String> getSharedKey() {
+    public Output<String> sharedKey() {
         return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
     }
 
@@ -202,7 +202,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
 
-    public Output<Either<String,ExpressRoutePeeringState>> getState() {
+    public Output<Either<String,ExpressRoutePeeringState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -213,7 +213,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="stats")
       private final @Nullable Output<ExpressRouteCircuitStatsArgs> stats;
 
-    public Output<ExpressRouteCircuitStatsArgs> getStats() {
+    public Output<ExpressRouteCircuitStatsArgs> stats() {
         return this.stats == null ? Codegen.empty() : this.stats;
     }
 
@@ -224,7 +224,7 @@ public final class ExpressRouteCircuitPeeringArgs extends com.pulumi.resources.R
     @Import(name="vlanId")
       private final @Nullable Output<Integer> vlanId;
 
-    public Output<Integer> getVlanId() {
+    public Output<Integer> vlanId() {
         return this.vlanId == null ? Codegen.empty() : this.vlanId;
     }
 

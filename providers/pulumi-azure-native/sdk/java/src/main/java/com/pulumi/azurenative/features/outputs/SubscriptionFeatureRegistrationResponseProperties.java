@@ -121,98 +121,98 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
      * The feature approval type.
      * 
     */
-    public String getApprovalType() {
+    public String approvalType() {
         return this.approvalType;
     }
     /**
      * Authorization Profile
      * 
     */
-    public Optional<AuthorizationProfileResponse> getAuthorizationProfile() {
+    public Optional<AuthorizationProfileResponse> authorizationProfile() {
         return Optional.ofNullable(this.authorizationProfile);
     }
     /**
      * The feature description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The featureDisplayName.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The feature documentation link.
      * 
     */
-    public String getDocumentationLink() {
+    public String documentationLink() {
         return this.documentationLink;
     }
     /**
      * The featureName.
      * 
     */
-    public String getFeatureName() {
+    public String featureName() {
         return this.featureName;
     }
     /**
      * Key-value pairs for meta data.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The providerNamespace.
      * 
     */
-    public String getProviderNamespace() {
+    public String providerNamespace() {
         return this.providerNamespace;
     }
     /**
      * The feature registration date.
      * 
     */
-    public String getRegistrationDate() {
+    public String registrationDate() {
         return this.registrationDate;
     }
     /**
      * The feature release date.
      * 
     */
-    public String getReleaseDate() {
+    public String releaseDate() {
         return this.releaseDate;
     }
     /**
      * Indicates whether feature should be displayed in Portal.
      * 
     */
-    public Optional<Boolean> getShouldFeatureDisplayInPortal() {
+    public Optional<Boolean> shouldFeatureDisplayInPortal() {
         return Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
     /**
      * The state.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The subscriptionId.
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * The tenantId.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

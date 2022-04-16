@@ -48,28 +48,28 @@ public final class ParameterDeclarationResponse {
      * The default value for the parameter to be used if the pipeline does not specify a value.
      * 
     */
-    public Optional<String> getDefault_() {
+    public Optional<String> default_() {
         return Optional.ofNullable(this.default_);
     }
     /**
      * Description of the parameter.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Name of the parameter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Type of the parameter.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

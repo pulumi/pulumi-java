@@ -37,14 +37,14 @@ public final class MpiResponse {
      * Expected value is 'Mpi'.
      * 
     */
-    public String getDistributionType() {
+    public String distributionType() {
         return this.distributionType;
     }
     /**
      * Number of processes per MPI node.
      * 
     */
-    public Optional<Integer> getProcessCountPerInstance() {
+    public Optional<Integer> processCountPerInstance() {
         return Optional.ofNullable(this.processCountPerInstance);
     }
 

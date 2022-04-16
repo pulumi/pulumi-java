@@ -26,7 +26,7 @@ public final class PropertiesNetworkInjectionArgs extends com.pulumi.resources.R
     @Import(name="virtualNetworks")
       private final @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
-    public Output<VirtualNetworkPropertiesListArgs> getVirtualNetworks() {
+    public Output<VirtualNetworkPropertiesListArgs> virtualNetworks() {
         return this.virtualNetworks == null ? Codegen.empty() : this.virtualNetworks;
     }
 

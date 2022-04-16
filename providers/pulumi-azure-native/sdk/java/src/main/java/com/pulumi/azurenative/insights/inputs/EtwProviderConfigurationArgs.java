@@ -19,14 +19,14 @@ public final class EtwProviderConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="events", required=true)
       private final Output<List<EtwEventConfigurationArgs>> events;
 
-    public Output<List<EtwEventConfigurationArgs>> getEvents() {
+    public Output<List<EtwEventConfigurationArgs>> events() {
         return this.events;
     }
 
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 

@@ -26,7 +26,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="graphName")
       private final @Nullable Output<String> graphName;
 
-    public Output<String> getGraphName() {
+    public Output<String> graphName() {
         return this.graphName == null ? Codegen.empty() : this.graphName;
     }
 
@@ -48,7 +48,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -59,7 +59,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Output<CreateUpdateOptionsArgs> getOptions() {
+    public Output<CreateUpdateOptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -81,7 +81,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="resource", required=true)
       private final Output<GraphResourceArgs> resource;
 
-    public Output<GraphResourceArgs> getResource() {
+    public Output<GraphResourceArgs> resource() {
         return this.resource;
     }
 
@@ -92,7 +92,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class GraphResourceGraphArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -22,84 +22,84 @@ public final class SkuSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capabilities")
       private final @Nullable List<SkuCapabilityResponse> capabilities;
 
-    public List<SkuCapabilityResponse> getCapabilities() {
+    public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
     @Import(name="capacity")
       private final @Nullable SkuSettingResponseCapacity capacity;
 
-    public Optional<SkuSettingResponseCapacity> getCapacity() {
+    public Optional<SkuSettingResponseCapacity> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
     @Import(name="costs")
       private final @Nullable List<SkuCostResponse> costs;
 
-    public List<SkuCostResponse> getCosts() {
+    public List<SkuCostResponse> costs() {
         return this.costs == null ? List.of() : this.costs;
     }
 
     @Import(name="family")
       private final @Nullable String family;
 
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
     @Import(name="locationInfo")
       private final @Nullable List<SkuLocationInfoResponse> locationInfo;
 
-    public List<SkuLocationInfoResponse> getLocationInfo() {
+    public List<SkuLocationInfoResponse> locationInfo() {
         return this.locationInfo == null ? List.of() : this.locationInfo;
     }
 
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
     @Import(name="requiredQuotaIds")
       private final @Nullable List<String> requiredQuotaIds;
 
-    public List<String> getRequiredQuotaIds() {
+    public List<String> requiredQuotaIds() {
         return this.requiredQuotaIds == null ? List.of() : this.requiredQuotaIds;
     }
 
     @Import(name="size")
       private final @Nullable String size;
 
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

@@ -34,14 +34,14 @@ public final class OpenIdConnectClientCredentialResponse {
      * The app setting that contains the client secret for the custom Open ID Connect provider.
      * 
     */
-    public Optional<String> getClientSecretSettingName() {
+    public Optional<String> clientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
     /**
      * The method that should be used to authenticate the user.
      * 
     */
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
 

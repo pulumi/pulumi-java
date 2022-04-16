@@ -27,7 +27,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="discoveryStatus")
       private final @Nullable String discoveryStatus;
 
-    public Optional<String> getDiscoveryStatus() {
+    public Optional<String> discoveryStatus() {
         return this.discoveryStatus == null ? Optional.empty() : Optional.ofNullable(this.discoveryStatus);
     }
 
@@ -38,7 +38,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="fabricArmResourceName")
       private final @Nullable String fabricArmResourceName;
 
-    public Optional<String> getFabricArmResourceName() {
+    public Optional<String> fabricArmResourceName() {
         return this.fabricArmResourceName == null ? Optional.empty() : Optional.ofNullable(this.fabricArmResourceName);
     }
 
@@ -49,7 +49,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -60,7 +60,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="healthErrors")
       private final @Nullable List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
 
@@ -71,7 +71,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="infrastructureId")
       private final @Nullable String infrastructureId;
 
-    public Optional<String> getInfrastructureId() {
+    public Optional<String> infrastructureId() {
         return this.infrastructureId == null ? Optional.empty() : Optional.ofNullable(this.infrastructureId);
     }
 
@@ -82,7 +82,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="internalId")
       private final @Nullable String internalId;
 
-    public Optional<String> getInternalId() {
+    public Optional<String> internalId() {
         return this.internalId == null ? Optional.empty() : Optional.ofNullable(this.internalId);
     }
 
@@ -93,7 +93,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -104,7 +104,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
@@ -115,7 +115,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="port")
       private final @Nullable String port;
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -126,7 +126,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="processServerId")
       private final @Nullable String processServerId;
 
-    public Optional<String> getProcessServerId() {
+    public Optional<String> processServerId() {
         return this.processServerId == null ? Optional.empty() : Optional.ofNullable(this.processServerId);
     }
 
@@ -137,7 +137,7 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="runAsAccountId")
       private final @Nullable String runAsAccountId;
 
-    public Optional<String> getRunAsAccountId() {
+    public Optional<String> runAsAccountId() {
         return this.runAsAccountId == null ? Optional.empty() : Optional.ofNullable(this.runAsAccountId);
     }
 

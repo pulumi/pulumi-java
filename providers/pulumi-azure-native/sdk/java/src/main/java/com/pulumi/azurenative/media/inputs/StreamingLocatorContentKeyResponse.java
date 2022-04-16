@@ -27,7 +27,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -38,7 +38,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="labelReferenceInStreamingPolicy")
       private final @Nullable String labelReferenceInStreamingPolicy;
 
-    public Optional<String> getLabelReferenceInStreamingPolicy() {
+    public Optional<String> labelReferenceInStreamingPolicy() {
         return this.labelReferenceInStreamingPolicy == null ? Optional.empty() : Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
 
@@ -49,7 +49,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="policyName", required=true)
       private final String policyName;
 
-    public String getPolicyName() {
+    public String policyName() {
         return this.policyName;
     }
 
@@ -60,7 +60,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="tracks", required=true)
       private final List<TrackSelectionResponse> tracks;
 
-    public List<TrackSelectionResponse> getTracks() {
+    public List<TrackSelectionResponse> tracks() {
         return this.tracks;
     }
 
@@ -71,7 +71,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -82,7 +82,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

@@ -29,7 +29,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
@@ -40,7 +40,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -51,7 +51,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="isLocal")
       private final @Nullable Output<Boolean> isLocal;
 
-    public Output<Boolean> getIsLocal() {
+    public Output<Boolean> isLocal() {
         return this.isLocal == null ? Codegen.empty() : this.isLocal;
     }
 
@@ -62,7 +62,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,7 +73,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -84,7 +84,7 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

@@ -34,7 +34,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="clusterUri", required=true)
       private final Object clusterUri;
 
-    public Object getClusterUri() {
+    public Object clusterUri() {
         return this.clusterUri;
     }
 
@@ -56,7 +56,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -67,7 +67,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -78,7 +78,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -89,7 +89,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="fileSystem")
       private final @Nullable Object fileSystem;
 
-    public Optional<Object> getFileSystem() {
+    public Optional<Object> fileSystem() {
         return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
     }
 
@@ -100,7 +100,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="hcatalogLinkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getHcatalogLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> hcatalogLinkedServiceName() {
         return this.hcatalogLinkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
 
@@ -111,7 +111,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="isEspEnabled")
       private final @Nullable Object isEspEnabled;
 
-    public Optional<Object> getIsEspEnabled() {
+    public Optional<Object> isEspEnabled() {
         return this.isEspEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEspEnabled);
     }
 
@@ -122,7 +122,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -133,7 +133,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -144,7 +144,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -156,7 +156,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -167,7 +167,7 @@ public final class HDInsightLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="userName")
       private final @Nullable Object userName;
 
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

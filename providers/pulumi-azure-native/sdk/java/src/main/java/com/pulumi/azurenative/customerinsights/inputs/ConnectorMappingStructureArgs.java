@@ -27,7 +27,7 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="columnName", required=true)
       private final Output<String> columnName;
 
-    public Output<String> getColumnName() {
+    public Output<String> columnName() {
         return this.columnName;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="customFormatSpecifier")
       private final @Nullable Output<String> customFormatSpecifier;
 
-    public Output<String> getCustomFormatSpecifier() {
+    public Output<String> customFormatSpecifier() {
         return this.customFormatSpecifier == null ? Codegen.empty() : this.customFormatSpecifier;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
 
-    public Output<Boolean> getIsEncrypted() {
+    public Output<Boolean> isEncrypted() {
         return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
     }
 
@@ -60,7 +60,7 @@ public final class ConnectorMappingStructureArgs extends com.pulumi.resources.Re
     @Import(name="propertyName", required=true)
       private final Output<String> propertyName;
 
-    public Output<String> getPropertyName() {
+    public Output<String> propertyName() {
         return this.propertyName;
     }
 

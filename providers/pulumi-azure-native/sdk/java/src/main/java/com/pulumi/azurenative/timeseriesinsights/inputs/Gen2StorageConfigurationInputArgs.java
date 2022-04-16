@@ -25,7 +25,7 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
     @Import(name="managementKey", required=true)
       private final Output<String> managementKey;
 
-    public Output<String> getManagementKey() {
+    public Output<String> managementKey() {
         return this.managementKey;
     }
 

@@ -30,7 +30,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="activeRevisionsMode")
       private final @Nullable String activeRevisionsMode;
 
-    public Optional<String> getActiveRevisionsMode() {
+    public Optional<String> activeRevisionsMode() {
         return this.activeRevisionsMode == null ? Optional.empty() : Optional.ofNullable(this.activeRevisionsMode);
     }
 
@@ -41,7 +41,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ingress")
       private final @Nullable IngressResponse ingress;
 
-    public Optional<IngressResponse> getIngress() {
+    public Optional<IngressResponse> ingress() {
         return this.ingress == null ? Optional.empty() : Optional.ofNullable(this.ingress);
     }
 
@@ -52,7 +52,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="registries")
       private final @Nullable List<RegistryCredentialsResponse> registries;
 
-    public List<RegistryCredentialsResponse> getRegistries() {
+    public List<RegistryCredentialsResponse> registries() {
         return this.registries == null ? List.of() : this.registries;
     }
 
@@ -63,7 +63,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secrets")
       private final @Nullable List<SecretResponse> secrets;
 
-    public List<SecretResponse> getSecrets() {
+    public List<SecretResponse> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
 

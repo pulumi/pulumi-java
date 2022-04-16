@@ -23,7 +23,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hanaInstanceSize", required=true)
       private final String hanaInstanceSize;
 
-    public String getHanaInstanceSize() {
+    public String hanaInstanceSize() {
         return this.hanaInstanceSize;
     }
 
@@ -34,7 +34,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hardwareType", required=true)
       private final String hardwareType;
 
-    public String getHardwareType() {
+    public String hardwareType() {
         return this.hardwareType;
     }
 

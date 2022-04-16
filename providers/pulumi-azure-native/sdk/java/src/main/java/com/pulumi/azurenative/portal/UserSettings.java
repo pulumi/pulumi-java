@@ -42,7 +42,7 @@ public class UserSettings extends com.pulumi.resources.CustomResource {
      * @return The cloud shell user settings properties.
      * 
      */
-    public Output<UserPropertiesResponse> getProperties() {
+    public Output<UserPropertiesResponse> properties() {
         return this.properties;
     }
 

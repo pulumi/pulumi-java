@@ -68,49 +68,49 @@ public final class ShareSubscriptionSynchronizationResponse {
      * Synchronization duration
      * 
     */
-    public Integer getDurationMs() {
+    public Integer durationMs() {
         return this.durationMs;
     }
     /**
      * End time of synchronization
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * message of Synchronization
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * start time of synchronization
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Raw Status
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Synchronization id
      * 
     */
-    public String getSynchronizationId() {
+    public String synchronizationId() {
         return this.synchronizationId;
     }
     /**
      * Synchronization Mode
      * 
     */
-    public String getSynchronizationMode() {
+    public String synchronizationMode() {
         return this.synchronizationMode;
     }
 

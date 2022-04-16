@@ -34,14 +34,14 @@ public final class VirtualDirectoryResponse {
      * Physical path.
      * 
     */
-    public Optional<String> getPhysicalPath() {
+    public Optional<String> physicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
     /**
      * Path to virtual application.
      * 
     */
-    public Optional<String> getVirtualPath() {
+    public Optional<String> virtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }
 

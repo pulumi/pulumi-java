@@ -25,7 +25,7 @@ public final class ScopeClusterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="releaseNamespace")
       private final @Nullable String releaseNamespace;
 
-    public Optional<String> getReleaseNamespace() {
+    public Optional<String> releaseNamespace() {
         return this.releaseNamespace == null ? Optional.empty() : Optional.ofNullable(this.releaseNamespace);
     }
 

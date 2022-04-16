@@ -23,10 +23,10 @@ public final class NotebookPreparationErrorResponse {
         this.statusCode = statusCode;
     }
 
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
-    public Optional<Integer> getStatusCode() {
+    public Optional<Integer> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
 

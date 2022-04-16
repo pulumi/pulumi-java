@@ -26,7 +26,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
     @Import(name="status")
       private final @Nullable InstanceViewStatusResponse status;
 
-    public Optional<InstanceViewStatusResponse> getStatus() {
+    public Optional<InstanceViewStatusResponse> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -37,7 +37,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -48,7 +48,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
     @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;
 
-    public Optional<String> getTypeHandlerVersion() {
+    public Optional<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
     }
 

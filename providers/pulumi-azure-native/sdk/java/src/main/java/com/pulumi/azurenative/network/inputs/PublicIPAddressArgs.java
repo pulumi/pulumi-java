@@ -40,7 +40,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ddosSettings")
       private final @Nullable Output<DdosSettingsArgs> ddosSettings;
 
-    public Output<DdosSettingsArgs> getDdosSettings() {
+    public Output<DdosSettingsArgs> ddosSettings() {
         return this.ddosSettings == null ? Codegen.empty() : this.ddosSettings;
     }
 
@@ -51,7 +51,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dnsSettings")
       private final @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
 
-    public Output<PublicIPAddressDnsSettingsArgs> getDnsSettings() {
+    public Output<PublicIPAddressDnsSettingsArgs> dnsSettings() {
         return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
@@ -62,7 +62,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -73,7 +73,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -84,7 +84,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
+    public Output<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
@@ -95,7 +95,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -106,7 +106,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ipTags")
       private final @Nullable Output<List<IpTagArgs>> ipTags;
 
-    public Output<List<IpTagArgs>> getIpTags() {
+    public Output<List<IpTagArgs>> ipTags() {
         return this.ipTags == null ? Codegen.empty() : this.ipTags;
     }
 
@@ -117,7 +117,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="linkedPublicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> linkedPublicIPAddress;
 
-    public Output<PublicIPAddressArgs> getLinkedPublicIPAddress() {
+    public Output<PublicIPAddressArgs> linkedPublicIPAddress() {
         return this.linkedPublicIPAddress == null ? Codegen.empty() : this.linkedPublicIPAddress;
     }
 
@@ -128,7 +128,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -139,7 +139,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="migrationPhase")
       private final @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
 
-    public Output<Either<String,PublicIPAddressMigrationPhase>> getMigrationPhase() {
+    public Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase() {
         return this.migrationPhase == null ? Codegen.empty() : this.migrationPhase;
     }
 
@@ -150,7 +150,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="natGateway")
       private final @Nullable Output<NatGatewayArgs> natGateway;
 
-    public Output<NatGatewayArgs> getNatGateway() {
+    public Output<NatGatewayArgs> natGateway() {
         return this.natGateway == null ? Codegen.empty() : this.natGateway;
     }
 
@@ -161,7 +161,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> getPublicIPAddressVersion() {
+    public Output<Either<String,IPVersion>> publicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Codegen.empty() : this.publicIPAddressVersion;
     }
 
@@ -172,7 +172,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPublicIPAllocationMethod() {
+    public Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod() {
         return this.publicIPAllocationMethod == null ? Codegen.empty() : this.publicIPAllocationMethod;
     }
 
@@ -183,7 +183,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicIPPrefix")
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
 
-    public Output<SubResourceArgs> getPublicIPPrefix() {
+    public Output<SubResourceArgs> publicIPPrefix() {
         return this.publicIPPrefix == null ? Codegen.empty() : this.publicIPPrefix;
     }
 
@@ -194,7 +194,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="servicePublicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> servicePublicIPAddress;
 
-    public Output<PublicIPAddressArgs> getServicePublicIPAddress() {
+    public Output<PublicIPAddressArgs> servicePublicIPAddress() {
         return this.servicePublicIPAddress == null ? Codegen.empty() : this.servicePublicIPAddress;
     }
 
@@ -205,7 +205,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku")
       private final @Nullable Output<PublicIPAddressSkuArgs> sku;
 
-    public Output<PublicIPAddressSkuArgs> getSku() {
+    public Output<PublicIPAddressSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -216,7 +216,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -227,7 +227,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

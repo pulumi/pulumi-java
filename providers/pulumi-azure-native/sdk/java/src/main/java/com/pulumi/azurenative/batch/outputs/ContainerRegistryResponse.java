@@ -29,17 +29,17 @@ public final class ContainerRegistryResponse {
         this.userName = userName;
     }
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * If omitted, the default is "docker.io".
      * 
     */
-    public Optional<String> getRegistryServer() {
+    public Optional<String> registryServer() {
         return Optional.ofNullable(this.registryServer);
     }
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

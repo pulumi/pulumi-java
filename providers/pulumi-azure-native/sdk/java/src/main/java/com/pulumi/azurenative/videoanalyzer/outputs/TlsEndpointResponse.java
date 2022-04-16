@@ -67,21 +67,21 @@ public final class TlsEndpointResponse {
      * Credentials to be presented to the endpoint.
      * 
     */
-    public UsernamePasswordCredentialsResponse getCredentials() {
+    public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
     }
     /**
      * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
      * 
     */
-    public Optional<PemCertificateListResponse> getTrustedCertificates() {
+    public Optional<PemCertificateListResponse> trustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
     /**
      * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
      * 
     */
-    public Optional<SecureIotDeviceRemoteTunnelResponse> getTunnel() {
+    public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
         return Optional.ofNullable(this.tunnel);
     }
     /**
@@ -89,21 +89,21 @@ public final class TlsEndpointResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The endpoint URL for Video Analyzer to connect to.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
     /**
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
      * 
     */
-    public Optional<TlsValidationOptionsResponse> getValidationOptions() {
+    public Optional<TlsValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
 

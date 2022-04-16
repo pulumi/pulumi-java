@@ -26,7 +26,7 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends com.pulumi.reso
     @Import(name="keyUri")
       private final @Nullable Output<String> keyUri;
 
-    public Output<String> getKeyUri() {
+    public Output<String> keyUri() {
         return this.keyUri == null ? Codegen.empty() : this.keyUri;
     }
 

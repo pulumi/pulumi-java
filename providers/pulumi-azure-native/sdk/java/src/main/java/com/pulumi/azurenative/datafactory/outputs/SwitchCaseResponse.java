@@ -74,14 +74,14 @@ public final class SwitchCaseResponse {
      * List of activities to execute for satisfied case condition.
      * 
     */
-    public List<Object> getActivities() {
+    public List<Object> activities() {
         return this.activities == null ? List.of() : this.activities;
     }
     /**
      * Expected value that satisfies the expression result of the 'on' property.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

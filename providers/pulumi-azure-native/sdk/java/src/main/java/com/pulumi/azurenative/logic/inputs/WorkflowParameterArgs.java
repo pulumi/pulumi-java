@@ -29,7 +29,7 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -51,7 +51,7 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -62,7 +62,7 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -27,7 +27,7 @@ public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.
     @Import(name="targets")
       private final @Nullable Output<List<DiskEncryptionTarget>> targets;
 
-    public Output<List<DiskEncryptionTarget>> getTargets() {
+    public Output<List<DiskEncryptionTarget>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 

@@ -129,35 +129,35 @@ public final class BatchDeploymentResponse {
      * Code configuration for the endpoint deployment.
      * 
     */
-    public Optional<CodeConfigurationResponse> getCodeConfiguration() {
+    public Optional<CodeConfigurationResponse> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
      * Configuration for compute binding.
      * 
     */
-    public Optional<ComputeConfigurationResponse> getCompute() {
+    public Optional<ComputeConfigurationResponse> compute() {
         return Optional.ofNullable(this.compute);
     }
     /**
      * Description of the endpoint deployment.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
     */
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * Environment variables configuration for the deployment.
      * 
     */
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
@@ -168,14 +168,14 @@ public final class BatchDeploymentResponse {
      * If set to -1 (the lower bound), all failures during batch inference will be ignored.
      * 
     */
-    public Optional<Integer> getErrorThreshold() {
+    public Optional<Integer> errorThreshold() {
         return Optional.ofNullable(this.errorThreshold);
     }
     /**
      * Logging level for batch inference operation.
      * 
     */
-    public Optional<String> getLoggingLevel() {
+    public Optional<String> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
@@ -184,42 +184,42 @@ public final class BatchDeploymentResponse {
      * For TabularDataset, this is the size of the records in bytes, per mini-batch.
      * 
     */
-    public Optional<Double> getMiniBatchSize() {
+    public Optional<Double> miniBatchSize() {
         return Optional.ofNullable(this.miniBatchSize);
     }
     /**
      * Reference to the model asset for the endpoint deployment.
      * 
     */
-    public Optional<Object> getModel() {
+    public Optional<Object> model() {
         return Optional.ofNullable(this.model);
     }
     /**
      * Output configuration for the batch inference operation.
      * 
     */
-    public Optional<BatchOutputConfigurationResponse> getOutputConfiguration() {
+    public Optional<BatchOutputConfigurationResponse> outputConfiguration() {
         return Optional.ofNullable(this.outputConfiguration);
     }
     /**
      * Partition keys list used for Named partitioning.
      * 
     */
-    public List<String> getPartitionKeys() {
+    public List<String> partitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
     }
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Retry Settings for the batch inference operation.
      * 
     */
-    public Optional<BatchRetrySettingsResponse> getRetrySettings() {
+    public Optional<BatchRetrySettingsResponse> retrySettings() {
         return Optional.ofNullable(this.retrySettings);
     }
 

@@ -30,7 +30,7 @@ public final class AutoHealTriggersResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateBytesInKB")
       private final @Nullable Integer privateBytesInKB;
 
-    public Optional<Integer> getPrivateBytesInKB() {
+    public Optional<Integer> privateBytesInKB() {
         return this.privateBytesInKB == null ? Optional.empty() : Optional.ofNullable(this.privateBytesInKB);
     }
 
@@ -41,7 +41,7 @@ public final class AutoHealTriggersResponse extends com.pulumi.resources.InvokeA
     @Import(name="requests")
       private final @Nullable RequestsBasedTriggerResponse requests;
 
-    public Optional<RequestsBasedTriggerResponse> getRequests() {
+    public Optional<RequestsBasedTriggerResponse> requests() {
         return this.requests == null ? Optional.empty() : Optional.ofNullable(this.requests);
     }
 
@@ -52,7 +52,7 @@ public final class AutoHealTriggersResponse extends com.pulumi.resources.InvokeA
     @Import(name="slowRequests")
       private final @Nullable SlowRequestsBasedTriggerResponse slowRequests;
 
-    public Optional<SlowRequestsBasedTriggerResponse> getSlowRequests() {
+    public Optional<SlowRequestsBasedTriggerResponse> slowRequests() {
         return this.slowRequests == null ? Optional.empty() : Optional.ofNullable(this.slowRequests);
     }
 
@@ -63,7 +63,7 @@ public final class AutoHealTriggersResponse extends com.pulumi.resources.InvokeA
     @Import(name="slowRequestsWithPath")
       private final @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath;
 
-    public List<SlowRequestsBasedTriggerResponse> getSlowRequestsWithPath() {
+    public List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath() {
         return this.slowRequestsWithPath == null ? List.of() : this.slowRequestsWithPath;
     }
 
@@ -74,7 +74,7 @@ public final class AutoHealTriggersResponse extends com.pulumi.resources.InvokeA
     @Import(name="statusCodes")
       private final @Nullable List<StatusCodesBasedTriggerResponse> statusCodes;
 
-    public List<StatusCodesBasedTriggerResponse> getStatusCodes() {
+    public List<StatusCodesBasedTriggerResponse> statusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
 
@@ -85,7 +85,7 @@ public final class AutoHealTriggersResponse extends com.pulumi.resources.InvokeA
     @Import(name="statusCodesRange")
       private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 
-    public List<StatusCodesRangeBasedTriggerResponse> getStatusCodesRange() {
+    public List<StatusCodesRangeBasedTriggerResponse> statusCodesRange() {
         return this.statusCodesRange == null ? List.of() : this.statusCodesRange;
     }
 

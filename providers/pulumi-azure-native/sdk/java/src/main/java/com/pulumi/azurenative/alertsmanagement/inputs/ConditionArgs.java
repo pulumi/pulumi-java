@@ -29,7 +29,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -40,7 +40,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

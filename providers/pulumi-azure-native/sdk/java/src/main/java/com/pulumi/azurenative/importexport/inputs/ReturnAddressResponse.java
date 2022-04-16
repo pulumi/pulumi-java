@@ -25,7 +25,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="city", required=true)
       private final String city;
 
-    public String getCity() {
+    public String city() {
         return this.city;
     }
 
@@ -36,7 +36,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="countryOrRegion", required=true)
       private final String countryOrRegion;
 
-    public String getCountryOrRegion() {
+    public String countryOrRegion() {
         return this.countryOrRegion;
     }
 
@@ -47,7 +47,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -58,7 +58,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="phone", required=true)
       private final String phone;
 
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
 
@@ -69,7 +69,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="postalCode", required=true)
       private final String postalCode;
 
-    public String getPostalCode() {
+    public String postalCode() {
         return this.postalCode;
     }
 
@@ -80,7 +80,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="recipientName", required=true)
       private final String recipientName;
 
-    public String getRecipientName() {
+    public String recipientName() {
         return this.recipientName;
     }
 
@@ -91,7 +91,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
 
-    public Optional<String> getStateOrProvince() {
+    public Optional<String> stateOrProvince() {
         return this.stateOrProvince == null ? Optional.empty() : Optional.ofNullable(this.stateOrProvince);
     }
 
@@ -102,7 +102,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="streetAddress1", required=true)
       private final String streetAddress1;
 
-    public String getStreetAddress1() {
+    public String streetAddress1() {
         return this.streetAddress1;
     }
 
@@ -113,7 +113,7 @@ public final class ReturnAddressResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;
 
-    public Optional<String> getStreetAddress2() {
+    public Optional<String> streetAddress2() {
         return this.streetAddress2 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress2);
     }
 

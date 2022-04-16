@@ -22,7 +22,7 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -33,7 +33,7 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties", required=true)
       private final Output<com.pulumi.azurenative.machinelearningservices.inputs.ModelContainerArgs> properties;
 
-    public Output<com.pulumi.azurenative.machinelearningservices.inputs.ModelContainerArgs> getProperties() {
+    public Output<com.pulumi.azurenative.machinelearningservices.inputs.ModelContainerArgs> properties() {
         return this.properties;
     }
 
@@ -44,7 +44,7 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ModelContainerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

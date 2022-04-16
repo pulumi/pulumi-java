@@ -32,7 +32,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="arguments")
       private final @Nullable List<Object> arguments;
 
-    public List<Object> getArguments() {
+    public List<Object> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
 
@@ -43,7 +43,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="className")
       private final @Nullable String className;
 
-    public Optional<String> getClassName() {
+    public Optional<String> className() {
         return this.className == null ? Optional.empty() : Optional.ofNullable(this.className);
     }
 
@@ -54,7 +54,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -65,7 +65,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -76,7 +76,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="entryFilePath", required=true)
       private final Object entryFilePath;
 
-    public Object getEntryFilePath() {
+    public Object entryFilePath() {
         return this.entryFilePath;
     }
 
@@ -87,7 +87,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
 
-    public Optional<String> getGetDebugInfo() {
+    public Optional<String> getDebugInfo() {
         return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
     }
 
@@ -98,7 +98,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -109,7 +109,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -120,7 +120,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -131,7 +131,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="proxyUser")
       private final @Nullable Object proxyUser;
 
-    public Optional<Object> getProxyUser() {
+    public Optional<Object> proxyUser() {
         return this.proxyUser == null ? Optional.empty() : Optional.ofNullable(this.proxyUser);
     }
 
@@ -142,7 +142,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="rootPath", required=true)
       private final Object rootPath;
 
-    public Object getRootPath() {
+    public Object rootPath() {
         return this.rootPath;
     }
 
@@ -153,7 +153,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="sparkConfig")
       private final @Nullable Map<String,Object> sparkConfig;
 
-    public Map<String,Object> getSparkConfig() {
+    public Map<String,Object> sparkConfig() {
         return this.sparkConfig == null ? Map.of() : this.sparkConfig;
     }
 
@@ -164,7 +164,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="sparkJobLinkedService")
       private final @Nullable LinkedServiceReferenceResponse sparkJobLinkedService;
 
-    public Optional<LinkedServiceReferenceResponse> getSparkJobLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> sparkJobLinkedService() {
         return this.sparkJobLinkedService == null ? Optional.empty() : Optional.ofNullable(this.sparkJobLinkedService);
     }
 
@@ -176,7 +176,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -187,7 +187,7 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

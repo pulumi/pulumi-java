@@ -25,7 +25,7 @@ public final class HierarchyInformation extends com.pulumi.resources.InvokeArgs 
     @Import(name="configurationName")
       private final @Nullable String configurationName;
 
-    public Optional<String> getConfigurationName() {
+    public Optional<String> configurationName() {
         return this.configurationName == null ? Optional.empty() : Optional.ofNullable(this.configurationName);
     }
 
@@ -36,7 +36,7 @@ public final class HierarchyInformation extends com.pulumi.resources.InvokeArgs 
     @Import(name="productFamilyName")
       private final @Nullable String productFamilyName;
 
-    public Optional<String> getProductFamilyName() {
+    public Optional<String> productFamilyName() {
         return this.productFamilyName == null ? Optional.empty() : Optional.ofNullable(this.productFamilyName);
     }
 
@@ -47,7 +47,7 @@ public final class HierarchyInformation extends com.pulumi.resources.InvokeArgs 
     @Import(name="productLineName")
       private final @Nullable String productLineName;
 
-    public Optional<String> getProductLineName() {
+    public Optional<String> productLineName() {
         return this.productLineName == null ? Optional.empty() : Optional.ofNullable(this.productLineName);
     }
 
@@ -58,7 +58,7 @@ public final class HierarchyInformation extends com.pulumi.resources.InvokeArgs 
     @Import(name="productName")
       private final @Nullable String productName;
 
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
     }
 

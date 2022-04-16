@@ -35,14 +35,14 @@ public final class DeliveryRuleRequestBodyConditionResponse {
      * Expected value is 'RequestBody'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
     */
-    public RequestBodyMatchConditionParametersResponse getParameters() {
+    public RequestBodyMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

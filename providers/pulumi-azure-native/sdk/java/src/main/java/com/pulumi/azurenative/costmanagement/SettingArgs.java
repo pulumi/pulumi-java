@@ -24,7 +24,7 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cache")
       private final @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
 
-    public Output<List<SettingsPropertiesCacheArgs>> getCache() {
+    public Output<List<SettingsPropertiesCacheArgs>> cache() {
         return this.cache == null ? Codegen.empty() : this.cache;
     }
 
@@ -35,7 +35,7 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -46,7 +46,7 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="settingName")
       private final @Nullable Output<String> settingName;
 
-    public Output<String> getSettingName() {
+    public Output<String> settingName() {
         return this.settingName == null ? Codegen.empty() : this.settingName;
     }
 
@@ -57,7 +57,7 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startOn")
       private final @Nullable Output<String> startOn;
 
-    public Output<String> getStartOn() {
+    public Output<String> startOn() {
         return this.startOn == null ? Codegen.empty() : this.startOn;
     }
 

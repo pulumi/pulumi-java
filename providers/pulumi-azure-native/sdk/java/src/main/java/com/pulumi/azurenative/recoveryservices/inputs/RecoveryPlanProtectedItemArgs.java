@@ -26,7 +26,7 @@ public final class RecoveryPlanProtectedItemArgs extends com.pulumi.resources.Re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class RecoveryPlanProtectedItemArgs extends com.pulumi.resources.Re
     @Import(name="virtualMachineId")
       private final @Nullable Output<String> virtualMachineId;
 
-    public Output<String> getVirtualMachineId() {
+    public Output<String> virtualMachineId() {
         return this.virtualMachineId == null ? Codegen.empty() : this.virtualMachineId;
     }
 

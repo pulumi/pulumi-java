@@ -42,7 +42,7 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +56,7 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
      * @return The resource ID of the related resource
      * 
      */
-    public Output<String> getRelatedResourceId() {
+    public Output<String> relatedResourceId() {
         return this.relatedResourceId;
     }
     /**
@@ -84,7 +84,7 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
      * @return The resource kind of the related resource
      * 
      */
-    public Output<String> getRelatedResourceKind() {
+    public Output<String> relatedResourceKind() {
         return this.relatedResourceKind;
     }
     /**
@@ -98,7 +98,7 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
      * @return The name of the related resource
      * 
      */
-    public Output<String> getRelatedResourceName() {
+    public Output<String> relatedResourceName() {
         return this.relatedResourceName;
     }
     /**
@@ -112,7 +112,7 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
      * @return The resource type of the related resource
      * 
      */
-    public Output<String> getRelatedResourceType() {
+    public Output<String> relatedResourceType() {
         return this.relatedResourceType;
     }
     /**
@@ -126,7 +126,7 @@ public class BookmarkRelation extends com.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

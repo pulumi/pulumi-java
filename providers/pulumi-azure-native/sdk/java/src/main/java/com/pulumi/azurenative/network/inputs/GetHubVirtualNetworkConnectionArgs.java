@@ -19,7 +19,7 @@ public final class GetHubVirtualNetworkConnectionArgs extends com.pulumi.resourc
     @Import(name="connectionName", required=true)
       private final String connectionName;
 
-    public String getConnectionName() {
+    public String connectionName() {
         return this.connectionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHubVirtualNetworkConnectionArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetHubVirtualNetworkConnectionArgs extends com.pulumi.resourc
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;
 
-    public String getVirtualHubName() {
+    public String virtualHubName() {
         return this.virtualHubName;
     }
 

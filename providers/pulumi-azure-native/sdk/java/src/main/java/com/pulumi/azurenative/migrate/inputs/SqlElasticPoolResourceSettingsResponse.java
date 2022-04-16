@@ -26,7 +26,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends com.pulumi.res
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -37,7 +37,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends com.pulumi.res
     @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -48,7 +48,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends com.pulumi.res
     @Import(name="zoneRedundant")
       private final @Nullable String zoneRedundant;
 
-    public Optional<String> getZoneRedundant() {
+    public Optional<String> zoneRedundant() {
         return this.zoneRedundant == null ? Optional.empty() : Optional.ofNullable(this.zoneRedundant);
     }
 

@@ -44,14 +44,14 @@ public final class DeliveryWithResourceIdentityResponse {
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
-    public Optional<Object> getDestination() {
+    public Optional<Object> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * The identity to use when delivering events.
      * 
     */
-    public Optional<EventSubscriptionIdentityResponse> getIdentity() {
+    public Optional<EventSubscriptionIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
 

@@ -25,7 +25,7 @@ public final class RunAsAccountResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountId")
       private final @Nullable String accountId;
 
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
@@ -36,7 +36,7 @@ public final class RunAsAccountResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 

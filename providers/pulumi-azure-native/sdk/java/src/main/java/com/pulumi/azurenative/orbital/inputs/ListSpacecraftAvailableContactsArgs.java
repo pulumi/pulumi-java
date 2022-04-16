@@ -20,7 +20,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
     @Import(name="contactProfile", required=true)
       private final ResourceReference contactProfile;
 
-    public ResourceReference getContactProfile() {
+    public ResourceReference contactProfile() {
         return this.contactProfile;
     }
 
@@ -31,7 +31,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -42,7 +42,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
     @Import(name="groundStationName", required=true)
       private final String groundStationName;
 
-    public String getGroundStationName() {
+    public String groundStationName() {
         return this.groundStationName;
     }
 
@@ -53,7 +53,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,7 +64,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
     @Import(name="spacecraftName", required=true)
       private final String spacecraftName;
 
-    public String getSpacecraftName() {
+    public String spacecraftName() {
         return this.spacecraftName;
     }
 
@@ -75,7 +75,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

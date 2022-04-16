@@ -25,7 +25,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends com.pu
     @Import(name="isRServicesEnabled")
       private final @Nullable Boolean isRServicesEnabled;
 
-    public Optional<Boolean> getIsRServicesEnabled() {
+    public Optional<Boolean> isRServicesEnabled() {
         return this.isRServicesEnabled == null ? Optional.empty() : Optional.ofNullable(this.isRServicesEnabled);
     }
 

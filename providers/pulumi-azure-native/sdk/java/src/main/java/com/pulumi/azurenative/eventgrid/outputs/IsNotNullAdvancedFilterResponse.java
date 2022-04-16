@@ -35,7 +35,7 @@ public final class IsNotNullAdvancedFilterResponse {
      * The field/property in the event based on which you want to filter.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
@@ -43,7 +43,7 @@ public final class IsNotNullAdvancedFilterResponse {
      * Expected value is 'IsNotNull'.
      * 
     */
-    public String getOperatorType() {
+    public String operatorType() {
         return this.operatorType;
     }
 

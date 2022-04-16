@@ -31,7 +31,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends com.p
     @Import(name="assets")
       private final @Nullable Output<List<ImageAssetArgs>> assets;
 
-    public Output<List<ImageAssetArgs>> getAssets() {
+    public Output<List<ImageAssetArgs>> assets() {
         return this.assets == null ? Codegen.empty() : this.assets;
     }
 
@@ -42,7 +42,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends com.p
     @Import(name="driverProgram")
       private final @Nullable Output<String> driverProgram;
 
-    public Output<String> getDriverProgram() {
+    public Output<String> driverProgram() {
         return this.driverProgram == null ? Codegen.empty() : this.driverProgram;
     }
 
@@ -53,7 +53,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends com.p
     @Import(name="environment")
       private final @Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment;
 
-    public Output<EnvironmentImageRequestEnvironmentArgs> getEnvironment() {
+    public Output<EnvironmentImageRequestEnvironmentArgs> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -64,7 +64,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends com.p
     @Import(name="environmentReference")
       private final @Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
 
-    public Output<EnvironmentImageRequestEnvironmentReferenceArgs> getEnvironmentReference() {
+    public Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference() {
         return this.environmentReference == null ? Codegen.empty() : this.environmentReference;
     }
 
@@ -75,7 +75,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends com.p
     @Import(name="modelIds")
       private final @Nullable Output<List<String>> modelIds;
 
-    public Output<List<String>> getModelIds() {
+    public Output<List<String>> modelIds() {
         return this.modelIds == null ? Codegen.empty() : this.modelIds;
     }
 
@@ -86,7 +86,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends com.p
     @Import(name="models")
       private final @Nullable Output<List<ModelArgs>> models;
 
-    public Output<List<ModelArgs>> getModels() {
+    public Output<List<ModelArgs>> models() {
         return this.models == null ? Codegen.empty() : this.models;
     }
 

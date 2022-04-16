@@ -24,7 +24,7 @@ public final class ListAccountSasResult {
      * The shared access signature access token.
      * 
     */
-    public String getAccountSasToken() {
+    public String accountSasToken() {
         return this.accountSasToken;
     }
 

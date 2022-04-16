@@ -19,7 +19,7 @@ public final class GetWorkloadNetworkPortMirroringArgs extends com.pulumi.resour
     @Import(name="portMirroringId", required=true)
       private final String portMirroringId;
 
-    public String getPortMirroringId() {
+    public String portMirroringId() {
         return this.portMirroringId;
     }
 
@@ -30,7 +30,7 @@ public final class GetWorkloadNetworkPortMirroringArgs extends com.pulumi.resour
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWorkloadNetworkPortMirroringArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

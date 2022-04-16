@@ -25,7 +25,7 @@ public final class X12MessageIdentifierArgs extends com.pulumi.resources.Resourc
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId;
     }
 

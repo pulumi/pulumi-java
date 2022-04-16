@@ -43,7 +43,7 @@ public class ReplicationvCenter extends com.pulumi.resources.CustomResource {
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class ReplicationvCenter extends com.pulumi.resources.CustomResource {
      * @return Resource Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ReplicationvCenter extends com.pulumi.resources.CustomResource {
      * @return VCenter related data.
      * 
      */
-    public Output<VCenterPropertiesResponse> getProperties() {
+    public Output<VCenterPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class ReplicationvCenter extends com.pulumi.resources.CustomResource {
      * @return Resource Type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

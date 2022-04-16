@@ -23,7 +23,7 @@ public final class DatabaseAccountConnectionStringResponse extends com.pulumi.re
     @Import(name="connectionString", required=true)
       private final String connectionString;
 
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
 
@@ -34,7 +34,7 @@ public final class DatabaseAccountConnectionStringResponse extends com.pulumi.re
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 

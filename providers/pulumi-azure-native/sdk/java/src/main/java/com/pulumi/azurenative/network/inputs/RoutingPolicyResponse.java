@@ -24,7 +24,7 @@ public final class RoutingPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="destinations", required=true)
       private final List<String> destinations;
 
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations;
     }
 
@@ -35,7 +35,7 @@ public final class RoutingPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class RoutingPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="nextHop", required=true)
       private final String nextHop;
 
-    public String getNextHop() {
+    public String nextHop() {
         return this.nextHop;
     }
 

@@ -19,7 +19,7 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
     @Import(name="dhcpId", required=true)
       private final String dhcpId;
 
-    public String getDhcpId() {
+    public String dhcpId() {
         return this.dhcpId;
     }
 
@@ -30,7 +30,7 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

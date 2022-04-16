@@ -32,14 +32,14 @@ public final class IscsiLunResponse {
      * Azure Resource ID of the Managed Disk.
      * 
     */
-    public String getManagedDiskAzureResourceId() {
+    public String managedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
     }
     /**
      * User defined name for iSCSI LUN; example: "lun0"
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

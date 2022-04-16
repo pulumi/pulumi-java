@@ -137,112 +137,112 @@ public final class GetDatastoreResult {
      * Gets the name of the corresponding resource in Kubernetes.
      * 
     */
-    public String getCustomResourceName() {
+    public String customResourceName() {
         return this.customResourceName;
     }
     /**
      * Gets or sets the extended location.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Gets or sets the Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the inventory Item ID for the datastore.
      * 
     */
-    public Optional<String> getInventoryItemId() {
+    public Optional<String> inventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Gets or sets the location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Gets or sets the vCenter Managed Object name for the datastore.
      * 
     */
-    public String getMoName() {
+    public String moName() {
         return this.moName;
     }
     /**
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
      * 
     */
-    public Optional<String> getMoRefId() {
+    public Optional<String> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
      * Gets or sets the name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource status information.
      * 
     */
-    public List<ResourceStatusResponse> getStatuses() {
+    public List<ResourceStatusResponse> statuses() {
         return this.statuses;
     }
     /**
      * The system data.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Gets or sets the Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets or sets the type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
      * 
     */
-    public String getUuid() {
+    public String uuid() {
         return this.uuid;
     }
     /**
      * Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
      * 
     */
-    public Optional<String> getVCenterId() {
+    public Optional<String> vCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }
 

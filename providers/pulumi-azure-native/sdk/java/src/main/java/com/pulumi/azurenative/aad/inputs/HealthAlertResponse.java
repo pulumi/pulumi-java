@@ -23,7 +23,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="issue", required=true)
       private final String issue;
 
-    public String getIssue() {
+    public String issue() {
         return this.issue;
     }
 
@@ -45,7 +45,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastDetected", required=true)
       private final String lastDetected;
 
-    public String getLastDetected() {
+    public String lastDetected() {
         return this.lastDetected;
     }
 
@@ -56,7 +56,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -67,7 +67,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="raised", required=true)
       private final String raised;
 
-    public String getRaised() {
+    public String raised() {
         return this.raised;
     }
 
@@ -78,7 +78,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolutionUri", required=true)
       private final String resolutionUri;
 
-    public String getResolutionUri() {
+    public String resolutionUri() {
         return this.resolutionUri;
     }
 
@@ -89,7 +89,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 

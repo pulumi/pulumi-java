@@ -26,7 +26,7 @@ public final class WinRMConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="listeners")
       private final @Nullable List<WinRMListenerResponse> listeners;
 
-    public List<WinRMListenerResponse> getListeners() {
+    public List<WinRMListenerResponse> listeners() {
         return this.listeners == null ? List.of() : this.listeners;
     }
 

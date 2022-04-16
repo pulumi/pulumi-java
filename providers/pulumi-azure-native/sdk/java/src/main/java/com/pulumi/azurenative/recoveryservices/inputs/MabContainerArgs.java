@@ -33,7 +33,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
@@ -44,7 +44,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -55,7 +55,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="canReRegister")
       private final @Nullable Output<Boolean> canReRegister;
 
-    public Output<Boolean> getCanReRegister() {
+    public Output<Boolean> canReRegister() {
         return this.canReRegister == null ? Codegen.empty() : this.canReRegister;
     }
 
@@ -66,7 +66,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerHealthState")
       private final @Nullable Output<String> containerHealthState;
 
-    public Output<String> getContainerHealthState() {
+    public Output<String> containerHealthState() {
         return this.containerHealthState == null ? Codegen.empty() : this.containerHealthState;
     }
 
@@ -77,7 +77,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerId")
       private final @Nullable Output<Double> containerId;
 
-    public Output<Double> getContainerId() {
+    public Output<Double> containerId() {
         return this.containerId == null ? Codegen.empty() : this.containerId;
     }
 
@@ -92,7 +92,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
-    public Output<String> getContainerType() {
+    public Output<String> containerType() {
         return this.containerType;
     }
 
@@ -103,7 +103,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedInfo")
       private final @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
 
-    public Output<MabContainerExtendedInfoArgs> getExtendedInfo() {
+    public Output<MabContainerExtendedInfoArgs> extendedInfo() {
         return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
@@ -114,7 +114,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -125,7 +125,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
-    public Output<String> getHealthStatus() {
+    public Output<String> healthStatus() {
         return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
@@ -136,7 +136,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mabContainerHealthDetails")
       private final @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
 
-    public Output<List<MABContainerHealthDetailsArgs>> getMabContainerHealthDetails() {
+    public Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails() {
         return this.mabContainerHealthDetails == null ? Codegen.empty() : this.mabContainerHealthDetails;
     }
 
@@ -147,7 +147,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectedItemCount")
       private final @Nullable Output<Double> protectedItemCount;
 
-    public Output<Double> getProtectedItemCount() {
+    public Output<Double> protectedItemCount() {
         return this.protectedItemCount == null ? Codegen.empty() : this.protectedItemCount;
     }
 
@@ -158,7 +158,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
-    public Output<String> getRegistrationStatus() {
+    public Output<String> registrationStatus() {
         return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 

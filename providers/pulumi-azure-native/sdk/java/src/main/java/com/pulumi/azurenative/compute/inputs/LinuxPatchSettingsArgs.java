@@ -29,7 +29,7 @@ public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="assessmentMode")
       private final @Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
 
-    public Output<Either<String,LinuxPatchAssessmentMode>> getAssessmentMode() {
+    public Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode() {
         return this.assessmentMode == null ? Codegen.empty() : this.assessmentMode;
     }
 
@@ -40,7 +40,7 @@ public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="patchMode")
       private final @Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode;
 
-    public Output<Either<String,LinuxVMGuestPatchMode>> getPatchMode() {
+    public Output<Either<String,LinuxVMGuestPatchMode>> patchMode() {
         return this.patchMode == null ? Codegen.empty() : this.patchMode;
     }
 

@@ -28,7 +28,7 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
 
-    public Output<List<String>> getCustomEmails() {
+    public Output<List<String>> customEmails() {
         return this.customEmails == null ? Codegen.empty() : this.customEmails;
     }
 
@@ -39,7 +39,7 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sendToSubscriptionAdministrator")
       private final @Nullable Output<Boolean> sendToSubscriptionAdministrator;
 
-    public Output<Boolean> getSendToSubscriptionAdministrator() {
+    public Output<Boolean> sendToSubscriptionAdministrator() {
         return this.sendToSubscriptionAdministrator == null ? Codegen.empty() : this.sendToSubscriptionAdministrator;
     }
 
@@ -50,7 +50,7 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sendToSubscriptionCoAdministrators")
       private final @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
 
-    public Output<Boolean> getSendToSubscriptionCoAdministrators() {
+    public Output<Boolean> sendToSubscriptionCoAdministrators() {
         return this.sendToSubscriptionCoAdministrators == null ? Codegen.empty() : this.sendToSubscriptionCoAdministrators;
     }
 

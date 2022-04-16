@@ -25,7 +25,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="apiName")
       private final @Nullable Output<String> apiName;
 
-    public Output<String> getApiName() {
+    public Output<String> apiName() {
         return this.apiName == null ? Codegen.empty() : this.apiName;
     }
 
@@ -36,7 +36,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="deploymentParameters")
       private final @Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
 
-    public Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> getDeploymentParameters() {
+    public Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters() {
         return this.deploymentParameters == null ? Codegen.empty() : this.deploymentParameters;
     }
 
@@ -47,7 +47,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
+    public Output<ResourceReferenceArgs> integrationServiceEnvironment() {
         return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
     }
 
@@ -58,7 +58,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="integrationServiceEnvironmentName", required=true)
       private final Output<String> integrationServiceEnvironmentName;
 
-    public Output<String> getIntegrationServiceEnvironmentName() {
+    public Output<String> integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
 
@@ -69,7 +69,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,7 +80,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -91,7 +91,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends com.pulum
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

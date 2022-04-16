@@ -27,7 +27,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alg", required=true)
       private final Output<Either<String,AccessPolicyEccAlgo>> alg;
 
-    public Output<Either<String,AccessPolicyEccAlgo>> getAlg() {
+    public Output<Either<String,AccessPolicyEccAlgo>> alg() {
         return this.alg;
     }
 
@@ -38,7 +38,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kid", required=true)
       private final Output<String> kid;
 
-    public Output<String> getKid() {
+    public Output<String> kid() {
         return this.kid;
     }
 
@@ -50,7 +50,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -61,7 +61,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="x", required=true)
       private final Output<String> x;
 
-    public Output<String> getX() {
+    public Output<String> x() {
         return this.x;
     }
 
@@ -72,7 +72,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="y", required=true)
       private final Output<String> y;
 
-    public Output<String> getY() {
+    public Output<String> y() {
         return this.y;
     }
 

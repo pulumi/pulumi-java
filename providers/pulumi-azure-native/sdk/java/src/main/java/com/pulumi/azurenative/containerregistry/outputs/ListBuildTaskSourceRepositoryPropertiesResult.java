@@ -50,28 +50,28 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
      * The value of this property indicates whether the source control commit trigger is enabled or not.
      * 
     */
-    public Optional<Boolean> getIsCommitTriggerEnabled() {
+    public Optional<Boolean> isCommitTriggerEnabled() {
         return Optional.ofNullable(this.isCommitTriggerEnabled);
     }
     /**
      * The full URL to the source code repository
      * 
     */
-    public String getRepositoryUrl() {
+    public String repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
      * The authorization properties for accessing the source code repository.
      * 
     */
-    public Optional<SourceControlAuthInfoResponse> getSourceControlAuthProperties() {
+    public Optional<SourceControlAuthInfoResponse> sourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
     /**
      * The type of source control service.
      * 
     */
-    public String getSourceControlType() {
+    public String sourceControlType() {
         return this.sourceControlType;
     }
 

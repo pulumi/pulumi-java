@@ -26,7 +26,7 @@ public final class FirewallPolicySNATResponse {
      * List of private IP addresses/IP address ranges to not be SNAT.
      * 
     */
-    public List<String> getPrivateRanges() {
+    public List<String> privateRanges() {
         return this.privateRanges == null ? List.of() : this.privateRanges;
     }
 

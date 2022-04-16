@@ -54,35 +54,35 @@ public final class HubRouteResponse {
      * The type of destinations (eg: CIDR, ResourceId, Service).
      * 
     */
-    public String getDestinationType() {
+    public String destinationType() {
         return this.destinationType;
     }
     /**
      * List of all destinations.
      * 
     */
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations;
     }
     /**
      * The name of the Route that is unique within a RouteTable. This name can be used to access this route.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * NextHop resource ID.
      * 
     */
-    public String getNextHop() {
+    public String nextHop() {
         return this.nextHop;
     }
     /**
      * The type of next hop (eg: ResourceId).
      * 
     */
-    public String getNextHopType() {
+    public String nextHopType() {
         return this.nextHopType;
     }
 

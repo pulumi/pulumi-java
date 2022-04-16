@@ -26,7 +26,7 @@ public final class RestResponseResponseRegex extends com.pulumi.resources.Invoke
     @Import(name="matchQuantifier")
       private final @Nullable String matchQuantifier;
 
-    public Optional<String> getMatchQuantifier() {
+    public Optional<String> matchQuantifier() {
         return this.matchQuantifier == null ? Optional.empty() : Optional.ofNullable(this.matchQuantifier);
     }
 
@@ -37,7 +37,7 @@ public final class RestResponseResponseRegex extends com.pulumi.resources.Invoke
     @Import(name="matches")
       private final @Nullable List<String> matches;
 
-    public List<String> getMatches() {
+    public List<String> matches() {
         return this.matches == null ? List.of() : this.matches;
     }
 

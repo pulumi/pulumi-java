@@ -26,7 +26,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hanaInstanceName")
       private final @Nullable Output<String> hanaInstanceName;
 
-    public Output<String> getHanaInstanceName() {
+    public Output<String> hanaInstanceName() {
         return this.hanaInstanceName == null ? Codegen.empty() : this.hanaInstanceName;
     }
 
@@ -37,7 +37,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -48,7 +48,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
+    public Output<NetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -59,7 +59,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
 
-    public Output<OSProfileArgs> getOsProfile() {
+    public Output<OSProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -70,7 +70,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerNodeId")
       private final @Nullable Output<String> partnerNodeId;
 
-    public Output<String> getPartnerNodeId() {
+    public Output<String> partnerNodeId() {
         return this.partnerNodeId == null ? Codegen.empty() : this.partnerNodeId;
     }
 
@@ -81,7 +81,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -103,7 +103,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

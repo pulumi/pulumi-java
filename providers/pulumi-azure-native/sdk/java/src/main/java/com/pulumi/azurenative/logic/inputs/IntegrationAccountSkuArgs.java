@@ -27,7 +27,7 @@ public final class IntegrationAccountSkuArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
       private final Output<Either<String,IntegrationAccountSkuName>> name;
 
-    public Output<Either<String,IntegrationAccountSkuName>> getName() {
+    public Output<Either<String,IntegrationAccountSkuName>> name() {
         return this.name;
     }
 

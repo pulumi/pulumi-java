@@ -29,7 +29,7 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="agentCount")
       private final @Nullable Integer agentCount;
 
-    public Optional<Integer> getAgentCount() {
+    public Optional<Integer> agentCount() {
         return this.agentCount == null ? Optional.empty() : Optional.ofNullable(this.agentCount);
     }
 
@@ -40,7 +40,7 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="agentVmSize")
       private final @Nullable String agentVmSize;
 
-    public Optional<String> getAgentVmSize() {
+    public Optional<String> agentVmSize() {
         return this.agentVmSize == null ? Optional.empty() : Optional.ofNullable(this.agentVmSize);
     }
 
@@ -51,7 +51,7 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="clusterFqdn", required=true)
       private final String clusterFqdn;
 
-    public String getClusterFqdn() {
+    public String clusterFqdn() {
         return this.clusterFqdn;
     }
 
@@ -62,7 +62,7 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="masterCount")
       private final @Nullable Integer masterCount;
 
-    public Optional<Integer> getMasterCount() {
+    public Optional<Integer> masterCount() {
         return this.masterCount == null ? Optional.empty() : Optional.ofNullable(this.masterCount);
     }
 
@@ -73,7 +73,7 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="orchestratorProperties")
       private final @Nullable KubernetesClusterPropertiesResponse orchestratorProperties;
 
-    public Optional<KubernetesClusterPropertiesResponse> getOrchestratorProperties() {
+    public Optional<KubernetesClusterPropertiesResponse> orchestratorProperties() {
         return this.orchestratorProperties == null ? Optional.empty() : Optional.ofNullable(this.orchestratorProperties);
     }
 
@@ -84,7 +84,7 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="orchestratorType", required=true)
       private final String orchestratorType;
 
-    public String getOrchestratorType() {
+    public String orchestratorType() {
         return this.orchestratorType;
     }
 
@@ -95,7 +95,7 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="systemServices")
       private final @Nullable List<SystemServiceResponse> systemServices;
 
-    public List<SystemServiceResponse> getSystemServices() {
+    public List<SystemServiceResponse> systemServices() {
         return this.systemServices == null ? List.of() : this.systemServices;
     }
 

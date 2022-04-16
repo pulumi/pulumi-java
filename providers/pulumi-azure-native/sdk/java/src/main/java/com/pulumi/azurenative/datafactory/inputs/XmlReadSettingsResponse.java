@@ -29,7 +29,7 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="compressionProperties")
       private final @Nullable Object compressionProperties;
 
-    public Object getCompressionProperties() {
+    public Object compressionProperties() {
         return this.compressionProperties == null ? null : this.compressionProperties;
     }
 
@@ -40,7 +40,7 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="detectDataType")
       private final @Nullable Object detectDataType;
 
-    public Optional<Object> getDetectDataType() {
+    public Optional<Object> detectDataType() {
         return this.detectDataType == null ? Optional.empty() : Optional.ofNullable(this.detectDataType);
     }
 
@@ -51,7 +51,7 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="namespacePrefixes")
       private final @Nullable Object namespacePrefixes;
 
-    public Optional<Object> getNamespacePrefixes() {
+    public Optional<Object> namespacePrefixes() {
         return this.namespacePrefixes == null ? Optional.empty() : Optional.ofNullable(this.namespacePrefixes);
     }
 
@@ -62,7 +62,7 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="namespaces")
       private final @Nullable Object namespaces;
 
-    public Optional<Object> getNamespaces() {
+    public Optional<Object> namespaces() {
         return this.namespaces == null ? Optional.empty() : Optional.ofNullable(this.namespaces);
     }
 
@@ -74,7 +74,7 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -85,7 +85,7 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="validationMode")
       private final @Nullable Object validationMode;
 
-    public Optional<Object> getValidationMode() {
+    public Optional<Object> validationMode() {
         return this.validationMode == null ? Optional.empty() : Optional.ofNullable(this.validationMode);
     }
 

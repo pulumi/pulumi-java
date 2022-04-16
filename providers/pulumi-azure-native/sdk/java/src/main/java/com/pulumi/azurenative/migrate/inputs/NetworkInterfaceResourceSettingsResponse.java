@@ -28,7 +28,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Boolean enableAcceleratedNetworking;
 
-    public Optional<Boolean> getEnableAcceleratedNetworking() {
+    public Optional<Boolean> enableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
@@ -39,7 +39,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="ipConfigurations")
       private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
 
-    public List<NicIpConfigurationResourceSettingsResponse> getIpConfigurations() {
+    public List<NicIpConfigurationResourceSettingsResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -62,7 +62,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
     @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 

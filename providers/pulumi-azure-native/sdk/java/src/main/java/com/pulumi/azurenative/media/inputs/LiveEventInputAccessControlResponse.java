@@ -25,7 +25,7 @@ public final class LiveEventInputAccessControlResponse extends com.pulumi.resour
     @Import(name="ip")
       private final @Nullable IPAccessControlResponse ip;
 
-    public Optional<IPAccessControlResponse> getIp() {
+    public Optional<IPAccessControlResponse> ip() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 

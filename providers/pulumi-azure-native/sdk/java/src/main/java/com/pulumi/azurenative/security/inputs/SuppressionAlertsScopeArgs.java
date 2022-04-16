@@ -22,7 +22,7 @@ public final class SuppressionAlertsScopeArgs extends com.pulumi.resources.Resou
     @Import(name="allOf", required=true)
       private final Output<List<ScopeElementArgs>> allOf;
 
-    public Output<List<ScopeElementArgs>> getAllOf() {
+    public Output<List<ScopeElementArgs>> allOf() {
         return this.allOf;
     }
 

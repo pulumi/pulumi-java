@@ -26,7 +26,7 @@ public final class ServerlessUpstreamSettingsResponse extends com.pulumi.resourc
     @Import(name="templates")
       private final @Nullable List<UpstreamTemplateResponse> templates;
 
-    public List<UpstreamTemplateResponse> getTemplates() {
+    public List<UpstreamTemplateResponse> templates() {
         return this.templates == null ? List.of() : this.templates;
     }
 

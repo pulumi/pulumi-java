@@ -26,7 +26,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="collectionId", required=true)
       private final Output<String> collectionId;
 
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
 
@@ -37,7 +37,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -48,7 +48,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="iconFileUris")
       private final @Nullable Output<Map<String,String>> iconFileUris;
 
-    public Output<Map<String,String>> getIconFileUris() {
+    public Output<Map<String,String>> iconFileUris() {
         return this.iconFileUris == null ? Codegen.empty() : this.iconFileUris;
     }
 
@@ -59,7 +59,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="offerId")
       private final @Nullable Output<String> offerId;
 
-    public Output<String> getOfferId() {
+    public Output<String> offerId() {
         return this.offerId == null ? Codegen.empty() : this.offerId;
     }
 
@@ -70,7 +70,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="plans")
       private final @Nullable Output<List<PlanArgs>> plans;
 
-    public Output<List<PlanArgs>> getPlans() {
+    public Output<List<PlanArgs>> plans() {
         return this.plans == null ? Codegen.empty() : this.plans;
     }
 
@@ -81,7 +81,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
 
-    public Output<String> getPrivateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
 
@@ -92,7 +92,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="specificPlanIdsLimitation")
       private final @Nullable Output<List<String>> specificPlanIdsLimitation;
 
-    public Output<List<String>> getSpecificPlanIdsLimitation() {
+    public Output<List<String>> specificPlanIdsLimitation() {
         return this.specificPlanIdsLimitation == null ? Codegen.empty() : this.specificPlanIdsLimitation;
     }
 
@@ -103,7 +103,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
     @Import(name="updateSuppressedDueIdempotence")
       private final @Nullable Output<Boolean> updateSuppressedDueIdempotence;
 
-    public Output<Boolean> getUpdateSuppressedDueIdempotence() {
+    public Output<Boolean> updateSuppressedDueIdempotence() {
         return this.updateSuppressedDueIdempotence == null ? Codegen.empty() : this.updateSuppressedDueIdempotence;
     }
 

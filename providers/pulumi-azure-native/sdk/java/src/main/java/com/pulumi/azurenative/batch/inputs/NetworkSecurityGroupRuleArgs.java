@@ -21,7 +21,7 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
     @Import(name="access", required=true)
       private final Output<NetworkSecurityGroupRuleAccess> access;
 
-    public Output<NetworkSecurityGroupRuleAccess> getAccess() {
+    public Output<NetworkSecurityGroupRuleAccess> access() {
         return this.access;
     }
 
@@ -32,7 +32,7 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -43,7 +43,7 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
     @Import(name="sourceAddressPrefix", required=true)
       private final Output<String> sourceAddressPrefix;
 
-    public Output<String> getSourceAddressPrefix() {
+    public Output<String> sourceAddressPrefix() {
         return this.sourceAddressPrefix;
     }
 
@@ -54,7 +54,7 @@ public final class NetworkSecurityGroupRuleArgs extends com.pulumi.resources.Res
     @Import(name="sourcePortRanges")
       private final @Nullable Output<List<String>> sourcePortRanges;
 
-    public Output<List<String>> getSourcePortRanges() {
+    public Output<List<String>> sourcePortRanges() {
         return this.sourcePortRanges == null ? Codegen.empty() : this.sourcePortRanges;
     }
 

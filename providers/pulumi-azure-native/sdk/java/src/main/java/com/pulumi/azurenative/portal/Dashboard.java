@@ -45,7 +45,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The dashboard lenses.
      * 
      */
-    public Output</* @Nullable */ List<DashboardLensResponse>> getLenses() {
+    public Output</* @Nullable */ List<DashboardLensResponse>> lenses() {
         return this.lenses;
     }
     /**
@@ -59,7 +59,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The dashboard metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getMetadata() {
+    public Output</* @Nullable */ Map<String,Object>> metadata() {
         return this.metadata;
     }
     /**
@@ -87,7 +87,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -115,7 +115,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

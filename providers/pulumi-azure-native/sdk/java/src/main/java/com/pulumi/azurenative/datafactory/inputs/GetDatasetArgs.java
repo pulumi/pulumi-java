@@ -19,7 +19,7 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetName", required=true)
       private final String datasetName;
 
-    public String getDatasetName() {
+    public String datasetName() {
         return this.datasetName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="factoryName", required=true)
       private final String factoryName;
 
-    public String getFactoryName() {
+    public String factoryName() {
         return this.factoryName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -19,7 +19,7 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
     @Import(name="remediationName", required=true)
       private final String remediationName;
 
-    public String getRemediationName() {
+    public String remediationName() {
         return this.remediationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -25,7 +25,7 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="parametersArtifactSourceRelativePath")
       private final @Nullable String parametersArtifactSourceRelativePath;
 
-    public Optional<String> getParametersArtifactSourceRelativePath() {
+    public Optional<String> parametersArtifactSourceRelativePath() {
         return this.parametersArtifactSourceRelativePath == null ? Optional.empty() : Optional.ofNullable(this.parametersArtifactSourceRelativePath);
     }
 
@@ -36,7 +36,7 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="parametersUri")
       private final @Nullable String parametersUri;
 
-    public Optional<String> getParametersUri() {
+    public Optional<String> parametersUri() {
         return this.parametersUri == null ? Optional.empty() : Optional.ofNullable(this.parametersUri);
     }
 
@@ -47,7 +47,7 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="templateArtifactSourceRelativePath")
       private final @Nullable String templateArtifactSourceRelativePath;
 
-    public Optional<String> getTemplateArtifactSourceRelativePath() {
+    public Optional<String> templateArtifactSourceRelativePath() {
         return this.templateArtifactSourceRelativePath == null ? Optional.empty() : Optional.ofNullable(this.templateArtifactSourceRelativePath);
     }
 
@@ -58,7 +58,7 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
     @Import(name="templateUri")
       private final @Nullable String templateUri;
 
-    public Optional<String> getTemplateUri() {
+    public Optional<String> templateUri() {
         return this.templateUri == null ? Optional.empty() : Optional.ofNullable(this.templateUri);
     }
 

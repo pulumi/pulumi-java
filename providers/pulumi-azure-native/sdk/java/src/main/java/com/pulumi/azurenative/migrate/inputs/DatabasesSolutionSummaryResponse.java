@@ -26,7 +26,7 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="databaseInstancesAssessedCount")
       private final @Nullable Integer databaseInstancesAssessedCount;
 
-    public Optional<Integer> getDatabaseInstancesAssessedCount() {
+    public Optional<Integer> databaseInstancesAssessedCount() {
         return this.databaseInstancesAssessedCount == null ? Optional.empty() : Optional.ofNullable(this.databaseInstancesAssessedCount);
     }
 
@@ -37,7 +37,7 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="databasesAssessedCount")
       private final @Nullable Integer databasesAssessedCount;
 
-    public Optional<Integer> getDatabasesAssessedCount() {
+    public Optional<Integer> databasesAssessedCount() {
         return this.databasesAssessedCount == null ? Optional.empty() : Optional.ofNullable(this.databasesAssessedCount);
     }
 
@@ -49,7 +49,7 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -60,7 +60,7 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="migrationReadyCount")
       private final @Nullable Integer migrationReadyCount;
 
-    public Optional<Integer> getMigrationReadyCount() {
+    public Optional<Integer> migrationReadyCount() {
         return this.migrationReadyCount == null ? Optional.empty() : Optional.ofNullable(this.migrationReadyCount);
     }
 

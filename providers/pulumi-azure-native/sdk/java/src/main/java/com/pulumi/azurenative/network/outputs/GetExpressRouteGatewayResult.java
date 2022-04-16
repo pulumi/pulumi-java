@@ -95,70 +95,70 @@ public final class GetExpressRouteGatewayResult {
      * Configuration for auto scaling.
      * 
     */
-    public Optional<ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> getAutoScaleConfiguration() {
+    public Optional<ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> autoScaleConfiguration() {
         return Optional.ofNullable(this.autoScaleConfiguration);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * List of ExpressRoute connections to the ExpressRoute gateway.
      * 
     */
-    public List<ExpressRouteConnectionResponse> getExpressRouteConnections() {
+    public List<ExpressRouteConnectionResponse> expressRouteConnections() {
         return this.expressRouteConnections;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the express route gateway resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
      * 
     */
-    public VirtualHubIdResponse getVirtualHub() {
+    public VirtualHubIdResponse virtualHub() {
         return this.virtualHub;
     }
 

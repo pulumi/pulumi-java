@@ -98,77 +98,77 @@ public final class GetShareResult {
      * Time at which the share was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Share description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Share kind.
      * 
     */
-    public Optional<String> getShareKind() {
+    public Optional<String> shareKind() {
         return Optional.ofNullable(this.shareKind);
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Share terms.
      * 
     */
-    public Optional<String> getTerms() {
+    public Optional<String> terms() {
         return Optional.ofNullable(this.terms);
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
      * 
     */
-    public String getUserEmail() {
+    public String userEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

@@ -29,7 +29,7 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="excludedKbNumbers")
       private final @Nullable Output<List<String>> excludedKbNumbers;
 
-    public Output<List<String>> getExcludedKbNumbers() {
+    public Output<List<String>> excludedKbNumbers() {
         return this.excludedKbNumbers == null ? Codegen.empty() : this.excludedKbNumbers;
     }
 
@@ -40,7 +40,7 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="includedKbNumbers")
       private final @Nullable Output<List<String>> includedKbNumbers;
 
-    public Output<List<String>> getIncludedKbNumbers() {
+    public Output<List<String>> includedKbNumbers() {
         return this.includedKbNumbers == null ? Codegen.empty() : this.includedKbNumbers;
     }
 
@@ -51,7 +51,7 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="includedUpdateClassifications")
       private final @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
 
-    public Output<Either<String,WindowsUpdateClasses>> getIncludedUpdateClassifications() {
+    public Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications() {
         return this.includedUpdateClassifications == null ? Codegen.empty() : this.includedUpdateClassifications;
     }
 
@@ -62,7 +62,7 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rebootSetting")
       private final @Nullable Output<String> rebootSetting;
 
-    public Output<String> getRebootSetting() {
+    public Output<String> rebootSetting() {
         return this.rebootSetting == null ? Codegen.empty() : this.rebootSetting;
     }
 

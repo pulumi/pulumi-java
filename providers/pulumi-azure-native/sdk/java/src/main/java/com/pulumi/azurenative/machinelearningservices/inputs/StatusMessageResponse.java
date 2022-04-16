@@ -23,7 +23,7 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="createdTimeUtc", required=true)
       private final String createdTimeUtc;
 
-    public String getCreatedTimeUtc() {
+    public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
 
@@ -45,7 +45,7 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="level", required=true)
       private final String level;
 
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
 
@@ -56,7 +56,7 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

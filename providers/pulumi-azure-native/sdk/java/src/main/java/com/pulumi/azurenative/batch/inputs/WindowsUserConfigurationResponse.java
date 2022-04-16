@@ -21,7 +21,7 @@ public final class WindowsUserConfigurationResponse extends com.pulumi.resources
     @Import(name="loginMode")
       private final @Nullable String loginMode;
 
-    public Optional<String> getLoginMode() {
+    public Optional<String> loginMode() {
         return this.loginMode == null ? Optional.empty() : Optional.ofNullable(this.loginMode);
     }
 

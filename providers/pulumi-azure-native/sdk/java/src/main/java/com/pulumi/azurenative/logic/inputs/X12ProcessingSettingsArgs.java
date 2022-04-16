@@ -25,7 +25,7 @@ public final class X12ProcessingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="convertImpliedDecimal", required=true)
       private final Output<Boolean> convertImpliedDecimal;
 
-    public Output<Boolean> getConvertImpliedDecimal() {
+    public Output<Boolean> convertImpliedDecimal() {
         return this.convertImpliedDecimal;
     }
 
@@ -36,7 +36,7 @@ public final class X12ProcessingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="createEmptyXmlTagsForTrailingSeparators", required=true)
       private final Output<Boolean> createEmptyXmlTagsForTrailingSeparators;
 
-    public Output<Boolean> getCreateEmptyXmlTagsForTrailingSeparators() {
+    public Output<Boolean> createEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
 
@@ -47,7 +47,7 @@ public final class X12ProcessingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="maskSecurityInfo", required=true)
       private final Output<Boolean> maskSecurityInfo;
 
-    public Output<Boolean> getMaskSecurityInfo() {
+    public Output<Boolean> maskSecurityInfo() {
         return this.maskSecurityInfo;
     }
 
@@ -58,7 +58,7 @@ public final class X12ProcessingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="preserveInterchange", required=true)
       private final Output<Boolean> preserveInterchange;
 
-    public Output<Boolean> getPreserveInterchange() {
+    public Output<Boolean> preserveInterchange() {
         return this.preserveInterchange;
     }
 
@@ -69,7 +69,7 @@ public final class X12ProcessingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="suspendInterchangeOnError", required=true)
       private final Output<Boolean> suspendInterchangeOnError;
 
-    public Output<Boolean> getSuspendInterchangeOnError() {
+    public Output<Boolean> suspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
     }
 
@@ -80,7 +80,7 @@ public final class X12ProcessingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="useDotAsDecimalSeparator", required=true)
       private final Output<Boolean> useDotAsDecimalSeparator;
 
-    public Output<Boolean> getUseDotAsDecimalSeparator() {
+    public Output<Boolean> useDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }
 

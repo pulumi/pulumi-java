@@ -29,7 +29,7 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backends")
       private final @Nullable Output<List<BackendArgs>> backends;
 
-    public Output<List<BackendArgs>> getBackends() {
+    public Output<List<BackendArgs>> backends() {
         return this.backends == null ? Codegen.empty() : this.backends;
     }
 
@@ -40,7 +40,7 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthProbeSettings")
       private final @Nullable Output<SubResourceArgs> healthProbeSettings;
 
-    public Output<SubResourceArgs> getHealthProbeSettings() {
+    public Output<SubResourceArgs> healthProbeSettings() {
         return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
     }
 
@@ -51,7 +51,7 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -62,7 +62,7 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingSettings")
       private final @Nullable Output<SubResourceArgs> loadBalancingSettings;
 
-    public Output<SubResourceArgs> getLoadBalancingSettings() {
+    public Output<SubResourceArgs> loadBalancingSettings() {
         return this.loadBalancingSettings == null ? Codegen.empty() : this.loadBalancingSettings;
     }
 
@@ -73,7 +73,7 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

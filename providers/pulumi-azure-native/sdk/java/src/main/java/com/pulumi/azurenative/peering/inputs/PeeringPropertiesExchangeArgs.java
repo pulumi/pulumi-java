@@ -28,7 +28,7 @@ public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.Re
     @Import(name="connections")
       private final @Nullable Output<List<ExchangeConnectionArgs>> connections;
 
-    public Output<List<ExchangeConnectionArgs>> getConnections() {
+    public Output<List<ExchangeConnectionArgs>> connections() {
         return this.connections == null ? Codegen.empty() : this.connections;
     }
 
@@ -39,7 +39,7 @@ public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.Re
     @Import(name="peerAsn")
       private final @Nullable Output<SubResourceArgs> peerAsn;
 
-    public Output<SubResourceArgs> getPeerAsn() {
+    public Output<SubResourceArgs> peerAsn() {
         return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 

@@ -19,7 +19,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
     @Import(name="columnName", required=true)
       private final String columnName;
 
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -41,7 +41,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
     @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
-    public String getManagedInstanceName() {
+    public String managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
     @Import(name="schemaName", required=true)
       private final String schemaName;
 
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
 
@@ -74,7 +74,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
     @Import(name="sensitivityLabelSource", required=true)
       private final String sensitivityLabelSource;
 
-    public String getSensitivityLabelSource() {
+    public String sensitivityLabelSource() {
         return this.sensitivityLabelSource;
     }
 
@@ -85,7 +85,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

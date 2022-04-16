@@ -23,7 +23,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="azureStorageSid", required=true)
       private final String azureStorageSid;
 
-    public String getAzureStorageSid() {
+    public String azureStorageSid() {
         return this.azureStorageSid;
     }
 
@@ -34,7 +34,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="domainGuid", required=true)
       private final String domainGuid;
 
-    public String getDomainGuid() {
+    public String domainGuid() {
         return this.domainGuid;
     }
 
@@ -45,7 +45,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -56,7 +56,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="domainSid", required=true)
       private final String domainSid;
 
-    public String getDomainSid() {
+    public String domainSid() {
         return this.domainSid;
     }
 
@@ -67,7 +67,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="forestName", required=true)
       private final String forestName;
 
-    public String getForestName() {
+    public String forestName() {
         return this.forestName;
     }
 
@@ -78,7 +78,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="netBiosDomainName", required=true)
       private final String netBiosDomainName;
 
-    public String getNetBiosDomainName() {
+    public String netBiosDomainName() {
         return this.netBiosDomainName;
     }
 

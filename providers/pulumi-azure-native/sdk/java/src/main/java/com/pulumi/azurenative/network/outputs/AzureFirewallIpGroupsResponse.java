@@ -32,14 +32,14 @@ public final class AzureFirewallIpGroupsResponse {
      * The iteration number.
      * 
     */
-    public String getChangeNumber() {
+    public String changeNumber() {
         return this.changeNumber;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

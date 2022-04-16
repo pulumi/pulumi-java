@@ -29,7 +29,7 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="monthDays")
       private final @Nullable Output<List<Integer>> monthDays;
 
-    public Output<List<Integer>> getMonthDays() {
+    public Output<List<Integer>> monthDays() {
         return this.monthDays == null ? Codegen.empty() : this.monthDays;
     }
 
@@ -40,7 +40,7 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="monthlyOccurrences")
       private final @Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
-    public Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> getMonthlyOccurrences() {
+    public Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? Codegen.empty() : this.monthlyOccurrences;
     }
 
@@ -51,7 +51,7 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="weekDays")
       private final @Nullable Output<List<String>> weekDays;
 
-    public Output<List<String>> getWeekDays() {
+    public Output<List<String>> weekDays() {
         return this.weekDays == null ? Codegen.empty() : this.weekDays;
     }
 

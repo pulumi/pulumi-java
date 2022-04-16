@@ -70,49 +70,49 @@ public final class GetGroupResult {
      * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
      * 
     */
-    public Boolean getBuiltIn() {
+    public Boolean builtIn() {
         return this.builtIn;
     }
     /**
      * Group description. Can contain HTML formatting tags.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Group name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
      * 
     */
-    public Optional<String> getExternalId() {
+    public Optional<String> externalId() {
         return Optional.ofNullable(this.externalId);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

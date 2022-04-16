@@ -24,7 +24,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -35,7 +35,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="migrationSolutionId", required=true)
       private final String migrationSolutionId;
 
-    public String getMigrationSolutionId() {
+    public String migrationSolutionId() {
         return this.migrationSolutionId;
     }
 
@@ -46,7 +46,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
 
-    public String getServiceEndpoint() {
+    public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
 
@@ -57,7 +57,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="serviceResourceId", required=true)
       private final String serviceResourceId;
 
-    public String getServiceResourceId() {
+    public String serviceResourceId() {
         return this.serviceResourceId;
     }
 
@@ -68,7 +68,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
     @Import(name="vmwareSiteId", required=true)
       private final String vmwareSiteId;
 
-    public String getVmwareSiteId() {
+    public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
 

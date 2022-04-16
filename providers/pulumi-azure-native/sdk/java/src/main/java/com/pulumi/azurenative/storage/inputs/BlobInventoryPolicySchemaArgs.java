@@ -30,7 +30,7 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -41,7 +41,7 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -52,7 +52,7 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="rules", required=true)
       private final Output<List<BlobInventoryPolicyRuleArgs>> rules;
 
-    public Output<List<BlobInventoryPolicyRuleArgs>> getRules() {
+    public Output<List<BlobInventoryPolicyRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -63,7 +63,7 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<Either<String,InventoryRuleType>> type;
 
-    public Output<Either<String,InventoryRuleType>> getType() {
+    public Output<Either<String,InventoryRuleType>> type() {
         return this.type;
     }
 

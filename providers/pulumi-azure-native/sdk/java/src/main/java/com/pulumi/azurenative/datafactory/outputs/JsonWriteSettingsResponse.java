@@ -36,7 +36,7 @@ public final class JsonWriteSettingsResponse {
      * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
      * 
     */
-    public Optional<Object> getFilePattern() {
+    public Optional<Object> filePattern() {
         return Optional.ofNullable(this.filePattern);
     }
     /**
@@ -44,7 +44,7 @@ public final class JsonWriteSettingsResponse {
      * Expected value is 'JsonWriteSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

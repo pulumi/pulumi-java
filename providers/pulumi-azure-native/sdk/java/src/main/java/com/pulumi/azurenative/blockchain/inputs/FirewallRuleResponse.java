@@ -25,7 +25,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="endIpAddress")
       private final @Nullable String endIpAddress;
 
-    public Optional<String> getEndIpAddress() {
+    public Optional<String> endIpAddress() {
         return this.endIpAddress == null ? Optional.empty() : Optional.ofNullable(this.endIpAddress);
     }
 
@@ -36,7 +36,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="ruleName")
       private final @Nullable String ruleName;
 
-    public Optional<String> getRuleName() {
+    public Optional<String> ruleName() {
         return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
     }
 
@@ -47,7 +47,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startIpAddress")
       private final @Nullable String startIpAddress;
 
-    public Optional<String> getStartIpAddress() {
+    public Optional<String> startIpAddress() {
         return this.startIpAddress == null ? Optional.empty() : Optional.ofNullable(this.startIpAddress);
     }
 

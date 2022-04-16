@@ -50,28 +50,28 @@ public final class LogRulesResponse {
      * List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
      * 
     */
-    public List<FilteringTagResponse> getFilteringTags() {
+    public List<FilteringTagResponse> filteringTags() {
         return this.filteringTags == null ? List.of() : this.filteringTags;
     }
     /**
      * Flag specifying if AAD logs should be sent for the Monitor resource.
      * 
     */
-    public Optional<Boolean> getSendAadLogs() {
+    public Optional<Boolean> sendAadLogs() {
         return Optional.ofNullable(this.sendAadLogs);
     }
     /**
      * Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
      * 
     */
-    public Optional<Boolean> getSendActivityLogs() {
+    public Optional<Boolean> sendActivityLogs() {
         return Optional.ofNullable(this.sendActivityLogs);
     }
     /**
      * Flag specifying if subscription logs should be sent for the Monitor resource.
      * 
     */
-    public Optional<Boolean> getSendSubscriptionLogs() {
+    public Optional<Boolean> sendSubscriptionLogs() {
         return Optional.ofNullable(this.sendSubscriptionLogs);
     }
 

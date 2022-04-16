@@ -35,7 +35,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="alias", required=true)
       private final String alias;
 
-    public String getAlias() {
+    public String alias() {
         return this.alias;
     }
 
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="autoApproval")
       private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
 
-    public Optional<PrivateLinkServicePropertiesResponseAutoApproval> getAutoApproval() {
+    public Optional<PrivateLinkServicePropertiesResponseAutoApproval> autoApproval() {
         return this.autoApproval == null ? Optional.empty() : Optional.ofNullable(this.autoApproval);
     }
 
@@ -57,7 +57,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="enableProxyProtocol")
       private final @Nullable Boolean enableProxyProtocol;
 
-    public Optional<Boolean> getEnableProxyProtocol() {
+    public Optional<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol == null ? Optional.empty() : Optional.ofNullable(this.enableProxyProtocol);
     }
 
@@ -68,7 +68,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -79,7 +79,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="extendedLocation")
       private final @Nullable ExtendedLocationResponse extendedLocation;
 
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
     }
 
@@ -90,7 +90,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="fqdns")
       private final @Nullable List<String> fqdns;
 
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
 
@@ -101,7 +101,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -112,7 +112,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="ipConfigurations")
       private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
 
-    public List<PrivateLinkServiceIpConfigurationResponse> getIpConfigurations() {
+    public List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
@@ -123,7 +123,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="loadBalancerFrontendIpConfigurations")
       private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
 
-    public List<FrontendIPConfigurationResponse> getLoadBalancerFrontendIpConfigurations() {
+    public List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations == null ? List.of() : this.loadBalancerFrontendIpConfigurations;
     }
 
@@ -134,7 +134,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -145,7 +145,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -156,7 +156,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
 
@@ -167,7 +167,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
 
@@ -178,7 +178,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -189,7 +189,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -200,7 +200,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -211,7 +211,7 @@ public final class PrivateLinkServiceResponse extends com.pulumi.resources.Invok
     @Import(name="visibility")
       private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 
-    public Optional<PrivateLinkServicePropertiesResponseVisibility> getVisibility() {
+    public Optional<PrivateLinkServicePropertiesResponseVisibility> visibility() {
         return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
     }
 

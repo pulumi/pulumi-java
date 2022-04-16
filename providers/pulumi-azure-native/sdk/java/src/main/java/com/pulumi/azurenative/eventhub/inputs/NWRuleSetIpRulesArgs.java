@@ -28,7 +28,7 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="action")
       private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
-    public Output<Either<String,NetworkRuleIPAction>> getAction() {
+    public Output<Either<String,NetworkRuleIPAction>> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -39,7 +39,7 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;
 
-    public Output<String> getIpMask() {
+    public Output<String> ipMask() {
         return this.ipMask == null ? Codegen.empty() : this.ipMask;
     }
 

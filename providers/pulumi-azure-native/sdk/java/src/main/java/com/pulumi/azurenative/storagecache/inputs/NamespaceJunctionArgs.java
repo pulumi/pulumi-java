@@ -26,7 +26,7 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="namespacePath")
       private final @Nullable Output<String> namespacePath;
 
-    public Output<String> getNamespacePath() {
+    public Output<String> namespacePath() {
         return this.namespacePath == null ? Codegen.empty() : this.namespacePath;
     }
 
@@ -37,7 +37,7 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="nfsAccessPolicy")
       private final @Nullable Output<String> nfsAccessPolicy;
 
-    public Output<String> getNfsAccessPolicy() {
+    public Output<String> nfsAccessPolicy() {
         return this.nfsAccessPolicy == null ? Codegen.empty() : this.nfsAccessPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="nfsExport")
       private final @Nullable Output<String> nfsExport;
 
-    public Output<String> getNfsExport() {
+    public Output<String> nfsExport() {
         return this.nfsExport == null ? Codegen.empty() : this.nfsExport;
     }
 
@@ -59,7 +59,7 @@ public final class NamespaceJunctionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="targetPath")
       private final @Nullable Output<String> targetPath;
 
-    public Output<String> getTargetPath() {
+    public Output<String> targetPath() {
         return this.targetPath == null ? Codegen.empty() : this.targetPath;
     }
 

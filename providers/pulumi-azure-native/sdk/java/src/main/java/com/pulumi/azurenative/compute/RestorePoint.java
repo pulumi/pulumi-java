@@ -44,7 +44,7 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
      * 
      */
-    public Output<String> getConsistencyMode() {
+    public Output<String> consistencyMode() {
         return this.consistencyMode;
     }
     /**
@@ -58,7 +58,7 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
      * 
      */
-    public Output</* @Nullable */ List<ApiEntityReferenceResponse>> getExcludeDisks() {
+    public Output</* @Nullable */ List<ApiEntityReferenceResponse>> excludeDisks() {
         return this.excludeDisks;
     }
     /**
@@ -72,7 +72,7 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return Gets the provisioning state of the restore point.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return Gets the details of the VM captured at the time of the restore point creation.
      * 
      */
-    public Output<RestorePointSourceMetadataResponse> getSourceMetadata() {
+    public Output<RestorePointSourceMetadataResponse> sourceMetadata() {
         return this.sourceMetadata;
     }
     /**
@@ -114,7 +114,7 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return Gets the creation time of the restore point.
      * 
      */
-    public Output</* @Nullable */ String> getTimeCreated() {
+    public Output</* @Nullable */ String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -128,7 +128,7 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

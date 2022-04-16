@@ -25,7 +25,7 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="auditLogStatus")
       private final @Nullable String auditLogStatus;
 
-    public Optional<String> getAuditLogStatus() {
+    public Optional<String> auditLogStatus() {
         return this.auditLogStatus == null ? Optional.empty() : Optional.ofNullable(this.auditLogStatus);
     }
 
@@ -36,7 +36,7 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="logLevel")
       private final @Nullable String logLevel;
 
-    public Optional<String> getLogLevel() {
+    public Optional<String> logLevel() {
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
     }
 

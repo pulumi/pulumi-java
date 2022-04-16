@@ -34,14 +34,14 @@ public final class NetworkACLResponse {
      * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
     */
-    public List<String> getAllow() {
+    public List<String> allow() {
         return this.allow == null ? List.of() : this.allow;
     }
     /**
      * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
     */
-    public List<String> getDeny() {
+    public List<String> deny() {
         return this.deny == null ? List.of() : this.deny;
     }
 

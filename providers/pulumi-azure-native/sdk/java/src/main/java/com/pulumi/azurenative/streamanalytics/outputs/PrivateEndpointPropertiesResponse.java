@@ -35,14 +35,14 @@ public final class PrivateEndpointPropertiesResponse {
      * The date when this private endpoint was created.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * A list of connections to the remote resource. Immutable after it is set.
      * 
     */
-    public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
+    public List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
 

@@ -35,7 +35,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="arguments")
       private final @Nullable Output<List<Object>> arguments;
 
-    public Output<List<Object>> getArguments() {
+    public Output<List<Object>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -46,7 +46,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="combiner")
       private final @Nullable Output<Object> combiner;
 
-    public Output<Object> getCombiner() {
+    public Output<Object> combiner() {
         return this.combiner == null ? Codegen.empty() : this.combiner;
     }
 
@@ -57,7 +57,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="commandEnvironment")
       private final @Nullable Output<List<Object>> commandEnvironment;
 
-    public Output<List<Object>> getCommandEnvironment() {
+    public Output<List<Object>> commandEnvironment() {
         return this.commandEnvironment == null ? Codegen.empty() : this.commandEnvironment;
     }
 
@@ -68,7 +68,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="defines")
       private final @Nullable Output<Map<String,Object>> defines;
 
-    public Output<Map<String,Object>> getDefines() {
+    public Output<Map<String,Object>> defines() {
         return this.defines == null ? Codegen.empty() : this.defines;
     }
 
@@ -79,7 +79,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -90,7 +90,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="fileLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> getFileLinkedService() {
+    public Output<LinkedServiceReferenceArgs> fileLinkedService() {
         return this.fileLinkedService == null ? Codegen.empty() : this.fileLinkedService;
     }
 
@@ -112,7 +112,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="filePaths", required=true)
       private final Output<List<Object>> filePaths;
 
-    public Output<List<Object>> getFilePaths() {
+    public Output<List<Object>> filePaths() {
         return this.filePaths;
     }
 
@@ -123,7 +123,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="getDebugInfo")
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
+    public Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo() {
         return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
     }
 
@@ -134,7 +134,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="input", required=true)
       private final Output<Object> input;
 
-    public Output<Object> getInput() {
+    public Output<Object> input() {
         return this.input;
     }
 
@@ -145,7 +145,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -156,7 +156,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="mapper", required=true)
       private final Output<Object> mapper;
 
-    public Output<Object> getMapper() {
+    public Output<Object> mapper() {
         return this.mapper;
     }
 
@@ -167,7 +167,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -178,7 +178,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="output", required=true)
       private final Output<Object> output;
 
-    public Output<Object> getOutput() {
+    public Output<Object> output() {
         return this.output;
     }
 
@@ -189,7 +189,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -200,7 +200,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="reducer", required=true)
       private final Output<Object> reducer;
 
-    public Output<Object> getReducer() {
+    public Output<Object> reducer() {
         return this.reducer;
     }
 
@@ -211,7 +211,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="storageLinkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
+    public Output<List<LinkedServiceReferenceArgs>> storageLinkedServices() {
         return this.storageLinkedServices == null ? Codegen.empty() : this.storageLinkedServices;
     }
 
@@ -223,7 +223,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -234,7 +234,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

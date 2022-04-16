@@ -50,7 +50,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return Type of compute roles configured.
      * 
      */
-    public Output<List<String>> getConfiguredRoleTypes() {
+    public Output<List<String>> configuredRoleTypes() {
         return this.configuredRoleTypes;
     }
     /**
@@ -64,7 +64,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Data Box Edge/Gateway device culture.
      * 
      */
-    public Output<String> getCulture() {
+    public Output<String> culture() {
         return this.culture;
     }
     /**
@@ -78,7 +78,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The status of the Data Box Edge/Gateway device.
      * 
      */
-    public Output</* @Nullable */ String> getDataBoxEdgeDeviceStatus() {
+    public Output</* @Nullable */ String> dataBoxEdgeDeviceStatus() {
         return this.dataBoxEdgeDeviceStatus;
     }
     /**
@@ -92,7 +92,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Description of the Data Box Edge/Gateway device.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -106,7 +106,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The device software version number of the device (eg: 1.2.18105.6).
      * 
      */
-    public Output<String> getDeviceHcsVersion() {
+    public Output<String> deviceHcsVersion() {
         return this.deviceHcsVersion;
     }
     /**
@@ -120,7 +120,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Data Box Edge/Gateway device local capacity in MB.
      * 
      */
-    public Output<Double> getDeviceLocalCapacity() {
+    public Output<Double> deviceLocalCapacity() {
         return this.deviceLocalCapacity;
     }
     /**
@@ -134,7 +134,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Data Box Edge/Gateway device model.
      * 
      */
-    public Output<String> getDeviceModel() {
+    public Output<String> deviceModel() {
         return this.deviceModel;
     }
     /**
@@ -148,7 +148,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Data Box Edge/Gateway device software version.
      * 
      */
-    public Output<String> getDeviceSoftwareVersion() {
+    public Output<String> deviceSoftwareVersion() {
         return this.deviceSoftwareVersion;
     }
     /**
@@ -162,7 +162,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The type of the Data Box Edge/Gateway device.
      * 
      */
-    public Output<String> getDeviceType() {
+    public Output<String> deviceType() {
         return this.deviceType;
     }
     /**
@@ -176,7 +176,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The details of Edge Profile for this resource
      * 
      */
-    public Output<EdgeProfileResponse> getEdgeProfile() {
+    public Output<EdgeProfileResponse> edgeProfile() {
         return this.edgeProfile;
     }
     /**
@@ -190,7 +190,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The etag for the devices.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -204,7 +204,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Data Box Edge/Gateway device name.
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -218,7 +218,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return Msi identity of the resource
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -232,7 +232,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The etag for the devices.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -246,7 +246,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -260,7 +260,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The description of the Data Box Edge/Gateway device model.
      * 
      */
-    public Output<String> getModelDescription() {
+    public Output<String> modelDescription() {
         return this.modelDescription;
     }
     /**
@@ -274,7 +274,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -288,7 +288,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The number of nodes in the cluster.
      * 
      */
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -302,7 +302,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The details of the move operation on this resource.
      * 
      */
-    public Output<ResourceMoveDetailsResponse> getResourceMoveDetails() {
+    public Output<ResourceMoveDetailsResponse> resourceMoveDetails() {
         return this.resourceMoveDetails;
     }
     /**
@@ -316,7 +316,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Serial Number of Data Box Edge/Gateway device.
      * 
      */
-    public Output<String> getSerialNumber() {
+    public Output<String> serialNumber() {
         return this.serialNumber;
     }
     /**
@@ -330,7 +330,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The SKU type.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -344,7 +344,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return DataBoxEdge Resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -358,7 +358,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -372,7 +372,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Data Box Edge/Gateway device timezone.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
     /**
@@ -386,7 +386,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="limit")
       private final @Nullable Object limit;
 
-    public Optional<Object> getLimit() {
+    public Optional<Object> limit() {
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
     }
 
@@ -36,7 +36,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="project")
       private final @Nullable Object project;
 
-    public Optional<Object> getProject() {
+    public Optional<Object> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -47,7 +47,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="skip")
       private final @Nullable Object skip;
 
-    public Optional<Object> getSkip() {
+    public Optional<Object> skip() {
         return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
     }
 
@@ -58,7 +58,7 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="sort")
       private final @Nullable Object sort;
 
-    public Optional<Object> getSort() {
+    public Optional<Object> sort() {
         return this.sort == null ? Optional.empty() : Optional.ofNullable(this.sort);
     }
 

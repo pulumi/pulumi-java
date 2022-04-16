@@ -49,28 +49,28 @@ public final class IdentityResponse {
      * The principal ID of resource identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
      * 
     */
-    public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
+    public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

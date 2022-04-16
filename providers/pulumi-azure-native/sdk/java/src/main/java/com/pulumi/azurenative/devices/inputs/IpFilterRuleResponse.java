@@ -23,7 +23,7 @@ public final class IpFilterRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -34,7 +34,7 @@ public final class IpFilterRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filterName", required=true)
       private final String filterName;
 
-    public String getFilterName() {
+    public String filterName() {
         return this.filterName;
     }
 
@@ -45,7 +45,7 @@ public final class IpFilterRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="ipMask", required=true)
       private final String ipMask;
 
-    public String getIpMask() {
+    public String ipMask() {
         return this.ipMask;
     }
 

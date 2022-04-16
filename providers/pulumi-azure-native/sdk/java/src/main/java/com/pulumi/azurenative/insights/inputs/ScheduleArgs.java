@@ -25,7 +25,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frequencyInMinutes", required=true)
       private final Output<Integer> frequencyInMinutes;
 
-    public Output<Integer> getFrequencyInMinutes() {
+    public Output<Integer> frequencyInMinutes() {
         return this.frequencyInMinutes;
     }
 
@@ -36,7 +36,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeWindowInMinutes", required=true)
       private final Output<Integer> timeWindowInMinutes;
 
-    public Output<Integer> getTimeWindowInMinutes() {
+    public Output<Integer> timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
 

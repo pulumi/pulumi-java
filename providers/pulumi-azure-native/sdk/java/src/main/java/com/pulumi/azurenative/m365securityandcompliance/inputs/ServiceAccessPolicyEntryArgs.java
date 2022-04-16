@@ -25,7 +25,7 @@ public final class ServiceAccessPolicyEntryArgs extends com.pulumi.resources.Res
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 

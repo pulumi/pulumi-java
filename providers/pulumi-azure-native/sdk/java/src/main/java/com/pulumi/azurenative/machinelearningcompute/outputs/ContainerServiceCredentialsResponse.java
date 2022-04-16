@@ -40,21 +40,21 @@ public final class ContainerServiceCredentialsResponse {
      * The ACS kube config file.
      * 
     */
-    public String getAcsKubeConfig() {
+    public String acsKubeConfig() {
         return this.acsKubeConfig;
     }
     /**
      * The ACR image pull secret name which was created in Kubernetes.
      * 
     */
-    public String getImagePullSecretName() {
+    public String imagePullSecretName() {
         return this.imagePullSecretName;
     }
     /**
      * Service principal configuration used by Kubernetes.
      * 
     */
-    public ServicePrincipalPropertiesResponse getServicePrincipalConfiguration() {
+    public ServicePrincipalPropertiesResponse servicePrincipalConfiguration() {
         return this.servicePrincipalConfiguration;
     }
 

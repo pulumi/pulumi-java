@@ -92,70 +92,70 @@ public final class GetWorkloadNetworkDnsZoneResult {
      * Display name of the DNS Zone.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * DNS Server IP array of the DNS Zone.
      * 
     */
-    public List<String> getDnsServerIps() {
+    public List<String> dnsServerIps() {
         return this.dnsServerIps == null ? List.of() : this.dnsServerIps;
     }
     /**
      * Number of DNS Services using the DNS zone.
      * 
     */
-    public Optional<Double> getDnsServices() {
+    public Optional<Double> dnsServices() {
         return Optional.ofNullable(this.dnsServices);
     }
     /**
      * Domain names of the DNS Zone.
      * 
     */
-    public List<String> getDomain() {
+    public List<String> domain() {
         return this.domain == null ? List.of() : this.domain;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
     */
-    public Optional<Double> getRevision() {
+    public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Source IP of the DNS Zone.
      * 
     */
-    public Optional<String> getSourceIp() {
+    public Optional<String> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

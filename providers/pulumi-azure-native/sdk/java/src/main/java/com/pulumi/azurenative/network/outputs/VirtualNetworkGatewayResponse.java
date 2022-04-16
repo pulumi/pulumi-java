@@ -198,168 +198,168 @@ public final class VirtualNetworkGatewayResponse {
      * ActiveActive flag.
      * 
     */
-    public Optional<Boolean> getActiveActive() {
+    public Optional<Boolean> activeActive() {
         return Optional.ofNullable(this.activeActive);
     }
     /**
      * Virtual network gateway's BGP speaker settings.
      * 
     */
-    public Optional<BgpSettingsResponse> getBgpSettings() {
+    public Optional<BgpSettingsResponse> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
     /**
      * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
      * 
     */
-    public Optional<AddressSpaceResponse> getCustomRoutes() {
+    public Optional<AddressSpaceResponse> customRoutes() {
         return Optional.ofNullable(this.customRoutes);
     }
     /**
      * Whether BGP is enabled for this virtual network gateway or not.
      * 
     */
-    public Optional<Boolean> getEnableBgp() {
+    public Optional<Boolean> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
     /**
      * Whether dns forwarding is enabled or not.
      * 
     */
-    public Optional<Boolean> getEnableDnsForwarding() {
+    public Optional<Boolean> enableDnsForwarding() {
         return Optional.ofNullable(this.enableDnsForwarding);
     }
     /**
      * Whether private IP needs to be enabled on this gateway for connections or not.
      * 
     */
-    public Optional<Boolean> getEnablePrivateIpAddress() {
+    public Optional<Boolean> enablePrivateIpAddress() {
         return Optional.ofNullable(this.enablePrivateIpAddress);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The extended location of type local virtual network gateway.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
      * 
     */
-    public Optional<SubResourceResponse> getGatewayDefaultSite() {
+    public Optional<SubResourceResponse> gatewayDefaultSite() {
         return Optional.ofNullable(this.gatewayDefaultSite);
     }
     /**
      * The type of this virtual network gateway.
      * 
     */
-    public Optional<String> getGatewayType() {
+    public Optional<String> gatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The IP address allocated by the gateway to which dns requests can be sent.
      * 
     */
-    public String getInboundDnsForwardingEndpoint() {
+    public String inboundDnsForwardingEndpoint() {
         return this.inboundDnsForwardingEndpoint;
     }
     /**
      * IP configurations for virtual network gateway.
      * 
     */
-    public List<VirtualNetworkGatewayIPConfigurationResponse> getIpConfigurations() {
+    public List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the virtual network gateway resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the virtual network gateway resource.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
      * 
     */
-    public Optional<VirtualNetworkGatewaySkuResponse> getSku() {
+    public Optional<VirtualNetworkGatewaySkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
      * 
     */
-    public Optional<String> getVNetExtendedLocationResourceId() {
+    public Optional<String> vNetExtendedLocationResourceId() {
         return Optional.ofNullable(this.vNetExtendedLocationResourceId);
     }
     /**
      * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
      * 
     */
-    public Optional<VpnClientConfigurationResponse> getVpnClientConfiguration() {
+    public Optional<VpnClientConfigurationResponse> vpnClientConfiguration() {
         return Optional.ofNullable(this.vpnClientConfiguration);
     }
     /**
      * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
      * 
     */
-    public Optional<String> getVpnGatewayGeneration() {
+    public Optional<String> vpnGatewayGeneration() {
         return Optional.ofNullable(this.vpnGatewayGeneration);
     }
     /**
      * The type of this virtual network gateway.
      * 
     */
-    public Optional<String> getVpnType() {
+    public Optional<String> vpnType() {
         return Optional.ofNullable(this.vpnType);
     }
 

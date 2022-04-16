@@ -35,14 +35,14 @@ public final class ResourceRequirementsResponse {
      * Describes the maximum limits on the resources for a given container.
      * 
     */
-    public Optional<ResourceLimitsResponse> getLimits() {
+    public Optional<ResourceLimitsResponse> limits() {
         return Optional.ofNullable(this.limits);
     }
     /**
      * Describes the requested resources for a given container.
      * 
     */
-    public ResourceRequestsResponse getRequests() {
+    public ResourceRequestsResponse requests() {
         return this.requests;
     }
 

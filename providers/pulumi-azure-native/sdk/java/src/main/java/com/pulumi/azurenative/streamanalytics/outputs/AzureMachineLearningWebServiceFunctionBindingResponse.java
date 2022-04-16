@@ -67,35 +67,35 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
      * The API key used to authenticate with Request-Response endpoint.
      * 
     */
-    public Optional<String> getApiKey() {
+    public Optional<String> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
     /**
      * Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
      * 
     */
-    public Optional<Integer> getBatchSize() {
+    public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
      * 
     */
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The inputs for the Azure Machine Learning web service endpoint.
      * 
     */
-    public Optional<AzureMachineLearningWebServiceInputsResponse> getInputs() {
+    public Optional<AzureMachineLearningWebServiceInputsResponse> inputs() {
         return Optional.ofNullable(this.inputs);
     }
     /**
      * A list of outputs from the Azure Machine Learning web service endpoint execution.
      * 
     */
-    public List<AzureMachineLearningWebServiceOutputColumnResponse> getOutputs() {
+    public List<AzureMachineLearningWebServiceOutputColumnResponse> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
@@ -103,7 +103,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
      * Expected value is 'Microsoft.MachineLearning/WebService'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

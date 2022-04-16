@@ -97,73 +97,73 @@ public final class GetAFDCustomDomainResult {
      * Resource reference to the Azure DNS zone
      * 
     */
-    public Optional<ResourceReferenceResponse> getAzureDnsZone() {
+    public Optional<ResourceReferenceResponse> azureDnsZone() {
         return Optional.ofNullable(this.azureDnsZone);
     }
-    public String getDeploymentStatus() {
+    public String deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
      * 
     */
-    public String getDomainValidationState() {
+    public String domainValidationState() {
         return this.domainValidationState;
     }
     /**
      * The host name of the domain. Must be a domain name.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning status
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
     */
-    public Optional<AFDDomainHttpsParametersResponse> getTlsSettings() {
+    public Optional<AFDDomainHttpsParametersResponse> tlsSettings() {
         return Optional.ofNullable(this.tlsSettings);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Values the customer needs to validate domain ownership
      * 
     */
-    public DomainValidationPropertiesResponse getValidationProperties() {
+    public DomainValidationPropertiesResponse validationProperties() {
         return this.validationProperties;
     }
 

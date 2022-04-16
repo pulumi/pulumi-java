@@ -87,63 +87,63 @@ public final class AssignmentReportResponse {
      * Configuration details of the guest configuration assignment.
      * 
     */
-    public Optional<AssignmentInfoResponse> getAssignment() {
+    public Optional<AssignmentInfoResponse> assignment() {
         return Optional.ofNullable(this.assignment);
     }
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
      * 
     */
-    public String getComplianceStatus() {
+    public String complianceStatus() {
         return this.complianceStatus;
     }
     /**
      * End date and time of the guest configuration assignment compliance status check.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * ARM resource id of the report for the guest configuration assignment.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Type of report, Consistency or Initial
      * 
     */
-    public String getOperationType() {
+    public String operationType() {
         return this.operationType;
     }
     /**
      * GUID that identifies the guest configuration assignment report under a subscription, resource group.
      * 
     */
-    public String getReportId() {
+    public String reportId() {
         return this.reportId;
     }
     /**
      * The list of resources for which guest configuration assignment compliance is checked.
      * 
     */
-    public List<AssignmentReportResourceResponse> getResources() {
+    public List<AssignmentReportResourceResponse> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
      * Start date and time of the guest configuration assignment compliance status check.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Information about the VM.
      * 
     */
-    public Optional<VMInfoResponse> getVm() {
+    public Optional<VMInfoResponse> vm() {
         return Optional.ofNullable(this.vm);
     }
 

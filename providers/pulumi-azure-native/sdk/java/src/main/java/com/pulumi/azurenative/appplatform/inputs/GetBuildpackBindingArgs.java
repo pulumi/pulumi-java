@@ -19,7 +19,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="buildServiceName", required=true)
       private final String buildServiceName;
 
-    public String getBuildServiceName() {
+    public String buildServiceName() {
         return this.buildServiceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="builderName", required=true)
       private final String builderName;
 
-    public String getBuilderName() {
+    public String builderName() {
         return this.builderName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="buildpackBindingName", required=true)
       private final String buildpackBindingName;
 
-    public String getBuildpackBindingName() {
+    public String buildpackBindingName() {
         return this.buildpackBindingName;
     }
 
@@ -52,7 +52,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

@@ -26,7 +26,7 @@ public final class SeedNodeResponse {
      * IP address of this seed node.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
 

@@ -25,7 +25,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="dataSetId", required=true)
       private final String dataSetId;
 
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
 
@@ -36,7 +36,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="dataSetType", required=true)
       private final String dataSetType;
 
-    public String getDataSetType() {
+    public String dataSetType() {
         return this.dataSetType;
     }
 
@@ -47,7 +47,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="durationMs", required=true)
       private final Integer durationMs;
 
-    public Integer getDurationMs() {
+    public Integer durationMs() {
         return this.durationMs;
     }
 
@@ -58,7 +58,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -69,7 +69,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="filesRead", required=true)
       private final Double filesRead;
 
-    public Double getFilesRead() {
+    public Double filesRead() {
         return this.filesRead;
     }
 
@@ -80,7 +80,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="filesWritten", required=true)
       private final Double filesWritten;
 
-    public Double getFilesWritten() {
+    public Double filesWritten() {
         return this.filesWritten;
     }
 
@@ -91,7 +91,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -102,7 +102,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -113,7 +113,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="rowsCopied", required=true)
       private final Double rowsCopied;
 
-    public Double getRowsCopied() {
+    public Double rowsCopied() {
         return this.rowsCopied;
     }
 
@@ -124,7 +124,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="rowsRead", required=true)
       private final Double rowsRead;
 
-    public Double getRowsRead() {
+    public Double rowsRead() {
         return this.rowsRead;
     }
 
@@ -135,7 +135,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="sizeRead", required=true)
       private final Double sizeRead;
 
-    public Double getSizeRead() {
+    public Double sizeRead() {
         return this.sizeRead;
     }
 
@@ -146,7 +146,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="sizeWritten", required=true)
       private final Double sizeWritten;
 
-    public Double getSizeWritten() {
+    public Double sizeWritten() {
         return this.sizeWritten;
     }
 
@@ -157,7 +157,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -168,7 +168,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -179,7 +179,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
     @Import(name="vCore", required=true)
       private final Double vCore;
 
-    public Double getVCore() {
+    public Double vCore() {
         return this.vCore;
     }
 

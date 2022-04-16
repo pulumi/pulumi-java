@@ -27,7 +27,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="customRules")
       private final @Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules;
 
-    public Output<List<WebApplicationFirewallCustomRuleArgs>> getCustomRules() {
+    public Output<List<WebApplicationFirewallCustomRuleArgs>> customRules() {
         return this.customRules == null ? Codegen.empty() : this.customRules;
     }
 
@@ -38,7 +38,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="managedRules", required=true)
       private final Output<ManagedRulesDefinitionArgs> managedRules;
 
-    public Output<ManagedRulesDefinitionArgs> getManagedRules() {
+    public Output<ManagedRulesDefinitionArgs> managedRules() {
         return this.managedRules;
     }
 
@@ -71,7 +71,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -82,7 +82,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="policySettings")
       private final @Nullable Output<PolicySettingsArgs> policySettings;
 
-    public Output<PolicySettingsArgs> getPolicySettings() {
+    public Output<PolicySettingsArgs> policySettings() {
         return this.policySettings == null ? Codegen.empty() : this.policySettings;
     }
 
@@ -93,7 +93,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

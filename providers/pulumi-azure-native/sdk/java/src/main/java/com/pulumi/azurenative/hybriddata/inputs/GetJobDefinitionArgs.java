@@ -19,7 +19,7 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataManagerName", required=true)
       private final String dataManagerName;
 
-    public String getDataManagerName() {
+    public String dataManagerName() {
         return this.dataManagerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataServiceName", required=true)
       private final String dataServiceName;
 
-    public String getDataServiceName() {
+    public String dataServiceName() {
         return this.dataServiceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="jobDefinitionName", required=true)
       private final String jobDefinitionName;
 
-    public String getJobDefinitionName() {
+    public String jobDefinitionName() {
         return this.jobDefinitionName;
     }
 
@@ -52,7 +52,7 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

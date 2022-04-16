@@ -24,7 +24,7 @@ public final class ExportExecutionListResultResponse extends com.pulumi.resource
     @Import(name="value", required=true)
       private final List<ExportExecutionResponse> value;
 
-    public List<ExportExecutionResponse> getValue() {
+    public List<ExportExecutionResponse> value() {
         return this.value;
     }
 

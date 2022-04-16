@@ -22,7 +22,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -44,7 +44,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
+    public Output<String> dataSetName() {
         return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
@@ -56,7 +56,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -67,7 +67,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
 
@@ -78,7 +78,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -89,7 +89,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -111,7 +111,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -122,7 +122,7 @@ public final class BlobFolderDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 

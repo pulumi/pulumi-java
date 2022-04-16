@@ -31,7 +31,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backendPort", required=true)
       private final Output<Integer> backendPort;
 
-    public Output<Integer> getBackendPort() {
+    public Output<Integer> backendPort() {
         return this.backendPort;
     }
 
@@ -42,7 +42,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableFloatingIP")
       private final @Nullable Output<Boolean> enableFloatingIP;
 
-    public Output<Boolean> getEnableFloatingIP() {
+    public Output<Boolean> enableFloatingIP() {
         return this.enableFloatingIP == null ? Codegen.empty() : this.enableFloatingIP;
     }
 
@@ -53,7 +53,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableTcpReset")
       private final @Nullable Output<Boolean> enableTcpReset;
 
-    public Output<Boolean> getEnableTcpReset() {
+    public Output<Boolean> enableTcpReset() {
         return this.enableTcpReset == null ? Codegen.empty() : this.enableTcpReset;
     }
 
@@ -64,7 +64,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Output<SubResourceArgs> getFrontendIPConfiguration() {
+    public Output<SubResourceArgs> frontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Codegen.empty() : this.frontendIPConfiguration;
     }
 
@@ -75,7 +75,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPortRangeEnd", required=true)
       private final Output<Integer> frontendPortRangeEnd;
 
-    public Output<Integer> getFrontendPortRangeEnd() {
+    public Output<Integer> frontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
 
@@ -86,7 +86,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPortRangeStart", required=true)
       private final Output<Integer> frontendPortRangeStart;
 
-    public Output<Integer> getFrontendPortRangeStart() {
+    public Output<Integer> frontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
 
@@ -97,7 +97,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -108,7 +108,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
+    public Output<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
@@ -119,7 +119,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -130,7 +130,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="protocol", required=true)
       private final Output<Either<String,TransportProtocol>> protocol;
 
-    public Output<Either<String,TransportProtocol>> getProtocol() {
+    public Output<Either<String,TransportProtocol>> protocol() {
         return this.protocol;
     }
 

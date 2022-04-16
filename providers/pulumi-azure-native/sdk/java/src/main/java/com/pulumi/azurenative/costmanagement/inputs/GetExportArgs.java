@@ -21,7 +21,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="exportName", required=true)
       private final String exportName;
 
-    public String getExportName() {
+    public String exportName() {
         return this.exportName;
     }
 
@@ -43,7 +43,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

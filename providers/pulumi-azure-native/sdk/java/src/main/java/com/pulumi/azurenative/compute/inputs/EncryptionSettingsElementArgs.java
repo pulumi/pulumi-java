@@ -27,7 +27,7 @@ public final class EncryptionSettingsElementArgs extends com.pulumi.resources.Re
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
 
-    public Output<KeyVaultAndSecretReferenceArgs> getDiskEncryptionKey() {
+    public Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey() {
         return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
@@ -38,7 +38,7 @@ public final class EncryptionSettingsElementArgs extends com.pulumi.resources.Re
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
-    public Output<KeyVaultAndKeyReferenceArgs> getKeyEncryptionKey() {
+    public Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey() {
         return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 

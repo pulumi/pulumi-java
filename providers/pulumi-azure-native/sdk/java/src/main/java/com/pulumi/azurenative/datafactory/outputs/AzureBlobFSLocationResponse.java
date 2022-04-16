@@ -50,21 +50,21 @@ public final class AzureBlobFSLocationResponse {
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileSystem() {
+    public Optional<Object> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
@@ -72,7 +72,7 @@ public final class AzureBlobFSLocationResponse {
      * Expected value is 'AzureBlobFSLocation'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

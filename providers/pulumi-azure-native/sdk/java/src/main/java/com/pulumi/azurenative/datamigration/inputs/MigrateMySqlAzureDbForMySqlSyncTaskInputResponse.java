@@ -25,7 +25,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends com.
     @Import(name="selectedDatabases", required=true)
       private final List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases;
 
-    public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -36,7 +36,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends com.
     @Import(name="sourceConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse sourceConnectionInfo;
 
-    public MySqlConnectionInfoResponse getSourceConnectionInfo() {
+    public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -47,7 +47,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends com.
     @Import(name="targetConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse targetConnectionInfo;
 
-    public MySqlConnectionInfoResponse getTargetConnectionInfo() {
+    public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

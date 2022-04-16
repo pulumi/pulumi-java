@@ -35,14 +35,14 @@ public final class VirtualNetworkRuleResponse {
      * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.
      * 
     */
-    public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
+    public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
 

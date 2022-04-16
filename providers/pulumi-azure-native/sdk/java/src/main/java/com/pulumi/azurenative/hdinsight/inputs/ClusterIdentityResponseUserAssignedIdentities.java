@@ -21,7 +21,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends com.pul
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -32,7 +32,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends com.pul
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -43,7 +43,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends com.pul
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

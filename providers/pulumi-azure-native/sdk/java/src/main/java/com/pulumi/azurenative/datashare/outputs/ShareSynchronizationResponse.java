@@ -91,70 +91,70 @@ public final class ShareSynchronizationResponse {
      * Email of the user who created the synchronization
      * 
     */
-    public Optional<String> getConsumerEmail() {
+    public Optional<String> consumerEmail() {
         return Optional.ofNullable(this.consumerEmail);
     }
     /**
      * Name of the user who created the synchronization
      * 
     */
-    public Optional<String> getConsumerName() {
+    public Optional<String> consumerName() {
         return Optional.ofNullable(this.consumerName);
     }
     /**
      * Tenant name of the consumer who created the synchronization
      * 
     */
-    public Optional<String> getConsumerTenantName() {
+    public Optional<String> consumerTenantName() {
         return Optional.ofNullable(this.consumerTenantName);
     }
     /**
      * synchronization duration
      * 
     */
-    public Optional<Integer> getDurationMs() {
+    public Optional<Integer> durationMs() {
         return Optional.ofNullable(this.durationMs);
     }
     /**
      * End time of synchronization
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * message of synchronization
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * start time of synchronization
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Raw Status
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Synchronization id
      * 
     */
-    public Optional<String> getSynchronizationId() {
+    public Optional<String> synchronizationId() {
         return Optional.ofNullable(this.synchronizationId);
     }
     /**
      * Synchronization mode
      * 
     */
-    public String getSynchronizationMode() {
+    public String synchronizationMode() {
         return this.synchronizationMode;
     }
 

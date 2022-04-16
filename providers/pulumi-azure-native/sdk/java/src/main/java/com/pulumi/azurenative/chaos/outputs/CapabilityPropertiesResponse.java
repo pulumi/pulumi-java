@@ -53,35 +53,35 @@ public final class CapabilityPropertiesResponse {
      * Localized string of the description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * URL to retrieve JSON schema of the Capability parameters.
      * 
     */
-    public String getParametersSchema() {
+    public String parametersSchema() {
         return this.parametersSchema;
     }
     /**
      * String of the Publisher that this Capability extends.
      * 
     */
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
     /**
      * String of the Target Type that this Capability extends.
      * 
     */
-    public String getTargetType() {
+    public String targetType() {
         return this.targetType;
     }
     /**
      * String of the URN for this Capability Type.
      * 
     */
-    public String getUrn() {
+    public String urn() {
         return this.urn;
     }
 

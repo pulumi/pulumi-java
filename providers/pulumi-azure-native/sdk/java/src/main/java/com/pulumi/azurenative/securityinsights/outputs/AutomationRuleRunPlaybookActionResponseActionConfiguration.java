@@ -34,14 +34,14 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
      * The resource id of the playbook resource
      * 
     */
-    public Optional<String> getLogicAppResourceId() {
+    public Optional<String> logicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
     /**
      * The tenant id of the playbook resource
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

@@ -29,7 +29,7 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="bindingType")
       private final @Nullable Output<Either<String,BindingType>> bindingType;
 
-    public Output<Either<String,BindingType>> getBindingType() {
+    public Output<Either<String,BindingType>> bindingType() {
         return this.bindingType == null ? Codegen.empty() : this.bindingType;
     }
 
@@ -40,7 +40,7 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="launchProperties")
       private final @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
-    public Output<BuildpackBindingLaunchPropertiesArgs> getLaunchProperties() {
+    public Output<BuildpackBindingLaunchPropertiesArgs> launchProperties() {
         return this.launchProperties == null ? Codegen.empty() : this.launchProperties;
     }
 

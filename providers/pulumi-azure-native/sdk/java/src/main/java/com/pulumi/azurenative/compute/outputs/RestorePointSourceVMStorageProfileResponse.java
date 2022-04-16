@@ -36,14 +36,14 @@ public final class RestorePointSourceVMStorageProfileResponse {
      * Gets the data disks of the VM captured at the time of the restore point creation.
      * 
     */
-    public List<RestorePointSourceVMDataDiskResponse> getDataDisks() {
+    public List<RestorePointSourceVMDataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Gets the OS disk of the VM captured at the time of the restore point creation.
      * 
     */
-    public Optional<RestorePointSourceVMOSDiskResponse> getOsDisk() {
+    public Optional<RestorePointSourceVMOSDiskResponse> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
 

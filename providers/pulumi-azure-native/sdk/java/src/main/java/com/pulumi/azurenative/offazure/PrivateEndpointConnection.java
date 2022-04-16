@@ -44,7 +44,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Gets the tag for optimistic concurrency control.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -58,7 +58,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Gets the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Gets the properties of the object.
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -100,7 +100,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

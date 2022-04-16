@@ -30,7 +30,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="agentPoolProfiles")
       private final @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
-    public Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
+    public Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles() {
         return this.agentPoolProfiles == null ? Codegen.empty() : this.agentPoolProfiles;
     }
 
@@ -41,7 +41,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="authProfile")
       private final @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile;
 
-    public Output<OpenShiftManagedClusterAuthProfileArgs> getAuthProfile() {
+    public Output<OpenShiftManagedClusterAuthProfileArgs> authProfile() {
         return this.authProfile == null ? Codegen.empty() : this.authProfile;
     }
 
@@ -52,7 +52,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -63,7 +63,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="masterPoolProfile")
       private final @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
 
-    public Output<OpenShiftManagedClusterMasterPoolProfileArgs> getMasterPoolProfile() {
+    public Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile() {
         return this.masterPoolProfile == null ? Codegen.empty() : this.masterPoolProfile;
     }
 
@@ -74,7 +74,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
+    public Output<NetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -85,7 +85,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="openShiftVersion", required=true)
       private final Output<String> openShiftVersion;
 
-    public Output<String> getOpenShiftVersion() {
+    public Output<String> openShiftVersion() {
         return this.openShiftVersion;
     }
 
@@ -96,7 +96,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="plan")
       private final @Nullable Output<PurchasePlanArgs> plan;
 
-    public Output<PurchasePlanArgs> getPlan() {
+    public Output<PurchasePlanArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -107,7 +107,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -118,7 +118,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -129,7 +129,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="routerProfiles")
       private final @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles;
 
-    public Output<List<OpenShiftRouterProfileArgs>> getRouterProfiles() {
+    public Output<List<OpenShiftRouterProfileArgs>> routerProfiles() {
         return this.routerProfiles == null ? Codegen.empty() : this.routerProfiles;
     }
 
@@ -140,7 +140,7 @@ public final class OpenShiftManagedClusterArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -27,7 +27,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
@@ -38,7 +38,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="batchSize")
       private final @Nullable Object batchSize;
 
-    public Optional<Object> getBatchSize() {
+    public Optional<Object> batchSize() {
         return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
     }
 
@@ -49,7 +49,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="customRfcReadTableFunctionModule")
       private final @Nullable Object customRfcReadTableFunctionModule;
 
-    public Optional<Object> getCustomRfcReadTableFunctionModule() {
+    public Optional<Object> customRfcReadTableFunctionModule() {
         return this.customRfcReadTableFunctionModule == null ? Optional.empty() : Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
 
@@ -60,7 +60,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -71,7 +71,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -82,7 +82,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="partitionOption")
       private final @Nullable Object partitionOption;
 
-    public Optional<Object> getPartitionOption() {
+    public Optional<Object> partitionOption() {
         return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
     }
 
@@ -93,7 +93,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="partitionSettings")
       private final @Nullable SapTablePartitionSettingsResponse partitionSettings;
 
-    public Optional<SapTablePartitionSettingsResponse> getPartitionSettings() {
+    public Optional<SapTablePartitionSettingsResponse> partitionSettings() {
         return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
     }
 
@@ -104,7 +104,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
-    public Optional<Object> getQueryTimeout() {
+    public Optional<Object> queryTimeout() {
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
@@ -115,7 +115,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rfcTableFields")
       private final @Nullable Object rfcTableFields;
 
-    public Optional<Object> getRfcTableFields() {
+    public Optional<Object> rfcTableFields() {
         return this.rfcTableFields == null ? Optional.empty() : Optional.ofNullable(this.rfcTableFields);
     }
 
@@ -126,7 +126,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rfcTableOptions")
       private final @Nullable Object rfcTableOptions;
 
-    public Optional<Object> getRfcTableOptions() {
+    public Optional<Object> rfcTableOptions() {
         return this.rfcTableOptions == null ? Optional.empty() : Optional.ofNullable(this.rfcTableOptions);
     }
 
@@ -137,7 +137,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rowCount")
       private final @Nullable Object rowCount;
 
-    public Optional<Object> getRowCount() {
+    public Optional<Object> rowCount() {
         return this.rowCount == null ? Optional.empty() : Optional.ofNullable(this.rowCount);
     }
 
@@ -148,7 +148,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rowSkips")
       private final @Nullable Object rowSkips;
 
-    public Optional<Object> getRowSkips() {
+    public Optional<Object> rowSkips() {
         return this.rowSkips == null ? Optional.empty() : Optional.ofNullable(this.rowSkips);
     }
 
@@ -159,7 +159,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sapDataColumnDelimiter")
       private final @Nullable Object sapDataColumnDelimiter;
 
-    public Optional<Object> getSapDataColumnDelimiter() {
+    public Optional<Object> sapDataColumnDelimiter() {
         return this.sapDataColumnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.sapDataColumnDelimiter);
     }
 
@@ -170,7 +170,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
@@ -181,7 +181,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
@@ -193,7 +193,7 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

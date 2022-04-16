@@ -45,7 +45,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return The collection of groups and policies concerned with connectivity
      * 
      */
-    public Output<ConnectivityCollectionResponse> getConnectivity() {
+    public Output<ConnectivityCollectionResponse> connectivity() {
         return this.connectivity;
     }
     /**
@@ -59,7 +59,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -73,7 +73,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the ManagedNetwork resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
      * 
      */
-    public Output</* @Nullable */ ScopeResponse> getScope() {
+    public Output</* @Nullable */ ScopeResponse> scope() {
         return this.scope;
     }
     /**
@@ -129,7 +129,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class ManagedNetwork extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

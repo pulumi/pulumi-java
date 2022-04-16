@@ -42,7 +42,7 @@ public class NotificationRecipientUser extends com.pulumi.resources.CustomResour
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class NotificationRecipientUser extends com.pulumi.resources.CustomResour
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -70,7 +70,7 @@ public class NotificationRecipientUser extends com.pulumi.resources.CustomResour
      * @return API Management UserId subscribed to notification.
      * 
      */
-    public Output</* @Nullable */ String> getUserId() {
+    public Output</* @Nullable */ String> userId() {
         return this.userId;
     }
 

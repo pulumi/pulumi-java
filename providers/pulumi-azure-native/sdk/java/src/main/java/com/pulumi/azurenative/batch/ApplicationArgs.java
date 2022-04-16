@@ -23,7 +23,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowUpdates")
       private final @Nullable Output<Boolean> allowUpdates;
 
-    public Output<Boolean> getAllowUpdates() {
+    public Output<Boolean> allowUpdates() {
         return this.allowUpdates == null ? Codegen.empty() : this.allowUpdates;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
@@ -56,7 +56,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
       private final @Nullable Output<String> defaultVersion;
 
-    public Output<String> getDefaultVersion() {
+    public Output<String> defaultVersion() {
         return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
@@ -67,7 +67,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -78,7 +78,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

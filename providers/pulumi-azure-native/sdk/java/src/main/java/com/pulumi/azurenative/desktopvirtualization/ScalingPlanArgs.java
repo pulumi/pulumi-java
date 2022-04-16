@@ -32,7 +32,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,7 +43,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exclusionTag")
       private final @Nullable Output<String> exclusionTag;
 
-    public Output<String> getExclusionTag() {
+    public Output<String> exclusionTag() {
         return this.exclusionTag == null ? Codegen.empty() : this.exclusionTag;
     }
 
@@ -54,7 +54,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -65,7 +65,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolReferences")
       private final @Nullable Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences;
 
-    public Output<List<ScalingHostPoolReferenceArgs>> getHostPoolReferences() {
+    public Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences() {
         return this.hostPoolReferences == null ? Codegen.empty() : this.hostPoolReferences;
     }
 
@@ -76,14 +76,14 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolType")
       private final @Nullable Output<Either<String,HostPoolType>> hostPoolType;
 
-    public Output<Either<String,HostPoolType>> getHostPoolType() {
+    public Output<Either<String,HostPoolType>> hostPoolType() {
         return this.hostPoolType == null ? Codegen.empty() : this.hostPoolType;
     }
 
     @Import(name="identity")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
+    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -94,7 +94,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -105,7 +105,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -116,14 +116,14 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
-    public Output<String> getManagedBy() {
+    public Output<String> managedBy() {
         return this.managedBy == null ? Codegen.empty() : this.managedBy;
     }
 
     @Import(name="plan")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Output<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
+    public Output<ResourceModelWithAllowedPropertySetPlanArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -134,7 +134,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -145,7 +145,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ring")
       private final @Nullable Output<Integer> ring;
 
-    public Output<Integer> getRing() {
+    public Output<Integer> ring() {
         return this.ring == null ? Codegen.empty() : this.ring;
     }
 
@@ -156,7 +156,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingPlanName")
       private final @Nullable Output<String> scalingPlanName;
 
-    public Output<String> getScalingPlanName() {
+    public Output<String> scalingPlanName() {
         return this.scalingPlanName == null ? Codegen.empty() : this.scalingPlanName;
     }
 
@@ -167,14 +167,14 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedules")
       private final @Nullable Output<List<ScalingScheduleArgs>> schedules;
 
-    public Output<List<ScalingScheduleArgs>> getSchedules() {
+    public Output<List<ScalingScheduleArgs>> schedules() {
         return this.schedules == null ? Codegen.empty() : this.schedules;
     }
 
     @Import(name="sku")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Output<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
+    public Output<ResourceModelWithAllowedPropertySetSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -185,7 +185,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -196,7 +196,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

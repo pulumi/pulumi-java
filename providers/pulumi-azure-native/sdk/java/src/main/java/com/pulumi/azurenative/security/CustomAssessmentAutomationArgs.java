@@ -25,7 +25,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="compressedQuery")
       private final @Nullable Output<String> compressedQuery;
 
-    public Output<String> getCompressedQuery() {
+    public Output<String> compressedQuery() {
         return this.compressedQuery == null ? Codegen.empty() : this.compressedQuery;
     }
 
@@ -36,7 +36,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="customAssessmentAutomationName")
       private final @Nullable Output<String> customAssessmentAutomationName;
 
-    public Output<String> getCustomAssessmentAutomationName() {
+    public Output<String> customAssessmentAutomationName() {
         return this.customAssessmentAutomationName == null ? Codegen.empty() : this.customAssessmentAutomationName;
     }
 
@@ -47,7 +47,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -69,7 +69,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="remediationDescription")
       private final @Nullable Output<String> remediationDescription;
 
-    public Output<String> getRemediationDescription() {
+    public Output<String> remediationDescription() {
         return this.remediationDescription == null ? Codegen.empty() : this.remediationDescription;
     }
 
@@ -80,7 +80,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="severity")
       private final @Nullable Output<Either<String,SeverityEnum>> severity;
 
-    public Output<Either<String,SeverityEnum>> getSeverity() {
+    public Output<Either<String,SeverityEnum>> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
@@ -102,7 +102,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
     @Import(name="supportedCloud")
       private final @Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud;
 
-    public Output<Either<String,SupportedCloudEnum>> getSupportedCloud() {
+    public Output<Either<String,SupportedCloudEnum>> supportedCloud() {
         return this.supportedCloud == null ? Codegen.empty() : this.supportedCloud;
     }
 

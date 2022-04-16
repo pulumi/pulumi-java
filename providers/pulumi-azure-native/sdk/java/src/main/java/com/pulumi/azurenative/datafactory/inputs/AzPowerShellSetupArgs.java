@@ -26,7 +26,7 @@ public final class AzPowerShellSetupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -37,7 +37,7 @@ public final class AzPowerShellSetupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

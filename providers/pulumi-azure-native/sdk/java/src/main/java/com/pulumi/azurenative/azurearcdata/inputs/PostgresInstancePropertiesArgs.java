@@ -28,7 +28,7 @@ public final class PostgresInstancePropertiesArgs extends com.pulumi.resources.R
     @Import(name="admin")
       private final @Nullable Output<String> admin;
 
-    public Output<String> getAdmin() {
+    public Output<String> admin() {
         return this.admin == null ? Codegen.empty() : this.admin;
     }
 
@@ -39,7 +39,7 @@ public final class PostgresInstancePropertiesArgs extends com.pulumi.resources.R
     @Import(name="basicLoginInformation")
       private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
-    public Output<BasicLoginInformationArgs> getBasicLoginInformation() {
+    public Output<BasicLoginInformationArgs> basicLoginInformation() {
         return this.basicLoginInformation == null ? Codegen.empty() : this.basicLoginInformation;
     }
 
@@ -50,7 +50,7 @@ public final class PostgresInstancePropertiesArgs extends com.pulumi.resources.R
     @Import(name="dataControllerId")
       private final @Nullable Output<String> dataControllerId;
 
-    public Output<String> getDataControllerId() {
+    public Output<String> dataControllerId() {
         return this.dataControllerId == null ? Codegen.empty() : this.dataControllerId;
     }
 
@@ -61,7 +61,7 @@ public final class PostgresInstancePropertiesArgs extends com.pulumi.resources.R
     @Import(name="k8sRaw")
       private final @Nullable Output<Object> k8sRaw;
 
-    public Output<Object> getK8sRaw() {
+    public Output<Object> k8sRaw() {
         return this.k8sRaw == null ? Codegen.empty() : this.k8sRaw;
     }
 
@@ -72,7 +72,7 @@ public final class PostgresInstancePropertiesArgs extends com.pulumi.resources.R
     @Import(name="lastUploadedDate")
       private final @Nullable Output<String> lastUploadedDate;
 
-    public Output<String> getLastUploadedDate() {
+    public Output<String> lastUploadedDate() {
         return this.lastUploadedDate == null ? Codegen.empty() : this.lastUploadedDate;
     }
 

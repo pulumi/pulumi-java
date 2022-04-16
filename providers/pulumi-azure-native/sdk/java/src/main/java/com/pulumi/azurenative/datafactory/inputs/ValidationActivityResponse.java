@@ -30,7 +30,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="childItems")
       private final @Nullable Object childItems;
 
-    public Optional<Object> getChildItems() {
+    public Optional<Object> childItems() {
         return this.childItems == null ? Optional.empty() : Optional.ofNullable(this.childItems);
     }
 
@@ -41,7 +41,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
 
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
 
@@ -52,7 +52,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -63,7 +63,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -74,7 +74,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="minimumSize")
       private final @Nullable Object minimumSize;
 
-    public Optional<Object> getMinimumSize() {
+    public Optional<Object> minimumSize() {
         return this.minimumSize == null ? Optional.empty() : Optional.ofNullable(this.minimumSize);
     }
 
@@ -85,7 +85,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -96,7 +96,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="sleep")
       private final @Nullable Object sleep;
 
-    public Optional<Object> getSleep() {
+    public Optional<Object> sleep() {
         return this.sleep == null ? Optional.empty() : Optional.ofNullable(this.sleep);
     }
 
@@ -107,7 +107,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="timeout")
       private final @Nullable Object timeout;
 
-    public Optional<Object> getTimeout() {
+    public Optional<Object> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
@@ -119,7 +119,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -130,7 +130,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

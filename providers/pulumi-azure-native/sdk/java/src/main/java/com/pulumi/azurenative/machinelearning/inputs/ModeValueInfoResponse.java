@@ -27,7 +27,7 @@ public final class ModeValueInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="interfaceString")
       private final @Nullable String interfaceString;
 
-    public Optional<String> getInterfaceString() {
+    public Optional<String> interfaceString() {
         return this.interfaceString == null ? Optional.empty() : Optional.ofNullable(this.interfaceString);
     }
 
@@ -38,7 +38,7 @@ public final class ModeValueInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="parameters")
       private final @Nullable List<ModuleAssetParameterResponse> parameters;
 
-    public List<ModuleAssetParameterResponse> getParameters() {
+    public List<ModuleAssetParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 

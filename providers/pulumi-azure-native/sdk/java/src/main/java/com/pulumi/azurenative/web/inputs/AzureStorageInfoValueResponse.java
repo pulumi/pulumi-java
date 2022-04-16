@@ -25,7 +25,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="accessKey")
       private final @Nullable String accessKey;
 
-    public Optional<String> getAccessKey() {
+    public Optional<String> accessKey() {
         return this.accessKey == null ? Optional.empty() : Optional.ofNullable(this.accessKey);
     }
 
@@ -36,7 +36,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
@@ -47,7 +47,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="mountPath")
       private final @Nullable String mountPath;
 
-    public Optional<String> getMountPath() {
+    public Optional<String> mountPath() {
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
     }
 
@@ -58,7 +58,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="shareName")
       private final @Nullable String shareName;
 
-    public Optional<String> getShareName() {
+    public Optional<String> shareName() {
         return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
     }
 
@@ -69,7 +69,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -80,7 +80,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

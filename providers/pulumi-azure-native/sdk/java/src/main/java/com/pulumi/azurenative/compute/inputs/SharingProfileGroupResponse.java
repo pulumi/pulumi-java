@@ -26,7 +26,7 @@ public final class SharingProfileGroupResponse extends com.pulumi.resources.Invo
     @Import(name="ids")
       private final @Nullable List<String> ids;
 
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids == null ? List.of() : this.ids;
     }
 
@@ -37,7 +37,7 @@ public final class SharingProfileGroupResponse extends com.pulumi.resources.Invo
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

@@ -25,7 +25,7 @@ public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resource
     @Import(name="partnerName", required=true)
       private final Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName;
     }
 
@@ -36,7 +36,7 @@ public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resource
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 

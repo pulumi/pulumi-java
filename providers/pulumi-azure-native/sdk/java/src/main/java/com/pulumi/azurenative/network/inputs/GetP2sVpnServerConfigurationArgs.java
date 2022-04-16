@@ -19,7 +19,7 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
     @Import(name="p2SVpnServerConfigurationName", required=true)
       private final String p2SVpnServerConfigurationName;
 
-    public String getP2SVpnServerConfigurationName() {
+    public String p2SVpnServerConfigurationName() {
         return this.p2SVpnServerConfigurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
     @Import(name="virtualWanName", required=true)
       private final String virtualWanName;
 
-    public String getVirtualWanName() {
+    public String virtualWanName() {
         return this.virtualWanName;
     }
 

@@ -28,7 +28,7 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incidentId")
       private final @Nullable Output<String> incidentId;
 
-    public Output<String> getIncidentId() {
+    public Output<String> incidentId() {
         return this.incidentId == null ? Codegen.empty() : this.incidentId;
     }
 
@@ -39,7 +39,7 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relationName")
       private final @Nullable Output<String> relationName;
 
-    public Output<String> getRelationName() {
+    public Output<String> relationName() {
         return this.relationName == null ? Codegen.empty() : this.relationName;
     }
 
@@ -50,7 +50,7 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity")
       private final @Nullable Output<Either<String,IncidentSeverity>> severity;
 
-    public Output<Either<String,IncidentSeverity>> getSeverity() {
+    public Output<Either<String,IncidentSeverity>> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
@@ -61,7 +61,7 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

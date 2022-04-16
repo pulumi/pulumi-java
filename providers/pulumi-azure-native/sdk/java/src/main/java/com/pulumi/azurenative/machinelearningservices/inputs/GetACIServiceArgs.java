@@ -22,7 +22,7 @@ public final class GetACIServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable Boolean expand;
 
-    public Optional<Boolean> getExpand() {
+    public Optional<Boolean> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -33,7 +33,7 @@ public final class GetACIServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class GetACIServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -55,7 +55,7 @@ public final class GetACIServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

@@ -27,7 +27,7 @@ public final class ConfigurationServiceGitPropertyArgs extends com.pulumi.resour
     @Import(name="repositories")
       private final @Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories;
 
-    public Output<List<ConfigurationServiceGitRepositoryArgs>> getRepositories() {
+    public Output<List<ConfigurationServiceGitRepositoryArgs>> repositories() {
         return this.repositories == null ? Codegen.empty() : this.repositories;
     }
 

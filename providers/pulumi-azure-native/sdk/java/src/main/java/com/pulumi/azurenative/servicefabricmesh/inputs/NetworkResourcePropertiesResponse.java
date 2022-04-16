@@ -25,7 +25,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -59,7 +59,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -70,7 +70,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
     @Import(name="statusDetails", required=true)
       private final String statusDetails;
 
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
 

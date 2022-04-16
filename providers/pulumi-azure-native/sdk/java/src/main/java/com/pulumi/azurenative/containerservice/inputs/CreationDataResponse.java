@@ -25,7 +25,7 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 

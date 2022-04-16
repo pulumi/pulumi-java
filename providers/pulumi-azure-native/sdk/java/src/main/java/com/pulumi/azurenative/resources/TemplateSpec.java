@@ -46,7 +46,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Template Spec description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Template Spec display name.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +74,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -102,7 +102,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -130,7 +130,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -158,7 +158,7 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
      * 
      */
-    public Output<Map<String,TemplateSpecVersionInfoResponse>> getVersions() {
+    public Output<Map<String,TemplateSpecVersionInfoResponse>> versions() {
         return this.versions;
     }
 

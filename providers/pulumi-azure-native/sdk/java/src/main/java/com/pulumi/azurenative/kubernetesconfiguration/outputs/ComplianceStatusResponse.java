@@ -48,28 +48,28 @@ public final class ComplianceStatusResponse {
      * The compliance state of the configuration.
      * 
     */
-    public String getComplianceState() {
+    public String complianceState() {
         return this.complianceState;
     }
     /**
      * Datetime the configuration was last applied.
      * 
     */
-    public Optional<String> getLastConfigApplied() {
+    public Optional<String> lastConfigApplied() {
         return Optional.ofNullable(this.lastConfigApplied);
     }
     /**
      * Message from when the configuration was applied.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Level of the message.
      * 
     */
-    public Optional<String> getMessageLevel() {
+    public Optional<String> messageLevel() {
         return Optional.ofNullable(this.messageLevel);
     }
 

@@ -32,7 +32,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -43,7 +43,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -54,7 +54,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
 
-    public Output<DataFlowFolderArgs> getFolder() {
+    public Output<DataFlowFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -65,7 +65,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 
@@ -76,7 +76,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptLines")
       private final @Nullable Output<List<String>> scriptLines;
 
-    public Output<List<String>> getScriptLines() {
+    public Output<List<String>> scriptLines() {
         return this.scriptLines == null ? Codegen.empty() : this.scriptLines;
     }
 
@@ -87,7 +87,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sinks")
       private final @Nullable Output<List<DataFlowSinkArgs>> sinks;
 
-    public Output<List<DataFlowSinkArgs>> getSinks() {
+    public Output<List<DataFlowSinkArgs>> sinks() {
         return this.sinks == null ? Codegen.empty() : this.sinks;
     }
 
@@ -98,7 +98,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sources")
       private final @Nullable Output<List<DataFlowSourceArgs>> sources;
 
-    public Output<List<DataFlowSourceArgs>> getSources() {
+    public Output<List<DataFlowSourceArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 
@@ -109,7 +109,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transformations")
       private final @Nullable Output<List<TransformationArgs>> transformations;
 
-    public Output<List<TransformationArgs>> getTransformations() {
+    public Output<List<TransformationArgs>> transformations() {
         return this.transformations == null ? Codegen.empty() : this.transformations;
     }
 
@@ -121,7 +121,7 @@ public final class FlowletArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

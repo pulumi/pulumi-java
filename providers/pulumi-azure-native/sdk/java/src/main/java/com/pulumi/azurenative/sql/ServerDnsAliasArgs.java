@@ -22,7 +22,7 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dnsAliasName")
       private final @Nullable Output<String> dnsAliasName;
 
-    public Output<String> getDnsAliasName() {
+    public Output<String> dnsAliasName() {
         return this.dnsAliasName == null ? Codegen.empty() : this.dnsAliasName;
     }
 
@@ -33,7 +33,7 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

@@ -19,7 +19,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
     @Import(name="peer", required=true)
       private final String peer;
 
-    public String getPeer() {
+    public String peer() {
         return this.peer;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
     @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;
 
-    public String getVirtualNetworkGatewayName() {
+    public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 

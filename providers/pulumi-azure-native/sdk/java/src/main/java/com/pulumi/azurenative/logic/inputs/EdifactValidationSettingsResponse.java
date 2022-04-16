@@ -25,7 +25,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
-    public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
+    public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -36,7 +36,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="checkDuplicateGroupControlNumber", required=true)
       private final Boolean checkDuplicateGroupControlNumber;
 
-    public Boolean getCheckDuplicateGroupControlNumber() {
+    public Boolean checkDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
     }
 
@@ -47,7 +47,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="checkDuplicateInterchangeControlNumber", required=true)
       private final Boolean checkDuplicateInterchangeControlNumber;
 
-    public Boolean getCheckDuplicateInterchangeControlNumber() {
+    public Boolean checkDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
     }
 
@@ -58,7 +58,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="checkDuplicateTransactionSetControlNumber", required=true)
       private final Boolean checkDuplicateTransactionSetControlNumber;
 
-    public Boolean getCheckDuplicateTransactionSetControlNumber() {
+    public Boolean checkDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
     }
 
@@ -69,7 +69,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="interchangeControlNumberValidityDays", required=true)
       private final Integer interchangeControlNumberValidityDays;
 
-    public Integer getInterchangeControlNumberValidityDays() {
+    public Integer interchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
     }
 
@@ -80,7 +80,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="trailingSeparatorPolicy", required=true)
       private final String trailingSeparatorPolicy;
 
-    public String getTrailingSeparatorPolicy() {
+    public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
 
@@ -91,7 +91,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
-    public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
+    public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -102,7 +102,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="validateCharacterSet", required=true)
       private final Boolean validateCharacterSet;
 
-    public Boolean getValidateCharacterSet() {
+    public Boolean validateCharacterSet() {
         return this.validateCharacterSet;
     }
 
@@ -113,7 +113,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="validateEDITypes", required=true)
       private final Boolean validateEDITypes;
 
-    public Boolean getValidateEDITypes() {
+    public Boolean validateEDITypes() {
         return this.validateEDITypes;
     }
 
@@ -124,7 +124,7 @@ public final class EdifactValidationSettingsResponse extends com.pulumi.resource
     @Import(name="validateXSDTypes", required=true)
       private final Boolean validateXSDTypes;
 
-    public Boolean getValidateXSDTypes() {
+    public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }
 

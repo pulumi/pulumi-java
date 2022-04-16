@@ -26,7 +26,7 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exe")
       private final @Nullable Output<String> exe;
 
-    public Output<String> getExe() {
+    public Output<String> exe() {
         return this.exe == null ? Codegen.empty() : this.exe;
     }
 
@@ -37,7 +37,7 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="executable")
       private final @Nullable Output<String> executable;
 
-    public Output<String> getExecutable() {
+    public Output<String> executable() {
         return this.executable == null ? Codegen.empty() : this.executable;
     }
 
@@ -48,7 +48,7 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="msi")
       private final @Nullable Output<String> msi;
 
-    public Output<String> getMsi() {
+    public Output<String> msi() {
         return this.msi == null ? Codegen.empty() : this.msi;
     }
 
@@ -59,7 +59,7 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 

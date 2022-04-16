@@ -23,7 +23,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> getKeyType() {
+    public Either<String,KeyType> keyType() {
         return this.keyType == null ? null : this.keyType;
     }
 
@@ -34,7 +34,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="notAfter")
       private final @Nullable String notAfter;
 
-    public Optional<String> getNotAfter() {
+    public Optional<String> notAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
@@ -45,7 +45,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="workflowName", required=true)
       private final String workflowName;
 
-    public String getWorkflowName() {
+    public String workflowName() {
         return this.workflowName;
     }
 

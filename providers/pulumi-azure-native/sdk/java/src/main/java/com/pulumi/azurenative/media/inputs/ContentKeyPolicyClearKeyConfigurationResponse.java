@@ -24,7 +24,7 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse extends com.pul
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

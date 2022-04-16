@@ -84,63 +84,63 @@ public final class GetSignalRSharedPrivateLinkResourceResult {
      * The group id from the provider of resource the shared private link resource is for
      * 
     */
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource id of the resource the shared private link resource is for
      * 
     */
-    public String getPrivateLinkResourceId() {
+    public String privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
      * Provisioning state of the shared private link resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The request message for requesting approval of the shared private link resource
      * 
     */
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * Status of the shared private link resource
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

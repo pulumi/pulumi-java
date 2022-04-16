@@ -30,7 +30,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
     @Import(name="hub")
       private final @Nullable Output<ResourceIdArgs> hub;
 
-    public Output<ResourceIdArgs> getHub() {
+    public Output<ResourceIdArgs> hub() {
         return this.hub == null ? Codegen.empty() : this.hub;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
     @Import(name="mesh")
       private final @Nullable Output<List<ResourceIdArgs>> mesh;
 
-    public Output<List<ResourceIdArgs>> getMesh() {
+    public Output<List<ResourceIdArgs>> mesh() {
         return this.mesh == null ? Codegen.empty() : this.mesh;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
     @Import(name="spokes")
       private final @Nullable Output<List<ResourceIdArgs>> spokes;
 
-    public Output<List<ResourceIdArgs>> getSpokes() {
+    public Output<List<ResourceIdArgs>> spokes() {
         return this.spokes == null ? Codegen.empty() : this.spokes;
     }
 
@@ -63,7 +63,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
     @Import(name="type", required=true)
       private final Output<Either<String,Type>> type;
 
-    public Output<Either<String,Type>> getType() {
+    public Output<Either<String,Type>> type() {
         return this.type;
     }
 

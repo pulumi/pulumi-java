@@ -32,14 +32,14 @@ public final class VirtualNetworkBgpCommunitiesResponse {
      * The BGP community associated with the region of the virtual network.
      * 
     */
-    public String getRegionalCommunity() {
+    public String regionalCommunity() {
         return this.regionalCommunity;
     }
     /**
      * The BGP community associated with the virtual network.
      * 
     */
-    public String getVirtualNetworkCommunity() {
+    public String virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }
 

@@ -26,7 +26,7 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -37,7 +37,7 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
@@ -48,7 +48,7 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="subscriptionName")
       private final @Nullable Output<String> subscriptionName;
 
-    public Output<String> getSubscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName == null ? Codegen.empty() : this.subscriptionName;
     }
 

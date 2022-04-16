@@ -19,14 +19,14 @@ public final class AppLogsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="logAnalyticsConfiguration")
       private final @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 
-    public Output<LogAnalyticsConfigurationArgs> getLogAnalyticsConfiguration() {
+    public Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration() {
         return this.logAnalyticsConfiguration == null ? Codegen.empty() : this.logAnalyticsConfiguration;
     }
 

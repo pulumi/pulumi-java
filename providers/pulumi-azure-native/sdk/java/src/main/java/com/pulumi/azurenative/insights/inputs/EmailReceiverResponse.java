@@ -26,7 +26,7 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="emailAddress", required=true)
       private final String emailAddress;
 
-    public String getEmailAddress() {
+    public String emailAddress() {
         return this.emailAddress;
     }
 
@@ -37,7 +37,7 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -59,7 +59,7 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
     }
 

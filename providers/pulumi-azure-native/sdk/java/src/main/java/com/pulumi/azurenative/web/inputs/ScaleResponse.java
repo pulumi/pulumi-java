@@ -27,7 +27,7 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxReplicas")
       private final @Nullable Integer maxReplicas;
 
-    public Optional<Integer> getMaxReplicas() {
+    public Optional<Integer> maxReplicas() {
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
     }
 
@@ -38,7 +38,7 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minReplicas")
       private final @Nullable Integer minReplicas;
 
-    public Optional<Integer> getMinReplicas() {
+    public Optional<Integer> minReplicas() {
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
     }
 
@@ -49,7 +49,7 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rules")
       private final @Nullable List<ScaleRuleResponse> rules;
 
-    public List<ScaleRuleResponse> getRules() {
+    public List<ScaleRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

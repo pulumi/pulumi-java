@@ -51,28 +51,28 @@ public final class LastAccessTimeTrackingPolicyResponse {
      * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
      * 
     */
-    public List<String> getBlobType() {
+    public List<String> blobType() {
         return this.blobType == null ? List.of() : this.blobType;
     }
     /**
      * When set to true last access time based tracking is enabled.
      * 
     */
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
     /**
      * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
      * 
     */
-    public Optional<Integer> getTrackingGranularityInDays() {
+    public Optional<Integer> trackingGranularityInDays() {
         return Optional.ofNullable(this.trackingGranularityInDays);
     }
 

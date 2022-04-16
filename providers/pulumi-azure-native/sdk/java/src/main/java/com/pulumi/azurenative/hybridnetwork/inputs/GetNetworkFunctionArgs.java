@@ -19,7 +19,7 @@ public final class GetNetworkFunctionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="networkFunctionName", required=true)
       private final String networkFunctionName;
 
-    public String getNetworkFunctionName() {
+    public String networkFunctionName() {
         return this.networkFunctionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetNetworkFunctionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

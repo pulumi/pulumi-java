@@ -52,7 +52,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return List of content types on which compression applies. The value should be a valid MIME type.
      * 
      */
-    public Output</* @Nullable */ List<String>> getContentTypesToCompress() {
+    public Output</* @Nullable */ List<String>> contentTypesToCompress() {
         return this.contentTypesToCompress;
     }
     /**
@@ -66,7 +66,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return A reference to the origin group.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> getDefaultOriginGroup() {
+    public Output</* @Nullable */ ResourceReferenceResponse> defaultOriginGroup() {
         return this.defaultOriginGroup;
     }
     /**
@@ -80,7 +80,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return A policy that specifies the delivery rules to be used for an endpoint.
      * 
      */
-    public Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseDeliveryPolicy> getDeliveryPolicy() {
+    public Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseDeliveryPolicy> deliveryPolicy() {
         return this.deliveryPolicy;
     }
     /**
@@ -94,7 +94,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
      * 
      */
-    public Output</* @Nullable */ List<GeoFilterResponse>> getGeoFilters() {
+    public Output</* @Nullable */ List<GeoFilterResponse>> geoFilters() {
         return this.geoFilters;
     }
     /**
@@ -108,7 +108,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -122,7 +122,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsCompressionEnabled() {
+    public Output</* @Nullable */ Boolean> isCompressionEnabled() {
         return this.isCompressionEnabled;
     }
     /**
@@ -136,7 +136,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsHttpAllowed() {
+    public Output</* @Nullable */ Boolean> isHttpAllowed() {
         return this.isHttpAllowed;
     }
     /**
@@ -150,7 +150,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsHttpsAllowed() {
+    public Output</* @Nullable */ Boolean> isHttpsAllowed() {
         return this.isHttpsAllowed;
     }
     /**
@@ -164,7 +164,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -178,7 +178,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -192,7 +192,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
      * 
      */
-    public Output</* @Nullable */ String> getOptimizationType() {
+    public Output</* @Nullable */ String> optimizationType() {
         return this.optimizationType;
     }
     /**
@@ -206,7 +206,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The origin groups comprising of origins that are used for load balancing the traffic based on availability.
      * 
      */
-    public Output</* @Nullable */ List<DeepCreatedOriginGroupResponse>> getOriginGroups() {
+    public Output</* @Nullable */ List<DeepCreatedOriginGroupResponse>> originGroups() {
         return this.originGroups;
     }
     /**
@@ -220,7 +220,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
      * 
      */
-    public Output</* @Nullable */ String> getOriginHostHeader() {
+    public Output</* @Nullable */ String> originHostHeader() {
         return this.originHostHeader;
     }
     /**
@@ -234,7 +234,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
-    public Output</* @Nullable */ String> getOriginPath() {
+    public Output</* @Nullable */ String> originPath() {
         return this.originPath;
     }
     /**
@@ -248,7 +248,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The source of the content being delivered via CDN.
      * 
      */
-    public Output<List<DeepCreatedOriginResponse>> getOrigins() {
+    public Output<List<DeepCreatedOriginResponse>> origins() {
         return this.origins;
     }
     /**
@@ -262,7 +262,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.
      * 
      */
-    public Output</* @Nullable */ String> getProbePath() {
+    public Output</* @Nullable */ String> probePath() {
         return this.probePath;
     }
     /**
@@ -276,7 +276,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Provisioning status of the endpoint.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -290,7 +290,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
-    public Output</* @Nullable */ String> getQueryStringCachingBehavior() {
+    public Output</* @Nullable */ String> queryStringCachingBehavior() {
         return this.queryStringCachingBehavior;
     }
     /**
@@ -304,7 +304,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Resource status of the endpoint.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -318,7 +318,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -332,7 +332,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -346,7 +346,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -360,7 +360,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return List of keys used to validate the signed URL hashes.
      * 
      */
-    public Output</* @Nullable */ List<UrlSigningKeyResponse>> getUrlSigningKeys() {
+    public Output</* @Nullable */ List<UrlSigningKeyResponse>> urlSigningKeys() {
         return this.urlSigningKeys;
     }
     /**
@@ -374,7 +374,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Defines the Web Application Firewall policy for the endpoint (if applicable)
      * 
      */
-    public Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
+    public Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink;
     }
 

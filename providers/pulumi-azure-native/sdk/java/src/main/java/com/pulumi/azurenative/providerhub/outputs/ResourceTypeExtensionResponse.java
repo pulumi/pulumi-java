@@ -26,13 +26,13 @@ public final class ResourceTypeExtensionResponse {
         this.timeout = timeout;
     }
 
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
-    public List<String> getExtensionCategories() {
+    public List<String> extensionCategories() {
         return this.extensionCategories == null ? List.of() : this.extensionCategories;
     }
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

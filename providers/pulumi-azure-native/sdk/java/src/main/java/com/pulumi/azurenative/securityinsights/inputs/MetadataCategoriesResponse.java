@@ -26,7 +26,7 @@ public final class MetadataCategoriesResponse extends com.pulumi.resources.Invok
     @Import(name="domains")
       private final @Nullable List<String> domains;
 
-    public List<String> getDomains() {
+    public List<String> domains() {
         return this.domains == null ? List.of() : this.domains;
     }
 
@@ -37,7 +37,7 @@ public final class MetadataCategoriesResponse extends com.pulumi.resources.Invok
     @Import(name="verticals")
       private final @Nullable List<String> verticals;
 
-    public List<String> getVerticals() {
+    public List<String> verticals() {
         return this.verticals == null ? List.of() : this.verticals;
     }
 

@@ -41,21 +41,21 @@ public final class PackageValidationResultResponse {
      * Error information.
      * 
     */
-    public List<String> getErrors() {
+    public List<String> errors() {
         return this.errors;
     }
     /**
      * Indicates whether the package passed the validation.
      * 
     */
-    public Boolean getIsValid() {
+    public Boolean isValid() {
         return this.isValid;
     }
     /**
      * Validation name.
      * 
     */
-    public String getValidationName() {
+    public String validationName() {
         return this.validationName;
     }
 

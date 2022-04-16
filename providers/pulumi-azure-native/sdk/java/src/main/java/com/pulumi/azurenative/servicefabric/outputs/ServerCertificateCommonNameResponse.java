@@ -32,14 +32,14 @@ public final class ServerCertificateCommonNameResponse {
      * The common name of the server certificate.
      * 
     */
-    public String getCertificateCommonName() {
+    public String certificateCommonName() {
         return this.certificateCommonName;
     }
     /**
      * The issuer thumbprint of the server certificate.
      * 
     */
-    public String getCertificateIssuerThumbprint() {
+    public String certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
 

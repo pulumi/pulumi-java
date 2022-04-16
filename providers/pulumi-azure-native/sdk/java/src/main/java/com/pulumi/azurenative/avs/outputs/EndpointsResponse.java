@@ -39,21 +39,21 @@ public final class EndpointsResponse {
      * Endpoint for the HCX Cloud Manager
      * 
     */
-    public String getHcxCloudManager() {
+    public String hcxCloudManager() {
         return this.hcxCloudManager;
     }
     /**
      * Endpoint for the NSX-T Data Center manager
      * 
     */
-    public String getNsxtManager() {
+    public String nsxtManager() {
         return this.nsxtManager;
     }
     /**
      * Endpoint for Virtual Center Server Appliance
      * 
     */
-    public String getVcsa() {
+    public String vcsa() {
         return this.vcsa;
     }
 

@@ -33,14 +33,14 @@ public final class AzureMLWebServiceFileResponse {
      * The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getFilePath() {
+    public Object filePath() {
         return this.filePath;
     }
     /**
      * Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 

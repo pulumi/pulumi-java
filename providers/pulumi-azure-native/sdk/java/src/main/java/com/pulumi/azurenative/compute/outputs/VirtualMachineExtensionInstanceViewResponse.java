@@ -57,35 +57,35 @@ public final class VirtualMachineExtensionInstanceViewResponse {
      * The virtual machine extension name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource status information.
      * 
     */
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * The resource status information.
      * 
     */
-    public List<InstanceViewStatusResponse> getSubstatuses() {
+    public List<InstanceViewStatusResponse> substatuses() {
         return this.substatuses == null ? List.of() : this.substatuses;
     }
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Specifies the version of the script handler.
      * 
     */
-    public Optional<String> getTypeHandlerVersion() {
+    public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
 

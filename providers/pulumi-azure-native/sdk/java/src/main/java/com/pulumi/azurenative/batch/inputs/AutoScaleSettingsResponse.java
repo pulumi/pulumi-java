@@ -21,14 +21,14 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="evaluationInterval")
       private final @Nullable String evaluationInterval;
 
-    public Optional<String> getEvaluationInterval() {
+    public Optional<String> evaluationInterval() {
         return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
     }
 
     @Import(name="formula", required=true)
       private final String formula;
 
-    public String getFormula() {
+    public String formula() {
         return this.formula;
     }
 

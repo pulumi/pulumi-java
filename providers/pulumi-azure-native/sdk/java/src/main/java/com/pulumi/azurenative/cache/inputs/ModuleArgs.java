@@ -26,7 +26,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<String> args;
 
-    public Output<String> getArgs() {
+    public Output<String> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -37,7 +37,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

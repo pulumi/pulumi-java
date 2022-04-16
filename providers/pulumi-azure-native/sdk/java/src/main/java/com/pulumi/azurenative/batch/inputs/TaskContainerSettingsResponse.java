@@ -22,7 +22,7 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
     @Import(name="containerRunOptions")
       private final @Nullable String containerRunOptions;
 
-    public Optional<String> getContainerRunOptions() {
+    public Optional<String> containerRunOptions() {
         return this.containerRunOptions == null ? Optional.empty() : Optional.ofNullable(this.containerRunOptions);
     }
 
@@ -33,7 +33,7 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
     @Import(name="imageName", required=true)
       private final String imageName;
 
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
 
@@ -44,14 +44,14 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
     @Import(name="registry")
       private final @Nullable ContainerRegistryResponse registry;
 
-    public Optional<ContainerRegistryResponse> getRegistry() {
+    public Optional<ContainerRegistryResponse> registry() {
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
     }
 
     @Import(name="workingDirectory")
       private final @Nullable String workingDirectory;
 
-    public Optional<String> getWorkingDirectory() {
+    public Optional<String> workingDirectory() {
         return this.workingDirectory == null ? Optional.empty() : Optional.ofNullable(this.workingDirectory);
     }
 

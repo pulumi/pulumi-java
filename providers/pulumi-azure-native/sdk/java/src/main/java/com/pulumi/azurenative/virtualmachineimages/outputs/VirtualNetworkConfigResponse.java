@@ -26,7 +26,7 @@ public final class VirtualNetworkConfigResponse {
      * Resource id of a pre-existing subnet.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
 

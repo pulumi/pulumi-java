@@ -26,7 +26,7 @@ public final class ContainerServiceSshConfigurationArgs extends com.pulumi.resou
     @Import(name="publicKeys", required=true)
       private final Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
 
-    public Output<List<ContainerServiceSshPublicKeyArgs>> getPublicKeys() {
+    public Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys() {
         return this.publicKeys;
     }
 

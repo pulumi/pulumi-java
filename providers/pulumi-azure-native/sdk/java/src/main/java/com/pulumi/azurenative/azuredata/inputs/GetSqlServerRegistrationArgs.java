@@ -19,7 +19,7 @@ public final class GetSqlServerRegistrationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlServerRegistrationArgs extends com.pulumi.resources.Inv
     @Import(name="sqlServerRegistrationName", required=true)
       private final String sqlServerRegistrationName;
 
-    public String getSqlServerRegistrationName() {
+    public String sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
 

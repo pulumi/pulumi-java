@@ -26,7 +26,7 @@ public final class ReportRecurrencePeriodArgs extends com.pulumi.resources.Resou
     @Import(name="from", required=true)
       private final Output<String> from;
 
-    public Output<String> getFrom() {
+    public Output<String> from() {
         return this.from;
     }
 
@@ -37,7 +37,7 @@ public final class ReportRecurrencePeriodArgs extends com.pulumi.resources.Resou
     @Import(name="to")
       private final @Nullable Output<String> to;
 
-    public Output<String> getTo() {
+    public Output<String> to() {
         return this.to == null ? Codegen.empty() : this.to;
     }
 

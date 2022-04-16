@@ -28,7 +28,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="bootStrapConfigurationBlobs")
       private final @Nullable Output<List<String>> bootStrapConfigurationBlobs;
 
-    public Output<List<String>> getBootStrapConfigurationBlobs() {
+    public Output<List<String>> bootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs == null ? Codegen.empty() : this.bootStrapConfigurationBlobs;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="cloudInitConfiguration")
       private final @Nullable Output<String> cloudInitConfiguration;
 
-    public Output<String> getCloudInitConfiguration() {
+    public Output<String> cloudInitConfiguration() {
         return this.cloudInitConfiguration == null ? Codegen.empty() : this.cloudInitConfiguration;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="cloudInitConfigurationBlobs")
       private final @Nullable Output<List<String>> cloudInitConfigurationBlobs;
 
-    public Output<List<String>> getCloudInitConfigurationBlobs() {
+    public Output<List<String>> cloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs == null ? Codegen.empty() : this.cloudInitConfigurationBlobs;
     }
 
@@ -61,7 +61,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -72,7 +72,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -83,7 +83,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -94,7 +94,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="networkVirtualApplianceName")
       private final @Nullable Output<String> networkVirtualApplianceName;
 
-    public Output<String> getNetworkVirtualApplianceName() {
+    public Output<String> networkVirtualApplianceName() {
         return this.networkVirtualApplianceName == null ? Codegen.empty() : this.networkVirtualApplianceName;
     }
 
@@ -105,7 +105,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="nvaSku")
       private final @Nullable Output<VirtualApplianceSkuPropertiesArgs> nvaSku;
 
-    public Output<VirtualApplianceSkuPropertiesArgs> getNvaSku() {
+    public Output<VirtualApplianceSkuPropertiesArgs> nvaSku() {
         return this.nvaSku == null ? Codegen.empty() : this.nvaSku;
     }
 
@@ -116,7 +116,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -127,7 +127,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -138,7 +138,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="virtualApplianceAsn")
       private final @Nullable Output<Double> virtualApplianceAsn;
 
-    public Output<Double> getVirtualApplianceAsn() {
+    public Output<Double> virtualApplianceAsn() {
         return this.virtualApplianceAsn == null ? Codegen.empty() : this.virtualApplianceAsn;
     }
 
@@ -149,7 +149,7 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> getVirtualHub() {
+    public Output<SubResourceArgs> virtualHub() {
         return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
     }
 

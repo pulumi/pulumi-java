@@ -26,7 +26,7 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="associationAssignedCode")
       private final @Nullable Output<String> associationAssignedCode;
 
-    public Output<String> getAssociationAssignedCode() {
+    public Output<String> associationAssignedCode() {
         return this.associationAssignedCode == null ? Codegen.empty() : this.associationAssignedCode;
     }
 
@@ -37,7 +37,7 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId;
     }
 
@@ -48,7 +48,7 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="messageRelease", required=true)
       private final Output<String> messageRelease;
 
-    public Output<String> getMessageRelease() {
+    public Output<String> messageRelease() {
         return this.messageRelease;
     }
 
@@ -59,7 +59,7 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="messageVersion", required=true)
       private final Output<String> messageVersion;
 
-    public Output<String> getMessageVersion() {
+    public Output<String> messageVersion() {
         return this.messageVersion;
     }
 
@@ -70,7 +70,7 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -81,7 +81,7 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;
 
-    public Output<String> getSenderApplicationId() {
+    public Output<String> senderApplicationId() {
         return this.senderApplicationId == null ? Codegen.empty() : this.senderApplicationId;
     }
 
@@ -92,7 +92,7 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="senderApplicationQualifier")
       private final @Nullable Output<String> senderApplicationQualifier;
 
-    public Output<String> getSenderApplicationQualifier() {
+    public Output<String> senderApplicationQualifier() {
         return this.senderApplicationQualifier == null ? Codegen.empty() : this.senderApplicationQualifier;
     }
 

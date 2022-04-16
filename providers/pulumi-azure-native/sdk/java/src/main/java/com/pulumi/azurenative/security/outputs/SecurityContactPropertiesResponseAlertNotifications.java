@@ -34,14 +34,14 @@ public final class SecurityContactPropertiesResponseAlertNotifications {
      * Defines the minimal alert severity which will be sent as email notifications
      * 
     */
-    public Optional<String> getMinimalSeverity() {
+    public Optional<String> minimalSeverity() {
         return Optional.ofNullable(this.minimalSeverity);
     }
     /**
      * Defines if email notifications will be sent about new security alerts
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

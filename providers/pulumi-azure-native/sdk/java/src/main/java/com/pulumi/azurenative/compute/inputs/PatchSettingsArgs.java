@@ -30,7 +30,7 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assessmentMode")
       private final @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
 
-    public Output<Either<String,WindowsPatchAssessmentMode>> getAssessmentMode() {
+    public Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode() {
         return this.assessmentMode == null ? Codegen.empty() : this.assessmentMode;
     }
 
@@ -41,7 +41,7 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableHotpatching")
       private final @Nullable Output<Boolean> enableHotpatching;
 
-    public Output<Boolean> getEnableHotpatching() {
+    public Output<Boolean> enableHotpatching() {
         return this.enableHotpatching == null ? Codegen.empty() : this.enableHotpatching;
     }
 
@@ -52,7 +52,7 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="patchMode")
       private final @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
 
-    public Output<Either<String,WindowsVMGuestPatchMode>> getPatchMode() {
+    public Output<Either<String,WindowsVMGuestPatchMode>> patchMode() {
         return this.patchMode == null ? Codegen.empty() : this.patchMode;
     }
 

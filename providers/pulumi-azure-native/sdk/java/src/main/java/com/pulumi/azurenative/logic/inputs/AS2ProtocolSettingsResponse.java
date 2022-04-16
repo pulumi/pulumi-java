@@ -29,7 +29,7 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="acknowledgementConnectionSettings", required=true)
       private final AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings;
 
-    public AS2AcknowledgementConnectionSettingsResponse getAcknowledgementConnectionSettings() {
+    public AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
     }
 
@@ -40,7 +40,7 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="envelopeSettings", required=true)
       private final AS2EnvelopeSettingsResponse envelopeSettings;
 
-    public AS2EnvelopeSettingsResponse getEnvelopeSettings() {
+    public AS2EnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
 
@@ -51,7 +51,7 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="errorSettings", required=true)
       private final AS2ErrorSettingsResponse errorSettings;
 
-    public AS2ErrorSettingsResponse getErrorSettings() {
+    public AS2ErrorSettingsResponse errorSettings() {
         return this.errorSettings;
     }
 
@@ -62,7 +62,7 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="mdnSettings", required=true)
       private final AS2MdnSettingsResponse mdnSettings;
 
-    public AS2MdnSettingsResponse getMdnSettings() {
+    public AS2MdnSettingsResponse mdnSettings() {
         return this.mdnSettings;
     }
 
@@ -73,7 +73,7 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="messageConnectionSettings", required=true)
       private final AS2MessageConnectionSettingsResponse messageConnectionSettings;
 
-    public AS2MessageConnectionSettingsResponse getMessageConnectionSettings() {
+    public AS2MessageConnectionSettingsResponse messageConnectionSettings() {
         return this.messageConnectionSettings;
     }
 
@@ -84,7 +84,7 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="securitySettings", required=true)
       private final AS2SecuritySettingsResponse securitySettings;
 
-    public AS2SecuritySettingsResponse getSecuritySettings() {
+    public AS2SecuritySettingsResponse securitySettings() {
         return this.securitySettings;
     }
 
@@ -95,7 +95,7 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="validationSettings", required=true)
       private final AS2ValidationSettingsResponse validationSettings;
 
-    public AS2ValidationSettingsResponse getValidationSettings() {
+    public AS2ValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }
 

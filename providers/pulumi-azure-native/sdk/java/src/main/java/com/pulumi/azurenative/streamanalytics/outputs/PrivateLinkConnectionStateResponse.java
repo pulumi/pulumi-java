@@ -39,21 +39,21 @@ public final class PrivateLinkConnectionStateResponse {
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
     */
-    public String getActionsRequired() {
+    public String actionsRequired() {
         return this.actionsRequired;
     }
     /**
      * The reason for approval/rejection of the connection.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

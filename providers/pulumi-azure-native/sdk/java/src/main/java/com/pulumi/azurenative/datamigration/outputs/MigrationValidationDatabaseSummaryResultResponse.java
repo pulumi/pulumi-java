@@ -67,49 +67,49 @@ public final class MigrationValidationDatabaseSummaryResultResponse {
      * Validation end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Migration Identifier
      * 
     */
-    public String getMigrationId() {
+    public String migrationId() {
         return this.migrationId;
     }
     /**
      * Name of the source database
      * 
     */
-    public String getSourceDatabaseName() {
+    public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
     /**
      * Validation start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current status of validation at the database level
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Name of the target database
      * 
     */
-    public String getTargetDatabaseName() {
+    public String targetDatabaseName() {
         return this.targetDatabaseName;
     }
 

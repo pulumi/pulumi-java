@@ -26,7 +26,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
     @Import(name="metadata")
       private final @Nullable Object metadata;
 
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
@@ -48,7 +48,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 

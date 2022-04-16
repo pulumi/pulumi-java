@@ -32,14 +32,14 @@ public final class ExpressionResponse {
      * Expression type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Expression value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -44,7 +44,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
      * Log level.
      * 
     */
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
@@ -53,14 +53,14 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
      * 0 or lower means no retention.
      * 
     */
-    public Optional<Integer> getRetentionInDays() {
+    public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
      * SAS url to a azure blob container with read/write/list/delete permissions.
      * 
     */
-    public Optional<String> getSasUrl() {
+    public Optional<String> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
 

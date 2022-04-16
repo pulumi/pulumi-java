@@ -23,7 +23,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="propertyBag")
       private final @Nullable Output<String> propertyBag;
 
-    public Output<String> getPropertyBag() {
+    public Output<String> propertyBag() {
         return this.propertyBag == null ? Codegen.empty() : this.propertyBag;
     }
 
@@ -45,7 +45,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
@@ -56,7 +56,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="sqlServerRegistrationName")
       private final @Nullable Output<String> sqlServerRegistrationName;
 
-    public Output<String> getSqlServerRegistrationName() {
+    public Output<String> sqlServerRegistrationName() {
         return this.sqlServerRegistrationName == null ? Codegen.empty() : this.sqlServerRegistrationName;
     }
 
@@ -78,7 +78,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
@@ -89,7 +89,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

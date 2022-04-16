@@ -28,7 +28,7 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="conflictResolutionPath")
       private final @Nullable Output<String> conflictResolutionPath;
 
-    public Output<String> getConflictResolutionPath() {
+    public Output<String> conflictResolutionPath() {
         return this.conflictResolutionPath == null ? Codegen.empty() : this.conflictResolutionPath;
     }
 
@@ -39,7 +39,7 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="conflictResolutionProcedure")
       private final @Nullable Output<String> conflictResolutionProcedure;
 
-    public Output<String> getConflictResolutionProcedure() {
+    public Output<String> conflictResolutionProcedure() {
         return this.conflictResolutionProcedure == null ? Codegen.empty() : this.conflictResolutionProcedure;
     }
 
@@ -50,7 +50,7 @@ public final class ConflictResolutionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="mode")
       private final @Nullable Output<Either<String,ConflictResolutionMode>> mode;
 
-    public Output<Either<String,ConflictResolutionMode>> getMode() {
+    public Output<Either<String,ConflictResolutionMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

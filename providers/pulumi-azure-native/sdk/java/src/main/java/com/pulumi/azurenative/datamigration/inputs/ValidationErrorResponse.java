@@ -23,7 +23,7 @@ public final class ValidationErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
@@ -34,7 +34,7 @@ public final class ValidationErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

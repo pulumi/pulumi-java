@@ -28,7 +28,7 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<String> height;
 
-    public Output<String> getHeight() {
+    public Output<String> height() {
         return this.height == null ? Codegen.empty() : this.height;
     }
 
@@ -39,7 +39,7 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Either<String,VideoScaleMode>> mode;
 
-    public Output<Either<String,VideoScaleMode>> getMode() {
+    public Output<Either<String,VideoScaleMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -50,7 +50,7 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<String> width;
 
-    public Output<String> getWidth() {
+    public Output<String> width() {
         return this.width == null ? Codegen.empty() : this.width;
     }
 

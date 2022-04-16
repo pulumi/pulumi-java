@@ -25,7 +25,7 @@ public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="sourceRegion", required=true)
       private final Output<String> sourceRegion;
 
-    public Output<String> getSourceRegion() {
+    public Output<String> sourceRegion() {
         return this.sourceRegion;
     }
 
@@ -36,7 +36,7 @@ public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="targetRegion", required=true)
       private final Output<String> targetRegion;
 
-    public Output<String> getTargetRegion() {
+    public Output<String> targetRegion() {
         return this.targetRegion;
     }
 

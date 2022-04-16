@@ -27,7 +27,7 @@ public final class ArmRoleReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ArmRoleReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 
@@ -49,7 +49,7 @@ public final class ArmRoleReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
+    public Output<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 

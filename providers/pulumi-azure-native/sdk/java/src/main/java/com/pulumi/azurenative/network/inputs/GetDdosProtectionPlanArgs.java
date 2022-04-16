@@ -19,7 +19,7 @@ public final class GetDdosProtectionPlanArgs extends com.pulumi.resources.Invoke
     @Import(name="ddosProtectionPlanName", required=true)
       private final String ddosProtectionPlanName;
 
-    public String getDdosProtectionPlanName() {
+    public String ddosProtectionPlanName() {
         return this.ddosProtectionPlanName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDdosProtectionPlanArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -28,7 +28,7 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
     @Import(name="email")
       private final @Nullable EmailNotificationResponse email;
 
-    public Optional<EmailNotificationResponse> getEmail() {
+    public Optional<EmailNotificationResponse> email() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
@@ -39,7 +39,7 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
     @Import(name="operation", required=true)
       private final String operation;
 
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
 
@@ -50,7 +50,7 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
     @Import(name="webhooks")
       private final @Nullable List<WebhookNotificationResponse> webhooks;
 
-    public List<WebhookNotificationResponse> getWebhooks() {
+    public List<WebhookNotificationResponse> webhooks() {
         return this.webhooks == null ? List.of() : this.webhooks;
     }
 

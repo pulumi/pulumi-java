@@ -26,7 +26,7 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="count")
       private final @Nullable Integer count;
 
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -37,7 +37,7 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
@@ -48,7 +48,7 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
@@ -70,7 +70,7 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vmSize")
       private final @Nullable String vmSize;
 
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
     }
 

@@ -25,7 +25,7 @@ public final class NetAppVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nfsFilePath")
       private final @Nullable String nfsFilePath;
 
-    public Optional<String> getNfsFilePath() {
+    public Optional<String> nfsFilePath() {
         return this.nfsFilePath == null ? Optional.empty() : Optional.ofNullable(this.nfsFilePath);
     }
 
@@ -36,7 +36,7 @@ public final class NetAppVolumeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nfsProviderIp")
       private final @Nullable String nfsProviderIp;
 
-    public Optional<String> getNfsProviderIp() {
+    public Optional<String> nfsProviderIp() {
         return this.nfsProviderIp == null ? Optional.empty() : Optional.ofNullable(this.nfsProviderIp);
     }
 

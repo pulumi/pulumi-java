@@ -44,7 +44,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Specifies the private endpoint.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +72,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Specifies the connection state.
      * 
      */
-    public Output</* @Nullable */ ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ ConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +86,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Provisioning state of the Private Endpoint Connection.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +114,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

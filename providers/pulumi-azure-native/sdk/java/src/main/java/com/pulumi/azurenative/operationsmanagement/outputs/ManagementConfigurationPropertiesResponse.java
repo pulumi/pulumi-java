@@ -58,35 +58,35 @@ public final class ManagementConfigurationPropertiesResponse {
      * The applicationId of the appliance for this Management.
      * 
     */
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * Parameters to run the ARM template
      * 
     */
-    public List<ArmTemplateParameterResponse> getParameters() {
+    public List<ArmTemplateParameterResponse> parameters() {
         return this.parameters;
     }
     /**
      * The type of the parent resource.
      * 
     */
-    public String getParentResourceType() {
+    public String parentResourceType() {
         return this.parentResourceType;
     }
     /**
      * The provisioning state for the ManagementConfiguration.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The Json object containing the ARM template to deploy
      * 
     */
-    public Object getTemplate() {
+    public Object template() {
         return this.template;
     }
 

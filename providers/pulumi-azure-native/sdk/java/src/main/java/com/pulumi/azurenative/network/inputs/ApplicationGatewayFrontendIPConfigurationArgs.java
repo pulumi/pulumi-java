@@ -29,7 +29,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -62,7 +62,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
+    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
@@ -73,7 +73,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="privateLinkConfiguration")
       private final @Nullable Output<SubResourceArgs> privateLinkConfiguration;
 
-    public Output<SubResourceArgs> getPrivateLinkConfiguration() {
+    public Output<SubResourceArgs> privateLinkConfiguration() {
         return this.privateLinkConfiguration == null ? Codegen.empty() : this.privateLinkConfiguration;
     }
 
@@ -84,7 +84,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="publicIPAddress")
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
 
-    public Output<SubResourceArgs> getPublicIPAddress() {
+    public Output<SubResourceArgs> publicIPAddress() {
         return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
     }
 
@@ -95,7 +95,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
+    public Output<SubResourceArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

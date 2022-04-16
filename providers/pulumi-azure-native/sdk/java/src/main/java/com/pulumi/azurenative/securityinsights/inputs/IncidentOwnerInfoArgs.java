@@ -26,7 +26,7 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="assignedTo")
       private final @Nullable Output<String> assignedTo;
 
-    public Output<String> getAssignedTo() {
+    public Output<String> assignedTo() {
         return this.assignedTo == null ? Codegen.empty() : this.assignedTo;
     }
 
@@ -37,7 +37,7 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -48,7 +48,7 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
@@ -59,7 +59,7 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userPrincipalName")
       private final @Nullable Output<String> userPrincipalName;
 
-    public Output<String> getUserPrincipalName() {
+    public Output<String> userPrincipalName() {
         return this.userPrincipalName == null ? Codegen.empty() : this.userPrincipalName;
     }
 

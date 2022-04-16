@@ -26,7 +26,7 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="azureResourceName")
       private final @Nullable String azureResourceName;
 
-    public Optional<String> getAzureResourceName() {
+    public Optional<String> azureResourceName() {
         return this.azureResourceName == null ? Optional.empty() : Optional.ofNullable(this.azureResourceName);
     }
 
@@ -37,7 +37,7 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="azureResourceType")
       private final @Nullable String azureResourceType;
 
-    public Optional<String> getAzureResourceType() {
+    public Optional<String> azureResourceType() {
         return this.azureResourceType == null ? Optional.empty() : Optional.ofNullable(this.azureResourceType);
     }
 
@@ -48,7 +48,7 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customHostNameDnsRecordType")
       private final @Nullable String customHostNameDnsRecordType;
 
-    public Optional<String> getCustomHostNameDnsRecordType() {
+    public Optional<String> customHostNameDnsRecordType() {
         return this.customHostNameDnsRecordType == null ? Optional.empty() : Optional.ofNullable(this.customHostNameDnsRecordType);
     }
 
@@ -59,7 +59,7 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostNameType")
       private final @Nullable String hostNameType;
 
-    public Optional<String> getHostNameType() {
+    public Optional<String> hostNameType() {
         return this.hostNameType == null ? Optional.empty() : Optional.ofNullable(this.hostNameType);
     }
 
@@ -70,7 +70,7 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -81,7 +81,7 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteNames")
       private final @Nullable List<String> siteNames;
 
-    public List<String> getSiteNames() {
+    public List<String> siteNames() {
         return this.siteNames == null ? List.of() : this.siteNames;
     }
 

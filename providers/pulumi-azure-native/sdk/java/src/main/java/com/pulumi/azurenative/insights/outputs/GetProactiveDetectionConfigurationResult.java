@@ -65,42 +65,42 @@ public final class GetProactiveDetectionConfigurationResult {
      * Custom email addresses for this rule notifications
      * 
     */
-    public List<String> getCustomEmails() {
+    public List<String> customEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
     /**
      * A flag that indicates whether this rule is enabled by the user
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The last time this rule was updated
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * The rule name
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Static definitions of the ProactiveDetection configuration rule (same values for all components).
      * 
     */
-    public Optional<ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> getRuleDefinitions() {
+    public Optional<ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> ruleDefinitions() {
         return Optional.ofNullable(this.ruleDefinitions);
     }
     /**
      * A flag that indicated whether notifications on this rule should be sent to subscription owners
      * 
     */
-    public Optional<Boolean> getSendEmailsToSubscriptionOwners() {
+    public Optional<Boolean> sendEmailsToSubscriptionOwners() {
         return Optional.ofNullable(this.sendEmailsToSubscriptionOwners);
     }
 

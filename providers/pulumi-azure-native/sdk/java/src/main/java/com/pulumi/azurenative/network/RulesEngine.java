@@ -43,7 +43,7 @@ public class RulesEngine extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class RulesEngine extends com.pulumi.resources.CustomResource {
      * @return Resource status.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -71,7 +71,7 @@ public class RulesEngine extends com.pulumi.resources.CustomResource {
      * @return A list of rules that define a particular Rules Engine Configuration.
      * 
      */
-    public Output</* @Nullable */ List<RulesEngineRuleResponse>> getRules() {
+    public Output</* @Nullable */ List<RulesEngineRuleResponse>> rules() {
         return this.rules;
     }
     /**
@@ -85,7 +85,7 @@ public class RulesEngine extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

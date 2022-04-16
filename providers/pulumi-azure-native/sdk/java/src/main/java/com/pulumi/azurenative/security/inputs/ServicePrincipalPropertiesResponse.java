@@ -25,7 +25,7 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
@@ -36,7 +36,7 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
     @Import(name="secret")
       private final @Nullable String secret;
 
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 

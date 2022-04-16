@@ -53,7 +53,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Reason for cancellation.
      * 
      */
-    public Output<String> getCancellationReason() {
+    public Output<String> cancellationReason() {
         return this.cancellationReason;
     }
     /**
@@ -67,7 +67,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Delivery Info of Job.
      * 
      */
-    public Output</* @Nullable */ JobDeliveryInfoResponse> getDeliveryInfo() {
+    public Output</* @Nullable */ JobDeliveryInfoResponse> deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
@@ -81,7 +81,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Delivery type of Job.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryType() {
+    public Output</* @Nullable */ String> deliveryType() {
         return this.deliveryType;
     }
     /**
@@ -95,7 +95,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Details of a job run. This field will only be sent for expand details filter.
      * 
      */
-    public Output</* @Nullable */ Object> getDetails() {
+    public Output</* @Nullable */ Object> details() {
         return this.details;
     }
     /**
@@ -109,7 +109,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Top level error for the job.
      * 
      */
-    public Output<CloudErrorResponse> getError() {
+    public Output<CloudErrorResponse> error() {
         return this.error;
     }
     /**
@@ -123,7 +123,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Msi identity of the resource
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -137,7 +137,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Describes whether the job is cancellable or not.
      * 
      */
-    public Output<Boolean> getIsCancellable() {
+    public Output<Boolean> isCancellable() {
         return this.isCancellable;
     }
     /**
@@ -151,7 +151,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Flag to indicate cancellation of scheduled job.
      * 
      */
-    public Output<Boolean> getIsCancellableWithoutFee() {
+    public Output<Boolean> isCancellableWithoutFee() {
         return this.isCancellableWithoutFee;
     }
     /**
@@ -165,7 +165,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Describes whether the job is deletable or not.
      * 
      */
-    public Output<Boolean> getIsDeletable() {
+    public Output<Boolean> isDeletable() {
         return this.isDeletable;
     }
     /**
@@ -179,7 +179,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Is Prepare To Ship Enabled on this job
      * 
      */
-    public Output<Boolean> getIsPrepareToShipEnabled() {
+    public Output<Boolean> isPrepareToShipEnabled() {
         return this.isPrepareToShipEnabled;
     }
     /**
@@ -193,7 +193,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Describes whether the shipping address is editable or not.
      * 
      */
-    public Output<Boolean> getIsShippingAddressEditable() {
+    public Output<Boolean> isShippingAddressEditable() {
         return this.isShippingAddressEditable;
     }
     /**
@@ -207,7 +207,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -221,7 +221,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -235,7 +235,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The sku type.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -249,7 +249,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Time at which the job was started in UTC ISO 8601 format.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -263,7 +263,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Name of the stage which is in progress.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -277,7 +277,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -291,7 +291,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -305,7 +305,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Type of the data transfer.
      * 
      */
-    public Output<String> getTransferType() {
+    public Output<String> transferType() {
         return this.transferType;
     }
     /**
@@ -319,7 +319,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

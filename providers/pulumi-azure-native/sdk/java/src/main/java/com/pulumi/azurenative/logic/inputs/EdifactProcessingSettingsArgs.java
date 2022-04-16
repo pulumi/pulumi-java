@@ -25,7 +25,7 @@ public final class EdifactProcessingSettingsArgs extends com.pulumi.resources.Re
     @Import(name="createEmptyXmlTagsForTrailingSeparators", required=true)
       private final Output<Boolean> createEmptyXmlTagsForTrailingSeparators;
 
-    public Output<Boolean> getCreateEmptyXmlTagsForTrailingSeparators() {
+    public Output<Boolean> createEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
 
@@ -36,7 +36,7 @@ public final class EdifactProcessingSettingsArgs extends com.pulumi.resources.Re
     @Import(name="maskSecurityInfo", required=true)
       private final Output<Boolean> maskSecurityInfo;
 
-    public Output<Boolean> getMaskSecurityInfo() {
+    public Output<Boolean> maskSecurityInfo() {
         return this.maskSecurityInfo;
     }
 
@@ -47,7 +47,7 @@ public final class EdifactProcessingSettingsArgs extends com.pulumi.resources.Re
     @Import(name="preserveInterchange", required=true)
       private final Output<Boolean> preserveInterchange;
 
-    public Output<Boolean> getPreserveInterchange() {
+    public Output<Boolean> preserveInterchange() {
         return this.preserveInterchange;
     }
 
@@ -58,7 +58,7 @@ public final class EdifactProcessingSettingsArgs extends com.pulumi.resources.Re
     @Import(name="suspendInterchangeOnError", required=true)
       private final Output<Boolean> suspendInterchangeOnError;
 
-    public Output<Boolean> getSuspendInterchangeOnError() {
+    public Output<Boolean> suspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
     }
 
@@ -69,7 +69,7 @@ public final class EdifactProcessingSettingsArgs extends com.pulumi.resources.Re
     @Import(name="useDotAsDecimalSeparator", required=true)
       private final Output<Boolean> useDotAsDecimalSeparator;
 
-    public Output<Boolean> getUseDotAsDecimalSeparator() {
+    public Output<Boolean> useDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }
 

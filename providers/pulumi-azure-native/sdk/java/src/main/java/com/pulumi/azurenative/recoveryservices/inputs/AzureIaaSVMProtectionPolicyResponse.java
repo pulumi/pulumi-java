@@ -35,14 +35,14 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
 
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
 
     @Import(name="instantRPDetails")
       private final @Nullable InstantRPAdditionalDetailsResponse instantRPDetails;
 
-    public Optional<InstantRPAdditionalDetailsResponse> getInstantRPDetails() {
+    public Optional<InstantRPAdditionalDetailsResponse> instantRPDetails() {
         return this.instantRPDetails == null ? Optional.empty() : Optional.ofNullable(this.instantRPDetails);
     }
 
@@ -53,7 +53,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Integer instantRpRetentionRangeInDays;
 
-    public Optional<Integer> getInstantRpRetentionRangeInDays() {
+    public Optional<Integer> instantRpRetentionRangeInDays() {
         return this.instantRpRetentionRangeInDays == null ? Optional.empty() : Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
 
@@ -64,7 +64,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
 
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
@@ -75,7 +75,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
+    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 
@@ -86,7 +86,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="schedulePolicy")
       private final @Nullable Object schedulePolicy;
 
-    public Object getSchedulePolicy() {
+    public Object schedulePolicy() {
         return this.schedulePolicy == null ? null : this.schedulePolicy;
     }
 
@@ -97,7 +97,7 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 

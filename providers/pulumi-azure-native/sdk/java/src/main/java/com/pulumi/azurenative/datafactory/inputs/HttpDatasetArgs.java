@@ -40,7 +40,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalHeaders")
       private final @Nullable Output<Object> additionalHeaders;
 
-    public Output<Object> getAdditionalHeaders() {
+    public Output<Object> additionalHeaders() {
         return this.additionalHeaders == null ? Codegen.empty() : this.additionalHeaders;
     }
 
@@ -51,7 +51,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -62,7 +62,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
-    public Output<DatasetCompressionArgs> getCompression() {
+    public Output<DatasetCompressionArgs> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -73,7 +73,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -84,7 +84,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
+    public Output<DatasetFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -95,7 +95,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Object> format;
 
-    public Output<Object> getFormat() {
+    public Output<Object> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -106,7 +106,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -117,7 +117,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -128,7 +128,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relativeUrl")
       private final @Nullable Output<Object> relativeUrl;
 
-    public Output<Object> getRelativeUrl() {
+    public Output<Object> relativeUrl() {
         return this.relativeUrl == null ? Codegen.empty() : this.relativeUrl;
     }
 
@@ -139,7 +139,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestBody")
       private final @Nullable Output<Object> requestBody;
 
-    public Output<Object> getRequestBody() {
+    public Output<Object> requestBody() {
         return this.requestBody == null ? Codegen.empty() : this.requestBody;
     }
 
@@ -150,7 +150,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestMethod")
       private final @Nullable Output<Object> requestMethod;
 
-    public Output<Object> getRequestMethod() {
+    public Output<Object> requestMethod() {
         return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
     }
 
@@ -161,7 +161,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
+    public Output<Object> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -172,7 +172,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
+    public Output<Object> structure() {
         return this.structure == null ? Codegen.empty() : this.structure;
     }
 
@@ -184,7 +184,7 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

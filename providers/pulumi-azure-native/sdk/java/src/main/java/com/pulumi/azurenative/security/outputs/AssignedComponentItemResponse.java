@@ -26,7 +26,7 @@ public final class AssignedComponentItemResponse {
      * unique key to a security assessment object
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
 

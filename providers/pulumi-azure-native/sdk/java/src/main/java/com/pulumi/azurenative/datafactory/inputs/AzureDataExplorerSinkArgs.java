@@ -27,7 +27,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -38,7 +38,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="flushImmediately")
       private final @Nullable Output<Object> flushImmediately;
 
-    public Output<Object> getFlushImmediately() {
+    public Output<Object> flushImmediately() {
         return this.flushImmediately == null ? Codegen.empty() : this.flushImmediately;
     }
 
@@ -49,7 +49,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="ingestionMappingAsJson")
       private final @Nullable Output<Object> ingestionMappingAsJson;
 
-    public Output<Object> getIngestionMappingAsJson() {
+    public Output<Object> ingestionMappingAsJson() {
         return this.ingestionMappingAsJson == null ? Codegen.empty() : this.ingestionMappingAsJson;
     }
 
@@ -60,7 +60,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="ingestionMappingName")
       private final @Nullable Output<Object> ingestionMappingName;
 
-    public Output<Object> getIngestionMappingName() {
+    public Output<Object> ingestionMappingName() {
         return this.ingestionMappingName == null ? Codegen.empty() : this.ingestionMappingName;
     }
 
@@ -71,7 +71,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -82,7 +82,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> getSinkRetryCount() {
+    public Output<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
@@ -93,7 +93,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> getSinkRetryWait() {
+    public Output<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
@@ -105,7 +105,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -116,7 +116,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> getWriteBatchSize() {
+    public Output<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
@@ -127,7 +127,7 @@ public final class AzureDataExplorerSinkArgs extends com.pulumi.resources.Resour
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> getWriteBatchTimeout() {
+    public Output<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 

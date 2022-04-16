@@ -34,7 +34,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="authenticationType", required=true)
       private final Output<Object> authenticationType;
 
-    public Output<Object> getAuthenticationType() {
+    public Output<Object> authenticationType() {
         return this.authenticationType;
     }
 
@@ -56,7 +56,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -67,7 +67,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="deploymentType", required=true)
       private final Output<Object> deploymentType;
 
-    public Output<Object> getDeploymentType() {
+    public Output<Object> deploymentType() {
         return this.deploymentType;
     }
 
@@ -78,7 +78,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -89,7 +89,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -100,7 +100,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="hostName")
       private final @Nullable Output<Object> hostName;
 
-    public Output<Object> getHostName() {
+    public Output<Object> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -111,7 +111,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="organizationName")
       private final @Nullable Output<Object> organizationName;
 
-    public Output<Object> getOrganizationName() {
+    public Output<Object> organizationName() {
         return this.organizationName == null ? Codegen.empty() : this.organizationName;
     }
 
@@ -122,7 +122,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -133,7 +133,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -144,7 +144,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="port")
       private final @Nullable Output<Object> port;
 
-    public Output<Object> getPort() {
+    public Output<Object> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -155,7 +155,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="servicePrincipalCredential")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential() {
         return this.servicePrincipalCredential == null ? Codegen.empty() : this.servicePrincipalCredential;
     }
 
@@ -166,7 +166,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="servicePrincipalCredentialType")
       private final @Nullable Output<Object> servicePrincipalCredentialType;
 
-    public Output<Object> getServicePrincipalCredentialType() {
+    public Output<Object> servicePrincipalCredentialType() {
         return this.servicePrincipalCredentialType == null ? Codegen.empty() : this.servicePrincipalCredentialType;
     }
 
@@ -177,7 +177,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
@@ -188,7 +188,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="serviceUri")
       private final @Nullable Output<Object> serviceUri;
 
-    public Output<Object> getServiceUri() {
+    public Output<Object> serviceUri() {
         return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
     }
 
@@ -200,7 +200,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -211,7 +211,7 @@ public final class DynamicsCrmLinkedServiceArgs extends com.pulumi.resources.Res
     @Import(name="username")
       private final @Nullable Output<Object> username;
 
-    public Output<Object> getUsername() {
+    public Output<Object> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

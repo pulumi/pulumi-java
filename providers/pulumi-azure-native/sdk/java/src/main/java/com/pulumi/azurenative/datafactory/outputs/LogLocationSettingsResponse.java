@@ -35,14 +35,14 @@ public final class LogLocationSettingsResponse {
      * Log storage linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPath() {
+    public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }
 

@@ -25,7 +25,7 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
     @Import(name="privateEndpoint", required=true)
       private final PrivateEndpointResponse privateEndpoint;
 
-    public PrivateEndpointResponse getPrivateEndpoint() {
+    public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
 
@@ -36,7 +36,7 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
-    public VaultPrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
+    public VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
@@ -47,7 +47,7 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

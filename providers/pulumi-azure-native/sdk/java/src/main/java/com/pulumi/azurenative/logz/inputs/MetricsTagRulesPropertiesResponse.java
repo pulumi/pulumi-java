@@ -25,7 +25,7 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     @Import(name="metricRules")
       private final @Nullable List<MetricRulesResponse> metricRules;
 
-    public List<MetricRulesResponse> getMetricRules() {
+    public List<MetricRulesResponse> metricRules() {
         return this.metricRules == null ? List.of() : this.metricRules;
     }
 
@@ -36,7 +36,7 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -47,7 +47,7 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     @Import(name="sendMetrics")
       private final @Nullable Boolean sendMetrics;
 
-    public Optional<Boolean> getSendMetrics() {
+    public Optional<Boolean> sendMetrics() {
         return this.sendMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendMetrics);
     }
 
@@ -58,7 +58,7 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
 

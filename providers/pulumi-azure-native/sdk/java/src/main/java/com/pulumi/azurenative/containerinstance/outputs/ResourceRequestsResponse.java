@@ -42,21 +42,21 @@ public final class ResourceRequestsResponse {
      * The CPU request of this container instance.
      * 
     */
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
     /**
      * The GPU request of this container instance.
      * 
     */
-    public Optional<GpuResourceResponse> getGpu() {
+    public Optional<GpuResourceResponse> gpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
      * The memory request in GB of this container instance.
      * 
     */
-    public Double getMemoryInGB() {
+    public Double memoryInGB() {
         return this.memoryInGB;
     }
 

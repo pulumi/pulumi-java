@@ -27,7 +27,7 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="attributes")
       private final @Nullable Output<SecretAttributesArgs> attributes;
 
-    public Output<SecretAttributesArgs> getAttributes() {
+    public Output<SecretAttributesArgs> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -38,7 +38,7 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -49,7 +49,7 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

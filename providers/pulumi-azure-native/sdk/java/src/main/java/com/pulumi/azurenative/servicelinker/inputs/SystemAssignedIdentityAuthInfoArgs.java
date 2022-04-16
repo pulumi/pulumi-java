@@ -26,7 +26,7 @@ public final class SystemAssignedIdentityAuthInfoArgs extends com.pulumi.resourc
     @Import(name="authType", required=true)
       private final Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
 

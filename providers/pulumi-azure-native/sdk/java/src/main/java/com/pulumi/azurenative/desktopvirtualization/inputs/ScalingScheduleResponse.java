@@ -28,7 +28,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="daysOfWeek")
       private final @Nullable List<String> daysOfWeek;
 
-    public List<String> getDaysOfWeek() {
+    public List<String> daysOfWeek() {
         return this.daysOfWeek == null ? List.of() : this.daysOfWeek;
     }
 
@@ -39,7 +39,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -50,7 +50,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="offPeakLoadBalancingAlgorithm")
       private final @Nullable String offPeakLoadBalancingAlgorithm;
 
-    public Optional<String> getOffPeakLoadBalancingAlgorithm() {
+    public Optional<String> offPeakLoadBalancingAlgorithm() {
         return this.offPeakLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.offPeakLoadBalancingAlgorithm);
     }
 
@@ -61,7 +61,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="offPeakStartTime")
       private final @Nullable String offPeakStartTime;
 
-    public Optional<String> getOffPeakStartTime() {
+    public Optional<String> offPeakStartTime() {
         return this.offPeakStartTime == null ? Optional.empty() : Optional.ofNullable(this.offPeakStartTime);
     }
 
@@ -72,7 +72,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="peakLoadBalancingAlgorithm")
       private final @Nullable String peakLoadBalancingAlgorithm;
 
-    public Optional<String> getPeakLoadBalancingAlgorithm() {
+    public Optional<String> peakLoadBalancingAlgorithm() {
         return this.peakLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.peakLoadBalancingAlgorithm);
     }
 
@@ -83,7 +83,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="peakStartTime")
       private final @Nullable String peakStartTime;
 
-    public Optional<String> getPeakStartTime() {
+    public Optional<String> peakStartTime() {
         return this.peakStartTime == null ? Optional.empty() : Optional.ofNullable(this.peakStartTime);
     }
 
@@ -94,7 +94,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownCapacityThresholdPct")
       private final @Nullable Integer rampDownCapacityThresholdPct;
 
-    public Optional<Integer> getRampDownCapacityThresholdPct() {
+    public Optional<Integer> rampDownCapacityThresholdPct() {
         return this.rampDownCapacityThresholdPct == null ? Optional.empty() : Optional.ofNullable(this.rampDownCapacityThresholdPct);
     }
 
@@ -105,7 +105,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownForceLogoffUsers")
       private final @Nullable Boolean rampDownForceLogoffUsers;
 
-    public Optional<Boolean> getRampDownForceLogoffUsers() {
+    public Optional<Boolean> rampDownForceLogoffUsers() {
         return this.rampDownForceLogoffUsers == null ? Optional.empty() : Optional.ofNullable(this.rampDownForceLogoffUsers);
     }
 
@@ -116,7 +116,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownLoadBalancingAlgorithm")
       private final @Nullable String rampDownLoadBalancingAlgorithm;
 
-    public Optional<String> getRampDownLoadBalancingAlgorithm() {
+    public Optional<String> rampDownLoadBalancingAlgorithm() {
         return this.rampDownLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.rampDownLoadBalancingAlgorithm);
     }
 
@@ -127,7 +127,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownMinimumHostsPct")
       private final @Nullable Integer rampDownMinimumHostsPct;
 
-    public Optional<Integer> getRampDownMinimumHostsPct() {
+    public Optional<Integer> rampDownMinimumHostsPct() {
         return this.rampDownMinimumHostsPct == null ? Optional.empty() : Optional.ofNullable(this.rampDownMinimumHostsPct);
     }
 
@@ -138,7 +138,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownNotificationMessage")
       private final @Nullable String rampDownNotificationMessage;
 
-    public Optional<String> getRampDownNotificationMessage() {
+    public Optional<String> rampDownNotificationMessage() {
         return this.rampDownNotificationMessage == null ? Optional.empty() : Optional.ofNullable(this.rampDownNotificationMessage);
     }
 
@@ -149,7 +149,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownStartTime")
       private final @Nullable String rampDownStartTime;
 
-    public Optional<String> getRampDownStartTime() {
+    public Optional<String> rampDownStartTime() {
         return this.rampDownStartTime == null ? Optional.empty() : Optional.ofNullable(this.rampDownStartTime);
     }
 
@@ -160,7 +160,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownStopHostsWhen")
       private final @Nullable String rampDownStopHostsWhen;
 
-    public Optional<String> getRampDownStopHostsWhen() {
+    public Optional<String> rampDownStopHostsWhen() {
         return this.rampDownStopHostsWhen == null ? Optional.empty() : Optional.ofNullable(this.rampDownStopHostsWhen);
     }
 
@@ -171,7 +171,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampDownWaitTimeMinutes")
       private final @Nullable Integer rampDownWaitTimeMinutes;
 
-    public Optional<Integer> getRampDownWaitTimeMinutes() {
+    public Optional<Integer> rampDownWaitTimeMinutes() {
         return this.rampDownWaitTimeMinutes == null ? Optional.empty() : Optional.ofNullable(this.rampDownWaitTimeMinutes);
     }
 
@@ -182,7 +182,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpCapacityThresholdPct")
       private final @Nullable Integer rampUpCapacityThresholdPct;
 
-    public Optional<Integer> getRampUpCapacityThresholdPct() {
+    public Optional<Integer> rampUpCapacityThresholdPct() {
         return this.rampUpCapacityThresholdPct == null ? Optional.empty() : Optional.ofNullable(this.rampUpCapacityThresholdPct);
     }
 
@@ -193,7 +193,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpLoadBalancingAlgorithm")
       private final @Nullable String rampUpLoadBalancingAlgorithm;
 
-    public Optional<String> getRampUpLoadBalancingAlgorithm() {
+    public Optional<String> rampUpLoadBalancingAlgorithm() {
         return this.rampUpLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.rampUpLoadBalancingAlgorithm);
     }
 
@@ -204,7 +204,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpMinimumHostsPct")
       private final @Nullable Integer rampUpMinimumHostsPct;
 
-    public Optional<Integer> getRampUpMinimumHostsPct() {
+    public Optional<Integer> rampUpMinimumHostsPct() {
         return this.rampUpMinimumHostsPct == null ? Optional.empty() : Optional.ofNullable(this.rampUpMinimumHostsPct);
     }
 
@@ -215,7 +215,7 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rampUpStartTime")
       private final @Nullable String rampUpStartTime;
 
-    public Optional<String> getRampUpStartTime() {
+    public Optional<String> rampUpStartTime() {
         return this.rampUpStartTime == null ? Optional.empty() : Optional.ofNullable(this.rampUpStartTime);
     }
 

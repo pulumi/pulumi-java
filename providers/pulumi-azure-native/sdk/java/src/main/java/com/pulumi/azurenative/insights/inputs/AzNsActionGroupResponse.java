@@ -26,7 +26,7 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
     @Import(name="actionGroup")
       private final @Nullable List<String> actionGroup;
 
-    public List<String> getActionGroup() {
+    public List<String> actionGroup() {
         return this.actionGroup == null ? List.of() : this.actionGroup;
     }
 
@@ -37,7 +37,7 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
     @Import(name="customWebhookPayload")
       private final @Nullable String customWebhookPayload;
 
-    public Optional<String> getCustomWebhookPayload() {
+    public Optional<String> customWebhookPayload() {
         return this.customWebhookPayload == null ? Optional.empty() : Optional.ofNullable(this.customWebhookPayload);
     }
 
@@ -48,7 +48,7 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
     @Import(name="emailSubject")
       private final @Nullable String emailSubject;
 
-    public Optional<String> getEmailSubject() {
+    public Optional<String> emailSubject() {
         return this.emailSubject == null ? Optional.empty() : Optional.ofNullable(this.emailSubject);
     }
 

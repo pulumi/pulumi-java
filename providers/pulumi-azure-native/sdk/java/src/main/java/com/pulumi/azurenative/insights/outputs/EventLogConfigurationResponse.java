@@ -22,10 +22,10 @@ public final class EventLogConfigurationResponse {
         this.logName = logName;
     }
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
-    public String getLogName() {
+    public String logName() {
         return this.logName;
     }
 

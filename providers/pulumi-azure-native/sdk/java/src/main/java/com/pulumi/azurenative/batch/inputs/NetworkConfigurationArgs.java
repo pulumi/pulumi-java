@@ -28,7 +28,7 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="endpointConfiguration")
       private final @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<PoolEndpointConfigurationArgs> getEndpointConfiguration() {
+    public Output<PoolEndpointConfigurationArgs> endpointConfiguration() {
         return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="publicIPAddressConfiguration")
       private final @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
-    public Output<PublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
+    public Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Codegen.empty() : this.publicIPAddressConfiguration;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

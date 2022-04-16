@@ -26,7 +26,7 @@ public final class LocalTimestampTimeZoneOffsetArgs extends com.pulumi.resources
     @Import(name="propertyName")
       private final @Nullable Output<String> propertyName;
 
-    public Output<String> getPropertyName() {
+    public Output<String> propertyName() {
         return this.propertyName == null ? Codegen.empty() : this.propertyName;
     }
 

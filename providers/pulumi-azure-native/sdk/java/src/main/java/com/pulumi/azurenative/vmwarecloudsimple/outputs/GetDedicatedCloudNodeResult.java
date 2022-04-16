@@ -156,133 +156,133 @@ public final class GetDedicatedCloudNodeResult {
      * Availability Zone id, e.g. "az1"
      * 
     */
-    public String getAvailabilityZoneId() {
+    public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * Availability Zone name, e.g. "Availability Zone 1"
      * 
     */
-    public String getAvailabilityZoneName() {
+    public String availabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
      * VMWare Cloud Rack Name
      * 
     */
-    public String getCloudRackName() {
+    public String cloudRackName() {
         return this.cloudRackName;
     }
     /**
      * date time the resource was created
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * SKU's id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure region
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * SKU's name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * count of nodes to create
      * 
     */
-    public Integer getNodesCount() {
+    public Integer nodesCount() {
         return this.nodesCount;
     }
     /**
      * Placement Group id, e.g. "n1"
      * 
     */
-    public String getPlacementGroupId() {
+    public String placementGroupId() {
         return this.placementGroupId;
     }
     /**
      * Placement Name, e.g. "Placement Group 1"
      * 
     */
-    public String getPlacementGroupName() {
+    public String placementGroupName() {
         return this.placementGroupName;
     }
     /**
      * Private Cloud Id
      * 
     */
-    public String getPrivateCloudId() {
+    public String privateCloudId() {
         return this.privateCloudId;
     }
     /**
      * Resource Pool Name
      * 
     */
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
     /**
      * The provisioning status of the resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * purchase id
      * 
     */
-    public String getPurchaseId() {
+    public String purchaseId() {
         return this.purchaseId;
     }
     /**
      * Dedicated Cloud Nodes SKU
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Node status, indicates is private cloud set up on this node or not
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Dedicated Cloud Nodes tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * VMWare Cluster Name
      * 
     */
-    public String getVmwareClusterName() {
+    public String vmwareClusterName() {
         return this.vmwareClusterName;
     }
 

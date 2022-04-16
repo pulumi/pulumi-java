@@ -24,7 +24,7 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="companyName", required=true)
       private final String companyName;
 
-    public String getCompanyName() {
+    public String companyName() {
         return this.companyName;
     }
 
@@ -35,7 +35,7 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="contactPerson", required=true)
       private final String contactPerson;
 
-    public String getContactPerson() {
+    public String contactPerson() {
         return this.contactPerson;
     }
 
@@ -46,7 +46,7 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="emailList", required=true)
       private final List<String> emailList;
 
-    public List<String> getEmailList() {
+    public List<String> emailList() {
         return this.emailList;
     }
 
@@ -57,7 +57,7 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="phone", required=true)
       private final String phone;
 
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
 

@@ -19,7 +19,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -30,7 +30,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
     @Import(name="mappingName", required=true)
       private final String mappingName;
 
-    public String getMappingName() {
+    public String mappingName() {
         return this.mappingName;
     }
 
@@ -41,7 +41,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
     @Import(name="protectionContainerName", required=true)
       private final String protectionContainerName;
 
-    public String getProtectionContainerName() {
+    public String protectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -52,7 +52,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

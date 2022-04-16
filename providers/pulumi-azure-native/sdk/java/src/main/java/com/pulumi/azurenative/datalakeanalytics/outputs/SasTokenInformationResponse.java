@@ -24,7 +24,7 @@ public final class SasTokenInformationResponse {
      * The access token for the associated Azure Storage Container.
      * 
     */
-    public String getAccessToken() {
+    public String accessToken() {
         return this.accessToken;
     }
 

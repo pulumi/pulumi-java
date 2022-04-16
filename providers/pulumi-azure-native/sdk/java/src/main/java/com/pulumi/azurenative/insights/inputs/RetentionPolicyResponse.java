@@ -24,7 +24,7 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="days", required=true)
       private final Integer days;
 
-    public Integer getDays() {
+    public Integer days() {
         return this.days;
     }
 
@@ -35,7 +35,7 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

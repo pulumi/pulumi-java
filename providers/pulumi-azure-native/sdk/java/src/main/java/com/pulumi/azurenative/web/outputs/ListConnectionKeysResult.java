@@ -36,14 +36,14 @@ public final class ListConnectionKeysResult {
      * Connection Key
      * 
     */
-    public Optional<String> getConnectionKey() {
+    public Optional<String> connectionKey() {
         return Optional.ofNullable(this.connectionKey);
     }
     /**
      * Tokens/Claim
      * 
     */
-    public Map<String,Object> getParameterValues() {
+    public Map<String,Object> parameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
 

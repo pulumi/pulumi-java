@@ -19,7 +19,7 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
@@ -30,7 +30,7 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scopeAssignmentName", required=true)
       private final String scopeAssignmentName;
 
-    public String getScopeAssignmentName() {
+    public String scopeAssignmentName() {
         return this.scopeAssignmentName;
     }
 

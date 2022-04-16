@@ -50,21 +50,21 @@ public final class UrlSigningKeyParametersResponse {
      * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
      * 
     */
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
     /**
      * Resource reference to the KV secret
      * 
     */
-    public ResourceReferenceResponse getSecretSource() {
+    public ResourceReferenceResponse secretSource() {
         return this.secretSource;
     }
     /**
      * Version of the secret to be used
      * 
     */
-    public Optional<String> getSecretVersion() {
+    public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
@@ -72,7 +72,7 @@ public final class UrlSigningKeyParametersResponse {
      * Expected value is 'UrlSigningKey'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

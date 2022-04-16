@@ -25,7 +25,7 @@ public final class DebugSettingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="detailLevel")
       private final @Nullable String detailLevel;
 
-    public Optional<String> getDetailLevel() {
+    public Optional<String> detailLevel() {
         return this.detailLevel == null ? Optional.empty() : Optional.ofNullable(this.detailLevel);
     }
 

@@ -30,7 +30,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> getDiskEncryptionSetId() {
+    public Output<String> diskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
@@ -41,7 +41,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Output<Either<String,DiskAccountType>> getDiskType() {
+    public Output<Either<String,DiskAccountType>> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -52,7 +52,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="disksToInclude")
       private final @Nullable Output<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude;
 
-    public Output<List<InMageAzureV2DiskInputDetailsArgs>> getDisksToInclude() {
+    public Output<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude() {
         return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
     }
 
@@ -63,7 +63,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="enableRdpOnTargetOption")
       private final @Nullable Output<String> enableRdpOnTargetOption;
 
-    public Output<String> getEnableRdpOnTargetOption() {
+    public Output<String> enableRdpOnTargetOption() {
         return this.enableRdpOnTargetOption == null ? Codegen.empty() : this.enableRdpOnTargetOption;
     }
 
@@ -75,7 +75,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -86,7 +86,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;
 
-    public Output<String> getLogStorageAccountId() {
+    public Output<String> logStorageAccountId() {
         return this.logStorageAccountId == null ? Codegen.empty() : this.logStorageAccountId;
     }
 
@@ -97,7 +97,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="masterTargetId")
       private final @Nullable Output<String> masterTargetId;
 
-    public Output<String> getMasterTargetId() {
+    public Output<String> masterTargetId() {
         return this.masterTargetId == null ? Codegen.empty() : this.masterTargetId;
     }
 
@@ -108,7 +108,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="multiVmGroupId")
       private final @Nullable Output<String> multiVmGroupId;
 
-    public Output<String> getMultiVmGroupId() {
+    public Output<String> multiVmGroupId() {
         return this.multiVmGroupId == null ? Codegen.empty() : this.multiVmGroupId;
     }
 
@@ -119,7 +119,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="multiVmGroupName")
       private final @Nullable Output<String> multiVmGroupName;
 
-    public Output<String> getMultiVmGroupName() {
+    public Output<String> multiVmGroupName() {
         return this.multiVmGroupName == null ? Codegen.empty() : this.multiVmGroupName;
     }
 
@@ -130,7 +130,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="processServerId")
       private final @Nullable Output<String> processServerId;
 
-    public Output<String> getProcessServerId() {
+    public Output<String> processServerId() {
         return this.processServerId == null ? Codegen.empty() : this.processServerId;
     }
 
@@ -141,7 +141,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
 
-    public Output<String> getRunAsAccountId() {
+    public Output<String> runAsAccountId() {
         return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
     }
 
@@ -152,7 +152,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
@@ -163,7 +163,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> getTargetAvailabilitySetId() {
+    public Output<String> targetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
     }
 
@@ -174,7 +174,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAvailabilityZone")
       private final @Nullable Output<String> targetAvailabilityZone;
 
-    public Output<String> getTargetAvailabilityZone() {
+    public Output<String> targetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Codegen.empty() : this.targetAvailabilityZone;
     }
 
@@ -185,7 +185,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureNetworkId")
       private final @Nullable Output<String> targetAzureNetworkId;
 
-    public Output<String> getTargetAzureNetworkId() {
+    public Output<String> targetAzureNetworkId() {
         return this.targetAzureNetworkId == null ? Codegen.empty() : this.targetAzureNetworkId;
     }
 
@@ -196,7 +196,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureSubnetId")
       private final @Nullable Output<String> targetAzureSubnetId;
 
-    public Output<String> getTargetAzureSubnetId() {
+    public Output<String> targetAzureSubnetId() {
         return this.targetAzureSubnetId == null ? Codegen.empty() : this.targetAzureSubnetId;
     }
 
@@ -207,7 +207,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureV1ResourceGroupId")
       private final @Nullable Output<String> targetAzureV1ResourceGroupId;
 
-    public Output<String> getTargetAzureV1ResourceGroupId() {
+    public Output<String> targetAzureV1ResourceGroupId() {
         return this.targetAzureV1ResourceGroupId == null ? Codegen.empty() : this.targetAzureV1ResourceGroupId;
     }
 
@@ -218,7 +218,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureV2ResourceGroupId")
       private final @Nullable Output<String> targetAzureV2ResourceGroupId;
 
-    public Output<String> getTargetAzureV2ResourceGroupId() {
+    public Output<String> targetAzureV2ResourceGroupId() {
         return this.targetAzureV2ResourceGroupId == null ? Codegen.empty() : this.targetAzureV2ResourceGroupId;
     }
 
@@ -229,7 +229,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureVmName")
       private final @Nullable Output<String> targetAzureVmName;
 
-    public Output<String> getTargetAzureVmName() {
+    public Output<String> targetAzureVmName() {
         return this.targetAzureVmName == null ? Codegen.empty() : this.targetAzureVmName;
     }
 
@@ -240,7 +240,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetProximityPlacementGroupId")
       private final @Nullable Output<String> targetProximityPlacementGroupId;
 
-    public Output<String> getTargetProximityPlacementGroupId() {
+    public Output<String> targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Codegen.empty() : this.targetProximityPlacementGroupId;
     }
 
@@ -251,7 +251,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
 
-    public Output<String> getTargetVmSize() {
+    public Output<String> targetVmSize() {
         return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
     }
 

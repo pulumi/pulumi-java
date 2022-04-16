@@ -22,7 +22,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="actualProcessName", required=true)
       private final Output<String> actualProcessName;
 
-    public Output<String> getActualProcessName() {
+    public Output<String> actualProcessName() {
         return this.actualProcessName;
     }
 
@@ -33,7 +33,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="favoriteProcessResourceName")
       private final @Nullable Output<String> favoriteProcessResourceName;
 
-    public Output<String> getFavoriteProcessResourceName() {
+    public Output<String> favoriteProcessResourceName() {
         return this.favoriteProcessResourceName == null ? Codegen.empty() : this.favoriteProcessResourceName;
     }
 
@@ -44,7 +44,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="packageName", required=true)
       private final Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName;
     }
 
@@ -55,7 +55,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
-    public Output<String> getTestBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 

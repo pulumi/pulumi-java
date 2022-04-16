@@ -74,7 +74,7 @@ public final class GenericContainerResponse {
      * Type of backup management for the container.
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
@@ -85,42 +85,42 @@ public final class GenericContainerResponse {
      * Expected value is 'GenericContainer'.
      * 
     */
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
     /**
      * Extended information (not returned in List container API calls)
      * 
     */
-    public Optional<GenericContainerExtendedInfoResponse> getExtendedInformation() {
+    public Optional<GenericContainerExtendedInfoResponse> extendedInformation() {
         return Optional.ofNullable(this.extendedInformation);
     }
     /**
      * Name of the container's fabric
      * 
     */
-    public Optional<String> getFabricName() {
+    public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
     /**
      * Friendly name of the container.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
     */
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
     */
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
 

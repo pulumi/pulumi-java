@@ -39,7 +39,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
     @Export(name="aksResourceID", type=String.class, parameters={})
     private Output</* @Nullable */ String> aksResourceID;
 
-    public Output</* @Nullable */ String> getAksResourceID() {
+    public Output</* @Nullable */ String> aksResourceID() {
         return this.aksResourceID;
     }
     /**
@@ -57,7 +57,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * supported
      * 
      */
-    public Output</* @Nullable */ AppLogsConfigurationResponse> getAppLogsConfiguration() {
+    public Output</* @Nullable */ AppLogsConfigurationResponse> appLogsConfiguration() {
         return this.appLogsConfiguration;
     }
     /**
@@ -75,7 +75,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * FrontEnd Service ArtifactsStorageType etc.
      * 
      */
-    public Output</* @Nullable */ ArcConfigurationResponse> getArcConfiguration() {
+    public Output</* @Nullable */ ArcConfigurationResponse> arcConfiguration() {
         return this.arcConfiguration;
     }
     /**
@@ -89,7 +89,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Default Domain Name for the cluster
      * 
      */
-    public Output<String> getDefaultDomain() {
+    public Output<String> defaultDomain() {
         return this.defaultDomain;
     }
     /**
@@ -103,7 +103,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Any errors that occurred during deployment or deployment validation
      * 
      */
-    public Output<String> getDeploymentErrors() {
+    public Output<String> deploymentErrors() {
         return this.deploymentErrors;
     }
     /**
@@ -117,7 +117,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Extended Location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -131,7 +131,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Only visible within Vnet/Subnet
      * 
      */
-    public Output</* @Nullable */ Boolean> getInternalLoadBalancerEnabled() {
+    public Output</* @Nullable */ Boolean> internalLoadBalancerEnabled() {
         return this.internalLoadBalancerEnabled;
     }
     /**
@@ -145,7 +145,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -159,7 +159,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -173,7 +173,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -187,7 +187,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the Kubernetes Environment.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -201,7 +201,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Static IP of the KubeEnvironment
      * 
      */
-    public Output</* @Nullable */ String> getStaticIp() {
+    public Output</* @Nullable */ String> staticIp() {
         return this.staticIp;
     }
     /**
@@ -215,7 +215,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -229,7 +229,7 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

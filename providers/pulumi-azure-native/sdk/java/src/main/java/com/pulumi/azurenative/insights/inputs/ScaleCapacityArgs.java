@@ -25,7 +25,7 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="default", required=true)
       private final Output<String> default_;
 
-    public Output<String> getDefault_() {
+    public Output<String> default_() {
         return this.default_;
     }
 
@@ -36,7 +36,7 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximum", required=true)
       private final Output<String> maximum;
 
-    public Output<String> getMaximum() {
+    public Output<String> maximum() {
         return this.maximum;
     }
 
@@ -47,7 +47,7 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimum", required=true)
       private final Output<String> minimum;
 
-    public Output<String> getMinimum() {
+    public Output<String> minimum() {
         return this.minimum;
     }
 

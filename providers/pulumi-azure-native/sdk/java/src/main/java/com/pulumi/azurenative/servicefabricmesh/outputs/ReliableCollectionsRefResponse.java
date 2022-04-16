@@ -35,14 +35,14 @@ public final class ReliableCollectionsRefResponse {
      * False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
      * 
     */
-    public Optional<Boolean> getDoNotPersistState() {
+    public Optional<Boolean> doNotPersistState() {
         return Optional.ofNullable(this.doNotPersistState);
     }
     /**
      * Name of ReliableCollection resource. Right now it's not used and you can use any string.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

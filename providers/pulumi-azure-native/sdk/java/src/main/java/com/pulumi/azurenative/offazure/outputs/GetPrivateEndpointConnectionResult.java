@@ -62,42 +62,42 @@ public final class GetPrivateEndpointConnectionResult {
      * Gets the tag for optimistic concurrency control.
      * 
     */
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
     /**
      * Relative URL to get this Sites.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets the name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the properties of the object.
      * 
     */
-    public PrivateEndpointConnectionPropertiesResponse getProperties() {
+    public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

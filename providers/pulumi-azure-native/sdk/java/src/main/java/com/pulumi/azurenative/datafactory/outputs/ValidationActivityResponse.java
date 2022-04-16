@@ -96,56 +96,56 @@ public final class ValidationActivityResponse {
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getChildItems() {
+    public Optional<Object> childItems() {
         return Optional.ofNullable(this.childItems);
     }
     /**
      * Validation activity dataset reference.
      * 
     */
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMinimumSize() {
+    public Optional<Object> minimumSize() {
         return Optional.ofNullable(this.minimumSize);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSleep() {
+    public Optional<Object> sleep() {
         return Optional.ofNullable(this.sleep);
     }
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getTimeout() {
+    public Optional<Object> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -153,14 +153,14 @@ public final class ValidationActivityResponse {
      * Expected value is 'Validation'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

@@ -27,7 +27,7 @@ public final class ActionListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionGroups")
       private final @Nullable Output<List<ActionGroupArgs>> actionGroups;
 
-    public Output<List<ActionGroupArgs>> getActionGroups() {
+    public Output<List<ActionGroupArgs>> actionGroups() {
         return this.actionGroups == null ? Codegen.empty() : this.actionGroups;
     }
 

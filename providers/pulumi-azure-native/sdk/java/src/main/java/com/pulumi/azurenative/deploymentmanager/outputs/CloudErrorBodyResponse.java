@@ -49,28 +49,28 @@ public final class CloudErrorBodyResponse {
      * Error code string.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * More detailed error information.
      * 
     */
-    public List<CloudErrorBodyResponse> getDetails() {
+    public List<CloudErrorBodyResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * Descriptive error information.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Error target
      * 
     */
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
 

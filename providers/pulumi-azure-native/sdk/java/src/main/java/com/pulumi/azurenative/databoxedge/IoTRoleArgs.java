@@ -30,7 +30,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computeResource")
       private final @Nullable Output<ComputeResourceArgs> computeResource;
 
-    public Output<ComputeResourceArgs> getComputeResource() {
+    public Output<ComputeResourceArgs> computeResource() {
         return this.computeResource == null ? Codegen.empty() : this.computeResource;
     }
 
@@ -41,7 +41,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -52,7 +52,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPlatform", required=true)
       private final Output<Either<String,PlatformType>> hostPlatform;
 
-    public Output<Either<String,PlatformType>> getHostPlatform() {
+    public Output<Either<String,PlatformType>> hostPlatform() {
         return this.hostPlatform;
     }
 
@@ -63,7 +63,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
 
@@ -74,7 +74,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeAgentInfo")
       private final @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
-    public Output<IoTEdgeAgentInfoArgs> getIoTEdgeAgentInfo() {
+    public Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo() {
         return this.ioTEdgeAgentInfo == null ? Codegen.empty() : this.ioTEdgeAgentInfo;
     }
 
@@ -85,7 +85,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
 
@@ -97,7 +97,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -108,7 +108,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -119,7 +119,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -130,7 +130,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;
 
-    public Output<Either<String,RoleStatus>> getRoleStatus() {
+    public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
 
@@ -141,7 +141,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareMappings")
       private final @Nullable Output<List<MountPointMapArgs>> shareMappings;
 
-    public Output<List<MountPointMapArgs>> getShareMappings() {
+    public Output<List<MountPointMapArgs>> shareMappings() {
         return this.shareMappings == null ? Codegen.empty() : this.shareMappings;
     }
 

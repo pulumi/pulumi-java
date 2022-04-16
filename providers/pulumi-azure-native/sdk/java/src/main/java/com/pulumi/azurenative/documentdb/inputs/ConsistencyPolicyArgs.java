@@ -28,7 +28,7 @@ public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="defaultConsistencyLevel", required=true)
       private final Output<DefaultConsistencyLevel> defaultConsistencyLevel;
 
-    public Output<DefaultConsistencyLevel> getDefaultConsistencyLevel() {
+    public Output<DefaultConsistencyLevel> defaultConsistencyLevel() {
         return this.defaultConsistencyLevel;
     }
 
@@ -39,7 +39,7 @@ public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxIntervalInSeconds")
       private final @Nullable Output<Integer> maxIntervalInSeconds;
 
-    public Output<Integer> getMaxIntervalInSeconds() {
+    public Output<Integer> maxIntervalInSeconds() {
         return this.maxIntervalInSeconds == null ? Codegen.empty() : this.maxIntervalInSeconds;
     }
 
@@ -50,7 +50,7 @@ public final class ConsistencyPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxStalenessPrefix")
       private final @Nullable Output<Double> maxStalenessPrefix;
 
-    public Output<Double> getMaxStalenessPrefix() {
+    public Output<Double> maxStalenessPrefix() {
         return this.maxStalenessPrefix == null ? Codegen.empty() : this.maxStalenessPrefix;
     }
 

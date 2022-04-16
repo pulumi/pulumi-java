@@ -17,21 +17,21 @@ public final class ImportCollectorPropertiesResponse extends com.pulumi.resource
     @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
 
-    public String getCreatedTimestamp() {
+    public String createdTimestamp() {
         return this.createdTimestamp;
     }
 
     @Import(name="discoverySiteId")
       private final @Nullable String discoverySiteId;
 
-    public Optional<String> getDiscoverySiteId() {
+    public Optional<String> discoverySiteId() {
         return this.discoverySiteId == null ? Optional.empty() : Optional.ofNullable(this.discoverySiteId);
     }
 
     @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
 
-    public String getUpdatedTimestamp() {
+    public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 

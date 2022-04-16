@@ -29,7 +29,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -40,7 +40,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="batchFrequencyInSeconds")
       private final @Nullable Output<Integer> batchFrequencyInSeconds;
 
-    public Output<Integer> getBatchFrequencyInSeconds() {
+    public Output<Integer> batchFrequencyInSeconds() {
         return this.batchFrequencyInSeconds == null ? Codegen.empty() : this.batchFrequencyInSeconds;
     }
 
@@ -51,7 +51,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -62,7 +62,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -73,7 +73,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -84,7 +84,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
@@ -95,7 +95,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="fileNameFormat")
       private final @Nullable Output<String> fileNameFormat;
 
-    public Output<String> getFileNameFormat() {
+    public Output<String> fileNameFormat() {
         return this.fileNameFormat == null ? Codegen.empty() : this.fileNameFormat;
     }
 
@@ -106,7 +106,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -117,7 +117,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="maxChunkSizeInBytes")
       private final @Nullable Output<Integer> maxChunkSizeInBytes;
 
-    public Output<Integer> getMaxChunkSizeInBytes() {
+    public Output<Integer> maxChunkSizeInBytes() {
         return this.maxChunkSizeInBytes == null ? Codegen.empty() : this.maxChunkSizeInBytes;
     }
 
@@ -128,7 +128,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -139,7 +139,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
@@ -150,7 +150,7 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 

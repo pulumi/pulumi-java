@@ -56,14 +56,14 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
      * The clientId password associated with the provider.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The groupId to be granted cluster admin role.
      * 
     */
-    public Optional<String> getCustomerAdminGroupId() {
+    public Optional<String> customerAdminGroupId() {
         return Optional.ofNullable(this.customerAdminGroupId);
     }
     /**
@@ -71,21 +71,21 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
      * Expected value is 'AADIdentityProvider'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The secret password associated with the provider.
      * 
     */
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * The tenantId associated with the provider.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

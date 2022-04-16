@@ -26,7 +26,7 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 
@@ -37,7 +37,7 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -48,7 +48,7 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

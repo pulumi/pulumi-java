@@ -23,7 +23,7 @@ public final class AutoUserSpecificationArgs extends com.pulumi.resources.Resour
     @Import(name="elevationLevel")
       private final @Nullable Output<ElevationLevel> elevationLevel;
 
-    public Output<ElevationLevel> getElevationLevel() {
+    public Output<ElevationLevel> elevationLevel() {
         return this.elevationLevel == null ? Codegen.empty() : this.elevationLevel;
     }
 
@@ -34,7 +34,7 @@ public final class AutoUserSpecificationArgs extends com.pulumi.resources.Resour
     @Import(name="scope")
       private final @Nullable Output<AutoUserScope> scope;
 
-    public Output<AutoUserScope> getScope() {
+    public Output<AutoUserScope> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

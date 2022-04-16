@@ -23,7 +23,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
@@ -34,7 +34,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -45,7 +45,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
-    public Output<ScalarFunctionPropertiesArgs> getProperties() {
+    public Output<ScalarFunctionPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -67,7 +67,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

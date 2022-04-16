@@ -28,14 +28,14 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="assessmentType", required=true)
       private final String assessmentType;
 
-    public String getAssessmentType() {
+    public String assessmentType() {
         return this.assessmentType;
     }
 
     @Import(name="categories")
       private final @Nullable List<String> categories;
 
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories == null ? List.of() : this.categories;
     }
 
@@ -46,7 +46,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -57,7 +57,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -68,7 +68,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="implementationEffort")
       private final @Nullable String implementationEffort;
 
-    public Optional<String> getImplementationEffort() {
+    public Optional<String> implementationEffort() {
         return this.implementationEffort == null ? Optional.empty() : Optional.ofNullable(this.implementationEffort);
     }
 
@@ -79,7 +79,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="partnerData")
       private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
 
-    public Optional<SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
+    public Optional<SecurityAssessmentMetadataPartnerDataResponse> partnerData() {
         return this.partnerData == null ? Optional.empty() : Optional.ofNullable(this.partnerData);
     }
 
@@ -90,7 +90,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="policyDefinitionId", required=true)
       private final String policyDefinitionId;
 
-    public String getPolicyDefinitionId() {
+    public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
 
@@ -101,7 +101,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="preview")
       private final @Nullable Boolean preview;
 
-    public Optional<Boolean> getPreview() {
+    public Optional<Boolean> preview() {
         return this.preview == null ? Optional.empty() : Optional.ofNullable(this.preview);
     }
 
@@ -112,7 +112,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="remediationDescription")
       private final @Nullable String remediationDescription;
 
-    public Optional<String> getRemediationDescription() {
+    public Optional<String> remediationDescription() {
         return this.remediationDescription == null ? Optional.empty() : Optional.ofNullable(this.remediationDescription);
     }
 
@@ -123,14 +123,14 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
     @Import(name="threats")
       private final @Nullable List<String> threats;
 
-    public List<String> getThreats() {
+    public List<String> threats() {
         return this.threats == null ? List.of() : this.threats;
     }
 
@@ -141,7 +141,7 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="userImpact")
       private final @Nullable String userImpact;
 
-    public Optional<String> getUserImpact() {
+    public Optional<String> userImpact() {
         return this.userImpact == null ? Optional.empty() : Optional.ofNullable(this.userImpact);
     }
 

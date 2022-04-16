@@ -28,7 +28,7 @@ public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<DimensionArgs>> dimensions;
 
-    public Output<List<DimensionArgs>> getDimensions() {
+    public Output<List<DimensionArgs>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -39,7 +39,7 @@ public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 

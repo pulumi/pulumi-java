@@ -23,7 +23,7 @@ public final class ShareAccessRightResponse extends com.pulumi.resources.InvokeA
     @Import(name="accessType", required=true)
       private final String accessType;
 
-    public String getAccessType() {
+    public String accessType() {
         return this.accessType;
     }
 
@@ -34,7 +34,7 @@ public final class ShareAccessRightResponse extends com.pulumi.resources.InvokeA
     @Import(name="shareId", required=true)
       private final String shareId;
 
-    public String getShareId() {
+    public String shareId() {
         return this.shareId;
     }
 

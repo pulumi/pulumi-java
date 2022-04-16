@@ -46,7 +46,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return The Capacity reservation instance view.
      * 
      */
-    public Output<CapacityReservationInstanceViewResponse> getInstanceView() {
+    public Output<CapacityReservationInstanceViewResponse> instanceView() {
         return this.instanceView;
     }
     /**
@@ -60,7 +60,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -102,7 +102,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return The date time when the capacity reservation was last updated.
      * 
      */
-    public Output<String> getProvisioningTime() {
+    public Output<String> provisioningTime() {
         return this.provisioningTime;
     }
     /**
@@ -116,7 +116,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
      * 
      */
-    public Output<String> getReservationId() {
+    public Output<String> reservationId() {
         return this.reservationId;
     }
     /**
@@ -130,7 +130,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -144,7 +144,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -158,7 +158,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -172,7 +172,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return A list of all virtual machine resource ids that are associated with the capacity reservation.
      * 
      */
-    public Output<List<SubResourceReadOnlyResponse>> getVirtualMachinesAssociated() {
+    public Output<List<SubResourceReadOnlyResponse>> virtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
@@ -186,7 +186,7 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

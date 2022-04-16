@@ -29,7 +29,7 @@ public final class NetworkInterfaceReferenceArgs extends com.pulumi.resources.Re
     @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
-    public Output<Either<String,DeleteOptions>> getDeleteOption() {
+    public Output<Either<String,DeleteOptions>> deleteOption() {
         return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkInterfaceReferenceArgs extends com.pulumi.resources.Re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkInterfaceReferenceArgs extends com.pulumi.resources.Re
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
+    public Output<Boolean> primary() {
         return this.primary == null ? Codegen.empty() : this.primary;
     }
 

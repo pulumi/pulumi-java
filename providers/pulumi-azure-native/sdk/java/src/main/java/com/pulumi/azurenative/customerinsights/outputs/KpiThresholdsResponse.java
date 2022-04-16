@@ -40,21 +40,21 @@ public final class KpiThresholdsResponse {
      * Whether or not the KPI is an increasing KPI.
      * 
     */
-    public Boolean getIncreasingKpi() {
+    public Boolean increasingKpi() {
         return this.increasingKpi;
     }
     /**
      * The lower threshold limit.
      * 
     */
-    public Double getLowerLimit() {
+    public Double lowerLimit() {
         return this.lowerLimit;
     }
     /**
      * The upper threshold limit.
      * 
     */
-    public Double getUpperLimit() {
+    public Double upperLimit() {
         return this.upperLimit;
     }
 

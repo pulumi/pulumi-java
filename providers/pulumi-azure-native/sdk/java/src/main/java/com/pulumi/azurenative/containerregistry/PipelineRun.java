@@ -45,7 +45,7 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
      * 
      */
-    public Output</* @Nullable */ String> getForceUpdateTag() {
+    public Output</* @Nullable */ String> forceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
@@ -59,7 +59,7 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of a pipeline run.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -87,7 +87,7 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return The request parameters for a pipeline run.
      * 
      */
-    public Output</* @Nullable */ PipelineRunRequestResponse> getRequest() {
+    public Output</* @Nullable */ PipelineRunRequestResponse> request() {
         return this.request;
     }
     /**
@@ -101,7 +101,7 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return The response of a pipeline run.
      * 
      */
-    public Output<PipelineRunResponseResponse> getResponse() {
+    public Output<PipelineRunResponseResponse> response() {
         return this.response;
     }
     /**
@@ -115,7 +115,7 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +129,7 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -49,28 +49,28 @@ public final class ListTenantAccessGitSecretsResult {
      * Determines whether direct access is enabled.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Identifier.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
     */
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
     */
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
 

@@ -19,14 +19,14 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="resourceGuardProxyName", required=true)
       private final String resourceGuardProxyName;
 
-    public String getResourceGuardProxyName() {
+    public String resourceGuardProxyName() {
         return this.resourceGuardProxyName;
     }
 
@@ -37,7 +37,7 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
     @Import(name="vaultName", required=true)
       private final String vaultName;
 
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

@@ -27,7 +27,7 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
     @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;
 
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
     }
 
@@ -38,7 +38,7 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
     @Import(name="logAnalyticsResources")
       private final @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources;
 
-    public Optional<FirewallPolicyLogAnalyticsResourcesResponse> getLogAnalyticsResources() {
+    public Optional<FirewallPolicyLogAnalyticsResourcesResponse> logAnalyticsResources() {
         return this.logAnalyticsResources == null ? Optional.empty() : Optional.ofNullable(this.logAnalyticsResources);
     }
 
@@ -49,7 +49,7 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
     @Import(name="retentionDays")
       private final @Nullable Integer retentionDays;
 
-    public Optional<Integer> getRetentionDays() {
+    public Optional<Integer> retentionDays() {
         return this.retentionDays == null ? Optional.empty() : Optional.ofNullable(this.retentionDays);
     }
 

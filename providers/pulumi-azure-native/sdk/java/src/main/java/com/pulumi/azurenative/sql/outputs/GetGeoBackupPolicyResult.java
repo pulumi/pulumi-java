@@ -67,49 +67,49 @@ public final class GetGeoBackupPolicyResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of geo backup policy.  This is metadata used for the Azure portal experience.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Backup policy location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the geo backup policy.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The storage type of the geo backup policy.
      * 
     */
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

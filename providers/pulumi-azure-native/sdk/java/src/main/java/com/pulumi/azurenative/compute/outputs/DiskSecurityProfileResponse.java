@@ -26,7 +26,7 @@ public final class DiskSecurityProfileResponse {
      * Specifies the SecurityType of the VM. Applicable for OS disks only.
      * 
     */
-    public Optional<String> getSecurityType() {
+    public Optional<String> securityType() {
         return Optional.ofNullable(this.securityType);
     }
 

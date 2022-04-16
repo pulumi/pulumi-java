@@ -26,7 +26,7 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
     @Import(name="customBlockResponseBody")
       private final @Nullable String customBlockResponseBody;
 
-    public Optional<String> getCustomBlockResponseBody() {
+    public Optional<String> customBlockResponseBody() {
         return this.customBlockResponseBody == null ? Optional.empty() : Optional.ofNullable(this.customBlockResponseBody);
     }
 
@@ -37,7 +37,7 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
     @Import(name="customBlockResponseStatusCode")
       private final @Nullable Integer customBlockResponseStatusCode;
 
-    public Optional<Integer> getCustomBlockResponseStatusCode() {
+    public Optional<Integer> customBlockResponseStatusCode() {
         return this.customBlockResponseStatusCode == null ? Optional.empty() : Optional.ofNullable(this.customBlockResponseStatusCode);
     }
 
@@ -48,7 +48,7 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
     @Import(name="enabledState")
       private final @Nullable String enabledState;
 
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
@@ -59,7 +59,7 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -70,7 +70,7 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
     @Import(name="redirectUrl")
       private final @Nullable String redirectUrl;
 
-    public Optional<String> getRedirectUrl() {
+    public Optional<String> redirectUrl() {
         return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
     }
 
@@ -81,7 +81,7 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
     @Import(name="requestBodyCheck")
       private final @Nullable String requestBodyCheck;
 
-    public Optional<String> getRequestBodyCheck() {
+    public Optional<String> requestBodyCheck() {
         return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
     }
 

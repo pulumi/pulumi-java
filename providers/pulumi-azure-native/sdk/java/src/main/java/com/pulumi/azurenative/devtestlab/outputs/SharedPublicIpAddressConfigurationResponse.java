@@ -26,7 +26,7 @@ public final class SharedPublicIpAddressConfigurationResponse {
      * The incoming NAT rules
      * 
     */
-    public List<InboundNatRuleResponse> getInboundNatRules() {
+    public List<InboundNatRuleResponse> inboundNatRules() {
         return this.inboundNatRules == null ? List.of() : this.inboundNatRules;
     }
 

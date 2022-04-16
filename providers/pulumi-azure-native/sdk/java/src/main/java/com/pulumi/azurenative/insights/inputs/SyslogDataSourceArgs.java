@@ -32,7 +32,7 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="facilityNames")
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
-    public Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> getFacilityNames() {
+    public Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames() {
         return this.facilityNames == null ? Codegen.empty() : this.facilityNames;
     }
 
@@ -43,7 +43,7 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="logLevels")
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
-    public Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> getLogLevels() {
+    public Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels() {
         return this.logLevels == null ? Codegen.empty() : this.logLevels;
     }
 
@@ -55,7 +55,7 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
-    public Output<List<Either<String,KnownSyslogDataSourceStreams>>> getStreams() {
+    public Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams() {
         return this.streams == null ? Codegen.empty() : this.streams;
     }
 

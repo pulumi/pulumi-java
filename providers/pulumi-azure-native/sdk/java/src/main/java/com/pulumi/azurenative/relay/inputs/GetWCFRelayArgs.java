@@ -19,7 +19,7 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="relayName", required=true)
       private final String relayName;
 
-    public String getRelayName() {
+    public String relayName() {
         return this.relayName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWCFRelayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

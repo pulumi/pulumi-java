@@ -49,7 +49,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
 
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
 
@@ -60,7 +60,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -71,7 +71,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -82,7 +82,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="fieldList")
       private final @Nullable List<Object> fieldList;
 
-    public List<Object> getFieldList() {
+    public List<Object> fieldList() {
         return this.fieldList == null ? List.of() : this.fieldList;
     }
 
@@ -93,7 +93,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="formatSettings")
       private final @Nullable Object formatSettings;
 
-    public Object getFormatSettings() {
+    public Object formatSettings() {
         return this.formatSettings == null ? null : this.formatSettings;
     }
 
@@ -104,7 +104,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -115,7 +115,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -126,7 +126,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -137,7 +137,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="storeSettings")
       private final @Nullable Object storeSettings;
 
-    public Object getStoreSettings() {
+    public Object storeSettings() {
         return this.storeSettings == null ? null : this.storeSettings;
     }
 
@@ -149,7 +149,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -160,7 +160,7 @@ public final class GetMetadataActivityResponse extends com.pulumi.resources.Invo
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

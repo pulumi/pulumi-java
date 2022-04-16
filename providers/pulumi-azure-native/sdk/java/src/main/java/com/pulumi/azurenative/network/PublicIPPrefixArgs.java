@@ -32,7 +32,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customIPPrefix")
       private final @Nullable Output<SubResourceArgs> customIPPrefix;
 
-    public Output<SubResourceArgs> getCustomIPPrefix() {
+    public Output<SubResourceArgs> customIPPrefix() {
         return this.customIPPrefix == null ? Codegen.empty() : this.customIPPrefix;
     }
 
@@ -43,7 +43,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -54,7 +54,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -65,7 +65,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipTags")
       private final @Nullable Output<List<IpTagArgs>> ipTags;
 
-    public Output<List<IpTagArgs>> getIpTags() {
+    public Output<List<IpTagArgs>> ipTags() {
         return this.ipTags == null ? Codegen.empty() : this.ipTags;
     }
 
@@ -76,7 +76,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -87,7 +87,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="natGateway")
       private final @Nullable Output<NatGatewayArgs> natGateway;
 
-    public Output<NatGatewayArgs> getNatGateway() {
+    public Output<NatGatewayArgs> natGateway() {
         return this.natGateway == null ? Codegen.empty() : this.natGateway;
     }
 
@@ -98,7 +98,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
 
-    public Output<Integer> getPrefixLength() {
+    public Output<Integer> prefixLength() {
         return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
     }
 
@@ -109,7 +109,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> getPublicIPAddressVersion() {
+    public Output<Either<String,IPVersion>> publicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Codegen.empty() : this.publicIPAddressVersion;
     }
 
@@ -120,7 +120,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publicIpPrefixName")
       private final @Nullable Output<String> publicIpPrefixName;
 
-    public Output<String> getPublicIpPrefixName() {
+    public Output<String> publicIpPrefixName() {
         return this.publicIpPrefixName == null ? Codegen.empty() : this.publicIpPrefixName;
     }
 
@@ -131,7 +131,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -142,7 +142,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
       private final @Nullable Output<PublicIPPrefixSkuArgs> sku;
 
-    public Output<PublicIPPrefixSkuArgs> getSku() {
+    public Output<PublicIPPrefixSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -153,7 +153,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -164,7 +164,7 @@ public final class PublicIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

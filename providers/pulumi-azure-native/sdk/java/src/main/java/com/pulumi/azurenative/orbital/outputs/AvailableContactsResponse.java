@@ -99,77 +99,77 @@ public final class AvailableContactsResponse {
      * Azimuth of the antenna at the end of the contact in decimal degrees.
      * 
     */
-    public Double getEndAzimuthDegrees() {
+    public Double endAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
     /**
      * Spacecraft elevation above the horizon at contact end.
      * 
     */
-    public Double getEndElevationDegrees() {
+    public Double endElevationDegrees() {
         return this.endElevationDegrees;
     }
     /**
      * Name of Azure Ground Station.
      * 
     */
-    public String getGroundStationName() {
+    public String groundStationName() {
         return this.groundStationName;
     }
     /**
      * Maximum elevation of the antenna during the contact in decimal degrees.
      * 
     */
-    public Double getMaximumElevationDegrees() {
+    public Double maximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
     /**
      * Time to lost receiving a signal.
      * 
     */
-    public String getRxEndTime() {
+    public String rxEndTime() {
         return this.rxEndTime;
     }
     /**
      * Earliest time to receive a signal.
      * 
     */
-    public String getRxStartTime() {
+    public String rxStartTime() {
         return this.rxStartTime;
     }
     /**
      * The reference to the spacecraft resource.
      * 
     */
-    public Optional<ResourceReferenceResponse> getSpacecraft() {
+    public Optional<ResourceReferenceResponse> spacecraft() {
         return Optional.ofNullable(this.spacecraft);
     }
     /**
      * Azimuth of the antenna at the start of the contact in decimal degrees.
      * 
     */
-    public Double getStartAzimuthDegrees() {
+    public Double startAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
     /**
      * Spacecraft elevation above the horizon at contact start.
      * 
     */
-    public Double getStartElevationDegrees() {
+    public Double startElevationDegrees() {
         return this.startElevationDegrees;
     }
     /**
      * Time at which antenna transmit will be disabled.
      * 
     */
-    public String getTxEndTime() {
+    public String txEndTime() {
         return this.txEndTime;
     }
     /**
      * Time at which antenna transmit will be enabled.
      * 
     */
-    public String getTxStartTime() {
+    public String txStartTime() {
         return this.txStartTime;
     }
 

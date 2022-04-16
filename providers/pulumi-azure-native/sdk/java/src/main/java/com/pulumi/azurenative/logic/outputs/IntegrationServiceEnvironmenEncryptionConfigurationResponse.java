@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
      * The encryption key reference.
      * 
     */
-    public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> getEncryptionKeyReference() {
+    public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> encryptionKeyReference() {
         return Optional.ofNullable(this.encryptionKeyReference);
     }
 

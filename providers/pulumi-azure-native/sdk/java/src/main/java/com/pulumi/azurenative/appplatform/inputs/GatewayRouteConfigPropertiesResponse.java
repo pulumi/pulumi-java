@@ -27,7 +27,7 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
     @Import(name="appResourceId")
       private final @Nullable String appResourceId;
 
-    public Optional<String> getAppResourceId() {
+    public Optional<String> appResourceId() {
         return this.appResourceId == null ? Optional.empty() : Optional.ofNullable(this.appResourceId);
     }
 
@@ -38,7 +38,7 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -49,7 +49,7 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
     @Import(name="routes")
       private final @Nullable List<GatewayApiRouteResponse> routes;
 
-    public List<GatewayApiRouteResponse> getRoutes() {
+    public List<GatewayApiRouteResponse> routes() {
         return this.routes == null ? List.of() : this.routes;
     }
 

@@ -26,7 +26,7 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
     @Import(name="creationScript")
       private final @Nullable Output<ScriptReferenceArgs> creationScript;
 
-    public Output<ScriptReferenceArgs> getCreationScript() {
+    public Output<ScriptReferenceArgs> creationScript() {
         return this.creationScript == null ? Codegen.empty() : this.creationScript;
     }
 
@@ -37,7 +37,7 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
     @Import(name="startupScript")
       private final @Nullable Output<ScriptReferenceArgs> startupScript;
 
-    public Output<ScriptReferenceArgs> getStartupScript() {
+    public Output<ScriptReferenceArgs> startupScript() {
         return this.startupScript == null ? Codegen.empty() : this.startupScript;
     }
 

@@ -19,7 +19,7 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
     @Import(name="ascLocation", required=true)
       private final String ascLocation;
 
-    public String getAscLocation() {
+    public String ascLocation() {
         return this.ascLocation;
     }
 
@@ -30,7 +30,7 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
     @Import(name="groupName", required=true)
       private final String groupName;
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
 

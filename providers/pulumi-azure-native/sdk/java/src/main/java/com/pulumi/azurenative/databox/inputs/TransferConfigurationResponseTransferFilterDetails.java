@@ -25,7 +25,7 @@ public final class TransferConfigurationResponseTransferFilterDetails extends co
     @Import(name="include")
       private final @Nullable TransferFilterDetailsResponse include;
 
-    public Optional<TransferFilterDetailsResponse> getInclude() {
+    public Optional<TransferFilterDetailsResponse> include() {
         return this.include == null ? Optional.empty() : Optional.ofNullable(this.include);
     }
 

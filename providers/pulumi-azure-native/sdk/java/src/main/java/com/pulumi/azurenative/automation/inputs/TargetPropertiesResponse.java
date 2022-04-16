@@ -27,7 +27,7 @@ public final class TargetPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="azureQueries")
       private final @Nullable List<AzureQueryPropertiesResponse> azureQueries;
 
-    public List<AzureQueryPropertiesResponse> getAzureQueries() {
+    public List<AzureQueryPropertiesResponse> azureQueries() {
         return this.azureQueries == null ? List.of() : this.azureQueries;
     }
 
@@ -38,7 +38,7 @@ public final class TargetPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="nonAzureQueries")
       private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
-    public List<NonAzureQueryPropertiesResponse> getNonAzureQueries() {
+    public List<NonAzureQueryPropertiesResponse> nonAzureQueries() {
         return this.nonAzureQueries == null ? List.of() : this.nonAzureQueries;
     }
 

@@ -31,7 +31,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -42,7 +42,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="headers")
       private final @Nullable Output<Map<String,List<String>>> headers;
 
-    public Output<Map<String,List<String>>> getHeaders() {
+    public Output<Map<String,List<String>>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -82,7 +82,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -93,7 +93,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -115,7 +115,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="subnetMask")
       private final @Nullable Output<String> subnetMask;
 
-    public Output<String> getSubnetMask() {
+    public Output<String> subnetMask() {
         return this.subnetMask == null ? Codegen.empty() : this.subnetMask;
     }
 
@@ -126,7 +126,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="subnetTrafficTag")
       private final @Nullable Output<Integer> subnetTrafficTag;
 
-    public Output<Integer> getSubnetTrafficTag() {
+    public Output<Integer> subnetTrafficTag() {
         return this.subnetTrafficTag == null ? Codegen.empty() : this.subnetTrafficTag;
     }
 
@@ -137,7 +137,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="tag")
       private final @Nullable Output<Either<String,IpFilterTag>> tag;
 
-    public Output<Either<String,IpFilterTag>> getTag() {
+    public Output<Either<String,IpFilterTag>> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -148,7 +148,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="vnetSubnetResourceId")
       private final @Nullable Output<String> vnetSubnetResourceId;
 
-    public Output<String> getVnetSubnetResourceId() {
+    public Output<String> vnetSubnetResourceId() {
         return this.vnetSubnetResourceId == null ? Codegen.empty() : this.vnetSubnetResourceId;
     }
 
@@ -159,7 +159,7 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="vnetTrafficTag")
       private final @Nullable Output<Integer> vnetTrafficTag;
 
-    public Output<Integer> getVnetTrafficTag() {
+    public Output<Integer> vnetTrafficTag() {
         return this.vnetTrafficTag == null ? Codegen.empty() : this.vnetTrafficTag;
     }
 

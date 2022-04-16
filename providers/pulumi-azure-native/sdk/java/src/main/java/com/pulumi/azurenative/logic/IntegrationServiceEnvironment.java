@@ -46,7 +46,7 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return Managed service identity properties.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -60,7 +60,7 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return The integration service environment properties.
      * 
      */
-    public Output<IntegrationServiceEnvironmentPropertiesResponse> getProperties() {
+    public Output<IntegrationServiceEnvironmentPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -102,7 +102,7 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return The sku.
      * 
      */
-    public Output</* @Nullable */ IntegrationServiceEnvironmentSkuResponse> getSku() {
+    public Output</* @Nullable */ IntegrationServiceEnvironmentSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -116,7 +116,7 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +130,7 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

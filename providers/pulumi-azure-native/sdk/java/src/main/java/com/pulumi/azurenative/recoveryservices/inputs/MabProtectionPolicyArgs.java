@@ -35,7 +35,7 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
-    public Output<String> getBackupManagementType() {
+    public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -46,7 +46,7 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> getProtectedItemsCount() {
+    public Output<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
@@ -57,7 +57,7 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
+    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -68,7 +68,7 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
 
-    public Output<Object> getSchedulePolicy() {
+    public Output<Object> schedulePolicy() {
         return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 

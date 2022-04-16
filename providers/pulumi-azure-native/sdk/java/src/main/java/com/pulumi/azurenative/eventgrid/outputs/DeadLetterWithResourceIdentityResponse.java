@@ -37,14 +37,14 @@ public final class DeadLetterWithResourceIdentityResponse {
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
-    public Optional<StorageBlobDeadLetterDestinationResponse> getDeadLetterDestination() {
+    public Optional<StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
     /**
      * The identity to use when dead-lettering events.
      * 
     */
-    public Optional<EventSubscriptionIdentityResponse> getIdentity() {
+    public Optional<EventSubscriptionIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
 

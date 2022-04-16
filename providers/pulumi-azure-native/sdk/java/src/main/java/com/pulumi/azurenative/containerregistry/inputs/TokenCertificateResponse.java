@@ -25,7 +25,7 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="encodedPemCertificate")
       private final @Nullable String encodedPemCertificate;
 
-    public Optional<String> getEncodedPemCertificate() {
+    public Optional<String> encodedPemCertificate() {
         return this.encodedPemCertificate == null ? Optional.empty() : Optional.ofNullable(this.encodedPemCertificate);
     }
 
@@ -36,14 +36,14 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="expiry")
       private final @Nullable String expiry;
 
-    public Optional<String> getExpiry() {
+    public Optional<String> expiry() {
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
     }
 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -54,7 +54,7 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 

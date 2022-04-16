@@ -27,7 +27,7 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
     @Import(name="aS2")
       private final @Nullable AS2AgreementContentResponse aS2;
 
-    public Optional<AS2AgreementContentResponse> getAS2() {
+    public Optional<AS2AgreementContentResponse> aS2() {
         return this.aS2 == null ? Optional.empty() : Optional.ofNullable(this.aS2);
     }
 
@@ -38,7 +38,7 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
     @Import(name="edifact")
       private final @Nullable EdifactAgreementContentResponse edifact;
 
-    public Optional<EdifactAgreementContentResponse> getEdifact() {
+    public Optional<EdifactAgreementContentResponse> edifact() {
         return this.edifact == null ? Optional.empty() : Optional.ofNullable(this.edifact);
     }
 
@@ -49,7 +49,7 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
     @Import(name="x12")
       private final @Nullable X12AgreementContentResponse x12;
 
-    public Optional<X12AgreementContentResponse> getX12() {
+    public Optional<X12AgreementContentResponse> x12() {
         return this.x12 == null ? Optional.empty() : Optional.ofNullable(this.x12);
     }
 

@@ -25,7 +25,7 @@ public final class StorageInsightStatusResponse extends com.pulumi.resources.Inv
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class StorageInsightStatusResponse extends com.pulumi.resources.Inv
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

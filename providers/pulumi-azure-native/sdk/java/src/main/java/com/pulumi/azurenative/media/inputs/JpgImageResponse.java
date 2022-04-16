@@ -28,7 +28,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyFrameInterval")
       private final @Nullable String keyFrameInterval;
 
-    public Optional<String> getKeyFrameInterval() {
+    public Optional<String> keyFrameInterval() {
         return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
     }
 
@@ -39,7 +39,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -50,7 +50,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="layers")
       private final @Nullable List<JpgLayerResponse> layers;
 
-    public List<JpgLayerResponse> getLayers() {
+    public List<JpgLayerResponse> layers() {
         return this.layers == null ? List.of() : this.layers;
     }
 
@@ -62,7 +62,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -73,7 +73,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="range")
       private final @Nullable String range;
 
-    public Optional<String> getRange() {
+    public Optional<String> range() {
         return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
     }
 
@@ -84,7 +84,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="spriteColumn")
       private final @Nullable Integer spriteColumn;
 
-    public Optional<Integer> getSpriteColumn() {
+    public Optional<Integer> spriteColumn() {
         return this.spriteColumn == null ? Optional.empty() : Optional.ofNullable(this.spriteColumn);
     }
 
@@ -95,7 +95,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="start", required=true)
       private final String start;
 
-    public String getStart() {
+    public String start() {
         return this.start;
     }
 
@@ -106,7 +106,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="step")
       private final @Nullable String step;
 
-    public Optional<String> getStep() {
+    public Optional<String> step() {
         return this.step == null ? Optional.empty() : Optional.ofNullable(this.step);
     }
 
@@ -117,7 +117,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stretchMode")
       private final @Nullable String stretchMode;
 
-    public Optional<String> getStretchMode() {
+    public Optional<String> stretchMode() {
         return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
     }
 
@@ -128,7 +128,7 @@ public final class JpgImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="syncMode")
       private final @Nullable String syncMode;
 
-    public Optional<String> getSyncMode() {
+    public Optional<String> syncMode() {
         return this.syncMode == null ? Optional.empty() : Optional.ofNullable(this.syncMode);
     }
 

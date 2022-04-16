@@ -47,28 +47,28 @@ public final class GetRegistrationAssignmentResult {
      * The fully qualified path of the registration assignment.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the registration assignment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of a registration assignment.
      * 
     */
-    public RegistrationAssignmentPropertiesResponse getProperties() {
+    public RegistrationAssignmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

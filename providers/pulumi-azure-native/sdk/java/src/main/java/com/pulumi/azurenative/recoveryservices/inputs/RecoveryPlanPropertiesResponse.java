@@ -29,7 +29,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="allowedOperations")
       private final @Nullable List<String> allowedOperations;
 
-    public List<String> getAllowedOperations() {
+    public List<String> allowedOperations() {
         return this.allowedOperations == null ? List.of() : this.allowedOperations;
     }
 
@@ -40,7 +40,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="currentScenario")
       private final @Nullable CurrentScenarioDetailsResponse currentScenario;
 
-    public Optional<CurrentScenarioDetailsResponse> getCurrentScenario() {
+    public Optional<CurrentScenarioDetailsResponse> currentScenario() {
         return this.currentScenario == null ? Optional.empty() : Optional.ofNullable(this.currentScenario);
     }
 
@@ -51,7 +51,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="currentScenarioStatus")
       private final @Nullable String currentScenarioStatus;
 
-    public Optional<String> getCurrentScenarioStatus() {
+    public Optional<String> currentScenarioStatus() {
         return this.currentScenarioStatus == null ? Optional.empty() : Optional.ofNullable(this.currentScenarioStatus);
     }
 
@@ -62,7 +62,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="currentScenarioStatusDescription")
       private final @Nullable String currentScenarioStatusDescription;
 
-    public Optional<String> getCurrentScenarioStatusDescription() {
+    public Optional<String> currentScenarioStatusDescription() {
         return this.currentScenarioStatusDescription == null ? Optional.empty() : Optional.ofNullable(this.currentScenarioStatusDescription);
     }
 
@@ -73,7 +73,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="failoverDeploymentModel")
       private final @Nullable String failoverDeploymentModel;
 
-    public Optional<String> getFailoverDeploymentModel() {
+    public Optional<String> failoverDeploymentModel() {
         return this.failoverDeploymentModel == null ? Optional.empty() : Optional.ofNullable(this.failoverDeploymentModel);
     }
 
@@ -84,7 +84,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -95,7 +95,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="groups")
       private final @Nullable List<RecoveryPlanGroupResponse> groups;
 
-    public List<RecoveryPlanGroupResponse> getGroups() {
+    public List<RecoveryPlanGroupResponse> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
 
@@ -106,7 +106,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="lastPlannedFailoverTime")
       private final @Nullable String lastPlannedFailoverTime;
 
-    public Optional<String> getLastPlannedFailoverTime() {
+    public Optional<String> lastPlannedFailoverTime() {
         return this.lastPlannedFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastPlannedFailoverTime);
     }
 
@@ -117,7 +117,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="lastTestFailoverTime")
       private final @Nullable String lastTestFailoverTime;
 
-    public Optional<String> getLastTestFailoverTime() {
+    public Optional<String> lastTestFailoverTime() {
         return this.lastTestFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastTestFailoverTime);
     }
 
@@ -128,7 +128,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="lastUnplannedFailoverTime")
       private final @Nullable String lastUnplannedFailoverTime;
 
-    public Optional<String> getLastUnplannedFailoverTime() {
+    public Optional<String> lastUnplannedFailoverTime() {
         return this.lastUnplannedFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastUnplannedFailoverTime);
     }
 
@@ -139,7 +139,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="primaryFabricFriendlyName")
       private final @Nullable String primaryFabricFriendlyName;
 
-    public Optional<String> getPrimaryFabricFriendlyName() {
+    public Optional<String> primaryFabricFriendlyName() {
         return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
@@ -150,7 +150,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="primaryFabricId")
       private final @Nullable String primaryFabricId;
 
-    public Optional<String> getPrimaryFabricId() {
+    public Optional<String> primaryFabricId() {
         return this.primaryFabricId == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricId);
     }
 
@@ -161,7 +161,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="providerSpecificDetails", required=true)
       private final List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
 
-    public List<RecoveryPlanA2ADetailsResponse> getProviderSpecificDetails() {
+    public List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails() {
         return this.providerSpecificDetails;
     }
 
@@ -172,7 +172,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="recoveryFabricFriendlyName")
       private final @Nullable String recoveryFabricFriendlyName;
 
-    public Optional<String> getRecoveryFabricFriendlyName() {
+    public Optional<String> recoveryFabricFriendlyName() {
         return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
@@ -183,7 +183,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="recoveryFabricId")
       private final @Nullable String recoveryFabricId;
 
-    public Optional<String> getRecoveryFabricId() {
+    public Optional<String> recoveryFabricId() {
         return this.recoveryFabricId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricId);
     }
 
@@ -194,7 +194,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="replicationProviders")
       private final @Nullable List<String> replicationProviders;
 
-    public List<String> getReplicationProviders() {
+    public List<String> replicationProviders() {
         return this.replicationProviders == null ? List.of() : this.replicationProviders;
     }
 

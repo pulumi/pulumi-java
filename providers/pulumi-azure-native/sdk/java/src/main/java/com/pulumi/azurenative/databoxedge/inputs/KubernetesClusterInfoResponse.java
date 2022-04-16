@@ -26,7 +26,7 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
     @Import(name="etcdInfo", required=true)
       private final EtcdInfoResponse etcdInfo;
 
-    public EtcdInfoResponse getEtcdInfo() {
+    public EtcdInfoResponse etcdInfo() {
         return this.etcdInfo;
     }
 
@@ -37,7 +37,7 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
     @Import(name="nodes", required=true)
       private final List<NodeInfoResponse> nodes;
 
-    public List<NodeInfoResponse> getNodes() {
+    public List<NodeInfoResponse> nodes() {
         return this.nodes;
     }
 
@@ -48,7 +48,7 @@ public final class KubernetesClusterInfoResponse extends com.pulumi.resources.In
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

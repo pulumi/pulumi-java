@@ -217,28 +217,28 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
      * Azure VM Disk details.
      * 
     */
-    public List<AzureVmDiskDetailsResponse> getAzureVmDiskDetails() {
+    public List<AzureVmDiskDetailsResponse> azureVmDiskDetails() {
         return this.azureVmDiskDetails == null ? List.of() : this.azureVmDiskDetails;
     }
     /**
      * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
      * 
     */
-    public Optional<String> getEnableRdpOnTargetOption() {
+    public Optional<String> enableRdpOnTargetOption() {
         return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
     /**
      * The encryption info.
      * 
     */
-    public Optional<String> getEncryption() {
+    public Optional<String> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Initial replication details.
      * 
     */
-    public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
+    public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
     /**
@@ -246,161 +246,161 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
      * Expected value is 'HyperVReplicaAzure'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The Last replication time.
      * 
     */
-    public Optional<String> getLastReplicatedTime() {
+    public Optional<String> lastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
     /**
      * The last RPO calculated time.
      * 
     */
-    public Optional<String> getLastRpoCalculatedTime() {
+    public Optional<String> lastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
     /**
      * License Type of the VM to be used.
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * The operating system info.
      * 
     */
-    public Optional<OSDetailsResponse> getOSDetails() {
+    public Optional<OSDetailsResponse> oSDetails() {
         return Optional.ofNullable(this.oSDetails);
     }
     /**
      * The recovery availability set Id.
      * 
     */
-    public Optional<String> getRecoveryAvailabilitySetId() {
+    public Optional<String> recoveryAvailabilitySetId() {
         return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
     /**
      * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
      * 
     */
-    public Optional<String> getRecoveryAzureLogStorageAccountId() {
+    public Optional<String> recoveryAzureLogStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
     /**
      * The target resource group Id.
      * 
     */
-    public Optional<String> getRecoveryAzureResourceGroupId() {
+    public Optional<String> recoveryAzureResourceGroupId() {
         return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
     /**
      * The recovery Azure storage account.
      * 
     */
-    public Optional<String> getRecoveryAzureStorageAccount() {
+    public Optional<String> recoveryAzureStorageAccount() {
         return Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
     /**
      * The Recovery Azure VM size.
      * 
     */
-    public Optional<String> getRecoveryAzureVMSize() {
+    public Optional<String> recoveryAzureVMSize() {
         return Optional.ofNullable(this.recoveryAzureVMSize);
     }
     /**
      * Recovery Azure given name.
      * 
     */
-    public Optional<String> getRecoveryAzureVmName() {
+    public Optional<String> recoveryAzureVmName() {
         return Optional.ofNullable(this.recoveryAzureVmName);
     }
     /**
      * Last RPO value.
      * 
     */
-    public Optional<Double> getRpoInSeconds() {
+    public Optional<Double> rpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
     /**
      * The selected recovery azure network Id.
      * 
     */
-    public Optional<String> getSelectedRecoveryAzureNetworkId() {
+    public Optional<String> selectedRecoveryAzureNetworkId() {
         return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
     /**
      * The selected source nic Id which will be used as the primary nic during failover.
      * 
     */
-    public Optional<String> getSelectedSourceNicId() {
+    public Optional<String> selectedSourceNicId() {
         return Optional.ofNullable(this.selectedSourceNicId);
     }
     /**
      * The CPU count of the VM on the primary side.
      * 
     */
-    public Optional<Integer> getSourceVmCpuCount() {
+    public Optional<Integer> sourceVmCpuCount() {
         return Optional.ofNullable(this.sourceVmCpuCount);
     }
     /**
      * The RAM size of the VM on the primary side.
      * 
     */
-    public Optional<Integer> getSourceVmRamSizeInMB() {
+    public Optional<Integer> sourceVmRamSizeInMB() {
         return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
     /**
      * The target availability zone.
      * 
     */
-    public Optional<String> getTargetAvailabilityZone() {
+    public Optional<String> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
     /**
      * The target proximity placement group Id.
      * 
     */
-    public Optional<String> getTargetProximityPlacementGroupId() {
+    public Optional<String> targetProximityPlacementGroupId() {
         return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
     /**
      * A value indicating whether managed disks should be used during failover.
      * 
     */
-    public Optional<String> getUseManagedDisks() {
+    public Optional<String> useManagedDisks() {
         return Optional.ofNullable(this.useManagedDisks);
     }
     /**
      * The virtual machine Id.
      * 
     */
-    public Optional<String> getVmId() {
+    public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
      * 
     */
-    public List<VMNicDetailsResponse> getVmNics() {
+    public List<VMNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
      * 
     */
-    public Optional<String> getVmProtectionState() {
+    public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
      * 
     */
-    public Optional<String> getVmProtectionStateDescription() {
+    public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
 

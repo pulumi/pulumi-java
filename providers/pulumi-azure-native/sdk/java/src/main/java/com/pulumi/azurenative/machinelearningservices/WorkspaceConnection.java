@@ -42,7 +42,7 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Authorization type of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getAuthType() {
+    public Output</* @Nullable */ String> authType() {
         return this.authType;
     }
     /**
@@ -56,7 +56,7 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Category of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getCategory() {
+    public Output</* @Nullable */ String> category() {
         return this.category;
     }
     /**
@@ -70,7 +70,7 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Friendly name of the workspace connection.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Target of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getTarget() {
+    public Output</* @Nullable */ String> target() {
         return this.target;
     }
     /**
@@ -98,7 +98,7 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Resource type of workspace connection.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -112,7 +112,7 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Value details of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
     /**
@@ -126,7 +126,7 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return format for the workspace connection value
      * 
      */
-    public Output</* @Nullable */ String> getValueFormat() {
+    public Output</* @Nullable */ String> valueFormat() {
         return this.valueFormat;
     }
 

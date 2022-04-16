@@ -55,35 +55,35 @@ public final class ReplicationObjectResponse {
      * Indicates whether the local volume is the source or destination for the Volume Replication
      * 
     */
-    public Optional<String> getEndpointType() {
+    public Optional<String> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
     /**
      * The remote region for the other end of the Volume Replication.
      * 
     */
-    public Optional<String> getRemoteVolumeRegion() {
+    public Optional<String> remoteVolumeRegion() {
         return Optional.ofNullable(this.remoteVolumeRegion);
     }
     /**
      * The resource ID of the remote volume.
      * 
     */
-    public String getRemoteVolumeResourceId() {
+    public String remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
     /**
      * Id
      * 
     */
-    public Optional<String> getReplicationId() {
+    public Optional<String> replicationId() {
         return Optional.ofNullable(this.replicationId);
     }
     /**
      * Schedule
      * 
     */
-    public String getReplicationSchedule() {
+    public String replicationSchedule() {
         return this.replicationSchedule;
     }
 

@@ -26,7 +26,7 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
-    public Output<String> getSha256Checksum() {
+    public Output<String> sha256Checksum() {
         return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
@@ -59,7 +59,7 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
     @Import(name="sourceUri")
       private final @Nullable Output<String> sourceUri;
 
-    public Output<String> getSourceUri() {
+    public Output<String> sourceUri() {
         return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
     }
 
@@ -71,7 +71,7 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

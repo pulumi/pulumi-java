@@ -25,7 +25,7 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="assetId", required=true)
       private final Output<String> assetId;
 
-    public Output<String> getAssetId() {
+    public Output<String> assetId() {
         return this.assetId;
     }
 
@@ -37,7 +37,7 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="referenceType", required=true)
       private final Output<String> referenceType;
 
-    public Output<String> getReferenceType() {
+    public Output<String> referenceType() {
         return this.referenceType;
     }
 

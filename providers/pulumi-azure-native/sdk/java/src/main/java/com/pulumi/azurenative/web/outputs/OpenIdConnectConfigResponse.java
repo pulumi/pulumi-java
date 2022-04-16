@@ -55,35 +55,35 @@ public final class OpenIdConnectConfigResponse {
      * The endpoint to be used to make an authorization request.
      * 
     */
-    public Optional<String> getAuthorizationEndpoint() {
+    public Optional<String> authorizationEndpoint() {
         return Optional.ofNullable(this.authorizationEndpoint);
     }
     /**
      * The endpoint that provides the keys necessary to validate the token.
      * 
     */
-    public Optional<String> getCertificationUri() {
+    public Optional<String> certificationUri() {
         return Optional.ofNullable(this.certificationUri);
     }
     /**
      * The endpoint that issues the token.
      * 
     */
-    public Optional<String> getIssuer() {
+    public Optional<String> issuer() {
         return Optional.ofNullable(this.issuer);
     }
     /**
      * The endpoint to be used to request a token.
      * 
     */
-    public Optional<String> getTokenEndpoint() {
+    public Optional<String> tokenEndpoint() {
         return Optional.ofNullable(this.tokenEndpoint);
     }
     /**
      * The endpoint that contains all the configuration endpoints for the provider.
      * 
     */
-    public Optional<String> getWellKnownOpenIdConfiguration() {
+    public Optional<String> wellKnownOpenIdConfiguration() {
         return Optional.ofNullable(this.wellKnownOpenIdConfiguration);
     }
 

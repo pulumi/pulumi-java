@@ -35,14 +35,14 @@ public final class CassandraViewGetPropertiesResponseOptions {
      * Specifies the Autoscale settings.
      * 
     */
-    public Optional<AutoscaleSettingsResponse> getAutoscaleSettings() {
+    public Optional<AutoscaleSettingsResponse> autoscaleSettings() {
         return Optional.ofNullable(this.autoscaleSettings);
     }
     /**
      * Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
      * 
     */
-    public Optional<Integer> getThroughput() {
+    public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
 

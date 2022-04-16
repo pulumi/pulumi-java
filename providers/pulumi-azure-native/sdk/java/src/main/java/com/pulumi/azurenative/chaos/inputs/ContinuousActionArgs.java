@@ -27,7 +27,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -38,7 +38,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters", required=true)
       private final Output<List<KeyValuePairArgs>> parameters;
 
-    public Output<List<KeyValuePairArgs>> getParameters() {
+    public Output<List<KeyValuePairArgs>> parameters() {
         return this.parameters;
     }
 
@@ -60,7 +60,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="selectorId", required=true)
       private final Output<String> selectorId;
 
-    public Output<String> getSelectorId() {
+    public Output<String> selectorId() {
         return this.selectorId;
     }
 
@@ -72,7 +72,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

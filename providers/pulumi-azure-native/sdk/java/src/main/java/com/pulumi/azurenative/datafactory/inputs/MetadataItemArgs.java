@@ -26,7 +26,7 @@ public final class MetadataItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Object> name;
 
-    public Output<Object> getName() {
+    public Output<Object> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class MetadataItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

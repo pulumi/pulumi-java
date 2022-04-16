@@ -34,14 +34,14 @@ public final class BatchOutputConfigurationResponse {
      * Customized output file name for append_row output action.
      * 
     */
-    public Optional<String> getAppendRowFileName() {
+    public Optional<String> appendRowFileName() {
         return Optional.ofNullable(this.appendRowFileName);
     }
     /**
      * Indicates how the output will be organized.
      * 
     */
-    public Optional<String> getOutputAction() {
+    public Optional<String> outputAction() {
         return Optional.ofNullable(this.outputAction);
     }
 

@@ -23,7 +23,7 @@ public final class ServiceAuthConfigurationResponse extends com.pulumi.resources
     @Import(name="primaryAuthKeyHash", required=true)
       private final String primaryAuthKeyHash;
 
-    public String getPrimaryAuthKeyHash() {
+    public String primaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceAuthConfigurationResponse extends com.pulumi.resources
     @Import(name="secondaryAuthKeyHash", required=true)
       private final String secondaryAuthKeyHash;
 
-    public String getSecondaryAuthKeyHash() {
+    public String secondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
     }
 

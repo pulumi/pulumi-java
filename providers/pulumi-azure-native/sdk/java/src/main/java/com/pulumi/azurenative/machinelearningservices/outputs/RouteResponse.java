@@ -33,14 +33,14 @@ public final class RouteResponse {
      * The path for the route.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The port for the route.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

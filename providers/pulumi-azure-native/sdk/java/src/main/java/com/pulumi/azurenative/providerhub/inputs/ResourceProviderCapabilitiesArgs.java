@@ -21,21 +21,21 @@ public final class ResourceProviderCapabilitiesArgs extends com.pulumi.resources
     @Import(name="effect", required=true)
       private final Output<Either<String,ResourceProviderCapabilitiesEffect>> effect;
 
-    public Output<Either<String,ResourceProviderCapabilitiesEffect>> getEffect() {
+    public Output<Either<String,ResourceProviderCapabilitiesEffect>> effect() {
         return this.effect;
     }
 
     @Import(name="quotaId", required=true)
       private final Output<String> quotaId;
 
-    public Output<String> getQuotaId() {
+    public Output<String> quotaId() {
         return this.quotaId;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
+    public Output<List<String>> requiredFeatures() {
         return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 

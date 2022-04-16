@@ -25,7 +25,7 @@ public final class VirtualHardDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

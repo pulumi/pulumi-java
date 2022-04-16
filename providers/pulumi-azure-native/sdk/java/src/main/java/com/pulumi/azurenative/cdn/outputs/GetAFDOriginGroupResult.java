@@ -94,77 +94,77 @@ public final class GetAFDOriginGroupResult {
         this.type = type;
     }
 
-    public String getDeploymentStatus() {
+    public String deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
     */
-    public Optional<HealthProbeParametersResponse> getHealthProbeSettings() {
+    public Optional<HealthProbeParametersResponse> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Load balancing settings for a backend pool
      * 
     */
-    public Optional<LoadBalancingSettingsParametersResponse> getLoadBalancingSettings() {
+    public Optional<LoadBalancingSettingsParametersResponse> loadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning status
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
     */
-    public Optional<ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedAfdOriginErrorDetectionSettings() {
+    public Optional<ResponseBasedOriginErrorDetectionParametersResponse> responseBasedAfdOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedAfdOriginErrorDetectionSettings);
     }
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
     */
-    public Optional<String> getSessionAffinityState() {
+    public Optional<String> sessionAffinityState() {
         return Optional.ofNullable(this.sessionAffinityState);
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
     */
-    public Optional<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+    public Optional<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

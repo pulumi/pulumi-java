@@ -48,7 +48,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return A collection of references to application gateways.
      * 
      */
-    public Output<List<ApplicationGatewayResponse>> getApplicationGateways() {
+    public Output<List<ApplicationGatewayResponse>> applicationGateways() {
         return this.applicationGateways;
     }
     /**
@@ -62,7 +62,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return The custom rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> getCustomRules() {
+    public Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> customRules() {
         return this.customRules;
     }
     /**
@@ -76,7 +76,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -90,7 +90,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return A collection of references to application gateway http listeners.
      * 
      */
-    public Output<List<SubResourceResponse>> getHttpListeners() {
+    public Output<List<SubResourceResponse>> httpListeners() {
         return this.httpListeners;
     }
     /**
@@ -104,7 +104,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -118,7 +118,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Describes the managedRules structure.
      * 
      */
-    public Output<ManagedRulesDefinitionResponse> getManagedRules() {
+    public Output<ManagedRulesDefinitionResponse> managedRules() {
         return this.managedRules;
     }
     /**
@@ -132,7 +132,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return A collection of references to application gateway path rules.
      * 
      */
-    public Output<List<SubResourceResponse>> getPathBasedRules() {
+    public Output<List<SubResourceResponse>> pathBasedRules() {
         return this.pathBasedRules;
     }
     /**
@@ -160,7 +160,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return The PolicySettings for policy.
      * 
      */
-    public Output</* @Nullable */ PolicySettingsResponse> getPolicySettings() {
+    public Output</* @Nullable */ PolicySettingsResponse> policySettings() {
         return this.policySettings;
     }
     /**
@@ -174,7 +174,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return The provisioning state of the web application firewall policy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -188,7 +188,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Resource status of the policy.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -202,7 +202,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -216,7 +216,7 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="botName", required=true)
       private final String botName;
 
-    public String getBotName() {
+    public String botName() {
         return this.botName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

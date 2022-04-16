@@ -25,7 +25,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="emailRecipient")
       private final @Nullable Output<String> emailRecipient;
 
-    public Output<String> getEmailRecipient() {
+    public Output<String> emailRecipient() {
         return this.emailRecipient == null ? Codegen.empty() : this.emailRecipient;
     }
 
@@ -47,7 +47,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="events")
       private final @Nullable Output<List<EventArgs>> events;
 
-    public Output<List<EventArgs>> getEvents() {
+    public Output<List<EventArgs>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 
@@ -58,7 +58,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -69,7 +69,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,7 +80,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="notificationLocale")
       private final @Nullable Output<String> notificationLocale;
 
-    public Output<String> getNotificationLocale() {
+    public Output<String> notificationLocale() {
         return this.notificationLocale == null ? Codegen.empty() : this.notificationLocale;
     }
 
@@ -102,7 +102,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,7 +113,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="webHookUrl")
       private final @Nullable Output<String> webHookUrl;
 
-    public Output<String> getWebHookUrl() {
+    public Output<String> webHookUrl() {
         return this.webHookUrl == null ? Codegen.empty() : this.webHookUrl;
     }
 

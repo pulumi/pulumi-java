@@ -25,7 +25,7 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="queryText", required=true)
       private final String queryText;
 
-    public String getQueryText() {
+    public String queryText() {
         return this.queryText;
     }
 
@@ -36,7 +36,7 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="sourceResult", required=true)
       private final ExecutionStatisticsResponse sourceResult;
 
-    public ExecutionStatisticsResponse getSourceResult() {
+    public ExecutionStatisticsResponse sourceResult() {
         return this.sourceResult;
     }
 
@@ -47,7 +47,7 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="statementsInBatch", required=true)
       private final Double statementsInBatch;
 
-    public Double getStatementsInBatch() {
+    public Double statementsInBatch() {
         return this.statementsInBatch;
     }
 
@@ -58,7 +58,7 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
     @Import(name="targetResult", required=true)
       private final ExecutionStatisticsResponse targetResult;
 
-    public ExecutionStatisticsResponse getTargetResult() {
+    public ExecutionStatisticsResponse targetResult() {
         return this.targetResult;
     }
 

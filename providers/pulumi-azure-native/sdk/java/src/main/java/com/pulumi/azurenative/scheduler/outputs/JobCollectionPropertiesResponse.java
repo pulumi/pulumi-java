@@ -43,21 +43,21 @@ public final class JobCollectionPropertiesResponse {
      * Gets or sets the job collection quota.
      * 
     */
-    public Optional<JobCollectionQuotaResponse> getQuota() {
+    public Optional<JobCollectionQuotaResponse> quota() {
         return Optional.ofNullable(this.quota);
     }
     /**
      * Gets or sets the SKU.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets or sets the state.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

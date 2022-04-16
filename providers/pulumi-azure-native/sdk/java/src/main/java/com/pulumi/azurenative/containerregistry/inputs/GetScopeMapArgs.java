@@ -19,7 +19,7 @@ public final class GetScopeMapArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -30,7 +30,7 @@ public final class GetScopeMapArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetScopeMapArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scopeMapName", required=true)
       private final String scopeMapName;
 
-    public String getScopeMapName() {
+    public String scopeMapName() {
         return this.scopeMapName;
     }
 

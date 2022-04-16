@@ -25,7 +25,7 @@ public final class SqlDWUpsertSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="interimSchemaName")
       private final @Nullable Object interimSchemaName;
 
-    public Optional<Object> getInterimSchemaName() {
+    public Optional<Object> interimSchemaName() {
         return this.interimSchemaName == null ? Optional.empty() : Optional.ofNullable(this.interimSchemaName);
     }
 
@@ -36,7 +36,7 @@ public final class SqlDWUpsertSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="keys")
       private final @Nullable Object keys;
 
-    public Optional<Object> getKeys() {
+    public Optional<Object> keys() {
         return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
     }
 

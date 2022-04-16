@@ -24,7 +24,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="createdOn", required=true)
       private final String createdOn;
 
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
 
@@ -35,7 +35,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
 
@@ -46,7 +46,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="error", required=true)
       private final ErrorDefinitionResponse error;
 
-    public ErrorDefinitionResponse getError() {
+    public ErrorDefinitionResponse error() {
         return this.error;
     }
 
@@ -57,7 +57,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="lastUpdatedOn", required=true)
       private final String lastUpdatedOn;
 
-    public String getLastUpdatedOn() {
+    public String lastUpdatedOn() {
         return this.lastUpdatedOn;
     }
 
@@ -68,7 +68,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="remediatedResourceId", required=true)
       private final String remediatedResourceId;
 
-    public String getRemediatedResourceId() {
+    public String remediatedResourceId() {
         return this.remediatedResourceId;
     }
 
@@ -79,7 +79,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="resourceLocation", required=true)
       private final String resourceLocation;
 
-    public String getResourceLocation() {
+    public String resourceLocation() {
         return this.resourceLocation;
     }
 
@@ -90,7 +90,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -26,7 +26,7 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends com.p
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -37,7 +37,7 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends com.p
     @Import(name="provider")
       private final @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
 
-    public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> getProvider() {
+    public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> provider() {
         return this.provider == null ? Optional.empty() : Optional.ofNullable(this.provider);
     }
 

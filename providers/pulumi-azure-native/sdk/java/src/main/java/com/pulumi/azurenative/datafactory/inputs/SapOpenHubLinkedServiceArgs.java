@@ -34,7 +34,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="clientId")
       private final @Nullable Output<Object> clientId;
 
-    public Output<Object> getClientId() {
+    public Output<Object> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -56,7 +56,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -67,7 +67,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -89,7 +89,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="language")
       private final @Nullable Output<Object> language;
 
-    public Output<Object> getLanguage() {
+    public Output<Object> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -100,7 +100,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="logonGroup")
       private final @Nullable Output<Object> logonGroup;
 
-    public Output<Object> getLogonGroup() {
+    public Output<Object> logonGroup() {
         return this.logonGroup == null ? Codegen.empty() : this.logonGroup;
     }
 
@@ -111,7 +111,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="messageServer")
       private final @Nullable Output<Object> messageServer;
 
-    public Output<Object> getMessageServer() {
+    public Output<Object> messageServer() {
         return this.messageServer == null ? Codegen.empty() : this.messageServer;
     }
 
@@ -122,7 +122,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="messageServerService")
       private final @Nullable Output<Object> messageServerService;
 
-    public Output<Object> getMessageServerService() {
+    public Output<Object> messageServerService() {
         return this.messageServerService == null ? Codegen.empty() : this.messageServerService;
     }
 
@@ -133,7 +133,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -144,7 +144,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -155,7 +155,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="server")
       private final @Nullable Output<Object> server;
 
-    public Output<Object> getServer() {
+    public Output<Object> server() {
         return this.server == null ? Codegen.empty() : this.server;
     }
 
@@ -166,7 +166,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="systemId")
       private final @Nullable Output<Object> systemId;
 
-    public Output<Object> getSystemId() {
+    public Output<Object> systemId() {
         return this.systemId == null ? Codegen.empty() : this.systemId;
     }
 
@@ -177,7 +177,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="systemNumber")
       private final @Nullable Output<Object> systemNumber;
 
-    public Output<Object> getSystemNumber() {
+    public Output<Object> systemNumber() {
         return this.systemNumber == null ? Codegen.empty() : this.systemNumber;
     }
 
@@ -189,7 +189,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -200,7 +200,7 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

@@ -22,7 +22,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="consumerEmail")
       private final @Nullable String consumerEmail;
 
-    public Optional<String> getConsumerEmail() {
+    public Optional<String> consumerEmail() {
         return this.consumerEmail == null ? Optional.empty() : Optional.ofNullable(this.consumerEmail);
     }
 
@@ -44,7 +44,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="consumerName")
       private final @Nullable String consumerName;
 
-    public Optional<String> getConsumerName() {
+    public Optional<String> consumerName() {
         return this.consumerName == null ? Optional.empty() : Optional.ofNullable(this.consumerName);
     }
 
@@ -55,7 +55,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="consumerTenantName")
       private final @Nullable String consumerTenantName;
 
-    public Optional<String> getConsumerTenantName() {
+    public Optional<String> consumerTenantName() {
         return this.consumerTenantName == null ? Optional.empty() : Optional.ofNullable(this.consumerTenantName);
     }
 
@@ -66,7 +66,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="durationMs")
       private final @Nullable Integer durationMs;
 
-    public Optional<Integer> getDurationMs() {
+    public Optional<Integer> durationMs() {
         return this.durationMs == null ? Optional.empty() : Optional.ofNullable(this.durationMs);
     }
 
@@ -77,7 +77,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -88,7 +88,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -99,7 +99,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -110,7 +110,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="orderby")
       private final @Nullable String orderby;
 
-    public Optional<String> getOrderby() {
+    public Optional<String> orderby() {
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
     }
 
@@ -121,7 +121,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -132,7 +132,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="shareName", required=true)
       private final String shareName;
 
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
 
@@ -143,7 +143,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
@@ -154,7 +154,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -165,7 +165,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -176,7 +176,7 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="synchronizationId")
       private final @Nullable String synchronizationId;
 
-    public Optional<String> getSynchronizationId() {
+    public Optional<String> synchronizationId() {
         return this.synchronizationId == null ? Optional.empty() : Optional.ofNullable(this.synchronizationId);
     }
 

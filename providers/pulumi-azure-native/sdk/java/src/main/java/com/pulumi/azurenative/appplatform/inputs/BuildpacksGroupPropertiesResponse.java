@@ -27,7 +27,7 @@ public final class BuildpacksGroupPropertiesResponse extends com.pulumi.resource
     @Import(name="buildpacks")
       private final @Nullable List<BuildpackPropertiesResponse> buildpacks;
 
-    public List<BuildpackPropertiesResponse> getBuildpacks() {
+    public List<BuildpackPropertiesResponse> buildpacks() {
         return this.buildpacks == null ? List.of() : this.buildpacks;
     }
 
@@ -38,7 +38,7 @@ public final class BuildpacksGroupPropertiesResponse extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

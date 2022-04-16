@@ -27,7 +27,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
     @Import(name="allowedAadTenantIdsForLinking")
       private final @Nullable List<String> allowedAadTenantIdsForLinking;
 
-    public List<String> getAllowedAadTenantIdsForLinking() {
+    public List<String> allowedAadTenantIdsForLinking() {
         return this.allowedAadTenantIdsForLinking == null ? List.of() : this.allowedAadTenantIdsForLinking;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
     @Import(name="linkedAccessCheckOnTargetResource")
       private final @Nullable Boolean linkedAccessCheckOnTargetResource;
 
-    public Optional<Boolean> getLinkedAccessCheckOnTargetResource() {
+    public Optional<Boolean> linkedAccessCheckOnTargetResource() {
         return this.linkedAccessCheckOnTargetResource == null ? Optional.empty() : Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
     }
 
@@ -49,7 +49,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
     @Import(name="preventDataExfiltration")
       private final @Nullable Boolean preventDataExfiltration;
 
-    public Optional<Boolean> getPreventDataExfiltration() {
+    public Optional<Boolean> preventDataExfiltration() {
         return this.preventDataExfiltration == null ? Optional.empty() : Optional.ofNullable(this.preventDataExfiltration);
     }
 

@@ -19,7 +19,7 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
     @Import(name="rmplName", required=true)
       private final String rmplName;
 
-    public String getRmplName() {
+    public String rmplName() {
         return this.rmplName;
     }
 

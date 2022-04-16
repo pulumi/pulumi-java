@@ -26,7 +26,7 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -37,7 +37,7 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -48,7 +48,7 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

@@ -22,7 +22,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -33,7 +33,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -44,7 +44,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -55,7 +55,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="importance")
       private final @Nullable Output<String> importance;
 
-    public Output<String> getImportance() {
+    public Output<String> importance() {
         return this.importance == null ? Codegen.empty() : this.importance;
     }
 
@@ -66,7 +66,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -77,7 +77,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="memberName", required=true)
       private final Output<String> memberName;
 
-    public Output<String> getMemberName() {
+    public Output<String> memberName() {
         return this.memberName;
     }
 
@@ -88,7 +88,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,7 +99,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -110,7 +110,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -121,7 +121,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="workloadClassifierName")
       private final @Nullable Output<String> workloadClassifierName;
 
-    public Output<String> getWorkloadClassifierName() {
+    public Output<String> workloadClassifierName() {
         return this.workloadClassifierName == null ? Codegen.empty() : this.workloadClassifierName;
     }
 
@@ -132,7 +132,7 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="workloadGroupName", required=true)
       private final Output<String> workloadGroupName;
 
-    public Output<String> getWorkloadGroupName() {
+    public Output<String> workloadGroupName() {
         return this.workloadGroupName;
     }
 

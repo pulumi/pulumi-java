@@ -25,7 +25,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -58,7 +58,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -69,7 +69,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="provider", required=true)
       private final String provider;
 
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
 
@@ -80,7 +80,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="roles")
       private final @Nullable String roles;
 
-    public Optional<String> getRoles() {
+    public Optional<String> roles() {
         return this.roles == null ? Optional.empty() : Optional.ofNullable(this.roles);
     }
 
@@ -91,7 +91,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -102,7 +102,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

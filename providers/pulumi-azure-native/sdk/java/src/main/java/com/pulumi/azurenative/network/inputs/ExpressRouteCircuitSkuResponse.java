@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
     @Import(name="family")
       private final @Nullable String family;
 
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
@@ -36,7 +36,7 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

@@ -32,14 +32,14 @@ public final class BusinessIdentityResponse {
      * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
      * 
     */
-    public String getQualifier() {
+    public String qualifier() {
         return this.qualifier;
     }
     /**
      * The user defined business identity value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

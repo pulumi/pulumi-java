@@ -55,7 +55,7 @@ public final class DockerBuildResponse {
      * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
      * 
     */
-    public Optional<String> getContext() {
+    public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
@@ -63,7 +63,7 @@ public final class DockerBuildResponse {
      * Expected value is 'Build'.
      * 
     */
-    public String getDockerSpecificationType() {
+    public String dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
     /**
@@ -71,14 +71,14 @@ public final class DockerBuildResponse {
      * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
      * 
     */
-    public String getDockerfile() {
+    public String dockerfile() {
         return this.dockerfile;
     }
     /**
      * The platform information of the docker image.
      * 
     */
-    public Optional<DockerImagePlatformResponse> getPlatform() {
+    public Optional<DockerImagePlatformResponse> platform() {
         return Optional.ofNullable(this.platform);
     }
 

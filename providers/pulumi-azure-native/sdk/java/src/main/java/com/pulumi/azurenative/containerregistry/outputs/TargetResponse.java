@@ -84,63 +84,63 @@ public final class TargetResponse {
      * The digest of the content, as defined by the Registry V2 HTTP API Specification.
      * 
     */
-    public Optional<String> getDigest() {
+    public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
     /**
      * The number of bytes of the content. Same as Size field.
      * 
     */
-    public Optional<Double> getLength() {
+    public Optional<Double> length() {
         return Optional.ofNullable(this.length);
     }
     /**
      * The MIME type of the referenced object.
      * 
     */
-    public Optional<String> getMediaType() {
+    public Optional<String> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
      * The name of the artifact.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The repository name.
      * 
     */
-    public Optional<String> getRepository() {
+    public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
     /**
      * The number of bytes of the content. Same as Length field.
      * 
     */
-    public Optional<Double> getSize() {
+    public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The tag name.
      * 
     */
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * The direct URL to the content.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
     /**
      * The version of the artifact.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -27,7 +27,7 @@ public final class DnsConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relativeName")
       private final @Nullable Output<String> relativeName;
 
-    public Output<String> getRelativeName() {
+    public Output<String> relativeName() {
         return this.relativeName == null ? Codegen.empty() : this.relativeName;
     }
 
@@ -38,7 +38,7 @@ public final class DnsConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<Double> ttl;
 
-    public Output<Double> getTtl() {
+    public Output<Double> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

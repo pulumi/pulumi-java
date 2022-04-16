@@ -25,7 +25,7 @@ public final class AlertsDataTypeOfDataConnectorResponse extends com.pulumi.reso
     @Import(name="alerts")
       private final @Nullable DataConnectorDataTypeCommonResponse alerts;
 
-    public Optional<DataConnectorDataTypeCommonResponse> getAlerts() {
+    public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return this.alerts == null ? Optional.empty() : Optional.ofNullable(this.alerts);
     }
 

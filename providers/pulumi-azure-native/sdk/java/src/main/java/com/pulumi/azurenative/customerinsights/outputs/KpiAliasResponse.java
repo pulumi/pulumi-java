@@ -32,14 +32,14 @@ public final class KpiAliasResponse {
      * KPI alias name.
      * 
     */
-    public String getAliasName() {
+    public String aliasName() {
         return this.aliasName;
     }
     /**
      * The expression.
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 

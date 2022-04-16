@@ -19,7 +19,7 @@ public final class GetAuthorizationArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="authorizationName", required=true)
       private final String authorizationName;
 
-    public String getAuthorizationName() {
+    public String authorizationName() {
         return this.authorizationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAuthorizationArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAuthorizationArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

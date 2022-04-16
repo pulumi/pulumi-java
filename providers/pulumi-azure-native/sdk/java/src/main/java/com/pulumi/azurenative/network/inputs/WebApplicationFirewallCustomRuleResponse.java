@@ -28,7 +28,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -39,7 +39,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -50,7 +50,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="matchConditions", required=true)
       private final List<MatchConditionResponse> matchConditions;
 
-    public List<MatchConditionResponse> getMatchConditions() {
+    public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
 
@@ -61,7 +61,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -72,7 +72,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -83,7 +83,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 

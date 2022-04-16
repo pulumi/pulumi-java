@@ -33,7 +33,7 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
     @Import(name="action")
       private final @Nullable Output<FirewallPolicyFilterRuleActionArgs> action;
 
-    public Output<FirewallPolicyFilterRuleActionArgs> getAction() {
+    public Output<FirewallPolicyFilterRuleActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -44,7 +44,7 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -66,7 +66,7 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
     @Import(name="ruleConditions")
       private final @Nullable Output<List<Object>> ruleConditions;
 
-    public Output<List<Object>> getRuleConditions() {
+    public Output<List<Object>> ruleConditions() {
         return this.ruleConditions == null ? Codegen.empty() : this.ruleConditions;
     }
 
@@ -78,7 +78,7 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 

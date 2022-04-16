@@ -31,7 +31,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -42,7 +42,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputPorts")
       private final @Nullable Map<String,InputPortResponse> inputPorts;
 
-    public Map<String,InputPortResponse> getInputPorts() {
+    public Map<String,InputPortResponse> inputPorts() {
         return this.inputPorts == null ? Map.of() : this.inputPorts;
     }
 
@@ -53,7 +53,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locationInfo", required=true)
       private final BlobLocationResponse locationInfo;
 
-    public BlobLocationResponse getLocationInfo() {
+    public BlobLocationResponse locationInfo() {
         return this.locationInfo;
     }
 
@@ -64,7 +64,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
@@ -75,7 +75,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -86,7 +86,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputPorts")
       private final @Nullable Map<String,OutputPortResponse> outputPorts;
 
-    public Map<String,OutputPortResponse> getOutputPorts() {
+    public Map<String,OutputPortResponse> outputPorts() {
         return this.outputPorts == null ? Map.of() : this.outputPorts;
     }
 
@@ -97,7 +97,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
       private final @Nullable List<ModuleAssetParameterResponse> parameters;
 
-    public List<ModuleAssetParameterResponse> getParameters() {
+    public List<ModuleAssetParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
@@ -108,7 +108,7 @@ public final class AssetItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

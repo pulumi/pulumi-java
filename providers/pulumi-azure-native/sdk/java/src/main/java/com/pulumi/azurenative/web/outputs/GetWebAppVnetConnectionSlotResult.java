@@ -102,77 +102,77 @@ public final class GetWebAppVnetConnectionSlotResult {
      * Point-To-Site VPN connection.
      * 
     */
-    public Optional<String> getCertBlob() {
+    public Optional<String> certBlob() {
         return Optional.ofNullable(this.certBlob);
     }
     /**
      * The client certificate thumbprint.
      * 
     */
-    public String getCertThumbprint() {
+    public String certThumbprint() {
         return this.certThumbprint;
     }
     /**
      * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
      * 
     */
-    public Optional<String> getDnsServers() {
+    public Optional<String> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Flag that is used to denote if this is VNET injection
      * 
     */
-    public Optional<Boolean> getIsSwift() {
+    public Optional<Boolean> isSwift() {
         return Optional.ofNullable(this.isSwift);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * <code>true</code> if a resync is required; otherwise, <code>false</code>.
      * 
     */
-    public Boolean getResyncRequired() {
+    public Boolean resyncRequired() {
         return this.resyncRequired;
     }
     /**
      * The routes that this Virtual Network connection uses.
      * 
     */
-    public List<VnetRouteResponse> getRoutes() {
+    public List<VnetRouteResponse> routes() {
         return this.routes;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Virtual Network's resource ID.
      * 
     */
-    public Optional<String> getVnetResourceId() {
+    public Optional<String> vnetResourceId() {
         return Optional.ofNullable(this.vnetResourceId);
     }
 

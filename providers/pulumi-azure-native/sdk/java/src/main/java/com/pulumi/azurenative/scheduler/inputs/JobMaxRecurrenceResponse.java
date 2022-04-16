@@ -22,7 +22,7 @@ public final class JobMaxRecurrenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="frequency")
       private final @Nullable String frequency;
 
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
     }
 
@@ -33,7 +33,7 @@ public final class JobMaxRecurrenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="interval")
       private final @Nullable Integer interval;
 
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 

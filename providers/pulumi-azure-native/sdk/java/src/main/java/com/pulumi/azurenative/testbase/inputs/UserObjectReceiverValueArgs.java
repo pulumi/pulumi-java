@@ -27,7 +27,7 @@ public final class UserObjectReceiverValueArgs extends com.pulumi.resources.Reso
     @Import(name="userObjectIds")
       private final @Nullable Output<List<String>> userObjectIds;
 
-    public Output<List<String>> getUserObjectIds() {
+    public Output<List<String>> userObjectIds() {
         return this.userObjectIds == null ? Codegen.empty() : this.userObjectIds;
     }
 

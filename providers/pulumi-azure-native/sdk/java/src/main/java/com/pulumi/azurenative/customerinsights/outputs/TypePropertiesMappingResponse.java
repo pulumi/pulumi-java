@@ -41,21 +41,21 @@ public final class TypePropertiesMappingResponse {
      * Link type.
      * 
     */
-    public Optional<String> getLinkType() {
+    public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
      *  Property name on the source Entity Type.
      * 
     */
-    public String getSourcePropertyName() {
+    public String sourcePropertyName() {
         return this.sourcePropertyName;
     }
     /**
      * Property name on the target Entity Type.
      * 
     */
-    public String getTargetPropertyName() {
+    public String targetPropertyName() {
         return this.targetPropertyName;
     }
 

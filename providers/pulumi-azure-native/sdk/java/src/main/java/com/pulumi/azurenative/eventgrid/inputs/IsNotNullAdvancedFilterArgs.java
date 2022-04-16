@@ -26,7 +26,7 @@ public final class IsNotNullAdvancedFilterArgs extends com.pulumi.resources.Reso
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -38,7 +38,7 @@ public final class IsNotNullAdvancedFilterArgs extends com.pulumi.resources.Reso
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
 
-    public Output<String> getOperatorType() {
+    public Output<String> operatorType() {
         return this.operatorType;
     }
 

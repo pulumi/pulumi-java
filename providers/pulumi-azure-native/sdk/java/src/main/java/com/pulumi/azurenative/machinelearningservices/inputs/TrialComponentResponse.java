@@ -32,7 +32,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="codeId")
       private final @Nullable String codeId;
 
-    public Optional<String> getCodeId() {
+    public Optional<String> codeId() {
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
     }
 
@@ -43,7 +43,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="command", required=true)
       private final String command;
 
-    public String getCommand() {
+    public String command() {
         return this.command;
     }
 
@@ -54,7 +54,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="distribution")
       private final @Nullable Object distribution;
 
-    public Object getDistribution() {
+    public Object distribution() {
         return this.distribution == null ? null : this.distribution;
     }
 
@@ -65,7 +65,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="environmentId")
       private final @Nullable String environmentId;
 
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
     }
 
@@ -76,7 +76,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
@@ -87,7 +87,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="inputDataBindings")
       private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
-    public Map<String,InputDataBindingResponse> getInputDataBindings() {
+    public Map<String,InputDataBindingResponse> inputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
 
@@ -98,7 +98,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="outputDataBindings")
       private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
-    public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
+    public Map<String,OutputDataBindingResponse> outputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
 
@@ -110,7 +110,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

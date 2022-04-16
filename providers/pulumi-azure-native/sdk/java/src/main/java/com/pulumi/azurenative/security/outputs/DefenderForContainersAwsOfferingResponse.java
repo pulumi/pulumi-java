@@ -67,35 +67,35 @@ public final class DefenderForContainersAwsOfferingResponse {
      * The cloudwatch to kinesis connection configuration
      * 
     */
-    public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> getCloudWatchToKinesis() {
+    public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> cloudWatchToKinesis() {
         return Optional.ofNullable(this.cloudWatchToKinesis);
     }
     /**
      * The offering description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The kinesis to s3 connection configuration
      * 
     */
-    public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> getKinesisToS3() {
+    public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> kinesisToS3() {
         return Optional.ofNullable(this.kinesisToS3);
     }
     /**
      * The kubernetes to scuba connection configuration
      * 
     */
-    public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> getKubernetesScubaReader() {
+    public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> kubernetesScubaReader() {
         return Optional.ofNullable(this.kubernetesScubaReader);
     }
     /**
      * The kubernetes service connection configuration
      * 
     */
-    public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> getKubernetesService() {
+    public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> kubernetesService() {
         return Optional.ofNullable(this.kubernetesService);
     }
     /**
@@ -103,7 +103,7 @@ public final class DefenderForContainersAwsOfferingResponse {
      * Expected value is 'DefenderForContainersAws'.
      * 
     */
-    public String getOfferingType() {
+    public String offeringType() {
         return this.offeringType;
     }
 

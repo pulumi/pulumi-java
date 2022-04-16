@@ -26,7 +26,7 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends com.pulumi.res
     @Import(name="disableTraceRoute")
       private final @Nullable Output<Boolean> disableTraceRoute;
 
-    public Output<Boolean> getDisableTraceRoute() {
+    public Output<Boolean> disableTraceRoute() {
         return this.disableTraceRoute == null ? Codegen.empty() : this.disableTraceRoute;
     }
 

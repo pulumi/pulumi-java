@@ -27,7 +27,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="backupScheduleType")
       private final @Nullable String backupScheduleType;
 
-    public Optional<String> getBackupScheduleType() {
+    public Optional<String> backupScheduleType() {
         return this.backupScheduleType == null ? Optional.empty() : Optional.ofNullable(this.backupScheduleType);
     }
 
@@ -38,7 +38,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="backupSystemDbs")
       private final @Nullable Boolean backupSystemDbs;
 
-    public Optional<Boolean> getBackupSystemDbs() {
+    public Optional<Boolean> backupSystemDbs() {
         return this.backupSystemDbs == null ? Optional.empty() : Optional.ofNullable(this.backupSystemDbs);
     }
 
@@ -49,7 +49,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="enable")
       private final @Nullable Boolean enable;
 
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
     }
 
@@ -60,7 +60,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="enableEncryption")
       private final @Nullable Boolean enableEncryption;
 
-    public Optional<Boolean> getEnableEncryption() {
+    public Optional<Boolean> enableEncryption() {
         return this.enableEncryption == null ? Optional.empty() : Optional.ofNullable(this.enableEncryption);
     }
 
@@ -71,7 +71,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="fullBackupFrequency")
       private final @Nullable String fullBackupFrequency;
 
-    public Optional<String> getFullBackupFrequency() {
+    public Optional<String> fullBackupFrequency() {
         return this.fullBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.fullBackupFrequency);
     }
 
@@ -82,7 +82,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="fullBackupStartTime")
       private final @Nullable Integer fullBackupStartTime;
 
-    public Optional<Integer> getFullBackupStartTime() {
+    public Optional<Integer> fullBackupStartTime() {
         return this.fullBackupStartTime == null ? Optional.empty() : Optional.ofNullable(this.fullBackupStartTime);
     }
 
@@ -93,7 +93,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="fullBackupWindowHours")
       private final @Nullable Integer fullBackupWindowHours;
 
-    public Optional<Integer> getFullBackupWindowHours() {
+    public Optional<Integer> fullBackupWindowHours() {
         return this.fullBackupWindowHours == null ? Optional.empty() : Optional.ofNullable(this.fullBackupWindowHours);
     }
 
@@ -104,7 +104,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="logBackupFrequency")
       private final @Nullable Integer logBackupFrequency;
 
-    public Optional<Integer> getLogBackupFrequency() {
+    public Optional<Integer> logBackupFrequency() {
         return this.logBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.logBackupFrequency);
     }
 
@@ -115,7 +115,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="retentionPeriod")
       private final @Nullable Integer retentionPeriod;
 
-    public Optional<Integer> getRetentionPeriod() {
+    public Optional<Integer> retentionPeriod() {
         return this.retentionPeriod == null ? Optional.empty() : Optional.ofNullable(this.retentionPeriod);
     }
 
@@ -126,7 +126,7 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="storageAccountUrl")
       private final @Nullable String storageAccountUrl;
 
-    public Optional<String> getStorageAccountUrl() {
+    public Optional<String> storageAccountUrl() {
         return this.storageAccountUrl == null ? Optional.empty() : Optional.ofNullable(this.storageAccountUrl);
     }
 

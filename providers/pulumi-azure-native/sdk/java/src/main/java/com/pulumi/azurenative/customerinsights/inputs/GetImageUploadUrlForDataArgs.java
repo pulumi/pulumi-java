@@ -21,7 +21,7 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="entityType")
       private final @Nullable String entityType;
 
-    public Optional<String> getEntityType() {
+    public Optional<String> entityType() {
         return this.entityType == null ? Optional.empty() : Optional.ofNullable(this.entityType);
     }
 
@@ -32,7 +32,7 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="entityTypeName")
       private final @Nullable String entityTypeName;
 
-    public Optional<String> getEntityTypeName() {
+    public Optional<String> entityTypeName() {
         return this.entityTypeName == null ? Optional.empty() : Optional.ofNullable(this.entityTypeName);
     }
 
@@ -43,7 +43,7 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -54,7 +54,7 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="relativePath")
       private final @Nullable String relativePath;
 
-    public Optional<String> getRelativePath() {
+    public Optional<String> relativePath() {
         return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
     }
 
@@ -65,7 +65,7 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

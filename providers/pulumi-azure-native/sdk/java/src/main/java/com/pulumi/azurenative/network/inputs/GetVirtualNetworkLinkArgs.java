@@ -19,7 +19,7 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
     @Import(name="privateZoneName", required=true)
       private final String privateZoneName;
 
-    public String getPrivateZoneName() {
+    public String privateZoneName() {
         return this.privateZoneName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
     @Import(name="virtualNetworkLinkName", required=true)
       private final String virtualNetworkLinkName;
 
-    public String getVirtualNetworkLinkName() {
+    public String virtualNetworkLinkName() {
         return this.virtualNetworkLinkName;
     }
 

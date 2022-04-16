@@ -27,7 +27,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="accountKey")
       private final @Nullable String accountKey;
 
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -38,7 +38,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
@@ -49,7 +49,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="batchSize")
       private final @Nullable Integer batchSize;
 
-    public Optional<Integer> getBatchSize() {
+    public Optional<Integer> batchSize() {
         return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
     }
 
@@ -60,7 +60,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="columnsToRemove")
       private final @Nullable List<String> columnsToRemove;
 
-    public List<String> getColumnsToRemove() {
+    public List<String> columnsToRemove() {
         return this.columnsToRemove == null ? List.of() : this.columnsToRemove;
     }
 
@@ -71,7 +71,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
@@ -82,7 +82,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="rowKey")
       private final @Nullable String rowKey;
 
-    public Optional<String> getRowKey() {
+    public Optional<String> rowKey() {
         return this.rowKey == null ? Optional.empty() : Optional.ofNullable(this.rowKey);
     }
 
@@ -93,7 +93,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="table")
       private final @Nullable String table;
 
-    public Optional<String> getTable() {
+    public Optional<String> table() {
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
     }
 
@@ -105,7 +105,7 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

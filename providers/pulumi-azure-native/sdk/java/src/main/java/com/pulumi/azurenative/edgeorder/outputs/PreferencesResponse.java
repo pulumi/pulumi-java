@@ -52,28 +52,28 @@ public final class PreferencesResponse {
      * Preferences related to the Encryption.
      * 
     */
-    public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
+    public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
     /**
      * Preferences related to the Management resource.
      * 
     */
-    public Optional<ManagementResourcePreferencesResponse> getManagementResourcePreferences() {
+    public Optional<ManagementResourcePreferencesResponse> managementResourcePreferences() {
         return Optional.ofNullable(this.managementResourcePreferences);
     }
     /**
      * Notification preferences.
      * 
     */
-    public List<NotificationPreferenceResponse> getNotificationPreferences() {
+    public List<NotificationPreferenceResponse> notificationPreferences() {
         return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
     }
     /**
      * Preferences related to the shipment logistics of the order.
      * 
     */
-    public Optional<TransportPreferencesResponse> getTransportPreferences() {
+    public Optional<TransportPreferencesResponse> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
 

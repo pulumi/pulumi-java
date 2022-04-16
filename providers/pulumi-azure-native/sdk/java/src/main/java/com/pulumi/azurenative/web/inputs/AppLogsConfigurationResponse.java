@@ -18,14 +18,14 @@ public final class AppLogsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="destination")
       private final @Nullable String destination;
 
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
     @Import(name="logAnalyticsConfiguration")
       private final @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
 
-    public Optional<LogAnalyticsConfigurationResponse> getLogAnalyticsConfiguration() {
+    public Optional<LogAnalyticsConfigurationResponse> logAnalyticsConfiguration() {
         return this.logAnalyticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.logAnalyticsConfiguration);
     }
 

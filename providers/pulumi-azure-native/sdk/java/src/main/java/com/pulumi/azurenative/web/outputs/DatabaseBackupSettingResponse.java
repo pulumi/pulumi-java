@@ -45,7 +45,7 @@ public final class DatabaseBackupSettingResponse {
      * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
      * 
     */
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
@@ -53,17 +53,17 @@ public final class DatabaseBackupSettingResponse {
      * This is used during restore with overwrite connection strings options.
      * 
     */
-    public Optional<String> getConnectionStringName() {
+    public Optional<String> connectionStringName() {
         return Optional.ofNullable(this.connectionStringName);
     }
     /**
      * Database type (e.g. SqlAzure / MySql).
      * 
     */
-    public String getDatabaseType() {
+    public String databaseType() {
         return this.databaseType;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

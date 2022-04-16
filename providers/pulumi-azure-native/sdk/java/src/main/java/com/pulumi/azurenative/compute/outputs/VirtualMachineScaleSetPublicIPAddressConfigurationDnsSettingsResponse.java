@@ -24,7 +24,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
      * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
      * 
     */
-    public String getDomainNameLabel() {
+    public String domainNameLabel() {
         return this.domainNameLabel;
     }
 

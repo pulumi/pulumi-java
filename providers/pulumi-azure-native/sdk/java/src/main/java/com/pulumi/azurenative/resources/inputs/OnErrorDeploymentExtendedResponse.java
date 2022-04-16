@@ -25,7 +25,7 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
     @Import(name="deploymentName")
       private final @Nullable String deploymentName;
 
-    public Optional<String> getDeploymentName() {
+    public Optional<String> deploymentName() {
         return this.deploymentName == null ? Optional.empty() : Optional.ofNullable(this.deploymentName);
     }
 
@@ -36,7 +36,7 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -47,7 +47,7 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

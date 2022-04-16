@@ -25,7 +25,7 @@ public final class ApplicationPackageSupportUrlsResponse extends com.pulumi.reso
     @Import(name="governmentCloud")
       private final @Nullable String governmentCloud;
 
-    public Optional<String> getGovernmentCloud() {
+    public Optional<String> governmentCloud() {
         return this.governmentCloud == null ? Optional.empty() : Optional.ofNullable(this.governmentCloud);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationPackageSupportUrlsResponse extends com.pulumi.reso
     @Import(name="publicAzure")
       private final @Nullable String publicAzure;
 
-    public Optional<String> getPublicAzure() {
+    public Optional<String> publicAzure() {
         return this.publicAzure == null ? Optional.empty() : Optional.ofNullable(this.publicAzure);
     }
 

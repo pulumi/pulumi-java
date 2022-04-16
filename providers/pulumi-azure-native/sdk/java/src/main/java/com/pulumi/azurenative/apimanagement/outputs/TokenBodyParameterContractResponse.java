@@ -32,14 +32,14 @@ public final class TokenBodyParameterContractResponse {
      * body parameter name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * body parameter value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

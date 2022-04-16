@@ -34,14 +34,14 @@ public final class QosPortRangeResponse {
      * Qos Port Range end.
      * 
     */
-    public Optional<Integer> getEnd() {
+    public Optional<Integer> end() {
         return Optional.ofNullable(this.end);
     }
     /**
      * Qos Port Range start.
      * 
     */
-    public Optional<Integer> getStart() {
+    public Optional<Integer> start() {
         return Optional.ofNullable(this.start);
     }
 

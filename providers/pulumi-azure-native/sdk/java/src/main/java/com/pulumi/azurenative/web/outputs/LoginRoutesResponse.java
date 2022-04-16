@@ -26,7 +26,7 @@ public final class LoginRoutesResponse {
      * The endpoint at which a logout request should be made.
      * 
     */
-    public Optional<String> getLogoutEndpoint() {
+    public Optional<String> logoutEndpoint() {
         return Optional.ofNullable(this.logoutEndpoint);
     }
 

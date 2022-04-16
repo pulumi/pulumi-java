@@ -24,7 +24,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="distributedAvailabilityGroupName")
       private final @Nullable Output<String> distributedAvailabilityGroupName;
 
-    public Output<String> getDistributedAvailabilityGroupName() {
+    public Output<String> distributedAvailabilityGroupName() {
         return this.distributedAvailabilityGroupName == null ? Codegen.empty() : this.distributedAvailabilityGroupName;
     }
 
@@ -35,7 +35,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -46,7 +46,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="primaryAvailabilityGroupName")
       private final @Nullable Output<String> primaryAvailabilityGroupName;
 
-    public Output<String> getPrimaryAvailabilityGroupName() {
+    public Output<String> primaryAvailabilityGroupName() {
         return this.primaryAvailabilityGroupName == null ? Codegen.empty() : this.primaryAvailabilityGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="replicationMode")
       private final @Nullable Output<Either<String,ReplicationMode>> replicationMode;
 
-    public Output<Either<String,ReplicationMode>> getReplicationMode() {
+    public Output<Either<String,ReplicationMode>> replicationMode() {
         return this.replicationMode == null ? Codegen.empty() : this.replicationMode;
     }
 
@@ -68,7 +68,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="secondaryAvailabilityGroupName")
       private final @Nullable Output<String> secondaryAvailabilityGroupName;
 
-    public Output<String> getSecondaryAvailabilityGroupName() {
+    public Output<String> secondaryAvailabilityGroupName() {
         return this.secondaryAvailabilityGroupName == null ? Codegen.empty() : this.secondaryAvailabilityGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="sourceEndpoint")
       private final @Nullable Output<String> sourceEndpoint;
 
-    public Output<String> getSourceEndpoint() {
+    public Output<String> sourceEndpoint() {
         return this.sourceEndpoint == null ? Codegen.empty() : this.sourceEndpoint;
     }
 
@@ -101,7 +101,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
     @Import(name="targetDatabase")
       private final @Nullable Output<String> targetDatabase;
 
-    public Output<String> getTargetDatabase() {
+    public Output<String> targetDatabase() {
         return this.targetDatabase == null ? Codegen.empty() : this.targetDatabase;
     }
 

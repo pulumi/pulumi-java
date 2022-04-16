@@ -26,7 +26,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="eTag")
       private final @Nullable String eTag;
 
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
     }
 
@@ -37,7 +37,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -48,7 +48,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -59,7 +59,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="properties", required=true)
       private final PrivateEndpointConnectionPropertiesResponse properties;
 
-    public PrivateEndpointConnectionPropertiesResponse getProperties() {
+    public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
 
@@ -70,7 +70,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

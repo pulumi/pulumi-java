@@ -113,91 +113,91 @@ public final class GetSapMonitorResult {
      * The value indicating whether to send analytics to Microsoft
      * 
     */
-    public Optional<Boolean> getEnableCustomerAnalytics() {
+    public Optional<Boolean> enableCustomerAnalytics() {
         return Optional.ofNullable(this.enableCustomerAnalytics);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The ARM ID of the Log Analytics Workspace that is used for monitoring
      * 
     */
-    public Optional<String> getLogAnalyticsWorkspaceArmId() {
+    public Optional<String> logAnalyticsWorkspaceArmId() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceArmId);
     }
     /**
      * The workspace ID of the log analytics workspace to be used for monitoring
      * 
     */
-    public Optional<String> getLogAnalyticsWorkspaceId() {
+    public Optional<String> logAnalyticsWorkspaceId() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceId);
     }
     /**
      * The shared key of the log analytics workspace that is used for monitoring
      * 
     */
-    public Optional<String> getLogAnalyticsWorkspaceSharedKey() {
+    public Optional<String> logAnalyticsWorkspaceSharedKey() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceSharedKey);
     }
     /**
      * The name of the resource group the SAP Monitor resources get deployed into.
      * 
     */
-    public String getManagedResourceGroupName() {
+    public String managedResourceGroupName() {
         return this.managedResourceGroupName;
     }
     /**
      * The subnet which the SAP monitor will be deployed in
      * 
     */
-    public Optional<String> getMonitorSubnet() {
+    public Optional<String> monitorSubnet() {
         return Optional.ofNullable(this.monitorSubnet);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of provisioning of the HanaInstance
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The version of the payload running in the Collector VM
      * 
     */
-    public String getSapMonitorCollectorVersion() {
+    public String sapMonitorCollectorVersion() {
         return this.sapMonitorCollectorVersion;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

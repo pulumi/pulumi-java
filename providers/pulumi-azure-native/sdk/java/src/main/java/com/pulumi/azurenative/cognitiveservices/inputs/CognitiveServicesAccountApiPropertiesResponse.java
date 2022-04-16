@@ -26,7 +26,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="aadClientId")
       private final @Nullable String aadClientId;
 
-    public Optional<String> getAadClientId() {
+    public Optional<String> aadClientId() {
         return this.aadClientId == null ? Optional.empty() : Optional.ofNullable(this.aadClientId);
     }
 
@@ -37,7 +37,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="aadTenantId")
       private final @Nullable String aadTenantId;
 
-    public Optional<String> getAadTenantId() {
+    public Optional<String> aadTenantId() {
         return this.aadTenantId == null ? Optional.empty() : Optional.ofNullable(this.aadTenantId);
     }
 
@@ -48,7 +48,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="eventHubConnectionString")
       private final @Nullable String eventHubConnectionString;
 
-    public Optional<String> getEventHubConnectionString() {
+    public Optional<String> eventHubConnectionString() {
         return this.eventHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.eventHubConnectionString);
     }
 
@@ -59,7 +59,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="qnaAzureSearchEndpointId")
       private final @Nullable String qnaAzureSearchEndpointId;
 
-    public Optional<String> getQnaAzureSearchEndpointId() {
+    public Optional<String> qnaAzureSearchEndpointId() {
         return this.qnaAzureSearchEndpointId == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
 
@@ -70,7 +70,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="qnaAzureSearchEndpointKey")
       private final @Nullable String qnaAzureSearchEndpointKey;
 
-    public Optional<String> getQnaAzureSearchEndpointKey() {
+    public Optional<String> qnaAzureSearchEndpointKey() {
         return this.qnaAzureSearchEndpointKey == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
 
@@ -81,7 +81,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="qnaRuntimeEndpoint")
       private final @Nullable String qnaRuntimeEndpoint;
 
-    public Optional<String> getQnaRuntimeEndpoint() {
+    public Optional<String> qnaRuntimeEndpoint() {
         return this.qnaRuntimeEndpoint == null ? Optional.empty() : Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
 
@@ -92,7 +92,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="statisticsEnabled")
       private final @Nullable Boolean statisticsEnabled;
 
-    public Optional<Boolean> getStatisticsEnabled() {
+    public Optional<Boolean> statisticsEnabled() {
         return this.statisticsEnabled == null ? Optional.empty() : Optional.ofNullable(this.statisticsEnabled);
     }
 
@@ -103,7 +103,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="storageAccountConnectionString")
       private final @Nullable String storageAccountConnectionString;
 
-    public Optional<String> getStorageAccountConnectionString() {
+    public Optional<String> storageAccountConnectionString() {
         return this.storageAccountConnectionString == null ? Optional.empty() : Optional.ofNullable(this.storageAccountConnectionString);
     }
 
@@ -114,7 +114,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="superUser")
       private final @Nullable String superUser;
 
-    public Optional<String> getSuperUser() {
+    public Optional<String> superUser() {
         return this.superUser == null ? Optional.empty() : Optional.ofNullable(this.superUser);
     }
 
@@ -125,7 +125,7 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
     @Import(name="websiteName")
       private final @Nullable String websiteName;
 
-    public Optional<String> getWebsiteName() {
+    public Optional<String> websiteName() {
         return this.websiteName == null ? Optional.empty() : Optional.ofNullable(this.websiteName);
     }
 

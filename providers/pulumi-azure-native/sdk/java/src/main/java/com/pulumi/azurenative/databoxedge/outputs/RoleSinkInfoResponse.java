@@ -24,7 +24,7 @@ public final class RoleSinkInfoResponse {
      * Compute role ID.
      * 
     */
-    public String getRoleId() {
+    public String roleId() {
         return this.roleId;
     }
 

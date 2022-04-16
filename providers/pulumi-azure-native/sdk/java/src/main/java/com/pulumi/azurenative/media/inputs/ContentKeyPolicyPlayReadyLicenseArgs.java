@@ -33,7 +33,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="allowTestDevices", required=true)
       private final Output<Boolean> allowTestDevices;
 
-    public Output<Boolean> getAllowTestDevices() {
+    public Output<Boolean> allowTestDevices() {
         return this.allowTestDevices;
     }
 
@@ -44,7 +44,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="beginDate")
       private final @Nullable Output<String> beginDate;
 
-    public Output<String> getBeginDate() {
+    public Output<String> beginDate() {
         return this.beginDate == null ? Codegen.empty() : this.beginDate;
     }
 
@@ -55,7 +55,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="contentKeyLocation", required=true)
       private final Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation;
 
-    public Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> getContentKeyLocation() {
+    public Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation() {
         return this.contentKeyLocation;
     }
 
@@ -66,7 +66,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="contentType", required=true)
       private final Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType;
 
-    public Output<Either<String,ContentKeyPolicyPlayReadyContentType>> getContentType() {
+    public Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType() {
         return this.contentType;
     }
 
@@ -77,7 +77,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -88,7 +88,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="gracePeriod")
       private final @Nullable Output<String> gracePeriod;
 
-    public Output<String> getGracePeriod() {
+    public Output<String> gracePeriod() {
         return this.gracePeriod == null ? Codegen.empty() : this.gracePeriod;
     }
 
@@ -99,7 +99,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="licenseType", required=true)
       private final Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType;
 
-    public Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> getLicenseType() {
+    public Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType() {
         return this.licenseType;
     }
 
@@ -110,7 +110,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="playRight")
       private final @Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
 
-    public Output<ContentKeyPolicyPlayReadyPlayRightArgs> getPlayRight() {
+    public Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight() {
         return this.playRight == null ? Codegen.empty() : this.playRight;
     }
 
@@ -121,7 +121,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="relativeBeginDate")
       private final @Nullable Output<String> relativeBeginDate;
 
-    public Output<String> getRelativeBeginDate() {
+    public Output<String> relativeBeginDate() {
         return this.relativeBeginDate == null ? Codegen.empty() : this.relativeBeginDate;
     }
 
@@ -132,7 +132,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="relativeExpirationDate")
       private final @Nullable Output<String> relativeExpirationDate;
 
-    public Output<String> getRelativeExpirationDate() {
+    public Output<String> relativeExpirationDate() {
         return this.relativeExpirationDate == null ? Codegen.empty() : this.relativeExpirationDate;
     }
 

@@ -28,7 +28,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customRules")
       private final @Nullable Output<CustomRuleListArgs> customRules;
 
-    public Output<CustomRuleListArgs> getCustomRules() {
+    public Output<CustomRuleListArgs> customRules() {
         return this.customRules == null ? Codegen.empty() : this.customRules;
     }
 
@@ -39,7 +39,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -50,7 +50,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedRules")
       private final @Nullable Output<ManagedRuleSetListArgs> managedRules;
 
-    public Output<ManagedRuleSetListArgs> getManagedRules() {
+    public Output<ManagedRuleSetListArgs> managedRules() {
         return this.managedRules == null ? Codegen.empty() : this.managedRules;
     }
 
@@ -61,7 +61,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -72,7 +72,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policySettings")
       private final @Nullable Output<PolicySettingsArgs> policySettings;
 
-    public Output<PolicySettingsArgs> getPolicySettings() {
+    public Output<PolicySettingsArgs> policySettings() {
         return this.policySettings == null ? Codegen.empty() : this.policySettings;
     }
 
@@ -83,7 +83,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rateLimitRules")
       private final @Nullable Output<RateLimitRuleListArgs> rateLimitRules;
 
-    public Output<RateLimitRuleListArgs> getRateLimitRules() {
+    public Output<RateLimitRuleListArgs> rateLimitRules() {
         return this.rateLimitRules == null ? Codegen.empty() : this.rateLimitRules;
     }
 
@@ -94,7 +94,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -116,7 +116,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

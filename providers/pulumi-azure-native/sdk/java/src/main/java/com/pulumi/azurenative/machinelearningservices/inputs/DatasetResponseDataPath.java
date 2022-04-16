@@ -30,7 +30,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="additionalProperties")
       private final @Nullable Map<String,Object> additionalProperties;
 
-    public Map<String,Object> getAdditionalProperties() {
+    public Map<String,Object> additionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
 
@@ -41,7 +41,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="azureFilePath", required=true)
       private final String azureFilePath;
 
-    public String getAzureFilePath() {
+    public String azureFilePath() {
         return this.azureFilePath;
     }
 
@@ -52,7 +52,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="datastoreName", required=true)
       private final String datastoreName;
 
-    public String getDatastoreName() {
+    public String datastoreName() {
         return this.datastoreName;
     }
 
@@ -63,7 +63,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="httpUrl", required=true)
       private final String httpUrl;
 
-    public String getHttpUrl() {
+    public String httpUrl() {
         return this.httpUrl;
     }
 
@@ -74,7 +74,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="partitionFormat", required=true)
       private final String partitionFormat;
 
-    public String getPartitionFormat() {
+    public String partitionFormat() {
         return this.partitionFormat;
     }
 
@@ -85,7 +85,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="partitionFormatIgnoreError", required=true)
       private final Boolean partitionFormatIgnoreError;
 
-    public Boolean getPartitionFormatIgnoreError() {
+    public Boolean partitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
     }
 
@@ -96,7 +96,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="paths", required=true)
       private final List<String> paths;
 
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths;
     }
 
@@ -107,7 +107,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="relativePath", required=true)
       private final String relativePath;
 
-    public String getRelativePath() {
+    public String relativePath() {
         return this.relativePath;
     }
 
@@ -118,7 +118,7 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="sqlDataPath")
       private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
-    public Optional<DatasetResponseSqlDataPath> getSqlDataPath() {
+    public Optional<DatasetResponseSqlDataPath> sqlDataPath() {
         return this.sqlDataPath == null ? Optional.empty() : Optional.ofNullable(this.sqlDataPath);
     }
 

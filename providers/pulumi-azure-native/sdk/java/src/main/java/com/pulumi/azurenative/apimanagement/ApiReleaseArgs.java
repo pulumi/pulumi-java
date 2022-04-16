@@ -22,7 +22,7 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
+    public Output<String> notes() {
         return this.notes == null ? Codegen.empty() : this.notes;
     }
 
@@ -44,7 +44,7 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="releaseId")
       private final @Nullable Output<String> releaseId;
 
-    public Output<String> getReleaseId() {
+    public Output<String> releaseId() {
         return this.releaseId == null ? Codegen.empty() : this.releaseId;
     }
 
@@ -55,7 +55,7 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

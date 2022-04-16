@@ -27,7 +27,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> getAutoRenew() {
+    public Output<Boolean> autoRenew() {
         return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
     }
 
@@ -38,7 +38,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="certificateOrderName")
       private final @Nullable Output<String> certificateOrderName;
 
-    public Output<String> getCertificateOrderName() {
+    public Output<String> certificateOrderName() {
         return this.certificateOrderName == null ? Codegen.empty() : this.certificateOrderName;
     }
 
@@ -49,7 +49,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="certificates")
       private final @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
 
-    public Output<Map<String,AppServiceCertificateArgs>> getCertificates() {
+    public Output<Map<String,AppServiceCertificateArgs>> certificates() {
         return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
@@ -60,7 +60,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="csr")
       private final @Nullable Output<String> csr;
 
-    public Output<String> getCsr() {
+    public Output<String> csr() {
         return this.csr == null ? Codegen.empty() : this.csr;
     }
 
@@ -71,7 +71,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="distinguishedName")
       private final @Nullable Output<String> distinguishedName;
 
-    public Output<String> getDistinguishedName() {
+    public Output<String> distinguishedName() {
         return this.distinguishedName == null ? Codegen.empty() : this.distinguishedName;
     }
 
@@ -82,7 +82,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="keySize")
       private final @Nullable Output<Integer> keySize;
 
-    public Output<Integer> getKeySize() {
+    public Output<Integer> keySize() {
         return this.keySize == null ? Codegen.empty() : this.keySize;
     }
 
@@ -93,7 +93,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -104,7 +104,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -115,7 +115,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="productType", required=true)
       private final Output<CertificateProductType> productType;
 
-    public Output<CertificateProductType> getProductType() {
+    public Output<CertificateProductType> productType() {
         return this.productType;
     }
 
@@ -126,7 +126,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -137,7 +137,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -148,7 +148,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
     @Import(name="validityInYears")
       private final @Nullable Output<Integer> validityInYears;
 
-    public Output<Integer> getValidityInYears() {
+    public Output<Integer> validityInYears() {
         return this.validityInYears == null ? Codegen.empty() : this.validityInYears;
     }
 

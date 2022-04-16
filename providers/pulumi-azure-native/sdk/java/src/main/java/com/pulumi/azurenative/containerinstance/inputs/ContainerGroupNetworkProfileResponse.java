@@ -23,7 +23,7 @@ public final class ContainerGroupNetworkProfileResponse extends com.pulumi.resou
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

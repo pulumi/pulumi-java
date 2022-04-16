@@ -26,7 +26,7 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends com.pulumi
     @Import(name="isRServicesEnabled")
       private final @Nullable Output<Boolean> isRServicesEnabled;
 
-    public Output<Boolean> getIsRServicesEnabled() {
+    public Output<Boolean> isRServicesEnabled() {
         return this.isRServicesEnabled == null ? Codegen.empty() : this.isRServicesEnabled;
     }
 

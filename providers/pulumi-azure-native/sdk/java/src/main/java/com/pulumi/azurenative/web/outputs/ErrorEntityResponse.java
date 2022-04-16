@@ -63,42 +63,42 @@ public final class ErrorEntityResponse {
      * Basic error code.
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Type of error.
      * 
     */
-    public Optional<String> getExtendedCode() {
+    public Optional<String> extendedCode() {
         return Optional.ofNullable(this.extendedCode);
     }
     /**
      * Inner errors.
      * 
     */
-    public List<ErrorEntityResponse> getInnerErrors() {
+    public List<ErrorEntityResponse> innerErrors() {
         return this.innerErrors == null ? List.of() : this.innerErrors;
     }
     /**
      * Any details of the error.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Message template.
      * 
     */
-    public Optional<String> getMessageTemplate() {
+    public Optional<String> messageTemplate() {
         return Optional.ofNullable(this.messageTemplate);
     }
     /**
      * Parameters for the template.
      * 
     */
-    public List<String> getParameters() {
+    public List<String> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 

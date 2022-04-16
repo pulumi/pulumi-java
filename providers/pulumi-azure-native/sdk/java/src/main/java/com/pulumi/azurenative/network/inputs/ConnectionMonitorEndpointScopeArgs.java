@@ -27,7 +27,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resourc
     @Import(name="exclude")
       private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
-    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getExclude() {
+    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude() {
         return this.exclude == null ? Codegen.empty() : this.exclude;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resourc
     @Import(name="include")
       private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
-    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getInclude() {
+    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> include() {
         return this.include == null ? Codegen.empty() : this.include;
     }
 

@@ -32,14 +32,14 @@ public final class HealthBotPropertiesResponse {
      * The link.
      * 
     */
-    public String getBotManagementPortalLink() {
+    public String botManagementPortalLink() {
         return this.botManagementPortalLink;
     }
     /**
      * The provisioning state of the Healthbot resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

@@ -98,56 +98,56 @@ public final class DatabricksSparkJarActivityResponse {
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of libraries to be installed on the cluster that will execute the job.
      * 
     */
-    public List<Map<String,Object>> getLibraries() {
+    public List<Map<String,Object>> libraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * The full name of the class containing the main method to be executed. This class must be contained in a JAR provided as a library. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getMainClassName() {
+    public Object mainClassName() {
         return this.mainClassName;
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Parameters that will be passed to the main method.
      * 
     */
-    public List<Object> getParameters() {
+    public List<Object> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
@@ -155,14 +155,14 @@ public final class DatabricksSparkJarActivityResponse {
      * Expected value is 'DatabricksSparkJar'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

@@ -27,7 +27,7 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 
@@ -38,7 +38,7 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
     @Import(name="schedule", required=true)
       private final BackupScheduleResponse schedule;
 
-    public BackupScheduleResponse getSchedule() {
+    public BackupScheduleResponse schedule() {
         return this.schedule;
     }
 
@@ -49,7 +49,7 @@ public final class ScheduleBasedTriggerContextResponse extends com.pulumi.resour
     @Import(name="taggingCriteria", required=true)
       private final List<TaggingCriteriaResponse> taggingCriteria;
 
-    public List<TaggingCriteriaResponse> getTaggingCriteria() {
+    public List<TaggingCriteriaResponse> taggingCriteria() {
         return this.taggingCriteria;
     }
 

@@ -34,14 +34,14 @@ public final class PrivateLinkServiceConnectionStateResponse {
      * The private link service connection description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The private link service connection status.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

@@ -45,7 +45,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return User friendly Name to be displayed in the portal.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -59,7 +59,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return VHD/CIM image path on Network Share.
      * 
      */
-    public Output</* @Nullable */ String> getImagePath() {
+    public Output</* @Nullable */ String> imagePath() {
         return this.imagePath;
     }
     /**
@@ -73,7 +73,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Make this version of the package the active one across the hostpool.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsActive() {
+    public Output</* @Nullable */ Boolean> isActive() {
         return this.isActive;
     }
     /**
@@ -87,7 +87,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Specifies how to register Package in feed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsRegularRegistration() {
+    public Output</* @Nullable */ Boolean> isRegularRegistration() {
         return this.isRegularRegistration;
     }
     /**
@@ -101,7 +101,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Date Package was last updated, found in the appxmanifest.xml.
      * 
      */
-    public Output</* @Nullable */ String> getLastUpdated() {
+    public Output</* @Nullable */ String> lastUpdated() {
         return this.lastUpdated;
     }
     /**
@@ -115,7 +115,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return List of package applications.
      * 
      */
-    public Output</* @Nullable */ List<MsixPackageApplicationsResponse>> getPackageApplications() {
+    public Output</* @Nullable */ List<MsixPackageApplicationsResponse>> packageApplications() {
         return this.packageApplications;
     }
     /**
@@ -143,7 +143,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return List of package dependencies.
      * 
      */
-    public Output</* @Nullable */ List<MsixPackageDependenciesResponse>> getPackageDependencies() {
+    public Output</* @Nullable */ List<MsixPackageDependenciesResponse>> packageDependencies() {
         return this.packageDependencies;
     }
     /**
@@ -157,7 +157,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
      * 
      */
-    public Output</* @Nullable */ String> getPackageFamilyName() {
+    public Output</* @Nullable */ String> packageFamilyName() {
         return this.packageFamilyName;
     }
     /**
@@ -171,7 +171,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Package Name from appxmanifest.xml.
      * 
      */
-    public Output</* @Nullable */ String> getPackageName() {
+    public Output</* @Nullable */ String> packageName() {
         return this.packageName;
     }
     /**
@@ -185,7 +185,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Relative Path to the package inside the image.
      * 
      */
-    public Output</* @Nullable */ String> getPackageRelativePath() {
+    public Output</* @Nullable */ String> packageRelativePath() {
         return this.packageRelativePath;
     }
     /**
@@ -199,7 +199,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -213,7 +213,7 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Package Version found in the appxmanifest.xml.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

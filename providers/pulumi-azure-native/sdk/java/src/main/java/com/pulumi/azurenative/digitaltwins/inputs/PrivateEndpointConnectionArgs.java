@@ -21,7 +21,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="properties", required=true)
       private final Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
-    public Output<PrivateEndpointConnectionPropertiesArgs> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesArgs> properties() {
         return this.properties;
     }
 

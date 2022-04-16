@@ -28,7 +28,7 @@ public final class DataCollectionEndpointNetworkAclsArgs extends com.pulumi.reso
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
-    public Output<Either<String,KnownPublicNetworkAccessOptions>> getPublicNetworkAccess() {
+    public Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 

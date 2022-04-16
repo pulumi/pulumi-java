@@ -27,7 +27,7 @@ public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -38,7 +38,7 @@ public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

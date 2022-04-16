@@ -25,7 +25,7 @@ public final class ReportConfigTimePeriodArgs extends com.pulumi.resources.Resou
     @Import(name="from", required=true)
       private final Output<String> from;
 
-    public Output<String> getFrom() {
+    public Output<String> from() {
         return this.from;
     }
 
@@ -36,7 +36,7 @@ public final class ReportConfigTimePeriodArgs extends com.pulumi.resources.Resou
     @Import(name="to", required=true)
       private final Output<String> to;
 
-    public Output<String> getTo() {
+    public Output<String> to() {
         return this.to;
     }
 

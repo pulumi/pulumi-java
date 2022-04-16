@@ -26,7 +26,7 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="retentionDuration")
       private final @Nullable RetentionDurationResponse retentionDuration;
 
-    public Optional<RetentionDurationResponse> getRetentionDuration() {
+    public Optional<RetentionDurationResponse> retentionDuration() {
         return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
     }
 
@@ -38,7 +38,7 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="retentionPolicyType", required=true)
       private final String retentionPolicyType;
 
-    public String getRetentionPolicyType() {
+    public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
 

@@ -80,56 +80,56 @@ public final class ContainerNetworkInterfaceResponse {
      * Reference to the container to which this container network interface is attached.
      * 
     */
-    public Optional<ContainerResponse> getContainer() {
+    public Optional<ContainerResponse> container() {
         return Optional.ofNullable(this.container);
     }
     /**
      * Container network interface configuration from which this container network interface is created.
      * 
     */
-    public ContainerNetworkInterfaceConfigurationResponse getContainerNetworkInterfaceConfiguration() {
+    public ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration() {
         return this.containerNetworkInterfaceConfiguration;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reference to the ip configuration on this container nic.
      * 
     */
-    public List<ContainerNetworkInterfaceIpConfigurationResponse> getIpConfigurations() {
+    public List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * The name of the resource. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the container network interface resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

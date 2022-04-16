@@ -26,7 +26,7 @@ public final class InMageVolumeExclusionOptionsArgs extends com.pulumi.resources
     @Import(name="onlyExcludeIfSingleVolume")
       private final @Nullable Output<String> onlyExcludeIfSingleVolume;
 
-    public Output<String> getOnlyExcludeIfSingleVolume() {
+    public Output<String> onlyExcludeIfSingleVolume() {
         return this.onlyExcludeIfSingleVolume == null ? Codegen.empty() : this.onlyExcludeIfSingleVolume;
     }
 
@@ -37,7 +37,7 @@ public final class InMageVolumeExclusionOptionsArgs extends com.pulumi.resources
     @Import(name="volumeLabel")
       private final @Nullable Output<String> volumeLabel;
 
-    public Output<String> getVolumeLabel() {
+    public Output<String> volumeLabel() {
         return this.volumeLabel == null ? Codegen.empty() : this.volumeLabel;
     }
 

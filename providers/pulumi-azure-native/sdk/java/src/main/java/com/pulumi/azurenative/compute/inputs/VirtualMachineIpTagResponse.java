@@ -25,7 +25,7 @@ public final class VirtualMachineIpTagResponse extends com.pulumi.resources.Invo
     @Import(name="ipTagType")
       private final @Nullable String ipTagType;
 
-    public Optional<String> getIpTagType() {
+    public Optional<String> ipTagType() {
         return this.ipTagType == null ? Optional.empty() : Optional.ofNullable(this.ipTagType);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualMachineIpTagResponse extends com.pulumi.resources.Invo
     @Import(name="tag")
       private final @Nullable String tag;
 
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 

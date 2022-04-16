@@ -26,7 +26,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="enabled")
       private final @Nullable String enabled;
 
-    public Optional<String> getEnabled() {
+    public Optional<String> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -37,7 +37,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="expirationDate")
       private final @Nullable String expirationDate;
 
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
     }
 
@@ -48,7 +48,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="expired")
       private final @Nullable Boolean expired;
 
-    public Optional<Boolean> getExpired() {
+    public Optional<Boolean> expired() {
         return this.expired == null ? Optional.empty() : Optional.ofNullable(this.expired);
     }
 
@@ -59,7 +59,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="markdown")
       private final @Nullable String markdown;
 
-    public Optional<String> getMarkdown() {
+    public Optional<String> markdown() {
         return this.markdown == null ? Optional.empty() : Optional.ofNullable(this.markdown);
     }
 
@@ -70,7 +70,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
@@ -92,7 +92,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
     @Import(name="uniqueIdentifier", required=true)
       private final String uniqueIdentifier;
 
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

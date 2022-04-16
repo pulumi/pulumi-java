@@ -26,7 +26,7 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="content")
       private final @Nullable String content;
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
@@ -37,7 +37,7 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="headers")
       private final @Nullable Map<String,String> headers;
 
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
 
@@ -48,7 +48,7 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="reasonPhrase")
       private final @Nullable String reasonPhrase;
 
-    public Optional<String> getReasonPhrase() {
+    public Optional<String> reasonPhrase() {
         return this.reasonPhrase == null ? Optional.empty() : Optional.ofNullable(this.reasonPhrase);
     }
 
@@ -59,7 +59,7 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="statusCode")
       private final @Nullable String statusCode;
 
-    public Optional<String> getStatusCode() {
+    public Optional<String> statusCode() {
         return this.statusCode == null ? Optional.empty() : Optional.ofNullable(this.statusCode);
     }
 
@@ -70,7 +70,7 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

@@ -27,7 +27,7 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="batchGroupName", required=true)
       private final String batchGroupName;
 
-    public String getBatchGroupName() {
+    public String batchGroupName() {
         return this.batchGroupName;
     }
 
@@ -38,7 +38,7 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="changedTime")
       private final @Nullable String changedTime;
 
-    public Optional<String> getChangedTime() {
+    public Optional<String> changedTime() {
         return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
     }
 
@@ -49,14 +49,14 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="metadata")
       private final @Nullable Object metadata;
 
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
@@ -67,7 +67,7 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
     @Import(name="releaseCriteria", required=true)
       private final BatchReleaseCriteriaResponse releaseCriteria;
 
-    public BatchReleaseCriteriaResponse getReleaseCriteria() {
+    public BatchReleaseCriteriaResponse releaseCriteria() {
         return this.releaseCriteria;
     }
 

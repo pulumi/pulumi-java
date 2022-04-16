@@ -43,7 +43,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The expiration date for the invitation and share subscription.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationDate() {
+    public Output</* @Nullable */ String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -57,7 +57,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return unique invitation id
      * 
      */
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId;
     }
     /**
@@ -71,7 +71,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The status of the invitation.
      * 
      */
-    public Output<String> getInvitationStatus() {
+    public Output<String> invitationStatus() {
         return this.invitationStatus;
     }
     /**
@@ -85,7 +85,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The time the recipient responded to the invitation.
      * 
      */
-    public Output<String> getRespondedAt() {
+    public Output<String> respondedAt() {
         return this.respondedAt;
     }
     /**
@@ -113,7 +113,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return Gets the time at which the invitation was sent.
      * 
      */
-    public Output<String> getSentAt() {
+    public Output<String> sentAt() {
         return this.sentAt;
     }
     /**
@@ -127,7 +127,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -141,7 +141,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The target Azure AD Id. Can't be combined with email.
      * 
      */
-    public Output</* @Nullable */ String> getTargetActiveDirectoryId() {
+    public Output</* @Nullable */ String> targetActiveDirectoryId() {
         return this.targetActiveDirectoryId;
     }
     /**
@@ -155,7 +155,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The email the invitation is directed to.
      * 
      */
-    public Output</* @Nullable */ String> getTargetEmail() {
+    public Output</* @Nullable */ String> targetEmail() {
         return this.targetEmail;
     }
     /**
@@ -173,7 +173,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * invitations to specific users or applications in an AD tenant.
      * 
      */
-    public Output</* @Nullable */ String> getTargetObjectId() {
+    public Output</* @Nullable */ String> targetObjectId() {
         return this.targetObjectId;
     }
     /**
@@ -187,7 +187,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -201,7 +201,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return Email of the user who created the resource
      * 
      */
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail;
     }
     /**
@@ -215,7 +215,7 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return Name of the user who created the resource
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

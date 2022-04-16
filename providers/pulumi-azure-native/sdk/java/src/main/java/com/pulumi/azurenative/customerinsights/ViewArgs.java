@@ -23,7 +23,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<String> definition;
 
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
 
@@ -34,7 +34,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -45,7 +45,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -56,7 +56,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userId")
       private final @Nullable Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId == null ? Codegen.empty() : this.userId;
     }
 
@@ -78,7 +78,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="viewName")
       private final @Nullable Output<String> viewName;
 
-    public Output<String> getViewName() {
+    public Output<String> viewName() {
         return this.viewName == null ? Codegen.empty() : this.viewName;
     }
 

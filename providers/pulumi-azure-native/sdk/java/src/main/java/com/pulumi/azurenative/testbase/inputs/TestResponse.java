@@ -28,7 +28,7 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="commands", required=true)
       private final List<CommandResponse> commands;
 
-    public List<CommandResponse> getCommands() {
+    public List<CommandResponse> commands() {
         return this.commands;
     }
 
@@ -39,7 +39,7 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isActive")
       private final @Nullable Boolean isActive;
 
-    public Optional<Boolean> getIsActive() {
+    public Optional<Boolean> isActive() {
         return this.isActive == null ? Optional.empty() : Optional.ofNullable(this.isActive);
     }
 
@@ -50,7 +50,7 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testType", required=true)
       private final String testType;
 
-    public String getTestType() {
+    public String testType() {
         return this.testType;
     }
 
@@ -61,7 +61,7 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationRunStatus", required=true)
       private final String validationRunStatus;
 
-    public String getValidationRunStatus() {
+    public String validationRunStatus() {
         return this.validationRunStatus;
     }
 

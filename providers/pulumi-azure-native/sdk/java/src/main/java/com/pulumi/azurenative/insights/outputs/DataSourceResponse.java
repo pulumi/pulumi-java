@@ -30,17 +30,17 @@ public final class DataSourceResponse {
         this.sinks = sinks;
     }
 
-    public DataSourceConfigurationResponse getConfiguration() {
+    public DataSourceConfigurationResponse configuration() {
         return this.configuration;
     }
     /**
      * Datasource kind
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
-    public List<SinkConfigurationResponse> getSinks() {
+    public List<SinkConfigurationResponse> sinks() {
         return this.sinks;
     }
 

@@ -34,7 +34,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectivityEndpoints")
       private final @Nullable Output<Map<String,String>> connectivityEndpoints;
 
-    public Output<Map<String,String>> getConnectivityEndpoints() {
+    public Output<Map<String,String>> connectivityEndpoints() {
         return this.connectivityEndpoints == null ? Codegen.empty() : this.connectivityEndpoints;
     }
 
@@ -45,7 +45,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultDataLakeStorage")
       private final @Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
 
-    public Output<DataLakeStorageAccountDetailsArgs> getDefaultDataLakeStorage() {
+    public Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage() {
         return this.defaultDataLakeStorage == null ? Codegen.empty() : this.defaultDataLakeStorage;
     }
 
@@ -56,7 +56,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionDetailsArgs> encryption;
 
-    public Output<EncryptionDetailsArgs> getEncryption() {
+    public Output<EncryptionDetailsArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -67,7 +67,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
-    public Output<ManagedIdentityArgs> getIdentity() {
+    public Output<ManagedIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -78,7 +78,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -89,7 +89,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedResourceGroupName")
       private final @Nullable Output<String> managedResourceGroupName;
 
-    public Output<String> getManagedResourceGroupName() {
+    public Output<String> managedResourceGroupName() {
         return this.managedResourceGroupName == null ? Codegen.empty() : this.managedResourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedVirtualNetwork")
       private final @Nullable Output<String> managedVirtualNetwork;
 
-    public Output<String> getManagedVirtualNetwork() {
+    public Output<String> managedVirtualNetwork() {
         return this.managedVirtualNetwork == null ? Codegen.empty() : this.managedVirtualNetwork;
     }
 
@@ -111,7 +111,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedVirtualNetworkSettings")
       private final @Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
 
-    public Output<ManagedVirtualNetworkSettingsArgs> getManagedVirtualNetworkSettings() {
+    public Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings() {
         return this.managedVirtualNetworkSettings == null ? Codegen.empty() : this.managedVirtualNetworkSettings;
     }
 
@@ -122,7 +122,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
     }
 
@@ -133,7 +133,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,WorkspacePublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -144,7 +144,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="purviewConfiguration")
       private final @Nullable Output<PurviewConfigurationArgs> purviewConfiguration;
 
-    public Output<PurviewConfigurationArgs> getPurviewConfiguration() {
+    public Output<PurviewConfigurationArgs> purviewConfiguration() {
         return this.purviewConfiguration == null ? Codegen.empty() : this.purviewConfiguration;
     }
 
@@ -155,7 +155,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -166,7 +166,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlAdministratorLogin")
       private final @Nullable Output<String> sqlAdministratorLogin;
 
-    public Output<String> getSqlAdministratorLogin() {
+    public Output<String> sqlAdministratorLogin() {
         return this.sqlAdministratorLogin == null ? Codegen.empty() : this.sqlAdministratorLogin;
     }
 
@@ -177,7 +177,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlAdministratorLoginPassword")
       private final @Nullable Output<String> sqlAdministratorLoginPassword;
 
-    public Output<String> getSqlAdministratorLoginPassword() {
+    public Output<String> sqlAdministratorLoginPassword() {
         return this.sqlAdministratorLoginPassword == null ? Codegen.empty() : this.sqlAdministratorLoginPassword;
     }
 
@@ -188,7 +188,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -199,7 +199,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkProfile")
       private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
-    public Output<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
+    public Output<VirtualNetworkProfileArgs> virtualNetworkProfile() {
         return this.virtualNetworkProfile == null ? Codegen.empty() : this.virtualNetworkProfile;
     }
 
@@ -210,7 +210,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 
@@ -221,7 +221,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceRepositoryConfiguration")
       private final @Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
 
-    public Output<WorkspaceRepositoryConfigurationArgs> getWorkspaceRepositoryConfiguration() {
+    public Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration() {
         return this.workspaceRepositoryConfiguration == null ? Codegen.empty() : this.workspaceRepositoryConfiguration;
     }
 

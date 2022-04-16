@@ -19,7 +19,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
     @Import(name="functionAppName", required=true)
       private final String functionAppName;
 
-    public String getFunctionAppName() {
+    public String functionAppName() {
         return this.functionAppName;
     }
 
@@ -30,7 +30,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

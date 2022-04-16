@@ -28,7 +28,7 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -40,7 +40,7 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
     @Import(name="streams")
       private final @Nullable List<String> streams;
 
-    public List<String> getStreams() {
+    public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
 
@@ -51,7 +51,7 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
     @Import(name="xPathQueries")
       private final @Nullable List<String> xPathQueries;
 
-    public List<String> getXPathQueries() {
+    public List<String> xPathQueries() {
         return this.xPathQueries == null ? List.of() : this.xPathQueries;
     }
 

@@ -27,7 +27,7 @@ public final class SetValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isSecret")
       private final @Nullable Output<Boolean> isSecret;
 
-    public Output<Boolean> getIsSecret() {
+    public Output<Boolean> isSecret() {
         return this.isSecret == null ? Codegen.empty() : this.isSecret;
     }
 
@@ -38,7 +38,7 @@ public final class SetValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class SetValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

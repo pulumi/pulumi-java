@@ -19,7 +19,7 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainTopicName", required=true)
       private final String domainTopicName;
 
-    public String getDomainTopicName() {
+    public String domainTopicName() {
         return this.domainTopicName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

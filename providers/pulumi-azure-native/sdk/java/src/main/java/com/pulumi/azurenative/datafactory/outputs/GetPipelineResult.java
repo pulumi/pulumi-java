@@ -157,91 +157,91 @@ public final class GetPipelineResult {
      * List of activities in pipeline.
      * 
     */
-    public List<Object> getActivities() {
+    public List<Object> activities() {
         return this.activities == null ? List.of() : this.activities;
     }
     /**
      * List of tags that can be used for describing the Pipeline.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The max number of concurrent runs for the pipeline.
      * 
     */
-    public Optional<Integer> getConcurrency() {
+    public Optional<Integer> concurrency() {
         return Optional.ofNullable(this.concurrency);
     }
     /**
      * The description of the pipeline.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Etag identifies change in the resource.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
      * 
     */
-    public Optional<PipelineResponseFolder> getFolder() {
+    public Optional<PipelineResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of parameters for pipeline.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Pipeline Policy.
      * 
     */
-    public Optional<PipelinePolicyResponse> getPolicy() {
+    public Optional<PipelinePolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Dimensions emitted by Pipeline.
      * 
     */
-    public Map<String,Object> getRunDimensions() {
+    public Map<String,Object> runDimensions() {
         return this.runDimensions == null ? Map.of() : this.runDimensions;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * List of variables for pipeline.
      * 
     */
-    public Map<String,VariableSpecificationResponse> getVariables() {
+    public Map<String,VariableSpecificationResponse> variables() {
         return this.variables == null ? Map.of() : this.variables;
     }
 

@@ -46,7 +46,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Whether to disable the routes learned by BGP on that route table. True means disable.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableBgpRoutePropagation() {
+    public Output</* @Nullable */ Boolean> disableBgpRoutePropagation() {
         return this.disableBgpRoutePropagation;
     }
     /**
@@ -60,7 +60,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -74,7 +74,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the route table resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -116,7 +116,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return The resource GUID property of the route table.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -130,7 +130,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Collection of routes contained within a route table.
      * 
      */
-    public Output</* @Nullable */ List<RouteResponse>> getRoutes() {
+    public Output</* @Nullable */ List<RouteResponse>> routes() {
         return this.routes;
     }
     /**
@@ -144,7 +144,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return A collection of references to subnets.
      * 
      */
-    public Output<List<SubnetResponse>> getSubnets() {
+    public Output<List<SubnetResponse>> subnets() {
         return this.subnets;
     }
     /**
@@ -158,7 +158,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +172,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

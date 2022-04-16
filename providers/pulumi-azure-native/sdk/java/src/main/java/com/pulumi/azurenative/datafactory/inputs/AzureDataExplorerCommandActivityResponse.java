@@ -31,7 +31,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="command", required=true)
       private final Object command;
 
-    public Object getCommand() {
+    public Object command() {
         return this.command;
     }
 
@@ -42,7 +42,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="commandTimeout")
       private final @Nullable Object commandTimeout;
 
-    public Optional<Object> getCommandTimeout() {
+    public Optional<Object> commandTimeout() {
         return this.commandTimeout == null ? Optional.empty() : Optional.ofNullable(this.commandTimeout);
     }
 
@@ -53,7 +53,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -64,7 +64,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -75,7 +75,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -86,7 +86,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -97,7 +97,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -109,7 +109,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -120,7 +120,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

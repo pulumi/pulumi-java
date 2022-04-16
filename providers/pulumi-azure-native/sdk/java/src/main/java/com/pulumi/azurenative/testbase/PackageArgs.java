@@ -26,7 +26,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -37,7 +37,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobPath", required=true)
       private final Output<String> blobPath;
 
-    public Output<String> getBlobPath() {
+    public Output<String> blobPath() {
         return this.blobPath;
     }
 
@@ -48,7 +48,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flightingRing", required=true)
       private final Output<String> flightingRing;
 
-    public Output<String> getFlightingRing() {
+    public Output<String> flightingRing() {
         return this.flightingRing;
     }
 
@@ -59,7 +59,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
@@ -81,7 +81,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetOSList", required=true)
       private final Output<List<TargetOSInfoArgs>> targetOSList;
 
-    public Output<List<TargetOSInfoArgs>> getTargetOSList() {
+    public Output<List<TargetOSInfoArgs>> targetOSList() {
         return this.targetOSList;
     }
 
@@ -114,7 +114,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
-    public Output<String> getTestBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -125,7 +125,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tests", required=true)
       private final Output<List<TestArgs>> tests;
 
-    public Output<List<TestArgs>> getTests() {
+    public Output<List<TestArgs>> tests() {
         return this.tests;
     }
 
@@ -136,7 +136,7 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

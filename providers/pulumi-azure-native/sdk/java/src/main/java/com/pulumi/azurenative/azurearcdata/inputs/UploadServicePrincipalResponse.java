@@ -25,7 +25,7 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
     @Import(name="authority")
       private final @Nullable String authority;
 
-    public Optional<String> getAuthority() {
+    public Optional<String> authority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
@@ -36,7 +36,7 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -47,7 +47,7 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

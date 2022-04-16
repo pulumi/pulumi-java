@@ -30,7 +30,7 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -41,7 +41,7 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="password", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
 
@@ -52,7 +52,7 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="pfx", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx() {
         return this.pfx;
     }
 
@@ -63,7 +63,7 @@ public final class WebClientCertificateAuthenticationArgs extends com.pulumi.res
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 

@@ -24,7 +24,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -35,7 +35,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="importance")
       private final @Nullable Output<String> importance;
 
-    public Output<String> getImportance() {
+    public Output<String> importance() {
         return this.importance == null ? Codegen.empty() : this.importance;
     }
 
@@ -46,7 +46,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxResourcePercent", required=true)
       private final Output<Integer> maxResourcePercent;
 
-    public Output<Integer> getMaxResourcePercent() {
+    public Output<Integer> maxResourcePercent() {
         return this.maxResourcePercent;
     }
 
@@ -57,7 +57,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxResourcePercentPerRequest")
       private final @Nullable Output<Double> maxResourcePercentPerRequest;
 
-    public Output<Double> getMaxResourcePercentPerRequest() {
+    public Output<Double> maxResourcePercentPerRequest() {
         return this.maxResourcePercentPerRequest == null ? Codegen.empty() : this.maxResourcePercentPerRequest;
     }
 
@@ -68,7 +68,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minResourcePercent", required=true)
       private final Output<Integer> minResourcePercent;
 
-    public Output<Integer> getMinResourcePercent() {
+    public Output<Integer> minResourcePercent() {
         return this.minResourcePercent;
     }
 
@@ -79,7 +79,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minResourcePercentPerRequest", required=true)
       private final Output<Double> minResourcePercentPerRequest;
 
-    public Output<Double> getMinResourcePercentPerRequest() {
+    public Output<Double> minResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
 
@@ -90,7 +90,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryExecutionTimeout")
       private final @Nullable Output<Integer> queryExecutionTimeout;
 
-    public Output<Integer> getQueryExecutionTimeout() {
+    public Output<Integer> queryExecutionTimeout() {
         return this.queryExecutionTimeout == null ? Codegen.empty() : this.queryExecutionTimeout;
     }
 
@@ -101,7 +101,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,7 +112,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -123,7 +123,7 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workloadGroupName")
       private final @Nullable Output<String> workloadGroupName;
 
-    public Output<String> getWorkloadGroupName() {
+    public Output<String> workloadGroupName() {
         return this.workloadGroupName == null ? Codegen.empty() : this.workloadGroupName;
     }
 

@@ -44,7 +44,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return The location where the communication service stores its data at rest.
      * 
      */
-    public Output<String> getDataLocation() {
+    public Output<String> dataLocation() {
         return this.dataLocation;
     }
     /**
@@ -58,7 +58,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return FQDN of the CommunicationService instance.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -72,7 +72,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return The immutable resource Id of the communication service.
      * 
      */
-    public Output<String> getImmutableResourceId() {
+    public Output<String> immutableResourceId() {
         return this.immutableResourceId;
     }
     /**
@@ -86,7 +86,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return The Azure location where the CommunicationService is running.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -100,7 +100,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return Resource ID of an Azure Notification Hub linked to this resource.
      * 
      */
-    public Output<String> getNotificationHubId() {
+    public Output<String> notificationHubId() {
         return this.notificationHubId;
     }
     /**
@@ -128,7 +128,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -142,7 +142,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -156,7 +156,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -170,7 +170,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -184,7 +184,7 @@ public class CommunicationService extends com.pulumi.resources.CustomResource {
      * @return Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

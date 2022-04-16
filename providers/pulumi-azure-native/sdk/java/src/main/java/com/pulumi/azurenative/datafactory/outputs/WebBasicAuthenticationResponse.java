@@ -52,28 +52,28 @@ public final class WebBasicAuthenticationResponse {
      * Expected value is 'Basic'.
      * 
     */
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
     /**
      * The password for Basic authentication.
      * 
     */
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
     */
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
     /**
      * User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getUsername() {
+    public Object username() {
         return this.username;
     }
 

@@ -23,7 +23,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="in", required=true)
       private final String in;
 
-    public String getIn() {
+    public String in() {
         return this.in;
     }
 
@@ -34,7 +34,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -57,7 +57,7 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

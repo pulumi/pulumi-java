@@ -29,7 +29,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedUnsafeSysctls")
       private final @Nullable Output<List<String>> allowedUnsafeSysctls;
 
-    public Output<List<String>> getAllowedUnsafeSysctls() {
+    public Output<List<String>> allowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls == null ? Codegen.empty() : this.allowedUnsafeSysctls;
     }
 
@@ -40,7 +40,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerLogMaxFiles")
       private final @Nullable Output<Integer> containerLogMaxFiles;
 
-    public Output<Integer> getContainerLogMaxFiles() {
+    public Output<Integer> containerLogMaxFiles() {
         return this.containerLogMaxFiles == null ? Codegen.empty() : this.containerLogMaxFiles;
     }
 
@@ -51,7 +51,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerLogMaxSizeMB")
       private final @Nullable Output<Integer> containerLogMaxSizeMB;
 
-    public Output<Integer> getContainerLogMaxSizeMB() {
+    public Output<Integer> containerLogMaxSizeMB() {
         return this.containerLogMaxSizeMB == null ? Codegen.empty() : this.containerLogMaxSizeMB;
     }
 
@@ -62,7 +62,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuCfsQuota")
       private final @Nullable Output<Boolean> cpuCfsQuota;
 
-    public Output<Boolean> getCpuCfsQuota() {
+    public Output<Boolean> cpuCfsQuota() {
         return this.cpuCfsQuota == null ? Codegen.empty() : this.cpuCfsQuota;
     }
 
@@ -73,7 +73,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuCfsQuotaPeriod")
       private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
-    public Output<String> getCpuCfsQuotaPeriod() {
+    public Output<String> cpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod == null ? Codegen.empty() : this.cpuCfsQuotaPeriod;
     }
 
@@ -84,7 +84,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuManagerPolicy")
       private final @Nullable Output<String> cpuManagerPolicy;
 
-    public Output<String> getCpuManagerPolicy() {
+    public Output<String> cpuManagerPolicy() {
         return this.cpuManagerPolicy == null ? Codegen.empty() : this.cpuManagerPolicy;
     }
 
@@ -95,7 +95,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failSwapOn")
       private final @Nullable Output<Boolean> failSwapOn;
 
-    public Output<Boolean> getFailSwapOn() {
+    public Output<Boolean> failSwapOn() {
         return this.failSwapOn == null ? Codegen.empty() : this.failSwapOn;
     }
 
@@ -106,7 +106,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageGcHighThreshold")
       private final @Nullable Output<Integer> imageGcHighThreshold;
 
-    public Output<Integer> getImageGcHighThreshold() {
+    public Output<Integer> imageGcHighThreshold() {
         return this.imageGcHighThreshold == null ? Codegen.empty() : this.imageGcHighThreshold;
     }
 
@@ -117,7 +117,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageGcLowThreshold")
       private final @Nullable Output<Integer> imageGcLowThreshold;
 
-    public Output<Integer> getImageGcLowThreshold() {
+    public Output<Integer> imageGcLowThreshold() {
         return this.imageGcLowThreshold == null ? Codegen.empty() : this.imageGcLowThreshold;
     }
 
@@ -128,7 +128,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="podMaxPids")
       private final @Nullable Output<Integer> podMaxPids;
 
-    public Output<Integer> getPodMaxPids() {
+    public Output<Integer> podMaxPids() {
         return this.podMaxPids == null ? Codegen.empty() : this.podMaxPids;
     }
 
@@ -139,7 +139,7 @@ public final class KubeletConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topologyManagerPolicy")
       private final @Nullable Output<String> topologyManagerPolicy;
 
-    public Output<String> getTopologyManagerPolicy() {
+    public Output<String> topologyManagerPolicy() {
         return this.topologyManagerPolicy == null ? Codegen.empty() : this.topologyManagerPolicy;
     }
 

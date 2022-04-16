@@ -19,7 +19,7 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="commitmentPlanName", required=true)
       private final String commitmentPlanName;
 
-    public String getCommitmentPlanName() {
+    public String commitmentPlanName() {
         return this.commitmentPlanName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

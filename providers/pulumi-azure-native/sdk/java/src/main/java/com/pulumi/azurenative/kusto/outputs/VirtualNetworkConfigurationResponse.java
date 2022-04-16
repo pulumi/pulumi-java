@@ -39,21 +39,21 @@ public final class VirtualNetworkConfigurationResponse {
      * Data management's service public IP address resource id.
      * 
     */
-    public String getDataManagementPublicIpId() {
+    public String dataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
     }
     /**
      * Engine service's public IP address resource id.
      * 
     */
-    public String getEnginePublicIpId() {
+    public String enginePublicIpId() {
         return this.enginePublicIpId;
     }
     /**
      * The subnet resource id.
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

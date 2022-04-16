@@ -55,35 +55,35 @@ public final class ForestTrustResponse {
      * Friendly Name
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Remote Dns ips
      * 
     */
-    public Optional<String> getRemoteDnsIps() {
+    public Optional<String> remoteDnsIps() {
         return Optional.ofNullable(this.remoteDnsIps);
     }
     /**
      * Trust Direction
      * 
     */
-    public Optional<String> getTrustDirection() {
+    public Optional<String> trustDirection() {
         return Optional.ofNullable(this.trustDirection);
     }
     /**
      * Trust Password
      * 
     */
-    public Optional<String> getTrustPassword() {
+    public Optional<String> trustPassword() {
         return Optional.ofNullable(this.trustPassword);
     }
     /**
      * Trusted Domain FQDN
      * 
     */
-    public Optional<String> getTrustedDomainFqdn() {
+    public Optional<String> trustedDomainFqdn() {
         return Optional.ofNullable(this.trustedDomainFqdn);
     }
 

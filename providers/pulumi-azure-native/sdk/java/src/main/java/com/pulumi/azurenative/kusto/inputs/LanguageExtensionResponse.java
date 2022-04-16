@@ -25,7 +25,7 @@ public final class LanguageExtensionResponse extends com.pulumi.resources.Invoke
     @Import(name="languageExtensionName")
       private final @Nullable String languageExtensionName;
 
-    public Optional<String> getLanguageExtensionName() {
+    public Optional<String> languageExtensionName() {
         return this.languageExtensionName == null ? Optional.empty() : Optional.ofNullable(this.languageExtensionName);
     }
 

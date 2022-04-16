@@ -19,7 +19,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="factoryName", required=true)
       private final String factoryName;
 
-    public String getFactoryName() {
+    public String factoryName() {
         return this.factoryName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
-    public String getPrivateEndpointConnectionName() {
+    public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

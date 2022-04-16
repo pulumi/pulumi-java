@@ -23,7 +23,7 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName == null ? Codegen.empty() : this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<FabricCreationInputPropertiesArgs> properties;
 
-    public Output<FabricCreationInputPropertiesArgs> getProperties() {
+    public Output<FabricCreationInputPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

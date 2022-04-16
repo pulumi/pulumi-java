@@ -35,14 +35,14 @@ public final class TemporaryDiskResponse {
      * Mount path of the temporary disk
      * 
     */
-    public Optional<String> getMountPath() {
+    public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
     /**
      * Size of the temporary disk in GB
      * 
     */
-    public Optional<Integer> getSizeInGB() {
+    public Optional<Integer> sizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }
 

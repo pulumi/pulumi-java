@@ -24,7 +24,7 @@ public final class DatabaseInfoResponse {
      * Name of the database
      * 
     */
-    public String getSourceDatabaseName() {
+    public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 

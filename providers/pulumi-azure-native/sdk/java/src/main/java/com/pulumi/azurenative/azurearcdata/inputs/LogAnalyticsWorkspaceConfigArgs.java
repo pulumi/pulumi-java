@@ -26,7 +26,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends com.pulumi.resources.
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
-    public Output<String> getPrimaryKey() {
+    public Output<String> primaryKey() {
         return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
@@ -37,7 +37,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends com.pulumi.resources.
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 

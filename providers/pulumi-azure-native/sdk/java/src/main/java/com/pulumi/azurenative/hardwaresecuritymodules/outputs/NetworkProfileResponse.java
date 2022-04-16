@@ -36,14 +36,14 @@ public final class NetworkProfileResponse {
      * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
      * 
     */
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
      * Specifies the identifier of the subnet.
      * 
     */
-    public Optional<ApiEntityReferenceResponse> getSubnet() {
+    public Optional<ApiEntityReferenceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 

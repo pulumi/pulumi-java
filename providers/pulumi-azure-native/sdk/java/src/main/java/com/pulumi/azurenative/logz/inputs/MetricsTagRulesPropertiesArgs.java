@@ -24,7 +24,7 @@ public final class MetricsTagRulesPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="metricRules")
       private final @Nullable Output<List<MetricRulesArgs>> metricRules;
 
-    public Output<List<MetricRulesArgs>> getMetricRules() {
+    public Output<List<MetricRulesArgs>> metricRules() {
         return this.metricRules == null ? Codegen.empty() : this.metricRules;
     }
 
@@ -35,7 +35,7 @@ public final class MetricsTagRulesPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="sendMetrics")
       private final @Nullable Output<Boolean> sendMetrics;
 
-    public Output<Boolean> getSendMetrics() {
+    public Output<Boolean> sendMetrics() {
         return this.sendMetrics == null ? Codegen.empty() : this.sendMetrics;
     }
 

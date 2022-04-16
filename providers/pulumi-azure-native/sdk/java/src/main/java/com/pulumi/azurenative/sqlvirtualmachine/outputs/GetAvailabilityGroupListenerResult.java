@@ -80,56 +80,56 @@ public final class GetAvailabilityGroupListenerResult {
      * Name of the availability group.
      * 
     */
-    public Optional<String> getAvailabilityGroupName() {
+    public Optional<String> availabilityGroupName() {
         return Optional.ofNullable(this.availabilityGroupName);
     }
     /**
      * Create a default availability group if it does not exist.
      * 
     */
-    public Optional<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
+    public Optional<Boolean> createDefaultAvailabilityGroupIfNotExist() {
         return Optional.ofNullable(this.createDefaultAvailabilityGroupIfNotExist);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of load balancer configurations for an availability group listener.
      * 
     */
-    public List<LoadBalancerConfigurationResponse> getLoadBalancerConfigurations() {
+    public List<LoadBalancerConfigurationResponse> loadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? List.of() : this.loadBalancerConfigurations;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Listener port.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Provisioning state to track the async operation status.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

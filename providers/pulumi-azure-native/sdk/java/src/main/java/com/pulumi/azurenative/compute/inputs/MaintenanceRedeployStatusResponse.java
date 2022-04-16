@@ -26,7 +26,7 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="isCustomerInitiatedMaintenanceAllowed")
       private final @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
 
-    public Optional<Boolean> getIsCustomerInitiatedMaintenanceAllowed() {
+    public Optional<Boolean> isCustomerInitiatedMaintenanceAllowed() {
         return this.isCustomerInitiatedMaintenanceAllowed == null ? Optional.empty() : Optional.ofNullable(this.isCustomerInitiatedMaintenanceAllowed);
     }
 
@@ -37,7 +37,7 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="lastOperationMessage")
       private final @Nullable String lastOperationMessage;
 
-    public Optional<String> getLastOperationMessage() {
+    public Optional<String> lastOperationMessage() {
         return this.lastOperationMessage == null ? Optional.empty() : Optional.ofNullable(this.lastOperationMessage);
     }
 
@@ -48,7 +48,7 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="lastOperationResultCode")
       private final @Nullable String lastOperationResultCode;
 
-    public Optional<String> getLastOperationResultCode() {
+    public Optional<String> lastOperationResultCode() {
         return this.lastOperationResultCode == null ? Optional.empty() : Optional.ofNullable(this.lastOperationResultCode);
     }
 
@@ -59,7 +59,7 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="maintenanceWindowEndTime")
       private final @Nullable String maintenanceWindowEndTime;
 
-    public Optional<String> getMaintenanceWindowEndTime() {
+    public Optional<String> maintenanceWindowEndTime() {
         return this.maintenanceWindowEndTime == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowEndTime);
     }
 
@@ -70,7 +70,7 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="maintenanceWindowStartTime")
       private final @Nullable String maintenanceWindowStartTime;
 
-    public Optional<String> getMaintenanceWindowStartTime() {
+    public Optional<String> maintenanceWindowStartTime() {
         return this.maintenanceWindowStartTime == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowStartTime);
     }
 
@@ -81,7 +81,7 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="preMaintenanceWindowEndTime")
       private final @Nullable String preMaintenanceWindowEndTime;
 
-    public Optional<String> getPreMaintenanceWindowEndTime() {
+    public Optional<String> preMaintenanceWindowEndTime() {
         return this.preMaintenanceWindowEndTime == null ? Optional.empty() : Optional.ofNullable(this.preMaintenanceWindowEndTime);
     }
 
@@ -92,7 +92,7 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="preMaintenanceWindowStartTime")
       private final @Nullable String preMaintenanceWindowStartTime;
 
-    public Optional<String> getPreMaintenanceWindowStartTime() {
+    public Optional<String> preMaintenanceWindowStartTime() {
         return this.preMaintenanceWindowStartTime == null ? Optional.empty() : Optional.ofNullable(this.preMaintenanceWindowStartTime);
     }
 

@@ -57,35 +57,35 @@ public final class MonthlyScheduleResponse {
      * Indicates which days of the month snapshot should be taken. A comma delimited string.
      * 
     */
-    public Optional<String> getDaysOfMonth() {
+    public Optional<String> daysOfMonth() {
         return Optional.ofNullable(this.daysOfMonth);
     }
     /**
      * Indicates which hour in UTC timezone a snapshot should be taken
      * 
     */
-    public Optional<Integer> getHour() {
+    public Optional<Integer> hour() {
         return Optional.ofNullable(this.hour);
     }
     /**
      * Indicates which minute snapshot should be taken
      * 
     */
-    public Optional<Integer> getMinute() {
+    public Optional<Integer> minute() {
         return Optional.ofNullable(this.minute);
     }
     /**
      * Monthly snapshot count to keep
      * 
     */
-    public Optional<Integer> getSnapshotsToKeep() {
+    public Optional<Integer> snapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
      * 
     */
-    public Optional<Double> getUsedBytes() {
+    public Optional<Double> usedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
 

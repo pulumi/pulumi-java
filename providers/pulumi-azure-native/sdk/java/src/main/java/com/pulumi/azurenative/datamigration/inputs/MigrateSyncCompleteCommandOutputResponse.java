@@ -25,7 +25,7 @@ public final class MigrateSyncCompleteCommandOutputResponse extends com.pulumi.r
     @Import(name="errors", required=true)
       private final List<ReportableExceptionResponse> errors;
 
-    public List<ReportableExceptionResponse> getErrors() {
+    public List<ReportableExceptionResponse> errors() {
         return this.errors;
     }
 
@@ -36,7 +36,7 @@ public final class MigrateSyncCompleteCommandOutputResponse extends com.pulumi.r
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

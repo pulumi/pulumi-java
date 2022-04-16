@@ -35,7 +35,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
 
-    public Output<ContactDetailsArgs> getContactDetails() {
+    public Output<ContactDetailsArgs> contactDetails() {
         return this.contactDetails;
     }
 
@@ -46,7 +46,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="dataExportDetails")
       private final @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
 
-    public Output<List<DataExportDetailsArgs>> getDataExportDetails() {
+    public Output<List<DataExportDetailsArgs>> dataExportDetails() {
         return this.dataExportDetails == null ? Codegen.empty() : this.dataExportDetails;
     }
 
@@ -57,7 +57,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="dataImportDetails")
       private final @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
 
-    public Output<List<DataImportDetailsArgs>> getDataImportDetails() {
+    public Output<List<DataImportDetailsArgs>> dataImportDetails() {
         return this.dataImportDetails == null ? Codegen.empty() : this.dataImportDetails;
     }
 
@@ -68,7 +68,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="expectedDataSizeInTeraBytes")
       private final @Nullable Output<Integer> expectedDataSizeInTeraBytes;
 
-    public Output<Integer> getExpectedDataSizeInTeraBytes() {
+    public Output<Integer> expectedDataSizeInTeraBytes() {
         return this.expectedDataSizeInTeraBytes == null ? Codegen.empty() : this.expectedDataSizeInTeraBytes;
     }
 
@@ -80,7 +80,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="jobDetailsType", required=true)
       private final Output<String> jobDetailsType;
 
-    public Output<String> getJobDetailsType() {
+    public Output<String> jobDetailsType() {
         return this.jobDetailsType;
     }
 
@@ -91,7 +91,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
 
-    public Output<KeyEncryptionKeyArgs> getKeyEncryptionKey() {
+    public Output<KeyEncryptionKeyArgs> keyEncryptionKey() {
         return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 
@@ -102,7 +102,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="passkey")
       private final @Nullable Output<String> passkey;
 
-    public Output<String> getPasskey() {
+    public Output<String> passkey() {
         return this.passkey == null ? Codegen.empty() : this.passkey;
     }
 
@@ -113,7 +113,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
 
-    public Output<PreferencesArgs> getPreferences() {
+    public Output<PreferencesArgs> preferences() {
         return this.preferences == null ? Codegen.empty() : this.preferences;
     }
 
@@ -124,7 +124,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="preferredDisks")
       private final @Nullable Output<Map<String,Integer>> preferredDisks;
 
-    public Output<Map<String,Integer>> getPreferredDisks() {
+    public Output<Map<String,Integer>> preferredDisks() {
         return this.preferredDisks == null ? Codegen.empty() : this.preferredDisks;
     }
 
@@ -135,7 +135,7 @@ public final class DataBoxDiskJobDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Output<ShippingAddressArgs> getShippingAddress() {
+    public Output<ShippingAddressArgs> shippingAddress() {
         return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
     }
 

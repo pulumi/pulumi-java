@@ -19,7 +19,7 @@ public final class GetHanaInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hanaInstanceName", required=true)
       private final String hanaInstanceName;
 
-    public String getHanaInstanceName() {
+    public String hanaInstanceName() {
         return this.hanaInstanceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHanaInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

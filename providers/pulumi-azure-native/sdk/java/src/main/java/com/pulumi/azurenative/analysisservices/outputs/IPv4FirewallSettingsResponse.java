@@ -36,14 +36,14 @@ public final class IPv4FirewallSettingsResponse {
      * The indicator of enabling PBI service.
      * 
     */
-    public Optional<Boolean> getEnablePowerBIService() {
+    public Optional<Boolean> enablePowerBIService() {
         return Optional.ofNullable(this.enablePowerBIService);
     }
     /**
      * An array of firewall rules.
      * 
     */
-    public List<IPv4FirewallRuleResponse> getFirewallRules() {
+    public List<IPv4FirewallRuleResponse> firewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
 

@@ -25,7 +25,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="liftrResourceCategory", required=true)
       private final String liftrResourceCategory;
 
-    public String getLiftrResourceCategory() {
+    public String liftrResourceCategory() {
         return this.liftrResourceCategory;
     }
 
@@ -36,14 +36,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
 
-    public Integer getLiftrResourcePreference() {
+    public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
 
     @Import(name="logzOrganizationProperties")
       private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
 
-    public Optional<LogzOrganizationPropertiesResponse> getLogzOrganizationProperties() {
+    public Optional<LogzOrganizationPropertiesResponse> logzOrganizationProperties() {
         return this.logzOrganizationProperties == null ? Optional.empty() : Optional.ofNullable(this.logzOrganizationProperties);
     }
 
@@ -54,7 +54,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="marketplaceSubscriptionStatus")
       private final @Nullable String marketplaceSubscriptionStatus;
 
-    public Optional<String> getMarketplaceSubscriptionStatus() {
+    public Optional<String> marketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus == null ? Optional.empty() : Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
 
@@ -65,14 +65,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
 
-    public Optional<String> getMonitoringStatus() {
+    public Optional<String> monitoringStatus() {
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
     @Import(name="planData")
       private final @Nullable PlanDataResponse planData;
 
-    public Optional<PlanDataResponse> getPlanData() {
+    public Optional<PlanDataResponse> planData() {
         return this.planData == null ? Optional.empty() : Optional.ofNullable(this.planData);
     }
 
@@ -83,14 +83,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
     @Import(name="userInfo")
       private final @Nullable UserInfoResponse userInfo;
 
-    public Optional<UserInfoResponse> getUserInfo() {
+    public Optional<UserInfoResponse> userInfo() {
         return this.userInfo == null ? Optional.empty() : Optional.ofNullable(this.userInfo);
     }
 

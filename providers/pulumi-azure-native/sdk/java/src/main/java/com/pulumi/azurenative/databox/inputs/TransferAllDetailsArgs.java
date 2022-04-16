@@ -29,7 +29,7 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataAccountType", required=true)
       private final Output<Either<String,DataAccountType>> dataAccountType;
 
-    public Output<Either<String,DataAccountType>> getDataAccountType() {
+    public Output<Either<String,DataAccountType>> dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -40,7 +40,7 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="transferAllBlobs")
       private final @Nullable Output<Boolean> transferAllBlobs;
 
-    public Output<Boolean> getTransferAllBlobs() {
+    public Output<Boolean> transferAllBlobs() {
         return this.transferAllBlobs == null ? Codegen.empty() : this.transferAllBlobs;
     }
 
@@ -51,7 +51,7 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="transferAllFiles")
       private final @Nullable Output<Boolean> transferAllFiles;
 
-    public Output<Boolean> getTransferAllFiles() {
+    public Output<Boolean> transferAllFiles() {
         return this.transferAllFiles == null ? Codegen.empty() : this.transferAllFiles;
     }
 

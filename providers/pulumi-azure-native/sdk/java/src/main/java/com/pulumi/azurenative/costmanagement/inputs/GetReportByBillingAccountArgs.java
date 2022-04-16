@@ -19,7 +19,7 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
     @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
 
-    public String getBillingAccountId() {
+    public String billingAccountId() {
         return this.billingAccountId;
     }
 
@@ -30,7 +30,7 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
     @Import(name="reportName", required=true)
       private final String reportName;
 
-    public String getReportName() {
+    public String reportName() {
         return this.reportName;
     }
 

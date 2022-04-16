@@ -36,14 +36,14 @@ public final class ApplicationHealthPolicyResponse {
      * The health policy used by default to evaluate the health of a service type.
      * 
     */
-    public Optional<ServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
+    public Optional<ServiceTypeHealthPolicyResponse> defaultServiceTypeHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
     /**
      * The map with service type health policy per service type name. The map is empty by default.
      * 
     */
-    public Map<String,ServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicies() {
+    public Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies() {
         return this.serviceTypeHealthPolicies == null ? Map.of() : this.serviceTypeHealthPolicies;
     }
 

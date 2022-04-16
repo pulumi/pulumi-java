@@ -27,7 +27,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.re
     @Import(name="input")
       private final @Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input;
 
-    public Output<GetTdeCertificatesSqlTaskInputArgs> getInput() {
+    public Output<GetTdeCertificatesSqlTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.re
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

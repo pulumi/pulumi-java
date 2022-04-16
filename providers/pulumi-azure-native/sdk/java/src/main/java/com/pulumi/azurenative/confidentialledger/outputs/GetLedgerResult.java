@@ -72,49 +72,49 @@ public final class GetLedgerResult {
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Azure location where the Confidential Ledger is running.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the Resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of Confidential Ledger Resource.
      * 
     */
-    public LedgerPropertiesResponse getProperties() {
+    public LedgerPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Additional tags for Confidential Ledger
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

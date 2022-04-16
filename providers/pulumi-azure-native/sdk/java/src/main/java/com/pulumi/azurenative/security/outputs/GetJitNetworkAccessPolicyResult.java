@@ -75,52 +75,52 @@ public final class GetJitNetworkAccessPolicyResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of the resource
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the provisioning state of the Just-in-Time policy.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
-    public List<JitNetworkAccessRequestResponse> getRequests() {
+    public List<JitNetworkAccessRequestResponse> requests() {
         return this.requests == null ? List.of() : this.requests;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Configurations for Microsoft.Compute/virtualMachines resource type.
      * 
     */
-    public List<JitNetworkAccessPolicyVirtualMachineResponse> getVirtualMachines() {
+    public List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines() {
         return this.virtualMachines;
     }
 

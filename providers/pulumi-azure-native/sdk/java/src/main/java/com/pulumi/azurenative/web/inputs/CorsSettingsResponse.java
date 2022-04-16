@@ -28,7 +28,7 @@ public final class CorsSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="allowedOrigins")
       private final @Nullable List<String> allowedOrigins;
 
-    public List<String> getAllowedOrigins() {
+    public List<String> allowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
 
@@ -41,7 +41,7 @@ public final class CorsSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="supportCredentials")
       private final @Nullable Boolean supportCredentials;
 
-    public Optional<Boolean> getSupportCredentials() {
+    public Optional<Boolean> supportCredentials() {
         return this.supportCredentials == null ? Optional.empty() : Optional.ofNullable(this.supportCredentials);
     }
 

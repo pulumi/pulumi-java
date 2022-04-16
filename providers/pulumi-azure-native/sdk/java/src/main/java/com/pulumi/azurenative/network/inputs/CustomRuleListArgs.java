@@ -27,7 +27,7 @@ public final class CustomRuleListArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rules")
       private final @Nullable Output<List<CustomRuleArgs>> rules;
 
-    public Output<List<CustomRuleArgs>> getRules() {
+    public Output<List<CustomRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

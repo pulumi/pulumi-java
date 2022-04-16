@@ -41,7 +41,7 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="advancedFilters")
       private final @Nullable Output<List<Object>> advancedFilters;
 
-    public Output<List<Object>> getAdvancedFilters() {
+    public Output<List<Object>> advancedFilters() {
         return this.advancedFilters == null ? Codegen.empty() : this.advancedFilters;
     }
 
@@ -52,7 +52,7 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="includedEventTypes")
       private final @Nullable Output<List<String>> includedEventTypes;
 
-    public Output<List<String>> getIncludedEventTypes() {
+    public Output<List<String>> includedEventTypes() {
         return this.includedEventTypes == null ? Codegen.empty() : this.includedEventTypes;
     }
 
@@ -64,7 +64,7 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="isSubjectCaseSensitive")
       private final @Nullable Output<Boolean> isSubjectCaseSensitive;
 
-    public Output<Boolean> getIsSubjectCaseSensitive() {
+    public Output<Boolean> isSubjectCaseSensitive() {
         return this.isSubjectCaseSensitive == null ? Codegen.empty() : this.isSubjectCaseSensitive;
     }
 
@@ -77,7 +77,7 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="subjectBeginsWith")
       private final @Nullable Output<String> subjectBeginsWith;
 
-    public Output<String> getSubjectBeginsWith() {
+    public Output<String> subjectBeginsWith() {
         return this.subjectBeginsWith == null ? Codegen.empty() : this.subjectBeginsWith;
     }
 
@@ -89,7 +89,7 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
     @Import(name="subjectEndsWith")
       private final @Nullable Output<String> subjectEndsWith;
 
-    public Output<String> getSubjectEndsWith() {
+    public Output<String> subjectEndsWith() {
         return this.subjectEndsWith == null ? Codegen.empty() : this.subjectEndsWith;
     }
 

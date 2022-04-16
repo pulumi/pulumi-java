@@ -25,7 +25,7 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
     @Import(name="customFragment")
       private final @Nullable String customFragment;
 
-    public Optional<String> getCustomFragment() {
+    public Optional<String> customFragment() {
         return this.customFragment == null ? Optional.empty() : Optional.ofNullable(this.customFragment);
     }
 
@@ -36,7 +36,7 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
     @Import(name="customHostname")
       private final @Nullable String customHostname;
 
-    public Optional<String> getCustomHostname() {
+    public Optional<String> customHostname() {
         return this.customHostname == null ? Optional.empty() : Optional.ofNullable(this.customHostname);
     }
 
@@ -47,7 +47,7 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
     @Import(name="customPath")
       private final @Nullable String customPath;
 
-    public Optional<String> getCustomPath() {
+    public Optional<String> customPath() {
         return this.customPath == null ? Optional.empty() : Optional.ofNullable(this.customPath);
     }
 
@@ -58,7 +58,7 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
     @Import(name="customQueryString")
       private final @Nullable String customQueryString;
 
-    public Optional<String> getCustomQueryString() {
+    public Optional<String> customQueryString() {
         return this.customQueryString == null ? Optional.empty() : Optional.ofNullable(this.customQueryString);
     }
 
@@ -69,14 +69,14 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
     @Import(name="destinationProtocol")
       private final @Nullable String destinationProtocol;
 
-    public Optional<String> getDestinationProtocol() {
+    public Optional<String> destinationProtocol() {
         return this.destinationProtocol == null ? Optional.empty() : Optional.ofNullable(this.destinationProtocol);
     }
 
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -87,7 +87,7 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
     @Import(name="redirectType", required=true)
       private final String redirectType;
 
-    public String getRedirectType() {
+    public String redirectType() {
         return this.redirectType;
     }
 

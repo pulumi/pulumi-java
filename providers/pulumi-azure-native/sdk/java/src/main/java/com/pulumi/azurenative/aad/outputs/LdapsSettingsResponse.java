@@ -69,49 +69,49 @@ public final class LdapsSettingsResponse {
      * NotAfter DateTime of configure ldaps certificate.
      * 
     */
-    public String getCertificateNotAfter() {
+    public String certificateNotAfter() {
         return this.certificateNotAfter;
     }
     /**
      * Thumbprint of configure ldaps certificate.
      * 
     */
-    public String getCertificateThumbprint() {
+    public String certificateThumbprint() {
         return this.certificateThumbprint;
     }
     /**
      * A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
      * 
     */
-    public Optional<String> getExternalAccess() {
+    public Optional<String> externalAccess() {
         return Optional.ofNullable(this.externalAccess);
     }
     /**
      * A flag to determine whether or not Secure LDAP is enabled or disabled.
      * 
     */
-    public Optional<String> getLdaps() {
+    public Optional<String> ldaps() {
         return Optional.ofNullable(this.ldaps);
     }
     /**
      * The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
      * 
     */
-    public Optional<String> getPfxCertificate() {
+    public Optional<String> pfxCertificate() {
         return Optional.ofNullable(this.pfxCertificate);
     }
     /**
      * The password to decrypt the provided Secure LDAP certificate pfx file.
      * 
     */
-    public Optional<String> getPfxCertificatePassword() {
+    public Optional<String> pfxCertificatePassword() {
         return Optional.ofNullable(this.pfxCertificatePassword);
     }
     /**
      * Public certificate used to configure secure ldap.
      * 
     */
-    public String getPublicCertificate() {
+    public String publicCertificate() {
         return this.publicCertificate;
     }
 

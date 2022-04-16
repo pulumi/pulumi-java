@@ -27,7 +27,7 @@ public final class EncryptionImagesResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataDiskImages")
       private final @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
 
-    public List<DataDiskImageEncryptionResponse> getDataDiskImages() {
+    public List<DataDiskImageEncryptionResponse> dataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
 
@@ -38,7 +38,7 @@ public final class EncryptionImagesResponse extends com.pulumi.resources.InvokeA
     @Import(name="osDiskImage")
       private final @Nullable OSDiskImageEncryptionResponse osDiskImage;
 
-    public Optional<OSDiskImageEncryptionResponse> getOsDiskImage() {
+    public Optional<OSDiskImageEncryptionResponse> osDiskImage() {
         return this.osDiskImage == null ? Optional.empty() : Optional.ofNullable(this.osDiskImage);
     }
 

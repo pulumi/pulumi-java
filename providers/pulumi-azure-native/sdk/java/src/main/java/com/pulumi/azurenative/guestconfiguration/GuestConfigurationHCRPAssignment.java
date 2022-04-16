@@ -43,7 +43,7 @@ public class GuestConfigurationHCRPAssignment extends com.pulumi.resources.Custo
      * @return Region where the VM is located.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class GuestConfigurationHCRPAssignment extends com.pulumi.resources.Custo
      * @return Name of the guest configuration assignment.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class GuestConfigurationHCRPAssignment extends com.pulumi.resources.Custo
      * @return Properties of the Guest configuration assignment.
      * 
      */
-    public Output<GuestConfigurationAssignmentPropertiesResponse> getProperties() {
+    public Output<GuestConfigurationAssignmentPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class GuestConfigurationHCRPAssignment extends com.pulumi.resources.Custo
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

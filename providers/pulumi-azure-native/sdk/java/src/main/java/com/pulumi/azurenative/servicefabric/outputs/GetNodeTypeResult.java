@@ -160,133 +160,133 @@ public final class GetNodeTypeResult {
      * The range of ports from which cluster assigned port to Service Fabric applications.
      * 
     */
-    public Optional<EndpointRangeDescriptionResponse> getApplicationPorts() {
+    public Optional<EndpointRangeDescriptionResponse> applicationPorts() {
         return Optional.ofNullable(this.applicationPorts);
     }
     /**
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
      * 
     */
-    public Map<String,String> getCapacities() {
+    public Map<String,String> capacities() {
         return this.capacities == null ? Map.of() : this.capacities;
     }
     /**
      * Disk size for each vm in the node type in GBs.
      * 
     */
-    public Integer getDataDiskSizeGB() {
+    public Integer dataDiskSizeGB() {
         return this.dataDiskSizeGB;
     }
     /**
      * The range of ephemeral ports that nodes in this node type should be configured with.
      * 
     */
-    public Optional<EndpointRangeDescriptionResponse> getEphemeralPorts() {
+    public Optional<EndpointRangeDescriptionResponse> ephemeralPorts() {
         return Optional.ofNullable(this.ephemeralPorts);
     }
     /**
      * Azure resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
      * 
     */
-    public Boolean getIsPrimary() {
+    public Boolean isPrimary() {
         return this.isPrimary;
     }
     /**
      * Azure resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
      * 
     */
-    public Map<String,String> getPlacementProperties() {
+    public Map<String,String> placementProperties() {
         return this.placementProperties == null ? Map.of() : this.placementProperties;
     }
     /**
      * The provisioning state of the managed cluster resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Set of extensions that should be installed onto the virtual machines.
      * 
     */
-    public List<VMSSExtensionResponse> getVmExtensions() {
+    public List<VMSSExtensionResponse> vmExtensions() {
         return this.vmExtensions == null ? List.of() : this.vmExtensions;
     }
     /**
      * The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
      * 
     */
-    public Optional<String> getVmImageOffer() {
+    public Optional<String> vmImageOffer() {
         return Optional.ofNullable(this.vmImageOffer);
     }
     /**
      * The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
      * 
     */
-    public Optional<String> getVmImagePublisher() {
+    public Optional<String> vmImagePublisher() {
         return Optional.ofNullable(this.vmImagePublisher);
     }
     /**
      * The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
      * 
     */
-    public Optional<String> getVmImageSku() {
+    public Optional<String> vmImageSku() {
         return Optional.ofNullable(this.vmImageSku);
     }
     /**
      * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
      * 
     */
-    public Optional<String> getVmImageVersion() {
+    public Optional<String> vmImageVersion() {
         return Optional.ofNullable(this.vmImageVersion);
     }
     /**
      * The number of nodes in the node type.
      * 
     */
-    public Integer getVmInstanceCount() {
+    public Integer vmInstanceCount() {
         return this.vmInstanceCount;
     }
     /**
      * The secrets to install in the virtual machines.
      * 
     */
-    public List<VaultSecretGroupResponse> getVmSecrets() {
+    public List<VaultSecretGroupResponse> vmSecrets() {
         return this.vmSecrets == null ? List.of() : this.vmSecrets;
     }
     /**
      * The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
      * 
     */
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
 

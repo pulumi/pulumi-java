@@ -23,10 +23,10 @@ public final class NotificationEndpointResponse {
         this.notificationDestination = notificationDestination;
     }
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
-    public Optional<String> getNotificationDestination() {
+    public Optional<String> notificationDestination() {
         return Optional.ofNullable(this.notificationDestination);
     }
 

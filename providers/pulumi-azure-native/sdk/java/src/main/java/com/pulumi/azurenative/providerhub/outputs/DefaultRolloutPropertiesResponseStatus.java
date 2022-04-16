@@ -34,19 +34,19 @@ public final class DefaultRolloutPropertiesResponseStatus {
         this.subscriptionReregistrationResult = subscriptionReregistrationResult;
     }
 
-    public List<String> getCompletedRegions() {
+    public List<String> completedRegions() {
         return this.completedRegions == null ? List.of() : this.completedRegions;
     }
-    public Map<String,ExtendedErrorInfoResponse> getFailedOrSkippedRegions() {
+    public Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Map.of() : this.failedOrSkippedRegions;
     }
-    public Optional<String> getNextTrafficRegion() {
+    public Optional<String> nextTrafficRegion() {
         return Optional.ofNullable(this.nextTrafficRegion);
     }
-    public Optional<String> getNextTrafficRegionScheduledTime() {
+    public Optional<String> nextTrafficRegionScheduledTime() {
         return Optional.ofNullable(this.nextTrafficRegionScheduledTime);
     }
-    public Optional<String> getSubscriptionReregistrationResult() {
+    public Optional<String> subscriptionReregistrationResult() {
         return Optional.ofNullable(this.subscriptionReregistrationResult);
     }
 

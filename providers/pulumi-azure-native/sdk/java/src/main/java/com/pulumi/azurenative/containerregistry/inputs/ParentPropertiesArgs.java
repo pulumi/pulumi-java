@@ -27,7 +27,7 @@ public final class ParentPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class ParentPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="syncProperties", required=true)
       private final Output<SyncPropertiesArgs> syncProperties;
 
-    public Output<SyncPropertiesArgs> getSyncProperties() {
+    public Output<SyncPropertiesArgs> syncProperties() {
         return this.syncProperties;
     }
 

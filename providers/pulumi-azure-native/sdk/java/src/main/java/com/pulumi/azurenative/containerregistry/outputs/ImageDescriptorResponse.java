@@ -48,28 +48,28 @@ public final class ImageDescriptorResponse {
      * The sha256-based digest of the image manifest.
      * 
     */
-    public Optional<String> getDigest() {
+    public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
     /**
      * The registry login server.
      * 
     */
-    public Optional<String> getRegistry() {
+    public Optional<String> registry() {
         return Optional.ofNullable(this.registry);
     }
     /**
      * The repository name.
      * 
     */
-    public Optional<String> getRepository() {
+    public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
     /**
      * The tag name.
      * 
     */
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
 

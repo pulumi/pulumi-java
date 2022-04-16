@@ -33,7 +33,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="action")
       private final @Nullable Output<FirewallPolicyNatRuleCollectionActionArgs> action;
 
-    public Output<FirewallPolicyNatRuleCollectionActionArgs> getAction() {
+    public Output<FirewallPolicyNatRuleCollectionActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -44,7 +44,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -67,7 +67,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="ruleCollectionType", required=true)
       private final Output<String> ruleCollectionType;
 
-    public Output<String> getRuleCollectionType() {
+    public Output<String> ruleCollectionType() {
         return this.ruleCollectionType;
     }
 
@@ -78,7 +78,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="rules")
       private final @Nullable Output<List<Object>> rules;
 
-    public Output<List<Object>> getRules() {
+    public Output<List<Object>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

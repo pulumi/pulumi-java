@@ -27,7 +27,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesArgs extends com.pulumi
     @Import(name="input")
       private final @Nullable Output<ConnectToTargetSqlMISyncTaskInputArgs> input;
 
-    public Output<ConnectToTargetSqlMISyncTaskInputArgs> getInput() {
+    public Output<ConnectToTargetSqlMISyncTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesArgs extends com.pulumi
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

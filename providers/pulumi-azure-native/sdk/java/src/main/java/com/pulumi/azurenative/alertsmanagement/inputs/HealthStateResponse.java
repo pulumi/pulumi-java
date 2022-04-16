@@ -24,7 +24,7 @@ public final class HealthStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthStateName", required=true)
       private final String healthStateName;
 
-    public String getHealthStateName() {
+    public String healthStateName() {
         return this.healthStateName;
     }
 
@@ -35,7 +35,7 @@ public final class HealthStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="severity", required=true)
       private final Double severity;
 
-    public Double getSeverity() {
+    public Double severity() {
         return this.severity;
     }
 

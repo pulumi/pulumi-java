@@ -26,7 +26,7 @@ public final class UniqueKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="paths")
       private final @Nullable List<String> paths;
 
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
 

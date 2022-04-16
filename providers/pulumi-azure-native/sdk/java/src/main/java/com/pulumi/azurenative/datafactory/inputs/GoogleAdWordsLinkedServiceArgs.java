@@ -35,7 +35,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
 
-    public Output<Either<String,GoogleAdWordsAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="clientCustomerID")
       private final @Nullable Output<Object> clientCustomerID;
 
-    public Output<Object> getClientCustomerID() {
+    public Output<Object> clientCustomerID() {
         return this.clientCustomerID == null ? Codegen.empty() : this.clientCustomerID;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="clientId")
       private final @Nullable Output<Object> clientId;
 
-    public Output<Object> getClientId() {
+    public Output<Object> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -79,7 +79,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="clientSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -90,7 +90,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -101,7 +101,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
-    public Output<Object> getConnectionProperties() {
+    public Output<Object> connectionProperties() {
         return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
@@ -112,7 +112,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -123,7 +123,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="developerToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getDeveloperToken() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken() {
         return this.developerToken == null ? Codegen.empty() : this.developerToken;
     }
 
@@ -134,7 +134,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="email")
       private final @Nullable Output<Object> email;
 
-    public Output<Object> getEmail() {
+    public Output<Object> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -145,7 +145,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -156,7 +156,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="keyFilePath")
       private final @Nullable Output<Object> keyFilePath;
 
-    public Output<Object> getKeyFilePath() {
+    public Output<Object> keyFilePath() {
         return this.keyFilePath == null ? Codegen.empty() : this.keyFilePath;
     }
 
@@ -167,7 +167,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -178,7 +178,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="refreshToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getRefreshToken() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
@@ -189,7 +189,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
 
-    public Output<Object> getTrustedCertPath() {
+    public Output<Object> trustedCertPath() {
         return this.trustedCertPath == null ? Codegen.empty() : this.trustedCertPath;
     }
 
@@ -201,7 +201,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -212,7 +212,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="useSystemTrustStore")
       private final @Nullable Output<Object> useSystemTrustStore;
 
-    public Output<Object> getUseSystemTrustStore() {
+    public Output<Object> useSystemTrustStore() {
         return this.useSystemTrustStore == null ? Codegen.empty() : this.useSystemTrustStore;
     }
 

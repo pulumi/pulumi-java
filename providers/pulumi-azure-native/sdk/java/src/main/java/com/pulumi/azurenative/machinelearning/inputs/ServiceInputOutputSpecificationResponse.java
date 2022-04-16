@@ -27,7 +27,7 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -38,7 +38,7 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="properties", required=true)
       private final Map<String,TableSpecificationResponse> properties;
 
-    public Map<String,TableSpecificationResponse> getProperties() {
+    public Map<String,TableSpecificationResponse> properties() {
         return this.properties;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
@@ -60,7 +60,7 @@ public final class ServiceInputOutputSpecificationResponse extends com.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

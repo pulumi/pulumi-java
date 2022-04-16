@@ -25,7 +25,7 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="eventHubConnectionString")
       private final @Nullable String eventHubConnectionString;
 
-    public Optional<String> getEventHubConnectionString() {
+    public Optional<String> eventHubConnectionString() {
         return this.eventHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.eventHubConnectionString);
     }
 
@@ -36,7 +36,7 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ioTHubConnectionString")
       private final @Nullable String ioTHubConnectionString;
 
-    public Optional<String> getIoTHubConnectionString() {
+    public Optional<String> ioTHubConnectionString() {
         return this.ioTHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.ioTHubConnectionString);
     }
 
@@ -47,7 +47,7 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

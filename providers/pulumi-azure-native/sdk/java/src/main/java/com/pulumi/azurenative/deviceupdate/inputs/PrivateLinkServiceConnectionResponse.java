@@ -26,7 +26,7 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
-    public List<String> getGroupIds() {
+    public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
 
@@ -37,7 +37,7 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 

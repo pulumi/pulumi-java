@@ -25,7 +25,7 @@ public final class AzurePlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="skuDescription", required=true)
       private final String skuDescription;
 
-    public String getSkuDescription() {
+    public String skuDescription() {
         return this.skuDescription;
     }
 
@@ -36,7 +36,7 @@ public final class AzurePlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="skuId")
       private final @Nullable String skuId;
 
-    public Optional<String> getSkuId() {
+    public Optional<String> skuId() {
         return this.skuId == null ? Optional.empty() : Optional.ofNullable(this.skuId);
     }
 

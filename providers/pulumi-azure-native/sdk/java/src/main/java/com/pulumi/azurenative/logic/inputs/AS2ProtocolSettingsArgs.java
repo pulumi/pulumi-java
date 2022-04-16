@@ -31,7 +31,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="acknowledgementConnectionSettings", required=true)
       private final Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
 
-    public Output<AS2AcknowledgementConnectionSettingsArgs> getAcknowledgementConnectionSettings() {
+    public Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
     }
 
@@ -42,7 +42,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="envelopeSettings", required=true)
       private final Output<AS2EnvelopeSettingsArgs> envelopeSettings;
 
-    public Output<AS2EnvelopeSettingsArgs> getEnvelopeSettings() {
+    public Output<AS2EnvelopeSettingsArgs> envelopeSettings() {
         return this.envelopeSettings;
     }
 
@@ -53,7 +53,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="errorSettings", required=true)
       private final Output<AS2ErrorSettingsArgs> errorSettings;
 
-    public Output<AS2ErrorSettingsArgs> getErrorSettings() {
+    public Output<AS2ErrorSettingsArgs> errorSettings() {
         return this.errorSettings;
     }
 
@@ -64,7 +64,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="mdnSettings", required=true)
       private final Output<AS2MdnSettingsArgs> mdnSettings;
 
-    public Output<AS2MdnSettingsArgs> getMdnSettings() {
+    public Output<AS2MdnSettingsArgs> mdnSettings() {
         return this.mdnSettings;
     }
 
@@ -75,7 +75,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="messageConnectionSettings", required=true)
       private final Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
 
-    public Output<AS2MessageConnectionSettingsArgs> getMessageConnectionSettings() {
+    public Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings() {
         return this.messageConnectionSettings;
     }
 
@@ -86,7 +86,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="securitySettings", required=true)
       private final Output<AS2SecuritySettingsArgs> securitySettings;
 
-    public Output<AS2SecuritySettingsArgs> getSecuritySettings() {
+    public Output<AS2SecuritySettingsArgs> securitySettings() {
         return this.securitySettings;
     }
 
@@ -97,7 +97,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="validationSettings", required=true)
       private final Output<AS2ValidationSettingsArgs> validationSettings;
 
-    public Output<AS2ValidationSettingsArgs> getValidationSettings() {
+    public Output<AS2ValidationSettingsArgs> validationSettings() {
         return this.validationSettings;
     }
 

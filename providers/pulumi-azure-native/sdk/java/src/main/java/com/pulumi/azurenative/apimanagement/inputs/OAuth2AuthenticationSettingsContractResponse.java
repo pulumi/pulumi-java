@@ -25,7 +25,7 @@ public final class OAuth2AuthenticationSettingsContractResponse extends com.pulu
     @Import(name="authorizationServerId")
       private final @Nullable String authorizationServerId;
 
-    public Optional<String> getAuthorizationServerId() {
+    public Optional<String> authorizationServerId() {
         return this.authorizationServerId == null ? Optional.empty() : Optional.ofNullable(this.authorizationServerId);
     }
 
@@ -36,7 +36,7 @@ public final class OAuth2AuthenticationSettingsContractResponse extends com.pulu
     @Import(name="scope")
       private final @Nullable String scope;
 
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 

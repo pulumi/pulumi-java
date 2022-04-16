@@ -24,7 +24,7 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="administratorAccount")
       private final @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
 
-    public Output<VirtualMachineSshCredentialsArgs> getAdministratorAccount() {
+    public Output<VirtualMachineSshCredentialsArgs> administratorAccount() {
         return this.administratorAccount == null ? Codegen.empty() : this.administratorAccount;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="sshPort")
       private final @Nullable Output<Integer> sshPort;
 
-    public Output<Integer> getSshPort() {
+    public Output<Integer> sshPort() {
         return this.sshPort == null ? Codegen.empty() : this.sshPort;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="virtualMachineSize")
       private final @Nullable Output<String> virtualMachineSize;
 
-    public Output<String> getVirtualMachineSize() {
+    public Output<String> virtualMachineSize() {
         return this.virtualMachineSize == null ? Codegen.empty() : this.virtualMachineSize;
     }
 

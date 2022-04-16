@@ -27,7 +27,7 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
     @Import(name="certificateThumbprint")
       private final @Nullable Output<String> certificateThumbprint;
 
-    public Output<String> getCertificateThumbprint() {
+    public Output<String> certificateThumbprint() {
         return this.certificateThumbprint == null ? Codegen.empty() : this.certificateThumbprint;
     }
 
@@ -38,7 +38,7 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

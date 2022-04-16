@@ -35,14 +35,14 @@ public final class KeyVaultPropertiesResponse {
      * Uri of KeyVault
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Identity of the secret that includes name and version.
      * 
     */
-    public Optional<KeyPropertiesResponse> getKey() {
+    public Optional<KeyPropertiesResponse> key() {
         return Optional.ofNullable(this.key);
     }
 

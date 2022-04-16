@@ -30,7 +30,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="arrayValueSeparator")
       private final @Nullable String arrayValueSeparator;
 
-    public Optional<String> getArrayValueSeparator() {
+    public Optional<String> arrayValueSeparator() {
         return this.arrayValueSeparator == null ? Optional.empty() : Optional.ofNullable(this.arrayValueSeparator);
     }
 
@@ -41,7 +41,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="dataSourcePrecedenceRules", required=true)
       private final List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
 
-    public List<DataSourcePrecedenceResponse> getDataSourcePrecedenceRules() {
+    public List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules() {
         return this.dataSourcePrecedenceRules;
     }
 
@@ -52,7 +52,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="enumValidValues")
       private final @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
 
-    public List<ProfileEnumValidValuesFormatResponse> getEnumValidValues() {
+    public List<ProfileEnumValidValuesFormatResponse> enumValidValues() {
         return this.enumValidValues == null ? List.of() : this.enumValidValues;
     }
 
@@ -63,7 +63,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="fieldName", required=true)
       private final String fieldName;
 
-    public String getFieldName() {
+    public String fieldName() {
         return this.fieldName;
     }
 
@@ -74,7 +74,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="fieldType", required=true)
       private final String fieldType;
 
-    public String getFieldType() {
+    public String fieldType() {
         return this.fieldType;
     }
 
@@ -85,7 +85,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isArray")
       private final @Nullable Boolean isArray;
 
-    public Optional<Boolean> getIsArray() {
+    public Optional<Boolean> isArray() {
         return this.isArray == null ? Optional.empty() : Optional.ofNullable(this.isArray);
     }
 
@@ -96,7 +96,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isAvailableInGraph")
       private final @Nullable Boolean isAvailableInGraph;
 
-    public Optional<Boolean> getIsAvailableInGraph() {
+    public Optional<Boolean> isAvailableInGraph() {
         return this.isAvailableInGraph == null ? Optional.empty() : Optional.ofNullable(this.isAvailableInGraph);
     }
 
@@ -107,7 +107,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isEnum")
       private final @Nullable Boolean isEnum;
 
-    public Optional<Boolean> getIsEnum() {
+    public Optional<Boolean> isEnum() {
         return this.isEnum == null ? Optional.empty() : Optional.ofNullable(this.isEnum);
     }
 
@@ -118,7 +118,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isFlagEnum")
       private final @Nullable Boolean isFlagEnum;
 
-    public Optional<Boolean> getIsFlagEnum() {
+    public Optional<Boolean> isFlagEnum() {
         return this.isFlagEnum == null ? Optional.empty() : Optional.ofNullable(this.isFlagEnum);
     }
 
@@ -129,7 +129,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isImage")
       private final @Nullable Boolean isImage;
 
-    public Optional<Boolean> getIsImage() {
+    public Optional<Boolean> isImage() {
         return this.isImage == null ? Optional.empty() : Optional.ofNullable(this.isImage);
     }
 
@@ -140,7 +140,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isLocalizedString")
       private final @Nullable Boolean isLocalizedString;
 
-    public Optional<Boolean> getIsLocalizedString() {
+    public Optional<Boolean> isLocalizedString() {
         return this.isLocalizedString == null ? Optional.empty() : Optional.ofNullable(this.isLocalizedString);
     }
 
@@ -151,7 +151,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isName")
       private final @Nullable Boolean isName;
 
-    public Optional<Boolean> getIsName() {
+    public Optional<Boolean> isName() {
         return this.isName == null ? Optional.empty() : Optional.ofNullable(this.isName);
     }
 
@@ -162,7 +162,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isRequired")
       private final @Nullable Boolean isRequired;
 
-    public Optional<Boolean> getIsRequired() {
+    public Optional<Boolean> isRequired() {
         return this.isRequired == null ? Optional.empty() : Optional.ofNullable(this.isRequired);
     }
 
@@ -173,7 +173,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="maxLength")
       private final @Nullable Integer maxLength;
 
-    public Optional<Integer> getMaxLength() {
+    public Optional<Integer> maxLength() {
         return this.maxLength == null ? Optional.empty() : Optional.ofNullable(this.maxLength);
     }
 
@@ -184,7 +184,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="propertyId")
       private final @Nullable String propertyId;
 
-    public Optional<String> getPropertyId() {
+    public Optional<String> propertyId() {
         return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
     }
 
@@ -195,7 +195,7 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="schemaItemPropLink")
       private final @Nullable String schemaItemPropLink;
 
-    public Optional<String> getSchemaItemPropLink() {
+    public Optional<String> schemaItemPropLink() {
         return this.schemaItemPropLink == null ? Optional.empty() : Optional.ofNullable(this.schemaItemPropLink);
     }
 

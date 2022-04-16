@@ -26,7 +26,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -38,7 +38,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
@@ -49,7 +49,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="privateIpAllocationMethod")
       private final @Nullable String privateIpAllocationMethod;
 
-    public Optional<String> getPrivateIpAllocationMethod() {
+    public Optional<String> privateIpAllocationMethod() {
         return this.privateIpAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIpAllocationMethod);
     }
 
@@ -60,7 +60,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="subnet")
       private final @Nullable SubnetReferenceResponse subnet;
 
-    public Optional<SubnetReferenceResponse> getSubnet() {
+    public Optional<SubnetReferenceResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -71,7 +71,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
     @Import(name="zones")
       private final @Nullable String zones;
 
-    public Optional<String> getZones() {
+    public Optional<String> zones() {
         return this.zones == null ? Optional.empty() : Optional.ofNullable(this.zones);
     }
 

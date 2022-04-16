@@ -27,7 +27,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
     @Import(name="authorizationType", required=true)
       private final String authorizationType;
 
-    public String getAuthorizationType() {
+    public String authorizationType() {
         return this.authorizationType;
     }
 
@@ -38,7 +38,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -49,7 +49,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

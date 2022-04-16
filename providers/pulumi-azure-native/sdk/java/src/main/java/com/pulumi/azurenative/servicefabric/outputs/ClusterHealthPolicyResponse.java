@@ -56,7 +56,7 @@ public final class ClusterHealthPolicyResponse {
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
      * 
     */
-    public Map<String,ApplicationHealthPolicyResponse> getApplicationHealthPolicies() {
+    public Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies() {
         return this.applicationHealthPolicies == null ? Map.of() : this.applicationHealthPolicies;
     }
     /**
@@ -68,7 +68,7 @@ public final class ClusterHealthPolicyResponse {
      * The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
      * 
     */
-    public Optional<Integer> getMaxPercentUnhealthyApplications() {
+    public Optional<Integer> maxPercentUnhealthyApplications() {
         return Optional.ofNullable(this.maxPercentUnhealthyApplications);
     }
     /**
@@ -82,7 +82,7 @@ public final class ClusterHealthPolicyResponse {
      * In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
      * 
     */
-    public Optional<Integer> getMaxPercentUnhealthyNodes() {
+    public Optional<Integer> maxPercentUnhealthyNodes() {
         return Optional.ofNullable(this.maxPercentUnhealthyNodes);
     }
 

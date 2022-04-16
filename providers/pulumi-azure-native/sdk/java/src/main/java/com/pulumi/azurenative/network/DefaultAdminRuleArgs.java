@@ -22,7 +22,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName;
     }
 
@@ -33,7 +33,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="flag")
       private final @Nullable Output<String> flag;
 
-    public Output<String> getFlag() {
+    public Output<String> flag() {
         return this.flag == null ? Codegen.empty() : this.flag;
     }
 
@@ -45,7 +45,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -56,7 +56,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -67,7 +67,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ruleCollectionName", required=true)
       private final Output<String> ruleCollectionName;
 
-    public Output<String> getRuleCollectionName() {
+    public Output<String> ruleCollectionName() {
         return this.ruleCollectionName;
     }
 
@@ -89,7 +89,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 

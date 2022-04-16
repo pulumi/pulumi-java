@@ -28,7 +28,7 @@ public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceA
     @Import(name="activity", required=true)
       private final Output<String> activity;
 
-    public Output<String> getActivity() {
+    public Output<String> activity() {
         return this.activity;
     }
 
@@ -39,7 +39,7 @@ public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceA
     @Import(name="dependencyConditions", required=true)
       private final Output<List<Either<String,DependencyCondition>>> dependencyConditions;
 
-    public Output<List<Either<String,DependencyCondition>>> getDependencyConditions() {
+    public Output<List<Either<String,DependencyCondition>>> dependencyConditions() {
         return this.dependencyConditions;
     }
 

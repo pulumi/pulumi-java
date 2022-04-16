@@ -25,7 +25,7 @@ public final class DraDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="health", required=true)
       private final String health;
 
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
 
@@ -36,7 +36,7 @@ public final class DraDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
 
@@ -47,7 +47,7 @@ public final class DraDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -58,7 +58,7 @@ public final class DraDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
 
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
 
@@ -69,7 +69,7 @@ public final class DraDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -80,7 +80,7 @@ public final class DraDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

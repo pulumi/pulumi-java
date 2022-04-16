@@ -116,91 +116,91 @@ public final class GetQueryResult {
      * Object Id of user creating the query.
      * 
     */
-    public String getAuthor() {
+    public String author() {
         return this.author;
     }
     /**
      * Body of the query.
      * 
     */
-    public String getBody() {
+    public String body() {
         return this.body;
     }
     /**
      * Description of the query.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Unique display name for your query within the Query Pack.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Additional properties that can be set for the query.
      * 
     */
-    public Object getProperties() {
+    public Object properties() {
         return this.properties;
     }
     /**
      * The related metadata items for the function.
      * 
     */
-    public Optional<LogAnalyticsQueryPackQueryPropertiesResponseRelated> getRelated() {
+    public Optional<LogAnalyticsQueryPackQueryPropertiesResponseRelated> related() {
         return Optional.ofNullable(this.related);
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Tags associated with the query.
      * 
     */
-    public Map<String,List<String>> getTags() {
+    public Map<String,List<String>> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Creation Date for the Log Analytics Query, in ISO 8601 format.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
     /**
      * Last modified date of the Log Analytics Query, in ISO 8601 format.
      * 
     */
-    public String getTimeModified() {
+    public String timeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

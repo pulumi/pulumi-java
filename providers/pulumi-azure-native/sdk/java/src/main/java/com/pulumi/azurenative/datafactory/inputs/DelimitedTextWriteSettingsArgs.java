@@ -27,7 +27,7 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="fileExtension", required=true)
       private final Output<Object> fileExtension;
 
-    public Output<Object> getFileExtension() {
+    public Output<Object> fileExtension() {
         return this.fileExtension;
     }
 
@@ -38,7 +38,7 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="fileNamePrefix")
       private final @Nullable Output<Object> fileNamePrefix;
 
-    public Output<Object> getFileNamePrefix() {
+    public Output<Object> fileNamePrefix() {
         return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
     }
 
@@ -49,7 +49,7 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="maxRowsPerFile")
       private final @Nullable Output<Object> maxRowsPerFile;
 
-    public Output<Object> getMaxRowsPerFile() {
+    public Output<Object> maxRowsPerFile() {
         return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
     }
 
@@ -60,7 +60,7 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="quoteAllText")
       private final @Nullable Output<Object> quoteAllText;
 
-    public Output<Object> getQuoteAllText() {
+    public Output<Object> quoteAllText() {
         return this.quoteAllText == null ? Codegen.empty() : this.quoteAllText;
     }
 
@@ -72,7 +72,7 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

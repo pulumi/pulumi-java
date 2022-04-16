@@ -26,7 +26,7 @@ public final class A2APolicyDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Integer appConsistentFrequencyInMinutes;
 
-    public Optional<Integer> getAppConsistentFrequencyInMinutes() {
+    public Optional<Integer> appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
@@ -37,7 +37,7 @@ public final class A2APolicyDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
-    public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
+    public Optional<Integer> crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
 
@@ -49,7 +49,7 @@ public final class A2APolicyDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -60,7 +60,7 @@ public final class A2APolicyDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="multiVmSyncStatus")
       private final @Nullable String multiVmSyncStatus;
 
-    public Optional<String> getMultiVmSyncStatus() {
+    public Optional<String> multiVmSyncStatus() {
         return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
     }
 
@@ -71,7 +71,7 @@ public final class A2APolicyDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="recoveryPointHistory")
       private final @Nullable Integer recoveryPointHistory;
 
-    public Optional<Integer> getRecoveryPointHistory() {
+    public Optional<Integer> recoveryPointHistory() {
         return this.recoveryPointHistory == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistory);
     }
 
@@ -82,7 +82,7 @@ public final class A2APolicyDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="recoveryPointThresholdInMinutes")
       private final @Nullable Integer recoveryPointThresholdInMinutes;
 
-    public Optional<Integer> getRecoveryPointThresholdInMinutes() {
+    public Optional<Integer> recoveryPointThresholdInMinutes() {
         return this.recoveryPointThresholdInMinutes == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }
 

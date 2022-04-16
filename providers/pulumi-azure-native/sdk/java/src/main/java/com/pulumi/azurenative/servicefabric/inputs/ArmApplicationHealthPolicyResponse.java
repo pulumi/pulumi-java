@@ -29,7 +29,7 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="considerWarningAsError")
       private final @Nullable Boolean considerWarningAsError;
 
-    public Optional<Boolean> getConsiderWarningAsError() {
+    public Optional<Boolean> considerWarningAsError() {
         return this.considerWarningAsError == null ? Optional.empty() : Optional.ofNullable(this.considerWarningAsError);
     }
 
@@ -40,7 +40,7 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
-    public Optional<ArmServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
+    public Optional<ArmServiceTypeHealthPolicyResponse> defaultServiceTypeHealthPolicy() {
         return this.defaultServiceTypeHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
 
@@ -54,7 +54,7 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyDeployedApplications")
       private final @Nullable Integer maxPercentUnhealthyDeployedApplications;
 
-    public Optional<Integer> getMaxPercentUnhealthyDeployedApplications() {
+    public Optional<Integer> maxPercentUnhealthyDeployedApplications() {
         return this.maxPercentUnhealthyDeployedApplications == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
     }
 
@@ -65,7 +65,7 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="serviceTypeHealthPolicyMap")
       private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 
-    public Map<String,ArmServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicyMap() {
+    public Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap() {
         return this.serviceTypeHealthPolicyMap == null ? Map.of() : this.serviceTypeHealthPolicyMap;
     }
 

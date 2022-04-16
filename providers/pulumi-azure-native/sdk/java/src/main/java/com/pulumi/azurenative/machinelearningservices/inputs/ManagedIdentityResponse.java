@@ -25,7 +25,7 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -37,7 +37,7 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="identityType", required=true)
       private final String identityType;
 
-    public String getIdentityType() {
+    public String identityType() {
         return this.identityType;
     }
 
@@ -48,7 +48,7 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="objectId")
       private final @Nullable String objectId;
 
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
@@ -59,7 +59,7 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

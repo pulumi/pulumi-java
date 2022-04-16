@@ -29,7 +29,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="authorizationKey")
       private final @Nullable String authorizationKey;
 
-    public Optional<String> getAuthorizationKey() {
+    public Optional<String> authorizationKey() {
         return this.authorizationKey == null ? Optional.empty() : Optional.ofNullable(this.authorizationKey);
     }
 
@@ -40,7 +40,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="enableInternetSecurity")
       private final @Nullable Boolean enableInternetSecurity;
 
-    public Optional<Boolean> getEnableInternetSecurity() {
+    public Optional<Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
     }
 
@@ -51,7 +51,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="expressRouteCircuitPeering", required=true)
       private final ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering;
 
-    public ExpressRouteCircuitPeeringIdResponse getExpressRouteCircuitPeering() {
+    public ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
 
@@ -62,7 +62,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="expressRouteGatewayBypass")
       private final @Nullable Boolean expressRouteGatewayBypass;
 
-    public Optional<Boolean> getExpressRouteGatewayBypass() {
+    public Optional<Boolean> expressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass == null ? Optional.empty() : Optional.ofNullable(this.expressRouteGatewayBypass);
     }
 
@@ -73,7 +73,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -84,7 +84,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -95,7 +95,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -106,7 +106,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="routingConfiguration")
       private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
-    public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
     }
 
@@ -117,7 +117,7 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="routingWeight")
       private final @Nullable Integer routingWeight;
 
-    public Optional<Integer> getRoutingWeight() {
+    public Optional<Integer> routingWeight() {
         return this.routingWeight == null ? Optional.empty() : Optional.ofNullable(this.routingWeight);
     }
 

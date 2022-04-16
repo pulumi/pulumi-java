@@ -19,7 +19,7 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
     @Import(name="slot", required=true)
       private final String slot;
 
-    public String getSlot() {
+    public String slot() {
         return this.slot;
     }
 
@@ -52,7 +52,7 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
     @Import(name="vnetName", required=true)
       private final String vnetName;
 
-    public String getVnetName() {
+    public String vnetName() {
         return this.vnetName;
     }
 

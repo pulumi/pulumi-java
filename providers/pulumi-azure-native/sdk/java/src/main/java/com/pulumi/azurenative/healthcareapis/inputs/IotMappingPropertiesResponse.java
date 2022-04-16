@@ -25,7 +25,7 @@ public final class IotMappingPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="content")
       private final @Nullable Object content;
 
-    public Optional<Object> getContent() {
+    public Optional<Object> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 

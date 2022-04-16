@@ -58,35 +58,35 @@ public final class JobPropertiesResponse {
      * Gets or sets the job action.
      * 
     */
-    public Optional<JobActionResponse> getAction() {
+    public Optional<JobActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Gets or sets the job recurrence.
      * 
     */
-    public Optional<JobRecurrenceResponse> getRecurrence() {
+    public Optional<JobRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
      * Gets or sets the job start time.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Gets or set the job state.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Gets the job status.
      * 
     */
-    public JobStatusResponse getStatus() {
+    public JobStatusResponse status() {
         return this.status;
     }
 

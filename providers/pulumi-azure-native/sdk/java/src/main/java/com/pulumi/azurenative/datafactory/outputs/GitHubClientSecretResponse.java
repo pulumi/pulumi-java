@@ -34,14 +34,14 @@ public final class GitHubClientSecretResponse {
      * Bring your own app client secret AKV URL.
      * 
     */
-    public Optional<String> getByoaSecretAkvUrl() {
+    public Optional<String> byoaSecretAkvUrl() {
         return Optional.ofNullable(this.byoaSecretAkvUrl);
     }
     /**
      * Bring your own app client secret name in AKV.
      * 
     */
-    public Optional<String> getByoaSecretName() {
+    public Optional<String> byoaSecretName() {
         return Optional.ofNullable(this.byoaSecretName);
     }
 

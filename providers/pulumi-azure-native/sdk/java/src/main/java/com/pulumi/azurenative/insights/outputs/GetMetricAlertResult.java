@@ -155,126 +155,126 @@ public final class GetMetricAlertResult {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
     */
-    public List<MetricAlertActionResponse> getActions() {
+    public List<MetricAlertActionResponse> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * the flag that indicates whether the alert should be auto resolved or not. The default is true.
      * 
     */
-    public Optional<Boolean> getAutoMitigate() {
+    public Optional<Boolean> autoMitigate() {
         return Optional.ofNullable(this.autoMitigate);
     }
     /**
      * defines the specific alert criteria information.
      * 
     */
-    public Object getCriteria() {
+    public Object criteria() {
         return this.criteria;
     }
     /**
      * the description of the metric alert that will be included in the alert email.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * the flag that indicates whether the metric alert is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * how often the metric alert is evaluated represented in ISO 8601 duration format.
      * 
     */
-    public String getEvaluationFrequency() {
+    public String evaluationFrequency() {
         return this.evaluationFrequency;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * the value indicating whether this alert rule is migrated.
      * 
     */
-    public Boolean getIsMigrated() {
+    public Boolean isMigrated() {
         return this.isMigrated;
     }
     /**
      * Last time the rule was updated in ISO8601 format.
      * 
     */
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * the list of resource id's that this metric alert is scoped to.
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
     /**
      * Alert severity {0, 1, 2, 3, 4}
      * 
     */
-    public Integer getSeverity() {
+    public Integer severity() {
         return this.severity;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
     */
-    public Optional<String> getTargetResourceRegion() {
+    public Optional<String> targetResourceRegion() {
         return Optional.ofNullable(this.targetResourceRegion);
     }
     /**
      * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
     */
-    public Optional<String> getTargetResourceType() {
+    public Optional<String> targetResourceType() {
         return Optional.ofNullable(this.targetResourceType);
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
      * 
     */
-    public String getWindowSize() {
+    public String windowSize() {
         return this.windowSize;
     }
 

@@ -34,7 +34,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="apiProperties")
       private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
 
-    public Optional<CognitiveServicesAccountApiPropertiesResponse> getApiProperties() {
+    public Optional<CognitiveServicesAccountApiPropertiesResponse> apiProperties() {
         return this.apiProperties == null ? Optional.empty() : Optional.ofNullable(this.apiProperties);
     }
 
@@ -45,7 +45,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="capabilities", required=true)
       private final List<SkuCapabilityResponse> capabilities;
 
-    public List<SkuCapabilityResponse> getCapabilities() {
+    public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities;
     }
 
@@ -56,7 +56,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="customSubDomainName")
       private final @Nullable String customSubDomainName;
 
-    public Optional<String> getCustomSubDomainName() {
+    public Optional<String> customSubDomainName() {
         return this.customSubDomainName == null ? Optional.empty() : Optional.ofNullable(this.customSubDomainName);
     }
 
@@ -67,7 +67,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="dateCreated", required=true)
       private final String dateCreated;
 
-    public String getDateCreated() {
+    public String dateCreated() {
         return this.dateCreated;
     }
 
@@ -78,7 +78,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="encryption")
       private final @Nullable EncryptionResponse encryption;
 
-    public Optional<EncryptionResponse> getEncryption() {
+    public Optional<EncryptionResponse> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -89,7 +89,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="endpoint", required=true)
       private final String endpoint;
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 
@@ -100,7 +100,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="internalId", required=true)
       private final String internalId;
 
-    public String getInternalId() {
+    public String internalId() {
         return this.internalId;
     }
 
@@ -111,7 +111,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="isMigrated", required=true)
       private final Boolean isMigrated;
 
-    public Boolean getIsMigrated() {
+    public Boolean isMigrated() {
         return this.isMigrated;
     }
 
@@ -122,7 +122,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="networkAcls")
       private final @Nullable NetworkRuleSetResponse networkAcls;
 
-    public Optional<NetworkRuleSetResponse> getNetworkAcls() {
+    public Optional<NetworkRuleSetResponse> networkAcls() {
         return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
     }
 
@@ -133,7 +133,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
 
@@ -144,7 +144,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -155,7 +155,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
@@ -166,7 +166,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="skuChangeInfo", required=true)
       private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
 
-    public CognitiveServicesAccountSkuChangeInfoResponse getSkuChangeInfo() {
+    public CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo() {
         return this.skuChangeInfo;
     }
 
@@ -177,7 +177,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="userOwnedStorage")
       private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
-    public List<UserOwnedStorageResponse> getUserOwnedStorage() {
+    public List<UserOwnedStorageResponse> userOwnedStorage() {
         return this.userOwnedStorage == null ? List.of() : this.userOwnedStorage;
     }
 

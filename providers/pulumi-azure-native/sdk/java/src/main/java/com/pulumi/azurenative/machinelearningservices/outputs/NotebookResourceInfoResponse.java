@@ -34,21 +34,21 @@ public final class NotebookResourceInfoResponse {
         this.resourceId = resourceId;
     }
 
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * The error that occurs when preparing notebook.
      * 
     */
-    public Optional<NotebookPreparationErrorResponse> getNotebookPreparationError() {
+    public Optional<NotebookPreparationErrorResponse> notebookPreparationError() {
         return Optional.ofNullable(this.notebookPreparationError);
     }
     /**
      * the data plane resourceId that used to initialize notebook component
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

@@ -27,7 +27,7 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceVault", required=true)
       private final Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> getSourceVault() {
+    public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault;
     }
 
@@ -38,7 +38,7 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="vaultCertificates", required=true)
       private final Output<List<VaultCertificateArgs>> vaultCertificates;
 
-    public Output<List<VaultCertificateArgs>> getVaultCertificates() {
+    public Output<List<VaultCertificateArgs>> vaultCertificates() {
         return this.vaultCertificates;
     }
 

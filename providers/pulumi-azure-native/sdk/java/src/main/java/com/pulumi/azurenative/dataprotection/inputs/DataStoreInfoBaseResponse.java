@@ -23,7 +23,7 @@ public final class DataStoreInfoBaseResponse extends com.pulumi.resources.Invoke
     @Import(name="dataStoreType", required=true)
       private final String dataStoreType;
 
-    public String getDataStoreType() {
+    public String dataStoreType() {
         return this.dataStoreType;
     }
 
@@ -34,7 +34,7 @@ public final class DataStoreInfoBaseResponse extends com.pulumi.resources.Invoke
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

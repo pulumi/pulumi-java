@@ -23,7 +23,7 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
     @Import(name="operation", required=true)
       private final String operation;
 
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
 
@@ -34,7 +34,7 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
     @Import(name="property", required=true)
       private final String property;
 
-    public String getProperty() {
+    public String property() {
         return this.property;
     }
 
@@ -45,7 +45,7 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

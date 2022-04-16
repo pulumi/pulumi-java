@@ -26,7 +26,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endSearchTime")
       private final @Nullable String endSearchTime;
 
-    public Optional<String> getEndSearchTime() {
+    public Optional<String> endSearchTime() {
         return this.endSearchTime == null ? Optional.empty() : Optional.ofNullable(this.endSearchTime);
     }
 
@@ -48,7 +48,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="limit")
       private final @Nullable Integer limit;
 
-    public Optional<Integer> getLimit() {
+    public Optional<Integer> limit() {
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
     }
 
@@ -59,7 +59,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="query")
       private final @Nullable String query;
 
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
@@ -70,7 +70,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sourceTable", required=true)
       private final String sourceTable;
 
-    public String getSourceTable() {
+    public String sourceTable() {
         return this.sourceTable;
     }
 
@@ -81,7 +81,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="startSearchTime")
       private final @Nullable String startSearchTime;
 
-    public Optional<String> getStartSearchTime() {
+    public Optional<String> startSearchTime() {
         return this.startSearchTime == null ? Optional.empty() : Optional.ofNullable(this.startSearchTime);
     }
 

@@ -32,7 +32,7 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
       private final @Nullable Output<List<Object>> inputs;
 
-    public Output<List<Object>> getInputs() {
+    public Output<List<Object>> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -44,7 +44,7 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

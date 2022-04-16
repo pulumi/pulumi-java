@@ -23,7 +23,7 @@ public final class FirstQualityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="bitrate", required=true)
       private final Integer bitrate;
 
-    public Integer getBitrate() {
+    public Integer bitrate() {
         return this.bitrate;
     }
 

@@ -21,7 +21,7 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends com.pul
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -32,7 +32,7 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends com.pul
     @Import(name="ports", required=true)
       private final List<JitNetworkAccessRequestPortResponse> ports;
 
-    public List<JitNetworkAccessRequestPortResponse> getPorts() {
+    public List<JitNetworkAccessRequestPortResponse> ports() {
         return this.ports;
     }
 

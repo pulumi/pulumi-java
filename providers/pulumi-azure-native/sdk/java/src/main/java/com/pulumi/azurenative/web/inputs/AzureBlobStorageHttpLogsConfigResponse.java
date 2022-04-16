@@ -27,7 +27,7 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -40,7 +40,7 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
     @Import(name="retentionInDays")
       private final @Nullable Integer retentionInDays;
 
-    public Optional<Integer> getRetentionInDays() {
+    public Optional<Integer> retentionInDays() {
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
     }
 
@@ -51,7 +51,7 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
     @Import(name="sasUrl")
       private final @Nullable String sasUrl;
 
-    public Optional<String> getSasUrl() {
+    public Optional<String> sasUrl() {
         return this.sasUrl == null ? Optional.empty() : Optional.ofNullable(this.sasUrl);
     }
 

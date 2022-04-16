@@ -27,7 +27,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends com.pulumi.resour
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends com.pulumi.resour
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

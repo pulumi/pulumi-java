@@ -26,7 +26,7 @@ public final class LiveEventPreviewAccessControlResponse {
      * The IP access control properties.
      * 
     */
-    public Optional<IPAccessControlResponse> getIp() {
+    public Optional<IPAccessControlResponse> ip() {
         return Optional.ofNullable(this.ip);
     }
 

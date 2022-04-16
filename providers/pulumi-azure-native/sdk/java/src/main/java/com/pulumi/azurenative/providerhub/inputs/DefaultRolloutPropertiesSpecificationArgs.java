@@ -26,56 +26,56 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends com.pulumi.
     @Import(name="canary")
       private final @Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary;
 
-    public Output<DefaultRolloutSpecificationCanaryArgs> getCanary() {
+    public Output<DefaultRolloutSpecificationCanaryArgs> canary() {
         return this.canary == null ? Codegen.empty() : this.canary;
     }
 
     @Import(name="highTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
 
-    public Output<DefaultRolloutSpecificationHighTrafficArgs> getHighTraffic() {
+    public Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic() {
         return this.highTraffic == null ? Codegen.empty() : this.highTraffic;
     }
 
     @Import(name="lowTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
 
-    public Output<DefaultRolloutSpecificationLowTrafficArgs> getLowTraffic() {
+    public Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic() {
         return this.lowTraffic == null ? Codegen.empty() : this.lowTraffic;
     }
 
     @Import(name="mediumTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
 
-    public Output<DefaultRolloutSpecificationMediumTrafficArgs> getMediumTraffic() {
+    public Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic() {
         return this.mediumTraffic == null ? Codegen.empty() : this.mediumTraffic;
     }
 
     @Import(name="providerRegistration")
       private final @Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
 
-    public Output<DefaultRolloutSpecificationProviderRegistrationArgs> getProviderRegistration() {
+    public Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration() {
         return this.providerRegistration == null ? Codegen.empty() : this.providerRegistration;
     }
 
     @Import(name="resourceTypeRegistrations")
       private final @Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
 
-    public Output<List<ResourceTypeRegistrationArgs>> getResourceTypeRegistrations() {
+    public Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? Codegen.empty() : this.resourceTypeRegistrations;
     }
 
     @Import(name="restOfTheWorldGroupOne")
       private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
 
-    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> getRestOfTheWorldGroupOne() {
+    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne() {
         return this.restOfTheWorldGroupOne == null ? Codegen.empty() : this.restOfTheWorldGroupOne;
     }
 
     @Import(name="restOfTheWorldGroupTwo")
       private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
 
-    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> getRestOfTheWorldGroupTwo() {
+    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo() {
         return this.restOfTheWorldGroupTwo == null ? Codegen.empty() : this.restOfTheWorldGroupTwo;
     }
 

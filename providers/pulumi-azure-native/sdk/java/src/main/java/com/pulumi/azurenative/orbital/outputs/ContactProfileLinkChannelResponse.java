@@ -71,49 +71,49 @@ public final class ContactProfileLinkChannelResponse {
      * Bandwidth in MHz
      * 
     */
-    public Double getBandwidthMHz() {
+    public Double bandwidthMHz() {
         return this.bandwidthMHz;
     }
     /**
      * Center Frequency in MHz
      * 
     */
-    public Double getCenterFrequencyMHz() {
+    public Double centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
     /**
      * Configuration for decoding
      * 
     */
-    public Optional<String> getDecodingConfiguration() {
+    public Optional<String> decodingConfiguration() {
         return Optional.ofNullable(this.decodingConfiguration);
     }
     /**
      * Configuration for demodulation
      * 
     */
-    public Optional<String> getDemodulationConfiguration() {
+    public Optional<String> demodulationConfiguration() {
         return Optional.ofNullable(this.demodulationConfiguration);
     }
     /**
      * Configuration for encoding
      * 
     */
-    public Optional<String> getEncodingConfiguration() {
+    public Optional<String> encodingConfiguration() {
         return Optional.ofNullable(this.encodingConfiguration);
     }
     /**
      * Customer End point to store/retrieve data during a contact.
      * 
     */
-    public EndPointResponse getEndPoint() {
+    public EndPointResponse endPoint() {
         return this.endPoint;
     }
     /**
      * Configuration for modulation
      * 
     */
-    public Optional<String> getModulationConfiguration() {
+    public Optional<String> modulationConfiguration() {
         return Optional.ofNullable(this.modulationConfiguration);
     }
 

@@ -26,7 +26,7 @@ public final class HyperVSiteDetailsResponse {
      * Expected value is 'HyperVSite'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 

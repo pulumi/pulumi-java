@@ -49,7 +49,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
      * The fabric location.
      * 
     */
-    public String getFabricLocation() {
+    public String fabricLocation() {
         return this.fabricLocation;
     }
     /**
@@ -57,21 +57,21 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
      * Expected value is 'AutomationRunbookActionDetails'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The runbook ARM Id.
      * 
     */
-    public Optional<String> getRunbookId() {
+    public Optional<String> runbookId() {
         return Optional.ofNullable(this.runbookId);
     }
     /**
      * The runbook timeout.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

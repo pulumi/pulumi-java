@@ -116,91 +116,91 @@ public final class ManagedHsmPropertiesResponse {
      * The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
      * 
     */
-    public Optional<String> getCreateMode() {
+    public Optional<String> createMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
      * Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
      * 
     */
-    public Optional<Boolean> getEnablePurgeProtection() {
+    public Optional<Boolean> enablePurgeProtection() {
         return Optional.ofNullable(this.enablePurgeProtection);
     }
     /**
      * Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
     */
-    public Optional<Boolean> getEnableSoftDelete() {
+    public Optional<Boolean> enableSoftDelete() {
         return Optional.ofNullable(this.enableSoftDelete);
     }
     /**
      * The URI of the managed hsm pool for performing operations on keys.
      * 
     */
-    public String getHsmUri() {
+    public String hsmUri() {
         return this.hsmUri;
     }
     /**
      * Array of initial administrators object ids for this managed hsm pool.
      * 
     */
-    public List<String> getInitialAdminObjectIds() {
+    public List<String> initialAdminObjectIds() {
         return this.initialAdminObjectIds == null ? List.of() : this.initialAdminObjectIds;
     }
     /**
      * Rules governing the accessibility of the key vault from specific network locations.
      * 
     */
-    public Optional<MHSMNetworkRuleSetResponse> getNetworkAcls() {
+    public Optional<MHSMNetworkRuleSetResponse> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
     /**
      * List of private endpoint connections associated with the managed hsm pool.
      * 
     */
-    public List<MHSMPrivateEndpointConnectionItemResponse> getPrivateEndpointConnections() {
+    public List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The scheduled purge date in UTC.
      * 
     */
-    public String getScheduledPurgeDate() {
+    public String scheduledPurgeDate() {
         return this.scheduledPurgeDate;
     }
     /**
      * softDelete data retention days. It accepts >=7 and <=90.
      * 
     */
-    public Optional<Integer> getSoftDeleteRetentionInDays() {
+    public Optional<Integer> softDeleteRetentionInDays() {
         return Optional.ofNullable(this.softDeleteRetentionInDays);
     }
     /**
      * Resource Status Message.
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
     /**
      * The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

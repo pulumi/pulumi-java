@@ -26,7 +26,7 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageaccounts")
       private final @Nullable List<StorageAccountResponse> storageaccounts;
 
-    public List<StorageAccountResponse> getStorageaccounts() {
+    public List<StorageAccountResponse> storageaccounts() {
         return this.storageaccounts == null ? List.of() : this.storageaccounts;
     }
 

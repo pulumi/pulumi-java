@@ -36,14 +36,14 @@ public final class ListConfigurationsResult {
      * Link for the next set of configurations.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of configurations.
      * 
     */
-    public List<ConfigurationResponse> getValue() {
+    public List<ConfigurationResponse> value() {
         return this.value;
     }
 

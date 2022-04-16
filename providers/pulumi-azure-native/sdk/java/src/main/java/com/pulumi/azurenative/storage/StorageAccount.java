@@ -59,7 +59,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Required for storage accounts where kind = BlobStorage. The access tier used for billing.
      * 
      */
-    public Output<String> getAccessTier() {
+    public Output<String> accessTier() {
         return this.accessTier;
     }
     /**
@@ -73,7 +73,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowBlobPublicAccess() {
+    public Output</* @Nullable */ Boolean> allowBlobPublicAccess() {
         return this.allowBlobPublicAccess;
     }
     /**
@@ -87,7 +87,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowSharedKeyAccess() {
+    public Output</* @Nullable */ Boolean> allowSharedKeyAccess() {
         return this.allowSharedKeyAccess;
     }
     /**
@@ -101,7 +101,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Provides the identity based authentication settings for Azure Files.
      * 
      */
-    public Output</* @Nullable */ AzureFilesIdentityBasedAuthenticationResponse> getAzureFilesIdentityBasedAuthentication() {
+    public Output</* @Nullable */ AzureFilesIdentityBasedAuthenticationResponse> azureFilesIdentityBasedAuthentication() {
         return this.azureFilesIdentityBasedAuthentication;
     }
     /**
@@ -115,7 +115,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Blob restore status
      * 
      */
-    public Output<BlobRestoreStatusResponse> getBlobRestoreStatus() {
+    public Output<BlobRestoreStatusResponse> blobRestoreStatus() {
         return this.blobRestoreStatus;
     }
     /**
@@ -129,7 +129,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the creation date and time of the storage account in UTC.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -143,7 +143,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the custom domain the user assigned to this storage account.
      * 
      */
-    public Output<CustomDomainResponse> getCustomDomain() {
+    public Output<CustomDomainResponse> customDomain() {
         return this.customDomain;
     }
     /**
@@ -157,7 +157,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Allows https traffic only to storage service if sets to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableHttpsTrafficOnly() {
+    public Output</* @Nullable */ Boolean> enableHttpsTrafficOnly() {
         return this.enableHttpsTrafficOnly;
     }
     /**
@@ -171,7 +171,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return NFS 3.0 protocol support enabled if set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableNfsV3() {
+    public Output</* @Nullable */ Boolean> enableNfsV3() {
         return this.enableNfsV3;
     }
     /**
@@ -185,7 +185,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the encryption settings on the account. If unspecified, the account is unencrypted.
      * 
      */
-    public Output<EncryptionResponse> getEncryption() {
+    public Output<EncryptionResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -199,7 +199,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return The extendedLocation of the resource.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -213,7 +213,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return If the failover is in progress, the value will be true, otherwise, it will be null.
      * 
      */
-    public Output<Boolean> getFailoverInProgress() {
+    public Output<Boolean> failoverInProgress() {
         return this.failoverInProgress;
     }
     /**
@@ -227,7 +227,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Geo Replication Stats
      * 
      */
-    public Output<GeoReplicationStatsResponse> getGeoReplicationStats() {
+    public Output<GeoReplicationStatsResponse> geoReplicationStats() {
         return this.geoReplicationStats;
     }
     /**
@@ -241,7 +241,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -255,7 +255,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Account HierarchicalNamespace enabled if sets to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsHnsEnabled() {
+    public Output</* @Nullable */ Boolean> isHnsEnabled() {
         return this.isHnsEnabled;
     }
     /**
@@ -269,7 +269,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Storage account keys creation time.
      * 
      */
-    public Output<KeyCreationTimeResponse> getKeyCreationTime() {
+    public Output<KeyCreationTimeResponse> keyCreationTime() {
         return this.keyCreationTime;
     }
     /**
@@ -283,7 +283,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return KeyPolicy assigned to the storage account.
      * 
      */
-    public Output<KeyPolicyResponse> getKeyPolicy() {
+    public Output<KeyPolicyResponse> keyPolicy() {
         return this.keyPolicy;
     }
     /**
@@ -297,7 +297,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the Kind.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -311,7 +311,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
      * 
      */
-    public Output</* @Nullable */ String> getLargeFileSharesState() {
+    public Output</* @Nullable */ String> largeFileSharesState() {
         return this.largeFileSharesState;
     }
     /**
@@ -325,7 +325,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
      * 
      */
-    public Output<String> getLastGeoFailoverTime() {
+    public Output<String> lastGeoFailoverTime() {
         return this.lastGeoFailoverTime;
     }
     /**
@@ -339,7 +339,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -353,7 +353,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
      * 
      */
-    public Output</* @Nullable */ String> getMinimumTlsVersion() {
+    public Output</* @Nullable */ String> minimumTlsVersion() {
         return this.minimumTlsVersion;
     }
     /**
@@ -367,7 +367,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -381,7 +381,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Network rule set
      * 
      */
-    public Output<NetworkRuleSetResponse> getNetworkRuleSet() {
+    public Output<NetworkRuleSetResponse> networkRuleSet() {
         return this.networkRuleSet;
     }
     /**
@@ -395,7 +395,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
      * 
      */
-    public Output<EndpointsResponse> getPrimaryEndpoints() {
+    public Output<EndpointsResponse> primaryEndpoints() {
         return this.primaryEndpoints;
     }
     /**
@@ -409,7 +409,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the location of the primary data center for the storage account.
      * 
      */
-    public Output<String> getPrimaryLocation() {
+    public Output<String> primaryLocation() {
         return this.primaryLocation;
     }
     /**
@@ -423,7 +423,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return List of private endpoint connection associated with the specified storage account
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -437,7 +437,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the status of the storage account at the time the operation was called.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -451,7 +451,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Maintains information about the network routing choice opted by the user for data transfer
      * 
      */
-    public Output</* @Nullable */ RoutingPreferenceResponse> getRoutingPreference() {
+    public Output</* @Nullable */ RoutingPreferenceResponse> routingPreference() {
         return this.routingPreference;
     }
     /**
@@ -465,7 +465,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return SasPolicy assigned to the storage account.
      * 
      */
-    public Output<SasPolicyResponse> getSasPolicy() {
+    public Output<SasPolicyResponse> sasPolicy() {
         return this.sasPolicy;
     }
     /**
@@ -479,7 +479,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.
      * 
      */
-    public Output<EndpointsResponse> getSecondaryEndpoints() {
+    public Output<EndpointsResponse> secondaryEndpoints() {
         return this.secondaryEndpoints;
     }
     /**
@@ -493,7 +493,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
      * 
      */
-    public Output<String> getSecondaryLocation() {
+    public Output<String> secondaryLocation() {
         return this.secondaryLocation;
     }
     /**
@@ -507,7 +507,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the SKU.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -521,7 +521,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the status indicating whether the primary location of the storage account is available or unavailable.
      * 
      */
-    public Output<String> getStatusOfPrimary() {
+    public Output<String> statusOfPrimary() {
         return this.statusOfPrimary;
     }
     /**
@@ -535,7 +535,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
      * 
      */
-    public Output<String> getStatusOfSecondary() {
+    public Output<String> statusOfSecondary() {
         return this.statusOfSecondary;
     }
     /**
@@ -549,7 +549,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -563,7 +563,7 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

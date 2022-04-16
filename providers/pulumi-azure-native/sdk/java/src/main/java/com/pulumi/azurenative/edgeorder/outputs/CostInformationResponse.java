@@ -34,14 +34,14 @@ public final class CostInformationResponse {
      * Default url to display billing information
      * 
     */
-    public String getBillingInfoUrl() {
+    public String billingInfoUrl() {
         return this.billingInfoUrl;
     }
     /**
      * Details on the various billing aspects for the product system.
      * 
     */
-    public List<BillingMeterDetailsResponse> getBillingMeterDetails() {
+    public List<BillingMeterDetailsResponse> billingMeterDetails() {
         return this.billingMeterDetails;
     }
 

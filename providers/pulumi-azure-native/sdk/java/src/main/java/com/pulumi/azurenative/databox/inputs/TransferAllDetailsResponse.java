@@ -26,7 +26,7 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -37,7 +37,7 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="transferAllBlobs")
       private final @Nullable Boolean transferAllBlobs;
 
-    public Optional<Boolean> getTransferAllBlobs() {
+    public Optional<Boolean> transferAllBlobs() {
         return this.transferAllBlobs == null ? Optional.empty() : Optional.ofNullable(this.transferAllBlobs);
     }
 
@@ -48,7 +48,7 @@ public final class TransferAllDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="transferAllFiles")
       private final @Nullable Boolean transferAllFiles;
 
-    public Optional<Boolean> getTransferAllFiles() {
+    public Optional<Boolean> transferAllFiles() {
         return this.transferAllFiles == null ? Optional.empty() : Optional.ofNullable(this.transferAllFiles);
     }
 

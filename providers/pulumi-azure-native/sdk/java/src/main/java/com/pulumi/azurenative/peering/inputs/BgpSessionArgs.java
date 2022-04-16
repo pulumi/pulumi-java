@@ -27,7 +27,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPrefixesAdvertisedV4")
       private final @Nullable Output<Integer> maxPrefixesAdvertisedV4;
 
-    public Output<Integer> getMaxPrefixesAdvertisedV4() {
+    public Output<Integer> maxPrefixesAdvertisedV4() {
         return this.maxPrefixesAdvertisedV4 == null ? Codegen.empty() : this.maxPrefixesAdvertisedV4;
     }
 
@@ -38,7 +38,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPrefixesAdvertisedV6")
       private final @Nullable Output<Integer> maxPrefixesAdvertisedV6;
 
-    public Output<Integer> getMaxPrefixesAdvertisedV6() {
+    public Output<Integer> maxPrefixesAdvertisedV6() {
         return this.maxPrefixesAdvertisedV6 == null ? Codegen.empty() : this.maxPrefixesAdvertisedV6;
     }
 
@@ -49,7 +49,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="md5AuthenticationKey")
       private final @Nullable Output<String> md5AuthenticationKey;
 
-    public Output<String> getMd5AuthenticationKey() {
+    public Output<String> md5AuthenticationKey() {
         return this.md5AuthenticationKey == null ? Codegen.empty() : this.md5AuthenticationKey;
     }
 
@@ -60,7 +60,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="microsoftSessionIPv4Address")
       private final @Nullable Output<String> microsoftSessionIPv4Address;
 
-    public Output<String> getMicrosoftSessionIPv4Address() {
+    public Output<String> microsoftSessionIPv4Address() {
         return this.microsoftSessionIPv4Address == null ? Codegen.empty() : this.microsoftSessionIPv4Address;
     }
 
@@ -71,7 +71,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="microsoftSessionIPv6Address")
       private final @Nullable Output<String> microsoftSessionIPv6Address;
 
-    public Output<String> getMicrosoftSessionIPv6Address() {
+    public Output<String> microsoftSessionIPv6Address() {
         return this.microsoftSessionIPv6Address == null ? Codegen.empty() : this.microsoftSessionIPv6Address;
     }
 
@@ -82,7 +82,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerSessionIPv4Address")
       private final @Nullable Output<String> peerSessionIPv4Address;
 
-    public Output<String> getPeerSessionIPv4Address() {
+    public Output<String> peerSessionIPv4Address() {
         return this.peerSessionIPv4Address == null ? Codegen.empty() : this.peerSessionIPv4Address;
     }
 
@@ -93,7 +93,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerSessionIPv6Address")
       private final @Nullable Output<String> peerSessionIPv6Address;
 
-    public Output<String> getPeerSessionIPv6Address() {
+    public Output<String> peerSessionIPv6Address() {
         return this.peerSessionIPv6Address == null ? Codegen.empty() : this.peerSessionIPv6Address;
     }
 
@@ -104,7 +104,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionPrefixV4")
       private final @Nullable Output<String> sessionPrefixV4;
 
-    public Output<String> getSessionPrefixV4() {
+    public Output<String> sessionPrefixV4() {
         return this.sessionPrefixV4 == null ? Codegen.empty() : this.sessionPrefixV4;
     }
 
@@ -115,7 +115,7 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionPrefixV6")
       private final @Nullable Output<String> sessionPrefixV6;
 
-    public Output<String> getSessionPrefixV6() {
+    public Output<String> sessionPrefixV6() {
         return this.sessionPrefixV6 == null ? Codegen.empty() : this.sessionPrefixV6;
     }
 

@@ -26,7 +26,7 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="asn")
       private final @Nullable Double asn;
 
-    public Optional<Double> getAsn() {
+    public Optional<Double> asn() {
         return this.asn == null ? Optional.empty() : Optional.ofNullable(this.asn);
     }
 
@@ -37,7 +37,7 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="bgpPeeringAddress")
       private final @Nullable String bgpPeeringAddress;
 
-    public Optional<String> getBgpPeeringAddress() {
+    public Optional<String> bgpPeeringAddress() {
         return this.bgpPeeringAddress == null ? Optional.empty() : Optional.ofNullable(this.bgpPeeringAddress);
     }
 

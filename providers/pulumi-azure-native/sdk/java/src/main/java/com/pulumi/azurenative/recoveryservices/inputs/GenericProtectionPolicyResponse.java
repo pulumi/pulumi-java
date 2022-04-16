@@ -29,7 +29,7 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
 
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -40,7 +40,7 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="fabricName")
       private final @Nullable String fabricName;
 
-    public Optional<String> getFabricName() {
+    public Optional<String> fabricName() {
         return this.fabricName == null ? Optional.empty() : Optional.ofNullable(this.fabricName);
     }
 
@@ -51,7 +51,7 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
 
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
@@ -62,7 +62,7 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="subProtectionPolicy")
       private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
-    public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
+    public List<SubProtectionPolicyResponse> subProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
 
@@ -73,7 +73,7 @@ public final class GenericProtectionPolicyResponse extends com.pulumi.resources.
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 

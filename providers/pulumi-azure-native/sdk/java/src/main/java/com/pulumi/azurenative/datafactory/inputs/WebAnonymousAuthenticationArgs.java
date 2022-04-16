@@ -27,7 +27,7 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -38,7 +38,7 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 

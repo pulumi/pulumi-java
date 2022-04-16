@@ -39,21 +39,21 @@ public final class IdentityResponse {
      * The principal id of managed service identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant of managed service identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The type of managed service identity.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class ParametersLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="contentVersion")
       private final @Nullable String contentVersion;
 
-    public Optional<String> getContentVersion() {
+    public Optional<String> contentVersion() {
         return this.contentVersion == null ? Optional.empty() : Optional.ofNullable(this.contentVersion);
     }
 
@@ -36,7 +36,7 @@ public final class ParametersLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

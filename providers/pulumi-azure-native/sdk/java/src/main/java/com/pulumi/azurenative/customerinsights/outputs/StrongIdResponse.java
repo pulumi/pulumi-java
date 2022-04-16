@@ -49,28 +49,28 @@ public final class StrongIdResponse {
      * Localized descriptions.
      * 
     */
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The properties which make up the unique ID.
      * 
     */
-    public List<String> getKeyPropertyNames() {
+    public List<String> keyPropertyNames() {
         return this.keyPropertyNames;
     }
     /**
      * The Name identifying the strong ID.
      * 
     */
-    public String getStrongIdName() {
+    public String strongIdName() {
         return this.strongIdName;
     }
 

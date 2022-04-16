@@ -27,7 +27,7 @@ public final class KeyForDiskEncryptionSetArgs extends com.pulumi.resources.Reso
     @Import(name="keyUrl", required=true)
       private final Output<String> keyUrl;
 
-    public Output<String> getKeyUrl() {
+    public Output<String> keyUrl() {
         return this.keyUrl;
     }
 
@@ -38,7 +38,7 @@ public final class KeyForDiskEncryptionSetArgs extends com.pulumi.resources.Reso
     @Import(name="sourceVault")
       private final @Nullable Output<SourceVaultArgs> sourceVault;
 
-    public Output<SourceVaultArgs> getSourceVault() {
+    public Output<SourceVaultArgs> sourceVault() {
         return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
     }
 

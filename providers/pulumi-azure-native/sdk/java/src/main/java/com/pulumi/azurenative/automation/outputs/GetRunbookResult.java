@@ -174,147 +174,147 @@ public final class GetRunbookResult {
      * Gets or sets the creation time.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the draft runbook properties.
      * 
     */
-    public Optional<RunbookDraftResponse> getDraft() {
+    public Optional<RunbookDraftResponse> draft() {
         return Optional.ofNullable(this.draft);
     }
     /**
      * Gets or sets the etag of the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the job count of the runbook.
      * 
     */
-    public Optional<Integer> getJobCount() {
+    public Optional<Integer> jobCount() {
         return Optional.ofNullable(this.jobCount);
     }
     /**
      * Gets or sets the last modified by.
      * 
     */
-    public Optional<String> getLastModifiedBy() {
+    public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The Azure Region where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets or sets the option to log activity trace of the runbook.
      * 
     */
-    public Optional<Integer> getLogActivityTrace() {
+    public Optional<Integer> logActivityTrace() {
         return Optional.ofNullable(this.logActivityTrace);
     }
     /**
      * Gets or sets progress log option.
      * 
     */
-    public Optional<Boolean> getLogProgress() {
+    public Optional<Boolean> logProgress() {
         return Optional.ofNullable(this.logProgress);
     }
     /**
      * Gets or sets verbose log option.
      * 
     */
-    public Optional<Boolean> getLogVerbose() {
+    public Optional<Boolean> logVerbose() {
         return Optional.ofNullable(this.logVerbose);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the runbook output types.
      * 
     */
-    public List<String> getOutputTypes() {
+    public List<String> outputTypes() {
         return this.outputTypes == null ? List.of() : this.outputTypes;
     }
     /**
      * Gets or sets the runbook parameters.
      * 
     */
-    public Map<String,RunbookParameterResponse> getParameters() {
+    public Map<String,RunbookParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Gets or sets the provisioning state of the runbook.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Gets or sets the published runbook content link.
      * 
     */
-    public Optional<ContentLinkResponse> getPublishContentLink() {
+    public Optional<ContentLinkResponse> publishContentLink() {
         return Optional.ofNullable(this.publishContentLink);
     }
     /**
      * Gets or sets the type of the runbook.
      * 
     */
-    public Optional<String> getRunbookType() {
+    public Optional<String> runbookType() {
         return Optional.ofNullable(this.runbookType);
     }
     /**
      * Gets or sets the state of the runbook.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

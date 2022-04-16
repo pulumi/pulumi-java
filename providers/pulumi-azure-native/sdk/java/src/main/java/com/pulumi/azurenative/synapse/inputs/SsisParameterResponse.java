@@ -27,7 +27,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dataType")
       private final @Nullable String dataType;
 
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
@@ -38,7 +38,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
@@ -49,7 +49,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -60,7 +60,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="designDefaultValue")
       private final @Nullable String designDefaultValue;
 
-    public Optional<String> getDesignDefaultValue() {
+    public Optional<String> designDefaultValue() {
         return this.designDefaultValue == null ? Optional.empty() : Optional.ofNullable(this.designDefaultValue);
     }
 
@@ -71,7 +71,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
       private final @Nullable Double id;
 
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -82,7 +82,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -93,7 +93,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="required")
       private final @Nullable Boolean required;
 
-    public Optional<Boolean> getRequired() {
+    public Optional<Boolean> required() {
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
     }
 
@@ -104,7 +104,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sensitive")
       private final @Nullable Boolean sensitive;
 
-    public Optional<Boolean> getSensitive() {
+    public Optional<Boolean> sensitive() {
         return this.sensitive == null ? Optional.empty() : Optional.ofNullable(this.sensitive);
     }
 
@@ -115,7 +115,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sensitiveDefaultValue")
       private final @Nullable String sensitiveDefaultValue;
 
-    public Optional<String> getSensitiveDefaultValue() {
+    public Optional<String> sensitiveDefaultValue() {
         return this.sensitiveDefaultValue == null ? Optional.empty() : Optional.ofNullable(this.sensitiveDefaultValue);
     }
 
@@ -126,7 +126,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="valueSet")
       private final @Nullable Boolean valueSet;
 
-    public Optional<Boolean> getValueSet() {
+    public Optional<Boolean> valueSet() {
         return this.valueSet == null ? Optional.empty() : Optional.ofNullable(this.valueSet);
     }
 
@@ -137,7 +137,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="valueType")
       private final @Nullable String valueType;
 
-    public Optional<String> getValueType() {
+    public Optional<String> valueType() {
         return this.valueType == null ? Optional.empty() : Optional.ofNullable(this.valueType);
     }
 
@@ -148,7 +148,7 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="variable")
       private final @Nullable String variable;
 
-    public Optional<String> getVariable() {
+    public Optional<String> variable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
     }
 

@@ -33,7 +33,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -44,7 +44,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -66,7 +66,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
+    public Output<Map<String,Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -77,7 +77,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="pipeline", required=true)
       private final Output<PipelineReferenceArgs> pipeline;
 
-    public Output<PipelineReferenceArgs> getPipeline() {
+    public Output<PipelineReferenceArgs> pipeline() {
         return this.pipeline;
     }
 
@@ -89,7 +89,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -100,7 +100,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
@@ -111,7 +111,7 @@ public final class ExecutePipelineActivityArgs extends com.pulumi.resources.Reso
     @Import(name="waitOnCompletion")
       private final @Nullable Output<Boolean> waitOnCompletion;
 
-    public Output<Boolean> getWaitOnCompletion() {
+    public Output<Boolean> waitOnCompletion() {
         return this.waitOnCompletion == null ? Codegen.empty() : this.waitOnCompletion;
     }
 

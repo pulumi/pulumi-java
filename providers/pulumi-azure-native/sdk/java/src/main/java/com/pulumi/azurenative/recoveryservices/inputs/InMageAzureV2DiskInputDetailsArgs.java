@@ -28,7 +28,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> getDiskEncryptionSetId() {
+    public Output<String> diskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
@@ -39,7 +39,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="diskId")
       private final @Nullable Output<String> diskId;
 
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId == null ? Codegen.empty() : this.diskId;
     }
 
@@ -50,7 +50,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Output<Either<String,DiskAccountType>> getDiskType() {
+    public Output<Either<String,DiskAccountType>> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -61,7 +61,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;
 
-    public Output<String> getLogStorageAccountId() {
+    public Output<String> logStorageAccountId() {
         return this.logStorageAccountId == null ? Codegen.empty() : this.logStorageAccountId;
     }
 

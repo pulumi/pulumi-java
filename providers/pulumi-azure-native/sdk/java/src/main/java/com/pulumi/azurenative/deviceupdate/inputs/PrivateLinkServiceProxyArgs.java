@@ -29,7 +29,7 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
     @Import(name="groupConnectivityInformation")
       private final @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
 
-    public Output<List<GroupConnectivityInformationArgs>> getGroupConnectivityInformation() {
+    public Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? Codegen.empty() : this.groupConnectivityInformation;
     }
 
@@ -40,7 +40,7 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -51,7 +51,7 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
     @Import(name="remotePrivateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getRemotePrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState() {
         return this.remotePrivateLinkServiceConnectionState == null ? Codegen.empty() : this.remotePrivateLinkServiceConnectionState;
     }
 

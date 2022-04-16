@@ -58,35 +58,35 @@ public final class AutomationRuleTriggeringLogicResponse {
      * The conditions to evaluate to determine if the automation rule should be triggered on a given object
      * 
     */
-    public List<AutomationRulePropertyValuesConditionResponse> getConditions() {
+    public List<AutomationRulePropertyValuesConditionResponse> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Determines when the automation rule should automatically expire and be disabled.
      * 
     */
-    public Optional<String> getExpirationTimeUtc() {
+    public Optional<String> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
     /**
      * Determines whether the automation rule is enabled or disabled.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * The type of object the automation rule triggers on
      * 
     */
-    public String getTriggersOn() {
+    public String triggersOn() {
         return this.triggersOn;
     }
     /**
      * The type of event the automation rule triggers on
      * 
     */
-    public String getTriggersWhen() {
+    public String triggersWhen() {
         return this.triggersWhen;
     }
 

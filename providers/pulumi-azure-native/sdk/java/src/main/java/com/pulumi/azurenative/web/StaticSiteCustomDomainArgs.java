@@ -22,7 +22,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -33,7 +33,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -44,7 +44,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -55,7 +55,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
     @Import(name="validationMethod")
       private final @Nullable Output<String> validationMethod;
 
-    public Output<String> getValidationMethod() {
+    public Output<String> validationMethod() {
         return this.validationMethod == null ? Codegen.empty() : this.validationMethod;
     }
 

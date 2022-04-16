@@ -33,7 +33,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<ScaleRuleMetricDimensionArgs>> dimensions;
 
-    public Output<List<ScaleRuleMetricDimensionArgs>> getDimensions() {
+    public Output<List<ScaleRuleMetricDimensionArgs>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -44,7 +44,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dividePerInstance")
       private final @Nullable Output<Boolean> dividePerInstance;
 
-    public Output<Boolean> getDividePerInstance() {
+    public Output<Boolean> dividePerInstance() {
         return this.dividePerInstance == null ? Codegen.empty() : this.dividePerInstance;
     }
 
@@ -55,7 +55,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -66,7 +66,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
+    public Output<String> metricNamespace() {
         return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
@@ -77,7 +77,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricResourceLocation")
       private final @Nullable Output<String> metricResourceLocation;
 
-    public Output<String> getMetricResourceLocation() {
+    public Output<String> metricResourceLocation() {
         return this.metricResourceLocation == null ? Codegen.empty() : this.metricResourceLocation;
     }
 
@@ -88,7 +88,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricResourceUri", required=true)
       private final Output<String> metricResourceUri;
 
-    public Output<String> getMetricResourceUri() {
+    public Output<String> metricResourceUri() {
         return this.metricResourceUri;
     }
 
@@ -99,7 +99,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operator", required=true)
       private final Output<ComparisonOperationType> operator;
 
-    public Output<ComparisonOperationType> getOperator() {
+    public Output<ComparisonOperationType> operator() {
         return this.operator;
     }
 
@@ -110,7 +110,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="statistic", required=true)
       private final Output<MetricStatisticType> statistic;
 
-    public Output<MetricStatisticType> getStatistic() {
+    public Output<MetricStatisticType> statistic() {
         return this.statistic;
     }
 
@@ -121,7 +121,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -132,7 +132,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeAggregation", required=true)
       private final Output<TimeAggregationType> timeAggregation;
 
-    public Output<TimeAggregationType> getTimeAggregation() {
+    public Output<TimeAggregationType> timeAggregation() {
         return this.timeAggregation;
     }
 
@@ -143,7 +143,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeGrain", required=true)
       private final Output<String> timeGrain;
 
-    public Output<String> getTimeGrain() {
+    public Output<String> timeGrain() {
         return this.timeGrain;
     }
 
@@ -154,7 +154,7 @@ public final class MetricTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeWindow", required=true)
       private final Output<String> timeWindow;
 
-    public Output<String> getTimeWindow() {
+    public Output<String> timeWindow() {
         return this.timeWindow;
     }
 

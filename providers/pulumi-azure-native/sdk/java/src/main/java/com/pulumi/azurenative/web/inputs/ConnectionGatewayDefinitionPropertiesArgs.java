@@ -25,7 +25,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
     @Import(name="backendUri")
       private final @Nullable Output<String> backendUri;
 
-    public Output<String> getBackendUri() {
+    public Output<String> backendUri() {
         return this.backendUri == null ? Codegen.empty() : this.backendUri;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
     @Import(name="connectionGatewayInstallation")
       private final @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
 
-    public Output<ConnectionGatewayReferenceArgs> getConnectionGatewayInstallation() {
+    public Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation() {
         return this.connectionGatewayInstallation == null ? Codegen.empty() : this.connectionGatewayInstallation;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
     @Import(name="contactInformation")
       private final @Nullable Output<List<String>> contactInformation;
 
-    public Output<List<String>> getContactInformation() {
+    public Output<List<String>> contactInformation() {
         return this.contactInformation == null ? Codegen.empty() : this.contactInformation;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -80,7 +80,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
     @Import(name="machineName")
       private final @Nullable Output<String> machineName;
 
-    public Output<String> getMachineName() {
+    public Output<String> machineName() {
         return this.machineName == null ? Codegen.empty() : this.machineName;
     }
 
@@ -91,7 +91,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends com.pulumi.
     @Import(name="status")
       private final @Nullable Output<Object> status;
 
-    public Output<Object> getStatus() {
+    public Output<Object> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

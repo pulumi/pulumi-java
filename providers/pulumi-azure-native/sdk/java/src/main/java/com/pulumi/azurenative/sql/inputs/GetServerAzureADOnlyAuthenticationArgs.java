@@ -19,7 +19,7 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
     @Import(name="authenticationName", required=true)
       private final String authenticationName;
 
-    public String getAuthenticationName() {
+    public String authenticationName() {
         return this.authenticationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

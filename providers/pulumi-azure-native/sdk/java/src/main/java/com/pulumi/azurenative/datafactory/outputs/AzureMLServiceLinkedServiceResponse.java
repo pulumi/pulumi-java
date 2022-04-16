@@ -113,77 +113,77 @@ public final class AzureMLServiceLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Azure ML Service workspace name. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getMlWorkspaceName() {
+    public Object mlWorkspaceName() {
         return this.mlWorkspaceName;
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getResourceGroupName() {
+    public Object resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * The ID of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
      * Azure ML Service workspace subscription ID. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getSubscriptionId() {
+    public Object subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getTenant() {
+    public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
@@ -191,7 +191,7 @@ public final class AzureMLServiceLinkedServiceResponse {
      * Expected value is 'AzureMLService'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

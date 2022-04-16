@@ -92,70 +92,70 @@ public final class CommitmentPlanPropertiesResponse {
      * Indicates whether usage beyond the commitment plan's included quantities will be charged.
      * 
     */
-    public Boolean getChargeForOverage() {
+    public Boolean chargeForOverage() {
         return this.chargeForOverage;
     }
     /**
      * Indicates whether the commitment plan will incur a charge.
      * 
     */
-    public Boolean getChargeForPlan() {
+    public Boolean chargeForPlan() {
         return this.chargeForPlan;
     }
     /**
      * The date at which this commitment plan was created, in ISO 8601 format.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The included resource quantities this plan gives you.
      * 
     */
-    public Map<String,PlanQuantityResponse> getIncludedQuantities() {
+    public Map<String,PlanQuantityResponse> includedQuantities() {
         return this.includedQuantities;
     }
     /**
      * The maximum number of commitment associations that can be children of this commitment plan.
      * 
     */
-    public Integer getMaxAssociationLimit() {
+    public Integer maxAssociationLimit() {
         return this.maxAssociationLimit;
     }
     /**
      * The maximum scale-out capacity for this commitment plan.
      * 
     */
-    public Integer getMaxCapacityLimit() {
+    public Integer maxCapacityLimit() {
         return this.maxCapacityLimit;
     }
     /**
      * The minimum scale-out capacity for this commitment plan.
      * 
     */
-    public Integer getMinCapacityLimit() {
+    public Integer minCapacityLimit() {
         return this.minCapacityLimit;
     }
     /**
      * The Azure meter which will be used to charge for this commitment plan.
      * 
     */
-    public String getPlanMeter() {
+    public String planMeter() {
         return this.planMeter;
     }
     /**
      * The frequency at which this commitment plan's included quantities are refilled.
      * 
     */
-    public Integer getRefillFrequencyInDays() {
+    public Integer refillFrequencyInDays() {
         return this.refillFrequencyInDays;
     }
     /**
      * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.
      * 
     */
-    public Boolean getSuspendPlanOnOverage() {
+    public Boolean suspendPlanOnOverage() {
         return this.suspendPlanOnOverage;
     }
 

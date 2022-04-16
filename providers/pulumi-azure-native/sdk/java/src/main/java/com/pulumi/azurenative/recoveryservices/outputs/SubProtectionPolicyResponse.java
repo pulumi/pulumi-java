@@ -48,21 +48,21 @@ public final class SubProtectionPolicyResponse {
      * Type of backup policy type
      * 
     */
-    public Optional<String> getPolicyType() {
+    public Optional<String> policyType() {
         return Optional.ofNullable(this.policyType);
     }
     /**
      * Retention policy with the details on backup copy retention ranges.
      * 
     */
-    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
+    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * Backup schedule specified as part of backup policy.
      * 
     */
-    public Optional<Object> getSchedulePolicy() {
+    public Optional<Object> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
 

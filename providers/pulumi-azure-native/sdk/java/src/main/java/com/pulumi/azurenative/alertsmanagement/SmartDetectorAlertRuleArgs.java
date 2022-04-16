@@ -30,7 +30,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="actionGroups", required=true)
       private final Output<ActionGroupsInformationArgs> actionGroups;
 
-    public Output<ActionGroupsInformationArgs> getActionGroups() {
+    public Output<ActionGroupsInformationArgs> actionGroups() {
         return this.actionGroups;
     }
 
@@ -41,7 +41,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="alertRuleName")
       private final @Nullable Output<String> alertRuleName;
 
-    public Output<String> getAlertRuleName() {
+    public Output<String> alertRuleName() {
         return this.alertRuleName == null ? Codegen.empty() : this.alertRuleName;
     }
 
@@ -52,7 +52,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="detector", required=true)
       private final Output<DetectorArgs> detector;
 
-    public Output<DetectorArgs> getDetector() {
+    public Output<DetectorArgs> detector() {
         return this.detector;
     }
 
@@ -74,7 +74,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="frequency", required=true)
       private final Output<String> frequency;
 
-    public Output<String> getFrequency() {
+    public Output<String> frequency() {
         return this.frequency;
     }
 
@@ -85,7 +85,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -96,7 +96,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,7 +107,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="scope", required=true)
       private final Output<List<String>> scope;
 
-    public Output<List<String>> getScope() {
+    public Output<List<String>> scope() {
         return this.scope;
     }
 
@@ -118,7 +118,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="severity", required=true)
       private final Output<Either<String,Severity>> severity;
 
-    public Output<Either<String,Severity>> getSeverity() {
+    public Output<Either<String,Severity>> severity() {
         return this.severity;
     }
 
@@ -129,7 +129,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="state", required=true)
       private final Output<Either<String,AlertRuleState>> state;
 
-    public Output<Either<String,AlertRuleState>> getState() {
+    public Output<Either<String,AlertRuleState>> state() {
         return this.state;
     }
 
@@ -140,7 +140,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -151,7 +151,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="throttling")
       private final @Nullable Output<ThrottlingInformationArgs> throttling;
 
-    public Output<ThrottlingInformationArgs> getThrottling() {
+    public Output<ThrottlingInformationArgs> throttling() {
         return this.throttling == null ? Codegen.empty() : this.throttling;
     }
 

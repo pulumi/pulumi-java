@@ -26,7 +26,7 @@ public final class AzureFirewallApplicationRuleProtocolResponse extends com.pulu
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -37,7 +37,7 @@ public final class AzureFirewallApplicationRuleProtocolResponse extends com.pulu
     @Import(name="protocolType")
       private final @Nullable String protocolType;
 
-    public Optional<String> getProtocolType() {
+    public Optional<String> protocolType() {
         return this.protocolType == null ? Optional.empty() : Optional.ofNullable(this.protocolType);
     }
 

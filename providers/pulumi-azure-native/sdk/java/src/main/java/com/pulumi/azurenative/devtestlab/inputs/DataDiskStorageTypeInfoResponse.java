@@ -25,7 +25,7 @@ public final class DataDiskStorageTypeInfoResponse extends com.pulumi.resources.
     @Import(name="lun")
       private final @Nullable String lun;
 
-    public Optional<String> getLun() {
+    public Optional<String> lun() {
         return this.lun == null ? Optional.empty() : Optional.ofNullable(this.lun);
     }
 
@@ -36,7 +36,7 @@ public final class DataDiskStorageTypeInfoResponse extends com.pulumi.resources.
     @Import(name="storageType")
       private final @Nullable String storageType;
 
-    public Optional<String> getStorageType() {
+    public Optional<String> storageType() {
         return this.storageType == null ? Optional.empty() : Optional.ofNullable(this.storageType);
     }
 

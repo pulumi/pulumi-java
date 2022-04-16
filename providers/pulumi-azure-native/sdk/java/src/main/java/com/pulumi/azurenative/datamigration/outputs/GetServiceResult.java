@@ -99,77 +99,77 @@ public final class GetServiceResult {
      * HTTP strong entity tag value. Ignored if submitted
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource kind. Only 'vm' (the default) is supported.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource's provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The public key of the service, used to encrypt secrets sent to the service
      * 
     */
-    public Optional<String> getPublicKey() {
+    public Optional<String> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
     /**
      * Service SKU
      * 
     */
-    public Optional<ServiceSkuResponse> getSku() {
+    public Optional<ServiceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
      * 
     */
-    public String getVirtualSubnetId() {
+    public String virtualSubnetId() {
         return this.virtualSubnetId;
     }
 

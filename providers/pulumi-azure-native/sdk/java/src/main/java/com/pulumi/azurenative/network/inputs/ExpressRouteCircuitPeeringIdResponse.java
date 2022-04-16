@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitPeeringIdResponse extends com.pulumi.resou
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 

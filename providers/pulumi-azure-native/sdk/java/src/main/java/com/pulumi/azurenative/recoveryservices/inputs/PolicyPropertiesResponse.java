@@ -37,7 +37,7 @@ public final class PolicyPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -48,7 +48,7 @@ public final class PolicyPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="providerSpecificDetails")
       private final @Nullable Object providerSpecificDetails;
 
-    public Object getProviderSpecificDetails() {
+    public Object providerSpecificDetails() {
         return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
     }
 

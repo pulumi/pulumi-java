@@ -26,7 +26,7 @@ public final class AutoscaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
       private final @Nullable AutoscaleCapacityResponse capacity;
 
-    public Optional<AutoscaleCapacityResponse> getCapacity() {
+    public Optional<AutoscaleCapacityResponse> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -37,7 +37,7 @@ public final class AutoscaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recurrence")
       private final @Nullable AutoscaleRecurrenceResponse recurrence;
 
-    public Optional<AutoscaleRecurrenceResponse> getRecurrence() {
+    public Optional<AutoscaleRecurrenceResponse> recurrence() {
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
     }
 

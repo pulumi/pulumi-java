@@ -19,7 +19,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
       private final String functionName;
 
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobName", required=true)
       private final String jobName;
 
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
 
@@ -41,7 +41,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

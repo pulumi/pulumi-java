@@ -31,7 +31,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="agentUpgradeBlockingErrorDetails", required=true)
       private final List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
 
-    public List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> getAgentUpgradeBlockingErrorDetails() {
+    public List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails() {
         return this.agentUpgradeBlockingErrorDetails;
     }
 
@@ -42,7 +42,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="agentUpgradeState", required=true)
       private final String agentUpgradeState;
 
-    public String getAgentUpgradeState() {
+    public String agentUpgradeState() {
         return this.agentUpgradeState;
     }
 
@@ -53,7 +53,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="allocatedMemoryInMB", required=true)
       private final Double allocatedMemoryInMB;
 
-    public Double getAllocatedMemoryInMB() {
+    public Double allocatedMemoryInMB() {
         return this.allocatedMemoryInMB;
     }
 
@@ -64,7 +64,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="discoveryType", required=true)
       private final String discoveryType;
 
-    public String getDiscoveryType() {
+    public String discoveryType() {
         return this.discoveryType;
     }
 
@@ -75,7 +75,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="fabricDiscoveryMachineId", required=true)
       private final String fabricDiscoveryMachineId;
 
-    public String getFabricDiscoveryMachineId() {
+    public String fabricDiscoveryMachineId() {
         return this.fabricDiscoveryMachineId;
     }
 
@@ -86,7 +86,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="failoverRecoveryPointId", required=true)
       private final String failoverRecoveryPointId;
 
-    public String getFailoverRecoveryPointId() {
+    public String failoverRecoveryPointId() {
         return this.failoverRecoveryPointId;
     }
 
@@ -97,7 +97,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="firmwareType", required=true)
       private final String firmwareType;
 
-    public String getFirmwareType() {
+    public String firmwareType() {
         return this.firmwareType;
     }
 
@@ -108,7 +108,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="initialReplicationProcessedBytes", required=true)
       private final Double initialReplicationProcessedBytes;
 
-    public Double getInitialReplicationProcessedBytes() {
+    public Double initialReplicationProcessedBytes() {
         return this.initialReplicationProcessedBytes;
     }
 
@@ -119,7 +119,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="initialReplicationProgressPercentage", required=true)
       private final Integer initialReplicationProgressPercentage;
 
-    public Integer getInitialReplicationProgressPercentage() {
+    public Integer initialReplicationProgressPercentage() {
         return this.initialReplicationProgressPercentage;
     }
 
@@ -130,7 +130,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="initialReplicationTransferredBytes", required=true)
       private final Double initialReplicationTransferredBytes;
 
-    public Double getInitialReplicationTransferredBytes() {
+    public Double initialReplicationTransferredBytes() {
         return this.initialReplicationTransferredBytes;
     }
 
@@ -142,7 +142,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -153,7 +153,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="internalIdentifier", required=true)
       private final String internalIdentifier;
 
-    public String getInternalIdentifier() {
+    public String internalIdentifier() {
         return this.internalIdentifier;
     }
 
@@ -164,7 +164,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="isLastUpgradeSuccessful", required=true)
       private final String isLastUpgradeSuccessful;
 
-    public String getIsLastUpgradeSuccessful() {
+    public String isLastUpgradeSuccessful() {
         return this.isLastUpgradeSuccessful;
     }
 
@@ -175,7 +175,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastAgentUpgradeErrorDetails", required=true)
       private final List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
 
-    public List<InMageRcmLastAgentUpgradeErrorDetailsResponse> getLastAgentUpgradeErrorDetails() {
+    public List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails() {
         return this.lastAgentUpgradeErrorDetails;
     }
 
@@ -186,7 +186,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastAgentUpgradeFailedJobId", required=true)
       private final String lastAgentUpgradeFailedJobId;
 
-    public String getLastAgentUpgradeFailedJobId() {
+    public String lastAgentUpgradeFailedJobId() {
         return this.lastAgentUpgradeFailedJobId;
     }
 
@@ -197,7 +197,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastAgentUpgradeType", required=true)
       private final String lastAgentUpgradeType;
 
-    public String getLastAgentUpgradeType() {
+    public String lastAgentUpgradeType() {
         return this.lastAgentUpgradeType;
     }
 
@@ -208,7 +208,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRecoveryPointId", required=true)
       private final String lastRecoveryPointId;
 
-    public String getLastRecoveryPointId() {
+    public String lastRecoveryPointId() {
         return this.lastRecoveryPointId;
     }
 
@@ -219,7 +219,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRecoveryPointReceived", required=true)
       private final String lastRecoveryPointReceived;
 
-    public String getLastRecoveryPointReceived() {
+    public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
     }
 
@@ -230,7 +230,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRpoCalculatedTime", required=true)
       private final String lastRpoCalculatedTime;
 
-    public String getLastRpoCalculatedTime() {
+    public String lastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime;
     }
 
@@ -241,7 +241,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRpoInSeconds", required=true)
       private final Double lastRpoInSeconds;
 
-    public Double getLastRpoInSeconds() {
+    public Double lastRpoInSeconds() {
         return this.lastRpoInSeconds;
     }
 
@@ -252,7 +252,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="licenseType", required=true)
       private final String licenseType;
 
-    public String getLicenseType() {
+    public String licenseType() {
         return this.licenseType;
     }
 
@@ -263,7 +263,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="mobilityAgentDetails", required=true)
       private final InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
 
-    public InMageRcmMobilityAgentDetailsResponse getMobilityAgentDetails() {
+    public InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails() {
         return this.mobilityAgentDetails;
     }
 
@@ -274,7 +274,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="multiVmGroupName", required=true)
       private final String multiVmGroupName;
 
-    public String getMultiVmGroupName() {
+    public String multiVmGroupName() {
         return this.multiVmGroupName;
     }
 
@@ -285,7 +285,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="osType", required=true)
       private final String osType;
 
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 
@@ -296,7 +296,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="processServerId", required=true)
       private final String processServerId;
 
-    public String getProcessServerId() {
+    public String processServerId() {
         return this.processServerId;
     }
 
@@ -307,7 +307,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="processServerName", required=true)
       private final String processServerName;
 
-    public String getProcessServerName() {
+    public String processServerName() {
         return this.processServerName;
     }
 
@@ -318,7 +318,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="processorCoreCount", required=true)
       private final Integer processorCoreCount;
 
-    public Integer getProcessorCoreCount() {
+    public Integer processorCoreCount() {
         return this.processorCoreCount;
     }
 
@@ -329,7 +329,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="protectedDisks", required=true)
       private final List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
 
-    public List<InMageRcmProtectedDiskDetailsResponse> getProtectedDisks() {
+    public List<InMageRcmProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks;
     }
 
@@ -340,7 +340,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncProcessedBytes", required=true)
       private final Double resyncProcessedBytes;
 
-    public Double getResyncProcessedBytes() {
+    public Double resyncProcessedBytes() {
         return this.resyncProcessedBytes;
     }
 
@@ -351,7 +351,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncProgressPercentage", required=true)
       private final Integer resyncProgressPercentage;
 
-    public Integer getResyncProgressPercentage() {
+    public Integer resyncProgressPercentage() {
         return this.resyncProgressPercentage;
     }
 
@@ -362,7 +362,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncRequired", required=true)
       private final String resyncRequired;
 
-    public String getResyncRequired() {
+    public String resyncRequired() {
         return this.resyncRequired;
     }
 
@@ -373,7 +373,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncState", required=true)
       private final String resyncState;
 
-    public String getResyncState() {
+    public String resyncState() {
         return this.resyncState;
     }
 
@@ -384,7 +384,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncTransferredBytes", required=true)
       private final Double resyncTransferredBytes;
 
-    public Double getResyncTransferredBytes() {
+    public Double resyncTransferredBytes() {
         return this.resyncTransferredBytes;
     }
 
@@ -395,7 +395,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="runAsAccountId", required=true)
       private final String runAsAccountId;
 
-    public String getRunAsAccountId() {
+    public String runAsAccountId() {
         return this.runAsAccountId;
     }
 
@@ -406,7 +406,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetAvailabilitySetId", required=true)
       private final String targetAvailabilitySetId;
 
-    public String getTargetAvailabilitySetId() {
+    public String targetAvailabilitySetId() {
         return this.targetAvailabilitySetId;
     }
 
@@ -417,7 +417,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetAvailabilityZone", required=true)
       private final String targetAvailabilityZone;
 
-    public String getTargetAvailabilityZone() {
+    public String targetAvailabilityZone() {
         return this.targetAvailabilityZone;
     }
 
@@ -428,7 +428,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetBootDiagnosticsStorageAccountId", required=true)
       private final String targetBootDiagnosticsStorageAccountId;
 
-    public String getTargetBootDiagnosticsStorageAccountId() {
+    public String targetBootDiagnosticsStorageAccountId() {
         return this.targetBootDiagnosticsStorageAccountId;
     }
 
@@ -439,7 +439,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetGeneration", required=true)
       private final String targetGeneration;
 
-    public String getTargetGeneration() {
+    public String targetGeneration() {
         return this.targetGeneration;
     }
 
@@ -450,7 +450,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetNetworkId", required=true)
       private final String targetNetworkId;
 
-    public String getTargetNetworkId() {
+    public String targetNetworkId() {
         return this.targetNetworkId;
     }
 
@@ -461,7 +461,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetProximityPlacementGroupId", required=true)
       private final String targetProximityPlacementGroupId;
 
-    public String getTargetProximityPlacementGroupId() {
+    public String targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId;
     }
 
@@ -472,7 +472,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetResourceGroupId", required=true)
       private final String targetResourceGroupId;
 
-    public String getTargetResourceGroupId() {
+    public String targetResourceGroupId() {
         return this.targetResourceGroupId;
     }
 
@@ -483,7 +483,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetVmName", required=true)
       private final String targetVmName;
 
-    public String getTargetVmName() {
+    public String targetVmName() {
         return this.targetVmName;
     }
 
@@ -494,7 +494,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetVmSize", required=true)
       private final String targetVmSize;
 
-    public String getTargetVmSize() {
+    public String targetVmSize() {
         return this.targetVmSize;
     }
 
@@ -505,7 +505,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="testNetworkId", required=true)
       private final String testNetworkId;
 
-    public String getTestNetworkId() {
+    public String testNetworkId() {
         return this.testNetworkId;
     }
 
@@ -516,7 +516,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="vmNics", required=true)
       private final List<InMageRcmNicDetailsResponse> vmNics;
 
-    public List<InMageRcmNicDetailsResponse> getVmNics() {
+    public List<InMageRcmNicDetailsResponse> vmNics() {
         return this.vmNics;
     }
 

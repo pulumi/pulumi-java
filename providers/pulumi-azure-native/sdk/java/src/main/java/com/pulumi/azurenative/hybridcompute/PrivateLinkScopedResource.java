@@ -42,7 +42,7 @@ public class PrivateLinkScopedResource extends com.pulumi.resources.CustomResour
      * @return The resource id of the scoped Azure monitor resource.
      * 
      */
-    public Output</* @Nullable */ String> getLinkedResourceId() {
+    public Output</* @Nullable */ String> linkedResourceId() {
         return this.linkedResourceId;
     }
     /**
@@ -56,7 +56,7 @@ public class PrivateLinkScopedResource extends com.pulumi.resources.CustomResour
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class PrivateLinkScopedResource extends com.pulumi.resources.CustomResour
      * @return State of the private endpoint connection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -84,7 +84,7 @@ public class PrivateLinkScopedResource extends com.pulumi.resources.CustomResour
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

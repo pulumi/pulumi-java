@@ -25,7 +25,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxOperatingSystemProfile")
       private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
 
-    public Optional<LinuxOperatingSystemProfileResponse> getLinuxOperatingSystemProfile() {
+    public Optional<LinuxOperatingSystemProfileResponse> linuxOperatingSystemProfile() {
         return this.linuxOperatingSystemProfile == null ? Optional.empty() : Optional.ofNullable(this.linuxOperatingSystemProfile);
     }
 

@@ -24,7 +24,7 @@ public final class ManagedCertificateParametersResponse extends com.pulumi.resou
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -34,14 +34,14 @@ public final class LinkedWorkspacePropsResponse {
      * ResourceId of the link target of the linked workspace.
      * 
     */
-    public Optional<String> getLinkedWorkspaceResourceId() {
+    public Optional<String> linkedWorkspaceResourceId() {
         return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
     /**
      * ResourceId of the user assigned identity for the linked workspace.
      * 
     */
-    public Optional<String> getUserAssignedIdentityResourceId() {
+    public Optional<String> userAssignedIdentityResourceId() {
         return Optional.ofNullable(this.userAssignedIdentityResourceId);
     }
 

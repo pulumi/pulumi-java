@@ -25,7 +25,7 @@ public final class ApiVersionConstraintResponse extends com.pulumi.resources.Inv
     @Import(name="minApiVersion")
       private final @Nullable String minApiVersion;
 
-    public Optional<String> getMinApiVersion() {
+    public Optional<String> minApiVersion() {
         return this.minApiVersion == null ? Optional.empty() : Optional.ofNullable(this.minApiVersion);
     }
 

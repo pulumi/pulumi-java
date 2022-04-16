@@ -83,63 +83,63 @@ public final class GetEventHubConnectionResult {
      * The event hub consumer group.
      * 
     */
-    public String getConsumerGroup() {
+    public String consumerGroup() {
         return this.consumerGroup;
     }
     /**
      * The data format of the message. Optionally the data format can be added to each message.
      * 
     */
-    public Optional<String> getDataFormat() {
+    public Optional<String> dataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
     /**
      * The resource ID of the event hub to be used to create a data connection.
      * 
     */
-    public String getEventHubResourceId() {
+    public String eventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
     */
-    public Optional<String> getMappingRuleName() {
+    public Optional<String> mappingRuleName() {
         return Optional.ofNullable(this.mappingRuleName);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
     */
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

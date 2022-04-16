@@ -34,14 +34,14 @@ public final class MetadataCategoriesResponse {
      * domain for the solution content item
      * 
     */
-    public List<String> getDomains() {
+    public List<String> domains() {
         return this.domains == null ? List.of() : this.domains;
     }
     /**
      * Industry verticals for the solution content item
      * 
     */
-    public List<String> getVerticals() {
+    public List<String> verticals() {
         return this.verticals == null ? List.of() : this.verticals;
     }
 

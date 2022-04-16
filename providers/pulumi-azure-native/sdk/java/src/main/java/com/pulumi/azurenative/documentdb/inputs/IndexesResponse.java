@@ -26,7 +26,7 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataType")
       private final @Nullable String dataType;
 
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
@@ -37,7 +37,7 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -48,7 +48,7 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="precision")
       private final @Nullable Integer precision;
 
-    public Optional<Integer> getPrecision() {
+    public Optional<Integer> precision() {
         return this.precision == null ? Optional.empty() : Optional.ofNullable(this.precision);
     }
 

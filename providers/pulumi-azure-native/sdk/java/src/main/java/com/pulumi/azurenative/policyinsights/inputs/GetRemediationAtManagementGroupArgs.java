@@ -19,7 +19,7 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
     @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
 
-    public String getManagementGroupId() {
+    public String managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -30,7 +30,7 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
     @Import(name="managementGroupsNamespace", required=true)
       private final String managementGroupsNamespace;
 
-    public String getManagementGroupsNamespace() {
+    public String managementGroupsNamespace() {
         return this.managementGroupsNamespace;
     }
 
@@ -41,7 +41,7 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
     @Import(name="remediationName", required=true)
       private final String remediationName;
 
-    public String getRemediationName() {
+    public String remediationName() {
         return this.remediationName;
     }
 

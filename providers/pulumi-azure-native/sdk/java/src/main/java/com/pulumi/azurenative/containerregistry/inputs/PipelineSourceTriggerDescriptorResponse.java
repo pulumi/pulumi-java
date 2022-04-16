@@ -21,7 +21,7 @@ public final class PipelineSourceTriggerDescriptorResponse extends com.pulumi.re
     @Import(name="timestamp")
       private final @Nullable String timestamp;
 
-    public Optional<String> getTimestamp() {
+    public Optional<String> timestamp() {
         return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
     }
 

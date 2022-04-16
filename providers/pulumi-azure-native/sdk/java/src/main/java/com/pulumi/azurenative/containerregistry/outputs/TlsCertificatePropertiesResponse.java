@@ -32,14 +32,14 @@ public final class TlsCertificatePropertiesResponse {
      * Indicates the location of the certificates.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The type of certificate location.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

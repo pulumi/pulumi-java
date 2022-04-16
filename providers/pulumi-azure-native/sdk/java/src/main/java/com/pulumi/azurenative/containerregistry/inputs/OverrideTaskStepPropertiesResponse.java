@@ -25,7 +25,7 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="arguments")
       private final @Nullable List<ArgumentResponse> arguments;
 
-    public List<ArgumentResponse> getArguments() {
+    public List<ArgumentResponse> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
 
@@ -36,7 +36,7 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="contextPath")
       private final @Nullable String contextPath;
 
-    public Optional<String> getContextPath() {
+    public Optional<String> contextPath() {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
     }
 
@@ -47,7 +47,7 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="file")
       private final @Nullable String file;
 
-    public Optional<String> getFile() {
+    public Optional<String> file() {
         return this.file == null ? Optional.empty() : Optional.ofNullable(this.file);
     }
 
@@ -58,7 +58,7 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -69,7 +69,7 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="updateTriggerToken")
       private final @Nullable String updateTriggerToken;
 
-    public Optional<String> getUpdateTriggerToken() {
+    public Optional<String> updateTriggerToken() {
         return this.updateTriggerToken == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerToken);
     }
 
@@ -80,7 +80,7 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="values")
       private final @Nullable List<SetValueResponse> values;
 
-    public List<SetValueResponse> getValues() {
+    public List<SetValueResponse> values() {
         return this.values == null ? List.of() : this.values;
     }
 

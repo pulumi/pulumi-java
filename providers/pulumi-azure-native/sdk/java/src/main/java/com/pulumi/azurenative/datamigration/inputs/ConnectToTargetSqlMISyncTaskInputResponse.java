@@ -24,7 +24,7 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends com.pulumi.
     @Import(name="azureApp", required=true)
       private final AzureActiveDirectoryAppResponse azureApp;
 
-    public AzureActiveDirectoryAppResponse getAzureApp() {
+    public AzureActiveDirectoryAppResponse azureApp() {
         return this.azureApp;
     }
 
@@ -35,7 +35,7 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends com.pulumi.
     @Import(name="targetConnectionInfo", required=true)
       private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
-    public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
+    public MiSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

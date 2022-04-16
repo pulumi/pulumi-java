@@ -29,7 +29,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingType")
       private final @Nullable Output<Either<String,BillingType>> billingType;
 
-    public Output<Either<String,BillingType>> getBillingType() {
+    public Output<Either<String,BillingType>> billingType() {
         return this.billingType == null ? Codegen.empty() : this.billingType;
     }
 
@@ -40,7 +40,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -51,7 +51,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -62,7 +62,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isAvailabilityZonesEnabled")
       private final @Nullable Output<Boolean> isAvailabilityZonesEnabled;
 
-    public Output<Boolean> getIsAvailabilityZonesEnabled() {
+    public Output<Boolean> isAvailabilityZonesEnabled() {
         return this.isAvailabilityZonesEnabled == null ? Codegen.empty() : this.isAvailabilityZonesEnabled;
     }
 
@@ -73,7 +73,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isDoubleEncryptionEnabled")
       private final @Nullable Output<Boolean> isDoubleEncryptionEnabled;
 
-    public Output<Boolean> getIsDoubleEncryptionEnabled() {
+    public Output<Boolean> isDoubleEncryptionEnabled() {
         return this.isDoubleEncryptionEnabled == null ? Codegen.empty() : this.isDoubleEncryptionEnabled;
     }
 
@@ -84,7 +84,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
@@ -95,7 +95,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -106,7 +106,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -117,7 +117,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<ClusterSkuArgs> sku;
 
-    public Output<ClusterSkuArgs> getSku() {
+    public Output<ClusterSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -128,7 +128,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

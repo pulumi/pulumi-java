@@ -42,7 +42,7 @@ public class NotificationRecipientEmail extends com.pulumi.resources.CustomResou
      * @return User Email subscribed to notification.
      * 
      */
-    public Output</* @Nullable */ String> getEmail() {
+    public Output</* @Nullable */ String> email() {
         return this.email;
     }
     /**
@@ -56,7 +56,7 @@ public class NotificationRecipientEmail extends com.pulumi.resources.CustomResou
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class NotificationRecipientEmail extends com.pulumi.resources.CustomResou
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

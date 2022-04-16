@@ -25,7 +25,7 @@ public final class UserRoleResponseResponse extends com.pulumi.resources.InvokeA
     @Import(name="role")
       private final @Nullable String role;
 
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 

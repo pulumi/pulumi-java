@@ -55,35 +55,35 @@ public final class SiteAgentPropertiesResponse {
      * ID of the agent.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Key vault ARM Id.
      * 
     */
-    public Optional<String> getKeyVaultId() {
+    public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
      * Key vault URI.
      * 
     */
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * Last heartbeat time of the agent in UTC.
      * 
     */
-    public String getLastHeartBeatUtc() {
+    public String lastHeartBeatUtc() {
         return this.lastHeartBeatUtc;
     }
     /**
      * Version of the agent.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

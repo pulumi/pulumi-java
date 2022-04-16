@@ -25,7 +25,7 @@ public final class PutAliasResponsePropertiesResponse extends com.pulumi.resourc
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -36,7 +36,7 @@ public final class PutAliasResponsePropertiesResponse extends com.pulumi.resourc
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 

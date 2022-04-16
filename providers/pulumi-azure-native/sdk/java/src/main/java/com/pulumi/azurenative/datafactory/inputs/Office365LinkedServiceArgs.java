@@ -34,7 +34,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -56,7 +56,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -78,7 +78,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="office365TenantId", required=true)
       private final Output<Object> office365TenantId;
 
-    public Output<Object> getOffice365TenantId() {
+    public Output<Object> office365TenantId() {
         return this.office365TenantId;
     }
 
@@ -89,7 +89,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -100,7 +100,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="servicePrincipalId", required=true)
       private final Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId;
     }
 
@@ -111,7 +111,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="servicePrincipalKey", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
 
@@ -122,7 +122,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="servicePrincipalTenantId", required=true)
       private final Output<Object> servicePrincipalTenantId;
 
-    public Output<Object> getServicePrincipalTenantId() {
+    public Output<Object> servicePrincipalTenantId() {
         return this.servicePrincipalTenantId;
     }
 
@@ -134,7 +134,7 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

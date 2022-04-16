@@ -28,7 +28,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="bandwidthMHz", required=true)
       private final Output<Double> bandwidthMHz;
 
-    public Output<Double> getBandwidthMHz() {
+    public Output<Double> bandwidthMHz() {
         return this.bandwidthMHz;
     }
 
@@ -39,7 +39,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="centerFrequencyMHz", required=true)
       private final Output<Double> centerFrequencyMHz;
 
-    public Output<Double> getCenterFrequencyMHz() {
+    public Output<Double> centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
 
@@ -50,7 +50,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="decodingConfiguration")
       private final @Nullable Output<String> decodingConfiguration;
 
-    public Output<String> getDecodingConfiguration() {
+    public Output<String> decodingConfiguration() {
         return this.decodingConfiguration == null ? Codegen.empty() : this.decodingConfiguration;
     }
 
@@ -61,7 +61,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="demodulationConfiguration")
       private final @Nullable Output<String> demodulationConfiguration;
 
-    public Output<String> getDemodulationConfiguration() {
+    public Output<String> demodulationConfiguration() {
         return this.demodulationConfiguration == null ? Codegen.empty() : this.demodulationConfiguration;
     }
 
@@ -72,7 +72,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="encodingConfiguration")
       private final @Nullable Output<String> encodingConfiguration;
 
-    public Output<String> getEncodingConfiguration() {
+    public Output<String> encodingConfiguration() {
         return this.encodingConfiguration == null ? Codegen.empty() : this.encodingConfiguration;
     }
 
@@ -83,7 +83,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="endPoint", required=true)
       private final Output<EndPointArgs> endPoint;
 
-    public Output<EndPointArgs> getEndPoint() {
+    public Output<EndPointArgs> endPoint() {
         return this.endPoint;
     }
 
@@ -94,7 +94,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
     @Import(name="modulationConfiguration")
       private final @Nullable Output<String> modulationConfiguration;
 
-    public Output<String> getModulationConfiguration() {
+    public Output<String> modulationConfiguration() {
         return this.modulationConfiguration == null ? Codegen.empty() : this.modulationConfiguration;
     }
 

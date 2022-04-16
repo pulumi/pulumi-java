@@ -26,7 +26,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
     @Import(name="accountCredentialDetails", required=true)
       private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
 
-    public List<AccountCredentialDetailsResponse> getAccountCredentialDetails() {
+    public List<AccountCredentialDetailsResponse> accountCredentialDetails() {
         return this.accountCredentialDetails;
     }
 
@@ -37,7 +37,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
     @Import(name="devicePassword", required=true)
       private final String devicePassword;
 
-    public String getDevicePassword() {
+    public String devicePassword() {
         return this.devicePassword;
     }
 
@@ -48,7 +48,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
     @Import(name="deviceSerialNumber", required=true)
       private final String deviceSerialNumber;
 
-    public String getDeviceSerialNumber() {
+    public String deviceSerialNumber() {
         return this.deviceSerialNumber;
     }
 
@@ -59,7 +59,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
     @Import(name="encodedValidationCertPubKey", required=true)
       private final String encodedValidationCertPubKey;
 
-    public String getEncodedValidationCertPubKey() {
+    public String encodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
     }
 
@@ -70,7 +70,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
     @Import(name="networkConfigurations", required=true)
       private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
-    public List<ApplianceNetworkConfigurationResponse> getNetworkConfigurations() {
+    public List<ApplianceNetworkConfigurationResponse> networkConfigurations() {
         return this.networkConfigurations;
     }
 

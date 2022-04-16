@@ -55,35 +55,35 @@ public final class PlanResponse {
      * The plan ID.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The offer ID.
      * 
     */
-    public Optional<String> getProduct() {
+    public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
      * The promotion code.
      * 
     */
-    public Optional<String> getPromotionCode() {
+    public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The publisher ID.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * The plan's version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

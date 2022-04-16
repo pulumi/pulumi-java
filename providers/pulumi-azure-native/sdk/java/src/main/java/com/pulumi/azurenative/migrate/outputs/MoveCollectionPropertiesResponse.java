@@ -47,28 +47,28 @@ public final class MoveCollectionPropertiesResponse {
      * Defines the move collection errors.
      * 
     */
-    public MoveCollectionPropertiesResponseErrors getErrors() {
+    public MoveCollectionPropertiesResponseErrors errors() {
         return this.errors;
     }
     /**
      * Defines the provisioning states.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the source region.
      * 
     */
-    public String getSourceRegion() {
+    public String sourceRegion() {
         return this.sourceRegion;
     }
     /**
      * Gets or sets the target region.
      * 
     */
-    public String getTargetRegion() {
+    public String targetRegion() {
         return this.targetRegion;
     }
 

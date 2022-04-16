@@ -28,7 +28,7 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
@@ -39,21 +39,21 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="datasetType", required=true)
       private final Output<Either<String,DatasetType>> datasetType;
 
-    public Output<Either<String,DatasetType>> getDatasetType() {
+    public Output<Either<String,DatasetType>> datasetType() {
         return this.datasetType;
     }
 
     @Import(name="parameters", required=true)
       private final Output<DatasetCreateRequestParametersArgs> parameters;
 
-    public Output<DatasetCreateRequestParametersArgs> getParameters() {
+    public Output<DatasetCreateRequestParametersArgs> parameters() {
         return this.parameters;
     }
 
     @Import(name="registration", required=true)
       private final Output<DatasetCreateRequestRegistrationArgs> registration;
 
-    public Output<DatasetCreateRequestRegistrationArgs> getRegistration() {
+    public Output<DatasetCreateRequestRegistrationArgs> registration() {
         return this.registration;
     }
 
@@ -64,7 +64,7 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,14 +75,14 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="skipValidation")
       private final @Nullable Output<Boolean> skipValidation;
 
-    public Output<Boolean> getSkipValidation() {
+    public Output<Boolean> skipValidation() {
         return this.skipValidation == null ? Codegen.empty() : this.skipValidation;
     }
 
     @Import(name="timeSeries")
       private final @Nullable Output<DatasetCreateRequestTimeSeriesArgs> timeSeries;
 
-    public Output<DatasetCreateRequestTimeSeriesArgs> getTimeSeries() {
+    public Output<DatasetCreateRequestTimeSeriesArgs> timeSeries() {
         return this.timeSeries == null ? Codegen.empty() : this.timeSeries;
     }
 
@@ -93,7 +93,7 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

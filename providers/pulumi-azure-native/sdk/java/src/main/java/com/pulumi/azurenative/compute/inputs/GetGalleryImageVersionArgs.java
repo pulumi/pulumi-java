@@ -21,7 +21,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="galleryImageName", required=true)
       private final String galleryImageName;
 
-    public String getGalleryImageName() {
+    public String galleryImageName() {
         return this.galleryImageName;
     }
 
@@ -43,7 +43,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="galleryImageVersionName", required=true)
       private final String galleryImageVersionName;
 
-    public String getGalleryImageVersionName() {
+    public String galleryImageVersionName() {
         return this.galleryImageVersionName;
     }
 
@@ -54,7 +54,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="galleryName", required=true)
       private final String galleryName;
 
-    public String getGalleryName() {
+    public String galleryName() {
         return this.galleryName;
     }
 
@@ -65,7 +65,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -42,21 +42,21 @@ public final class ErrorResponseResponse {
      * Error code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * An array of error detail objects.
      * 
     */
-    public List<ErrorDetailResponse> getDetails() {
+    public List<ErrorDetailResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * Error message.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

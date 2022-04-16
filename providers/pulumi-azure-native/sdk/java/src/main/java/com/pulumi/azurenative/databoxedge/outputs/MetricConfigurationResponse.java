@@ -50,28 +50,28 @@ public final class MetricConfigurationResponse {
      * Host name for the IoT hub associated to the device.
      * 
     */
-    public List<MetricCounterSetResponse> getCounterSets() {
+    public List<MetricCounterSetResponse> counterSets() {
         return this.counterSets;
     }
     /**
      * The MDM account to which the counters should be pushed.
      * 
     */
-    public Optional<String> getMdmAccount() {
+    public Optional<String> mdmAccount() {
         return Optional.ofNullable(this.mdmAccount);
     }
     /**
      * The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
      * 
     */
-    public Optional<String> getMetricNameSpace() {
+    public Optional<String> metricNameSpace() {
         return Optional.ofNullable(this.metricNameSpace);
     }
     /**
      * The Resource ID on which the metrics should be pushed.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

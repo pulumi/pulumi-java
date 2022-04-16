@@ -29,7 +29,7 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="option")
       private final @Nullable Output<Either<String,DiffDiskOptions>> option;
 
-    public Output<Either<String,DiffDiskOptions>> getOption() {
+    public Output<Either<String,DiffDiskOptions>> option() {
         return this.option == null ? Codegen.empty() : this.option;
     }
 
@@ -40,7 +40,7 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="placement")
       private final @Nullable Output<Either<String,DiffDiskPlacement>> placement;
 
-    public Output<Either<String,DiffDiskPlacement>> getPlacement() {
+    public Output<Either<String,DiffDiskPlacement>> placement() {
         return this.placement == null ? Codegen.empty() : this.placement;
     }
 

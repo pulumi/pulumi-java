@@ -27,7 +27,7 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
     @Import(name="periodicModeProperties")
       private final @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
 
-    public Output<PeriodicModePropertiesArgs> getPeriodicModeProperties() {
+    public Output<PeriodicModePropertiesArgs> periodicModeProperties() {
         return this.periodicModeProperties == null ? Codegen.empty() : this.periodicModeProperties;
     }
 
@@ -39,7 +39,7 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

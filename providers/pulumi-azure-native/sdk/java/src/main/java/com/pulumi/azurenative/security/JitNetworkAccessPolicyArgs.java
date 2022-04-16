@@ -25,7 +25,7 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="ascLocation", required=true)
       private final Output<String> ascLocation;
 
-    public Output<String> getAscLocation() {
+    public Output<String> ascLocation() {
         return this.ascLocation;
     }
 
@@ -36,7 +36,7 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="jitNetworkAccessPolicyName")
       private final @Nullable Output<String> jitNetworkAccessPolicyName;
 
-    public Output<String> getJitNetworkAccessPolicyName() {
+    public Output<String> jitNetworkAccessPolicyName() {
         return this.jitNetworkAccessPolicyName == null ? Codegen.empty() : this.jitNetworkAccessPolicyName;
     }
 
@@ -47,14 +47,14 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="requests")
       private final @Nullable Output<List<JitNetworkAccessRequestArgs>> requests;
 
-    public Output<List<JitNetworkAccessRequestArgs>> getRequests() {
+    public Output<List<JitNetworkAccessRequestArgs>> requests() {
         return this.requests == null ? Codegen.empty() : this.requests;
     }
 
@@ -65,7 +65,7 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,7 +76,7 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="virtualMachines", required=true)
       private final Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
 
-    public Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> getVirtualMachines() {
+    public Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines() {
         return this.virtualMachines;
     }
 

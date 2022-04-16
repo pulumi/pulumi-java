@@ -25,7 +25,7 @@ public final class ServerInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverId", required=true)
       private final Output<String> serverId;
 
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 

@@ -154,133 +154,133 @@ public final class GetShareSubscriptionResult {
      * Time at which the share subscription was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * The expiration date of the share subscription.
      * 
     */
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The invitation id.
      * 
     */
-    public String getInvitationId() {
+    public String invitationId() {
         return this.invitationId;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Email of the provider who created the resource
      * 
     */
-    public String getProviderEmail() {
+    public String providerEmail() {
         return this.providerEmail;
     }
     /**
      * Name of the provider who created the resource
      * 
     */
-    public String getProviderName() {
+    public String providerName() {
         return this.providerName;
     }
     /**
      * Tenant name of the provider who created the resource
      * 
     */
-    public String getProviderTenantName() {
+    public String providerTenantName() {
         return this.providerTenantName;
     }
     /**
      * Provisioning state of the share subscription
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Description of share
      * 
     */
-    public String getShareDescription() {
+    public String shareDescription() {
         return this.shareDescription;
     }
     /**
      * Kind of share
      * 
     */
-    public String getShareKind() {
+    public String shareKind() {
         return this.shareKind;
     }
     /**
      * Name of the share
      * 
     */
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
     /**
      * Gets the current status of share subscription.
      * 
     */
-    public String getShareSubscriptionStatus() {
+    public String shareSubscriptionStatus() {
         return this.shareSubscriptionStatus;
     }
     /**
      * Terms of a share
      * 
     */
-    public String getShareTerms() {
+    public String shareTerms() {
         return this.shareTerms;
     }
     /**
      * Source share location.
      * 
     */
-    public String getSourceShareLocation() {
+    public String sourceShareLocation() {
         return this.sourceShareLocation;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
      * 
     */
-    public String getUserEmail() {
+    public String userEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

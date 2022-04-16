@@ -30,7 +30,7 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="backupParameters")
       private final @Nullable AzureBackupParamsResponse backupParameters;
 
-    public Optional<AzureBackupParamsResponse> getBackupParameters() {
+    public Optional<AzureBackupParamsResponse> backupParameters() {
         return this.backupParameters == null ? Optional.empty() : Optional.ofNullable(this.backupParameters);
     }
 
@@ -41,14 +41,14 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dataStore", required=true)
       private final DataStoreInfoBaseResponse dataStore;
 
-    public DataStoreInfoBaseResponse getDataStore() {
+    public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -59,7 +59,7 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 
@@ -70,7 +70,7 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="trigger", required=true)
       private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
-    public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> getTrigger() {
+    public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger() {
         return this.trigger;
     }
 

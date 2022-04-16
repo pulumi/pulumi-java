@@ -26,7 +26,7 @@ public final class EventChannelSourceResponse extends com.pulumi.resources.Invok
     @Import(name="source")
       private final @Nullable String source;
 
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 

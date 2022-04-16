@@ -30,7 +30,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="createMode")
       private final @Nullable String createMode;
 
-    public Optional<String> getCreateMode() {
+    public Optional<String> createMode() {
         return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
     }
 
@@ -41,7 +41,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="enablePurgeProtection")
       private final @Nullable Boolean enablePurgeProtection;
 
-    public Optional<Boolean> getEnablePurgeProtection() {
+    public Optional<Boolean> enablePurgeProtection() {
         return this.enablePurgeProtection == null ? Optional.empty() : Optional.ofNullable(this.enablePurgeProtection);
     }
 
@@ -52,7 +52,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="enableSoftDelete")
       private final @Nullable Boolean enableSoftDelete;
 
-    public Optional<Boolean> getEnableSoftDelete() {
+    public Optional<Boolean> enableSoftDelete() {
         return this.enableSoftDelete == null ? Optional.empty() : Optional.ofNullable(this.enableSoftDelete);
     }
 
@@ -63,7 +63,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="hsmUri", required=true)
       private final String hsmUri;
 
-    public String getHsmUri() {
+    public String hsmUri() {
         return this.hsmUri;
     }
 
@@ -74,7 +74,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="initialAdminObjectIds")
       private final @Nullable List<String> initialAdminObjectIds;
 
-    public List<String> getInitialAdminObjectIds() {
+    public List<String> initialAdminObjectIds() {
         return this.initialAdminObjectIds == null ? List.of() : this.initialAdminObjectIds;
     }
 
@@ -85,7 +85,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="networkAcls")
       private final @Nullable MHSMNetworkRuleSetResponse networkAcls;
 
-    public Optional<MHSMNetworkRuleSetResponse> getNetworkAcls() {
+    public Optional<MHSMNetworkRuleSetResponse> networkAcls() {
         return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
     }
 
@@ -96,7 +96,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="privateEndpointConnections", required=true)
       private final List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections;
 
-    public List<MHSMPrivateEndpointConnectionItemResponse> getPrivateEndpointConnections() {
+    public List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
 
@@ -107,7 +107,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -118,7 +118,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
@@ -129,7 +129,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="scheduledPurgeDate", required=true)
       private final String scheduledPurgeDate;
 
-    public String getScheduledPurgeDate() {
+    public String scheduledPurgeDate() {
         return this.scheduledPurgeDate;
     }
 
@@ -140,7 +140,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="softDeleteRetentionInDays")
       private final @Nullable Integer softDeleteRetentionInDays;
 
-    public Optional<Integer> getSoftDeleteRetentionInDays() {
+    public Optional<Integer> softDeleteRetentionInDays() {
         return this.softDeleteRetentionInDays == null ? Optional.empty() : Optional.ofNullable(this.softDeleteRetentionInDays);
     }
 
@@ -151,7 +151,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 
@@ -162,7 +162,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

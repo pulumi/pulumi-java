@@ -53,7 +53,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The settings for event handler in webpubsub service.
      * 
      */
-    public Output</* @Nullable */ EventHandlerSettingsResponse> getEventHandler() {
+    public Output</* @Nullable */ EventHandlerSettingsResponse> eventHandler() {
         return this.eventHandler;
     }
     /**
@@ -67,7 +67,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The publicly accessible IP of the resource.
      * 
      */
-    public Output<String> getExternalIP() {
+    public Output<String> externalIP() {
         return this.externalIP;
     }
     /**
@@ -91,7 +91,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
      */
-    public Output</* @Nullable */ List<WebPubSubFeatureResponse>> getFeatures() {
+    public Output</* @Nullable */ List<WebPubSubFeatureResponse>> features() {
         return this.features;
     }
     /**
@@ -105,7 +105,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return FQDN of the service instance.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -119,7 +119,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The managed identity response
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -133,7 +133,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -147,7 +147,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -161,7 +161,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return Network ACLs
      * 
      */
-    public Output</* @Nullable */ WebPubSubNetworkACLsResponse> getNetworkACLs() {
+    public Output</* @Nullable */ WebPubSubNetworkACLsResponse> networkACLs() {
         return this.networkACLs;
     }
     /**
@@ -175,7 +175,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return Private endpoint connections to the resource.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -189,7 +189,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -207,7 +207,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -221,7 +221,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The publicly accessible port of the resource which is designed for browser/client side usage.
      * 
      */
-    public Output<Integer> getPublicPort() {
+    public Output<Integer> publicPort() {
         return this.publicPort;
     }
     /**
@@ -235,7 +235,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The publicly accessible port of the resource which is designed for customer server side usage.
      * 
      */
-    public Output<Integer> getServerPort() {
+    public Output<Integer> serverPort() {
         return this.serverPort;
     }
     /**
@@ -249,7 +249,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The list of shared private link resources.
      * 
      */
-    public Output<List<SharedPrivateLinkResourceResponse>> getSharedPrivateLinkResources() {
+    public Output<List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
     /**
@@ -263,7 +263,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The billing information of the resource.(e.g. Free, Standard)
      * 
      */
-    public Output</* @Nullable */ ResourceSkuResponse> getSku() {
+    public Output</* @Nullable */ ResourceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -277,7 +277,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -291,7 +291,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -305,7 +305,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return TLS settings.
      * 
      */
-    public Output</* @Nullable */ WebPubSubTlsSettingsResponse> getTls() {
+    public Output</* @Nullable */ WebPubSubTlsSettingsResponse> tls() {
         return this.tls;
     }
     /**
@@ -319,7 +319,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -333,7 +333,7 @@ public class WebPubSub extends com.pulumi.resources.CustomResource {
      * @return Version of the resource. Probably you need the same or higher version of client SDKs.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

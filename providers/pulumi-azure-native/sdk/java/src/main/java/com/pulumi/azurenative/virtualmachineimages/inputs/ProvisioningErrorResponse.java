@@ -25,7 +25,7 @@ public final class ProvisioningErrorResponse extends com.pulumi.resources.Invoke
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -36,7 +36,7 @@ public final class ProvisioningErrorResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningErrorCode")
       private final @Nullable String provisioningErrorCode;
 
-    public Optional<String> getProvisioningErrorCode() {
+    public Optional<String> provisioningErrorCode() {
         return this.provisioningErrorCode == null ? Optional.empty() : Optional.ofNullable(this.provisioningErrorCode);
     }
 

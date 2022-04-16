@@ -22,7 +22,7 @@ public final class EdgeModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class EdgeModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="edgeModuleName")
       private final @Nullable Output<String> edgeModuleName;
 
-    public Output<String> getEdgeModuleName() {
+    public Output<String> edgeModuleName() {
         return this.edgeModuleName == null ? Codegen.empty() : this.edgeModuleName;
     }
 
@@ -44,7 +44,7 @@ public final class EdgeModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -43,21 +43,21 @@ public final class AutomationActionLogicAppResponse {
      * Expected value is 'LogicApp'.
      * 
     */
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
     /**
      * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
      * 
     */
-    public Optional<String> getLogicAppResourceId() {
+    public Optional<String> logicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
     /**
      * The Logic App trigger URI endpoint (it will not be included in any response).
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

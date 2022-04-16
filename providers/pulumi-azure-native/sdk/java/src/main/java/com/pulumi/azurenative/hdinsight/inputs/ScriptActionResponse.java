@@ -23,7 +23,7 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="parameters", required=true)
       private final String parameters;
 
-    public String getParameters() {
+    public String parameters() {
         return this.parameters;
     }
 
@@ -45,7 +45,7 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

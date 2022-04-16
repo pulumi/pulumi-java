@@ -41,21 +41,21 @@ public final class ApplicationPackageContactResponse {
      * The contact name.
      * 
     */
-    public Optional<String> getContactName() {
+    public Optional<String> contactName() {
         return Optional.ofNullable(this.contactName);
     }
     /**
      * The contact email.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The contact phone number.
      * 
     */
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
 

@@ -40,21 +40,21 @@ public final class SkuResponse {
      * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
      * 
     */
-    public Integer getCapacity() {
+    public Integer capacity() {
         return this.capacity;
     }
     /**
      * The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
      * 
     */
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
     /**
      * The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

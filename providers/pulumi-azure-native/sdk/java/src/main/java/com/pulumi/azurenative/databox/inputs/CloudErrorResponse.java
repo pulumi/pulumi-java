@@ -27,7 +27,7 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalInfo", required=true)
       private final List<AdditionalErrorInfoResponse> additionalInfo;
 
-    public List<AdditionalErrorInfoResponse> getAdditionalInfo() {
+    public List<AdditionalErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
 
@@ -38,7 +38,7 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -49,7 +49,7 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
       private final List<CloudErrorResponse> details;
 
-    public List<CloudErrorResponse> getDetails() {
+    public List<CloudErrorResponse> details() {
         return this.details;
     }
 
@@ -60,7 +60,7 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -71,7 +71,7 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

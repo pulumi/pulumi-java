@@ -23,7 +23,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
     @Import(name="bastionHostName", required=true)
       private final String bastionHostName;
 
-    public String getBastionHostName() {
+    public String bastionHostName() {
         return this.bastionHostName;
     }
 
@@ -34,7 +34,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
     @Import(name="vms")
       private final @Nullable List<BastionShareableLink> vms;
 
-    public List<BastionShareableLink> getVms() {
+    public List<BastionShareableLink> vms() {
         return this.vms == null ? List.of() : this.vms;
     }
 

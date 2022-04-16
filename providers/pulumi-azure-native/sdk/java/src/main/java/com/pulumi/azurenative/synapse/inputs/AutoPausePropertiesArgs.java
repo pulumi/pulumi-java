@@ -27,7 +27,7 @@ public final class AutoPausePropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="delayInMinutes")
       private final @Nullable Output<Integer> delayInMinutes;
 
-    public Output<Integer> getDelayInMinutes() {
+    public Output<Integer> delayInMinutes() {
         return this.delayInMinutes == null ? Codegen.empty() : this.delayInMinutes;
     }
 
@@ -38,7 +38,7 @@ public final class AutoPausePropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

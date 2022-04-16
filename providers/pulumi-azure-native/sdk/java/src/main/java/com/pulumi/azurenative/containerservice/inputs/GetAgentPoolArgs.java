@@ -19,7 +19,7 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="agentPoolName", required=true)
       private final String agentPoolName;
 
-    public String getAgentPoolName() {
+    public String agentPoolName() {
         return this.agentPoolName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

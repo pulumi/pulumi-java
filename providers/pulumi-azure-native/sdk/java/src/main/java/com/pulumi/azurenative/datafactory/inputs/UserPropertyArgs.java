@@ -26,7 +26,7 @@ public final class UserPropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class UserPropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value;
     }
 

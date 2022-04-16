@@ -37,7 +37,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
     @Import(name="catalogInfo")
       private final @Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
 
-    public Output<IntegrationRuntimeSsisCatalogInfoArgs> getCatalogInfo() {
+    public Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo() {
         return this.catalogInfo == null ? Codegen.empty() : this.catalogInfo;
     }
 
@@ -48,7 +48,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
     @Import(name="customSetupScriptProperties")
       private final @Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
 
-    public Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> getCustomSetupScriptProperties() {
+    public Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties() {
         return this.customSetupScriptProperties == null ? Codegen.empty() : this.customSetupScriptProperties;
     }
 
@@ -59,7 +59,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
     @Import(name="dataProxyProperties")
       private final @Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
 
-    public Output<IntegrationRuntimeDataProxyPropertiesArgs> getDataProxyProperties() {
+    public Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties() {
         return this.dataProxyProperties == null ? Codegen.empty() : this.dataProxyProperties;
     }
 
@@ -70,7 +70,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
     @Import(name="edition")
       private final @Nullable Output<Either<String,IntegrationRuntimeEdition>> edition;
 
-    public Output<Either<String,IntegrationRuntimeEdition>> getEdition() {
+    public Output<Either<String,IntegrationRuntimeEdition>> edition() {
         return this.edition == null ? Codegen.empty() : this.edition;
     }
 
@@ -81,7 +81,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
     @Import(name="expressCustomSetupProperties")
       private final @Nullable Output<List<Object>> expressCustomSetupProperties;
 
-    public Output<List<Object>> getExpressCustomSetupProperties() {
+    public Output<List<Object>> expressCustomSetupProperties() {
         return this.expressCustomSetupProperties == null ? Codegen.empty() : this.expressCustomSetupProperties;
     }
 
@@ -92,7 +92,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType;
 
-    public Output<Either<String,IntegrationRuntimeLicenseType>> getLicenseType() {
+    public Output<Either<String,IntegrationRuntimeLicenseType>> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 

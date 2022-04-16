@@ -31,7 +31,7 @@ public final class DeepCreatedOriginGroupArgs extends com.pulumi.resources.Resou
     @Import(name="healthProbeSettings")
       private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
-    public Output<HealthProbeParametersArgs> getHealthProbeSettings() {
+    public Output<HealthProbeParametersArgs> healthProbeSettings() {
         return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
     }
 
@@ -42,7 +42,7 @@ public final class DeepCreatedOriginGroupArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -53,7 +53,7 @@ public final class DeepCreatedOriginGroupArgs extends com.pulumi.resources.Resou
     @Import(name="origins", required=true)
       private final Output<List<ResourceReferenceArgs>> origins;
 
-    public Output<List<ResourceReferenceArgs>> getOrigins() {
+    public Output<List<ResourceReferenceArgs>> origins() {
         return this.origins;
     }
 
@@ -64,7 +64,7 @@ public final class DeepCreatedOriginGroupArgs extends com.pulumi.resources.Resou
     @Import(name="responseBasedOriginErrorDetectionSettings")
       private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
-    public Output<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedOriginErrorDetectionSettings() {
+    public Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings() {
         return this.responseBasedOriginErrorDetectionSettings == null ? Codegen.empty() : this.responseBasedOriginErrorDetectionSettings;
     }
 
@@ -75,7 +75,7 @@ public final class DeepCreatedOriginGroupArgs extends com.pulumi.resources.Resou
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
       private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    public Output<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+    public Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Codegen.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
 

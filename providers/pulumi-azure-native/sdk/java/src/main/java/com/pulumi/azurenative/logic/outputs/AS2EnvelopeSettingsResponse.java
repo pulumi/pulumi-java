@@ -54,35 +54,35 @@ public final class AS2EnvelopeSettingsResponse {
      * The value indicating whether to auto generate file name.
      * 
     */
-    public Boolean getAutogenerateFileName() {
+    public Boolean autogenerateFileName() {
         return this.autogenerateFileName;
     }
     /**
      * The template for file name.
      * 
     */
-    public String getFileNameTemplate() {
+    public String fileNameTemplate() {
         return this.fileNameTemplate;
     }
     /**
      * The message content type.
      * 
     */
-    public String getMessageContentType() {
+    public String messageContentType() {
         return this.messageContentType;
     }
     /**
      * The value indicating whether to suspend message on file name generation error.
      * 
     */
-    public Boolean getSuspendMessageOnFileNameGenerationError() {
+    public Boolean suspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
     }
     /**
      * The value indicating whether to transmit file name in mime header.
      * 
     */
-    public Boolean getTransmitFileNameInMimeHeader() {
+    public Boolean transmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
     }
 

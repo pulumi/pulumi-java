@@ -19,7 +19,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends com.pulum
     @Import(name="batchConfigurationName", required=true)
       private final String batchConfigurationName;
 
-    public String getBatchConfigurationName() {
+    public String batchConfigurationName() {
         return this.batchConfigurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends com.pulum
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends com.pulum
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

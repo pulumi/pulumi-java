@@ -43,7 +43,7 @@ public class BackupShortTermRetentionPolicy extends com.pulumi.resources.CustomR
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class BackupShortTermRetentionPolicy extends com.pulumi.resources.CustomR
      * @return The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
     /**
@@ -71,7 +71,7 @@ public class BackupShortTermRetentionPolicy extends com.pulumi.resources.CustomR
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

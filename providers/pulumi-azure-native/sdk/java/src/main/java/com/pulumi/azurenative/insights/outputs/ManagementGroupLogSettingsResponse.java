@@ -33,14 +33,14 @@ public final class ManagementGroupLogSettingsResponse {
      * Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
      * 
     */
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
     /**
      * a value indicating whether this log is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

@@ -35,14 +35,14 @@ public final class DeliveryRuleUrlPathConditionResponse {
      * Expected value is 'UrlPath'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
     */
-    public UrlPathMatchConditionParametersResponse getParameters() {
+    public UrlPathMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

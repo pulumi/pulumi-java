@@ -32,14 +32,14 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caching")
       private final @Nullable String caching;
 
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
     @Import(name="diskSizeGB", required=true)
       private final Integer diskSizeGB;
 
-    public Integer getDiskSizeGB() {
+    public Integer diskSizeGB() {
         return this.diskSizeGB;
     }
 
@@ -50,7 +50,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lun", required=true)
       private final Integer lun;
 
-    public Integer getLun() {
+    public Integer lun() {
         return this.lun;
     }
 
@@ -64,7 +64,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
     }
 

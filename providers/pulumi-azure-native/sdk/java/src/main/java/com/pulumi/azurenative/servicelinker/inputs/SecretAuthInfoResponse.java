@@ -26,7 +26,7 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="authType", required=true)
       private final String authType;
 
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
 
@@ -37,7 +37,7 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secret")
       private final @Nullable String secret;
 
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 

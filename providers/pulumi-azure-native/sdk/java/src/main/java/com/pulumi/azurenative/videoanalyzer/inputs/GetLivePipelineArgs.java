@@ -19,7 +19,7 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="livePipelineName", required=true)
       private final String livePipelineName;
 
-    public String getLivePipelineName() {
+    public String livePipelineName() {
         return this.livePipelineName;
     }
 
@@ -41,7 +41,7 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

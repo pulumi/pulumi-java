@@ -24,7 +24,7 @@ public final class MetricCounterSetResponse extends com.pulumi.resources.InvokeA
     @Import(name="counters", required=true)
       private final List<MetricCounterResponse> counters;
 
-    public List<MetricCounterResponse> getCounters() {
+    public List<MetricCounterResponse> counters() {
         return this.counters;
     }
 

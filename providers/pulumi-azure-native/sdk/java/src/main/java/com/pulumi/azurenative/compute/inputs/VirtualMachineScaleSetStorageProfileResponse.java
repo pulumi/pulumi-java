@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
     @Import(name="dataDisks")
       private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
 
-    public List<VirtualMachineScaleSetDataDiskResponse> getDataDisks() {
+    public List<VirtualMachineScaleSetDataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
     @Import(name="imageReference")
       private final @Nullable ImageReferenceResponse imageReference;
 
-    public Optional<ImageReferenceResponse> getImageReference() {
+    public Optional<ImageReferenceResponse> imageReference() {
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
     @Import(name="osDisk")
       private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
-    public Optional<VirtualMachineScaleSetOSDiskResponse> getOsDisk() {
+    public Optional<VirtualMachineScaleSetOSDiskResponse> osDisk() {
         return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
     }
 

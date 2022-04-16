@@ -31,7 +31,7 @@ public final class ApplicationJitAccessPolicyArgs extends com.pulumi.resources.R
     @Import(name="jitAccessEnabled", required=true)
       private final Output<Boolean> jitAccessEnabled;
 
-    public Output<Boolean> getJitAccessEnabled() {
+    public Output<Boolean> jitAccessEnabled() {
         return this.jitAccessEnabled;
     }
 
@@ -42,7 +42,7 @@ public final class ApplicationJitAccessPolicyArgs extends com.pulumi.resources.R
     @Import(name="jitApprovalMode")
       private final @Nullable Output<Either<String,JitApprovalMode>> jitApprovalMode;
 
-    public Output<Either<String,JitApprovalMode>> getJitApprovalMode() {
+    public Output<Either<String,JitApprovalMode>> jitApprovalMode() {
         return this.jitApprovalMode == null ? Codegen.empty() : this.jitApprovalMode;
     }
 
@@ -53,7 +53,7 @@ public final class ApplicationJitAccessPolicyArgs extends com.pulumi.resources.R
     @Import(name="jitApprovers")
       private final @Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers;
 
-    public Output<List<JitApproverDefinitionArgs>> getJitApprovers() {
+    public Output<List<JitApproverDefinitionArgs>> jitApprovers() {
         return this.jitApprovers == null ? Codegen.empty() : this.jitApprovers;
     }
 
@@ -64,7 +64,7 @@ public final class ApplicationJitAccessPolicyArgs extends com.pulumi.resources.R
     @Import(name="maximumJitAccessDuration")
       private final @Nullable Output<String> maximumJitAccessDuration;
 
-    public Output<String> getMaximumJitAccessDuration() {
+    public Output<String> maximumJitAccessDuration() {
         return this.maximumJitAccessDuration == null ? Codegen.empty() : this.maximumJitAccessDuration;
     }
 

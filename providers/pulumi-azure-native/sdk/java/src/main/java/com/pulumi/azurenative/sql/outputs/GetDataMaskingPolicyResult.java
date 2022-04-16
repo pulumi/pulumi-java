@@ -83,63 +83,63 @@ public final class GetDataMaskingPolicyResult {
      * The list of the application principals. This is a legacy parameter and is no longer used.
      * 
     */
-    public String getApplicationPrincipals() {
+    public String applicationPrincipals() {
         return this.applicationPrincipals;
     }
     /**
      * The state of the data masking policy.
      * 
     */
-    public String getDataMaskingState() {
+    public String dataMaskingState() {
         return this.dataMaskingState;
     }
     /**
      * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
     */
-    public Optional<String> getExemptPrincipals() {
+    public Optional<String> exemptPrincipals() {
         return Optional.ofNullable(this.exemptPrincipals);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The kind of data masking policy. Metadata, used for Azure portal.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The location of the data masking policy.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The masking level. This is a legacy parameter and is no longer used.
      * 
     */
-    public String getMaskingLevel() {
+    public String maskingLevel() {
         return this.maskingLevel;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

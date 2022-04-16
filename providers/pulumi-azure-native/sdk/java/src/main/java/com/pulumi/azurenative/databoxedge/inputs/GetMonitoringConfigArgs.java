@@ -19,7 +19,7 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
     @Import(name="roleName", required=true)
       private final String roleName;
 
-    public String getRoleName() {
+    public String roleName() {
         return this.roleName;
     }
 

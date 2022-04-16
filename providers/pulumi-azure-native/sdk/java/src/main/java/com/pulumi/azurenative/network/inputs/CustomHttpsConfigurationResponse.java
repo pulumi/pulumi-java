@@ -26,7 +26,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="certificateSource", required=true)
       private final String certificateSource;
 
-    public String getCertificateSource() {
+    public String certificateSource() {
         return this.certificateSource;
     }
 
@@ -37,7 +37,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="certificateType")
       private final @Nullable String certificateType;
 
-    public Optional<String> getCertificateType() {
+    public Optional<String> certificateType() {
         return this.certificateType == null ? Optional.empty() : Optional.ofNullable(this.certificateType);
     }
 
@@ -48,7 +48,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="minimumTlsVersion", required=true)
       private final String minimumTlsVersion;
 
-    public String getMinimumTlsVersion() {
+    public String minimumTlsVersion() {
         return this.minimumTlsVersion;
     }
 
@@ -59,7 +59,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="protocolType", required=true)
       private final String protocolType;
 
-    public String getProtocolType() {
+    public String protocolType() {
         return this.protocolType;
     }
 
@@ -70,7 +70,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="secretName")
       private final @Nullable String secretName;
 
-    public Optional<String> getSecretName() {
+    public Optional<String> secretName() {
         return this.secretName == null ? Optional.empty() : Optional.ofNullable(this.secretName);
     }
 
@@ -81,7 +81,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="secretVersion")
       private final @Nullable String secretVersion;
 
-    public Optional<String> getSecretVersion() {
+    public Optional<String> secretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
@@ -92,7 +92,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="vault")
       private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
-    public Optional<KeyVaultCertificateSourceParametersResponseVault> getVault() {
+    public Optional<KeyVaultCertificateSourceParametersResponseVault> vault() {
         return this.vault == null ? Optional.empty() : Optional.ofNullable(this.vault);
     }
 

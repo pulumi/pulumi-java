@@ -24,7 +24,7 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -35,7 +35,7 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contentLink", required=true)
       private final Output<ContentLinkArgs> contentLink;
 
-    public Output<ContentLinkArgs> getContentLink() {
+    public Output<ContentLinkArgs> contentLink() {
         return this.contentLink;
     }
 
@@ -46,7 +46,7 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
@@ -57,7 +57,7 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class Python2PackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

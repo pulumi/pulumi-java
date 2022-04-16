@@ -26,7 +26,7 @@ public final class CacheDirectorySettingsResponse extends com.pulumi.resources.I
     @Import(name="activeDirectory")
       private final @Nullable CacheActiveDirectorySettingsResponse activeDirectory;
 
-    public Optional<CacheActiveDirectorySettingsResponse> getActiveDirectory() {
+    public Optional<CacheActiveDirectorySettingsResponse> activeDirectory() {
         return this.activeDirectory == null ? Optional.empty() : Optional.ofNullable(this.activeDirectory);
     }
 
@@ -37,7 +37,7 @@ public final class CacheDirectorySettingsResponse extends com.pulumi.resources.I
     @Import(name="usernameDownload")
       private final @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;
 
-    public Optional<CacheUsernameDownloadSettingsResponse> getUsernameDownload() {
+    public Optional<CacheUsernameDownloadSettingsResponse> usernameDownload() {
         return this.usernameDownload == null ? Optional.empty() : Optional.ofNullable(this.usernameDownload);
     }
 

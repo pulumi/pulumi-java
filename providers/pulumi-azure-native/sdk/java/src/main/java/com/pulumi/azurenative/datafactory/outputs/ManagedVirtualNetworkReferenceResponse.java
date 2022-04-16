@@ -32,14 +32,14 @@ public final class ManagedVirtualNetworkReferenceResponse {
      * Reference ManagedVirtualNetwork name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Managed Virtual Network reference type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

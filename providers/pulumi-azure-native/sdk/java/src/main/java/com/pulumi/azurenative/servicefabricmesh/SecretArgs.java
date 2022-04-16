@@ -24,7 +24,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<SecretResourcePropertiesArgs> properties;
 
-    public Output<SecretResourcePropertiesArgs> getProperties() {
+    public Output<SecretResourcePropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -46,7 +46,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretResourceName")
       private final @Nullable Output<String> secretResourceName;
 
-    public Output<String> getSecretResourceName() {
+    public Output<String> secretResourceName() {
         return this.secretResourceName == null ? Codegen.empty() : this.secretResourceName;
     }
 
@@ -68,7 +68,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

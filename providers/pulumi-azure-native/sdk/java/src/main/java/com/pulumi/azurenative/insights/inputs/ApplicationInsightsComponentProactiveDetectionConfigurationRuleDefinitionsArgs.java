@@ -27,7 +27,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="helpUrl")
       private final @Nullable Output<String> helpUrl;
 
-    public Output<String> getHelpUrl() {
+    public Output<String> helpUrl() {
         return this.helpUrl == null ? Codegen.empty() : this.helpUrl;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="isEnabledByDefault")
       private final @Nullable Output<Boolean> isEnabledByDefault;
 
-    public Output<Boolean> getIsEnabledByDefault() {
+    public Output<Boolean> isEnabledByDefault() {
         return this.isEnabledByDefault == null ? Codegen.empty() : this.isEnabledByDefault;
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="isHidden")
       private final @Nullable Output<Boolean> isHidden;
 
-    public Output<Boolean> getIsHidden() {
+    public Output<Boolean> isHidden() {
         return this.isHidden == null ? Codegen.empty() : this.isHidden;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="isInPreview")
       private final @Nullable Output<Boolean> isInPreview;
 
-    public Output<Boolean> getIsInPreview() {
+    public Output<Boolean> isInPreview() {
         return this.isInPreview == null ? Codegen.empty() : this.isInPreview;
     }
 
@@ -93,7 +93,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="supportsEmailNotifications")
       private final @Nullable Output<Boolean> supportsEmailNotifications;
 
-    public Output<Boolean> getSupportsEmailNotifications() {
+    public Output<Boolean> supportsEmailNotifications() {
         return this.supportsEmailNotifications == null ? Codegen.empty() : this.supportsEmailNotifications;
     }
 

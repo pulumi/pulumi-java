@@ -26,7 +26,7 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="days")
       private final @Nullable Integer days;
 
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
     }
 
@@ -37,7 +37,7 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="lastUpdatedTime", required=true)
       private final String lastUpdatedTime;
 
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
 
@@ -48,7 +48,7 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

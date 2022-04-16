@@ -46,7 +46,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -60,7 +60,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The content.
      * 
      */
-    public Output</* @Nullable */ String> getContent() {
+    public Output</* @Nullable */ String> content() {
         return this.content;
     }
     /**
@@ -74,7 +74,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The content link.
      * 
      */
-    public Output<ContentLinkResponse> getContentLink() {
+    public Output<ContentLinkResponse> contentLink() {
         return this.contentLink;
     }
     /**
@@ -88,7 +88,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The content type.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -102,7 +102,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -116,7 +116,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -130,7 +130,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The map type.
      * 
      */
-    public Output<String> getMapType() {
+    public Output<String> mapType() {
         return this.mapType;
     }
     /**
@@ -144,7 +144,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -158,7 +158,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -172,7 +172,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The parameters schema of integration account map.
      * 
      */
-    public Output</* @Nullable */ IntegrationAccountMapPropertiesResponseParametersSchema> getParametersSchema() {
+    public Output</* @Nullable */ IntegrationAccountMapPropertiesResponseParametersSchema> parametersSchema() {
         return this.parametersSchema;
     }
     /**
@@ -186,7 +186,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -200,7 +200,7 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

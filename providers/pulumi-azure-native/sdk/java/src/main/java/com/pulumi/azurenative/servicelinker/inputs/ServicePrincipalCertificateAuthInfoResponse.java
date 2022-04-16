@@ -24,7 +24,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="authType", required=true)
       private final String authType;
 
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
 
@@ -35,7 +35,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="certificate", required=true)
       private final String certificate;
 
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
 
@@ -46,7 +46,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -57,7 +57,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

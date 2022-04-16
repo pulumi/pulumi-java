@@ -26,7 +26,7 @@ public final class CreateManagementGroupDetailsArgs extends com.pulumi.resources
     @Import(name="parent")
       private final @Nullable Output<CreateParentGroupInfoArgs> parent;
 
-    public Output<CreateParentGroupInfoArgs> getParent() {
+    public Output<CreateParentGroupInfoArgs> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 

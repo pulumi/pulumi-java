@@ -19,7 +19,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
     @Import(name="applicationTypeName", required=true)
       private final String applicationTypeName;
 
-    public String getApplicationTypeName() {
+    public String applicationTypeName() {
         return this.applicationTypeName;
     }
 
@@ -30,7 +30,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -41,7 +41,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -27,7 +27,7 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<AuthenticationArgs> authentication;
 
-    public Output<AuthenticationArgs> getAuthentication() {
+    public Output<AuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -38,7 +38,7 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -49,7 +49,7 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTHostHub", required=true)
       private final Output<String> ioTHostHub;
 
-    public Output<String> getIoTHostHub() {
+    public Output<String> ioTHostHub() {
         return this.ioTHostHub;
     }
 
@@ -60,7 +60,7 @@ public final class IoTDeviceInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTHostHubId")
       private final @Nullable Output<String> ioTHostHubId;
 
-    public Output<String> getIoTHostHubId() {
+    public Output<String> ioTHostHubId() {
         return this.ioTHostHubId == null ? Codegen.empty() : this.ioTHostHubId;
     }
 

@@ -182,154 +182,154 @@ public final class GetStreamingEndpointResult {
      * The access control definition of the streaming endpoint.
      * 
     */
-    public Optional<StreamingEndpointAccessControlResponse> getAccessControl() {
+    public Optional<StreamingEndpointAccessControlResponse> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
     /**
      * This feature is deprecated, do not set a value for this property.
      * 
     */
-    public Optional<String> getAvailabilitySetName() {
+    public Optional<String> availabilitySetName() {
         return Optional.ofNullable(this.availabilitySetName);
     }
     /**
      * The CDN enabled flag.
      * 
     */
-    public Optional<Boolean> getCdnEnabled() {
+    public Optional<Boolean> cdnEnabled() {
         return Optional.ofNullable(this.cdnEnabled);
     }
     /**
      * The CDN profile name.
      * 
     */
-    public Optional<String> getCdnProfile() {
+    public Optional<String> cdnProfile() {
         return Optional.ofNullable(this.cdnProfile);
     }
     /**
      * The CDN provider name.
      * 
     */
-    public Optional<String> getCdnProvider() {
+    public Optional<String> cdnProvider() {
         return Optional.ofNullable(this.cdnProvider);
     }
     /**
      * The exact time the streaming endpoint was created.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * The streaming endpoint access policies.
      * 
     */
-    public Optional<CrossSiteAccessPoliciesResponse> getCrossSiteAccessPolicies() {
+    public Optional<CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies() {
         return Optional.ofNullable(this.crossSiteAccessPolicies);
     }
     /**
      * The custom host names of the streaming endpoint
      * 
     */
-    public List<String> getCustomHostNames() {
+    public List<String> customHostNames() {
         return this.customHostNames == null ? List.of() : this.customHostNames;
     }
     /**
      * The streaming endpoint description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The free trial expiration time.
      * 
     */
-    public String getFreeTrialEndTime() {
+    public String freeTrialEndTime() {
         return this.freeTrialEndTime;
     }
     /**
      * The streaming endpoint host name.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The exact time the streaming endpoint was last modified.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Max cache age
      * 
     */
-    public Optional<Double> getMaxCacheAge() {
+    public Optional<Double> maxCacheAge() {
         return Optional.ofNullable(this.maxCacheAge);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the streaming endpoint.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource state of the streaming endpoint.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * The number of scale units. Use the Scale operation to adjust this value.
      * 
     */
-    public Integer getScaleUnits() {
+    public Integer scaleUnits() {
         return this.scaleUnits;
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

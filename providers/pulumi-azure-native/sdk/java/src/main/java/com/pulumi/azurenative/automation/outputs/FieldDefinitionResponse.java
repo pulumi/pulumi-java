@@ -42,21 +42,21 @@ public final class FieldDefinitionResponse {
      * Gets or sets the isEncrypted flag of the connection field definition.
      * 
     */
-    public Optional<Boolean> getIsEncrypted() {
+    public Optional<Boolean> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
      * Gets or sets the isOptional flag of the connection field definition.
      * 
     */
-    public Optional<Boolean> getIsOptional() {
+    public Optional<Boolean> isOptional() {
         return Optional.ofNullable(this.isOptional);
     }
     /**
      * Gets or sets the type of the connection field definition.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

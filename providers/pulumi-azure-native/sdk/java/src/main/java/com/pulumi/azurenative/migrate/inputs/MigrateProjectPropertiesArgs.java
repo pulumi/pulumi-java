@@ -29,7 +29,7 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -40,7 +40,7 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="registeredTools")
       private final @Nullable Output<List<String>> registeredTools;
 
-    public Output<List<String>> getRegisteredTools() {
+    public Output<List<String>> registeredTools() {
         return this.registeredTools == null ? Codegen.empty() : this.registeredTools;
     }
 

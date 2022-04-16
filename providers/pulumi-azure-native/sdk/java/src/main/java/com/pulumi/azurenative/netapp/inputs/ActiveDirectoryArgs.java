@@ -28,7 +28,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="activeDirectoryId")
       private final @Nullable Output<String> activeDirectoryId;
 
-    public Output<String> getActiveDirectoryId() {
+    public Output<String> activeDirectoryId() {
         return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
     }
 
@@ -39,7 +39,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="adName")
       private final @Nullable Output<String> adName;
 
-    public Output<String> getAdName() {
+    public Output<String> adName() {
         return this.adName == null ? Codegen.empty() : this.adName;
     }
 
@@ -50,7 +50,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="aesEncryption")
       private final @Nullable Output<Boolean> aesEncryption;
 
-    public Output<Boolean> getAesEncryption() {
+    public Output<Boolean> aesEncryption() {
         return this.aesEncryption == null ? Codegen.empty() : this.aesEncryption;
     }
 
@@ -61,7 +61,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="allowLocalNfsUsersWithLdap")
       private final @Nullable Output<Boolean> allowLocalNfsUsersWithLdap;
 
-    public Output<Boolean> getAllowLocalNfsUsersWithLdap() {
+    public Output<Boolean> allowLocalNfsUsersWithLdap() {
         return this.allowLocalNfsUsersWithLdap == null ? Codegen.empty() : this.allowLocalNfsUsersWithLdap;
     }
 
@@ -72,7 +72,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="backupOperators")
       private final @Nullable Output<List<String>> backupOperators;
 
-    public Output<List<String>> getBackupOperators() {
+    public Output<List<String>> backupOperators() {
         return this.backupOperators == null ? Codegen.empty() : this.backupOperators;
     }
 
@@ -83,7 +83,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dns")
       private final @Nullable Output<String> dns;
 
-    public Output<String> getDns() {
+    public Output<String> dns() {
         return this.dns == null ? Codegen.empty() : this.dns;
     }
 
@@ -94,7 +94,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -105,7 +105,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kdcIP")
       private final @Nullable Output<String> kdcIP;
 
-    public Output<String> getKdcIP() {
+    public Output<String> kdcIP() {
         return this.kdcIP == null ? Codegen.empty() : this.kdcIP;
     }
 
@@ -116,7 +116,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ldapOverTLS")
       private final @Nullable Output<Boolean> ldapOverTLS;
 
-    public Output<Boolean> getLdapOverTLS() {
+    public Output<Boolean> ldapOverTLS() {
         return this.ldapOverTLS == null ? Codegen.empty() : this.ldapOverTLS;
     }
 
@@ -127,7 +127,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ldapSigning")
       private final @Nullable Output<Boolean> ldapSigning;
 
-    public Output<Boolean> getLdapSigning() {
+    public Output<Boolean> ldapSigning() {
         return this.ldapSigning == null ? Codegen.empty() : this.ldapSigning;
     }
 
@@ -138,7 +138,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
-    public Output<String> getOrganizationalUnit() {
+    public Output<String> organizationalUnit() {
         return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
@@ -149,7 +149,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -160,7 +160,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="securityOperators")
       private final @Nullable Output<List<String>> securityOperators;
 
-    public Output<List<String>> getSecurityOperators() {
+    public Output<List<String>> securityOperators() {
         return this.securityOperators == null ? Codegen.empty() : this.securityOperators;
     }
 
@@ -171,7 +171,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serverRootCACertificate")
       private final @Nullable Output<String> serverRootCACertificate;
 
-    public Output<String> getServerRootCACertificate() {
+    public Output<String> serverRootCACertificate() {
         return this.serverRootCACertificate == null ? Codegen.empty() : this.serverRootCACertificate;
     }
 
@@ -182,7 +182,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="site")
       private final @Nullable Output<String> site;
 
-    public Output<String> getSite() {
+    public Output<String> site() {
         return this.site == null ? Codegen.empty() : this.site;
     }
 
@@ -193,7 +193,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="smbServerName")
       private final @Nullable Output<String> smbServerName;
 
-    public Output<String> getSmbServerName() {
+    public Output<String> smbServerName() {
         return this.smbServerName == null ? Codegen.empty() : this.smbServerName;
     }
 
@@ -204,7 +204,7 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

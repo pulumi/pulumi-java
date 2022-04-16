@@ -23,7 +23,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="allowedSourceAddressPrefix")
       private final @Nullable String allowedSourceAddressPrefix;
 
-    public Optional<String> getAllowedSourceAddressPrefix() {
+    public Optional<String> allowedSourceAddressPrefix() {
         return this.allowedSourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
 
@@ -34,7 +34,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable List<String> allowedSourceAddressPrefixes;
 
-    public List<String> getAllowedSourceAddressPrefixes() {
+    public List<String> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
 
@@ -45,7 +45,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
 
-    public String getEndTimeUtc() {
+    public String endTimeUtc() {
         return this.endTimeUtc;
     }
 
@@ -56,14 +56,14 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="mappedPort")
       private final @Nullable Integer mappedPort;
 
-    public Optional<Integer> getMappedPort() {
+    public Optional<Integer> mappedPort() {
         return this.mappedPort == null ? Optional.empty() : Optional.ofNullable(this.mappedPort);
     }
 
     @Import(name="number", required=true)
       private final Integer number;
 
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
 
@@ -74,7 +74,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -85,7 +85,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="statusReason", required=true)
       private final String statusReason;
 
-    public String getStatusReason() {
+    public String statusReason() {
         return this.statusReason;
     }
 

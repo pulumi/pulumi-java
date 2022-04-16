@@ -42,21 +42,21 @@ public final class DatasetReferenceResponse {
      * Arguments for dataset.
      * 
     */
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference dataset name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Dataset reference type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

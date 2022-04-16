@@ -27,7 +27,7 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoUser")
       private final @Nullable Output<AutoUserSpecificationArgs> autoUser;
 
-    public Output<AutoUserSpecificationArgs> getAutoUser() {
+    public Output<AutoUserSpecificationArgs> autoUser() {
         return this.autoUser == null ? Codegen.empty() : this.autoUser;
     }
 
@@ -38,7 +38,7 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

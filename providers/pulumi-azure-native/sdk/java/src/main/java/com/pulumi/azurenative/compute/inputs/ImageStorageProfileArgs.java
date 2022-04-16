@@ -29,7 +29,7 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
     @Import(name="dataDisks")
       private final @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
 
-    public Output<List<ImageDataDiskArgs>> getDataDisks() {
+    public Output<List<ImageDataDiskArgs>> dataDisks() {
         return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
@@ -40,7 +40,7 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
     @Import(name="osDisk")
       private final @Nullable Output<ImageOSDiskArgs> osDisk;
 
-    public Output<ImageOSDiskArgs> getOsDisk() {
+    public Output<ImageOSDiskArgs> osDisk() {
         return this.osDisk == null ? Codegen.empty() : this.osDisk;
     }
 
@@ -51,7 +51,7 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
     @Import(name="zoneResilient")
       private final @Nullable Output<Boolean> zoneResilient;
 
-    public Output<Boolean> getZoneResilient() {
+    public Output<Boolean> zoneResilient() {
         return this.zoneResilient == null ? Codegen.empty() : this.zoneResilient;
     }
 

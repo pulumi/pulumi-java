@@ -42,21 +42,21 @@ public final class VirtualNetworkRuleResponse {
      * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Ignore missing vnet service endpoint or not.
      * 
     */
-    public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
+    public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
      * Gets the state of virtual network rule.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

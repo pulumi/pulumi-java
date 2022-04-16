@@ -32,7 +32,7 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="cipherSuites")
       private final @Nullable Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites;
 
-    public Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> getCipherSuites() {
+    public Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites() {
         return this.cipherSuites == null ? Codegen.empty() : this.cipherSuites;
     }
 
@@ -43,7 +43,7 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="disabledSslProtocols")
       private final @Nullable Output<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols;
 
-    public Output<List<Either<String,ApplicationGatewaySslProtocol>>> getDisabledSslProtocols() {
+    public Output<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols() {
         return this.disabledSslProtocols == null ? Codegen.empty() : this.disabledSslProtocols;
     }
 
@@ -54,7 +54,7 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="minProtocolVersion")
       private final @Nullable Output<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion;
 
-    public Output<Either<String,ApplicationGatewaySslProtocol>> getMinProtocolVersion() {
+    public Output<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion() {
         return this.minProtocolVersion == null ? Codegen.empty() : this.minProtocolVersion;
     }
 
@@ -65,7 +65,7 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="policyName")
       private final @Nullable Output<Either<String,ApplicationGatewaySslPolicyName>> policyName;
 
-    public Output<Either<String,ApplicationGatewaySslPolicyName>> getPolicyName() {
+    public Output<Either<String,ApplicationGatewaySslPolicyName>> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -76,7 +76,7 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="policyType")
       private final @Nullable Output<Either<String,ApplicationGatewaySslPolicyType>> policyType;
 
-    public Output<Either<String,ApplicationGatewaySslPolicyType>> getPolicyType() {
+    public Output<Either<String,ApplicationGatewaySslPolicyType>> policyType() {
         return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 

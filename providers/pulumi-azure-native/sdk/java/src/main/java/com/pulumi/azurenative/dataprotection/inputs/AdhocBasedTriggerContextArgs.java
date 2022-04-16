@@ -27,7 +27,7 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -38,7 +38,7 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
     @Import(name="taggingCriteria", required=true)
       private final Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
 
-    public Output<AdhocBasedTaggingCriteriaArgs> getTaggingCriteria() {
+    public Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria() {
         return this.taggingCriteria;
     }
 

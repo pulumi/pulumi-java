@@ -29,7 +29,7 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> getStatus() {
+    public Output<Either<String,PolicyStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -40,7 +40,7 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,TrustPolicyType>> type;
 
-    public Output<Either<String,TrustPolicyType>> getType() {
+    public Output<Either<String,TrustPolicyType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -29,7 +29,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -40,7 +40,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="canReRegister")
       private final @Nullable Boolean canReRegister;
 
-    public Optional<Boolean> getCanReRegister() {
+    public Optional<Boolean> canReRegister() {
         return this.canReRegister == null ? Optional.empty() : Optional.ofNullable(this.canReRegister);
     }
 
@@ -51,7 +51,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="containerId")
       private final @Nullable String containerId;
 
-    public Optional<String> getContainerId() {
+    public Optional<String> containerId() {
         return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
     }
 
@@ -66,7 +66,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="containerType", required=true)
       private final String containerType;
 
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
 
@@ -77,7 +77,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="dpmAgentVersion")
       private final @Nullable String dpmAgentVersion;
 
-    public Optional<String> getDpmAgentVersion() {
+    public Optional<String> dpmAgentVersion() {
         return this.dpmAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.dpmAgentVersion);
     }
 
@@ -88,7 +88,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="dpmServers")
       private final @Nullable List<String> dpmServers;
 
-    public List<String> getDpmServers() {
+    public List<String> dpmServers() {
         return this.dpmServers == null ? List.of() : this.dpmServers;
     }
 
@@ -99,7 +99,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="extendedInfo")
       private final @Nullable DPMContainerExtendedInfoResponse extendedInfo;
 
-    public Optional<DPMContainerExtendedInfoResponse> getExtendedInfo() {
+    public Optional<DPMContainerExtendedInfoResponse> extendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
@@ -110,7 +110,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -121,7 +121,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
@@ -132,7 +132,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
 
-    public Optional<Double> getProtectedItemCount() {
+    public Optional<Double> protectedItemCount() {
         return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
     }
 
@@ -143,7 +143,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="protectionStatus")
       private final @Nullable String protectionStatus;
 
-    public Optional<String> getProtectionStatus() {
+    public Optional<String> protectionStatus() {
         return this.protectionStatus == null ? Optional.empty() : Optional.ofNullable(this.protectionStatus);
     }
 
@@ -154,7 +154,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 
@@ -165,7 +165,7 @@ public final class AzureBackupServerContainerResponse extends com.pulumi.resourc
     @Import(name="upgradeAvailable")
       private final @Nullable Boolean upgradeAvailable;
 
-    public Optional<Boolean> getUpgradeAvailable() {
+    public Optional<Boolean> upgradeAvailable() {
         return this.upgradeAvailable == null ? Optional.empty() : Optional.ofNullable(this.upgradeAvailable);
     }
 

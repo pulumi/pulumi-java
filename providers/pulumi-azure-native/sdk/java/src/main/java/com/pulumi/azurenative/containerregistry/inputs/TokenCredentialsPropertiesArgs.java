@@ -24,14 +24,14 @@ public final class TokenCredentialsPropertiesArgs extends com.pulumi.resources.R
     @Import(name="certificates")
       private final @Nullable Output<List<TokenCertificateArgs>> certificates;
 
-    public Output<List<TokenCertificateArgs>> getCertificates() {
+    public Output<List<TokenCertificateArgs>> certificates() {
         return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     @Import(name="passwords")
       private final @Nullable Output<List<TokenPasswordArgs>> passwords;
 
-    public Output<List<TokenPasswordArgs>> getPasswords() {
+    public Output<List<TokenPasswordArgs>> passwords() {
         return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 

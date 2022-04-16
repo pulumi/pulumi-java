@@ -23,7 +23,7 @@ public final class WarmStoreConfigurationPropertiesResponse extends com.pulumi.r
     @Import(name="dataRetention", required=true)
       private final String dataRetention;
 
-    public String getDataRetention() {
+    public String dataRetention() {
         return this.dataRetention;
     }
 

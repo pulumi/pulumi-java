@@ -20,56 +20,56 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
     @Import(name="incidentContactEmail")
       private final @Nullable String incidentContactEmail;
 
-    public Optional<String> getIncidentContactEmail() {
+    public Optional<String> incidentContactEmail() {
         return this.incidentContactEmail == null ? Optional.empty() : Optional.ofNullable(this.incidentContactEmail);
     }
 
     @Import(name="incidentRoutingService")
       private final @Nullable String incidentRoutingService;
 
-    public Optional<String> getIncidentRoutingService() {
+    public Optional<String> incidentRoutingService() {
         return this.incidentRoutingService == null ? Optional.empty() : Optional.ofNullable(this.incidentRoutingService);
     }
 
     @Import(name="incidentRoutingTeam")
       private final @Nullable String incidentRoutingTeam;
 
-    public Optional<String> getIncidentRoutingTeam() {
+    public Optional<String> incidentRoutingTeam() {
         return this.incidentRoutingTeam == null ? Optional.empty() : Optional.ofNullable(this.incidentRoutingTeam);
     }
 
     @Import(name="manifestOwners")
       private final @Nullable List<String> manifestOwners;
 
-    public List<String> getManifestOwners() {
+    public List<String> manifestOwners() {
         return this.manifestOwners == null ? List.of() : this.manifestOwners;
     }
 
     @Import(name="resourceAccessPolicy")
       private final @Nullable String resourceAccessPolicy;
 
-    public Optional<String> getResourceAccessPolicy() {
+    public Optional<String> resourceAccessPolicy() {
         return this.resourceAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.resourceAccessPolicy);
     }
 
     @Import(name="resourceAccessRoles")
       private final @Nullable List<Object> resourceAccessRoles;
 
-    public List<Object> getResourceAccessRoles() {
+    public List<Object> resourceAccessRoles() {
         return this.resourceAccessRoles == null ? List.of() : this.resourceAccessRoles;
     }
 
     @Import(name="schemaOwners")
       private final @Nullable List<String> schemaOwners;
 
-    public List<String> getSchemaOwners() {
+    public List<String> schemaOwners() {
         return this.schemaOwners == null ? List.of() : this.schemaOwners;
     }
 
     @Import(name="serviceTreeInfos")
       private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
-    public List<ServiceTreeInfoResponse> getServiceTreeInfos() {
+    public List<ServiceTreeInfoResponse> serviceTreeInfos() {
         return this.serviceTreeInfos == null ? List.of() : this.serviceTreeInfos;
     }
 

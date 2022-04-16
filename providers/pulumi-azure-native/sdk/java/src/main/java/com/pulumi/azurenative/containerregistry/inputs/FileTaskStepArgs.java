@@ -28,7 +28,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
 
-    public Output<String> getContextAccessToken() {
+    public Output<String> contextAccessToken() {
         return this.contextAccessToken == null ? Codegen.empty() : this.contextAccessToken;
     }
 
@@ -39,7 +39,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
-    public Output<String> getContextPath() {
+    public Output<String> contextPath() {
         return this.contextPath == null ? Codegen.empty() : this.contextPath;
     }
 
@@ -50,7 +50,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskFilePath", required=true)
       private final Output<String> taskFilePath;
 
-    public Output<String> getTaskFilePath() {
+    public Output<String> taskFilePath() {
         return this.taskFilePath;
     }
 
@@ -62,7 +62,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -73,7 +73,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> getValues() {
+    public Output<List<SetValueArgs>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 
@@ -84,7 +84,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="valuesFilePath")
       private final @Nullable Output<String> valuesFilePath;
 
-    public Output<String> getValuesFilePath() {
+    public Output<String> valuesFilePath() {
         return this.valuesFilePath == null ? Codegen.empty() : this.valuesFilePath;
     }
 

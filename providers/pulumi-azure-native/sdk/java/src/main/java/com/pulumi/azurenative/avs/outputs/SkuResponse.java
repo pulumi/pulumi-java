@@ -24,7 +24,7 @@ public final class SkuResponse {
      * The name of the SKU.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

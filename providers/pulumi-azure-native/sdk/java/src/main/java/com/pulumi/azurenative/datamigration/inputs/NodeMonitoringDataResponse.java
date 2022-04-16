@@ -23,7 +23,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="additionalProperties", required=true)
       private final Map<String,Object> additionalProperties;
 
-    public Map<String,Object> getAdditionalProperties() {
+    public Map<String,Object> additionalProperties() {
         return this.additionalProperties;
     }
 
@@ -34,7 +34,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="availableMemoryInMB", required=true)
       private final Integer availableMemoryInMB;
 
-    public Integer getAvailableMemoryInMB() {
+    public Integer availableMemoryInMB() {
         return this.availableMemoryInMB;
     }
 
@@ -45,7 +45,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="concurrentJobsLimit", required=true)
       private final Integer concurrentJobsLimit;
 
-    public Integer getConcurrentJobsLimit() {
+    public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
 
@@ -56,7 +56,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="concurrentJobsRunning", required=true)
       private final Integer concurrentJobsRunning;
 
-    public Integer getConcurrentJobsRunning() {
+    public Integer concurrentJobsRunning() {
         return this.concurrentJobsRunning;
     }
 
@@ -67,7 +67,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="cpuUtilization", required=true)
       private final Integer cpuUtilization;
 
-    public Integer getCpuUtilization() {
+    public Integer cpuUtilization() {
         return this.cpuUtilization;
     }
 
@@ -78,7 +78,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="maxConcurrentJobs", required=true)
       private final Integer maxConcurrentJobs;
 
-    public Integer getMaxConcurrentJobs() {
+    public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
 
@@ -89,7 +89,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="nodeName", required=true)
       private final String nodeName;
 
-    public String getNodeName() {
+    public String nodeName() {
         return this.nodeName;
     }
 
@@ -100,7 +100,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="receivedBytes", required=true)
       private final Double receivedBytes;
 
-    public Double getReceivedBytes() {
+    public Double receivedBytes() {
         return this.receivedBytes;
     }
 
@@ -111,7 +111,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
     @Import(name="sentBytes", required=true)
       private final Double sentBytes;
 
-    public Double getSentBytes() {
+    public Double sentBytes() {
         return this.sentBytes;
     }
 

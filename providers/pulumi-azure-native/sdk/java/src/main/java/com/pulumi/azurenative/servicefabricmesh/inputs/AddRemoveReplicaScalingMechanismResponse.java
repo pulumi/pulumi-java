@@ -25,7 +25,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -36,7 +36,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="maxCount", required=true)
       private final Integer maxCount;
 
-    public Integer getMaxCount() {
+    public Integer maxCount() {
         return this.maxCount;
     }
 
@@ -47,7 +47,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="minCount", required=true)
       private final Integer minCount;
 
-    public Integer getMinCount() {
+    public Integer minCount() {
         return this.minCount;
     }
 
@@ -58,7 +58,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
     @Import(name="scaleIncrement", required=true)
       private final Integer scaleIncrement;
 
-    public Integer getScaleIncrement() {
+    public Integer scaleIncrement() {
         return this.scaleIncrement;
     }
 

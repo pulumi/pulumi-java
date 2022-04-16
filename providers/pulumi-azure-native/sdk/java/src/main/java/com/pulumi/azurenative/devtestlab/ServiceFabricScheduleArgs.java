@@ -29,7 +29,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="dailyRecurrence")
       private final @Nullable Output<DayDetailsArgs> dailyRecurrence;
 
-    public Output<DayDetailsArgs> getDailyRecurrence() {
+    public Output<DayDetailsArgs> dailyRecurrence() {
         return this.dailyRecurrence == null ? Codegen.empty() : this.dailyRecurrence;
     }
 
@@ -40,7 +40,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="hourlyRecurrence")
       private final @Nullable Output<HourDetailsArgs> hourlyRecurrence;
 
-    public Output<HourDetailsArgs> getHourlyRecurrence() {
+    public Output<HourDetailsArgs> hourlyRecurrence() {
         return this.hourlyRecurrence == null ? Codegen.empty() : this.hourlyRecurrence;
     }
 
@@ -51,7 +51,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -62,7 +62,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,7 +73,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="notificationSettings")
       private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Output<NotificationSettingsArgs> getNotificationSettings() {
+    public Output<NotificationSettingsArgs> notificationSettings() {
         return this.notificationSettings == null ? Codegen.empty() : this.notificationSettings;
     }
 
@@ -95,7 +95,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -106,7 +106,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="serviceFabricName", required=true)
       private final Output<String> serviceFabricName;
 
-    public Output<String> getServiceFabricName() {
+    public Output<String> serviceFabricName() {
         return this.serviceFabricName;
     }
 
@@ -117,7 +117,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> getStatus() {
+    public Output<Either<String,EnableStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -128,7 +128,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -139,7 +139,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
 
-    public Output<String> getTargetResourceId() {
+    public Output<String> targetResourceId() {
         return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
     }
 
@@ -150,7 +150,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="taskType")
       private final @Nullable Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType == null ? Codegen.empty() : this.taskType;
     }
 
@@ -161,7 +161,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="timeZoneId")
       private final @Nullable Output<String> timeZoneId;
 
-    public Output<String> getTimeZoneId() {
+    public Output<String> timeZoneId() {
         return this.timeZoneId == null ? Codegen.empty() : this.timeZoneId;
     }
 
@@ -172,7 +172,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -183,7 +183,7 @@ public final class ServiceFabricScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="weeklyRecurrence")
       private final @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
 
-    public Output<WeekDetailsArgs> getWeeklyRecurrence() {
+    public Output<WeekDetailsArgs> weeklyRecurrence() {
         return this.weeklyRecurrence == null ? Codegen.empty() : this.weeklyRecurrence;
     }
 

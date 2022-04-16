@@ -28,7 +28,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -39,7 +39,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabledState")
       private final @Nullable String enabledState;
 
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
@@ -50,7 +50,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="matchConditions", required=true)
       private final List<FrontDoorMatchConditionResponse> matchConditions;
 
-    public List<FrontDoorMatchConditionResponse> getMatchConditions() {
+    public List<FrontDoorMatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
 
@@ -61,7 +61,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -72,7 +72,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -83,7 +83,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rateLimitDurationInMinutes")
       private final @Nullable Integer rateLimitDurationInMinutes;
 
-    public Optional<Integer> getRateLimitDurationInMinutes() {
+    public Optional<Integer> rateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes == null ? Optional.empty() : Optional.ofNullable(this.rateLimitDurationInMinutes);
     }
 
@@ -94,7 +94,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rateLimitThreshold")
       private final @Nullable Integer rateLimitThreshold;
 
-    public Optional<Integer> getRateLimitThreshold() {
+    public Optional<Integer> rateLimitThreshold() {
         return this.rateLimitThreshold == null ? Optional.empty() : Optional.ofNullable(this.rateLimitThreshold);
     }
 
@@ -105,7 +105,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 

@@ -23,7 +23,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="activeMessageCount", required=true)
       private final Double activeMessageCount;
 
-    public Double getActiveMessageCount() {
+    public Double activeMessageCount() {
         return this.activeMessageCount;
     }
 
@@ -34,7 +34,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="deadLetterMessageCount", required=true)
       private final Double deadLetterMessageCount;
 
-    public Double getDeadLetterMessageCount() {
+    public Double deadLetterMessageCount() {
         return this.deadLetterMessageCount;
     }
 
@@ -45,7 +45,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="scheduledMessageCount", required=true)
       private final Double scheduledMessageCount;
 
-    public Double getScheduledMessageCount() {
+    public Double scheduledMessageCount() {
         return this.scheduledMessageCount;
     }
 
@@ -56,7 +56,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="transferDeadLetterMessageCount", required=true)
       private final Double transferDeadLetterMessageCount;
 
-    public Double getTransferDeadLetterMessageCount() {
+    public Double transferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
     }
 
@@ -67,7 +67,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="transferMessageCount", required=true)
       private final Double transferMessageCount;
 
-    public Double getTransferMessageCount() {
+    public Double transferMessageCount() {
         return this.transferMessageCount;
     }
 

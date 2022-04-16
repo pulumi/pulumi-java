@@ -27,7 +27,7 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
     @Import(name="error")
       private final @Nullable Output<ConnectionErrorArgs> error;
 
-    public Output<ConnectionErrorArgs> getError() {
+    public Output<ConnectionErrorArgs> error() {
         return this.error == null ? Codegen.empty() : this.error;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

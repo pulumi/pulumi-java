@@ -25,7 +25,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="availabilityZoneId", required=true)
       private final Output<String> availabilityZoneId;
 
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
 
@@ -36,7 +36,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="dedicatedCloudNodeName")
       private final @Nullable Output<String> dedicatedCloudNodeName;
 
-    public Output<String> getDedicatedCloudNodeName() {
+    public Output<String> dedicatedCloudNodeName() {
         return this.dedicatedCloudNodeName == null ? Codegen.empty() : this.dedicatedCloudNodeName;
     }
 
@@ -47,7 +47,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -58,7 +58,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -80,7 +80,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodesCount", required=true)
       private final Output<Integer> nodesCount;
 
-    public Output<Integer> getNodesCount() {
+    public Output<Integer> nodesCount() {
         return this.nodesCount;
     }
 
@@ -91,7 +91,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="placementGroupId", required=true)
       private final Output<String> placementGroupId;
 
-    public Output<String> getPlacementGroupId() {
+    public Output<String> placementGroupId() {
         return this.placementGroupId;
     }
 
@@ -102,7 +102,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="purchaseId", required=true)
       private final Output<String> purchaseId;
 
-    public Output<String> getPurchaseId() {
+    public Output<String> purchaseId() {
         return this.purchaseId;
     }
 
@@ -113,7 +113,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -124,7 +124,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -135,7 +135,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

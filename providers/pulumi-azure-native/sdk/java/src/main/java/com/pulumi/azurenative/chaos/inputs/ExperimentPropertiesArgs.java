@@ -29,7 +29,7 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="selectors", required=true)
       private final Output<List<SelectorArgs>> selectors;
 
-    public Output<List<SelectorArgs>> getSelectors() {
+    public Output<List<SelectorArgs>> selectors() {
         return this.selectors;
     }
 
@@ -40,7 +40,7 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="startOnCreation")
       private final @Nullable Output<Boolean> startOnCreation;
 
-    public Output<Boolean> getStartOnCreation() {
+    public Output<Boolean> startOnCreation() {
         return this.startOnCreation == null ? Codegen.empty() : this.startOnCreation;
     }
 
@@ -51,7 +51,7 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="steps", required=true)
       private final Output<List<StepArgs>> steps;
 
-    public Output<List<StepArgs>> getSteps() {
+    public Output<List<StepArgs>> steps() {
         return this.steps;
     }
 

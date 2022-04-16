@@ -33,7 +33,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedEndpointRecordTypes")
       private final @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
 
-    public Output<List<Either<String,AllowedEndpointRecordType>>> getAllowedEndpointRecordTypes() {
+    public Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes() {
         return this.allowedEndpointRecordTypes == null ? Codegen.empty() : this.allowedEndpointRecordTypes;
     }
 
@@ -44,7 +44,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
       private final @Nullable Output<DnsConfigArgs> dnsConfig;
 
-    public Output<DnsConfigArgs> getDnsConfig() {
+    public Output<DnsConfigArgs> dnsConfig() {
         return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
@@ -55,7 +55,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoints")
       private final @Nullable Output<List<EndpointArgs>> endpoints;
 
-    public Output<List<EndpointArgs>> getEndpoints() {
+    public Output<List<EndpointArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -66,7 +66,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -77,7 +77,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -88,7 +88,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxReturn")
       private final @Nullable Output<Double> maxReturn;
 
-    public Output<Double> getMaxReturn() {
+    public Output<Double> maxReturn() {
         return this.maxReturn == null ? Codegen.empty() : this.maxReturn;
     }
 
@@ -99,7 +99,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorConfig")
       private final @Nullable Output<MonitorConfigArgs> monitorConfig;
 
-    public Output<MonitorConfigArgs> getMonitorConfig() {
+    public Output<MonitorConfigArgs> monitorConfig() {
         return this.monitorConfig == null ? Codegen.empty() : this.monitorConfig;
     }
 
@@ -110,7 +110,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -121,7 +121,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
@@ -132,7 +132,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileStatus")
       private final @Nullable Output<Either<String,ProfileStatus>> profileStatus;
 
-    public Output<Either<String,ProfileStatus>> getProfileStatus() {
+    public Output<Either<String,ProfileStatus>> profileStatus() {
         return this.profileStatus == null ? Codegen.empty() : this.profileStatus;
     }
 
@@ -143,7 +143,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -154,7 +154,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -165,7 +165,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficRoutingMethod")
       private final @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
 
-    public Output<Either<String,TrafficRoutingMethod>> getTrafficRoutingMethod() {
+    public Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod() {
         return this.trafficRoutingMethod == null ? Codegen.empty() : this.trafficRoutingMethod;
     }
 
@@ -176,7 +176,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficViewEnrollmentStatus")
       private final @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
 
-    public Output<Either<String,TrafficViewEnrollmentStatus>> getTrafficViewEnrollmentStatus() {
+    public Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus() {
         return this.trafficViewEnrollmentStatus == null ? Codegen.empty() : this.trafficViewEnrollmentStatus;
     }
 
@@ -187,7 +187,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

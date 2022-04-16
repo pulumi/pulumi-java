@@ -34,14 +34,14 @@ public final class ClientRegistrationResponse {
      * The Client ID of the app used for login.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The app setting name that contains the client secret.
      * 
     */
-    public Optional<String> getClientSecretSettingName() {
+    public Optional<String> clientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
 

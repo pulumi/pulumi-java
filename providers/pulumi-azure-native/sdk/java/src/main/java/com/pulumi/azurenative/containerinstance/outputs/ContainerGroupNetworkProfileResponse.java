@@ -24,7 +24,7 @@ public final class ContainerGroupNetworkProfileResponse {
      * The identifier for a network profile.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

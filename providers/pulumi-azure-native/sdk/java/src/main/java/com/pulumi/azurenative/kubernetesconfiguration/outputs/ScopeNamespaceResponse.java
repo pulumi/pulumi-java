@@ -26,7 +26,7 @@ public final class ScopeNamespaceResponse {
      * Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created
      * 
     */
-    public Optional<String> getTargetNamespace() {
+    public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
 

@@ -25,7 +25,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="adminUsername")
       private final @Nullable String adminUsername;
 
-    public Optional<String> getAdminUsername() {
+    public Optional<String> adminUsername() {
         return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
     }
 
@@ -36,7 +36,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computerName")
       private final @Nullable String computerName;
 
-    public Optional<String> getComputerName() {
+    public Optional<String> computerName() {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
     }
 
@@ -47,7 +47,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osName", required=true)
       private final String osName;
 
-    public String getOsName() {
+    public String osName() {
         return this.osName;
     }
 
@@ -58,7 +58,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -69,7 +69,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="toolsRunningStatus", required=true)
       private final String toolsRunningStatus;
 
-    public String getToolsRunningStatus() {
+    public String toolsRunningStatus() {
         return this.toolsRunningStatus;
     }
 
@@ -80,7 +80,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="toolsVersion", required=true)
       private final String toolsVersion;
 
-    public String getToolsVersion() {
+    public String toolsVersion() {
         return this.toolsVersion;
     }
 
@@ -91,7 +91,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="toolsVersionStatus", required=true)
       private final String toolsVersionStatus;
 
-    public String getToolsVersionStatus() {
+    public String toolsVersionStatus() {
         return this.toolsVersionStatus;
     }
 

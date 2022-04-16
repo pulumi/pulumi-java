@@ -25,7 +25,7 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
@@ -36,7 +36,7 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<Either<String,AccountEncryptionKeyType>> type;
 
-    public Output<Either<String,AccountEncryptionKeyType>> getType() {
+    public Output<Either<String,AccountEncryptionKeyType>> type() {
         return this.type;
     }
 

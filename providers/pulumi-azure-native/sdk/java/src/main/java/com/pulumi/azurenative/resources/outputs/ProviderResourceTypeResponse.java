@@ -92,66 +92,66 @@ public final class ProviderResourceTypeResponse {
      * The aliases that are supported by this resource type.
      * 
     */
-    public List<AliasResponse> getAliases() {
+    public List<AliasResponse> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
     /**
      * The API profiles for the resource provider.
      * 
     */
-    public List<ApiProfileResponse> getApiProfiles() {
+    public List<ApiProfileResponse> apiProfiles() {
         return this.apiProfiles;
     }
     /**
      * The API version.
      * 
     */
-    public List<String> getApiVersions() {
+    public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
     /**
      * The additional capabilities offered by this resource type.
      * 
     */
-    public Optional<String> getCapabilities() {
+    public Optional<String> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
     /**
      * The default API version.
      * 
     */
-    public String getDefaultApiVersion() {
+    public String defaultApiVersion() {
         return this.defaultApiVersion;
     }
     /**
      * The location mappings that are supported by this resource type.
      * 
     */
-    public List<ProviderExtendedLocationResponse> getLocationMappings() {
+    public List<ProviderExtendedLocationResponse> locationMappings() {
         return this.locationMappings == null ? List.of() : this.locationMappings;
     }
     /**
      * The collection of locations where this resource type can be created.
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * The properties.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The resource type.
      * 
     */
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
-    public List<ZoneMappingResponse> getZoneMappings() {
+    public List<ZoneMappingResponse> zoneMappings() {
         return this.zoneMappings == null ? List.of() : this.zoneMappings;
     }
 

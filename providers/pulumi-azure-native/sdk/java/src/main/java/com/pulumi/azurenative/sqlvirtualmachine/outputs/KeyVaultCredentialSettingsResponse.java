@@ -49,28 +49,28 @@ public final class KeyVaultCredentialSettingsResponse {
      * Azure Key Vault url.
      * 
     */
-    public Optional<String> getAzureKeyVaultUrl() {
+    public Optional<String> azureKeyVaultUrl() {
         return Optional.ofNullable(this.azureKeyVaultUrl);
     }
     /**
      * Credential name.
      * 
     */
-    public Optional<String> getCredentialName() {
+    public Optional<String> credentialName() {
         return Optional.ofNullable(this.credentialName);
     }
     /**
      * Enable or disable key vault credential setting.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * Service principal name to access key vault.
      * 
     */
-    public Optional<String> getServicePrincipalName() {
+    public Optional<String> servicePrincipalName() {
         return Optional.ofNullable(this.servicePrincipalName);
     }
 

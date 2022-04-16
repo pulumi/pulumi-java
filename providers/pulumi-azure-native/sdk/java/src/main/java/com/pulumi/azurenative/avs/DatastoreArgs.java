@@ -24,7 +24,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -35,7 +35,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
@@ -46,7 +46,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskPoolVolume")
       private final @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
 
-    public Output<DiskPoolVolumeArgs> getDiskPoolVolume() {
+    public Output<DiskPoolVolumeArgs> diskPoolVolume() {
         return this.diskPoolVolume == null ? Codegen.empty() : this.diskPoolVolume;
     }
 
@@ -57,7 +57,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="netAppVolume")
       private final @Nullable Output<NetAppVolumeArgs> netAppVolume;
 
-    public Output<NetAppVolumeArgs> getNetAppVolume() {
+    public Output<NetAppVolumeArgs> netAppVolume() {
         return this.netAppVolume == null ? Codegen.empty() : this.netAppVolume;
     }
 
@@ -68,7 +68,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -79,7 +79,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -51,28 +51,28 @@ public final class FacebookResponse {
      * <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The version of the Facebook api to be used while logging in.
      * 
     */
-    public Optional<String> getGraphApiVersion() {
+    public Optional<String> graphApiVersion() {
         return Optional.ofNullable(this.graphApiVersion);
     }
     /**
      * The configuration settings of the login flow.
      * 
     */
-    public Optional<LoginScopesResponse> getLogin() {
+    public Optional<LoginScopesResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the app registration for the Facebook provider.
      * 
     */
-    public Optional<AppRegistrationResponse> getRegistration() {
+    public Optional<AppRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }
 

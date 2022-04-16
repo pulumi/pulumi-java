@@ -21,119 +21,119 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends com
     @Import(name="balanceSimilarNodeGroups")
       private final @Nullable String balanceSimilarNodeGroups;
 
-    public Optional<String> getBalanceSimilarNodeGroups() {
+    public Optional<String> balanceSimilarNodeGroups() {
         return this.balanceSimilarNodeGroups == null ? Optional.empty() : Optional.ofNullable(this.balanceSimilarNodeGroups);
     }
 
     @Import(name="expander")
       private final @Nullable String expander;
 
-    public Optional<String> getExpander() {
+    public Optional<String> expander() {
         return this.expander == null ? Optional.empty() : Optional.ofNullable(this.expander);
     }
 
     @Import(name="maxEmptyBulkDelete")
       private final @Nullable String maxEmptyBulkDelete;
 
-    public Optional<String> getMaxEmptyBulkDelete() {
+    public Optional<String> maxEmptyBulkDelete() {
         return this.maxEmptyBulkDelete == null ? Optional.empty() : Optional.ofNullable(this.maxEmptyBulkDelete);
     }
 
     @Import(name="maxGracefulTerminationSec")
       private final @Nullable String maxGracefulTerminationSec;
 
-    public Optional<String> getMaxGracefulTerminationSec() {
+    public Optional<String> maxGracefulTerminationSec() {
         return this.maxGracefulTerminationSec == null ? Optional.empty() : Optional.ofNullable(this.maxGracefulTerminationSec);
     }
 
     @Import(name="maxNodeProvisionTime")
       private final @Nullable String maxNodeProvisionTime;
 
-    public Optional<String> getMaxNodeProvisionTime() {
+    public Optional<String> maxNodeProvisionTime() {
         return this.maxNodeProvisionTime == null ? Optional.empty() : Optional.ofNullable(this.maxNodeProvisionTime);
     }
 
     @Import(name="maxTotalUnreadyPercentage")
       private final @Nullable String maxTotalUnreadyPercentage;
 
-    public Optional<String> getMaxTotalUnreadyPercentage() {
+    public Optional<String> maxTotalUnreadyPercentage() {
         return this.maxTotalUnreadyPercentage == null ? Optional.empty() : Optional.ofNullable(this.maxTotalUnreadyPercentage);
     }
 
     @Import(name="newPodScaleUpDelay")
       private final @Nullable String newPodScaleUpDelay;
 
-    public Optional<String> getNewPodScaleUpDelay() {
+    public Optional<String> newPodScaleUpDelay() {
         return this.newPodScaleUpDelay == null ? Optional.empty() : Optional.ofNullable(this.newPodScaleUpDelay);
     }
 
     @Import(name="okTotalUnreadyCount")
       private final @Nullable String okTotalUnreadyCount;
 
-    public Optional<String> getOkTotalUnreadyCount() {
+    public Optional<String> okTotalUnreadyCount() {
         return this.okTotalUnreadyCount == null ? Optional.empty() : Optional.ofNullable(this.okTotalUnreadyCount);
     }
 
     @Import(name="scaleDownDelayAfterAdd")
       private final @Nullable String scaleDownDelayAfterAdd;
 
-    public Optional<String> getScaleDownDelayAfterAdd() {
+    public Optional<String> scaleDownDelayAfterAdd() {
         return this.scaleDownDelayAfterAdd == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterAdd);
     }
 
     @Import(name="scaleDownDelayAfterDelete")
       private final @Nullable String scaleDownDelayAfterDelete;
 
-    public Optional<String> getScaleDownDelayAfterDelete() {
+    public Optional<String> scaleDownDelayAfterDelete() {
         return this.scaleDownDelayAfterDelete == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterDelete);
     }
 
     @Import(name="scaleDownDelayAfterFailure")
       private final @Nullable String scaleDownDelayAfterFailure;
 
-    public Optional<String> getScaleDownDelayAfterFailure() {
+    public Optional<String> scaleDownDelayAfterFailure() {
         return this.scaleDownDelayAfterFailure == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterFailure);
     }
 
     @Import(name="scaleDownUnneededTime")
       private final @Nullable String scaleDownUnneededTime;
 
-    public Optional<String> getScaleDownUnneededTime() {
+    public Optional<String> scaleDownUnneededTime() {
         return this.scaleDownUnneededTime == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUnneededTime);
     }
 
     @Import(name="scaleDownUnreadyTime")
       private final @Nullable String scaleDownUnreadyTime;
 
-    public Optional<String> getScaleDownUnreadyTime() {
+    public Optional<String> scaleDownUnreadyTime() {
         return this.scaleDownUnreadyTime == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUnreadyTime);
     }
 
     @Import(name="scaleDownUtilizationThreshold")
       private final @Nullable String scaleDownUtilizationThreshold;
 
-    public Optional<String> getScaleDownUtilizationThreshold() {
+    public Optional<String> scaleDownUtilizationThreshold() {
         return this.scaleDownUtilizationThreshold == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUtilizationThreshold);
     }
 
     @Import(name="scanInterval")
       private final @Nullable String scanInterval;
 
-    public Optional<String> getScanInterval() {
+    public Optional<String> scanInterval() {
         return this.scanInterval == null ? Optional.empty() : Optional.ofNullable(this.scanInterval);
     }
 
     @Import(name="skipNodesWithLocalStorage")
       private final @Nullable String skipNodesWithLocalStorage;
 
-    public Optional<String> getSkipNodesWithLocalStorage() {
+    public Optional<String> skipNodesWithLocalStorage() {
         return this.skipNodesWithLocalStorage == null ? Optional.empty() : Optional.ofNullable(this.skipNodesWithLocalStorage);
     }
 
     @Import(name="skipNodesWithSystemPods")
       private final @Nullable String skipNodesWithSystemPods;
 
-    public Optional<String> getSkipNodesWithSystemPods() {
+    public Optional<String> skipNodesWithSystemPods() {
         return this.skipNodesWithSystemPods == null ? Optional.empty() : Optional.ofNullable(this.skipNodesWithSystemPods);
     }
 

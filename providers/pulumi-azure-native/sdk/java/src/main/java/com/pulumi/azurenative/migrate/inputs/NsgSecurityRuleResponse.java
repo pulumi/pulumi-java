@@ -27,7 +27,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="access")
       private final @Nullable String access;
 
-    public Optional<String> getAccess() {
+    public Optional<String> access() {
         return this.access == null ? Optional.empty() : Optional.ofNullable(this.access);
     }
 
@@ -38,7 +38,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -51,7 +51,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="destinationAddressPrefix")
       private final @Nullable String destinationAddressPrefix;
 
-    public Optional<String> getDestinationAddressPrefix() {
+    public Optional<String> destinationAddressPrefix() {
         return this.destinationAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.destinationAddressPrefix);
     }
 
@@ -63,7 +63,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="destinationPortRange")
       private final @Nullable String destinationPortRange;
 
-    public Optional<String> getDestinationPortRange() {
+    public Optional<String> destinationPortRange() {
         return this.destinationPortRange == null ? Optional.empty() : Optional.ofNullable(this.destinationPortRange);
     }
 
@@ -75,7 +75,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="direction")
       private final @Nullable String direction;
 
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
     }
 
@@ -86,7 +86,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -99,7 +99,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -110,7 +110,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -124,7 +124,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceAddressPrefix")
       private final @Nullable String sourceAddressPrefix;
 
-    public Optional<String> getSourceAddressPrefix() {
+    public Optional<String> sourceAddressPrefix() {
         return this.sourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.sourceAddressPrefix);
     }
 
@@ -136,7 +136,7 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourcePortRange")
       private final @Nullable String sourcePortRange;
 
-    public Optional<String> getSourcePortRange() {
+    public Optional<String> sourcePortRange() {
         return this.sourcePortRange == null ? Optional.empty() : Optional.ofNullable(this.sourcePortRange);
     }
 

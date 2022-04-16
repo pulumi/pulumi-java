@@ -52,21 +52,21 @@ public final class ApiManagementServiceIdentityResponse {
      * The principal id of the identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The client tenant id of the identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
@@ -76,7 +76,7 @@ public final class ApiManagementServiceIdentityResponse {
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
     */
-    public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
+    public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

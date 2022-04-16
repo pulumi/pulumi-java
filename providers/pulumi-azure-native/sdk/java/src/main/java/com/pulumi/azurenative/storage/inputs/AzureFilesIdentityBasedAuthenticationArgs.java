@@ -29,7 +29,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends com.pulumi.
     @Import(name="activeDirectoryProperties")
       private final @Nullable Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
 
-    public Output<ActiveDirectoryPropertiesArgs> getActiveDirectoryProperties() {
+    public Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties() {
         return this.activeDirectoryProperties == null ? Codegen.empty() : this.activeDirectoryProperties;
     }
 
@@ -40,7 +40,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends com.pulumi.
     @Import(name="directoryServiceOptions", required=true)
       private final Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 
-    public Output<Either<String,DirectoryServiceOptions>> getDirectoryServiceOptions() {
+    public Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions() {
         return this.directoryServiceOptions;
     }
 

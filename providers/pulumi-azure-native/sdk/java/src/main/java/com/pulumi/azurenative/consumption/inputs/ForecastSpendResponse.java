@@ -24,7 +24,7 @@ public final class ForecastSpendResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="amount", required=true)
       private final Double amount;
 
-    public Double getAmount() {
+    public Double amount() {
         return this.amount;
     }
 
@@ -35,7 +35,7 @@ public final class ForecastSpendResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 

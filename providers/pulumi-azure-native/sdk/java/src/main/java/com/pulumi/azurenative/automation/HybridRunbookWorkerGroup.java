@@ -45,7 +45,7 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Sets the credential of a worker group.
      * 
      */
-    public Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> getCredential() {
+    public Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> credential() {
         return this.credential;
     }
     /**
@@ -59,7 +59,7 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Type of the HybridWorkerGroup.
      * 
      */
-    public Output</* @Nullable */ String> getGroupType() {
+    public Output</* @Nullable */ String> groupType() {
         return this.groupType;
     }
     /**
@@ -73,7 +73,7 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Gets or sets the list of hybrid runbook workers.
      * 
      */
-    public Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> getHybridRunbookWorkers() {
+    public Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> hybridRunbookWorkers() {
         return this.hybridRunbookWorkers;
     }
     /**
@@ -87,7 +87,7 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Gets or sets the name of the group.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Resource system metadata.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +115,7 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

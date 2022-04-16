@@ -27,7 +27,7 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerAddress", required=true)
       private final Output<String> radiusServerAddress;
 
-    public Output<String> getRadiusServerAddress() {
+    public Output<String> radiusServerAddress() {
         return this.radiusServerAddress;
     }
 
@@ -38,7 +38,7 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerScore")
       private final @Nullable Output<Double> radiusServerScore;
 
-    public Output<Double> getRadiusServerScore() {
+    public Output<Double> radiusServerScore() {
         return this.radiusServerScore == null ? Codegen.empty() : this.radiusServerScore;
     }
 
@@ -49,7 +49,7 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
 
-    public Output<String> getRadiusServerSecret() {
+    public Output<String> radiusServerSecret() {
         return this.radiusServerSecret == null ? Codegen.empty() : this.radiusServerSecret;
     }
 

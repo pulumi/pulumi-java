@@ -39,21 +39,21 @@ public final class AzureActiveDirectoryAppResponse {
      * Key used to authenticate to the Azure Active Directory Application
      * 
     */
-    public String getAppKey() {
+    public String appKey() {
         return this.appKey;
     }
     /**
      * Application ID of the Azure Active Directory Application
      * 
     */
-    public String getApplicationId() {
+    public String applicationId() {
         return this.applicationId;
     }
     /**
      * Tenant id of the customer
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

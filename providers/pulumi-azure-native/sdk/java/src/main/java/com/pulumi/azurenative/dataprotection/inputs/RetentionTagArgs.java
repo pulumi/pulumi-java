@@ -25,7 +25,7 @@ public final class RetentionTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagName", required=true)
       private final Output<String> tagName;
 
-    public Output<String> getTagName() {
+    public Output<String> tagName() {
         return this.tagName;
     }
 

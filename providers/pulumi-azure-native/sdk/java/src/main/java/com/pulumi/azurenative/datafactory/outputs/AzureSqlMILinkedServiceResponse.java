@@ -129,91 +129,91 @@ public final class AzureSqlMILinkedServiceResponse {
      * Sql always encrypted properties.
      * 
     */
-    public Optional<SqlAlwaysEncryptedPropertiesResponse> getAlwaysEncryptedSettings() {
+    public Optional<SqlAlwaysEncryptedPropertiesResponse> alwaysEncryptedSettings() {
         return Optional.ofNullable(this.alwaysEncryptedSettings);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAzureCloudType() {
+    public Optional<Object> azureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
     */
-    public Object getConnectionString() {
+    public Object connectionString() {
         return this.connectionString;
     }
     /**
      * The credential reference containing authentication information.
      * 
     */
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The Azure key vault secret reference of password in connection string.
      * 
     */
-    public Optional<AzureKeyVaultSecretReferenceResponse> getPassword() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The ID of the service principal used to authenticate against Azure SQL Managed Instance. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * The key of the service principal used to authenticate against Azure SQL Managed Instance.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getTenant() {
+    public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
@@ -221,7 +221,7 @@ public final class AzureSqlMILinkedServiceResponse {
      * Expected value is 'AzureSqlMI'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

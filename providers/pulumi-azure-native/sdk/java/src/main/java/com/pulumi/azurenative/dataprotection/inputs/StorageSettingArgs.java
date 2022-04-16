@@ -29,7 +29,7 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="datastoreType")
       private final @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
 
-    public Output<Either<String,StorageSettingStoreTypes>> getDatastoreType() {
+    public Output<Either<String,StorageSettingStoreTypes>> datastoreType() {
         return this.datastoreType == null ? Codegen.empty() : this.datastoreType;
     }
 
@@ -40,7 +40,7 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<Either<String,StorageSettingTypes>> type;
 
-    public Output<Either<String,StorageSettingTypes>> getType() {
+    public Output<Either<String,StorageSettingTypes>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

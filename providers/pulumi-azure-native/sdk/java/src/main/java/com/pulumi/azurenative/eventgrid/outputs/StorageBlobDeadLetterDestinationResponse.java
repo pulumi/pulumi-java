@@ -42,7 +42,7 @@ public final class StorageBlobDeadLetterDestinationResponse {
      * The name of the Storage blob container that is the destination of the deadletter events
      * 
     */
-    public Optional<String> getBlobContainerName() {
+    public Optional<String> blobContainerName() {
         return Optional.ofNullable(this.blobContainerName);
     }
     /**
@@ -50,14 +50,14 @@ public final class StorageBlobDeadLetterDestinationResponse {
      * Expected value is 'StorageBlob'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The Azure Resource ID of the storage account that is the destination of the deadletter events
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

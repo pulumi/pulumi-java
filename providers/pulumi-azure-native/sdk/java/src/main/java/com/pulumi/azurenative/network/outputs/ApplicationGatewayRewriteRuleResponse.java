@@ -52,28 +52,28 @@ public final class ApplicationGatewayRewriteRuleResponse {
      * Set of actions to be done as part of the rewrite Rule.
      * 
     */
-    public Optional<ApplicationGatewayRewriteRuleActionSetResponse> getActionSet() {
+    public Optional<ApplicationGatewayRewriteRuleActionSetResponse> actionSet() {
         return Optional.ofNullable(this.actionSet);
     }
     /**
      * Conditions based on which the action set execution will be evaluated.
      * 
     */
-    public List<ApplicationGatewayRewriteRuleConditionResponse> getConditions() {
+    public List<ApplicationGatewayRewriteRuleConditionResponse> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Name of the rewrite rule that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
      * 
     */
-    public Optional<Integer> getRuleSequence() {
+    public Optional<Integer> ruleSequence() {
         return Optional.ofNullable(this.ruleSequence);
     }
 

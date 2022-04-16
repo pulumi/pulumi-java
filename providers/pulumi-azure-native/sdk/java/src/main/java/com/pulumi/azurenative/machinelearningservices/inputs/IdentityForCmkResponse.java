@@ -23,7 +23,7 @@ public final class IdentityForCmkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userAssignedIdentity", required=true)
       private final String userAssignedIdentity;
 
-    public String getUserAssignedIdentity() {
+    public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 

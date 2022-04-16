@@ -29,7 +29,7 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopeType")
       private final @Nullable Output<Either<String,ScopeType>> scopeType;
 
-    public Output<Either<String,ScopeType>> getScopeType() {
+    public Output<Either<String,ScopeType>> scopeType() {
         return this.scopeType == null ? Codegen.empty() : this.scopeType;
     }
 
@@ -40,7 +40,7 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

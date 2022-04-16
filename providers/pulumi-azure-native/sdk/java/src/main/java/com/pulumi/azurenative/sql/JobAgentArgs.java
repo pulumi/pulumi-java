@@ -24,7 +24,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -35,7 +35,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName")
       private final @Nullable Output<String> jobAgentName;
 
-    public Output<String> getJobAgentName() {
+    public Output<String> jobAgentName() {
         return this.jobAgentName == null ? Codegen.empty() : this.jobAgentName;
     }
 
@@ -46,7 +46,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -79,7 +79,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -90,7 +90,7 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

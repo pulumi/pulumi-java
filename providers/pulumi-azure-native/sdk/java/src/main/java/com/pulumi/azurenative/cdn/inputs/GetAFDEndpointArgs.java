@@ -19,7 +19,7 @@ public final class GetAFDEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointName", required=true)
       private final String endpointName;
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAFDEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAFDEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

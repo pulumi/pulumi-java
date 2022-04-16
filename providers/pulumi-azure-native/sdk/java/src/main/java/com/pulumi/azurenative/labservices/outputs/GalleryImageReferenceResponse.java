@@ -55,35 +55,35 @@ public final class GalleryImageReferenceResponse {
      * The offer of the gallery image.
      * 
     */
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The OS type of the gallery image.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The publisher of the gallery image.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * The SKU of the gallery image.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The version of the gallery image.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

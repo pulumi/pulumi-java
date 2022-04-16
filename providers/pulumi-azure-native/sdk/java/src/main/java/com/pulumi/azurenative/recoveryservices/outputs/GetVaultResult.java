@@ -95,70 +95,70 @@ public final class GetVaultResult {
      * Optional ETag.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id represents the complete path to the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
     */
-    public Optional<IdentityDataResponse> getIdentity() {
+    public Optional<IdentityDataResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name associated with the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the vault.
      * 
     */
-    public VaultPropertiesResponse getProperties() {
+    public VaultPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Identifies the unique system identifier for each Azure resource.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

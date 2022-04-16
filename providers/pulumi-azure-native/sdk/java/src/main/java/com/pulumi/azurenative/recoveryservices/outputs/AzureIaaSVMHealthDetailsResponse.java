@@ -48,28 +48,28 @@ public final class AzureIaaSVMHealthDetailsResponse {
      * Health Code
      * 
     */
-    public Integer getCode() {
+    public Integer code() {
         return this.code;
     }
     /**
      * Health Message
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Health Recommended Actions
      * 
     */
-    public List<String> getRecommendations() {
+    public List<String> recommendations() {
         return this.recommendations;
     }
     /**
      * Health Title
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

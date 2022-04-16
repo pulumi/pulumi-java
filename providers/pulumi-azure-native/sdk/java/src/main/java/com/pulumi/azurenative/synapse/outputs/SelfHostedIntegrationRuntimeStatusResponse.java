@@ -164,112 +164,112 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
      * Whether Self-hosted integration runtime auto update has been turned on.
      * 
     */
-    public String getAutoUpdate() {
+    public String autoUpdate() {
         return this.autoUpdate;
     }
     /**
      * The estimated time when the self-hosted integration runtime will be updated.
      * 
     */
-    public String getAutoUpdateETA() {
+    public String autoUpdateETA() {
         return this.autoUpdateETA;
     }
     /**
      * Object with additional information about integration runtime capabilities.
      * 
     */
-    public Map<String,String> getCapabilities() {
+    public Map<String,String> capabilities() {
         return this.capabilities;
     }
     /**
      * The time at which the integration runtime was created, in ISO8601 format.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The workspace name which the integration runtime belong to.
      * 
     */
-    public String getDataFactoryName() {
+    public String dataFactoryName() {
         return this.dataFactoryName;
     }
     /**
      * It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
      * 
     */
-    public String getInternalChannelEncryption() {
+    public String internalChannelEncryption() {
         return this.internalChannelEncryption;
     }
     /**
      * The latest version on download center.
      * 
     */
-    public String getLatestVersion() {
+    public String latestVersion() {
         return this.latestVersion;
     }
     /**
      * The list of linked integration runtimes that are created to share with this integration runtime.
      * 
     */
-    public List<LinkedIntegrationRuntimeResponse> getLinks() {
+    public List<LinkedIntegrationRuntimeResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
     /**
      * The local time zone offset in hours.
      * 
     */
-    public String getLocalTimeZoneOffset() {
+    public String localTimeZoneOffset() {
         return this.localTimeZoneOffset;
     }
     /**
      * The node communication Channel encryption mode
      * 
     */
-    public String getNodeCommunicationChannelEncryptionMode() {
+    public String nodeCommunicationChannelEncryptionMode() {
         return this.nodeCommunicationChannelEncryptionMode;
     }
     /**
      * The list of nodes for this integration runtime.
      * 
     */
-    public List<SelfHostedIntegrationRuntimeNodeResponse> getNodes() {
+    public List<SelfHostedIntegrationRuntimeNodeResponse> nodes() {
         return this.nodes == null ? List.of() : this.nodes;
     }
     /**
      * The version that the integration runtime is going to update to.
      * 
     */
-    public String getPushedVersion() {
+    public String pushedVersion() {
         return this.pushedVersion;
     }
     /**
      * The date at which the integration runtime will be scheduled to update, in ISO8601 format.
      * 
     */
-    public String getScheduledUpdateDate() {
+    public String scheduledUpdateDate() {
         return this.scheduledUpdateDate;
     }
     /**
      * The URLs for the services used in integration runtime backend service.
      * 
     */
-    public List<String> getServiceUrls() {
+    public List<String> serviceUrls() {
         return this.serviceUrls;
     }
     /**
      * The state of integration runtime.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The task queue id of the integration runtime.
      * 
     */
-    public String getTaskQueueId() {
+    public String taskQueueId() {
         return this.taskQueueId;
     }
     /**
@@ -277,28 +277,28 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
      * Expected value is 'SelfHosted'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
      * 
     */
-    public String getUpdateDelayOffset() {
+    public String updateDelayOffset() {
         return this.updateDelayOffset;
     }
     /**
      * Version of the integration runtime.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * Status of the integration runtime version.
      * 
     */
-    public String getVersionStatus() {
+    public String versionStatus() {
         return this.versionStatus;
     }
 

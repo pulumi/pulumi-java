@@ -76,56 +76,56 @@ public final class GetRegisteredPrefixResult {
      * The error message associated with the validation state, if any.
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The peering service prefix key that is to be shared with the customer.
      * 
     */
-    public String getPeeringServicePrefixKey() {
+    public String peeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
      * The customer's prefix from which traffic originates.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The prefix validation state.
      * 
     */
-    public String getPrefixValidationState() {
+    public String prefixValidationState() {
         return this.prefixValidationState;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

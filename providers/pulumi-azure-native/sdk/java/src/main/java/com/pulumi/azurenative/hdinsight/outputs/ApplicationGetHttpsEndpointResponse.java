@@ -72,49 +72,49 @@ public final class ApplicationGetHttpsEndpointResponse {
      * The list of access modes for the application.
      * 
     */
-    public List<String> getAccessModes() {
+    public List<String> accessModes() {
         return this.accessModes == null ? List.of() : this.accessModes;
     }
     /**
      * The destination port to connect to.
      * 
     */
-    public Optional<Integer> getDestinationPort() {
+    public Optional<Integer> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
      * The value indicates whether to disable GatewayAuth.
      * 
     */
-    public Optional<Boolean> getDisableGatewayAuth() {
+    public Optional<Boolean> disableGatewayAuth() {
         return Optional.ofNullable(this.disableGatewayAuth);
     }
     /**
      * The location of the endpoint.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The private ip address of the endpoint.
      * 
     */
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The public port to connect to.
      * 
     */
-    public Integer getPublicPort() {
+    public Integer publicPort() {
         return this.publicPort;
     }
     /**
      * The subdomain suffix of the application.
      * 
     */
-    public Optional<String> getSubDomainSuffix() {
+    public Optional<String> subDomainSuffix() {
         return Optional.ofNullable(this.subDomainSuffix);
     }
 

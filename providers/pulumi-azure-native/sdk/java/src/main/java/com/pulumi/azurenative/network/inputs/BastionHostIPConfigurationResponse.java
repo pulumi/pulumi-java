@@ -26,7 +26,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -37,7 +37,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
@@ -70,7 +70,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="publicIPAddress", required=true)
       private final SubResourceResponse publicIPAddress;
 
-    public SubResourceResponse getPublicIPAddress() {
+    public SubResourceResponse publicIPAddress() {
         return this.publicIPAddress;
     }
 
@@ -92,7 +92,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="subnet", required=true)
       private final SubResourceResponse subnet;
 
-    public SubResourceResponse getSubnet() {
+    public SubResourceResponse subnet() {
         return this.subnet;
     }
 
@@ -103,7 +103,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

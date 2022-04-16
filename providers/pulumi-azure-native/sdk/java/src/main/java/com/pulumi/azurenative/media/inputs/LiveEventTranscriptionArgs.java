@@ -29,7 +29,7 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="inputTrackSelection")
       private final @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
 
-    public Output<List<LiveEventInputTrackSelectionArgs>> getInputTrackSelection() {
+    public Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection() {
         return this.inputTrackSelection == null ? Codegen.empty() : this.inputTrackSelection;
     }
 
@@ -40,7 +40,7 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="language")
       private final @Nullable Output<String> language;
 
-    public Output<String> getLanguage() {
+    public Output<String> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -51,7 +51,7 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="outputTranscriptionTrack")
       private final @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
-    public Output<LiveEventOutputTranscriptionTrackArgs> getOutputTranscriptionTrack() {
+    public Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack() {
         return this.outputTranscriptionTrack == null ? Codegen.empty() : this.outputTranscriptionTrack;
     }
 

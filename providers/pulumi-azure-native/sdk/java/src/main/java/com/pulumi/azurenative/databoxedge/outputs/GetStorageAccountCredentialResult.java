@@ -106,84 +106,84 @@ public final class GetStorageAccountCredentialResult {
      * Encrypted storage key.
      * 
     */
-    public Optional<AsymmetricEncryptedSecretResponse> getAccountKey() {
+    public Optional<AsymmetricEncryptedSecretResponse> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * Type of storage accessed on the storage account.
      * 
     */
-    public String getAccountType() {
+    public String accountType() {
         return this.accountType;
     }
     /**
      * Alias for the storage account.
      * 
     */
-    public String getAlias() {
+    public String alias() {
         return this.alias;
     }
     /**
      * Blob end point for private clouds.
      * 
     */
-    public Optional<String> getBlobDomainName() {
+    public Optional<String> blobDomainName() {
         return Optional.ofNullable(this.blobDomainName);
     }
     /**
      * Connection string for the storage account. Use this string if username and account key are not specified.
      * 
     */
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Signifies whether SSL needs to be enabled or not.
      * 
     */
-    public String getSslStatus() {
+    public String sslStatus() {
         return this.sslStatus;
     }
     /**
      * Id of the storage account.
      * 
     */
-    public Optional<String> getStorageAccountId() {
+    public Optional<String> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
      * StorageAccountCredential object
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Username for the storage account.
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

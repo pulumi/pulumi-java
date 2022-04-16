@@ -115,91 +115,91 @@ public final class GetCustomLocationResult {
      * This is optional input that contains the authentication that should be used to generate the namespace.
      * 
     */
-    public Optional<CustomLocationPropertiesResponseAuthentication> getAuthentication() {
+    public Optional<CustomLocationPropertiesResponseAuthentication> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
      * 
     */
-    public List<String> getClusterExtensionIds() {
+    public List<String> clusterExtensionIds() {
         return this.clusterExtensionIds == null ? List.of() : this.clusterExtensionIds;
     }
     /**
      * Display name for the Custom Locations location.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
      * 
     */
-    public Optional<String> getHostResourceId() {
+    public Optional<String> hostResourceId() {
         return Optional.ofNullable(this.hostResourceId);
     }
     /**
      * Type of host the Custom Locations is referencing (Kubernetes, etc...).
      * 
     */
-    public Optional<String> getHostType() {
+    public Optional<String> hostType() {
         return Optional.ofNullable(this.hostType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Kubernetes namespace that will be created on the specified cluster.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Provisioning State for the Custom Location.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

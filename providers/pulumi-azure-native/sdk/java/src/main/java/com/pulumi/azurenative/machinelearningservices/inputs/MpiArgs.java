@@ -28,7 +28,7 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
-    public Output<String> getDistributionType() {
+    public Output<String> distributionType() {
         return this.distributionType;
     }
 
@@ -39,7 +39,7 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="processCountPerInstance")
       private final @Nullable Output<Integer> processCountPerInstance;
 
-    public Output<Integer> getProcessCountPerInstance() {
+    public Output<Integer> processCountPerInstance() {
         return this.processCountPerInstance == null ? Codegen.empty() : this.processCountPerInstance;
     }
 

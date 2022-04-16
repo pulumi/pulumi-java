@@ -19,7 +19,7 @@ public final class ListDomainSharedAccessKeysArgs extends com.pulumi.resources.I
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -30,7 +30,7 @@ public final class ListDomainSharedAccessKeysArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

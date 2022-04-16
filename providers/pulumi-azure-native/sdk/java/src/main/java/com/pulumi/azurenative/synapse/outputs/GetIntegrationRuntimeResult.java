@@ -56,35 +56,35 @@ public final class GetIntegrationRuntimeResult {
      * Resource Etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Integration runtime properties.
      * 
     */
-    public Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse> getProperties() {
+    public Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse> properties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

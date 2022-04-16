@@ -25,7 +25,7 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
     @Import(name="includeChangeDetails")
       private final @Nullable String includeChangeDetails;
 
-    public Optional<String> getIncludeChangeDetails() {
+    public Optional<String> includeChangeDetails() {
         return this.includeChangeDetails == null ? Optional.empty() : Optional.ofNullable(this.includeChangeDetails);
     }
 
@@ -36,7 +36,7 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
     @Import(name="workspaceId")
       private final @Nullable String workspaceId;
 
-    public Optional<String> getWorkspaceId() {
+    public Optional<String> workspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
     }
 
@@ -47,7 +47,7 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
     }
 

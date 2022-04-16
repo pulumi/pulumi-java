@@ -26,7 +26,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends com.pulumi.resou
     @Import(name="postTask")
       private final @Nullable Output<TaskPropertiesArgs> postTask;
 
-    public Output<TaskPropertiesArgs> getPostTask() {
+    public Output<TaskPropertiesArgs> postTask() {
         return this.postTask == null ? Codegen.empty() : this.postTask;
     }
 
@@ -37,7 +37,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends com.pulumi.resou
     @Import(name="preTask")
       private final @Nullable Output<TaskPropertiesArgs> preTask;
 
-    public Output<TaskPropertiesArgs> getPreTask() {
+    public Output<TaskPropertiesArgs> preTask() {
         return this.preTask == null ? Codegen.empty() : this.preTask;
     }
 

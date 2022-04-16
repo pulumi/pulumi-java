@@ -19,7 +19,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="queueName", required=true)
       private final String queueName;
 
-    public String getQueueName() {
+    public String queueName() {
         return this.queueName;
     }
 
@@ -41,7 +41,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

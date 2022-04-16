@@ -26,7 +26,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -37,7 +37,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
     @Import(name="recurrenceInterval")
       private final @Nullable String recurrenceInterval;
 
-    public Optional<String> getRecurrenceInterval() {
+    public Optional<String> recurrenceInterval() {
         return this.recurrenceInterval == null ? Optional.empty() : Optional.ofNullable(this.recurrenceInterval);
     }
 
@@ -48,7 +48,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
     @Import(name="synchronizationTime")
       private final @Nullable String synchronizationTime;
 
-    public Optional<String> getSynchronizationTime() {
+    public Optional<String> synchronizationTime() {
         return this.synchronizationTime == null ? Optional.empty() : Optional.ofNullable(this.synchronizationTime);
     }
 

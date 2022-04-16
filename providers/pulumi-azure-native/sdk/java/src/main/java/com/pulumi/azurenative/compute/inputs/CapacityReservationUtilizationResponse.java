@@ -24,7 +24,7 @@ public final class CapacityReservationUtilizationResponse extends com.pulumi.res
     @Import(name="virtualMachinesAllocated", required=true)
       private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
-    public List<SubResourceReadOnlyResponse> getVirtualMachinesAllocated() {
+    public List<SubResourceReadOnlyResponse> virtualMachinesAllocated() {
         return this.virtualMachinesAllocated;
     }
 

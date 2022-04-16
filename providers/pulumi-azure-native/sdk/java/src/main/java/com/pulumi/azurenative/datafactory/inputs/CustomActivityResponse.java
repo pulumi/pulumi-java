@@ -33,7 +33,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="autoUserSpecification")
       private final @Nullable Object autoUserSpecification;
 
-    public Optional<Object> getAutoUserSpecification() {
+    public Optional<Object> autoUserSpecification() {
         return this.autoUserSpecification == null ? Optional.empty() : Optional.ofNullable(this.autoUserSpecification);
     }
 
@@ -44,7 +44,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="command", required=true)
       private final Object command;
 
-    public Object getCommand() {
+    public Object command() {
         return this.command;
     }
 
@@ -55,7 +55,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -66,7 +66,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -77,7 +77,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="extendedProperties")
       private final @Nullable Map<String,Object> extendedProperties;
 
-    public Map<String,Object> getExtendedProperties() {
+    public Map<String,Object> extendedProperties() {
         return this.extendedProperties == null ? Map.of() : this.extendedProperties;
     }
 
@@ -88,7 +88,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="folderPath")
       private final @Nullable Object folderPath;
 
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
@@ -99,7 +99,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -110,7 +110,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -121,7 +121,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -132,7 +132,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="referenceObjects")
       private final @Nullable CustomActivityReferenceObjectResponse referenceObjects;
 
-    public Optional<CustomActivityReferenceObjectResponse> getReferenceObjects() {
+    public Optional<CustomActivityReferenceObjectResponse> referenceObjects() {
         return this.referenceObjects == null ? Optional.empty() : Optional.ofNullable(this.referenceObjects);
     }
 
@@ -143,7 +143,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="resourceLinkedService")
       private final @Nullable LinkedServiceReferenceResponse resourceLinkedService;
 
-    public Optional<LinkedServiceReferenceResponse> getResourceLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> resourceLinkedService() {
         return this.resourceLinkedService == null ? Optional.empty() : Optional.ofNullable(this.resourceLinkedService);
     }
 
@@ -154,7 +154,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="retentionTimeInDays")
       private final @Nullable Object retentionTimeInDays;
 
-    public Optional<Object> getRetentionTimeInDays() {
+    public Optional<Object> retentionTimeInDays() {
         return this.retentionTimeInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionTimeInDays);
     }
 
@@ -166,7 +166,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -177,7 +177,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

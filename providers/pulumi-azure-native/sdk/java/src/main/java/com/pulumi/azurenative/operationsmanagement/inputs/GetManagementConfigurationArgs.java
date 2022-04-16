@@ -19,7 +19,7 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
     @Import(name="managementConfigurationName", required=true)
       private final String managementConfigurationName;
 
-    public String getManagementConfigurationName() {
+    public String managementConfigurationName() {
         return this.managementConfigurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

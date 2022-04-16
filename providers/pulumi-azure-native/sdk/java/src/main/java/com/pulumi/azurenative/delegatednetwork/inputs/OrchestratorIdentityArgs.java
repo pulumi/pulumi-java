@@ -22,7 +22,7 @@ public final class OrchestratorIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

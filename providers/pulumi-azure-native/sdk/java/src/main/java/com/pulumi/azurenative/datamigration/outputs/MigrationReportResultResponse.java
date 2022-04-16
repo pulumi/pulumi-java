@@ -32,14 +32,14 @@ public final class MigrationReportResultResponse {
      * Migration validation result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The url of the report.
      * 
     */
-    public String getReportUrl() {
+    public String reportUrl() {
         return this.reportUrl;
     }
 

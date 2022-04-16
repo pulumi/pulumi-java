@@ -27,7 +27,7 @@ public final class EnterpriseChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="nodes", required=true)
       private final List<EnterpriseChannelNodeResponse> nodes;
 
-    public List<EnterpriseChannelNodeResponse> getNodes() {
+    public List<EnterpriseChannelNodeResponse> nodes() {
         return this.nodes;
     }
 
@@ -38,7 +38,7 @@ public final class EnterpriseChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

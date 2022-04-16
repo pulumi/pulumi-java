@@ -24,7 +24,7 @@ public final class LiveEventOutputTranscriptionTrackResponse {
      * The output track name. This property is reserved for future use, any value set on this property will be ignored.
      * 
     */
-    public String getTrackName() {
+    public String trackName() {
         return this.trackName;
     }
 

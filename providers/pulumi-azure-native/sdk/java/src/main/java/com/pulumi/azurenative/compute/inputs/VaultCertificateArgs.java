@@ -26,7 +26,7 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="certificateStore")
       private final @Nullable Output<String> certificateStore;
 
-    public Output<String> getCertificateStore() {
+    public Output<String> certificateStore() {
         return this.certificateStore == null ? Codegen.empty() : this.certificateStore;
     }
 
@@ -37,7 +37,7 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
 
-    public Output<String> getCertificateUrl() {
+    public Output<String> certificateUrl() {
         return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
     }
 

@@ -28,7 +28,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressMailing")
       private final @Nullable Output<AddressArgs> addressMailing;
 
-    public Output<AddressArgs> getAddressMailing() {
+    public Output<AddressArgs> addressMailing() {
         return this.addressMailing == null ? Codegen.empty() : this.addressMailing;
     }
 
@@ -39,7 +39,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -50,7 +50,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fax")
       private final @Nullable Output<String> fax;
 
-    public Output<String> getFax() {
+    public Output<String> fax() {
         return this.fax == null ? Codegen.empty() : this.fax;
     }
 
@@ -61,7 +61,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobTitle")
       private final @Nullable Output<String> jobTitle;
 
-    public Output<String> getJobTitle() {
+    public Output<String> jobTitle() {
         return this.jobTitle == null ? Codegen.empty() : this.jobTitle;
     }
 
@@ -72,7 +72,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameFirst", required=true)
       private final Output<String> nameFirst;
 
-    public Output<String> getNameFirst() {
+    public Output<String> nameFirst() {
         return this.nameFirst;
     }
 
@@ -83,7 +83,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameLast", required=true)
       private final Output<String> nameLast;
 
-    public Output<String> getNameLast() {
+    public Output<String> nameLast() {
         return this.nameLast;
     }
 
@@ -94,7 +94,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameMiddle")
       private final @Nullable Output<String> nameMiddle;
 
-    public Output<String> getNameMiddle() {
+    public Output<String> nameMiddle() {
         return this.nameMiddle == null ? Codegen.empty() : this.nameMiddle;
     }
 
@@ -105,7 +105,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization == null ? Codegen.empty() : this.organization;
     }
 
@@ -116,7 +116,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phone", required=true)
       private final Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone;
     }
 

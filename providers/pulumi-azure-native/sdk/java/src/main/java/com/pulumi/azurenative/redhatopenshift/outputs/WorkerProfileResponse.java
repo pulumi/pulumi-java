@@ -56,35 +56,35 @@ public final class WorkerProfileResponse {
      * The number of worker VMs.  Must be between 3 and 20 (immutable).
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * The disk size of the worker VMs.  Must be 128 or greater (immutable).
      * 
     */
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * The worker profile name.  Must be "worker" (immutable).
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Azure resource ID of the worker subnet (immutable).
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The size of the worker VMs (immutable).
      * 
     */
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
 

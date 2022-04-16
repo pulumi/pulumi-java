@@ -29,7 +29,7 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -40,7 +40,7 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
@@ -51,7 +51,7 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="customParameters")
       private final @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
 
-    public Map<String,ApiOAuthSettingsParameterResponse> getCustomParameters() {
+    public Map<String,ApiOAuthSettingsParameterResponse> customParameters() {
         return this.customParameters == null ? Map.of() : this.customParameters;
     }
 
@@ -62,7 +62,7 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="identityProvider")
       private final @Nullable String identityProvider;
 
-    public Optional<String> getIdentityProvider() {
+    public Optional<String> identityProvider() {
         return this.identityProvider == null ? Optional.empty() : Optional.ofNullable(this.identityProvider);
     }
 
@@ -73,7 +73,7 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="properties")
       private final @Nullable Object properties;
 
-    public Optional<Object> getProperties() {
+    public Optional<Object> properties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
@@ -84,7 +84,7 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="redirectUrl")
       private final @Nullable String redirectUrl;
 
-    public Optional<String> getRedirectUrl() {
+    public Optional<String> redirectUrl() {
         return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
     }
 
@@ -95,7 +95,7 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="scopes")
       private final @Nullable List<String> scopes;
 
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
 

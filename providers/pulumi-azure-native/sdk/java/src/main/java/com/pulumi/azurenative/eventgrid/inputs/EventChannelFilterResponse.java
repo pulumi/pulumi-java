@@ -46,7 +46,7 @@ public final class EventChannelFilterResponse extends com.pulumi.resources.Invok
     @Import(name="advancedFilters")
       private final @Nullable List<Object> advancedFilters;
 
-    public List<Object> getAdvancedFilters() {
+    public List<Object> advancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
 
@@ -57,7 +57,7 @@ public final class EventChannelFilterResponse extends com.pulumi.resources.Invok
     @Import(name="enableAdvancedFilteringOnArrays")
       private final @Nullable Boolean enableAdvancedFilteringOnArrays;
 
-    public Optional<Boolean> getEnableAdvancedFilteringOnArrays() {
+    public Optional<Boolean> enableAdvancedFilteringOnArrays() {
         return this.enableAdvancedFilteringOnArrays == null ? Optional.empty() : Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
     }
 

@@ -29,7 +29,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="containerNetworkInterfaces")
       private final @Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces;
 
-    public Output<List<SubResourceArgs>> getContainerNetworkInterfaces() {
+    public Output<List<SubResourceArgs>> containerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? Codegen.empty() : this.containerNetworkInterfaces;
     }
 
@@ -40,7 +40,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -51,7 +51,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations;
 
-    public Output<List<IPConfigurationProfileArgs>> getIpConfigurations() {
+    public Output<List<IPConfigurationProfileArgs>> ipConfigurations() {
         return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
@@ -62,7 +62,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends com.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

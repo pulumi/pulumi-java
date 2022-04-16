@@ -35,14 +35,14 @@ public final class CustomActivityReferenceObjectResponse {
      * Dataset references.
      * 
     */
-    public List<DatasetReferenceResponse> getDatasets() {
+    public List<DatasetReferenceResponse> datasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
     /**
      * Linked service references.
      * 
     */
-    public List<LinkedServiceReferenceResponse> getLinkedServices() {
+    public List<LinkedServiceReferenceResponse> linkedServices() {
         return this.linkedServices == null ? List.of() : this.linkedServices;
     }
 

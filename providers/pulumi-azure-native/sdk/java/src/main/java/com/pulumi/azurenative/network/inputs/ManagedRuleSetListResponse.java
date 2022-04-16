@@ -26,7 +26,7 @@ public final class ManagedRuleSetListResponse extends com.pulumi.resources.Invok
     @Import(name="managedRuleSets")
       private final @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
 
-    public List<FrontDoorManagedRuleSetResponse> getManagedRuleSets() {
+    public List<FrontDoorManagedRuleSetResponse> managedRuleSets() {
         return this.managedRuleSets == null ? List.of() : this.managedRuleSets;
     }
 

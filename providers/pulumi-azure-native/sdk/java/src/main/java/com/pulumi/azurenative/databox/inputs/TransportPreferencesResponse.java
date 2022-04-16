@@ -23,7 +23,7 @@ public final class TransportPreferencesResponse extends com.pulumi.resources.Inv
     @Import(name="preferredShipmentType", required=true)
       private final String preferredShipmentType;
 
-    public String getPreferredShipmentType() {
+    public String preferredShipmentType() {
         return this.preferredShipmentType;
     }
 

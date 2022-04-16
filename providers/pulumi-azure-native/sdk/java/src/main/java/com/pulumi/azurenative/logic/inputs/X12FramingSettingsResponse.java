@@ -25,7 +25,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="characterSet", required=true)
       private final String characterSet;
 
-    public String getCharacterSet() {
+    public String characterSet() {
         return this.characterSet;
     }
 
@@ -36,7 +36,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
 
-    public Integer getComponentSeparator() {
+    public Integer componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -47,7 +47,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
 
-    public Integer getDataElementSeparator() {
+    public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -58,7 +58,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="replaceCharacter", required=true)
       private final Integer replaceCharacter;
 
-    public Integer getReplaceCharacter() {
+    public Integer replaceCharacter() {
         return this.replaceCharacter;
     }
 
@@ -69,7 +69,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="replaceSeparatorsInPayload", required=true)
       private final Boolean replaceSeparatorsInPayload;
 
-    public Boolean getReplaceSeparatorsInPayload() {
+    public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
 
@@ -80,7 +80,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
 
-    public Integer getSegmentTerminator() {
+    public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -91,7 +91,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
 
-    public String getSegmentTerminatorSuffix() {
+    public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 

@@ -43,7 +43,7 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
      * @return The id of the app associated with the identity. This is a random generated UUID by MSI.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -57,7 +57,7 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +71,7 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
      * @return The id of the service principal object associated with the created identity.
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -99,7 +99,7 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +113,7 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
      * @return The id of the tenant which the identity belongs to.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -127,7 +127,7 @@ public class UserAssignedIdentity extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

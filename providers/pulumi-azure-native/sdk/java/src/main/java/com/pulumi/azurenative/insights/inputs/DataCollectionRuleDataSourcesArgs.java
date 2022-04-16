@@ -31,7 +31,7 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
     @Import(name="extensions")
       private final @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
 
-    public Output<List<ExtensionDataSourceArgs>> getExtensions() {
+    public Output<List<ExtensionDataSourceArgs>> extensions() {
         return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
@@ -42,7 +42,7 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
     @Import(name="performanceCounters")
       private final @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
 
-    public Output<List<PerfCounterDataSourceArgs>> getPerformanceCounters() {
+    public Output<List<PerfCounterDataSourceArgs>> performanceCounters() {
         return this.performanceCounters == null ? Codegen.empty() : this.performanceCounters;
     }
 
@@ -53,7 +53,7 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
     @Import(name="syslog")
       private final @Nullable Output<List<SyslogDataSourceArgs>> syslog;
 
-    public Output<List<SyslogDataSourceArgs>> getSyslog() {
+    public Output<List<SyslogDataSourceArgs>> syslog() {
         return this.syslog == null ? Codegen.empty() : this.syslog;
     }
 
@@ -64,7 +64,7 @@ public final class DataCollectionRuleDataSourcesArgs extends com.pulumi.resource
     @Import(name="windowsEventLogs")
       private final @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 
-    public Output<List<WindowsEventLogDataSourceArgs>> getWindowsEventLogs() {
+    public Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs() {
         return this.windowsEventLogs == null ? Codegen.empty() : this.windowsEventLogs;
     }
 

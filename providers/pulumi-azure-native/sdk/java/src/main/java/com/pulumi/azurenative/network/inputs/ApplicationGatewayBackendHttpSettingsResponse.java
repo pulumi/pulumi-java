@@ -30,7 +30,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="affinityCookieName")
       private final @Nullable String affinityCookieName;
 
-    public Optional<String> getAffinityCookieName() {
+    public Optional<String> affinityCookieName() {
         return this.affinityCookieName == null ? Optional.empty() : Optional.ofNullable(this.affinityCookieName);
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="authenticationCertificates")
       private final @Nullable List<SubResourceResponse> authenticationCertificates;
 
-    public List<SubResourceResponse> getAuthenticationCertificates() {
+    public List<SubResourceResponse> authenticationCertificates() {
         return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
     }
 
@@ -52,7 +52,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="connectionDraining")
       private final @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
 
-    public Optional<ApplicationGatewayConnectionDrainingResponse> getConnectionDraining() {
+    public Optional<ApplicationGatewayConnectionDrainingResponse> connectionDraining() {
         return this.connectionDraining == null ? Optional.empty() : Optional.ofNullable(this.connectionDraining);
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="cookieBasedAffinity")
       private final @Nullable String cookieBasedAffinity;
 
-    public Optional<String> getCookieBasedAffinity() {
+    public Optional<String> cookieBasedAffinity() {
         return this.cookieBasedAffinity == null ? Optional.empty() : Optional.ofNullable(this.cookieBasedAffinity);
     }
 
@@ -74,7 +74,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -85,7 +85,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -96,7 +96,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -107,7 +107,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -118,7 +118,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -129,7 +129,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="pickHostNameFromBackendAddress")
       private final @Nullable Boolean pickHostNameFromBackendAddress;
 
-    public Optional<Boolean> getPickHostNameFromBackendAddress() {
+    public Optional<Boolean> pickHostNameFromBackendAddress() {
         return this.pickHostNameFromBackendAddress == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendAddress);
     }
 
@@ -140,7 +140,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -151,7 +151,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="probe")
       private final @Nullable SubResourceResponse probe;
 
-    public Optional<SubResourceResponse> getProbe() {
+    public Optional<SubResourceResponse> probe() {
         return this.probe == null ? Optional.empty() : Optional.ofNullable(this.probe);
     }
 
@@ -162,7 +162,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="probeEnabled")
       private final @Nullable Boolean probeEnabled;
 
-    public Optional<Boolean> getProbeEnabled() {
+    public Optional<Boolean> probeEnabled() {
         return this.probeEnabled == null ? Optional.empty() : Optional.ofNullable(this.probeEnabled);
     }
 
@@ -173,7 +173,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -184,7 +184,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -195,7 +195,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="requestTimeout")
       private final @Nullable Integer requestTimeout;
 
-    public Optional<Integer> getRequestTimeout() {
+    public Optional<Integer> requestTimeout() {
         return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
     }
 
@@ -206,7 +206,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="trustedRootCertificates")
       private final @Nullable List<SubResourceResponse> trustedRootCertificates;
 
-    public List<SubResourceResponse> getTrustedRootCertificates() {
+    public List<SubResourceResponse> trustedRootCertificates() {
         return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
     }
 
@@ -217,7 +217,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

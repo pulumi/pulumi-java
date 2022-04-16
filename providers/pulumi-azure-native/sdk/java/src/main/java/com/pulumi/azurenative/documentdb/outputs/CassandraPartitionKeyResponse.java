@@ -26,7 +26,7 @@ public final class CassandraPartitionKeyResponse {
      * Name of the Cosmos DB Cassandra table partition key
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

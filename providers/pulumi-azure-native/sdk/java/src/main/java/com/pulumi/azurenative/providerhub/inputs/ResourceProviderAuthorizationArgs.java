@@ -18,21 +18,21 @@ public final class ResourceProviderAuthorizationArgs extends com.pulumi.resource
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     @Import(name="managedByRoleDefinitionId")
       private final @Nullable Output<String> managedByRoleDefinitionId;
 
-    public Output<String> getManagedByRoleDefinitionId() {
+    public Output<String> managedByRoleDefinitionId() {
         return this.managedByRoleDefinitionId == null ? Codegen.empty() : this.managedByRoleDefinitionId;
     }
 
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 

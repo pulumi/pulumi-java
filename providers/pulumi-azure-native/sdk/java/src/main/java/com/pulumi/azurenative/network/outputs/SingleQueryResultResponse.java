@@ -100,77 +100,77 @@ public final class SingleQueryResultResponse {
      * Describes what is the signature enforces
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Describes the list of destination ports related to this signature
      * 
     */
-    public List<String> getDestinationPorts() {
+    public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
      * 
     */
-    public Optional<Integer> getDirection() {
+    public Optional<Integer> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * Describes the groups the signature belongs to
      * 
     */
-    public Optional<String> getGroup() {
+    public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
     /**
      * Describes if this override is inherited from base policy or not
      * 
     */
-    public Optional<Boolean> getInheritedFromParentPolicy() {
+    public Optional<Boolean> inheritedFromParentPolicy() {
         return Optional.ofNullable(this.inheritedFromParentPolicy);
     }
     /**
      * Describes the last updated time of the signature (provided from 3rd party vendor)
      * 
     */
-    public Optional<String> getLastUpdated() {
+    public Optional<String> lastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
     /**
      * The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
      * 
     */
-    public Optional<Integer> getMode() {
+    public Optional<Integer> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Describes the protocol the signatures is being enforced in
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
      * 
     */
-    public Optional<Integer> getSeverity() {
+    public Optional<Integer> severity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * The ID of the signature
      * 
     */
-    public Optional<Integer> getSignatureId() {
+    public Optional<Integer> signatureId() {
         return Optional.ofNullable(this.signatureId);
     }
     /**
      * Describes the list of source ports related to this signature
      * 
     */
-    public List<String> getSourcePorts() {
+    public List<String> sourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
 

@@ -25,7 +25,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -36,7 +36,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="components")
       private final @Nullable Output<List<StandardComponentPropertiesArgs>> components;
 
-    public Output<List<StandardComponentPropertiesArgs>> getComponents() {
+    public Output<List<StandardComponentPropertiesArgs>> components() {
         return this.components == null ? Codegen.empty() : this.components;
     }
 
@@ -47,7 +47,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -69,7 +69,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -80,7 +80,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -91,7 +91,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="standardId")
       private final @Nullable Output<String> standardId;
 
-    public Output<String> getStandardId() {
+    public Output<String> standardId() {
         return this.standardId == null ? Codegen.empty() : this.standardId;
     }
 
@@ -113,7 +113,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

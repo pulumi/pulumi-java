@@ -30,7 +30,7 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> getCompressionProperties() {
+    public Output<Object> compressionProperties() {
         return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
     }
 
@@ -41,7 +41,7 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="detectDataType")
       private final @Nullable Output<Object> detectDataType;
 
-    public Output<Object> getDetectDataType() {
+    public Output<Object> detectDataType() {
         return this.detectDataType == null ? Codegen.empty() : this.detectDataType;
     }
 
@@ -52,7 +52,7 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespacePrefixes")
       private final @Nullable Output<Object> namespacePrefixes;
 
-    public Output<Object> getNamespacePrefixes() {
+    public Output<Object> namespacePrefixes() {
         return this.namespacePrefixes == null ? Codegen.empty() : this.namespacePrefixes;
     }
 
@@ -63,7 +63,7 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespaces")
       private final @Nullable Output<Object> namespaces;
 
-    public Output<Object> getNamespaces() {
+    public Output<Object> namespaces() {
         return this.namespaces == null ? Codegen.empty() : this.namespaces;
     }
 
@@ -75,7 +75,7 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -86,7 +86,7 @@ public final class XmlReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="validationMode")
       private final @Nullable Output<Object> validationMode;
 
-    public Output<Object> getValidationMode() {
+    public Output<Object> validationMode() {
         return this.validationMode == null ? Codegen.empty() : this.validationMode;
     }
 

@@ -27,7 +27,7 @@ public final class FileSystemHttpLogsConfigArgs extends com.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -40,7 +40,7 @@ public final class FileSystemHttpLogsConfigArgs extends com.pulumi.resources.Res
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> getRetentionInDays() {
+    public Output<Integer> retentionInDays() {
         return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
@@ -53,7 +53,7 @@ public final class FileSystemHttpLogsConfigArgs extends com.pulumi.resources.Res
     @Import(name="retentionInMb")
       private final @Nullable Output<Integer> retentionInMb;
 
-    public Output<Integer> getRetentionInMb() {
+    public Output<Integer> retentionInMb() {
         return this.retentionInMb == null ? Codegen.empty() : this.retentionInMb;
     }
 

@@ -26,7 +26,7 @@ public final class EnableMigrationInputPropertiesArgs extends com.pulumi.resourc
     @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -37,7 +37,7 @@ public final class EnableMigrationInputPropertiesArgs extends com.pulumi.resourc
     @Import(name="providerSpecificDetails", required=true)
       private final Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 
-    public Output<VMwareCbtEnableMigrationInputArgs> getProviderSpecificDetails() {
+    public Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails() {
         return this.providerSpecificDetails;
     }
 

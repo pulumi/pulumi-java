@@ -54,7 +54,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The containers within the container group.
      * 
      */
-    public Output<List<ContainerResponse>> getContainers() {
+    public Output<List<ContainerResponse>> containers() {
         return this.containers;
     }
     /**
@@ -68,7 +68,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The diagnostic information for a container group.
      * 
      */
-    public Output</* @Nullable */ ContainerGroupDiagnosticsResponse> getDiagnostics() {
+    public Output</* @Nullable */ ContainerGroupDiagnosticsResponse> diagnostics() {
         return this.diagnostics;
     }
     /**
@@ -82,7 +82,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The DNS config information for a container group.
      * 
      */
-    public Output</* @Nullable */ DnsConfigurationResponse> getDnsConfig() {
+    public Output</* @Nullable */ DnsConfigurationResponse> dnsConfig() {
         return this.dnsConfig;
     }
     /**
@@ -96,7 +96,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The encryption properties for a container group.
      * 
      */
-    public Output</* @Nullable */ EncryptionPropertiesResponse> getEncryptionProperties() {
+    public Output</* @Nullable */ EncryptionPropertiesResponse> encryptionProperties() {
         return this.encryptionProperties;
     }
     /**
@@ -110,7 +110,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The identity of the container group, if configured.
      * 
      */
-    public Output</* @Nullable */ ContainerGroupIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ContainerGroupIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -124,7 +124,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The image registry credentials by which the container group is created from.
      * 
      */
-    public Output</* @Nullable */ List<ImageRegistryCredentialResponse>> getImageRegistryCredentials() {
+    public Output</* @Nullable */ List<ImageRegistryCredentialResponse>> imageRegistryCredentials() {
         return this.imageRegistryCredentials;
     }
     /**
@@ -138,7 +138,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The init containers for a container group.
      * 
      */
-    public Output</* @Nullable */ List<InitContainerDefinitionResponse>> getInitContainers() {
+    public Output</* @Nullable */ List<InitContainerDefinitionResponse>> initContainers() {
         return this.initContainers;
     }
     /**
@@ -152,7 +152,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The instance view of the container group. Only valid in response.
      * 
      */
-    public Output<ContainerGroupResponseInstanceView> getInstanceView() {
+    public Output<ContainerGroupResponseInstanceView> instanceView() {
         return this.instanceView;
     }
     /**
@@ -166,7 +166,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The IP address type of the container group.
      * 
      */
-    public Output</* @Nullable */ IpAddressResponse> getIpAddress() {
+    public Output</* @Nullable */ IpAddressResponse> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -180,7 +180,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -194,7 +194,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -208,7 +208,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The network profile information for a container group.
      * 
      */
-    public Output</* @Nullable */ ContainerGroupNetworkProfileResponse> getNetworkProfile() {
+    public Output</* @Nullable */ ContainerGroupNetworkProfileResponse> networkProfile() {
         return this.networkProfile;
     }
     /**
@@ -222,7 +222,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The operating system type required by the containers in the container group.
      * 
      */
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType;
     }
     /**
@@ -236,7 +236,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the container group. This only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -256,7 +256,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * - `Never` Never restart
      * 
      */
-    public Output</* @Nullable */ String> getRestartPolicy() {
+    public Output</* @Nullable */ String> restartPolicy() {
         return this.restartPolicy;
     }
     /**
@@ -270,7 +270,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The SKU for a container group.
      * 
      */
-    public Output</* @Nullable */ String> getSku() {
+    public Output</* @Nullable */ String> sku() {
         return this.sku;
     }
     /**
@@ -284,7 +284,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -298,7 +298,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -312,7 +312,7 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The list of volumes that can be mounted by containers in this container group.
      * 
      */
-    public Output</* @Nullable */ List<VolumeResponse>> getVolumes() {
+    public Output</* @Nullable */ List<VolumeResponse>> volumes() {
         return this.volumes;
     }
 

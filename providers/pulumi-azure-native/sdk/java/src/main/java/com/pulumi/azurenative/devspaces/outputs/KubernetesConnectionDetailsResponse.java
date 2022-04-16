@@ -36,14 +36,14 @@ public final class KubernetesConnectionDetailsResponse {
      * Expected value is 'Kubernetes'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * Gets the kubeconfig for the cluster.
      * 
     */
-    public Optional<String> getKubeConfig() {
+    public Optional<String> kubeConfig() {
         return Optional.ofNullable(this.kubeConfig);
     }
 

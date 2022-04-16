@@ -26,7 +26,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -37,7 +37,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
@@ -48,7 +48,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="logProgress")
       private final @Nullable Output<Boolean> logProgress;
 
-    public Output<Boolean> getLogProgress() {
+    public Output<Boolean> logProgress() {
         return this.logProgress == null ? Codegen.empty() : this.logProgress;
     }
 
@@ -81,7 +81,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="logVerbose")
       private final @Nullable Output<Boolean> logVerbose;
 
-    public Output<Boolean> getLogVerbose() {
+    public Output<Boolean> logVerbose() {
         return this.logVerbose == null ? Codegen.empty() : this.logVerbose;
     }
 
@@ -92,7 +92,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters")
       private final @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters;
 
-    public Output<Map<String,DscConfigurationParameterArgs>> getParameters() {
+    public Output<Map<String,DscConfigurationParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -114,7 +114,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,7 +125,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="source", required=true)
       private final Output<ContentSourceArgs> source;
 
-    public Output<ContentSourceArgs> getSource() {
+    public Output<ContentSourceArgs> source() {
         return this.source;
     }
 
@@ -136,7 +136,7 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

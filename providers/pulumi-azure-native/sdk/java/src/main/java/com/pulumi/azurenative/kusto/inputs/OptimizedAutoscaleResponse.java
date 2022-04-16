@@ -24,7 +24,7 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -35,7 +35,7 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="maximum", required=true)
       private final Integer maximum;
 
-    public Integer getMaximum() {
+    public Integer maximum() {
         return this.maximum;
     }
 
@@ -46,7 +46,7 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="minimum", required=true)
       private final Integer minimum;
 
-    public Integer getMinimum() {
+    public Integer minimum() {
         return this.minimum;
     }
 
@@ -57,7 +57,7 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="version", required=true)
       private final Integer version;
 
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

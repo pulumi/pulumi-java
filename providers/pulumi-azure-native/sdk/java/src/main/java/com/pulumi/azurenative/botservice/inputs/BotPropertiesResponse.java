@@ -28,7 +28,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allSettings")
       private final @Nullable Map<String,String> allSettings;
 
-    public Map<String,String> getAllSettings() {
+    public Map<String,String> allSettings() {
         return this.allSettings == null ? Map.of() : this.allSettings;
     }
 
@@ -39,7 +39,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="appPasswordHint")
       private final @Nullable String appPasswordHint;
 
-    public Optional<String> getAppPasswordHint() {
+    public Optional<String> appPasswordHint() {
         return this.appPasswordHint == null ? Optional.empty() : Optional.ofNullable(this.appPasswordHint);
     }
 
@@ -50,7 +50,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cmekEncryptionStatus", required=true)
       private final String cmekEncryptionStatus;
 
-    public String getCmekEncryptionStatus() {
+    public String cmekEncryptionStatus() {
         return this.cmekEncryptionStatus;
     }
 
@@ -61,7 +61,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cmekKeyVaultUrl")
       private final @Nullable String cmekKeyVaultUrl;
 
-    public Optional<String> getCmekKeyVaultUrl() {
+    public Optional<String> cmekKeyVaultUrl() {
         return this.cmekKeyVaultUrl == null ? Optional.empty() : Optional.ofNullable(this.cmekKeyVaultUrl);
     }
 
@@ -72,7 +72,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="configuredChannels", required=true)
       private final List<String> configuredChannels;
 
-    public List<String> getConfiguredChannels() {
+    public List<String> configuredChannels() {
         return this.configuredChannels;
     }
 
@@ -83,7 +83,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -94,7 +94,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="developerAppInsightKey")
       private final @Nullable String developerAppInsightKey;
 
-    public Optional<String> getDeveloperAppInsightKey() {
+    public Optional<String> developerAppInsightKey() {
         return this.developerAppInsightKey == null ? Optional.empty() : Optional.ofNullable(this.developerAppInsightKey);
     }
 
@@ -105,7 +105,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="developerAppInsightsApiKey")
       private final @Nullable String developerAppInsightsApiKey;
 
-    public Optional<String> getDeveloperAppInsightsApiKey() {
+    public Optional<String> developerAppInsightsApiKey() {
         return this.developerAppInsightsApiKey == null ? Optional.empty() : Optional.ofNullable(this.developerAppInsightsApiKey);
     }
 
@@ -116,7 +116,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="developerAppInsightsApplicationId")
       private final @Nullable String developerAppInsightsApplicationId;
 
-    public Optional<String> getDeveloperAppInsightsApplicationId() {
+    public Optional<String> developerAppInsightsApplicationId() {
         return this.developerAppInsightsApplicationId == null ? Optional.empty() : Optional.ofNullable(this.developerAppInsightsApplicationId);
     }
 
@@ -127,7 +127,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="disableLocalAuth")
       private final @Nullable Boolean disableLocalAuth;
 
-    public Optional<Boolean> getDisableLocalAuth() {
+    public Optional<Boolean> disableLocalAuth() {
         return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
     }
 
@@ -138,7 +138,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -149,7 +149,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabledChannels", required=true)
       private final List<String> enabledChannels;
 
-    public List<String> getEnabledChannels() {
+    public List<String> enabledChannels() {
         return this.enabledChannels;
     }
 
@@ -160,7 +160,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endpoint", required=true)
       private final String endpoint;
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 
@@ -171,7 +171,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endpointVersion", required=true)
       private final String endpointVersion;
 
-    public String getEndpointVersion() {
+    public String endpointVersion() {
         return this.endpointVersion;
     }
 
@@ -182,7 +182,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="iconUrl")
       private final @Nullable String iconUrl;
 
-    public Optional<String> getIconUrl() {
+    public Optional<String> iconUrl() {
         return this.iconUrl == null ? Optional.empty() : Optional.ofNullable(this.iconUrl);
     }
 
@@ -193,7 +193,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isCmekEnabled")
       private final @Nullable Boolean isCmekEnabled;
 
-    public Optional<Boolean> getIsCmekEnabled() {
+    public Optional<Boolean> isCmekEnabled() {
         return this.isCmekEnabled == null ? Optional.empty() : Optional.ofNullable(this.isCmekEnabled);
     }
 
@@ -204,7 +204,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isDeveloperAppInsightsApiKeySet", required=true)
       private final Boolean isDeveloperAppInsightsApiKeySet;
 
-    public Boolean getIsDeveloperAppInsightsApiKeySet() {
+    public Boolean isDeveloperAppInsightsApiKeySet() {
         return this.isDeveloperAppInsightsApiKeySet;
     }
 
@@ -215,7 +215,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isStreamingSupported")
       private final @Nullable Boolean isStreamingSupported;
 
-    public Optional<Boolean> getIsStreamingSupported() {
+    public Optional<Boolean> isStreamingSupported() {
         return this.isStreamingSupported == null ? Optional.empty() : Optional.ofNullable(this.isStreamingSupported);
     }
 
@@ -226,7 +226,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="luisAppIds")
       private final @Nullable List<String> luisAppIds;
 
-    public List<String> getLuisAppIds() {
+    public List<String> luisAppIds() {
         return this.luisAppIds == null ? List.of() : this.luisAppIds;
     }
 
@@ -237,7 +237,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="luisKey")
       private final @Nullable String luisKey;
 
-    public Optional<String> getLuisKey() {
+    public Optional<String> luisKey() {
         return this.luisKey == null ? Optional.empty() : Optional.ofNullable(this.luisKey);
     }
 
@@ -248,7 +248,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="manifestUrl")
       private final @Nullable String manifestUrl;
 
-    public Optional<String> getManifestUrl() {
+    public Optional<String> manifestUrl() {
         return this.manifestUrl == null ? Optional.empty() : Optional.ofNullable(this.manifestUrl);
     }
 
@@ -259,7 +259,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="migrationToken", required=true)
       private final String migrationToken;
 
-    public String getMigrationToken() {
+    public String migrationToken() {
         return this.migrationToken;
     }
 
@@ -270,7 +270,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppId", required=true)
       private final String msaAppId;
 
-    public String getMsaAppId() {
+    public String msaAppId() {
         return this.msaAppId;
     }
 
@@ -281,7 +281,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppMSIResourceId")
       private final @Nullable String msaAppMSIResourceId;
 
-    public Optional<String> getMsaAppMSIResourceId() {
+    public Optional<String> msaAppMSIResourceId() {
         return this.msaAppMSIResourceId == null ? Optional.empty() : Optional.ofNullable(this.msaAppMSIResourceId);
     }
 
@@ -292,7 +292,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppTenantId")
       private final @Nullable String msaAppTenantId;
 
-    public Optional<String> getMsaAppTenantId() {
+    public Optional<String> msaAppTenantId() {
         return this.msaAppTenantId == null ? Optional.empty() : Optional.ofNullable(this.msaAppTenantId);
     }
 
@@ -303,7 +303,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppType")
       private final @Nullable String msaAppType;
 
-    public Optional<String> getMsaAppType() {
+    public Optional<String> msaAppType() {
         return this.msaAppType == null ? Optional.empty() : Optional.ofNullable(this.msaAppType);
     }
 
@@ -314,7 +314,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="openWithHint")
       private final @Nullable String openWithHint;
 
-    public Optional<String> getOpenWithHint() {
+    public Optional<String> openWithHint() {
         return this.openWithHint == null ? Optional.empty() : Optional.ofNullable(this.openWithHint);
     }
 
@@ -325,7 +325,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -336,7 +336,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -347,7 +347,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
@@ -358,7 +358,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publishingCredentials")
       private final @Nullable String publishingCredentials;
 
-    public Optional<String> getPublishingCredentials() {
+    public Optional<String> publishingCredentials() {
         return this.publishingCredentials == null ? Optional.empty() : Optional.ofNullable(this.publishingCredentials);
     }
 
@@ -369,7 +369,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="schemaTransformationVersion")
       private final @Nullable String schemaTransformationVersion;
 
-    public Optional<String> getSchemaTransformationVersion() {
+    public Optional<String> schemaTransformationVersion() {
         return this.schemaTransformationVersion == null ? Optional.empty() : Optional.ofNullable(this.schemaTransformationVersion);
     }
 
@@ -380,7 +380,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="storageResourceId")
       private final @Nullable String storageResourceId;
 
-    public Optional<String> getStorageResourceId() {
+    public Optional<String> storageResourceId() {
         return this.storageResourceId == null ? Optional.empty() : Optional.ofNullable(this.storageResourceId);
     }
 

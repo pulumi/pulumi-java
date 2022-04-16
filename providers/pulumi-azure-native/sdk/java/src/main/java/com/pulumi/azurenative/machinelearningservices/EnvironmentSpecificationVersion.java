@@ -44,7 +44,7 @@ public class EnvironmentSpecificationVersion extends com.pulumi.resources.Custom
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class EnvironmentSpecificationVersion extends com.pulumi.resources.Custom
      * @return Additional attributes of the entity.
      * 
      */
-    public Output<EnvironmentSpecificationVersionResponse> getProperties() {
+    public Output<EnvironmentSpecificationVersionResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class EnvironmentSpecificationVersion extends com.pulumi.resources.Custom
      * @return System data associated with resource provider
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +86,7 @@ public class EnvironmentSpecificationVersion extends com.pulumi.resources.Custom
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

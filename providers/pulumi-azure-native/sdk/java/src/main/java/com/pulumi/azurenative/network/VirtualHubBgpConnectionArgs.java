@@ -23,7 +23,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="peerAsn")
       private final @Nullable Output<Double> peerAsn;
 
-    public Output<Double> getPeerAsn() {
+    public Output<Double> peerAsn() {
         return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 
@@ -67,7 +67,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
 
-    public Output<String> getPeerIp() {
+    public Output<String> peerIp() {
         return this.peerIp == null ? Codegen.empty() : this.peerIp;
     }
 
@@ -78,7 +78,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
-    public Output<String> getVirtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 

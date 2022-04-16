@@ -46,7 +46,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The URI of the workspace endpoint.
      * 
      */
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri;
     }
     /**
@@ -60,7 +60,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Managed Identity information.
      * 
      */
-    public Output</* @Nullable */ QuantumWorkspaceResponseIdentity> getIdentity() {
+    public Output</* @Nullable */ QuantumWorkspaceResponseIdentity> identity() {
         return this.identity;
     }
     /**
@@ -74,7 +74,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return List of Providers selected for this Workspace
      * 
      */
-    public Output</* @Nullable */ List<ProviderResponse>> getProviders() {
+    public Output</* @Nullable */ List<ProviderResponse>> providers() {
         return this.providers;
     }
     /**
@@ -116,7 +116,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Provisioning status field
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return ARM Resource Id of the storage account associated with this workspace.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccount() {
+    public Output</* @Nullable */ String> storageAccount() {
         return this.storageAccount;
     }
     /**
@@ -144,7 +144,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return System metadata
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -158,7 +158,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +172,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -186,7 +186,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Whether the current workspace is ready to accept Jobs.
      * 
      */
-    public Output<String> getUsable() {
+    public Output<String> usable() {
         return this.usable;
     }
 

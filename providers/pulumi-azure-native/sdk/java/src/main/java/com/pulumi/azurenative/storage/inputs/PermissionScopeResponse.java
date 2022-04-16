@@ -19,7 +19,7 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="permissions", required=true)
       private final String permissions;
 
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
 
@@ -30,7 +30,7 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -41,7 +41,7 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

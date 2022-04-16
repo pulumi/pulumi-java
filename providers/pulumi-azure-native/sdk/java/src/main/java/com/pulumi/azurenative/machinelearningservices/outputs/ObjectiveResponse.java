@@ -32,14 +32,14 @@ public final class ObjectiveResponse {
      * Defines supported metric goals for hyperparameter tuning
      * 
     */
-    public String getGoal() {
+    public String goal() {
         return this.goal;
     }
     /**
      * Name of the metric to optimize.
      * 
     */
-    public String getPrimaryMetric() {
+    public String primaryMetric() {
         return this.primaryMetric;
     }
 

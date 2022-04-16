@@ -29,7 +29,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -40,7 +40,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="lowerLoadThreshold", required=true)
       private final Output<Double> lowerLoadThreshold;
 
-    public Output<Double> getLowerLoadThreshold() {
+    public Output<Double> lowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
 
@@ -51,7 +51,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="metric", required=true)
       private final Output<AutoScalingResourceMetricArgs> metric;
 
-    public Output<AutoScalingResourceMetricArgs> getMetric() {
+    public Output<AutoScalingResourceMetricArgs> metric() {
         return this.metric;
     }
 
@@ -62,7 +62,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="scaleIntervalInSeconds", required=true)
       private final Output<Integer> scaleIntervalInSeconds;
 
-    public Output<Integer> getScaleIntervalInSeconds() {
+    public Output<Integer> scaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
 
@@ -73,7 +73,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="upperLoadThreshold", required=true)
       private final Output<Double> upperLoadThreshold;
 
-    public Output<Double> getUpperLoadThreshold() {
+    public Output<Double> upperLoadThreshold() {
         return this.upperLoadThreshold;
     }
 

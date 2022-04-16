@@ -34,14 +34,14 @@ public final class ListIntegrationRuntimeAuthKeysResult {
      * The primary integration runtime authentication key.
      * 
     */
-    public Optional<String> getAuthKey1() {
+    public Optional<String> authKey1() {
         return Optional.ofNullable(this.authKey1);
     }
     /**
      * The secondary integration runtime authentication key.
      * 
     */
-    public Optional<String> getAuthKey2() {
+    public Optional<String> authKey2() {
         return Optional.ofNullable(this.authKey2);
     }
 

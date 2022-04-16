@@ -44,7 +44,7 @@ public class DefenderSetting extends com.pulumi.resources.CustomResource {
      * @return Size of the device quota. Value is required to be in multiples of 100.
      * 
      */
-    public Output<Integer> getDeviceQuota() {
+    public Output<Integer> deviceQuota() {
         return this.deviceQuota;
     }
     /**
@@ -58,7 +58,7 @@ public class DefenderSetting extends com.pulumi.resources.CustomResource {
      * @return End time of the evaluation period, if such exist
      * 
      */
-    public Output<String> getEvaluationEndTime() {
+    public Output<String> evaluationEndTime() {
         return this.evaluationEndTime;
     }
     /**
@@ -72,7 +72,7 @@ public class DefenderSetting extends com.pulumi.resources.CustomResource {
      * @return MDE integration configuration
      * 
      */
-    public Output<DefenderSettingsPropertiesResponseMdeIntegration> getMdeIntegration() {
+    public Output<DefenderSettingsPropertiesResponseMdeIntegration> mdeIntegration() {
         return this.mdeIntegration;
     }
     /**
@@ -86,7 +86,7 @@ public class DefenderSetting extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class DefenderSetting extends com.pulumi.resources.CustomResource {
      * @return The kind of onboarding for the subscription
      * 
      */
-    public Output<String> getOnboardingKind() {
+    public Output<String> onboardingKind() {
         return this.onboardingKind;
     }
     /**
@@ -114,7 +114,7 @@ public class DefenderSetting extends com.pulumi.resources.CustomResource {
      * @return Sentinel Workspace Resource Ids
      * 
      */
-    public Output<List<String>> getSentinelWorkspaceResourceIds() {
+    public Output<List<String>> sentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
     }
     /**
@@ -128,7 +128,7 @@ public class DefenderSetting extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

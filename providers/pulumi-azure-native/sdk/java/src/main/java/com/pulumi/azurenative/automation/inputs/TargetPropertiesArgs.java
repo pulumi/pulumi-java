@@ -28,7 +28,7 @@ public final class TargetPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="azureQueries")
       private final @Nullable Output<List<AzureQueryPropertiesArgs>> azureQueries;
 
-    public Output<List<AzureQueryPropertiesArgs>> getAzureQueries() {
+    public Output<List<AzureQueryPropertiesArgs>> azureQueries() {
         return this.azureQueries == null ? Codegen.empty() : this.azureQueries;
     }
 
@@ -39,7 +39,7 @@ public final class TargetPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nonAzureQueries")
       private final @Nullable Output<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
 
-    public Output<List<NonAzureQueryPropertiesArgs>> getNonAzureQueries() {
+    public Output<List<NonAzureQueryPropertiesArgs>> nonAzureQueries() {
         return this.nonAzureQueries == null ? Codegen.empty() : this.nonAzureQueries;
     }
 

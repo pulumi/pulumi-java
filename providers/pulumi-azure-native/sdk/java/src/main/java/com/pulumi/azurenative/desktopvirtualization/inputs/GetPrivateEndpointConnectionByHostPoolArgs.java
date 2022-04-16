@@ -19,7 +19,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends com.pulumi
     @Import(name="hostPoolName", required=true)
       private final String hostPoolName;
 
-    public String getHostPoolName() {
+    public String hostPoolName() {
         return this.hostPoolName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends com.pulumi
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
-    public String getPrivateEndpointConnectionName() {
+    public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

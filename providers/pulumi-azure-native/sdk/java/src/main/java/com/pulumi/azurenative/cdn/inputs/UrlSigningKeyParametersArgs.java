@@ -27,7 +27,7 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -38,7 +38,7 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="secretSource", required=true)
       private final Output<ResourceReferenceArgs> secretSource;
 
-    public Output<ResourceReferenceArgs> getSecretSource() {
+    public Output<ResourceReferenceArgs> secretSource() {
         return this.secretSource;
     }
 
@@ -49,7 +49,7 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
+    public Output<String> secretVersion() {
         return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 
@@ -61,7 +61,7 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

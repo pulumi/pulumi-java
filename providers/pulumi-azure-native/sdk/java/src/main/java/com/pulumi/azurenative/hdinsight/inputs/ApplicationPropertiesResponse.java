@@ -31,7 +31,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="applicationState", required=true)
       private final String applicationState;
 
-    public String getApplicationState() {
+    public String applicationState() {
         return this.applicationState;
     }
 
@@ -42,7 +42,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="applicationType")
       private final @Nullable String applicationType;
 
-    public Optional<String> getApplicationType() {
+    public Optional<String> applicationType() {
         return this.applicationType == null ? Optional.empty() : Optional.ofNullable(this.applicationType);
     }
 
@@ -53,7 +53,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="computeProfile")
       private final @Nullable ComputeProfileResponse computeProfile;
 
-    public Optional<ComputeProfileResponse> getComputeProfile() {
+    public Optional<ComputeProfileResponse> computeProfile() {
         return this.computeProfile == null ? Optional.empty() : Optional.ofNullable(this.computeProfile);
     }
 
@@ -64,7 +64,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="createdDate", required=true)
       private final String createdDate;
 
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
 
@@ -75,7 +75,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="errors")
       private final @Nullable List<ErrorsResponse> errors;
 
-    public List<ErrorsResponse> getErrors() {
+    public List<ErrorsResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
 
@@ -86,7 +86,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="httpsEndpoints")
       private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
 
-    public List<ApplicationGetHttpsEndpointResponse> getHttpsEndpoints() {
+    public List<ApplicationGetHttpsEndpointResponse> httpsEndpoints() {
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
     }
 
@@ -97,7 +97,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="installScriptActions")
       private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
 
-    public List<RuntimeScriptActionResponse> getInstallScriptActions() {
+    public List<RuntimeScriptActionResponse> installScriptActions() {
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
     }
 
@@ -108,7 +108,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="marketplaceIdentifier", required=true)
       private final String marketplaceIdentifier;
 
-    public String getMarketplaceIdentifier() {
+    public String marketplaceIdentifier() {
         return this.marketplaceIdentifier;
     }
 
@@ -119,7 +119,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -130,7 +130,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="sshEndpoints")
       private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
 
-    public List<ApplicationGetEndpointResponse> getSshEndpoints() {
+    public List<ApplicationGetEndpointResponse> sshEndpoints() {
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
     }
 
@@ -141,7 +141,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
     @Import(name="uninstallScriptActions")
       private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
-    public List<RuntimeScriptActionResponse> getUninstallScriptActions() {
+    public List<RuntimeScriptActionResponse> uninstallScriptActions() {
         return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
     }
 

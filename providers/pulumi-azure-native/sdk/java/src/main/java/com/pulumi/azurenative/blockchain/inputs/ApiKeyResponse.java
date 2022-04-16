@@ -25,7 +25,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyName")
       private final @Nullable String keyName;
 
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
@@ -36,7 +36,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

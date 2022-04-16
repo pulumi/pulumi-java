@@ -39,21 +39,21 @@ public final class EncryptionPropertiesResponse {
      * The encryption key name.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * The encryption key version.
      * 
     */
-    public String getKeyVersion() {
+    public String keyVersion() {
         return this.keyVersion;
     }
     /**
      * The keyvault base url.
      * 
     */
-    public String getVaultBaseUrl() {
+    public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 

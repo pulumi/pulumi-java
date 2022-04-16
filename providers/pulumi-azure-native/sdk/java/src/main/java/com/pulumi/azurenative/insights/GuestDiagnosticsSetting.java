@@ -44,7 +44,7 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return the array of data source object which are configured to collect and send data
      * 
      */
-    public Output</* @Nullable */ List<DataSourceResponse>> getDataSources() {
+    public Output</* @Nullable */ List<DataSourceResponse>> dataSources() {
         return this.dataSources;
     }
     /**
@@ -58,7 +58,7 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,13 +86,13 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return Operating system type for the configuration
      * 
      */
-    public Output</* @Nullable */ String> getOsType() {
+    public Output</* @Nullable */ String> osType() {
         return this.osType;
     }
     @Export(name="proxySetting", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxySetting;
 
-    public Output</* @Nullable */ String> getProxySetting() {
+    public Output</* @Nullable */ String> proxySetting() {
         return this.proxySetting;
     }
     /**
@@ -106,7 +106,7 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -120,7 +120,7 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

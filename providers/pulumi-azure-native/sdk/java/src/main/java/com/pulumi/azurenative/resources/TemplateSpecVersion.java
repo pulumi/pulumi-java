@@ -46,7 +46,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return Template Spec version description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return An array of linked template artifacts.
      * 
      */
-    public Output</* @Nullable */ List<LinkedTemplateArtifactResponse>> getLinkedTemplates() {
+    public Output</* @Nullable */ List<LinkedTemplateArtifactResponse>> linkedTemplates() {
         return this.linkedTemplates;
     }
     /**
@@ -74,7 +74,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return The location of the Template Spec Version. It must match the location of the parent Template Spec.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return The main Azure Resource Manager template content.
      * 
      */
-    public Output</* @Nullable */ Object> getMainTemplate() {
+    public Output</* @Nullable */ Object> mainTemplate() {
         return this.mainTemplate;
     }
     /**
@@ -102,7 +102,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -116,7 +116,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -144,7 +144,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -158,7 +158,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -172,7 +172,7 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return The Azure Resource Manager template UI definition content.
      * 
      */
-    public Output</* @Nullable */ Object> getUiFormDefinition() {
+    public Output</* @Nullable */ Object> uiFormDefinition() {
         return this.uiFormDefinition;
     }
 

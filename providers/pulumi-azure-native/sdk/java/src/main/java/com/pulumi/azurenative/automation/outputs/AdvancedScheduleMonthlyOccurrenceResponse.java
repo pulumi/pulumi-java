@@ -35,14 +35,14 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
      * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
     */
-    public Optional<String> getDay() {
+    public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
     /**
      * Occurrence of the week within the month. Must be between 1 and 5
      * 
     */
-    public Optional<Integer> getOccurrence() {
+    public Optional<Integer> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }
 

@@ -28,7 +28,7 @@ public final class CustomActivityReferenceObjectArgs extends com.pulumi.resource
     @Import(name="datasets")
       private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Output<List<DatasetReferenceArgs>> getDatasets() {
+    public Output<List<DatasetReferenceArgs>> datasets() {
         return this.datasets == null ? Codegen.empty() : this.datasets;
     }
 
@@ -39,7 +39,7 @@ public final class CustomActivityReferenceObjectArgs extends com.pulumi.resource
     @Import(name="linkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> getLinkedServices() {
+    public Output<List<LinkedServiceReferenceArgs>> linkedServices() {
         return this.linkedServices == null ? Codegen.empty() : this.linkedServices;
     }
 

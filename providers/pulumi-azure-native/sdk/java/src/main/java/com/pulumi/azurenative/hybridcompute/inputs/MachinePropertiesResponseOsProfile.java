@@ -23,7 +23,7 @@ public final class MachinePropertiesResponseOsProfile extends com.pulumi.resourc
     @Import(name="computerName", required=true)
       private final String computerName;
 
-    public String getComputerName() {
+    public String computerName() {
         return this.computerName;
     }
 

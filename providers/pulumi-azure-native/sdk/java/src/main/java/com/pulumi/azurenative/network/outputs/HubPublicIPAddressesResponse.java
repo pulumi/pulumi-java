@@ -36,14 +36,14 @@ public final class HubPublicIPAddressesResponse {
      * The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
      * 
     */
-    public List<AzureFirewallPublicIPAddressResponse> getAddresses() {
+    public List<AzureFirewallPublicIPAddressResponse> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
      * The number of Public IP addresses associated with azure firewall.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
 

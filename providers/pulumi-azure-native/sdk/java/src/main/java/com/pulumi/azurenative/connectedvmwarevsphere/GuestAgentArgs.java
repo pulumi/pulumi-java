@@ -26,7 +26,7 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<GuestCredentialArgs> credentials;
 
-    public Output<GuestCredentialArgs> getCredentials() {
+    public Output<GuestCredentialArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -37,7 +37,7 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpProxyConfig")
       private final @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
 
-    public Output<HttpProxyConfigurationArgs> getHttpProxyConfig() {
+    public Output<HttpProxyConfigurationArgs> httpProxyConfig() {
         return this.httpProxyConfig == null ? Codegen.empty() : this.httpProxyConfig;
     }
 
@@ -48,7 +48,7 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningAction")
       private final @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
 
-    public Output<Either<String,ProvisioningAction>> getProvisioningAction() {
+    public Output<Either<String,ProvisioningAction>> provisioningAction() {
         return this.provisioningAction == null ? Codegen.empty() : this.provisioningAction;
     }
 
@@ -70,7 +70,7 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;
 
-    public Output<String> getVirtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 

@@ -25,7 +25,7 @@ public final class ReturnShippingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="carrierAccountNumber", required=true)
       private final Output<String> carrierAccountNumber;
 
-    public Output<String> getCarrierAccountNumber() {
+    public Output<String> carrierAccountNumber() {
         return this.carrierAccountNumber;
     }
 
@@ -36,7 +36,7 @@ public final class ReturnShippingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="carrierName", required=true)
       private final Output<String> carrierName;
 
-    public Output<String> getCarrierName() {
+    public Output<String> carrierName() {
         return this.carrierName;
     }
 

@@ -27,7 +27,7 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="datasourceTypes", required=true)
       private final List<String> datasourceTypes;
 
-    public List<String> getDatasourceTypes() {
+    public List<String> datasourceTypes() {
         return this.datasourceTypes;
     }
 
@@ -38,7 +38,7 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 
@@ -49,7 +49,7 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="policyRules", required=true)
       private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
-    public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> getPolicyRules() {
+    public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules() {
         return this.policyRules;
     }
 

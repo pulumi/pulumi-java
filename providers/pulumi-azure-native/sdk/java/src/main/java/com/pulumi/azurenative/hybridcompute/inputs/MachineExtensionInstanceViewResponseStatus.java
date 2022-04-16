@@ -23,7 +23,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="displayStatus", required=true)
       private final String displayStatus;
 
-    public String getDisplayStatus() {
+    public String displayStatus() {
         return this.displayStatus;
     }
 
@@ -45,7 +45,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="level", required=true)
       private final String level;
 
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
 
@@ -56,7 +56,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -67,7 +67,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="time", required=true)
       private final String time;
 
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

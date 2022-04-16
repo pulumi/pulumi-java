@@ -26,7 +26,7 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="applicationName", required=true)
       private final String applicationName;
 
-    public String getApplicationName() {
+    public String applicationName() {
         return this.applicationName;
     }
 
@@ -37,7 +37,7 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="parameters")
       private final @Nullable String parameters;
 
-    public Optional<String> getParameters() {
+    public Optional<String> parameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
     }
 
@@ -59,7 +59,7 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="roles", required=true)
       private final List<String> roles;
 
-    public List<String> getRoles() {
+    public List<String> roles() {
         return this.roles;
     }
 
@@ -70,7 +70,7 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

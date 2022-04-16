@@ -28,7 +28,7 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
+    public Output<String> forceUpdateTag() {
         return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
@@ -39,7 +39,7 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> getIdentity() {
+    public Output<IdentityPropertiesArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -50,7 +50,7 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -72,7 +72,7 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -83,7 +83,7 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runRequest")
       private final @Nullable Output<Object> runRequest;
 
-    public Output<Object> getRunRequest() {
+    public Output<Object> runRequest() {
         return this.runRequest == null ? Codegen.empty() : this.runRequest;
     }
 
@@ -94,7 +94,7 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskRunName")
       private final @Nullable Output<String> taskRunName;
 
-    public Output<String> getTaskRunName() {
+    public Output<String> taskRunName() {
         return this.taskRunName == null ? Codegen.empty() : this.taskRunName;
     }
 

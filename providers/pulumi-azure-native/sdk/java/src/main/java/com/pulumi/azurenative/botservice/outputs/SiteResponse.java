@@ -113,91 +113,91 @@ public final class SiteResponse {
      * Entity Tag
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Whether this site is enabled for block user upload.
      * 
     */
-    public Optional<Boolean> getIsBlockUserUploadEnabled() {
+    public Optional<Boolean> isBlockUserUploadEnabled() {
         return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
     /**
      * Whether this site is enabled for DirectLine channel.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this site is enabled for authentication with Bot Framework.
      * 
     */
-    public Optional<Boolean> getIsSecureSiteEnabled() {
+    public Optional<Boolean> isSecureSiteEnabled() {
         return Optional.ofNullable(this.isSecureSiteEnabled);
     }
     /**
      * Whether this site is token enabled for channel
      * 
     */
-    public Optional<Boolean> getIsTokenEnabled() {
+    public Optional<Boolean> isTokenEnabled() {
         return Optional.ofNullable(this.isTokenEnabled);
     }
     /**
      * Whether this site is enabled for Bot Framework V1 protocol.
      * 
     */
-    public Boolean getIsV1Enabled() {
+    public Boolean isV1Enabled() {
         return this.isV1Enabled;
     }
     /**
      * Whether this site is enabled for Bot Framework V1 protocol.
      * 
     */
-    public Boolean getIsV3Enabled() {
+    public Boolean isV3Enabled() {
         return this.isV3Enabled;
     }
     /**
      * Whether this site is enabled for preview versions of Webchat
      * 
     */
-    public Boolean getIsWebchatPreviewEnabled() {
+    public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
     /**
      * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public String getKey2() {
+    public String key2() {
         return this.key2;
     }
     /**
      * Site Id
      * 
     */
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
     /**
      * Site name
      * 
     */
-    public String getSiteName() {
+    public String siteName() {
         return this.siteName;
     }
     /**
      * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
      * 
     */
-    public List<String> getTrustedOrigins() {
+    public List<String> trustedOrigins() {
         return this.trustedOrigins == null ? List.of() : this.trustedOrigins;
     }
 

@@ -29,7 +29,7 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationMethod")
       private final @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
-    public Output<Either<String,IPAddressAllocationMethod>> getAllocationMethod() {
+    public Output<Either<String,IPAddressAllocationMethod>> allocationMethod() {
         return this.allocationMethod == null ? Codegen.empty() : this.allocationMethod;
     }
 
@@ -40,7 +40,7 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -51,7 +51,7 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gateway")
       private final @Nullable Output<List<String>> gateway;
 
-    public Output<List<String>> getGateway() {
+    public Output<List<String>> gateway() {
         return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
@@ -62,7 +62,7 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -73,7 +73,7 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetMask")
       private final @Nullable Output<String> subnetMask;
 
-    public Output<String> getSubnetMask() {
+    public Output<String> subnetMask() {
         return this.subnetMask == null ? Codegen.empty() : this.subnetMask;
     }
 

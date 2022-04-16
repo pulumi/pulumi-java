@@ -47,7 +47,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return Modified whenever there is a change in the state of private endpoint connection.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -61,7 +61,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -75,7 +75,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return The name of the managed HSM Pool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return Properties of the private endpoint object.
      * 
      */
-    public Output</* @Nullable */ MHSMPrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ MHSMPrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -103,7 +103,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return Approval state of the private link connection.
      * 
      */
-    public Output</* @Nullable */ MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ MHSMPrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -117,7 +117,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return Provisioning state of the private endpoint connection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -131,7 +131,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return SKU details
      * 
      */
-    public Output</* @Nullable */ ManagedHsmSkuResponse> getSku() {
+    public Output</* @Nullable */ ManagedHsmSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -145,7 +145,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return Metadata pertaining to creation and last modification of the key vault resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -159,7 +159,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -173,7 +173,7 @@ public class MHSMPrivateEndpointConnection extends com.pulumi.resources.CustomRe
      * @return The resource type of the managed HSM Pool.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -94,70 +94,70 @@ public final class ServerEndpointCloudTieringStatusResponse {
      * Information regarding how well the local cache on the server is performing.
      * 
     */
-    public CloudTieringCachePerformanceResponse getCachePerformance() {
+    public CloudTieringCachePerformanceResponse cachePerformance() {
         return this.cachePerformance;
     }
     /**
      * Status of the date policy
      * 
     */
-    public CloudTieringDatePolicyStatusResponse getDatePolicyStatus() {
+    public CloudTieringDatePolicyStatusResponse datePolicyStatus() {
         return this.datePolicyStatus;
     }
     /**
      * Information regarding files that failed to be tiered
      * 
     */
-    public CloudTieringFilesNotTieringResponse getFilesNotTiering() {
+    public CloudTieringFilesNotTieringResponse filesNotTiering() {
         return this.filesNotTiering;
     }
     /**
      * Cloud tiering health state.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * The last updated timestamp of health state
      * 
     */
-    public String getHealthLastUpdatedTimestamp() {
+    public String healthLastUpdatedTimestamp() {
         return this.healthLastUpdatedTimestamp;
     }
     /**
      * Last cloud tiering result (HResult)
      * 
     */
-    public Integer getLastCloudTieringResult() {
+    public Integer lastCloudTieringResult() {
         return this.lastCloudTieringResult;
     }
     /**
      * Last cloud tiering success timestamp
      * 
     */
-    public String getLastSuccessTimestamp() {
+    public String lastSuccessTimestamp() {
         return this.lastSuccessTimestamp;
     }
     /**
      * Last updated timestamp
      * 
     */
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Information regarding how much local space cloud tiering is saving.
      * 
     */
-    public CloudTieringSpaceSavingsResponse getSpaceSavings() {
+    public CloudTieringSpaceSavingsResponse spaceSavings() {
         return this.spaceSavings;
     }
     /**
      * Status of the volume free space policy
      * 
     */
-    public CloudTieringVolumeFreeSpacePolicyStatusResponse getVolumeFreeSpacePolicyStatus() {
+    public CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus() {
         return this.volumeFreeSpacePolicyStatus;
     }
 

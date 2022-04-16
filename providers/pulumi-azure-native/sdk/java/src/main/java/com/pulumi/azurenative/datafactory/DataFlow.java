@@ -46,7 +46,7 @@ public class DataFlow extends com.pulumi.resources.CustomResource {
      * @return Etag identifies change in the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -60,7 +60,7 @@ public class DataFlow extends com.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class DataFlow extends com.pulumi.resources.CustomResource {
      * @return Data flow properties.
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -88,7 +88,7 @@ public class DataFlow extends com.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

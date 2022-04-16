@@ -42,21 +42,21 @@ public final class ManagedRuleSetResponse {
      * Defines the rule group overrides to apply to the rule set.
      * 
     */
-    public List<ManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
+    public List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
     /**
      * Defines the rule set type to use.
      * 
     */
-    public String getRuleSetType() {
+    public String ruleSetType() {
         return this.ruleSetType;
     }
     /**
      * Defines the version of the rule set to use.
      * 
     */
-    public String getRuleSetVersion() {
+    public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

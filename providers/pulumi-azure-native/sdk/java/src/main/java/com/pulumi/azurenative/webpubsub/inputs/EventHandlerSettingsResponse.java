@@ -28,7 +28,7 @@ public final class EventHandlerSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="items")
       private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
-    public Map<String,List<EventHandlerTemplateResponse>> getItems() {
+    public Map<String,List<EventHandlerTemplateResponse>> items() {
         return this.items == null ? Map.of() : this.items;
     }
 

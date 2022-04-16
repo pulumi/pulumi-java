@@ -26,7 +26,7 @@ public final class UnknownTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="attributes")
       private final @Nullable Map<String,String> attributes;
 
-    public Map<String,String> getAttributes() {
+    public Map<String,String> attributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
 

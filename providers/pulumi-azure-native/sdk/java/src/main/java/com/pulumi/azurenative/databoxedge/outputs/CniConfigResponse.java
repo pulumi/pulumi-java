@@ -46,28 +46,28 @@ public final class CniConfigResponse {
      * Pod Subnet
      * 
     */
-    public String getPodSubnet() {
+    public String podSubnet() {
         return this.podSubnet;
     }
     /**
      * Service subnet
      * 
     */
-    public String getServiceSubnet() {
+    public String serviceSubnet() {
         return this.serviceSubnet;
     }
     /**
      * Cni type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Cni version
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -25,7 +25,7 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
     @Import(name="memoryInBytes", required=true)
       private final Double memoryInBytes;
 
-    public Double getMemoryInBytes() {
+    public Double memoryInBytes() {
         return this.memoryInBytes;
     }
 
@@ -36,7 +36,7 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
     @Import(name="processorCount", required=true)
       private final Integer processorCount;
 
-    public Integer getProcessorCount() {
+    public Integer processorCount() {
         return this.processorCount;
     }
 
@@ -47,7 +47,7 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
     @Import(name="vmProfile", required=true)
       private final String vmProfile;
 
-    public String getVmProfile() {
+    public String vmProfile() {
         return this.vmProfile;
     }
 

@@ -43,7 +43,7 @@ public class LinkedWorkspace extends com.pulumi.resources.CustomResource {
      * @return Friendly name of the linked workspace.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class LinkedWorkspace extends com.pulumi.resources.CustomResource {
      * @return LinkedWorkspace specific properties.
      * 
      */
-    public Output<LinkedWorkspacePropsResponse> getProperties() {
+    public Output<LinkedWorkspacePropsResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class LinkedWorkspace extends com.pulumi.resources.CustomResource {
      * @return Resource type of linked workspace.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

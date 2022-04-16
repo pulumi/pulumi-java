@@ -117,91 +117,91 @@ public final class NetworkSecurityGroupResponse {
      * The default security rules of network security group.
      * 
     */
-    public List<SecurityRuleResponse> getDefaultSecurityRules() {
+    public List<SecurityRuleResponse> defaultSecurityRules() {
         return this.defaultSecurityRules;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * A collection of references to flow log resources.
      * 
     */
-    public List<FlowLogResponse> getFlowLogs() {
+    public List<FlowLogResponse> flowLogs() {
         return this.flowLogs;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A collection of references to network interfaces.
      * 
     */
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * The provisioning state of the network security group resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the network security group resource.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * A collection of security rules of the network security group.
      * 
     */
-    public List<SecurityRuleResponse> getSecurityRules() {
+    public List<SecurityRuleResponse> securityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
     }
     /**
      * A collection of references to subnets.
      * 
     */
-    public List<SubnetResponse> getSubnets() {
+    public List<SubnetResponse> subnets() {
         return this.subnets;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

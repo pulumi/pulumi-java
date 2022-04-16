@@ -32,7 +32,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -43,7 +43,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasets")
       private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Output<List<DatasetReferenceArgs>> getDatasets() {
+    public Output<List<DatasetReferenceArgs>> datasets() {
         return this.datasets == null ? Codegen.empty() : this.datasets;
     }
 
@@ -54,7 +54,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="derivedModelIds")
       private final @Nullable Output<List<String>> derivedModelIds;
 
-    public Output<List<String>> getDerivedModelIds() {
+    public Output<List<String>> derivedModelIds() {
         return this.derivedModelIds == null ? Codegen.empty() : this.derivedModelIds;
     }
 
@@ -65,7 +65,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
-    public Output<String> getExperimentName() {
+    public Output<String> experimentName() {
         return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
@@ -87,7 +87,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="framework")
       private final @Nullable Output<String> framework;
 
-    public Output<String> getFramework() {
+    public Output<String> framework() {
         return this.framework == null ? Codegen.empty() : this.framework;
     }
 
@@ -98,7 +98,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frameworkVersion")
       private final @Nullable Output<String> frameworkVersion;
 
-    public Output<String> getFrameworkVersion() {
+    public Output<String> frameworkVersion() {
         return this.frameworkVersion == null ? Codegen.empty() : this.frameworkVersion;
     }
 
@@ -109,7 +109,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -120,7 +120,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> getKvTags() {
+    public Output<Map<String,String>> kvTags() {
         return this.kvTags == null ? Codegen.empty() : this.kvTags;
     }
 
@@ -131,7 +131,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mimeType", required=true)
       private final Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType;
     }
 
@@ -142,7 +142,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="modifiedTime")
       private final @Nullable Output<String> modifiedTime;
 
-    public Output<String> getModifiedTime() {
+    public Output<String> modifiedTime() {
         return this.modifiedTime == null ? Codegen.empty() : this.modifiedTime;
     }
 
@@ -153,7 +153,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -164,7 +164,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentModelId")
       private final @Nullable Output<String> parentModelId;
 
-    public Output<String> getParentModelId() {
+    public Output<String> parentModelId() {
         return this.parentModelId == null ? Codegen.empty() : this.parentModelId;
     }
 
@@ -175,7 +175,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -186,7 +186,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements;
 
-    public Output<ContainerResourceRequirementsArgs> getResourceRequirements() {
+    public Output<ContainerResourceRequirementsArgs> resourceRequirements() {
         return this.resourceRequirements == null ? Codegen.empty() : this.resourceRequirements;
     }
 
@@ -197,7 +197,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runId")
       private final @Nullable Output<String> runId;
 
-    public Output<String> getRunId() {
+    public Output<String> runId() {
         return this.runId == null ? Codegen.empty() : this.runId;
     }
 
@@ -208,7 +208,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleInputData")
       private final @Nullable Output<String> sampleInputData;
 
-    public Output<String> getSampleInputData() {
+    public Output<String> sampleInputData() {
         return this.sampleInputData == null ? Codegen.empty() : this.sampleInputData;
     }
 
@@ -219,7 +219,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleOutputData")
       private final @Nullable Output<String> sampleOutputData;
 
-    public Output<String> getSampleOutputData() {
+    public Output<String> sampleOutputData() {
         return this.sampleOutputData == null ? Codegen.empty() : this.sampleOutputData;
     }
 
@@ -230,7 +230,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unpack")
       private final @Nullable Output<Boolean> unpack;
 
-    public Output<Boolean> getUnpack() {
+    public Output<Boolean> unpack() {
         return this.unpack == null ? Codegen.empty() : this.unpack;
     }
 
@@ -241,7 +241,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -252,7 +252,7 @@ public final class ModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Double> version;
 
-    public Output<Double> getVersion() {
+    public Output<Double> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

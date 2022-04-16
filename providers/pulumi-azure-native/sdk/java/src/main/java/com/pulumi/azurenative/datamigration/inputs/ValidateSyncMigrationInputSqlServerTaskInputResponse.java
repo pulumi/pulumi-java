@@ -25,7 +25,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
     @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
 
-    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -36,7 +36,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -47,7 +47,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

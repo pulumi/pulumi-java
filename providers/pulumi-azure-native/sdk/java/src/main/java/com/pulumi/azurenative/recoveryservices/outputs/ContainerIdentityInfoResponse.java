@@ -48,28 +48,28 @@ public final class ContainerIdentityInfoResponse {
      * Protection container identity - AAD Tenant
      * 
     */
-    public Optional<String> getAadTenantId() {
+    public Optional<String> aadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
     /**
      * Protection container identity - Audience
      * 
     */
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * Protection container identity - AAD Service Principal
      * 
     */
-    public Optional<String> getServicePrincipalClientId() {
+    public Optional<String> servicePrincipalClientId() {
         return Optional.ofNullable(this.servicePrincipalClientId);
     }
     /**
      * Unique name of the container
      * 
     */
-    public Optional<String> getUniqueName() {
+    public Optional<String> uniqueName() {
         return Optional.ofNullable(this.uniqueName);
     }
 

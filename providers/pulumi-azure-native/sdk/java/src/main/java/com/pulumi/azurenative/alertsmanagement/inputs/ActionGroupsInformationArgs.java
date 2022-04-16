@@ -27,7 +27,7 @@ public final class ActionGroupsInformationArgs extends com.pulumi.resources.Reso
     @Import(name="customEmailSubject")
       private final @Nullable Output<String> customEmailSubject;
 
-    public Output<String> getCustomEmailSubject() {
+    public Output<String> customEmailSubject() {
         return this.customEmailSubject == null ? Codegen.empty() : this.customEmailSubject;
     }
 
@@ -38,7 +38,7 @@ public final class ActionGroupsInformationArgs extends com.pulumi.resources.Reso
     @Import(name="customWebhookPayload")
       private final @Nullable Output<String> customWebhookPayload;
 
-    public Output<String> getCustomWebhookPayload() {
+    public Output<String> customWebhookPayload() {
         return this.customWebhookPayload == null ? Codegen.empty() : this.customWebhookPayload;
     }
 
@@ -49,7 +49,7 @@ public final class ActionGroupsInformationArgs extends com.pulumi.resources.Reso
     @Import(name="groupIds", required=true)
       private final Output<List<String>> groupIds;
 
-    public Output<List<String>> getGroupIds() {
+    public Output<List<String>> groupIds() {
         return this.groupIds;
     }
 

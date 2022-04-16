@@ -23,7 +23,7 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
     @Import(name="expiry", required=true)
       private final String expiry;
 
-    public String getExpiry() {
+    public String expiry() {
         return this.expiry;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
     @Import(name="subject", required=true)
       private final String subject;
 
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
 

@@ -24,7 +24,7 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiPortalName")
       private final @Nullable Output<String> apiPortalName;
 
-    public Output<String> getApiPortalName() {
+    public Output<String> apiPortalName() {
         return this.apiPortalName == null ? Codegen.empty() : this.apiPortalName;
     }
 
@@ -35,7 +35,7 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ApiPortalPropertiesArgs> properties;
 
-    public Output<ApiPortalPropertiesArgs> getProperties() {
+    public Output<ApiPortalPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -46,7 +46,7 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -68,7 +68,7 @@ public final class ApiPortalArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 

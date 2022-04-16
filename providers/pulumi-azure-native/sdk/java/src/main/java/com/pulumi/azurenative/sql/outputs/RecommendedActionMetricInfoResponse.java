@@ -54,35 +54,35 @@ public final class RecommendedActionMetricInfoResponse {
      * Gets the name of the metric. e.g., CPU, Number of Queries.
      * 
     */
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
     /**
      * Gets the start time of time interval given by this MetricInfo.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
      * 
     */
-    public String getTimeGrain() {
+    public String timeGrain() {
         return this.timeGrain;
     }
     /**
      * Gets the unit in which metric is measured. e.g., DTU, Frequency
      * 
     */
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
     /**
      * Gets the value of the metric in the time interval given by this MetricInfo.
      * 
     */
-    public Double getValue() {
+    public Double value() {
         return this.value;
     }
 

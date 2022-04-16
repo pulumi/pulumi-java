@@ -25,7 +25,7 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends com.pulumi.r
     @Import(name="upgradeChannel")
       private final @Nullable String upgradeChannel;
 
-    public Optional<String> getUpgradeChannel() {
+    public Optional<String> upgradeChannel() {
         return this.upgradeChannel == null ? Optional.empty() : Optional.ofNullable(this.upgradeChannel);
     }
 

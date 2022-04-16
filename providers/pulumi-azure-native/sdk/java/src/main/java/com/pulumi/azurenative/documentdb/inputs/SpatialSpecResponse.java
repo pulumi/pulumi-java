@@ -22,7 +22,7 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -33,7 +33,7 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="types")
       private final @Nullable List<String> types;
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types == null ? List.of() : this.types;
     }
 

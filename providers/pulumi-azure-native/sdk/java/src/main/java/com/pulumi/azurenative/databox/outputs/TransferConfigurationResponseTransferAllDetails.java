@@ -26,7 +26,7 @@ public final class TransferConfigurationResponseTransferAllDetails {
      * Details to transfer all data.
      * 
     */
-    public Optional<TransferAllDetailsResponse> getInclude() {
+    public Optional<TransferAllDetailsResponse> include() {
         return Optional.ofNullable(this.include);
     }
 

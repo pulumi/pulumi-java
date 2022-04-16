@@ -77,56 +77,56 @@ public final class DatabaseBackupInfoResponse {
      * The list of backup files for the current database.
      * 
     */
-    public List<String> getBackupFiles() {
+    public List<String> backupFiles() {
         return this.backupFiles;
     }
     /**
      * Date and time when the backup operation finished.
      * 
     */
-    public String getBackupFinishDate() {
+    public String backupFinishDate() {
         return this.backupFinishDate;
     }
     /**
      * Backup Type.
      * 
     */
-    public String getBackupType() {
+    public String backupType() {
         return this.backupType;
     }
     /**
      * Database name.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * Number of files in the backup set.
      * 
     */
-    public Integer getFamilyCount() {
+    public Integer familyCount() {
         return this.familyCount;
     }
     /**
      * Whether the backup set is compressed
      * 
     */
-    public Boolean getIsCompressed() {
+    public Boolean isCompressed() {
         return this.isCompressed;
     }
     /**
      * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
      * 
     */
-    public Boolean getIsDamaged() {
+    public Boolean isDamaged() {
         return this.isDamaged;
     }
     /**
      * Position of current database backup in the file.
      * 
     */
-    public Integer getPosition() {
+    public Integer position() {
         return this.position;
     }
 

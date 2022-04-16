@@ -26,7 +26,7 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationEndpoint")
       private final @Nullable Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint == null ? Codegen.empty() : this.authorizationEndpoint;
     }
 
@@ -37,7 +37,7 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="certificationUri")
       private final @Nullable Output<String> certificationUri;
 
-    public Output<String> getCertificationUri() {
+    public Output<String> certificationUri() {
         return this.certificationUri == null ? Codegen.empty() : this.certificationUri;
     }
 
@@ -48,7 +48,7 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
@@ -59,7 +59,7 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="tokenEndpoint")
       private final @Nullable Output<String> tokenEndpoint;
 
-    public Output<String> getTokenEndpoint() {
+    public Output<String> tokenEndpoint() {
         return this.tokenEndpoint == null ? Codegen.empty() : this.tokenEndpoint;
     }
 
@@ -70,7 +70,7 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="wellKnownOpenIdConfiguration")
       private final @Nullable Output<String> wellKnownOpenIdConfiguration;
 
-    public Output<String> getWellKnownOpenIdConfiguration() {
+    public Output<String> wellKnownOpenIdConfiguration() {
         return this.wellKnownOpenIdConfiguration == null ? Codegen.empty() : this.wellKnownOpenIdConfiguration;
     }
 

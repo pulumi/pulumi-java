@@ -24,7 +24,7 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="action")
       private final @Nullable JobActionResponse action;
 
-    public Optional<JobActionResponse> getAction() {
+    public Optional<JobActionResponse> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -35,7 +35,7 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="recurrence")
       private final @Nullable JobRecurrenceResponse recurrence;
 
-    public Optional<JobRecurrenceResponse> getRecurrence() {
+    public Optional<JobRecurrenceResponse> recurrence() {
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
     }
 
@@ -46,7 +46,7 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -57,7 +57,7 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -68,7 +68,7 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
       private final JobStatusResponse status;
 
-    public JobStatusResponse getStatus() {
+    public JobStatusResponse status() {
         return this.status;
     }
 

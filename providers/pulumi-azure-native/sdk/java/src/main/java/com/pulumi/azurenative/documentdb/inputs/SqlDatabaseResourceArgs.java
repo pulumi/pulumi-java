@@ -25,7 +25,7 @@ public final class SqlDatabaseResourceArgs extends com.pulumi.resources.Resource
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 

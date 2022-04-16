@@ -24,7 +24,7 @@ public final class ApplicationNotificationPolicyResponse extends com.pulumi.reso
     @Import(name="notificationEndpoints", required=true)
       private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
-    public List<ApplicationNotificationEndpointResponse> getNotificationEndpoints() {
+    public List<ApplicationNotificationEndpointResponse> notificationEndpoints() {
         return this.notificationEndpoints;
     }
 

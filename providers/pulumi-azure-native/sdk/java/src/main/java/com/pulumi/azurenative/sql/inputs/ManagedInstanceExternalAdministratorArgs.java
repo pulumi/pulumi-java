@@ -30,7 +30,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="administratorType")
       private final @Nullable Output<Either<String,AdministratorType>> administratorType;
 
-    public Output<Either<String,AdministratorType>> getAdministratorType() {
+    public Output<Either<String,AdministratorType>> administratorType() {
         return this.administratorType == null ? Codegen.empty() : this.administratorType;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="azureADOnlyAuthentication")
       private final @Nullable Output<Boolean> azureADOnlyAuthentication;
 
-    public Output<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication == null ? Codegen.empty() : this.azureADOnlyAuthentication;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="login")
       private final @Nullable Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -63,7 +63,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="principalType")
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
 
-    public Output<Either<String,PrincipalType>> getPrincipalType() {
+    public Output<Either<String,PrincipalType>> principalType() {
         return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
@@ -74,7 +74,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="sid")
       private final @Nullable Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid == null ? Codegen.empty() : this.sid;
     }
 
@@ -85,7 +85,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

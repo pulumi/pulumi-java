@@ -23,7 +23,7 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="dash", required=true)
       private final Boolean dash;
 
-    public Boolean getDash() {
+    public Boolean dash() {
         return this.dash;
     }
 
@@ -34,7 +34,7 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="download", required=true)
       private final Boolean download;
 
-    public Boolean getDownload() {
+    public Boolean download() {
         return this.download;
     }
 
@@ -45,7 +45,7 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="hls", required=true)
       private final Boolean hls;
 
-    public Boolean getHls() {
+    public Boolean hls() {
         return this.hls;
     }
 
@@ -56,7 +56,7 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="smoothStreaming", required=true)
       private final Boolean smoothStreaming;
 
-    public Boolean getSmoothStreaming() {
+    public Boolean smoothStreaming() {
         return this.smoothStreaming;
     }
 

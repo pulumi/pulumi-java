@@ -19,7 +19,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateName", required=true)
       private final String certificateName;
 
-    public String getCertificateName() {
+    public String certificateName() {
         return this.certificateName;
     }
 
@@ -41,7 +41,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

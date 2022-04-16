@@ -21,7 +21,7 @@ public final class DataMaskingEntityResponse extends com.pulumi.resources.Invoke
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -32,7 +32,7 @@ public final class DataMaskingEntityResponse extends com.pulumi.resources.Invoke
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

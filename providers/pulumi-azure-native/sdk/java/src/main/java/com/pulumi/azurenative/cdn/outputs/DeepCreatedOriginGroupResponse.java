@@ -60,35 +60,35 @@ public final class DeepCreatedOriginGroupResponse {
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
     */
-    public Optional<HealthProbeParametersResponse> getHealthProbeSettings() {
+    public Optional<HealthProbeParametersResponse> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
      * Origin group name which must be unique within the endpoint.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The source of the content being delivered via CDN within given origin group.
      * 
     */
-    public List<ResourceReferenceResponse> getOrigins() {
+    public List<ResourceReferenceResponse> origins() {
         return this.origins;
     }
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
      * 
     */
-    public Optional<ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedOriginErrorDetectionSettings() {
+    public Optional<ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
     */
-    public Optional<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+    public Optional<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
 

@@ -28,7 +28,7 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
     @Import(name="operator")
       private final @Nullable Output<ConditionOperator> operator;
 
-    public Output<ConditionOperator> getOperator() {
+    public Output<ConditionOperator> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -39,7 +39,7 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
     @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
@@ -50,7 +50,7 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
     @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;
 
-    public Output<String> getWindowSize() {
+    public Output<String> windowSize() {
         return this.windowSize == null ? Codegen.empty() : this.windowSize;
     }
 

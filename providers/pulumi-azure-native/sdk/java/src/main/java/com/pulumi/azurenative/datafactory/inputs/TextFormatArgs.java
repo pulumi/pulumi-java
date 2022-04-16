@@ -27,7 +27,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columnDelimiter")
       private final @Nullable Output<Object> columnDelimiter;
 
-    public Output<Object> getColumnDelimiter() {
+    public Output<Object> columnDelimiter() {
         return this.columnDelimiter == null ? Codegen.empty() : this.columnDelimiter;
     }
 
@@ -38,7 +38,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
 
-    public Output<Object> getDeserializer() {
+    public Output<Object> deserializer() {
         return this.deserializer == null ? Codegen.empty() : this.deserializer;
     }
 
@@ -49,7 +49,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encodingName")
       private final @Nullable Output<Object> encodingName;
 
-    public Output<Object> getEncodingName() {
+    public Output<Object> encodingName() {
         return this.encodingName == null ? Codegen.empty() : this.encodingName;
     }
 
@@ -60,7 +60,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="escapeChar")
       private final @Nullable Output<Object> escapeChar;
 
-    public Output<Object> getEscapeChar() {
+    public Output<Object> escapeChar() {
         return this.escapeChar == null ? Codegen.empty() : this.escapeChar;
     }
 
@@ -71,7 +71,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstRowAsHeader")
       private final @Nullable Output<Object> firstRowAsHeader;
 
-    public Output<Object> getFirstRowAsHeader() {
+    public Output<Object> firstRowAsHeader() {
         return this.firstRowAsHeader == null ? Codegen.empty() : this.firstRowAsHeader;
     }
 
@@ -82,7 +82,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nullValue")
       private final @Nullable Output<Object> nullValue;
 
-    public Output<Object> getNullValue() {
+    public Output<Object> nullValue() {
         return this.nullValue == null ? Codegen.empty() : this.nullValue;
     }
 
@@ -93,7 +93,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quoteChar")
       private final @Nullable Output<Object> quoteChar;
 
-    public Output<Object> getQuoteChar() {
+    public Output<Object> quoteChar() {
         return this.quoteChar == null ? Codegen.empty() : this.quoteChar;
     }
 
@@ -104,7 +104,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rowDelimiter")
       private final @Nullable Output<Object> rowDelimiter;
 
-    public Output<Object> getRowDelimiter() {
+    public Output<Object> rowDelimiter() {
         return this.rowDelimiter == null ? Codegen.empty() : this.rowDelimiter;
     }
 
@@ -115,7 +115,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
 
-    public Output<Object> getSerializer() {
+    public Output<Object> serializer() {
         return this.serializer == null ? Codegen.empty() : this.serializer;
     }
 
@@ -126,7 +126,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipLineCount")
       private final @Nullable Output<Object> skipLineCount;
 
-    public Output<Object> getSkipLineCount() {
+    public Output<Object> skipLineCount() {
         return this.skipLineCount == null ? Codegen.empty() : this.skipLineCount;
     }
 
@@ -137,7 +137,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="treatEmptyAsNull")
       private final @Nullable Output<Object> treatEmptyAsNull;
 
-    public Output<Object> getTreatEmptyAsNull() {
+    public Output<Object> treatEmptyAsNull() {
         return this.treatEmptyAsNull == null ? Codegen.empty() : this.treatEmptyAsNull;
     }
 
@@ -149,7 +149,7 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

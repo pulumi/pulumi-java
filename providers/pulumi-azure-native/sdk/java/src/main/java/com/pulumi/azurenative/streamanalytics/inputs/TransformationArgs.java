@@ -27,7 +27,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -49,7 +49,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="streamingUnits")
       private final @Nullable Output<Integer> streamingUnits;
 
-    public Output<Integer> getStreamingUnits() {
+    public Output<Integer> streamingUnits() {
         return this.streamingUnits == null ? Codegen.empty() : this.streamingUnits;
     }
 

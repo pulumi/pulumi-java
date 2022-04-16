@@ -26,7 +26,7 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="keyVaultMetaInfo")
       private final @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
 
-    public Optional<KeyVaultMetaInfoResponse> getKeyVaultMetaInfo() {
+    public Optional<KeyVaultMetaInfoResponse> keyVaultMetaInfo() {
         return this.keyVaultMetaInfo == null ? Optional.empty() : Optional.ofNullable(this.keyVaultMetaInfo);
     }
 
@@ -37,7 +37,7 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

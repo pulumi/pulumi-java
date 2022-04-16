@@ -41,21 +41,21 @@ public final class OrganizationResourcePropertiesResponseUserDetail {
      * Email address
      * 
     */
-    public Optional<String> getEmailAddress() {
+    public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
      * First name
      * 
     */
-    public Optional<String> getFirstName() {
+    public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
      * Last name
      * 
     */
-    public Optional<String> getLastName() {
+    public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
 

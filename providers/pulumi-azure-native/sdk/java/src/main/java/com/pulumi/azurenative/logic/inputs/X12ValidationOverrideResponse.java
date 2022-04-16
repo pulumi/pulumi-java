@@ -24,7 +24,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
-    public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
+    public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -35,7 +35,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="messageId", required=true)
       private final String messageId;
 
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
 
@@ -46,7 +46,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="trailingSeparatorPolicy", required=true)
       private final String trailingSeparatorPolicy;
 
-    public String getTrailingSeparatorPolicy() {
+    public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
 
@@ -57,7 +57,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
-    public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
+    public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -68,7 +68,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="validateCharacterSet", required=true)
       private final Boolean validateCharacterSet;
 
-    public Boolean getValidateCharacterSet() {
+    public Boolean validateCharacterSet() {
         return this.validateCharacterSet;
     }
 
@@ -79,7 +79,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="validateEDITypes", required=true)
       private final Boolean validateEDITypes;
 
-    public Boolean getValidateEDITypes() {
+    public Boolean validateEDITypes() {
         return this.validateEDITypes;
     }
 
@@ -90,7 +90,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
     @Import(name="validateXSDTypes", required=true)
       private final Boolean validateXSDTypes;
 
-    public Boolean getValidateXSDTypes() {
+    public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }
 

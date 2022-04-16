@@ -30,7 +30,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,7 +41,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -52,7 +52,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -63,7 +63,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
+    public Output<Map<String,ParameterDefinitionsValueArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -74,7 +74,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="policyDefinitionGroups")
       private final @Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
 
-    public Output<List<PolicyDefinitionGroupArgs>> getPolicyDefinitionGroups() {
+    public Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups() {
         return this.policyDefinitionGroups == null ? Codegen.empty() : this.policyDefinitionGroups;
     }
 
@@ -85,7 +85,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="policyDefinitions", required=true)
       private final Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
 
-    public Output<List<PolicyDefinitionReferenceArgs>> getPolicyDefinitions() {
+    public Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions() {
         return this.policyDefinitions;
     }
 
@@ -96,7 +96,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="policySetDefinitionName")
       private final @Nullable Output<String> policySetDefinitionName;
 
-    public Output<String> getPolicySetDefinitionName() {
+    public Output<String> policySetDefinitionName() {
         return this.policySetDefinitionName == null ? Codegen.empty() : this.policySetDefinitionName;
     }
 
@@ -107,7 +107,7 @@ public final class PolicySetDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Output<Either<String,PolicyType>> getPolicyType() {
+    public Output<Either<String,PolicyType>> policyType() {
         return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 

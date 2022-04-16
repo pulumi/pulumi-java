@@ -28,7 +28,7 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesResult {
      * A collection of DeliveryAttributeMapping
      * 
     */
-    public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> getValue() {
+    public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value() {
         return this.value == null ? List.of() : this.value;
     }
 

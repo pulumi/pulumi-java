@@ -30,7 +30,7 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,7 +41,7 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="links", required=true)
       private final Output<List<GraphParameterLinkArgs>> links;
 
-    public Output<List<GraphParameterLinkArgs>> getLinks() {
+    public Output<List<GraphParameterLinkArgs>> links() {
         return this.links;
     }
 
@@ -52,7 +52,7 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
 

@@ -49,28 +49,28 @@ public final class PersistenceResponse {
      * Sets whether AOF is enabled.
      * 
     */
-    public Optional<Boolean> getAofEnabled() {
+    public Optional<Boolean> aofEnabled() {
         return Optional.ofNullable(this.aofEnabled);
     }
     /**
      * Sets the frequency at which data is written to disk.
      * 
     */
-    public Optional<String> getAofFrequency() {
+    public Optional<String> aofFrequency() {
         return Optional.ofNullable(this.aofFrequency);
     }
     /**
      * Sets whether RDB is enabled.
      * 
     */
-    public Optional<Boolean> getRdbEnabled() {
+    public Optional<Boolean> rdbEnabled() {
         return Optional.ofNullable(this.rdbEnabled);
     }
     /**
      * Sets the frequency at which a snapshot of the database is created.
      * 
     */
-    public Optional<String> getRdbFrequency() {
+    public Optional<String> rdbFrequency() {
         return Optional.ofNullable(this.rdbFrequency);
     }
 

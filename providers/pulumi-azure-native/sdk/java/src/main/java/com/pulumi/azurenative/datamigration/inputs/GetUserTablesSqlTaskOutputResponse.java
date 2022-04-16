@@ -27,7 +27,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
     @Import(name="databasesToTables", required=true)
       private final Map<String,List<DatabaseTableResponse>> databasesToTables;
 
-    public Map<String,List<DatabaseTableResponse>> getDatabasesToTables() {
+    public Map<String,List<DatabaseTableResponse>> databasesToTables() {
         return this.databasesToTables;
     }
 
@@ -38,7 +38,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -49,7 +49,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

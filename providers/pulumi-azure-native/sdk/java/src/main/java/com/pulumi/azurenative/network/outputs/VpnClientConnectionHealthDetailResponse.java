@@ -103,84 +103,84 @@ public final class VpnClientConnectionHealthDetailResponse {
      * The egress bytes per second.
      * 
     */
-    public Double getEgressBytesTransferred() {
+    public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
      * The egress packets per second.
      * 
     */
-    public Double getEgressPacketsTransferred() {
+    public Double egressPacketsTransferred() {
         return this.egressPacketsTransferred;
     }
     /**
      * The ingress bytes per second.
      * 
     */
-    public Double getIngressBytesTransferred() {
+    public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
      * The ingress packets per second.
      * 
     */
-    public Double getIngressPacketsTransferred() {
+    public Double ingressPacketsTransferred() {
         return this.ingressPacketsTransferred;
     }
     /**
      * The max band width.
      * 
     */
-    public Double getMaxBandwidth() {
+    public Double maxBandwidth() {
         return this.maxBandwidth;
     }
     /**
      * The max packets transferred per second.
      * 
     */
-    public Double getMaxPacketsPerSecond() {
+    public Double maxPacketsPerSecond() {
         return this.maxPacketsPerSecond;
     }
     /**
      * The assigned private Ip of a connected vpn client.
      * 
     */
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * The public Ip of a connected vpn client.
      * 
     */
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
      * The duration time of a connected vpn client.
      * 
     */
-    public Double getVpnConnectionDuration() {
+    public Double vpnConnectionDuration() {
         return this.vpnConnectionDuration;
     }
     /**
      * The vpn client Id.
      * 
     */
-    public String getVpnConnectionId() {
+    public String vpnConnectionId() {
         return this.vpnConnectionId;
     }
     /**
      * The start time of a connected vpn client.
      * 
     */
-    public String getVpnConnectionTime() {
+    public String vpnConnectionTime() {
         return this.vpnConnectionTime;
     }
     /**
      * The user name of a connected vpn client.
      * 
     */
-    public String getVpnUserName() {
+    public String vpnUserName() {
         return this.vpnUserName;
     }
 

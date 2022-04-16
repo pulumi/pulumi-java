@@ -23,7 +23,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactName")
       private final @Nullable Output<String> contactName;
 
-    public Output<String> getContactName() {
+    public Output<String> contactName() {
         return this.contactName == null ? Codegen.empty() : this.contactName;
     }
 
@@ -34,7 +34,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactProfile", required=true)
       private final Output<ResourceReferenceArgs> contactProfile;
 
-    public Output<ResourceReferenceArgs> getContactProfile() {
+    public Output<ResourceReferenceArgs> contactProfile() {
         return this.contactProfile;
     }
 
@@ -45,7 +45,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groundStationName", required=true)
       private final Output<String> groundStationName;
 
-    public Output<String> getGroundStationName() {
+    public Output<String> groundStationName() {
         return this.groundStationName;
     }
 
@@ -56,7 +56,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationEndTime", required=true)
       private final Output<String> reservationEndTime;
 
-    public Output<String> getReservationEndTime() {
+    public Output<String> reservationEndTime() {
         return this.reservationEndTime;
     }
 
@@ -67,7 +67,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationStartTime", required=true)
       private final Output<String> reservationStartTime;
 
-    public Output<String> getReservationStartTime() {
+    public Output<String> reservationStartTime() {
         return this.reservationStartTime;
     }
 
@@ -78,7 +78,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spacecraftName", required=true)
       private final Output<String> spacecraftName;
 
-    public Output<String> getSpacecraftName() {
+    public Output<String> spacecraftName() {
         return this.spacecraftName;
     }
 

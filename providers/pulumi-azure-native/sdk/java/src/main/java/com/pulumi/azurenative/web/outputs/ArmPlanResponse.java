@@ -55,35 +55,35 @@ public final class ArmPlanResponse {
      * The name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The product.
      * 
     */
-    public Optional<String> getProduct() {
+    public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
      * The promotion code.
      * 
     */
-    public Optional<String> getPromotionCode() {
+    public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The publisher.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * Version of product.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

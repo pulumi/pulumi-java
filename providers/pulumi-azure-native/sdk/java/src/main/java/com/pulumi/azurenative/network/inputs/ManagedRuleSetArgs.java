@@ -28,7 +28,7 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleGroupOverrides")
       private final @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
-    public Output<List<ManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
+    public Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides() {
         return this.ruleGroupOverrides == null ? Codegen.empty() : this.ruleGroupOverrides;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleSetType", required=true)
       private final Output<String> ruleSetType;
 
-    public Output<String> getRuleSetType() {
+    public Output<String> ruleSetType() {
         return this.ruleSetType;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleSetVersion", required=true)
       private final Output<String> ruleSetVersion;
 
-    public Output<String> getRuleSetVersion() {
+    public Output<String> ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

@@ -43,21 +43,21 @@ public final class CassandraSchemaResponse {
      * List of cluster key.
      * 
     */
-    public List<ClusterKeyResponse> getClusterKeys() {
+    public List<ClusterKeyResponse> clusterKeys() {
         return this.clusterKeys == null ? List.of() : this.clusterKeys;
     }
     /**
      * List of Cassandra table columns.
      * 
     */
-    public List<ColumnResponse> getColumns() {
+    public List<ColumnResponse> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * List of partition key.
      * 
     */
-    public List<CassandraPartitionKeyResponse> getPartitionKeys() {
+    public List<CassandraPartitionKeyResponse> partitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
     }
 

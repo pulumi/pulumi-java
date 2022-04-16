@@ -41,21 +41,21 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
      * Databases to migrate
      * 
     */
-    public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Connection information for source PostgreSQL
      * 
     */
-    public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
+    public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for target Azure Database for PostgreSQL
      * 
     */
-    public PostgreSqlConnectionInfoResponse getTargetConnectionInfo() {
+    public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

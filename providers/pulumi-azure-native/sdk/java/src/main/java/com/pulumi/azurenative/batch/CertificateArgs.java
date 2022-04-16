@@ -23,7 +23,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data", required=true)
       private final Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
 
@@ -56,7 +56,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<CertificateFormat> format;
 
-    public Output<CertificateFormat> getFormat() {
+    public Output<CertificateFormat> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -67,7 +67,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -78,7 +78,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
@@ -100,7 +100,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thumbprintAlgorithm")
       private final @Nullable Output<String> thumbprintAlgorithm;
 
-    public Output<String> getThumbprintAlgorithm() {
+    public Output<String> thumbprintAlgorithm() {
         return this.thumbprintAlgorithm == null ? Codegen.empty() : this.thumbprintAlgorithm;
     }
 

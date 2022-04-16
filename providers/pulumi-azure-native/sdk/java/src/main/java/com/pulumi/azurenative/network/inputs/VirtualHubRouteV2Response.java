@@ -26,7 +26,7 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="destinationType")
       private final @Nullable String destinationType;
 
-    public Optional<String> getDestinationType() {
+    public Optional<String> destinationType() {
         return this.destinationType == null ? Optional.empty() : Optional.ofNullable(this.destinationType);
     }
 
@@ -37,7 +37,7 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="destinations")
       private final @Nullable List<String> destinations;
 
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="nextHopType")
       private final @Nullable String nextHopType;
 
-    public Optional<String> getNextHopType() {
+    public Optional<String> nextHopType() {
         return this.nextHopType == null ? Optional.empty() : Optional.ofNullable(this.nextHopType);
     }
 
@@ -59,7 +59,7 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="nextHops")
       private final @Nullable List<String> nextHops;
 
-    public List<String> getNextHops() {
+    public List<String> nextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
     }
 

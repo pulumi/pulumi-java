@@ -26,7 +26,7 @@ public final class NetAppVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nfsFilePath")
       private final @Nullable Output<String> nfsFilePath;
 
-    public Output<String> getNfsFilePath() {
+    public Output<String> nfsFilePath() {
         return this.nfsFilePath == null ? Codegen.empty() : this.nfsFilePath;
     }
 
@@ -37,7 +37,7 @@ public final class NetAppVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nfsProviderIp")
       private final @Nullable Output<String> nfsProviderIp;
 
-    public Output<String> getNfsProviderIp() {
+    public Output<String> nfsProviderIp() {
         return this.nfsProviderIp == null ? Codegen.empty() : this.nfsProviderIp;
     }
 

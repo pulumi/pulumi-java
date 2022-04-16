@@ -25,7 +25,7 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -36,7 +36,7 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
     @Import(name="names", required=true)
       private final List<String> names;
 
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
 
@@ -48,7 +48,7 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
     @Import(name="partitionScheme", required=true)
       private final String partitionScheme;
 
-    public String getPartitionScheme() {
+    public String partitionScheme() {
         return this.partitionScheme;
     }
 

@@ -19,28 +19,28 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
     @Import(name="biztalkUri")
       private final @Nullable Output<String> biztalkUri;
 
-    public Output<String> getBiztalkUri() {
+    public Output<String> biztalkUri() {
         return this.biztalkUri == null ? Codegen.empty() : this.biztalkUri;
     }
 
     @Import(name="entityConnectionString")
       private final @Nullable Output<String> entityConnectionString;
 
-    public Output<String> getEntityConnectionString() {
+    public Output<String> entityConnectionString() {
         return this.entityConnectionString == null ? Codegen.empty() : this.entityConnectionString;
     }
 
     @Import(name="entityName")
       private final @Nullable Output<String> entityName;
 
-    public Output<String> getEntityName() {
+    public Output<String> entityName() {
         return this.entityName == null ? Codegen.empty() : this.entityName;
     }
 
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
@@ -51,7 +51,7 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -62,21 +62,21 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="resourceConnectionString")
       private final @Nullable Output<String> resourceConnectionString;
 
-    public Output<String> getResourceConnectionString() {
+    public Output<String> resourceConnectionString() {
         return this.resourceConnectionString == null ? Codegen.empty() : this.resourceConnectionString;
     }
 
@@ -87,14 +87,14 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -105,7 +105,7 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 

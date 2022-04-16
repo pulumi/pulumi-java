@@ -84,63 +84,63 @@ public final class GetGatewayHostnameConfigurationResult {
      * Identifier of Certificate entity that will be used for TLS connection establishment
      * 
     */
-    public Optional<String> getCertificateId() {
+    public Optional<String> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
     /**
      * Hostname value. Supports valid domain name, partial or full wildcard
      * 
     */
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * Specifies if HTTP/2.0 is supported
      * 
     */
-    public Optional<Boolean> getHttp2Enabled() {
+    public Optional<Boolean> http2Enabled() {
         return Optional.ofNullable(this.http2Enabled);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Determines whether gateway requests client certificate
      * 
     */
-    public Optional<Boolean> getNegotiateClientCertificate() {
+    public Optional<Boolean> negotiateClientCertificate() {
         return Optional.ofNullable(this.negotiateClientCertificate);
     }
     /**
      * Specifies if TLS 1.0 is supported
      * 
     */
-    public Optional<Boolean> getTls10Enabled() {
+    public Optional<Boolean> tls10Enabled() {
         return Optional.ofNullable(this.tls10Enabled);
     }
     /**
      * Specifies if TLS 1.1 is supported
      * 
     */
-    public Optional<Boolean> getTls11Enabled() {
+    public Optional<Boolean> tls11Enabled() {
         return Optional.ofNullable(this.tls11Enabled);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

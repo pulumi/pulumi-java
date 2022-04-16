@@ -66,7 +66,7 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activities")
       private final @Nullable Output<List<Object>> activities;
 
-    public Output<List<Object>> getActivities() {
+    public Output<List<Object>> activities() {
         return this.activities == null ? Codegen.empty() : this.activities;
     }
 
@@ -77,7 +77,7 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

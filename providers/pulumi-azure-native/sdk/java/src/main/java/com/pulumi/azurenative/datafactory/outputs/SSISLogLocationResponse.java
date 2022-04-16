@@ -50,28 +50,28 @@ public final class SSISLogLocationResponse {
      * The package execution log access credential.
      * 
     */
-    public Optional<SSISAccessCredentialResponse> getAccessCredential() {
+    public Optional<SSISAccessCredentialResponse> accessCredential() {
         return Optional.ofNullable(this.accessCredential);
     }
     /**
      * The SSIS package execution log path. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getLogPath() {
+    public Object logPath() {
         return this.logPath;
     }
     /**
      * Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getLogRefreshInterval() {
+    public Optional<Object> logRefreshInterval() {
         return Optional.ofNullable(this.logRefreshInterval);
     }
     /**
      * The type of SSIS log location.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

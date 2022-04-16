@@ -46,7 +46,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule actions.
      * 
      */
-    public Output<ActionGroupsInformationResponse> getActionGroups() {
+    public Output<ActionGroupsInformationResponse> actionGroups() {
         return this.actionGroups;
     }
     /**
@@ -60,7 +60,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule's detector.
      * 
      */
-    public Output<DetectorResponse> getDetector() {
+    public Output<DetectorResponse> detector() {
         return this.detector;
     }
     /**
@@ -88,7 +88,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
      * 
      */
-    public Output<String> getFrequency() {
+    public Output<String> frequency() {
         return this.frequency;
     }
     /**
@@ -102,7 +102,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -116,7 +116,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule resources scope.
      * 
      */
-    public Output<List<String>> getScope() {
+    public Output<List<String>> scope() {
         return this.scope;
     }
     /**
@@ -144,7 +144,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule severity.
      * 
      */
-    public Output<String> getSeverity() {
+    public Output<String> severity() {
         return this.severity;
     }
     /**
@@ -158,7 +158,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -172,7 +172,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +186,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule throttling information.
      * 
      */
-    public Output</* @Nullable */ ThrottlingInformationResponse> getThrottling() {
+    public Output</* @Nullable */ ThrottlingInformationResponse> throttling() {
         return this.throttling;
     }
     /**
@@ -200,7 +200,7 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

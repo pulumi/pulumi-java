@@ -30,7 +30,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="access", required=true)
       private final Output<Either<String,NfsAccessRuleAccess>> access;
 
-    public Output<Either<String,NfsAccessRuleAccess>> getAccess() {
+    public Output<Either<String,NfsAccessRuleAccess>> access() {
         return this.access;
     }
 
@@ -41,7 +41,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="anonymousGID")
       private final @Nullable Output<String> anonymousGID;
 
-    public Output<String> getAnonymousGID() {
+    public Output<String> anonymousGID() {
         return this.anonymousGID == null ? Codegen.empty() : this.anonymousGID;
     }
 
@@ -52,7 +52,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="anonymousUID")
       private final @Nullable Output<String> anonymousUID;
 
-    public Output<String> getAnonymousUID() {
+    public Output<String> anonymousUID() {
         return this.anonymousUID == null ? Codegen.empty() : this.anonymousUID;
     }
 
@@ -63,7 +63,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -74,7 +74,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootSquash")
       private final @Nullable Output<Boolean> rootSquash;
 
-    public Output<Boolean> getRootSquash() {
+    public Output<Boolean> rootSquash() {
         return this.rootSquash == null ? Codegen.empty() : this.rootSquash;
     }
 
@@ -85,7 +85,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<Either<String,NfsAccessRuleScope>> scope;
 
-    public Output<Either<String,NfsAccessRuleScope>> getScope() {
+    public Output<Either<String,NfsAccessRuleScope>> scope() {
         return this.scope;
     }
 
@@ -96,7 +96,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="submountAccess")
       private final @Nullable Output<Boolean> submountAccess;
 
-    public Output<Boolean> getSubmountAccess() {
+    public Output<Boolean> submountAccess() {
         return this.submountAccess == null ? Codegen.empty() : this.submountAccess;
     }
 
@@ -107,7 +107,7 @@ public final class NfsAccessRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suid")
       private final @Nullable Output<Boolean> suid;
 
-    public Output<Boolean> getSuid() {
+    public Output<Boolean> suid() {
         return this.suid == null ? Codegen.empty() : this.suid;
     }
 

@@ -46,7 +46,7 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The allow-list custom alert rules.
      * 
      */
-    public Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> getAllowlistRules() {
+    public Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> allowlistRules() {
         return this.allowlistRules;
     }
     /**
@@ -60,7 +60,7 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The deny-list custom alert rules.
      * 
      */
-    public Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> getDenylistRules() {
+    public Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> denylistRules() {
         return this.denylistRules;
     }
     /**
@@ -74,7 +74,7 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The list of custom alert threshold rules.
      * 
      */
-    public Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> getThresholdRules() {
+    public Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> thresholdRules() {
         return this.thresholdRules;
     }
     /**
@@ -102,7 +102,7 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The list of custom alert time-window rules.
      * 
      */
-    public Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> getTimeWindowRules() {
+    public Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> timeWindowRules() {
         return this.timeWindowRules;
     }
     /**
@@ -116,7 +116,7 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

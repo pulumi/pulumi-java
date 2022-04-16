@@ -40,21 +40,21 @@ public final class GatewayOperatorResourceRequestsResponse {
      * Cpu allocated to each Spring Cloud Gateway Operator instance.
      * 
     */
-    public String getCpu() {
+    public String cpu() {
         return this.cpu;
     }
     /**
      * Instance count of the Spring Cloud Gateway Operator.
      * 
     */
-    public Integer getInstanceCount() {
+    public Integer instanceCount() {
         return this.instanceCount;
     }
     /**
      * Memory allocated to each Spring Cloud Gateway Operator instance.
      * 
     */
-    public String getMemory() {
+    public String memory() {
         return this.memory;
     }
 

@@ -21,7 +21,7 @@ public final class DatadogLogsAgentResponse extends com.pulumi.resources.InvokeA
     @Import(name="transport")
       private final @Nullable String transport;
 
-    public Optional<String> getTransport() {
+    public Optional<String> transport() {
         return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
     }
 

@@ -26,7 +26,7 @@ public final class LabelingJobInstructionsArgs extends com.pulumi.resources.Reso
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

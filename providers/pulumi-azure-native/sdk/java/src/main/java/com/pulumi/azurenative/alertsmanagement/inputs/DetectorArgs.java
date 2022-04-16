@@ -29,7 +29,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -51,7 +51,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imagePaths")
       private final @Nullable Output<List<String>> imagePaths;
 
-    public Output<List<String>> getImagePaths() {
+    public Output<List<String>> imagePaths() {
         return this.imagePaths == null ? Codegen.empty() : this.imagePaths;
     }
 
@@ -62,7 +62,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
+    public Output<Map<String,Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -84,7 +84,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedResourceTypes")
       private final @Nullable Output<List<String>> supportedResourceTypes;
 
-    public Output<List<String>> getSupportedResourceTypes() {
+    public Output<List<String>> supportedResourceTypes() {
         return this.supportedResourceTypes == null ? Codegen.empty() : this.supportedResourceTypes;
     }
 

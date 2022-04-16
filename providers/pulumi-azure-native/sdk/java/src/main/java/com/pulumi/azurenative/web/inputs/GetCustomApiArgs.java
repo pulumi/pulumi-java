@@ -21,7 +21,7 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="apiName", required=true)
       private final String apiName;
 
-    public String getApiName() {
+    public String apiName() {
         return this.apiName;
     }
 
@@ -32,7 +32,7 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 

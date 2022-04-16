@@ -22,7 +22,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
+    public Output<String> dataSetName() {
         return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
@@ -45,7 +45,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -56,7 +56,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
     @Import(name="kustoDatabaseResourceId", required=true)
       private final Output<String> kustoDatabaseResourceId;
 
-    public Output<String> getKustoDatabaseResourceId() {
+    public Output<String> kustoDatabaseResourceId() {
         return this.kustoDatabaseResourceId;
     }
 
@@ -67,7 +67,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class KustoDatabaseDataSetArgs extends com.pulumi.resources.Resourc
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 

@@ -33,7 +33,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -55,7 +55,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -77,7 +77,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -88,7 +88,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="host", required=true)
       private final Object host;
 
-    public Object getHost() {
+    public Object host() {
         return this.host;
     }
 
@@ -99,7 +99,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="hostKeyFingerprint")
       private final @Nullable Object hostKeyFingerprint;
 
-    public Optional<Object> getHostKeyFingerprint() {
+    public Optional<Object> hostKeyFingerprint() {
         return this.hostKeyFingerprint == null ? Optional.empty() : Optional.ofNullable(this.hostKeyFingerprint);
     }
 
@@ -110,7 +110,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -121,7 +121,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="passPhrase")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassPhrase() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase() {
         return this.passPhrase == null ? null : this.passPhrase;
     }
 
@@ -132,7 +132,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -143,7 +143,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="port")
       private final @Nullable Object port;
 
-    public Optional<Object> getPort() {
+    public Optional<Object> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -154,7 +154,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="privateKeyContent")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPrivateKeyContent() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent() {
         return this.privateKeyContent == null ? null : this.privateKeyContent;
     }
 
@@ -165,7 +165,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="privateKeyPath")
       private final @Nullable Object privateKeyPath;
 
-    public Optional<Object> getPrivateKeyPath() {
+    public Optional<Object> privateKeyPath() {
         return this.privateKeyPath == null ? Optional.empty() : Optional.ofNullable(this.privateKeyPath);
     }
 
@@ -176,7 +176,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="skipHostKeyValidation")
       private final @Nullable Object skipHostKeyValidation;
 
-    public Optional<Object> getSkipHostKeyValidation() {
+    public Optional<Object> skipHostKeyValidation() {
         return this.skipHostKeyValidation == null ? Optional.empty() : Optional.ofNullable(this.skipHostKeyValidation);
     }
 
@@ -188,7 +188,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -199,7 +199,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="userName")
       private final @Nullable Object userName;
 
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

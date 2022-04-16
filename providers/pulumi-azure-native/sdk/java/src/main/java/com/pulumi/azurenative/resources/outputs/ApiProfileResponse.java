@@ -32,14 +32,14 @@ public final class ApiProfileResponse {
      * The API version.
      * 
     */
-    public String getApiVersion() {
+    public String apiVersion() {
         return this.apiVersion;
     }
     /**
      * The profile version.
      * 
     */
-    public String getProfileVersion() {
+    public String profileVersion() {
         return this.profileVersion;
     }
 

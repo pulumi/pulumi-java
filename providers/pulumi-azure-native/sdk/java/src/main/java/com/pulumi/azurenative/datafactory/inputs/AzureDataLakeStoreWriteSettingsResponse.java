@@ -26,7 +26,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
     @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
 
-    public Optional<Object> getCopyBehavior() {
+    public Optional<Object> copyBehavior() {
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
     }
 
@@ -37,7 +37,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -48,7 +48,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
     @Import(name="expiryDateTime")
       private final @Nullable Object expiryDateTime;
 
-    public Optional<Object> getExpiryDateTime() {
+    public Optional<Object> expiryDateTime() {
         return this.expiryDateTime == null ? Optional.empty() : Optional.ofNullable(this.expiryDateTime);
     }
 
@@ -59,7 +59,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -71,7 +71,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

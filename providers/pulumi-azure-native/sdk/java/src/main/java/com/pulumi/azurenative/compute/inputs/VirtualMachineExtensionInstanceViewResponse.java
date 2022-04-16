@@ -27,7 +27,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -38,7 +38,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="substatuses")
       private final @Nullable List<InstanceViewStatusResponse> substatuses;
 
-    public List<InstanceViewStatusResponse> getSubstatuses() {
+    public List<InstanceViewStatusResponse> substatuses() {
         return this.substatuses == null ? List.of() : this.substatuses;
     }
 
@@ -60,7 +60,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -71,7 +71,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
     @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;
 
-    public Optional<String> getTypeHandlerVersion() {
+    public Optional<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
     }
 

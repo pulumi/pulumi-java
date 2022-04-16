@@ -26,7 +26,7 @@ public final class PipelinePolicyResponse {
      * Pipeline ElapsedTime Metric Policy.
      * 
     */
-    public Optional<PipelineElapsedTimeMetricPolicyResponse> getElapsedTimeMetric() {
+    public Optional<PipelineElapsedTimeMetricPolicyResponse> elapsedTimeMetric() {
         return Optional.ofNullable(this.elapsedTimeMetric);
     }
 

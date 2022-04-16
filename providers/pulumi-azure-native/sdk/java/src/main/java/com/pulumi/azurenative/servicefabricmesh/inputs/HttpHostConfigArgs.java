@@ -27,7 +27,7 @@ public final class HttpHostConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class HttpHostConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="routes", required=true)
       private final Output<List<HttpRouteConfigArgs>> routes;
 
-    public Output<List<HttpRouteConfigArgs>> getRoutes() {
+    public Output<List<HttpRouteConfigArgs>> routes() {
         return this.routes;
     }
 

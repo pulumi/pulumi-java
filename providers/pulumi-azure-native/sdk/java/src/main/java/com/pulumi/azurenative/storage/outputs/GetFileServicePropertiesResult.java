@@ -73,49 +73,49 @@ public final class GetFileServicePropertiesResult {
      * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
      * 
     */
-    public Optional<CorsRulesResponse> getCors() {
+    public Optional<CorsRulesResponse> cors() {
         return Optional.ofNullable(this.cors);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Protocol settings for file service
      * 
     */
-    public Optional<ProtocolSettingsResponse> getProtocolSettings() {
+    public Optional<ProtocolSettingsResponse> protocolSettings() {
         return Optional.ofNullable(this.protocolSettings);
     }
     /**
      * The file service properties for share soft delete.
      * 
     */
-    public Optional<DeleteRetentionPolicyResponse> getShareDeleteRetentionPolicy() {
+    public Optional<DeleteRetentionPolicyResponse> shareDeleteRetentionPolicy() {
         return Optional.ofNullable(this.shareDeleteRetentionPolicy);
     }
     /**
      * Sku name and tier.
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -34,7 +34,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="condaFile")
       private final @Nullable Output<String> condaFile;
 
-    public Output<String> getCondaFile() {
+    public Output<String> condaFile() {
         return this.condaFile == null ? Codegen.empty() : this.condaFile;
     }
 
@@ -45,7 +45,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="docker")
       private final @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
-    public Output<Either<DockerBuildArgs,DockerImageArgs>> getDocker() {
+    public Output<Either<DockerBuildArgs,DockerImageArgs>> docker() {
         return this.docker == null ? Codegen.empty() : this.docker;
     }
 
@@ -67,7 +67,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="inferenceContainerProperties")
       private final @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
-    public Output<InferenceContainerPropertiesArgs> getInferenceContainerProperties() {
+    public Output<InferenceContainerPropertiesArgs> inferenceContainerProperties() {
         return this.inferenceContainerProperties == null ? Codegen.empty() : this.inferenceContainerProperties;
     }
 
@@ -78,7 +78,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="isAnonymous")
       private final @Nullable Output<Boolean> isAnonymous;
 
-    public Output<Boolean> getIsAnonymous() {
+    public Output<Boolean> isAnonymous() {
         return this.isAnonymous == null ? Codegen.empty() : this.isAnonymous;
     }
 
@@ -89,7 +89,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -100,7 +100,7 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

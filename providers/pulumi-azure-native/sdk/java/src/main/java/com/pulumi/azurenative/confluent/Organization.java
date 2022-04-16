@@ -45,7 +45,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return The creation time of the resource.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -59,7 +59,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Location of Organization resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Confluent offer detail
      * 
      */
-    public Output</* @Nullable */ OrganizationResourcePropertiesResponseOfferDetail> getOfferDetail() {
+    public Output</* @Nullable */ OrganizationResourcePropertiesResponseOfferDetail> offerDetail() {
         return this.offerDetail;
     }
     /**
@@ -101,7 +101,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Id of the Confluent organization.
      * 
      */
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
     /**
@@ -115,7 +115,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Provision states for confluent RP
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +129,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return SSO url for the Confluent organization.
      * 
      */
-    public Output<String> getSsoUrl() {
+    public Output<String> ssoUrl() {
         return this.ssoUrl;
     }
     /**
@@ -143,7 +143,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Organization resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -171,7 +171,7 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Subscriber detail
      * 
      */
-    public Output</* @Nullable */ OrganizationResourcePropertiesResponseUserDetail> getUserDetail() {
+    public Output</* @Nullable */ OrganizationResourcePropertiesResponseUserDetail> userDetail() {
         return this.userDetail;
     }
 

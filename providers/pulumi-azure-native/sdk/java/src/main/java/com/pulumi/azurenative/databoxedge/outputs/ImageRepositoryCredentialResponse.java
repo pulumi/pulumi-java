@@ -42,21 +42,21 @@ public final class ImageRepositoryCredentialResponse {
      * Image repository url (e.g.: mcr.microsoft.com).
      * 
     */
-    public String getImageRepositoryUrl() {
+    public String imageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
     /**
      * Repository user password.
      * 
     */
-    public Optional<AsymmetricEncryptedSecretResponse> getPassword() {
+    public Optional<AsymmetricEncryptedSecretResponse> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Repository user name.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

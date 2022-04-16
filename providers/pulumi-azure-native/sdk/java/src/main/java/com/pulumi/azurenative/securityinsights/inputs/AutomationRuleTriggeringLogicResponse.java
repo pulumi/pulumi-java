@@ -28,7 +28,7 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="conditions")
       private final @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
 
-    public List<AutomationRulePropertyValuesConditionResponse> getConditions() {
+    public List<AutomationRulePropertyValuesConditionResponse> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
 
@@ -39,7 +39,7 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="expirationTimeUtc")
       private final @Nullable String expirationTimeUtc;
 
-    public Optional<String> getExpirationTimeUtc() {
+    public Optional<String> expirationTimeUtc() {
         return this.expirationTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.expirationTimeUtc);
     }
 
@@ -50,7 +50,7 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -61,7 +61,7 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="triggersOn", required=true)
       private final String triggersOn;
 
-    public String getTriggersOn() {
+    public String triggersOn() {
         return this.triggersOn;
     }
 
@@ -72,7 +72,7 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="triggersWhen", required=true)
       private final String triggersWhen;
 
-    public String getTriggersWhen() {
+    public String triggersWhen() {
         return this.triggersWhen;
     }
 

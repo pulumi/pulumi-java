@@ -19,7 +19,7 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
     @Import(name="registrationDefinitionId", required=true)
       private final String registrationDefinitionId;
 
-    public String getRegistrationDefinitionId() {
+    public String registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
 
@@ -30,7 +30,7 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

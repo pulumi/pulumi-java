@@ -26,7 +26,7 @@ public final class SignalRCorsSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="allowedOrigins")
       private final @Nullable List<String> allowedOrigins;
 
-    public List<String> getAllowedOrigins() {
+    public List<String> allowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
 

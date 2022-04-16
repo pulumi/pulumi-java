@@ -25,7 +25,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="gatewayEndpoint", required=true)
       private final String gatewayEndpoint;
 
-    public String getGatewayEndpoint() {
+    public String gatewayEndpoint() {
         return this.gatewayEndpoint;
     }
 
@@ -36,7 +36,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastSyncTime", required=true)
       private final String lastSyncTime;
 
-    public String getLastSyncTime() {
+    public String lastSyncTime() {
         return this.lastSyncTime;
     }
 
@@ -47,7 +47,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="messageTtl", required=true)
       private final String messageTtl;
 
-    public String getMessageTtl() {
+    public String messageTtl() {
         return this.messageTtl;
     }
 
@@ -58,7 +58,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="schedule")
       private final @Nullable String schedule;
 
-    public Optional<String> getSchedule() {
+    public Optional<String> schedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
     }
 
@@ -69,7 +69,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="syncWindow")
       private final @Nullable String syncWindow;
 
-    public Optional<String> getSyncWindow() {
+    public Optional<String> syncWindow() {
         return this.syncWindow == null ? Optional.empty() : Optional.ofNullable(this.syncWindow);
     }
 
@@ -80,7 +80,7 @@ public final class SyncPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="tokenId", required=true)
       private final String tokenId;
 
-    public String getTokenId() {
+    public String tokenId() {
         return this.tokenId;
     }
 

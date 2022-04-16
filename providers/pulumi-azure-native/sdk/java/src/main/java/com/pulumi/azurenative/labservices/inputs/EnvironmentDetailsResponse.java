@@ -25,7 +25,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="environmentState", required=true)
       private final String environmentState;
 
-    public String getEnvironmentState() {
+    public String environmentState() {
         return this.environmentState;
     }
 
@@ -47,7 +47,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -58,7 +58,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="latestOperationResult", required=true)
       private final LatestOperationResultResponse latestOperationResult;
 
-    public LatestOperationResultResponse getLatestOperationResult() {
+    public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
 
@@ -69,7 +69,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -80,7 +80,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="passwordLastReset", required=true)
       private final String passwordLastReset;
 
-    public String getPasswordLastReset() {
+    public String passwordLastReset() {
         return this.passwordLastReset;
     }
 
@@ -91,7 +91,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -102,7 +102,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="totalUsage", required=true)
       private final String totalUsage;
 
-    public String getTotalUsage() {
+    public String totalUsage() {
         return this.totalUsage;
     }
 
@@ -113,7 +113,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="virtualMachineDetails", required=true)
       private final VirtualMachineDetailsResponse virtualMachineDetails;
 
-    public VirtualMachineDetailsResponse getVirtualMachineDetails() {
+    public VirtualMachineDetailsResponse virtualMachineDetails() {
         return this.virtualMachineDetails;
     }
 

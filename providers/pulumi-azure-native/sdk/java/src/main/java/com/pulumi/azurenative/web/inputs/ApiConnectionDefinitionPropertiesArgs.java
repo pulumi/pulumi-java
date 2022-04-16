@@ -23,7 +23,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="api")
       private final @Nullable Output<ApiReferenceArgs> api;
 
-    public Output<ApiReferenceArgs> getApi() {
+    public Output<ApiReferenceArgs> api() {
         return this.api == null ? Codegen.empty() : this.api;
     }
 
@@ -34,7 +34,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
 
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime == null ? Codegen.empty() : this.changedTime;
     }
 
@@ -45,7 +45,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -56,7 +56,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="customParameterValues")
       private final @Nullable Output<Map<String,String>> customParameterValues;
 
-    public Output<Map<String,String>> getCustomParameterValues() {
+    public Output<Map<String,String>> customParameterValues() {
         return this.customParameterValues == null ? Codegen.empty() : this.customParameterValues;
     }
 
@@ -67,7 +67,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -78,7 +78,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="nonSecretParameterValues")
       private final @Nullable Output<Map<String,String>> nonSecretParameterValues;
 
-    public Output<Map<String,String>> getNonSecretParameterValues() {
+    public Output<Map<String,String>> nonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Codegen.empty() : this.nonSecretParameterValues;
     }
 
@@ -89,7 +89,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="parameterValues")
       private final @Nullable Output<Map<String,String>> parameterValues;
 
-    public Output<Map<String,String>> getParameterValues() {
+    public Output<Map<String,String>> parameterValues() {
         return this.parameterValues == null ? Codegen.empty() : this.parameterValues;
     }
 
@@ -100,7 +100,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="statuses")
       private final @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses;
 
-    public Output<List<ConnectionStatusDefinitionArgs>> getStatuses() {
+    public Output<List<ConnectionStatusDefinitionArgs>> statuses() {
         return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
@@ -111,7 +111,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     @Import(name="testLinks")
       private final @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks;
 
-    public Output<List<ApiConnectionTestLinkArgs>> getTestLinks() {
+    public Output<List<ApiConnectionTestLinkArgs>> testLinks() {
         return this.testLinks == null ? Codegen.empty() : this.testLinks;
     }
 

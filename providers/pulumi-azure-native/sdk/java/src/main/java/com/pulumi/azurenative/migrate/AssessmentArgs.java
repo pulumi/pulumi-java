@@ -23,7 +23,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assessmentName")
       private final @Nullable Output<String> assessmentName;
 
-    public Output<String> getAssessmentName() {
+    public Output<String> assessmentName() {
         return this.assessmentName == null ? Codegen.empty() : this.assessmentName;
     }
 
@@ -34,7 +34,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -45,7 +45,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -56,7 +56,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -67,7 +67,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<AssessmentPropertiesArgs> properties;
 
-    public Output<AssessmentPropertiesArgs> getProperties() {
+    public Output<AssessmentPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -78,7 +78,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

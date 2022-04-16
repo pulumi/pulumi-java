@@ -25,7 +25,7 @@ public final class ThrottlingInformationResponse extends com.pulumi.resources.In
     @Import(name="duration")
       private final @Nullable String duration;
 
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 

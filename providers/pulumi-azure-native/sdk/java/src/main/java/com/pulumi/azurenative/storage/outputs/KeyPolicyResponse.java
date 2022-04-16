@@ -24,7 +24,7 @@ public final class KeyPolicyResponse {
      * The key expiration period in days.
      * 
     */
-    public Integer getKeyExpirationPeriodInDays() {
+    public Integer keyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }
 

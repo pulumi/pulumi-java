@@ -99,21 +99,21 @@ public final class GetKubernetesRoleResult {
      * Host OS supported by the Kubernetes role.
      * 
     */
-    public String getHostPlatform() {
+    public String hostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the runtime is hosted.
      * 
     */
-    public String getHostPlatformType() {
+    public String hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -121,56 +121,56 @@ public final class GetKubernetesRoleResult {
      * Expected value is 'Kubernetes'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Kubernetes cluster configuration
      * 
     */
-    public KubernetesClusterInfoResponse getKubernetesClusterInfo() {
+    public KubernetesClusterInfoResponse kubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
     /**
      * Kubernetes role resources
      * 
     */
-    public KubernetesRoleResourcesResponse getKubernetesRoleResources() {
+    public KubernetesRoleResourcesResponse kubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of Kubernetes deployment
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Role status.
      * 
     */
-    public String getRoleStatus() {
+    public String roleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
@@ -49,7 +49,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="hashes")
       private final @Nullable Output<Map<String,String>> hashes;
 
-    public Output<Map<String,String>> getHashes() {
+    public Output<Map<String,String>> hashes() {
         return this.hashes == null ? Codegen.empty() : this.hashes;
     }
 
@@ -60,7 +60,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="sourceName")
       private final @Nullable Output<String> sourceName;
 
-    public Output<String> getSourceName() {
+    public Output<String> sourceName() {
         return this.sourceName == null ? Codegen.empty() : this.sourceName;
     }
 
@@ -71,7 +71,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

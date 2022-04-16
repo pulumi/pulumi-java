@@ -29,7 +29,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends com.pulumi.resou
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -40,7 +40,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 
-    public Output<Either<String,IntegrationServiceEnvironmentSkuName>> getName() {
+    public Output<Either<String,IntegrationServiceEnvironmentSkuName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

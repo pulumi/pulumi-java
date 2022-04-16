@@ -29,7 +29,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="credentials", required=true)
       private final UsernamePasswordCredentialsResponse credentials;
 
-    public UsernamePasswordCredentialsResponse getCredentials() {
+    public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
     }
 
@@ -40,7 +40,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustedCertificates")
       private final @Nullable PemCertificateListResponse trustedCertificates;
 
-    public Optional<PemCertificateListResponse> getTrustedCertificates() {
+    public Optional<PemCertificateListResponse> trustedCertificates() {
         return this.trustedCertificates == null ? Optional.empty() : Optional.ofNullable(this.trustedCertificates);
     }
 
@@ -51,7 +51,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tunnel")
       private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
-    public Optional<SecureIotDeviceRemoteTunnelResponse> getTunnel() {
+    public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
         return this.tunnel == null ? Optional.empty() : Optional.ofNullable(this.tunnel);
     }
 
@@ -63,7 +63,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -74,7 +74,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 
@@ -85,7 +85,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationOptions")
       private final @Nullable TlsValidationOptionsResponse validationOptions;
 
-    public Optional<TlsValidationOptionsResponse> getValidationOptions() {
+    public Optional<TlsValidationOptionsResponse> validationOptions() {
         return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);
     }
 

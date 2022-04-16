@@ -25,7 +25,7 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
     @Import(name="accountKey")
       private final @Nullable String accountKey;
 
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -36,7 +36,7 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -47,7 +47,7 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
     @Import(name="shareName", required=true)
       private final String shareName;
 
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
 

@@ -99,77 +99,77 @@ public final class GetVolumeResult {
      * This type describes a volume provided by an Azure Files file share.
      * 
     */
-    public Optional<VolumeProviderParametersAzureFileResponse> getAzureFileParameters() {
+    public Optional<VolumeProviderParametersAzureFileResponse> azureFileParameters() {
         return Optional.ofNullable(this.azureFileParameters);
     }
     /**
      * User readable description of the volume.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provider of the volume.
      * 
     */
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
     /**
      * State of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of the volume.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the volume.
      * 
     */
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -43,7 +43,7 @@ public class ComponentCurrentBillingFeature extends com.pulumi.resources.CustomR
      * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCurrentBillingFeatures() {
+    public Output</* @Nullable */ List<String>> currentBillingFeatures() {
         return this.currentBillingFeatures;
     }
     /**
@@ -57,7 +57,7 @@ public class ComponentCurrentBillingFeature extends com.pulumi.resources.CustomR
      * @return An Application Insights component daily data volume cap
      * 
      */
-    public Output</* @Nullable */ ApplicationInsightsComponentDataVolumeCapResponse> getDataVolumeCap() {
+    public Output</* @Nullable */ ApplicationInsightsComponentDataVolumeCapResponse> dataVolumeCap() {
         return this.dataVolumeCap;
     }
 

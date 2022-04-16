@@ -24,7 +24,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -35,7 +35,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataFormat", required=true)
       private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
-    public Output<Either<String,AzureContainerDataFormat>> getDataFormat() {
+    public Output<Either<String,AzureContainerDataFormat>> dataFormat() {
         return this.dataFormat;
     }
 
@@ -46,7 +46,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -57,7 +57,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 

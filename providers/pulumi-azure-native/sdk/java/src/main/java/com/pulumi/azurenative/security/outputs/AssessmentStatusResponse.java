@@ -41,21 +41,21 @@ public final class AssessmentStatusResponse {
      * Programmatic code for the cause of the assessment status
      * 
     */
-    public Optional<String> getCause() {
+    public Optional<String> cause() {
         return Optional.ofNullable(this.cause);
     }
     /**
      * Programmatic code for the status of the assessment
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Human readable description of the assessment status
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 

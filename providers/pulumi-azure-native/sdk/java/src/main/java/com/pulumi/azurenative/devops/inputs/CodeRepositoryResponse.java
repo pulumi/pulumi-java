@@ -27,7 +27,7 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="authorization")
       private final @Nullable AuthorizationResponse authorization;
 
-    public Optional<AuthorizationResponse> getAuthorization() {
+    public Optional<AuthorizationResponse> authorization() {
         return this.authorization == null ? Optional.empty() : Optional.ofNullable(this.authorization);
     }
 
@@ -38,7 +38,7 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="defaultBranch", required=true)
       private final String defaultBranch;
 
-    public String getDefaultBranch() {
+    public String defaultBranch() {
         return this.defaultBranch;
     }
 
@@ -49,7 +49,7 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -60,7 +60,7 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -71,7 +71,7 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="repositoryType", required=true)
       private final String repositoryType;
 
-    public String getRepositoryType() {
+    public String repositoryType() {
         return this.repositoryType;
     }
 

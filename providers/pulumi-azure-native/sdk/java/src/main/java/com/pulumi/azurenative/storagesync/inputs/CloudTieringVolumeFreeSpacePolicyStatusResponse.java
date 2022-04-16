@@ -24,7 +24,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
     @Import(name="currentVolumeFreeSpacePercent", required=true)
       private final Integer currentVolumeFreeSpacePercent;
 
-    public Integer getCurrentVolumeFreeSpacePercent() {
+    public Integer currentVolumeFreeSpacePercent() {
         return this.currentVolumeFreeSpacePercent;
     }
 
@@ -35,7 +35,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
     @Import(name="effectiveVolumeFreeSpacePolicy", required=true)
       private final Integer effectiveVolumeFreeSpacePolicy;
 
-    public Integer getEffectiveVolumeFreeSpacePolicy() {
+    public Integer effectiveVolumeFreeSpacePolicy() {
         return this.effectiveVolumeFreeSpacePolicy;
     }
 
@@ -46,7 +46,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 

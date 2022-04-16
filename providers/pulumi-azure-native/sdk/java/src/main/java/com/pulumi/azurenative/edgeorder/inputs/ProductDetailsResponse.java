@@ -30,7 +30,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -41,7 +41,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="deviceDetails", required=true)
       private final List<DeviceDetailsResponse> deviceDetails;
 
-    public List<DeviceDetailsResponse> getDeviceDetails() {
+    public List<DeviceDetailsResponse> deviceDetails() {
         return this.deviceDetails;
     }
 
@@ -52,7 +52,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="displayInfo")
       private final @Nullable DisplayInfoResponse displayInfo;
 
-    public Optional<DisplayInfoResponse> getDisplayInfo() {
+    public Optional<DisplayInfoResponse> displayInfo() {
         return this.displayInfo == null ? Optional.empty() : Optional.ofNullable(this.displayInfo);
     }
 
@@ -63,7 +63,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformationResponse hierarchyInformation;
 
-    public HierarchyInformationResponse getHierarchyInformation() {
+    public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
 
@@ -74,7 +74,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="productDoubleEncryptionStatus", required=true)
       private final String productDoubleEncryptionStatus;
 
-    public String getProductDoubleEncryptionStatus() {
+    public String productDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }
 

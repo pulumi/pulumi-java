@@ -28,7 +28,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="actions", required=true)
       private final Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
 
-    public Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> getActions() {
+    public Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions() {
         return this.actions;
     }
 
@@ -39,7 +39,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="automationRuleId")
       private final @Nullable Output<String> automationRuleId;
 
-    public Output<String> getAutomationRuleId() {
+    public Output<String> automationRuleId() {
         return this.automationRuleId == null ? Codegen.empty() : this.automationRuleId;
     }
 
@@ -50,7 +50,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -61,7 +61,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -72,7 +72,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="order", required=true)
       private final Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
 
@@ -83,7 +83,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="triggeringLogic", required=true)
       private final Output<AutomationRuleTriggeringLogicArgs> triggeringLogic;
 
-    public Output<AutomationRuleTriggeringLogicArgs> getTriggeringLogic() {
+    public Output<AutomationRuleTriggeringLogicArgs> triggeringLogic() {
         return this.triggeringLogic;
     }
 
@@ -105,7 +105,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

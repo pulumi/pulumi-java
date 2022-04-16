@@ -34,14 +34,14 @@ public final class ClusterKeyResponse {
      * Name of the Cosmos DB Cassandra table cluster key
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
      * 
     */
-    public Optional<String> getOrderBy() {
+    public Optional<String> orderBy() {
         return Optional.ofNullable(this.orderBy);
     }
 

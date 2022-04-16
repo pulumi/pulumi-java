@@ -34,14 +34,14 @@ public final class StorageAccountDetailsResponse {
      * Expected value is 'StorageAccount'.
      * 
     */
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
      * Storage Account Resource Id.
      * 
     */
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
 

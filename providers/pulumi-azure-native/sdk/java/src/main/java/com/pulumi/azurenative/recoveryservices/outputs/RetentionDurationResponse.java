@@ -37,14 +37,14 @@ public final class RetentionDurationResponse {
      * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Retention duration type of retention policy.
      * 
     */
-    public Optional<String> getDurationType() {
+    public Optional<String> durationType() {
         return Optional.ofNullable(this.durationType);
     }
 

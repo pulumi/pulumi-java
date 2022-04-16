@@ -29,7 +29,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -62,7 +62,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkName")
       private final @Nullable Output<String> linkName;
 
-    public Output<String> getLinkName() {
+    public Output<String> linkName() {
         return this.linkName == null ? Codegen.empty() : this.linkName;
     }
 
@@ -73,7 +73,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mappings")
       private final @Nullable Output<List<TypePropertiesMappingArgs>> mappings;
 
-    public Output<List<TypePropertiesMappingArgs>> getMappings() {
+    public Output<List<TypePropertiesMappingArgs>> mappings() {
         return this.mappings == null ? Codegen.empty() : this.mappings;
     }
 
@@ -84,7 +84,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationType")
       private final @Nullable Output<InstanceOperationType> operationType;
 
-    public Output<InstanceOperationType> getOperationType() {
+    public Output<InstanceOperationType> operationType() {
         return this.operationType == null ? Codegen.empty() : this.operationType;
     }
 
@@ -95,7 +95,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="participantPropertyReferences", required=true)
       private final Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
 
-    public Output<List<ParticipantPropertyReferenceArgs>> getParticipantPropertyReferences() {
+    public Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences() {
         return this.participantPropertyReferences;
     }
 
@@ -106,7 +106,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="referenceOnly")
       private final @Nullable Output<Boolean> referenceOnly;
 
-    public Output<Boolean> getReferenceOnly() {
+    public Output<Boolean> referenceOnly() {
         return this.referenceOnly == null ? Codegen.empty() : this.referenceOnly;
     }
 
@@ -117,7 +117,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,7 +128,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceEntityType", required=true)
       private final Output<EntityType> sourceEntityType;
 
-    public Output<EntityType> getSourceEntityType() {
+    public Output<EntityType> sourceEntityType() {
         return this.sourceEntityType;
     }
 
@@ -139,7 +139,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceEntityTypeName", required=true)
       private final Output<String> sourceEntityTypeName;
 
-    public Output<String> getSourceEntityTypeName() {
+    public Output<String> sourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
 
@@ -150,7 +150,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetEntityType", required=true)
       private final Output<EntityType> targetEntityType;
 
-    public Output<EntityType> getTargetEntityType() {
+    public Output<EntityType> targetEntityType() {
         return this.targetEntityType;
     }
 
@@ -161,7 +161,7 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetEntityTypeName", required=true)
       private final Output<String> targetEntityTypeName;
 
-    public Output<String> getTargetEntityTypeName() {
+    public Output<String> targetEntityTypeName() {
         return this.targetEntityTypeName;
     }
 

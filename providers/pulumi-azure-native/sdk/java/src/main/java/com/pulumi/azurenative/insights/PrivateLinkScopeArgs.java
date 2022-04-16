@@ -23,7 +23,7 @@ public final class PrivateLinkScopeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateLinkScopeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateLinkScopeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scopeName")
       private final @Nullable Output<String> scopeName;
 
-    public Output<String> getScopeName() {
+    public Output<String> scopeName() {
         return this.scopeName == null ? Codegen.empty() : this.scopeName;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateLinkScopeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

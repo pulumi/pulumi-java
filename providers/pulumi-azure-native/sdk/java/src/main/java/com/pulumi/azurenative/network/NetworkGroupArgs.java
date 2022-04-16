@@ -24,7 +24,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditionalMembership")
       private final @Nullable Output<String> conditionalMembership;
 
-    public Output<String> getConditionalMembership() {
+    public Output<String> conditionalMembership() {
         return this.conditionalMembership == null ? Codegen.empty() : this.conditionalMembership;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -57,7 +57,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupMembers")
       private final @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
 
-    public Output<List<GroupMembersItemArgs>> getGroupMembers() {
+    public Output<List<GroupMembersItemArgs>> groupMembers() {
         return this.groupMembers == null ? Codegen.empty() : this.groupMembers;
     }
 
@@ -68,7 +68,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memberType")
       private final @Nullable Output<String> memberType;
 
-    public Output<String> getMemberType() {
+    public Output<String> memberType() {
         return this.memberType == null ? Codegen.empty() : this.memberType;
     }
 
@@ -79,7 +79,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkGroupName")
       private final @Nullable Output<String> networkGroupName;
 
-    public Output<String> getNetworkGroupName() {
+    public Output<String> networkGroupName() {
         return this.networkGroupName == null ? Codegen.empty() : this.networkGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -101,7 +101,7 @@ public final class NetworkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

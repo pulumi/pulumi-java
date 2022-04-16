@@ -43,7 +43,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return For optimistic concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -57,7 +57,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Name of the group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Properties of the group.
      * 
      */
-    public Output<GroupPropertiesResponse> getProperties() {
+    public Output<GroupPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

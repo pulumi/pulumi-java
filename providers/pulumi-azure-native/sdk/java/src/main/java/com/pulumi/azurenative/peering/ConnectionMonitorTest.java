@@ -44,7 +44,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test destination
      * 
      */
-    public Output</* @Nullable */ String> getDestination() {
+    public Output</* @Nullable */ String> destination() {
         return this.destination;
     }
     /**
@@ -58,7 +58,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test destination port
      * 
      */
-    public Output</* @Nullable */ Integer> getDestinationPort() {
+    public Output</* @Nullable */ Integer> destinationPort() {
         return this.destinationPort;
     }
     /**
@@ -72,7 +72,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The flag that indicates if the Connection Monitor test is successful or not.
      * 
      */
-    public Output<Boolean> getIsTestSuccessful() {
+    public Output<Boolean> isTestSuccessful() {
         return this.isTestSuccessful;
     }
     /**
@@ -86,7 +86,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The path representing the Connection Monitor test.
      * 
      */
-    public Output<List<String>> getPath() {
+    public Output<List<String>> path() {
         return this.path;
     }
     /**
@@ -114,7 +114,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +128,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test source agent
      * 
      */
-    public Output</* @Nullable */ String> getSourceAgent() {
+    public Output</* @Nullable */ String> sourceAgent() {
         return this.sourceAgent;
     }
     /**
@@ -142,7 +142,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test frequency in seconds
      * 
      */
-    public Output</* @Nullable */ Integer> getTestFrequencyInSec() {
+    public Output</* @Nullable */ Integer> testFrequencyInSec() {
         return this.testFrequencyInSec;
     }
     /**
@@ -156,7 +156,7 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

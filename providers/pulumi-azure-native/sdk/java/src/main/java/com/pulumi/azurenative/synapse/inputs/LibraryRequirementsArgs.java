@@ -26,7 +26,7 @@ public final class LibraryRequirementsArgs extends com.pulumi.resources.Resource
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -37,7 +37,7 @@ public final class LibraryRequirementsArgs extends com.pulumi.resources.Resource
     @Import(name="filename")
       private final @Nullable Output<String> filename;
 
-    public Output<String> getFilename() {
+    public Output<String> filename() {
         return this.filename == null ? Codegen.empty() : this.filename;
     }
 

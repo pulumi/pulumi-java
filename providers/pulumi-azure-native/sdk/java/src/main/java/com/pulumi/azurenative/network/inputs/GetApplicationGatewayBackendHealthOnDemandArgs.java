@@ -27,7 +27,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="applicationGatewayName", required=true)
       private final String applicationGatewayName;
 
-    public String getApplicationGatewayName() {
+    public String applicationGatewayName() {
         return this.applicationGatewayName;
     }
 
@@ -38,7 +38,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="backendAddressPool")
       private final @Nullable SubResource backendAddressPool;
 
-    public Optional<SubResource> getBackendAddressPool() {
+    public Optional<SubResource> backendAddressPool() {
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
     }
 
@@ -49,7 +49,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="backendHttpSettings")
       private final @Nullable SubResource backendHttpSettings;
 
-    public Optional<SubResource> getBackendHttpSettings() {
+    public Optional<SubResource> backendHttpSettings() {
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
     }
 
@@ -60,7 +60,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -71,7 +71,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="host")
       private final @Nullable String host;
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
@@ -82,7 +82,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="match")
       private final @Nullable ApplicationGatewayProbeHealthResponseMatch match;
 
-    public Optional<ApplicationGatewayProbeHealthResponseMatch> getMatch() {
+    public Optional<ApplicationGatewayProbeHealthResponseMatch> match() {
         return this.match == null ? Optional.empty() : Optional.ofNullable(this.match);
     }
 
@@ -93,7 +93,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -104,7 +104,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="pickHostNameFromBackendHttpSettings")
       private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
 
-    public Optional<Boolean> getPickHostNameFromBackendHttpSettings() {
+    public Optional<Boolean> pickHostNameFromBackendHttpSettings() {
         return this.pickHostNameFromBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
     }
 
@@ -115,7 +115,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="protocol")
       private final @Nullable Either<String,ApplicationGatewayProtocol> protocol;
 
-    public Either<String,ApplicationGatewayProtocol> getProtocol() {
+    public Either<String,ApplicationGatewayProtocol> protocol() {
         return this.protocol == null ? null : this.protocol;
     }
 
@@ -126,7 +126,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -137,7 +137,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends com.pu
     @Import(name="timeout")
       private final @Nullable Integer timeout;
 
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

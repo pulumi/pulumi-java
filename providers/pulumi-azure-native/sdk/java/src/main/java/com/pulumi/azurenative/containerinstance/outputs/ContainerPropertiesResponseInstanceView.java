@@ -49,28 +49,28 @@ public final class ContainerPropertiesResponseInstanceView {
      * Current container instance state.
      * 
     */
-    public ContainerStateResponse getCurrentState() {
+    public ContainerStateResponse currentState() {
         return this.currentState;
     }
     /**
      * The events of the container instance.
      * 
     */
-    public List<EventResponse> getEvents() {
+    public List<EventResponse> events() {
         return this.events;
     }
     /**
      * Previous container instance state.
      * 
     */
-    public ContainerStateResponse getPreviousState() {
+    public ContainerStateResponse previousState() {
         return this.previousState;
     }
     /**
      * The number of times that the container instance has been restarted.
      * 
     */
-    public Integer getRestartCount() {
+    public Integer restartCount() {
         return this.restartCount;
     }
 

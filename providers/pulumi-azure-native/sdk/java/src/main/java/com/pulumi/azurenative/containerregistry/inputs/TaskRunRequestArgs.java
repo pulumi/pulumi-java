@@ -28,7 +28,7 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
+    public Output<String> agentPoolName() {
         return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
@@ -39,7 +39,7 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Output<Boolean> getIsArchiveEnabled() {
+    public Output<Boolean> isArchiveEnabled() {
         return this.isArchiveEnabled == null ? Codegen.empty() : this.isArchiveEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
 
-    public Output<String> getLogTemplate() {
+    public Output<String> logTemplate() {
         return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
     }
 
@@ -61,7 +61,7 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="overrideTaskStepProperties")
       private final @Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
 
-    public Output<OverrideTaskStepPropertiesArgs> getOverrideTaskStepProperties() {
+    public Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties() {
         return this.overrideTaskStepProperties == null ? Codegen.empty() : this.overrideTaskStepProperties;
     }
 
@@ -72,7 +72,7 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="taskId", required=true)
       private final Output<String> taskId;
 
-    public Output<String> getTaskId() {
+    public Output<String> taskId() {
         return this.taskId;
     }
 
@@ -84,7 +84,7 @@ public final class TaskRunRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

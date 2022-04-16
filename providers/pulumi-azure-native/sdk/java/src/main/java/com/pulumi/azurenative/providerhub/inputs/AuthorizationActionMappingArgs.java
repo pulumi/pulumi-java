@@ -18,14 +18,14 @@ public final class AuthorizationActionMappingArgs extends com.pulumi.resources.R
     @Import(name="desired")
       private final @Nullable Output<String> desired;
 
-    public Output<String> getDesired() {
+    public Output<String> desired() {
         return this.desired == null ? Codegen.empty() : this.desired;
     }
 
     @Import(name="original")
       private final @Nullable Output<String> original;
 
-    public Output<String> getOriginal() {
+    public Output<String> original() {
         return this.original == null ? Codegen.empty() : this.original;
     }
 

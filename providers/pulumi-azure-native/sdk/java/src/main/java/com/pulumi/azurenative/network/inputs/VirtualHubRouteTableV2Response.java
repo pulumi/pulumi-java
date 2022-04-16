@@ -27,7 +27,7 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="attachedConnections")
       private final @Nullable List<String> attachedConnections;
 
-    public List<String> getAttachedConnections() {
+    public List<String> attachedConnections() {
         return this.attachedConnections == null ? List.of() : this.attachedConnections;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -60,7 +60,7 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -71,7 +71,7 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -82,7 +82,7 @@ public final class VirtualHubRouteTableV2Response extends com.pulumi.resources.I
     @Import(name="routes")
       private final @Nullable List<VirtualHubRouteV2Response> routes;
 
-    public List<VirtualHubRouteV2Response> getRoutes() {
+    public List<VirtualHubRouteV2Response> routes() {
         return this.routes == null ? List.of() : this.routes;
     }
 

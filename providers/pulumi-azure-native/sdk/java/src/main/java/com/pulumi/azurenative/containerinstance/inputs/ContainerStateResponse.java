@@ -24,7 +24,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="detailStatus", required=true)
       private final String detailStatus;
 
-    public String getDetailStatus() {
+    public String detailStatus() {
         return this.detailStatus;
     }
 
@@ -35,7 +35,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exitCode", required=true)
       private final Integer exitCode;
 
-    public Integer getExitCode() {
+    public Integer exitCode() {
         return this.exitCode;
     }
 
@@ -46,7 +46,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="finishTime", required=true)
       private final String finishTime;
 
-    public String getFinishTime() {
+    public String finishTime() {
         return this.finishTime;
     }
 
@@ -57,7 +57,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -68,7 +68,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

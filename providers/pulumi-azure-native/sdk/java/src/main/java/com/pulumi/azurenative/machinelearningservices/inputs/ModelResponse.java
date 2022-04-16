@@ -31,7 +31,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
@@ -42,7 +42,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasets")
       private final @Nullable List<DatasetReferenceResponse> datasets;
 
-    public List<DatasetReferenceResponse> getDatasets() {
+    public List<DatasetReferenceResponse> datasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
 
@@ -53,7 +53,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="derivedModelIds")
       private final @Nullable List<String> derivedModelIds;
 
-    public List<String> getDerivedModelIds() {
+    public List<String> derivedModelIds() {
         return this.derivedModelIds == null ? List.of() : this.derivedModelIds;
     }
 
@@ -64,7 +64,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -75,7 +75,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="experimentName")
       private final @Nullable String experimentName;
 
-    public Optional<String> getExperimentName() {
+    public Optional<String> experimentName() {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
     }
 
@@ -86,7 +86,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="framework")
       private final @Nullable String framework;
 
-    public Optional<String> getFramework() {
+    public Optional<String> framework() {
         return this.framework == null ? Optional.empty() : Optional.ofNullable(this.framework);
     }
 
@@ -97,7 +97,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="frameworkVersion")
       private final @Nullable String frameworkVersion;
 
-    public Optional<String> getFrameworkVersion() {
+    public Optional<String> frameworkVersion() {
         return this.frameworkVersion == null ? Optional.empty() : Optional.ofNullable(this.frameworkVersion);
     }
 
@@ -108,7 +108,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -119,7 +119,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
 
-    public Map<String,String> getKvTags() {
+    public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
 
@@ -130,7 +130,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mimeType", required=true)
       private final String mimeType;
 
-    public String getMimeType() {
+    public String mimeType() {
         return this.mimeType;
     }
 
@@ -141,7 +141,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedTime")
       private final @Nullable String modifiedTime;
 
-    public Optional<String> getModifiedTime() {
+    public Optional<String> modifiedTime() {
         return this.modifiedTime == null ? Optional.empty() : Optional.ofNullable(this.modifiedTime);
     }
 
@@ -152,7 +152,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -163,7 +163,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentModelId")
       private final @Nullable String parentModelId;
 
-    public Optional<String> getParentModelId() {
+    public Optional<String> parentModelId() {
         return this.parentModelId == null ? Optional.empty() : Optional.ofNullable(this.parentModelId);
     }
 
@@ -174,7 +174,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -185,7 +185,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse resourceRequirements;
 
-    public Optional<ContainerResourceRequirementsResponse> getResourceRequirements() {
+    public Optional<ContainerResourceRequirementsResponse> resourceRequirements() {
         return this.resourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.resourceRequirements);
     }
 
@@ -196,7 +196,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runId")
       private final @Nullable String runId;
 
-    public Optional<String> getRunId() {
+    public Optional<String> runId() {
         return this.runId == null ? Optional.empty() : Optional.ofNullable(this.runId);
     }
 
@@ -207,7 +207,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sampleInputData")
       private final @Nullable String sampleInputData;
 
-    public Optional<String> getSampleInputData() {
+    public Optional<String> sampleInputData() {
         return this.sampleInputData == null ? Optional.empty() : Optional.ofNullable(this.sampleInputData);
     }
 
@@ -218,7 +218,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sampleOutputData")
       private final @Nullable String sampleOutputData;
 
-    public Optional<String> getSampleOutputData() {
+    public Optional<String> sampleOutputData() {
         return this.sampleOutputData == null ? Optional.empty() : Optional.ofNullable(this.sampleOutputData);
     }
 
@@ -229,7 +229,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="unpack")
       private final @Nullable Boolean unpack;
 
-    public Optional<Boolean> getUnpack() {
+    public Optional<Boolean> unpack() {
         return this.unpack == null ? Optional.empty() : Optional.ofNullable(this.unpack);
     }
 
@@ -240,7 +240,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 
@@ -251,7 +251,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable Double version;
 
-    public Optional<Double> getVersion() {
+    public Optional<Double> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

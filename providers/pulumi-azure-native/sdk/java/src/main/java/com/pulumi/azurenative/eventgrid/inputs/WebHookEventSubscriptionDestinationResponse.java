@@ -26,7 +26,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
     @Import(name="azureActiveDirectoryApplicationIdOrUri")
       private final @Nullable String azureActiveDirectoryApplicationIdOrUri;
 
-    public Optional<String> getAzureActiveDirectoryApplicationIdOrUri() {
+    public Optional<String> azureActiveDirectoryApplicationIdOrUri() {
         return this.azureActiveDirectoryApplicationIdOrUri == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
     }
 
@@ -37,7 +37,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
     @Import(name="azureActiveDirectoryTenantId")
       private final @Nullable String azureActiveDirectoryTenantId;
 
-    public Optional<String> getAzureActiveDirectoryTenantId() {
+    public Optional<String> azureActiveDirectoryTenantId() {
         return this.azureActiveDirectoryTenantId == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryTenantId);
     }
 
@@ -48,7 +48,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
     @Import(name="endpointBaseUrl", required=true)
       private final String endpointBaseUrl;
 
-    public String getEndpointBaseUrl() {
+    public String endpointBaseUrl() {
         return this.endpointBaseUrl;
     }
 
@@ -60,7 +60,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
     @Import(name="endpointType", required=true)
       private final String endpointType;
 
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
 
@@ -71,7 +71,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
     @Import(name="endpointUrl")
       private final @Nullable String endpointUrl;
 
-    public Optional<String> getEndpointUrl() {
+    public Optional<String> endpointUrl() {
         return this.endpointUrl == null ? Optional.empty() : Optional.ofNullable(this.endpointUrl);
     }
 
@@ -82,7 +82,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
     @Import(name="maxEventsPerBatch")
       private final @Nullable Integer maxEventsPerBatch;
 
-    public Optional<Integer> getMaxEventsPerBatch() {
+    public Optional<Integer> maxEventsPerBatch() {
         return this.maxEventsPerBatch == null ? Optional.empty() : Optional.ofNullable(this.maxEventsPerBatch);
     }
 
@@ -93,7 +93,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
     @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Integer preferredBatchSizeInKilobytes;
 
-    public Optional<Integer> getPreferredBatchSizeInKilobytes() {
+    public Optional<Integer> preferredBatchSizeInKilobytes() {
         return this.preferredBatchSizeInKilobytes == null ? Optional.empty() : Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
 

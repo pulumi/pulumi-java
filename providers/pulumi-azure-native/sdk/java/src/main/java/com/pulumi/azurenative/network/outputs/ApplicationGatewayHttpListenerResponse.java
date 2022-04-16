@@ -129,105 +129,105 @@ public final class ApplicationGatewayHttpListenerResponse {
      * Custom error configurations of the HTTP listener.
      * 
     */
-    public List<ApplicationGatewayCustomErrorResponse> getCustomErrorConfigurations() {
+    public List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations() {
         return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Reference to the FirewallPolicy resource.
      * 
     */
-    public Optional<SubResourceResponse> getFirewallPolicy() {
+    public Optional<SubResourceResponse> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
     /**
      * Frontend IP configuration resource of an application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getFrontendIPConfiguration() {
+    public Optional<SubResourceResponse> frontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
     /**
      * Frontend port resource of an application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getFrontendPort() {
+    public Optional<SubResourceResponse> frontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
     /**
      * Host name of HTTP listener.
      * 
     */
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * List of Host names for HTTP Listener that allows special wildcard characters as well.
      * 
     */
-    public List<String> getHostNames() {
+    public List<String> hostNames() {
         return this.hostNames == null ? List.of() : this.hostNames;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the HTTP listener that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Protocol of the HTTP listener.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The provisioning state of the HTTP listener resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Applicable only if protocol is https. Enables SNI for multi-hosting.
      * 
     */
-    public Optional<Boolean> getRequireServerNameIndication() {
+    public Optional<Boolean> requireServerNameIndication() {
         return Optional.ofNullable(this.requireServerNameIndication);
     }
     /**
      * SSL certificate resource of an application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getSslCertificate() {
+    public Optional<SubResourceResponse> sslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
     /**
      * SSL profile resource of the application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getSslProfile() {
+    public Optional<SubResourceResponse> sslProfile() {
         return Optional.ofNullable(this.sslProfile);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="certificateName", required=true)
       private final String certificateName;
 
-    public String getCertificateName() {
+    public String certificateName() {
         return this.certificateName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
 
-    public String getProvisioningServiceName() {
+    public String provisioningServiceName() {
         return this.provisioningServiceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -19,7 +19,7 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
     @Import(name="reportName", required=true)
       private final String reportName;
 
-    public String getReportName() {
+    public String reportName() {
         return this.reportName;
     }
 
@@ -30,7 +30,7 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

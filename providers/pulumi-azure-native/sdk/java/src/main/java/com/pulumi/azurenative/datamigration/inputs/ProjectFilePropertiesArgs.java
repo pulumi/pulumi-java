@@ -26,7 +26,7 @@ public final class ProjectFilePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="extension")
       private final @Nullable Output<String> extension;
 
-    public Output<String> getExtension() {
+    public Output<String> extension() {
         return this.extension == null ? Codegen.empty() : this.extension;
     }
 
@@ -37,7 +37,7 @@ public final class ProjectFilePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
-    public Output<String> getFilePath() {
+    public Output<String> filePath() {
         return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
@@ -48,7 +48,7 @@ public final class ProjectFilePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="mediaType")
       private final @Nullable Output<String> mediaType;
 
-    public Output<String> getMediaType() {
+    public Output<String> mediaType() {
         return this.mediaType == null ? Codegen.empty() : this.mediaType;
     }
 

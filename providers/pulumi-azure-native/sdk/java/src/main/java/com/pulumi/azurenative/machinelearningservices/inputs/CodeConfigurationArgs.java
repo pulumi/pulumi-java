@@ -26,7 +26,7 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="codeId")
       private final @Nullable Output<String> codeId;
 
-    public Output<String> getCodeId() {
+    public Output<String> codeId() {
         return this.codeId == null ? Codegen.empty() : this.codeId;
     }
 
@@ -37,7 +37,7 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scoringScript", required=true)
       private final Output<String> scoringScript;
 
-    public Output<String> getScoringScript() {
+    public Output<String> scoringScript() {
         return this.scoringScript;
     }
 

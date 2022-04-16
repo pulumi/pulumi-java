@@ -43,13 +43,13 @@ public class SubscriptionFeatureRegistration extends com.pulumi.resources.Custom
      * @return Azure resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=SubscriptionFeatureRegistrationResponseProperties.class, parameters={})
     private Output<SubscriptionFeatureRegistrationResponseProperties> properties;
 
-    public Output<SubscriptionFeatureRegistrationResponseProperties> getProperties() {
+    public Output<SubscriptionFeatureRegistrationResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -63,7 +63,7 @@ public class SubscriptionFeatureRegistration extends com.pulumi.resources.Custom
      * @return Azure resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

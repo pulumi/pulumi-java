@@ -96,70 +96,70 @@ public final class SqlContainerGetPropertiesResponseResource {
      * Analytical TTL.
      * 
     */
-    public Optional<Double> getAnalyticalStorageTtl() {
+    public Optional<Double> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
     /**
      * The conflict resolution policy for the container.
      * 
     */
-    public Optional<ConflictResolutionPolicyResponse> getConflictResolutionPolicy() {
+    public Optional<ConflictResolutionPolicyResponse> conflictResolutionPolicy() {
         return Optional.ofNullable(this.conflictResolutionPolicy);
     }
     /**
      * Default time to live
      * 
     */
-    public Optional<Integer> getDefaultTtl() {
+    public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB SQL container
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
      * 
     */
-    public Optional<IndexingPolicyResponse> getIndexingPolicy() {
+    public Optional<IndexingPolicyResponse> indexingPolicy() {
         return Optional.ofNullable(this.indexingPolicy);
     }
     /**
      * The configuration of the partition key to be used for partitioning data into multiple partitions
      * 
     */
-    public Optional<ContainerPartitionKeyResponse> getPartitionKey() {
+    public Optional<ContainerPartitionKeyResponse> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * A system generated property. A unique identifier.
      * 
     */
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
     */
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
     /**
      * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
      * 
     */
-    public Optional<UniqueKeyPolicyResponse> getUniqueKeyPolicy() {
+    public Optional<UniqueKeyPolicyResponse> uniqueKeyPolicy() {
         return Optional.ofNullable(this.uniqueKeyPolicy);
     }
 

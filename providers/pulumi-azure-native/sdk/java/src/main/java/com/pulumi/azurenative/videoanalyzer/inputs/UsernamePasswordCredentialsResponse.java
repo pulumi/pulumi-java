@@ -23,7 +23,7 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -35,7 +35,7 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -46,7 +46,7 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

@@ -25,7 +25,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="attribute", required=true)
       private final String attribute;
 
-    public String getAttribute() {
+    public String attribute() {
         return this.attribute;
     }
 
@@ -36,7 +36,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="channelMapping")
       private final @Nullable String channelMapping;
 
-    public Optional<String> getChannelMapping() {
+    public Optional<String> channelMapping() {
         return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
     }
 
@@ -47,7 +47,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -58,7 +58,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="filterValue")
       private final @Nullable String filterValue;
 
-    public Optional<String> getFilterValue() {
+    public Optional<String> filterValue() {
         return this.filterValue == null ? Optional.empty() : Optional.ofNullable(this.filterValue);
     }
 
@@ -70,7 +70,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

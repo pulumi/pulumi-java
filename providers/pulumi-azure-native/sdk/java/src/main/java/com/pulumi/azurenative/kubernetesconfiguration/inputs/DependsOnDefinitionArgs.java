@@ -26,7 +26,7 @@ public final class DependsOnDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="kustomizationName")
       private final @Nullable Output<String> kustomizationName;
 
-    public Output<String> getKustomizationName() {
+    public Output<String> kustomizationName() {
         return this.kustomizationName == null ? Codegen.empty() : this.kustomizationName;
     }
 

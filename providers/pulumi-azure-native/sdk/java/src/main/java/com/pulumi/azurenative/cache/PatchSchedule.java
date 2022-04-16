@@ -43,7 +43,7 @@ public class PatchSchedule extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class PatchSchedule extends com.pulumi.resources.CustomResource {
      * @return List of patch schedules for a Redis cache.
      * 
      */
-    public Output<List<ScheduleEntryResponse>> getScheduleEntries() {
+    public Output<List<ScheduleEntryResponse>> scheduleEntries() {
         return this.scheduleEntries;
     }
     /**
@@ -71,7 +71,7 @@ public class PatchSchedule extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

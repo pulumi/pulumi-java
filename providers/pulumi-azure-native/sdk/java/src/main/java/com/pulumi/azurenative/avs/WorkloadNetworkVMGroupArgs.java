@@ -24,7 +24,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -46,7 +46,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -57,7 +57,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
+    public Output<Double> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -79,7 +79,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="vmGroupId")
       private final @Nullable Output<String> vmGroupId;
 
-    public Output<String> getVmGroupId() {
+    public Output<String> vmGroupId() {
         return this.vmGroupId == null ? Codegen.empty() : this.vmGroupId;
     }
 

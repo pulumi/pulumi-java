@@ -26,7 +26,7 @@ public final class EventHubEventSubscriptionDestinationResponse extends com.pulu
     @Import(name="endpointType", required=true)
       private final String endpointType;
 
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
 
@@ -37,7 +37,7 @@ public final class EventHubEventSubscriptionDestinationResponse extends com.pulu
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

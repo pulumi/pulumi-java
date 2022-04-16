@@ -28,7 +28,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="inline")
       private final @Nullable List<String> inline;
 
-    public List<String> getInline() {
+    public List<String> inline() {
         return this.inline == null ? List.of() : this.inline;
     }
 
@@ -39,7 +39,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -50,7 +50,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="runAsSystem")
       private final @Nullable Boolean runAsSystem;
 
-    public Optional<Boolean> getRunAsSystem() {
+    public Optional<Boolean> runAsSystem() {
         return this.runAsSystem == null ? Optional.empty() : Optional.ofNullable(this.runAsSystem);
     }
 
@@ -61,7 +61,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="runElevated")
       private final @Nullable Boolean runElevated;
 
-    public Optional<Boolean> getRunElevated() {
+    public Optional<Boolean> runElevated() {
         return this.runElevated == null ? Optional.empty() : Optional.ofNullable(this.runElevated);
     }
 
@@ -72,7 +72,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="scriptUri")
       private final @Nullable String scriptUri;
 
-    public Optional<String> getScriptUri() {
+    public Optional<String> scriptUri() {
         return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
     }
 
@@ -83,7 +83,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="sha256Checksum")
       private final @Nullable String sha256Checksum;
 
-    public Optional<String> getSha256Checksum() {
+    public Optional<String> sha256Checksum() {
         return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
     }
 
@@ -95,7 +95,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -106,7 +106,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends com.pulumi.
     @Import(name="validExitCodes")
       private final @Nullable List<Integer> validExitCodes;
 
-    public List<Integer> getValidExitCodes() {
+    public List<Integer> validExitCodes() {
         return this.validExitCodes == null ? List.of() : this.validExitCodes;
     }
 

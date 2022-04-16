@@ -26,7 +26,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceMapping")
       private final @Nullable Output<IotMappingPropertiesArgs> deviceMapping;
 
-    public Output<IotMappingPropertiesArgs> getDeviceMapping() {
+    public Output<IotMappingPropertiesArgs> deviceMapping() {
         return this.deviceMapping == null ? Codegen.empty() : this.deviceMapping;
     }
 
@@ -37,7 +37,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
-    public Output<ServiceManagedIdentityIdentityArgs> getIdentity() {
+    public Output<ServiceManagedIdentityIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -48,7 +48,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingestionEndpointConfiguration")
       private final @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
 
-    public Output<IotEventHubIngestionEndpointConfigurationArgs> getIngestionEndpointConfiguration() {
+    public Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration() {
         return this.ingestionEndpointConfiguration == null ? Codegen.empty() : this.ingestionEndpointConfiguration;
     }
 
@@ -59,7 +59,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iotConnectorName")
       private final @Nullable Output<String> iotConnectorName;
 
-    public Output<String> getIotConnectorName() {
+    public Output<String> iotConnectorName() {
         return this.iotConnectorName == null ? Codegen.empty() : this.iotConnectorName;
     }
 
@@ -70,7 +70,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,7 +81,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

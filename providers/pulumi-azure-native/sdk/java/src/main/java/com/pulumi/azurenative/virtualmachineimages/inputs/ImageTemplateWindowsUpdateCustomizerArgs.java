@@ -28,7 +28,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="filters")
       private final @Nullable Output<List<String>> filters;
 
-    public Output<List<String>> getFilters() {
+    public Output<List<String>> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 
@@ -39,7 +39,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="searchCriteria")
       private final @Nullable Output<String> searchCriteria;
 
-    public Output<String> getSearchCriteria() {
+    public Output<String> searchCriteria() {
         return this.searchCriteria == null ? Codegen.empty() : this.searchCriteria;
     }
 
@@ -62,7 +62,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -73,7 +73,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
     @Import(name="updateLimit")
       private final @Nullable Output<Integer> updateLimit;
 
-    public Output<Integer> getUpdateLimit() {
+    public Output<Integer> updateLimit() {
         return this.updateLimit == null ? Codegen.empty() : this.updateLimit;
     }
 

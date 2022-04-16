@@ -26,7 +26,7 @@ public final class StorageMappingInputPropertiesArgs extends com.pulumi.resource
     @Import(name="targetStorageClassificationId")
       private final @Nullable Output<String> targetStorageClassificationId;
 
-    public Output<String> getTargetStorageClassificationId() {
+    public Output<String> targetStorageClassificationId() {
         return this.targetStorageClassificationId == null ? Codegen.empty() : this.targetStorageClassificationId;
     }
 

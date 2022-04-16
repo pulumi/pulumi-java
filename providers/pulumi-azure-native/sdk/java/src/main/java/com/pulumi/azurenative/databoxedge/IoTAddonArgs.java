@@ -23,7 +23,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
-    public Output<String> getAddonName() {
+    public Output<String> addonName() {
         return this.addonName == null ? Codegen.empty() : this.addonName;
     }
 
@@ -34,7 +34,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -45,7 +45,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
 
@@ -56,7 +56,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
 
@@ -68,7 +68,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -79,7 +79,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName", required=true)
       private final Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName;
     }
 

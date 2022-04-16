@@ -28,7 +28,7 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
 
-    public Output<List<String>> getDependsOn() {
+    public Output<List<String>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -39,7 +39,7 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -61,7 +61,7 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -72,7 +72,7 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -83,7 +83,7 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="strongType")
       private final @Nullable Output<String> strongType;
 
-    public Output<String> getStrongType() {
+    public Output<String> strongType() {
         return this.strongType == null ? Codegen.empty() : this.strongType;
     }
 
@@ -94,7 +94,7 @@ public final class ResourceGroupDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

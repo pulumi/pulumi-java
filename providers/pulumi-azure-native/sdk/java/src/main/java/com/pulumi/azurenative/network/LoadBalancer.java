@@ -52,7 +52,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Collection of backend address pools used by a load balancer.
      * 
      */
-    public Output</* @Nullable */ List<BackendAddressPoolResponse>> getBackendAddressPools() {
+    public Output</* @Nullable */ List<BackendAddressPoolResponse>> backendAddressPools() {
         return this.backendAddressPools;
     }
     /**
@@ -66,7 +66,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -80,7 +80,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The extended location of the load balancer.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -94,7 +94,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Object representing the frontend IPs to be used for the load balancer.
      * 
      */
-    public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> getFrontendIPConfigurations() {
+    public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
     /**
@@ -108,7 +108,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    public Output</* @Nullable */ List<InboundNatPoolResponse>> getInboundNatPools() {
+    public Output</* @Nullable */ List<InboundNatPoolResponse>> inboundNatPools() {
         return this.inboundNatPools;
     }
     /**
@@ -122,7 +122,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    public Output</* @Nullable */ List<InboundNatRuleResponse>> getInboundNatRules() {
+    public Output</* @Nullable */ List<InboundNatRuleResponse>> inboundNatRules() {
         return this.inboundNatRules;
     }
     /**
@@ -136,7 +136,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Object collection representing the load balancing rules Gets the provisioning.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancingRuleResponse>> getLoadBalancingRules() {
+    public Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
@@ -150,7 +150,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -164,7 +164,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -178,7 +178,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The outbound rules.
      * 
      */
-    public Output</* @Nullable */ List<OutboundRuleResponse>> getOutboundRules() {
+    public Output</* @Nullable */ List<OutboundRuleResponse>> outboundRules() {
         return this.outboundRules;
     }
     /**
@@ -192,7 +192,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Collection of probe objects used in the load balancer.
      * 
      */
-    public Output</* @Nullable */ List<ProbeResponse>> getProbes() {
+    public Output</* @Nullable */ List<ProbeResponse>> probes() {
         return this.probes;
     }
     /**
@@ -206,7 +206,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the load balancer resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -220,7 +220,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The resource GUID property of the load balancer resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -234,7 +234,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The load balancer SKU.
      * 
      */
-    public Output</* @Nullable */ LoadBalancerSkuResponse> getSku() {
+    public Output</* @Nullable */ LoadBalancerSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -248,7 +248,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -262,7 +262,7 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

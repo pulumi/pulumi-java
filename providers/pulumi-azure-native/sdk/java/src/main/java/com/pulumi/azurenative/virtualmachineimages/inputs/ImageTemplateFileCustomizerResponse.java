@@ -25,7 +25,7 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="destination")
       private final @Nullable String destination;
 
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
@@ -36,7 +36,7 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="sha256Checksum")
       private final @Nullable String sha256Checksum;
 
-    public Optional<String> getSha256Checksum() {
+    public Optional<String> sha256Checksum() {
         return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
     }
 
@@ -58,7 +58,7 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="sourceUri")
       private final @Nullable String sourceUri;
 
-    public Optional<String> getSourceUri() {
+    public Optional<String> sourceUri() {
         return this.sourceUri == null ? Optional.empty() : Optional.ofNullable(this.sourceUri);
     }
 
@@ -70,7 +70,7 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class StoredProcedureParameterResponse extends com.pulumi.resources
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -37,7 +37,7 @@ public final class StoredProcedureParameterResponse extends com.pulumi.resources
     @Import(name="value")
       private final @Nullable Object value;
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

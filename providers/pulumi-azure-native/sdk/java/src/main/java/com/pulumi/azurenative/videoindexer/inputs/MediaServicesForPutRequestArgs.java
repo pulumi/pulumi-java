@@ -26,7 +26,7 @@ public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.R
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -37,7 +37,7 @@ public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.R
     @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
+    public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 

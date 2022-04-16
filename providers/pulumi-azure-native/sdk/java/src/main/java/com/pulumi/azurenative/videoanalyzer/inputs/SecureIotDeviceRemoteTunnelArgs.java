@@ -25,7 +25,7 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -36,7 +36,7 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
     @Import(name="iotHubName", required=true)
       private final Output<String> iotHubName;
 
-    public Output<String> getIotHubName() {
+    public Output<String> iotHubName() {
         return this.iotHubName;
     }
 
@@ -48,7 +48,7 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

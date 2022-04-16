@@ -221,189 +221,189 @@ public final class ReplicationProtectedItemPropertiesResponse {
      * The Current active location of the PE.
      * 
     */
-    public Optional<String> getActiveLocation() {
+    public Optional<String> activeLocation() {
         return Optional.ofNullable(this.activeLocation);
     }
     /**
      * The allowed operations on the Replication protected item.
      * 
     */
-    public List<String> getAllowedOperations() {
+    public List<String> allowedOperations() {
         return this.allowedOperations == null ? List.of() : this.allowedOperations;
     }
     /**
      * The current scenario.
      * 
     */
-    public Optional<CurrentScenarioDetailsResponse> getCurrentScenario() {
+    public Optional<CurrentScenarioDetailsResponse> currentScenario() {
         return Optional.ofNullable(this.currentScenario);
     }
     /**
      * The consolidated failover health for the VM.
      * 
     */
-    public Optional<String> getFailoverHealth() {
+    public Optional<String> failoverHealth() {
         return Optional.ofNullable(this.failoverHealth);
     }
     /**
      * The recovery point ARM Id to which the Vm was failed over.
      * 
     */
-    public Optional<String> getFailoverRecoveryPointId() {
+    public Optional<String> failoverRecoveryPointId() {
         return Optional.ofNullable(this.failoverRecoveryPointId);
     }
     /**
      * The name.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * List of health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
      * The Last successful failover time.
      * 
     */
-    public Optional<String> getLastSuccessfulFailoverTime() {
+    public Optional<String> lastSuccessfulFailoverTime() {
         return Optional.ofNullable(this.lastSuccessfulFailoverTime);
     }
     /**
      * The Last successful test failover time.
      * 
     */
-    public Optional<String> getLastSuccessfulTestFailoverTime() {
+    public Optional<String> lastSuccessfulTestFailoverTime() {
         return Optional.ofNullable(this.lastSuccessfulTestFailoverTime);
     }
     /**
      * The name of Policy governing this PE.
      * 
     */
-    public Optional<String> getPolicyFriendlyName() {
+    public Optional<String> policyFriendlyName() {
         return Optional.ofNullable(this.policyFriendlyName);
     }
     /**
      * The ID of Policy governing this PE.
      * 
     */
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * The friendly name of the primary fabric.
      * 
     */
-    public Optional<String> getPrimaryFabricFriendlyName() {
+    public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
     /**
      * The fabric provider of the primary fabric.
      * 
     */
-    public Optional<String> getPrimaryFabricProvider() {
+    public Optional<String> primaryFabricProvider() {
         return Optional.ofNullable(this.primaryFabricProvider);
     }
     /**
      * The name of primary protection container friendly name.
      * 
     */
-    public Optional<String> getPrimaryProtectionContainerFriendlyName() {
+    public Optional<String> primaryProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.primaryProtectionContainerFriendlyName);
     }
     /**
      * The protected item ARM Id.
      * 
     */
-    public Optional<String> getProtectableItemId() {
+    public Optional<String> protectableItemId() {
         return Optional.ofNullable(this.protectableItemId);
     }
     /**
      * The type of protected item type.
      * 
     */
-    public Optional<String> getProtectedItemType() {
+    public Optional<String> protectedItemType() {
         return Optional.ofNullable(this.protectedItemType);
     }
     /**
      * The protection status.
      * 
     */
-    public Optional<String> getProtectionState() {
+    public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
      * The protection state description.
      * 
     */
-    public Optional<String> getProtectionStateDescription() {
+    public Optional<String> protectionStateDescription() {
         return Optional.ofNullable(this.protectionStateDescription);
     }
     /**
      * The Replication provider custom settings.
      * 
     */
-    public Optional<Object> getProviderSpecificDetails() {
+    public Optional<Object> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
     /**
      * The recovery container Id.
      * 
     */
-    public Optional<String> getRecoveryContainerId() {
+    public Optional<String> recoveryContainerId() {
         return Optional.ofNullable(this.recoveryContainerId);
     }
     /**
      * The friendly name of recovery fabric.
      * 
     */
-    public Optional<String> getRecoveryFabricFriendlyName() {
+    public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
     /**
      * The Arm Id of recovery fabric.
      * 
     */
-    public Optional<String> getRecoveryFabricId() {
+    public Optional<String> recoveryFabricId() {
         return Optional.ofNullable(this.recoveryFabricId);
     }
     /**
      * The name of recovery container friendly name.
      * 
     */
-    public Optional<String> getRecoveryProtectionContainerFriendlyName() {
+    public Optional<String> recoveryProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.recoveryProtectionContainerFriendlyName);
     }
     /**
      * The recovery provider ARM Id.
      * 
     */
-    public Optional<String> getRecoveryServicesProviderId() {
+    public Optional<String> recoveryServicesProviderId() {
         return Optional.ofNullable(this.recoveryServicesProviderId);
     }
     /**
      * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM's replication group into account. This is a string representation of the ProtectionHealth enumeration.
      * 
     */
-    public Optional<String> getReplicationHealth() {
+    public Optional<String> replicationHealth() {
         return Optional.ofNullable(this.replicationHealth);
     }
     /**
      * The Test failover state.
      * 
     */
-    public Optional<String> getTestFailoverState() {
+    public Optional<String> testFailoverState() {
         return Optional.ofNullable(this.testFailoverState);
     }
     /**
      * The Test failover state description.
      * 
     */
-    public Optional<String> getTestFailoverStateDescription() {
+    public Optional<String> testFailoverStateDescription() {
         return Optional.ofNullable(this.testFailoverStateDescription);
     }
 

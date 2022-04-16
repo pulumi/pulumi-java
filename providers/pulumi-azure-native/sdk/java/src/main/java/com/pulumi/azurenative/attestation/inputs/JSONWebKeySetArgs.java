@@ -27,7 +27,7 @@ public final class JSONWebKeySetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<List<JSONWebKeyArgs>> keys;
 
-    public Output<List<JSONWebKeyArgs>> getKeys() {
+    public Output<List<JSONWebKeyArgs>> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 

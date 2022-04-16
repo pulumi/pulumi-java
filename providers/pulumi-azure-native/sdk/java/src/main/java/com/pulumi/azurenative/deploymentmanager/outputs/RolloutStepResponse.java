@@ -66,42 +66,42 @@ public final class RolloutStepResponse {
      * Supplementary informative messages during rollout.
      * 
     */
-    public List<MessageResponse> getMessages() {
+    public List<MessageResponse> messages() {
         return this.messages;
     }
     /**
      * Name of the step.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Detailed information of specific action execution.
      * 
     */
-    public StepOperationInfoResponse getOperationInfo() {
+    public StepOperationInfoResponse operationInfo() {
         return this.operationInfo;
     }
     /**
      * Set of resource operations that were performed, if any, on an Azure resource.
      * 
     */
-    public List<ResourceOperationResponse> getResourceOperations() {
+    public List<ResourceOperationResponse> resourceOperations() {
         return this.resourceOperations;
     }
     /**
      * Current state of the step.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The step group the current step is part of.
      * 
     */
-    public Optional<String> getStepGroup() {
+    public Optional<String> stepGroup() {
         return Optional.ofNullable(this.stepGroup);
     }
 

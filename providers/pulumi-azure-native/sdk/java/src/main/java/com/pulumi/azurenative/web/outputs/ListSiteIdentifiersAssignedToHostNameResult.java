@@ -34,14 +34,14 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
      * Link to next page of resources.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
      * 
     */
-    public List<IdentifierResponse> getValue() {
+    public List<IdentifierResponse> value() {
         return this.value;
     }
 

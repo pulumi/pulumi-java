@@ -115,91 +115,91 @@ public final class GetZoneResult {
      * The etag of the zone.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
     */
-    public Double getMaxNumberOfRecordSets() {
+    public Double maxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
      * The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
     */
-    public Double getMaxNumberOfRecordsPerRecordSet() {
+    public Double maxNumberOfRecordsPerRecordSet() {
         return this.maxNumberOfRecordsPerRecordSet;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
     */
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
     /**
      * The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
     */
-    public Double getNumberOfRecordSets() {
+    public Double numberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
      * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
     */
-    public List<SubResourceResponse> getRegistrationVirtualNetworks() {
+    public List<SubResourceResponse> registrationVirtualNetworks() {
         return this.registrationVirtualNetworks == null ? List.of() : this.registrationVirtualNetworks;
     }
     /**
      * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
     */
-    public List<SubResourceResponse> getResolutionVirtualNetworks() {
+    public List<SubResourceResponse> resolutionVirtualNetworks() {
         return this.resolutionVirtualNetworks == null ? List.of() : this.resolutionVirtualNetworks;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The type of this DNS zone (Public or Private).
      * 
     */
-    public Optional<String> getZoneType() {
+    public Optional<String> zoneType() {
         return Optional.ofNullable(this.zoneType);
     }
 

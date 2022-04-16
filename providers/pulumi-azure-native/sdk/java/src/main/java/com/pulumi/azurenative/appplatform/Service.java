@@ -45,7 +45,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The GEO location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Properties of the Service resource
      * 
      */
-    public Output<ClusterResourcePropertiesResponse> getProperties() {
+    public Output<ClusterResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -87,7 +87,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Sku of the Service resource
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -101,7 +101,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -115,7 +115,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

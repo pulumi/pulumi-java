@@ -25,7 +25,7 @@ public final class EntityInsightItemResponseQueryTimeInterval extends com.pulumi
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -36,7 +36,7 @@ public final class EntityInsightItemResponseQueryTimeInterval extends com.pulumi
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

@@ -25,7 +25,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="approvalRequired")
       private final @Nullable Output<Boolean> approvalRequired;
 
-    public Output<Boolean> getApprovalRequired() {
+    public Output<Boolean> approvalRequired() {
         return this.approvalRequired == null ? Codegen.empty() : this.approvalRequired;
     }
 
@@ -36,7 +36,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
@@ -69,7 +69,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -91,7 +91,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<ProductState> state;
 
-    public Output<ProductState> getState() {
+    public Output<ProductState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -102,7 +102,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionRequired")
       private final @Nullable Output<Boolean> subscriptionRequired;
 
-    public Output<Boolean> getSubscriptionRequired() {
+    public Output<Boolean> subscriptionRequired() {
         return this.subscriptionRequired == null ? Codegen.empty() : this.subscriptionRequired;
     }
 
@@ -113,7 +113,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionsLimit")
       private final @Nullable Output<Integer> subscriptionsLimit;
 
-    public Output<Integer> getSubscriptionsLimit() {
+    public Output<Integer> subscriptionsLimit() {
         return this.subscriptionsLimit == null ? Codegen.empty() : this.subscriptionsLimit;
     }
 
@@ -124,7 +124,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="terms")
       private final @Nullable Output<String> terms;
 
-    public Output<String> getTerms() {
+    public Output<String> terms() {
         return this.terms == null ? Codegen.empty() : this.terms;
     }
 

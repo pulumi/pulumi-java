@@ -24,7 +24,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -35,7 +35,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,TriggerEventType>> kind;
 
-    public Output<Either<String,TriggerEventType>> getKind() {
+    public Output<Either<String,TriggerEventType>> kind() {
         return this.kind;
     }
 
@@ -46,7 +46,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

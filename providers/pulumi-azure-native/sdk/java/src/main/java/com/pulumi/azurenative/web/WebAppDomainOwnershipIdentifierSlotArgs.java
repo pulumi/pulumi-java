@@ -22,7 +22,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi.re
     @Import(name="domainOwnershipIdentifierName")
       private final @Nullable Output<String> domainOwnershipIdentifierName;
 
-    public Output<String> getDomainOwnershipIdentifierName() {
+    public Output<String> domainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName == null ? Codegen.empty() : this.domainOwnershipIdentifierName;
     }
 
@@ -33,7 +33,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi.re
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -44,7 +44,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -55,7 +55,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi.re
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -77,7 +77,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi.re
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

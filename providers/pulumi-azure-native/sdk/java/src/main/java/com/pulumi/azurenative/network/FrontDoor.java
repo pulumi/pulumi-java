@@ -50,7 +50,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Backend pools available to routing rules.
      * 
      */
-    public Output</* @Nullable */ List<BackendPoolResponse>> getBackendPools() {
+    public Output</* @Nullable */ List<BackendPoolResponse>> backendPools() {
         return this.backendPools;
     }
     /**
@@ -64,7 +64,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Settings for all backendPools
      * 
      */
-    public Output</* @Nullable */ BackendPoolsSettingsResponse> getBackendPoolsSettings() {
+    public Output</* @Nullable */ BackendPoolsSettingsResponse> backendPoolsSettings() {
         return this.backendPoolsSettings;
     }
     /**
@@ -78,7 +78,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return The host that each frontendEndpoint must CNAME to.
      * 
      */
-    public Output<String> getCname() {
+    public Output<String> cname() {
         return this.cname;
     }
     /**
@@ -92,7 +92,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    public Output</* @Nullable */ String> getEnabledState() {
+    public Output</* @Nullable */ String> enabledState() {
         return this.enabledState;
     }
     /**
@@ -106,7 +106,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return A friendly name for the frontDoor
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -120,7 +120,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return The Id of the frontdoor.
      * 
      */
-    public Output<String> getFrontdoorId() {
+    public Output<String> frontdoorId() {
         return this.frontdoorId;
     }
     /**
@@ -134,7 +134,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Frontend endpoints available to routing rules.
      * 
      */
-    public Output</* @Nullable */ List<FrontendEndpointResponse>> getFrontendEndpoints() {
+    public Output</* @Nullable */ List<FrontendEndpointResponse>> frontendEndpoints() {
         return this.frontendEndpoints;
     }
     /**
@@ -148,7 +148,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Health probe settings associated with this Front Door instance.
      * 
      */
-    public Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> getHealthProbeSettings() {
+    public Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> healthProbeSettings() {
         return this.healthProbeSettings;
     }
     /**
@@ -162,7 +162,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Load balancing settings associated with this Front Door instance.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> getLoadBalancingSettings() {
+    public Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> loadBalancingSettings() {
         return this.loadBalancingSettings;
     }
     /**
@@ -176,7 +176,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -190,7 +190,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -204,7 +204,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the Front Door.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -218,7 +218,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Resource status of the Front Door.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -232,7 +232,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Routing rules associated with this Front Door.
      * 
      */
-    public Output</* @Nullable */ List<RoutingRuleResponse>> getRoutingRules() {
+    public Output</* @Nullable */ List<RoutingRuleResponse>> routingRules() {
         return this.routingRules;
     }
     /**
@@ -246,7 +246,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Rules Engine Configurations available to routing rules.
      * 
      */
-    public Output<List<RulesEngineResponse>> getRulesEngines() {
+    public Output<List<RulesEngineResponse>> rulesEngines() {
         return this.rulesEngines;
     }
     /**
@@ -260,7 +260,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -274,7 +274,7 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

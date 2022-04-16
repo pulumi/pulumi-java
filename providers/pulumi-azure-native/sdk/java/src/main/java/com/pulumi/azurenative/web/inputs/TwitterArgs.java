@@ -27,7 +27,7 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class TwitterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registration")
       private final @Nullable Output<TwitterRegistrationArgs> registration;
 
-    public Output<TwitterRegistrationArgs> getRegistration() {
+    public Output<TwitterRegistrationArgs> registration() {
         return this.registration == null ? Codegen.empty() : this.registration;
     }
 

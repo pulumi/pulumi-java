@@ -36,7 +36,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="compute")
       private final @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
 
-    public Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> getCompute() {
+    public Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute() {
         return this.compute == null ? Codegen.empty() : this.compute;
     }
 
@@ -47,7 +47,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="continueOnError")
       private final @Nullable Output<Object> continueOnError;
 
-    public Output<Object> getContinueOnError() {
+    public Output<Object> continueOnError() {
         return this.continueOnError == null ? Codegen.empty() : this.continueOnError;
     }
 
@@ -58,7 +58,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="dataFlow", required=true)
       private final Output<DataFlowReferenceArgs> dataFlow;
 
-    public Output<DataFlowReferenceArgs> getDataFlow() {
+    public Output<DataFlowReferenceArgs> dataFlow() {
         return this.dataFlow;
     }
 
@@ -69,7 +69,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -80,7 +80,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -91,7 +91,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="integrationRuntime")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime;
 
-    public Output<IntegrationRuntimeReferenceArgs> getIntegrationRuntime() {
+    public Output<IntegrationRuntimeReferenceArgs> integrationRuntime() {
         return this.integrationRuntime == null ? Codegen.empty() : this.integrationRuntime;
     }
 
@@ -102,7 +102,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -113,7 +113,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -124,7 +124,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -135,7 +135,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="runConcurrently")
       private final @Nullable Output<Object> runConcurrently;
 
-    public Output<Object> getRunConcurrently() {
+    public Output<Object> runConcurrently() {
         return this.runConcurrently == null ? Codegen.empty() : this.runConcurrently;
     }
 
@@ -146,7 +146,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="staging")
       private final @Nullable Output<DataFlowStagingInfoArgs> staging;
 
-    public Output<DataFlowStagingInfoArgs> getStaging() {
+    public Output<DataFlowStagingInfoArgs> staging() {
         return this.staging == null ? Codegen.empty() : this.staging;
     }
 
@@ -157,7 +157,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="traceLevel")
       private final @Nullable Output<Object> traceLevel;
 
-    public Output<Object> getTraceLevel() {
+    public Output<Object> traceLevel() {
         return this.traceLevel == null ? Codegen.empty() : this.traceLevel;
     }
 
@@ -169,7 +169,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -180,7 +180,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

@@ -104,84 +104,84 @@ public final class GetCloudEndpointResult {
      * Azure file share name
      * 
     */
-    public Optional<String> getAzureFileShareName() {
+    public Optional<String> azureFileShareName() {
         return Optional.ofNullable(this.azureFileShareName);
     }
     /**
      * Backup Enabled
      * 
     */
-    public String getBackupEnabled() {
+    public String backupEnabled() {
         return this.backupEnabled;
     }
     /**
      * Friendly Name
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource Last Operation Name
      * 
     */
-    public Optional<String> getLastOperationName() {
+    public Optional<String> lastOperationName() {
         return Optional.ofNullable(this.lastOperationName);
     }
     /**
      * CloudEndpoint lastWorkflowId
      * 
     */
-    public Optional<String> getLastWorkflowId() {
+    public Optional<String> lastWorkflowId() {
         return Optional.ofNullable(this.lastWorkflowId);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Partnership Id
      * 
     */
-    public Optional<String> getPartnershipId() {
+    public Optional<String> partnershipId() {
         return Optional.ofNullable(this.partnershipId);
     }
     /**
      * CloudEndpoint Provisioning State
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Storage Account Resource Id
      * 
     */
-    public Optional<String> getStorageAccountResourceId() {
+    public Optional<String> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
     /**
      * Storage Account Tenant Id
      * 
     */
-    public Optional<String> getStorageAccountTenantId() {
+    public Optional<String> storageAccountTenantId() {
         return Optional.ofNullable(this.storageAccountTenantId);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

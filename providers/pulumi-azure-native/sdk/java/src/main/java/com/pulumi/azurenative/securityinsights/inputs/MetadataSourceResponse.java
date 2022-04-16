@@ -25,7 +25,7 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -36,7 +36,7 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sourceId")
       private final @Nullable String sourceId;
 
-    public Optional<String> getSourceId() {
+    public Optional<String> sourceId() {
         return this.sourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceId);
     }
 

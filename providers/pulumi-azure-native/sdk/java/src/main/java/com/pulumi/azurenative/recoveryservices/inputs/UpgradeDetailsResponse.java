@@ -23,7 +23,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
 
-    public String getEndTimeUtc() {
+    public String endTimeUtc() {
         return this.endTimeUtc;
     }
 
@@ -34,7 +34,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastUpdatedTimeUtc", required=true)
       private final String lastUpdatedTimeUtc;
 
-    public String getLastUpdatedTimeUtc() {
+    public String lastUpdatedTimeUtc() {
         return this.lastUpdatedTimeUtc;
     }
 
@@ -45,7 +45,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -56,7 +56,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="operationId", required=true)
       private final String operationId;
 
-    public String getOperationId() {
+    public String operationId() {
         return this.operationId;
     }
 
@@ -67,7 +67,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="previousResourceId", required=true)
       private final String previousResourceId;
 
-    public String getPreviousResourceId() {
+    public String previousResourceId() {
         return this.previousResourceId;
     }
 
@@ -78,7 +78,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTimeUtc", required=true)
       private final String startTimeUtc;
 
-    public String getStartTimeUtc() {
+    public String startTimeUtc() {
         return this.startTimeUtc;
     }
 
@@ -89,7 +89,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -100,7 +100,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="triggerType", required=true)
       private final String triggerType;
 
-    public String getTriggerType() {
+    public String triggerType() {
         return this.triggerType;
     }
 
@@ -111,7 +111,7 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="upgradedResourceId", required=true)
       private final String upgradedResourceId;
 
-    public String getUpgradedResourceId() {
+    public String upgradedResourceId() {
         return this.upgradedResourceId;
     }
 

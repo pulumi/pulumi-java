@@ -26,7 +26,7 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="endTimestamp")
       private final @Nullable Double endTimestamp;
 
-    public Optional<Double> getEndTimestamp() {
+    public Optional<Double> endTimestamp() {
         return this.endTimestamp == null ? Optional.empty() : Optional.ofNullable(this.endTimestamp);
     }
 
@@ -37,7 +37,7 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="forceEndTimestamp")
       private final @Nullable Boolean forceEndTimestamp;
 
-    public Optional<Boolean> getForceEndTimestamp() {
+    public Optional<Boolean> forceEndTimestamp() {
         return this.forceEndTimestamp == null ? Optional.empty() : Optional.ofNullable(this.forceEndTimestamp);
     }
 
@@ -48,7 +48,7 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="liveBackoffDuration")
       private final @Nullable Double liveBackoffDuration;
 
-    public Optional<Double> getLiveBackoffDuration() {
+    public Optional<Double> liveBackoffDuration() {
         return this.liveBackoffDuration == null ? Optional.empty() : Optional.ofNullable(this.liveBackoffDuration);
     }
 
@@ -59,7 +59,7 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="presentationWindowDuration")
       private final @Nullable Double presentationWindowDuration;
 
-    public Optional<Double> getPresentationWindowDuration() {
+    public Optional<Double> presentationWindowDuration() {
         return this.presentationWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.presentationWindowDuration);
     }
 
@@ -70,7 +70,7 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="startTimestamp")
       private final @Nullable Double startTimestamp;
 
-    public Optional<Double> getStartTimestamp() {
+    public Optional<Double> startTimestamp() {
         return this.startTimestamp == null ? Optional.empty() : Optional.ofNullable(this.startTimestamp);
     }
 
@@ -81,7 +81,7 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="timescale")
       private final @Nullable Double timescale;
 
-    public Optional<Double> getTimescale() {
+    public Optional<Double> timescale() {
         return this.timescale == null ? Optional.empty() : Optional.ofNullable(this.timescale);
     }
 

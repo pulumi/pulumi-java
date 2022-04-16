@@ -108,84 +108,84 @@ public final class GetStorageSyncServiceResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Incoming Traffic Policy
      * 
     */
-    public Optional<String> getIncomingTrafficPolicy() {
+    public Optional<String> incomingTrafficPolicy() {
         return Optional.ofNullable(this.incomingTrafficPolicy);
     }
     /**
      * Resource Last Operation Name
      * 
     */
-    public String getLastOperationName() {
+    public String lastOperationName() {
         return this.lastOperationName;
     }
     /**
      * StorageSyncService lastWorkflowId
      * 
     */
-    public String getLastWorkflowId() {
+    public String lastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of private endpoint connection associated with the specified storage sync service
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * StorageSyncService Provisioning State
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Storage Sync service status.
      * 
     */
-    public Integer getStorageSyncServiceStatus() {
+    public Integer storageSyncServiceStatus() {
         return this.storageSyncServiceStatus;
     }
     /**
      * Storage Sync service Uid
      * 
     */
-    public String getStorageSyncServiceUid() {
+    public String storageSyncServiceUid() {
         return this.storageSyncServiceUid;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

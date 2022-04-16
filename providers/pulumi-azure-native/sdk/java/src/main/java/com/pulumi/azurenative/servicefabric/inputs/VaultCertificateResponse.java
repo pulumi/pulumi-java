@@ -23,7 +23,7 @@ public final class VaultCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="certificateStore", required=true)
       private final String certificateStore;
 
-    public String getCertificateStore() {
+    public String certificateStore() {
         return this.certificateStore;
     }
 
@@ -34,7 +34,7 @@ public final class VaultCertificateResponse extends com.pulumi.resources.InvokeA
     @Import(name="certificateUrl", required=true)
       private final String certificateUrl;
 
-    public String getCertificateUrl() {
+    public String certificateUrl() {
         return this.certificateUrl;
     }
 

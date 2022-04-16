@@ -27,7 +27,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoTrackingConfiguration")
       private final @Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration;
 
-    public Output<AutoTrackingConfiguration> getAutoTrackingConfiguration() {
+    public Output<AutoTrackingConfiguration> autoTrackingConfiguration() {
         return this.autoTrackingConfiguration == null ? Codegen.empty() : this.autoTrackingConfiguration;
     }
 
@@ -38,7 +38,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactProfileName")
       private final @Nullable Output<String> contactProfileName;
 
-    public Output<String> getContactProfileName() {
+    public Output<String> contactProfileName() {
         return this.contactProfileName == null ? Codegen.empty() : this.contactProfileName;
     }
 
@@ -49,7 +49,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="eventHubUri")
       private final @Nullable Output<String> eventHubUri;
 
-    public Output<String> getEventHubUri() {
+    public Output<String> eventHubUri() {
         return this.eventHubUri == null ? Codegen.empty() : this.eventHubUri;
     }
 
@@ -60,7 +60,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="links", required=true)
       private final Output<List<ContactProfileLinkArgs>> links;
 
-    public Output<List<ContactProfileLinkArgs>> getLinks() {
+    public Output<List<ContactProfileLinkArgs>> links() {
         return this.links;
     }
 
@@ -71,7 +71,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minimumElevationDegrees")
       private final @Nullable Output<Double> minimumElevationDegrees;
 
-    public Output<Double> getMinimumElevationDegrees() {
+    public Output<Double> minimumElevationDegrees() {
         return this.minimumElevationDegrees == null ? Codegen.empty() : this.minimumElevationDegrees;
     }
 
@@ -93,7 +93,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minimumViableContactDuration")
       private final @Nullable Output<String> minimumViableContactDuration;
 
-    public Output<String> getMinimumViableContactDuration() {
+    public Output<String> minimumViableContactDuration() {
         return this.minimumViableContactDuration == null ? Codegen.empty() : this.minimumViableContactDuration;
     }
 
@@ -104,7 +104,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,7 +115,7 @@ public final class ContactProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -26,7 +26,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="consumerGroupName", required=true)
       private final Output<String> consumerGroupName;
 
-    public Output<String> getConsumerGroupName() {
+    public Output<String> consumerGroupName() {
         return this.consumerGroupName;
     }
 
@@ -37,7 +37,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -48,7 +48,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="eventHubName", required=true)
       private final Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName;
     }
 
@@ -59,7 +59,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="eventSourceName")
       private final @Nullable Output<String> eventSourceName;
 
-    public Output<String> getEventSourceName() {
+    public Output<String> eventSourceName() {
         return this.eventSourceName == null ? Codegen.empty() : this.eventSourceName;
     }
 
@@ -70,7 +70,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="eventSourceResourceId", required=true)
       private final Output<String> eventSourceResourceId;
 
-    public Output<String> getEventSourceResourceId() {
+    public Output<String> eventSourceResourceId() {
         return this.eventSourceResourceId;
     }
 
@@ -81,7 +81,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -93,7 +93,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -104,7 +104,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="localTimestamp")
       private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Output<LocalTimestampArgs> getLocalTimestamp() {
+    public Output<LocalTimestampArgs> localTimestamp() {
         return this.localTimestamp == null ? Codegen.empty() : this.localTimestamp;
     }
 
@@ -115,7 +115,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -126,7 +126,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -137,7 +137,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="serviceBusNamespace", required=true)
       private final Output<String> serviceBusNamespace;
 
-    public Output<String> getServiceBusNamespace() {
+    public Output<String> serviceBusNamespace() {
         return this.serviceBusNamespace;
     }
 
@@ -148,7 +148,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="sharedAccessKey", required=true)
       private final Output<String> sharedAccessKey;
 
-    public Output<String> getSharedAccessKey() {
+    public Output<String> sharedAccessKey() {
         return this.sharedAccessKey;
     }
 
@@ -159,7 +159,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -170,7 +170,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
+    public Output<String> time() {
         return this.time == null ? Codegen.empty() : this.time;
     }
 
@@ -181,7 +181,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="timestampPropertyName")
       private final @Nullable Output<String> timestampPropertyName;
 
-    public Output<String> getTimestampPropertyName() {
+    public Output<String> timestampPropertyName() {
         return this.timestampPropertyName == null ? Codegen.empty() : this.timestampPropertyName;
     }
 
@@ -192,7 +192,7 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<Either<String,IngressStartAtType>> type;
 
-    public Output<Either<String,IngressStartAtType>> getType() {
+    public Output<Either<String,IngressStartAtType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -47,7 +47,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableLocalAuth() {
+    public Output</* @Nullable */ Boolean> disableLocalAuth() {
         return this.disableLocalAuth;
     }
     /**
@@ -61,7 +61,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return Endpoint for the partner namespace.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -75,7 +75,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    public Output</* @Nullable */ List<InboundIpRuleResponse>> getInboundIpRules() {
+    public Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules() {
         return this.inboundIpRules;
     }
     /**
@@ -89,7 +89,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return Location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -103,7 +103,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,13 +119,13 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
      * 
      */
-    public Output</* @Nullable */ String> getPartnerRegistrationFullyQualifiedId() {
+    public Output</* @Nullable */ String> partnerRegistrationFullyQualifiedId() {
         return this.partnerRegistrationFullyQualifiedId;
     }
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -139,7 +139,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the partner namespace.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -155,7 +155,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -169,7 +169,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to Partner Namespace resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -183,7 +183,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -197,7 +197,7 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -43,7 +43,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Time at which the share subscription was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -57,7 +57,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return The expiration date of the share subscription.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationDate() {
+    public Output</* @Nullable */ String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -71,7 +71,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return The invitation id.
      * 
      */
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId;
     }
     /**
@@ -85,7 +85,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Email of the provider who created the resource
      * 
      */
-    public Output<String> getProviderEmail() {
+    public Output<String> providerEmail() {
         return this.providerEmail;
     }
     /**
@@ -113,7 +113,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Name of the provider who created the resource
      * 
      */
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
     /**
@@ -127,7 +127,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Tenant name of the provider who created the resource
      * 
      */
-    public Output<String> getProviderTenantName() {
+    public Output<String> providerTenantName() {
         return this.providerTenantName;
     }
     /**
@@ -141,7 +141,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the share subscription
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -155,7 +155,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Description of share
      * 
      */
-    public Output<String> getShareDescription() {
+    public Output<String> shareDescription() {
         return this.shareDescription;
     }
     /**
@@ -169,7 +169,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Kind of share
      * 
      */
-    public Output<String> getShareKind() {
+    public Output<String> shareKind() {
         return this.shareKind;
     }
     /**
@@ -183,7 +183,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Name of the share
      * 
      */
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
     /**
@@ -197,7 +197,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Gets the current status of share subscription.
      * 
      */
-    public Output<String> getShareSubscriptionStatus() {
+    public Output<String> shareSubscriptionStatus() {
         return this.shareSubscriptionStatus;
     }
     /**
@@ -211,7 +211,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Terms of a share
      * 
      */
-    public Output<String> getShareTerms() {
+    public Output<String> shareTerms() {
         return this.shareTerms;
     }
     /**
@@ -225,7 +225,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Source share location.
      * 
      */
-    public Output<String> getSourceShareLocation() {
+    public Output<String> sourceShareLocation() {
         return this.sourceShareLocation;
     }
     /**
@@ -239,7 +239,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -253,7 +253,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -267,7 +267,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Email of the user who created the resource
      * 
      */
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail;
     }
     /**
@@ -281,7 +281,7 @@ public class ShareSubscription extends com.pulumi.resources.CustomResource {
      * @return Name of the user who created the resource
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

@@ -41,21 +41,21 @@ public final class CertificateDescriptionResponse {
      * Thumbprint of the primary certificate.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * Thumbprint of the secondary certificate.
      * 
     */
-    public Optional<String> getThumbprintSecondary() {
+    public Optional<String> thumbprintSecondary() {
         return Optional.ofNullable(this.thumbprintSecondary);
     }
     /**
      * The local certificate store location.
      * 
     */
-    public Optional<String> getX509StoreName() {
+    public Optional<String> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }
 

@@ -25,7 +25,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventName")
       private final @Nullable String eventName;
 
-    public Optional<String> getEventName() {
+    public Optional<String> eventName() {
         return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);
     }
 

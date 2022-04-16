@@ -27,7 +27,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends com.pulumi.re
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -38,7 +38,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends com.pulumi.re
     @Import(name="workspaceId")
       private final @Nullable Output<SubResourceArgs> workspaceId;
 
-    public Output<SubResourceArgs> getWorkspaceId() {
+    public Output<SubResourceArgs> workspaceId() {
         return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 

@@ -32,7 +32,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionIdentity")
       private final @Nullable Output<EncryptionIdentityArgs> encryptionIdentity;
 
-    public Output<EncryptionIdentityArgs> getEncryptionIdentity() {
+    public Output<EncryptionIdentityArgs> encryptionIdentity() {
         return this.encryptionIdentity == null ? Codegen.empty() : this.encryptionIdentity;
     }
 
@@ -43,7 +43,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySource", required=true)
       private final Output<Either<String,KeySource>> keySource;
 
-    public Output<Either<String,KeySource>> getKeySource() {
+    public Output<Either<String,KeySource>> keySource() {
         return this.keySource;
     }
 
@@ -54,7 +54,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
@@ -65,7 +65,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireInfrastructureEncryption")
       private final @Nullable Output<Boolean> requireInfrastructureEncryption;
 
-    public Output<Boolean> getRequireInfrastructureEncryption() {
+    public Output<Boolean> requireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Codegen.empty() : this.requireInfrastructureEncryption;
     }
 
@@ -76,7 +76,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="services")
       private final @Nullable Output<EncryptionServicesArgs> services;
 
-    public Output<EncryptionServicesArgs> getServices() {
+    public Output<EncryptionServicesArgs> services() {
         return this.services == null ? Codegen.empty() : this.services;
     }
 

@@ -48,7 +48,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The activation properties of the connected registry.
      * 
      */
-    public Output<ActivationPropertiesResponse> getActivation() {
+    public Output<ActivationPropertiesResponse> activation() {
         return this.activation;
     }
     /**
@@ -62,7 +62,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The list of the ACR token resource IDs used to authenticate clients to the connected registry.
      * 
      */
-    public Output</* @Nullable */ List<String>> getClientTokenIds() {
+    public Output</* @Nullable */ List<String>> clientTokenIds() {
         return this.clientTokenIds;
     }
     /**
@@ -76,7 +76,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The current connection state of the connected registry.
      * 
      */
-    public Output<String> getConnectionState() {
+    public Output<String> connectionState() {
         return this.connectionState;
     }
     /**
@@ -90,7 +90,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The last activity time of the connected registry.
      * 
      */
-    public Output<String> getLastActivityTime() {
+    public Output<String> lastActivityTime() {
         return this.lastActivityTime;
     }
     /**
@@ -104,7 +104,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The logging properties of the connected registry.
      * 
      */
-    public Output</* @Nullable */ LoggingPropertiesResponse> getLogging() {
+    public Output</* @Nullable */ LoggingPropertiesResponse> logging() {
         return this.logging;
     }
     /**
@@ -118,7 +118,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The login server properties of the connected registry.
      * 
      */
-    public Output</* @Nullable */ LoginServerPropertiesResponse> getLoginServer() {
+    public Output</* @Nullable */ LoginServerPropertiesResponse> loginServer() {
         return this.loginServer;
     }
     /**
@@ -132,7 +132,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The mode of the connected registry resource that indicates the permissions of the registry.
      * 
      */
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
     /**
@@ -146,7 +146,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +160,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The parent of the connected registry.
      * 
      */
-    public Output<ParentPropertiesResponse> getParent() {
+    public Output<ParentPropertiesResponse> parent() {
         return this.parent;
     }
     /**
@@ -174,7 +174,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -188,7 +188,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The list of current statuses of the connected registry.
      * 
      */
-    public Output<List<StatusDetailPropertiesResponse>> getStatusDetails() {
+    public Output<List<StatusDetailPropertiesResponse>> statusDetails() {
         return this.statusDetails;
     }
     /**
@@ -202,7 +202,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -216,7 +216,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -230,7 +230,7 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The current version of ACR runtime on the connected registry.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

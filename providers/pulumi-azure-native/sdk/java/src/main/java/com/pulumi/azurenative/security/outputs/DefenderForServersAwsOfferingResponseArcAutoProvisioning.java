@@ -35,14 +35,14 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
      * Is arc auto provisioning enabled
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Metadata of Service Principal secret for autoprovisioning
      * 
     */
-    public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> getServicePrincipalSecretMetadata() {
+    public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> servicePrincipalSecretMetadata() {
         return Optional.ofNullable(this.servicePrincipalSecretMetadata);
     }
 

@@ -29,16 +29,16 @@ public final class CollectorAgentPropertiesResponse {
         this.version = version;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
-    public Optional<CollectorBodyAgentSpnPropertiesResponse> getSpnDetails() {
+    public Optional<CollectorBodyAgentSpnPropertiesResponse> spnDetails() {
         return Optional.ofNullable(this.spnDetails);
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

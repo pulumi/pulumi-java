@@ -25,7 +25,7 @@ public final class ApiResourceBackendServiceResponse extends com.pulumi.resource
     @Import(name="serviceUrl")
       private final @Nullable String serviceUrl;
 
-    public Optional<String> getServiceUrl() {
+    public Optional<String> serviceUrl() {
         return this.serviceUrl == null ? Optional.empty() : Optional.ofNullable(this.serviceUrl);
     }
 

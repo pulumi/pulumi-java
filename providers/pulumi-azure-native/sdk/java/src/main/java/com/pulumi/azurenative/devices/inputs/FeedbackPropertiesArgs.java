@@ -27,7 +27,7 @@ public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="lockDurationAsIso8601")
       private final @Nullable Output<String> lockDurationAsIso8601;
 
-    public Output<String> getLockDurationAsIso8601() {
+    public Output<String> lockDurationAsIso8601() {
         return this.lockDurationAsIso8601 == null ? Codegen.empty() : this.lockDurationAsIso8601;
     }
 
@@ -38,7 +38,7 @@ public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> getMaxDeliveryCount() {
+    public Output<Integer> maxDeliveryCount() {
         return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
     }
 
@@ -49,7 +49,7 @@ public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="ttlAsIso8601")
       private final @Nullable Output<String> ttlAsIso8601;
 
-    public Output<String> getTtlAsIso8601() {
+    public Output<String> ttlAsIso8601() {
         return this.ttlAsIso8601 == null ? Codegen.empty() : this.ttlAsIso8601;
     }
 

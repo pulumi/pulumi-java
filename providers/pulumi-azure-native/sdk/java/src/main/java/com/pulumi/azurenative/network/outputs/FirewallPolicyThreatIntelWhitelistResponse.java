@@ -34,14 +34,14 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
      * List of FQDNs for the ThreatIntel Whitelist.
      * 
     */
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * List of IP addresses for the ThreatIntel Whitelist.
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
 

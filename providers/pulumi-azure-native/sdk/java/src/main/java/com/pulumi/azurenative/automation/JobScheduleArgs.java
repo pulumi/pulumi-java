@@ -25,7 +25,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -36,7 +36,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobScheduleId")
       private final @Nullable Output<String> jobScheduleId;
 
-    public Output<String> getJobScheduleId() {
+    public Output<String> jobScheduleId() {
         return this.jobScheduleId == null ? Codegen.empty() : this.jobScheduleId;
     }
 
@@ -47,7 +47,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -58,7 +58,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runOn")
       private final @Nullable Output<String> runOn;
 
-    public Output<String> getRunOn() {
+    public Output<String> runOn() {
         return this.runOn == null ? Codegen.empty() : this.runOn;
     }
 
@@ -80,7 +80,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runbook", required=true)
       private final Output<RunbookAssociationPropertyArgs> runbook;
 
-    public Output<RunbookAssociationPropertyArgs> getRunbook() {
+    public Output<RunbookAssociationPropertyArgs> runbook() {
         return this.runbook;
     }
 
@@ -91,7 +91,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<ScheduleAssociationPropertyArgs> schedule;
 
-    public Output<ScheduleAssociationPropertyArgs> getSchedule() {
+    public Output<ScheduleAssociationPropertyArgs> schedule() {
         return this.schedule;
     }
 

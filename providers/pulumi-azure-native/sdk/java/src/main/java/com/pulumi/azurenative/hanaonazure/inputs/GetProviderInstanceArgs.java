@@ -19,7 +19,7 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="providerInstanceName", required=true)
       private final String providerInstanceName;
 
-    public String getProviderInstanceName() {
+    public String providerInstanceName() {
         return this.providerInstanceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="sapMonitorName", required=true)
       private final String sapMonitorName;
 
-    public String getSapMonitorName() {
+    public String sapMonitorName() {
         return this.sapMonitorName;
     }
 

@@ -26,7 +26,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineType")
       private final @Nullable Output<Either<String,EngineType>> engineType;
 
-    public Output<Either<String,EngineType>> getEngineType() {
+    public Output<Either<String,EngineType>> engineType() {
         return this.engineType == null ? Codegen.empty() : this.engineType;
     }
 
@@ -37,7 +37,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kustoPoolName")
       private final @Nullable Output<String> kustoPoolName;
 
-    public Output<String> getKustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName == null ? Codegen.empty() : this.kustoPoolName;
     }
 
@@ -48,7 +48,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +70,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<AzureSkuArgs> sku;
 
-    public Output<AzureSkuArgs> getSku() {
+    public Output<AzureSkuArgs> sku() {
         return this.sku;
     }
 
@@ -81,7 +81,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -103,7 +103,7 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceUid")
       private final @Nullable Output<String> workspaceUid;
 
-    public Output<String> getWorkspaceUid() {
+    public Output<String> workspaceUid() {
         return this.workspaceUid == null ? Codegen.empty() : this.workspaceUid;
     }
 

@@ -30,7 +30,7 @@ public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="requestHeaderActions")
       private final @Nullable Output<List<HeaderActionArgs>> requestHeaderActions;
 
-    public Output<List<HeaderActionArgs>> getRequestHeaderActions() {
+    public Output<List<HeaderActionArgs>> requestHeaderActions() {
         return this.requestHeaderActions == null ? Codegen.empty() : this.requestHeaderActions;
     }
 
@@ -41,7 +41,7 @@ public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="responseHeaderActions")
       private final @Nullable Output<List<HeaderActionArgs>> responseHeaderActions;
 
-    public Output<List<HeaderActionArgs>> getResponseHeaderActions() {
+    public Output<List<HeaderActionArgs>> responseHeaderActions() {
         return this.responseHeaderActions == null ? Codegen.empty() : this.responseHeaderActions;
     }
 
@@ -52,7 +52,7 @@ public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routeConfigurationOverride")
       private final @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
 
-    public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfigurationOverride() {
+    public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride() {
         return this.routeConfigurationOverride == null ? Codegen.empty() : this.routeConfigurationOverride;
     }
 

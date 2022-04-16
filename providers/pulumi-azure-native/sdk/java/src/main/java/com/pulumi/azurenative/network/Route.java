@@ -43,7 +43,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The destination CIDR to which the route applies.
      * 
      */
-    public Output</* @Nullable */ String> getAddressPrefix() {
+    public Output</* @Nullable */ String> addressPrefix() {
         return this.addressPrefix;
     }
     /**
@@ -57,7 +57,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +71,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
      */
-    public Output</* @Nullable */ Boolean> getHasBgpOverride() {
+    public Output</* @Nullable */ Boolean> hasBgpOverride() {
         return this.hasBgpOverride;
     }
     /**
@@ -85,7 +85,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
      */
-    public Output</* @Nullable */ String> getNextHopIpAddress() {
+    public Output</* @Nullable */ String> nextHopIpAddress() {
         return this.nextHopIpAddress;
     }
     /**
@@ -113,7 +113,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The type of Azure hop the packet should be sent to.
      * 
      */
-    public Output<String> getNextHopType() {
+    public Output<String> nextHopType() {
         return this.nextHopType;
     }
     /**
@@ -127,7 +127,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the route resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -141,7 +141,7 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

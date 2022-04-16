@@ -26,7 +26,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="body", required=true)
       private final Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body;
     }
 
@@ -37,7 +37,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -70,7 +70,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -81,7 +81,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryPackName", required=true)
       private final Output<String> queryPackName;
 
-    public Output<String> getQueryPackName() {
+    public Output<String> queryPackName() {
         return this.queryPackName;
     }
 
@@ -92,7 +92,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="related")
       private final @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
 
-    public Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> getRelated() {
+    public Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related() {
         return this.related == null ? Codegen.empty() : this.related;
     }
 
@@ -103,7 +103,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,List<String>>> tags;
 
-    public Output<Map<String,List<String>>> getTags() {
+    public Output<Map<String,List<String>>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

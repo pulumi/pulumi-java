@@ -28,7 +28,7 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="appendRowFileName")
       private final @Nullable Output<String> appendRowFileName;
 
-    public Output<String> getAppendRowFileName() {
+    public Output<String> appendRowFileName() {
         return this.appendRowFileName == null ? Codegen.empty() : this.appendRowFileName;
     }
 
@@ -39,7 +39,7 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="outputAction")
       private final @Nullable Output<Either<String,BatchOutputAction>> outputAction;
 
-    public Output<Either<String,BatchOutputAction>> getOutputAction() {
+    public Output<Either<String,BatchOutputAction>> outputAction() {
         return this.outputAction == null ? Codegen.empty() : this.outputAction;
     }
 

@@ -26,7 +26,7 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="diskConfigurationType")
       private final @Nullable String diskConfigurationType;
 
-    public Optional<String> getDiskConfigurationType() {
+    public Optional<String> diskConfigurationType() {
         return this.diskConfigurationType == null ? Optional.empty() : Optional.ofNullable(this.diskConfigurationType);
     }
 
@@ -37,7 +37,7 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="sqlDataSettings")
       private final @Nullable SQLStorageSettingsResponse sqlDataSettings;
 
-    public Optional<SQLStorageSettingsResponse> getSqlDataSettings() {
+    public Optional<SQLStorageSettingsResponse> sqlDataSettings() {
         return this.sqlDataSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlDataSettings);
     }
 
@@ -48,7 +48,7 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="sqlLogSettings")
       private final @Nullable SQLStorageSettingsResponse sqlLogSettings;
 
-    public Optional<SQLStorageSettingsResponse> getSqlLogSettings() {
+    public Optional<SQLStorageSettingsResponse> sqlLogSettings() {
         return this.sqlLogSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlLogSettings);
     }
 
@@ -59,7 +59,7 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="sqlTempDbSettings")
       private final @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
 
-    public Optional<SQLStorageSettingsResponse> getSqlTempDbSettings() {
+    public Optional<SQLStorageSettingsResponse> sqlTempDbSettings() {
         return this.sqlTempDbSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlTempDbSettings);
     }
 
@@ -70,7 +70,7 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="storageWorkloadType")
       private final @Nullable String storageWorkloadType;
 
-    public Optional<String> getStorageWorkloadType() {
+    public Optional<String> storageWorkloadType() {
         return this.storageWorkloadType == null ? Optional.empty() : Optional.ofNullable(this.storageWorkloadType);
     }
 

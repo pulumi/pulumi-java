@@ -23,7 +23,7 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends com.pul
     @Import(name="parameter", required=true)
       private final String parameter;
 
-    public String getParameter() {
+    public String parameter() {
         return this.parameter;
     }
 
@@ -34,7 +34,7 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends com.pul
     @Import(name="scheme", required=true)
       private final String scheme;
 
-    public String getScheme() {
+    public String scheme() {
         return this.scheme;
     }
 

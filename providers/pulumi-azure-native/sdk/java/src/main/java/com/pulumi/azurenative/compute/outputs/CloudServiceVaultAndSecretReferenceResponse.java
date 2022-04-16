@@ -23,10 +23,10 @@ public final class CloudServiceVaultAndSecretReferenceResponse {
         this.sourceVault = sourceVault;
     }
 
-    public Optional<String> getSecretUrl() {
+    public Optional<String> secretUrl() {
         return Optional.ofNullable(this.secretUrl);
     }
-    public Optional<SubResourceResponse> getSourceVault() {
+    public Optional<SubResourceResponse> sourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }
 

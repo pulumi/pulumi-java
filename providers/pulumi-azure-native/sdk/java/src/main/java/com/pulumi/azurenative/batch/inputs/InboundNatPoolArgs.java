@@ -26,7 +26,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backendPort", required=true)
       private final Output<Integer> backendPort;
 
-    public Output<Integer> getBackendPort() {
+    public Output<Integer> backendPort() {
         return this.backendPort;
     }
 
@@ -37,7 +37,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPortRangeEnd", required=true)
       private final Output<Integer> frontendPortRangeEnd;
 
-    public Output<Integer> getFrontendPortRangeEnd() {
+    public Output<Integer> frontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
 
@@ -48,7 +48,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPortRangeStart", required=true)
       private final Output<Integer> frontendPortRangeStart;
 
-    public Output<Integer> getFrontendPortRangeStart() {
+    public Output<Integer> frontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
 
@@ -59,7 +59,7 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -70,14 +70,14 @@ public final class InboundNatPoolArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkSecurityGroupRules")
       private final @Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
 
-    public Output<List<NetworkSecurityGroupRuleArgs>> getNetworkSecurityGroupRules() {
+    public Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules() {
         return this.networkSecurityGroupRules == null ? Codegen.empty() : this.networkSecurityGroupRules;
     }
 
     @Import(name="protocol", required=true)
       private final Output<InboundEndpointProtocol> protocol;
 
-    public Output<InboundEndpointProtocol> getProtocol() {
+    public Output<InboundEndpointProtocol> protocol() {
         return this.protocol;
     }
 

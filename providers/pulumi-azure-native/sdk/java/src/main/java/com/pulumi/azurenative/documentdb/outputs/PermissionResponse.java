@@ -34,14 +34,14 @@ public final class PermissionResponse {
      * An array of data actions that are allowed.
      * 
     */
-    public List<String> getDataActions() {
+    public List<String> dataActions() {
         return this.dataActions == null ? List.of() : this.dataActions;
     }
     /**
      * An array of data actions that are denied.
      * 
     */
-    public List<String> getNotDataActions() {
+    public List<String> notDataActions() {
         return this.notDataActions == null ? List.of() : this.notDataActions;
     }
 

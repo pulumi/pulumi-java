@@ -27,7 +27,7 @@ public final class VolumePropertiesExportPolicyArgs extends com.pulumi.resources
     @Import(name="rules")
       private final @Nullable Output<List<ExportPolicyRuleArgs>> rules;
 
-    public Output<List<ExportPolicyRuleArgs>> getRules() {
+    public Output<List<ExportPolicyRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

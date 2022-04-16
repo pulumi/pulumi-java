@@ -30,7 +30,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capabilities")
       private final @Nullable Output<List<CapabilityArgs>> capabilities;
 
-    public Output<List<CapabilityArgs>> getCapabilities() {
+    public Output<List<CapabilityArgs>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
@@ -41,7 +41,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -52,7 +52,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -63,7 +63,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
@@ -74,7 +74,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -96,7 +96,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="skuCapacity")
       private final @Nullable Output<SkuCapacityArgs> skuCapacity;
 
-    public Output<SkuCapacityArgs> getSkuCapacity() {
+    public Output<SkuCapacityArgs> skuCapacity() {
         return this.skuCapacity == null ? Codegen.empty() : this.skuCapacity;
     }
 
@@ -107,7 +107,7 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

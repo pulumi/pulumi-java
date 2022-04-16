@@ -22,7 +22,7 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="previewSubscription")
       private final @Nullable Output<String> previewSubscription;
 
-    public Output<String> getPreviewSubscription() {
+    public Output<String> previewSubscription() {
         return this.previewSubscription == null ? Codegen.empty() : this.previewSubscription;
     }
 
@@ -33,7 +33,7 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="skuName", required=true)
       private final Output<String> skuName;
 
-    public Output<String> getSkuName() {
+    public Output<String> skuName() {
         return this.skuName;
     }
 
@@ -44,7 +44,7 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="vendorName", required=true)
       private final Output<String> vendorName;
 
-    public Output<String> getVendorName() {
+    public Output<String> vendorName() {
         return this.vendorName;
     }
 

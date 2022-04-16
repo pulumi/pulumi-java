@@ -34,14 +34,14 @@ public final class SettingsSectionDescriptionResponse {
      * The section name of the fabric settings.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The collection of parameters in the section.
      * 
     */
-    public List<SettingsParameterDescriptionResponse> getParameters() {
+    public List<SettingsParameterDescriptionResponse> parameters() {
         return this.parameters;
     }
 

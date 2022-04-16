@@ -69,49 +69,49 @@ public final class GetWebAppPublicCertificateResult {
      * Public Certificate byte array
      * 
     */
-    public Optional<String> getBlob() {
+    public Optional<String> blob() {
         return Optional.ofNullable(this.blob);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Public Certificate Location
      * 
     */
-    public Optional<String> getPublicCertificateLocation() {
+    public Optional<String> publicCertificateLocation() {
         return Optional.ofNullable(this.publicCertificateLocation);
     }
     /**
      * Certificate Thumbprint
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

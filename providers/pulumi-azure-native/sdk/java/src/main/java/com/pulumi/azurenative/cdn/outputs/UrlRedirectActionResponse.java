@@ -35,14 +35,14 @@ public final class UrlRedirectActionResponse {
      * Expected value is 'UrlRedirect'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
     */
-    public UrlRedirectActionParametersResponse getParameters() {
+    public UrlRedirectActionParametersResponse parameters() {
         return this.parameters;
     }
 

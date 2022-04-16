@@ -37,7 +37,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupDriveManifest")
       private final @Nullable Output<Boolean> backupDriveManifest;
 
-    public Output<Boolean> getBackupDriveManifest() {
+    public Output<Boolean> backupDriveManifest() {
         return this.backupDriveManifest == null ? Codegen.empty() : this.backupDriveManifest;
     }
 
@@ -48,7 +48,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cancelRequested")
       private final @Nullable Output<Boolean> cancelRequested;
 
-    public Output<Boolean> getCancelRequested() {
+    public Output<Boolean> cancelRequested() {
         return this.cancelRequested == null ? Codegen.empty() : this.cancelRequested;
     }
 
@@ -59,7 +59,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryPackage")
       private final @Nullable Output<DeliveryPackageInformationArgs> deliveryPackage;
 
-    public Output<DeliveryPackageInformationArgs> getDeliveryPackage() {
+    public Output<DeliveryPackageInformationArgs> deliveryPackage() {
         return this.deliveryPackage == null ? Codegen.empty() : this.deliveryPackage;
     }
 
@@ -70,7 +70,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diagnosticsPath")
       private final @Nullable Output<String> diagnosticsPath;
 
-    public Output<String> getDiagnosticsPath() {
+    public Output<String> diagnosticsPath() {
         return this.diagnosticsPath == null ? Codegen.empty() : this.diagnosticsPath;
     }
 
@@ -81,7 +81,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="driveList")
       private final @Nullable Output<List<DriveStatusArgs>> driveList;
 
-    public Output<List<DriveStatusArgs>> getDriveList() {
+    public Output<List<DriveStatusArgs>> driveList() {
         return this.driveList == null ? Codegen.empty() : this.driveList;
     }
 
@@ -92,7 +92,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKey")
       private final @Nullable Output<EncryptionKeyDetailsArgs> encryptionKey;
 
-    public Output<EncryptionKeyDetailsArgs> getEncryptionKey() {
+    public Output<EncryptionKeyDetailsArgs> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -103,7 +103,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="export")
       private final @Nullable Output<ExportArgs> export;
 
-    public Output<ExportArgs> getExport() {
+    public Output<ExportArgs> export() {
         return this.export == null ? Codegen.empty() : this.export;
     }
 
@@ -114,7 +114,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incompleteBlobListUri")
       private final @Nullable Output<String> incompleteBlobListUri;
 
-    public Output<String> getIncompleteBlobListUri() {
+    public Output<String> incompleteBlobListUri() {
         return this.incompleteBlobListUri == null ? Codegen.empty() : this.incompleteBlobListUri;
     }
 
@@ -125,7 +125,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobType")
       private final @Nullable Output<String> jobType;
 
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType == null ? Codegen.empty() : this.jobType;
     }
 
@@ -136,7 +136,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
-    public Output<String> getLogLevel() {
+    public Output<String> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -147,7 +147,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="percentComplete")
       private final @Nullable Output<Integer> percentComplete;
 
-    public Output<Integer> getPercentComplete() {
+    public Output<Integer> percentComplete() {
         return this.percentComplete == null ? Codegen.empty() : this.percentComplete;
     }
 
@@ -158,7 +158,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -169,7 +169,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnAddress")
       private final @Nullable Output<ReturnAddressArgs> returnAddress;
 
-    public Output<ReturnAddressArgs> getReturnAddress() {
+    public Output<ReturnAddressArgs> returnAddress() {
         return this.returnAddress == null ? Codegen.empty() : this.returnAddress;
     }
 
@@ -180,7 +180,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnPackage")
       private final @Nullable Output<PackageInformationArgs> returnPackage;
 
-    public Output<PackageInformationArgs> getReturnPackage() {
+    public Output<PackageInformationArgs> returnPackage() {
         return this.returnPackage == null ? Codegen.empty() : this.returnPackage;
     }
 
@@ -191,7 +191,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnShipping")
       private final @Nullable Output<ReturnShippingArgs> returnShipping;
 
-    public Output<ReturnShippingArgs> getReturnShipping() {
+    public Output<ReturnShippingArgs> returnShipping() {
         return this.returnShipping == null ? Codegen.empty() : this.returnShipping;
     }
 
@@ -202,7 +202,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shippingInformation")
       private final @Nullable Output<ShippingInformationArgs> shippingInformation;
 
-    public Output<ShippingInformationArgs> getShippingInformation() {
+    public Output<ShippingInformationArgs> shippingInformation() {
         return this.shippingInformation == null ? Codegen.empty() : this.shippingInformation;
     }
 
@@ -213,7 +213,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -224,7 +224,7 @@ public final class JobDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 

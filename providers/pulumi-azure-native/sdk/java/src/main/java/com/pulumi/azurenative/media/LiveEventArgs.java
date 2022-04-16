@@ -32,7 +32,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -43,7 +43,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoStart")
       private final @Nullable Output<Boolean> autoStart;
 
-    public Output<Boolean> getAutoStart() {
+    public Output<Boolean> autoStart() {
         return this.autoStart == null ? Codegen.empty() : this.autoStart;
     }
 
@@ -54,7 +54,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="crossSiteAccessPolicies")
       private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
-    public Output<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
+    public Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies == null ? Codegen.empty() : this.crossSiteAccessPolicies;
     }
 
@@ -65,7 +65,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
       private final @Nullable Output<LiveEventEncodingArgs> encoding;
 
-    public Output<LiveEventEncodingArgs> getEncoding() {
+    public Output<LiveEventEncodingArgs> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -87,7 +87,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostnamePrefix")
       private final @Nullable Output<String> hostnamePrefix;
 
-    public Output<String> getHostnamePrefix() {
+    public Output<String> hostnamePrefix() {
         return this.hostnamePrefix == null ? Codegen.empty() : this.hostnamePrefix;
     }
 
@@ -98,7 +98,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="input", required=true)
       private final Output<LiveEventInputArgs> input;
 
-    public Output<LiveEventInputArgs> getInput() {
+    public Output<LiveEventInputArgs> input() {
         return this.input;
     }
 
@@ -109,7 +109,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="liveEventName")
       private final @Nullable Output<String> liveEventName;
 
-    public Output<String> getLiveEventName() {
+    public Output<String> liveEventName() {
         return this.liveEventName == null ? Codegen.empty() : this.liveEventName;
     }
 
@@ -120,7 +120,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -131,7 +131,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preview")
       private final @Nullable Output<LiveEventPreviewArgs> preview;
 
-    public Output<LiveEventPreviewArgs> getPreview() {
+    public Output<LiveEventPreviewArgs> preview() {
         return this.preview == null ? Codegen.empty() : this.preview;
     }
 
@@ -142,7 +142,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -153,7 +153,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamOptions")
       private final @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
 
-    public Output<List<Either<String,StreamOptionsFlag>>> getStreamOptions() {
+    public Output<List<Either<String,StreamOptionsFlag>>> streamOptions() {
         return this.streamOptions == null ? Codegen.empty() : this.streamOptions;
     }
 
@@ -164,7 +164,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -175,7 +175,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transcriptions")
       private final @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
 
-    public Output<List<LiveEventTranscriptionArgs>> getTranscriptions() {
+    public Output<List<LiveEventTranscriptionArgs>> transcriptions() {
         return this.transcriptions == null ? Codegen.empty() : this.transcriptions;
     }
 
@@ -186,7 +186,7 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useStaticHostname")
       private final @Nullable Output<Boolean> useStaticHostname;
 
-    public Output<Boolean> getUseStaticHostname() {
+    public Output<Boolean> useStaticHostname() {
         return this.useStaticHostname == null ? Codegen.empty() : this.useStaticHostname;
     }
 

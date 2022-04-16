@@ -30,7 +30,7 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
     @Import(name="contentId")
       private final @Nullable Output<String> contentId;
 
-    public Output<String> getContentId() {
+    public Output<String> contentId() {
         return this.contentId == null ? Codegen.empty() : this.contentId;
     }
 
@@ -41,7 +41,7 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
     @Import(name="criteria")
       private final @Nullable Output<List<MetadataDependenciesArgs>> criteria;
 
-    public Output<List<MetadataDependenciesArgs>> getCriteria() {
+    public Output<List<MetadataDependenciesArgs>> criteria() {
         return this.criteria == null ? Codegen.empty() : this.criteria;
     }
 
@@ -52,7 +52,7 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -63,7 +63,7 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -74,7 +74,7 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
     @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -85,7 +85,7 @@ public final class MetadataDependenciesArgs extends com.pulumi.resources.Resourc
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

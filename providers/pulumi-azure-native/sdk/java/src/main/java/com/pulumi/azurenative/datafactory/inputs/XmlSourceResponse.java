@@ -40,7 +40,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
@@ -51,7 +51,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -62,7 +62,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="formatSettings")
       private final @Nullable XmlReadSettingsResponse formatSettings;
 
-    public Optional<XmlReadSettingsResponse> getFormatSettings() {
+    public Optional<XmlReadSettingsResponse> formatSettings() {
         return this.formatSettings == null ? Optional.empty() : Optional.ofNullable(this.formatSettings);
     }
 
@@ -73,7 +73,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -84,7 +84,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
@@ -95,7 +95,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
@@ -106,7 +106,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storeSettings")
       private final @Nullable Object storeSettings;
 
-    public Object getStoreSettings() {
+    public Object storeSettings() {
         return this.storeSettings == null ? null : this.storeSettings;
     }
 
@@ -118,7 +118,7 @@ public final class XmlSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

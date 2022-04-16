@@ -48,28 +48,28 @@ public final class DatadogApiKeyResponse {
      * The time of creation of the API key.
      * 
     */
-    public Optional<String> getCreated() {
+    public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
      * The user that created the API key.
      * 
     */
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The value of the API key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The name of the API key.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

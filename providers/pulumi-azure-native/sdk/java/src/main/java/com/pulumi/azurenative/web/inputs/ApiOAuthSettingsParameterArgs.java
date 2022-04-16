@@ -27,7 +27,7 @@ public final class ApiOAuthSettingsParameterArgs extends com.pulumi.resources.Re
     @Import(name="options")
       private final @Nullable Output<Object> options;
 
-    public Output<Object> getOptions() {
+    public Output<Object> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -38,7 +38,7 @@ public final class ApiOAuthSettingsParameterArgs extends com.pulumi.resources.Re
     @Import(name="uiDefinition")
       private final @Nullable Output<Object> uiDefinition;
 
-    public Output<Object> getUiDefinition() {
+    public Output<Object> uiDefinition() {
         return this.uiDefinition == null ? Codegen.empty() : this.uiDefinition;
     }
 
@@ -49,7 +49,7 @@ public final class ApiOAuthSettingsParameterArgs extends com.pulumi.resources.Re
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

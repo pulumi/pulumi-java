@@ -91,70 +91,70 @@ public final class GetInventoryItemResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * They inventory type.
      * 
     */
-    public String getInventoryType() {
+    public String inventoryType() {
         return this.inventoryType;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
     */
-    public Optional<String> getManagedResourceId() {
+    public Optional<String> managedResourceId() {
         return Optional.ofNullable(this.managedResourceId);
     }
     /**
      * Gets or sets the vCenter Managed Object name for the inventory item.
      * 
     */
-    public Optional<String> getMoName() {
+    public Optional<String> moName() {
         return Optional.ofNullable(this.moName);
     }
     /**
      * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
     */
-    public Optional<String> getMoRefId() {
+    public Optional<String> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The system data.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

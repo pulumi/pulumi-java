@@ -29,7 +29,7 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
     @Import(name="diskEncryptionSet")
       private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
+    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
         return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
     }
 
@@ -40,7 +40,7 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -51,7 +51,7 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> getStorageAccountType() {
+    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 

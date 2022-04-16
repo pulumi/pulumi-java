@@ -120,77 +120,77 @@ public final class FtpServerLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The authentication type to be used to connect to the FTP server.
      * 
     */
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableServerCertificateValidation() {
+    public Optional<Object> enableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
     /**
      * If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableSsl() {
+    public Optional<Object> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Host name of the FTP server. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getHost() {
+    public Object host() {
         return this.host;
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to logon the FTP server.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
     */
-    public Optional<Object> getPort() {
+    public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
@@ -198,14 +198,14 @@ public final class FtpServerLinkedServiceResponse {
      * Expected value is 'FtpServer'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Username to logon the FTP server. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
 

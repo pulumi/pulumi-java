@@ -71,49 +71,49 @@ public final class GetPrivateLinkScopeResult {
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties that define a Azure Arc PrivateLinkScope resource.
      * 
     */
-    public HybridComputePrivateLinkScopePropertiesResponse getProperties() {
+    public HybridComputePrivateLinkScopePropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The system meta data relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

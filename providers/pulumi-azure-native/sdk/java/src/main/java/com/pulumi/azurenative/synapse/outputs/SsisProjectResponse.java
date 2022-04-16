@@ -81,42 +81,42 @@ public final class SsisProjectResponse {
      * Metadata description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Environment reference in project
      * 
     */
-    public List<SsisEnvironmentReferenceResponse> getEnvironmentRefs() {
+    public List<SsisEnvironmentReferenceResponse> environmentRefs() {
         return this.environmentRefs == null ? List.of() : this.environmentRefs;
     }
     /**
      * Folder id which contains project.
      * 
     */
-    public Optional<Double> getFolderId() {
+    public Optional<Double> folderId() {
         return Optional.ofNullable(this.folderId);
     }
     /**
      * Metadata id.
      * 
     */
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Parameters in project
      * 
     */
-    public List<SsisParameterResponse> getParameters() {
+    public List<SsisParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
@@ -124,14 +124,14 @@ public final class SsisProjectResponse {
      * Expected value is 'Project'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Project version.
      * 
     */
-    public Optional<Double> getVersion() {
+    public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }
 

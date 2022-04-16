@@ -28,7 +28,7 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
     @Import(name="config")
       private final @Nullable Map<String,String> config;
 
-    public Map<String,String> getConfig() {
+    public Map<String,String> config() {
         return this.config == null ? Map.of() : this.config;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
     @Import(name="identity", required=true)
       private final ManagedClusterAddonProfileResponseIdentity identity;
 
-    public ManagedClusterAddonProfileResponseIdentity getIdentity() {
+    public ManagedClusterAddonProfileResponseIdentity identity() {
         return this.identity;
     }
 

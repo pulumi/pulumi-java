@@ -107,63 +107,63 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
      * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessToken() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getClusterId() {
+    public Optional<Object> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
      * 
     */
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getDomain() {
+    public Object domain() {
         return this.domain;
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
@@ -171,14 +171,14 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
      * Expected value is 'AzureDatabricksDeltaLake'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getWorkspaceResourceId() {
+    public Optional<Object> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
 

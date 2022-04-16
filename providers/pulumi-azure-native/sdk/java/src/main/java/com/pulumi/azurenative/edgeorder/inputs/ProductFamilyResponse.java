@@ -34,7 +34,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="availabilityInformation", required=true)
       private final AvailabilityInformationResponse availabilityInformation;
 
-    public AvailabilityInformationResponse getAvailabilityInformation() {
+    public AvailabilityInformationResponse availabilityInformation() {
         return this.availabilityInformation;
     }
 
@@ -45,7 +45,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="costInformation", required=true)
       private final CostInformationResponse costInformation;
 
-    public CostInformationResponse getCostInformation() {
+    public CostInformationResponse costInformation() {
         return this.costInformation;
     }
 
@@ -56,7 +56,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
       private final DescriptionResponse description;
 
-    public DescriptionResponse getDescription() {
+    public DescriptionResponse description() {
         return this.description;
     }
 
@@ -67,7 +67,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -78,7 +78,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="filterableProperties", required=true)
       private final List<FilterablePropertyResponse> filterableProperties;
 
-    public List<FilterablePropertyResponse> getFilterableProperties() {
+    public List<FilterablePropertyResponse> filterableProperties() {
         return this.filterableProperties;
     }
 
@@ -89,7 +89,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformationResponse hierarchyInformation;
 
-    public HierarchyInformationResponse getHierarchyInformation() {
+    public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
 
@@ -100,7 +100,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="imageInformation", required=true)
       private final List<ImageInformationResponse> imageInformation;
 
-    public List<ImageInformationResponse> getImageInformation() {
+    public List<ImageInformationResponse> imageInformation() {
         return this.imageInformation;
     }
 
@@ -111,7 +111,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="productLines", required=true)
       private final List<ProductLineResponse> productLines;
 
-    public List<ProductLineResponse> getProductLines() {
+    public List<ProductLineResponse> productLines() {
         return this.productLines;
     }
 
@@ -122,7 +122,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceProviderDetails")
       private final @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails;
 
-    public List<ResourceProviderDetailsResponse> getResourceProviderDetails() {
+    public List<ResourceProviderDetailsResponse> resourceProviderDetails() {
         return this.resourceProviderDetails == null ? List.of() : this.resourceProviderDetails;
     }
 

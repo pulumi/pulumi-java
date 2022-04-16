@@ -26,7 +26,7 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branches")
       private final @Nullable List<String> branches;
 
-    public List<String> getBranches() {
+    public List<String> branches() {
         return this.branches == null ? List.of() : this.branches;
     }
 
@@ -37,7 +37,7 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fullName")
       private final @Nullable String fullName;
 
-    public Optional<String> getFullName() {
+    public Optional<String> fullName() {
         return this.fullName == null ? Optional.empty() : Optional.ofNullable(this.fullName);
     }
 
@@ -48,7 +48,7 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

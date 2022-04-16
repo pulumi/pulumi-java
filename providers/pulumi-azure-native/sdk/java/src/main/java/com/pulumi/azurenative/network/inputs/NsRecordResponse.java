@@ -25,7 +25,7 @@ public final class NsRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nsdname")
       private final @Nullable String nsdname;
 
-    public Optional<String> getNsdname() {
+    public Optional<String> nsdname() {
         return this.nsdname == null ? Optional.empty() : Optional.ofNullable(this.nsdname);
     }
 

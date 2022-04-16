@@ -57,35 +57,35 @@ public final class AutoScaleConfigurationResponse {
      * The maximum number of replicas for each service.
      * 
     */
-    public Optional<Integer> getMaxReplicas() {
+    public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
     /**
      * The minimum number of replicas for each service.
      * 
     */
-    public Optional<Integer> getMinReplicas() {
+    public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
     /**
      * Refresh period in seconds.
      * 
     */
-    public Optional<Integer> getRefreshPeriodInSeconds() {
+    public Optional<Integer> refreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
     /**
      * If auto-scale is enabled for all services. Each service can turn it off individually.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The target utilization.
      * 
     */
-    public Optional<Double> getTargetUtilization() {
+    public Optional<Double> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
 

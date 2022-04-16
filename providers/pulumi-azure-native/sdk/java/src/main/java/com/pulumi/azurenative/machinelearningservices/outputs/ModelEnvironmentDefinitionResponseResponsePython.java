@@ -42,28 +42,28 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
         this.userManagedDependencies = userManagedDependencies;
     }
 
-    public Optional<String> getBaseCondaEnvironment() {
+    public Optional<String> baseCondaEnvironment() {
         return Optional.ofNullable(this.baseCondaEnvironment);
     }
     /**
      * A JObject containing Conda dependencies.
      * 
     */
-    public Optional<Object> getCondaDependencies() {
+    public Optional<Object> condaDependencies() {
         return Optional.ofNullable(this.condaDependencies);
     }
     /**
      * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
      * 
     */
-    public Optional<String> getInterpreterPath() {
+    public Optional<String> interpreterPath() {
         return Optional.ofNullable(this.interpreterPath);
     }
     /**
      * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
      * 
     */
-    public Optional<Boolean> getUserManagedDependencies() {
+    public Optional<Boolean> userManagedDependencies() {
         return Optional.ofNullable(this.userManagedDependencies);
     }
 

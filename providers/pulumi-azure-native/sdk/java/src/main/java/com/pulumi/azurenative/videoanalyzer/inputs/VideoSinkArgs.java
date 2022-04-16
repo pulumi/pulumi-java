@@ -30,7 +30,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputs", required=true)
       private final Output<List<NodeInputArgs>> inputs;
 
-    public Output<List<NodeInputArgs>> getInputs() {
+    public Output<List<NodeInputArgs>> inputs() {
         return this.inputs;
     }
 
@@ -41,7 +41,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -53,7 +53,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -64,7 +64,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="videoCreationProperties")
       private final @Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties;
 
-    public Output<VideoCreationPropertiesArgs> getVideoCreationProperties() {
+    public Output<VideoCreationPropertiesArgs> videoCreationProperties() {
         return this.videoCreationProperties == null ? Codegen.empty() : this.videoCreationProperties;
     }
 
@@ -75,7 +75,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="videoName", required=true)
       private final Output<String> videoName;
 
-    public Output<String> getVideoName() {
+    public Output<String> videoName() {
         return this.videoName;
     }
 
@@ -86,7 +86,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="videoPublishingOptions")
       private final @Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions;
 
-    public Output<VideoPublishingOptionsArgs> getVideoPublishingOptions() {
+    public Output<VideoPublishingOptionsArgs> videoPublishingOptions() {
         return this.videoPublishingOptions == null ? Codegen.empty() : this.videoPublishingOptions;
     }
 

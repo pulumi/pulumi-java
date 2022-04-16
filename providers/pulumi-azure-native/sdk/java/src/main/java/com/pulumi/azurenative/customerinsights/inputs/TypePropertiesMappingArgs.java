@@ -27,7 +27,7 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
     @Import(name="linkType")
       private final @Nullable Output<LinkTypes> linkType;
 
-    public Output<LinkTypes> getLinkType() {
+    public Output<LinkTypes> linkType() {
         return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
@@ -38,7 +38,7 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
     @Import(name="sourcePropertyName", required=true)
       private final Output<String> sourcePropertyName;
 
-    public Output<String> getSourcePropertyName() {
+    public Output<String> sourcePropertyName() {
         return this.sourcePropertyName;
     }
 
@@ -49,7 +49,7 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
     @Import(name="targetPropertyName", required=true)
       private final Output<String> targetPropertyName;
 
-    public Output<String> getTargetPropertyName() {
+    public Output<String> targetPropertyName() {
         return this.targetPropertyName;
     }
 

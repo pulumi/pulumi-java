@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
-    public List<String> getGroupIds() {
+    public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
 
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -57,7 +57,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
 
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
@@ -68,7 +68,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
 
-    public Optional<ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<ConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
@@ -79,7 +79,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -90,7 +90,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

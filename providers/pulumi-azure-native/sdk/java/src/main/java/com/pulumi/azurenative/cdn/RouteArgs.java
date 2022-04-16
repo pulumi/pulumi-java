@@ -32,7 +32,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compressionSettings")
       private final @Nullable Output<CompressionSettingsArgs> compressionSettings;
 
-    public Output<CompressionSettingsArgs> getCompressionSettings() {
+    public Output<CompressionSettingsArgs> compressionSettings() {
         return this.compressionSettings == null ? Codegen.empty() : this.compressionSettings;
     }
 
@@ -43,7 +43,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDomains")
       private final @Nullable Output<List<ResourceReferenceArgs>> customDomains;
 
-    public Output<List<ResourceReferenceArgs>> getCustomDomains() {
+    public Output<List<ResourceReferenceArgs>> customDomains() {
         return this.customDomains == null ? Codegen.empty() : this.customDomains;
     }
 
@@ -54,7 +54,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
-    public Output<Either<String,EnabledState>> getEnabledState() {
+    public Output<Either<String,EnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -65,7 +65,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -76,7 +76,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardingProtocol")
       private final @Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol;
 
-    public Output<Either<String,ForwardingProtocol>> getForwardingProtocol() {
+    public Output<Either<String,ForwardingProtocol>> forwardingProtocol() {
         return this.forwardingProtocol == null ? Codegen.empty() : this.forwardingProtocol;
     }
 
@@ -87,7 +87,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpsRedirect")
       private final @Nullable Output<Either<String,HttpsRedirect>> httpsRedirect;
 
-    public Output<Either<String,HttpsRedirect>> getHttpsRedirect() {
+    public Output<Either<String,HttpsRedirect>> httpsRedirect() {
         return this.httpsRedirect == null ? Codegen.empty() : this.httpsRedirect;
     }
 
@@ -98,7 +98,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkToDefaultDomain")
       private final @Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
 
-    public Output<Either<String,LinkToDefaultDomain>> getLinkToDefaultDomain() {
+    public Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain() {
         return this.linkToDefaultDomain == null ? Codegen.empty() : this.linkToDefaultDomain;
     }
 
@@ -109,7 +109,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originGroup", required=true)
       private final Output<ResourceReferenceArgs> originGroup;
 
-    public Output<ResourceReferenceArgs> getOriginGroup() {
+    public Output<ResourceReferenceArgs> originGroup() {
         return this.originGroup;
     }
 
@@ -120,7 +120,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
-    public Output<String> getOriginPath() {
+    public Output<String> originPath() {
         return this.originPath == null ? Codegen.empty() : this.originPath;
     }
 
@@ -131,7 +131,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="patternsToMatch")
       private final @Nullable Output<List<String>> patternsToMatch;
 
-    public Output<List<String>> getPatternsToMatch() {
+    public Output<List<String>> patternsToMatch() {
         return this.patternsToMatch == null ? Codegen.empty() : this.patternsToMatch;
     }
 
@@ -142,7 +142,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -153,7 +153,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryStringCachingBehavior")
       private final @Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
 
-    public Output<AfdQueryStringCachingBehavior> getQueryStringCachingBehavior() {
+    public Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior() {
         return this.queryStringCachingBehavior == null ? Codegen.empty() : this.queryStringCachingBehavior;
     }
 
@@ -164,7 +164,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -175,7 +175,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeName")
       private final @Nullable Output<String> routeName;
 
-    public Output<String> getRouteName() {
+    public Output<String> routeName() {
         return this.routeName == null ? Codegen.empty() : this.routeName;
     }
 
@@ -186,7 +186,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleSets")
       private final @Nullable Output<List<ResourceReferenceArgs>> ruleSets;
 
-    public Output<List<ResourceReferenceArgs>> getRuleSets() {
+    public Output<List<ResourceReferenceArgs>> ruleSets() {
         return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
     }
 
@@ -197,7 +197,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedProtocols")
       private final @Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 
-    public Output<List<Either<String,AFDEndpointProtocols>>> getSupportedProtocols() {
+    public Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols() {
         return this.supportedProtocols == null ? Codegen.empty() : this.supportedProtocols;
     }
 

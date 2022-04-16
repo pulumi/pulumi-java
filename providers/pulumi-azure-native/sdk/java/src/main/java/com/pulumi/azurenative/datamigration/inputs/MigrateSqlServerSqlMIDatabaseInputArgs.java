@@ -28,7 +28,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="backupFilePaths")
       private final @Nullable Output<List<String>> backupFilePaths;
 
-    public Output<List<String>> getBackupFilePaths() {
+    public Output<List<String>> backupFilePaths() {
         return this.backupFilePaths == null ? Codegen.empty() : this.backupFilePaths;
     }
 
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> getBackupFileShare() {
+    public Output<FileShareArgs> backupFileShare() {
         return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
     }
 
@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="restoreDatabaseName", required=true)
       private final Output<String> restoreDatabaseName;
 
-    public Output<String> getRestoreDatabaseName() {
+    public Output<String> restoreDatabaseName() {
         return this.restoreDatabaseName;
     }
 

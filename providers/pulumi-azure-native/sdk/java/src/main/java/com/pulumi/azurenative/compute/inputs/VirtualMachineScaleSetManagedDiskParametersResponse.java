@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends c
     @Import(name="diskEncryptionSet")
       private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
-    public Optional<DiskEncryptionSetParametersResponse> getDiskEncryptionSet() {
+    public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
         return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
     }
 
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends c
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
     }
 

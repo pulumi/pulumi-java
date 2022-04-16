@@ -42,21 +42,21 @@ public final class DataDiskResponse {
      * Specifies how the virtual machine should be created.
      * 
     */
-    public Optional<String> getCreateOption() {
+    public Optional<String> createOption() {
         return Optional.ofNullable(this.createOption);
     }
     /**
      * Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
      * 
     */
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * The name of data disk.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

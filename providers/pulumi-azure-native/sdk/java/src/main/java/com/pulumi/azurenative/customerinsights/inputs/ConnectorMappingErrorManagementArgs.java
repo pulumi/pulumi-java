@@ -27,7 +27,7 @@ public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resour
     @Import(name="errorLimit")
       private final @Nullable Output<Integer> errorLimit;
 
-    public Output<Integer> getErrorLimit() {
+    public Output<Integer> errorLimit() {
         return this.errorLimit == null ? Codegen.empty() : this.errorLimit;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resour
     @Import(name="errorManagementType", required=true)
       private final Output<ErrorManagementTypes> errorManagementType;
 
-    public Output<ErrorManagementTypes> getErrorManagementType() {
+    public Output<ErrorManagementTypes> errorManagementType() {
         return this.errorManagementType;
     }
 

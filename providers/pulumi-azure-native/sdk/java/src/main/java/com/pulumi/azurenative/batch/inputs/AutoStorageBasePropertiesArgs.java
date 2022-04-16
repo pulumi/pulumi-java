@@ -25,7 +25,7 @@ public final class AutoStorageBasePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="storageAccountId", required=true)
       private final Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 

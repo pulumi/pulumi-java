@@ -19,7 +19,7 @@ public final class ListIngestionSettingConnectionStringsArgs extends com.pulumi.
     @Import(name="ingestionSettingName", required=true)
       private final String ingestionSettingName;
 
-    public String getIngestionSettingName() {
+    public String ingestionSettingName() {
         return this.ingestionSettingName;
     }
 

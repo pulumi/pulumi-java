@@ -19,7 +19,7 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
     @Import(name="activityLogAlertName", required=true)
       private final String activityLogAlertName;
 
-    public String getActivityLogAlertName() {
+    public String activityLogAlertName() {
         return this.activityLogAlertName;
     }
 
@@ -30,7 +30,7 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

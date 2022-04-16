@@ -25,7 +25,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="collaborationBranch", required=true)
       private final String collaborationBranch;
 
-    public String getCollaborationBranch() {
+    public String collaborationBranch() {
         return this.collaborationBranch;
     }
 
@@ -47,7 +47,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="lastCommitId")
       private final @Nullable String lastCommitId;
 
-    public Optional<String> getLastCommitId() {
+    public Optional<String> lastCommitId() {
         return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
     }
 
@@ -58,7 +58,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="projectName", required=true)
       private final String projectName;
 
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
@@ -69,7 +69,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 
@@ -80,7 +80,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="rootFolder", required=true)
       private final String rootFolder;
 
-    public String getRootFolder() {
+    public String rootFolder() {
         return this.rootFolder;
     }
 
@@ -91,7 +91,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -103,7 +103,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -44,7 +44,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
      * 
      */
-    public Output</* @Nullable */ String> getArtifactRoot() {
+    public Output</* @Nullable */ String> artifactRoot() {
         return this.artifactRoot;
     }
     /**
@@ -58,7 +58,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The authentication method to use to access the artifact source.
      * 
      */
-    public Output<SasAuthenticationResponse> getAuthentication() {
+    public Output<SasAuthenticationResponse> authentication() {
         return this.authentication;
     }
     /**
@@ -72,7 +72,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +86,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The type of artifact source used.
      * 
      */
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType;
     }
     /**
@@ -114,7 +114,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +128,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

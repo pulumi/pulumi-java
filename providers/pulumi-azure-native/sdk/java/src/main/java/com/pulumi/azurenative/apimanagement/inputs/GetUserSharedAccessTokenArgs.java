@@ -20,7 +20,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="expiry", required=true)
       private final String expiry;
 
-    public String getExpiry() {
+    public String expiry() {
         return this.expiry;
     }
 
@@ -31,7 +31,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="keyType", required=true)
       private final KeyType keyType;
 
-    public KeyType getKeyType() {
+    public KeyType keyType() {
         return this.keyType;
     }
 
@@ -42,7 +42,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,7 +53,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -64,7 +64,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

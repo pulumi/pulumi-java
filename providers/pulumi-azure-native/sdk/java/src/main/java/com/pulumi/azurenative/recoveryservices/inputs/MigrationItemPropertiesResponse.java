@@ -29,7 +29,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="allowedOperations", required=true)
       private final List<String> allowedOperations;
 
-    public List<String> getAllowedOperations() {
+    public List<String> allowedOperations() {
         return this.allowedOperations;
     }
 
@@ -40,7 +40,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="currentJob", required=true)
       private final CurrentJobDetailsResponse currentJob;
 
-    public CurrentJobDetailsResponse getCurrentJob() {
+    public CurrentJobDetailsResponse currentJob() {
         return this.currentJob;
     }
 
@@ -51,7 +51,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="health", required=true)
       private final String health;
 
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
 
@@ -62,7 +62,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
 
@@ -73,7 +73,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="machineName", required=true)
       private final String machineName;
 
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
 
@@ -84,7 +84,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="migrationState", required=true)
       private final String migrationState;
 
-    public String getMigrationState() {
+    public String migrationState() {
         return this.migrationState;
     }
 
@@ -95,7 +95,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="migrationStateDescription", required=true)
       private final String migrationStateDescription;
 
-    public String getMigrationStateDescription() {
+    public String migrationStateDescription() {
         return this.migrationStateDescription;
     }
 
@@ -106,7 +106,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="policyFriendlyName", required=true)
       private final String policyFriendlyName;
 
-    public String getPolicyFriendlyName() {
+    public String policyFriendlyName() {
         return this.policyFriendlyName;
     }
 
@@ -117,7 +117,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="policyId", required=true)
       private final String policyId;
 
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
 
@@ -128,7 +128,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="providerSpecificDetails")
       private final @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
 
-    public Optional<VMwareCbtMigrationDetailsResponse> getProviderSpecificDetails() {
+    public Optional<VMwareCbtMigrationDetailsResponse> providerSpecificDetails() {
         return this.providerSpecificDetails == null ? Optional.empty() : Optional.ofNullable(this.providerSpecificDetails);
     }
 
@@ -139,7 +139,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="recoveryServicesProviderId", required=true)
       private final String recoveryServicesProviderId;
 
-    public String getRecoveryServicesProviderId() {
+    public String recoveryServicesProviderId() {
         return this.recoveryServicesProviderId;
     }
 
@@ -150,7 +150,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="testMigrateState", required=true)
       private final String testMigrateState;
 
-    public String getTestMigrateState() {
+    public String testMigrateState() {
         return this.testMigrateState;
     }
 
@@ -161,7 +161,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="testMigrateStateDescription", required=true)
       private final String testMigrateStateDescription;
 
-    public String getTestMigrateStateDescription() {
+    public String testMigrateStateDescription() {
         return this.testMigrateStateDescription;
     }
 

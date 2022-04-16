@@ -28,7 +28,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="diskStorageUsedInBytes")
       private final @Nullable String diskStorageUsedInBytes;
 
-    public Optional<String> getDiskStorageUsedInBytes() {
+    public Optional<String> diskStorageUsedInBytes() {
         return this.diskStorageUsedInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskStorageUsedInBytes);
     }
 
@@ -39,7 +39,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="isCollocated")
       private final @Nullable Boolean isCollocated;
 
-    public Optional<Boolean> getIsCollocated() {
+    public Optional<Boolean> isCollocated() {
         return this.isCollocated == null ? Optional.empty() : Optional.ofNullable(this.isCollocated);
     }
 
@@ -50,7 +50,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="isPresentOnCloud")
       private final @Nullable Boolean isPresentOnCloud;
 
-    public Optional<Boolean> getIsPresentOnCloud() {
+    public Optional<Boolean> isPresentOnCloud() {
         return this.isPresentOnCloud == null ? Optional.empty() : Optional.ofNullable(this.isPresentOnCloud);
     }
 
@@ -61,7 +61,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="lastBackupStatus")
       private final @Nullable String lastBackupStatus;
 
-    public Optional<String> getLastBackupStatus() {
+    public Optional<String> lastBackupStatus() {
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
     }
 
@@ -72,7 +72,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="lastRefreshedAt")
       private final @Nullable String lastRefreshedAt;
 
-    public Optional<String> getLastRefreshedAt() {
+    public Optional<String> lastRefreshedAt() {
         return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
     }
 
@@ -83,7 +83,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="oldestRecoveryPoint")
       private final @Nullable String oldestRecoveryPoint;
 
-    public Optional<String> getOldestRecoveryPoint() {
+    public Optional<String> oldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
@@ -94,7 +94,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="onPremiseLatestRecoveryPoint")
       private final @Nullable String onPremiseLatestRecoveryPoint;
 
-    public Optional<String> getOnPremiseLatestRecoveryPoint() {
+    public Optional<String> onPremiseLatestRecoveryPoint() {
         return this.onPremiseLatestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.onPremiseLatestRecoveryPoint);
     }
 
@@ -105,7 +105,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="onPremiseOldestRecoveryPoint")
       private final @Nullable String onPremiseOldestRecoveryPoint;
 
-    public Optional<String> getOnPremiseOldestRecoveryPoint() {
+    public Optional<String> onPremiseOldestRecoveryPoint() {
         return this.onPremiseOldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.onPremiseOldestRecoveryPoint);
     }
 
@@ -116,7 +116,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="onPremiseRecoveryPointCount")
       private final @Nullable Integer onPremiseRecoveryPointCount;
 
-    public Optional<Integer> getOnPremiseRecoveryPointCount() {
+    public Optional<Integer> onPremiseRecoveryPointCount() {
         return this.onPremiseRecoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.onPremiseRecoveryPointCount);
     }
 
@@ -127,7 +127,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="protectableObjectLoadPath")
       private final @Nullable Map<String,String> protectableObjectLoadPath;
 
-    public Map<String,String> getProtectableObjectLoadPath() {
+    public Map<String,String> protectableObjectLoadPath() {
         return this.protectableObjectLoadPath == null ? Map.of() : this.protectableObjectLoadPath;
     }
 
@@ -138,7 +138,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="protected")
       private final @Nullable Boolean protected_;
 
-    public Optional<Boolean> getProtected_() {
+    public Optional<Boolean> protected_() {
         return this.protected_ == null ? Optional.empty() : Optional.ofNullable(this.protected_);
     }
 
@@ -149,7 +149,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="protectionGroupName")
       private final @Nullable String protectionGroupName;
 
-    public Optional<String> getProtectionGroupName() {
+    public Optional<String> protectionGroupName() {
         return this.protectionGroupName == null ? Optional.empty() : Optional.ofNullable(this.protectionGroupName);
     }
 
@@ -160,7 +160,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="recoveryPointCount")
       private final @Nullable Integer recoveryPointCount;
 
-    public Optional<Integer> getRecoveryPointCount() {
+    public Optional<Integer> recoveryPointCount() {
         return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
     }
 
@@ -171,7 +171,7 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
     @Import(name="totalDiskStorageSizeInBytes")
       private final @Nullable String totalDiskStorageSizeInBytes;
 
-    public Optional<String> getTotalDiskStorageSizeInBytes() {
+    public Optional<String> totalDiskStorageSizeInBytes() {
         return this.totalDiskStorageSizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalDiskStorageSizeInBytes);
     }
 

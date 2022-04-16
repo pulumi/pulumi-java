@@ -24,7 +24,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="endAddress")
       private final @Nullable Output<String> endAddress;
 
-    public Output<String> getEndAddress() {
+    public Output<String> endAddress() {
         return this.endAddress == null ? Codegen.empty() : this.endAddress;
     }
 
@@ -35,7 +35,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -46,7 +46,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -57,7 +57,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="routeName")
       private final @Nullable Output<String> routeName;
 
-    public Output<String> getRouteName() {
+    public Output<String> routeName() {
         return this.routeName == null ? Codegen.empty() : this.routeName;
     }
 
@@ -84,7 +84,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="routeType")
       private final @Nullable Output<Either<String,RouteType>> routeType;
 
-    public Output<Either<String,RouteType>> getRouteType() {
+    public Output<Either<String,RouteType>> routeType() {
         return this.routeType == null ? Codegen.empty() : this.routeType;
     }
 
@@ -95,7 +95,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="startAddress")
       private final @Nullable Output<String> startAddress;
 
-    public Output<String> getStartAddress() {
+    public Output<String> startAddress() {
         return this.startAddress == null ? Codegen.empty() : this.startAddress;
     }
 
@@ -106,7 +106,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="vnetName", required=true)
       private final Output<String> vnetName;
 
-    public Output<String> getVnetName() {
+    public Output<String> vnetName() {
         return this.vnetName;
     }
 

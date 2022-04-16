@@ -24,7 +24,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="galleryApplicationName", required=true)
       private final Output<String> galleryApplicationName;
 
-    public Output<String> getGalleryApplicationName() {
+    public Output<String> galleryApplicationName() {
         return this.galleryApplicationName;
     }
 
@@ -35,7 +35,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="galleryApplicationVersionName")
       private final @Nullable Output<String> galleryApplicationVersionName;
 
-    public Output<String> getGalleryApplicationVersionName() {
+    public Output<String> galleryApplicationVersionName() {
         return this.galleryApplicationVersionName == null ? Codegen.empty() : this.galleryApplicationVersionName;
     }
 
@@ -46,7 +46,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
 
-    public Output<String> getGalleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -57,7 +57,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -68,7 +68,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="publishingProfile", required=true)
       private final Output<GalleryApplicationVersionPublishingProfileArgs> publishingProfile;
 
-    public Output<GalleryApplicationVersionPublishingProfileArgs> getPublishingProfile() {
+    public Output<GalleryApplicationVersionPublishingProfileArgs> publishingProfile() {
         return this.publishingProfile;
     }
 
@@ -79,7 +79,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class GalleryApplicationVersionArgs extends com.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

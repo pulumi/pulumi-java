@@ -41,21 +41,21 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
      * Consumer group of the event hub to connected to.
      * 
     */
-    public Optional<String> getConsumerGroup() {
+    public Optional<String> consumerGroup() {
         return Optional.ofNullable(this.consumerGroup);
     }
     /**
      * Event Hub name to connect to.
      * 
     */
-    public Optional<String> getEventHubName() {
+    public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
      * Fully qualified namespace of the Event Hub to connect to.
      * 
     */
-    public Optional<String> getFullyQualifiedEventHubNamespace() {
+    public Optional<String> fullyQualifiedEventHubNamespace() {
         return Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
     }
 

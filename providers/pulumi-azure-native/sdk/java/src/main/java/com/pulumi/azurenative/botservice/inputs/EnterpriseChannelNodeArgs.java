@@ -28,7 +28,7 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="azureLocation", required=true)
       private final Output<String> azureLocation;
 
-    public Output<String> getAzureLocation() {
+    public Output<String> azureLocation() {
         return this.azureLocation;
     }
 
@@ -39,7 +39,7 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="azureSku", required=true)
       private final Output<String> azureSku;
 
-    public Output<String> getAzureSku() {
+    public Output<String> azureSku() {
         return this.azureSku;
     }
 
@@ -50,7 +50,7 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
     @Import(name="state")
       private final @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
-    public Output<Either<String,EnterpriseChannelNodeState>> getState() {
+    public Output<Either<String,EnterpriseChannelNodeState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

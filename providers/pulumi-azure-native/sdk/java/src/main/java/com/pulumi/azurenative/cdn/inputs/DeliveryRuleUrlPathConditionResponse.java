@@ -25,7 +25,7 @@ public final class DeliveryRuleUrlPathConditionResponse extends com.pulumi.resou
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleUrlPathConditionResponse extends com.pulumi.resou
     @Import(name="parameters", required=true)
       private final UrlPathMatchConditionParametersResponse parameters;
 
-    public UrlPathMatchConditionParametersResponse getParameters() {
+    public UrlPathMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

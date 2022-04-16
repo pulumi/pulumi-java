@@ -20,10 +20,10 @@ public final class LightHouseAuthorizationResponse {
         this.roleDefinitionId = roleDefinitionId;
     }
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

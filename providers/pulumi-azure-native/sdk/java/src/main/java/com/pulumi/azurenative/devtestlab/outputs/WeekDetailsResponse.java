@@ -35,14 +35,14 @@ public final class WeekDetailsResponse {
      * The time of the day the schedule will occur.
      * 
     */
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
     /**
      * The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
      * 
     */
-    public List<String> getWeekdays() {
+    public List<String> weekdays() {
         return this.weekdays == null ? List.of() : this.weekdays;
     }
 

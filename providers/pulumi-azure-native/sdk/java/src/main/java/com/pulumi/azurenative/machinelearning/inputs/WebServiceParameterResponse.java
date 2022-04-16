@@ -26,7 +26,7 @@ public final class WebServiceParameterResponse extends com.pulumi.resources.Invo
     @Import(name="certificateThumbprint")
       private final @Nullable String certificateThumbprint;
 
-    public Optional<String> getCertificateThumbprint() {
+    public Optional<String> certificateThumbprint() {
         return this.certificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certificateThumbprint);
     }
 
@@ -37,7 +37,7 @@ public final class WebServiceParameterResponse extends com.pulumi.resources.Invo
     @Import(name="value")
       private final @Nullable Object value;
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

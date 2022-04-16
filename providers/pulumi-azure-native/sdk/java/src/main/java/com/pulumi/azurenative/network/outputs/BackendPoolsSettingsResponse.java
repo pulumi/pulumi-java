@@ -35,14 +35,14 @@ public final class BackendPoolsSettingsResponse {
      * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
      * 
     */
-    public Optional<String> getEnforceCertificateNameCheck() {
+    public Optional<String> enforceCertificateNameCheck() {
         return Optional.ofNullable(this.enforceCertificateNameCheck);
     }
     /**
      * Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
      * 
     */
-    public Optional<Integer> getSendRecvTimeoutSeconds() {
+    public Optional<Integer> sendRecvTimeoutSeconds() {
         return Optional.ofNullable(this.sendRecvTimeoutSeconds);
     }
 

@@ -28,7 +28,7 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="physicalPath")
       private final @Nullable String physicalPath;
 
-    public Optional<String> getPhysicalPath() {
+    public Optional<String> physicalPath() {
         return this.physicalPath == null ? Optional.empty() : Optional.ofNullable(this.physicalPath);
     }
 
@@ -39,7 +39,7 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="preloadEnabled")
       private final @Nullable Boolean preloadEnabled;
 
-    public Optional<Boolean> getPreloadEnabled() {
+    public Optional<Boolean> preloadEnabled() {
         return this.preloadEnabled == null ? Optional.empty() : Optional.ofNullable(this.preloadEnabled);
     }
 
@@ -50,7 +50,7 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="virtualDirectories")
       private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
 
-    public List<VirtualDirectoryResponse> getVirtualDirectories() {
+    public List<VirtualDirectoryResponse> virtualDirectories() {
         return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
     }
 
@@ -61,7 +61,7 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="virtualPath")
       private final @Nullable String virtualPath;
 
-    public Optional<String> getVirtualPath() {
+    public Optional<String> virtualPath() {
         return this.virtualPath == null ? Optional.empty() : Optional.ofNullable(this.virtualPath);
     }
 

@@ -26,7 +26,7 @@ public final class ExtendedPropertiesResponse {
      * Extended Properties for Disk Exclusion.
      * 
     */
-    public Optional<DiskExclusionPropertiesResponse> getDiskExclusionProperties() {
+    public Optional<DiskExclusionPropertiesResponse> diskExclusionProperties() {
         return Optional.ofNullable(this.diskExclusionProperties);
     }
 

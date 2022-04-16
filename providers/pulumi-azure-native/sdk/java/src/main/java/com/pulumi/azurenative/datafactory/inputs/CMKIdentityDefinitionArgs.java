@@ -26,7 +26,7 @@ public final class CMKIdentityDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
+    public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 

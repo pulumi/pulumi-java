@@ -32,14 +32,14 @@ public final class SkuResponse {
      * The SKU name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The SKU tier.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

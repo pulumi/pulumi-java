@@ -24,7 +24,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerEventName")
       private final @Nullable Output<String> customerEventName;
 
-    public Output<String> getCustomerEventName() {
+    public Output<String> customerEventName() {
         return this.customerEventName == null ? Codegen.empty() : this.customerEventName;
     }
 
@@ -35,7 +35,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventName", required=true)
       private final Output<String> eventName;
 
-    public Output<String> getEventName() {
+    public Output<String> eventName() {
         return this.eventName;
     }
 
@@ -46,7 +46,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="receivers", required=true)
       private final Output<List<NotificationEventReceiverArgs>> receivers;
 
-    public Output<List<NotificationEventReceiverArgs>> getReceivers() {
+    public Output<List<NotificationEventReceiverArgs>> receivers() {
         return this.receivers;
     }
 
@@ -57,7 +57,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
-    public Output<String> getTestBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 

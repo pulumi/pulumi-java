@@ -25,7 +25,7 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
     @Import(name="format")
       private final @Nullable String format;
 
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
@@ -36,7 +36,7 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

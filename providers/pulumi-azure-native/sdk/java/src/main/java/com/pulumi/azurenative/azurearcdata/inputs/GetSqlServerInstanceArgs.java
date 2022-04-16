@@ -19,7 +19,7 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
     @Import(name="sqlServerInstanceName", required=true)
       private final String sqlServerInstanceName;
 
-    public String getSqlServerInstanceName() {
+    public String sqlServerInstanceName() {
         return this.sqlServerInstanceName;
     }
 

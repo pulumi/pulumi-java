@@ -29,7 +29,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobWriterAddHeader")
       private final @Nullable Output<Object> blobWriterAddHeader;
 
-    public Output<Object> getBlobWriterAddHeader() {
+    public Output<Object> blobWriterAddHeader() {
         return this.blobWriterAddHeader == null ? Codegen.empty() : this.blobWriterAddHeader;
     }
 
@@ -40,7 +40,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobWriterDateTimeFormat")
       private final @Nullable Output<Object> blobWriterDateTimeFormat;
 
-    public Output<Object> getBlobWriterDateTimeFormat() {
+    public Output<Object> blobWriterDateTimeFormat() {
         return this.blobWriterDateTimeFormat == null ? Codegen.empty() : this.blobWriterDateTimeFormat;
     }
 
@@ -51,7 +51,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobWriterOverwriteFiles")
       private final @Nullable Output<Object> blobWriterOverwriteFiles;
 
-    public Output<Object> getBlobWriterOverwriteFiles() {
+    public Output<Object> blobWriterOverwriteFiles() {
         return this.blobWriterOverwriteFiles == null ? Codegen.empty() : this.blobWriterOverwriteFiles;
     }
 
@@ -62,7 +62,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
 
-    public Output<Object> getCopyBehavior() {
+    public Output<Object> copyBehavior() {
         return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
     }
 
@@ -73,7 +73,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -84,7 +84,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -95,7 +95,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<List<MetadataItemArgs>> metadata;
 
-    public Output<List<MetadataItemArgs>> getMetadata() {
+    public Output<List<MetadataItemArgs>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -106,7 +106,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> getSinkRetryCount() {
+    public Output<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
@@ -117,7 +117,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> getSinkRetryWait() {
+    public Output<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
@@ -129,7 +129,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +140,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> getWriteBatchSize() {
+    public Output<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
@@ -151,7 +151,7 @@ public final class BlobSinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> getWriteBatchTimeout() {
+    public Output<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 

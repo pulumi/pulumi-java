@@ -30,7 +30,7 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -41,7 +41,7 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -52,7 +52,7 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="customParameters")
       private final @Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
 
-    public Output<Map<String,ApiOAuthSettingsParameterArgs>> getCustomParameters() {
+    public Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters() {
         return this.customParameters == null ? Codegen.empty() : this.customParameters;
     }
 
@@ -63,7 +63,7 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identityProvider")
       private final @Nullable Output<String> identityProvider;
 
-    public Output<String> getIdentityProvider() {
+    public Output<String> identityProvider() {
         return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
@@ -74,7 +74,7 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -85,7 +85,7 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="redirectUrl")
       private final @Nullable Output<String> redirectUrl;
 
-    public Output<String> getRedirectUrl() {
+    public Output<String> redirectUrl() {
         return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
     }
 
@@ -96,7 +96,7 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 

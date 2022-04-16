@@ -19,7 +19,7 @@ public final class GetExpressRoutePortArgs extends com.pulumi.resources.InvokeAr
     @Import(name="expressRoutePortName", required=true)
       private final String expressRoutePortName;
 
-    public String getExpressRoutePortName() {
+    public String expressRoutePortName() {
         return this.expressRoutePortName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExpressRoutePortArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

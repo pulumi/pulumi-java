@@ -28,7 +28,7 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="clusterKeys")
       private final @Nullable List<ClusterKeyResponse> clusterKeys;
 
-    public List<ClusterKeyResponse> getClusterKeys() {
+    public List<ClusterKeyResponse> clusterKeys() {
         return this.clusterKeys == null ? List.of() : this.clusterKeys;
     }
 
@@ -39,7 +39,7 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="columns")
       private final @Nullable List<ColumnResponse> columns;
 
-    public List<ColumnResponse> getColumns() {
+    public List<ColumnResponse> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
 
@@ -50,7 +50,7 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="partitionKeys")
       private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
-    public List<CassandraPartitionKeyResponse> getPartitionKeys() {
+    public List<CassandraPartitionKeyResponse> partitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
     }
 

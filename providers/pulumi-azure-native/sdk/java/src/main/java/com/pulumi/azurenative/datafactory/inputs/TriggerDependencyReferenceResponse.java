@@ -24,7 +24,7 @@ public final class TriggerDependencyReferenceResponse extends com.pulumi.resourc
     @Import(name="referenceTrigger", required=true)
       private final TriggerReferenceResponse referenceTrigger;
 
-    public TriggerReferenceResponse getReferenceTrigger() {
+    public TriggerReferenceResponse referenceTrigger() {
         return this.referenceTrigger;
     }
 
@@ -36,7 +36,7 @@ public final class TriggerDependencyReferenceResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

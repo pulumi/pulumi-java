@@ -22,7 +22,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainServiceName", required=true)
       private final Output<String> domainServiceName;
 
-    public Output<String> getDomainServiceName() {
+    public Output<String> domainServiceName() {
         return this.domainServiceName;
     }
 
@@ -44,7 +44,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ouContainerName")
       private final @Nullable Output<String> ouContainerName;
 
-    public Output<String> getOuContainerName() {
+    public Output<String> ouContainerName() {
         return this.ouContainerName == null ? Codegen.empty() : this.ouContainerName;
     }
 
@@ -55,7 +55,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -66,7 +66,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +77,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spn")
       private final @Nullable Output<String> spn;
 
-    public Output<String> getSpn() {
+    public Output<String> spn() {
         return this.spn == null ? Codegen.empty() : this.spn;
     }
 

@@ -43,7 +43,7 @@ public class ServerAzureADOnlyAuthentication extends com.pulumi.resources.Custom
      * @return Azure Active Directory only Authentication enabled.
      * 
      */
-    public Output<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
@@ -57,7 +57,7 @@ public class ServerAzureADOnlyAuthentication extends com.pulumi.resources.Custom
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ServerAzureADOnlyAuthentication extends com.pulumi.resources.Custom
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

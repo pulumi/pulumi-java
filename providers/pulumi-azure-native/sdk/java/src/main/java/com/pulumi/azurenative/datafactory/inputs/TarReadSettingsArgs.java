@@ -27,7 +27,7 @@ public final class TarReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="preserveCompressionFileNameAsFolder")
       private final @Nullable Output<Object> preserveCompressionFileNameAsFolder;
 
-    public Output<Object> getPreserveCompressionFileNameAsFolder() {
+    public Output<Object> preserveCompressionFileNameAsFolder() {
         return this.preserveCompressionFileNameAsFolder == null ? Codegen.empty() : this.preserveCompressionFileNameAsFolder;
     }
 
@@ -39,7 +39,7 @@ public final class TarReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

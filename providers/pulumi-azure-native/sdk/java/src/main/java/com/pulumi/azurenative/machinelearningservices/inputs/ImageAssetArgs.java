@@ -27,7 +27,7 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 
@@ -49,7 +49,7 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unpack")
       private final @Nullable Output<Boolean> unpack;
 
-    public Output<Boolean> getUnpack() {
+    public Output<Boolean> unpack() {
         return this.unpack == null ? Codegen.empty() : this.unpack;
     }
 
@@ -60,7 +60,7 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

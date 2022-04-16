@@ -39,21 +39,21 @@ public final class StatusResponse {
      * The short label for the status.
      * 
     */
-    public String getDisplayStatus() {
+    public String displayStatus() {
         return this.displayStatus;
     }
     /**
      * The detailed message for the status, including alerts and error messages.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The timestamp when the status was changed to the current value.
      * 
     */
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 

@@ -33,14 +33,14 @@ public final class ScaleRuleResponse {
      * the trigger that results in a scaling action.
      * 
     */
-    public MetricTriggerResponse getMetricTrigger() {
+    public MetricTriggerResponse metricTrigger() {
         return this.metricTrigger;
     }
     /**
      * the parameters for the scaling action.
      * 
     */
-    public ScaleActionResponse getScaleAction() {
+    public ScaleActionResponse scaleAction() {
         return this.scaleAction;
     }
 

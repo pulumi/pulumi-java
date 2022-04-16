@@ -19,7 +19,7 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="actionId", required=true)
       private final String actionId;
 
-    public String getActionId() {
+    public String actionId() {
         return this.actionId;
     }
 
@@ -30,7 +30,7 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleId", required=true)
       private final String ruleId;
 
-    public String getRuleId() {
+    public String ruleId() {
         return this.ruleId;
     }
 
@@ -52,7 +52,7 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

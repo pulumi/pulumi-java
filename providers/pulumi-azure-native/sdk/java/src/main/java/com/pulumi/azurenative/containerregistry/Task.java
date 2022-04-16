@@ -56,7 +56,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The machine configuration of the run agent.
      * 
      */
-    public Output</* @Nullable */ AgentPropertiesResponse> getAgentConfiguration() {
+    public Output</* @Nullable */ AgentPropertiesResponse> agentConfiguration() {
         return this.agentConfiguration;
     }
     /**
@@ -70,7 +70,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The dedicated agent pool for the task.
      * 
      */
-    public Output</* @Nullable */ String> getAgentPoolName() {
+    public Output</* @Nullable */ String> agentPoolName() {
         return this.agentPoolName;
     }
     /**
@@ -84,7 +84,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The creation date of task.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -98,7 +98,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The properties that describes a set of credentials that will be used when this run is invoked.
      * 
      */
-    public Output</* @Nullable */ CredentialsResponse> getCredentials() {
+    public Output</* @Nullable */ CredentialsResponse> credentials() {
         return this.credentials;
     }
     /**
@@ -112,7 +112,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
         return this.identity;
     }
     /**
@@ -126,7 +126,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The value of this property indicates whether the task resource is system task or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsSystemTask() {
+    public Output</* @Nullable */ Boolean> isSystemTask() {
         return this.isSystemTask;
     }
     /**
@@ -140,7 +140,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -154,7 +154,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The template that describes the repository and tag information for run log artifact.
      * 
      */
-    public Output</* @Nullable */ String> getLogTemplate() {
+    public Output</* @Nullable */ String> logTemplate() {
         return this.logTemplate;
     }
     /**
@@ -168,7 +168,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -182,7 +182,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The platform properties against which the run has to happen.
      * 
      */
-    public Output</* @Nullable */ PlatformPropertiesResponse> getPlatform() {
+    public Output</* @Nullable */ PlatformPropertiesResponse> platform() {
         return this.platform;
     }
     /**
@@ -196,7 +196,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the task.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -210,7 +210,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The current status of task.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -224,7 +224,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The properties of a task step.
      * 
      */
-    public Output</* @Nullable */ Object> getStep() {
+    public Output</* @Nullable */ Object> step() {
         return this.step;
     }
     /**
@@ -238,7 +238,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -252,7 +252,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -266,7 +266,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Run timeout in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -280,7 +280,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The properties that describe all triggers for the task.
      * 
      */
-    public Output</* @Nullable */ TriggerPropertiesResponse> getTrigger() {
+    public Output</* @Nullable */ TriggerPropertiesResponse> trigger() {
         return this.trigger;
     }
     /**
@@ -294,7 +294,7 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

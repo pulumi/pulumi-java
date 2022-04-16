@@ -44,21 +44,21 @@ public final class NetworkConfigurationResponse {
      * The access endpoint.
      * 
     */
-    public Optional<IntegrationServiceEnvironmentAccessEndpointResponse> getAccessEndpoint() {
+    public Optional<IntegrationServiceEnvironmentAccessEndpointResponse> accessEndpoint() {
         return Optional.ofNullable(this.accessEndpoint);
     }
     /**
      * The subnets.
      * 
     */
-    public List<ResourceReferenceResponse> getSubnets() {
+    public List<ResourceReferenceResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
      * Gets the virtual network address space.
      * 
     */
-    public Optional<String> getVirtualNetworkAddressSpace() {
+    public Optional<String> virtualNetworkAddressSpace() {
         return Optional.ofNullable(this.virtualNetworkAddressSpace);
     }
 

@@ -24,7 +24,7 @@ public final class ServerEndpointRecallErrorResponse extends com.pulumi.resource
     @Import(name="count", required=true)
       private final Double count;
 
-    public Double getCount() {
+    public Double count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class ServerEndpointRecallErrorResponse extends com.pulumi.resource
     @Import(name="errorCode", required=true)
       private final Integer errorCode;
 
-    public Integer getErrorCode() {
+    public Integer errorCode() {
         return this.errorCode;
     }
 

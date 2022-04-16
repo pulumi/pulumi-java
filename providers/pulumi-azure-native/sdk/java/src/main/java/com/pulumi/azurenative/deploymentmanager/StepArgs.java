@@ -26,7 +26,7 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -37,7 +37,7 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties;
 
-    public Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> getProperties() {
+    public Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties() {
         return this.properties;
     }
 
@@ -48,7 +48,7 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepName")
       private final @Nullable Output<String> stepName;
 
-    public Output<String> getStepName() {
+    public Output<String> stepName() {
         return this.stepName == null ? Codegen.empty() : this.stepName;
     }
 
@@ -70,7 +70,7 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

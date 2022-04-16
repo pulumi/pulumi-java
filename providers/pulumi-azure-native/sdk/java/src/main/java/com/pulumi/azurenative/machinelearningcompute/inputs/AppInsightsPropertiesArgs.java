@@ -26,7 +26,7 @@ public final class AppInsightsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

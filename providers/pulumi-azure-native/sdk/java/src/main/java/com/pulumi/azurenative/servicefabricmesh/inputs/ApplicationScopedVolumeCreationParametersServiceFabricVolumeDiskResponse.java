@@ -25,7 +25,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="sizeDisk", required=true)
       private final String sizeDisk;
 
-    public String getSizeDisk() {
+    public String sizeDisk() {
         return this.sizeDisk;
     }
 

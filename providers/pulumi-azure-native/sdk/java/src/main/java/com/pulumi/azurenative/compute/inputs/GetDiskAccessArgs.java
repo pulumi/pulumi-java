@@ -19,7 +19,7 @@ public final class GetDiskAccessArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskAccessName", required=true)
       private final String diskAccessName;
 
-    public String getDiskAccessName() {
+    public String diskAccessName() {
         return this.diskAccessName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDiskAccessArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

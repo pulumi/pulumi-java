@@ -26,7 +26,7 @@ public final class A2AUnprotectedDiskDetailsResponse {
      * The source lun Id for the data disk.
      * 
     */
-    public Optional<Integer> getDiskLunId() {
+    public Optional<Integer> diskLunId() {
         return Optional.ofNullable(this.diskLunId);
     }
 

@@ -19,7 +19,7 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appName", required=true)
       private final String appName;
 
-    public String getAppName() {
+    public String appName() {
         return this.appName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="bindingName", required=true)
       private final String bindingName;
 
-    public String getBindingName() {
+    public String bindingName() {
         return this.bindingName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

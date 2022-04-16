@@ -19,7 +19,7 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
     @Import(name="vpnServerConfigurationName", required=true)
       private final String vpnServerConfigurationName;
 
-    public String getVpnServerConfigurationName() {
+    public String vpnServerConfigurationName() {
         return this.vpnServerConfigurationName;
     }
 

@@ -38,7 +38,7 @@ public class WorkflowAccessKey extends com.pulumi.resources.CustomResource {
      * @return Gets the workflow access key name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -52,7 +52,7 @@ public class WorkflowAccessKey extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the not-after time.
      * 
      */
-    public Output</* @Nullable */ String> getNotAfter() {
+    public Output</* @Nullable */ String> notAfter() {
         return this.notAfter;
     }
     /**
@@ -66,7 +66,7 @@ public class WorkflowAccessKey extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the not-before time.
      * 
      */
-    public Output</* @Nullable */ String> getNotBefore() {
+    public Output</* @Nullable */ String> notBefore() {
         return this.notBefore;
     }
     /**
@@ -80,7 +80,7 @@ public class WorkflowAccessKey extends com.pulumi.resources.CustomResource {
      * @return Gets the workflow access key type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

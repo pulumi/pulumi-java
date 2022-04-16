@@ -26,7 +26,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mountPath", required=true)
       private final String mountPath;
 
-    public String getMountPath() {
+    public String mountPath() {
         return this.mountPath;
     }
 
@@ -37,7 +37,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="readOnly")
       private final @Nullable Boolean readOnly;
 
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
     }
 

@@ -40,7 +40,7 @@ public class JobCollection extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the storage account location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -54,7 +54,7 @@ public class JobCollection extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the job collection resource name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -68,7 +68,7 @@ public class JobCollection extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the job collection properties.
      * 
      */
-    public Output<JobCollectionPropertiesResponse> getProperties() {
+    public Output<JobCollectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -82,7 +82,7 @@ public class JobCollection extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -96,7 +96,7 @@ public class JobCollection extends com.pulumi.resources.CustomResource {
      * @return Gets the job collection resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

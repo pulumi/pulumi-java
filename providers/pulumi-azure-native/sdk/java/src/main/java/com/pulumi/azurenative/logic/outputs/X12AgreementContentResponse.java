@@ -32,14 +32,14 @@ public final class X12AgreementContentResponse {
      * The X12 one-way receive agreement.
      * 
     */
-    public X12OneWayAgreementResponse getReceiveAgreement() {
+    public X12OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
     /**
      * The X12 one-way send agreement.
      * 
     */
-    public X12OneWayAgreementResponse getSendAgreement() {
+    public X12OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 

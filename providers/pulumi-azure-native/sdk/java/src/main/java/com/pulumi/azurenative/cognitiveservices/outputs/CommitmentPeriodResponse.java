@@ -57,35 +57,35 @@ public final class CommitmentPeriodResponse {
      * Commitment period commitment count.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Commitment period end date.
      * 
     */
-    public String getEndDate() {
+    public String endDate() {
         return this.endDate;
     }
     /**
      * Cognitive Services account commitment quota.
      * 
     */
-    public CommitmentQuotaResponse getQuota() {
+    public CommitmentQuotaResponse quota() {
         return this.quota;
     }
     /**
      * Commitment period start date.
      * 
     */
-    public String getStartDate() {
+    public String startDate() {
         return this.startDate;
     }
     /**
      * Commitment period commitment tier.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

@@ -49,7 +49,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return UTC Date and time when project was created
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -63,7 +63,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return List of DatabaseInfo
      * 
      */
-    public Output</* @Nullable */ List<DatabaseInfoResponse>> getDatabasesInfo() {
+    public Output</* @Nullable */ List<DatabaseInfoResponse>> databasesInfo() {
         return this.databasesInfo;
     }
     /**
@@ -77,7 +77,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -91,7 +91,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -105,7 +105,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return The project's provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -119,7 +119,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Information for connecting to source
      * 
      */
-    public Output</* @Nullable */ Object> getSourceConnectionInfo() {
+    public Output</* @Nullable */ Object> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
@@ -133,7 +133,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Source platform for the project
      * 
      */
-    public Output<String> getSourcePlatform() {
+    public Output<String> sourcePlatform() {
         return this.sourcePlatform;
     }
     /**
@@ -147,7 +147,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -161,7 +161,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Information for connecting to target
      * 
      */
-    public Output</* @Nullable */ Object> getTargetConnectionInfo() {
+    public Output</* @Nullable */ Object> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
     /**
@@ -175,7 +175,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Target platform for the project
      * 
      */
-    public Output<String> getTargetPlatform() {
+    public Output<String> targetPlatform() {
         return this.targetPlatform;
     }
     /**
@@ -189,7 +189,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class EnabledConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 

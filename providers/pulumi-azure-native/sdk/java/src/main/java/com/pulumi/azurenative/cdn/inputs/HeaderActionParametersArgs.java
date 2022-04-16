@@ -28,7 +28,7 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
     @Import(name="headerAction", required=true)
       private final Output<Either<String,HeaderAction>> headerAction;
 
-    public Output<Either<String,HeaderAction>> getHeaderAction() {
+    public Output<Either<String,HeaderAction>> headerAction() {
         return this.headerAction;
     }
 
@@ -39,14 +39,14 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -57,7 +57,7 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

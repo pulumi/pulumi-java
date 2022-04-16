@@ -33,7 +33,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="aadResourceId", required=true)
       private final Object aadResourceId;
 
-    public Object getAadResourceId() {
+    public Object aadResourceId() {
         return this.aadResourceId;
     }
 
@@ -44,7 +44,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -55,7 +55,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -77,7 +77,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -88,7 +88,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -99,7 +99,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="servicePrincipalId", required=true)
       private final Object servicePrincipalId;
 
-    public Object getServicePrincipalId() {
+    public Object servicePrincipalId() {
         return this.servicePrincipalId;
     }
 
@@ -110,7 +110,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="servicePrincipalKey", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
 
@@ -121,7 +121,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="tenant", required=true)
       private final Object tenant;
 
-    public Object getTenant() {
+    public Object tenant() {
         return this.tenant;
     }
 
@@ -133,7 +133,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -144,7 +144,7 @@ public final class DynamicsAXLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="url", required=true)
       private final Object url;
 
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 

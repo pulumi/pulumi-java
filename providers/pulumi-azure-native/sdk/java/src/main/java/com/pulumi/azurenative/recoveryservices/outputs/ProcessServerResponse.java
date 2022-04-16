@@ -278,252 +278,252 @@ public final class ProcessServerResponse {
      * Agent expiry date.
      * 
     */
-    public Optional<String> getAgentExpiryDate() {
+    public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
      * The version of the scout component on the server.
      * 
     */
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * The agent version details.
      * 
     */
-    public Optional<VersionDetailsResponse> getAgentVersionDetails() {
+    public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
     /**
      * The available memory.
      * 
     */
-    public Optional<Double> getAvailableMemoryInBytes() {
+    public Optional<Double> availableMemoryInBytes() {
         return Optional.ofNullable(this.availableMemoryInBytes);
     }
     /**
      * The available space.
      * 
     */
-    public Optional<Double> getAvailableSpaceInBytes() {
+    public Optional<Double> availableSpaceInBytes() {
         return Optional.ofNullable(this.availableSpaceInBytes);
     }
     /**
      * The percentage of the CPU load.
      * 
     */
-    public Optional<String> getCpuLoad() {
+    public Optional<String> cpuLoad() {
         return Optional.ofNullable(this.cpuLoad);
     }
     /**
      * The CPU load status.
      * 
     */
-    public Optional<String> getCpuLoadStatus() {
+    public Optional<String> cpuLoadStatus() {
         return Optional.ofNullable(this.cpuLoadStatus);
     }
     /**
      * The Process Server's friendly name.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The health of Process Server.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * Health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
      * The agent generated Id.
      * 
     */
-    public Optional<String> getHostId() {
+    public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
     /**
      * The Process Server Id.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The IP address of the server.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The last heartbeat received from the server.
      * 
     */
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The servers configured with this PS.
      * 
     */
-    public Optional<String> getMachineCount() {
+    public Optional<String> machineCount() {
         return Optional.ofNullable(this.machineCount);
     }
     /**
      * The MARS communication status.
      * 
     */
-    public String getMarsCommunicationStatus() {
+    public String marsCommunicationStatus() {
         return this.marsCommunicationStatus;
     }
     /**
      * The MARS registration status.
      * 
     */
-    public String getMarsRegistrationStatus() {
+    public String marsRegistrationStatus() {
         return this.marsRegistrationStatus;
     }
     /**
      * The memory usage status.
      * 
     */
-    public Optional<String> getMemoryUsageStatus() {
+    public Optional<String> memoryUsageStatus() {
         return Optional.ofNullable(this.memoryUsageStatus);
     }
     /**
      * The list of the mobility service updates available on the Process Server.
      * 
     */
-    public List<MobilityServiceUpdateResponse> getMobilityServiceUpdates() {
+    public List<MobilityServiceUpdateResponse> mobilityServiceUpdates() {
         return this.mobilityServiceUpdates == null ? List.of() : this.mobilityServiceUpdates;
     }
     /**
      * The OS type of the server.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
      * 
     */
-    public Optional<String> getOsVersion() {
+    public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
     /**
      * The PS service status.
      * 
     */
-    public Optional<String> getPsServiceStatus() {
+    public Optional<String> psServiceStatus() {
         return Optional.ofNullable(this.psServiceStatus);
     }
     /**
      * The process server stats refresh time.
      * 
     */
-    public String getPsStatsRefreshTime() {
+    public String psStatsRefreshTime() {
         return this.psStatsRefreshTime;
     }
     /**
      * The number of replication pairs configured in this PS.
      * 
     */
-    public Optional<String> getReplicationPairCount() {
+    public Optional<String> replicationPairCount() {
         return Optional.ofNullable(this.replicationPairCount);
     }
     /**
      * The space usage status.
      * 
     */
-    public Optional<String> getSpaceUsageStatus() {
+    public Optional<String> spaceUsageStatus() {
         return Optional.ofNullable(this.spaceUsageStatus);
     }
     /**
      * The PS SSL cert expiry date.
      * 
     */
-    public Optional<String> getSslCertExpiryDate() {
+    public Optional<String> sslCertExpiryDate() {
         return Optional.ofNullable(this.sslCertExpiryDate);
     }
     /**
      * CS SSL cert expiry date.
      * 
     */
-    public Optional<Integer> getSslCertExpiryRemainingDays() {
+    public Optional<Integer> sslCertExpiryRemainingDays() {
         return Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
     /**
      * The percentage of the system load.
      * 
     */
-    public Optional<String> getSystemLoad() {
+    public Optional<String> systemLoad() {
         return Optional.ofNullable(this.systemLoad);
     }
     /**
      * The system load status.
      * 
     */
-    public Optional<String> getSystemLoadStatus() {
+    public Optional<String> systemLoadStatus() {
         return Optional.ofNullable(this.systemLoadStatus);
     }
     /**
      * The throughput in bytes.
      * 
     */
-    public Double getThroughputInBytes() {
+    public Double throughputInBytes() {
         return this.throughputInBytes;
     }
     /**
      * The throughput in MBps.
      * 
     */
-    public Double getThroughputInMBps() {
+    public Double throughputInMBps() {
         return this.throughputInMBps;
     }
     /**
      * The throughput status.
      * 
     */
-    public String getThroughputStatus() {
+    public String throughputStatus() {
         return this.throughputStatus;
     }
     /**
      * The uploading pending data in bytes.
      * 
     */
-    public Double getThroughputUploadPendingDataInBytes() {
+    public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
     }
     /**
      * The total memory.
      * 
     */
-    public Optional<Double> getTotalMemoryInBytes() {
+    public Optional<Double> totalMemoryInBytes() {
         return Optional.ofNullable(this.totalMemoryInBytes);
     }
     /**
      * The total space.
      * 
     */
-    public Optional<Double> getTotalSpaceInBytes() {
+    public Optional<Double> totalSpaceInBytes() {
         return Optional.ofNullable(this.totalSpaceInBytes);
     }
     /**
      * Version status
      * 
     */
-    public Optional<String> getVersionStatus() {
+    public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }
 

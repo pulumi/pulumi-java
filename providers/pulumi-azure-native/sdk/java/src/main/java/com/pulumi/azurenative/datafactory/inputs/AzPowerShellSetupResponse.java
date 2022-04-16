@@ -24,7 +24,7 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -35,7 +35,7 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

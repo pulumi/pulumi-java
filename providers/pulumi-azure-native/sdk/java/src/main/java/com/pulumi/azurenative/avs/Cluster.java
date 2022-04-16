@@ -44,7 +44,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity
      * 
      */
-    public Output<Integer> getClusterId() {
+    public Output<Integer> clusterId() {
         return this.clusterId;
     }
     /**
@@ -58,7 +58,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster size
      * 
      */
-    public Output<Integer> getClusterSize() {
+    public Output<Integer> clusterSize() {
         return this.clusterSize;
     }
     /**
@@ -72,7 +72,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The hosts
      * 
      */
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts;
     }
     /**
@@ -86,7 +86,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The state of the cluster provisioning
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +114,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster SKU
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -128,7 +128,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

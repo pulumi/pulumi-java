@@ -41,21 +41,21 @@ public final class HttpRouteMatchHeaderResponse {
      * Name of header to match in request.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * how to match header value
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Value of header to match in request.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

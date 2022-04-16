@@ -28,7 +28,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backends")
       private final @Nullable List<BackendResponse> backends;
 
-    public List<BackendResponse> getBackends() {
+    public List<BackendResponse> backends() {
         return this.backends == null ? List.of() : this.backends;
     }
 
@@ -39,7 +39,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthProbeSettings")
       private final @Nullable SubResourceResponse healthProbeSettings;
 
-    public Optional<SubResourceResponse> getHealthProbeSettings() {
+    public Optional<SubResourceResponse> healthProbeSettings() {
         return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
     }
 
@@ -50,7 +50,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -61,7 +61,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancingSettings")
       private final @Nullable SubResourceResponse loadBalancingSettings;
 
-    public Optional<SubResourceResponse> getLoadBalancingSettings() {
+    public Optional<SubResourceResponse> loadBalancingSettings() {
         return this.loadBalancingSettings == null ? Optional.empty() : Optional.ofNullable(this.loadBalancingSettings);
     }
 
@@ -72,7 +72,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -83,7 +83,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceState", required=true)
       private final String resourceState;
 
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
 
@@ -94,7 +94,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

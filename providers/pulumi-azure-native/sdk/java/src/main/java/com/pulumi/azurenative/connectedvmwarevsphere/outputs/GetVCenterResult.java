@@ -153,126 +153,126 @@ public final class GetVCenterResult {
      * Gets or sets the connection status to the vCenter.
      * 
     */
-    public String getConnectionStatus() {
+    public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
      * Username / Password Credentials to connect to vcenter.
      * 
     */
-    public Optional<VICredentialResponse> getCredentials() {
+    public Optional<VICredentialResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
      * 
     */
-    public String getCustomResourceName() {
+    public String customResourceName() {
         return this.customResourceName;
     }
     /**
      * Gets or sets the extended location.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Gets or sets the FQDN/IPAddress of the vCenter.
      * 
     */
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
     /**
      * Gets or sets the Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the instance UUID of the vCenter.
      * 
     */
-    public String getInstanceUuid() {
+    public String instanceUuid() {
         return this.instanceUuid;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Gets or sets the location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Gets or sets the name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the port of the vCenter.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Gets or sets the provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource status information.
      * 
     */
-    public List<ResourceStatusResponse> getStatuses() {
+    public List<ResourceStatusResponse> statuses() {
         return this.statuses;
     }
     /**
      * The system data.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Gets or sets the Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets or sets the type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
      * 
     */
-    public String getUuid() {
+    public String uuid() {
         return this.uuid;
     }
     /**
      * Gets or sets the version of the vCenter.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

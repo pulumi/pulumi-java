@@ -26,7 +26,7 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="groupId")
       private final @Nullable String groupId;
 
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
@@ -37,7 +37,7 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="privateLinkServiceID", required=true)
       private final String privateLinkServiceID;
 
-    public String getPrivateLinkServiceID() {
+    public String privateLinkServiceID() {
         return this.privateLinkServiceID;
     }
 
@@ -70,7 +70,7 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="requiredMembers")
       private final @Nullable List<String> requiredMembers;
 
-    public List<String> getRequiredMembers() {
+    public List<String> requiredMembers() {
         return this.requiredMembers == null ? List.of() : this.requiredMembers;
     }
 
@@ -81,7 +81,7 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

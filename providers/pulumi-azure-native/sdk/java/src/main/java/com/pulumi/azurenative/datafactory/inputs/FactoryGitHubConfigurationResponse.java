@@ -26,7 +26,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -48,7 +48,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="clientSecret")
       private final @Nullable GitHubClientSecretResponse clientSecret;
 
-    public Optional<GitHubClientSecretResponse> getClientSecret() {
+    public Optional<GitHubClientSecretResponse> clientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
@@ -59,7 +59,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="collaborationBranch", required=true)
       private final String collaborationBranch;
 
-    public String getCollaborationBranch() {
+    public String collaborationBranch() {
         return this.collaborationBranch;
     }
 
@@ -70,7 +70,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -81,7 +81,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="lastCommitId")
       private final @Nullable String lastCommitId;
 
-    public Optional<String> getLastCommitId() {
+    public Optional<String> lastCommitId() {
         return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
     }
 
@@ -92,7 +92,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 
@@ -103,7 +103,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="rootFolder", required=true)
       private final String rootFolder;
 
-    public String getRootFolder() {
+    public String rootFolder() {
         return this.rootFolder;
     }
 
@@ -115,7 +115,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

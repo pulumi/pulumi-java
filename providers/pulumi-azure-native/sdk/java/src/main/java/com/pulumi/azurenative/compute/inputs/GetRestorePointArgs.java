@@ -19,7 +19,7 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restorePointCollectionName", required=true)
       private final String restorePointCollectionName;
 
-    public String getRestorePointCollectionName() {
+    public String restorePointCollectionName() {
         return this.restorePointCollectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restorePointName", required=true)
       private final String restorePointName;
 
-    public String getRestorePointName() {
+    public String restorePointName() {
         return this.restorePointName;
     }
 

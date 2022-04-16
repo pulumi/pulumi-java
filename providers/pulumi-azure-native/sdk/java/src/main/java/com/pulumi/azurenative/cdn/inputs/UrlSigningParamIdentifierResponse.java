@@ -23,7 +23,7 @@ public final class UrlSigningParamIdentifierResponse extends com.pulumi.resource
     @Import(name="paramIndicator", required=true)
       private final String paramIndicator;
 
-    public String getParamIndicator() {
+    public String paramIndicator() {
         return this.paramIndicator;
     }
 
@@ -34,7 +34,7 @@ public final class UrlSigningParamIdentifierResponse extends com.pulumi.resource
     @Import(name="paramName", required=true)
       private final String paramName;
 
-    public String getParamName() {
+    public String paramName() {
         return this.paramName;
     }
 

@@ -28,7 +28,7 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableProxy")
       private final @Nullable Output<Boolean> enableProxy;
 
-    public Output<Boolean> getEnableProxy() {
+    public Output<Boolean> enableProxy() {
         return this.enableProxy == null ? Codegen.empty() : this.enableProxy;
     }
 
@@ -39,7 +39,7 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireProxyForNetworkRules")
       private final @Nullable Output<Boolean> requireProxyForNetworkRules;
 
-    public Output<Boolean> getRequireProxyForNetworkRules() {
+    public Output<Boolean> requireProxyForNetworkRules() {
         return this.requireProxyForNetworkRules == null ? Codegen.empty() : this.requireProxyForNetworkRules;
     }
 
@@ -50,7 +50,7 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="servers")
       private final @Nullable Output<List<String>> servers;
 
-    public Output<List<String>> getServers() {
+    public Output<List<String>> servers() {
         return this.servers == null ? Codegen.empty() : this.servers;
     }
 

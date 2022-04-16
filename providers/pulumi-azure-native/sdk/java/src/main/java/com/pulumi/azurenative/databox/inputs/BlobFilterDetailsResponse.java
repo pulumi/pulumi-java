@@ -26,7 +26,7 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="blobPathList")
       private final @Nullable List<String> blobPathList;
 
-    public List<String> getBlobPathList() {
+    public List<String> blobPathList() {
         return this.blobPathList == null ? List.of() : this.blobPathList;
     }
 
@@ -37,7 +37,7 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="blobPrefixList")
       private final @Nullable List<String> blobPrefixList;
 
-    public List<String> getBlobPrefixList() {
+    public List<String> blobPrefixList() {
         return this.blobPrefixList == null ? List.of() : this.blobPrefixList;
     }
 
@@ -48,7 +48,7 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="containerList")
       private final @Nullable List<String> containerList;
 
-    public List<String> getContainerList() {
+    public List<String> containerList() {
         return this.containerList == null ? List.of() : this.containerList;
     }
 

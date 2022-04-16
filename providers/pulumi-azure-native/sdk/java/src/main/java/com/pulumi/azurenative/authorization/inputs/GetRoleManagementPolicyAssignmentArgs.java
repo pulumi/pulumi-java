@@ -19,7 +19,7 @@ public final class GetRoleManagementPolicyAssignmentArgs extends com.pulumi.reso
     @Import(name="roleManagementPolicyAssignmentName", required=true)
       private final String roleManagementPolicyAssignmentName;
 
-    public String getRoleManagementPolicyAssignmentName() {
+    public String roleManagementPolicyAssignmentName() {
         return this.roleManagementPolicyAssignmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRoleManagementPolicyAssignmentArgs extends com.pulumi.reso
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

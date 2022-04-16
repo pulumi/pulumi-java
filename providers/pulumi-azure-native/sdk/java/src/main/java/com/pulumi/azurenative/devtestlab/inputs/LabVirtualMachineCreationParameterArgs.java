@@ -35,7 +35,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="allowClaim")
       private final @Nullable Output<Boolean> allowClaim;
 
-    public Output<Boolean> getAllowClaim() {
+    public Output<Boolean> allowClaim() {
         return this.allowClaim == null ? Codegen.empty() : this.allowClaim;
     }
 
@@ -46,7 +46,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="artifacts")
       private final @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
 
-    public Output<List<ArtifactInstallPropertiesArgs>> getArtifacts() {
+    public Output<List<ArtifactInstallPropertiesArgs>> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -57,7 +57,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="bulkCreationParameters")
       private final @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters;
 
-    public Output<BulkCreationParametersArgs> getBulkCreationParameters() {
+    public Output<BulkCreationParametersArgs> bulkCreationParameters() {
         return this.bulkCreationParameters == null ? Codegen.empty() : this.bulkCreationParameters;
     }
 
@@ -68,7 +68,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -79,7 +79,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="customImageId")
       private final @Nullable Output<String> customImageId;
 
-    public Output<String> getCustomImageId() {
+    public Output<String> customImageId() {
         return this.customImageId == null ? Codegen.empty() : this.customImageId;
     }
 
@@ -90,7 +90,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="dataDiskParameters")
       private final @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
 
-    public Output<List<DataDiskPropertiesArgs>> getDataDiskParameters() {
+    public Output<List<DataDiskPropertiesArgs>> dataDiskParameters() {
         return this.dataDiskParameters == null ? Codegen.empty() : this.dataDiskParameters;
     }
 
@@ -101,7 +101,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="disallowPublicIpAddress")
       private final @Nullable Output<Boolean> disallowPublicIpAddress;
 
-    public Output<Boolean> getDisallowPublicIpAddress() {
+    public Output<Boolean> disallowPublicIpAddress() {
         return this.disallowPublicIpAddress == null ? Codegen.empty() : this.disallowPublicIpAddress;
     }
 
@@ -112,7 +112,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -123,7 +123,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -134,7 +134,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="galleryImageReference")
       private final @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
 
-    public Output<GalleryImageReferenceArgs> getGalleryImageReference() {
+    public Output<GalleryImageReferenceArgs> galleryImageReference() {
         return this.galleryImageReference == null ? Codegen.empty() : this.galleryImageReference;
     }
 
@@ -145,7 +145,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="isAuthenticationWithSshKey")
       private final @Nullable Output<Boolean> isAuthenticationWithSshKey;
 
-    public Output<Boolean> getIsAuthenticationWithSshKey() {
+    public Output<Boolean> isAuthenticationWithSshKey() {
         return this.isAuthenticationWithSshKey == null ? Codegen.empty() : this.isAuthenticationWithSshKey;
     }
 
@@ -156,7 +156,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
 
-    public Output<String> getLabSubnetName() {
+    public Output<String> labSubnetName() {
         return this.labSubnetName == null ? Codegen.empty() : this.labSubnetName;
     }
 
@@ -167,7 +167,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="labVirtualNetworkId")
       private final @Nullable Output<String> labVirtualNetworkId;
 
-    public Output<String> getLabVirtualNetworkId() {
+    public Output<String> labVirtualNetworkId() {
         return this.labVirtualNetworkId == null ? Codegen.empty() : this.labVirtualNetworkId;
     }
 
@@ -178,7 +178,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -189,7 +189,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -200,7 +200,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="networkInterface")
       private final @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
 
-    public Output<NetworkInterfacePropertiesArgs> getNetworkInterface() {
+    public Output<NetworkInterfacePropertiesArgs> networkInterface() {
         return this.networkInterface == null ? Codegen.empty() : this.networkInterface;
     }
 
@@ -211,7 +211,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
+    public Output<String> notes() {
         return this.notes == null ? Codegen.empty() : this.notes;
     }
 
@@ -222,7 +222,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="ownerObjectId")
       private final @Nullable Output<String> ownerObjectId;
 
-    public Output<String> getOwnerObjectId() {
+    public Output<String> ownerObjectId() {
         return this.ownerObjectId == null ? Codegen.empty() : this.ownerObjectId;
     }
 
@@ -233,7 +233,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="ownerUserPrincipalName")
       private final @Nullable Output<String> ownerUserPrincipalName;
 
-    public Output<String> getOwnerUserPrincipalName() {
+    public Output<String> ownerUserPrincipalName() {
         return this.ownerUserPrincipalName == null ? Codegen.empty() : this.ownerUserPrincipalName;
     }
 
@@ -244,7 +244,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -255,7 +255,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="planId")
       private final @Nullable Output<String> planId;
 
-    public Output<String> getPlanId() {
+    public Output<String> planId() {
         return this.planId == null ? Codegen.empty() : this.planId;
     }
 
@@ -266,7 +266,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="scheduleParameters")
       private final @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
 
-    public Output<List<ScheduleCreationParameterArgs>> getScheduleParameters() {
+    public Output<List<ScheduleCreationParameterArgs>> scheduleParameters() {
         return this.scheduleParameters == null ? Codegen.empty() : this.scheduleParameters;
     }
 
@@ -277,7 +277,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -288,7 +288,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="sshKey")
       private final @Nullable Output<String> sshKey;
 
-    public Output<String> getSshKey() {
+    public Output<String> sshKey() {
         return this.sshKey == null ? Codegen.empty() : this.sshKey;
     }
 
@@ -299,7 +299,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
@@ -310,7 +310,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -321,7 +321,7 @@ public final class LabVirtualMachineCreationParameterArgs extends com.pulumi.res
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

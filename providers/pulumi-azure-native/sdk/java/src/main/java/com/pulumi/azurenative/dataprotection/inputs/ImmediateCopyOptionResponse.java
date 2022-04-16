@@ -24,7 +24,7 @@ public final class ImmediateCopyOptionResponse extends com.pulumi.resources.Invo
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

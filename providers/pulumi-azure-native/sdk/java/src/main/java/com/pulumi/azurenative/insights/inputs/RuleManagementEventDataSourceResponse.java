@@ -26,7 +26,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="claims")
       private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
 
-    public Optional<RuleManagementEventClaimsDataSourceResponse> getClaims() {
+    public Optional<RuleManagementEventClaimsDataSourceResponse> claims() {
         return this.claims == null ? Optional.empty() : Optional.ofNullable(this.claims);
     }
 
@@ -37,7 +37,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="eventName")
       private final @Nullable String eventName;
 
-    public Optional<String> getEventName() {
+    public Optional<String> eventName() {
         return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);
     }
 
@@ -48,7 +48,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="eventSource")
       private final @Nullable String eventSource;
 
-    public Optional<String> getEventSource() {
+    public Optional<String> eventSource() {
         return this.eventSource == null ? Optional.empty() : Optional.ofNullable(this.eventSource);
     }
 
@@ -59,7 +59,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="legacyResourceId")
       private final @Nullable String legacyResourceId;
 
-    public Optional<String> getLegacyResourceId() {
+    public Optional<String> legacyResourceId() {
         return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
     }
 
@@ -70,7 +70,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="level")
       private final @Nullable String level;
 
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
@@ -81,7 +81,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
 
-    public Optional<String> getMetricNamespace() {
+    public Optional<String> metricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
@@ -93,7 +93,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -104,7 +104,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="operationName")
       private final @Nullable String operationName;
 
-    public Optional<String> getOperationName() {
+    public Optional<String> operationName() {
         return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
     }
 
@@ -115,7 +115,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
 
-    public Optional<String> getResourceGroupName() {
+    public Optional<String> resourceGroupName() {
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
     }
 
@@ -126,7 +126,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceLocation")
       private final @Nullable String resourceLocation;
 
-    public Optional<String> getResourceLocation() {
+    public Optional<String> resourceLocation() {
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
     }
 
@@ -137,7 +137,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceProviderName")
       private final @Nullable String resourceProviderName;
 
-    public Optional<String> getResourceProviderName() {
+    public Optional<String> resourceProviderName() {
         return this.resourceProviderName == null ? Optional.empty() : Optional.ofNullable(this.resourceProviderName);
     }
 
@@ -148,7 +148,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;
 
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
     }
 
@@ -159,7 +159,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -170,7 +170,7 @@ public final class RuleManagementEventDataSourceResponse extends com.pulumi.reso
     @Import(name="subStatus")
       private final @Nullable String subStatus;
 
-    public Optional<String> getSubStatus() {
+    public Optional<String> subStatus() {
         return this.subStatus == null ? Optional.empty() : Optional.ofNullable(this.subStatus);
     }
 

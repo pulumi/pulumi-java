@@ -27,7 +27,7 @@ public final class DeliveryRuleRequestBodyConditionArgs extends com.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleRequestBodyConditionArgs extends com.pulumi.resou
     @Import(name="parameters", required=true)
       private final Output<RequestBodyMatchConditionParametersArgs> parameters;
 
-    public Output<RequestBodyMatchConditionParametersArgs> getParameters() {
+    public Output<RequestBodyMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 

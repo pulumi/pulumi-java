@@ -47,7 +47,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the HANA instance unique ID.
      * 
      */
-    public Output<String> getHanaInstanceId() {
+    public Output<String> hanaInstanceId() {
         return this.hanaInstanceId;
     }
     /**
@@ -61,7 +61,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the hardware settings for the HANA instance.
      * 
      */
-    public Output</* @Nullable */ HardwareProfileResponse> getHardwareProfile() {
+    public Output</* @Nullable */ HardwareProfileResponse> hardwareProfile() {
         return this.hardwareProfile;
     }
     /**
@@ -75,7 +75,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Hardware revision of a HANA instance
      * 
      */
-    public Output<String> getHwRevision() {
+    public Output<String> hwRevision() {
         return this.hwRevision;
     }
     /**
@@ -89,7 +89,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -103,7 +103,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the network settings for the HANA instance.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> getNetworkProfile() {
+    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
         return this.networkProfile;
     }
     /**
@@ -131,7 +131,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the operating system settings for the HANA instance.
      * 
      */
-    public Output</* @Nullable */ OSProfileResponse> getOsProfile() {
+    public Output</* @Nullable */ OSProfileResponse> osProfile() {
         return this.osProfile;
     }
     /**
@@ -145,7 +145,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
      */
-    public Output</* @Nullable */ String> getPartnerNodeId() {
+    public Output</* @Nullable */ String> partnerNodeId() {
         return this.partnerNodeId;
     }
     /**
@@ -159,7 +159,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource power state
      * 
      */
-    public Output<String> getPowerState() {
+    public Output<String> powerState() {
         return this.powerState;
     }
     /**
@@ -173,7 +173,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return State of provisioning of the HanaInstance
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -187,7 +187,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource proximity placement group
      * 
      */
-    public Output<String> getProximityPlacementGroup() {
+    public Output<String> proximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
     /**
@@ -201,7 +201,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the storage settings for the HANA instance disks.
      * 
      */
-    public Output</* @Nullable */ StorageProfileResponse> getStorageProfile() {
+    public Output</* @Nullable */ StorageProfileResponse> storageProfile() {
         return this.storageProfile;
     }
     /**
@@ -215,7 +215,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -229,7 +229,7 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

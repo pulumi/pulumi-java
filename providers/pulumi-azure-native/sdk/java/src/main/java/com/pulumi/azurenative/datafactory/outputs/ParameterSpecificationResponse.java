@@ -35,14 +35,14 @@ public final class ParameterSpecificationResponse {
      * Default value of parameter.
      * 
     */
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Parameter type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

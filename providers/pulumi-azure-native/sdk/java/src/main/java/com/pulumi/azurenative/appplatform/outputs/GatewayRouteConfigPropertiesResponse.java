@@ -43,21 +43,21 @@ public final class GatewayRouteConfigPropertiesResponse {
      * The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
      * 
     */
-    public Optional<String> getAppResourceId() {
+    public Optional<String> appResourceId() {
         return Optional.ofNullable(this.appResourceId);
     }
     /**
      * State of the Spring Cloud Gateway route config.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
      * 
     */
-    public List<GatewayApiRouteResponse> getRoutes() {
+    public List<GatewayApiRouteResponse> routes() {
         return this.routes == null ? List.of() : this.routes;
     }
 

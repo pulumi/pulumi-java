@@ -25,7 +25,7 @@ public final class SelectedCertificateInputArgs extends com.pulumi.resources.Res
     @Import(name="certificateName", required=true)
       private final Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -36,7 +36,7 @@ public final class SelectedCertificateInputArgs extends com.pulumi.resources.Res
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 

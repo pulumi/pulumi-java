@@ -25,7 +25,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="allowHubToRemoteVnetTransit")
       private final @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
 
-    public Output<Boolean> getAllowHubToRemoteVnetTransit() {
+    public Output<Boolean> allowHubToRemoteVnetTransit() {
         return this.allowHubToRemoteVnetTransit == null ? Codegen.empty() : this.allowHubToRemoteVnetTransit;
     }
 
@@ -36,7 +36,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="allowRemoteVnetToUseHubVnetGateways")
       private final @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
 
-    public Output<Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
+    public Output<Boolean> allowRemoteVnetToUseHubVnetGateways() {
         return this.allowRemoteVnetToUseHubVnetGateways == null ? Codegen.empty() : this.allowRemoteVnetToUseHubVnetGateways;
     }
 
@@ -47,7 +47,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -58,7 +58,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
-    public Output<Boolean> getEnableInternetSecurity() {
+    public Output<Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity == null ? Codegen.empty() : this.enableInternetSecurity;
     }
 
@@ -69,7 +69,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -80,7 +80,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="remoteVirtualNetwork")
       private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
-    public Output<SubResourceArgs> getRemoteVirtualNetwork() {
+    public Output<SubResourceArgs> remoteVirtualNetwork() {
         return this.remoteVirtualNetwork == null ? Codegen.empty() : this.remoteVirtualNetwork;
     }
 
@@ -102,7 +102,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,7 +113,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
-    public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
+    public Output<RoutingConfigurationArgs> routingConfiguration() {
         return this.routingConfiguration == null ? Codegen.empty() : this.routingConfiguration;
     }
 
@@ -124,7 +124,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
-    public Output<String> getVirtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 

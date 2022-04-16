@@ -72,49 +72,49 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * The reason the incident was closed
      * 
     */
-    public Optional<String> getClassification() {
+    public Optional<String> classification() {
         return Optional.ofNullable(this.classification);
     }
     /**
      * Describes the reason the incident was closed
      * 
     */
-    public Optional<String> getClassificationComment() {
+    public Optional<String> classificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
     /**
      * The classification reason to close the incident with
      * 
     */
-    public Optional<String> getClassificationReason() {
+    public Optional<String> classificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
     /**
      * List of labels to add to the incident
      * 
     */
-    public List<IncidentLabelResponse> getLabels() {
+    public List<IncidentLabelResponse> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * Describes a user that the incident is assigned to
      * 
     */
-    public Optional<IncidentOwnerInfoResponse> getOwner() {
+    public Optional<IncidentOwnerInfoResponse> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * The severity of the incident
      * 
     */
-    public Optional<String> getSeverity() {
+    public Optional<String> severity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * The status of the incident
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

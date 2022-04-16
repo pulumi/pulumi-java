@@ -46,7 +46,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return A collection of Dedicated capacity administrators
      * 
      */
-    public Output</* @Nullable */ DedicatedCapacityAdministratorsResponse> getAdministration() {
+    public Output</* @Nullable */ DedicatedCapacityAdministratorsResponse> administration() {
         return this.administration;
     }
     /**
@@ -60,7 +60,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Capacity name
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -74,7 +74,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Location of the PowerBI Dedicated resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
      * 
      */
-    public Output</* @Nullable */ String> getMode() {
+    public Output</* @Nullable */ String> mode() {
         return this.mode;
     }
     /**
@@ -102,7 +102,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return The name of the PowerBI Dedicated resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return The SKU of the PowerBI Dedicated capacity resource.
      * 
      */
-    public Output<CapacitySkuResponse> getSku() {
+    public Output<CapacitySkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -144,7 +144,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -158,7 +158,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> getSystemData() {
+    public Output</* @Nullable */ SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -172,7 +172,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +186,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Tenant ID for the capacity. Used for creating Pro Plus capacity.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -200,7 +200,7 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return The type of the PowerBI Dedicated resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

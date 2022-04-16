@@ -26,7 +26,7 @@ public final class DelimitedTextWriteSettingsResponse extends com.pulumi.resourc
     @Import(name="fileExtension", required=true)
       private final Object fileExtension;
 
-    public Object getFileExtension() {
+    public Object fileExtension() {
         return this.fileExtension;
     }
 
@@ -37,7 +37,7 @@ public final class DelimitedTextWriteSettingsResponse extends com.pulumi.resourc
     @Import(name="fileNamePrefix")
       private final @Nullable Object fileNamePrefix;
 
-    public Optional<Object> getFileNamePrefix() {
+    public Optional<Object> fileNamePrefix() {
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
     }
 
@@ -48,7 +48,7 @@ public final class DelimitedTextWriteSettingsResponse extends com.pulumi.resourc
     @Import(name="maxRowsPerFile")
       private final @Nullable Object maxRowsPerFile;
 
-    public Optional<Object> getMaxRowsPerFile() {
+    public Optional<Object> maxRowsPerFile() {
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
     }
 
@@ -59,7 +59,7 @@ public final class DelimitedTextWriteSettingsResponse extends com.pulumi.resourc
     @Import(name="quoteAllText")
       private final @Nullable Object quoteAllText;
 
-    public Optional<Object> getQuoteAllText() {
+    public Optional<Object> quoteAllText() {
         return this.quoteAllText == null ? Optional.empty() : Optional.ofNullable(this.quoteAllText);
     }
 
@@ -71,7 +71,7 @@ public final class DelimitedTextWriteSettingsResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -50,7 +50,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ List<MetricAlertActionResponse>> getActions() {
+    public Output</* @Nullable */ List<MetricAlertActionResponse>> actions() {
         return this.actions;
     }
     /**
@@ -64,7 +64,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the flag that indicates whether the alert should be auto resolved or not. The default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoMitigate() {
+    public Output</* @Nullable */ Boolean> autoMitigate() {
         return this.autoMitigate;
     }
     /**
@@ -78,7 +78,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return defines the specific alert criteria information.
      * 
      */
-    public Output<Object> getCriteria() {
+    public Output<Object> criteria() {
         return this.criteria;
     }
     /**
@@ -92,7 +92,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the description of the metric alert that will be included in the alert email.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -106,7 +106,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the flag that indicates whether the metric alert is enabled.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -120,7 +120,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return how often the metric alert is evaluated represented in ISO 8601 duration format.
      * 
      */
-    public Output<String> getEvaluationFrequency() {
+    public Output<String> evaluationFrequency() {
         return this.evaluationFrequency;
     }
     /**
@@ -134,7 +134,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the value indicating whether this alert rule is migrated.
      * 
      */
-    public Output<Boolean> getIsMigrated() {
+    public Output<Boolean> isMigrated() {
         return this.isMigrated;
     }
     /**
@@ -148,7 +148,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return Last time the rule was updated in ISO8601 format.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -162,7 +162,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -176,7 +176,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -190,7 +190,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the list of resource id's that this metric alert is scoped to.
      * 
      */
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
     /**
@@ -204,7 +204,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return Alert severity {0, 1, 2, 3, 4}
      * 
      */
-    public Output<Integer> getSeverity() {
+    public Output<Integer> severity() {
         return this.severity;
     }
     /**
@@ -218,7 +218,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -232,7 +232,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    public Output</* @Nullable */ String> getTargetResourceRegion() {
+    public Output</* @Nullable */ String> targetResourceRegion() {
         return this.targetResourceRegion;
     }
     /**
@@ -246,7 +246,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    public Output</* @Nullable */ String> getTargetResourceType() {
+    public Output</* @Nullable */ String> targetResourceType() {
         return this.targetResourceType;
     }
     /**
@@ -260,7 +260,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -274,7 +274,7 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
      * 
      */
-    public Output<String> getWindowSize() {
+    public Output<String> windowSize() {
         return this.windowSize;
     }
 

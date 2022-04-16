@@ -15,14 +15,14 @@ public final class SubscriptionStateOverrideActionResponse extends com.pulumi.re
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

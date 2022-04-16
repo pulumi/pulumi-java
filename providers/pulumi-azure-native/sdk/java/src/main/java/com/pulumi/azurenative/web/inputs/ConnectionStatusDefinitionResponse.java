@@ -26,7 +26,7 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
     @Import(name="error")
       private final @Nullable ConnectionErrorResponse error;
 
-    public Optional<ConnectionErrorResponse> getError() {
+    public Optional<ConnectionErrorResponse> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -37,7 +37,7 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -48,7 +48,7 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

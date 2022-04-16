@@ -29,7 +29,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends com.p
     @Import(name="diskEncryptionSet")
       private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
+    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
         return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends com.p
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> getStorageAccountType() {
+    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 

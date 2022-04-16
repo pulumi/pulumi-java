@@ -25,7 +25,7 @@ public final class ExportDeliveryInfoArgs extends com.pulumi.resources.ResourceA
     @Import(name="destination", required=true)
       private final Output<ExportDeliveryDestinationArgs> destination;
 
-    public Output<ExportDeliveryDestinationArgs> getDestination() {
+    public Output<ExportDeliveryDestinationArgs> destination() {
         return this.destination;
     }
 

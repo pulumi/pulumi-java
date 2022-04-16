@@ -31,7 +31,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends com.pulumi.reso
     @Import(name="failoverDeploymentModel")
       private final @Nullable Output<Either<String,FailoverDeploymentModel>> failoverDeploymentModel;
 
-    public Output<Either<String,FailoverDeploymentModel>> getFailoverDeploymentModel() {
+    public Output<Either<String,FailoverDeploymentModel>> failoverDeploymentModel() {
         return this.failoverDeploymentModel == null ? Codegen.empty() : this.failoverDeploymentModel;
     }
 
@@ -42,7 +42,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends com.pulumi.reso
     @Import(name="groups", required=true)
       private final Output<List<RecoveryPlanGroupArgs>> groups;
 
-    public Output<List<RecoveryPlanGroupArgs>> getGroups() {
+    public Output<List<RecoveryPlanGroupArgs>> groups() {
         return this.groups;
     }
 
@@ -53,7 +53,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends com.pulumi.reso
     @Import(name="primaryFabricId", required=true)
       private final Output<String> primaryFabricId;
 
-    public Output<String> getPrimaryFabricId() {
+    public Output<String> primaryFabricId() {
         return this.primaryFabricId;
     }
 
@@ -64,7 +64,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends com.pulumi.reso
     @Import(name="providerSpecificInput")
       private final @Nullable Output<List<RecoveryPlanA2AInputArgs>> providerSpecificInput;
 
-    public Output<List<RecoveryPlanA2AInputArgs>> getProviderSpecificInput() {
+    public Output<List<RecoveryPlanA2AInputArgs>> providerSpecificInput() {
         return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
     }
 
@@ -75,7 +75,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends com.pulumi.reso
     @Import(name="recoveryFabricId", required=true)
       private final Output<String> recoveryFabricId;
 
-    public Output<String> getRecoveryFabricId() {
+    public Output<String> recoveryFabricId() {
         return this.recoveryFabricId;
     }
 

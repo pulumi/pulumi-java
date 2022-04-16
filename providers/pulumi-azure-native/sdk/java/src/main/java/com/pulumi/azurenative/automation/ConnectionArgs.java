@@ -24,7 +24,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -35,7 +35,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -46,7 +46,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionType", required=true)
       private final Output<ConnectionTypeAssociationPropertyArgs> connectionType;
 
-    public Output<ConnectionTypeAssociationPropertyArgs> getConnectionType() {
+    public Output<ConnectionTypeAssociationPropertyArgs> connectionType() {
         return this.connectionType;
     }
 
@@ -57,7 +57,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldDefinitionValues")
       private final @Nullable Output<Map<String,String>> fieldDefinitionValues;
 
-    public Output<Map<String,String>> getFieldDefinitionValues() {
+    public Output<Map<String,String>> fieldDefinitionValues() {
         return this.fieldDefinitionValues == null ? Codegen.empty() : this.fieldDefinitionValues;
     }
 
@@ -79,7 +79,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -90,7 +90,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

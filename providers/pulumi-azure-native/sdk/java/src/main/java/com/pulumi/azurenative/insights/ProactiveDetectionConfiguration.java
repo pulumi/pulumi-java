@@ -44,7 +44,7 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return Custom email addresses for this rule notifications
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomEmails() {
+    public Output</* @Nullable */ List<String>> customEmails() {
         return this.customEmails;
     }
     /**
@@ -58,7 +58,7 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return A flag that indicates whether this rule is enabled by the user
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -72,7 +72,7 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return The last time this rule was updated
      * 
      */
-    public Output</* @Nullable */ String> getLastUpdatedTime() {
+    public Output</* @Nullable */ String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -86,7 +86,7 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return The rule name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
      * 
      */
-    public Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> getRuleDefinitions() {
+    public Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> ruleDefinitions() {
         return this.ruleDefinitions;
     }
     /**
@@ -114,7 +114,7 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
      * 
      */
-    public Output</* @Nullable */ Boolean> getSendEmailsToSubscriptionOwners() {
+    public Output</* @Nullable */ Boolean> sendEmailsToSubscriptionOwners() {
         return this.sendEmailsToSubscriptionOwners;
     }
 

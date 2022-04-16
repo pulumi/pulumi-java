@@ -64,42 +64,42 @@ public final class FrontDoorMatchConditionResponse {
      * List of possible match values.
      * 
     */
-    public List<String> getMatchValue() {
+    public List<String> matchValue() {
         return this.matchValue;
     }
     /**
      * Request variable to compare with.
      * 
     */
-    public String getMatchVariable() {
+    public String matchVariable() {
         return this.matchVariable;
     }
     /**
      * Describes if the result of this condition should be negated.
      * 
     */
-    public Optional<Boolean> getNegateCondition() {
+    public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
      * Comparison type to use for matching with the variable value.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
      * 
     */
-    public Optional<String> getSelector() {
+    public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * List of transforms.
      * 
     */
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

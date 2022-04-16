@@ -45,7 +45,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return DNS name of the cluster endpoint
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -59,7 +59,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return The minimum TLS version for the cluster to support, e.g. '1.2'
      * 
      */
-    public Output</* @Nullable */ String> getMinimumTlsVersion() {
+    public Output</* @Nullable */ String> minimumTlsVersion() {
         return this.minimumTlsVersion;
     }
     /**
@@ -87,7 +87,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return List of private endpoint connections associated with the specified RedisEnterprise cluster
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -115,7 +115,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return Current provisioning status of the cluster
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +129,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return Version of redis the cluster supports, e.g. '6'
      * 
      */
-    public Output<String> getRedisVersion() {
+    public Output<String> redisVersion() {
         return this.redisVersion;
     }
     /**
@@ -143,7 +143,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return Current resource status of the cluster
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -157,7 +157,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return The SKU to create, which affects price, performance, and features.
      * 
      */
-    public Output<EnterpriseSkuResponse> getSku() {
+    public Output<EnterpriseSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -171,7 +171,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -199,7 +199,7 @@ public class RedisEnterprise extends com.pulumi.resources.CustomResource {
      * @return The Availability Zones where this cluster will be deployed.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

@@ -30,7 +30,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Output<Either<String,ManagedServiceIdentityType>> getType() {
+    public Output<Either<String,ManagedServiceIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
+    public Output<Map<String,Object>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

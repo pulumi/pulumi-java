@@ -34,7 +34,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends com.pu
     @Import(name="enableHealthCheck")
       private final @Nullable Output<Boolean> enableHealthCheck;
 
-    public Output<Boolean> getEnableHealthCheck() {
+    public Output<Boolean> enableHealthCheck() {
         return this.enableHealthCheck == null ? Codegen.empty() : this.enableHealthCheck;
     }
 
@@ -45,7 +45,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends com.pu
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> getEndOfLifeDate() {
+    public Output<String> endOfLifeDate() {
         return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
     }
 
@@ -56,14 +56,14 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends com.pu
     @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
 
-    public Output<Boolean> getExcludeFromLatest() {
+    public Output<Boolean> excludeFromLatest() {
         return this.excludeFromLatest == null ? Codegen.empty() : this.excludeFromLatest;
     }
 
     @Import(name="manageActions")
       private final @Nullable Output<UserArtifactManageArgs> manageActions;
 
-    public Output<UserArtifactManageArgs> getManageActions() {
+    public Output<UserArtifactManageArgs> manageActions() {
         return this.manageActions == null ? Codegen.empty() : this.manageActions;
     }
 
@@ -74,7 +74,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends com.pu
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
+    public Output<Integer> replicaCount() {
         return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
@@ -85,7 +85,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends com.pu
     @Import(name="source", required=true)
       private final Output<UserArtifactSourceArgs> source;
 
-    public Output<UserArtifactSourceArgs> getSource() {
+    public Output<UserArtifactSourceArgs> source() {
         return this.source;
     }
 
@@ -96,7 +96,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends com.pu
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+    public Output<Either<String,StorageAccountType>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
@@ -107,7 +107,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends com.pu
     @Import(name="targetRegions")
       private final @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
-    public Output<List<TargetRegionArgs>> getTargetRegions() {
+    public Output<List<TargetRegionArgs>> targetRegions() {
         return this.targetRegions == null ? Codegen.empty() : this.targetRegions;
     }
 

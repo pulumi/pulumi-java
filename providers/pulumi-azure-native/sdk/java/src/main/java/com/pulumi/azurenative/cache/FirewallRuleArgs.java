@@ -22,7 +22,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheName", required=true)
       private final Output<String> cacheName;
 
-    public Output<String> getCacheName() {
+    public Output<String> cacheName() {
         return this.cacheName;
     }
 
@@ -33,7 +33,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endIP", required=true)
       private final Output<String> endIP;
 
-    public Output<String> getEndIP() {
+    public Output<String> endIP() {
         return this.endIP;
     }
 
@@ -44,7 +44,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -66,7 +66,7 @@ public final class FirewallRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startIP", required=true)
       private final Output<String> startIP;
 
-    public Output<String> getStartIP() {
+    public Output<String> startIP() {
         return this.startIP;
     }
 

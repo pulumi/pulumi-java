@@ -27,7 +27,7 @@ public final class DiskEncryptionSettingsResponse extends com.pulumi.resources.I
     @Import(name="diskEncryptionKey")
       private final @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
 
-    public Optional<KeyVaultSecretReferenceResponse> getDiskEncryptionKey() {
+    public Optional<KeyVaultSecretReferenceResponse> diskEncryptionKey() {
         return this.diskEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionKey);
     }
 
@@ -38,7 +38,7 @@ public final class DiskEncryptionSettingsResponse extends com.pulumi.resources.I
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -49,7 +49,7 @@ public final class DiskEncryptionSettingsResponse extends com.pulumi.resources.I
     @Import(name="keyEncryptionKey")
       private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
-    public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {
+    public Optional<KeyVaultKeyReferenceResponse> keyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
     }
 

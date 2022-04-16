@@ -45,7 +45,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Group id of the private endpoint.
      * 
      */
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
     /**
@@ -59,7 +59,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Private endpoint which the connection belongs to.
      * 
      */
-    public Output<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
+    public Output<PrivateEndpointPropertyResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -87,7 +87,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Connection State of the Private Endpoint Connection.
      * 
      */
-    public Output<PrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -101,7 +101,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Provisioning state of the private endpoint.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +129,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

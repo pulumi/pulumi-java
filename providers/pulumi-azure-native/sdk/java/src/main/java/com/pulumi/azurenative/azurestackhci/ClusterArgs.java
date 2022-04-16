@@ -25,7 +25,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aadClientId", required=true)
       private final Output<String> aadClientId;
 
-    public Output<String> getAadClientId() {
+    public Output<String> aadClientId() {
         return this.aadClientId;
     }
 
@@ -36,7 +36,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aadTenantId", required=true)
       private final Output<String> aadTenantId;
 
-    public Output<String> getAadTenantId() {
+    public Output<String> aadTenantId() {
         return this.aadTenantId;
     }
 
@@ -47,7 +47,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -58,7 +58,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -69,7 +69,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
@@ -80,7 +80,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> getCreatedByType() {
+    public Output<Either<String,CreatedByType>> createdByType() {
         return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
@@ -91,7 +91,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
@@ -102,7 +102,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
@@ -113,7 +113,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
+    public Output<Either<String,CreatedByType>> lastModifiedByType() {
         return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
@@ -124,7 +124,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -135,7 +135,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -146,7 +146,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

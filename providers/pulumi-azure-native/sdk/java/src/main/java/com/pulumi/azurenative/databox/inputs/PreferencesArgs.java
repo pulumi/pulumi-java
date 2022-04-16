@@ -29,7 +29,7 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionPreferences")
       private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
-    public Output<EncryptionPreferencesArgs> getEncryptionPreferences() {
+    public Output<EncryptionPreferencesArgs> encryptionPreferences() {
         return this.encryptionPreferences == null ? Codegen.empty() : this.encryptionPreferences;
     }
 
@@ -40,7 +40,7 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredDataCenterRegion")
       private final @Nullable Output<List<String>> preferredDataCenterRegion;
 
-    public Output<List<String>> getPreferredDataCenterRegion() {
+    public Output<List<String>> preferredDataCenterRegion() {
         return this.preferredDataCenterRegion == null ? Codegen.empty() : this.preferredDataCenterRegion;
     }
 
@@ -51,7 +51,7 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transportPreferences")
       private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
-    public Output<TransportPreferencesArgs> getTransportPreferences() {
+    public Output<TransportPreferencesArgs> transportPreferences() {
         return this.transportPreferences == null ? Codegen.empty() : this.transportPreferences;
     }
 

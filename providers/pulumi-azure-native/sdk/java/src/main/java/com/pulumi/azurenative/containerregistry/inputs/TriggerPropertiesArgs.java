@@ -29,7 +29,7 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="baseImageTrigger")
       private final @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
 
-    public Output<BaseImageTriggerArgs> getBaseImageTrigger() {
+    public Output<BaseImageTriggerArgs> baseImageTrigger() {
         return this.baseImageTrigger == null ? Codegen.empty() : this.baseImageTrigger;
     }
 
@@ -40,7 +40,7 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceTriggers")
       private final @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
 
-    public Output<List<SourceTriggerArgs>> getSourceTriggers() {
+    public Output<List<SourceTriggerArgs>> sourceTriggers() {
         return this.sourceTriggers == null ? Codegen.empty() : this.sourceTriggers;
     }
 
@@ -51,7 +51,7 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timerTriggers")
       private final @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
 
-    public Output<List<TimerTriggerArgs>> getTimerTriggers() {
+    public Output<List<TimerTriggerArgs>> timerTriggers() {
         return this.timerTriggers == null ? Codegen.empty() : this.timerTriggers;
     }
 

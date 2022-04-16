@@ -23,7 +23,7 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="aliases")
       private final @Nullable List<String> aliases;
 
-    public List<String> getAliases() {
+    public List<String> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
 
@@ -34,14 +34,14 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="apps")
       private final @Nullable List<String> apps;
 
-    public List<String> getApps() {
+    public List<String> apps() {
         return this.apps == null ? List.of() : this.apps;
     }
 
     @Import(name="meta")
       private final @Nullable DatadogHostMetadataResponse meta;
 
-    public Optional<DatadogHostMetadataResponse> getMeta() {
+    public Optional<DatadogHostMetadataResponse> meta() {
         return this.meta == null ? Optional.empty() : Optional.ofNullable(this.meta);
     }
 
@@ -52,7 +52,7 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

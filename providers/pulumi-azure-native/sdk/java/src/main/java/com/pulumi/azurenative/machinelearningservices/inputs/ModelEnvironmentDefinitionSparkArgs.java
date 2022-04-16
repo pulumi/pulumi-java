@@ -29,7 +29,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
     @Import(name="packages")
       private final @Nullable Output<List<SparkMavenPackageArgs>> packages;
 
-    public Output<List<SparkMavenPackageArgs>> getPackages() {
+    public Output<List<SparkMavenPackageArgs>> packages() {
         return this.packages == null ? Codegen.empty() : this.packages;
     }
 
@@ -40,7 +40,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
     @Import(name="precachePackages")
       private final @Nullable Output<Boolean> precachePackages;
 
-    public Output<Boolean> getPrecachePackages() {
+    public Output<Boolean> precachePackages() {
         return this.precachePackages == null ? Codegen.empty() : this.precachePackages;
     }
 
@@ -51,7 +51,7 @@ public final class ModelEnvironmentDefinitionSparkArgs extends com.pulumi.resour
     @Import(name="repositories")
       private final @Nullable Output<List<String>> repositories;
 
-    public Output<List<String>> getRepositories() {
+    public Output<List<String>> repositories() {
         return this.repositories == null ? Codegen.empty() : this.repositories;
     }
 

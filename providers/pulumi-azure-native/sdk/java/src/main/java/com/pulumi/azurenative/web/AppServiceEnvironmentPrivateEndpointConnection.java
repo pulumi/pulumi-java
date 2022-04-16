@@ -41,7 +41,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return Private IPAddresses mapped to the remote private endpoint
      * 
      */
-    public Output</* @Nullable */ List<String>> getIpAddresses() {
+    public Output</* @Nullable */ List<String>> ipAddresses() {
         return this.ipAddresses;
     }
     /**
@@ -55,7 +55,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -69,7 +69,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +83,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return PrivateEndpoint of a remote private endpoint connection
      * 
      */
-    public Output</* @Nullable */ ArmIdWrapperResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ ArmIdWrapperResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -97,13 +97,13 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return The state of a private link connection
      * 
      */
-    public Output</* @Nullable */ PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -117,7 +117,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

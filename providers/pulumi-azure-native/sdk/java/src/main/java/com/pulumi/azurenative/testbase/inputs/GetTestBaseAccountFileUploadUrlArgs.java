@@ -21,7 +21,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
     @Import(name="blobName")
       private final @Nullable String blobName;
 
-    public Optional<String> getBlobName() {
+    public Optional<String> blobName() {
         return this.blobName == null ? Optional.empty() : Optional.ofNullable(this.blobName);
     }
 
@@ -32,7 +32,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
 
-    public String getTestBaseAccountName() {
+    public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
 

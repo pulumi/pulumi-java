@@ -50,28 +50,28 @@ public final class RunbookParameterResponse {
      * Gets or sets the default value of parameter.
      * 
     */
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
      * 
     */
-    public Optional<Boolean> getIsMandatory() {
+    public Optional<Boolean> isMandatory() {
         return Optional.ofNullable(this.isMandatory);
     }
     /**
      * Get or sets the position of the parameter.
      * 
     */
-    public Optional<Integer> getPosition() {
+    public Optional<Integer> position() {
         return Optional.ofNullable(this.position);
     }
     /**
      * Gets or sets the type of the parameter.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

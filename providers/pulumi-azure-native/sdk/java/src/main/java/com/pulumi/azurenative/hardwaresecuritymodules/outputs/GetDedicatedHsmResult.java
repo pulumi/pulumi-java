@@ -101,77 +101,77 @@ public final class GetDedicatedHsmResult {
      * The Azure Resource Manager resource ID for the dedicated HSM.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The supported Azure location where the dedicated HSM should be created.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the dedicated HSM.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the network interfaces of the dedicated hsm.
      * 
     */
-    public Optional<NetworkProfileResponse> getNetworkProfile() {
+    public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * SKU details
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * This field will be used when RP does not support Availability zones.
      * 
     */
-    public Optional<String> getStampId() {
+    public Optional<String> stampId() {
         return Optional.ofNullable(this.stampId);
     }
     /**
      * Resource Status Message.
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type of the dedicated HSM.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Dedicated Hsm zones.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

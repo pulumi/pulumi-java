@@ -15,7 +15,7 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="dataControllerName", required=true)
       private final String dataControllerName;
 
-    public String getDataControllerName() {
+    public String dataControllerName() {
         return this.dataControllerName;
     }
 
@@ -26,7 +26,7 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

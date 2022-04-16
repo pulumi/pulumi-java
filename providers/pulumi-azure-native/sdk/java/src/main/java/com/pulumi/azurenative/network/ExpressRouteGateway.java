@@ -46,7 +46,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return Configuration for auto scaling.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> getAutoScaleConfiguration() {
+    public Output</* @Nullable */ ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> autoScaleConfiguration() {
         return this.autoScaleConfiguration;
     }
     /**
@@ -60,7 +60,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -74,7 +74,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return List of ExpressRoute connections to the ExpressRoute gateway.
      * 
      */
-    public Output<List<ExpressRouteConnectionResponse>> getExpressRouteConnections() {
+    public Output<List<ExpressRouteConnectionResponse>> expressRouteConnections() {
         return this.expressRouteConnections;
     }
     /**
@@ -88,7 +88,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -102,7 +102,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the express route gateway resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -158,7 +158,7 @@ public class ExpressRouteGateway extends com.pulumi.resources.CustomResource {
      * @return The Virtual Hub where the ExpressRoute gateway is or will be deployed.
      * 
      */
-    public Output<VirtualHubIdResponse> getVirtualHub() {
+    public Output<VirtualHubIdResponse> virtualHub() {
         return this.virtualHub;
     }
 

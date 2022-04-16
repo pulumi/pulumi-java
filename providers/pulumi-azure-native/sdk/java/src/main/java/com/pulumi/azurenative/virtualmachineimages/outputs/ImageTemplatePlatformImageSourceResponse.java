@@ -64,28 +64,28 @@ public final class ImageTemplatePlatformImageSourceResponse {
      * Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
     */
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * Optional configuration of purchase plan for platform image.
      * 
     */
-    public Optional<PlatformImagePurchasePlanResponse> getPlanInfo() {
+    public Optional<PlatformImagePurchasePlanResponse> planInfo() {
         return Optional.ofNullable(this.planInfo);
     }
     /**
      * Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
@@ -93,14 +93,14 @@ public final class ImageTemplatePlatformImageSourceResponse {
      * Expected value is 'PlatformImage'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

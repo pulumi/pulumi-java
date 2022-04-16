@@ -27,7 +27,7 @@ public final class DataCollectionRuleResponseDestinations extends com.pulumi.res
     @Import(name="azureMonitorMetrics")
       private final @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
 
-    public Optional<DestinationsSpecResponseAzureMonitorMetrics> getAzureMonitorMetrics() {
+    public Optional<DestinationsSpecResponseAzureMonitorMetrics> azureMonitorMetrics() {
         return this.azureMonitorMetrics == null ? Optional.empty() : Optional.ofNullable(this.azureMonitorMetrics);
     }
 
@@ -38,7 +38,7 @@ public final class DataCollectionRuleResponseDestinations extends com.pulumi.res
     @Import(name="logAnalytics")
       private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
-    public List<LogAnalyticsDestinationResponse> getLogAnalytics() {
+    public List<LogAnalyticsDestinationResponse> logAnalytics() {
         return this.logAnalytics == null ? List.of() : this.logAnalytics;
     }
 

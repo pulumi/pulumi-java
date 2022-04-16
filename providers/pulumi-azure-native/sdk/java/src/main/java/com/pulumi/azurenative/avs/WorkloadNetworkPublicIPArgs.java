@@ -23,7 +23,7 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="numberOfPublicIPs")
       private final @Nullable Output<Double> numberOfPublicIPs;
 
-    public Output<Double> getNumberOfPublicIPs() {
+    public Output<Double> numberOfPublicIPs() {
         return this.numberOfPublicIPs == null ? Codegen.empty() : this.numberOfPublicIPs;
     }
 
@@ -45,7 +45,7 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -56,7 +56,7 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="publicIPId")
       private final @Nullable Output<String> publicIPId;
 
-    public Output<String> getPublicIPId() {
+    public Output<String> publicIPId() {
         return this.publicIPId == null ? Codegen.empty() : this.publicIPId;
     }
 
@@ -67,7 +67,7 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

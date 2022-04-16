@@ -29,7 +29,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -40,7 +40,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
+    public Output<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
@@ -51,7 +51,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfProbes")
       private final @Nullable Output<Integer> numberOfProbes;
 
-    public Output<Integer> getNumberOfProbes() {
+    public Output<Integer> numberOfProbes() {
         return this.numberOfProbes == null ? Codegen.empty() : this.numberOfProbes;
     }
 
@@ -73,7 +73,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -84,7 +84,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<Either<String,ProbeProtocol>> protocol;
 
-    public Output<Either<String,ProbeProtocol>> getProtocol() {
+    public Output<Either<String,ProbeProtocol>> protocol() {
         return this.protocol;
     }
 
@@ -95,7 +95,7 @@ public final class ProbeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
 
-    public Output<String> getRequestPath() {
+    public Output<String> requestPath() {
         return this.requestPath == null ? Codegen.empty() : this.requestPath;
     }
 

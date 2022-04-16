@@ -45,7 +45,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Private store offer creation date
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -59,7 +59,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Identifier for purposes of race condition
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -73,7 +73,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Icon File Uris
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getIconFileUris() {
+    public Output</* @Nullable */ Map<String,String>> iconFileUris() {
         return this.iconFileUris;
     }
     /**
@@ -87,7 +87,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Private store offer modification date
      * 
      */
-    public Output<String> getModifiedAt() {
+    public Output<String> modifiedAt() {
         return this.modifiedAt;
     }
     /**
@@ -101,7 +101,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return It will be displayed prominently in the marketplace
      * 
      */
-    public Output<String> getOfferDisplayName() {
+    public Output<String> offerDisplayName() {
         return this.offerDisplayName;
     }
     /**
@@ -129,7 +129,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Offer plans
      * 
      */
-    public Output</* @Nullable */ List<PlanResponse>> getPlans() {
+    public Output</* @Nullable */ List<PlanResponse>> plans() {
         return this.plans;
     }
     /**
@@ -143,7 +143,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Private store unique id
      * 
      */
-    public Output<String> getPrivateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
     /**
@@ -157,7 +157,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Publisher name that will be displayed prominently in the marketplace
      * 
      */
-    public Output<String> getPublisherDisplayName() {
+    public Output<String> publisherDisplayName() {
         return this.publisherDisplayName;
     }
     /**
@@ -171,7 +171,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Plan ids limitation for this offer
      * 
      */
-    public Output</* @Nullable */ List<String>> getSpecificPlanIdsLimitation() {
+    public Output</* @Nullable */ List<String>> specificPlanIdsLimitation() {
         return this.specificPlanIdsLimitation;
     }
     /**
@@ -185,7 +185,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -199,7 +199,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Offers unique id
      * 
      */
-    public Output<String> getUniqueOfferId() {
+    public Output<String> uniqueOfferId() {
         return this.uniqueOfferId;
     }
     /**
@@ -213,7 +213,7 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUpdateSuppressedDueIdempotence() {
+    public Output</* @Nullable */ Boolean> updateSuppressedDueIdempotence() {
         return this.updateSuppressedDueIdempotence;
     }
 

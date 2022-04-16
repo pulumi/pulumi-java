@@ -47,7 +47,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Show costs accumulated over time.
      * 
      */
-    public Output</* @Nullable */ String> getAccumulated() {
+    public Output</* @Nullable */ String> accumulated() {
         return this.accumulated;
     }
     /**
@@ -61,7 +61,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Chart type of the main view in Cost Analysis. Required.
      * 
      */
-    public Output</* @Nullable */ String> getChart() {
+    public Output</* @Nullable */ String> chart() {
         return this.chart;
     }
     /**
@@ -75,7 +75,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Date the user created this view.
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -89,7 +89,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Selected currency.
      * 
      */
-    public Output<String> getCurrency() {
+    public Output<String> currency() {
         return this.currency;
     }
     /**
@@ -103,7 +103,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Has definition for data in this report config.
      * 
      */
-    public Output</* @Nullable */ ReportConfigDatasetResponse> getDataSet() {
+    public Output</* @Nullable */ ReportConfigDatasetResponse> dataSet() {
         return this.dataSet;
     }
     /**
@@ -117,7 +117,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Selected date range for viewing cost in.
      * 
      */
-    public Output<String> getDateRange() {
+    public Output<String> dateRange() {
         return this.dateRange;
     }
     /**
@@ -131,7 +131,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return User input name of the view. Required.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -145,7 +145,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -159,7 +159,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Include monetary commitment
      * 
      */
-    public Output<Boolean> getIncludeMonetaryCommitment() {
+    public Output<Boolean> includeMonetaryCommitment() {
         return this.includeMonetaryCommitment;
     }
     /**
@@ -173,7 +173,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return List of KPIs to show in Cost Analysis UI.
      * 
      */
-    public Output</* @Nullable */ List<KpiPropertiesResponse>> getKpis() {
+    public Output</* @Nullable */ List<KpiPropertiesResponse>> kpis() {
         return this.kpis;
     }
     /**
@@ -187,7 +187,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Metric to use when displaying costs.
      * 
      */
-    public Output</* @Nullable */ String> getMetric() {
+    public Output</* @Nullable */ String> metric() {
         return this.metric;
     }
     /**
@@ -201,7 +201,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Date when the user last modified this view.
      * 
      */
-    public Output<String> getModifiedOn() {
+    public Output<String> modifiedOn() {
         return this.modifiedOn;
     }
     /**
@@ -215,7 +215,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -229,7 +229,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Configuration of 3 sub-views in the Cost Analysis UI.
      * 
      */
-    public Output</* @Nullable */ List<PivotPropertiesResponse>> getPivots() {
+    public Output</* @Nullable */ List<PivotPropertiesResponse>> pivots() {
         return this.pivots;
     }
     /**
@@ -243,7 +243,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -257,7 +257,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Has time period for pulling data for the report.
      * 
      */
-    public Output</* @Nullable */ ReportConfigTimePeriodResponse> getTimePeriod() {
+    public Output</* @Nullable */ ReportConfigTimePeriodResponse> timePeriod() {
         return this.timePeriod;
     }
     /**
@@ -271,7 +271,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
      */
-    public Output<String> getTimeframe() {
+    public Output<String> timeframe() {
         return this.timeframe;
     }
     /**
@@ -285,7 +285,7 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

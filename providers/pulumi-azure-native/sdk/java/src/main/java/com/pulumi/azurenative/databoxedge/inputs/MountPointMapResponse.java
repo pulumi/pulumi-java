@@ -23,7 +23,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mountPoint", required=true)
       private final String mountPoint;
 
-    public String getMountPoint() {
+    public String mountPoint() {
         return this.mountPoint;
     }
 
@@ -34,7 +34,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mountType", required=true)
       private final String mountType;
 
-    public String getMountType() {
+    public String mountType() {
         return this.mountType;
     }
 
@@ -45,7 +45,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="roleId", required=true)
       private final String roleId;
 
-    public String getRoleId() {
+    public String roleId() {
         return this.roleId;
     }
 
@@ -56,7 +56,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="roleType", required=true)
       private final String roleType;
 
-    public String getRoleType() {
+    public String roleType() {
         return this.roleType;
     }
 
@@ -67,7 +67,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="shareId", required=true)
       private final String shareId;
 
-    public String getShareId() {
+    public String shareId() {
         return this.shareId;
     }
 

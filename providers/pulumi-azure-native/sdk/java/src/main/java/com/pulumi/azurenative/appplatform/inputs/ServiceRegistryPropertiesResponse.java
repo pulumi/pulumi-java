@@ -26,7 +26,7 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
     @Import(name="instances", required=true)
       private final List<ServiceRegistryInstanceResponse> instances;
 
-    public List<ServiceRegistryInstanceResponse> getInstances() {
+    public List<ServiceRegistryInstanceResponse> instances() {
         return this.instances;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
     @Import(name="resourceRequests", required=true)
       private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
-    public ServiceRegistryResourceRequestsResponse getResourceRequests() {
+    public ServiceRegistryResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
 

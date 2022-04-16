@@ -30,7 +30,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Output<Either<String,ManagedServiceIdentityType>> getType() {
+    public Output<Either<String,ManagedServiceIdentityType>> type() {
         return this.type;
     }
 
@@ -63,7 +63,7 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
-    public Output<Map<String,UserAssignedIdentityArgs>> getUserAssignedIdentities() {
+    public Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

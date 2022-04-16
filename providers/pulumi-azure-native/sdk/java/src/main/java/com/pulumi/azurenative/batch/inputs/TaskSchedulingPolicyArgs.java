@@ -17,7 +17,7 @@ public final class TaskSchedulingPolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="nodeFillType", required=true)
       private final Output<ComputeNodeFillType> nodeFillType;
 
-    public Output<ComputeNodeFillType> getNodeFillType() {
+    public Output<ComputeNodeFillType> nodeFillType() {
         return this.nodeFillType;
     }
 

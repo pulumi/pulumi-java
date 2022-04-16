@@ -22,7 +22,7 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -33,7 +33,7 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
     @Import(name="notificationName", required=true)
       private final Output<String> notificationName;
 
-    public Output<String> getNotificationName() {
+    public Output<String> notificationName() {
         return this.notificationName;
     }
 
@@ -44,7 +44,7 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class NotificationRecipientEmailArgs extends com.pulumi.resources.R
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

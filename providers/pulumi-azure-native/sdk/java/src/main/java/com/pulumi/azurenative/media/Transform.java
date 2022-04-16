@@ -44,7 +44,7 @@ public class Transform extends com.pulumi.resources.CustomResource {
      * @return The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -58,7 +58,7 @@ public class Transform extends com.pulumi.resources.CustomResource {
      * @return An optional verbose description of the Transform.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class Transform extends com.pulumi.resources.CustomResource {
      * @return The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -86,7 +86,7 @@ public class Transform extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Transform extends com.pulumi.resources.CustomResource {
      * @return An array of one or more TransformOutputs that the Transform should generate.
      * 
      */
-    public Output<List<TransformOutputResponse>> getOutputs() {
+    public Output<List<TransformOutputResponse>> outputs() {
         return this.outputs;
     }
     /**
@@ -114,7 +114,7 @@ public class Transform extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -128,7 +128,7 @@ public class Transform extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

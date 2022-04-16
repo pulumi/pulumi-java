@@ -19,7 +19,7 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedServerName", required=true)
       private final String linkedServerName;
 
-    public String getLinkedServerName() {
+    public String linkedServerName() {
         return this.linkedServerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

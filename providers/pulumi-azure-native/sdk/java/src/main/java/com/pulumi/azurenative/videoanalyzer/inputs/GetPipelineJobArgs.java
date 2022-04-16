@@ -19,7 +19,7 @@ public final class GetPipelineJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPipelineJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="pipelineJobName", required=true)
       private final String pipelineJobName;
 
-    public String getPipelineJobName() {
+    public String pipelineJobName() {
         return this.pipelineJobName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPipelineJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

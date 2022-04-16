@@ -44,7 +44,7 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return Default Action for Network Rule Set
      * 
      */
-    public Output</* @Nullable */ String> getDefaultAction() {
+    public Output</* @Nullable */ String> defaultAction() {
         return this.defaultAction;
     }
     /**
@@ -58,7 +58,7 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return List of IpRules
      * 
      */
-    public Output</* @Nullable */ List<NWRuleSetIpRulesResponse>> getIpRules() {
+    public Output</* @Nullable */ List<NWRuleSetIpRulesResponse>> ipRules() {
         return this.ipRules;
     }
     /**
@@ -72,7 +72,7 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -100,7 +100,7 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return List VirtualNetwork Rules
      * 
      */
-    public Output</* @Nullable */ List<NWRuleSetVirtualNetworkRulesResponse>> getVirtualNetworkRules() {
+    public Output</* @Nullable */ List<NWRuleSetVirtualNetworkRulesResponse>> virtualNetworkRules() {
         return this.virtualNetworkRules;
     }
 

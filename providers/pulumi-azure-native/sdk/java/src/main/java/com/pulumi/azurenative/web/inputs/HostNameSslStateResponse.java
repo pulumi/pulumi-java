@@ -26,7 +26,7 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="hostType")
       private final @Nullable String hostType;
 
-    public Optional<String> getHostType() {
+    public Optional<String> hostType() {
         return this.hostType == null ? Optional.empty() : Optional.ofNullable(this.hostType);
     }
 
@@ -37,7 +37,7 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="sslState")
       private final @Nullable String sslState;
 
-    public Optional<String> getSslState() {
+    public Optional<String> sslState() {
         return this.sslState == null ? Optional.empty() : Optional.ofNullable(this.sslState);
     }
 
@@ -59,7 +59,7 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 
@@ -70,7 +70,7 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="toUpdate")
       private final @Nullable Boolean toUpdate;
 
-    public Optional<Boolean> getToUpdate() {
+    public Optional<Boolean> toUpdate() {
         return this.toUpdate == null ? Optional.empty() : Optional.ofNullable(this.toUpdate);
     }
 
@@ -81,7 +81,7 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="virtualIP")
       private final @Nullable String virtualIP;
 
-    public Optional<String> getVirtualIP() {
+    public Optional<String> virtualIP() {
         return this.virtualIP == null ? Optional.empty() : Optional.ofNullable(this.virtualIP);
     }
 

@@ -19,7 +19,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="columnName", required=true)
       private final String columnName;
 
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="schemaName", required=true)
       private final String schemaName;
 
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="sensitivityLabelSource", required=true)
       private final String sensitivityLabelSource;
 
-    public String getSensitivityLabelSource() {
+    public String sensitivityLabelSource() {
         return this.sensitivityLabelSource;
     }
 
@@ -63,7 +63,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="sqlPoolName", required=true)
       private final String sqlPoolName;
 
-    public String getSqlPoolName() {
+    public String sqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -74,7 +74,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 
@@ -85,7 +85,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

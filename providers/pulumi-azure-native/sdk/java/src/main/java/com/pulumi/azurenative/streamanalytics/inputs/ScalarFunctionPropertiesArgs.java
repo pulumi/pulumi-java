@@ -32,7 +32,7 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="binding")
       private final @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
 
-    public Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> getBinding() {
+    public Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding() {
         return this.binding == null ? Codegen.empty() : this.binding;
     }
 
@@ -43,7 +43,7 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="inputs")
       private final @Nullable Output<List<FunctionInputArgs>> inputs;
 
-    public Output<List<FunctionInputArgs>> getInputs() {
+    public Output<List<FunctionInputArgs>> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -54,7 +54,7 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="output")
       private final @Nullable Output<FunctionOutputArgs> output;
 
-    public Output<FunctionOutputArgs> getOutput() {
+    public Output<FunctionOutputArgs> output() {
         return this.output == null ? Codegen.empty() : this.output;
     }
 
@@ -66,7 +66,7 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

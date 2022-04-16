@@ -24,7 +24,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -35,7 +35,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="shareName", required=true)
       private final String shareName;
 
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
 
@@ -46,7 +46,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="shareType", required=true)
       private final String shareType;
 
-    public String getShareType() {
+    public String shareType() {
         return this.shareType;
     }
 
@@ -57,7 +57,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="supportedAccessProtocols", required=true)
       private final List<String> supportedAccessProtocols;
 
-    public List<String> getSupportedAccessProtocols() {
+    public List<String> supportedAccessProtocols() {
         return this.supportedAccessProtocols;
     }
 
@@ -68,7 +68,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

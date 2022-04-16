@@ -24,7 +24,7 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessibility")
       private final @Nullable Output<Either<String,Accessibility>> accessibility;
 
-    public Output<Either<String,Accessibility>> getAccessibility() {
+    public Output<Either<String,Accessibility>> accessibility() {
         return this.accessibility == null ? Codegen.empty() : this.accessibility;
     }
 

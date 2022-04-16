@@ -26,7 +26,7 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authTokenUrl")
       private final @Nullable Output<String> authTokenUrl;
 
-    public Output<String> getAuthTokenUrl() {
+    public Output<String> authTokenUrl() {
         return this.authTokenUrl == null ? Codegen.empty() : this.authTokenUrl;
     }
 
@@ -37,7 +37,7 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -48,7 +48,7 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 

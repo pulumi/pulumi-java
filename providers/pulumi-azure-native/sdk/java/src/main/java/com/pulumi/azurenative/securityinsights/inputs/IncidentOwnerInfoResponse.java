@@ -25,7 +25,7 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="assignedTo")
       private final @Nullable String assignedTo;
 
-    public Optional<String> getAssignedTo() {
+    public Optional<String> assignedTo() {
         return this.assignedTo == null ? Optional.empty() : Optional.ofNullable(this.assignedTo);
     }
 
@@ -36,7 +36,7 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="email")
       private final @Nullable String email;
 
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
@@ -47,7 +47,7 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="objectId")
       private final @Nullable String objectId;
 
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
@@ -58,7 +58,7 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="userPrincipalName")
       private final @Nullable String userPrincipalName;
 
-    public Optional<String> getUserPrincipalName() {
+    public Optional<String> userPrincipalName() {
         return this.userPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.userPrincipalName);
     }
 

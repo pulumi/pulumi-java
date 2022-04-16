@@ -27,7 +27,7 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="publicPort")
       private final @Nullable Output<Integer> publicPort;
 
-    public Output<Integer> getPublicPort() {
+    public Output<Integer> publicPort() {
         return this.publicPort == null ? Codegen.empty() : this.publicPort;
     }
 

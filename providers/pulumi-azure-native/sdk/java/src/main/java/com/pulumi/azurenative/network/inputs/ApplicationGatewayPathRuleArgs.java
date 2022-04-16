@@ -28,7 +28,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
-    public Output<SubResourceArgs> getBackendAddressPool() {
+    public Output<SubResourceArgs> backendAddressPool() {
         return this.backendAddressPool == null ? Codegen.empty() : this.backendAddressPool;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="backendHttpSettings")
       private final @Nullable Output<SubResourceArgs> backendHttpSettings;
 
-    public Output<SubResourceArgs> getBackendHttpSettings() {
+    public Output<SubResourceArgs> backendHttpSettings() {
         return this.backendHttpSettings == null ? Codegen.empty() : this.backendHttpSettings;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="firewallPolicy")
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
-    public Output<SubResourceArgs> getFirewallPolicy() {
+    public Output<SubResourceArgs> firewallPolicy() {
         return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> getPaths() {
+    public Output<List<String>> paths() {
         return this.paths == null ? Codegen.empty() : this.paths;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="redirectConfiguration")
       private final @Nullable Output<SubResourceArgs> redirectConfiguration;
 
-    public Output<SubResourceArgs> getRedirectConfiguration() {
+    public Output<SubResourceArgs> redirectConfiguration() {
         return this.redirectConfiguration == null ? Codegen.empty() : this.redirectConfiguration;
     }
 
@@ -105,7 +105,7 @@ public final class ApplicationGatewayPathRuleArgs extends com.pulumi.resources.R
     @Import(name="rewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
-    public Output<SubResourceArgs> getRewriteRuleSet() {
+    public Output<SubResourceArgs> rewriteRuleSet() {
         return this.rewriteRuleSet == null ? Codegen.empty() : this.rewriteRuleSet;
     }
 

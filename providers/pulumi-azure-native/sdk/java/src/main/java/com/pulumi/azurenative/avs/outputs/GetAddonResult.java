@@ -62,42 +62,42 @@ public final class GetAddonResult {
      * The type of private cloud addon
      * 
     */
-    public Optional<String> getAddonType() {
+    public Optional<String> addonType() {
         return Optional.ofNullable(this.addonType);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The SRM license
      * 
     */
-    public Optional<String> getLicenseKey() {
+    public Optional<String> licenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the addon provisioning
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

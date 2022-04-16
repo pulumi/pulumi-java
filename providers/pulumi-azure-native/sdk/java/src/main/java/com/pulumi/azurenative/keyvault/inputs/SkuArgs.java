@@ -28,7 +28,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
       private final Output<Either<String,SkuFamily>> family;
 
-    public Output<Either<String,SkuFamily>> getFamily() {
+    public Output<Either<String,SkuFamily>> family() {
         return this.family;
     }
 
@@ -39,7 +39,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<SkuName> name;
 
-    public Output<SkuName> getName() {
+    public Output<SkuName> name() {
         return this.name;
     }
 

@@ -228,196 +228,196 @@ public final class GetWorkspaceResult {
      * The flag to indicate whether to allow public access when behind VNet.
      * 
     */
-    public Optional<Boolean> getAllowPublicAccessWhenBehindVnet() {
+    public Optional<Boolean> allowPublicAccessWhenBehindVnet() {
         return Optional.ofNullable(this.allowPublicAccessWhenBehindVnet);
     }
     /**
      * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
      * 
     */
-    public Optional<String> getApplicationInsights() {
+    public Optional<String> applicationInsights() {
         return Optional.ofNullable(this.applicationInsights);
     }
     /**
      * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
      * 
     */
-    public Optional<String> getContainerRegistry() {
+    public Optional<String> containerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
     /**
      * The description of this workspace.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Url for the discovery service to identify regional endpoints for machine learning experimentation services
      * 
     */
-    public Optional<String> getDiscoveryUrl() {
+    public Optional<String> discoveryUrl() {
         return Optional.ofNullable(this.discoveryUrl);
     }
     /**
      * The encryption settings of Azure ML workspace.
      * 
     */
-    public Optional<EncryptionPropertyResponse> getEncryption() {
+    public Optional<EncryptionPropertyResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The friendly name for this workspace. This name in mutable
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
      * 
     */
-    public Optional<Boolean> getHbiWorkspace() {
+    public Optional<Boolean> hbiWorkspace() {
         return Optional.ofNullable(this.hbiWorkspace);
     }
     /**
      * Specifies the resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
     */
-    public Optional<IdentityResponse> getIdentity() {
+    public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The compute name for image build
      * 
     */
-    public Optional<String> getImageBuildCompute() {
+    public Optional<String> imageBuildCompute() {
         return Optional.ofNullable(this.imageBuildCompute);
     }
     /**
      * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
      * 
     */
-    public Optional<String> getKeyVault() {
+    public Optional<String> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * Specifies the location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The notebook info of Azure ML workspace.
      * 
     */
-    public NotebookResourceInfoResponse getNotebookInfo() {
+    public NotebookResourceInfoResponse notebookInfo() {
         return this.notebookInfo;
     }
     /**
      * The user assigned identity resource id that represents the workspace identity.
      * 
     */
-    public Optional<String> getPrimaryUserAssignedIdentity() {
+    public Optional<String> primaryUserAssignedIdentity() {
         return Optional.ofNullable(this.primaryUserAssignedIdentity);
     }
     /**
      * The list of private endpoint connections in the workspace.
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Count of private connections in the workspace
      * 
     */
-    public Integer getPrivateLinkCount() {
+    public Integer privateLinkCount() {
         return this.privateLinkCount;
     }
     /**
      * The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The service managed resource settings.
      * 
     */
-    public Optional<ServiceManagedResourcesSettingsResponse> getServiceManagedResourcesSettings() {
+    public Optional<ServiceManagedResourcesSettingsResponse> serviceManagedResourcesSettings() {
         return Optional.ofNullable(this.serviceManagedResourcesSettings);
     }
     /**
      * The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
      * 
     */
-    public String getServiceProvisionedResourceGroup() {
+    public String serviceProvisionedResourceGroup() {
         return this.serviceProvisionedResourceGroup;
     }
     /**
      * The list of shared private link resources in this workspace.
      * 
     */
-    public List<SharedPrivateLinkResourceResponse> getSharedPrivateLinkResources() {
+    public List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources == null ? List.of() : this.sharedPrivateLinkResources;
     }
     /**
      * The sku of the workspace.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
      * 
     */
-    public Optional<String> getStorageAccount() {
+    public Optional<String> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The immutable id associated with this workspace.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 

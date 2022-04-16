@@ -19,7 +19,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -41,7 +41,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
     @Import(name="relayName", required=true)
       private final String relayName;
 
-    public String getRelayName() {
+    public String relayName() {
         return this.relayName;
     }
 
@@ -52,7 +52,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
     @Import(name="slot", required=true)
       private final String slot;
 
-    public String getSlot() {
+    public String slot() {
         return this.slot;
     }
 

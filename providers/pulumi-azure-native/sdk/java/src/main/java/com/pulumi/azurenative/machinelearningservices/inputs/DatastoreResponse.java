@@ -31,35 +31,35 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="azureDataLakeSection")
       private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
 
-    public Optional<AzureDataLakeSectionResponse> getAzureDataLakeSection() {
+    public Optional<AzureDataLakeSectionResponse> azureDataLakeSection() {
         return this.azureDataLakeSection == null ? Optional.empty() : Optional.ofNullable(this.azureDataLakeSection);
     }
 
     @Import(name="azureMySqlSection")
       private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
 
-    public Optional<AzureMySqlSectionResponse> getAzureMySqlSection() {
+    public Optional<AzureMySqlSectionResponse> azureMySqlSection() {
         return this.azureMySqlSection == null ? Optional.empty() : Optional.ofNullable(this.azureMySqlSection);
     }
 
     @Import(name="azurePostgreSqlSection")
       private final @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
 
-    public Optional<AzurePostgreSqlSectionResponse> getAzurePostgreSqlSection() {
+    public Optional<AzurePostgreSqlSectionResponse> azurePostgreSqlSection() {
         return this.azurePostgreSqlSection == null ? Optional.empty() : Optional.ofNullable(this.azurePostgreSqlSection);
     }
 
     @Import(name="azureSqlDatabaseSection")
       private final @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
 
-    public Optional<AzureSqlDatabaseSectionResponse> getAzureSqlDatabaseSection() {
+    public Optional<AzureSqlDatabaseSectionResponse> azureSqlDatabaseSection() {
         return this.azureSqlDatabaseSection == null ? Optional.empty() : Optional.ofNullable(this.azureSqlDatabaseSection);
     }
 
     @Import(name="azureStorageSection")
       private final @Nullable AzureStorageSectionResponse azureStorageSection;
 
-    public Optional<AzureStorageSectionResponse> getAzureStorageSection() {
+    public Optional<AzureStorageSectionResponse> azureStorageSection() {
         return this.azureStorageSection == null ? Optional.empty() : Optional.ofNullable(this.azureStorageSection);
     }
 
@@ -70,7 +70,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdBy", required=true)
       private final UserInfoResponse createdBy;
 
-    public UserInfoResponse getCreatedBy() {
+    public UserInfoResponse createdBy() {
         return this.createdBy;
     }
 
@@ -81,7 +81,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
       private final String createdTime;
 
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
 
@@ -92,7 +92,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataStoreType")
       private final @Nullable String dataStoreType;
 
-    public Optional<String> getDataStoreType() {
+    public Optional<String> dataStoreType() {
         return this.dataStoreType == null ? Optional.empty() : Optional.ofNullable(this.dataStoreType);
     }
 
@@ -103,7 +103,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -114,7 +114,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="glusterFsSection")
       private final @Nullable GlusterFsSectionResponse glusterFsSection;
 
-    public Optional<GlusterFsSectionResponse> getGlusterFsSection() {
+    public Optional<GlusterFsSectionResponse> glusterFsSection() {
         return this.glusterFsSection == null ? Optional.empty() : Optional.ofNullable(this.glusterFsSection);
     }
 
@@ -125,7 +125,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hasBeenValidated")
       private final @Nullable Boolean hasBeenValidated;
 
-    public Optional<Boolean> getHasBeenValidated() {
+    public Optional<Boolean> hasBeenValidated() {
         return this.hasBeenValidated == null ? Optional.empty() : Optional.ofNullable(this.hasBeenValidated);
     }
 
@@ -136,7 +136,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedInfo")
       private final @Nullable LinkedInfoResponse linkedInfo;
 
-    public Optional<LinkedInfoResponse> getLinkedInfo() {
+    public Optional<LinkedInfoResponse> linkedInfo() {
         return this.linkedInfo == null ? Optional.empty() : Optional.ofNullable(this.linkedInfo);
     }
 
@@ -147,7 +147,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedBy", required=true)
       private final UserInfoResponse modifiedBy;
 
-    public UserInfoResponse getModifiedBy() {
+    public UserInfoResponse modifiedBy() {
         return this.modifiedBy;
     }
 
@@ -158,7 +158,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
 
-    public String getModifiedTime() {
+    public String modifiedTime() {
         return this.modifiedTime;
     }
 
@@ -169,7 +169,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -180,7 +180,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

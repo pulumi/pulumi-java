@@ -16,7 +16,7 @@ public final class ListStorageAccountKeysResult {
         this.userStorageKey = userStorageKey;
     }
 
-    public String getUserStorageKey() {
+    public String userStorageKey() {
         return this.userStorageKey;
     }
 

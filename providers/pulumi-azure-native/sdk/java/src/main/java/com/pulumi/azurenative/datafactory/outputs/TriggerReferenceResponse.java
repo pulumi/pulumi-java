@@ -32,14 +32,14 @@ public final class TriggerReferenceResponse {
      * Reference trigger name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Trigger reference type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

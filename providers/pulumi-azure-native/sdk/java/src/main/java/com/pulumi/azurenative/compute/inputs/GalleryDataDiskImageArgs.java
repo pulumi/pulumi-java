@@ -28,7 +28,7 @@ public final class GalleryDataDiskImageArgs extends com.pulumi.resources.Resourc
     @Import(name="hostCaching")
       private final @Nullable Output<HostCaching> hostCaching;
 
-    public Output<HostCaching> getHostCaching() {
+    public Output<HostCaching> hostCaching() {
         return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
     }
 
@@ -39,7 +39,7 @@ public final class GalleryDataDiskImageArgs extends com.pulumi.resources.Resourc
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -50,7 +50,7 @@ public final class GalleryDataDiskImageArgs extends com.pulumi.resources.Resourc
     @Import(name="source")
       private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Output<GalleryArtifactVersionSourceArgs> getSource() {
+    public Output<GalleryArtifactVersionSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

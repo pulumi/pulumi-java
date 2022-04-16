@@ -25,7 +25,7 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -48,7 +48,7 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -59,7 +59,7 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

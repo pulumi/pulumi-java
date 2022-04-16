@@ -23,7 +23,7 @@ public final class ResourceProviderDetailsResponse extends com.pulumi.resources.
     @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
 
-    public String getResourceProviderNamespace() {
+    public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 

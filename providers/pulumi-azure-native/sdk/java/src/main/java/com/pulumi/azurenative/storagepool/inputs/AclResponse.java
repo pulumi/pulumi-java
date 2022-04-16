@@ -24,7 +24,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="initiatorIqn", required=true)
       private final String initiatorIqn;
 
-    public String getInitiatorIqn() {
+    public String initiatorIqn() {
         return this.initiatorIqn;
     }
 
@@ -35,7 +35,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mappedLuns", required=true)
       private final List<String> mappedLuns;
 
-    public List<String> getMappedLuns() {
+    public List<String> mappedLuns() {
         return this.mappedLuns;
     }
 
@@ -46,7 +46,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -57,7 +57,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

@@ -30,7 +30,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
-    public Output<String> getBackupManagementType() {
+    public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -41,7 +41,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName == null ? Codegen.empty() : this.fabricName;
     }
 
@@ -52,7 +52,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> getProtectedItemsCount() {
+    public Output<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
@@ -63,7 +63,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="subProtectionPolicy")
       private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
-    public Output<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
+    public Output<List<SubProtectionPolicyArgs>> subProtectionPolicy() {
         return this.subProtectionPolicy == null ? Codegen.empty() : this.subProtectionPolicy;
     }
 
@@ -74,7 +74,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

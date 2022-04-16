@@ -25,7 +25,7 @@ public final class ServiceProviderParameterResponseConstraints extends com.pulum
     @Import(name="required")
       private final @Nullable Boolean required;
 
-    public Optional<Boolean> getRequired() {
+    public Optional<Boolean> required() {
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
     }
 

@@ -15,7 +15,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupPolicyName", required=true)
       private final String backupPolicyName;
 
-    public String getBackupPolicyName() {
+    public String backupPolicyName() {
         return this.backupPolicyName;
     }
 
@@ -26,7 +26,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -37,7 +37,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vaultName", required=true)
       private final String vaultName;
 
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

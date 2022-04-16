@@ -23,7 +23,7 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datastoreId", required=true)
       private final String datastoreId;
 
-    public String getDatastoreId() {
+    public String datastoreId() {
         return this.datastoreId;
     }
 
@@ -34,7 +34,7 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

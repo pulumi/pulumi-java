@@ -26,7 +26,7 @@ public final class AzureFirewallPublicIPAddressResponse {
      * Public IP Address value.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
 

@@ -51,28 +51,28 @@ public final class RecoveryPlanActionResponse {
      * The action name.
      * 
     */
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
     /**
      * The custom details.
      * 
     */
-    public Object getCustomDetails() {
+    public Object customDetails() {
         return this.customDetails;
     }
     /**
      * The list of failover directions.
      * 
     */
-    public List<String> getFailoverDirections() {
+    public List<String> failoverDirections() {
         return this.failoverDirections;
     }
     /**
      * The list of failover types.
      * 
     */
-    public List<String> getFailoverTypes() {
+    public List<String> failoverTypes() {
         return this.failoverTypes;
     }
 

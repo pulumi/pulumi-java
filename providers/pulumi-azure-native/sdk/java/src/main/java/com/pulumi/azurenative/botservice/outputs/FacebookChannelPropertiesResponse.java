@@ -65,42 +65,42 @@ public final class FacebookChannelPropertiesResponse {
      * Facebook application id
      * 
     */
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
     /**
      * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public Optional<String> getAppSecret() {
+    public Optional<String> appSecret() {
         return Optional.ofNullable(this.appSecret);
     }
     /**
      * Callback Url
      * 
     */
-    public String getCallbackUrl() {
+    public String callbackUrl() {
         return this.callbackUrl;
     }
     /**
      * Whether this channel is enabled for the bot
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * The list of Facebook pages
      * 
     */
-    public List<FacebookPageResponse> getPages() {
+    public List<FacebookPageResponse> pages() {
         return this.pages == null ? List.of() : this.pages;
     }
     /**
      * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public String getVerifyToken() {
+    public String verifyToken() {
         return this.verifyToken;
     }
 

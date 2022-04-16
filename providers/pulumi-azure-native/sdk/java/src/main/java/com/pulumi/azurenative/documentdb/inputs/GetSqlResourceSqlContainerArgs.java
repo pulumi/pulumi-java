@@ -19,7 +19,7 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
     @Import(name="containerName", required=true)
       private final String containerName;
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

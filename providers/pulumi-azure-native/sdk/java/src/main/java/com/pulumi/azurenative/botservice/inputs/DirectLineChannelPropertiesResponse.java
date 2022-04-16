@@ -27,7 +27,7 @@ public final class DirectLineChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="directLineEmbedCode")
       private final @Nullable String directLineEmbedCode;
 
-    public Optional<String> getDirectLineEmbedCode() {
+    public Optional<String> directLineEmbedCode() {
         return this.directLineEmbedCode == null ? Optional.empty() : Optional.ofNullable(this.directLineEmbedCode);
     }
 
@@ -38,7 +38,7 @@ public final class DirectLineChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="sites")
       private final @Nullable List<DirectLineSiteResponse> sites;
 
-    public List<DirectLineSiteResponse> getSites() {
+    public List<DirectLineSiteResponse> sites() {
         return this.sites == null ? List.of() : this.sites;
     }
 

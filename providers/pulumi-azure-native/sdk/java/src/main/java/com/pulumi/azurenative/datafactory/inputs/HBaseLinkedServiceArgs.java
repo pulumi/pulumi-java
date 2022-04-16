@@ -35,7 +35,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowHostNameCNMismatch")
       private final @Nullable Output<Object> allowHostNameCNMismatch;
 
-    public Output<Object> getAllowHostNameCNMismatch() {
+    public Output<Object> allowHostNameCNMismatch() {
         return this.allowHostNameCNMismatch == null ? Codegen.empty() : this.allowHostNameCNMismatch;
     }
 
@@ -46,7 +46,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Output<Object> allowSelfSignedServerCert;
 
-    public Output<Object> getAllowSelfSignedServerCert() {
+    public Output<Object> allowSelfSignedServerCert() {
         return this.allowSelfSignedServerCert == null ? Codegen.empty() : this.allowSelfSignedServerCert;
     }
 
@@ -57,7 +57,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -68,7 +68,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,HBaseAuthenticationType>> authenticationType;
 
-    public Output<Either<String,HBaseAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,HBaseAuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
 
@@ -79,7 +79,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -90,7 +90,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
 
-    public Output<Object> getEnableSsl() {
+    public Output<Object> enableSsl() {
         return this.enableSsl == null ? Codegen.empty() : this.enableSsl;
     }
 
@@ -112,7 +112,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -123,7 +123,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="host", required=true)
       private final Output<Object> host;
 
-    public Output<Object> getHost() {
+    public Output<Object> host() {
         return this.host;
     }
 
@@ -134,7 +134,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="httpPath")
       private final @Nullable Output<Object> httpPath;
 
-    public Output<Object> getHttpPath() {
+    public Output<Object> httpPath() {
         return this.httpPath == null ? Codegen.empty() : this.httpPath;
     }
 
@@ -145,7 +145,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -156,7 +156,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -167,7 +167,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="port")
       private final @Nullable Output<Object> port;
 
-    public Output<Object> getPort() {
+    public Output<Object> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -178,7 +178,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
 
-    public Output<Object> getTrustedCertPath() {
+    public Output<Object> trustedCertPath() {
         return this.trustedCertPath == null ? Codegen.empty() : this.trustedCertPath;
     }
 
@@ -190,7 +190,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -201,7 +201,7 @@ public final class HBaseLinkedServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="username")
       private final @Nullable Output<Object> username;
 
-    public Output<Object> getUsername() {
+    public Output<Object> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

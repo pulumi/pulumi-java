@@ -42,21 +42,21 @@ public final class StagingSettingsResponse {
      * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableCompression() {
+    public Optional<Object> enableCompression() {
         return Optional.ofNullable(this.enableCompression);
     }
     /**
      * Staging linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPath() {
+    public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }
 

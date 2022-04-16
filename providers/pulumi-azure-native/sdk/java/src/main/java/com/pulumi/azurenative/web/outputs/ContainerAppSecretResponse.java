@@ -32,14 +32,14 @@ public final class ContainerAppSecretResponse {
      * Secret Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Secret Value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

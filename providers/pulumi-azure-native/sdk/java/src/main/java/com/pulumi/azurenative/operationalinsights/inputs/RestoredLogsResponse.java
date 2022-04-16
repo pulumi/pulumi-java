@@ -25,7 +25,7 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="endRestoreTime")
       private final @Nullable String endRestoreTime;
 
-    public Optional<String> getEndRestoreTime() {
+    public Optional<String> endRestoreTime() {
         return this.endRestoreTime == null ? Optional.empty() : Optional.ofNullable(this.endRestoreTime);
     }
 
@@ -36,7 +36,7 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceTable", required=true)
       private final String sourceTable;
 
-    public String getSourceTable() {
+    public String sourceTable() {
         return this.sourceTable;
     }
 
@@ -47,7 +47,7 @@ public final class RestoredLogsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startRestoreTime")
       private final @Nullable String startRestoreTime;
 
-    public Optional<String> getStartRestoreTime() {
+    public Optional<String> startRestoreTime() {
         return this.startRestoreTime == null ? Optional.empty() : Optional.ofNullable(this.startRestoreTime);
     }
 

@@ -44,7 +44,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The time at which the remediation was created.
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -58,7 +58,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The deployment status summary for all deployments created by the remediation.
      * 
      */
-    public Output<RemediationDeploymentSummaryResponse> getDeploymentStatus() {
+    public Output<RemediationDeploymentSummaryResponse> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -72,7 +72,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The filters that will be applied to determine which resources to remediate.
      * 
      */
-    public Output</* @Nullable */ RemediationFiltersResponse> getFilters() {
+    public Output</* @Nullable */ RemediationFiltersResponse> filters() {
         return this.filters;
     }
     /**
@@ -86,7 +86,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The time at which the remediation was last updated.
      * 
      */
-    public Output<String> getLastUpdatedOn() {
+    public Output<String> lastUpdatedOn() {
         return this.lastUpdatedOn;
     }
     /**
@@ -100,7 +100,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The name of the remediation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The resource ID of the policy assignment that should be remediated.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyAssignmentId() {
+    public Output</* @Nullable */ String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
@@ -128,7 +128,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyDefinitionReferenceId() {
+    public Output</* @Nullable */ String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId;
     }
     /**
@@ -142,7 +142,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The status of the remediation.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -156,7 +156,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
      * 
      */
-    public Output</* @Nullable */ String> getResourceDiscoveryMode() {
+    public Output</* @Nullable */ String> resourceDiscoveryMode() {
         return this.resourceDiscoveryMode;
     }
     /**
@@ -170,7 +170,7 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The type of the remediation.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

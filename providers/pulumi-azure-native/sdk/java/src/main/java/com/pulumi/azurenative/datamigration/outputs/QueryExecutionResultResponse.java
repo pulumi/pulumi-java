@@ -48,28 +48,28 @@ public final class QueryExecutionResultResponse {
      * Query text retrieved from the source server
      * 
     */
-    public String getQueryText() {
+    public String queryText() {
         return this.queryText;
     }
     /**
      * Query analysis result from the source
      * 
     */
-    public ExecutionStatisticsResponse getSourceResult() {
+    public ExecutionStatisticsResponse sourceResult() {
         return this.sourceResult;
     }
     /**
      * Total no. of statements in the batch
      * 
     */
-    public Double getStatementsInBatch() {
+    public Double statementsInBatch() {
         return this.statementsInBatch;
     }
     /**
      * Query analysis result from the target
      * 
     */
-    public ExecutionStatisticsResponse getTargetResult() {
+    public ExecutionStatisticsResponse targetResult() {
         return this.targetResult;
     }
 

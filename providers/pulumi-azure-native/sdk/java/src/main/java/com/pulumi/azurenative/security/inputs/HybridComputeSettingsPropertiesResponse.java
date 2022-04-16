@@ -27,7 +27,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="autoProvision", required=true)
       private final String autoProvision;
 
-    public String getAutoProvision() {
+    public String autoProvision() {
         return this.autoProvision;
     }
 
@@ -38,7 +38,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="hybridComputeProvisioningState", required=true)
       private final String hybridComputeProvisioningState;
 
-    public String getHybridComputeProvisioningState() {
+    public String hybridComputeProvisioningState() {
         return this.hybridComputeProvisioningState;
     }
 
@@ -49,7 +49,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="proxyServer")
       private final @Nullable ProxyServerPropertiesResponse proxyServer;
 
-    public Optional<ProxyServerPropertiesResponse> getProxyServer() {
+    public Optional<ProxyServerPropertiesResponse> proxyServer() {
         return this.proxyServer == null ? Optional.empty() : Optional.ofNullable(this.proxyServer);
     }
 
@@ -60,7 +60,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -71,7 +71,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
 
-    public Optional<String> getResourceGroupName() {
+    public Optional<String> resourceGroupName() {
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
     }
 
@@ -82,7 +82,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="servicePrincipal")
       private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
-    public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {
+    public Optional<ServicePrincipalPropertiesResponse> servicePrincipal() {
         return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);
     }
 

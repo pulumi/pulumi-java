@@ -30,7 +30,7 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="criteria")
       private final @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
 
-    public Output<List<ScheduleBasedBackupCriteriaArgs>> getCriteria() {
+    public Output<List<ScheduleBasedBackupCriteriaArgs>> criteria() {
         return this.criteria == null ? Codegen.empty() : this.criteria;
     }
 
@@ -41,7 +41,7 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isDefault", required=true)
       private final Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
 
@@ -52,7 +52,7 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tagInfo", required=true)
       private final Output<RetentionTagArgs> tagInfo;
 
-    public Output<RetentionTagArgs> getTagInfo() {
+    public Output<RetentionTagArgs> tagInfo() {
         return this.tagInfo;
     }
 
@@ -63,7 +63,7 @@ public final class TaggingCriteriaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="taggingPriority", required=true)
       private final Output<Double> taggingPriority;
 
-    public Output<Double> getTaggingPriority() {
+    public Output<Double> taggingPriority() {
         return this.taggingPriority;
     }
 

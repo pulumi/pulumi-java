@@ -19,7 +19,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends com.pulumi
     @Import(name="gatewayName", required=true)
       private final String gatewayName;
 
-    public String getGatewayName() {
+    public String gatewayName() {
         return this.gatewayName;
     }
 
@@ -30,7 +30,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

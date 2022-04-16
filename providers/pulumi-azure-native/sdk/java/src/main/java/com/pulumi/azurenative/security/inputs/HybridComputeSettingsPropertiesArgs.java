@@ -30,7 +30,7 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="autoProvision", required=true)
       private final Output<Either<String,AutoProvision>> autoProvision;
 
-    public Output<Either<String,AutoProvision>> getAutoProvision() {
+    public Output<Either<String,AutoProvision>> autoProvision() {
         return this.autoProvision;
     }
 
@@ -41,7 +41,7 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="proxyServer")
       private final @Nullable Output<ProxyServerPropertiesArgs> proxyServer;
 
-    public Output<ProxyServerPropertiesArgs> getProxyServer() {
+    public Output<ProxyServerPropertiesArgs> proxyServer() {
         return this.proxyServer == null ? Codegen.empty() : this.proxyServer;
     }
 
@@ -52,7 +52,7 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -63,7 +63,7 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
@@ -74,7 +74,7 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="servicePrincipal")
       private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
-    public Output<ServicePrincipalPropertiesArgs> getServicePrincipal() {
+    public Output<ServicePrincipalPropertiesArgs> servicePrincipal() {
         return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
     }
 

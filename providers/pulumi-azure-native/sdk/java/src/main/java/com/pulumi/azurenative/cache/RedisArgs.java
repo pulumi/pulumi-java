@@ -31,7 +31,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableNonSslPort")
       private final @Nullable Output<Boolean> enableNonSslPort;
 
-    public Output<Boolean> getEnableNonSslPort() {
+    public Output<Boolean> enableNonSslPort() {
         return this.enableNonSslPort == null ? Codegen.empty() : this.enableNonSslPort;
     }
 
@@ -42,7 +42,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -53,7 +53,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
-    public Output<Either<String,TlsVersion>> getMinimumTlsVersion() {
+    public Output<Either<String,TlsVersion>> minimumTlsVersion() {
         return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
@@ -64,7 +64,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -75,7 +75,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -86,7 +86,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="redisConfiguration")
       private final @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
 
-    public Output<RedisCommonPropertiesRedisConfigurationArgs> getRedisConfiguration() {
+    public Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration() {
         return this.redisConfiguration == null ? Codegen.empty() : this.redisConfiguration;
     }
 
@@ -97,7 +97,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicasPerMaster")
       private final @Nullable Output<Integer> replicasPerMaster;
 
-    public Output<Integer> getReplicasPerMaster() {
+    public Output<Integer> replicasPerMaster() {
         return this.replicasPerMaster == null ? Codegen.empty() : this.replicasPerMaster;
     }
 
@@ -108,7 +108,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -119,7 +119,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> getShardCount() {
+    public Output<Integer> shardCount() {
         return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
@@ -130,7 +130,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -141,7 +141,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="staticIP")
       private final @Nullable Output<String> staticIP;
 
-    public Output<String> getStaticIP() {
+    public Output<String> staticIP() {
         return this.staticIP == null ? Codegen.empty() : this.staticIP;
     }
 
@@ -152,7 +152,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -163,7 +163,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -174,7 +174,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantSettings")
       private final @Nullable Output<Map<String,String>> tenantSettings;
 
-    public Output<Map<String,String>> getTenantSettings() {
+    public Output<Map<String,String>> tenantSettings() {
         return this.tenantSettings == null ? Codegen.empty() : this.tenantSettings;
     }
 
@@ -185,7 +185,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

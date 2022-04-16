@@ -19,7 +19,7 @@ public final class GetPrivateStoreCollectionArgs extends com.pulumi.resources.In
     @Import(name="collectionId", required=true)
       private final String collectionId;
 
-    public String getCollectionId() {
+    public String collectionId() {
         return this.collectionId;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateStoreCollectionArgs extends com.pulumi.resources.In
     @Import(name="privateStoreId", required=true)
       private final String privateStoreId;
 
-    public String getPrivateStoreId() {
+    public String privateStoreId() {
         return this.privateStoreId;
     }
 

@@ -66,42 +66,42 @@ public final class InitContainerDefinitionResponse {
      * The command to execute within the init container in exec form.
      * 
     */
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * The environment variables to set in the init container.
      * 
     */
-    public List<EnvironmentVariableResponse> getEnvironmentVariables() {
+    public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * The image of the init container.
      * 
     */
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
      * The instance view of the init container. Only valid in response.
      * 
     */
-    public InitContainerPropertiesDefinitionResponseInstanceView getInstanceView() {
+    public InitContainerPropertiesDefinitionResponseInstanceView instanceView() {
         return this.instanceView;
     }
     /**
      * The name for the init container.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The volume mounts available to the init container.
      * 
     */
-    public List<VolumeMountResponse> getVolumeMounts() {
+    public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
 

@@ -34,7 +34,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
 
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -45,7 +45,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
 
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
@@ -56,7 +56,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
+    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 
@@ -67,7 +67,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="schedulePolicy")
       private final @Nullable Object schedulePolicy;
 
-    public Object getSchedulePolicy() {
+    public Object schedulePolicy() {
         return this.schedulePolicy == null ? null : this.schedulePolicy;
     }
 
@@ -78,7 +78,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 
@@ -89,7 +89,7 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="workLoadType")
       private final @Nullable String workLoadType;
 
-    public Optional<String> getWorkLoadType() {
+    public Optional<String> workLoadType() {
         return this.workLoadType == null ? Optional.empty() : Optional.ofNullable(this.workLoadType);
     }
 

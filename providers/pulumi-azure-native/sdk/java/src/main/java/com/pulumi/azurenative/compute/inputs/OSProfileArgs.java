@@ -31,7 +31,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
-    public Output<String> getAdminPassword() {
+    public Output<String> adminPassword() {
         return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
@@ -42,7 +42,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
+    public Output<String> adminUsername() {
         return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
@@ -53,7 +53,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowExtensionOperations")
       private final @Nullable Output<Boolean> allowExtensionOperations;
 
-    public Output<Boolean> getAllowExtensionOperations() {
+    public Output<Boolean> allowExtensionOperations() {
         return this.allowExtensionOperations == null ? Codegen.empty() : this.allowExtensionOperations;
     }
 
@@ -64,7 +64,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
-    public Output<String> getComputerName() {
+    public Output<String> computerName() {
         return this.computerName == null ? Codegen.empty() : this.computerName;
     }
 
@@ -75,7 +75,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
+    public Output<String> customData() {
         return this.customData == null ? Codegen.empty() : this.customData;
     }
 
@@ -86,7 +86,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linuxConfiguration")
       private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
+    public Output<LinuxConfigurationArgs> linuxConfiguration() {
         return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
     }
 
@@ -97,7 +97,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireGuestProvisionSignal")
       private final @Nullable Output<Boolean> requireGuestProvisionSignal;
 
-    public Output<Boolean> getRequireGuestProvisionSignal() {
+    public Output<Boolean> requireGuestProvisionSignal() {
         return this.requireGuestProvisionSignal == null ? Codegen.empty() : this.requireGuestProvisionSignal;
     }
 
@@ -108,7 +108,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
       private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
-    public Output<List<VaultSecretGroupArgs>> getSecrets() {
+    public Output<List<VaultSecretGroupArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
@@ -119,7 +119,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowsConfiguration")
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
+    public Output<WindowsConfigurationArgs> windowsConfiguration() {
         return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
     }
 

@@ -335,147 +335,147 @@ public final class CopyActivityResponse {
      * Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
     */
-    public Optional<Object> getDataIntegrationUnits() {
+    public Optional<Object> dataIntegrationUnits() {
         return Optional.ofNullable(this.dataIntegrationUnits);
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableSkipIncompatibleRow() {
+    public Optional<Object> enableSkipIncompatibleRow() {
         return Optional.ofNullable(this.enableSkipIncompatibleRow);
     }
     /**
      * Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableStaging() {
+    public Optional<Object> enableStaging() {
         return Optional.ofNullable(this.enableStaging);
     }
     /**
      * List of inputs for the activity.
      * 
     */
-    public List<DatasetReferenceResponse> getInputs() {
+    public List<DatasetReferenceResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Log settings customer needs provide when enabling log.
      * 
     */
-    public Optional<LogSettingsResponse> getLogSettings() {
+    public Optional<LogSettingsResponse> logSettings() {
         return Optional.ofNullable(this.logSettings);
     }
     /**
      * (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
      * 
     */
-    public Optional<LogStorageSettingsResponse> getLogStorageSettings() {
+    public Optional<LogStorageSettingsResponse> logStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of outputs for the activity.
      * 
     */
-    public List<DatasetReferenceResponse> getOutputs() {
+    public List<DatasetReferenceResponse> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
      * Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
     */
-    public Optional<Object> getParallelCopies() {
+    public Optional<Object> parallelCopies() {
         return Optional.ofNullable(this.parallelCopies);
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Preserve rules.
      * 
     */
-    public List<Object> getPreserve() {
+    public List<Object> preserve() {
         return this.preserve == null ? List.of() : this.preserve;
     }
     /**
      * Preserve Rules.
      * 
     */
-    public List<Object> getPreserveRules() {
+    public List<Object> preserveRules() {
         return this.preserveRules == null ? List.of() : this.preserveRules;
     }
     /**
      * Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
      * 
     */
-    public Optional<RedirectIncompatibleRowSettingsResponse> getRedirectIncompatibleRowSettings() {
+    public Optional<RedirectIncompatibleRowSettingsResponse> redirectIncompatibleRowSettings() {
         return Optional.ofNullable(this.redirectIncompatibleRowSettings);
     }
     /**
      * Copy activity sink.
      * 
     */
-    public Object getSink() {
+    public Object sink() {
         return this.sink;
     }
     /**
      * Specify the fault tolerance for data consistency.
      * 
     */
-    public Optional<SkipErrorFileResponse> getSkipErrorFile() {
+    public Optional<SkipErrorFileResponse> skipErrorFile() {
         return Optional.ofNullable(this.skipErrorFile);
     }
     /**
      * Copy activity source.
      * 
     */
-    public Object getSource() {
+    public Object source() {
         return this.source;
     }
     /**
      * Specifies interim staging settings when EnableStaging is true.
      * 
     */
-    public Optional<StagingSettingsResponse> getStagingSettings() {
+    public Optional<StagingSettingsResponse> stagingSettings() {
         return Optional.ofNullable(this.stagingSettings);
     }
     /**
      * Copy activity translator. If not specified, tabular translator is used.
      * 
     */
-    public Optional<Object> getTranslator() {
+    public Optional<Object> translator() {
         return Optional.ofNullable(this.translator);
     }
     /**
@@ -483,21 +483,21 @@ public final class CopyActivityResponse {
      * Expected value is 'Copy'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getValidateDataConsistency() {
+    public Optional<Object> validateDataConsistency() {
         return Optional.ofNullable(this.validateDataConsistency);
     }
 

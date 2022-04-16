@@ -26,7 +26,7 @@ public final class HlsResponse {
      * The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
      * 
     */
-    public Optional<Integer> getFragmentsPerTsSegment() {
+    public Optional<Integer> fragmentsPerTsSegment() {
         return Optional.ofNullable(this.fragmentsPerTsSegment);
     }
 

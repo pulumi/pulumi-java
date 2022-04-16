@@ -24,7 +24,7 @@ public final class X12MessageIdentifierResponse {
      * The message id.
      * 
     */
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
 

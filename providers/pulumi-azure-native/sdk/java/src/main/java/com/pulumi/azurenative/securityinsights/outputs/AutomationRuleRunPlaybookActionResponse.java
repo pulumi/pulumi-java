@@ -42,7 +42,7 @@ public final class AutomationRuleRunPlaybookActionResponse {
      * The configuration of the run playbook automation rule action
      * 
     */
-    public AutomationRuleRunPlaybookActionResponseActionConfiguration getActionConfiguration() {
+    public AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration() {
         return this.actionConfiguration;
     }
     /**
@@ -50,14 +50,14 @@ public final class AutomationRuleRunPlaybookActionResponse {
      * Expected value is 'RunPlaybook'.
      * 
     */
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
     /**
      * The order of execution of the automation rule action
      * 
     */
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 

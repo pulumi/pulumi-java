@@ -77,49 +77,49 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The state of the original AgentJob.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * The type of AgentJob.
      * 
     */
-    public String getJobCategory() {
+    public String jobCategory() {
         return this.jobCategory;
     }
     /**
      * The owner of the AgentJob
      * 
     */
-    public String getJobOwner() {
+    public String jobOwner() {
         return this.jobOwner;
     }
     /**
      * UTC Date and time when the AgentJob was last executed.
      * 
     */
-    public String getLastExecutedOn() {
+    public String lastExecutedOn() {
         return this.lastExecutedOn;
     }
     /**
      * Information about eligibility of agent job for migration.
      * 
     */
-    public MigrationEligibilityInfoResponse getMigrationEligibility() {
+    public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
     }
     /**
      * AgentJob name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
      * Expected value is 'AgentJobLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

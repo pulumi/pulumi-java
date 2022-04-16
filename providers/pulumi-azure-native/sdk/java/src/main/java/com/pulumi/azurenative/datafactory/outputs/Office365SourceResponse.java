@@ -99,63 +99,63 @@ public final class Office365SourceResponse {
      * The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
      * 
     */
-    public Optional<Object> getAllowedGroups() {
+    public Optional<Object> allowedGroups() {
         return Optional.ofNullable(this.allowedGroups);
     }
     /**
      * The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getDateFilterColumn() {
+    public Optional<Object> dateFilterColumn() {
         return Optional.ofNullable(this.dateFilterColumn);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * End time of the requested range for this dataset. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEndTime() {
+    public Optional<Object> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
      * 
     */
-    public Optional<Object> getOutputColumns() {
+    public Optional<Object> outputColumns() {
         return Optional.ofNullable(this.outputColumns);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
      * Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getStartTime() {
+    public Optional<Object> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
@@ -163,14 +163,14 @@ public final class Office365SourceResponse {
      * Expected value is 'Office365Source'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The user scope uri. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUserScopeFilterUri() {
+    public Optional<Object> userScopeFilterUri() {
         return Optional.ofNullable(this.userScopeFilterUri);
     }
 

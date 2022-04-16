@@ -16,14 +16,14 @@ public final class TypedErrorInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="info", required=true)
       private final Object info;
 
-    public Object getInfo() {
+    public Object info() {
         return this.info;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

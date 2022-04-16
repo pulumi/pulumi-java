@@ -62,42 +62,42 @@ public final class AzureStorageInfoValueResponse {
      * Access key for the storage account.
      * 
     */
-    public Optional<String> getAccessKey() {
+    public Optional<String> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
      * Name of the storage account.
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Path to mount the storage within the site's runtime environment.
      * 
     */
-    public Optional<String> getMountPath() {
+    public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
     /**
      * Name of the file share (container name, for Blob storage).
      * 
     */
-    public Optional<String> getShareName() {
+    public Optional<String> shareName() {
         return Optional.ofNullable(this.shareName);
     }
     /**
      * State of the storage account.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Type of storage.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -25,7 +25,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="aadAuthority", required=true)
       private final Output<String> aadAuthority;
 
-    public Output<String> getAadAuthority() {
+    public Output<String> aadAuthority() {
         return this.aadAuthority;
     }
 
@@ -36,7 +36,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -47,7 +47,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="audience", required=true)
       private final Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience;
     }
 
@@ -58,7 +58,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -69,7 +69,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 

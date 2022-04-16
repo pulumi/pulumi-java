@@ -33,7 +33,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -44,7 +44,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiRevision")
       private final @Nullable Output<String> apiRevision;
 
-    public Output<String> getApiRevision() {
+    public Output<String> apiRevision() {
         return this.apiRevision == null ? Codegen.empty() : this.apiRevision;
     }
 
@@ -55,7 +55,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiRevisionDescription")
       private final @Nullable Output<String> apiRevisionDescription;
 
-    public Output<String> getApiRevisionDescription() {
+    public Output<String> apiRevisionDescription() {
         return this.apiRevisionDescription == null ? Codegen.empty() : this.apiRevisionDescription;
     }
 
@@ -66,7 +66,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiType")
       private final @Nullable Output<Either<String,ApiType>> apiType;
 
-    public Output<Either<String,ApiType>> getApiType() {
+    public Output<Either<String,ApiType>> apiType() {
         return this.apiType == null ? Codegen.empty() : this.apiType;
     }
 
@@ -77,7 +77,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -88,7 +88,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiVersionDescription")
       private final @Nullable Output<String> apiVersionDescription;
 
-    public Output<String> getApiVersionDescription() {
+    public Output<String> apiVersionDescription() {
         return this.apiVersionDescription == null ? Codegen.empty() : this.apiVersionDescription;
     }
 
@@ -99,7 +99,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiVersionSet")
       private final @Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet;
 
-    public Output<ApiVersionSetContractDetailsArgs> getApiVersionSet() {
+    public Output<ApiVersionSetContractDetailsArgs> apiVersionSet() {
         return this.apiVersionSet == null ? Codegen.empty() : this.apiVersionSet;
     }
 
@@ -110,7 +110,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiVersionSetId")
       private final @Nullable Output<String> apiVersionSetId;
 
-    public Output<String> getApiVersionSetId() {
+    public Output<String> apiVersionSetId() {
         return this.apiVersionSetId == null ? Codegen.empty() : this.apiVersionSetId;
     }
 
@@ -121,7 +121,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationSettings")
       private final @Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings;
 
-    public Output<AuthenticationSettingsContractArgs> getAuthenticationSettings() {
+    public Output<AuthenticationSettingsContractArgs> authenticationSettings() {
         return this.authenticationSettings == null ? Codegen.empty() : this.authenticationSettings;
     }
 
@@ -132,7 +132,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -143,7 +143,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -154,7 +154,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Either<String,ContentFormat>> format;
 
-    public Output<Either<String,ContentFormat>> getFormat() {
+    public Output<Either<String,ContentFormat>> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -165,7 +165,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isCurrent")
       private final @Nullable Output<Boolean> isCurrent;
 
-    public Output<Boolean> getIsCurrent() {
+    public Output<Boolean> isCurrent() {
         return this.isCurrent == null ? Codegen.empty() : this.isCurrent;
     }
 
@@ -176,7 +176,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -187,7 +187,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocols")
       private final @Nullable Output<List<Protocol>> protocols;
 
-    public Output<List<Protocol>> getProtocols() {
+    public Output<List<Protocol>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
@@ -198,7 +198,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -209,7 +209,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -220,7 +220,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;
 
-    public Output<String> getServiceUrl() {
+    public Output<String> serviceUrl() {
         return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
     }
 
@@ -233,7 +233,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="soapApiType")
       private final @Nullable Output<Either<String,SoapApiType>> soapApiType;
 
-    public Output<Either<String,SoapApiType>> getSoapApiType() {
+    public Output<Either<String,SoapApiType>> soapApiType() {
         return this.soapApiType == null ? Codegen.empty() : this.soapApiType;
     }
 
@@ -244,7 +244,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceApiId")
       private final @Nullable Output<String> sourceApiId;
 
-    public Output<String> getSourceApiId() {
+    public Output<String> sourceApiId() {
         return this.sourceApiId == null ? Codegen.empty() : this.sourceApiId;
     }
 
@@ -255,7 +255,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionKeyParameterNames")
       private final @Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
 
-    public Output<SubscriptionKeyParameterNamesContractArgs> getSubscriptionKeyParameterNames() {
+    public Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames() {
         return this.subscriptionKeyParameterNames == null ? Codegen.empty() : this.subscriptionKeyParameterNames;
     }
 
@@ -266,7 +266,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionRequired")
       private final @Nullable Output<Boolean> subscriptionRequired;
 
-    public Output<Boolean> getSubscriptionRequired() {
+    public Output<Boolean> subscriptionRequired() {
         return this.subscriptionRequired == null ? Codegen.empty() : this.subscriptionRequired;
     }
 
@@ -277,7 +277,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -288,7 +288,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="wsdlSelector")
       private final @Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;
 
-    public Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> getWsdlSelector() {
+    public Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector() {
         return this.wsdlSelector == null ? Codegen.empty() : this.wsdlSelector;
     }
 

@@ -28,7 +28,7 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
+    public Output<Integer> maxReplicas() {
         return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
     }
 
@@ -39,7 +39,7 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> getMinReplicas() {
+    public Output<Integer> minReplicas() {
         return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
     }
 
@@ -50,7 +50,7 @@ public final class ScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<ScaleRuleArgs>> rules;
 
-    public Output<List<ScaleRuleArgs>> getRules() {
+    public Output<List<ScaleRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

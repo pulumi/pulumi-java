@@ -53,14 +53,14 @@ public final class LocationThresholdRuleConditionResponse {
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
      * 
     */
-    public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> getDataSource() {
+    public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
      * the number of locations that must fail to activate the alert.
      * 
     */
-    public Integer getFailedLocationCount() {
+    public Integer failedLocationCount() {
         return this.failedLocationCount;
     }
     /**
@@ -68,14 +68,14 @@ public final class LocationThresholdRuleConditionResponse {
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
     */
-    public Optional<String> getWindowSize() {
+    public Optional<String> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }
 

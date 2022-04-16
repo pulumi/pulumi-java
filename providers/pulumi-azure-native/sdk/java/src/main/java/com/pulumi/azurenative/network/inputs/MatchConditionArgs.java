@@ -32,7 +32,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="matchValues", required=true)
       private final Output<List<String>> matchValues;
 
-    public Output<List<String>> getMatchValues() {
+    public Output<List<String>> matchValues() {
         return this.matchValues;
     }
 
@@ -43,7 +43,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="matchVariables", required=true)
       private final Output<List<MatchVariableArgs>> matchVariables;
 
-    public Output<List<MatchVariableArgs>> getMatchVariables() {
+    public Output<List<MatchVariableArgs>> matchVariables() {
         return this.matchVariables;
     }
 
@@ -54,7 +54,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="negationConditon")
       private final @Nullable Output<Boolean> negationConditon;
 
-    public Output<Boolean> getNegationConditon() {
+    public Output<Boolean> negationConditon() {
         return this.negationConditon == null ? Codegen.empty() : this.negationConditon;
     }
 
@@ -65,7 +65,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operator", required=true)
       private final Output<Either<String,WebApplicationFirewallOperator>> operator;
 
-    public Output<Either<String,WebApplicationFirewallOperator>> getOperator() {
+    public Output<Either<String,WebApplicationFirewallOperator>> operator() {
         return this.operator;
     }
 
@@ -76,7 +76,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
-    public Output<List<Either<String,WebApplicationFirewallTransform>>> getTransforms() {
+    public Output<List<Either<String,WebApplicationFirewallTransform>>> transforms() {
         return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 

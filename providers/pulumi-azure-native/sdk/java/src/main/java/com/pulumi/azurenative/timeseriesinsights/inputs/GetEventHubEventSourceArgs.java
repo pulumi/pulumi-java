@@ -19,7 +19,7 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
     @Import(name="environmentName", required=true)
       private final String environmentName;
 
-    public String getEnvironmentName() {
+    public String environmentName() {
         return this.environmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
     @Import(name="eventSourceName", required=true)
       private final String eventSourceName;
 
-    public String getEventSourceName() {
+    public String eventSourceName() {
         return this.eventSourceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -50,7 +50,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The creation time for the live event
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -64,7 +64,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Live event cross site access policies.
      * 
      */
-    public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> getCrossSiteAccessPolicies() {
+    public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies;
     }
     /**
@@ -78,7 +78,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return A description for the live event.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -92,7 +92,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
      * 
      */
-    public Output</* @Nullable */ LiveEventEncodingResponse> getEncoding() {
+    public Output</* @Nullable */ LiveEventEncodingResponse> encoding() {
         return this.encoding;
     }
     /**
@@ -106,7 +106,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
      * 
      */
-    public Output</* @Nullable */ String> getHostnamePrefix() {
+    public Output</* @Nullable */ String> hostnamePrefix() {
         return this.hostnamePrefix;
     }
     /**
@@ -120,7 +120,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Live event input settings. It defines how the live event receives input from a contribution encoder.
      * 
      */
-    public Output<LiveEventInputResponse> getInput() {
+    public Output<LiveEventInputResponse> input() {
         return this.input;
     }
     /**
@@ -134,7 +134,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The last modified time of the live event.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -148,7 +148,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -162,7 +162,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -176,7 +176,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
      * 
      */
-    public Output</* @Nullable */ LiveEventPreviewResponse> getPreview() {
+    public Output</* @Nullable */ LiveEventPreviewResponse> preview() {
         return this.preview;
     }
     /**
@@ -190,7 +190,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the live event.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -204,7 +204,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -218,7 +218,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
      * 
      */
-    public Output</* @Nullable */ List<String>> getStreamOptions() {
+    public Output</* @Nullable */ List<String>> streamOptions() {
         return this.streamOptions;
     }
     /**
@@ -232,7 +232,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -246,7 +246,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -260,7 +260,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
      * 
      */
-    public Output</* @Nullable */ List<LiveEventTranscriptionResponse>> getTranscriptions() {
+    public Output</* @Nullable */ List<LiveEventTranscriptionResponse>> transcriptions() {
         return this.transcriptions;
     }
     /**
@@ -274,7 +274,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -288,7 +288,7 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseStaticHostname() {
+    public Output</* @Nullable */ Boolean> useStaticHostname() {
         return this.useStaticHostname;
     }
 

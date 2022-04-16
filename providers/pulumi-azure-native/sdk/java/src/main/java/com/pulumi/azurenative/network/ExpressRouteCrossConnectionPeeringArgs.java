@@ -29,7 +29,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="crossConnectionName", required=true)
       private final Output<String> crossConnectionName;
 
-    public Output<String> getCrossConnectionName() {
+    public Output<String> crossConnectionName() {
         return this.crossConnectionName;
     }
 
@@ -40,7 +40,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
 
-    public Output<String> getGatewayManagerEtag() {
+    public Output<String> gatewayManagerEtag() {
         return this.gatewayManagerEtag == null ? Codegen.empty() : this.gatewayManagerEtag;
     }
 
@@ -51,7 +51,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -62,7 +62,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="ipv6PeeringConfig")
       private final @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
 
-    public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> getIpv6PeeringConfig() {
+    public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig() {
         return this.ipv6PeeringConfig == null ? Codegen.empty() : this.ipv6PeeringConfig;
     }
 
@@ -73,7 +73,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
-    public Output<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
+    public Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig() {
         return this.microsoftPeeringConfig == null ? Codegen.empty() : this.microsoftPeeringConfig;
     }
 
@@ -84,7 +84,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -95,7 +95,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="peerASN")
       private final @Nullable Output<Double> peerASN;
 
-    public Output<Double> getPeerASN() {
+    public Output<Double> peerASN() {
         return this.peerASN == null ? Codegen.empty() : this.peerASN;
     }
 
@@ -106,7 +106,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
 
-    public Output<String> getPeeringName() {
+    public Output<String> peeringName() {
         return this.peeringName == null ? Codegen.empty() : this.peeringName;
     }
 
@@ -117,7 +117,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="peeringType")
       private final @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
 
-    public Output<Either<String,ExpressRoutePeeringType>> getPeeringType() {
+    public Output<Either<String,ExpressRoutePeeringType>> peeringType() {
         return this.peeringType == null ? Codegen.empty() : this.peeringType;
     }
 
@@ -128,7 +128,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
 
-    public Output<String> getPrimaryPeerAddressPrefix() {
+    public Output<String> primaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix == null ? Codegen.empty() : this.primaryPeerAddressPrefix;
     }
 
@@ -139,7 +139,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -150,7 +150,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
 
-    public Output<String> getSecondaryPeerAddressPrefix() {
+    public Output<String> secondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix == null ? Codegen.empty() : this.secondaryPeerAddressPrefix;
     }
 
@@ -161,7 +161,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
-    public Output<String> getSharedKey() {
+    public Output<String> sharedKey() {
         return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
     }
 
@@ -172,7 +172,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
 
-    public Output<Either<String,ExpressRoutePeeringState>> getState() {
+    public Output<Either<String,ExpressRoutePeeringState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -183,7 +183,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
     @Import(name="vlanId")
       private final @Nullable Output<Integer> vlanId;
 
-    public Output<Integer> getVlanId() {
+    public Output<Integer> vlanId() {
         return this.vlanId == null ? Codegen.empty() : this.vlanId;
     }
 

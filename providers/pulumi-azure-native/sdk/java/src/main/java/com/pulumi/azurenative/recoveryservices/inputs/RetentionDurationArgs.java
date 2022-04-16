@@ -30,7 +30,7 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -41,7 +41,7 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="durationType")
       private final @Nullable Output<Either<String,RetentionDurationType>> durationType;
 
-    public Output<Either<String,RetentionDurationType>> getDurationType() {
+    public Output<Either<String,RetentionDurationType>> durationType() {
         return this.durationType == null ? Codegen.empty() : this.durationType;
     }
 

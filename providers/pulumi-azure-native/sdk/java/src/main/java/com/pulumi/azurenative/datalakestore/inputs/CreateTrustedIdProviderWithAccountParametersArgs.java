@@ -25,7 +25,7 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.
     @Import(name="idProvider", required=true)
       private final Output<String> idProvider;
 
-    public Output<String> getIdProvider() {
+    public Output<String> idProvider() {
         return this.idProvider;
     }
 
@@ -36,7 +36,7 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

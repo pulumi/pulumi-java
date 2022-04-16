@@ -26,7 +26,7 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
     @Import(name="documentation")
       private final @Nullable Output<String> documentation;
 
-    public Output<String> getDocumentation() {
+    public Output<String> documentation() {
         return this.documentation == null ? Codegen.empty() : this.documentation;
     }
 
@@ -48,7 +48,7 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
     @Import(name="serverUrl")
       private final @Nullable Output<String> serverUrl;
 
-    public Output<String> getServerUrl() {
+    public Output<String> serverUrl() {
         return this.serverUrl == null ? Codegen.empty() : this.serverUrl;
     }
 
@@ -59,7 +59,7 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -70,7 +70,7 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

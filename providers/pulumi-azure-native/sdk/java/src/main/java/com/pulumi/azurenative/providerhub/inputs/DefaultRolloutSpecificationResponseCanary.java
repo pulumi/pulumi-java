@@ -18,14 +18,14 @@ public final class DefaultRolloutSpecificationResponseCanary extends com.pulumi.
     @Import(name="regions")
       private final @Nullable List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
     @Import(name="skipRegions")
       private final @Nullable List<String> skipRegions;
 
-    public List<String> getSkipRegions() {
+    public List<String> skipRegions() {
         return this.skipRegions == null ? List.of() : this.skipRegions;
     }
 

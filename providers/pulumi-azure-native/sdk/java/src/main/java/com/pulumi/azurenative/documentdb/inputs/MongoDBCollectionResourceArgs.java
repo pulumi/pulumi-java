@@ -30,7 +30,7 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Integer> analyticalStorageTtl;
 
-    public Output<Integer> getAnalyticalStorageTtl() {
+    public Output<Integer> analyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Codegen.empty() : this.analyticalStorageTtl;
     }
 
@@ -41,7 +41,7 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -52,7 +52,7 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="indexes")
       private final @Nullable Output<List<MongoIndexArgs>> indexes;
 
-    public Output<List<MongoIndexArgs>> getIndexes() {
+    public Output<List<MongoIndexArgs>> indexes() {
         return this.indexes == null ? Codegen.empty() : this.indexes;
     }
 
@@ -63,7 +63,7 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="shardKey")
       private final @Nullable Output<Map<String,String>> shardKey;
 
-    public Output<Map<String,String>> getShardKey() {
+    public Output<Map<String,String>> shardKey() {
         return this.shardKey == null ? Codegen.empty() : this.shardKey;
     }
 

@@ -22,7 +22,7 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -33,7 +33,7 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -44,7 +44,7 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="workspaceSettingName")
       private final @Nullable Output<String> workspaceSettingName;
 
-    public Output<String> getWorkspaceSettingName() {
+    public Output<String> workspaceSettingName() {
         return this.workspaceSettingName == null ? Codegen.empty() : this.workspaceSettingName;
     }
 

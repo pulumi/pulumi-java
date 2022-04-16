@@ -19,7 +19,7 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
     @Import(name="planId", required=true)
       private final String planId;
 
-    public String getPlanId() {
+    public String planId() {
         return this.planId;
     }
 
@@ -30,7 +30,7 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

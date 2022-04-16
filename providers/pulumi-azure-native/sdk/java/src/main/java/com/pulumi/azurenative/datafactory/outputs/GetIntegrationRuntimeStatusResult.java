@@ -35,14 +35,14 @@ public final class GetIntegrationRuntimeStatusResult {
      * The integration runtime name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Integration runtime properties.
      * 
     */
-    public Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> getProperties() {
+    public Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties() {
         return this.properties;
     }
 

@@ -24,7 +24,7 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
     @Import(name="authentication")
       private final @Nullable ServiceBusAuthenticationResponse authentication;
 
-    public Optional<ServiceBusAuthenticationResponse> getAuthentication() {
+    public Optional<ServiceBusAuthenticationResponse> authentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
@@ -35,7 +35,7 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
     @Import(name="brokeredMessageProperties")
       private final @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
 
-    public Optional<ServiceBusBrokeredMessagePropertiesResponse> getBrokeredMessageProperties() {
+    public Optional<ServiceBusBrokeredMessagePropertiesResponse> brokeredMessageProperties() {
         return this.brokeredMessageProperties == null ? Optional.empty() : Optional.ofNullable(this.brokeredMessageProperties);
     }
 
@@ -46,7 +46,7 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
     @Import(name="customMessageProperties")
       private final @Nullable Map<String,String> customMessageProperties;
 
-    public Map<String,String> getCustomMessageProperties() {
+    public Map<String,String> customMessageProperties() {
         return this.customMessageProperties == null ? Map.of() : this.customMessageProperties;
     }
 
@@ -57,7 +57,7 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -68,7 +68,7 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
     @Import(name="namespace")
       private final @Nullable String namespace;
 
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
@@ -79,7 +79,7 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
     @Import(name="topicPath")
       private final @Nullable String topicPath;
 
-    public Optional<String> getTopicPath() {
+    public Optional<String> topicPath() {
         return this.topicPath == null ? Optional.empty() : Optional.ofNullable(this.topicPath);
     }
 
@@ -90,7 +90,7 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
     @Import(name="transportType")
       private final @Nullable String transportType;
 
-    public Optional<String> getTransportType() {
+    public Optional<String> transportType() {
         return this.transportType == null ? Optional.empty() : Optional.ofNullable(this.transportType);
     }
 

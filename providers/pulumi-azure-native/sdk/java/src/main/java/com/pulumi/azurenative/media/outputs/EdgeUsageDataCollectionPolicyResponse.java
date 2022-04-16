@@ -49,28 +49,28 @@ public final class EdgeUsageDataCollectionPolicyResponse {
      * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
     */
-    public Optional<String> getDataCollectionFrequency() {
+    public Optional<String> dataCollectionFrequency() {
         return Optional.ofNullable(this.dataCollectionFrequency);
     }
     /**
      * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
     */
-    public Optional<String> getDataReportingFrequency() {
+    public Optional<String> dataReportingFrequency() {
         return Optional.ofNullable(this.dataReportingFrequency);
     }
     /**
      * Details of Event Hub where the usage will be reported.
      * 
     */
-    public Optional<EdgeUsageDataEventHubResponse> getEventHubDetails() {
+    public Optional<EdgeUsageDataEventHubResponse> eventHubDetails() {
         return Optional.ofNullable(this.eventHubDetails);
     }
     /**
      * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
      * 
     */
-    public Optional<String> getMaxAllowedUnreportedUsageDuration() {
+    public Optional<String> maxAllowedUnreportedUsageDuration() {
         return Optional.ofNullable(this.maxAllowedUnreportedUsageDuration);
     }
 

@@ -28,7 +28,7 @@ public final class OfficeDataConnectorDataTypesExchangeArgs extends com.pulumi.r
     @Import(name="state")
       private final @Nullable Output<Either<String,DataTypeState>> state;
 
-    public Output<Either<String,DataTypeState>> getState() {
+    public Output<Either<String,DataTypeState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

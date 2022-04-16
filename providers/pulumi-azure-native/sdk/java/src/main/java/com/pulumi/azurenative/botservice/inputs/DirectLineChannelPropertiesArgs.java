@@ -28,7 +28,7 @@ public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.
     @Import(name="directLineEmbedCode")
       private final @Nullable Output<String> directLineEmbedCode;
 
-    public Output<String> getDirectLineEmbedCode() {
+    public Output<String> directLineEmbedCode() {
         return this.directLineEmbedCode == null ? Codegen.empty() : this.directLineEmbedCode;
     }
 
@@ -39,7 +39,7 @@ public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.
     @Import(name="sites")
       private final @Nullable Output<List<DirectLineSiteArgs>> sites;
 
-    public Output<List<DirectLineSiteArgs>> getSites() {
+    public Output<List<DirectLineSiteArgs>> sites() {
         return this.sites == null ? Codegen.empty() : this.sites;
     }
 

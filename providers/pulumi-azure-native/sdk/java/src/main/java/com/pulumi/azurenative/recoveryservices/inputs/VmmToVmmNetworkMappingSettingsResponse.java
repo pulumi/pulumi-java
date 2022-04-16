@@ -24,7 +24,7 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends com.pulumi.res
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 

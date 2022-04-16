@@ -21,14 +21,14 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     @Import(name="request")
       private final @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
 
-    public Output<List<Either<String,ExtensionOptionType>>> getRequest() {
+    public Output<List<Either<String,ExtensionOptionType>>> request() {
         return this.request == null ? Codegen.empty() : this.request;
     }
 
     @Import(name="response")
       private final @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
 
-    public Output<List<Either<String,ExtensionOptionType>>> getResponse() {
+    public Output<List<Either<String,ExtensionOptionType>>> response() {
         return this.response == null ? Codegen.empty() : this.response;
     }
 

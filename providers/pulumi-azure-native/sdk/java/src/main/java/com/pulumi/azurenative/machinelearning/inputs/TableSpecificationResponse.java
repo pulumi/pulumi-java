@@ -27,7 +27,7 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -38,7 +38,7 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="format")
       private final @Nullable String format;
 
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
@@ -49,7 +49,7 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="properties")
       private final @Nullable Map<String,ColumnSpecificationResponse> properties;
 
-    public Map<String,ColumnSpecificationResponse> getProperties() {
+    public Map<String,ColumnSpecificationResponse> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -60,7 +60,7 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
@@ -71,7 +71,7 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

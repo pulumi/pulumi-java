@@ -19,7 +19,7 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
     @Import(name="entityName", required=true)
       private final String entityName;
 
-    public String getEntityName() {
+    public String entityName() {
         return this.entityName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

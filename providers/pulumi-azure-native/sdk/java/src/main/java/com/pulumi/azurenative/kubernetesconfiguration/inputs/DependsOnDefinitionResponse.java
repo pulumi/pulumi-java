@@ -25,7 +25,7 @@ public final class DependsOnDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="kustomizationName")
       private final @Nullable String kustomizationName;
 
-    public Optional<String> getKustomizationName() {
+    public Optional<String> kustomizationName() {
         return this.kustomizationName == null ? Optional.empty() : Optional.ofNullable(this.kustomizationName);
     }
 

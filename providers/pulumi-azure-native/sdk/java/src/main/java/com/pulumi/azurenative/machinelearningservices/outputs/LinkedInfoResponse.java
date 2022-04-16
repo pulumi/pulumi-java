@@ -41,21 +41,21 @@ public final class LinkedInfoResponse {
      * LinkedId id.
      * 
     */
-    public Optional<String> getLinkedId() {
+    public Optional<String> linkedId() {
         return Optional.ofNullable(this.linkedId);
     }
     /**
      * Linked resource name.
      * 
     */
-    public Optional<String> getLinkedResourceName() {
+    public Optional<String> linkedResourceName() {
         return Optional.ofNullable(this.linkedResourceName);
     }
     /**
      * Datastore origin
      * 
     */
-    public Optional<String> getOrigin() {
+    public Optional<String> origin() {
         return Optional.ofNullable(this.origin);
     }
 

@@ -63,42 +63,42 @@ public final class HostNameSslStateResponse {
      * Indicates whether the hostname is a standard or repository hostname.
      * 
     */
-    public Optional<String> getHostType() {
+    public Optional<String> hostType() {
         return Optional.ofNullable(this.hostType);
     }
     /**
      * Hostname.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * SSL type.
      * 
     */
-    public Optional<String> getSslState() {
+    public Optional<String> sslState() {
         return Optional.ofNullable(this.sslState);
     }
     /**
      * SSL certificate thumbprint.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * Set to <code>true</code> to update existing hostname.
      * 
     */
-    public Optional<Boolean> getToUpdate() {
+    public Optional<Boolean> toUpdate() {
         return Optional.ofNullable(this.toUpdate);
     }
     /**
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
     */
-    public Optional<String> getVirtualIP() {
+    public Optional<String> virtualIP() {
         return Optional.ofNullable(this.virtualIP);
     }
 

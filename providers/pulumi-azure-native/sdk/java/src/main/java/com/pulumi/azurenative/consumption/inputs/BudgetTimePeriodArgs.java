@@ -26,7 +26,7 @@ public final class BudgetTimePeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
@@ -37,7 +37,7 @@ public final class BudgetTimePeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="startDate", required=true)
       private final Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate;
     }
 

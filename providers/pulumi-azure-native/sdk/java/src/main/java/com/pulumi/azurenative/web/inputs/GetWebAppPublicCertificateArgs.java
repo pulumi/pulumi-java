@@ -19,7 +19,7 @@ public final class GetWebAppPublicCertificateArgs extends com.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebAppPublicCertificateArgs extends com.pulumi.resources.I
     @Import(name="publicCertificateName", required=true)
       private final String publicCertificateName;
 
-    public String getPublicCertificateName() {
+    public String publicCertificateName() {
         return this.publicCertificateName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebAppPublicCertificateArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

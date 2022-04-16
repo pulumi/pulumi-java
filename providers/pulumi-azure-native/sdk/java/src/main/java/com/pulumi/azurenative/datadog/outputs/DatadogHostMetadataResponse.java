@@ -35,13 +35,13 @@ public final class DatadogHostMetadataResponse {
      * The agent version.
      * 
     */
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
-    public Optional<DatadogInstallMethodResponse> getInstallMethod() {
+    public Optional<DatadogInstallMethodResponse> installMethod() {
         return Optional.ofNullable(this.installMethod);
     }
-    public Optional<DatadogLogsAgentResponse> getLogsAgent() {
+    public Optional<DatadogLogsAgentResponse> logsAgent() {
         return Optional.ofNullable(this.logsAgent);
     }
 

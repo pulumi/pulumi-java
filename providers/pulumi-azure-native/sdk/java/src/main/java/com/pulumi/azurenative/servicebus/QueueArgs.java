@@ -25,7 +25,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeleteOnIdle")
       private final @Nullable Output<String> autoDeleteOnIdle;
 
-    public Output<String> getAutoDeleteOnIdle() {
+    public Output<String> autoDeleteOnIdle() {
         return this.autoDeleteOnIdle == null ? Codegen.empty() : this.autoDeleteOnIdle;
     }
 
@@ -36,7 +36,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetteringOnMessageExpiration")
       private final @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
 
-    public Output<Boolean> getDeadLetteringOnMessageExpiration() {
+    public Output<Boolean> deadLetteringOnMessageExpiration() {
         return this.deadLetteringOnMessageExpiration == null ? Codegen.empty() : this.deadLetteringOnMessageExpiration;
     }
 
@@ -47,7 +47,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultMessageTimeToLive")
       private final @Nullable Output<String> defaultMessageTimeToLive;
 
-    public Output<String> getDefaultMessageTimeToLive() {
+    public Output<String> defaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive == null ? Codegen.empty() : this.defaultMessageTimeToLive;
     }
 
@@ -58,7 +58,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="duplicateDetectionHistoryTimeWindow")
       private final @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
-    public Output<String> getDuplicateDetectionHistoryTimeWindow() {
+    public Output<String> duplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow == null ? Codegen.empty() : this.duplicateDetectionHistoryTimeWindow;
     }
 
@@ -69,7 +69,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBatchedOperations")
       private final @Nullable Output<Boolean> enableBatchedOperations;
 
-    public Output<Boolean> getEnableBatchedOperations() {
+    public Output<Boolean> enableBatchedOperations() {
         return this.enableBatchedOperations == null ? Codegen.empty() : this.enableBatchedOperations;
     }
 
@@ -80,7 +80,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableExpress")
       private final @Nullable Output<Boolean> enableExpress;
 
-    public Output<Boolean> getEnableExpress() {
+    public Output<Boolean> enableExpress() {
         return this.enableExpress == null ? Codegen.empty() : this.enableExpress;
     }
 
@@ -91,7 +91,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enablePartitioning")
       private final @Nullable Output<Boolean> enablePartitioning;
 
-    public Output<Boolean> getEnablePartitioning() {
+    public Output<Boolean> enablePartitioning() {
         return this.enablePartitioning == null ? Codegen.empty() : this.enablePartitioning;
     }
 
@@ -102,7 +102,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardDeadLetteredMessagesTo")
       private final @Nullable Output<String> forwardDeadLetteredMessagesTo;
 
-    public Output<String> getForwardDeadLetteredMessagesTo() {
+    public Output<String> forwardDeadLetteredMessagesTo() {
         return this.forwardDeadLetteredMessagesTo == null ? Codegen.empty() : this.forwardDeadLetteredMessagesTo;
     }
 
@@ -113,7 +113,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardTo")
       private final @Nullable Output<String> forwardTo;
 
-    public Output<String> getForwardTo() {
+    public Output<String> forwardTo() {
         return this.forwardTo == null ? Codegen.empty() : this.forwardTo;
     }
 
@@ -124,7 +124,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lockDuration")
       private final @Nullable Output<String> lockDuration;
 
-    public Output<String> getLockDuration() {
+    public Output<String> lockDuration() {
         return this.lockDuration == null ? Codegen.empty() : this.lockDuration;
     }
 
@@ -135,7 +135,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> getMaxDeliveryCount() {
+    public Output<Integer> maxDeliveryCount() {
         return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
     }
 
@@ -146,7 +146,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSizeInMegabytes")
       private final @Nullable Output<Integer> maxSizeInMegabytes;
 
-    public Output<Integer> getMaxSizeInMegabytes() {
+    public Output<Integer> maxSizeInMegabytes() {
         return this.maxSizeInMegabytes == null ? Codegen.empty() : this.maxSizeInMegabytes;
     }
 
@@ -157,7 +157,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -168,7 +168,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
-    public Output<String> getQueueName() {
+    public Output<String> queueName() {
         return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
@@ -179,7 +179,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresDuplicateDetection")
       private final @Nullable Output<Boolean> requiresDuplicateDetection;
 
-    public Output<Boolean> getRequiresDuplicateDetection() {
+    public Output<Boolean> requiresDuplicateDetection() {
         return this.requiresDuplicateDetection == null ? Codegen.empty() : this.requiresDuplicateDetection;
     }
 
@@ -190,7 +190,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresSession")
       private final @Nullable Output<Boolean> requiresSession;
 
-    public Output<Boolean> getRequiresSession() {
+    public Output<Boolean> requiresSession() {
         return this.requiresSession == null ? Codegen.empty() : this.requiresSession;
     }
 
@@ -201,7 +201,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -212,7 +212,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<EntityStatus> status;
 
-    public Output<EntityStatus> getStatus() {
+    public Output<EntityStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

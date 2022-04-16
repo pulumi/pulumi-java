@@ -26,7 +26,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="dnsName")
       private final @Nullable String dnsName;
 
-    public Optional<String> getDnsName() {
+    public Optional<String> dnsName() {
         return this.dnsName == null ? Optional.empty() : Optional.ofNullable(this.dnsName);
     }
 
@@ -37,7 +37,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
@@ -48,7 +48,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="publicIpAddress")
       private final @Nullable String publicIpAddress;
 
-    public Optional<String> getPublicIpAddress() {
+    public Optional<String> publicIpAddress() {
         return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
     }
 
@@ -59,7 +59,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="publicIpAddressId")
       private final @Nullable String publicIpAddressId;
 
-    public Optional<String> getPublicIpAddressId() {
+    public Optional<String> publicIpAddressId() {
         return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
     }
 
@@ -70,7 +70,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="rdpAuthority")
       private final @Nullable String rdpAuthority;
 
-    public Optional<String> getRdpAuthority() {
+    public Optional<String> rdpAuthority() {
         return this.rdpAuthority == null ? Optional.empty() : Optional.ofNullable(this.rdpAuthority);
     }
 
@@ -81,7 +81,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
-    public Optional<SharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
+    public Optional<SharedPublicIpAddressConfigurationResponse> sharedPublicIpAddressConfiguration() {
         return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
 
@@ -92,7 +92,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="sshAuthority")
       private final @Nullable String sshAuthority;
 
-    public Optional<String> getSshAuthority() {
+    public Optional<String> sshAuthority() {
         return this.sshAuthority == null ? Optional.empty() : Optional.ofNullable(this.sshAuthority);
     }
 
@@ -103,7 +103,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
@@ -114,7 +114,7 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
     @Import(name="virtualNetworkId")
       private final @Nullable String virtualNetworkId;
 
-    public Optional<String> getVirtualNetworkId() {
+    public Optional<String> virtualNetworkId() {
         return this.virtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkId);
     }
 

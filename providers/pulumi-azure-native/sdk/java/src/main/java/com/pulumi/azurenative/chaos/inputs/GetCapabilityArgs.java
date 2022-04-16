@@ -19,7 +19,7 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="capabilityName", required=true)
       private final String capabilityName;
 
-    public String getCapabilityName() {
+    public String capabilityName() {
         return this.capabilityName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentProviderNamespace", required=true)
       private final String parentProviderNamespace;
 
-    public String getParentProviderNamespace() {
+    public String parentProviderNamespace() {
         return this.parentProviderNamespace;
     }
 
@@ -41,7 +41,7 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentResourceName", required=true)
       private final String parentResourceName;
 
-    public String getParentResourceName() {
+    public String parentResourceName() {
         return this.parentResourceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentResourceType", required=true)
       private final String parentResourceType;
 
-    public String getParentResourceType() {
+    public String parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -63,7 +63,7 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,7 +74,7 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetName", required=true)
       private final String targetName;
 
-    public String getTargetName() {
+    public String targetName() {
         return this.targetName;
     }
 

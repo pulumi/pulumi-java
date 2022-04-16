@@ -29,7 +29,7 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
     @Import(name="accessModes")
       private final @Nullable Output<List<String>> accessModes;
 
-    public Output<List<String>> getAccessModes() {
+    public Output<List<String>> accessModes() {
         return this.accessModes == null ? Codegen.empty() : this.accessModes;
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
     @Import(name="disableGatewayAuth")
       private final @Nullable Output<Boolean> disableGatewayAuth;
 
-    public Output<Boolean> getDisableGatewayAuth() {
+    public Output<Boolean> disableGatewayAuth() {
         return this.disableGatewayAuth == null ? Codegen.empty() : this.disableGatewayAuth;
     }
 
@@ -62,7 +62,7 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -73,7 +73,7 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
     @Import(name="subDomainSuffix")
       private final @Nullable Output<String> subDomainSuffix;
 
-    public Output<String> getSubDomainSuffix() {
+    public Output<String> subDomainSuffix() {
         return this.subDomainSuffix == null ? Codegen.empty() : this.subDomainSuffix;
     }
 

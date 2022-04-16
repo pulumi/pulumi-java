@@ -61,42 +61,42 @@ public final class ApiKeyResponse {
      * A connection string that can be used by supporting clients for authentication.
      * 
     */
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
     /**
      * The key ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last time any of the key's properties were modified.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * A name for the key describing its usage.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Whether this key can only be used for read operations.
      * 
     */
-    public Boolean getReadOnly() {
+    public Boolean readOnly() {
         return this.readOnly;
     }
     /**
      * The value of the key that is used for authentication purposes.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

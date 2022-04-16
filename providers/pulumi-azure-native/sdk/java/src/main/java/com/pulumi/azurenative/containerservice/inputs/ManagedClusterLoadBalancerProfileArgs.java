@@ -31,7 +31,7 @@ public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.reso
     @Import(name="allocatedOutboundPorts")
       private final @Nullable Output<Integer> allocatedOutboundPorts;
 
-    public Output<Integer> getAllocatedOutboundPorts() {
+    public Output<Integer> allocatedOutboundPorts() {
         return this.allocatedOutboundPorts == null ? Codegen.empty() : this.allocatedOutboundPorts;
     }
 
@@ -42,7 +42,7 @@ public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.reso
     @Import(name="effectiveOutboundIPs")
       private final @Nullable Output<List<ResourceReferenceArgs>> effectiveOutboundIPs;
 
-    public Output<List<ResourceReferenceArgs>> getEffectiveOutboundIPs() {
+    public Output<List<ResourceReferenceArgs>> effectiveOutboundIPs() {
         return this.effectiveOutboundIPs == null ? Codegen.empty() : this.effectiveOutboundIPs;
     }
 
@@ -53,7 +53,7 @@ public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.reso
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
+    public Output<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
@@ -64,7 +64,7 @@ public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.reso
     @Import(name="managedOutboundIPs")
       private final @Nullable Output<ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs> managedOutboundIPs;
 
-    public Output<ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs> getManagedOutboundIPs() {
+    public Output<ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs> managedOutboundIPs() {
         return this.managedOutboundIPs == null ? Codegen.empty() : this.managedOutboundIPs;
     }
 
@@ -75,7 +75,7 @@ public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.reso
     @Import(name="outboundIPPrefixes")
       private final @Nullable Output<ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs> outboundIPPrefixes;
 
-    public Output<ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs> getOutboundIPPrefixes() {
+    public Output<ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs> outboundIPPrefixes() {
         return this.outboundIPPrefixes == null ? Codegen.empty() : this.outboundIPPrefixes;
     }
 
@@ -86,7 +86,7 @@ public final class ManagedClusterLoadBalancerProfileArgs extends com.pulumi.reso
     @Import(name="outboundIPs")
       private final @Nullable Output<ManagedClusterLoadBalancerProfileOutboundIPsArgs> outboundIPs;
 
-    public Output<ManagedClusterLoadBalancerProfileOutboundIPsArgs> getOutboundIPs() {
+    public Output<ManagedClusterLoadBalancerProfileOutboundIPsArgs> outboundIPs() {
         return this.outboundIPs == null ? Codegen.empty() : this.outboundIPs;
     }
 

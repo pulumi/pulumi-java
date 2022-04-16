@@ -31,7 +31,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -42,7 +42,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
+    public Output<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
@@ -53,7 +53,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -64,7 +64,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIpAddresses")
       private final @Nullable Output<List<SubResourceArgs>> publicIpAddresses;
 
-    public Output<List<SubResourceArgs>> getPublicIpAddresses() {
+    public Output<List<SubResourceArgs>> publicIpAddresses() {
         return this.publicIpAddresses == null ? Codegen.empty() : this.publicIpAddresses;
     }
 
@@ -75,7 +75,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIpPrefixes")
       private final @Nullable Output<List<SubResourceArgs>> publicIpPrefixes;
 
-    public Output<List<SubResourceArgs>> getPublicIpPrefixes() {
+    public Output<List<SubResourceArgs>> publicIpPrefixes() {
         return this.publicIpPrefixes == null ? Codegen.empty() : this.publicIpPrefixes;
     }
 
@@ -86,7 +86,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<NatGatewaySkuArgs> sku;
 
-    public Output<NatGatewaySkuArgs> getSku() {
+    public Output<NatGatewaySkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -97,7 +97,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -108,7 +108,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

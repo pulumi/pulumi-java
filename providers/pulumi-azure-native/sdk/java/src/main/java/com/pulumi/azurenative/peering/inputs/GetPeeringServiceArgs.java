@@ -19,7 +19,7 @@ public final class GetPeeringServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="peeringServiceName", required=true)
       private final String peeringServiceName;
 
-    public String getPeeringServiceName() {
+    public String peeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPeeringServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

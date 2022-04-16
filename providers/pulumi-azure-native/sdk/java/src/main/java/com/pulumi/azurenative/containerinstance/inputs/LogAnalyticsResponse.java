@@ -26,7 +26,7 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="logType")
       private final @Nullable String logType;
 
-    public Optional<String> getLogType() {
+    public Optional<String> logType() {
         return this.logType == null ? Optional.empty() : Optional.ofNullable(this.logType);
     }
 
@@ -37,7 +37,7 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
@@ -48,7 +48,7 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 
@@ -59,7 +59,7 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceKey", required=true)
       private final String workspaceKey;
 
-    public String getWorkspaceKey() {
+    public String workspaceKey() {
         return this.workspaceKey;
     }
 
@@ -70,7 +70,7 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceResourceId")
       private final @Nullable Map<String,String> workspaceResourceId;
 
-    public Map<String,String> getWorkspaceResourceId() {
+    public Map<String,String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Map.of() : this.workspaceResourceId;
     }
 

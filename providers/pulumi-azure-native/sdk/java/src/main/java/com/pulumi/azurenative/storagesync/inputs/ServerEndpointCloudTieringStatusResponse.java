@@ -29,7 +29,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="cachePerformance", required=true)
       private final CloudTieringCachePerformanceResponse cachePerformance;
 
-    public CloudTieringCachePerformanceResponse getCachePerformance() {
+    public CloudTieringCachePerformanceResponse cachePerformance() {
         return this.cachePerformance;
     }
 
@@ -40,7 +40,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="datePolicyStatus", required=true)
       private final CloudTieringDatePolicyStatusResponse datePolicyStatus;
 
-    public CloudTieringDatePolicyStatusResponse getDatePolicyStatus() {
+    public CloudTieringDatePolicyStatusResponse datePolicyStatus() {
         return this.datePolicyStatus;
     }
 
@@ -51,7 +51,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="filesNotTiering", required=true)
       private final CloudTieringFilesNotTieringResponse filesNotTiering;
 
-    public CloudTieringFilesNotTieringResponse getFilesNotTiering() {
+    public CloudTieringFilesNotTieringResponse filesNotTiering() {
         return this.filesNotTiering;
     }
 
@@ -62,7 +62,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="health", required=true)
       private final String health;
 
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
 
@@ -73,7 +73,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="healthLastUpdatedTimestamp", required=true)
       private final String healthLastUpdatedTimestamp;
 
-    public String getHealthLastUpdatedTimestamp() {
+    public String healthLastUpdatedTimestamp() {
         return this.healthLastUpdatedTimestamp;
     }
 
@@ -84,7 +84,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="lastCloudTieringResult", required=true)
       private final Integer lastCloudTieringResult;
 
-    public Integer getLastCloudTieringResult() {
+    public Integer lastCloudTieringResult() {
         return this.lastCloudTieringResult;
     }
 
@@ -95,7 +95,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="lastSuccessTimestamp", required=true)
       private final String lastSuccessTimestamp;
 
-    public String getLastSuccessTimestamp() {
+    public String lastSuccessTimestamp() {
         return this.lastSuccessTimestamp;
     }
 
@@ -106,7 +106,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 
@@ -117,7 +117,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="spaceSavings", required=true)
       private final CloudTieringSpaceSavingsResponse spaceSavings;
 
-    public CloudTieringSpaceSavingsResponse getSpaceSavings() {
+    public CloudTieringSpaceSavingsResponse spaceSavings() {
         return this.spaceSavings;
     }
 
@@ -128,7 +128,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
     @Import(name="volumeFreeSpacePolicyStatus", required=true)
       private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
-    public CloudTieringVolumeFreeSpacePolicyStatusResponse getVolumeFreeSpacePolicyStatus() {
+    public CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus() {
         return this.volumeFreeSpacePolicyStatus;
     }
 

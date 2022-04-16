@@ -156,126 +156,126 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
      * The API definition.
      * 
     */
-    public String getApiDefinitionUrl() {
+    public String apiDefinitionUrl() {
         return this.apiDefinitionUrl;
     }
     /**
      * The api definitions.
      * 
     */
-    public ApiResourceDefinitionsResponse getApiDefinitions() {
+    public ApiResourceDefinitionsResponse apiDefinitions() {
         return this.apiDefinitions;
     }
     /**
      * The backend service.
      * 
     */
-    public ApiResourceBackendServiceResponse getBackendService() {
+    public ApiResourceBackendServiceResponse backendService() {
         return this.backendService;
     }
     /**
      * The capabilities.
      * 
     */
-    public List<String> getCapabilities() {
+    public List<String> capabilities() {
         return this.capabilities;
     }
     /**
      * The category.
      * 
     */
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
     /**
      * The connection parameters.
      * 
     */
-    public Map<String,Object> getConnectionParameters() {
+    public Map<String,Object> connectionParameters() {
         return this.connectionParameters;
     }
     /**
      * The integration service environment managed api deployment parameters.
      * 
     */
-    public Optional<IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> getDeploymentParameters() {
+    public Optional<IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> deploymentParameters() {
         return Optional.ofNullable(this.deploymentParameters);
     }
     /**
      * The api general information.
      * 
     */
-    public ApiResourceGeneralInformationResponse getGeneralInformation() {
+    public ApiResourceGeneralInformationResponse generalInformation() {
         return this.generalInformation;
     }
     /**
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The integration service environment reference.
      * 
     */
-    public Optional<ResourceReferenceResponse> getIntegrationServiceEnvironment() {
+    public Optional<ResourceReferenceResponse> integrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
      * 
     */
-    public ApiResourceMetadataResponse getMetadata() {
+    public ApiResourceMetadataResponse metadata() {
         return this.metadata;
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The policies for the API.
      * 
     */
-    public ApiResourcePoliciesResponse getPolicies() {
+    public ApiResourcePoliciesResponse policies() {
         return this.policies;
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The runtime urls.
      * 
     */
-    public List<String> getRuntimeUrls() {
+    public List<String> runtimeUrls() {
         return this.runtimeUrls;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

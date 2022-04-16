@@ -109,84 +109,84 @@ public final class GetADCCatalogResult {
      * Azure data catalog admin list.
      * 
     */
-    public List<PrincipalsResponse> getAdmins() {
+    public List<PrincipalsResponse> admins() {
         return this.admins == null ? List.of() : this.admins;
     }
     /**
      * Automatic unit adjustment enabled or not.
      * 
     */
-    public Optional<Boolean> getEnableAutomaticUnitAdjustment() {
+    public Optional<Boolean> enableAutomaticUnitAdjustment() {
         return Optional.ofNullable(this.enableAutomaticUnitAdjustment);
     }
     /**
      * Resource etag
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure data catalog SKU.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Azure data catalog provision status.
      * 
     */
-    public Optional<Boolean> getSuccessfullyProvisioned() {
+    public Optional<Boolean> successfullyProvisioned() {
         return Optional.ofNullable(this.successfullyProvisioned);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Azure data catalog units.
      * 
     */
-    public Optional<Integer> getUnits() {
+    public Optional<Integer> units() {
         return Optional.ofNullable(this.units);
     }
     /**
      * Azure data catalog user list.
      * 
     */
-    public List<PrincipalsResponse> getUsers() {
+    public List<PrincipalsResponse> users() {
         return this.users == null ? List.of() : this.users;
     }
 

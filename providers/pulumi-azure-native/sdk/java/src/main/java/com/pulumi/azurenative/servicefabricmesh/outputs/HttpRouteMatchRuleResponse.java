@@ -35,14 +35,14 @@ public final class HttpRouteMatchRuleResponse {
      * headers and their values to match in request.
      * 
     */
-    public List<HttpRouteMatchHeaderResponse> getHeaders() {
+    public List<HttpRouteMatchHeaderResponse> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Path to match for routing.
      * 
     */
-    public HttpRouteMatchPathResponse getPath() {
+    public HttpRouteMatchPathResponse path() {
         return this.path;
     }
 

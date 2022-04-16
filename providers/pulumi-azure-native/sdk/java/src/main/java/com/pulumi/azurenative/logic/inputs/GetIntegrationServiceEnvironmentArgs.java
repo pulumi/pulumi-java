@@ -19,7 +19,7 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
     @Import(name="integrationServiceEnvironmentName", required=true)
       private final String integrationServiceEnvironmentName;
 
-    public String getIntegrationServiceEnvironmentName() {
+    public String integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
 

@@ -25,7 +25,7 @@ public final class FirstQualityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitrate", required=true)
       private final Output<Integer> bitrate;
 
-    public Output<Integer> getBitrate() {
+    public Output<Integer> bitrate() {
         return this.bitrate;
     }
 

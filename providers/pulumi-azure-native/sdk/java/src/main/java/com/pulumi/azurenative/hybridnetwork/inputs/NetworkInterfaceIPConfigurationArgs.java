@@ -30,7 +30,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -41,7 +41,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
@@ -52,7 +52,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -63,7 +63,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="ipAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> ipAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getIpAllocationMethod() {
+    public Output<Either<String,IPAllocationMethod>> ipAllocationMethod() {
         return this.ipAllocationMethod == null ? Codegen.empty() : this.ipAllocationMethod;
     }
 
@@ -74,7 +74,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="ipVersion")
       private final @Nullable Output<Either<String,IPVersion>> ipVersion;
 
-    public Output<Either<String,IPVersion>> getIpVersion() {
+    public Output<Either<String,IPVersion>> ipVersion() {
         return this.ipVersion == null ? Codegen.empty() : this.ipVersion;
     }
 
@@ -85,7 +85,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

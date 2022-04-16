@@ -29,7 +29,7 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="action")
       private final @Nullable Output<Either<String,ActionType>> action;
 
-    public Output<Either<String,ActionType>> getAction() {
+    public Output<Either<String,ActionType>> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -40,7 +40,7 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
-    public Output<Either<String,ManagedRuleEnabledState>> getEnabledState() {
+    public Output<Either<String,ManagedRuleEnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -51,7 +51,7 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 

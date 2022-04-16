@@ -50,14 +50,14 @@ public final class DatabasesSolutionSummaryResponse {
      * Gets or sets the count of database instances assessed.
      * 
     */
-    public Optional<Integer> getDatabaseInstancesAssessedCount() {
+    public Optional<Integer> databaseInstancesAssessedCount() {
         return Optional.ofNullable(this.databaseInstancesAssessedCount);
     }
     /**
      * Gets or sets the count of databases assessed.
      * 
     */
-    public Optional<Integer> getDatabasesAssessedCount() {
+    public Optional<Integer> databasesAssessedCount() {
         return Optional.ofNullable(this.databasesAssessedCount);
     }
     /**
@@ -65,14 +65,14 @@ public final class DatabasesSolutionSummaryResponse {
      * Expected value is 'Databases'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * Gets or sets the count of databases ready for migration.
      * 
     */
-    public Optional<Integer> getMigrationReadyCount() {
+    public Optional<Integer> migrationReadyCount() {
         return Optional.ofNullable(this.migrationReadyCount);
     }
 

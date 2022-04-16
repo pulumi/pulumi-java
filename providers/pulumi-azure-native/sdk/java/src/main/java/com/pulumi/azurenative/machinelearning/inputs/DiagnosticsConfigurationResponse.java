@@ -25,7 +25,7 @@ public final class DiagnosticsConfigurationResponse extends com.pulumi.resources
     @Import(name="expiry")
       private final @Nullable String expiry;
 
-    public Optional<String> getExpiry() {
+    public Optional<String> expiry() {
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
     }
 
@@ -36,7 +36,7 @@ public final class DiagnosticsConfigurationResponse extends com.pulumi.resources
     @Import(name="level", required=true)
       private final String level;
 
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
 

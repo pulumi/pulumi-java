@@ -69,49 +69,49 @@ public final class DatabasePrincipalResponse {
      * Application id - relevant only for application principal type.
      * 
     */
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * Database principal email if exists.
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Database principal fully qualified name.
      * 
     */
-    public Optional<String> getFqn() {
+    public Optional<String> fqn() {
         return Optional.ofNullable(this.fqn);
     }
     /**
      * Database principal name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Database principal role.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * The tenant name of the principal
      * 
     */
-    public String getTenantName() {
+    public String tenantName() {
         return this.tenantName;
     }
     /**
      * Database principal type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

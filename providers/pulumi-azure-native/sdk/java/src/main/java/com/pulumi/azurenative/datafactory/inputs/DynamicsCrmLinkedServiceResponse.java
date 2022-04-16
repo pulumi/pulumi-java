@@ -33,7 +33,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="authenticationType", required=true)
       private final Object authenticationType;
 
-    public Object getAuthenticationType() {
+    public Object authenticationType() {
         return this.authenticationType;
     }
 
@@ -55,7 +55,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="deploymentType", required=true)
       private final Object deploymentType;
 
-    public Object getDeploymentType() {
+    public Object deploymentType() {
         return this.deploymentType;
     }
 
@@ -77,7 +77,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -88,7 +88,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -99,7 +99,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="hostName")
       private final @Nullable Object hostName;
 
-    public Optional<Object> getHostName() {
+    public Optional<Object> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -110,7 +110,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="organizationName")
       private final @Nullable Object organizationName;
 
-    public Optional<Object> getOrganizationName() {
+    public Optional<Object> organizationName() {
         return this.organizationName == null ? Optional.empty() : Optional.ofNullable(this.organizationName);
     }
 
@@ -121,7 +121,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -132,7 +132,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -143,7 +143,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="port")
       private final @Nullable Object port;
 
-    public Optional<Object> getPort() {
+    public Optional<Object> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -154,7 +154,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="servicePrincipalCredential")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalCredential() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential() {
         return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
     }
 
@@ -165,7 +165,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="servicePrincipalCredentialType")
       private final @Nullable Object servicePrincipalCredentialType;
 
-    public Optional<Object> getServicePrincipalCredentialType() {
+    public Optional<Object> servicePrincipalCredentialType() {
         return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
     }
 
@@ -176,7 +176,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
@@ -187,7 +187,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="serviceUri")
       private final @Nullable Object serviceUri;
 
-    public Optional<Object> getServiceUri() {
+    public Optional<Object> serviceUri() {
         return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
     }
 
@@ -199,7 +199,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -210,7 +210,7 @@ public final class DynamicsCrmLinkedServiceResponse extends com.pulumi.resources
     @Import(name="username")
       private final @Nullable Object username;
 
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

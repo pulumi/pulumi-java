@@ -29,7 +29,7 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="headers")
       private final @Nullable Output<List<ParameterContractArgs>> headers;
 
-    public Output<List<ParameterContractArgs>> getHeaders() {
+    public Output<List<ParameterContractArgs>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -51,7 +51,7 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="queryParameters")
       private final @Nullable Output<List<ParameterContractArgs>> queryParameters;
 
-    public Output<List<ParameterContractArgs>> getQueryParameters() {
+    public Output<List<ParameterContractArgs>> queryParameters() {
         return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
     }
 
@@ -62,7 +62,7 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="representations")
       private final @Nullable Output<List<RepresentationContractArgs>> representations;
 
-    public Output<List<RepresentationContractArgs>> getRepresentations() {
+    public Output<List<RepresentationContractArgs>> representations() {
         return this.representations == null ? Codegen.empty() : this.representations;
     }
 

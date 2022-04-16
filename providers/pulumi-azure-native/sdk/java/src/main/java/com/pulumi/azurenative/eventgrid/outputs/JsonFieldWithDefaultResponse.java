@@ -34,14 +34,14 @@ public final class JsonFieldWithDefaultResponse {
      * The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.
      * 
     */
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Name of a field in the input event schema that's to be used as the source of a mapping.
      * 
     */
-    public Optional<String> getSourceField() {
+    public Optional<String> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
 

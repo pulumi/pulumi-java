@@ -26,7 +26,7 @@ public final class WebTestPropertiesConfigurationArgs extends com.pulumi.resourc
     @Import(name="webTest")
       private final @Nullable Output<String> webTest;
 
-    public Output<String> getWebTest() {
+    public Output<String> webTest() {
         return this.webTest == null ? Codegen.empty() : this.webTest;
     }
 

@@ -28,7 +28,7 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -39,7 +39,7 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="paths")
       private final @Nullable List<String> paths;
 
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="systemKey", required=true)
       private final Boolean systemKey;
 
-    public Boolean getSystemKey() {
+    public Boolean systemKey() {
         return this.systemKey;
     }
 
@@ -61,7 +61,7 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="version")
       private final @Nullable Integer version;
 
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

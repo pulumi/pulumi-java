@@ -25,7 +25,7 @@ public final class AdhocBasedTaggingCriteriaResponse extends com.pulumi.resource
     @Import(name="tagInfo")
       private final @Nullable RetentionTagResponse tagInfo;
 
-    public Optional<RetentionTagResponse> getTagInfo() {
+    public Optional<RetentionTagResponse> tagInfo() {
         return this.tagInfo == null ? Optional.empty() : Optional.ofNullable(this.tagInfo);
     }
 

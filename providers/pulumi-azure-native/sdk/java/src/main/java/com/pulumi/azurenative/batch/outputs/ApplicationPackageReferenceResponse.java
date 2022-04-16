@@ -26,14 +26,14 @@ public final class ApplicationPackageReferenceResponse {
         this.version = version;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

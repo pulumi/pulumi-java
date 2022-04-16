@@ -28,7 +28,7 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="bgpSession")
       private final @Nullable Output<BgpSessionArgs> bgpSession;
 
-    public Output<BgpSessionArgs> getBgpSession() {
+    public Output<BgpSessionArgs> bgpSession() {
         return this.bgpSession == null ? Codegen.empty() : this.bgpSession;
     }
 
@@ -39,7 +39,7 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="connectionIdentifier")
       private final @Nullable Output<String> connectionIdentifier;
 
-    public Output<String> getConnectionIdentifier() {
+    public Output<String> connectionIdentifier() {
         return this.connectionIdentifier == null ? Codegen.empty() : this.connectionIdentifier;
     }
 
@@ -50,7 +50,7 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="peeringDBFacilityId")
       private final @Nullable Output<Integer> peeringDBFacilityId;
 
-    public Output<Integer> getPeeringDBFacilityId() {
+    public Output<Integer> peeringDBFacilityId() {
         return this.peeringDBFacilityId == null ? Codegen.empty() : this.peeringDBFacilityId;
     }
 

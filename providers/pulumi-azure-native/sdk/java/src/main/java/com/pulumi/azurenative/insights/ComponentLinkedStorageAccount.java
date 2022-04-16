@@ -42,7 +42,7 @@ public class ComponentLinkedStorageAccount extends com.pulumi.resources.CustomRe
      * @return Linked storage account resource ID
      * 
      */
-    public Output</* @Nullable */ String> getLinkedStorageAccount() {
+    public Output</* @Nullable */ String> linkedStorageAccount() {
         return this.linkedStorageAccount;
     }
     /**
@@ -56,7 +56,7 @@ public class ComponentLinkedStorageAccount extends com.pulumi.resources.CustomRe
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class ComponentLinkedStorageAccount extends com.pulumi.resources.CustomRe
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

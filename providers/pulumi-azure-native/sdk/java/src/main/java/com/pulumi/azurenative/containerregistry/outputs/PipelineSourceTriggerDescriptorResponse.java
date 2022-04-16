@@ -26,7 +26,7 @@ public final class PipelineSourceTriggerDescriptorResponse {
      * The timestamp when the source update happened.
      * 
     */
-    public Optional<String> getTimestamp() {
+    public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
 

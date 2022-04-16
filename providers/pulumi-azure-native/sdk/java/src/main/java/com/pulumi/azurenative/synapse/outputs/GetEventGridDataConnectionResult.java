@@ -128,42 +128,42 @@ public final class GetEventGridDataConnectionResult {
      * The name of blob storage event type to process.
      * 
     */
-    public Optional<String> getBlobStorageEventType() {
+    public Optional<String> blobStorageEventType() {
         return Optional.ofNullable(this.blobStorageEventType);
     }
     /**
      * The event hub consumer group.
      * 
     */
-    public String getConsumerGroup() {
+    public String consumerGroup() {
         return this.consumerGroup;
     }
     /**
      * The data format of the message. Optionally the data format can be added to each message.
      * 
     */
-    public Optional<String> getDataFormat() {
+    public Optional<String> dataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
     /**
      * The resource ID where the event grid is configured to send events.
      * 
     */
-    public String getEventHubResourceId() {
+    public String eventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
      * 
     */
-    public Optional<Boolean> getIgnoreFirstRecord() {
+    public Optional<Boolean> ignoreFirstRecord() {
         return Optional.ofNullable(this.ignoreFirstRecord);
     }
     /**
@@ -171,63 +171,63 @@ public final class GetEventGridDataConnectionResult {
      * Expected value is 'EventGrid'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
     */
-    public Optional<String> getMappingRuleName() {
+    public Optional<String> mappingRuleName() {
         return Optional.ofNullable(this.mappingRuleName);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource ID of the storage account where the data resides.
      * 
     */
-    public String getStorageAccountResourceId() {
+    public String storageAccountResourceId() {
         return this.storageAccountResourceId;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
     */
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -47,7 +47,7 @@ public final class EventChannelFilterArgs extends com.pulumi.resources.ResourceA
     @Import(name="advancedFilters")
       private final @Nullable Output<List<Object>> advancedFilters;
 
-    public Output<List<Object>> getAdvancedFilters() {
+    public Output<List<Object>> advancedFilters() {
         return this.advancedFilters == null ? Codegen.empty() : this.advancedFilters;
     }
 
@@ -58,7 +58,7 @@ public final class EventChannelFilterArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableAdvancedFilteringOnArrays")
       private final @Nullable Output<Boolean> enableAdvancedFilteringOnArrays;
 
-    public Output<Boolean> getEnableAdvancedFilteringOnArrays() {
+    public Output<Boolean> enableAdvancedFilteringOnArrays() {
         return this.enableAdvancedFilteringOnArrays == null ? Codegen.empty() : this.enableAdvancedFilteringOnArrays;
     }
 

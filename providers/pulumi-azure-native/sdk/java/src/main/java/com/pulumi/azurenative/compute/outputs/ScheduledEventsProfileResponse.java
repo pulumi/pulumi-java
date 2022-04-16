@@ -26,7 +26,7 @@ public final class ScheduledEventsProfileResponse {
      * Specifies Terminate Scheduled Event related configurations.
      * 
     */
-    public Optional<TerminateNotificationProfileResponse> getTerminateNotificationProfile() {
+    public Optional<TerminateNotificationProfileResponse> terminateNotificationProfile() {
         return Optional.ofNullable(this.terminateNotificationProfile);
     }
 

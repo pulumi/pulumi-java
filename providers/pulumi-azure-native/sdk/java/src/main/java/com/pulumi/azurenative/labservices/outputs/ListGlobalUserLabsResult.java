@@ -26,7 +26,7 @@ public final class ListGlobalUserLabsResult {
      * List of all the labs
      * 
     */
-    public List<LabDetailsResponse> getLabs() {
+    public List<LabDetailsResponse> labs() {
         return this.labs == null ? List.of() : this.labs;
     }
 

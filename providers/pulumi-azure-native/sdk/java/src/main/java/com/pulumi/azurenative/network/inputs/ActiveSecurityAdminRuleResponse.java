@@ -30,7 +30,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="access", required=true)
       private final String access;
 
-    public String getAccess() {
+    public String access() {
         return this.access;
     }
 
@@ -41,7 +41,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="commitTime")
       private final @Nullable String commitTime;
 
-    public Optional<String> getCommitTime() {
+    public Optional<String> commitTime() {
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
     }
 
@@ -52,7 +52,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="configurationDescription")
       private final @Nullable String configurationDescription;
 
-    public Optional<String> getConfigurationDescription() {
+    public Optional<String> configurationDescription() {
         return this.configurationDescription == null ? Optional.empty() : Optional.ofNullable(this.configurationDescription);
     }
 
@@ -63,7 +63,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="configurationDisplayName")
       private final @Nullable String configurationDisplayName;
 
-    public Optional<String> getConfigurationDisplayName() {
+    public Optional<String> configurationDisplayName() {
         return this.configurationDisplayName == null ? Optional.empty() : Optional.ofNullable(this.configurationDisplayName);
     }
 
@@ -74,7 +74,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -85,7 +85,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="destinationPortRanges")
       private final @Nullable List<String> destinationPortRanges;
 
-    public List<String> getDestinationPortRanges() {
+    public List<String> destinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
 
@@ -96,7 +96,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="destinations")
       private final @Nullable List<AddressPrefixItemResponse> destinations;
 
-    public List<AddressPrefixItemResponse> getDestinations() {
+    public List<AddressPrefixItemResponse> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
 
@@ -107,7 +107,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -118,7 +118,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -129,7 +129,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -141,7 +141,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -152,7 +152,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -163,7 +163,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -174,7 +174,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -185,7 +185,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -196,7 +196,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="ruleCollectionAppliesToGroups")
       private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
-    public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
+    public List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups() {
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
 
@@ -207,7 +207,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="ruleCollectionDescription")
       private final @Nullable String ruleCollectionDescription;
 
-    public Optional<String> getRuleCollectionDescription() {
+    public Optional<String> ruleCollectionDescription() {
         return this.ruleCollectionDescription == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDescription);
     }
 
@@ -218,7 +218,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="ruleCollectionDisplayName")
       private final @Nullable String ruleCollectionDisplayName;
 
-    public Optional<String> getRuleCollectionDisplayName() {
+    public Optional<String> ruleCollectionDisplayName() {
         return this.ruleCollectionDisplayName == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDisplayName);
     }
 
@@ -229,7 +229,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="ruleGroups")
       private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
-    public List<ConfigurationGroupResponse> getRuleGroups() {
+    public List<ConfigurationGroupResponse> ruleGroups() {
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
 
@@ -240,7 +240,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="sourcePortRanges")
       private final @Nullable List<String> sourcePortRanges;
 
-    public List<String> getSourcePortRanges() {
+    public List<String> sourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
 
@@ -251,7 +251,7 @@ public final class ActiveSecurityAdminRuleResponse extends com.pulumi.resources.
     @Import(name="sources")
       private final @Nullable List<AddressPrefixItemResponse> sources;
 
-    public List<AddressPrefixItemResponse> getSources() {
+    public List<AddressPrefixItemResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
 

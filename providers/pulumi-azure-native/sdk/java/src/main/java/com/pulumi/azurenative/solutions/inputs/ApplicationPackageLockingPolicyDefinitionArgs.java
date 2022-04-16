@@ -27,7 +27,7 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pul
     @Import(name="allowedActions")
       private final @Nullable Output<List<String>> allowedActions;
 
-    public Output<List<String>> getAllowedActions() {
+    public Output<List<String>> allowedActions() {
         return this.allowedActions == null ? Codegen.empty() : this.allowedActions;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pul
     @Import(name="allowedDataActions")
       private final @Nullable Output<List<String>> allowedDataActions;
 
-    public Output<List<String>> getAllowedDataActions() {
+    public Output<List<String>> allowedDataActions() {
         return this.allowedDataActions == null ? Codegen.empty() : this.allowedDataActions;
     }
 

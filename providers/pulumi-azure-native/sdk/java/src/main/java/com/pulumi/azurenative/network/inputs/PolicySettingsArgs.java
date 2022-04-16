@@ -31,7 +31,7 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fileUploadLimitInMb")
       private final @Nullable Output<Integer> fileUploadLimitInMb;
 
-    public Output<Integer> getFileUploadLimitInMb() {
+    public Output<Integer> fileUploadLimitInMb() {
         return this.fileUploadLimitInMb == null ? Codegen.empty() : this.fileUploadLimitInMb;
     }
 
@@ -42,7 +42,7 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Output<Integer> maxRequestBodySizeInKb;
 
-    public Output<Integer> getMaxRequestBodySizeInKb() {
+    public Output<Integer> maxRequestBodySizeInKb() {
         return this.maxRequestBodySizeInKb == null ? Codegen.empty() : this.maxRequestBodySizeInKb;
     }
 
@@ -53,7 +53,7 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mode")
       private final @Nullable Output<Either<String,WebApplicationFirewallMode>> mode;
 
-    public Output<Either<String,WebApplicationFirewallMode>> getMode() {
+    public Output<Either<String,WebApplicationFirewallMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -64,7 +64,7 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="requestBodyCheck")
       private final @Nullable Output<Boolean> requestBodyCheck;
 
-    public Output<Boolean> getRequestBodyCheck() {
+    public Output<Boolean> requestBodyCheck() {
         return this.requestBodyCheck == null ? Codegen.empty() : this.requestBodyCheck;
     }
 
@@ -75,7 +75,7 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="state")
       private final @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state;
 
-    public Output<Either<String,WebApplicationFirewallEnabledState>> getState() {
+    public Output<Either<String,WebApplicationFirewallEnabledState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

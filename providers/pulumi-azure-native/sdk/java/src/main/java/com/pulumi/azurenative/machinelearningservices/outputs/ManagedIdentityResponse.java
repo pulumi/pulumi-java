@@ -49,7 +49,7 @@ public final class ManagedIdentityResponse {
      * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
@@ -57,21 +57,21 @@ public final class ManagedIdentityResponse {
      * Expected value is 'Managed'.
      * 
     */
-    public String getIdentityType() {
+    public String identityType() {
         return this.identityType;
     }
     /**
      * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

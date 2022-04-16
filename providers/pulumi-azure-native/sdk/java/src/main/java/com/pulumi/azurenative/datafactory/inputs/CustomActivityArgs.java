@@ -34,7 +34,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoUserSpecification")
       private final @Nullable Output<Object> autoUserSpecification;
 
-    public Output<Object> getAutoUserSpecification() {
+    public Output<Object> autoUserSpecification() {
         return this.autoUserSpecification == null ? Codegen.empty() : this.autoUserSpecification;
     }
 
@@ -45,7 +45,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="command", required=true)
       private final Output<Object> command;
 
-    public Output<Object> getCommand() {
+    public Output<Object> command() {
         return this.command;
     }
 
@@ -56,7 +56,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -67,7 +67,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedProperties")
       private final @Nullable Output<Map<String,Object>> extendedProperties;
 
-    public Output<Map<String,Object>> getExtendedProperties() {
+    public Output<Map<String,Object>> extendedProperties() {
         return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
     }
 
@@ -89,7 +89,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
+    public Output<Object> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -100,7 +100,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -111,7 +111,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -122,7 +122,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -133,7 +133,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="referenceObjects")
       private final @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
 
-    public Output<CustomActivityReferenceObjectArgs> getReferenceObjects() {
+    public Output<CustomActivityReferenceObjectArgs> referenceObjects() {
         return this.referenceObjects == null ? Codegen.empty() : this.referenceObjects;
     }
 
@@ -144,7 +144,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> getResourceLinkedService() {
+    public Output<LinkedServiceReferenceArgs> resourceLinkedService() {
         return this.resourceLinkedService == null ? Codegen.empty() : this.resourceLinkedService;
     }
 
@@ -155,7 +155,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retentionTimeInDays")
       private final @Nullable Output<Object> retentionTimeInDays;
 
-    public Output<Object> getRetentionTimeInDays() {
+    public Output<Object> retentionTimeInDays() {
         return this.retentionTimeInDays == null ? Codegen.empty() : this.retentionTimeInDays;
     }
 
@@ -167,7 +167,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -178,7 +178,7 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

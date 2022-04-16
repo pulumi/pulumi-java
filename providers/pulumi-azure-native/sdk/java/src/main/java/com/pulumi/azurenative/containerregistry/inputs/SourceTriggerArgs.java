@@ -31,7 +31,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -42,7 +42,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRepository", required=true)
       private final Output<SourcePropertiesArgs> sourceRepository;
 
-    public Output<SourcePropertiesArgs> getSourceRepository() {
+    public Output<SourcePropertiesArgs> sourceRepository() {
         return this.sourceRepository;
     }
 
@@ -53,7 +53,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceTriggerEvents", required=true)
       private final Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
 
-    public Output<List<Either<String,SourceTriggerEvent>>> getSourceTriggerEvents() {
+    public Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents() {
         return this.sourceTriggerEvents;
     }
 
@@ -64,7 +64,7 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Output<Either<String,TriggerStatus>> getStatus() {
+    public Output<Either<String,TriggerStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

@@ -25,7 +25,7 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
 
-    public Optional<String> getKeyVaultId() {
+    public Optional<String> keyVaultId() {
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
     }
 
@@ -47,7 +47,7 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 
@@ -58,7 +58,7 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="lastHeartBeatUtc", required=true)
       private final String lastHeartBeatUtc;
 
-    public String getLastHeartBeatUtc() {
+    public String lastHeartBeatUtc() {
         return this.lastHeartBeatUtc;
     }
 
@@ -69,7 +69,7 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

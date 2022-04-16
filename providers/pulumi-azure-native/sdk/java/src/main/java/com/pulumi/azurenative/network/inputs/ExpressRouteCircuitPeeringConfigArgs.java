@@ -28,7 +28,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="advertisedCommunities")
       private final @Nullable Output<List<String>> advertisedCommunities;
 
-    public Output<List<String>> getAdvertisedCommunities() {
+    public Output<List<String>> advertisedCommunities() {
         return this.advertisedCommunities == null ? Codegen.empty() : this.advertisedCommunities;
     }
 
@@ -39,7 +39,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="advertisedPublicPrefixes")
       private final @Nullable Output<List<String>> advertisedPublicPrefixes;
 
-    public Output<List<String>> getAdvertisedPublicPrefixes() {
+    public Output<List<String>> advertisedPublicPrefixes() {
         return this.advertisedPublicPrefixes == null ? Codegen.empty() : this.advertisedPublicPrefixes;
     }
 
@@ -50,7 +50,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="customerASN")
       private final @Nullable Output<Integer> customerASN;
 
-    public Output<Integer> getCustomerASN() {
+    public Output<Integer> customerASN() {
         return this.customerASN == null ? Codegen.empty() : this.customerASN;
     }
 
@@ -61,7 +61,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="legacyMode")
       private final @Nullable Output<Integer> legacyMode;
 
-    public Output<Integer> getLegacyMode() {
+    public Output<Integer> legacyMode() {
         return this.legacyMode == null ? Codegen.empty() : this.legacyMode;
     }
 
@@ -72,7 +72,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="routingRegistryName")
       private final @Nullable Output<String> routingRegistryName;
 
-    public Output<String> getRoutingRegistryName() {
+    public Output<String> routingRegistryName() {
         return this.routingRegistryName == null ? Codegen.empty() : this.routingRegistryName;
     }
 

@@ -33,14 +33,14 @@ public final class WorkspaceCustomObjectParameterResponse {
      * The type of variable that this is
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
      * 
     */
-    public Object getValue() {
+    public Object value() {
         return this.value;
     }
 

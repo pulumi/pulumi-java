@@ -23,7 +23,7 @@ public final class TargetReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class TargetReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

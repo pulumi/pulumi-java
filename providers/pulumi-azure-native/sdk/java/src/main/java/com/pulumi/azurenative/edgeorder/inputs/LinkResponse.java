@@ -23,7 +23,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkType", required=true)
       private final String linkType;
 
-    public String getLinkType() {
+    public String linkType() {
         return this.linkType;
     }
 
@@ -34,7 +34,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkUrl", required=true)
       private final String linkUrl;
 
-    public String getLinkUrl() {
+    public String linkUrl() {
         return this.linkUrl;
     }
 

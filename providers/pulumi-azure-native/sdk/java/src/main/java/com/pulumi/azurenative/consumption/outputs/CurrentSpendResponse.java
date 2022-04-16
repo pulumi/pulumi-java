@@ -33,14 +33,14 @@ public final class CurrentSpendResponse {
      * The total amount of cost which is being tracked by the budget.
      * 
     */
-    public Double getAmount() {
+    public Double amount() {
         return this.amount;
     }
     /**
      * The unit of measure for the budget amount.
      * 
     */
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 

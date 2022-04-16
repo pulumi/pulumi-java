@@ -26,7 +26,7 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="apiKey")
       private final @Nullable String apiKey;
 
-    public Optional<String> getApiKey() {
+    public Optional<String> apiKey() {
         return this.apiKey == null ? Optional.empty() : Optional.ofNullable(this.apiKey);
     }
 
@@ -37,7 +37,7 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="isValidated")
       private final @Nullable Boolean isValidated;
 
-    public Optional<Boolean> getIsValidated() {
+    public Optional<Boolean> isValidated() {
         return this.isValidated == null ? Optional.empty() : Optional.ofNullable(this.isValidated);
     }
 
@@ -59,7 +59,7 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

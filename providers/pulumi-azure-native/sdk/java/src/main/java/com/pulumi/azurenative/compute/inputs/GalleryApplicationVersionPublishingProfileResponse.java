@@ -31,7 +31,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="enableHealthCheck")
       private final @Nullable Boolean enableHealthCheck;
 
-    public Optional<Boolean> getEnableHealthCheck() {
+    public Optional<Boolean> enableHealthCheck() {
         return this.enableHealthCheck == null ? Optional.empty() : Optional.ofNullable(this.enableHealthCheck);
     }
 
@@ -42,7 +42,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="endOfLifeDate")
       private final @Nullable String endOfLifeDate;
 
-    public Optional<String> getEndOfLifeDate() {
+    public Optional<String> endOfLifeDate() {
         return this.endOfLifeDate == null ? Optional.empty() : Optional.ofNullable(this.endOfLifeDate);
     }
 
@@ -53,14 +53,14 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="excludeFromLatest")
       private final @Nullable Boolean excludeFromLatest;
 
-    public Optional<Boolean> getExcludeFromLatest() {
+    public Optional<Boolean> excludeFromLatest() {
         return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
     }
 
     @Import(name="manageActions")
       private final @Nullable UserArtifactManageResponse manageActions;
 
-    public Optional<UserArtifactManageResponse> getManageActions() {
+    public Optional<UserArtifactManageResponse> manageActions() {
         return this.manageActions == null ? Optional.empty() : Optional.ofNullable(this.manageActions);
     }
 
@@ -71,7 +71,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="publishedDate", required=true)
       private final String publishedDate;
 
-    public String getPublishedDate() {
+    public String publishedDate() {
         return this.publishedDate;
     }
 
@@ -82,7 +82,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="replicaCount")
       private final @Nullable Integer replicaCount;
 
-    public Optional<Integer> getReplicaCount() {
+    public Optional<Integer> replicaCount() {
         return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
     }
 
@@ -93,7 +93,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="source", required=true)
       private final UserArtifactSourceResponse source;
 
-    public UserArtifactSourceResponse getSource() {
+    public UserArtifactSourceResponse source() {
         return this.source;
     }
 
@@ -104,7 +104,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
     }
 
@@ -115,7 +115,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="targetRegions")
       private final @Nullable List<TargetRegionResponse> targetRegions;
 
-    public List<TargetRegionResponse> getTargetRegions() {
+    public List<TargetRegionResponse> targetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;
     }
 

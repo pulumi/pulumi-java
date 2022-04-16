@@ -84,63 +84,63 @@ public final class GetRegistrationResult {
      * Specifies the billing mode for the Azure Stack registration.
      * 
     */
-    public Optional<String> getBillingModel() {
+    public Optional<String> billingModel() {
         return Optional.ofNullable(this.billingModel);
     }
     /**
      * The identifier of the registered Azure Stack.
      * 
     */
-    public Optional<String> getCloudId() {
+    public Optional<String> cloudId() {
         return Optional.ofNullable(this.cloudId);
     }
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The object identifier associated with the Azure Stack connecting to Azure.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * Custom tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of Resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

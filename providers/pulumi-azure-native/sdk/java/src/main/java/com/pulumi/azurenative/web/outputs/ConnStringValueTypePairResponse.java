@@ -32,14 +32,14 @@ public final class ConnStringValueTypePairResponse {
      * Type of database.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value of pair.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

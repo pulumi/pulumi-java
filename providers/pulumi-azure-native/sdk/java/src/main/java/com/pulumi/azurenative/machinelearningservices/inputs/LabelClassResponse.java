@@ -26,7 +26,7 @@ public final class LabelClassResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -37,7 +37,7 @@ public final class LabelClassResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subclasses")
       private final @Nullable Map<String,LabelClassResponse> subclasses;
 
-    public Map<String,LabelClassResponse> getSubclasses() {
+    public Map<String,LabelClassResponse> subclasses() {
         return this.subclasses == null ? Map.of() : this.subclasses;
     }
 

@@ -24,7 +24,7 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends com.pulumi
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -35,7 +35,7 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends com.pulumi
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -46,7 +46,7 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends com.pulumi
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -57,7 +57,7 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends com.pulumi
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -68,7 +68,7 @@ public final class ResourceModelWithAllowedPropertySetSkuArgs extends com.pulumi
     @Import(name="tier")
       private final @Nullable Output<SkuTier> tier;
 
-    public Output<SkuTier> getTier() {
+    public Output<SkuTier> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

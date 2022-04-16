@@ -24,7 +24,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="asPath", required=true)
       private final String asPath;
 
-    public String getAsPath() {
+    public String asPath() {
         return this.asPath;
     }
 
@@ -35,7 +35,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="localAddress", required=true)
       private final String localAddress;
 
-    public String getLocalAddress() {
+    public String localAddress() {
         return this.localAddress;
     }
 
@@ -46,7 +46,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -57,7 +57,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nextHop", required=true)
       private final String nextHop;
 
-    public String getNextHop() {
+    public String nextHop() {
         return this.nextHop;
     }
 
@@ -68,7 +68,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="origin", required=true)
       private final String origin;
 
-    public String getOrigin() {
+    public String origin() {
         return this.origin;
     }
 
@@ -79,7 +79,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourcePeer", required=true)
       private final String sourcePeer;
 
-    public String getSourcePeer() {
+    public String sourcePeer() {
         return this.sourcePeer;
     }
 
@@ -90,7 +90,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="weight", required=true)
       private final Integer weight;
 
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

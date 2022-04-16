@@ -27,7 +27,7 @@ public final class PipelineTemplateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -38,7 +38,7 @@ public final class PipelineTemplateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

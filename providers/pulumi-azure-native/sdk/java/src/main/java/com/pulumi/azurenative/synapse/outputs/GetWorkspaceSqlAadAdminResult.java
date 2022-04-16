@@ -69,49 +69,49 @@ public final class GetWorkspaceSqlAadAdminResult {
      * Workspace active directory administrator type
      * 
     */
-    public Optional<String> getAdministratorType() {
+    public Optional<String> administratorType() {
         return Optional.ofNullable(this.administratorType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Login of the workspace active directory administrator
      * 
     */
-    public Optional<String> getLogin() {
+    public Optional<String> login() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Object ID of the workspace active directory administrator
      * 
     */
-    public Optional<String> getSid() {
+    public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
     /**
      * Tenant ID of the workspace active directory administrator
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

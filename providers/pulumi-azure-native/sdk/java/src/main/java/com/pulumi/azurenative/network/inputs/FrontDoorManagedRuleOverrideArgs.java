@@ -31,7 +31,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
     @Import(name="action")
       private final @Nullable Output<Either<String,ActionType>> action;
 
-    public Output<Either<String,ActionType>> getAction() {
+    public Output<Either<String,ActionType>> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -42,7 +42,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
-    public Output<Either<String,ManagedRuleEnabledState>> getEnabledState() {
+    public Output<Either<String,ManagedRuleEnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -53,7 +53,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
     @Import(name="exclusions")
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
-    public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
+    public Output<List<ManagedRuleExclusionArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -64,7 +64,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 

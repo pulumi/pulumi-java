@@ -24,7 +24,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="galleryImageName")
       private final @Nullable Output<String> galleryImageName;
 
-    public Output<String> getGalleryImageName() {
+    public Output<String> galleryImageName() {
         return this.galleryImageName == null ? Codegen.empty() : this.galleryImageName;
     }
 
@@ -35,7 +35,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -46,7 +46,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isOverride")
       private final @Nullable Output<Boolean> isOverride;
 
-    public Output<Boolean> getIsOverride() {
+    public Output<Boolean> isOverride() {
         return this.isOverride == null ? Codegen.empty() : this.isOverride;
     }
 
@@ -57,7 +57,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isPlanAuthorized")
       private final @Nullable Output<Boolean> isPlanAuthorized;
 
-    public Output<Boolean> getIsPlanAuthorized() {
+    public Output<Boolean> isPlanAuthorized() {
         return this.isPlanAuthorized == null ? Codegen.empty() : this.isPlanAuthorized;
     }
 
@@ -68,7 +68,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
-    public Output<String> getLabAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -79,7 +79,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -90,7 +90,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -101,7 +101,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,7 +112,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -123,7 +123,7 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 

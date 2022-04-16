@@ -48,28 +48,28 @@ public final class LogzOrganizationPropertiesResponse {
      * Name of the Logz organization.
      * 
     */
-    public Optional<String> getCompanyName() {
+    public Optional<String> companyName() {
         return Optional.ofNullable(this.companyName);
     }
     /**
      * The Id of the Enterprise App used for Single sign on.
      * 
     */
-    public Optional<String> getEnterpriseAppId() {
+    public Optional<String> enterpriseAppId() {
         return Optional.ofNullable(this.enterpriseAppId);
     }
     /**
      * Id of the Logz organization.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The login URL specific to this Logz Organization.
      * 
     */
-    public Optional<String> getSingleSignOnUrl() {
+    public Optional<String> singleSignOnUrl() {
         return Optional.ofNullable(this.singleSignOnUrl);
     }
 

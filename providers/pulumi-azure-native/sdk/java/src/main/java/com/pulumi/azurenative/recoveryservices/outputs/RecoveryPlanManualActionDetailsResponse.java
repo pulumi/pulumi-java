@@ -35,7 +35,7 @@ public final class RecoveryPlanManualActionDetailsResponse {
      * The manual action description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -43,7 +43,7 @@ public final class RecoveryPlanManualActionDetailsResponse {
      * Expected value is 'ManualActionDetails'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 

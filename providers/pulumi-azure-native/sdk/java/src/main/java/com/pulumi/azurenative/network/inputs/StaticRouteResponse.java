@@ -26,7 +26,7 @@ public final class StaticRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefixes")
       private final @Nullable List<String> addressPrefixes;
 
-    public List<String> getAddressPrefixes() {
+    public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
 
@@ -37,7 +37,7 @@ public final class StaticRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class StaticRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHopIpAddress")
       private final @Nullable String nextHopIpAddress;
 
-    public Optional<String> getNextHopIpAddress() {
+    public Optional<String> nextHopIpAddress() {
         return this.nextHopIpAddress == null ? Optional.empty() : Optional.ofNullable(this.nextHopIpAddress);
     }
 

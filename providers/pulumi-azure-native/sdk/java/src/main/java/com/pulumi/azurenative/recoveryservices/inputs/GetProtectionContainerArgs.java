@@ -19,7 +19,7 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="containerName", required=true)
       private final String containerName;
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -41,7 +41,7 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="vaultName", required=true)
       private final String vaultName;
 
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

@@ -29,7 +29,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="arguments")
       private final @Nullable List<ArgumentResponse> arguments;
 
-    public List<ArgumentResponse> getArguments() {
+    public List<ArgumentResponse> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
 
@@ -40,7 +40,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="baseImageDependencies", required=true)
       private final List<BaseImageDependencyResponse> baseImageDependencies;
 
-    public List<BaseImageDependencyResponse> getBaseImageDependencies() {
+    public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
 
@@ -51,7 +51,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="contextAccessToken")
       private final @Nullable String contextAccessToken;
 
-    public Optional<String> getContextAccessToken() {
+    public Optional<String> contextAccessToken() {
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
     }
 
@@ -62,7 +62,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="contextPath")
       private final @Nullable String contextPath;
 
-    public Optional<String> getContextPath() {
+    public Optional<String> contextPath() {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
     }
 
@@ -73,7 +73,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dockerFilePath", required=true)
       private final String dockerFilePath;
 
-    public String getDockerFilePath() {
+    public String dockerFilePath() {
         return this.dockerFilePath;
     }
 
@@ -84,7 +84,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="imageNames")
       private final @Nullable List<String> imageNames;
 
-    public List<String> getImageNames() {
+    public List<String> imageNames() {
         return this.imageNames == null ? List.of() : this.imageNames;
     }
 
@@ -95,7 +95,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isPushEnabled")
       private final @Nullable Boolean isPushEnabled;
 
-    public Optional<Boolean> getIsPushEnabled() {
+    public Optional<Boolean> isPushEnabled() {
         return this.isPushEnabled == null ? Optional.empty() : Optional.ofNullable(this.isPushEnabled);
     }
 
@@ -106,7 +106,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="noCache")
       private final @Nullable Boolean noCache;
 
-    public Optional<Boolean> getNoCache() {
+    public Optional<Boolean> noCache() {
         return this.noCache == null ? Optional.empty() : Optional.ofNullable(this.noCache);
     }
 
@@ -117,7 +117,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -129,7 +129,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

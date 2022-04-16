@@ -18,14 +18,14 @@ public final class LogAnalyticsConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="customerId")
       private final @Nullable Output<String> customerId;
 
-    public Output<String> getCustomerId() {
+    public Output<String> customerId() {
         return this.customerId == null ? Codegen.empty() : this.customerId;
     }
 
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
-    public Output<String> getSharedKey() {
+    public Output<String> sharedKey() {
         return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
     }
 

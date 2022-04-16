@@ -23,7 +23,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="buildServiceName", required=true)
       private final Output<String> buildServiceName;
 
-    public Output<String> getBuildServiceName() {
+    public Output<String> buildServiceName() {
         return this.buildServiceName;
     }
 
@@ -34,7 +34,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="builderName", required=true)
       private final Output<String> builderName;
 
-    public Output<String> getBuilderName() {
+    public Output<String> builderName() {
         return this.builderName;
     }
 
@@ -45,7 +45,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="buildpackBindingName")
       private final @Nullable Output<String> buildpackBindingName;
 
-    public Output<String> getBuildpackBindingName() {
+    public Output<String> buildpackBindingName() {
         return this.buildpackBindingName == null ? Codegen.empty() : this.buildpackBindingName;
     }
 
@@ -56,7 +56,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="properties")
       private final @Nullable Output<BuildpackBindingPropertiesArgs> properties;
 
-    public Output<BuildpackBindingPropertiesArgs> getProperties() {
+    public Output<BuildpackBindingPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -67,7 +67,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

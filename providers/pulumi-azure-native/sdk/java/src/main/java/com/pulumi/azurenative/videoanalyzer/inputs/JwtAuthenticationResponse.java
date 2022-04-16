@@ -30,7 +30,7 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="audiences")
       private final @Nullable List<String> audiences;
 
-    public List<String> getAudiences() {
+    public List<String> audiences() {
         return this.audiences == null ? List.of() : this.audiences;
     }
 
@@ -41,7 +41,7 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="claims")
       private final @Nullable List<TokenClaimResponse> claims;
 
-    public List<TokenClaimResponse> getClaims() {
+    public List<TokenClaimResponse> claims() {
         return this.claims == null ? List.of() : this.claims;
     }
 
@@ -52,7 +52,7 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="issuers")
       private final @Nullable List<String> issuers;
 
-    public List<String> getIssuers() {
+    public List<String> issuers() {
         return this.issuers == null ? List.of() : this.issuers;
     }
 
@@ -63,7 +63,7 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="keys")
       private final @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
 
-    public List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> getKeys() {
+    public List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
 
@@ -75,7 +75,7 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

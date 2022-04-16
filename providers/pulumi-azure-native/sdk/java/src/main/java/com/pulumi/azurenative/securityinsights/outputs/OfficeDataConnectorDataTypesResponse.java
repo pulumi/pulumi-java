@@ -43,21 +43,21 @@ public final class OfficeDataConnectorDataTypesResponse {
      * Exchange data type connection.
      * 
     */
-    public Optional<OfficeDataConnectorDataTypesResponseExchange> getExchange() {
+    public Optional<OfficeDataConnectorDataTypesResponseExchange> exchange() {
         return Optional.ofNullable(this.exchange);
     }
     /**
      * SharePoint data type connection.
      * 
     */
-    public Optional<OfficeDataConnectorDataTypesResponseSharePoint> getSharePoint() {
+    public Optional<OfficeDataConnectorDataTypesResponseSharePoint> sharePoint() {
         return Optional.ofNullable(this.sharePoint);
     }
     /**
      * Teams data type connection.
      * 
     */
-    public Optional<OfficeDataConnectorDataTypesResponseTeams> getTeams() {
+    public Optional<OfficeDataConnectorDataTypesResponseTeams> teams() {
         return Optional.ofNullable(this.teams);
     }
 

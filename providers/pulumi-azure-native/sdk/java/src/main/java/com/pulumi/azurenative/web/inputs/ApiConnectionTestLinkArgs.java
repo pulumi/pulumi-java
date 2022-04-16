@@ -26,7 +26,7 @@ public final class ApiConnectionTestLinkArgs extends com.pulumi.resources.Resour
     @Import(name="method")
       private final @Nullable Output<String> method;
 
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -37,7 +37,7 @@ public final class ApiConnectionTestLinkArgs extends com.pulumi.resources.Resour
     @Import(name="requestUri")
       private final @Nullable Output<String> requestUri;
 
-    public Output<String> getRequestUri() {
+    public Output<String> requestUri() {
         return this.requestUri == null ? Codegen.empty() : this.requestUri;
     }
 

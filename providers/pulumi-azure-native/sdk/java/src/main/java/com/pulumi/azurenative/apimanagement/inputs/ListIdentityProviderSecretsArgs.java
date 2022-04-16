@@ -19,7 +19,7 @@ public final class ListIdentityProviderSecretsArgs extends com.pulumi.resources.
     @Import(name="identityProviderName", required=true)
       private final String identityProviderName;
 
-    public String getIdentityProviderName() {
+    public String identityProviderName() {
         return this.identityProviderName;
     }
 
@@ -30,7 +30,7 @@ public final class ListIdentityProviderSecretsArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListIdentityProviderSecretsArgs extends com.pulumi.resources.
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

@@ -73,49 +73,49 @@ public final class RestorePointSourceVMOSDiskResponse {
      * Gets the caching type.
      * 
     */
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
     /**
      * Gets the disk restore point Id.
      * 
     */
-    public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
+    public Optional<ApiEntityReferenceResponse> diskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
     /**
      * Gets the disk size in GB.
      * 
     */
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Gets the disk encryption settings.
      * 
     */
-    public Optional<DiskEncryptionSettingsResponse> getEncryptionSettings() {
+    public Optional<DiskEncryptionSettingsResponse> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
     /**
      * Gets the managed disk details
      * 
     */
-    public Optional<ManagedDiskParametersResponse> getManagedDisk() {
+    public Optional<ManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
      * Gets the disk name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets the Operating System type.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
 

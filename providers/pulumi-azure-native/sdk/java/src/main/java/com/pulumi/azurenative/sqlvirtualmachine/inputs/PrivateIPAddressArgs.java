@@ -26,7 +26,7 @@ public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -37,7 +37,7 @@ public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetResourceId")
       private final @Nullable Output<String> subnetResourceId;
 
-    public Output<String> getSubnetResourceId() {
+    public Output<String> subnetResourceId() {
         return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
     }
 

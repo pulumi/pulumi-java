@@ -25,7 +25,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="detailStatus")
       private final @Nullable String detailStatus;
 
-    public Optional<String> getDetailStatus() {
+    public Optional<String> detailStatus() {
         return this.detailStatus == null ? Optional.empty() : Optional.ofNullable(this.detailStatus);
     }
 
@@ -36,7 +36,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exitCode")
       private final @Nullable String exitCode;
 
-    public Optional<String> getExitCode() {
+    public Optional<String> exitCode() {
         return this.exitCode == null ? Optional.empty() : Optional.ofNullable(this.exitCode);
     }
 
@@ -47,7 +47,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="finishTime")
       private final @Nullable String finishTime;
 
-    public Optional<String> getFinishTime() {
+    public Optional<String> finishTime() {
         return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
     }
 
@@ -58,7 +58,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -69,7 +69,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

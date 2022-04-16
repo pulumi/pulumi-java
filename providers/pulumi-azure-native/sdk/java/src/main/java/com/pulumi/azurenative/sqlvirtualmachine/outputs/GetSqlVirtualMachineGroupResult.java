@@ -106,84 +106,84 @@ public final class GetSqlVirtualMachineGroupResult {
      * Cluster type.
      * 
     */
-    public String getClusterConfiguration() {
+    public String clusterConfiguration() {
         return this.clusterConfiguration;
     }
     /**
      * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
      * 
     */
-    public String getClusterManagerType() {
+    public String clusterManagerType() {
         return this.clusterManagerType;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state to track the async operation status.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Scale type.
      * 
     */
-    public String getScaleType() {
+    public String scaleType() {
         return this.scaleType;
     }
     /**
      * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
     */
-    public Optional<String> getSqlImageOffer() {
+    public Optional<String> sqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
     /**
      * SQL image sku.
      * 
     */
-    public Optional<String> getSqlImageSku() {
+    public Optional<String> sqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Cluster Active Directory domain profile.
      * 
     */
-    public Optional<WsfcDomainProfileResponse> getWsfcDomainProfile() {
+    public Optional<WsfcDomainProfileResponse> wsfcDomainProfile() {
         return Optional.ofNullable(this.wsfcDomainProfile);
     }
 

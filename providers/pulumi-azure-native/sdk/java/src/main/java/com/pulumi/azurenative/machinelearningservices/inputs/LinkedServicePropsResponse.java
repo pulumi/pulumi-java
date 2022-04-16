@@ -25,7 +25,7 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
@@ -36,7 +36,7 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="linkType")
       private final @Nullable String linkType;
 
-    public Optional<String> getLinkType() {
+    public Optional<String> linkType() {
         return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
     }
 
@@ -47,7 +47,7 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="linkedServiceResourceId", required=true)
       private final String linkedServiceResourceId;
 
-    public String getLinkedServiceResourceId() {
+    public String linkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
 
@@ -58,7 +58,7 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="modifiedTime")
       private final @Nullable String modifiedTime;
 
-    public Optional<String> getModifiedTime() {
+    public Optional<String> modifiedTime() {
         return this.modifiedTime == null ? Optional.empty() : Optional.ofNullable(this.modifiedTime);
     }
 

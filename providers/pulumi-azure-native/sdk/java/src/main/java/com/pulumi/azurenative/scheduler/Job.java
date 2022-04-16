@@ -39,7 +39,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Gets the job resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -53,7 +53,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the job properties.
      * 
      */
-    public Output<JobPropertiesResponse> getProperties() {
+    public Output<JobPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -67,7 +67,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Gets the job resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

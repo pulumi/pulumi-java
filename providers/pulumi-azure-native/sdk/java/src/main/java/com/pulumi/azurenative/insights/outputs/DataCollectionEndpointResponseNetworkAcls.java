@@ -26,7 +26,7 @@ public final class DataCollectionEndpointResponseNetworkAcls {
      * The configuration to set whether network access from public internet to the endpoints are allowed.
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
 

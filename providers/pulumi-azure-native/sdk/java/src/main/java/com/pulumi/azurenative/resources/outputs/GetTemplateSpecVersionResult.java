@@ -102,77 +102,77 @@ public final class GetTemplateSpecVersionResult {
      * Template Spec version description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * An array of linked template artifacts.
      * 
     */
-    public List<LinkedTemplateArtifactResponse> getLinkedTemplates() {
+    public List<LinkedTemplateArtifactResponse> linkedTemplates() {
         return this.linkedTemplates == null ? List.of() : this.linkedTemplates;
     }
     /**
      * The location of the Template Spec Version. It must match the location of the parent Template Spec.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The main Azure Resource Manager template content.
      * 
     */
-    public Optional<Object> getMainTemplate() {
+    public Optional<Object> mainTemplate() {
         return Optional.ofNullable(this.mainTemplate);
     }
     /**
      * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Azure Resource Manager template UI definition content.
      * 
     */
-    public Optional<Object> getUiFormDefinition() {
+    public Optional<Object> uiFormDefinition() {
         return Optional.ofNullable(this.uiFormDefinition);
     }
 

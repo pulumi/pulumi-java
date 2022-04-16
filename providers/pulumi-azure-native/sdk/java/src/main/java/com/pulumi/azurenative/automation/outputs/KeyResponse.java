@@ -39,21 +39,21 @@ public final class KeyResponse {
      * Automation key name.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * Automation key permissions.
      * 
     */
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
     /**
      * Value of the Automation Key used for registration.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

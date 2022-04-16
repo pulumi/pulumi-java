@@ -46,7 +46,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return Number of bytes captured per packet, the remaining bytes are truncated.
      * 
      */
-    public Output</* @Nullable */ Double> getBytesToCapturePerPacket() {
+    public Output</* @Nullable */ Double> bytesToCapturePerPacket() {
         return this.bytesToCapturePerPacket;
     }
     /**
@@ -60,7 +60,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -74,7 +74,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return A list of packet capture filters.
      * 
      */
-    public Output</* @Nullable */ List<PacketCaptureFilterResponse>> getFilters() {
+    public Output</* @Nullable */ List<PacketCaptureFilterResponse>> filters() {
         return this.filters;
     }
     /**
@@ -88,7 +88,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return Name of the packet capture session.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the packet capture session.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -116,7 +116,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return The storage location for a packet capture session.
      * 
      */
-    public Output<PacketCaptureStorageLocationResponse> getStorageLocation() {
+    public Output<PacketCaptureStorageLocationResponse> storageLocation() {
         return this.storageLocation;
     }
     /**
@@ -130,7 +130,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return The ID of the targeted resource, only VM is currently supported.
      * 
      */
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
     /**
@@ -144,7 +144,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return Maximum duration of the capture session in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeLimitInSeconds() {
+    public Output</* @Nullable */ Integer> timeLimitInSeconds() {
         return this.timeLimitInSeconds;
     }
     /**
@@ -158,7 +158,7 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return Maximum size of the capture output.
      * 
      */
-    public Output</* @Nullable */ Double> getTotalBytesPerSession() {
+    public Output</* @Nullable */ Double> totalBytesPerSession() {
         return this.totalBytesPerSession;
     }
 

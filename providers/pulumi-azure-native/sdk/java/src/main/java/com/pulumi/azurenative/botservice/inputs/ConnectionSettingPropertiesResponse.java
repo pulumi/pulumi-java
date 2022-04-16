@@ -27,7 +27,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
@@ -49,7 +49,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -60,7 +60,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -71,7 +71,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="parameters")
       private final @Nullable List<ConnectionSettingParameterResponse> parameters;
 
-    public List<ConnectionSettingParameterResponse> getParameters() {
+    public List<ConnectionSettingParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
@@ -82,7 +82,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -93,7 +93,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="scopes")
       private final @Nullable String scopes;
 
-    public Optional<String> getScopes() {
+    public Optional<String> scopes() {
         return this.scopes == null ? Optional.empty() : Optional.ofNullable(this.scopes);
     }
 
@@ -104,7 +104,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="serviceProviderDisplayName")
       private final @Nullable String serviceProviderDisplayName;
 
-    public Optional<String> getServiceProviderDisplayName() {
+    public Optional<String> serviceProviderDisplayName() {
         return this.serviceProviderDisplayName == null ? Optional.empty() : Optional.ofNullable(this.serviceProviderDisplayName);
     }
 
@@ -115,7 +115,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="serviceProviderId")
       private final @Nullable String serviceProviderId;
 
-    public Optional<String> getServiceProviderId() {
+    public Optional<String> serviceProviderId() {
         return this.serviceProviderId == null ? Optional.empty() : Optional.ofNullable(this.serviceProviderId);
     }
 
@@ -126,7 +126,7 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="settingId", required=true)
       private final String settingId;
 
-    public String getSettingId() {
+    public String settingId() {
         return this.settingId;
     }
 

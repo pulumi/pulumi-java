@@ -19,21 +19,21 @@ public final class ThrottlingRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
     @Import(name="metrics", required=true)
       private final List<ThrottlingMetricResponse> metrics;
 
-    public List<ThrottlingMetricResponse> getMetrics() {
+    public List<ThrottlingMetricResponse> metrics() {
         return this.metrics;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 

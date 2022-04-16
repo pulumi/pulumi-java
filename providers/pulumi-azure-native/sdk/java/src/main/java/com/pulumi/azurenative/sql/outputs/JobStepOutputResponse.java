@@ -76,56 +76,56 @@ public final class JobStepOutputResponse {
      * The resource ID of the credential to use to connect to the output destination.
      * 
     */
-    public String getCredential() {
+    public String credential() {
         return this.credential;
     }
     /**
      * The output destination database.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * The output destination resource group.
      * 
     */
-    public Optional<String> getResourceGroupName() {
+    public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
      * The output destination schema.
      * 
     */
-    public Optional<String> getSchemaName() {
+    public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
     /**
      * The output destination server name.
      * 
     */
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
     /**
      * The output destination subscription id.
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * The output destination table.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
     /**
      * The output destination type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

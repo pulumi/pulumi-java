@@ -30,7 +30,7 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
       private final @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
-    public Output<FrontendIPConfigurationArgs> getDestinationLoadBalancerFrontEndIPConfiguration() {
+    public Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration() {
         return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Codegen.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
     }
 
@@ -41,7 +41,7 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationNetworkInterfaceIPConfiguration")
       private final @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
-    public Output<NetworkInterfaceIPConfigurationArgs> getDestinationNetworkInterfaceIPConfiguration() {
+    public Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration() {
         return this.destinationNetworkInterfaceIPConfiguration == null ? Codegen.empty() : this.destinationNetworkInterfaceIPConfiguration;
     }
 
@@ -52,7 +52,7 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
@@ -63,7 +63,7 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -74,7 +74,7 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -85,7 +85,7 @@ public final class VirtualNetworkTapArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

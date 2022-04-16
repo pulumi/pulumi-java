@@ -26,7 +26,7 @@ public final class UserObjectReceiverValueResponse extends com.pulumi.resources.
     @Import(name="userObjectIds")
       private final @Nullable List<String> userObjectIds;
 
-    public List<String> getUserObjectIds() {
+    public List<String> userObjectIds() {
         return this.userObjectIds == null ? List.of() : this.userObjectIds;
     }
 

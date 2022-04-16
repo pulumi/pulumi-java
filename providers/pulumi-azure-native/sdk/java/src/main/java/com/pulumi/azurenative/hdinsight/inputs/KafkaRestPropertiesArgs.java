@@ -28,7 +28,7 @@ public final class KafkaRestPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="clientGroupInfo")
       private final @Nullable Output<ClientGroupInfoArgs> clientGroupInfo;
 
-    public Output<ClientGroupInfoArgs> getClientGroupInfo() {
+    public Output<ClientGroupInfoArgs> clientGroupInfo() {
         return this.clientGroupInfo == null ? Codegen.empty() : this.clientGroupInfo;
     }
 
@@ -39,7 +39,7 @@ public final class KafkaRestPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="configurationOverride")
       private final @Nullable Output<Map<String,String>> configurationOverride;
 
-    public Output<Map<String,String>> getConfigurationOverride() {
+    public Output<Map<String,String>> configurationOverride() {
         return this.configurationOverride == null ? Codegen.empty() : this.configurationOverride;
     }
 

@@ -42,21 +42,21 @@ public final class CustomImagePropertiesCustomResponse {
      * The image name.
      * 
     */
-    public Optional<String> getImageName() {
+    public Optional<String> imageName() {
         return Optional.ofNullable(this.imageName);
     }
     /**
      * The OS type of the custom image (i.e. Windows, Linux)
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * Indicates whether sysprep has been run on the VHD.
      * 
     */
-    public Optional<Boolean> getSysPrep() {
+    public Optional<Boolean> sysPrep() {
         return Optional.ofNullable(this.sysPrep);
     }
 

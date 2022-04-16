@@ -25,7 +25,7 @@ public final class BodyDiagnosticSettingsResponse extends com.pulumi.resources.I
     @Import(name="bytes")
       private final @Nullable Integer bytes;
 
-    public Optional<Integer> getBytes() {
+    public Optional<Integer> bytes() {
         return this.bytes == null ? Optional.empty() : Optional.ofNullable(this.bytes);
     }
 

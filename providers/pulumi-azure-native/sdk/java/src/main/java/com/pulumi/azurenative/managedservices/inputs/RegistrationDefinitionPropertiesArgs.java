@@ -28,7 +28,7 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="authorizations", required=true)
       private final Output<List<AuthorizationArgs>> authorizations;
 
-    public Output<List<AuthorizationArgs>> getAuthorizations() {
+    public Output<List<AuthorizationArgs>> authorizations() {
         return this.authorizations;
     }
 
@@ -39,7 +39,7 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="managedByTenantId", required=true)
       private final Output<String> managedByTenantId;
 
-    public Output<String> getManagedByTenantId() {
+    public Output<String> managedByTenantId() {
         return this.managedByTenantId;
     }
 
@@ -61,7 +61,7 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
     @Import(name="registrationDefinitionName")
       private final @Nullable Output<String> registrationDefinitionName;
 
-    public Output<String> getRegistrationDefinitionName() {
+    public Output<String> registrationDefinitionName() {
         return this.registrationDefinitionName == null ? Codegen.empty() : this.registrationDefinitionName;
     }
 

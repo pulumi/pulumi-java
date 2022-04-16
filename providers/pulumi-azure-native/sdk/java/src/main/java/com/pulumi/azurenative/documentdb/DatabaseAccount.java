@@ -57,7 +57,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return API specific properties.
      * 
      */
-    public Output</* @Nullable */ ApiPropertiesResponse> getApiProperties() {
+    public Output</* @Nullable */ ApiPropertiesResponse> apiProperties() {
         return this.apiProperties;
     }
     /**
@@ -71,7 +71,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The object representing the policy for taking backups on an account.
      * 
      */
-    public Output</* @Nullable */ Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse>> getBackupPolicy() {
+    public Output</* @Nullable */ Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse>> backupPolicy() {
         return this.backupPolicy;
     }
     /**
@@ -85,7 +85,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return List of Cosmos DB capabilities for the account
      * 
      */
-    public Output</* @Nullable */ List<CapabilityResponse>> getCapabilities() {
+    public Output</* @Nullable */ List<CapabilityResponse>> capabilities() {
         return this.capabilities;
     }
     /**
@@ -99,7 +99,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The cassandra connector offer type for the Cosmos DB database C* account.
      * 
      */
-    public Output</* @Nullable */ String> getConnectorOffer() {
+    public Output</* @Nullable */ String> connectorOffer() {
         return this.connectorOffer;
     }
     /**
@@ -113,7 +113,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The consistency policy for the Cosmos DB database account.
      * 
      */
-    public Output</* @Nullable */ ConsistencyPolicyResponse> getConsistencyPolicy() {
+    public Output</* @Nullable */ ConsistencyPolicyResponse> consistencyPolicy() {
         return this.consistencyPolicy;
     }
     /**
@@ -127,7 +127,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The CORS policy for the Cosmos DB database account.
      * 
      */
-    public Output</* @Nullable */ List<CorsPolicyResponse>> getCors() {
+    public Output</* @Nullable */ List<CorsPolicyResponse>> cors() {
         return this.cors;
     }
     /**
@@ -141,7 +141,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The offer type for the Cosmos DB database account. Default value: Standard.
      * 
      */
-    public Output<String> getDatabaseAccountOfferType() {
+    public Output<String> databaseAccountOfferType() {
         return this.databaseAccountOfferType;
     }
     /**
@@ -155,7 +155,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultIdentity() {
+    public Output</* @Nullable */ String> defaultIdentity() {
         return this.defaultIdentity;
     }
     /**
@@ -169,7 +169,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Disable write operations on metadata resources (databases, containers, throughput) via account keys
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableKeyBasedMetadataWriteAccess() {
+    public Output</* @Nullable */ Boolean> disableKeyBasedMetadataWriteAccess() {
         return this.disableKeyBasedMetadataWriteAccess;
     }
     /**
@@ -183,7 +183,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The connection endpoint for the Cosmos DB database account.
      * 
      */
-    public Output<String> getDocumentEndpoint() {
+    public Output<String> documentEndpoint() {
         return this.documentEndpoint;
     }
     /**
@@ -197,7 +197,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Flag to indicate whether to enable storage analytics.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableAnalyticalStorage() {
+    public Output</* @Nullable */ Boolean> enableAnalyticalStorage() {
         return this.enableAnalyticalStorage;
     }
     /**
@@ -211,7 +211,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableAutomaticFailover() {
+    public Output</* @Nullable */ Boolean> enableAutomaticFailover() {
         return this.enableAutomaticFailover;
     }
     /**
@@ -225,7 +225,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Enables the cassandra connector on the Cosmos DB C* account
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableCassandraConnector() {
+    public Output</* @Nullable */ Boolean> enableCassandraConnector() {
         return this.enableCassandraConnector;
     }
     /**
@@ -239,7 +239,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Flag to indicate whether Free Tier is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableFreeTier() {
+    public Output</* @Nullable */ Boolean> enableFreeTier() {
         return this.enableFreeTier;
     }
     /**
@@ -253,7 +253,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Enables the account to write in multiple locations
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableMultipleWriteLocations() {
+    public Output</* @Nullable */ Boolean> enableMultipleWriteLocations() {
         return this.enableMultipleWriteLocations;
     }
     /**
@@ -267,7 +267,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return An array that contains the regions ordered by their failover priorities.
      * 
      */
-    public Output<List<FailoverPolicyResponse>> getFailoverPolicies() {
+    public Output<List<FailoverPolicyResponse>> failoverPolicies() {
         return this.failoverPolicies;
     }
     /**
@@ -281,7 +281,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -295,7 +295,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return List of IpRules.
      * 
      */
-    public Output</* @Nullable */ List<IpAddressOrRangeResponse>> getIpRules() {
+    public Output</* @Nullable */ List<IpAddressOrRangeResponse>> ipRules() {
         return this.ipRules;
     }
     /**
@@ -309,7 +309,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Flag to indicate whether to enable/disable Virtual Network ACL rules.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsVirtualNetworkFilterEnabled() {
+    public Output</* @Nullable */ Boolean> isVirtualNetworkFilterEnabled() {
         return this.isVirtualNetworkFilterEnabled;
     }
     /**
@@ -323,7 +323,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The URI of the key vault
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultKeyUri() {
+    public Output</* @Nullable */ String> keyVaultKeyUri() {
         return this.keyVaultKeyUri;
     }
     /**
@@ -337,7 +337,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Indicates the type of database account. This can only be set at database account creation.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -351,7 +351,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The location of the resource group to which the resource belongs.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -365,7 +365,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return An array that contains all of the locations enabled for the Cosmos DB account.
      * 
      */
-    public Output<List<LocationResponse>> getLocations() {
+    public Output<List<LocationResponse>> locations() {
         return this.locations;
     }
     /**
@@ -379,7 +379,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The name of the ARM resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -393,7 +393,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Indicates what services are allowed to bypass firewall checks.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkAclBypass() {
+    public Output</* @Nullable */ String> networkAclBypass() {
         return this.networkAclBypass;
     }
     /**
@@ -407,7 +407,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetworkAclBypassResourceIds() {
+    public Output</* @Nullable */ List<String>> networkAclBypassResourceIds() {
         return this.networkAclBypassResourceIds;
     }
     /**
@@ -421,7 +421,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return List of Private Endpoint Connections configured for the Cosmos DB account.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -435,7 +435,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -449,7 +449,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Whether requests from Public Network are allowed
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -463,7 +463,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return An array that contains of the read locations enabled for the Cosmos DB account.
      * 
      */
-    public Output<List<LocationResponse>> getReadLocations() {
+    public Output<List<LocationResponse>> readLocations() {
         return this.readLocations;
     }
     /**
@@ -477,7 +477,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -491,7 +491,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -505,7 +505,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return List of Virtual Network ACL rules configured for the Cosmos DB account.
      * 
      */
-    public Output</* @Nullable */ List<VirtualNetworkRuleResponse>> getVirtualNetworkRules() {
+    public Output</* @Nullable */ List<VirtualNetworkRuleResponse>> virtualNetworkRules() {
         return this.virtualNetworkRules;
     }
     /**
@@ -519,7 +519,7 @@ public class DatabaseAccount extends com.pulumi.resources.CustomResource {
      * @return An array that contains the write location for the Cosmos DB account.
      * 
      */
-    public Output<List<LocationResponse>> getWriteLocations() {
+    public Output<List<LocationResponse>> writeLocations() {
         return this.writeLocations;
     }
 

@@ -35,7 +35,7 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="onError")
       private final @Nullable Output<Either<String,OnErrorType>> onError;
 
-    public Output<Either<String,OnErrorType>> getOnError() {
+    public Output<Either<String,OnErrorType>> onError() {
         return this.onError == null ? Codegen.empty() : this.onError;
     }
 
@@ -46,7 +46,7 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="preset", required=true)
       private final Output<Object> preset;
 
-    public Output<Object> getPreset() {
+    public Output<Object> preset() {
         return this.preset;
     }
 
@@ -57,7 +57,7 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="relativePriority")
       private final @Nullable Output<Either<String,Priority>> relativePriority;
 
-    public Output<Either<String,Priority>> getRelativePriority() {
+    public Output<Either<String,Priority>> relativePriority() {
         return this.relativePriority == null ? Codegen.empty() : this.relativePriority;
     }
 

@@ -24,7 +24,7 @@ public final class ListIngestionSettingTokensResult {
      * The token is used for correlating security data and logs with the resources in the subscription.
      * 
     */
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 

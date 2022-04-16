@@ -25,7 +25,7 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="serviceEndpointPolicyDefinitions")
       private final @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
 
-    public Output<List<ServiceEndpointPolicyDefinitionArgs>> getServiceEndpointPolicyDefinitions() {
+    public Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions() {
         return this.serviceEndpointPolicyDefinitions == null ? Codegen.empty() : this.serviceEndpointPolicyDefinitions;
     }
 
@@ -69,7 +69,7 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="serviceEndpointPolicyName")
       private final @Nullable Output<String> serviceEndpointPolicyName;
 
-    public Output<String> getServiceEndpointPolicyName() {
+    public Output<String> serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName == null ? Codegen.empty() : this.serviceEndpointPolicyName;
     }
 
@@ -80,7 +80,7 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

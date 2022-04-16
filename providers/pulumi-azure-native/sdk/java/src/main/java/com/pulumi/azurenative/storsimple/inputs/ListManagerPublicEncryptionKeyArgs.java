@@ -19,7 +19,7 @@ public final class ListManagerPublicEncryptionKeyArgs extends com.pulumi.resourc
     @Import(name="managerName", required=true)
       private final String managerName;
 
-    public String getManagerName() {
+    public String managerName() {
         return this.managerName;
     }
 
@@ -30,7 +30,7 @@ public final class ListManagerPublicEncryptionKeyArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

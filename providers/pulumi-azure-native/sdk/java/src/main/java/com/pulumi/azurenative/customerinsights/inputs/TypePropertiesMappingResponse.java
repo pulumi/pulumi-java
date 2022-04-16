@@ -25,7 +25,7 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
     @Import(name="linkType")
       private final @Nullable String linkType;
 
-    public Optional<String> getLinkType() {
+    public Optional<String> linkType() {
         return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
     }
 
@@ -36,7 +36,7 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
     @Import(name="sourcePropertyName", required=true)
       private final String sourcePropertyName;
 
-    public String getSourcePropertyName() {
+    public String sourcePropertyName() {
         return this.sourcePropertyName;
     }
 
@@ -47,7 +47,7 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
     @Import(name="targetPropertyName", required=true)
       private final String targetPropertyName;
 
-    public String getTargetPropertyName() {
+    public String targetPropertyName() {
         return this.targetPropertyName;
     }
 

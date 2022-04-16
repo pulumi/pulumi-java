@@ -22,7 +22,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -33,7 +33,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -44,7 +44,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="authority")
       private final @Nullable Output<String> authority;
 
-    public Output<String> getAuthority() {
+    public Output<String> authority() {
         return this.authority == null ? Codegen.empty() : this.authority;
     }
 
@@ -55,7 +55,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
@@ -66,7 +66,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

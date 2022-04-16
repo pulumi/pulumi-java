@@ -22,7 +22,7 @@ public final class ServiceManagedResourcesSettingsArgs extends com.pulumi.resour
     @Import(name="cosmosDb")
       private final @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
 
-    public Output<CosmosDbSettingsArgs> getCosmosDb() {
+    public Output<CosmosDbSettingsArgs> cosmosDb() {
         return this.cosmosDb == null ? Codegen.empty() : this.cosmosDb;
     }
 

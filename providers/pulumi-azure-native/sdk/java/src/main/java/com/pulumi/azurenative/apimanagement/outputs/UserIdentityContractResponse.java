@@ -34,14 +34,14 @@ public final class UserIdentityContractResponse {
      * Identifier value within provider.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Identity provider name.
      * 
     */
-    public Optional<String> getProvider() {
+    public Optional<String> provider() {
         return Optional.ofNullable(this.provider);
     }
 

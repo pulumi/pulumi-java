@@ -26,7 +26,7 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -37,7 +37,7 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -48,7 +48,7 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
     @Import(name="rootFolderPath")
       private final @Nullable Output<String> rootFolderPath;
 
-    public Output<String> getRootFolderPath() {
+    public Output<String> rootFolderPath() {
         return this.rootFolderPath == null ? Codegen.empty() : this.rootFolderPath;
     }
 

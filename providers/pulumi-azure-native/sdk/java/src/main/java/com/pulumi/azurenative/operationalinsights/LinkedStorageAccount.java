@@ -42,7 +42,7 @@ public class LinkedStorageAccount extends com.pulumi.resources.CustomResource {
      * @return Linked storage accounts type.
      * 
      */
-    public Output<String> getDataSourceType() {
+    public Output<String> dataSourceType() {
         return this.dataSourceType;
     }
     /**
@@ -56,7 +56,7 @@ public class LinkedStorageAccount extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class LinkedStorageAccount extends com.pulumi.resources.CustomResource {
      * @return Linked storage accounts resources ids.
      * 
      */
-    public Output</* @Nullable */ List<String>> getStorageAccountIds() {
+    public Output</* @Nullable */ List<String>> storageAccountIds() {
         return this.storageAccountIds;
     }
     /**
@@ -84,7 +84,7 @@ public class LinkedStorageAccount extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

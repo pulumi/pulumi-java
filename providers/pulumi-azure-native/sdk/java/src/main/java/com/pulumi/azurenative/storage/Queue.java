@@ -43,7 +43,7 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Integer indicating an approximate number of messages in the queue. This number is not lower than the actual number of messages in the queue, but could be higher.
      * 
      */
-    public Output<Integer> getApproximateMessageCount() {
+    public Output<Integer> approximateMessageCount() {
         return this.approximateMessageCount;
     }
     /**
@@ -57,7 +57,7 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A name-value pair that represents queue metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -71,7 +71,7 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

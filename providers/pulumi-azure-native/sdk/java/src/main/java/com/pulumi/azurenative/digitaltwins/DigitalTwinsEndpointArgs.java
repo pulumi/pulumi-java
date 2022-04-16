@@ -26,7 +26,7 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
@@ -37,7 +37,7 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -48,7 +48,7 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

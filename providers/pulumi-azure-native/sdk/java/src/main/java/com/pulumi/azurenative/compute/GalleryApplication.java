@@ -43,7 +43,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The description of this gallery Application Definition resource. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> getEndOfLifeDate() {
+    public Output</* @Nullable */ String> endOfLifeDate() {
         return this.endOfLifeDate;
     }
     /**
@@ -71,7 +71,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The Eula agreement for the gallery Application Definition.
      * 
      */
-    public Output</* @Nullable */ String> getEula() {
+    public Output</* @Nullable */ String> eula() {
         return this.eula;
     }
     /**
@@ -85,7 +85,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -99,7 +99,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The privacy statement uri.
      * 
      */
-    public Output</* @Nullable */ String> getPrivacyStatementUri() {
+    public Output</* @Nullable */ String> privacyStatementUri() {
         return this.privacyStatementUri;
     }
     /**
@@ -127,7 +127,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The release note uri.
      * 
      */
-    public Output</* @Nullable */ String> getReleaseNoteUri() {
+    public Output</* @Nullable */ String> releaseNoteUri() {
         return this.releaseNoteUri;
     }
     /**
@@ -141,7 +141,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
      */
-    public Output<String> getSupportedOSType() {
+    public Output<String> supportedOSType() {
         return this.supportedOSType;
     }
     /**
@@ -155,7 +155,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +169,7 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
     @Import(name="baseBlob")
       private final @Nullable ManagementPolicyBaseBlobResponse baseBlob;
 
-    public Optional<ManagementPolicyBaseBlobResponse> getBaseBlob() {
+    public Optional<ManagementPolicyBaseBlobResponse> baseBlob() {
         return this.baseBlob == null ? Optional.empty() : Optional.ofNullable(this.baseBlob);
     }
 
@@ -38,7 +38,7 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
     @Import(name="snapshot")
       private final @Nullable ManagementPolicySnapShotResponse snapshot;
 
-    public Optional<ManagementPolicySnapShotResponse> getSnapshot() {
+    public Optional<ManagementPolicySnapShotResponse> snapshot() {
         return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
     }
 
@@ -49,7 +49,7 @@ public final class ManagementPolicyActionResponse extends com.pulumi.resources.I
     @Import(name="version")
       private final @Nullable ManagementPolicyVersionResponse version;
 
-    public Optional<ManagementPolicyVersionResponse> getVersion() {
+    public Optional<ManagementPolicyVersionResponse> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

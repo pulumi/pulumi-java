@@ -22,7 +22,7 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -33,7 +33,7 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="alternateName")
       private final @Nullable Output<String> alternateName;
 
-    public Output<String> getAlternateName() {
+    public Output<String> alternateName() {
         return this.alternateName == null ? Codegen.empty() : this.alternateName;
     }
 
@@ -44,7 +44,7 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -55,7 +55,7 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="partnerNamespace")
       private final @Nullable Output<String> partnerNamespace;
 
-    public Output<String> getPartnerNamespace() {
+    public Output<String> partnerNamespace() {
         return this.partnerNamespace == null ? Codegen.empty() : this.partnerNamespace;
     }
 
@@ -66,7 +66,7 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

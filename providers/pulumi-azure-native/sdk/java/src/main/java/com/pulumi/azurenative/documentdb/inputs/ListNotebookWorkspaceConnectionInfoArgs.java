@@ -19,7 +19,7 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends com.pulumi.re
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends com.pulumi.re
     @Import(name="notebookWorkspaceName", required=true)
       private final String notebookWorkspaceName;
 
-    public String getNotebookWorkspaceName() {
+    public String notebookWorkspaceName() {
         return this.notebookWorkspaceName;
     }
 
@@ -41,7 +41,7 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

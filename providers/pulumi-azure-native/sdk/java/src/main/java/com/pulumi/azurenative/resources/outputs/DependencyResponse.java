@@ -50,28 +50,28 @@ public final class DependencyResponse {
      * The list of dependencies.
      * 
     */
-    public List<BasicDependencyResponse> getDependsOn() {
+    public List<BasicDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * The ID of the dependency.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The dependency resource name.
      * 
     */
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * The dependency resource type.
      * 
     */
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
 

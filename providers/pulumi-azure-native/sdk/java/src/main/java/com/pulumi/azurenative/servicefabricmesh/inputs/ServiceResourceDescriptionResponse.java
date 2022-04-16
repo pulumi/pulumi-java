@@ -31,7 +31,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="autoScalingPolicies")
       private final @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
 
-    public List<AutoScalingPolicyResponse> getAutoScalingPolicies() {
+    public List<AutoScalingPolicyResponse> autoScalingPolicies() {
         return this.autoScalingPolicies == null ? List.of() : this.autoScalingPolicies;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="codePackages", required=true)
       private final List<ContainerCodePackagePropertiesResponse> codePackages;
 
-    public List<ContainerCodePackagePropertiesResponse> getCodePackages() {
+    public List<ContainerCodePackagePropertiesResponse> codePackages() {
         return this.codePackages;
     }
 
@@ -53,7 +53,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -64,7 +64,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="diagnostics")
       private final @Nullable DiagnosticsRefResponse diagnostics;
 
-    public Optional<DiagnosticsRefResponse> getDiagnostics() {
+    public Optional<DiagnosticsRefResponse> diagnostics() {
         return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
     }
 
@@ -75,7 +75,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="healthState", required=true)
       private final String healthState;
 
-    public String getHealthState() {
+    public String healthState() {
         return this.healthState;
     }
 
@@ -86,7 +86,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -97,7 +97,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -108,7 +108,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="networkRefs")
       private final @Nullable List<NetworkRefResponse> networkRefs;
 
-    public List<NetworkRefResponse> getNetworkRefs() {
+    public List<NetworkRefResponse> networkRefs() {
         return this.networkRefs == null ? List.of() : this.networkRefs;
     }
 
@@ -119,7 +119,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="osType", required=true)
       private final String osType;
 
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 
@@ -130,7 +130,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -141,7 +141,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="replicaCount")
       private final @Nullable Integer replicaCount;
 
-    public Optional<Integer> getReplicaCount() {
+    public Optional<Integer> replicaCount() {
         return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
     }
 
@@ -152,7 +152,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -163,7 +163,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="statusDetails", required=true)
       private final String statusDetails;
 
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
 
@@ -174,7 +174,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -185,7 +185,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
     @Import(name="unhealthyEvaluation", required=true)
       private final String unhealthyEvaluation;
 
-    public String getUnhealthyEvaluation() {
+    public String unhealthyEvaluation() {
         return this.unhealthyEvaluation;
     }
 

@@ -26,7 +26,7 @@ public final class SkipErrorFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataInconsistency")
       private final @Nullable Output<Object> dataInconsistency;
 
-    public Output<Object> getDataInconsistency() {
+    public Output<Object> dataInconsistency() {
         return this.dataInconsistency == null ? Codegen.empty() : this.dataInconsistency;
     }
 
@@ -37,7 +37,7 @@ public final class SkipErrorFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileMissing")
       private final @Nullable Output<Object> fileMissing;
 
-    public Output<Object> getFileMissing() {
+    public Output<Object> fileMissing() {
         return this.fileMissing == null ? Codegen.empty() : this.fileMissing;
     }
 

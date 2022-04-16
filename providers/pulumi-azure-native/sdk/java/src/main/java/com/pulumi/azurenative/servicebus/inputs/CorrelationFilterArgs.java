@@ -28,7 +28,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -39,7 +39,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
 
-    public Output<String> getCorrelationId() {
+    public Output<String> correlationId() {
         return this.correlationId == null ? Codegen.empty() : this.correlationId;
     }
 
@@ -50,7 +50,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -61,7 +61,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
@@ -72,7 +72,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -83,7 +83,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replyTo")
       private final @Nullable Output<String> replyTo;
 
-    public Output<String> getReplyTo() {
+    public Output<String> replyTo() {
         return this.replyTo == null ? Codegen.empty() : this.replyTo;
     }
 
@@ -94,7 +94,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replyToSessionId")
       private final @Nullable Output<String> replyToSessionId;
 
-    public Output<String> getReplyToSessionId() {
+    public Output<String> replyToSessionId() {
         return this.replyToSessionId == null ? Codegen.empty() : this.replyToSessionId;
     }
 
@@ -105,7 +105,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="requiresPreprocessing")
       private final @Nullable Output<Boolean> requiresPreprocessing;
 
-    public Output<Boolean> getRequiresPreprocessing() {
+    public Output<Boolean> requiresPreprocessing() {
         return this.requiresPreprocessing == null ? Codegen.empty() : this.requiresPreprocessing;
     }
 
@@ -116,7 +116,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sessionId")
       private final @Nullable Output<String> sessionId;
 
-    public Output<String> getSessionId() {
+    public Output<String> sessionId() {
         return this.sessionId == null ? Codegen.empty() : this.sessionId;
     }
 
@@ -127,7 +127,7 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="to")
       private final @Nullable Output<String> to;
 
-    public Output<String> getTo() {
+    public Output<String> to() {
         return this.to == null ? Codegen.empty() : this.to;
     }
 

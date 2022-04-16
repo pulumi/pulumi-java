@@ -23,7 +23,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="blobContainerSasUri", required=true)
       private final String blobContainerSasUri;
 
-    public String getBlobContainerSasUri() {
+    public String blobContainerSasUri() {
         return this.blobContainerSasUri;
     }
 
@@ -34,7 +34,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="fromTime", required=true)
       private final String fromTime;
 
-    public String getFromTime() {
+    public String fromTime() {
         return this.fromTime;
     }
 
@@ -45,7 +45,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="groupByClientApplicationId")
       private final @Nullable Boolean groupByClientApplicationId;
 
-    public Optional<Boolean> getGroupByClientApplicationId() {
+    public Optional<Boolean> groupByClientApplicationId() {
         return this.groupByClientApplicationId == null ? Optional.empty() : Optional.ofNullable(this.groupByClientApplicationId);
     }
 
@@ -56,7 +56,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="groupByOperationName")
       private final @Nullable Boolean groupByOperationName;
 
-    public Optional<Boolean> getGroupByOperationName() {
+    public Optional<Boolean> groupByOperationName() {
         return this.groupByOperationName == null ? Optional.empty() : Optional.ofNullable(this.groupByOperationName);
     }
 
@@ -67,7 +67,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="groupByResourceName")
       private final @Nullable Boolean groupByResourceName;
 
-    public Optional<Boolean> getGroupByResourceName() {
+    public Optional<Boolean> groupByResourceName() {
         return this.groupByResourceName == null ? Optional.empty() : Optional.ofNullable(this.groupByResourceName);
     }
 
@@ -78,7 +78,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="groupByThrottlePolicy")
       private final @Nullable Boolean groupByThrottlePolicy;
 
-    public Optional<Boolean> getGroupByThrottlePolicy() {
+    public Optional<Boolean> groupByThrottlePolicy() {
         return this.groupByThrottlePolicy == null ? Optional.empty() : Optional.ofNullable(this.groupByThrottlePolicy);
     }
 
@@ -89,7 +89,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="groupByUserAgent")
       private final @Nullable Boolean groupByUserAgent;
 
-    public Optional<Boolean> getGroupByUserAgent() {
+    public Optional<Boolean> groupByUserAgent() {
         return this.groupByUserAgent == null ? Optional.empty() : Optional.ofNullable(this.groupByUserAgent);
     }
 
@@ -100,7 +100,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="intervalLength", required=true)
       private final IntervalInMins intervalLength;
 
-    public IntervalInMins getIntervalLength() {
+    public IntervalInMins intervalLength() {
         return this.intervalLength;
     }
 
@@ -111,7 +111,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -122,7 +122,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends com.pul
     @Import(name="toTime", required=true)
       private final String toTime;
 
-    public String getToTime() {
+    public String toTime() {
         return this.toTime;
     }
 

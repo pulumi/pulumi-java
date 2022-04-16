@@ -122,98 +122,98 @@ public final class GetIntegrationAccountAgreementResult {
      * The agreement type.
      * 
     */
-    public String getAgreementType() {
+    public String agreementType() {
         return this.agreementType;
     }
     /**
      * The changed time.
      * 
     */
-    public String getChangedTime() {
+    public String changedTime() {
         return this.changedTime;
     }
     /**
      * The agreement content.
      * 
     */
-    public AgreementContentResponse getContent() {
+    public AgreementContentResponse content() {
         return this.content;
     }
     /**
      * The created time.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * The business identity of the guest partner.
      * 
     */
-    public BusinessIdentityResponse getGuestIdentity() {
+    public BusinessIdentityResponse guestIdentity() {
         return this.guestIdentity;
     }
     /**
      * The integration account partner that is set as guest partner for this agreement.
      * 
     */
-    public String getGuestPartner() {
+    public String guestPartner() {
         return this.guestPartner;
     }
     /**
      * The business identity of the host partner.
      * 
     */
-    public BusinessIdentityResponse getHostIdentity() {
+    public BusinessIdentityResponse hostIdentity() {
         return this.hostIdentity;
     }
     /**
      * The integration account partner that is set as host partner for this agreement.
      * 
     */
-    public String getHostPartner() {
+    public String hostPartner() {
         return this.hostPartner;
     }
     /**
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -39,14 +39,14 @@ public final class GetEntitiesGetTimelineResult {
      * The metadata from the timeline operation results.
      * 
     */
-    public Optional<TimelineResultsMetadataResponse> getMetaData() {
+    public Optional<TimelineResultsMetadataResponse> metaData() {
         return Optional.ofNullable(this.metaData);
     }
     /**
      * The timeline result values.
      * 
     */
-    public List<Object> getValue() {
+    public List<Object> value() {
         return this.value == null ? List.of() : this.value;
     }
 

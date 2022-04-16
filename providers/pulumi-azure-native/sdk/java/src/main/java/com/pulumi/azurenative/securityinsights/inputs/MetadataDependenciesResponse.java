@@ -26,7 +26,7 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="contentId")
       private final @Nullable String contentId;
 
-    public Optional<String> getContentId() {
+    public Optional<String> contentId() {
         return this.contentId == null ? Optional.empty() : Optional.ofNullable(this.contentId);
     }
 
@@ -37,7 +37,7 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="criteria")
       private final @Nullable List<MetadataDependenciesResponse> criteria;
 
-    public List<MetadataDependenciesResponse> getCriteria() {
+    public List<MetadataDependenciesResponse> criteria() {
         return this.criteria == null ? List.of() : this.criteria;
     }
 
@@ -48,7 +48,7 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -59,7 +59,7 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -70,7 +70,7 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="operator")
       private final @Nullable String operator;
 
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
@@ -81,7 +81,7 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

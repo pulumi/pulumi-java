@@ -46,7 +46,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -60,7 +60,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    public Output</* @Nullable */ ServicesResourceResponseIdentity> getIdentity() {
+    public Output</* @Nullable */ ServicesResourceResponseIdentity> identity() {
         return this.identity;
     }
     /**
@@ -74,7 +74,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return The kind of the service.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -88,7 +88,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return The resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -102,7 +102,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return The common properties of a service.
      * 
      */
-    public Output<ServicesPropertiesResponse> getProperties() {
+    public Output<ServicesPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -130,7 +130,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return Required property for system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -144,7 +144,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -158,7 +158,7 @@ public class PrivateLinkServicesForEDMUpload extends com.pulumi.resources.Custom
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

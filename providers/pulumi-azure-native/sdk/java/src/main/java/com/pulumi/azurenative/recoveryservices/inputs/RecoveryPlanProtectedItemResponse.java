@@ -25,7 +25,7 @@ public final class RecoveryPlanProtectedItemResponse extends com.pulumi.resource
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class RecoveryPlanProtectedItemResponse extends com.pulumi.resource
     @Import(name="virtualMachineId")
       private final @Nullable String virtualMachineId;
 
-    public Optional<String> getVirtualMachineId() {
+    public Optional<String> virtualMachineId() {
         return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);
     }
 

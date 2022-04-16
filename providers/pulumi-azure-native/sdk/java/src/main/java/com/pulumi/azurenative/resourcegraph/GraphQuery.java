@@ -43,7 +43,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return The description of a graph query.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +71,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return The location of the resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -85,7 +85,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return Azure resource name. This is GUID value. The display name should be assigned within properties field.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return KQL query that will be graph.
      * 
      */
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
     /**
@@ -113,7 +113,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return Enum indicating a type of graph query.
      * 
      */
-    public Output<String> getResultKind() {
+    public Output<String> resultKind() {
         return this.resultKind;
     }
     /**
@@ -127,7 +127,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return Date and time in UTC of the last modification that was made to this graph query definition.
      * 
      */
-    public Output<String> getTimeModified() {
+    public Output<String> timeModified() {
         return this.timeModified;
     }
     /**
@@ -155,7 +155,7 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

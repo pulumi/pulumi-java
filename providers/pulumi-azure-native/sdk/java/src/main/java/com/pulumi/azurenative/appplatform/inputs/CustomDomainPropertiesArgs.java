@@ -26,7 +26,7 @@ public final class CustomDomainPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="certName")
       private final @Nullable Output<String> certName;
 
-    public Output<String> getCertName() {
+    public Output<String> certName() {
         return this.certName == null ? Codegen.empty() : this.certName;
     }
 
@@ -37,7 +37,7 @@ public final class CustomDomainPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

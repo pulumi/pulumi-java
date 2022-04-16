@@ -44,7 +44,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -55,7 +55,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="columnDelimiter")
       private final @Nullable Object columnDelimiter;
 
-    public Optional<Object> getColumnDelimiter() {
+    public Optional<Object> columnDelimiter() {
         return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
     }
 
@@ -66,7 +66,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="compressionCodec")
       private final @Nullable Object compressionCodec;
 
-    public Optional<Object> getCompressionCodec() {
+    public Optional<Object> compressionCodec() {
         return this.compressionCodec == null ? Optional.empty() : Optional.ofNullable(this.compressionCodec);
     }
 
@@ -77,7 +77,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="compressionLevel")
       private final @Nullable Object compressionLevel;
 
-    public Optional<Object> getCompressionLevel() {
+    public Optional<Object> compressionLevel() {
         return this.compressionLevel == null ? Optional.empty() : Optional.ofNullable(this.compressionLevel);
     }
 
@@ -88,7 +88,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -99,7 +99,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="encodingName")
       private final @Nullable Object encodingName;
 
-    public Optional<Object> getEncodingName() {
+    public Optional<Object> encodingName() {
         return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
     }
 
@@ -110,7 +110,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="escapeChar")
       private final @Nullable Object escapeChar;
 
-    public Optional<Object> getEscapeChar() {
+    public Optional<Object> escapeChar() {
         return this.escapeChar == null ? Optional.empty() : Optional.ofNullable(this.escapeChar);
     }
 
@@ -121,7 +121,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="firstRowAsHeader")
       private final @Nullable Object firstRowAsHeader;
 
-    public Optional<Object> getFirstRowAsHeader() {
+    public Optional<Object> firstRowAsHeader() {
         return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
     }
 
@@ -132,7 +132,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
@@ -143,7 +143,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -154,7 +154,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="location", required=true)
       private final Object location;
 
-    public Object getLocation() {
+    public Object location() {
         return this.location;
     }
 
@@ -165,7 +165,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="nullValue")
       private final @Nullable Object nullValue;
 
-    public Optional<Object> getNullValue() {
+    public Optional<Object> nullValue() {
         return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
     }
 
@@ -176,7 +176,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -187,7 +187,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="quoteChar")
       private final @Nullable Object quoteChar;
 
-    public Optional<Object> getQuoteChar() {
+    public Optional<Object> quoteChar() {
         return this.quoteChar == null ? Optional.empty() : Optional.ofNullable(this.quoteChar);
     }
 
@@ -198,7 +198,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="rowDelimiter")
       private final @Nullable Object rowDelimiter;
 
-    public Optional<Object> getRowDelimiter() {
+    public Optional<Object> rowDelimiter() {
         return this.rowDelimiter == null ? Optional.empty() : Optional.ofNullable(this.rowDelimiter);
     }
 
@@ -209,7 +209,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="schema")
       private final @Nullable Object schema;
 
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
@@ -220,7 +220,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="structure")
       private final @Nullable Object structure;
 
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
@@ -232,7 +232,7 @@ public final class DelimitedTextDatasetResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

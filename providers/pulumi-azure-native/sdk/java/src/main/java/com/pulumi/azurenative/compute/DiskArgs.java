@@ -38,7 +38,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="burstingEnabled")
       private final @Nullable Output<Boolean> burstingEnabled;
 
-    public Output<Boolean> getBurstingEnabled() {
+    public Output<Boolean> burstingEnabled() {
         return this.burstingEnabled == null ? Codegen.empty() : this.burstingEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationData", required=true)
       private final Output<CreationDataArgs> creationData;
 
-    public Output<CreationDataArgs> getCreationData() {
+    public Output<CreationDataArgs> creationData() {
         return this.creationData;
     }
 
@@ -60,7 +60,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskAccessId")
       private final @Nullable Output<String> diskAccessId;
 
-    public Output<String> getDiskAccessId() {
+    public Output<String> diskAccessId() {
         return this.diskAccessId == null ? Codegen.empty() : this.diskAccessId;
     }
 
@@ -71,7 +71,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskIOPSReadOnly")
       private final @Nullable Output<Double> diskIOPSReadOnly;
 
-    public Output<Double> getDiskIOPSReadOnly() {
+    public Output<Double> diskIOPSReadOnly() {
         return this.diskIOPSReadOnly == null ? Codegen.empty() : this.diskIOPSReadOnly;
     }
 
@@ -82,7 +82,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskIOPSReadWrite")
       private final @Nullable Output<Double> diskIOPSReadWrite;
 
-    public Output<Double> getDiskIOPSReadWrite() {
+    public Output<Double> diskIOPSReadWrite() {
         return this.diskIOPSReadWrite == null ? Codegen.empty() : this.diskIOPSReadWrite;
     }
 
@@ -93,7 +93,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskMBpsReadOnly")
       private final @Nullable Output<Double> diskMBpsReadOnly;
 
-    public Output<Double> getDiskMBpsReadOnly() {
+    public Output<Double> diskMBpsReadOnly() {
         return this.diskMBpsReadOnly == null ? Codegen.empty() : this.diskMBpsReadOnly;
     }
 
@@ -104,7 +104,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskMBpsReadWrite")
       private final @Nullable Output<Double> diskMBpsReadWrite;
 
-    public Output<Double> getDiskMBpsReadWrite() {
+    public Output<Double> diskMBpsReadWrite() {
         return this.diskMBpsReadWrite == null ? Codegen.empty() : this.diskMBpsReadWrite;
     }
 
@@ -115,7 +115,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
-    public Output<String> getDiskName() {
+    public Output<String> diskName() {
         return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
@@ -126,7 +126,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -137,7 +137,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> getEncryption() {
+    public Output<EncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -148,7 +148,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSettingsCollection")
       private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
-    public Output<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
+    public Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection() {
         return this.encryptionSettingsCollection == null ? Codegen.empty() : this.encryptionSettingsCollection;
     }
 
@@ -159,7 +159,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -170,7 +170,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Output<Either<String,HyperVGeneration>> getHyperVGeneration() {
+    public Output<Either<String,HyperVGeneration>> hyperVGeneration() {
         return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
     }
 
@@ -181,7 +181,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -192,7 +192,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxShares")
       private final @Nullable Output<Integer> maxShares;
 
-    public Output<Integer> getMaxShares() {
+    public Output<Integer> maxShares() {
         return this.maxShares == null ? Codegen.empty() : this.maxShares;
     }
 
@@ -203,7 +203,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkAccessPolicy")
       private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
-    public Output<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
+    public Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy() {
         return this.networkAccessPolicy == null ? Codegen.empty() : this.networkAccessPolicy;
     }
 
@@ -214,7 +214,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<OperatingSystemTypes> osType;
 
-    public Output<OperatingSystemTypes> getOsType() {
+    public Output<OperatingSystemTypes> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -225,7 +225,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="purchasePlan")
       private final @Nullable Output<PurchasePlanArgs> purchasePlan;
 
-    public Output<PurchasePlanArgs> getPurchasePlan() {
+    public Output<PurchasePlanArgs> purchasePlan() {
         return this.purchasePlan == null ? Codegen.empty() : this.purchasePlan;
     }
 
@@ -236,7 +236,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -247,7 +247,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityProfile")
       private final @Nullable Output<DiskSecurityProfileArgs> securityProfile;
 
-    public Output<DiskSecurityProfileArgs> getSecurityProfile() {
+    public Output<DiskSecurityProfileArgs> securityProfile() {
         return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
     }
 
@@ -258,7 +258,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<DiskSkuArgs> sku;
 
-    public Output<DiskSkuArgs> getSku() {
+    public Output<DiskSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -269,7 +269,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportsHibernation")
       private final @Nullable Output<Boolean> supportsHibernation;
 
-    public Output<Boolean> getSupportsHibernation() {
+    public Output<Boolean> supportsHibernation() {
         return this.supportsHibernation == null ? Codegen.empty() : this.supportsHibernation;
     }
 
@@ -280,7 +280,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -291,7 +291,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 
@@ -302,7 +302,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

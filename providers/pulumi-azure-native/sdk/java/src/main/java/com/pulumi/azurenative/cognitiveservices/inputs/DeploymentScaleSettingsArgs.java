@@ -29,7 +29,7 @@ public final class DeploymentScaleSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -40,7 +40,7 @@ public final class DeploymentScaleSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="scaleType")
       private final @Nullable Output<Either<String,DeploymentScaleType>> scaleType;
 
-    public Output<Either<String,DeploymentScaleType>> getScaleType() {
+    public Output<Either<String,DeploymentScaleType>> scaleType() {
         return this.scaleType == null ? Codegen.empty() : this.scaleType;
     }
 

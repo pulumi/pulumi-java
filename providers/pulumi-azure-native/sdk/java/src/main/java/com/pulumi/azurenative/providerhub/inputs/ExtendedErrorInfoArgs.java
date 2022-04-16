@@ -20,35 +20,35 @@ public final class ExtendedErrorInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="additionalInfo")
       private final @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
 
-    public Output<List<TypedErrorInfoArgs>> getAdditionalInfo() {
+    public Output<List<TypedErrorInfoArgs>> additionalInfo() {
         return this.additionalInfo == null ? Codegen.empty() : this.additionalInfo;
     }
 
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
     @Import(name="details")
       private final @Nullable Output<List<ExtendedErrorInfoArgs>> details;
 
-    public Output<List<ExtendedErrorInfoArgs>> getDetails() {
+    public Output<List<ExtendedErrorInfoArgs>> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

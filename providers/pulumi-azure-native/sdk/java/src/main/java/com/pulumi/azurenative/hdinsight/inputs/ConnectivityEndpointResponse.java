@@ -26,7 +26,7 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -37,7 +37,7 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -59,7 +59,7 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
@@ -70,7 +70,7 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 

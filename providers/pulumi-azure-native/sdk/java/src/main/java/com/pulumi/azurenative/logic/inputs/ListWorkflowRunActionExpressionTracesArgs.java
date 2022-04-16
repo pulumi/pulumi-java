@@ -19,7 +19,7 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends com.pulumi.
     @Import(name="actionName", required=true)
       private final String actionName;
 
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 
@@ -30,7 +30,7 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends com.pulumi.
     @Import(name="runName", required=true)
       private final String runName;
 
-    public String getRunName() {
+    public String runName() {
         return this.runName;
     }
 
@@ -52,7 +52,7 @@ public final class ListWorkflowRunActionExpressionTracesArgs extends com.pulumi.
     @Import(name="workflowName", required=true)
       private final String workflowName;
 
-    public String getWorkflowName() {
+    public String workflowName() {
         return this.workflowName;
     }
 

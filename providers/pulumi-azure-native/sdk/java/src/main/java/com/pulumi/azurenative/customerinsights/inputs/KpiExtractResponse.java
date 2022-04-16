@@ -23,7 +23,7 @@ public final class KpiExtractResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 
@@ -34,7 +34,7 @@ public final class KpiExtractResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="extractName", required=true)
       private final String extractName;
 
-    public String getExtractName() {
+    public String extractName() {
         return this.extractName;
     }
 

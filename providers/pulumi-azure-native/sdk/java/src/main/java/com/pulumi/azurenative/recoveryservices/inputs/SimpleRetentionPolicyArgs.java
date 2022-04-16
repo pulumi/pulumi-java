@@ -27,7 +27,7 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> getRetentionDuration() {
+    public Output<RetentionDurationArgs> retentionDuration() {
         return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
     }
 
@@ -39,7 +39,7 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="retentionPolicyType", required=true)
       private final Output<String> retentionPolicyType;
 
-    public Output<String> getRetentionPolicyType() {
+    public Output<String> retentionPolicyType() {
         return this.retentionPolicyType;
     }
 

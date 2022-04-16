@@ -42,21 +42,21 @@ public final class KeyVaultKeyReferenceResponse {
      * The private key name in key vault.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * The key vault reference.
      * 
     */
-    public KeyVaultKeyReferenceResponseKeyVault getKeyVault() {
+    public KeyVaultKeyReferenceResponseKeyVault keyVault() {
         return this.keyVault;
     }
     /**
      * The private key version in key vault.
      * 
     */
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
 

@@ -93,70 +93,70 @@ public final class ApplicationGatewayUrlPathMapResponse {
      * Default backend address pool resource of URL path map.
      * 
     */
-    public Optional<SubResourceResponse> getDefaultBackendAddressPool() {
+    public Optional<SubResourceResponse> defaultBackendAddressPool() {
         return Optional.ofNullable(this.defaultBackendAddressPool);
     }
     /**
      * Default backend http settings resource of URL path map.
      * 
     */
-    public Optional<SubResourceResponse> getDefaultBackendHttpSettings() {
+    public Optional<SubResourceResponse> defaultBackendHttpSettings() {
         return Optional.ofNullable(this.defaultBackendHttpSettings);
     }
     /**
      * Default redirect configuration resource of URL path map.
      * 
     */
-    public Optional<SubResourceResponse> getDefaultRedirectConfiguration() {
+    public Optional<SubResourceResponse> defaultRedirectConfiguration() {
         return Optional.ofNullable(this.defaultRedirectConfiguration);
     }
     /**
      * Default Rewrite rule set resource of URL path map.
      * 
     */
-    public Optional<SubResourceResponse> getDefaultRewriteRuleSet() {
+    public Optional<SubResourceResponse> defaultRewriteRuleSet() {
         return Optional.ofNullable(this.defaultRewriteRuleSet);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the URL path map that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path rule of URL path map resource.
      * 
     */
-    public List<ApplicationGatewayPathRuleResponse> getPathRules() {
+    public List<ApplicationGatewayPathRuleResponse> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
      * The provisioning state of the URL path map resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -69,49 +69,49 @@ public final class LibraryInfoResponse {
      * Storage blob container name.
      * 
     */
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Creator Id of the library/package.
      * 
     */
-    public String getCreatorId() {
+    public String creatorId() {
         return this.creatorId;
     }
     /**
      * Name of the library.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Storage blob path of library.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Provisioning status of the library/package.
      * 
     */
-    public String getProvisioningStatus() {
+    public String provisioningStatus() {
         return this.provisioningStatus;
     }
     /**
      * Type of the library.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The last update time of the library.
      * 
     */
-    public String getUploadedTimestamp() {
+    public String uploadedTimestamp() {
         return this.uploadedTimestamp;
     }
 

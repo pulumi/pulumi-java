@@ -29,7 +29,7 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hash")
       private final @Nullable Output<ContentHashArgs> hash;
 
-    public Output<ContentHashArgs> getHash() {
+    public Output<ContentHashArgs> hash() {
         return this.hash == null ? Codegen.empty() : this.hash;
     }
 
@@ -40,7 +40,7 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,ContentSourceType>> type;
 
-    public Output<Either<String,ContentSourceType>> getType() {
+    public Output<Either<String,ContentSourceType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -51,7 +51,7 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -62,7 +62,7 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -25,7 +25,7 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ip")
       private final @Nullable String ip;
 
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
@@ -36,7 +36,7 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="visibility")
       private final @Nullable String visibility;
 
-    public Optional<String> getVisibility() {
+    public Optional<String> visibility() {
         return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
     }
 

@@ -20,14 +20,14 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     @Import(name="type")
       private final @Nullable Output<Either<String,IdentityManagementTypes>> type;
 
-    public Output<Either<String,IdentityManagementTypes>> getType() {
+    public Output<Either<String,IdentityManagementTypes>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

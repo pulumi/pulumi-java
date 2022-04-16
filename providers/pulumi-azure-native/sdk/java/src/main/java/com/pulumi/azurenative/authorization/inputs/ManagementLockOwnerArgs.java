@@ -26,7 +26,7 @@ public final class ManagementLockOwnerArgs extends com.pulumi.resources.Resource
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 

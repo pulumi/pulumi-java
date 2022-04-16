@@ -18,14 +18,14 @@ public final class SwaggerSpecificationResponse extends com.pulumi.resources.Inv
     @Import(name="apiVersions")
       private final @Nullable List<String> apiVersions;
 
-    public List<String> getApiVersions() {
+    public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
 
     @Import(name="swaggerSpecFolderUri")
       private final @Nullable String swaggerSpecFolderUri;
 
-    public Optional<String> getSwaggerSpecFolderUri() {
+    public Optional<String> swaggerSpecFolderUri() {
         return this.swaggerSpecFolderUri == null ? Optional.empty() : Optional.ofNullable(this.swaggerSpecFolderUri);
     }
 

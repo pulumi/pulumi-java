@@ -30,7 +30,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adaptiveBFrame")
       private final @Nullable Output<Boolean> adaptiveBFrame;
 
-    public Output<Boolean> getAdaptiveBFrame() {
+    public Output<Boolean> adaptiveBFrame() {
         return this.adaptiveBFrame == null ? Codegen.empty() : this.adaptiveBFrame;
     }
 
@@ -41,7 +41,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bFrames")
       private final @Nullable Output<Integer> bFrames;
 
-    public Output<Integer> getBFrames() {
+    public Output<Integer> bFrames() {
         return this.bFrames == null ? Codegen.empty() : this.bFrames;
     }
 
@@ -52,7 +52,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitrate", required=true)
       private final Output<Integer> bitrate;
 
-    public Output<Integer> getBitrate() {
+    public Output<Integer> bitrate() {
         return this.bitrate;
     }
 
@@ -63,7 +63,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bufferWindow")
       private final @Nullable Output<String> bufferWindow;
 
-    public Output<String> getBufferWindow() {
+    public Output<String> bufferWindow() {
         return this.bufferWindow == null ? Codegen.empty() : this.bufferWindow;
     }
 
@@ -74,7 +74,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frameRate")
       private final @Nullable Output<String> frameRate;
 
-    public Output<String> getFrameRate() {
+    public Output<String> frameRate() {
         return this.frameRate == null ? Codegen.empty() : this.frameRate;
     }
 
@@ -85,7 +85,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<String> height;
 
-    public Output<String> getHeight() {
+    public Output<String> height() {
         return this.height == null ? Codegen.empty() : this.height;
     }
 
@@ -96,7 +96,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -107,7 +107,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -118,7 +118,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBitrate")
       private final @Nullable Output<Integer> maxBitrate;
 
-    public Output<Integer> getMaxBitrate() {
+    public Output<Integer> maxBitrate() {
         return this.maxBitrate == null ? Codegen.empty() : this.maxBitrate;
     }
 
@@ -130,7 +130,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -141,7 +141,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profile")
       private final @Nullable Output<Either<String,H265VideoProfile>> profile;
 
-    public Output<Either<String,H265VideoProfile>> getProfile() {
+    public Output<Either<String,H265VideoProfile>> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
@@ -152,7 +152,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="referenceFrames")
       private final @Nullable Output<Integer> referenceFrames;
 
-    public Output<Integer> getReferenceFrames() {
+    public Output<Integer> referenceFrames() {
         return this.referenceFrames == null ? Codegen.empty() : this.referenceFrames;
     }
 
@@ -163,7 +163,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slices")
       private final @Nullable Output<Integer> slices;
 
-    public Output<Integer> getSlices() {
+    public Output<Integer> slices() {
         return this.slices == null ? Codegen.empty() : this.slices;
     }
 
@@ -174,7 +174,7 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<String> width;
 
-    public Output<String> getWidth() {
+    public Output<String> width() {
         return this.width == null ? Codegen.empty() : this.width;
     }
 

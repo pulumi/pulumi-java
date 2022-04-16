@@ -42,7 +42,7 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return Sync group status
      * 
      */
-    public Output<String> getSyncGroupStatus() {
+    public Output<String> syncGroupStatus() {
         return this.syncGroupStatus;
     }
     /**
@@ -70,7 +70,7 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -84,7 +84,7 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return Unique Id
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 

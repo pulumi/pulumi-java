@@ -27,7 +27,7 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
     @Import(name="logRules")
       private final @Nullable LogRulesResponse logRules;
 
-    public Optional<LogRulesResponse> getLogRules() {
+    public Optional<LogRulesResponse> logRules() {
         return this.logRules == null ? Optional.empty() : Optional.ofNullable(this.logRules);
     }
 
@@ -38,7 +38,7 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -49,7 +49,7 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
 

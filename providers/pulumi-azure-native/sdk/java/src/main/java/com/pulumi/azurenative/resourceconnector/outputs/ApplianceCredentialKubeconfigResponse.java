@@ -32,14 +32,14 @@ public final class ApplianceCredentialKubeconfigResponse {
      * Name which contains the role of the kubeconfig.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Contains the kubeconfig value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

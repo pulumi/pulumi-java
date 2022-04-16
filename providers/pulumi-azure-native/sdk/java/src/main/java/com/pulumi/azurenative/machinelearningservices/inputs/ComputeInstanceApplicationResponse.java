@@ -25,7 +25,7 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -36,7 +36,7 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
     @Import(name="endpointUri")
       private final @Nullable String endpointUri;
 
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 

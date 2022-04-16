@@ -28,7 +28,7 @@ public final class JobInputSequenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="inputs")
       private final @Nullable Output<List<JobInputClipArgs>> inputs;
 
-    public Output<List<JobInputClipArgs>> getInputs() {
+    public Output<List<JobInputClipArgs>> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -40,7 +40,7 @@ public final class JobInputSequenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

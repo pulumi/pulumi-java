@@ -148,63 +148,63 @@ public final class DataBoxJobDetailsResponse {
      * Shared access key to download the chain of custody logs
      * 
     */
-    public String getChainOfCustodySasKey() {
+    public String chainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
     }
     /**
      * Contact details for notification and shipping.
      * 
     */
-    public ContactDetailsResponse getContactDetails() {
+    public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
     /**
      * List of copy log details.
      * 
     */
-    public List<Object> getCopyLogDetails() {
+    public List<Object> copyLogDetails() {
         return this.copyLogDetails;
     }
     /**
      * Copy progress per storage account.
      * 
     */
-    public List<CopyProgressResponse> getCopyProgress() {
+    public List<CopyProgressResponse> copyProgress() {
         return this.copyProgress;
     }
     /**
      * Details of the data to be exported from azure.
      * 
     */
-    public List<DataExportDetailsResponse> getDataExportDetails() {
+    public List<DataExportDetailsResponse> dataExportDetails() {
         return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
     }
     /**
      * Details of the data to be imported into azure.
      * 
     */
-    public List<DataImportDetailsResponse> getDataImportDetails() {
+    public List<DataImportDetailsResponse> dataImportDetails() {
         return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
     }
     /**
      * Delivery package shipping details.
      * 
     */
-    public PackageShippingDetailsResponse getDeliveryPackage() {
+    public PackageShippingDetailsResponse deliveryPackage() {
         return this.deliveryPackage;
     }
     /**
      * Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
      * 
     */
-    public Optional<String> getDevicePassword() {
+    public Optional<String> devicePassword() {
         return Optional.ofNullable(this.devicePassword);
     }
     /**
      * The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
     */
-    public Optional<Integer> getExpectedDataSizeInTeraBytes() {
+    public Optional<Integer> expectedDataSizeInTeraBytes() {
         return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
     /**
@@ -212,49 +212,49 @@ public final class DataBoxJobDetailsResponse {
      * Expected value is 'DataBox'.
      * 
     */
-    public String getJobDetailsType() {
+    public String jobDetailsType() {
         return this.jobDetailsType;
     }
     /**
      * List of stages that run in the job.
      * 
     */
-    public List<JobStagesResponse> getJobStages() {
+    public List<JobStagesResponse> jobStages() {
         return this.jobStages;
     }
     /**
      * Details about which key encryption type is being used.
      * 
     */
-    public Optional<KeyEncryptionKeyResponse> getKeyEncryptionKey() {
+    public Optional<KeyEncryptionKeyResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
     /**
      * Preferences for the order.
      * 
     */
-    public Optional<PreferencesResponse> getPreferences() {
+    public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
     /**
      * Return package shipping details.
      * 
     */
-    public PackageShippingDetailsResponse getReturnPackage() {
+    public PackageShippingDetailsResponse returnPackage() {
         return this.returnPackage;
     }
     /**
      * Shared access key to download the return shipment label
      * 
     */
-    public String getReverseShipmentLabelSasKey() {
+    public String reverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
     }
     /**
      * Shipping address of the customer.
      * 
     */
-    public Optional<ShippingAddressResponse> getShippingAddress() {
+    public Optional<ShippingAddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
 

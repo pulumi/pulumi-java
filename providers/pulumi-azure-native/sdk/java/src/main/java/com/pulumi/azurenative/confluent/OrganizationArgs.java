@@ -25,7 +25,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -36,7 +36,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="offerDetail")
       private final @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
 
-    public Output<OrganizationResourcePropertiesOfferDetailArgs> getOfferDetail() {
+    public Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail() {
         return this.offerDetail == null ? Codegen.empty() : this.offerDetail;
     }
 
@@ -47,7 +47,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="organizationName")
       private final @Nullable Output<String> organizationName;
 
-    public Output<String> getOrganizationName() {
+    public Output<String> organizationName() {
         return this.organizationName == null ? Codegen.empty() : this.organizationName;
     }
 
@@ -58,7 +58,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userDetail")
       private final @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 
-    public Output<OrganizationResourcePropertiesUserDetailArgs> getUserDetail() {
+    public Output<OrganizationResourcePropertiesUserDetailArgs> userDetail() {
         return this.userDetail == null ? Codegen.empty() : this.userDetail;
     }
 

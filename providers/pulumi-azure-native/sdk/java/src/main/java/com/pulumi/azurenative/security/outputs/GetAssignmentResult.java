@@ -145,119 +145,119 @@ public final class GetAssignmentResult {
      * Additional data about the assignment
      * 
     */
-    public Optional<AssignmentPropertiesResponseAdditionalData> getAdditionalData() {
+    public Optional<AssignmentPropertiesResponseAdditionalData> additionalData() {
         return Optional.ofNullable(this.additionalData);
     }
     /**
      * Component item with key as applied to this standard assignment over the given scope
      * 
     */
-    public Optional<AssignedComponentItemResponse> getAssignedComponent() {
+    public Optional<AssignedComponentItemResponse> assignedComponent() {
         return Optional.ofNullable(this.assignedComponent);
     }
     /**
      * Standard item with key as applied to this standard assignment over the given scope
      * 
     */
-    public Optional<AssignedStandardItemResponse> getAssignedStandard() {
+    public Optional<AssignedStandardItemResponse> assignedStandard() {
         return Optional.ofNullable(this.assignedStandard);
     }
     /**
      * description of the standardAssignment
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * display name of the standardAssignment
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * expected effect of this assignment (Disable/Exempt/etc)
      * 
     */
-    public Optional<String> getEffect() {
+    public Optional<String> effect() {
         return Optional.ofNullable(this.effect);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Expiration date of this assignment as a full ISO date
      * 
     */
-    public Optional<String> getExpiresOn() {
+    public Optional<String> expiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of the resource
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * A list of key value pairs that describe the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

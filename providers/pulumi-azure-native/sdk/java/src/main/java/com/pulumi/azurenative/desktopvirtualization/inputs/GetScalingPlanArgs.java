@@ -19,7 +19,7 @@ public final class GetScalingPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetScalingPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scalingPlanName", required=true)
       private final String scalingPlanName;
 
-    public String getScalingPlanName() {
+    public String scalingPlanName() {
         return this.scalingPlanName;
     }
 

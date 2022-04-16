@@ -27,7 +27,7 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -49,7 +49,7 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roles", required=true)
       private final Output<Object> roles;
 
-    public Output<Object> getRoles() {
+    public Output<Object> roles() {
         return this.roles;
     }
 
@@ -60,7 +60,7 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

@@ -26,7 +26,7 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptArguments")
       private final @Nullable Output<String> scriptArguments;
 
-    public Output<String> getScriptArguments() {
+    public Output<String> scriptArguments() {
         return this.scriptArguments == null ? Codegen.empty() : this.scriptArguments;
     }
 
@@ -37,7 +37,7 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptData")
       private final @Nullable Output<String> scriptData;
 
-    public Output<String> getScriptData() {
+    public Output<String> scriptData() {
         return this.scriptData == null ? Codegen.empty() : this.scriptData;
     }
 
@@ -48,7 +48,7 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptSource")
       private final @Nullable Output<String> scriptSource;
 
-    public Output<String> getScriptSource() {
+    public Output<String> scriptSource() {
         return this.scriptSource == null ? Codegen.empty() : this.scriptSource;
     }
 
@@ -59,7 +59,7 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

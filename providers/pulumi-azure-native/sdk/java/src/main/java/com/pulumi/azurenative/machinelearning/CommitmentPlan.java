@@ -42,7 +42,7 @@ public class CommitmentPlan extends com.pulumi.resources.CustomResource {
      * @return An entity tag used to enforce optimistic concurrency.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +56,7 @@ public class CommitmentPlan extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -70,7 +70,7 @@ public class CommitmentPlan extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class CommitmentPlan extends com.pulumi.resources.CustomResource {
      * @return The commitment plan properties.
      * 
      */
-    public Output<CommitmentPlanPropertiesResponse> getProperties() {
+    public Output<CommitmentPlanPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -98,7 +98,7 @@ public class CommitmentPlan extends com.pulumi.resources.CustomResource {
      * @return The commitment plan SKU.
      * 
      */
-    public Output</* @Nullable */ ResourceSkuResponse> getSku() {
+    public Output</* @Nullable */ ResourceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -112,7 +112,7 @@ public class CommitmentPlan extends com.pulumi.resources.CustomResource {
      * @return User-defined tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -126,7 +126,7 @@ public class CommitmentPlan extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

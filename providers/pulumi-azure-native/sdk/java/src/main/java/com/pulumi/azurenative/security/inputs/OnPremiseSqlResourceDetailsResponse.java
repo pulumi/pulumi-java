@@ -23,7 +23,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -34,7 +34,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
     @Import(name="machineName", required=true)
       private final String machineName;
 
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
 
@@ -45,7 +45,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 
@@ -57,7 +57,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -68,7 +68,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
     @Import(name="sourceComputerId", required=true)
       private final String sourceComputerId;
 
-    public String getSourceComputerId() {
+    public String sourceComputerId() {
         return this.sourceComputerId;
     }
 
@@ -79,7 +79,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
     @Import(name="vmuuid", required=true)
       private final String vmuuid;
 
-    public String getVmuuid() {
+    public String vmuuid() {
         return this.vmuuid;
     }
 
@@ -90,7 +90,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
     @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 

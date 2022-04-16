@@ -27,7 +27,7 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="admin")
       private final @Nullable String admin;
 
-    public Optional<String> getAdmin() {
+    public Optional<String> admin() {
         return this.admin == null ? Optional.empty() : Optional.ofNullable(this.admin);
     }
 
@@ -38,7 +38,7 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="basicLoginInformation")
       private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
-    public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
+    public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
     }
 
@@ -49,7 +49,7 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="dataControllerId")
       private final @Nullable String dataControllerId;
 
-    public Optional<String> getDataControllerId() {
+    public Optional<String> dataControllerId() {
         return this.dataControllerId == null ? Optional.empty() : Optional.ofNullable(this.dataControllerId);
     }
 
@@ -60,7 +60,7 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -71,7 +71,7 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="k8sRaw")
       private final @Nullable Object k8sRaw;
 
-    public Optional<Object> getK8sRaw() {
+    public Optional<Object> k8sRaw() {
         return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
     }
 
@@ -82,14 +82,14 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="lastUploadedDate")
       private final @Nullable String lastUploadedDate;
 
-    public Optional<String> getLastUploadedDate() {
+    public Optional<String> lastUploadedDate() {
         return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
     }
 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -100,7 +100,7 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

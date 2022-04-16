@@ -42,21 +42,21 @@ public final class AdditionalWorkspacesPropertiesResponse {
      * List of data types sent to workspace
      * 
     */
-    public List<String> getDataTypes() {
+    public List<String> dataTypes() {
         return this.dataTypes == null ? List.of() : this.dataTypes;
     }
     /**
      * Workspace type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Workspace resource id
      * 
     */
-    public Optional<String> getWorkspace() {
+    public Optional<String> workspace() {
         return Optional.ofNullable(this.workspace);
     }
 

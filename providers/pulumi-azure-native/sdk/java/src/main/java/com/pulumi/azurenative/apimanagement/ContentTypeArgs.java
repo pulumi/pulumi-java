@@ -22,7 +22,7 @@ public final class ContentTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentTypeId")
       private final @Nullable Output<String> contentTypeId;
 
-    public Output<String> getContentTypeId() {
+    public Output<String> contentTypeId() {
         return this.contentTypeId == null ? Codegen.empty() : this.contentTypeId;
     }
 
@@ -33,7 +33,7 @@ public final class ContentTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class ContentTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

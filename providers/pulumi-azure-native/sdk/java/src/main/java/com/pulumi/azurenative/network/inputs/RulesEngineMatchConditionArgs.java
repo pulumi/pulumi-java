@@ -32,7 +32,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> getNegateCondition() {
+    public Output<Boolean> negateCondition() {
         return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
     }
 
@@ -43,7 +43,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="rulesEngineMatchValue", required=true)
       private final Output<List<String>> rulesEngineMatchValue;
 
-    public Output<List<String>> getRulesEngineMatchValue() {
+    public Output<List<String>> rulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
 
@@ -54,7 +54,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="rulesEngineMatchVariable", required=true)
       private final Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
 
-    public Output<Either<String,RulesEngineMatchVariable>> getRulesEngineMatchVariable() {
+    public Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
 
@@ -65,7 +65,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="rulesEngineOperator", required=true)
       private final Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
 
-    public Output<Either<String,RulesEngineOperator>> getRulesEngineOperator() {
+    public Output<Either<String,RulesEngineOperator>> rulesEngineOperator() {
         return this.rulesEngineOperator;
     }
 
@@ -76,7 +76,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -87,7 +87,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
-    public Output<List<Either<String,Transform>>> getTransforms() {
+    public Output<List<Either<String,Transform>>> transforms() {
         return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 

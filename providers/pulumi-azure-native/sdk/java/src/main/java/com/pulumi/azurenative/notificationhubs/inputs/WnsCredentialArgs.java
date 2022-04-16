@@ -26,7 +26,7 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageSid")
       private final @Nullable Output<String> packageSid;
 
-    public Output<String> getPackageSid() {
+    public Output<String> packageSid() {
         return this.packageSid == null ? Codegen.empty() : this.packageSid;
     }
 
@@ -37,7 +37,7 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
-    public Output<String> getSecretKey() {
+    public Output<String> secretKey() {
         return this.secretKey == null ? Codegen.empty() : this.secretKey;
     }
 
@@ -48,7 +48,7 @@ public final class WnsCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowsLiveEndpoint")
       private final @Nullable Output<String> windowsLiveEndpoint;
 
-    public Output<String> getWindowsLiveEndpoint() {
+    public Output<String> windowsLiveEndpoint() {
         return this.windowsLiveEndpoint == null ? Codegen.empty() : this.windowsLiveEndpoint;
     }
 

@@ -23,7 +23,7 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="gatewayName", required=true)
       private final Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
       private final @Nullable Output<GatewayCustomDomainPropertiesArgs> properties;
 
-    public Output<GatewayCustomDomainPropertiesArgs> getProperties() {
+    public Output<GatewayCustomDomainPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class GatewayCustomDomainArgs extends com.pulumi.resources.Resource
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

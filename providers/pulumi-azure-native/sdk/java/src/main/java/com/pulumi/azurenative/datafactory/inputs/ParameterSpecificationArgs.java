@@ -29,7 +29,7 @@ public final class ParameterSpecificationArgs extends com.pulumi.resources.Resou
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
+    public Output<Object> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -40,7 +40,7 @@ public final class ParameterSpecificationArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
 

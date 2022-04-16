@@ -72,52 +72,52 @@ public final class KeyVaultCertificateSourceParametersResponse {
      * Describes the action that shall be taken when the certificate is removed from Key Vault.
      * 
     */
-    public String getDeleteRule() {
+    public String deleteRule() {
         return this.deleteRule;
     }
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Resource group of the user's Key Vault containing the SSL certificate
      * 
     */
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
      * 
     */
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
     /**
      * The version(GUID) of Key Vault Secret in Key Vault.
      * 
     */
-    public Optional<String> getSecretVersion() {
+    public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
      * Subscription Id of the user's Key Vault containing the SSL certificate
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Describes the action that shall be taken when the certificate is updated in Key Vault.
      * 
     */
-    public String getUpdateRule() {
+    public String updateRule() {
         return this.updateRule;
     }
     /**
      * The name of the user's Key Vault containing the SSL certificate
      * 
     */
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

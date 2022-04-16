@@ -22,7 +22,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
+    public Output<String> dataSetName() {
         return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
@@ -44,7 +44,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -56,7 +56,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -67,7 +67,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -89,7 +89,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -100,7 +100,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlServerResourceId", required=true)
       private final Output<String> sqlServerResourceId;
 
-    public Output<String> getSqlServerResourceId() {
+    public Output<String> sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
 
@@ -111,7 +111,7 @@ public final class SqlDBTableDataSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

@@ -25,7 +25,7 @@ public final class ProductLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -36,7 +36,7 @@ public final class ProductLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

@@ -55,35 +55,35 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
      * List of databases on source server
      * 
     */
-    public List<String> getDatabases() {
+    public List<String> databases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Source server brand version
      * 
     */
-    public String getSourceServerBrandVersion() {
+    public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Version of the source server
      * 
     */
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Validation errors associated with the task
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

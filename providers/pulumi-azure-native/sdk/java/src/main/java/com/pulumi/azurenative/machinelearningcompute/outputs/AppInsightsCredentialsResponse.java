@@ -34,14 +34,14 @@ public final class AppInsightsCredentialsResponse {
      * The AppInsights application ID.
      * 
     */
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
     */
-    public Optional<String> getInstrumentationKey() {
+    public Optional<String> instrumentationKey() {
         return Optional.ofNullable(this.instrumentationKey);
     }
 

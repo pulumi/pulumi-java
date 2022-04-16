@@ -55,35 +55,35 @@ public final class InstanceViewStatusResponse {
      * The status code.
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * The short localizable label for the status.
      * 
     */
-    public Optional<String> getDisplayStatus() {
+    public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
      * The level code.
      * 
     */
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
      * The detailed status message, including for alerts and error messages.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The time of the status.
      * 
     */
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
 

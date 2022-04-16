@@ -33,7 +33,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -55,7 +55,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -66,7 +66,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -77,7 +77,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -88,7 +88,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="servicePrincipalId", required=true)
       private final Object servicePrincipalId;
 
-    public Object getServicePrincipalId() {
+    public Object servicePrincipalId() {
         return this.servicePrincipalId;
     }
 
@@ -99,7 +99,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="servicePrincipalKey", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
 
@@ -110,7 +110,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="siteUrl", required=true)
       private final Object siteUrl;
 
-    public Object getSiteUrl() {
+    public Object siteUrl() {
         return this.siteUrl;
     }
 
@@ -121,7 +121,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="tenantId", required=true)
       private final Object tenantId;
 
-    public Object getTenantId() {
+    public Object tenantId() {
         return this.tenantId;
     }
 
@@ -133,7 +133,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends com.pulumi.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -29,7 +29,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="cleanupState")
       private final @Nullable String cleanupState;
 
-    public Optional<String> getCleanupState() {
+    public Optional<String> cleanupState() {
         return this.cleanupState == null ? Optional.empty() : Optional.ofNullable(this.cleanupState);
     }
 
@@ -40,7 +40,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="details")
       private final @Nullable SolutionDetailsResponse details;
 
-    public Optional<SolutionDetailsResponse> getDetails() {
+    public Optional<SolutionDetailsResponse> details() {
         return this.details == null ? Optional.empty() : Optional.ofNullable(this.details);
     }
 
@@ -51,7 +51,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="goal")
       private final @Nullable String goal;
 
-    public Optional<String> getGoal() {
+    public Optional<String> goal() {
         return this.goal == null ? Optional.empty() : Optional.ofNullable(this.goal);
     }
 
@@ -62,7 +62,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="purpose")
       private final @Nullable String purpose;
 
-    public Optional<String> getPurpose() {
+    public Optional<String> purpose() {
         return this.purpose == null ? Optional.empty() : Optional.ofNullable(this.purpose);
     }
 
@@ -73,7 +73,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -84,7 +84,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="summary")
       private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
 
-    public Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> getSummary() {
+    public Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary() {
         return this.summary == null ? null : this.summary;
     }
 
@@ -95,7 +95,7 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="tool")
       private final @Nullable String tool;
 
-    public Optional<String> getTool() {
+    public Optional<String> tool() {
         return this.tool == null ? Optional.empty() : Optional.ofNullable(this.tool);
     }
 

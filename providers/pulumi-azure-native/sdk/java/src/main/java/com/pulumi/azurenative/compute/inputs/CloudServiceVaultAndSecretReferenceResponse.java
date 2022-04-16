@@ -18,14 +18,14 @@ public final class CloudServiceVaultAndSecretReferenceResponse extends com.pulum
     @Import(name="secretUrl")
       private final @Nullable String secretUrl;
 
-    public Optional<String> getSecretUrl() {
+    public Optional<String> secretUrl() {
         return this.secretUrl == null ? Optional.empty() : Optional.ofNullable(this.secretUrl);
     }
 
     @Import(name="sourceVault")
       private final @Nullable SubResourceResponse sourceVault;
 
-    public Optional<SubResourceResponse> getSourceVault() {
+    public Optional<SubResourceResponse> sourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
     }
 

@@ -27,7 +27,7 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends com.pulumi.res
     @Import(name="identityProviders")
       private final @Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
 
-    public Output<List<OpenShiftManagedClusterIdentityProviderArgs>> getIdentityProviders() {
+    public Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders() {
         return this.identityProviders == null ? Codegen.empty() : this.identityProviders;
     }
 

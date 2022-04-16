@@ -40,21 +40,21 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
      * Gets the count of downgrades.
      * 
     */
-    public Double getCountOfDowngrades() {
+    public Double countOfDowngrades() {
         return this.countOfDowngrades;
     }
     /**
      * Gets the count of upgrades after downgrades.
      * 
     */
-    public Double getCountOfUpgradesAfterDowngrades() {
+    public Double countOfUpgradesAfterDowngrades() {
         return this.countOfUpgradesAfterDowngrades;
     }
     /**
      * Gets the last change date.
      * 
     */
-    public String getLastChangeDate() {
+    public String lastChangeDate() {
         return this.lastChangeDate;
     }
 

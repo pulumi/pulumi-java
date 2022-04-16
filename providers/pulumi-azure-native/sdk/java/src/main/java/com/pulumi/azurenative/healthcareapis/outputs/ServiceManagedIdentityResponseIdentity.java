@@ -26,7 +26,7 @@ public final class ServiceManagedIdentityResponseIdentity {
      * Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

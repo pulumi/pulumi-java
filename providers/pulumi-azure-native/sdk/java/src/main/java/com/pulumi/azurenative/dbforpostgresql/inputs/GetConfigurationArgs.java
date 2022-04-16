@@ -19,7 +19,7 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="configurationName", required=true)
       private final String configurationName;
 
-    public String getConfigurationName() {
+    public String configurationName() {
         return this.configurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

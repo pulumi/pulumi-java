@@ -166,133 +166,133 @@ public final class GetTaskResult {
      * The machine configuration of the run agent.
      * 
     */
-    public Optional<AgentPropertiesResponse> getAgentConfiguration() {
+    public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
     /**
      * The dedicated agent pool for the task.
      * 
     */
-    public Optional<String> getAgentPoolName() {
+    public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The creation date of task.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
     */
-    public Optional<CredentialsResponse> getCredentials() {
+    public Optional<CredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
     */
-    public Optional<IdentityPropertiesResponse> getIdentity() {
+    public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The value of this property indicates whether the task resource is system task or not.
      * 
     */
-    public Optional<Boolean> getIsSystemTask() {
+    public Optional<Boolean> isSystemTask() {
         return Optional.ofNullable(this.isSystemTask);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
      * 
     */
-    public Optional<String> getLogTemplate() {
+    public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The platform properties against which the run has to happen.
      * 
     */
-    public Optional<PlatformPropertiesResponse> getPlatform() {
+    public Optional<PlatformPropertiesResponse> platform() {
         return Optional.ofNullable(this.platform);
     }
     /**
      * The provisioning state of the task.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The current status of task.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The properties of a task step.
      * 
     */
-    public Optional<Object> getStep() {
+    public Optional<Object> step() {
         return Optional.ofNullable(this.step);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Run timeout in seconds.
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * The properties that describe all triggers for the task.
      * 
     */
-    public Optional<TriggerPropertiesResponse> getTrigger() {
+    public Optional<TriggerPropertiesResponse> trigger() {
         return Optional.ofNullable(this.trigger);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

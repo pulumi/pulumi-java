@@ -58,35 +58,35 @@ public final class CustomRuleResponse {
      * Describes what action to be applied when rule matches
      * 
     */
-    public String getAction() {
+    public String action() {
         return this.action;
     }
     /**
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * List of match conditions.
      * 
     */
-    public List<MatchConditionResponse> getMatchConditions() {
+    public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
     /**
      * Defines the name of the custom rule
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines in what order this rule be evaluated in the overall list of custom rules
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 

@@ -33,7 +33,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -44,7 +44,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
 
-    public Output<String> getBackupSetName() {
+    public Output<String> backupSetName() {
         return this.backupSetName == null ? Codegen.empty() : this.backupSetName;
     }
 
@@ -55,7 +55,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -66,7 +66,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Output<Either<String,CreateMode>> getCreateMode() {
+    public Output<Either<String,CreateMode>> createMode() {
         return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
@@ -77,7 +77,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
-    public Output<String> getDeferredDeleteTimeInUTC() {
+    public Output<String> deferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Codegen.empty() : this.deferredDeleteTimeInUTC;
     }
 
@@ -88,7 +88,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
-    public Output<String> getDeferredDeleteTimeRemaining() {
+    public Output<String> deferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Codegen.empty() : this.deferredDeleteTimeRemaining;
     }
 
@@ -99,7 +99,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="extendedInfo")
       private final @Nullable Output<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo;
 
-    public Output<AzureSqlProtectedItemExtendedInfoArgs> getExtendedInfo() {
+    public Output<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo() {
         return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
@@ -110,7 +110,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
-    public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+    public Output<Boolean> isDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Codegen.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
@@ -121,7 +121,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
 
-    public Output<Boolean> getIsRehydrate() {
+    public Output<Boolean> isRehydrate() {
         return this.isRehydrate == null ? Codegen.empty() : this.isRehydrate;
     }
 
@@ -132,7 +132,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
-    public Output<Boolean> getIsScheduledForDeferredDelete() {
+    public Output<Boolean> isScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Codegen.empty() : this.isScheduledForDeferredDelete;
     }
 
@@ -143,7 +143,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
 
-    public Output<String> getLastRecoveryPoint() {
+    public Output<String> lastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Codegen.empty() : this.lastRecoveryPoint;
     }
 
@@ -154,7 +154,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -165,7 +165,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="protectedItemDataId")
       private final @Nullable Output<String> protectedItemDataId;
 
-    public Output<String> getProtectedItemDataId() {
+    public Output<String> protectedItemDataId() {
         return this.protectedItemDataId == null ? Codegen.empty() : this.protectedItemDataId;
     }
 
@@ -177,7 +177,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
 
-    public Output<String> getProtectedItemType() {
+    public Output<String> protectedItemType() {
         return this.protectedItemType;
     }
 
@@ -188,7 +188,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectedItemState>> protectionState;
 
-    public Output<Either<String,ProtectedItemState>> getProtectionState() {
+    public Output<Either<String,ProtectedItemState>> protectionState() {
         return this.protectionState == null ? Codegen.empty() : this.protectionState;
     }
 
@@ -199,7 +199,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
+    public Output<String> sourceResourceId() {
         return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
@@ -210,7 +210,7 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
-    public Output<Either<String,DataSourceType>> getWorkloadType() {
+    public Output<Either<String,DataSourceType>> workloadType() {
         return this.workloadType == null ? Codegen.empty() : this.workloadType;
     }
 

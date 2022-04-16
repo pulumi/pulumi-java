@@ -44,7 +44,7 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -58,7 +58,7 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The session content.
      * 
      */
-    public Output</* @Nullable */ Object> getContent() {
+    public Output</* @Nullable */ Object> content() {
         return this.content;
     }
     /**
@@ -72,7 +72,7 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -86,7 +86,7 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -100,7 +100,7 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +128,7 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

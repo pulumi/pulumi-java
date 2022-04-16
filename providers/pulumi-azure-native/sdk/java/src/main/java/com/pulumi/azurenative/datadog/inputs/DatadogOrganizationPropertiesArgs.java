@@ -26,7 +26,7 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
     @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
@@ -37,7 +37,7 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
     @Import(name="applicationKey")
       private final @Nullable Output<String> applicationKey;
 
-    public Output<String> getApplicationKey() {
+    public Output<String> applicationKey() {
         return this.applicationKey == null ? Codegen.empty() : this.applicationKey;
     }
 
@@ -48,7 +48,7 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
     @Import(name="enterpriseAppId")
       private final @Nullable Output<String> enterpriseAppId;
 
-    public Output<String> getEnterpriseAppId() {
+    public Output<String> enterpriseAppId() {
         return this.enterpriseAppId == null ? Codegen.empty() : this.enterpriseAppId;
     }
 
@@ -59,7 +59,7 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
     @Import(name="linkingAuthCode")
       private final @Nullable Output<String> linkingAuthCode;
 
-    public Output<String> getLinkingAuthCode() {
+    public Output<String> linkingAuthCode() {
         return this.linkingAuthCode == null ? Codegen.empty() : this.linkingAuthCode;
     }
 
@@ -70,7 +70,7 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
     @Import(name="linkingClientId")
       private final @Nullable Output<String> linkingClientId;
 
-    public Output<String> getLinkingClientId() {
+    public Output<String> linkingClientId() {
         return this.linkingClientId == null ? Codegen.empty() : this.linkingClientId;
     }
 
@@ -81,7 +81,7 @@ public final class DatadogOrganizationPropertiesArgs extends com.pulumi.resource
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;
 
-    public Output<String> getRedirectUri() {
+    public Output<String> redirectUri() {
         return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
     }
 

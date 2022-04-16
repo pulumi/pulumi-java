@@ -19,7 +19,7 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
     @Import(name="guestConfigurationAssignmentName", required=true)
       private final String guestConfigurationAssignmentName;
 
-    public String getGuestConfigurationAssignmentName() {
+    public String guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
     @Import(name="vmName", required=true)
       private final String vmName;
 
-    public String getVmName() {
+    public String vmName() {
         return this.vmName;
     }
 

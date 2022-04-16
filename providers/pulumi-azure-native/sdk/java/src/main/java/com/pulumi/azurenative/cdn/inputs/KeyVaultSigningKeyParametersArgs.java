@@ -21,7 +21,7 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -32,7 +32,7 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -54,7 +54,7 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="secretVersion", required=true)
       private final Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
+    public Output<String> secretVersion() {
         return this.secretVersion;
     }
 
@@ -65,7 +65,7 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -76,7 +76,7 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 

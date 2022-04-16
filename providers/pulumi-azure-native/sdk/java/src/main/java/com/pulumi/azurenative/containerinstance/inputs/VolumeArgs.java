@@ -30,7 +30,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureFile")
       private final @Nullable Output<AzureFileVolumeArgs> azureFile;
 
-    public Output<AzureFileVolumeArgs> getAzureFile() {
+    public Output<AzureFileVolumeArgs> azureFile() {
         return this.azureFile == null ? Codegen.empty() : this.azureFile;
     }
 
@@ -41,7 +41,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emptyDir")
       private final @Nullable Output<Object> emptyDir;
 
-    public Output<Object> getEmptyDir() {
+    public Output<Object> emptyDir() {
         return this.emptyDir == null ? Codegen.empty() : this.emptyDir;
     }
 
@@ -52,7 +52,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gitRepo")
       private final @Nullable Output<GitRepoVolumeArgs> gitRepo;
 
-    public Output<GitRepoVolumeArgs> getGitRepo() {
+    public Output<GitRepoVolumeArgs> gitRepo() {
         return this.gitRepo == null ? Codegen.empty() : this.gitRepo;
     }
 
@@ -63,7 +63,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -74,7 +74,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<Map<String,String>> secret;
 
-    public Output<Map<String,String>> getSecret() {
+    public Output<Map<String,String>> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 

@@ -19,21 +19,21 @@ public final class RegistryListCredentialsResultResponse extends com.pulumi.reso
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="passwords")
       private final @Nullable List<PasswordResponse> passwords;
 
-    public List<PasswordResponse> getPasswords() {
+    public List<PasswordResponse> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
 
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

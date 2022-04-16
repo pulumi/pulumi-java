@@ -27,7 +27,7 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="faultDomain")
       private final @Nullable Output<Integer> faultDomain;
 
-    public Output<Integer> getFaultDomain() {
+    public Output<Integer> faultDomain() {
         return this.faultDomain == null ? Codegen.empty() : this.faultDomain;
     }
 
@@ -39,7 +39,7 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -50,7 +50,7 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -61,7 +61,7 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="updateDomain")
       private final @Nullable Output<Integer> updateDomain;
 
-    public Output<Integer> getUpdateDomain() {
+    public Output<Integer> updateDomain() {
         return this.updateDomain == null ? Codegen.empty() : this.updateDomain;
     }
 

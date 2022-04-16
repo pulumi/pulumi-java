@@ -21,7 +21,7 @@ public final class RGitHubPackageResponseResponse extends com.pulumi.resources.I
     @Import(name="repository")
       private final @Nullable String repository;
 
-    public Optional<String> getRepository() {
+    public Optional<String> repository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
     }
 

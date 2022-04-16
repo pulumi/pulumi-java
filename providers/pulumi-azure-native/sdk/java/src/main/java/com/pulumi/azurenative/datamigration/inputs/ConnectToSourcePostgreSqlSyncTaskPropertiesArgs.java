@@ -27,7 +27,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends com.p
     @Import(name="input")
       private final @Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
 
-    public Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> getInput() {
+    public Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends com.p
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

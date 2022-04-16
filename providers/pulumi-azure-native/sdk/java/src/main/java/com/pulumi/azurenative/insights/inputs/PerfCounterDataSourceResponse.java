@@ -30,7 +30,7 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="counterSpecifiers")
       private final @Nullable List<String> counterSpecifiers;
 
-    public List<String> getCounterSpecifiers() {
+    public List<String> counterSpecifiers() {
         return this.counterSpecifiers == null ? List.of() : this.counterSpecifiers;
     }
 
@@ -42,7 +42,7 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -53,7 +53,7 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="samplingFrequencyInSeconds")
       private final @Nullable Integer samplingFrequencyInSeconds;
 
-    public Optional<Integer> getSamplingFrequencyInSeconds() {
+    public Optional<Integer> samplingFrequencyInSeconds() {
         return this.samplingFrequencyInSeconds == null ? Optional.empty() : Optional.ofNullable(this.samplingFrequencyInSeconds);
     }
 
@@ -65,7 +65,7 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
     @Import(name="streams")
       private final @Nullable List<String> streams;
 
-    public List<String> getStreams() {
+    public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
 

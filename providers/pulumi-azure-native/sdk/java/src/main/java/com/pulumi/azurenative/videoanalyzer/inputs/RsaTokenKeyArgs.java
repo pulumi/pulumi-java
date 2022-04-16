@@ -27,7 +27,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alg", required=true)
       private final Output<Either<String,AccessPolicyRsaAlgo>> alg;
 
-    public Output<Either<String,AccessPolicyRsaAlgo>> getAlg() {
+    public Output<Either<String,AccessPolicyRsaAlgo>> alg() {
         return this.alg;
     }
 
@@ -38,7 +38,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="e", required=true)
       private final Output<String> e;
 
-    public Output<String> getE() {
+    public Output<String> e() {
         return this.e;
     }
 
@@ -49,7 +49,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kid", required=true)
       private final Output<String> kid;
 
-    public Output<String> getKid() {
+    public Output<String> kid() {
         return this.kid;
     }
 
@@ -60,7 +60,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="n", required=true)
       private final Output<String> n;
 
-    public Output<String> getN() {
+    public Output<String> n() {
         return this.n;
     }
 
@@ -72,7 +72,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

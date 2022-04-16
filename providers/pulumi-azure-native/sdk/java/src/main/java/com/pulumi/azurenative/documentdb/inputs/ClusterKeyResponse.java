@@ -25,7 +25,7 @@ public final class ClusterKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class ClusterKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="orderBy")
       private final @Nullable String orderBy;
 
-    public Optional<String> getOrderBy() {
+    public Optional<String> orderBy() {
         return this.orderBy == null ? Optional.empty() : Optional.ofNullable(this.orderBy);
     }
 

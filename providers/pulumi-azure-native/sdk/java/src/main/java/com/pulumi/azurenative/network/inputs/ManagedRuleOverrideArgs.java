@@ -28,7 +28,7 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="state")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
 
-    public Output<Either<String,ManagedRuleEnabledState>> getState() {
+    public Output<Either<String,ManagedRuleEnabledState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

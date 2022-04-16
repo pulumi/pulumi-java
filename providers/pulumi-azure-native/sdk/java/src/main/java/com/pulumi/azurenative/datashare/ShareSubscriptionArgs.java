@@ -22,7 +22,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -44,7 +44,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="invitationId", required=true)
       private final Output<String> invitationId;
 
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId;
     }
 
@@ -55,7 +55,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="shareSubscriptionName")
       private final @Nullable Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName == null ? Codegen.empty() : this.shareSubscriptionName;
     }
 
@@ -77,7 +77,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceShareLocation", required=true)
       private final Output<String> sourceShareLocation;
 
-    public Output<String> getSourceShareLocation() {
+    public Output<String> sourceShareLocation() {
         return this.sourceShareLocation;
     }
 

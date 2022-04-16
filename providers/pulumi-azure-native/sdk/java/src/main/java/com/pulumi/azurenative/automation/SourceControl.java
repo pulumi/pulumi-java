@@ -43,7 +43,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The auto sync of the source control. Default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoSync() {
+    public Output</* @Nullable */ Boolean> autoSync() {
         return this.autoSync;
     }
     /**
@@ -57,7 +57,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The repo branch of the source control. Include branch as empty string for VsoTfvc.
      * 
      */
-    public Output</* @Nullable */ String> getBranch() {
+    public Output</* @Nullable */ String> branch() {
         return this.branch;
     }
     /**
@@ -71,7 +71,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -85,7 +85,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -99,7 +99,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The folder path of the source control.
      * 
      */
-    public Output</* @Nullable */ String> getFolderPath() {
+    public Output</* @Nullable */ String> folderPath() {
         return this.folderPath;
     }
     /**
@@ -113,7 +113,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -127,7 +127,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +141,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The auto publish of the source control. Default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPublishRunbook() {
+    public Output</* @Nullable */ Boolean> publishRunbook() {
         return this.publishRunbook;
     }
     /**
@@ -155,7 +155,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The repo url of the source control.
      * 
      */
-    public Output</* @Nullable */ String> getRepoUrl() {
+    public Output</* @Nullable */ String> repoUrl() {
         return this.repoUrl;
     }
     /**
@@ -169,7 +169,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The source type. Must be one of VsoGit, VsoTfvc, GitHub.
      * 
      */
-    public Output</* @Nullable */ String> getSourceType() {
+    public Output</* @Nullable */ String> sourceType() {
         return this.sourceType;
     }
     /**
@@ -183,7 +183,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

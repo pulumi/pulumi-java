@@ -25,7 +25,7 @@ public final class BasicLoginInformationResponse extends com.pulumi.resources.In
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

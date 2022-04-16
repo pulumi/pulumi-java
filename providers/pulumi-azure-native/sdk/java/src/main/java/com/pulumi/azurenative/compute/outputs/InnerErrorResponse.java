@@ -34,14 +34,14 @@ public final class InnerErrorResponse {
      * The internal error message or exception dump.
      * 
     */
-    public Optional<String> getErrordetail() {
+    public Optional<String> errordetail() {
         return Optional.ofNullable(this.errordetail);
     }
     /**
      * The exception type.
      * 
     */
-    public Optional<String> getExceptiontype() {
+    public Optional<String> exceptiontype() {
         return Optional.ofNullable(this.exceptiontype);
     }
 

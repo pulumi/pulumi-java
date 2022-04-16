@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesResponseTeams extends com.pulumi.
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

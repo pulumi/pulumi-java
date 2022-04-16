@@ -25,7 +25,7 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
     @Import(name="channelAccessToken")
       private final @Nullable String channelAccessToken;
 
-    public Optional<String> getChannelAccessToken() {
+    public Optional<String> channelAccessToken() {
         return this.channelAccessToken == null ? Optional.empty() : Optional.ofNullable(this.channelAccessToken);
     }
 
@@ -36,7 +36,7 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
     @Import(name="channelSecret")
       private final @Nullable String channelSecret;
 
-    public Optional<String> getChannelSecret() {
+    public Optional<String> channelSecret() {
         return this.channelSecret == null ? Optional.empty() : Optional.ofNullable(this.channelSecret);
     }
 
@@ -47,7 +47,7 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
     @Import(name="generatedId", required=true)
       private final String generatedId;
 
-    public String getGeneratedId() {
+    public String generatedId() {
         return this.generatedId;
     }
 

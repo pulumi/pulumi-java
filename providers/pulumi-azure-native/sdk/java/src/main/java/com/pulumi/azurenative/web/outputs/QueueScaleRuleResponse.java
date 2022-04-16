@@ -44,21 +44,21 @@ public final class QueueScaleRuleResponse {
      * Authentication secrets for the queue scale rule.
      * 
     */
-    public List<ScaleRuleAuthResponse> getAuth() {
+    public List<ScaleRuleAuthResponse> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
      * Queue length.
      * 
     */
-    public Optional<Integer> getQueueLength() {
+    public Optional<Integer> queueLength() {
         return Optional.ofNullable(this.queueLength);
     }
     /**
      * Queue name.
      * 
     */
-    public Optional<String> getQueueName() {
+    public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
 

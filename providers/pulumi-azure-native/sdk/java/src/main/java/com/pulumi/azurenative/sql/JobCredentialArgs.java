@@ -22,7 +22,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
 
-    public Output<String> getCredentialName() {
+    public Output<String> credentialName() {
         return this.credentialName == null ? Codegen.empty() : this.credentialName;
     }
 
@@ -33,7 +33,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
 
-    public Output<String> getJobAgentName() {
+    public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
 
@@ -44,7 +44,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -55,7 +55,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -77,7 +77,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

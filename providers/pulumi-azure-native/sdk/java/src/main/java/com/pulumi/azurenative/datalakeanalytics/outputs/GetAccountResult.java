@@ -267,238 +267,238 @@ public final class GetAccountResult {
      * The unique identifier associated with this Data Lake Analytics account.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * The list of compute policies associated with this account.
      * 
     */
-    public List<ComputePolicyResponse> getComputePolicies() {
+    public List<ComputePolicyResponse> computePolicies() {
         return this.computePolicies;
     }
     /**
      * The account creation time.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * The commitment tier in use for the current month.
      * 
     */
-    public String getCurrentTier() {
+    public String currentTier() {
         return this.currentTier;
     }
     /**
      * The list of Data Lake Store accounts associated with this account.
      * 
     */
-    public List<DataLakeStoreAccountInformationResponse> getDataLakeStoreAccounts() {
+    public List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
     /**
      * The current state of the DebugDataAccessLevel for this account.
      * 
     */
-    public String getDebugDataAccessLevel() {
+    public String debugDataAccessLevel() {
         return this.debugDataAccessLevel;
     }
     /**
      * The default Data Lake Store account associated with this account.
      * 
     */
-    public String getDefaultDataLakeStoreAccount() {
+    public String defaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
     /**
      * The full CName endpoint for this account.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
     */
-    public Optional<String> getFirewallAllowAzureIps() {
+    public Optional<String> firewallAllowAzureIps() {
         return Optional.ofNullable(this.firewallAllowAzureIps);
     }
     /**
      * The list of firewall rules associated with this account.
      * 
     */
-    public List<FirewallRuleResponse> getFirewallRules() {
+    public List<FirewallRuleResponse> firewallRules() {
         return this.firewallRules;
     }
     /**
      * The current state of the IP address firewall for this account.
      * 
     */
-    public Optional<String> getFirewallState() {
+    public Optional<String> firewallState() {
         return Optional.ofNullable(this.firewallState);
     }
     /**
      * The list of hiveMetastores associated with this account.
      * 
     */
-    public List<HiveMetastoreResponse> getHiveMetastores() {
+    public List<HiveMetastoreResponse> hiveMetastores() {
         return this.hiveMetastores;
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The account last modified time.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The maximum supported active jobs under the account at the same time.
      * 
     */
-    public Integer getMaxActiveJobCountPerUser() {
+    public Integer maxActiveJobCountPerUser() {
         return this.maxActiveJobCountPerUser;
     }
     /**
      * The maximum supported degree of parallelism for this account.
      * 
     */
-    public Optional<Integer> getMaxDegreeOfParallelism() {
+    public Optional<Integer> maxDegreeOfParallelism() {
         return Optional.ofNullable(this.maxDegreeOfParallelism);
     }
     /**
      * The maximum supported degree of parallelism per job for this account.
      * 
     */
-    public Optional<Integer> getMaxDegreeOfParallelismPerJob() {
+    public Optional<Integer> maxDegreeOfParallelismPerJob() {
         return Optional.ofNullable(this.maxDegreeOfParallelismPerJob);
     }
     /**
      * The maximum supported jobs running under the account at the same time.
      * 
     */
-    public Optional<Integer> getMaxJobCount() {
+    public Optional<Integer> maxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
     /**
      * The maximum supported active jobs under the account at the same time.
      * 
     */
-    public Integer getMaxJobRunningTimeInMin() {
+    public Integer maxJobRunningTimeInMin() {
         return this.maxJobRunningTimeInMin;
     }
     /**
      * The maximum supported jobs queued under the account at the same time.
      * 
     */
-    public Integer getMaxQueuedJobCountPerUser() {
+    public Integer maxQueuedJobCountPerUser() {
         return this.maxQueuedJobCountPerUser;
     }
     /**
      * The minimum supported priority per job for this account.
      * 
     */
-    public Integer getMinPriorityPerJob() {
+    public Integer minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The commitment tier for the next month.
      * 
     */
-    public Optional<String> getNewTier() {
+    public Optional<String> newTier() {
         return Optional.ofNullable(this.newTier);
     }
     /**
      * The provisioning status of the Data Lake Analytics account.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of Data Lake Store accounts associated with this account.
      * 
     */
-    public List<DataLakeStoreAccountInformationResponse> getPublicDataLakeStoreAccounts() {
+    public List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts() {
         return this.publicDataLakeStoreAccounts == null ? List.of() : this.publicDataLakeStoreAccounts;
     }
     /**
      * The number of days that job metadata is retained.
      * 
     */
-    public Optional<Integer> getQueryStoreRetention() {
+    public Optional<Integer> queryStoreRetention() {
         return Optional.ofNullable(this.queryStoreRetention);
     }
     /**
      * The state of the Data Lake Analytics account.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The list of Azure Blob Storage accounts associated with this account.
      * 
     */
-    public List<StorageAccountInformationResponse> getStorageAccounts() {
+    public List<StorageAccountInformationResponse> storageAccounts() {
         return this.storageAccounts;
     }
     /**
      * The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
      * 
     */
-    public Integer getSystemMaxDegreeOfParallelism() {
+    public Integer systemMaxDegreeOfParallelism() {
         return this.systemMaxDegreeOfParallelism;
     }
     /**
      * The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
      * 
     */
-    public Integer getSystemMaxJobCount() {
+    public Integer systemMaxJobCount() {
         return this.systemMaxJobCount;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The list of virtualNetwork rules associated with this account.
      * 
     */
-    public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
+    public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules;
     }
 

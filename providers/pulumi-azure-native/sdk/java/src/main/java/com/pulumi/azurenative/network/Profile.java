@@ -47,7 +47,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The list of allowed endpoint record types.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAllowedEndpointRecordTypes() {
+    public Output</* @Nullable */ List<String>> allowedEndpointRecordTypes() {
         return this.allowedEndpointRecordTypes;
     }
     /**
@@ -61,7 +61,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The DNS settings of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ DnsConfigResponse> getDnsConfig() {
+    public Output</* @Nullable */ DnsConfigResponse> dnsConfig() {
         return this.dnsConfig;
     }
     /**
@@ -75,7 +75,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The list of endpoints in the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ List<EndpointResponse>> getEndpoints() {
+    public Output</* @Nullable */ List<EndpointResponse>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -89,7 +89,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -103,7 +103,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Maximum number of endpoints to be returned for MultiValue routing type.
      * 
      */
-    public Output</* @Nullable */ Double> getMaxReturn() {
+    public Output</* @Nullable */ Double> maxReturn() {
         return this.maxReturn;
     }
     /**
@@ -117,7 +117,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The endpoint monitoring settings of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ MonitorConfigResponse> getMonitorConfig() {
+    public Output</* @Nullable */ MonitorConfigResponse> monitorConfig() {
         return this.monitorConfig;
     }
     /**
@@ -131,7 +131,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -145,7 +145,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The status of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ String> getProfileStatus() {
+    public Output</* @Nullable */ String> profileStatus() {
         return this.profileStatus;
     }
     /**
@@ -159,7 +159,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -173,7 +173,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The traffic routing method of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ String> getTrafficRoutingMethod() {
+    public Output</* @Nullable */ String> trafficRoutingMethod() {
         return this.trafficRoutingMethod;
     }
     /**
@@ -187,7 +187,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
-    public Output</* @Nullable */ String> getTrafficViewEnrollmentStatus() {
+    public Output</* @Nullable */ String> trafficViewEnrollmentStatus() {
         return this.trafficViewEnrollmentStatus;
     }
     /**
@@ -201,7 +201,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

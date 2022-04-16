@@ -26,7 +26,7 @@ public final class RecommendedMachineConfigurationArgs extends com.pulumi.resour
     @Import(name="memory")
       private final @Nullable Output<ResourceRangeArgs> memory;
 
-    public Output<ResourceRangeArgs> getMemory() {
+    public Output<ResourceRangeArgs> memory() {
         return this.memory == null ? Codegen.empty() : this.memory;
     }
 
@@ -37,7 +37,7 @@ public final class RecommendedMachineConfigurationArgs extends com.pulumi.resour
     @Import(name="vCPUs")
       private final @Nullable Output<ResourceRangeArgs> vCPUs;
 
-    public Output<ResourceRangeArgs> getVCPUs() {
+    public Output<ResourceRangeArgs> vCPUs() {
         return this.vCPUs == null ? Codegen.empty() : this.vCPUs;
     }
 

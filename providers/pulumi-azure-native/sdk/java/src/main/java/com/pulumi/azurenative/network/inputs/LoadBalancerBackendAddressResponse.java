@@ -26,7 +26,7 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -37,7 +37,7 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="loadBalancerFrontendIPConfiguration")
       private final @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
 
-    public Optional<SubResourceResponse> getLoadBalancerFrontendIPConfiguration() {
+    public Optional<SubResourceResponse> loadBalancerFrontendIPConfiguration() {
         return this.loadBalancerFrontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
     }
 
@@ -48,7 +48,7 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="networkInterfaceIPConfiguration", required=true)
       private final SubResourceResponse networkInterfaceIPConfiguration;
 
-    public SubResourceResponse getNetworkInterfaceIPConfiguration() {
+    public SubResourceResponse networkInterfaceIPConfiguration() {
         return this.networkInterfaceIPConfiguration;
     }
 
@@ -70,7 +70,7 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -81,7 +81,7 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="virtualNetwork")
       private final @Nullable SubResourceResponse virtualNetwork;
 
-    public Optional<SubResourceResponse> getVirtualNetwork() {
+    public Optional<SubResourceResponse> virtualNetwork() {
         return this.virtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.virtualNetwork);
     }
 

@@ -19,7 +19,7 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
     @Import(name="dnsServiceId", required=true)
       private final String dnsServiceId;
 
-    public String getDnsServiceId() {
+    public String dnsServiceId() {
         return this.dnsServiceId;
     }
 
@@ -30,7 +30,7 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -50,14 +50,14 @@ public final class StaticDeliveryAttributeMappingResponse {
      * Boolean flag to tell if the attribute contains sensitive information .
      * 
     */
-    public Optional<Boolean> getIsSecret() {
+    public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
      * Name of the delivery attribute or header.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -65,14 +65,14 @@ public final class StaticDeliveryAttributeMappingResponse {
      * Expected value is 'Static'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value of the delivery attribute.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

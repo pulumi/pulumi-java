@@ -23,7 +23,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="functionAppName")
       private final @Nullable Output<String> functionAppName;
 
-    public Output<String> getFunctionAppName() {
+    public Output<String> functionAppName() {
         return this.functionAppName == null ? Codegen.empty() : this.functionAppName;
     }
 
@@ -34,7 +34,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="functionAppRegion")
       private final @Nullable Output<String> functionAppRegion;
 
-    public Output<String> getFunctionAppRegion() {
+    public Output<String> functionAppRegion() {
         return this.functionAppRegion == null ? Codegen.empty() : this.functionAppRegion;
     }
 
@@ -45,7 +45,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="functionAppResourceId")
       private final @Nullable Output<String> functionAppResourceId;
 
-    public Output<String> getFunctionAppResourceId() {
+    public Output<String> functionAppResourceId() {
         return this.functionAppResourceId == null ? Codegen.empty() : this.functionAppResourceId;
     }
 
@@ -56,7 +56,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="isForced")
       private final @Nullable Output<Boolean> isForced;
 
-    public Output<Boolean> getIsForced() {
+    public Output<Boolean> isForced() {
         return this.isForced == null ? Codegen.empty() : this.isForced;
     }
 
@@ -67,7 +67,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -78,7 +78,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -89,7 +89,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -128,98 +128,98 @@ public final class GetOpenShiftClusterResult {
      * The cluster API server profile.
      * 
     */
-    public Optional<APIServerProfileResponse> getApiserverProfile() {
+    public Optional<APIServerProfileResponse> apiserverProfile() {
         return Optional.ofNullable(this.apiserverProfile);
     }
     /**
      * The cluster profile.
      * 
     */
-    public Optional<ClusterProfileResponse> getClusterProfile() {
+    public Optional<ClusterProfileResponse> clusterProfile() {
         return Optional.ofNullable(this.clusterProfile);
     }
     /**
      * The console profile.
      * 
     */
-    public Optional<ConsoleProfileResponse> getConsoleProfile() {
+    public Optional<ConsoleProfileResponse> consoleProfile() {
         return Optional.ofNullable(this.consoleProfile);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The cluster ingress profiles.
      * 
     */
-    public List<IngressProfileResponse> getIngressProfiles() {
+    public List<IngressProfileResponse> ingressProfiles() {
         return this.ingressProfiles == null ? List.of() : this.ingressProfiles;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The cluster master profile.
      * 
     */
-    public Optional<MasterProfileResponse> getMasterProfile() {
+    public Optional<MasterProfileResponse> masterProfile() {
         return Optional.ofNullable(this.masterProfile);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The cluster network profile.
      * 
     */
-    public Optional<NetworkProfileResponse> getNetworkProfile() {
+    public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * The cluster provisioning state (immutable).
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The cluster service principal profile.
      * 
     */
-    public Optional<ServicePrincipalProfileResponse> getServicePrincipalProfile() {
+    public Optional<ServicePrincipalProfileResponse> servicePrincipalProfile() {
         return Optional.ofNullable(this.servicePrincipalProfile);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The cluster worker profiles.
      * 
     */
-    public List<WorkerProfileResponse> getWorkerProfiles() {
+    public List<WorkerProfileResponse> workerProfiles() {
         return this.workerProfiles == null ? List.of() : this.workerProfiles;
     }
 

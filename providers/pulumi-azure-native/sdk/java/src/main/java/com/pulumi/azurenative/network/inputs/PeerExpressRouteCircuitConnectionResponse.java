@@ -26,7 +26,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
@@ -37,7 +37,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="authResourceGuid")
       private final @Nullable String authResourceGuid;
 
-    public Optional<String> getAuthResourceGuid() {
+    public Optional<String> authResourceGuid() {
         return this.authResourceGuid == null ? Optional.empty() : Optional.ofNullable(this.authResourceGuid);
     }
 
@@ -48,7 +48,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="circuitConnectionStatus", required=true)
       private final String circuitConnectionStatus;
 
-    public String getCircuitConnectionStatus() {
+    public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
 
@@ -59,7 +59,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="connectionName")
       private final @Nullable String connectionName;
 
-    public Optional<String> getConnectionName() {
+    public Optional<String> connectionName() {
         return this.connectionName == null ? Optional.empty() : Optional.ofNullable(this.connectionName);
     }
 
@@ -70,7 +70,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -81,7 +81,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="expressRouteCircuitPeering")
       private final @Nullable SubResourceResponse expressRouteCircuitPeering;
 
-    public Optional<SubResourceResponse> getExpressRouteCircuitPeering() {
+    public Optional<SubResourceResponse> expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.expressRouteCircuitPeering);
     }
 
@@ -92,7 +92,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -103,7 +103,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -114,7 +114,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="peerExpressRouteCircuitPeering")
       private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
 
-    public Optional<SubResourceResponse> getPeerExpressRouteCircuitPeering() {
+    public Optional<SubResourceResponse> peerExpressRouteCircuitPeering() {
         return this.peerExpressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
 
@@ -125,7 +125,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -136,7 +136,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

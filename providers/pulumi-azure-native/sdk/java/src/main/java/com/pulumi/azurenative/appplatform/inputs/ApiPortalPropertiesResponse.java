@@ -30,7 +30,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="gatewayIds")
       private final @Nullable List<String> gatewayIds;
 
-    public List<String> getGatewayIds() {
+    public List<String> gatewayIds() {
         return this.gatewayIds == null ? List.of() : this.gatewayIds;
     }
 
@@ -41,7 +41,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="httpsOnly")
       private final @Nullable Boolean httpsOnly;
 
-    public Optional<Boolean> getHttpsOnly() {
+    public Optional<Boolean> httpsOnly() {
         return this.httpsOnly == null ? Optional.empty() : Optional.ofNullable(this.httpsOnly);
     }
 
@@ -52,7 +52,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="instances", required=true)
       private final List<ApiPortalInstanceResponse> instances;
 
-    public List<ApiPortalInstanceResponse> getInstances() {
+    public List<ApiPortalInstanceResponse> instances() {
         return this.instances;
     }
 
@@ -63,7 +63,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -74,7 +74,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="public")
       private final @Nullable Boolean public_;
 
-    public Optional<Boolean> getPublic_() {
+    public Optional<Boolean> public_() {
         return this.public_ == null ? Optional.empty() : Optional.ofNullable(this.public_);
     }
 
@@ -85,7 +85,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="resourceRequests", required=true)
       private final ApiPortalResourceRequestsResponse resourceRequests;
 
-    public ApiPortalResourceRequestsResponse getResourceRequests() {
+    public ApiPortalResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
 
@@ -96,7 +96,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="sourceUrls")
       private final @Nullable List<String> sourceUrls;
 
-    public List<String> getSourceUrls() {
+    public List<String> sourceUrls() {
         return this.sourceUrls == null ? List.of() : this.sourceUrls;
     }
 
@@ -107,7 +107,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="ssoProperties")
       private final @Nullable SsoPropertiesResponse ssoProperties;
 
-    public Optional<SsoPropertiesResponse> getSsoProperties() {
+    public Optional<SsoPropertiesResponse> ssoProperties() {
         return this.ssoProperties == null ? Optional.empty() : Optional.ofNullable(this.ssoProperties);
     }
 
@@ -118,7 +118,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

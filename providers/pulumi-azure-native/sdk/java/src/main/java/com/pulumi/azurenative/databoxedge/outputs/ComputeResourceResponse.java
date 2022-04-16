@@ -33,14 +33,14 @@ public final class ComputeResourceResponse {
      * Memory in GB
      * 
     */
-    public Double getMemoryInGB() {
+    public Double memoryInGB() {
         return this.memoryInGB;
     }
     /**
      * Processor count
      * 
     */
-    public Integer getProcessorCount() {
+    public Integer processorCount() {
         return this.processorCount;
     }
 

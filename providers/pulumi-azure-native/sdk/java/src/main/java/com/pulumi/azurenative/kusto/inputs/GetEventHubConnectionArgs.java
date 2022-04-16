@@ -19,7 +19,7 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -41,7 +41,7 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
     @Import(name="eventHubConnectionName", required=true)
       private final String eventHubConnectionName;
 
-    public String getEventHubConnectionName() {
+    public String eventHubConnectionName() {
         return this.eventHubConnectionName;
     }
 
@@ -52,7 +52,7 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

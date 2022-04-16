@@ -51,28 +51,28 @@ public final class ScaleRuleResponse {
      * Azure Queue based scaling.
      * 
     */
-    public Optional<QueueScaleRuleResponse> getAzureQueue() {
+    public Optional<QueueScaleRuleResponse> azureQueue() {
         return Optional.ofNullable(this.azureQueue);
     }
     /**
      * Custom scale rule.
      * 
     */
-    public Optional<CustomScaleRuleResponse> getCustom() {
+    public Optional<CustomScaleRuleResponse> custom() {
         return Optional.ofNullable(this.custom);
     }
     /**
      * HTTP requests based scaling.
      * 
     */
-    public Optional<HttpScaleRuleResponse> getHttp() {
+    public Optional<HttpScaleRuleResponse> http() {
         return Optional.ofNullable(this.http);
     }
     /**
      * Scale Rule Name
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

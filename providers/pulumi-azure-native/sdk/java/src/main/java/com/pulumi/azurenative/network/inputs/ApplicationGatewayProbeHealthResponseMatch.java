@@ -26,7 +26,7 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends com.pulumi
     @Import(name="body")
       private final @Nullable String body;
 
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends com.pulumi
     @Import(name="statusCodes")
       private final @Nullable List<String> statusCodes;
 
-    public List<String> getStatusCodes() {
+    public List<String> statusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
 

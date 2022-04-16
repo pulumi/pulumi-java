@@ -27,7 +27,7 @@ public final class ReliableCollectionsRefArgs extends com.pulumi.resources.Resou
     @Import(name="doNotPersistState")
       private final @Nullable Output<Boolean> doNotPersistState;
 
-    public Output<Boolean> getDoNotPersistState() {
+    public Output<Boolean> doNotPersistState() {
         return this.doNotPersistState == null ? Codegen.empty() : this.doNotPersistState;
     }
 
@@ -38,7 +38,7 @@ public final class ReliableCollectionsRefArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

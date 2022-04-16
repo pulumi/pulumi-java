@@ -35,14 +35,14 @@ public final class ParentPropertiesResponse {
      * The resource ID of the parent to which the connected registry will be associated.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The sync properties of the connected registry with its parent.
      * 
     */
-    public SyncPropertiesResponse getSyncProperties() {
+    public SyncPropertiesResponse syncProperties() {
         return this.syncProperties;
     }
 

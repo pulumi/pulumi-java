@@ -19,7 +19,7 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectionName", required=true)
       private final String connectionName;
 
-    public String getConnectionName() {
+    public String connectionName() {
         return this.connectionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="gatewayName", required=true)
       private final String gatewayName;
 
-    public String getGatewayName() {
+    public String gatewayName() {
         return this.gatewayName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

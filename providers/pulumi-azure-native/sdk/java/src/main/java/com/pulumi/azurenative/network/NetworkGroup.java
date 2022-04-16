@@ -44,7 +44,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Network group conditional filter.
      * 
      */
-    public Output</* @Nullable */ String> getConditionalMembership() {
+    public Output</* @Nullable */ String> conditionalMembership() {
         return this.conditionalMembership;
     }
     /**
@@ -58,7 +58,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return A description of the network group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return A friendly name for the network group.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -86,7 +86,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -100,7 +100,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Group members of network group.
      * 
      */
-    public Output</* @Nullable */ List<GroupMembersItemResponse>> getGroupMembers() {
+    public Output</* @Nullable */ List<GroupMembersItemResponse>> groupMembers() {
         return this.groupMembers;
     }
     /**
@@ -114,7 +114,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Group member type.
      * 
      */
-    public Output</* @Nullable */ String> getMemberType() {
+    public Output</* @Nullable */ String> memberType() {
         return this.memberType;
     }
     /**
@@ -128,7 +128,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +142,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the scope assignment resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -156,7 +156,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -170,7 +170,7 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

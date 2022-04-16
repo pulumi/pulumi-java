@@ -30,7 +30,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="computeType", required=true)
       private final String computeType;
 
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
 
@@ -41,7 +41,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="deploymentType")
       private final @Nullable String deploymentType;
 
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
@@ -52,7 +52,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -63,7 +63,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="error", required=true)
       private final ServiceResponseBaseResponseError error;
 
-    public ServiceResponseBaseResponseError getError() {
+    public ServiceResponseBaseResponseError error() {
         return this.error;
     }
 
@@ -74,7 +74,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="isDefault")
       private final @Nullable Boolean isDefault;
 
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
     }
 
@@ -85,7 +85,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
 
-    public Map<String,String> getKvTags() {
+    public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
 
@@ -96,7 +96,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -107,7 +107,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -118,7 +118,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="trafficPercentile")
       private final @Nullable Double trafficPercentile;
 
-    public Optional<Double> getTrafficPercentile() {
+    public Optional<Double> trafficPercentile() {
         return this.trafficPercentile == null ? Optional.empty() : Optional.ofNullable(this.trafficPercentile);
     }
 
@@ -129,7 +129,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

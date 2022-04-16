@@ -19,7 +19,7 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="exportPipelineName", required=true)
       private final String exportPipelineName;
 
-    public String getExportPipelineName() {
+    public String exportPipelineName() {
         return this.exportPipelineName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -64,42 +64,42 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
      * 
     */
-    public List<String> getAssignableScopes() {
+    public List<String> assignableScopes() {
         return this.assignableScopes == null ? List.of() : this.assignableScopes;
     }
     /**
      * The unique resource identifier of the database account.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The set of operations allowed through this Role Definition.
      * 
     */
-    public List<PermissionResponse> getPermissions() {
+    public List<PermissionResponse> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
     */
-    public Optional<String> getRoleName() {
+    public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * The type of Azure resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

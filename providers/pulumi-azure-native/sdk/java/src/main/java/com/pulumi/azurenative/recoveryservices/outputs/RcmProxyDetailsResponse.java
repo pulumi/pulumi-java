@@ -62,42 +62,42 @@ public final class RcmProxyDetailsResponse {
      * The health of the RCM proxy.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * The health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
      * The RCM proxy Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last heartbeat received from the RCM proxy.
      * 
     */
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
      * The RCM proxy name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The RCM proxy version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

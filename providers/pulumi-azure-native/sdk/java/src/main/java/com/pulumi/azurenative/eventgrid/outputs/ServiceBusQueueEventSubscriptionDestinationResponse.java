@@ -36,14 +36,14 @@ public final class ServiceBusQueueEventSubscriptionDestinationResponse {
      * Expected value is 'ServiceBusQueue'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

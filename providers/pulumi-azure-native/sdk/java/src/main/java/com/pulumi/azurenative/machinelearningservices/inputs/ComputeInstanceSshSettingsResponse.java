@@ -26,7 +26,7 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="adminPublicKey")
       private final @Nullable String adminPublicKey;
 
-    public Optional<String> getAdminPublicKey() {
+    public Optional<String> adminPublicKey() {
         return this.adminPublicKey == null ? Optional.empty() : Optional.ofNullable(this.adminPublicKey);
     }
 
@@ -37,7 +37,7 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="adminUserName", required=true)
       private final String adminUserName;
 
-    public String getAdminUserName() {
+    public String adminUserName() {
         return this.adminUserName;
     }
 
@@ -48,7 +48,7 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="sshPort", required=true)
       private final Integer sshPort;
 
-    public Integer getSshPort() {
+    public Integer sshPort() {
         return this.sshPort;
     }
 
@@ -59,7 +59,7 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="sshPublicAccess")
       private final @Nullable String sshPublicAccess;
 
-    public Optional<String> getSshPublicAccess() {
+    public Optional<String> sshPublicAccess() {
         return this.sshPublicAccess == null ? Optional.empty() : Optional.ofNullable(this.sshPublicAccess);
     }
 

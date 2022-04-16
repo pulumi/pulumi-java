@@ -26,7 +26,7 @@ public final class DataFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinations")
       private final @Nullable List<String> destinations;
 
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
 
@@ -37,7 +37,7 @@ public final class DataFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="streams")
       private final @Nullable List<String> streams;
 
-    public List<String> getStreams() {
+    public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
 

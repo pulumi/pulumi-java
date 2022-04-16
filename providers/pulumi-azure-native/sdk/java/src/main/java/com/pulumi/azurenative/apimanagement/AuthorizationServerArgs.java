@@ -30,7 +30,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -41,7 +41,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationMethods")
       private final @Nullable Output<List<AuthorizationMethod>> authorizationMethods;
 
-    public Output<List<AuthorizationMethod>> getAuthorizationMethods() {
+    public Output<List<AuthorizationMethod>> authorizationMethods() {
         return this.authorizationMethods == null ? Codegen.empty() : this.authorizationMethods;
     }
 
@@ -52,7 +52,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="authsid")
       private final @Nullable Output<String> authsid;
 
-    public Output<String> getAuthsid() {
+    public Output<String> authsid() {
         return this.authsid == null ? Codegen.empty() : this.authsid;
     }
 
@@ -63,7 +63,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="bearerTokenSendingMethods")
       private final @Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
 
-    public Output<List<Either<String,BearerTokenSendingMethod>>> getBearerTokenSendingMethods() {
+    public Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? Codegen.empty() : this.bearerTokenSendingMethods;
     }
 
@@ -74,7 +74,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientAuthenticationMethod")
       private final @Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
 
-    public Output<List<Either<String,ClientAuthenticationMethod>>> getClientAuthenticationMethod() {
+    public Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod() {
         return this.clientAuthenticationMethod == null ? Codegen.empty() : this.clientAuthenticationMethod;
     }
 
@@ -85,7 +85,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -96,7 +96,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientRegistrationEndpoint", required=true)
       private final Output<String> clientRegistrationEndpoint;
 
-    public Output<String> getClientRegistrationEndpoint() {
+    public Output<String> clientRegistrationEndpoint() {
         return this.clientRegistrationEndpoint;
     }
 
@@ -107,7 +107,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -118,7 +118,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="defaultScope")
       private final @Nullable Output<String> defaultScope;
 
-    public Output<String> getDefaultScope() {
+    public Output<String> defaultScope() {
         return this.defaultScope == null ? Codegen.empty() : this.defaultScope;
     }
 
@@ -129,7 +129,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -140,7 +140,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -151,7 +151,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="grantTypes", required=true)
       private final Output<List<Either<String,GrantType>>> grantTypes;
 
-    public Output<List<Either<String,GrantType>>> getGrantTypes() {
+    public Output<List<Either<String,GrantType>>> grantTypes() {
         return this.grantTypes;
     }
 
@@ -162,7 +162,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -173,7 +173,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceOwnerPassword")
       private final @Nullable Output<String> resourceOwnerPassword;
 
-    public Output<String> getResourceOwnerPassword() {
+    public Output<String> resourceOwnerPassword() {
         return this.resourceOwnerPassword == null ? Codegen.empty() : this.resourceOwnerPassword;
     }
 
@@ -184,7 +184,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceOwnerUsername")
       private final @Nullable Output<String> resourceOwnerUsername;
 
-    public Output<String> getResourceOwnerUsername() {
+    public Output<String> resourceOwnerUsername() {
         return this.resourceOwnerUsername == null ? Codegen.empty() : this.resourceOwnerUsername;
     }
 
@@ -195,7 +195,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -206,7 +206,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="supportState")
       private final @Nullable Output<Boolean> supportState;
 
-    public Output<Boolean> getSupportState() {
+    public Output<Boolean> supportState() {
         return this.supportState == null ? Codegen.empty() : this.supportState;
     }
 
@@ -217,7 +217,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="tokenBodyParameters")
       private final @Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
 
-    public Output<List<TokenBodyParameterContractArgs>> getTokenBodyParameters() {
+    public Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters() {
         return this.tokenBodyParameters == null ? Codegen.empty() : this.tokenBodyParameters;
     }
 
@@ -228,7 +228,7 @@ public final class AuthorizationServerArgs extends com.pulumi.resources.Resource
     @Import(name="tokenEndpoint")
       private final @Nullable Output<String> tokenEndpoint;
 
-    public Output<String> getTokenEndpoint() {
+    public Output<String> tokenEndpoint() {
         return this.tokenEndpoint == null ? Codegen.empty() : this.tokenEndpoint;
     }
 

@@ -65,42 +65,42 @@ public final class IntegrationRuntimeComputePropertiesResponse {
      * Data flow properties for managed integration runtime.
      * 
     */
-    public Optional<IntegrationRuntimeDataFlowPropertiesResponse> getDataFlowProperties() {
+    public Optional<IntegrationRuntimeDataFlowPropertiesResponse> dataFlowProperties() {
         return Optional.ofNullable(this.dataFlowProperties);
     }
     /**
      * The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Maximum parallel executions count per node for managed integration runtime.
      * 
     */
-    public Optional<Integer> getMaxParallelExecutionsPerNode() {
+    public Optional<Integer> maxParallelExecutionsPerNode() {
         return Optional.ofNullable(this.maxParallelExecutionsPerNode);
     }
     /**
      * The node size requirement to managed integration runtime.
      * 
     */
-    public Optional<String> getNodeSize() {
+    public Optional<String> nodeSize() {
         return Optional.ofNullable(this.nodeSize);
     }
     /**
      * The required number of nodes for managed integration runtime.
      * 
     */
-    public Optional<Integer> getNumberOfNodes() {
+    public Optional<Integer> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
     /**
      * VNet properties for managed integration runtime.
      * 
     */
-    public Optional<IntegrationRuntimeVNetPropertiesResponse> getVNetProperties() {
+    public Optional<IntegrationRuntimeVNetPropertiesResponse> vNetProperties() {
         return Optional.ofNullable(this.vNetProperties);
     }
 

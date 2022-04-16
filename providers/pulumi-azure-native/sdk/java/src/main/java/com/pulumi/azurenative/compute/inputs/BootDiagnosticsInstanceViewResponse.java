@@ -24,7 +24,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     @Import(name="consoleScreenshotBlobUri", required=true)
       private final String consoleScreenshotBlobUri;
 
-    public String getConsoleScreenshotBlobUri() {
+    public String consoleScreenshotBlobUri() {
         return this.consoleScreenshotBlobUri;
     }
 
@@ -35,7 +35,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     @Import(name="serialConsoleLogBlobUri", required=true)
       private final String serialConsoleLogBlobUri;
 
-    public String getSerialConsoleLogBlobUri() {
+    public String serialConsoleLogBlobUri() {
         return this.serialConsoleLogBlobUri;
     }
 
@@ -46,7 +46,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     @Import(name="status", required=true)
       private final InstanceViewStatusResponse status;
 
-    public InstanceViewStatusResponse getStatus() {
+    public InstanceViewStatusResponse status() {
         return this.status;
     }
 

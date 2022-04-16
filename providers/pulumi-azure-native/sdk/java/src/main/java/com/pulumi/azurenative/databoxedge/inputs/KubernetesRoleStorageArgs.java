@@ -27,7 +27,7 @@ public final class KubernetesRoleStorageArgs extends com.pulumi.resources.Resour
     @Import(name="endpoints")
       private final @Nullable Output<List<MountPointMapArgs>> endpoints;
 
-    public Output<List<MountPointMapArgs>> getEndpoints() {
+    public Output<List<MountPointMapArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 

@@ -30,7 +30,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="httpConfiguration")
       private final @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
 
-    public Optional<ConnectionMonitorHttpConfigurationResponse> getHttpConfiguration() {
+    public Optional<ConnectionMonitorHttpConfigurationResponse> httpConfiguration() {
         return this.httpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.httpConfiguration);
     }
 
@@ -41,7 +41,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="icmpConfiguration")
       private final @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
 
-    public Optional<ConnectionMonitorIcmpConfigurationResponse> getIcmpConfiguration() {
+    public Optional<ConnectionMonitorIcmpConfigurationResponse> icmpConfiguration() {
         return this.icmpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.icmpConfiguration);
     }
 
@@ -52,7 +52,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="preferredIPVersion")
       private final @Nullable String preferredIPVersion;
 
-    public Optional<String> getPreferredIPVersion() {
+    public Optional<String> preferredIPVersion() {
         return this.preferredIPVersion == null ? Optional.empty() : Optional.ofNullable(this.preferredIPVersion);
     }
 
@@ -74,7 +74,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -85,7 +85,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="successThreshold")
       private final @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
 
-    public Optional<ConnectionMonitorSuccessThresholdResponse> getSuccessThreshold() {
+    public Optional<ConnectionMonitorSuccessThresholdResponse> successThreshold() {
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
     }
 
@@ -96,7 +96,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="tcpConfiguration")
       private final @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
 
-    public Optional<ConnectionMonitorTcpConfigurationResponse> getTcpConfiguration() {
+    public Optional<ConnectionMonitorTcpConfigurationResponse> tcpConfiguration() {
         return this.tcpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.tcpConfiguration);
     }
 
@@ -107,7 +107,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
     @Import(name="testFrequencySec")
       private final @Nullable Integer testFrequencySec;
 
-    public Optional<Integer> getTestFrequencySec() {
+    public Optional<Integer> testFrequencySec() {
         return this.testFrequencySec == null ? Optional.empty() : Optional.ofNullable(this.testFrequencySec);
     }
 

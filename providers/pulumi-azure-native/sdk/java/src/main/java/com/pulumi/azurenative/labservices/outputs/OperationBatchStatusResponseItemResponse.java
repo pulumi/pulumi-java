@@ -32,14 +32,14 @@ public final class OperationBatchStatusResponseItemResponse {
      * status of the long running operation for an environment
      * 
     */
-    public String getOperationUrl() {
+    public String operationUrl() {
         return this.operationUrl;
     }
     /**
      * status of the long running operation for an environment
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

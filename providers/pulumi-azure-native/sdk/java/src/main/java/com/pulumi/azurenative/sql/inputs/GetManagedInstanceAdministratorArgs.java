@@ -15,7 +15,7 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
     @Import(name="administratorName", required=true)
       private final String administratorName;
 
-    public String getAdministratorName() {
+    public String administratorName() {
         return this.administratorName;
     }
 
@@ -26,7 +26,7 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
     @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
-    public String getManagedInstanceName() {
+    public String managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -37,7 +37,7 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

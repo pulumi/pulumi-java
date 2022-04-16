@@ -31,7 +31,7 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="aggregation")
       private final @Nullable Map<String,ReportAggregationResponse> aggregation;
 
-    public Map<String,ReportAggregationResponse> getAggregation() {
+    public Map<String,ReportAggregationResponse> aggregation() {
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
 
@@ -42,7 +42,7 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="configuration")
       private final @Nullable ReportDatasetConfigurationResponse configuration;
 
-    public Optional<ReportDatasetConfigurationResponse> getConfiguration() {
+    public Optional<ReportDatasetConfigurationResponse> configuration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
@@ -53,7 +53,7 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="filter")
       private final @Nullable ReportFilterResponse filter;
 
-    public Optional<ReportFilterResponse> getFilter() {
+    public Optional<ReportFilterResponse> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -64,7 +64,7 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="granularity")
       private final @Nullable String granularity;
 
-    public Optional<String> getGranularity() {
+    public Optional<String> granularity() {
         return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
     }
 
@@ -75,7 +75,7 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="grouping")
       private final @Nullable List<ReportGroupingResponse> grouping;
 
-    public List<ReportGroupingResponse> getGrouping() {
+    public List<ReportGroupingResponse> grouping() {
         return this.grouping == null ? List.of() : this.grouping;
     }
 

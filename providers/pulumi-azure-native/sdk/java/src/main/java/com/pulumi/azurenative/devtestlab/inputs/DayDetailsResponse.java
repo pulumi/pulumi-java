@@ -25,7 +25,7 @@ public final class DayDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="time")
       private final @Nullable String time;
 
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
     }
 

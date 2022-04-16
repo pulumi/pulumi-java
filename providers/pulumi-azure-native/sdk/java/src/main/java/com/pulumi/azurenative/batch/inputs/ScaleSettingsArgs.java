@@ -27,7 +27,7 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScale")
       private final @Nullable Output<AutoScaleSettingsArgs> autoScale;
 
-    public Output<AutoScaleSettingsArgs> getAutoScale() {
+    public Output<AutoScaleSettingsArgs> autoScale() {
         return this.autoScale == null ? Codegen.empty() : this.autoScale;
     }
 
@@ -38,7 +38,7 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedScale")
       private final @Nullable Output<FixedScaleSettingsArgs> fixedScale;
 
-    public Output<FixedScaleSettingsArgs> getFixedScale() {
+    public Output<FixedScaleSettingsArgs> fixedScale() {
         return this.fixedScale == null ? Codegen.empty() : this.fixedScale;
     }
 

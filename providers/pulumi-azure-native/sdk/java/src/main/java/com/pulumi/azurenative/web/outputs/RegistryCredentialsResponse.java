@@ -41,21 +41,21 @@ public final class RegistryCredentialsResponse {
      * The name of the Secret that contains the registry login password
      * 
     */
-    public Optional<String> getPasswordSecretRef() {
+    public Optional<String> passwordSecretRef() {
         return Optional.ofNullable(this.passwordSecretRef);
     }
     /**
      * Container Registry Server
      * 
     */
-    public Optional<String> getServer() {
+    public Optional<String> server() {
         return Optional.ofNullable(this.server);
     }
     /**
      * Container Registry Username
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

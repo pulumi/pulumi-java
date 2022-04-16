@@ -29,7 +29,7 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encoding")
       private final @Nullable Output<Either<String,Encoding>> encoding;
 
-    public Output<Either<String,Encoding>> getEncoding() {
+    public Output<Either<String,Encoding>> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -40,7 +40,7 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="format")
       private final @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
 
-    public Output<Either<String,JsonOutputSerializationFormat>> getFormat() {
+    public Output<Either<String,JsonOutputSerializationFormat>> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -52,7 +52,7 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

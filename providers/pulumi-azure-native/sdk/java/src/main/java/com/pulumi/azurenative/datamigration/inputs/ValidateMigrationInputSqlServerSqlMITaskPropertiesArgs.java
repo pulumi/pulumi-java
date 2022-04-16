@@ -27,7 +27,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs extend
     @Import(name="input")
       private final @Nullable Output<ValidateMigrationInputSqlServerSqlMITaskInputArgs> input;
 
-    public Output<ValidateMigrationInputSqlServerSqlMITaskInputArgs> getInput() {
+    public Output<ValidateMigrationInputSqlServerSqlMITaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs extend
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

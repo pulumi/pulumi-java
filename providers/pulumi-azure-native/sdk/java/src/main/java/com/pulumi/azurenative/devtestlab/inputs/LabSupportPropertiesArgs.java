@@ -28,7 +28,7 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="enabled")
       private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
-    public Output<Either<String,EnableStatus>> getEnabled() {
+    public Output<Either<String,EnableStatus>> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -39,7 +39,7 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="markdown")
       private final @Nullable Output<String> markdown;
 
-    public Output<String> getMarkdown() {
+    public Output<String> markdown() {
         return this.markdown == null ? Codegen.empty() : this.markdown;
     }
 

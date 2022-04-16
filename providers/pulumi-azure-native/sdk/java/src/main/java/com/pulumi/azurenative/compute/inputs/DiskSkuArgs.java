@@ -28,7 +28,7 @@ public final class DiskSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,DiskStorageAccountTypes>> name;
 
-    public Output<Either<String,DiskStorageAccountTypes>> getName() {
+    public Output<Either<String,DiskStorageAccountTypes>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

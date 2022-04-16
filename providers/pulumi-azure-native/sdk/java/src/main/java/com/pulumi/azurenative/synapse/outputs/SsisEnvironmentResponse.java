@@ -66,28 +66,28 @@ public final class SsisEnvironmentResponse {
      * Metadata description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Folder id which contains environment.
      * 
     */
-    public Optional<Double> getFolderId() {
+    public Optional<Double> folderId() {
         return Optional.ofNullable(this.folderId);
     }
     /**
      * Metadata id.
      * 
     */
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -95,14 +95,14 @@ public final class SsisEnvironmentResponse {
      * Expected value is 'Environment'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Variable in environment
      * 
     */
-    public List<SsisVariableResponse> getVariables() {
+    public List<SsisVariableResponse> variables() {
         return this.variables == null ? List.of() : this.variables;
     }
 

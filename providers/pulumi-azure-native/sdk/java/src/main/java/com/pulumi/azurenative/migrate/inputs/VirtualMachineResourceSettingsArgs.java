@@ -29,7 +29,7 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> getTargetAvailabilitySetId() {
+    public Output<String> targetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilityZone")
       private final @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
 
-    public Output<Either<String,TargetAvailabilityZone>> getTargetAvailabilityZone() {
+    public Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Codegen.empty() : this.targetAvailabilityZone;
     }
 
@@ -62,7 +62,7 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -73,7 +73,7 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
 
-    public Output<String> getTargetVmSize() {
+    public Output<String> targetVmSize() {
         return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
     }
 

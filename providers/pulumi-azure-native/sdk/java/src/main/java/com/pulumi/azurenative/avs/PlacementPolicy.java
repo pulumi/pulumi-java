@@ -45,7 +45,7 @@ public class PlacementPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class PlacementPolicy extends com.pulumi.resources.CustomResource {
      * @return placement policy properties
      * 
      */
-    public Output<Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse>> getProperties() {
+    public Output<Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse>> properties() {
         return this.properties;
     }
     /**
@@ -73,7 +73,7 @@ public class PlacementPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

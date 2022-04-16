@@ -29,7 +29,7 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -40,7 +40,7 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="details")
       private final @Nullable List<UserFacingErrorResponse> details;
 
-    public List<UserFacingErrorResponse> getDetails() {
+    public List<UserFacingErrorResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
 
@@ -51,7 +51,7 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="innerError")
       private final @Nullable InnerErrorResponse innerError;
 
-    public Optional<InnerErrorResponse> getInnerError() {
+    public Optional<InnerErrorResponse> innerError() {
         return this.innerError == null ? Optional.empty() : Optional.ofNullable(this.innerError);
     }
 
@@ -62,7 +62,7 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isRetryable")
       private final @Nullable Boolean isRetryable;
 
-    public Optional<Boolean> getIsRetryable() {
+    public Optional<Boolean> isRetryable() {
         return this.isRetryable == null ? Optional.empty() : Optional.ofNullable(this.isRetryable);
     }
 
@@ -73,14 +73,14 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isUserError")
       private final @Nullable Boolean isUserError;
 
-    public Optional<Boolean> getIsUserError() {
+    public Optional<Boolean> isUserError() {
         return this.isUserError == null ? Optional.empty() : Optional.ofNullable(this.isUserError);
     }
 
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -91,7 +91,7 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -102,7 +102,7 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="recommendedAction")
       private final @Nullable List<String> recommendedAction;
 
-    public List<String> getRecommendedAction() {
+    public List<String> recommendedAction() {
         return this.recommendedAction == null ? List.of() : this.recommendedAction;
     }
 
@@ -113,7 +113,7 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

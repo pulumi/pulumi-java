@@ -27,7 +27,7 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branch")
       private final @Nullable String branch;
 
-    public Optional<String> getBranch() {
+    public Optional<String> branch() {
         return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
     }
 
@@ -38,7 +38,7 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentLogsUrl")
       private final @Nullable String deploymentLogsUrl;
 
-    public Optional<String> getDeploymentLogsUrl() {
+    public Optional<String> deploymentLogsUrl() {
         return this.deploymentLogsUrl == null ? Optional.empty() : Optional.ofNullable(this.deploymentLogsUrl);
     }
 
@@ -49,7 +49,7 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayUrl")
       private final @Nullable String displayUrl;
 
-    public Optional<String> getDisplayUrl() {
+    public Optional<String> displayUrl() {
         return this.displayUrl == null ? Optional.empty() : Optional.ofNullable(this.displayUrl);
     }
 
@@ -60,7 +60,7 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pathMapping")
       private final @Nullable List<ContentPathMapResponse> pathMapping;
 
-    public List<ContentPathMapResponse> getPathMapping() {
+    public List<ContentPathMapResponse> pathMapping() {
         return this.pathMapping == null ? List.of() : this.pathMapping;
     }
 
@@ -71,7 +71,7 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

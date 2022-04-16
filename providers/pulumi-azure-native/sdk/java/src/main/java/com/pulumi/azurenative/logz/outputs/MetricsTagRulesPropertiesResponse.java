@@ -44,28 +44,28 @@ public final class MetricsTagRulesPropertiesResponse {
         this.systemData = systemData;
     }
 
-    public List<MetricRulesResponse> getMetricRules() {
+    public List<MetricRulesResponse> metricRules() {
         return this.metricRules == null ? List.of() : this.metricRules;
     }
     /**
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
      * 
     */
-    public Optional<Boolean> getSendMetrics() {
+    public Optional<Boolean> sendMetrics() {
         return Optional.ofNullable(this.sendMetrics);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
 

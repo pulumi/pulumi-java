@@ -26,7 +26,7 @@ public final class CreateServiceRequestKeysArgs extends com.pulumi.resources.Res
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
-    public Output<String> getPrimaryKey() {
+    public Output<String> primaryKey() {
         return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
@@ -37,7 +37,7 @@ public final class CreateServiceRequestKeysArgs extends com.pulumi.resources.Res
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
-    public Output<String> getSecondaryKey() {
+    public Output<String> secondaryKey() {
         return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
     }
 

@@ -20,7 +20,7 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -31,7 +31,7 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
@@ -42,7 +42,7 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
     @Import(name="podLabels", required=true)
       private final Map<String,String> podLabels;
 
-    public Map<String,String> getPodLabels() {
+    public Map<String,String> podLabels() {
         return this.podLabels;
     }
 

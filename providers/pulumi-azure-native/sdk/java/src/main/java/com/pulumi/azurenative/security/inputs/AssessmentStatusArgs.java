@@ -28,7 +28,7 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cause")
       private final @Nullable Output<String> cause;
 
-    public Output<String> getCause() {
+    public Output<String> cause() {
         return this.cause == null ? Codegen.empty() : this.cause;
     }
 
@@ -39,7 +39,7 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="code", required=true)
       private final Output<Either<String,AssessmentStatusCode>> code;
 
-    public Output<Either<String,AssessmentStatusCode>> getCode() {
+    public Output<Either<String,AssessmentStatusCode>> code() {
         return this.code;
     }
 
@@ -50,7 +50,7 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 

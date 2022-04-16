@@ -113,42 +113,42 @@ public final class FileTaskRunRequestResponse {
      * The machine configuration of the run agent.
      * 
     */
-    public Optional<AgentPropertiesResponse> getAgentConfiguration() {
+    public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
     /**
      * The dedicated agent pool for the run.
      * 
     */
-    public Optional<String> getAgentPoolName() {
+    public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
     */
-    public Optional<CredentialsResponse> getCredentials() {
+    public Optional<CredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The value that indicates whether archiving is enabled for the run or not.
      * 
     */
-    public Optional<Boolean> getIsArchiveEnabled() {
+    public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
      * 
     */
-    public Optional<String> getLogTemplate() {
+    public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
      * The platform properties against which the run has to happen.
      * 
     */
-    public PlatformPropertiesResponse getPlatform() {
+    public PlatformPropertiesResponse platform() {
         return this.platform;
     }
     /**
@@ -156,21 +156,21 @@ public final class FileTaskRunRequestResponse {
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
      * 
     */
-    public Optional<String> getSourceLocation() {
+    public Optional<String> sourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
     /**
      * The template/definition file path relative to the source.
      * 
     */
-    public String getTaskFilePath() {
+    public String taskFilePath() {
         return this.taskFilePath;
     }
     /**
      * Run timeout in seconds.
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -178,21 +178,21 @@ public final class FileTaskRunRequestResponse {
      * Expected value is 'FileTaskRunRequest'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The collection of overridable values that can be passed when running a task.
      * 
     */
-    public List<SetValueResponse> getValues() {
+    public List<SetValueResponse> values() {
         return this.values == null ? List.of() : this.values;
     }
     /**
      * The values/parameters file path relative to the source.
      * 
     */
-    public Optional<String> getValuesFilePath() {
+    public Optional<String> valuesFilePath() {
         return Optional.ofNullable(this.valuesFilePath);
     }
 

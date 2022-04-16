@@ -26,7 +26,7 @@ public final class DhcpOptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 

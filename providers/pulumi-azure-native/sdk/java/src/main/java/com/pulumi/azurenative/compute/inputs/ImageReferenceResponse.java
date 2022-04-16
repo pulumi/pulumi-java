@@ -25,7 +25,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exactVersion", required=true)
       private final String exactVersion;
 
-    public String getExactVersion() {
+    public String exactVersion() {
         return this.exactVersion;
     }
 
@@ -36,7 +36,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -47,7 +47,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="offer")
       private final @Nullable String offer;
 
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
     }
 
@@ -58,7 +58,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="publisher")
       private final @Nullable String publisher;
 
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
@@ -69,7 +69,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sku")
       private final @Nullable String sku;
 
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -80,7 +80,7 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

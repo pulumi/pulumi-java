@@ -74,14 +74,14 @@ public final class GetDataManagerResult {
      * Etag of the Resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -90,21 +90,21 @@ public final class GetDataManagerResult {
      * region is specified on update the request will succeed.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The sku type.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
@@ -112,14 +112,14 @@ public final class GetDataManagerResult {
      * (across resource groups).
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

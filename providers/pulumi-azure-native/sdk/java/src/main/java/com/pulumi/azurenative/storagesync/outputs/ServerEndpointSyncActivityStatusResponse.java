@@ -68,49 +68,49 @@ public final class ServerEndpointSyncActivityStatusResponse {
      * Applied bytes
      * 
     */
-    public Double getAppliedBytes() {
+    public Double appliedBytes() {
         return this.appliedBytes;
     }
     /**
      * Applied item count.
      * 
     */
-    public Double getAppliedItemCount() {
+    public Double appliedItemCount() {
         return this.appliedItemCount;
     }
     /**
      * Per item error count
      * 
     */
-    public Double getPerItemErrorCount() {
+    public Double perItemErrorCount() {
         return this.perItemErrorCount;
     }
     /**
      * Sync mode
      * 
     */
-    public String getSyncMode() {
+    public String syncMode() {
         return this.syncMode;
     }
     /**
      * Timestamp when properties were updated
      * 
     */
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
     /**
      * Total bytes (if available)
      * 
     */
-    public Double getTotalBytes() {
+    public Double totalBytes() {
         return this.totalBytes;
     }
     /**
      * Total item count (if available)
      * 
     */
-    public Double getTotalItemCount() {
+    public Double totalItemCount() {
         return this.totalItemCount;
     }
 

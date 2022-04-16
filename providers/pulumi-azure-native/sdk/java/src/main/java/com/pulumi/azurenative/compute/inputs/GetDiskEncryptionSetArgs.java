@@ -19,7 +19,7 @@ public final class GetDiskEncryptionSetArgs extends com.pulumi.resources.InvokeA
     @Import(name="diskEncryptionSetName", required=true)
       private final String diskEncryptionSetName;
 
-    public String getDiskEncryptionSetName() {
+    public String diskEncryptionSetName() {
         return this.diskEncryptionSetName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDiskEncryptionSetArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

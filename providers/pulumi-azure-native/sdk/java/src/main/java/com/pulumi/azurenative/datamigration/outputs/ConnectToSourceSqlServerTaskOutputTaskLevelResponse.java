@@ -78,28 +78,28 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
      * Source agent jobs as a map from agent job name to id.
      * 
     */
-    public Map<String,String> getAgentJobs() {
+    public Map<String,String> agentJobs() {
         return this.agentJobs;
     }
     /**
      * Source databases as a map from database name to database id
      * 
     */
-    public Map<String,String> getDatabases() {
+    public Map<String,String> databases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Source logins as a map from login name to login id.
      * 
     */
-    public Map<String,String> getLogins() {
+    public Map<String,String> logins() {
         return this.logins;
     }
     /**
@@ -107,28 +107,28 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
      * Expected value is 'TaskLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Source server brand version
      * 
     */
-    public String getSourceServerBrandVersion() {
+    public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Source server version
      * 
     */
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Validation errors
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

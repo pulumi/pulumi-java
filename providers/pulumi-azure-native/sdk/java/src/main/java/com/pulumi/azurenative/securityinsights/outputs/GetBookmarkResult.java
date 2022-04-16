@@ -142,119 +142,119 @@ public final class GetBookmarkResult {
      * The time the bookmark was created
      * 
     */
-    public Optional<String> getCreated() {
+    public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Describes a user that created the bookmark
      * 
     */
-    public Optional<UserInfoResponse> getCreatedBy() {
+    public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The display name of the bookmark
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The bookmark event time
      * 
     */
-    public Optional<String> getEventTime() {
+    public Optional<String> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Describes an incident that relates to bookmark
      * 
     */
-    public Optional<IncidentInfoResponse> getIncidentInfo() {
+    public Optional<IncidentInfoResponse> incidentInfo() {
         return Optional.ofNullable(this.incidentInfo);
     }
     /**
      * List of labels relevant to this bookmark
      * 
     */
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The notes of the bookmark
      * 
     */
-    public Optional<String> getNotes() {
+    public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * The query of the bookmark.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
      * The end time for the query
      * 
     */
-    public Optional<String> getQueryEndTime() {
+    public Optional<String> queryEndTime() {
         return Optional.ofNullable(this.queryEndTime);
     }
     /**
      * The query result of the bookmark.
      * 
     */
-    public Optional<String> getQueryResult() {
+    public Optional<String> queryResult() {
         return Optional.ofNullable(this.queryResult);
     }
     /**
      * The start time for the query
      * 
     */
-    public Optional<String> getQueryStartTime() {
+    public Optional<String> queryStartTime() {
         return Optional.ofNullable(this.queryStartTime);
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The last time the bookmark was updated
      * 
     */
-    public Optional<String> getUpdated() {
+    public Optional<String> updated() {
         return Optional.ofNullable(this.updated);
     }
     /**
      * Describes a user that updated the bookmark
      * 
     */
-    public Optional<UserInfoResponse> getUpdatedBy() {
+    public Optional<UserInfoResponse> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
 

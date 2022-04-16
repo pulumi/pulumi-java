@@ -27,7 +27,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="advertisedCommunities")
       private final @Nullable List<String> advertisedCommunities;
 
-    public List<String> getAdvertisedCommunities() {
+    public List<String> advertisedCommunities() {
         return this.advertisedCommunities == null ? List.of() : this.advertisedCommunities;
     }
 
@@ -38,7 +38,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="advertisedPublicPrefixes")
       private final @Nullable List<String> advertisedPublicPrefixes;
 
-    public List<String> getAdvertisedPublicPrefixes() {
+    public List<String> advertisedPublicPrefixes() {
         return this.advertisedPublicPrefixes == null ? List.of() : this.advertisedPublicPrefixes;
     }
 
@@ -49,7 +49,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="advertisedPublicPrefixesState", required=true)
       private final String advertisedPublicPrefixesState;
 
-    public String getAdvertisedPublicPrefixesState() {
+    public String advertisedPublicPrefixesState() {
         return this.advertisedPublicPrefixesState;
     }
 
@@ -60,7 +60,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="customerASN")
       private final @Nullable Integer customerASN;
 
-    public Optional<Integer> getCustomerASN() {
+    public Optional<Integer> customerASN() {
         return this.customerASN == null ? Optional.empty() : Optional.ofNullable(this.customerASN);
     }
 
@@ -71,7 +71,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="legacyMode")
       private final @Nullable Integer legacyMode;
 
-    public Optional<Integer> getLegacyMode() {
+    public Optional<Integer> legacyMode() {
         return this.legacyMode == null ? Optional.empty() : Optional.ofNullable(this.legacyMode);
     }
 
@@ -82,7 +82,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="routingRegistryName")
       private final @Nullable String routingRegistryName;
 
-    public Optional<String> getRoutingRegistryName() {
+    public Optional<String> routingRegistryName() {
         return this.routingRegistryName == null ? Optional.empty() : Optional.ofNullable(this.routingRegistryName);
     }
 

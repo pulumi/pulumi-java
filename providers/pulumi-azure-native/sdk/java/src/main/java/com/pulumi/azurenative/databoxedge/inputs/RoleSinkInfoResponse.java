@@ -23,7 +23,7 @@ public final class RoleSinkInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="roleId", required=true)
       private final String roleId;
 
-    public String getRoleId() {
+    public String roleId() {
         return this.roleId;
     }
 

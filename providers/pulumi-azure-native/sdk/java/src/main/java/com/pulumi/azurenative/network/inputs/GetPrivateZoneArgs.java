@@ -19,7 +19,7 @@ public final class GetPrivateZoneArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateZoneName", required=true)
       private final String privateZoneName;
 
-    public String getPrivateZoneName() {
+    public String privateZoneName() {
         return this.privateZoneName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateZoneArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

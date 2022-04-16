@@ -33,7 +33,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="allowClassicOperations")
       private final @Nullable Output<Boolean> allowClassicOperations;
 
-    public Output<Boolean> getAllowClassicOperations() {
+    public Output<Boolean> allowClassicOperations() {
         return this.allowClassicOperations == null ? Codegen.empty() : this.allowClassicOperations;
     }
 
@@ -44,7 +44,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="authorizations")
       private final @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
 
-    public Output<List<ExpressRouteCircuitAuthorizationArgs>> getAuthorizations() {
+    public Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations() {
         return this.authorizations == null ? Codegen.empty() : this.authorizations;
     }
 
@@ -55,7 +55,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="bandwidthInGbps")
       private final @Nullable Output<Double> bandwidthInGbps;
 
-    public Output<Double> getBandwidthInGbps() {
+    public Output<Double> bandwidthInGbps() {
         return this.bandwidthInGbps == null ? Codegen.empty() : this.bandwidthInGbps;
     }
 
@@ -66,7 +66,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="circuitName")
       private final @Nullable Output<String> circuitName;
 
-    public Output<String> getCircuitName() {
+    public Output<String> circuitName() {
         return this.circuitName == null ? Codegen.empty() : this.circuitName;
     }
 
@@ -77,7 +77,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="circuitProvisioningState")
       private final @Nullable Output<String> circuitProvisioningState;
 
-    public Output<String> getCircuitProvisioningState() {
+    public Output<String> circuitProvisioningState() {
         return this.circuitProvisioningState == null ? Codegen.empty() : this.circuitProvisioningState;
     }
 
@@ -88,7 +88,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="expressRoutePort")
       private final @Nullable Output<SubResourceArgs> expressRoutePort;
 
-    public Output<SubResourceArgs> getExpressRoutePort() {
+    public Output<SubResourceArgs> expressRoutePort() {
         return this.expressRoutePort == null ? Codegen.empty() : this.expressRoutePort;
     }
 
@@ -99,7 +99,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
 
-    public Output<String> getGatewayManagerEtag() {
+    public Output<String> gatewayManagerEtag() {
         return this.gatewayManagerEtag == null ? Codegen.empty() : this.gatewayManagerEtag;
     }
 
@@ -110,7 +110,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="globalReachEnabled")
       private final @Nullable Output<Boolean> globalReachEnabled;
 
-    public Output<Boolean> getGlobalReachEnabled() {
+    public Output<Boolean> globalReachEnabled() {
         return this.globalReachEnabled == null ? Codegen.empty() : this.globalReachEnabled;
     }
 
@@ -121,7 +121,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -132,7 +132,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -143,7 +143,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="peerings")
       private final @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
 
-    public Output<List<ExpressRouteCircuitPeeringArgs>> getPeerings() {
+    public Output<List<ExpressRouteCircuitPeeringArgs>> peerings() {
         return this.peerings == null ? Codegen.empty() : this.peerings;
     }
 
@@ -154,7 +154,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -165,7 +165,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="serviceKey")
       private final @Nullable Output<String> serviceKey;
 
-    public Output<String> getServiceKey() {
+    public Output<String> serviceKey() {
         return this.serviceKey == null ? Codegen.empty() : this.serviceKey;
     }
 
@@ -176,7 +176,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="serviceProviderNotes")
       private final @Nullable Output<String> serviceProviderNotes;
 
-    public Output<String> getServiceProviderNotes() {
+    public Output<String> serviceProviderNotes() {
         return this.serviceProviderNotes == null ? Codegen.empty() : this.serviceProviderNotes;
     }
 
@@ -187,7 +187,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="serviceProviderProperties")
       private final @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
 
-    public Output<ExpressRouteCircuitServiceProviderPropertiesArgs> getServiceProviderProperties() {
+    public Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties() {
         return this.serviceProviderProperties == null ? Codegen.empty() : this.serviceProviderProperties;
     }
 
@@ -198,7 +198,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="serviceProviderProvisioningState")
       private final @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
 
-    public Output<Either<String,ServiceProviderProvisioningState>> getServiceProviderProvisioningState() {
+    public Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState() {
         return this.serviceProviderProvisioningState == null ? Codegen.empty() : this.serviceProviderProvisioningState;
     }
 
@@ -209,7 +209,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="sku")
       private final @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
 
-    public Output<ExpressRouteCircuitSkuArgs> getSku() {
+    public Output<ExpressRouteCircuitSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -220,7 +220,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

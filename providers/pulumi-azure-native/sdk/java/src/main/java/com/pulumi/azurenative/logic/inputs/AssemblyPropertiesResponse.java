@@ -27,7 +27,7 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyCulture")
       private final @Nullable String assemblyCulture;
 
-    public Optional<String> getAssemblyCulture() {
+    public Optional<String> assemblyCulture() {
         return this.assemblyCulture == null ? Optional.empty() : Optional.ofNullable(this.assemblyCulture);
     }
 
@@ -38,7 +38,7 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyName", required=true)
       private final String assemblyName;
 
-    public String getAssemblyName() {
+    public String assemblyName() {
         return this.assemblyName;
     }
 
@@ -49,7 +49,7 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyPublicKeyToken")
       private final @Nullable String assemblyPublicKeyToken;
 
-    public Optional<String> getAssemblyPublicKeyToken() {
+    public Optional<String> assemblyPublicKeyToken() {
         return this.assemblyPublicKeyToken == null ? Optional.empty() : Optional.ofNullable(this.assemblyPublicKeyToken);
     }
 
@@ -60,7 +60,7 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="assemblyVersion")
       private final @Nullable String assemblyVersion;
 
-    public Optional<String> getAssemblyVersion() {
+    public Optional<String> assemblyVersion() {
         return this.assemblyVersion == null ? Optional.empty() : Optional.ofNullable(this.assemblyVersion);
     }
 
@@ -71,14 +71,14 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="changedTime")
       private final @Nullable String changedTime;
 
-    public Optional<String> getChangedTime() {
+    public Optional<String> changedTime() {
         return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
     }
 
     @Import(name="content")
       private final @Nullable Object content;
 
-    public Optional<Object> getContent() {
+    public Optional<Object> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
@@ -89,7 +89,7 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="contentLink")
       private final @Nullable ContentLinkResponse contentLink;
 
-    public Optional<ContentLinkResponse> getContentLink() {
+    public Optional<ContentLinkResponse> contentLink() {
         return this.contentLink == null ? Optional.empty() : Optional.ofNullable(this.contentLink);
     }
 
@@ -100,7 +100,7 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -111,14 +111,14 @@ public final class AssemblyPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="metadata")
       private final @Nullable Object metadata;
 
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 

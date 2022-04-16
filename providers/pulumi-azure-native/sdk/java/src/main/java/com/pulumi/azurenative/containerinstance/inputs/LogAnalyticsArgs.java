@@ -29,7 +29,7 @@ public final class LogAnalyticsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logType")
       private final @Nullable Output<Either<String,LogAnalyticsLogType>> logType;
 
-    public Output<Either<String,LogAnalyticsLogType>> getLogType() {
+    public Output<Either<String,LogAnalyticsLogType>> logType() {
         return this.logType == null ? Codegen.empty() : this.logType;
     }
 
@@ -40,7 +40,7 @@ public final class LogAnalyticsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -51,7 +51,7 @@ public final class LogAnalyticsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -62,7 +62,7 @@ public final class LogAnalyticsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceKey", required=true)
       private final Output<String> workspaceKey;
 
-    public Output<String> getWorkspaceKey() {
+    public Output<String> workspaceKey() {
         return this.workspaceKey;
     }
 
@@ -73,7 +73,7 @@ public final class LogAnalyticsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceResourceId")
       private final @Nullable Output<Map<String,String>> workspaceResourceId;
 
-    public Output<Map<String,String>> getWorkspaceResourceId() {
+    public Output<Map<String,String>> workspaceResourceId() {
         return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 

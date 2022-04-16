@@ -26,7 +26,7 @@ public final class FirewallPolicyIntrusionDetectionResponse extends com.pulumi.r
     @Import(name="configuration")
       private final @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
 
-    public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> getConfiguration() {
+    public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> configuration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
@@ -37,7 +37,7 @@ public final class FirewallPolicyIntrusionDetectionResponse extends com.pulumi.r
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 

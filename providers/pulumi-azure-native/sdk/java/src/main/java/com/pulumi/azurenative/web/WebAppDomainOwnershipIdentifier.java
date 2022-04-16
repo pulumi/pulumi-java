@@ -39,7 +39,7 @@ public class WebAppDomainOwnershipIdentifier extends com.pulumi.resources.Custom
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -53,7 +53,7 @@ public class WebAppDomainOwnershipIdentifier extends com.pulumi.resources.Custom
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -67,7 +67,7 @@ public class WebAppDomainOwnershipIdentifier extends com.pulumi.resources.Custom
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -81,7 +81,7 @@ public class WebAppDomainOwnershipIdentifier extends com.pulumi.resources.Custom
      * @return String representation of the identity.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 

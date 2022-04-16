@@ -25,7 +25,7 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceNodeId")
       private final @Nullable String sourceNodeId;
 
-    public Optional<String> getSourceNodeId() {
+    public Optional<String> sourceNodeId() {
         return this.sourceNodeId == null ? Optional.empty() : Optional.ofNullable(this.sourceNodeId);
     }
 
@@ -36,7 +36,7 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourcePortId")
       private final @Nullable String sourcePortId;
 
-    public Optional<String> getSourcePortId() {
+    public Optional<String> sourcePortId() {
         return this.sourcePortId == null ? Optional.empty() : Optional.ofNullable(this.sourcePortId);
     }
 
@@ -47,7 +47,7 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetNodeId")
       private final @Nullable String targetNodeId;
 
-    public Optional<String> getTargetNodeId() {
+    public Optional<String> targetNodeId() {
         return this.targetNodeId == null ? Optional.empty() : Optional.ofNullable(this.targetNodeId);
     }
 
@@ -58,7 +58,7 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetPortId")
       private final @Nullable String targetPortId;
 
-    public Optional<String> getTargetPortId() {
+    public Optional<String> targetPortId() {
         return this.targetPortId == null ? Optional.empty() : Optional.ofNullable(this.targetPortId);
     }
 

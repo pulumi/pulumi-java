@@ -28,7 +28,7 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="endGroupActions")
       private final @Nullable List<RecoveryPlanActionResponse> endGroupActions;
 
-    public List<RecoveryPlanActionResponse> getEndGroupActions() {
+    public List<RecoveryPlanActionResponse> endGroupActions() {
         return this.endGroupActions == null ? List.of() : this.endGroupActions;
     }
 
@@ -39,7 +39,7 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="groupType", required=true)
       private final String groupType;
 
-    public String getGroupType() {
+    public String groupType() {
         return this.groupType;
     }
 
@@ -50,7 +50,7 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="replicationProtectedItems")
       private final @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems;
 
-    public List<RecoveryPlanProtectedItemResponse> getReplicationProtectedItems() {
+    public List<RecoveryPlanProtectedItemResponse> replicationProtectedItems() {
         return this.replicationProtectedItems == null ? List.of() : this.replicationProtectedItems;
     }
 
@@ -61,7 +61,7 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="startGroupActions")
       private final @Nullable List<RecoveryPlanActionResponse> startGroupActions;
 
-    public List<RecoveryPlanActionResponse> getStartGroupActions() {
+    public List<RecoveryPlanActionResponse> startGroupActions() {
         return this.startGroupActions == null ? List.of() : this.startGroupActions;
     }
 

@@ -28,7 +28,7 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="day")
       private final @Nullable Output<String> day;
 
-    public Output<String> getDay() {
+    public Output<String> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -39,7 +39,7 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hour")
       private final @Nullable Output<Integer> hour;
 
-    public Output<Integer> getHour() {
+    public Output<Integer> hour() {
         return this.hour == null ? Codegen.empty() : this.hour;
     }
 
@@ -50,7 +50,7 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minute")
       private final @Nullable Output<Integer> minute;
 
-    public Output<Integer> getMinute() {
+    public Output<Integer> minute() {
         return this.minute == null ? Codegen.empty() : this.minute;
     }
 
@@ -61,7 +61,7 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="snapshotsToKeep")
       private final @Nullable Output<Integer> snapshotsToKeep;
 
-    public Output<Integer> getSnapshotsToKeep() {
+    public Output<Integer> snapshotsToKeep() {
         return this.snapshotsToKeep == null ? Codegen.empty() : this.snapshotsToKeep;
     }
 
@@ -72,7 +72,7 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="usedBytes")
       private final @Nullable Output<Double> usedBytes;
 
-    public Output<Double> getUsedBytes() {
+    public Output<Double> usedBytes() {
         return this.usedBytes == null ? Codegen.empty() : this.usedBytes;
     }
 

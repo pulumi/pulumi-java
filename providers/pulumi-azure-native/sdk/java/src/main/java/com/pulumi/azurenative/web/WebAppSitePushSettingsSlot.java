@@ -40,7 +40,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getDynamicTagsJson() {
+    public Output</* @Nullable */ String> dynamicTagsJson() {
         return this.dynamicTagsJson;
     }
     /**
@@ -54,7 +54,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @return Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
      */
-    public Output<Boolean> getIsPushEnabled() {
+    public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled;
     }
     /**
@@ -68,7 +68,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -82,7 +82,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -96,7 +96,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getTagWhitelistJson() {
+    public Output</* @Nullable */ String> tagWhitelistJson() {
         return this.tagWhitelistJson;
     }
     /**
@@ -116,7 +116,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * Validation should be performed at the PushRequestHandler.
      * 
      */
-    public Output</* @Nullable */ String> getTagsRequiringAuth() {
+    public Output</* @Nullable */ String> tagsRequiringAuth() {
         return this.tagsRequiringAuth;
     }
     /**
@@ -130,7 +130,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

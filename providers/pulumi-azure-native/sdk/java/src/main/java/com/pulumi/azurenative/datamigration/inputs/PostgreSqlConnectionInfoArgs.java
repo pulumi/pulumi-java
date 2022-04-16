@@ -27,7 +27,7 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -38,7 +38,7 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -49,7 +49,7 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -60,7 +60,7 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -72,7 +72,7 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -83,7 +83,7 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

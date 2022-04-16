@@ -27,7 +27,7 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accessType", required=true)
       private final Output<Either<String,ShareAccessType>> accessType;
 
-    public Output<Either<String,ShareAccessType>> getAccessType() {
+    public Output<Either<String,ShareAccessType>> accessType() {
         return this.accessType;
     }
 
@@ -38,7 +38,7 @@ public final class UserAccessRightArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

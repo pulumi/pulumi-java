@@ -28,7 +28,7 @@ public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="indexes")
       private final @Nullable Output<List<IndexesArgs>> indexes;
 
-    public Output<List<IndexesArgs>> getIndexes() {
+    public Output<List<IndexesArgs>> indexes() {
         return this.indexes == null ? Codegen.empty() : this.indexes;
     }
 
@@ -39,7 +39,7 @@ public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

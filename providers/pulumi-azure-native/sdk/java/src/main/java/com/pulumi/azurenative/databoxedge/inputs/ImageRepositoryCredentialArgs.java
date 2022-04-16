@@ -27,7 +27,7 @@ public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.Re
     @Import(name="imageRepositoryUrl", required=true)
       private final Output<String> imageRepositoryUrl;
 
-    public Output<String> getImageRepositoryUrl() {
+    public Output<String> imageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
 
@@ -38,7 +38,7 @@ public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.Re
     @Import(name="password")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> password;
 
-    public Output<AsymmetricEncryptedSecretArgs> getPassword() {
+    public Output<AsymmetricEncryptedSecretArgs> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -49,7 +49,7 @@ public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.Re
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

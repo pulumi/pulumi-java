@@ -43,7 +43,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return A custom definition for the USer Definition.
      * 
      */
-    public Output</* @Nullable */ String> getCustomData() {
+    public Output</* @Nullable */ String> customData() {
         return this.customData;
     }
     /**
@@ -57,7 +57,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The database name for which access is being granted for this User Definition.
      * 
      */
-    public Output</* @Nullable */ String> getDatabaseName() {
+    public Output</* @Nullable */ String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -71,7 +71,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
      * 
      */
-    public Output</* @Nullable */ String> getMechanisms() {
+    public Output</* @Nullable */ String> mechanisms() {
         return this.mechanisms;
     }
     /**
@@ -85,7 +85,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The name of the database account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The password for User Definition. Response does not contain user password.
      * 
      */
-    public Output</* @Nullable */ String> getPassword() {
+    public Output</* @Nullable */ String> password() {
         return this.password;
     }
     /**
@@ -113,7 +113,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The set of roles inherited by the User Definition.
      * 
      */
-    public Output</* @Nullable */ List<RoleResponse>> getRoles() {
+    public Output</* @Nullable */ List<RoleResponse>> roles() {
         return this.roles;
     }
     /**
@@ -127,7 +127,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -141,7 +141,7 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The user name for User Definition.
      * 
      */
-    public Output</* @Nullable */ String> getUserName() {
+    public Output</* @Nullable */ String> userName() {
         return this.userName;
     }
 

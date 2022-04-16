@@ -36,14 +36,14 @@ public final class ServerCertificateCommonNamesResponse {
      * The list of server certificates referenced by common name that are used to secure the cluster.
      * 
     */
-    public List<ServerCertificateCommonNameResponse> getCommonNames() {
+    public List<ServerCertificateCommonNameResponse> commonNames() {
         return this.commonNames == null ? List.of() : this.commonNames;
     }
     /**
      * The local certificate store location.
      * 
     */
-    public Optional<String> getX509StoreName() {
+    public Optional<String> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }
 

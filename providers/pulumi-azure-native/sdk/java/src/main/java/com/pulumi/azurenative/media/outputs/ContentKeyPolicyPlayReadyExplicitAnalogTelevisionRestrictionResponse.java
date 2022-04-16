@@ -33,14 +33,14 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      * Indicates whether this restriction is enforced on a Best Effort basis.
      * 
     */
-    public Boolean getBestEffort() {
+    public Boolean bestEffort() {
         return this.bestEffort;
     }
     /**
      * Configures the restriction control bits. Must be between 0 and 3 inclusive.
      * 
     */
-    public Integer getConfigurationData() {
+    public Integer configurationData() {
         return this.configurationData;
     }
 

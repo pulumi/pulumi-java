@@ -19,7 +19,7 @@ public final class GetScheduledTriggerArgs extends com.pulumi.resources.InvokeAr
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetScheduledTriggerArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetScheduledTriggerArgs extends com.pulumi.resources.InvokeAr
     @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
 
-    public String getShareSubscriptionName() {
+    public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -52,7 +52,7 @@ public final class GetScheduledTriggerArgs extends com.pulumi.resources.InvokeAr
     @Import(name="triggerName", required=true)
       private final String triggerName;
 
-    public String getTriggerName() {
+    public String triggerName() {
         return this.triggerName;
     }
 

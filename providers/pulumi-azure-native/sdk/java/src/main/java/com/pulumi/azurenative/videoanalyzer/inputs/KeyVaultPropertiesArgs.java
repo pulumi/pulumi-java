@@ -25,7 +25,7 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyIdentifier", required=true)
       private final Output<String> keyIdentifier;
 
-    public Output<String> getKeyIdentifier() {
+    public Output<String> keyIdentifier() {
         return this.keyIdentifier;
     }
 

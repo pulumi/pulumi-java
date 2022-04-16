@@ -19,7 +19,7 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="skuName", required=true)
       private final String skuName;
 
-    public String getSkuName() {
+    public String skuName() {
         return this.skuName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vendorName", required=true)
       private final String vendorName;
 
-    public String getVendorName() {
+    public String vendorName() {
         return this.vendorName;
     }
 

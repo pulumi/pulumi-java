@@ -29,7 +29,7 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backendPort")
       private final @Nullable Output<Integer> backendPort;
 
-    public Output<Integer> getBackendPort() {
+    public Output<Integer> backendPort() {
         return this.backendPort == null ? Codegen.empty() : this.backendPort;
     }
 
@@ -40,7 +40,7 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frontendPort")
       private final @Nullable Output<Integer> frontendPort;
 
-    public Output<Integer> getFrontendPort() {
+    public Output<Integer> frontendPort() {
         return this.frontendPort == null ? Codegen.empty() : this.frontendPort;
     }
 
@@ -51,7 +51,7 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="transportProtocol")
       private final @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
-    public Output<Either<String,TransportProtocol>> getTransportProtocol() {
+    public Output<Either<String,TransportProtocol>> transportProtocol() {
         return this.transportProtocol == null ? Codegen.empty() : this.transportProtocol;
     }
 

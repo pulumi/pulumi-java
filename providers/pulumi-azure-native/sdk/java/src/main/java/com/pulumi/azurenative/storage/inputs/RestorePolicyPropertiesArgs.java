@@ -27,7 +27,7 @@ public final class RestorePolicyPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
@@ -38,7 +38,7 @@ public final class RestorePolicyPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

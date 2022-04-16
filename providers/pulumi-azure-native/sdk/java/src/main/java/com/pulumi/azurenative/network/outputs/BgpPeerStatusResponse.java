@@ -75,56 +75,56 @@ public final class BgpPeerStatusResponse {
      * The autonomous system number of the remote BGP peer.
      * 
     */
-    public Double getAsn() {
+    public Double asn() {
         return this.asn;
     }
     /**
      * For how long the peering has been up.
      * 
     */
-    public String getConnectedDuration() {
+    public String connectedDuration() {
         return this.connectedDuration;
     }
     /**
      * The virtual network gateway's local address.
      * 
     */
-    public String getLocalAddress() {
+    public String localAddress() {
         return this.localAddress;
     }
     /**
      * The number of BGP messages received.
      * 
     */
-    public Double getMessagesReceived() {
+    public Double messagesReceived() {
         return this.messagesReceived;
     }
     /**
      * The number of BGP messages sent.
      * 
     */
-    public Double getMessagesSent() {
+    public Double messagesSent() {
         return this.messagesSent;
     }
     /**
      * The remote BGP peer.
      * 
     */
-    public String getNeighbor() {
+    public String neighbor() {
         return this.neighbor;
     }
     /**
      * The number of routes learned from this peer.
      * 
     */
-    public Double getRoutesReceived() {
+    public Double routesReceived() {
         return this.routesReceived;
     }
     /**
      * The BGP peer state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

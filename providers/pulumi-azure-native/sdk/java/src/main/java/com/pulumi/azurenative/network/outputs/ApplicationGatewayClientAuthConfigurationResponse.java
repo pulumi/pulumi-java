@@ -26,7 +26,7 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
      * Verify client certificate issuer name on the application gateway.
      * 
     */
-    public Optional<Boolean> getVerifyClientCertIssuerDN() {
+    public Optional<Boolean> verifyClientCertIssuerDN() {
         return Optional.ofNullable(this.verifyClientCertIssuerDN);
     }
 

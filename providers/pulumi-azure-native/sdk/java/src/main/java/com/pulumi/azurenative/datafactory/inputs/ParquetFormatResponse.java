@@ -26,7 +26,7 @@ public final class ParquetFormatResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="deserializer")
       private final @Nullable Object deserializer;
 
-    public Optional<Object> getDeserializer() {
+    public Optional<Object> deserializer() {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
     }
 
@@ -37,7 +37,7 @@ public final class ParquetFormatResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="serializer")
       private final @Nullable Object serializer;
 
-    public Optional<Object> getSerializer() {
+    public Optional<Object> serializer() {
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
     }
 
@@ -49,7 +49,7 @@ public final class ParquetFormatResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

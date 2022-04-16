@@ -45,7 +45,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return List of additional capabilities for Disk pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAdditionalCapabilities() {
+    public Output</* @Nullable */ List<String>> additionalCapabilities() {
         return this.additionalCapabilities;
     }
     /**
@@ -59,7 +59,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return Logical zone for Disk pool resource; example: ["1"].
      * 
      */
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -73,7 +73,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
      * 
      */
-    public Output</* @Nullable */ List<DiskResponse>> getDisks() {
+    public Output</* @Nullable */ List<DiskResponse>> disks() {
         return this.disks;
     }
     /**
@@ -87,7 +87,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -101,7 +101,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return State of the operation on the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +129,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return Operational status of the Disk pool.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -143,7 +143,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return Azure Resource ID of a Subnet for the Disk pool.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -157,7 +157,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return Resource metadata required by ARM RPC
      * 
      */
-    public Output<SystemMetadataResponse> getSystemData() {
+    public Output<SystemMetadataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -171,7 +171,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return Determines the SKU of VM deployed for Disk pool
      * 
      */
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
     /**
@@ -199,7 +199,7 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

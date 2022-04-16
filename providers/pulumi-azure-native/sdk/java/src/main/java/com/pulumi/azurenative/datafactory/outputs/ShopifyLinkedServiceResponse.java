@@ -106,49 +106,49 @@ public final class ShopifyLinkedServiceResponse {
      * The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessToken() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
      * 
     */
-    public Object getHost() {
+    public Object host() {
         return this.host;
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
@@ -156,28 +156,28 @@ public final class ShopifyLinkedServiceResponse {
      * Expected value is 'Shopify'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
     */
-    public Optional<Object> getUseEncryptedEndpoints() {
+    public Optional<Object> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
     */
-    public Optional<Object> getUseHostVerification() {
+    public Optional<Object> useHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
     */
-    public Optional<Object> getUsePeerVerification() {
+    public Optional<Object> usePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
 

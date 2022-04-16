@@ -26,7 +26,7 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isSecret")
       private final @Nullable Boolean isSecret;
 
-    public Optional<Boolean> getIsSecret() {
+    public Optional<Boolean> isSecret() {
         return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
     }
 
@@ -37,7 +37,7 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

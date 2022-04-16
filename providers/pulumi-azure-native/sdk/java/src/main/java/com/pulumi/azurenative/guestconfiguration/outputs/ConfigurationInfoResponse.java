@@ -32,14 +32,14 @@ public final class ConfigurationInfoResponse {
      * Name of the configuration.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Version of the configuration.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

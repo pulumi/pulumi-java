@@ -24,7 +24,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
+    public Output<String> dataSetMappingName() {
         return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
@@ -46,7 +46,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
       private final Output<Either<String,DataSetMappingKind>> kind;
 
-    public Output<Either<String,DataSetMappingKind>> getKind() {
+    public Output<Either<String,DataSetMappingKind>> kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 

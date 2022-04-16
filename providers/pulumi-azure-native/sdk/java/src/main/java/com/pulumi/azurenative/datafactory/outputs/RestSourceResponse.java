@@ -106,77 +106,77 @@ public final class RestSourceResponse {
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
     */
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAdditionalHeaders() {
+    public Optional<Object> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getHttpRequestTimeout() {
+    public Optional<Object> httpRequestTimeout() {
         return Optional.ofNullable(this.httpRequestTimeout);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPaginationRules() {
+    public Optional<Object> paginationRules() {
         return Optional.ofNullable(this.paginationRules);
     }
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRequestBody() {
+    public Optional<Object> requestBody() {
         return Optional.ofNullable(this.requestBody);
     }
     /**
      * The time to await before sending next page request.
      * 
     */
-    public Optional<Object> getRequestInterval() {
+    public Optional<Object> requestInterval() {
         return Optional.ofNullable(this.requestInterval);
     }
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRequestMethod() {
+    public Optional<Object> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
@@ -184,7 +184,7 @@ public final class RestSourceResponse {
      * Expected value is 'RestSource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

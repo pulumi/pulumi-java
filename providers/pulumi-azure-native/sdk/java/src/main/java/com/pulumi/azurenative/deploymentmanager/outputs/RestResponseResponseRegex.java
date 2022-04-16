@@ -35,14 +35,14 @@ public final class RestResponseResponseRegex {
      * Indicates whether any or all of the expressions should match with the response content.
      * 
     */
-    public Optional<String> getMatchQuantifier() {
+    public Optional<String> matchQuantifier() {
         return Optional.ofNullable(this.matchQuantifier);
     }
     /**
      * The list of regular expressions.
      * 
     */
-    public List<String> getMatches() {
+    public List<String> matches() {
         return this.matches == null ? List.of() : this.matches;
     }
 

@@ -25,7 +25,7 @@ public final class ConfigurationProfileResourcePropertiesResponse extends com.pu
     @Import(name="notifications")
       private final @Nullable NotificationSettingsResponse notifications;
 
-    public Optional<NotificationSettingsResponse> getNotifications() {
+    public Optional<NotificationSettingsResponse> notifications() {
         return this.notifications == null ? Optional.empty() : Optional.ofNullable(this.notifications);
     }
 

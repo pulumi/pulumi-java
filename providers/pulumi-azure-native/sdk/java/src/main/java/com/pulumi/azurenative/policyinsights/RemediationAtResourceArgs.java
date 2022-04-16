@@ -25,7 +25,7 @@ public final class RemediationAtResourceArgs extends com.pulumi.resources.Resour
     @Import(name="filters")
       private final @Nullable Output<RemediationFiltersArgs> filters;
 
-    public Output<RemediationFiltersArgs> getFilters() {
+    public Output<RemediationFiltersArgs> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 
@@ -36,7 +36,7 @@ public final class RemediationAtResourceArgs extends com.pulumi.resources.Resour
     @Import(name="policyAssignmentId")
       private final @Nullable Output<String> policyAssignmentId;
 
-    public Output<String> getPolicyAssignmentId() {
+    public Output<String> policyAssignmentId() {
         return this.policyAssignmentId == null ? Codegen.empty() : this.policyAssignmentId;
     }
 
@@ -47,7 +47,7 @@ public final class RemediationAtResourceArgs extends com.pulumi.resources.Resour
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> getPolicyDefinitionReferenceId() {
+    public Output<String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
     }
 
@@ -58,7 +58,7 @@ public final class RemediationAtResourceArgs extends com.pulumi.resources.Resour
     @Import(name="remediationName")
       private final @Nullable Output<String> remediationName;
 
-    public Output<String> getRemediationName() {
+    public Output<String> remediationName() {
         return this.remediationName == null ? Codegen.empty() : this.remediationName;
     }
 
@@ -69,7 +69,7 @@ public final class RemediationAtResourceArgs extends com.pulumi.resources.Resour
     @Import(name="resourceDiscoveryMode")
       private final @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
-    public Output<Either<String,ResourceDiscoveryMode>> getResourceDiscoveryMode() {
+    public Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode() {
         return this.resourceDiscoveryMode == null ? Codegen.empty() : this.resourceDiscoveryMode;
     }
 
@@ -80,7 +80,7 @@ public final class RemediationAtResourceArgs extends com.pulumi.resources.Resour
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

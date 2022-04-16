@@ -130,101 +130,101 @@ public final class GetPolicyResult {
      * Describes custom rules inside the policy.
      * 
     */
-    public Optional<CustomRuleListResponse> getCustomRules() {
+    public Optional<CustomRuleListResponse> customRules() {
         return Optional.ofNullable(this.customRules);
     }
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Describes Frontend Endpoints associated with this Web Application Firewall policy.
      * 
     */
-    public List<FrontendEndpointLinkResponse> getFrontendEndpointLinks() {
+    public List<FrontendEndpointLinkResponse> frontendEndpointLinks() {
         return this.frontendEndpointLinks;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Describes managed rules inside the policy.
      * 
     */
-    public Optional<ManagedRuleSetListResponse> getManagedRules() {
+    public Optional<ManagedRuleSetListResponse> managedRules() {
         return Optional.ofNullable(this.managedRules);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Describes settings for the policy.
      * 
     */
-    public Optional<FrontDoorPolicySettingsResponse> getPolicySettings() {
+    public Optional<FrontDoorPolicySettingsResponse> policySettings() {
         return Optional.ofNullable(this.policySettings);
     }
     /**
      * Provisioning state of the policy.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * Describes Routing Rules associated with this Web Application Firewall policy.
      * 
     */
-    public List<RoutingRuleLinkResponse> getRoutingRuleLinks() {
+    public List<RoutingRuleLinkResponse> routingRuleLinks() {
         return this.routingRuleLinks;
     }
     /**
      * Describes Security Policy associated with this Web Application Firewall policy.
      * 
     */
-    public List<SecurityPolicyLinkResponse> getSecurityPolicyLinks() {
+    public List<SecurityPolicyLinkResponse> securityPolicyLinks() {
         return this.securityPolicyLinks;
     }
     /**
      * The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

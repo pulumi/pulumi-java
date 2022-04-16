@@ -26,7 +26,7 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -37,7 +37,7 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
     @Import(name="variableName", required=true)
       private final Output<String> variableName;
 
-    public Output<String> getVariableName() {
+    public Output<String> variableName() {
         return this.variableName;
     }
 
@@ -48,7 +48,7 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
     @Import(name="variableValue", required=true)
       private final Output<String> variableValue;
 
-    public Output<String> getVariableValue() {
+    public Output<String> variableValue() {
         return this.variableValue;
     }
 

@@ -26,7 +26,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="access", required=true)
       private final String access;
 
-    public String getAccess() {
+    public String access() {
         return this.access;
     }
 
@@ -37,7 +37,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="communities", required=true)
       private final List<String> communities;
 
-    public List<String> getCommunities() {
+    public List<String> communities() {
         return this.communities;
     }
 
@@ -48,7 +48,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -59,7 +59,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -70,7 +70,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -81,7 +81,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -92,7 +92,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -103,7 +103,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="routeFilterRuleType", required=true)
       private final String routeFilterRuleType;
 
-    public String getRouteFilterRuleType() {
+    public String routeFilterRuleType() {
         return this.routeFilterRuleType;
     }
 

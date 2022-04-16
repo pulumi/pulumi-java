@@ -29,7 +29,7 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="authorization")
       private final @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
 
-    public Output<BackendAuthorizationHeaderCredentialsArgs> getAuthorization() {
+    public Output<BackendAuthorizationHeaderCredentialsArgs> authorization() {
         return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
@@ -40,7 +40,7 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="certificate")
       private final @Nullable Output<List<String>> certificate;
 
-    public Output<List<String>> getCertificate() {
+    public Output<List<String>> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -51,7 +51,7 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="certificateIds")
       private final @Nullable Output<List<String>> certificateIds;
 
-    public Output<List<String>> getCertificateIds() {
+    public Output<List<String>> certificateIds() {
         return this.certificateIds == null ? Codegen.empty() : this.certificateIds;
     }
 
@@ -62,7 +62,7 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="header")
       private final @Nullable Output<Map<String,List<String>>> header;
 
-    public Output<Map<String,List<String>>> getHeader() {
+    public Output<Map<String,List<String>>> header() {
         return this.header == null ? Codegen.empty() : this.header;
     }
 
@@ -73,7 +73,7 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
     @Import(name="query")
       private final @Nullable Output<Map<String,List<String>>> query;
 
-    public Output<Map<String,List<String>>> getQuery() {
+    public Output<Map<String,List<String>>> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 

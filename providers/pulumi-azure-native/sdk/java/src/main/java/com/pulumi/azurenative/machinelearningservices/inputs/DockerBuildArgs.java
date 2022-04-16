@@ -29,7 +29,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -41,7 +41,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dockerSpecificationType", required=true)
       private final Output<String> dockerSpecificationType;
 
-    public Output<String> getDockerSpecificationType() {
+    public Output<String> dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
 
@@ -53,7 +53,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dockerfile", required=true)
       private final Output<String> dockerfile;
 
-    public Output<String> getDockerfile() {
+    public Output<String> dockerfile() {
         return this.dockerfile;
     }
 
@@ -64,7 +64,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<DockerImagePlatformArgs> platform;
 
-    public Output<DockerImagePlatformArgs> getPlatform() {
+    public Output<DockerImagePlatformArgs> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 

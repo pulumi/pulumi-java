@@ -34,14 +34,14 @@ public final class ListDomainRecommendationsResult {
      * Link to next page of resources.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
      * 
     */
-    public List<NameIdentifierResponse> getValue() {
+    public List<NameIdentifierResponse> value() {
         return this.value;
     }
 

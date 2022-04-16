@@ -41,21 +41,21 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
      * Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Password for a username/password pair.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Username for a username/password pair.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

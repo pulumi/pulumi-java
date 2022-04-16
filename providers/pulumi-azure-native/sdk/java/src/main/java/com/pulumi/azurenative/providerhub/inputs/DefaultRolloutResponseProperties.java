@@ -23,21 +23,21 @@ public final class DefaultRolloutResponseProperties extends com.pulumi.resources
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
     @Import(name="specification")
       private final @Nullable DefaultRolloutPropertiesResponseSpecification specification;
 
-    public Optional<DefaultRolloutPropertiesResponseSpecification> getSpecification() {
+    public Optional<DefaultRolloutPropertiesResponseSpecification> specification() {
         return this.specification == null ? Optional.empty() : Optional.ofNullable(this.specification);
     }
 
     @Import(name="status")
       private final @Nullable DefaultRolloutPropertiesResponseStatus status;
 
-    public Optional<DefaultRolloutPropertiesResponseStatus> getStatus() {
+    public Optional<DefaultRolloutPropertiesResponseStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

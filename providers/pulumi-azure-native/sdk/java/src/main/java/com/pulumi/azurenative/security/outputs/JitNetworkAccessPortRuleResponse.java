@@ -49,27 +49,27 @@ public final class JitNetworkAccessPortRuleResponse {
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
      * 
     */
-    public Optional<String> getAllowedSourceAddressPrefix() {
+    public Optional<String> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
      * 
     */
-    public List<String> getAllowedSourceAddressPrefixes() {
+    public List<String> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
     /**
      * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
      * 
     */
-    public String getMaxRequestAccessDuration() {
+    public String maxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

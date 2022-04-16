@@ -28,7 +28,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="includePath")
       private final @Nullable Boolean includePath;
 
-    public Optional<Boolean> getIncludePath() {
+    public Optional<Boolean> includePath() {
         return this.includePath == null ? Optional.empty() : Optional.ofNullable(this.includePath);
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="includeQueryString")
       private final @Nullable Boolean includeQueryString;
 
-    public Optional<Boolean> getIncludeQueryString() {
+    public Optional<Boolean> includeQueryString() {
         return this.includeQueryString == null ? Optional.empty() : Optional.ofNullable(this.includeQueryString);
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="pathRules")
       private final @Nullable List<SubResourceResponse> pathRules;
 
-    public List<SubResourceResponse> getPathRules() {
+    public List<SubResourceResponse> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="redirectType")
       private final @Nullable String redirectType;
 
-    public Optional<String> getRedirectType() {
+    public Optional<String> redirectType() {
         return this.redirectType == null ? Optional.empty() : Optional.ofNullable(this.redirectType);
     }
 
@@ -105,7 +105,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="requestRoutingRules")
       private final @Nullable List<SubResourceResponse> requestRoutingRules;
 
-    public List<SubResourceResponse> getRequestRoutingRules() {
+    public List<SubResourceResponse> requestRoutingRules() {
         return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
     }
 
@@ -116,7 +116,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="targetListener")
       private final @Nullable SubResourceResponse targetListener;
 
-    public Optional<SubResourceResponse> getTargetListener() {
+    public Optional<SubResourceResponse> targetListener() {
         return this.targetListener == null ? Optional.empty() : Optional.ofNullable(this.targetListener);
     }
 
@@ -127,7 +127,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="targetUrl")
       private final @Nullable String targetUrl;
 
-    public Optional<String> getTargetUrl() {
+    public Optional<String> targetUrl() {
         return this.targetUrl == null ? Optional.empty() : Optional.ofNullable(this.targetUrl);
     }
 
@@ -138,7 +138,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -149,7 +149,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="urlPathMaps")
       private final @Nullable List<SubResourceResponse> urlPathMaps;
 
-    public List<SubResourceResponse> getUrlPathMaps() {
+    public List<SubResourceResponse> urlPathMaps() {
         return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
     }
 

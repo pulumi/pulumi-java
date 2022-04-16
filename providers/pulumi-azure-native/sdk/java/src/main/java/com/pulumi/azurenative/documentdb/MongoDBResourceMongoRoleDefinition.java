@@ -44,7 +44,7 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return The database name for which access is being granted for this Role Definition.
      * 
      */
-    public Output</* @Nullable */ String> getDatabaseName() {
+    public Output</* @Nullable */ String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -58,7 +58,7 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return The name of the database account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
      * 
      */
-    public Output</* @Nullable */ List<PrivilegeResponse>> getPrivileges() {
+    public Output</* @Nullable */ List<PrivilegeResponse>> privileges() {
         return this.privileges;
     }
     /**
@@ -86,7 +86,7 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
      */
-    public Output</* @Nullable */ String> getRoleName() {
+    public Output</* @Nullable */ String> roleName() {
         return this.roleName;
     }
     /**
@@ -100,7 +100,7 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return The set of roles inherited by this Role Definition.
      * 
      */
-    public Output</* @Nullable */ List<RoleResponse>> getRoles() {
+    public Output</* @Nullable */ List<RoleResponse>> roles() {
         return this.roles;
     }
     /**
@@ -114,7 +114,7 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

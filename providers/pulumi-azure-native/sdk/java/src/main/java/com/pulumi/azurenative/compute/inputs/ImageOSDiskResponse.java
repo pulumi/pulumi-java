@@ -28,7 +28,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blobUri")
       private final @Nullable String blobUri;
 
-    public Optional<String> getBlobUri() {
+    public Optional<String> blobUri() {
         return this.blobUri == null ? Optional.empty() : Optional.ofNullable(this.blobUri);
     }
 
@@ -39,7 +39,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caching")
       private final @Nullable String caching;
 
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
@@ -50,7 +50,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskEncryptionSet")
       private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
-    public Optional<DiskEncryptionSetParametersResponse> getDiskEncryptionSet() {
+    public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
         return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
     }
 
@@ -61,7 +61,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
@@ -72,7 +72,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managedDisk")
       private final @Nullable SubResourceResponse managedDisk;
 
-    public Optional<SubResourceResponse> getManagedDisk() {
+    public Optional<SubResourceResponse> managedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
     }
 
@@ -83,7 +83,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osState", required=true)
       private final String osState;
 
-    public String getOsState() {
+    public String osState() {
         return this.osState;
     }
 
@@ -94,7 +94,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osType", required=true)
       private final String osType;
 
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 
@@ -105,7 +105,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="snapshot")
       private final @Nullable SubResourceResponse snapshot;
 
-    public Optional<SubResourceResponse> getSnapshot() {
+    public Optional<SubResourceResponse> snapshot() {
         return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
     }
 
@@ -116,7 +116,7 @@ public final class ImageOSDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
     }
 

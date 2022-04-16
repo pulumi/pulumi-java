@@ -19,7 +19,7 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
     @Import(name="datasetName", required=true)
       private final String datasetName;
 
-    public String getDatasetName() {
+    public String datasetName() {
         return this.datasetName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetMachineLearningDatasetArgs extends com.pulumi.resources.In
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

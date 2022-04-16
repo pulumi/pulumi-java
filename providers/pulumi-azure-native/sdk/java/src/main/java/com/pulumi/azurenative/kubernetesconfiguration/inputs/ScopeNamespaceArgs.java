@@ -26,7 +26,7 @@ public final class ScopeNamespaceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
+    public Output<String> targetNamespace() {
         return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 

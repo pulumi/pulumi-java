@@ -35,7 +35,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
-    public Output<Boolean> getAppInsightsEnabled() {
+    public Output<Boolean> appInsightsEnabled() {
         return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
     }
 
@@ -46,7 +46,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="codeConfiguration")
       private final @Nullable Output<CodeConfigurationArgs> codeConfiguration;
 
-    public Output<CodeConfigurationArgs> getCodeConfiguration() {
+    public Output<CodeConfigurationArgs> codeConfiguration() {
         return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
@@ -57,7 +57,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="containerResourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
-    public Output<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
+    public Output<ContainerResourceRequirementsArgs> containerResourceRequirements() {
         return this.containerResourceRequirements == null ? Codegen.empty() : this.containerResourceRequirements;
     }
 
@@ -68,7 +68,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -80,7 +80,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="endpointComputeType", required=true)
       private final Output<String> endpointComputeType;
 
-    public Output<String> getEndpointComputeType() {
+    public Output<String> endpointComputeType() {
         return this.endpointComputeType;
     }
 
@@ -91,7 +91,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -102,7 +102,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -113,7 +113,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="livenessProbe")
       private final @Nullable Output<ProbeSettingsArgs> livenessProbe;
 
-    public Output<ProbeSettingsArgs> getLivenessProbe() {
+    public Output<ProbeSettingsArgs> livenessProbe() {
         return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
     }
 
@@ -124,7 +124,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="model")
       private final @Nullable Output<Object> model;
 
-    public Output<Object> getModel() {
+    public Output<Object> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 
@@ -135,7 +135,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -146,7 +146,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="requestSettings")
       private final @Nullable Output<OnlineRequestSettingsArgs> requestSettings;
 
-    public Output<OnlineRequestSettingsArgs> getRequestSettings() {
+    public Output<OnlineRequestSettingsArgs> requestSettings() {
         return this.requestSettings == null ? Codegen.empty() : this.requestSettings;
     }
 
@@ -157,7 +157,7 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="scaleSettings")
       private final @Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
-    public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> getScaleSettings() {
+    public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings() {
         return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 

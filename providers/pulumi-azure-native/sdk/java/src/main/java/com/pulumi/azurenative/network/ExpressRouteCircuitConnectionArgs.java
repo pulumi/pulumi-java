@@ -24,7 +24,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
-    public Output<String> getAddressPrefix() {
+    public Output<String> addressPrefix() {
         return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 
@@ -35,7 +35,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
-    public Output<String> getAuthorizationKey() {
+    public Output<String> authorizationKey() {
         return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
@@ -46,7 +46,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="circuitName", required=true)
       private final Output<String> circuitName;
 
-    public Output<String> getCircuitName() {
+    public Output<String> circuitName() {
         return this.circuitName;
     }
 
@@ -57,7 +57,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -68,7 +68,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="expressRouteCircuitPeering")
       private final @Nullable Output<SubResourceArgs> expressRouteCircuitPeering;
 
-    public Output<SubResourceArgs> getExpressRouteCircuitPeering() {
+    public Output<SubResourceArgs> expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering == null ? Codegen.empty() : this.expressRouteCircuitPeering;
     }
 
@@ -79,7 +79,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -90,7 +90,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="ipv6CircuitConnectionConfig")
       private final @Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig;
 
-    public Output<Ipv6CircuitConnectionConfigArgs> getIpv6CircuitConnectionConfig() {
+    public Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig() {
         return this.ipv6CircuitConnectionConfig == null ? Codegen.empty() : this.ipv6CircuitConnectionConfig;
     }
 
@@ -101,7 +101,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -112,7 +112,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="peerExpressRouteCircuitPeering")
       private final @Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering;
 
-    public Output<SubResourceArgs> getPeerExpressRouteCircuitPeering() {
+    public Output<SubResourceArgs> peerExpressRouteCircuitPeering() {
         return this.peerExpressRouteCircuitPeering == null ? Codegen.empty() : this.peerExpressRouteCircuitPeering;
     }
 
@@ -123,7 +123,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="peeringName", required=true)
       private final Output<String> peeringName;
 
-    public Output<String> getPeeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -134,7 +134,7 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

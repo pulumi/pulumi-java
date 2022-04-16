@@ -70,49 +70,49 @@ public final class VolumeFailoverMetadataResponse {
      * The date at which the snapshot was taken.
      * 
     */
-    public Optional<String> getBackupCreatedDate() {
+    public Optional<String> backupCreatedDate() {
         return Optional.ofNullable(this.backupCreatedDate);
     }
     /**
      * The path ID of the backup-element for this volume, inside the backup set.
      * 
     */
-    public Optional<String> getBackupElementId() {
+    public Optional<String> backupElementId() {
         return Optional.ofNullable(this.backupElementId);
     }
     /**
      * The path ID of the backup set.
      * 
     */
-    public Optional<String> getBackupId() {
+    public Optional<String> backupId() {
         return Optional.ofNullable(this.backupId);
     }
     /**
      * The path ID of the backup policy using which the snapshot was taken.
      * 
     */
-    public Optional<String> getBackupPolicyId() {
+    public Optional<String> backupPolicyId() {
         return Optional.ofNullable(this.backupPolicyId);
     }
     /**
      * The size of the volume in bytes at the time the snapshot was taken.
      * 
     */
-    public Optional<Double> getSizeInBytes() {
+    public Optional<Double> sizeInBytes() {
         return Optional.ofNullable(this.sizeInBytes);
     }
     /**
      * The path ID of the volume.
      * 
     */
-    public Optional<String> getVolumeId() {
+    public Optional<String> volumeId() {
         return Optional.ofNullable(this.volumeId);
     }
     /**
      * The type of the volume.
      * 
     */
-    public Optional<String> getVolumeType() {
+    public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

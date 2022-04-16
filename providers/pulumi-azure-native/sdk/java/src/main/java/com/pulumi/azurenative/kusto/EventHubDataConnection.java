@@ -42,7 +42,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The event hub messages compression type
      * 
      */
-    public Output</* @Nullable */ String> getCompression() {
+    public Output</* @Nullable */ String> compression() {
         return this.compression;
     }
     /**
@@ -56,7 +56,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The event hub consumer group.
      * 
      */
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
     /**
@@ -70,7 +70,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getDataFormat() {
+    public Output</* @Nullable */ String> dataFormat() {
         return this.dataFormat;
     }
     /**
@@ -84,7 +84,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The resource ID of the event hub to be used to create a data connection.
      * 
      */
-    public Output<String> getEventHubResourceId() {
+    public Output<String> eventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
@@ -98,7 +98,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return System properties of the event hub
      * 
      */
-    public Output</* @Nullable */ List<String>> getEventSystemProperties() {
+    public Output</* @Nullable */ List<String>> eventSystemProperties() {
         return this.eventSystemProperties;
     }
     /**
@@ -114,7 +114,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * Expected value is 'EventHub'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -128,7 +128,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -142,7 +142,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
      * 
      */
-    public Output</* @Nullable */ String> getManagedIdentityResourceId() {
+    public Output</* @Nullable */ String> managedIdentityResourceId() {
         return this.managedIdentityResourceId;
     }
     /**
@@ -156,7 +156,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getMappingRuleName() {
+    public Output</* @Nullable */ String> mappingRuleName() {
         return this.mappingRuleName;
     }
     /**
@@ -170,7 +170,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -184,7 +184,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -198,7 +198,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getTableName() {
+    public Output</* @Nullable */ String> tableName() {
         return this.tableName;
     }
     /**
@@ -212,7 +212,7 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

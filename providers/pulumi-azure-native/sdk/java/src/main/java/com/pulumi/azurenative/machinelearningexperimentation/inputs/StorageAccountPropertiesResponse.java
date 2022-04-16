@@ -23,7 +23,7 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
     @Import(name="accessKey", required=true)
       private final String accessKey;
 
-    public String getAccessKey() {
+    public String accessKey() {
         return this.accessKey;
     }
 
@@ -34,7 +34,7 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
     @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
 

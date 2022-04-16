@@ -28,7 +28,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dockerImageUri", required=true)
       private final Output<String> dockerImageUri;
 
-    public Output<String> getDockerImageUri() {
+    public Output<String> dockerImageUri() {
         return this.dockerImageUri;
     }
 
@@ -40,7 +40,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dockerSpecificationType", required=true)
       private final Output<String> dockerSpecificationType;
 
-    public Output<String> getDockerSpecificationType() {
+    public Output<String> dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
 
@@ -51,7 +51,7 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<DockerImagePlatformArgs> platform;
 
-    public Output<DockerImagePlatformArgs> getPlatform() {
+    public Output<DockerImagePlatformArgs> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 

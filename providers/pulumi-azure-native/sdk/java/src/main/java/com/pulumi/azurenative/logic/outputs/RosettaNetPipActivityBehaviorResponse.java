@@ -76,56 +76,56 @@ public final class RosettaNetPipActivityBehaviorResponse {
      * The value indicating whether the RosettaNet PIP is used for a single action.
      * 
     */
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
     /**
      * The value indicating whether authorization is required.
      * 
     */
-    public Boolean getIsAuthorizationRequired() {
+    public Boolean isAuthorizationRequired() {
         return this.isAuthorizationRequired;
     }
     /**
      * The value indicating whether secured transport is required.
      * 
     */
-    public Boolean getIsSecuredTransportRequired() {
+    public Boolean isSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
     }
     /**
      * The value indicating whether non-repudiation is for origin and content.
      * 
     */
-    public Boolean getNonRepudiationOfOriginAndContent() {
+    public Boolean nonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
     }
     /**
      * The persistent confidentiality encryption scope.
      * 
     */
-    public String getPersistentConfidentialityScope() {
+    public String persistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
     }
     /**
      * The value indicating whether the RosettaNet PIP communication is synchronous.
      * 
     */
-    public String getResponseType() {
+    public String responseType() {
         return this.responseType;
     }
     /**
      * The value indicating retry count.
      * 
     */
-    public Integer getRetryCount() {
+    public Integer retryCount() {
         return this.retryCount;
     }
     /**
      * The time to perform in seconds.
      * 
     */
-    public Integer getTimeToPerformInSeconds() {
+    public Integer timeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
     }
 

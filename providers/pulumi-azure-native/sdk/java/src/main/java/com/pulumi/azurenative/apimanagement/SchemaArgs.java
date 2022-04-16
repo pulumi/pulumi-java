@@ -24,7 +24,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -46,7 +46,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
-    public Output<String> getSchemaId() {
+    public Output<String> schemaId() {
         return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
@@ -57,7 +57,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaType", required=true)
       private final Output<Either<String,SchemaType>> schemaType;
 
-    public Output<Either<String,SchemaType>> getSchemaType() {
+    public Output<Either<String,SchemaType>> schemaType() {
         return this.schemaType;
     }
 
@@ -68,7 +68,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -79,7 +79,7 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -30,7 +30,7 @@ public final class ArmApplicationHealthPolicyArgs extends com.pulumi.resources.R
     @Import(name="considerWarningAsError")
       private final @Nullable Output<Boolean> considerWarningAsError;
 
-    public Output<Boolean> getConsiderWarningAsError() {
+    public Output<Boolean> considerWarningAsError() {
         return this.considerWarningAsError == null ? Codegen.empty() : this.considerWarningAsError;
     }
 
@@ -41,7 +41,7 @@ public final class ArmApplicationHealthPolicyArgs extends com.pulumi.resources.R
     @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
-    public Output<ArmServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
+    public Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy() {
         return this.defaultServiceTypeHealthPolicy == null ? Codegen.empty() : this.defaultServiceTypeHealthPolicy;
     }
 
@@ -55,7 +55,7 @@ public final class ArmApplicationHealthPolicyArgs extends com.pulumi.resources.R
     @Import(name="maxPercentUnhealthyDeployedApplications")
       private final @Nullable Output<Integer> maxPercentUnhealthyDeployedApplications;
 
-    public Output<Integer> getMaxPercentUnhealthyDeployedApplications() {
+    public Output<Integer> maxPercentUnhealthyDeployedApplications() {
         return this.maxPercentUnhealthyDeployedApplications == null ? Codegen.empty() : this.maxPercentUnhealthyDeployedApplications;
     }
 
@@ -66,7 +66,7 @@ public final class ArmApplicationHealthPolicyArgs extends com.pulumi.resources.R
     @Import(name="serviceTypeHealthPolicyMap")
       private final @Nullable Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap;
 
-    public Output<Map<String,ArmServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicyMap() {
+    public Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap() {
         return this.serviceTypeHealthPolicyMap == null ? Codegen.empty() : this.serviceTypeHealthPolicyMap;
     }
 

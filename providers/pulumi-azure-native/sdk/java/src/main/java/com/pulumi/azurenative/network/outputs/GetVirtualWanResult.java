@@ -115,91 +115,91 @@ public final class GetVirtualWanResult {
      * True if branch to branch traffic is allowed.
      * 
     */
-    public Optional<Boolean> getAllowBranchToBranchTraffic() {
+    public Optional<Boolean> allowBranchToBranchTraffic() {
         return Optional.ofNullable(this.allowBranchToBranchTraffic);
     }
     /**
      * True if Vnet to Vnet traffic is allowed.
      * 
     */
-    public Optional<Boolean> getAllowVnetToVnetTraffic() {
+    public Optional<Boolean> allowVnetToVnetTraffic() {
         return Optional.ofNullable(this.allowVnetToVnetTraffic);
     }
     /**
      * Vpn encryption to be disabled or not.
      * 
     */
-    public Optional<Boolean> getDisableVpnEncryption() {
+    public Optional<Boolean> disableVpnEncryption() {
         return Optional.ofNullable(this.disableVpnEncryption);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The office local breakout category.
      * 
     */
-    public String getOffice365LocalBreakoutCategory() {
+    public String office365LocalBreakoutCategory() {
         return this.office365LocalBreakoutCategory;
     }
     /**
      * The provisioning state of the virtual WAN resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * List of VirtualHubs in the VirtualWAN.
      * 
     */
-    public List<SubResourceResponse> getVirtualHubs() {
+    public List<SubResourceResponse> virtualHubs() {
         return this.virtualHubs;
     }
     /**
      * List of VpnSites in the VirtualWAN.
      * 
     */
-    public List<SubResourceResponse> getVpnSites() {
+    public List<SubResourceResponse> vpnSites() {
         return this.vpnSites;
     }
 

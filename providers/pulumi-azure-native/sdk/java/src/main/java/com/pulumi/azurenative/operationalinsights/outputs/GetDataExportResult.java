@@ -92,70 +92,70 @@ public final class GetDataExportResult {
      * The latest data export rule modification time.
      * 
     */
-    public Optional<String> getCreatedDate() {
+    public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
      * The data export rule ID.
      * 
     */
-    public Optional<String> getDataExportId() {
+    public Optional<String> dataExportId() {
         return Optional.ofNullable(this.dataExportId);
     }
     /**
      * Active when enabled.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
      * 
     */
-    public Optional<String> getEventHubName() {
+    public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Date and time when the export was last modified.
      * 
     */
-    public Optional<String> getLastModifiedDate() {
+    public Optional<String> lastModifiedDate() {
         return Optional.ofNullable(this.lastModifiedDate);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
      * 
     */
-    public List<String> getTableNames() {
+    public List<String> tableNames() {
         return this.tableNames;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

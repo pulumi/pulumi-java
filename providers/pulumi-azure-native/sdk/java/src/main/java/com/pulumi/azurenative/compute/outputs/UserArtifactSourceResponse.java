@@ -34,14 +34,14 @@ public final class UserArtifactSourceResponse {
      * Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
      * 
     */
-    public Optional<String> getDefaultConfigurationLink() {
+    public Optional<String> defaultConfigurationLink() {
         return Optional.ofNullable(this.defaultConfigurationLink);
     }
     /**
      * Required. The mediaLink of the artifact, must be a readable storage page blob.
      * 
     */
-    public String getMediaLink() {
+    public String mediaLink() {
         return this.mediaLink;
     }
 

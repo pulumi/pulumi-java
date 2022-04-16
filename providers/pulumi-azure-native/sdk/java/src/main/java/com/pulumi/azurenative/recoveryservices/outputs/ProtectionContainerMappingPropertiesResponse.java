@@ -102,77 +102,77 @@ public final class ProtectionContainerMappingPropertiesResponse {
      * Health of pairing.
      * 
     */
-    public Optional<String> getHealth() {
+    public Optional<String> health() {
         return Optional.ofNullable(this.health);
     }
     /**
      * Health error.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrorDetails() {
+    public List<HealthErrorResponse> healthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
     /**
      * Friendly name of replication policy.
      * 
     */
-    public Optional<String> getPolicyFriendlyName() {
+    public Optional<String> policyFriendlyName() {
         return Optional.ofNullable(this.policyFriendlyName);
     }
     /**
      * Policy ARM Id.
      * 
     */
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * Provider specific provider details.
      * 
     */
-    public Optional<Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse>> getProviderSpecificDetails() {
+    public Optional<Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse>> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
     /**
      * Friendly name of source fabric.
      * 
     */
-    public Optional<String> getSourceFabricFriendlyName() {
+    public Optional<String> sourceFabricFriendlyName() {
         return Optional.ofNullable(this.sourceFabricFriendlyName);
     }
     /**
      * Friendly name of source protection container.
      * 
     */
-    public Optional<String> getSourceProtectionContainerFriendlyName() {
+    public Optional<String> sourceProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.sourceProtectionContainerFriendlyName);
     }
     /**
      * Association Status
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Friendly name of target fabric.
      * 
     */
-    public Optional<String> getTargetFabricFriendlyName() {
+    public Optional<String> targetFabricFriendlyName() {
         return Optional.ofNullable(this.targetFabricFriendlyName);
     }
     /**
      * Friendly name of paired container.
      * 
     */
-    public Optional<String> getTargetProtectionContainerFriendlyName() {
+    public Optional<String> targetProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.targetProtectionContainerFriendlyName);
     }
     /**
      * Paired protection container ARM ID.
      * 
     */
-    public Optional<String> getTargetProtectionContainerId() {
+    public Optional<String> targetProtectionContainerId() {
         return Optional.ofNullable(this.targetProtectionContainerId);
     }
 

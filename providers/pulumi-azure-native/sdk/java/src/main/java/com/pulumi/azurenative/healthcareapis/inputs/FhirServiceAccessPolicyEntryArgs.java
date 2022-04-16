@@ -25,7 +25,7 @@ public final class FhirServiceAccessPolicyEntryArgs extends com.pulumi.resources
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 

@@ -26,7 +26,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operator")
       private final @Nullable String operator;
 
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
@@ -37,7 +37,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

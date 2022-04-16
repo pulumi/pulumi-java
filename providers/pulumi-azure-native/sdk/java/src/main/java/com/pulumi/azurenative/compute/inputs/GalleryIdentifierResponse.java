@@ -23,7 +23,7 @@ public final class GalleryIdentifierResponse extends com.pulumi.resources.Invoke
     @Import(name="uniqueName", required=true)
       private final String uniqueName;
 
-    public String getUniqueName() {
+    public String uniqueName() {
         return this.uniqueName;
     }
 

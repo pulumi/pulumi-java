@@ -28,7 +28,7 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -50,7 +50,7 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyPropertyNames", required=true)
       private final Output<List<String>> keyPropertyNames;
 
-    public Output<List<String>> getKeyPropertyNames() {
+    public Output<List<String>> keyPropertyNames() {
         return this.keyPropertyNames;
     }
 
@@ -61,7 +61,7 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="strongIdName", required=true)
       private final Output<String> strongIdName;
 
-    public Output<String> getStrongIdName() {
+    public Output<String> strongIdName() {
         return this.strongIdName;
     }
 

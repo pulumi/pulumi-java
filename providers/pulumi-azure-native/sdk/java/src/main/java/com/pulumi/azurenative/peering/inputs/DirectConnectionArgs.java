@@ -31,7 +31,7 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bandwidthInMbps")
       private final @Nullable Output<Integer> bandwidthInMbps;
 
-    public Output<Integer> getBandwidthInMbps() {
+    public Output<Integer> bandwidthInMbps() {
         return this.bandwidthInMbps == null ? Codegen.empty() : this.bandwidthInMbps;
     }
 
@@ -42,7 +42,7 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bgpSession")
       private final @Nullable Output<BgpSessionArgs> bgpSession;
 
-    public Output<BgpSessionArgs> getBgpSession() {
+    public Output<BgpSessionArgs> bgpSession() {
         return this.bgpSession == null ? Codegen.empty() : this.bgpSession;
     }
 
@@ -53,7 +53,7 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="connectionIdentifier")
       private final @Nullable Output<String> connectionIdentifier;
 
-    public Output<String> getConnectionIdentifier() {
+    public Output<String> connectionIdentifier() {
         return this.connectionIdentifier == null ? Codegen.empty() : this.connectionIdentifier;
     }
 
@@ -64,7 +64,7 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="peeringDBFacilityId")
       private final @Nullable Output<Integer> peeringDBFacilityId;
 
-    public Output<Integer> getPeeringDBFacilityId() {
+    public Output<Integer> peeringDBFacilityId() {
         return this.peeringDBFacilityId == null ? Codegen.empty() : this.peeringDBFacilityId;
     }
 
@@ -75,7 +75,7 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sessionAddressProvider")
       private final @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
 
-    public Output<Either<String,SessionAddressProvider>> getSessionAddressProvider() {
+    public Output<Either<String,SessionAddressProvider>> sessionAddressProvider() {
         return this.sessionAddressProvider == null ? Codegen.empty() : this.sessionAddressProvider;
     }
 
@@ -86,7 +86,7 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="useForPeeringService")
       private final @Nullable Output<Boolean> useForPeeringService;
 
-    public Output<Boolean> getUseForPeeringService() {
+    public Output<Boolean> useForPeeringService() {
         return this.useForPeeringService == null ? Codegen.empty() : this.useForPeeringService;
     }
 

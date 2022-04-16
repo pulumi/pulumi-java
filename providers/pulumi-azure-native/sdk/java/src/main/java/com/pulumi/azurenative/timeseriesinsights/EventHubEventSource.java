@@ -44,7 +44,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The name of the event hub's consumer group that holds the partitions from which events will be read.
      * 
      */
-    public Output<String> getConsumerGroupName() {
+    public Output<String> consumerGroupName() {
         return this.consumerGroupName;
     }
     /**
@@ -58,7 +58,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The time the resource was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -72,7 +72,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The name of the event hub.
      * 
      */
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName;
     }
     /**
@@ -86,7 +86,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The resource id of the event source in Azure Resource Manager.
      * 
      */
-    public Output<String> getEventSourceResourceId() {
+    public Output<String> eventSourceResourceId() {
         return this.eventSourceResourceId;
     }
     /**
@@ -100,7 +100,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant 'Listen' permissions to the event hub.
      * 
      */
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
     /**
@@ -116,7 +116,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * Expected value is 'Microsoft.EventHub'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -130,7 +130,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
-    public Output</* @Nullable */ LocalTimestampResponse> getLocalTimestamp() {
+    public Output</* @Nullable */ LocalTimestampResponse> localTimestamp() {
         return this.localTimestamp;
     }
     /**
@@ -144,7 +144,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -158,7 +158,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -172,7 +172,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -186,7 +186,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The name of the service bus that contains the event hub.
      * 
      */
-    public Output<String> getServiceBusNamespace() {
+    public Output<String> serviceBusNamespace() {
         return this.serviceBusNamespace;
     }
     /**
@@ -200,7 +200,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -214,7 +214,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
      * 
      */
-    public Output</* @Nullable */ String> getTime() {
+    public Output</* @Nullable */ String> time() {
         return this.time;
     }
     /**
@@ -228,7 +228,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
-    public Output</* @Nullable */ String> getTimestampPropertyName() {
+    public Output</* @Nullable */ String> timestampPropertyName() {
         return this.timestampPropertyName;
     }
     /**
@@ -242,7 +242,7 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -31,7 +31,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
-    public Optional<String> getDeleteOption() {
+    public Optional<String> deleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
     }
 
@@ -42,7 +42,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="dnsSettings")
       private final @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
 
-    public Optional<VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse> getDnsSettings() {
+    public Optional<VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse> dnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
@@ -53,7 +53,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
@@ -64,7 +64,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="ipTags")
       private final @Nullable List<VirtualMachineIpTagResponse> ipTags;
 
-    public List<VirtualMachineIpTagResponse> getIpTags() {
+    public List<VirtualMachineIpTagResponse> ipTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
     }
 
@@ -75,7 +75,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -86,7 +86,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="publicIPAddressVersion")
       private final @Nullable String publicIPAddressVersion;
 
-    public Optional<String> getPublicIPAddressVersion() {
+    public Optional<String> publicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressVersion);
     }
 
@@ -97,7 +97,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="publicIPAllocationMethod")
       private final @Nullable String publicIPAllocationMethod;
 
-    public Optional<String> getPublicIPAllocationMethod() {
+    public Optional<String> publicIPAllocationMethod() {
         return this.publicIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.publicIPAllocationMethod);
     }
 
@@ -108,7 +108,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="publicIPPrefix")
       private final @Nullable SubResourceResponse publicIPPrefix;
 
-    public Optional<SubResourceResponse> getPublicIPPrefix() {
+    public Optional<SubResourceResponse> publicIPPrefix() {
         return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
     }
 
@@ -119,7 +119,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
     @Import(name="sku")
       private final @Nullable PublicIPAddressSkuResponse sku;
 
-    public Optional<PublicIPAddressSkuResponse> getSku() {
+    public Optional<PublicIPAddressSkuResponse> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 

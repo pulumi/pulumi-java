@@ -194,168 +194,168 @@ public final class GetComponentResult {
      * Application Insights Unique ID for your Application.
      * 
     */
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
     /**
      * The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
      * 
     */
-    public String getApplicationId() {
+    public String applicationId() {
         return this.applicationId;
     }
     /**
      * Type of application being monitored.
      * 
     */
-    public String getApplicationType() {
+    public String applicationType() {
         return this.applicationType;
     }
     /**
      * Application Insights component connection string.
      * 
     */
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
     /**
      * Creation Date for the Application Insights component, in ISO 8601 format.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * Disable IP masking.
      * 
     */
-    public Optional<Boolean> getDisableIpMasking() {
+    public Optional<Boolean> disableIpMasking() {
         return Optional.ofNullable(this.disableIpMasking);
     }
     /**
      * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
      * 
     */
-    public Optional<String> getFlowType() {
+    public Optional<String> flowType() {
         return Optional.ofNullable(this.flowType);
     }
     /**
      * The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
      * 
     */
-    public Optional<String> getHockeyAppId() {
+    public Optional<String> hockeyAppId() {
         return Optional.ofNullable(this.hockeyAppId);
     }
     /**
      * Token used to authenticate communications with between Application Insights and HockeyApp.
      * 
     */
-    public String getHockeyAppToken() {
+    public String hockeyAppToken() {
         return this.hockeyAppToken;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Purge data immediately after 30 days.
      * 
     */
-    public Optional<Boolean> getImmediatePurgeDataOn30Days() {
+    public Optional<Boolean> immediatePurgeDataOn30Days() {
         return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }
     /**
      * Indicates the flow of the ingestion.
      * 
     */
-    public Optional<String> getIngestionMode() {
+    public Optional<String> ingestionMode() {
         return Optional.ofNullable(this.ingestionMode);
     }
     /**
      * Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
      * 
     */
-    public String getInstrumentationKey() {
+    public String instrumentationKey() {
         return this.instrumentationKey;
     }
     /**
      * The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of linked private link scope resources.
      * 
     */
-    public List<PrivateLinkScopedResourceResponse> getPrivateLinkScopedResources() {
+    public List<PrivateLinkScopedResourceResponse> privateLinkScopedResources() {
         return this.privateLinkScopedResources;
     }
     /**
      * Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
      * 
     */
-    public Optional<String> getRequestSource() {
+    public Optional<String> requestSource() {
         return Optional.ofNullable(this.requestSource);
     }
     /**
      * Retention period in days.
      * 
     */
-    public Optional<Integer> getRetentionInDays() {
+    public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
      * Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
      * 
     */
-    public Optional<Double> getSamplingPercentage() {
+    public Optional<Double> samplingPercentage() {
         return Optional.ofNullable(this.samplingPercentage);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure Tenant Id.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

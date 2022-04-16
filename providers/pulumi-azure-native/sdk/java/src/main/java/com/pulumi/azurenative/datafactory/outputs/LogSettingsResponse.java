@@ -43,21 +43,21 @@ public final class LogSettingsResponse {
      * Specifies settings for copy activity log.
      * 
     */
-    public Optional<CopyActivityLogSettingsResponse> getCopyActivityLogSettings() {
+    public Optional<CopyActivityLogSettingsResponse> copyActivityLogSettings() {
         return Optional.ofNullable(this.copyActivityLogSettings);
     }
     /**
      * Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableCopyActivityLog() {
+    public Optional<Object> enableCopyActivityLog() {
         return Optional.ofNullable(this.enableCopyActivityLog);
     }
     /**
      * Log location settings customer needs to provide when enabling log.
      * 
     */
-    public LogLocationSettingsResponse getLogLocationSettings() {
+    public LogLocationSettingsResponse logLocationSettings() {
         return this.logLocationSettings;
     }
 

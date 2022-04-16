@@ -24,7 +24,7 @@ public final class FirstQualityResponse {
      * The first quality bitrate.
      * 
     */
-    public Integer getBitrate() {
+    public Integer bitrate() {
         return this.bitrate;
     }
 

@@ -26,7 +26,7 @@ public final class ServiceTypeHealthPolicyResponse {
      * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
      * 
     */
-    public Optional<Integer> getMaxPercentUnhealthyServices() {
+    public Optional<Integer> maxPercentUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
 

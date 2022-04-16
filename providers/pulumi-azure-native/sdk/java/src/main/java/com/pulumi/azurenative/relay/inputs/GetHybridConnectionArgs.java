@@ -19,7 +19,7 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hybridConnectionName", required=true)
       private final String hybridConnectionName;
 
-    public String getHybridConnectionName() {
+    public String hybridConnectionName() {
         return this.hybridConnectionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

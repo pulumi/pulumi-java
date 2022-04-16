@@ -152,126 +152,126 @@ public final class DatasetResponseLatest {
      * User who created.
      * 
     */
-    public Optional<UserInfoResponse> getCreatedBy() {
+    public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The dataset creation time (UTC).
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
      * 
     */
-    public Optional<DatasetResponseDataPath> getDataPath() {
+    public Optional<DatasetResponseDataPath> dataPath() {
         return Optional.ofNullable(this.dataPath);
     }
     /**
      * Dataflow Json
      * 
     */
-    public String getDataflow() {
+    public String dataflow() {
         return this.dataflow;
     }
     /**
      * Dataset state
      * 
     */
-    public Optional<DatasetStateResponse> getDatasetDefinitionState() {
+    public Optional<DatasetStateResponse> datasetDefinitionState() {
         return Optional.ofNullable(this.datasetDefinitionState);
     }
     /**
      * Unique Dataset identifier.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
     /**
      * Description about the dataset.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * eTag description
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Dataset FileType, specified by user.
      * 
     */
-    public String getFileType() {
+    public String fileType() {
         return this.fileType;
     }
     /**
      * The dataset last modified time (UTC).
      * 
     */
-    public String getModifiedTime() {
+    public String modifiedTime() {
         return this.modifiedTime;
     }
     /**
      * Summary of Definition changes.
      * 
     */
-    public String getNotes() {
+    public String notes() {
         return this.notes;
     }
     /**
      * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
      * 
     */
-    public Boolean getPartitionFormatInPath() {
+    public Boolean partitionFormatInPath() {
         return this.partitionFormatInPath;
     }
     /**
      * Properties stores information like name of time series column for time series dataset.
      * 
     */
-    public Map<String,Object> getProperties() {
+    public Map<String,Object> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Indicates the saved dataset this definition is mapping to, populated on Get.
      * 
     */
-    public String getSavedDatasetId() {
+    public String savedDatasetId() {
         return this.savedDatasetId;
     }
     /**
      * Tags associated with the dataset.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      *  Telemetry information about the dataset including information like which service the dataset was created from.
      * 
     */
-    public Map<String,String> getTelemetryInfo() {
+    public Map<String,String> telemetryInfo() {
         return this.telemetryInfo;
     }
     /**
      *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
      * 
     */
-    public Boolean getUseDescriptionTagsFromDefinition() {
+    public Boolean useDescriptionTagsFromDefinition() {
         return this.useDescriptionTagsFromDefinition;
     }
     /**
      * An identifier uniquely identifies a definition change.
      * 
     */
-    public String getVersionId() {
+    public String versionId() {
         return this.versionId;
     }
 

@@ -28,7 +28,7 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="chartQueryResults")
       private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
 
-    public List<InsightsTableResultResponse> getChartQueryResults() {
+    public List<InsightsTableResultResponse> chartQueryResults() {
         return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
     }
 
@@ -39,7 +39,7 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="queryId")
       private final @Nullable String queryId;
 
-    public Optional<String> getQueryId() {
+    public Optional<String> queryId() {
         return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);
     }
 
@@ -50,7 +50,7 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="queryTimeInterval")
       private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
 
-    public Optional<EntityInsightItemResponseQueryTimeInterval> getQueryTimeInterval() {
+    public Optional<EntityInsightItemResponseQueryTimeInterval> queryTimeInterval() {
         return this.queryTimeInterval == null ? Optional.empty() : Optional.ofNullable(this.queryTimeInterval);
     }
 
@@ -61,7 +61,7 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="tableQueryResults")
       private final @Nullable InsightsTableResultResponse tableQueryResults;
 
-    public Optional<InsightsTableResultResponse> getTableQueryResults() {
+    public Optional<InsightsTableResultResponse> tableQueryResults() {
         return this.tableQueryResults == null ? Optional.empty() : Optional.ofNullable(this.tableQueryResults);
     }
 

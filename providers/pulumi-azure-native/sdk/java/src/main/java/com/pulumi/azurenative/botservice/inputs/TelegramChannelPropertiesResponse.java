@@ -26,7 +26,7 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="accessToken")
       private final @Nullable String accessToken;
 
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
     }
 
@@ -37,7 +37,7 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="isValidated")
       private final @Nullable Boolean isValidated;
 
-    public Optional<Boolean> getIsValidated() {
+    public Optional<Boolean> isValidated() {
         return this.isValidated == null ? Optional.empty() : Optional.ofNullable(this.isValidated);
     }
 

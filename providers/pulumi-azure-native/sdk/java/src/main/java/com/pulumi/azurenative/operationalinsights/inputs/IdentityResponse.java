@@ -27,7 +27,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -38,7 +38,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 
@@ -49,7 +49,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -60,7 +60,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
-    public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
+    public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

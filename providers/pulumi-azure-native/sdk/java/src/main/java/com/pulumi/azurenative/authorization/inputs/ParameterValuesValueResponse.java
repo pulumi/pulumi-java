@@ -25,7 +25,7 @@ public final class ParameterValuesValueResponse extends com.pulumi.resources.Inv
     @Import(name="value")
       private final @Nullable Object value;
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

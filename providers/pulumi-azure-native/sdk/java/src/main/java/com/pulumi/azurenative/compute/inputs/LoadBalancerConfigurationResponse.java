@@ -26,7 +26,7 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
     @Import(name="properties", required=true)
       private final LoadBalancerConfigurationPropertiesResponse properties;
 
-    public LoadBalancerConfigurationPropertiesResponse getProperties() {
+    public LoadBalancerConfigurationPropertiesResponse properties() {
         return this.properties;
     }
 

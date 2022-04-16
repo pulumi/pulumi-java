@@ -27,7 +27,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="cap")
       private final @Nullable Double cap;
 
-    public Optional<Double> getCap() {
+    public Optional<Double> cap() {
         return this.cap == null ? Optional.empty() : Optional.ofNullable(this.cap);
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="maxHistoryCap", required=true)
       private final Double maxHistoryCap;
 
-    public Double getMaxHistoryCap() {
+    public Double maxHistoryCap() {
         return this.maxHistoryCap;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="resetTime", required=true)
       private final Integer resetTime;
 
-    public Integer getResetTime() {
+    public Integer resetTime() {
         return this.resetTime;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="stopSendNotificationWhenHitCap")
       private final @Nullable Boolean stopSendNotificationWhenHitCap;
 
-    public Optional<Boolean> getStopSendNotificationWhenHitCap() {
+    public Optional<Boolean> stopSendNotificationWhenHitCap() {
         return this.stopSendNotificationWhenHitCap == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="stopSendNotificationWhenHitThreshold")
       private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
 
-    public Optional<Boolean> getStopSendNotificationWhenHitThreshold() {
+    public Optional<Boolean> stopSendNotificationWhenHitThreshold() {
         return this.stopSendNotificationWhenHitThreshold == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="warningThreshold")
       private final @Nullable Integer warningThreshold;
 
-    public Optional<Integer> getWarningThreshold() {
+    public Optional<Integer> warningThreshold() {
         return this.warningThreshold == null ? Optional.empty() : Optional.ofNullable(this.warningThreshold);
     }
 

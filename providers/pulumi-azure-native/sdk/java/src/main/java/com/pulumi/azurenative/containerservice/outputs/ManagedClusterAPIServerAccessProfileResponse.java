@@ -43,21 +43,21 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
      * Authorized IP Ranges to kubernetes API server.
      * 
     */
-    public List<String> getAuthorizedIPRanges() {
+    public List<String> authorizedIPRanges() {
         return this.authorizedIPRanges == null ? List.of() : this.authorizedIPRanges;
     }
     /**
      * Whether to create the cluster as a private cluster or not.
      * 
     */
-    public Optional<Boolean> getEnablePrivateCluster() {
+    public Optional<Boolean> enablePrivateCluster() {
         return Optional.ofNullable(this.enablePrivateCluster);
     }
     /**
      * Private dns zone mode for private cluster.
      * 
     */
-    public Optional<String> getPrivateDNSZone() {
+    public Optional<String> privateDNSZone() {
         return Optional.ofNullable(this.privateDNSZone);
     }
 

@@ -84,63 +84,63 @@ public final class GetIncidentRelationResult {
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource ID of the related resource
      * 
     */
-    public String getRelatedResourceId() {
+    public String relatedResourceId() {
         return this.relatedResourceId;
     }
     /**
      * The resource kind of the related resource
      * 
     */
-    public String getRelatedResourceKind() {
+    public String relatedResourceKind() {
         return this.relatedResourceKind;
     }
     /**
      * The name of the related resource
      * 
     */
-    public String getRelatedResourceName() {
+    public String relatedResourceName() {
         return this.relatedResourceName;
     }
     /**
      * The resource type of the related resource
      * 
     */
-    public String getRelatedResourceType() {
+    public String relatedResourceType() {
         return this.relatedResourceType;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

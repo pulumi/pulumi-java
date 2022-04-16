@@ -26,7 +26,7 @@ public final class CustomProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataConfigurationPath")
       private final @Nullable Output<String> metadataConfigurationPath;
 
-    public Output<String> getMetadataConfigurationPath() {
+    public Output<String> metadataConfigurationPath() {
         return this.metadataConfigurationPath == null ? Codegen.empty() : this.metadataConfigurationPath;
     }
 

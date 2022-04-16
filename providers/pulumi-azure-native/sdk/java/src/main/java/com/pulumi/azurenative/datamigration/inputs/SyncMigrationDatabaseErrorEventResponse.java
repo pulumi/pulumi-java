@@ -23,7 +23,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
     @Import(name="eventText", required=true)
       private final String eventText;
 
-    public String getEventText() {
+    public String eventText() {
         return this.eventText;
     }
 
@@ -34,7 +34,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
     @Import(name="eventTypeString", required=true)
       private final String eventTypeString;
 
-    public String getEventTypeString() {
+    public String eventTypeString() {
         return this.eventTypeString;
     }
 
@@ -45,7 +45,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
     @Import(name="timestampString", required=true)
       private final String timestampString;
 
-    public String getTimestampString() {
+    public String timestampString() {
         return this.timestampString;
     }
 

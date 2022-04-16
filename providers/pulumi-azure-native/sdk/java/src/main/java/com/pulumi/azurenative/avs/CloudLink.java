@@ -42,7 +42,7 @@ public class CloudLink extends com.pulumi.resources.CustomResource {
      * @return Identifier of the other private cloud participating in the link.
      * 
      */
-    public Output</* @Nullable */ String> getLinkedCloud() {
+    public Output</* @Nullable */ String> linkedCloud() {
         return this.linkedCloud;
     }
     /**
@@ -56,7 +56,7 @@ public class CloudLink extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class CloudLink extends com.pulumi.resources.CustomResource {
      * @return The state of the cloud link.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -84,7 +84,7 @@ public class CloudLink extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

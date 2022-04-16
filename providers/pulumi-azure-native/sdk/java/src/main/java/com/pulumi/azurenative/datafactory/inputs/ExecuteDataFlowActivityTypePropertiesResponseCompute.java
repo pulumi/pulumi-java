@@ -25,7 +25,7 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
     @Import(name="computeType")
       private final @Nullable Object computeType;
 
-    public Optional<Object> getComputeType() {
+    public Optional<Object> computeType() {
         return this.computeType == null ? Optional.empty() : Optional.ofNullable(this.computeType);
     }
 
@@ -36,7 +36,7 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
     @Import(name="coreCount")
       private final @Nullable Object coreCount;
 
-    public Optional<Object> getCoreCount() {
+    public Optional<Object> coreCount() {
         return this.coreCount == null ? Optional.empty() : Optional.ofNullable(this.coreCount);
     }
 

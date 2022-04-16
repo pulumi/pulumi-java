@@ -34,7 +34,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="accountKey")
       private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
-    public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -45,7 +45,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="accountKind")
       private final @Nullable String accountKind;
 
-    public Optional<String> getAccountKind() {
+    public Optional<String> accountKind() {
         return this.accountKind == null ? Optional.empty() : Optional.ofNullable(this.accountKind);
     }
 
@@ -56,7 +56,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -67,7 +67,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="azureCloudType")
       private final @Nullable Object azureCloudType;
 
-    public Optional<Object> getAzureCloudType() {
+    public Optional<Object> azureCloudType() {
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
     }
 
@@ -78,7 +78,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -89,7 +89,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
 
-    public Optional<Object> getConnectionString() {
+    public Optional<Object> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -100,7 +100,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -111,7 +111,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -122,7 +122,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="encryptedCredential")
       private final @Nullable String encryptedCredential;
 
-    public Optional<String> getEncryptedCredential() {
+    public Optional<String> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -133,7 +133,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -144,7 +144,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="sasToken")
       private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
-    public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> sasToken() {
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
@@ -155,7 +155,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="sasUri")
       private final @Nullable Object sasUri;
 
-    public Optional<Object> getSasUri() {
+    public Optional<Object> sasUri() {
         return this.sasUri == null ? Optional.empty() : Optional.ofNullable(this.sasUri);
     }
 
@@ -166,7 +166,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="serviceEndpoint")
       private final @Nullable String serviceEndpoint;
 
-    public Optional<String> getServiceEndpoint() {
+    public Optional<String> serviceEndpoint() {
         return this.serviceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.serviceEndpoint);
     }
 
@@ -177,7 +177,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
@@ -188,7 +188,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
@@ -199,7 +199,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="tenant")
       private final @Nullable Object tenant;
 
-    public Optional<Object> getTenant() {
+    public Optional<Object> tenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
@@ -211,7 +211,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="assemblyCulture")
       private final @Nullable Output<String> assemblyCulture;
 
-    public Output<String> getAssemblyCulture() {
+    public Output<String> assemblyCulture() {
         return this.assemblyCulture == null ? Codegen.empty() : this.assemblyCulture;
     }
 
@@ -39,7 +39,7 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="assemblyName", required=true)
       private final Output<String> assemblyName;
 
-    public Output<String> getAssemblyName() {
+    public Output<String> assemblyName() {
         return this.assemblyName;
     }
 
@@ -50,7 +50,7 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="assemblyPublicKeyToken")
       private final @Nullable Output<String> assemblyPublicKeyToken;
 
-    public Output<String> getAssemblyPublicKeyToken() {
+    public Output<String> assemblyPublicKeyToken() {
         return this.assemblyPublicKeyToken == null ? Codegen.empty() : this.assemblyPublicKeyToken;
     }
 
@@ -61,7 +61,7 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="assemblyVersion")
       private final @Nullable Output<String> assemblyVersion;
 
-    public Output<String> getAssemblyVersion() {
+    public Output<String> assemblyVersion() {
         return this.assemblyVersion == null ? Codegen.empty() : this.assemblyVersion;
     }
 
@@ -72,14 +72,14 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
 
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime == null ? Codegen.empty() : this.changedTime;
     }
 
     @Import(name="content")
       private final @Nullable Output<Object> content;
 
-    public Output<Object> getContent() {
+    public Output<Object> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -90,7 +90,7 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="contentLink")
       private final @Nullable Output<ContentLinkArgs> contentLink;
 
-    public Output<ContentLinkArgs> getContentLink() {
+    public Output<ContentLinkArgs> contentLink() {
         return this.contentLink == null ? Codegen.empty() : this.contentLink;
     }
 
@@ -101,7 +101,7 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -112,14 +112,14 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 

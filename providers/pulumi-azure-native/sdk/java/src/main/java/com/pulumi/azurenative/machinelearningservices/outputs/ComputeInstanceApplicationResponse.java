@@ -34,14 +34,14 @@ public final class ComputeInstanceApplicationResponse {
      * Name of the ComputeInstance application.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Application' endpoint URI.
      * 
     */
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
 

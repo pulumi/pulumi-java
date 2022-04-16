@@ -91,70 +91,70 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the frontend IP configuration that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * PrivateIPAddress of the network interface IP Configuration.
      * 
     */
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The private IP address allocation method.
      * 
     */
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * Reference to the application gateway private link configuration.
      * 
     */
-    public Optional<SubResourceResponse> getPrivateLinkConfiguration() {
+    public Optional<SubResourceResponse> privateLinkConfiguration() {
         return Optional.ofNullable(this.privateLinkConfiguration);
     }
     /**
      * The provisioning state of the frontend IP configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the PublicIP resource.
      * 
     */
-    public Optional<SubResourceResponse> getPublicIPAddress() {
+    public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
      * Reference to the subnet resource.
      * 
     */
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

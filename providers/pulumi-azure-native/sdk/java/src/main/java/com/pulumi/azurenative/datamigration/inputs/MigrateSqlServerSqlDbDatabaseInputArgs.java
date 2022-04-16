@@ -28,7 +28,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="makeSourceDbReadOnly")
       private final @Nullable Output<Boolean> makeSourceDbReadOnly;
 
-    public Output<Boolean> getMakeSourceDbReadOnly() {
+    public Output<Boolean> makeSourceDbReadOnly() {
         return this.makeSourceDbReadOnly == null ? Codegen.empty() : this.makeSourceDbReadOnly;
     }
 
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="tableMap")
       private final @Nullable Output<Map<String,String>> tableMap;
 
-    public Output<Map<String,String>> getTableMap() {
+    public Output<Map<String,String>> tableMap() {
         return this.tableMap == null ? Codegen.empty() : this.tableMap;
     }
 
@@ -61,7 +61,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends com.pulumi.res
     @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
-    public Output<String> getTargetDatabaseName() {
+    public Output<String> targetDatabaseName() {
         return this.targetDatabaseName == null ? Codegen.empty() : this.targetDatabaseName;
     }
 

@@ -23,7 +23,7 @@ public final class ServiceCorrelationDescriptionResponse extends com.pulumi.reso
     @Import(name="scheme", required=true)
       private final String scheme;
 
-    public String getScheme() {
+    public String scheme() {
         return this.scheme;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceCorrelationDescriptionResponse extends com.pulumi.reso
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

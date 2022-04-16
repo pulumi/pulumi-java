@@ -32,7 +32,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 
@@ -43,7 +43,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
+    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -54,7 +54,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -65,7 +65,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="livenessProbe")
       private final @Nullable Output<ContainerProbeArgs> livenessProbe;
 
-    public Output<ContainerProbeArgs> getLivenessProbe() {
+    public Output<ContainerProbeArgs> livenessProbe() {
         return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
     }
 
@@ -76,7 +76,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -87,7 +87,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ports")
       private final @Nullable Output<List<ContainerPortArgs>> ports;
 
-    public Output<List<ContainerPortArgs>> getPorts() {
+    public Output<List<ContainerPortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -98,7 +98,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readinessProbe")
       private final @Nullable Output<ContainerProbeArgs> readinessProbe;
 
-    public Output<ContainerProbeArgs> getReadinessProbe() {
+    public Output<ContainerProbeArgs> readinessProbe() {
         return this.readinessProbe == null ? Codegen.empty() : this.readinessProbe;
     }
 
@@ -109,7 +109,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resources", required=true)
       private final Output<ResourceRequirementsArgs> resources;
 
-    public Output<ResourceRequirementsArgs> getResources() {
+    public Output<ResourceRequirementsArgs> resources() {
         return this.resources;
     }
 
@@ -120,7 +120,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> getVolumeMounts() {
+    public Output<List<VolumeMountArgs>> volumeMounts() {
         return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 

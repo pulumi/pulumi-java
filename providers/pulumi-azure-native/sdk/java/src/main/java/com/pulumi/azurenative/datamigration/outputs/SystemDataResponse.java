@@ -34,22 +34,22 @@ public final class SystemDataResponse {
         this.lastModifiedByType = lastModifiedByType;
     }
 
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
-    public Optional<String> getCreatedByType() {
+    public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
-    public Optional<String> getLastModifiedAt() {
+    public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
-    public Optional<String> getLastModifiedBy() {
+    public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
-    public Optional<String> getLastModifiedByType() {
+    public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
 

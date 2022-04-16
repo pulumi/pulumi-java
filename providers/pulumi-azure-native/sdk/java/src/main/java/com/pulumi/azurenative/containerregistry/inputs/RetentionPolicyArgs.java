@@ -29,7 +29,7 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
@@ -40,7 +40,7 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> getStatus() {
+    public Output<Either<String,PolicyStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

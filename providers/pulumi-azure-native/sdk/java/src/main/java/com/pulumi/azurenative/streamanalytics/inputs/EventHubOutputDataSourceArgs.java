@@ -26,7 +26,7 @@ public final class EventHubOutputDataSourceArgs extends com.pulumi.resources.Res
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
@@ -37,7 +37,7 @@ public final class EventHubOutputDataSourceArgs extends com.pulumi.resources.Res
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
+    public Output<String> partitionKey() {
         return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
@@ -48,7 +48,7 @@ public final class EventHubOutputDataSourceArgs extends com.pulumi.resources.Res
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
-    public Output<String> getServiceBusNamespace() {
+    public Output<String> serviceBusNamespace() {
         return this.serviceBusNamespace == null ? Codegen.empty() : this.serviceBusNamespace;
     }
 
@@ -59,7 +59,7 @@ public final class EventHubOutputDataSourceArgs extends com.pulumi.resources.Res
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Output<String> getSharedAccessPolicyKey() {
+    public Output<String> sharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Codegen.empty() : this.sharedAccessPolicyKey;
     }
 
@@ -70,7 +70,7 @@ public final class EventHubOutputDataSourceArgs extends com.pulumi.resources.Res
     @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Output<String> getSharedAccessPolicyName() {
+    public Output<String> sharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Codegen.empty() : this.sharedAccessPolicyName;
     }
 
@@ -82,7 +82,7 @@ public final class EventHubOutputDataSourceArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

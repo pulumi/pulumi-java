@@ -25,7 +25,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     @Import(name="localIPAddress")
       private final @Nullable String localIPAddress;
 
-    public Optional<String> getLocalIPAddress() {
+    public Optional<String> localIPAddress() {
         return this.localIPAddress == null ? Optional.empty() : Optional.ofNullable(this.localIPAddress);
     }
 
@@ -36,7 +36,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     @Import(name="localPort")
       private final @Nullable String localPort;
 
-    public Optional<String> getLocalPort() {
+    public Optional<String> localPort() {
         return this.localPort == null ? Optional.empty() : Optional.ofNullable(this.localPort);
     }
 
@@ -47,7 +47,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -58,7 +58,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     @Import(name="remoteIPAddress")
       private final @Nullable String remoteIPAddress;
 
-    public Optional<String> getRemoteIPAddress() {
+    public Optional<String> remoteIPAddress() {
         return this.remoteIPAddress == null ? Optional.empty() : Optional.ofNullable(this.remoteIPAddress);
     }
 
@@ -69,7 +69,7 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
     @Import(name="remotePort")
       private final @Nullable String remotePort;
 
-    public Optional<String> getRemotePort() {
+    public Optional<String> remotePort() {
         return this.remotePort == null ? Optional.empty() : Optional.ofNullable(this.remotePort);
     }
 

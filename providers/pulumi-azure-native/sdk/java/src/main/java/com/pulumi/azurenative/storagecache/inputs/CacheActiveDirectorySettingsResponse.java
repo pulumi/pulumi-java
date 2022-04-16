@@ -26,7 +26,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     @Import(name="cacheNetBiosName", required=true)
       private final String cacheNetBiosName;
 
-    public String getCacheNetBiosName() {
+    public String cacheNetBiosName() {
         return this.cacheNetBiosName;
     }
 
@@ -37,7 +37,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     @Import(name="credentials")
       private final @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
 
-    public Optional<CacheActiveDirectorySettingsResponseCredentials> getCredentials() {
+    public Optional<CacheActiveDirectorySettingsResponseCredentials> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
@@ -48,7 +48,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     @Import(name="domainJoined", required=true)
       private final String domainJoined;
 
-    public String getDomainJoined() {
+    public String domainJoined() {
         return this.domainJoined;
     }
 
@@ -59,7 +59,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -70,7 +70,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     @Import(name="domainNetBiosName", required=true)
       private final String domainNetBiosName;
 
-    public String getDomainNetBiosName() {
+    public String domainNetBiosName() {
         return this.domainNetBiosName;
     }
 
@@ -81,7 +81,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     @Import(name="primaryDnsIpAddress", required=true)
       private final String primaryDnsIpAddress;
 
-    public String getPrimaryDnsIpAddress() {
+    public String primaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
     }
 
@@ -92,7 +92,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
     @Import(name="secondaryDnsIpAddress")
       private final @Nullable String secondaryDnsIpAddress;
 
-    public Optional<String> getSecondaryDnsIpAddress() {
+    public Optional<String> secondaryDnsIpAddress() {
         return this.secondaryDnsIpAddress == null ? Optional.empty() : Optional.ofNullable(this.secondaryDnsIpAddress);
     }
 

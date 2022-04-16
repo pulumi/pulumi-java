@@ -22,7 +22,7 @@ public final class DedicatedHostGroupInstanceViewResponse extends com.pulumi.res
     @Import(name="hosts")
       private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
-    public List<DedicatedHostInstanceViewWithNameResponse> getHosts() {
+    public List<DedicatedHostInstanceViewWithNameResponse> hosts() {
         return this.hosts == null ? List.of() : this.hosts;
     }
 

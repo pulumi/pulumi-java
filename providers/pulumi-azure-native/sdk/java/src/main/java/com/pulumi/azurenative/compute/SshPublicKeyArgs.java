@@ -23,7 +23,7 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -45,7 +45,7 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKeyName")
       private final @Nullable Output<String> sshPublicKeyName;
 
-    public Output<String> getSshPublicKeyName() {
+    public Output<String> sshPublicKeyName() {
         return this.sshPublicKeyName == null ? Codegen.empty() : this.sshPublicKeyName;
     }
 
@@ -67,7 +67,7 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

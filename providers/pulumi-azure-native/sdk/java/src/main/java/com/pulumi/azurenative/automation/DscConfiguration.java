@@ -47,7 +47,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -61,7 +61,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +75,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -89,7 +89,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the job count of the configuration.
      * 
      */
-    public Output</* @Nullable */ Integer> getJobCount() {
+    public Output</* @Nullable */ Integer> jobCount() {
         return this.jobCount;
     }
     /**
@@ -103,7 +103,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -117,7 +117,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -131,7 +131,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets verbose log option.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLogVerbose() {
+    public Output</* @Nullable */ Boolean> logVerbose() {
         return this.logVerbose;
     }
     /**
@@ -145,7 +145,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +159,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets the number of compiled node configurations.
      * 
      */
-    public Output</* @Nullable */ Integer> getNodeConfigurationCount() {
+    public Output</* @Nullable */ Integer> nodeConfigurationCount() {
         return this.nodeConfigurationCount;
     }
     /**
@@ -173,7 +173,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the configuration parameters.
      * 
      */
-    public Output</* @Nullable */ Map<String,DscConfigurationParameterResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,DscConfigurationParameterResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -187,7 +187,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -201,7 +201,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the source.
      * 
      */
-    public Output</* @Nullable */ ContentSourceResponse> getSource() {
+    public Output</* @Nullable */ ContentSourceResponse> source() {
         return this.source;
     }
     /**
@@ -215,7 +215,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the state of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -229,7 +229,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -243,7 +243,7 @@ public class DscConfiguration extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

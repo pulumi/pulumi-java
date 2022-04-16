@@ -34,7 +34,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
-    public Output<Boolean> getAppInsightsEnabled() {
+    public Output<Boolean> appInsightsEnabled() {
         return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
     }
 
@@ -45,7 +45,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="codeConfiguration")
       private final @Nullable Output<CodeConfigurationArgs> codeConfiguration;
 
-    public Output<CodeConfigurationArgs> getCodeConfiguration() {
+    public Output<CodeConfigurationArgs> codeConfiguration() {
         return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
@@ -56,7 +56,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="endpointComputeType", required=true)
       private final Output<String> endpointComputeType;
 
-    public Output<String> getEndpointComputeType() {
+    public Output<String> endpointComputeType() {
         return this.endpointComputeType;
     }
 
@@ -79,7 +79,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -90,7 +90,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -101,7 +101,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -112,7 +112,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="livenessProbe")
       private final @Nullable Output<ProbeSettingsArgs> livenessProbe;
 
-    public Output<ProbeSettingsArgs> getLivenessProbe() {
+    public Output<ProbeSettingsArgs> livenessProbe() {
         return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
     }
 
@@ -123,7 +123,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="model")
       private final @Nullable Output<Object> model;
 
-    public Output<Object> getModel() {
+    public Output<Object> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 
@@ -134,7 +134,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -145,7 +145,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="readinessProbe")
       private final @Nullable Output<ProbeSettingsArgs> readinessProbe;
 
-    public Output<ProbeSettingsArgs> getReadinessProbe() {
+    public Output<ProbeSettingsArgs> readinessProbe() {
         return this.readinessProbe == null ? Codegen.empty() : this.readinessProbe;
     }
 
@@ -156,7 +156,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="requestSettings")
       private final @Nullable Output<OnlineRequestSettingsArgs> requestSettings;
 
-    public Output<OnlineRequestSettingsArgs> getRequestSettings() {
+    public Output<OnlineRequestSettingsArgs> requestSettings() {
         return this.requestSettings == null ? Codegen.empty() : this.requestSettings;
     }
 
@@ -167,7 +167,7 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
     @Import(name="scaleSettings")
       private final @Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
-    public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> getScaleSettings() {
+    public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings() {
         return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 

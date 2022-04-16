@@ -39,21 +39,21 @@ public final class ResourceIdentityResponse {
      * GUID that represents the principal ID of this resource identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * GUID that represents the tenant ID of this resource identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * String of the resource identity type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

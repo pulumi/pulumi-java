@@ -19,7 +19,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="containerName", required=true)
       private final String containerName;
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
     @Import(name="storedProcedureName", required=true)
       private final String storedProcedureName;
 
-    public String getStoredProcedureName() {
+    public String storedProcedureName() {
         return this.storedProcedureName;
     }
 

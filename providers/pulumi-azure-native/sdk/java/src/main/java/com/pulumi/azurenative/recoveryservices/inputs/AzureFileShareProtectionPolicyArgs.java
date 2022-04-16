@@ -36,7 +36,7 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
-    public Output<String> getBackupManagementType() {
+    public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -47,7 +47,7 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> getProtectedItemsCount() {
+    public Output<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
@@ -58,7 +58,7 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
+    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -69,7 +69,7 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
 
-    public Output<Object> getSchedulePolicy() {
+    public Output<Object> schedulePolicy() {
         return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 
@@ -80,7 +80,7 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
@@ -91,7 +91,7 @@ public final class AzureFileShareProtectionPolicyArgs extends com.pulumi.resourc
     @Import(name="workLoadType")
       private final @Nullable Output<Either<String,WorkloadType>> workLoadType;
 
-    public Output<Either<String,WorkloadType>> getWorkLoadType() {
+    public Output<Either<String,WorkloadType>> workLoadType() {
         return this.workLoadType == null ? Codegen.empty() : this.workLoadType;
     }
 

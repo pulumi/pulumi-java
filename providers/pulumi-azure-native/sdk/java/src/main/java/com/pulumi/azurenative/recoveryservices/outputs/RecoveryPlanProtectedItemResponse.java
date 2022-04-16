@@ -34,14 +34,14 @@ public final class RecoveryPlanProtectedItemResponse {
      * The ARM Id of the recovery plan protected item.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The virtual machine Id.
      * 
     */
-    public Optional<String> getVirtualMachineId() {
+    public Optional<String> virtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }
 

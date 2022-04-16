@@ -27,7 +27,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -38,7 +38,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
     @Import(name="markdownSource")
       private final @Nullable Output<Integer> markdownSource;
 
-    public Output<Integer> getMarkdownSource() {
+    public Output<Integer> markdownSource() {
         return this.markdownSource == null ? Codegen.empty() : this.markdownSource;
     }
 
@@ -49,7 +49,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
     @Import(name="markdownUri")
       private final @Nullable Output<String> markdownUri;
 
-    public Output<String> getMarkdownUri() {
+    public Output<String> markdownUri() {
         return this.markdownUri == null ? Codegen.empty() : this.markdownUri;
     }
 
@@ -60,7 +60,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
+    public Output<String> subtitle() {
         return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
@@ -71,7 +71,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

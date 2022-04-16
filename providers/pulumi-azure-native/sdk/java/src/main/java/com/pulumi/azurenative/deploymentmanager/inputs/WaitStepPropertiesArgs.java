@@ -26,7 +26,7 @@ public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="attributes", required=true)
       private final Output<WaitStepAttributesArgs> attributes;
 
-    public Output<WaitStepAttributesArgs> getAttributes() {
+    public Output<WaitStepAttributesArgs> attributes() {
         return this.attributes;
     }
 
@@ -38,7 +38,7 @@ public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="stepType", required=true)
       private final Output<String> stepType;
 
-    public Output<String> getStepType() {
+    public Output<String> stepType() {
         return this.stepType;
     }
 

@@ -64,42 +64,42 @@ public final class CommitmentPlanPropertiesResponse {
      * AutoRenew commitment plan.
      * 
     */
-    public Optional<Boolean> getAutoRenew() {
+    public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
      * Cognitive Services account commitment period.
      * 
     */
-    public Optional<CommitmentPeriodResponse> getCurrent() {
+    public Optional<CommitmentPeriodResponse> current() {
         return Optional.ofNullable(this.current);
     }
     /**
      * Account hosting model.
      * 
     */
-    public Optional<String> getHostingModel() {
+    public Optional<String> hostingModel() {
         return Optional.ofNullable(this.hostingModel);
     }
     /**
      * Cognitive Services account commitment period.
      * 
     */
-    public CommitmentPeriodResponse getLast() {
+    public CommitmentPeriodResponse last() {
         return this.last;
     }
     /**
      * Cognitive Services account commitment period.
      * 
     */
-    public Optional<CommitmentPeriodResponse> getNext() {
+    public Optional<CommitmentPeriodResponse> next() {
         return Optional.ofNullable(this.next);
     }
     /**
      * Commitment plan type.
      * 
     */
-    public Optional<String> getPlanType() {
+    public Optional<String> planType() {
         return Optional.ofNullable(this.planType);
     }
 

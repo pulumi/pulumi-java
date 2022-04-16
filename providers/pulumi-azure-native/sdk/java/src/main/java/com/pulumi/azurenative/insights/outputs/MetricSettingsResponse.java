@@ -50,28 +50,28 @@ public final class MetricSettingsResponse {
      * Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
      * 
     */
-    public Optional<String> getCategory() {
+    public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
      * a value indicating whether this category is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * the retention policy for this category.
      * 
     */
-    public Optional<RetentionPolicyResponse> getRetentionPolicy() {
+    public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * the timegrain of the metric in ISO8601 format.
      * 
     */
-    public Optional<String> getTimeGrain() {
+    public Optional<String> timeGrain() {
         return Optional.ofNullable(this.timeGrain);
     }
 

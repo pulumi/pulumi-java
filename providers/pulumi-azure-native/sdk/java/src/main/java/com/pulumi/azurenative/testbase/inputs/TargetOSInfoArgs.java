@@ -26,7 +26,7 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osUpdateType", required=true)
       private final Output<String> osUpdateType;
 
-    public Output<String> getOsUpdateType() {
+    public Output<String> osUpdateType() {
         return this.osUpdateType;
     }
 
@@ -37,7 +37,7 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetOSs", required=true)
       private final Output<List<String>> targetOSs;
 
-    public Output<List<String>> getTargetOSs() {
+    public Output<List<String>> targetOSs() {
         return this.targetOSs;
     }
 

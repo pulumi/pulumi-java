@@ -64,42 +64,42 @@ public final class RegistrationDefinitionPropertiesResponse {
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
      * 
     */
-    public List<AuthorizationResponse> getAuthorizations() {
+    public List<AuthorizationResponse> authorizations() {
         return this.authorizations;
     }
     /**
      * Description of the registration definition.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Id of the managedBy tenant.
      * 
     */
-    public String getManagedByTenantId() {
+    public String managedByTenantId() {
         return this.managedByTenantId;
     }
     /**
      * Name of the managedBy tenant.
      * 
     */
-    public String getManagedByTenantName() {
+    public String managedByTenantName() {
         return this.managedByTenantName;
     }
     /**
      * Current state of the registration definition.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Name of the registration definition.
      * 
     */
-    public Optional<String> getRegistrationDefinitionName() {
+    public Optional<String> registrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }
 

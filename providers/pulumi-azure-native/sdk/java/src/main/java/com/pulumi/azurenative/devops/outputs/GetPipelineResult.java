@@ -87,63 +87,63 @@ public final class GetPipelineResult {
      * Configuration used to bootstrap the Pipeline.
      * 
     */
-    public BootstrapConfigurationResponse getBootstrapConfiguration() {
+    public BootstrapConfigurationResponse bootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource Location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Unique identifier of the Pipeline
      * 
     */
-    public Integer getPipelineId() {
+    public Integer pipelineId() {
         return this.pipelineId;
     }
     /**
      * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
      * 
     */
-    public String getPipelineType() {
+    public String pipelineType() {
         return this.pipelineType;
     }
     /**
      * The system metadata pertaining to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource Tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource Type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

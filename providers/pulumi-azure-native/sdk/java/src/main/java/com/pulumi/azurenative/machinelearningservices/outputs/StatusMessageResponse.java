@@ -46,28 +46,28 @@ public final class StatusMessageResponse {
      * Service-defined message code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Time in UTC at which the message was created.
      * 
     */
-    public String getCreatedTimeUtc() {
+    public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * Severity level of the status message.
      * 
     */
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
     /**
      * A human-readable representation of the message code.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

@@ -26,7 +26,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arcSettingName", required=true)
       private final Output<String> arcSettingName;
 
-    public Output<String> getArcSettingName() {
+    public Output<String> arcSettingName() {
         return this.arcSettingName;
     }
 
@@ -37,7 +37,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
+    public Output<Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
@@ -48,7 +48,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -59,7 +59,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -70,7 +70,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
@@ -81,7 +81,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> getCreatedByType() {
+    public Output<Either<String,CreatedByType>> createdByType() {
         return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
@@ -92,7 +92,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extensionName")
       private final @Nullable Output<String> extensionName;
 
-    public Output<String> getExtensionName() {
+    public Output<String> extensionName() {
         return this.extensionName == null ? Codegen.empty() : this.extensionName;
     }
 
@@ -103,7 +103,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
+    public Output<String> forceUpdateTag() {
         return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
@@ -114,7 +114,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
@@ -125,7 +125,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
@@ -136,7 +136,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
+    public Output<Either<String,CreatedByType>> lastModifiedByType() {
         return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
@@ -147,7 +147,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> getProtectedSettings() {
+    public Output<Object> protectedSettings() {
         return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
@@ -158,7 +158,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
@@ -169,7 +169,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -180,7 +180,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
-    public Output<Object> getSettings() {
+    public Output<Object> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -191,7 +191,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -202,7 +202,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
+    public Output<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 

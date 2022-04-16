@@ -38,7 +38,7 @@ public final class SecretObjectResponse {
      * interpreted.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
@@ -47,7 +47,7 @@ public final class SecretObjectResponse {
      * used as is without any modification.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

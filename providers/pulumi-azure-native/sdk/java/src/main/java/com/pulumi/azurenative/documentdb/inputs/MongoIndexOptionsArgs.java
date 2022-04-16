@@ -27,7 +27,7 @@ public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expireAfterSeconds")
       private final @Nullable Output<Integer> expireAfterSeconds;
 
-    public Output<Integer> getExpireAfterSeconds() {
+    public Output<Integer> expireAfterSeconds() {
         return this.expireAfterSeconds == null ? Codegen.empty() : this.expireAfterSeconds;
     }
 
@@ -38,7 +38,7 @@ public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="unique")
       private final @Nullable Output<Boolean> unique;
 
-    public Output<Boolean> getUnique() {
+    public Output<Boolean> unique() {
         return this.unique == null ? Codegen.empty() : this.unique;
     }
 

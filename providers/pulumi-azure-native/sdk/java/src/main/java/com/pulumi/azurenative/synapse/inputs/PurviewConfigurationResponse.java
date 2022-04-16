@@ -25,7 +25,7 @@ public final class PurviewConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="purviewResourceId")
       private final @Nullable String purviewResourceId;
 
-    public Optional<String> getPurviewResourceId() {
+    public Optional<String> purviewResourceId() {
         return this.purviewResourceId == null ? Optional.empty() : Optional.ofNullable(this.purviewResourceId);
     }
 

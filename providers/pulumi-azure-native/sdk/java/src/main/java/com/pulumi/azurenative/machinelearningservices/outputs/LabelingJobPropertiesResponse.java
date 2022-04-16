@@ -113,84 +113,84 @@ public final class LabelingJobPropertiesResponse {
      * Created time of the job in UTC timezone.
      * 
     */
-    public String getCreatedTimeUtc() {
+    public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * Dataset configuration for the job.
      * 
     */
-    public LabelingDatasetConfigurationResponse getDatasetConfiguration() {
+    public LabelingDatasetConfigurationResponse datasetConfiguration() {
         return this.datasetConfiguration;
     }
     /**
      * Instructions for the job.
      * 
     */
-    public LabelingJobInstructionsResponse getJobInstructions() {
+    public LabelingJobInstructionsResponse jobInstructions() {
         return this.jobInstructions;
     }
     /**
      * Label categories of the job.
      * 
     */
-    public Map<String,LabelCategoryResponse> getLabelCategories() {
+    public Map<String,LabelCategoryResponse> labelCategories() {
         return this.labelCategories;
     }
     /**
      * Media specific properties in a labeling job.
      * 
     */
-    public LabelingJobImagePropertiesResponse getLabelingJobMediaProperties() {
+    public LabelingJobImagePropertiesResponse labelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
     }
     /**
      * Machine learning assisted configuration for the job.
      * 
     */
-    public Optional<MLAssistConfigurationResponse> getMlAssistConfiguration() {
+    public Optional<MLAssistConfigurationResponse> mlAssistConfiguration() {
         return Optional.ofNullable(this.mlAssistConfiguration);
     }
     /**
      * Progress metrics of the job.
      * 
     */
-    public ProgressMetricsResponse getProgressMetrics() {
+    public ProgressMetricsResponse progressMetrics() {
         return this.progressMetrics;
     }
     /**
      * Internal id of the job(Previously called project).
      * 
     */
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
     /**
      * The job property dictionary. Properties can be added, but not removed or altered.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Status of the job.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Status messages of the job.
      * 
     */
-    public List<StatusMessageResponse> getStatusMessages() {
+    public List<StatusMessageResponse> statusMessages() {
         return this.statusMessages;
     }
     /**
      * The job tag dictionary. Tags can be added, removed, and updated.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

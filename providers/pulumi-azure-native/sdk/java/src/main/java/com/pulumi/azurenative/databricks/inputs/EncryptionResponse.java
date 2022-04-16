@@ -25,7 +25,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyName")
       private final @Nullable String keyName;
 
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
@@ -36,7 +36,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keySource")
       private final @Nullable String keySource;
 
-    public Optional<String> getKeySource() {
+    public Optional<String> keySource() {
         return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
     }
 
@@ -47,7 +47,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 
@@ -58,7 +58,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 

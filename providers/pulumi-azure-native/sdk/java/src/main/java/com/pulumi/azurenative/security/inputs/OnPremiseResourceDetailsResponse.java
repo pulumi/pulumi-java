@@ -23,7 +23,7 @@ public final class OnPremiseResourceDetailsResponse extends com.pulumi.resources
     @Import(name="machineName", required=true)
       private final String machineName;
 
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
 
@@ -35,7 +35,7 @@ public final class OnPremiseResourceDetailsResponse extends com.pulumi.resources
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -46,7 +46,7 @@ public final class OnPremiseResourceDetailsResponse extends com.pulumi.resources
     @Import(name="sourceComputerId", required=true)
       private final String sourceComputerId;
 
-    public String getSourceComputerId() {
+    public String sourceComputerId() {
         return this.sourceComputerId;
     }
 
@@ -57,7 +57,7 @@ public final class OnPremiseResourceDetailsResponse extends com.pulumi.resources
     @Import(name="vmuuid", required=true)
       private final String vmuuid;
 
-    public String getVmuuid() {
+    public String vmuuid() {
         return this.vmuuid;
     }
 
@@ -68,7 +68,7 @@ public final class OnPremiseResourceDetailsResponse extends com.pulumi.resources
     @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 

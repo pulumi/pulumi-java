@@ -25,7 +25,7 @@ public final class AutoScalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="mechanism", required=true)
       private final AddRemoveReplicaScalingMechanismResponse mechanism;
 
-    public AddRemoveReplicaScalingMechanismResponse getMechanism() {
+    public AddRemoveReplicaScalingMechanismResponse mechanism() {
         return this.mechanism;
     }
 
@@ -36,7 +36,7 @@ public final class AutoScalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class AutoScalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="trigger", required=true)
       private final AverageLoadScalingTriggerResponse trigger;
 
-    public AverageLoadScalingTriggerResponse getTrigger() {
+    public AverageLoadScalingTriggerResponse trigger() {
         return this.trigger;
     }
 

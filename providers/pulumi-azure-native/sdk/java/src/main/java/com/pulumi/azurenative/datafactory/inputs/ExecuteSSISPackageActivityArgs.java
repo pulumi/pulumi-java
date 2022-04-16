@@ -39,7 +39,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="connectVia", required=true)
       private final Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia;
     }
 
@@ -50,7 +50,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -61,7 +61,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -72,7 +72,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="environmentPath")
       private final @Nullable Output<Object> environmentPath;
 
-    public Output<Object> getEnvironmentPath() {
+    public Output<Object> environmentPath() {
         return this.environmentPath == null ? Codegen.empty() : this.environmentPath;
     }
 
@@ -83,7 +83,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="executionCredential")
       private final @Nullable Output<SSISExecutionCredentialArgs> executionCredential;
 
-    public Output<SSISExecutionCredentialArgs> getExecutionCredential() {
+    public Output<SSISExecutionCredentialArgs> executionCredential() {
         return this.executionCredential == null ? Codegen.empty() : this.executionCredential;
     }
 
@@ -94,7 +94,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -105,7 +105,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="logLocation")
       private final @Nullable Output<SSISLogLocationArgs> logLocation;
 
-    public Output<SSISLogLocationArgs> getLogLocation() {
+    public Output<SSISLogLocationArgs> logLocation() {
         return this.logLocation == null ? Codegen.empty() : this.logLocation;
     }
 
@@ -116,7 +116,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="loggingLevel")
       private final @Nullable Output<Object> loggingLevel;
 
-    public Output<Object> getLoggingLevel() {
+    public Output<Object> loggingLevel() {
         return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
@@ -127,7 +127,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -138,7 +138,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="packageConnectionManagers")
       private final @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
 
-    public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> getPackageConnectionManagers() {
+    public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers() {
         return this.packageConnectionManagers == null ? Codegen.empty() : this.packageConnectionManagers;
     }
 
@@ -149,7 +149,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="packageLocation", required=true)
       private final Output<SSISPackageLocationArgs> packageLocation;
 
-    public Output<SSISPackageLocationArgs> getPackageLocation() {
+    public Output<SSISPackageLocationArgs> packageLocation() {
         return this.packageLocation;
     }
 
@@ -160,7 +160,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="packageParameters")
       private final @Nullable Output<Map<String,SSISExecutionParameterArgs>> packageParameters;
 
-    public Output<Map<String,SSISExecutionParameterArgs>> getPackageParameters() {
+    public Output<Map<String,SSISExecutionParameterArgs>> packageParameters() {
         return this.packageParameters == null ? Codegen.empty() : this.packageParameters;
     }
 
@@ -171,7 +171,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -182,7 +182,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="projectConnectionManagers")
       private final @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
 
-    public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> getProjectConnectionManagers() {
+    public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers() {
         return this.projectConnectionManagers == null ? Codegen.empty() : this.projectConnectionManagers;
     }
 
@@ -193,7 +193,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="projectParameters")
       private final @Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters;
 
-    public Output<Map<String,SSISExecutionParameterArgs>> getProjectParameters() {
+    public Output<Map<String,SSISExecutionParameterArgs>> projectParameters() {
         return this.projectParameters == null ? Codegen.empty() : this.projectParameters;
     }
 
@@ -204,7 +204,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="propertyOverrides")
       private final @Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
 
-    public Output<Map<String,SSISPropertyOverrideArgs>> getPropertyOverrides() {
+    public Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides() {
         return this.propertyOverrides == null ? Codegen.empty() : this.propertyOverrides;
     }
 
@@ -215,7 +215,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="runtime")
       private final @Nullable Output<Object> runtime;
 
-    public Output<Object> getRuntime() {
+    public Output<Object> runtime() {
         return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
@@ -227,7 +227,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -238,7 +238,7 @@ public final class ExecuteSSISPackageActivityArgs extends com.pulumi.resources.R
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

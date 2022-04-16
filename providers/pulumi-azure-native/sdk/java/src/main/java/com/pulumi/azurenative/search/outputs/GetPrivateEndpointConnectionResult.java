@@ -47,28 +47,28 @@ public final class GetPrivateEndpointConnectionResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
      * 
     */
-    public PrivateEndpointConnectionPropertiesResponse getProperties() {
+    public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

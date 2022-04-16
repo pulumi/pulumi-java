@@ -23,7 +23,7 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="ddosProtectionPlanName")
       private final @Nullable Output<String> ddosProtectionPlanName;
 
-    public Output<String> getDdosProtectionPlanName() {
+    public Output<String> ddosProtectionPlanName() {
         return this.ddosProtectionPlanName == null ? Codegen.empty() : this.ddosProtectionPlanName;
     }
 
@@ -34,7 +34,7 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -45,7 +45,7 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

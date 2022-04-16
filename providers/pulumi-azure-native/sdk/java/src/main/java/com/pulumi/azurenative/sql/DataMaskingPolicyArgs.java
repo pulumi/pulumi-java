@@ -23,7 +23,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataMaskingPolicyName")
       private final @Nullable Output<String> dataMaskingPolicyName;
 
-    public Output<String> getDataMaskingPolicyName() {
+    public Output<String> dataMaskingPolicyName() {
         return this.dataMaskingPolicyName == null ? Codegen.empty() : this.dataMaskingPolicyName;
     }
 
@@ -34,7 +34,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataMaskingState", required=true)
       private final Output<DataMaskingState> dataMaskingState;
 
-    public Output<DataMaskingState> getDataMaskingState() {
+    public Output<DataMaskingState> dataMaskingState() {
         return this.dataMaskingState;
     }
 
@@ -45,7 +45,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -56,7 +56,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="exemptPrincipals")
       private final @Nullable Output<String> exemptPrincipals;
 
-    public Output<String> getExemptPrincipals() {
+    public Output<String> exemptPrincipals() {
         return this.exemptPrincipals == null ? Codegen.empty() : this.exemptPrincipals;
     }
 
@@ -67,7 +67,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

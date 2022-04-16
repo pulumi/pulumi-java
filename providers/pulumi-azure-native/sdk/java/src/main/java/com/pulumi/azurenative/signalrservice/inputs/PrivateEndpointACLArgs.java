@@ -29,7 +29,7 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
     @Import(name="allow")
       private final @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
 
-    public Output<List<Either<String,SignalRRequestType>>> getAllow() {
+    public Output<List<Either<String,SignalRRequestType>>> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -40,7 +40,7 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
     @Import(name="deny")
       private final @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
 
-    public Output<List<Either<String,SignalRRequestType>>> getDeny() {
+    public Output<List<Either<String,SignalRRequestType>>> deny() {
         return this.deny == null ? Codegen.empty() : this.deny;
     }
 
@@ -51,7 +51,7 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

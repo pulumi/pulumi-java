@@ -25,7 +25,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 
@@ -36,7 +36,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="bytesProcessed", required=true)
       private final Double bytesProcessed;
 
-    public Double getBytesProcessed() {
+    public Double bytesProcessed() {
         return this.bytesProcessed;
     }
 
@@ -47,7 +47,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -58,7 +58,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="directoriesErroredOut", required=true)
       private final Double directoriesErroredOut;
 
-    public Double getDirectoriesErroredOut() {
+    public Double directoriesErroredOut() {
         return this.directoriesErroredOut;
     }
 
@@ -69,7 +69,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filesErroredOut", required=true)
       private final Double filesErroredOut;
 
-    public Double getFilesErroredOut() {
+    public Double filesErroredOut() {
         return this.filesErroredOut;
     }
 
@@ -80,7 +80,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filesProcessed", required=true)
       private final Double filesProcessed;
 
-    public Double getFilesProcessed() {
+    public Double filesProcessed() {
         return this.filesProcessed;
     }
 
@@ -91,7 +91,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="invalidDirectoriesProcessed", required=true)
       private final Double invalidDirectoriesProcessed;
 
-    public Double getInvalidDirectoriesProcessed() {
+    public Double invalidDirectoriesProcessed() {
         return this.invalidDirectoriesProcessed;
     }
 
@@ -102,7 +102,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="invalidFileBytesUploaded", required=true)
       private final Double invalidFileBytesUploaded;
 
-    public Double getInvalidFileBytesUploaded() {
+    public Double invalidFileBytesUploaded() {
         return this.invalidFileBytesUploaded;
     }
 
@@ -113,7 +113,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="invalidFilesProcessed", required=true)
       private final Double invalidFilesProcessed;
 
-    public Double getInvalidFilesProcessed() {
+    public Double invalidFilesProcessed() {
         return this.invalidFilesProcessed;
     }
 
@@ -125,7 +125,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="isEnumerationInProgress", required=true)
       private final Boolean isEnumerationInProgress;
 
-    public Boolean getIsEnumerationInProgress() {
+    public Boolean isEnumerationInProgress() {
         return this.isEnumerationInProgress;
     }
 
@@ -136,7 +136,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="renamedContainerCount", required=true)
       private final Double renamedContainerCount;
 
-    public Double getRenamedContainerCount() {
+    public Double renamedContainerCount() {
         return this.renamedContainerCount;
     }
 
@@ -147,7 +147,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="storageAccountName", required=true)
       private final String storageAccountName;
 
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -158,7 +158,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="totalBytesToProcess", required=true)
       private final Double totalBytesToProcess;
 
-    public Double getTotalBytesToProcess() {
+    public Double totalBytesToProcess() {
         return this.totalBytesToProcess;
     }
 
@@ -169,7 +169,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="totalFilesToProcess", required=true)
       private final Double totalFilesToProcess;
 
-    public Double getTotalFilesToProcess() {
+    public Double totalFilesToProcess() {
         return this.totalFilesToProcess;
     }
 
@@ -180,7 +180,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="transferType", required=true)
       private final String transferType;
 
-    public String getTransferType() {
+    public String transferType() {
         return this.transferType;
     }
 

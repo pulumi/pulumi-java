@@ -27,7 +27,7 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends com.pulu
     @Import(name="allowedPorts")
       private final @Nullable Output<List<PortArgs>> allowedPorts;
 
-    public Output<List<PortArgs>> getAllowedPorts() {
+    public Output<List<PortArgs>> allowedPorts() {
         return this.allowedPorts == null ? Codegen.empty() : this.allowedPorts;
     }
 

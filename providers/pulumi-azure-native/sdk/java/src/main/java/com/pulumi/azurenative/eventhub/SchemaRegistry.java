@@ -44,7 +44,7 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return Exact time the Schema Group was created.
      * 
      */
-    public Output<String> getCreatedAtUtc() {
+    public Output<String> createdAtUtc() {
         return this.createdAtUtc;
     }
     /**
@@ -58,7 +58,7 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return The ETag value.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -72,7 +72,7 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return dictionary object for SchemaGroup group properties
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getGroupProperties() {
+    public Output</* @Nullable */ Map<String,String>> groupProperties() {
         return this.groupProperties;
     }
     /**
@@ -86,7 +86,7 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -100,19 +100,19 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="schemaCompatibility", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaCompatibility;
 
-    public Output</* @Nullable */ String> getSchemaCompatibility() {
+    public Output</* @Nullable */ String> schemaCompatibility() {
         return this.schemaCompatibility;
     }
     @Export(name="schemaType", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaType;
 
-    public Output</* @Nullable */ String> getSchemaType() {
+    public Output</* @Nullable */ String> schemaType() {
         return this.schemaType;
     }
     /**
@@ -126,7 +126,7 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -140,7 +140,7 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -154,7 +154,7 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return Exact time the Schema Group was updated
      * 
      */
-    public Output<String> getUpdatedAtUtc() {
+    public Output<String> updatedAtUtc() {
         return this.updatedAtUtc;
     }
 

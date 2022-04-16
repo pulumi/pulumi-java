@@ -32,14 +32,14 @@ public final class IncidentLabelResponse {
      * The name of the label
      * 
     */
-    public String getLabelName() {
+    public String labelName() {
         return this.labelName;
     }
     /**
      * The type of the label
      * 
     */
-    public String getLabelType() {
+    public String labelType() {
         return this.labelType;
     }
 

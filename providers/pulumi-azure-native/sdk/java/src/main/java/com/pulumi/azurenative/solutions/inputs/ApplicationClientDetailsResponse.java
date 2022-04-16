@@ -25,7 +25,7 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
     @Import(name="oid")
       private final @Nullable String oid;
 
-    public Optional<String> getOid() {
+    public Optional<String> oid() {
         return this.oid == null ? Optional.empty() : Optional.ofNullable(this.oid);
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
     @Import(name="puid")
       private final @Nullable String puid;
 
-    public Optional<String> getPuid() {
+    public Optional<String> puid() {
         return this.puid == null ? Optional.empty() : Optional.ofNullable(this.puid);
     }
 

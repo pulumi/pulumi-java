@@ -26,7 +26,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="dataIntegrityValidationResult", required=true)
       private final DataIntegrityValidationResultResponse dataIntegrityValidationResult;
 
-    public DataIntegrityValidationResultResponse getDataIntegrityValidationResult() {
+    public DataIntegrityValidationResultResponse dataIntegrityValidationResult() {
         return this.dataIntegrityValidationResult;
     }
 
@@ -37,7 +37,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -59,7 +59,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="migrationId", required=true)
       private final String migrationId;
 
-    public String getMigrationId() {
+    public String migrationId() {
         return this.migrationId;
     }
 
@@ -70,7 +70,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="queryAnalysisValidationResult", required=true)
       private final QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
 
-    public QueryAnalysisValidationResultResponse getQueryAnalysisValidationResult() {
+    public QueryAnalysisValidationResultResponse queryAnalysisValidationResult() {
         return this.queryAnalysisValidationResult;
     }
 
@@ -82,7 +82,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -93,7 +93,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="schemaValidationResult", required=true)
       private final SchemaComparisonValidationResultResponse schemaValidationResult;
 
-    public SchemaComparisonValidationResultResponse getSchemaValidationResult() {
+    public SchemaComparisonValidationResultResponse schemaValidationResult() {
         return this.schemaValidationResult;
     }
 
@@ -104,7 +104,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
 
-    public String getSourceDatabaseName() {
+    public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 
@@ -115,7 +115,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -126,7 +126,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -137,7 +137,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     @Import(name="targetDatabaseName", required=true)
       private final String targetDatabaseName;
 
-    public String getTargetDatabaseName() {
+    public String targetDatabaseName() {
         return this.targetDatabaseName;
     }
 

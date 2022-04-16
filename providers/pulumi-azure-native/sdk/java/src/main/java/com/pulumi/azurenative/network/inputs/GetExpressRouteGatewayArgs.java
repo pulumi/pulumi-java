@@ -19,7 +19,7 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
     @Import(name="expressRouteGatewayName", required=true)
       private final String expressRouteGatewayName;
 
-    public String getExpressRouteGatewayName() {
+    public String expressRouteGatewayName() {
         return this.expressRouteGatewayName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

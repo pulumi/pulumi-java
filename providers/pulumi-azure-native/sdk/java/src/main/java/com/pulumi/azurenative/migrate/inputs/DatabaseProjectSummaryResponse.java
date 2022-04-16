@@ -26,7 +26,7 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="extendedSummary")
       private final @Nullable Map<String,String> extendedSummary;
 
-    public Map<String,String> getExtendedSummary() {
+    public Map<String,String> extendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
 
@@ -38,7 +38,7 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -49,7 +49,7 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="lastSummaryRefreshedTime")
       private final @Nullable String lastSummaryRefreshedTime;
 
-    public Optional<String> getLastSummaryRefreshedTime() {
+    public Optional<String> lastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime == null ? Optional.empty() : Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
 
@@ -60,7 +60,7 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="refreshSummaryState")
       private final @Nullable String refreshSummaryState;
 
-    public Optional<String> getRefreshSummaryState() {
+    public Optional<String> refreshSummaryState() {
         return this.refreshSummaryState == null ? Optional.empty() : Optional.ofNullable(this.refreshSummaryState);
     }
 

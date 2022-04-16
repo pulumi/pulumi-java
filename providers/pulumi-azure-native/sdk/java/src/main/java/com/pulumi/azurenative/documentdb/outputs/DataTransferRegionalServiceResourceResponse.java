@@ -39,21 +39,21 @@ public final class DataTransferRegionalServiceResourceResponse {
      * The location name.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The regional service name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Describes the status of a service.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

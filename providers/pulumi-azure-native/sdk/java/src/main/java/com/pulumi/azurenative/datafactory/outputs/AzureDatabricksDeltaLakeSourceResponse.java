@@ -72,42 +72,42 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Azure Databricks Delta Lake export settings.
      * 
     */
-    public Optional<AzureDatabricksDeltaLakeExportCommandResponse> getExportSettings() {
+    public Optional<AzureDatabricksDeltaLakeExportCommandResponse> exportSettings() {
         return Optional.ofNullable(this.exportSettings);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getQuery() {
+    public Optional<Object> query() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
@@ -115,7 +115,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
      * Expected value is 'AzureDatabricksDeltaLakeSource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

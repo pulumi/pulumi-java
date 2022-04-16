@@ -25,7 +25,7 @@ public final class WebTestPropertiesResponseConfiguration extends com.pulumi.res
     @Import(name="webTest")
       private final @Nullable String webTest;
 
-    public Optional<String> getWebTest() {
+    public Optional<String> webTest() {
         return this.webTest == null ? Optional.empty() : Optional.ofNullable(this.webTest);
     }
 

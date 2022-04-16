@@ -25,7 +25,7 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
     @Import(name="secureValue")
       private final @Nullable String secureValue;
 
-    public Optional<String> getSecureValue() {
+    public Optional<String> secureValue() {
         return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
     }
 
@@ -48,7 +48,7 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

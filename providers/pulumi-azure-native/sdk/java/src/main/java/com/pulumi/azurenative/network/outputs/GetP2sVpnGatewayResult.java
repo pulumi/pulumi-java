@@ -125,98 +125,98 @@ public final class GetP2sVpnGatewayResult {
      * List of all customer specified DNS servers IP addresses.
      * 
     */
-    public List<String> getCustomDnsServers() {
+    public List<String> customDnsServers() {
         return this.customDnsServers == null ? List.of() : this.customDnsServers;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
      * 
     */
-    public Optional<Boolean> getIsRoutingPreferenceInternet() {
+    public Optional<Boolean> isRoutingPreferenceInternet() {
         return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of all p2s connection configurations of the gateway.
      * 
     */
-    public List<P2SConnectionConfigurationResponse> getP2SConnectionConfigurations() {
+    public List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations() {
         return this.p2SConnectionConfigurations == null ? List.of() : this.p2SConnectionConfigurations;
     }
     /**
      * The provisioning state of the P2S VPN gateway resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The VirtualHub to which the gateway belongs.
      * 
     */
-    public Optional<SubResourceResponse> getVirtualHub() {
+    public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
      * All P2S VPN clients' connection health status.
      * 
     */
-    public VpnClientConnectionHealthResponse getVpnClientConnectionHealth() {
+    public VpnClientConnectionHealthResponse vpnClientConnectionHealth() {
         return this.vpnClientConnectionHealth;
     }
     /**
      * The scale unit for this p2s vpn gateway.
      * 
     */
-    public Optional<Integer> getVpnGatewayScaleUnit() {
+    public Optional<Integer> vpnGatewayScaleUnit() {
         return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
     /**
      * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
      * 
     */
-    public Optional<SubResourceResponse> getVpnServerConfiguration() {
+    public Optional<SubResourceResponse> vpnServerConfiguration() {
         return Optional.ofNullable(this.vpnServerConfiguration);
     }
 

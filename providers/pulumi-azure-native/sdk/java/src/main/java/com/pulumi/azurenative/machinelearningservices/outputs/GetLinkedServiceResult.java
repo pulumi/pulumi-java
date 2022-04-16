@@ -64,42 +64,42 @@ public final class GetLinkedServiceResult {
      * ResourceId of the link of the linked service.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
     */
-    public Optional<IdentityResponse> getIdentity() {
+    public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * location of the linked service.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Friendly name of the linked service.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * LinkedService specific properties.
      * 
     */
-    public LinkedServicePropsResponse getProperties() {
+    public LinkedServicePropsResponse properties() {
         return this.properties;
     }
     /**
      * Resource type of linked service.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

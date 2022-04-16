@@ -26,7 +26,7 @@ public final class PrivilegeResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="collection")
       private final @Nullable Output<String> collection;
 
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection == null ? Codegen.empty() : this.collection;
     }
 
@@ -37,7 +37,7 @@ public final class PrivilegeResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="db")
       private final @Nullable Output<String> db;
 
-    public Output<String> getDb() {
+    public Output<String> db() {
         return this.db == null ? Codegen.empty() : this.db;
     }
 

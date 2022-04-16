@@ -21,7 +21,7 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="virtualRouterName", required=true)
       private final String virtualRouterName;
 
-    public String getVirtualRouterName() {
+    public String virtualRouterName() {
         return this.virtualRouterName;
     }
 

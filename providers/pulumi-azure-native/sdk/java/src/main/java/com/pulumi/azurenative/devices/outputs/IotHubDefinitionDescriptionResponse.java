@@ -57,35 +57,35 @@ public final class IotHubDefinitionDescriptionResponse {
      * weight to apply for a given iot h.
      * 
     */
-    public Optional<Integer> getAllocationWeight() {
+    public Optional<Integer> allocationWeight() {
         return Optional.ofNullable(this.allocationWeight);
     }
     /**
      * flag for applying allocationPolicy or not for a given iot hub.
      * 
     */
-    public Optional<Boolean> getApplyAllocationPolicy() {
+    public Optional<Boolean> applyAllocationPolicy() {
         return Optional.ofNullable(this.applyAllocationPolicy);
     }
     /**
      * Connection string of the IoT hub.
      * 
     */
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
     /**
      * ARM region of the IoT hub.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Host name of the IoT hub.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -28,7 +28,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="configStoreName")
       private final @Nullable Output<String> configStoreName;
 
-    public Output<String> getConfigStoreName() {
+    public Output<String> configStoreName() {
         return this.configStoreName == null ? Codegen.empty() : this.configStoreName;
     }
 
@@ -39,7 +39,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
-    public Output<EncryptionPropertiesArgs> getEncryption() {
+    public Output<EncryptionPropertiesArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
+    public Output<ResourceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -61,7 +61,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -72,7 +72,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -83,7 +83,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -105,7 +105,7 @@ public final class ConfigurationStoreArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

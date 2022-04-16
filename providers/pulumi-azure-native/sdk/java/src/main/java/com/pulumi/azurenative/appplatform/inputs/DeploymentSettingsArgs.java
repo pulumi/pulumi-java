@@ -30,7 +30,7 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
-    public Output<Integer> getCpu() {
+    public Output<Integer> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -41,7 +41,7 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -52,7 +52,7 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="jvmOptions")
       private final @Nullable Output<String> jvmOptions;
 
-    public Output<String> getJvmOptions() {
+    public Output<String> jvmOptions() {
         return this.jvmOptions == null ? Codegen.empty() : this.jvmOptions;
     }
 
@@ -63,7 +63,7 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="memoryInGB")
       private final @Nullable Output<Integer> memoryInGB;
 
-    public Output<Integer> getMemoryInGB() {
+    public Output<Integer> memoryInGB() {
         return this.memoryInGB == null ? Codegen.empty() : this.memoryInGB;
     }
 
@@ -74,7 +74,7 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="netCoreMainEntryPath")
       private final @Nullable Output<String> netCoreMainEntryPath;
 
-    public Output<String> getNetCoreMainEntryPath() {
+    public Output<String> netCoreMainEntryPath() {
         return this.netCoreMainEntryPath == null ? Codegen.empty() : this.netCoreMainEntryPath;
     }
 
@@ -85,7 +85,7 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="runtimeVersion")
       private final @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
 
-    public Output<Either<String,RuntimeVersion>> getRuntimeVersion() {
+    public Output<Either<String,RuntimeVersion>> runtimeVersion() {
         return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 

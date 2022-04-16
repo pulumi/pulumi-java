@@ -27,7 +27,7 @@ public final class DatabaseBackupSetting extends com.pulumi.resources.InvokeArgs
     @Import(name="connectionString")
       private final @Nullable String connectionString;
 
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -39,7 +39,7 @@ public final class DatabaseBackupSetting extends com.pulumi.resources.InvokeArgs
     @Import(name="connectionStringName")
       private final @Nullable String connectionStringName;
 
-    public Optional<String> getConnectionStringName() {
+    public Optional<String> connectionStringName() {
         return this.connectionStringName == null ? Optional.empty() : Optional.ofNullable(this.connectionStringName);
     }
 
@@ -50,14 +50,14 @@ public final class DatabaseBackupSetting extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseType", required=true)
       private final Either<String,DatabaseType> databaseType;
 
-    public Either<String,DatabaseType> getDatabaseType() {
+    public Either<String,DatabaseType> databaseType() {
         return this.databaseType;
     }
 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

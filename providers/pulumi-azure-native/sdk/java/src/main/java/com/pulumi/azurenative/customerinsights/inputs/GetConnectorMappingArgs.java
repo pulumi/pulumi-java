@@ -19,7 +19,7 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="connectorName", required=true)
       private final String connectorName;
 
-    public String getConnectorName() {
+    public String connectorName() {
         return this.connectorName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="mappingName", required=true)
       private final String mappingName;
 
-    public String getMappingName() {
+    public String mappingName() {
         return this.mappingName;
     }
 
@@ -52,7 +52,7 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

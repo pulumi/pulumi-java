@@ -27,7 +27,7 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends com.pu
     @Import(name="extensions")
       private final @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
 
-    public List<VirtualMachineScaleSetExtensionResponse> getExtensions() {
+    public List<VirtualMachineScaleSetExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends com.pu
     @Import(name="extensionsTimeBudget")
       private final @Nullable String extensionsTimeBudget;
 
-    public Optional<String> getExtensionsTimeBudget() {
+    public Optional<String> extensionsTimeBudget() {
         return this.extensionsTimeBudget == null ? Optional.empty() : Optional.ofNullable(this.extensionsTimeBudget);
     }
 

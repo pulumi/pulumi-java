@@ -83,56 +83,56 @@ public final class ConnectorMappingPropertiesResponse {
      * The availability of mapping property.
      * 
     */
-    public ConnectorMappingAvailabilityResponse getAvailability() {
+    public ConnectorMappingAvailabilityResponse availability() {
         return this.availability;
     }
     /**
      * The operation after import is done.
      * 
     */
-    public ConnectorMappingCompleteOperationResponse getCompleteOperation() {
+    public ConnectorMappingCompleteOperationResponse completeOperation() {
         return this.completeOperation;
     }
     /**
      * The error management setting for the mapping.
      * 
     */
-    public ConnectorMappingErrorManagementResponse getErrorManagement() {
+    public ConnectorMappingErrorManagementResponse errorManagement() {
         return this.errorManagement;
     }
     /**
      * The file filter for the mapping.
      * 
     */
-    public Optional<String> getFileFilter() {
+    public Optional<String> fileFilter() {
         return Optional.ofNullable(this.fileFilter);
     }
     /**
      * The folder path for the mapping.
      * 
     */
-    public Optional<String> getFolderPath() {
+    public Optional<String> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * The format of mapping property.
      * 
     */
-    public ConnectorMappingFormatResponse getFormat() {
+    public ConnectorMappingFormatResponse format() {
         return this.format;
     }
     /**
      * If the file contains a header or not.
      * 
     */
-    public Optional<Boolean> getHasHeader() {
+    public Optional<Boolean> hasHeader() {
         return Optional.ofNullable(this.hasHeader);
     }
     /**
      * Ingestion mapping information at property level.
      * 
     */
-    public List<ConnectorMappingStructureResponse> getStructure() {
+    public List<ConnectorMappingStructureResponse> structure() {
         return this.structure;
     }
 

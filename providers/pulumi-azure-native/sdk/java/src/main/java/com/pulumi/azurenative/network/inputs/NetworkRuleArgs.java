@@ -29,7 +29,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
+    public Output<List<String>> destinationAddresses() {
         return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationFqdns")
       private final @Nullable Output<List<String>> destinationFqdns;
 
-    public Output<List<String>> getDestinationFqdns() {
+    public Output<List<String>> destinationFqdns() {
         return this.destinationFqdns == null ? Codegen.empty() : this.destinationFqdns;
     }
 
@@ -62,7 +62,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationIpGroups")
       private final @Nullable Output<List<String>> destinationIpGroups;
 
-    public Output<List<String>> getDestinationIpGroups() {
+    public Output<List<String>> destinationIpGroups() {
         return this.destinationIpGroups == null ? Codegen.empty() : this.destinationIpGroups;
     }
 
@@ -73,7 +73,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> getDestinationPorts() {
+    public Output<List<String>> destinationPorts() {
         return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
@@ -84,7 +84,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipProtocols")
       private final @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
 
-    public Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> getIpProtocols() {
+    public Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols() {
         return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
     }
 
@@ -95,7 +95,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -107,7 +107,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -118,7 +118,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
+    public Output<List<String>> sourceAddresses() {
         return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
@@ -129,7 +129,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
+    public Output<List<String>> sourceIpGroups() {
         return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 

@@ -28,7 +28,7 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -39,7 +39,7 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="isMandatory")
       private final @Nullable Output<Boolean> isMandatory;
 
-    public Output<Boolean> getIsMandatory() {
+    public Output<Boolean> isMandatory() {
         return this.isMandatory == null ? Codegen.empty() : this.isMandatory;
     }
 
@@ -50,7 +50,7 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="position")
       private final @Nullable Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position == null ? Codegen.empty() : this.position;
     }
 
@@ -61,7 +61,7 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

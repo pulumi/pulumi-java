@@ -29,7 +29,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="author")
       private final @Nullable Output<String> author;
 
-    public Output<String> getAuthor() {
+    public Output<String> author() {
         return this.author == null ? Codegen.empty() : this.author;
     }
 
@@ -40,7 +40,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customImagePlan")
       private final @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
 
-    public Output<CustomImagePropertiesFromPlanArgs> getCustomImagePlan() {
+    public Output<CustomImagePropertiesFromPlanArgs> customImagePlan() {
         return this.customImagePlan == null ? Codegen.empty() : this.customImagePlan;
     }
 
@@ -51,7 +51,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskStorageInfo")
       private final @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
 
-    public Output<List<DataDiskStorageTypeInfoArgs>> getDataDiskStorageInfo() {
+    public Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo() {
         return this.dataDiskStorageInfo == null ? Codegen.empty() : this.dataDiskStorageInfo;
     }
 
@@ -62,7 +62,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isPlanAuthorized")
       private final @Nullable Output<Boolean> isPlanAuthorized;
 
-    public Output<Boolean> getIsPlanAuthorized() {
+    public Output<Boolean> isPlanAuthorized() {
         return this.isPlanAuthorized == null ? Codegen.empty() : this.isPlanAuthorized;
     }
 
@@ -84,7 +84,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -95,7 +95,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -106,7 +106,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedImageId")
       private final @Nullable Output<String> managedImageId;
 
-    public Output<String> getManagedImageId() {
+    public Output<String> managedImageId() {
         return this.managedImageId == null ? Codegen.empty() : this.managedImageId;
     }
 
@@ -117,7 +117,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedSnapshotId")
       private final @Nullable Output<String> managedSnapshotId;
 
-    public Output<String> getManagedSnapshotId() {
+    public Output<String> managedSnapshotId() {
         return this.managedSnapshotId == null ? Codegen.empty() : this.managedSnapshotId;
     }
 
@@ -128,7 +128,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -139,7 +139,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -150,7 +150,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -161,7 +161,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
       private final @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
 
-    public Output<CustomImagePropertiesCustomArgs> getVhd() {
+    public Output<CustomImagePropertiesCustomArgs> vhd() {
         return this.vhd == null ? Codegen.empty() : this.vhd;
     }
 
@@ -172,7 +172,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vm")
       private final @Nullable Output<CustomImagePropertiesFromVmArgs> vm;
 
-    public Output<CustomImagePropertiesFromVmArgs> getVm() {
+    public Output<CustomImagePropertiesFromVmArgs> vm() {
         return this.vm == null ? Codegen.empty() : this.vm;
     }
 

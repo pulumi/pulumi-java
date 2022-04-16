@@ -69,49 +69,49 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
      * Expected value is 'VMwareCbt'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The target key vault ARM Id.
      * 
     */
-    public String getKeyVaultId() {
+    public String keyVaultId() {
         return this.keyVaultId;
     }
     /**
      * The target key vault URI.
      * 
     */
-    public String getKeyVaultUri() {
+    public String keyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The secret name of the service bus connection string.
      * 
     */
-    public String getServiceBusConnectionStringSecretName() {
+    public String serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
     /**
      * The storage account ARM Id.
      * 
     */
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
     /**
      * The secret name of the storage account.
      * 
     */
-    public String getStorageAccountSasSecretName() {
+    public String storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
     /**
      * The target location.
      * 
     */
-    public String getTargetLocation() {
+    public String targetLocation() {
         return this.targetLocation;
     }
 

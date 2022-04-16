@@ -42,21 +42,21 @@ public final class SSISAccessCredentialResponse {
      * Domain for windows authentication.
      * 
     */
-    public Object getDomain() {
+    public Object domain() {
         return this.domain;
     }
     /**
      * Password for windows authentication.
      * 
     */
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
     /**
      * UseName for windows authentication.
      * 
     */
-    public Object getUserName() {
+    public Object userName() {
         return this.userName;
     }
 

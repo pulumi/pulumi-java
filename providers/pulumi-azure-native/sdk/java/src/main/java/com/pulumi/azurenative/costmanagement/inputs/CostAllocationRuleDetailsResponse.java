@@ -27,7 +27,7 @@ public final class CostAllocationRuleDetailsResponse extends com.pulumi.resource
     @Import(name="sourceResources")
       private final @Nullable List<SourceCostAllocationResourceResponse> sourceResources;
 
-    public List<SourceCostAllocationResourceResponse> getSourceResources() {
+    public List<SourceCostAllocationResourceResponse> sourceResources() {
         return this.sourceResources == null ? List.of() : this.sourceResources;
     }
 
@@ -38,7 +38,7 @@ public final class CostAllocationRuleDetailsResponse extends com.pulumi.resource
     @Import(name="targetResources")
       private final @Nullable List<TargetCostAllocationResourceResponse> targetResources;
 
-    public List<TargetCostAllocationResourceResponse> getTargetResources() {
+    public List<TargetCostAllocationResourceResponse> targetResources() {
         return this.targetResources == null ? List.of() : this.targetResources;
     }
 

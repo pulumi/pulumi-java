@@ -27,7 +27,7 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="distributionType", required=true)
       private final String distributionType;
 
-    public String getDistributionType() {
+    public String distributionType() {
         return this.distributionType;
     }
 
@@ -38,7 +38,7 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameterServerCount")
       private final @Nullable Integer parameterServerCount;
 
-    public Optional<Integer> getParameterServerCount() {
+    public Optional<Integer> parameterServerCount() {
         return this.parameterServerCount == null ? Optional.empty() : Optional.ofNullable(this.parameterServerCount);
     }
 
@@ -49,7 +49,7 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="workerCount")
       private final @Nullable Integer workerCount;
 
-    public Optional<Integer> getWorkerCount() {
+    public Optional<Integer> workerCount() {
         return this.workerCount == null ? Optional.empty() : Optional.ofNullable(this.workerCount);
     }
 

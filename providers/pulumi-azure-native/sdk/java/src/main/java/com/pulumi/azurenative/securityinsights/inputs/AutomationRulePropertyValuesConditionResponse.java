@@ -24,7 +24,7 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
     @Import(name="conditionProperties", required=true)
       private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
 
-    public AutomationRulePropertyValuesConditionResponseConditionProperties getConditionProperties() {
+    public AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties() {
         return this.conditionProperties;
     }
 
@@ -36,7 +36,7 @@ public final class AutomationRulePropertyValuesConditionResponse extends com.pul
     @Import(name="conditionType", required=true)
       private final String conditionType;
 
-    public String getConditionType() {
+    public String conditionType() {
         return this.conditionType;
     }
 

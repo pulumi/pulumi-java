@@ -42,21 +42,21 @@ public final class LabelingDatasetConfigurationResponse {
      * Name of the data asset to perform labeling.
      * 
     */
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
     /**
      * AML dataset version.
      * 
     */
-    public String getDatasetVersion() {
+    public String datasetVersion() {
         return this.datasetVersion;
     }
     /**
      * Indicates whether to enable incremental dataset refresh.
      * 
     */
-    public Optional<Boolean> getEnableIncrementalDatasetRefresh() {
+    public Optional<Boolean> enableIncrementalDatasetRefresh() {
         return Optional.ofNullable(this.enableIncrementalDatasetRefresh);
     }
 

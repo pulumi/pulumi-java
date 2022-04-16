@@ -39,21 +39,21 @@ public final class FilterTrackPropertyConditionResponse {
      * The track property condition operation.
      * 
     */
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
     /**
      * The track property type.
      * 
     */
-    public String getProperty() {
+    public String property() {
         return this.property;
     }
     /**
      * The track property value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

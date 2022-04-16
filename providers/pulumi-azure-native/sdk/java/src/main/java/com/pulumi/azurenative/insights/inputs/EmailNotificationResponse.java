@@ -27,7 +27,7 @@ public final class EmailNotificationResponse extends com.pulumi.resources.Invoke
     @Import(name="customEmails")
       private final @Nullable List<String> customEmails;
 
-    public List<String> getCustomEmails() {
+    public List<String> customEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
 
@@ -38,7 +38,7 @@ public final class EmailNotificationResponse extends com.pulumi.resources.Invoke
     @Import(name="sendToSubscriptionAdministrator")
       private final @Nullable Boolean sendToSubscriptionAdministrator;
 
-    public Optional<Boolean> getSendToSubscriptionAdministrator() {
+    public Optional<Boolean> sendToSubscriptionAdministrator() {
         return this.sendToSubscriptionAdministrator == null ? Optional.empty() : Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
 
@@ -49,7 +49,7 @@ public final class EmailNotificationResponse extends com.pulumi.resources.Invoke
     @Import(name="sendToSubscriptionCoAdministrators")
       private final @Nullable Boolean sendToSubscriptionCoAdministrators;
 
-    public Optional<Boolean> getSendToSubscriptionCoAdministrators() {
+    public Optional<Boolean> sendToSubscriptionCoAdministrators() {
         return this.sendToSubscriptionCoAdministrators == null ? Optional.empty() : Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }
 

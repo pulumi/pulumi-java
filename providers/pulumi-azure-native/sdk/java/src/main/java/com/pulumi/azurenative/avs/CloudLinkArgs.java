@@ -22,7 +22,7 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudLinkName")
       private final @Nullable Output<String> cloudLinkName;
 
-    public Output<String> getCloudLinkName() {
+    public Output<String> cloudLinkName() {
         return this.cloudLinkName == null ? Codegen.empty() : this.cloudLinkName;
     }
 
@@ -33,7 +33,7 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedCloud")
       private final @Nullable Output<String> linkedCloud;
 
-    public Output<String> getLinkedCloud() {
+    public Output<String> linkedCloud() {
         return this.linkedCloud == null ? Codegen.empty() : this.linkedCloud;
     }
 
@@ -44,7 +44,7 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -55,7 +55,7 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

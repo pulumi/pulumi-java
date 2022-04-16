@@ -34,14 +34,14 @@ public final class GetSharedKeysResult {
      * The primary shared key of a workspace.
      * 
     */
-    public Optional<String> getPrimarySharedKey() {
+    public Optional<String> primarySharedKey() {
         return Optional.ofNullable(this.primarySharedKey);
     }
     /**
      * The secondary shared key of a workspace.
      * 
     */
-    public Optional<String> getSecondarySharedKey() {
+    public Optional<String> secondarySharedKey() {
         return Optional.ofNullable(this.secondarySharedKey);
     }
 

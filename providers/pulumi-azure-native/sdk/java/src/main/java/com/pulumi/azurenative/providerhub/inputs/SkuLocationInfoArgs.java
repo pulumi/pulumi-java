@@ -20,35 +20,35 @@ public final class SkuLocationInfoArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="extendedLocations")
       private final @Nullable Output<List<String>> extendedLocations;
 
-    public Output<List<String>> getExtendedLocations() {
+    public Output<List<String>> extendedLocations() {
         return this.extendedLocations == null ? Codegen.empty() : this.extendedLocations;
     }
 
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="zoneDetails")
       private final @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
 
-    public Output<List<SkuZoneDetailArgs>> getZoneDetails() {
+    public Output<List<SkuZoneDetailArgs>> zoneDetails() {
         return this.zoneDetails == null ? Codegen.empty() : this.zoneDetails;
     }
 
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

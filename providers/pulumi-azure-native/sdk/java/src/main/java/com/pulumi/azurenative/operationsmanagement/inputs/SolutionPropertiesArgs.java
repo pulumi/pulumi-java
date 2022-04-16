@@ -27,7 +27,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="containedResources")
       private final @Nullable Output<List<String>> containedResources;
 
-    public Output<List<String>> getContainedResources() {
+    public Output<List<String>> containedResources() {
         return this.containedResources == null ? Codegen.empty() : this.containedResources;
     }
 
@@ -38,7 +38,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="referencedResources")
       private final @Nullable Output<List<String>> referencedResources;
 
-    public Output<List<String>> getReferencedResources() {
+    public Output<List<String>> referencedResources() {
         return this.referencedResources == null ? Codegen.empty() : this.referencedResources;
     }
 
@@ -49,7 +49,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="workspaceResourceId", required=true)
       private final Output<String> workspaceResourceId;
 
-    public Output<String> getWorkspaceResourceId() {
+    public Output<String> workspaceResourceId() {
         return this.workspaceResourceId;
     }
 

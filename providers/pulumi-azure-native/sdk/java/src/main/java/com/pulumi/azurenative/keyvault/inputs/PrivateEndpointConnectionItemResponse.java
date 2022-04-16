@@ -27,7 +27,7 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="etag")
       private final @Nullable String etag;
 
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
@@ -38,7 +38,7 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -49,7 +49,7 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
 
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
@@ -60,7 +60,7 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
-    public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
@@ -71,7 +71,7 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

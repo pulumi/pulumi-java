@@ -26,7 +26,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="activeStorageAccountId")
       private final @Nullable String activeStorageAccountId;
 
-    public Optional<String> getActiveStorageAccountId() {
+    public Optional<String> activeStorageAccountId() {
         return this.activeStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.activeStorageAccountId);
     }
 
@@ -37,7 +37,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
-    public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
+    public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Optional.empty() : Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
 
@@ -48,7 +48,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="encryption")
       private final @Nullable String encryption;
 
-    public Optional<String> getEncryption() {
+    public Optional<String> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -60,7 +60,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -71,7 +71,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="onlineReplicationStartTime")
       private final @Nullable String onlineReplicationStartTime;
 
-    public Optional<String> getOnlineReplicationStartTime() {
+    public Optional<String> onlineReplicationStartTime() {
         return this.onlineReplicationStartTime == null ? Optional.empty() : Optional.ofNullable(this.onlineReplicationStartTime);
     }
 
@@ -82,7 +82,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="recoveryPointHistoryDurationInHours")
       private final @Nullable Integer recoveryPointHistoryDurationInHours;
 
-    public Optional<Integer> getRecoveryPointHistoryDurationInHours() {
+    public Optional<Integer> recoveryPointHistoryDurationInHours() {
         return this.recoveryPointHistoryDurationInHours == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
 
@@ -93,7 +93,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="replicationInterval")
       private final @Nullable Integer replicationInterval;
 
-    public Optional<Integer> getReplicationInterval() {
+    public Optional<Integer> replicationInterval() {
         return this.replicationInterval == null ? Optional.empty() : Optional.ofNullable(this.replicationInterval);
     }
 

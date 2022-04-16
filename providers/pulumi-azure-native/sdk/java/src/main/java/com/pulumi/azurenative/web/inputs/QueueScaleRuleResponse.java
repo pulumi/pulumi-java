@@ -28,7 +28,7 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="auth")
       private final @Nullable List<ScaleRuleAuthResponse> auth;
 
-    public List<ScaleRuleAuthResponse> getAuth() {
+    public List<ScaleRuleAuthResponse> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
 
@@ -39,7 +39,7 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="queueLength")
       private final @Nullable Integer queueLength;
 
-    public Optional<Integer> getQueueLength() {
+    public Optional<Integer> queueLength() {
         return this.queueLength == null ? Optional.empty() : Optional.ofNullable(this.queueLength);
     }
 
@@ -50,7 +50,7 @@ public final class QueueScaleRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="queueName")
       private final @Nullable String queueName;
 
-    public Optional<String> getQueueName() {
+    public Optional<String> queueName() {
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
     }
 

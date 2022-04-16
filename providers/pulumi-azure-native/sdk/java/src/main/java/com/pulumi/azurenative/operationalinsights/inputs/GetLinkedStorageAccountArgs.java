@@ -19,7 +19,7 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
     @Import(name="dataSourceType", required=true)
       private final String dataSourceType;
 
-    public String getDataSourceType() {
+    public String dataSourceType() {
         return this.dataSourceType;
     }
 
@@ -30,7 +30,7 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetLinkedStorageAccountArgs extends com.pulumi.resources.Invo
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

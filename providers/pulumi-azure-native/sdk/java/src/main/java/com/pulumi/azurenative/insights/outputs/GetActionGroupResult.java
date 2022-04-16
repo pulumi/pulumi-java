@@ -165,133 +165,133 @@ public final class GetActionGroupResult {
      * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
      * 
     */
-    public List<ArmRoleReceiverResponse> getArmRoleReceivers() {
+    public List<ArmRoleReceiverResponse> armRoleReceivers() {
         return this.armRoleReceivers == null ? List.of() : this.armRoleReceivers;
     }
     /**
      * The list of AutomationRunbook receivers that are part of this action group.
      * 
     */
-    public List<AutomationRunbookReceiverResponse> getAutomationRunbookReceivers() {
+    public List<AutomationRunbookReceiverResponse> automationRunbookReceivers() {
         return this.automationRunbookReceivers == null ? List.of() : this.automationRunbookReceivers;
     }
     /**
      * The list of AzureAppPush receivers that are part of this action group.
      * 
     */
-    public List<AzureAppPushReceiverResponse> getAzureAppPushReceivers() {
+    public List<AzureAppPushReceiverResponse> azureAppPushReceivers() {
         return this.azureAppPushReceivers == null ? List.of() : this.azureAppPushReceivers;
     }
     /**
      * The list of azure function receivers that are part of this action group.
      * 
     */
-    public List<AzureFunctionReceiverResponse> getAzureFunctionReceivers() {
+    public List<AzureFunctionReceiverResponse> azureFunctionReceivers() {
         return this.azureFunctionReceivers == null ? List.of() : this.azureFunctionReceivers;
     }
     /**
      * The list of email receivers that are part of this action group.
      * 
     */
-    public List<EmailReceiverResponse> getEmailReceivers() {
+    public List<EmailReceiverResponse> emailReceivers() {
         return this.emailReceivers == null ? List.of() : this.emailReceivers;
     }
     /**
      * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The short name of the action group. This will be used in SMS messages.
      * 
     */
-    public String getGroupShortName() {
+    public String groupShortName() {
         return this.groupShortName;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure resource identity
      * 
     */
-    public String getIdentity() {
+    public String identity() {
         return this.identity;
     }
     /**
      * The list of ITSM receivers that are part of this action group.
      * 
     */
-    public List<ItsmReceiverResponse> getItsmReceivers() {
+    public List<ItsmReceiverResponse> itsmReceivers() {
         return this.itsmReceivers == null ? List.of() : this.itsmReceivers;
     }
     /**
      * Azure resource kind
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The list of logic app receivers that are part of this action group.
      * 
     */
-    public List<LogicAppReceiverResponse> getLogicAppReceivers() {
+    public List<LogicAppReceiverResponse> logicAppReceivers() {
         return this.logicAppReceivers == null ? List.of() : this.logicAppReceivers;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of SMS receivers that are part of this action group.
      * 
     */
-    public List<SmsReceiverResponse> getSmsReceivers() {
+    public List<SmsReceiverResponse> smsReceivers() {
         return this.smsReceivers == null ? List.of() : this.smsReceivers;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The list of voice receivers that are part of this action group.
      * 
     */
-    public List<VoiceReceiverResponse> getVoiceReceivers() {
+    public List<VoiceReceiverResponse> voiceReceivers() {
         return this.voiceReceivers == null ? List.of() : this.voiceReceivers;
     }
     /**
      * The list of webhook receivers that are part of this action group.
      * 
     */
-    public List<WebhookReceiverResponse> getWebhookReceivers() {
+    public List<WebhookReceiverResponse> webhookReceivers() {
         return this.webhookReceivers == null ? List.of() : this.webhookReceivers;
     }
 

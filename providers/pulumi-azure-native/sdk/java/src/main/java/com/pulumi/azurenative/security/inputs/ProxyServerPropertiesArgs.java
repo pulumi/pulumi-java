@@ -26,7 +26,7 @@ public final class ProxyServerPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 
@@ -37,7 +37,7 @@ public final class ProxyServerPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

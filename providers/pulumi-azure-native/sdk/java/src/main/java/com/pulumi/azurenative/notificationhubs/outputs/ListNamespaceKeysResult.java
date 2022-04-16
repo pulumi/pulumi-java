@@ -55,35 +55,35 @@ public final class ListNamespaceKeysResult {
      * KeyName of the created AuthorizationRule
      * 
     */
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * PrimaryConnectionString of the AuthorizationRule.
      * 
     */
-    public Optional<String> getPrimaryConnectionString() {
+    public Optional<String> primaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
      * PrimaryKey of the created AuthorizationRule.
      * 
     */
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * SecondaryConnectionString of the created AuthorizationRule
      * 
     */
-    public Optional<String> getSecondaryConnectionString() {
+    public Optional<String> secondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
      * SecondaryKey of the created AuthorizationRule
      * 
     */
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
 

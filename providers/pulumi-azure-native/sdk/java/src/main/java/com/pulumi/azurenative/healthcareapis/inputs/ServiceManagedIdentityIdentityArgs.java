@@ -28,7 +28,7 @@ public final class ServiceManagedIdentityIdentityArgs extends com.pulumi.resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Output<Either<String,ManagedServiceIdentityType>> getType() {
+    public Output<Either<String,ManagedServiceIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -26,7 +26,7 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linuxOperatingSystemProfile")
       private final @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
-    public Output<LinuxOperatingSystemProfileArgs> getLinuxOperatingSystemProfile() {
+    public Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile() {
         return this.linuxOperatingSystemProfile == null ? Codegen.empty() : this.linuxOperatingSystemProfile;
     }
 

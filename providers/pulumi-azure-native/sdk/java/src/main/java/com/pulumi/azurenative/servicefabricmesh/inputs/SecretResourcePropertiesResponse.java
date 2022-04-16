@@ -25,7 +25,7 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -36,7 +36,7 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -48,7 +48,7 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -59,7 +59,7 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -70,7 +70,7 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -81,7 +81,7 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="statusDetails", required=true)
       private final String statusDetails;
 
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
 

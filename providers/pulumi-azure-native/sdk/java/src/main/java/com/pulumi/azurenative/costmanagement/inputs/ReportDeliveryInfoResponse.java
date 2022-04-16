@@ -23,7 +23,7 @@ public final class ReportDeliveryInfoResponse extends com.pulumi.resources.Invok
     @Import(name="destination", required=true)
       private final ReportDeliveryDestinationResponse destination;
 
-    public ReportDeliveryDestinationResponse getDestination() {
+    public ReportDeliveryDestinationResponse destination() {
         return this.destination;
     }
 

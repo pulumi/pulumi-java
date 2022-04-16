@@ -24,7 +24,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="groupMembers", required=true)
       private final Output<List<ServerInfoArgs>> groupMembers;
 
-    public Output<List<ServerInfoArgs>> getGroupMembers() {
+    public Output<List<ServerInfoArgs>> groupMembers() {
         return this.groupMembers;
     }
 
@@ -35,7 +35,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="locationName", required=true)
       private final Output<String> locationName;
 
-    public Output<String> getLocationName() {
+    public Output<String> locationName() {
         return this.locationName;
     }
 
@@ -46,7 +46,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverTrustGroupName")
       private final @Nullable Output<String> serverTrustGroupName;
 
-    public Output<String> getServerTrustGroupName() {
+    public Output<String> serverTrustGroupName() {
         return this.serverTrustGroupName == null ? Codegen.empty() : this.serverTrustGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="trustScopes", required=true)
       private final Output<List<String>> trustScopes;
 
-    public Output<List<String>> getTrustScopes() {
+    public Output<List<String>> trustScopes() {
         return this.trustScopes;
     }
 

@@ -27,7 +27,7 @@ public final class ExperimentsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rampUpRules")
       private final @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
 
-    public Output<List<RampUpRuleArgs>> getRampUpRules() {
+    public Output<List<RampUpRuleArgs>> rampUpRules() {
         return this.rampUpRules == null ? Codegen.empty() : this.rampUpRules;
     }
 

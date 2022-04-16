@@ -27,7 +27,7 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="asn")
       private final @Nullable Output<Double> asn;
 
-    public Output<Double> getAsn() {
+    public Output<Double> asn() {
         return this.asn == null ? Codegen.empty() : this.asn;
     }
 
@@ -38,7 +38,7 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="bgpPeeringAddress")
       private final @Nullable Output<String> bgpPeeringAddress;
 
-    public Output<String> getBgpPeeringAddress() {
+    public Output<String> bgpPeeringAddress() {
         return this.bgpPeeringAddress == null ? Codegen.empty() : this.bgpPeeringAddress;
     }
 

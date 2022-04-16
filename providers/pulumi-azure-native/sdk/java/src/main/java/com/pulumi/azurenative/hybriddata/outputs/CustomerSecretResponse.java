@@ -39,21 +39,21 @@ public final class CustomerSecretResponse {
      * The encryption algorithm used to encrypt data.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * The identifier to the data service input object which this secret corresponds to.
      * 
     */
-    public String getKeyIdentifier() {
+    public String keyIdentifier() {
         return this.keyIdentifier;
     }
     /**
      * It contains the encrypted customer secret.
      * 
     */
-    public String getKeyValue() {
+    public String keyValue() {
         return this.keyValue;
     }
 

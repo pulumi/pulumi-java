@@ -34,7 +34,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="autoBackupSettings")
       private final @Nullable Output<AutoBackupSettingsArgs> autoBackupSettings;
 
-    public Output<AutoBackupSettingsArgs> getAutoBackupSettings() {
+    public Output<AutoBackupSettingsArgs> autoBackupSettings() {
         return this.autoBackupSettings == null ? Codegen.empty() : this.autoBackupSettings;
     }
 
@@ -45,7 +45,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="autoPatchingSettings")
       private final @Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings;
 
-    public Output<AutoPatchingSettingsArgs> getAutoPatchingSettings() {
+    public Output<AutoPatchingSettingsArgs> autoPatchingSettings() {
         return this.autoPatchingSettings == null ? Codegen.empty() : this.autoPatchingSettings;
     }
 
@@ -56,7 +56,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
+    public Output<ResourceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -67,7 +67,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyVaultCredentialSettings")
       private final @Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
 
-    public Output<KeyVaultCredentialSettingsArgs> getKeyVaultCredentialSettings() {
+    public Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings() {
         return this.keyVaultCredentialSettings == null ? Codegen.empty() : this.keyVaultCredentialSettings;
     }
 
@@ -78,7 +78,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -89,7 +89,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serverConfigurationsManagementSettings")
       private final @Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
 
-    public Output<ServerConfigurationsManagementSettingsArgs> getServerConfigurationsManagementSettings() {
+    public Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings() {
         return this.serverConfigurationsManagementSettings == null ? Codegen.empty() : this.serverConfigurationsManagementSettings;
     }
 
@@ -111,7 +111,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlImageOffer")
       private final @Nullable Output<String> sqlImageOffer;
 
-    public Output<String> getSqlImageOffer() {
+    public Output<String> sqlImageOffer() {
         return this.sqlImageOffer == null ? Codegen.empty() : this.sqlImageOffer;
     }
 
@@ -122,7 +122,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlImageSku")
       private final @Nullable Output<Either<String,SqlImageSku>> sqlImageSku;
 
-    public Output<Either<String,SqlImageSku>> getSqlImageSku() {
+    public Output<Either<String,SqlImageSku>> sqlImageSku() {
         return this.sqlImageSku == null ? Codegen.empty() : this.sqlImageSku;
     }
 
@@ -133,7 +133,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlManagement")
       private final @Nullable Output<Either<String,SqlManagementMode>> sqlManagement;
 
-    public Output<Either<String,SqlManagementMode>> getSqlManagement() {
+    public Output<Either<String,SqlManagementMode>> sqlManagement() {
         return this.sqlManagement == null ? Codegen.empty() : this.sqlManagement;
     }
 
@@ -144,7 +144,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlServerLicenseType")
       private final @Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
 
-    public Output<Either<String,SqlServerLicenseType>> getSqlServerLicenseType() {
+    public Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType() {
         return this.sqlServerLicenseType == null ? Codegen.empty() : this.sqlServerLicenseType;
     }
 
@@ -155,7 +155,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlVirtualMachineGroupResourceId")
       private final @Nullable Output<String> sqlVirtualMachineGroupResourceId;
 
-    public Output<String> getSqlVirtualMachineGroupResourceId() {
+    public Output<String> sqlVirtualMachineGroupResourceId() {
         return this.sqlVirtualMachineGroupResourceId == null ? Codegen.empty() : this.sqlVirtualMachineGroupResourceId;
     }
 
@@ -166,7 +166,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sqlVirtualMachineName")
       private final @Nullable Output<String> sqlVirtualMachineName;
 
-    public Output<String> getSqlVirtualMachineName() {
+    public Output<String> sqlVirtualMachineName() {
         return this.sqlVirtualMachineName == null ? Codegen.empty() : this.sqlVirtualMachineName;
     }
 
@@ -177,7 +177,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="storageConfigurationSettings")
       private final @Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings;
 
-    public Output<StorageConfigurationSettingsArgs> getStorageConfigurationSettings() {
+    public Output<StorageConfigurationSettingsArgs> storageConfigurationSettings() {
         return this.storageConfigurationSettings == null ? Codegen.empty() : this.storageConfigurationSettings;
     }
 
@@ -188,7 +188,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -199,7 +199,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="virtualMachineResourceId")
       private final @Nullable Output<String> virtualMachineResourceId;
 
-    public Output<String> getVirtualMachineResourceId() {
+    public Output<String> virtualMachineResourceId() {
         return this.virtualMachineResourceId == null ? Codegen.empty() : this.virtualMachineResourceId;
     }
 
@@ -210,7 +210,7 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
     @Import(name="wsfcDomainCredentials")
       private final @Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
 
-    public Output<WsfcDomainCredentialsArgs> getWsfcDomainCredentials() {
+    public Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials() {
         return this.wsfcDomainCredentials == null ? Codegen.empty() : this.wsfcDomainCredentials;
     }
 

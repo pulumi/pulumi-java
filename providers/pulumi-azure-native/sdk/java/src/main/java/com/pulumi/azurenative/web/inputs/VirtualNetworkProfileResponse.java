@@ -25,7 +25,7 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="subnet")
       private final @Nullable String subnet;
 
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -58,7 +58,7 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="endAzimuthDegrees", required=true)
       private final Double endAzimuthDegrees;
 
-    public Double getEndAzimuthDegrees() {
+    public Double endAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
 
@@ -38,7 +38,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="endElevationDegrees", required=true)
       private final Double endElevationDegrees;
 
-    public Double getEndElevationDegrees() {
+    public Double endElevationDegrees() {
         return this.endElevationDegrees;
     }
 
@@ -49,7 +49,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="groundStationName", required=true)
       private final String groundStationName;
 
-    public String getGroundStationName() {
+    public String groundStationName() {
         return this.groundStationName;
     }
 
@@ -60,7 +60,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="maximumElevationDegrees", required=true)
       private final Double maximumElevationDegrees;
 
-    public Double getMaximumElevationDegrees() {
+    public Double maximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
 
@@ -71,7 +71,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="rxEndTime", required=true)
       private final String rxEndTime;
 
-    public String getRxEndTime() {
+    public String rxEndTime() {
         return this.rxEndTime;
     }
 
@@ -82,7 +82,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="rxStartTime", required=true)
       private final String rxStartTime;
 
-    public String getRxStartTime() {
+    public String rxStartTime() {
         return this.rxStartTime;
     }
 
@@ -93,7 +93,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="spacecraft")
       private final @Nullable ResourceReferenceResponse spacecraft;
 
-    public Optional<ResourceReferenceResponse> getSpacecraft() {
+    public Optional<ResourceReferenceResponse> spacecraft() {
         return this.spacecraft == null ? Optional.empty() : Optional.ofNullable(this.spacecraft);
     }
 
@@ -104,7 +104,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="startAzimuthDegrees", required=true)
       private final Double startAzimuthDegrees;
 
-    public Double getStartAzimuthDegrees() {
+    public Double startAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
 
@@ -115,7 +115,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="startElevationDegrees", required=true)
       private final Double startElevationDegrees;
 
-    public Double getStartElevationDegrees() {
+    public Double startElevationDegrees() {
         return this.startElevationDegrees;
     }
 
@@ -126,7 +126,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="txEndTime", required=true)
       private final String txEndTime;
 
-    public String getTxEndTime() {
+    public String txEndTime() {
         return this.txEndTime;
     }
 
@@ -137,7 +137,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="txStartTime", required=true)
       private final String txStartTime;
 
-    public String getTxStartTime() {
+    public String txStartTime() {
         return this.txStartTime;
     }
 

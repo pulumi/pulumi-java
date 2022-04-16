@@ -42,7 +42,7 @@ public class NotebookWorkspace extends com.pulumi.resources.CustomResource {
      * @return The name of the database account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class NotebookWorkspace extends com.pulumi.resources.CustomResource {
      * @return Specifies the endpoint of Notebook server.
      * 
      */
-    public Output<String> getNotebookServerEndpoint() {
+    public Output<String> notebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }
     /**
@@ -70,7 +70,7 @@ public class NotebookWorkspace extends com.pulumi.resources.CustomResource {
      * @return Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -84,7 +84,7 @@ public class NotebookWorkspace extends com.pulumi.resources.CustomResource {
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

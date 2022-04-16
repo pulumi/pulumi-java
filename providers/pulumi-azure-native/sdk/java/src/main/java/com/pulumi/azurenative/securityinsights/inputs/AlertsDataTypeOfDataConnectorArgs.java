@@ -26,7 +26,7 @@ public final class AlertsDataTypeOfDataConnectorArgs extends com.pulumi.resource
     @Import(name="alerts")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
-    public Output<DataConnectorDataTypeCommonArgs> getAlerts() {
+    public Output<DataConnectorDataTypeCommonArgs> alerts() {
         return this.alerts == null ? Codegen.empty() : this.alerts;
     }
 

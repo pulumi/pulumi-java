@@ -26,7 +26,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="migrationSetting")
       private final @Nullable Map<String,String> migrationSetting;
 
-    public Map<String,String> getMigrationSetting() {
+    public Map<String,String> migrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
 
@@ -37,7 +37,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="sourceSetting")
       private final @Nullable Map<String,String> sourceSetting;
 
-    public Map<String,String> getSourceSetting() {
+    public Map<String,String> sourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
 
@@ -59,7 +59,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
 
-    public Optional<String> getTargetDatabaseName() {
+    public Optional<String> targetDatabaseName() {
         return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
     }
 
@@ -70,7 +70,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="targetSetting")
       private final @Nullable Map<String,String> targetSetting;
 
-    public Map<String,String> getTargetSetting() {
+    public Map<String,String> targetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
     }
 

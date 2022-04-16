@@ -26,7 +26,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -37,7 +37,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -59,7 +59,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="role")
       private final @Nullable String role;
 
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 
@@ -70,7 +70,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="subnetCidr")
       private final @Nullable String subnetCidr;
 
-    public Optional<String> getSubnetCidr() {
+    public Optional<String> subnetCidr() {
         return this.subnetCidr == null ? Optional.empty() : Optional.ofNullable(this.subnetCidr);
     }
 
@@ -81,7 +81,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="vmSize", required=true)
       private final String vmSize;
 
-    public String getVmSize() {
+    public String vmSize() {
         return this.vmSize;
     }
 

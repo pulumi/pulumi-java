@@ -22,7 +22,7 @@ public final class DomainTopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -33,7 +33,7 @@ public final class DomainTopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainTopicName")
       private final @Nullable Output<String> domainTopicName;
 
-    public Output<String> getDomainTopicName() {
+    public Output<String> domainTopicName() {
         return this.domainTopicName == null ? Codegen.empty() : this.domainTopicName;
     }
 
@@ -44,7 +44,7 @@ public final class DomainTopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -27,7 +27,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="automationAccountId", required=true)
       private final Output<String> automationAccountId;
 
-    public Output<String> getAutomationAccountId() {
+    public Output<String> automationAccountId() {
         return this.automationAccountId;
     }
 
@@ -38,7 +38,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="isGlobalRunbook", required=true)
       private final Output<Boolean> isGlobalRunbook;
 
-    public Output<Boolean> getIsGlobalRunbook() {
+    public Output<Boolean> isGlobalRunbook() {
         return this.isGlobalRunbook;
     }
 
@@ -49,7 +49,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="runbookName", required=true)
       private final Output<String> runbookName;
 
-    public Output<String> getRunbookName() {
+    public Output<String> runbookName() {
         return this.runbookName;
     }
 
@@ -71,7 +71,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="serviceUri")
       private final @Nullable Output<String> serviceUri;
 
-    public Output<String> getServiceUri() {
+    public Output<String> serviceUri() {
         return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
     }
 
@@ -82,7 +82,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
+    public Output<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 
@@ -93,7 +93,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="webhookResourceId", required=true)
       private final Output<String> webhookResourceId;
 
-    public Output<String> getWebhookResourceId() {
+    public Output<String> webhookResourceId() {
         return this.webhookResourceId;
     }
 

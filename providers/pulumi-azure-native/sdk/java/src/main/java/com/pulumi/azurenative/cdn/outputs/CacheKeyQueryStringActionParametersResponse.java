@@ -33,21 +33,21 @@ public final class CacheKeyQueryStringActionParametersResponse {
         this.queryStringBehavior = queryStringBehavior;
     }
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * query parameters to include or exclude (comma separated).
      * 
     */
-    public Optional<String> getQueryParameters() {
+    public Optional<String> queryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
     /**
      * Caching behavior for the requests
      * 
     */
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
 

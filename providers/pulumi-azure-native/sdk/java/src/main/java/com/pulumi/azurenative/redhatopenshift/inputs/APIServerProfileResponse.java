@@ -25,7 +25,7 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="ip")
       private final @Nullable String ip;
 
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
@@ -36,7 +36,7 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 
@@ -47,7 +47,7 @@ public final class APIServerProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="visibility")
       private final @Nullable String visibility;
 
-    public Optional<String> getVisibility() {
+    public Optional<String> visibility() {
         return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
     }
 

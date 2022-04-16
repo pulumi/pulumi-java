@@ -26,7 +26,7 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation == null ? Codegen.empty() : this.operation;
     }
 
@@ -37,7 +37,7 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
     @Import(name="property")
       private final @Nullable Output<String> property;
 
-    public Output<String> getProperty() {
+    public Output<String> property() {
         return this.property == null ? Codegen.empty() : this.property;
     }
 
@@ -48,7 +48,7 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

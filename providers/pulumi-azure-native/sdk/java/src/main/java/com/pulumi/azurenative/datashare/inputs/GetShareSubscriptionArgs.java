@@ -19,7 +19,7 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
 
-    public String getShareSubscriptionName() {
+    public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 

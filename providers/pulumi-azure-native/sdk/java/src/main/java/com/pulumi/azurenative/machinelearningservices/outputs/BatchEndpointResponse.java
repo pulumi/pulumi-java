@@ -64,42 +64,42 @@ public final class BatchEndpointResponse {
      * Enum to determine endpoint authentication mode.
      * 
     */
-    public Optional<String> getAuthMode() {
+    public Optional<String> authMode() {
         return Optional.ofNullable(this.authMode);
     }
     /**
      * Description of the inference endpoint.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Endpoint URI.
      * 
     */
-    public String getScoringUri() {
+    public String scoringUri() {
         return this.scoringUri;
     }
     /**
      * Endpoint Swagger URI.
      * 
     */
-    public String getSwaggerUri() {
+    public String swaggerUri() {
         return this.swaggerUri;
     }
     /**
      * Traffic rules on how the traffic will be routed across deployments.
      * 
     */
-    public Map<String,Integer> getTraffic() {
+    public Map<String,Integer> traffic() {
         return this.traffic == null ? Map.of() : this.traffic;
     }
 

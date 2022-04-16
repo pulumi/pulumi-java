@@ -24,7 +24,7 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frontDoorName", required=true)
       private final Output<String> frontDoorName;
 
-    public Output<String> getFrontDoorName() {
+    public Output<String> frontDoorName() {
         return this.frontDoorName;
     }
 
@@ -35,7 +35,7 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -46,7 +46,7 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<RulesEngineRuleArgs>> rules;
 
-    public Output<List<RulesEngineRuleArgs>> getRules() {
+    public Output<List<RulesEngineRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -57,7 +57,7 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rulesEngineName")
       private final @Nullable Output<String> rulesEngineName;
 
-    public Output<String> getRulesEngineName() {
+    public Output<String> rulesEngineName() {
         return this.rulesEngineName == null ? Codegen.empty() : this.rulesEngineName;
     }
 

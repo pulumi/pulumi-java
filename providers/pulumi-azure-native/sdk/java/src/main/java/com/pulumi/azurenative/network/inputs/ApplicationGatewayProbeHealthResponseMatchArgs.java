@@ -27,7 +27,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends com.pu
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends com.pu
     @Import(name="statusCodes")
       private final @Nullable Output<List<String>> statusCodes;
 
-    public Output<List<String>> getStatusCodes() {
+    public Output<List<String>> statusCodes() {
         return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
     }
 

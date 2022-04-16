@@ -21,7 +21,7 @@ public final class EdgeUsageDataEventHubResponse extends com.pulumi.resources.In
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -32,7 +32,7 @@ public final class EdgeUsageDataEventHubResponse extends com.pulumi.resources.In
     @Import(name="namespace")
       private final @Nullable String namespace;
 
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
@@ -43,7 +43,7 @@ public final class EdgeUsageDataEventHubResponse extends com.pulumi.resources.In
     @Import(name="token")
       private final @Nullable String token;
 
-    public Optional<String> getToken() {
+    public Optional<String> token() {
         return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
     }
 

@@ -19,7 +19,7 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends com.pulumi.r
     @Import(name="lockName", required=true)
       private final String lockName;
 
-    public String getLockName() {
+    public String lockName() {
         return this.lockName;
     }
 

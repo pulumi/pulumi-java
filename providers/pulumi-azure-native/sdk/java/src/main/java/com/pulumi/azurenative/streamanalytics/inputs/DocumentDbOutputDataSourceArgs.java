@@ -26,7 +26,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -37,7 +37,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
@@ -48,7 +48,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="collectionNamePattern")
       private final @Nullable Output<String> collectionNamePattern;
 
-    public Output<String> getCollectionNamePattern() {
+    public Output<String> collectionNamePattern() {
         return this.collectionNamePattern == null ? Codegen.empty() : this.collectionNamePattern;
     }
 
@@ -59,7 +59,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -70,7 +70,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="documentId")
       private final @Nullable Output<String> documentId;
 
-    public Output<String> getDocumentId() {
+    public Output<String> documentId() {
         return this.documentId == null ? Codegen.empty() : this.documentId;
     }
 
@@ -81,7 +81,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
+    public Output<String> partitionKey() {
         return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
@@ -93,7 +93,7 @@ public final class DocumentDbOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

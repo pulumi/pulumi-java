@@ -26,7 +26,7 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
     @Import(name="enableDataIntegrityValidation")
       private final @Nullable Output<Boolean> enableDataIntegrityValidation;
 
-    public Output<Boolean> getEnableDataIntegrityValidation() {
+    public Output<Boolean> enableDataIntegrityValidation() {
         return this.enableDataIntegrityValidation == null ? Codegen.empty() : this.enableDataIntegrityValidation;
     }
 
@@ -37,7 +37,7 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
     @Import(name="enableQueryAnalysisValidation")
       private final @Nullable Output<Boolean> enableQueryAnalysisValidation;
 
-    public Output<Boolean> getEnableQueryAnalysisValidation() {
+    public Output<Boolean> enableQueryAnalysisValidation() {
         return this.enableQueryAnalysisValidation == null ? Codegen.empty() : this.enableQueryAnalysisValidation;
     }
 
@@ -48,7 +48,7 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
     @Import(name="enableSchemaValidation")
       private final @Nullable Output<Boolean> enableSchemaValidation;
 
-    public Output<Boolean> getEnableSchemaValidation() {
+    public Output<Boolean> enableSchemaValidation() {
         return this.enableSchemaValidation == null ? Codegen.empty() : this.enableSchemaValidation;
     }
 

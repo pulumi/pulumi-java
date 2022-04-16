@@ -25,7 +25,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="billingType", required=true)
       private final String billingType;
 
-    public String getBillingType() {
+    public String billingType() {
         return this.billingType;
     }
 
@@ -36,7 +36,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="chargingType", required=true)
       private final String chargingType;
 
-    public String getChargingType() {
+    public String chargingType() {
         return this.chargingType;
     }
 
@@ -47,7 +47,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="meterGuid", required=true)
       private final String meterGuid;
 
-    public String getMeterGuid() {
+    public String meterGuid() {
         return this.meterGuid;
     }
 
@@ -58,7 +58,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="multiplier", required=true)
       private final Double multiplier;
 
-    public Double getMultiplier() {
+    public Double multiplier() {
         return this.multiplier;
     }
 

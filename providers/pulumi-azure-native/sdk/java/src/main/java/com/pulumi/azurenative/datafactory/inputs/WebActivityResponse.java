@@ -34,7 +34,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authentication")
       private final @Nullable WebActivityAuthenticationResponse authentication;
 
-    public Optional<WebActivityAuthenticationResponse> getAuthentication() {
+    public Optional<WebActivityAuthenticationResponse> authentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
@@ -45,7 +45,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="body")
       private final @Nullable Object body;
 
-    public Optional<Object> getBody() {
+    public Optional<Object> body() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
@@ -56,7 +56,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -67,7 +67,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasets")
       private final @Nullable List<DatasetReferenceResponse> datasets;
 
-    public List<DatasetReferenceResponse> getDatasets() {
+    public List<DatasetReferenceResponse> datasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
 
@@ -78,7 +78,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -89,7 +89,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -100,7 +100,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="headers")
       private final @Nullable Object headers;
 
-    public Optional<Object> getHeaders() {
+    public Optional<Object> headers() {
         return this.headers == null ? Optional.empty() : Optional.ofNullable(this.headers);
     }
 
@@ -111,7 +111,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -122,7 +122,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
-    public List<LinkedServiceReferenceResponse> getLinkedServices() {
+    public List<LinkedServiceReferenceResponse> linkedServices() {
         return this.linkedServices == null ? List.of() : this.linkedServices;
     }
 
@@ -133,7 +133,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="method", required=true)
       private final String method;
 
-    public String getMethod() {
+    public String method() {
         return this.method;
     }
 
@@ -144,7 +144,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -155,7 +155,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -167,7 +167,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -178,7 +178,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final Object url;
 
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 
@@ -189,7 +189,7 @@ public final class WebActivityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

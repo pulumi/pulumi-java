@@ -26,7 +26,7 @@ public final class ParametersLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contentVersion")
       private final @Nullable Output<String> contentVersion;
 
-    public Output<String> getContentVersion() {
+    public Output<String> contentVersion() {
         return this.contentVersion == null ? Codegen.empty() : this.contentVersion;
     }
 
@@ -37,7 +37,7 @@ public final class ParametersLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

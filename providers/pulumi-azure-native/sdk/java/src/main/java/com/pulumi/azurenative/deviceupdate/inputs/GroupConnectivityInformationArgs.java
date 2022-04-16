@@ -27,7 +27,7 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
     @Import(name="customerVisibleFqdns")
       private final @Nullable Output<List<String>> customerVisibleFqdns;
 
-    public Output<List<String>> getCustomerVisibleFqdns() {
+    public Output<List<String>> customerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? Codegen.empty() : this.customerVisibleFqdns;
     }
 
@@ -38,7 +38,7 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
     @Import(name="privateLinkServiceArmRegion")
       private final @Nullable Output<String> privateLinkServiceArmRegion;
 
-    public Output<String> getPrivateLinkServiceArmRegion() {
+    public Output<String> privateLinkServiceArmRegion() {
         return this.privateLinkServiceArmRegion == null ? Codegen.empty() : this.privateLinkServiceArmRegion;
     }
 
@@ -49,7 +49,7 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
     @Import(name="redirectMapId")
       private final @Nullable Output<String> redirectMapId;
 
-    public Output<String> getRedirectMapId() {
+    public Output<String> redirectMapId() {
         return this.redirectMapId == null ? Codegen.empty() : this.redirectMapId;
     }
 

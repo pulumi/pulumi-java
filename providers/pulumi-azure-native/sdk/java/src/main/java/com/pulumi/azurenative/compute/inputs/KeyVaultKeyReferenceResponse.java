@@ -24,7 +24,7 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="keyUrl", required=true)
       private final String keyUrl;
 
-    public String getKeyUrl() {
+    public String keyUrl() {
         return this.keyUrl;
     }
 
@@ -35,7 +35,7 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="sourceVault", required=true)
       private final SubResourceResponse sourceVault;
 
-    public SubResourceResponse getSourceVault() {
+    public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }
 

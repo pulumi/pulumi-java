@@ -26,7 +26,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
     @Import(name="computeType")
       private final @Nullable Output<Object> computeType;
 
-    public Output<Object> getComputeType() {
+    public Output<Object> computeType() {
         return this.computeType == null ? Codegen.empty() : this.computeType;
     }
 
@@ -37,7 +37,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
     @Import(name="coreCount")
       private final @Nullable Output<Object> coreCount;
 
-    public Output<Object> getCoreCount() {
+    public Output<Object> coreCount() {
         return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 

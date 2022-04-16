@@ -25,7 +25,7 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="namespacePath")
       private final @Nullable String namespacePath;
 
-    public Optional<String> getNamespacePath() {
+    public Optional<String> namespacePath() {
         return this.namespacePath == null ? Optional.empty() : Optional.ofNullable(this.namespacePath);
     }
 
@@ -36,7 +36,7 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="nfsAccessPolicy")
       private final @Nullable String nfsAccessPolicy;
 
-    public Optional<String> getNfsAccessPolicy() {
+    public Optional<String> nfsAccessPolicy() {
         return this.nfsAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.nfsAccessPolicy);
     }
 
@@ -47,7 +47,7 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="nfsExport")
       private final @Nullable String nfsExport;
 
-    public Optional<String> getNfsExport() {
+    public Optional<String> nfsExport() {
         return this.nfsExport == null ? Optional.empty() : Optional.ofNullable(this.nfsExport);
     }
 
@@ -58,7 +58,7 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="targetPath")
       private final @Nullable String targetPath;
 
-    public Optional<String> getTargetPath() {
+    public Optional<String> targetPath() {
         return this.targetPath == null ? Optional.empty() : Optional.ofNullable(this.targetPath);
     }
 

@@ -32,7 +32,7 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="policyType")
       private final @Nullable String policyType;
 
-    public Optional<String> getPolicyType() {
+    public Optional<String> policyType() {
         return this.policyType == null ? Optional.empty() : Optional.ofNullable(this.policyType);
     }
 
@@ -43,7 +43,7 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
+    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 
@@ -54,7 +54,7 @@ public final class SubProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="schedulePolicy")
       private final @Nullable Object schedulePolicy;
 
-    public Object getSchedulePolicy() {
+    public Object schedulePolicy() {
         return this.schedulePolicy == null ? null : this.schedulePolicy;
     }
 

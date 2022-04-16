@@ -19,7 +19,7 @@ public final class GetContentKeyPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetContentKeyPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="contentKeyPolicyName", required=true)
       private final String contentKeyPolicyName;
 
-    public String getContentKeyPolicyName() {
+    public String contentKeyPolicyName() {
         return this.contentKeyPolicyName;
     }
 
@@ -41,7 +41,7 @@ public final class GetContentKeyPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

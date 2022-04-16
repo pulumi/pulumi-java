@@ -26,7 +26,7 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="ascLocation", required=true)
       private final Output<String> ascLocation;
 
-    public Output<String> getAscLocation() {
+    public Output<String> ascLocation() {
         return this.ascLocation;
     }
 
@@ -37,7 +37,7 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="enforcementMode")
       private final @Nullable Output<String> enforcementMode;
 
-    public Output<String> getEnforcementMode() {
+    public Output<String> enforcementMode() {
         return this.enforcementMode == null ? Codegen.empty() : this.enforcementMode;
     }
 
@@ -48,14 +48,14 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     @Import(name="pathRecommendations")
       private final @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
 
-    public Output<List<PathRecommendationArgs>> getPathRecommendations() {
+    public Output<List<PathRecommendationArgs>> pathRecommendations() {
         return this.pathRecommendations == null ? Codegen.empty() : this.pathRecommendations;
     }
 
@@ -66,14 +66,14 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="protectionMode")
       private final @Nullable Output<ProtectionModeArgs> protectionMode;
 
-    public Output<ProtectionModeArgs> getProtectionMode() {
+    public Output<ProtectionModeArgs> protectionMode() {
         return this.protectionMode == null ? Codegen.empty() : this.protectionMode;
     }
 
     @Import(name="vmRecommendations")
       private final @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
 
-    public Output<List<VmRecommendationArgs>> getVmRecommendations() {
+    public Output<List<VmRecommendationArgs>> vmRecommendations() {
         return this.vmRecommendations == null ? Codegen.empty() : this.vmRecommendations;
     }
 

@@ -45,7 +45,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return A string that describes the claim type
      * 
      */
-    public Output<String> getClaimType() {
+    public Output<String> claimType() {
         return this.claimType;
     }
     /**
@@ -59,7 +59,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return A string that describes the claim value
      * 
      */
-    public Output<String> getClaimValue() {
+    public Output<String> claimValue() {
         return this.claimValue;
     }
     /**
@@ -73,7 +73,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return The created time for this rule
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -87,7 +87,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return A string that describes the authorization rule.
      * 
      */
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
     /**
@@ -101,7 +101,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return The last modified time for this rule
      * 
      */
-    public Output<String> getModifiedTime() {
+    public Output<String> modifiedTime() {
         return this.modifiedTime;
     }
     /**
@@ -129,7 +129,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +143,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
-    public Output<String> getPrimaryKey() {
+    public Output<String> primaryKey() {
         return this.primaryKey;
     }
     /**
@@ -157,7 +157,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return The revision number for the rule
      * 
      */
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
     /**
@@ -171,7 +171,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return The rights associated with the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRights() {
+    public Output</* @Nullable */ List<String>> rights() {
         return this.rights;
     }
     /**
@@ -185,7 +185,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
-    public Output<String> getSecondaryKey() {
+    public Output<String> secondaryKey() {
         return this.secondaryKey;
     }
     /**
@@ -199,7 +199,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return The sku of the created namespace
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -213,7 +213,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -227,7 +227,7 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

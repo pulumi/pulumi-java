@@ -32,7 +32,7 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="aggregation")
       private final @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
 
-    public Map<String,ReportConfigAggregationResponse> getAggregation() {
+    public Map<String,ReportConfigAggregationResponse> aggregation() {
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
 
@@ -43,7 +43,7 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="configuration")
       private final @Nullable ReportConfigDatasetConfigurationResponse configuration;
 
-    public Optional<ReportConfigDatasetConfigurationResponse> getConfiguration() {
+    public Optional<ReportConfigDatasetConfigurationResponse> configuration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
@@ -54,7 +54,7 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="filter")
       private final @Nullable ReportConfigFilterResponse filter;
 
-    public Optional<ReportConfigFilterResponse> getFilter() {
+    public Optional<ReportConfigFilterResponse> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -65,7 +65,7 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="granularity")
       private final @Nullable String granularity;
 
-    public Optional<String> getGranularity() {
+    public Optional<String> granularity() {
         return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
     }
 
@@ -76,7 +76,7 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="grouping")
       private final @Nullable List<ReportConfigGroupingResponse> grouping;
 
-    public List<ReportConfigGroupingResponse> getGrouping() {
+    public List<ReportConfigGroupingResponse> grouping() {
         return this.grouping == null ? List.of() : this.grouping;
     }
 
@@ -87,7 +87,7 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
     @Import(name="sorting")
       private final @Nullable List<ReportConfigSortingResponse> sorting;
 
-    public List<ReportConfigSortingResponse> getSorting() {
+    public List<ReportConfigSortingResponse> sorting() {
         return this.sorting == null ? List.of() : this.sorting;
     }
 

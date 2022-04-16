@@ -49,28 +49,28 @@ public final class VolumeBackupPropertiesResponse {
      * Backup Enabled
      * 
     */
-    public Optional<Boolean> getBackupEnabled() {
+    public Optional<Boolean> backupEnabled() {
         return Optional.ofNullable(this.backupEnabled);
     }
     /**
      * Backup Policy Resource ID
      * 
     */
-    public Optional<String> getBackupPolicyId() {
+    public Optional<String> backupPolicyId() {
         return Optional.ofNullable(this.backupPolicyId);
     }
     /**
      * Policy Enforced
      * 
     */
-    public Optional<Boolean> getPolicyEnforced() {
+    public Optional<Boolean> policyEnforced() {
         return Optional.ofNullable(this.policyEnforced);
     }
     /**
      * Vault Resource ID
      * 
     */
-    public Optional<String> getVaultId() {
+    public Optional<String> vaultId() {
         return Optional.ofNullable(this.vaultId);
     }
 

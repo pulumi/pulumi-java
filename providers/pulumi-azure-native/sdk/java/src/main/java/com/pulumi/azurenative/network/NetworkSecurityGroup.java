@@ -47,7 +47,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The default security rules of network security group.
      * 
      */
-    public Output<List<SecurityRuleResponse>> getDefaultSecurityRules() {
+    public Output<List<SecurityRuleResponse>> defaultSecurityRules() {
         return this.defaultSecurityRules;
     }
     /**
@@ -61,7 +61,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -75,7 +75,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of references to flow log resources.
      * 
      */
-    public Output<List<FlowLogResponse>> getFlowLogs() {
+    public Output<List<FlowLogResponse>> flowLogs() {
         return this.flowLogs;
     }
     /**
@@ -89,7 +89,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -103,7 +103,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of references to network interfaces.
      * 
      */
-    public Output<List<NetworkInterfaceResponse>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceResponse>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -131,7 +131,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the network security group resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -145,7 +145,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The resource GUID property of the network security group resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -159,7 +159,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of security rules of the network security group.
      * 
      */
-    public Output</* @Nullable */ List<SecurityRuleResponse>> getSecurityRules() {
+    public Output</* @Nullable */ List<SecurityRuleResponse>> securityRules() {
         return this.securityRules;
     }
     /**
@@ -173,7 +173,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of references to subnets.
      * 
      */
-    public Output<List<SubnetResponse>> getSubnets() {
+    public Output<List<SubnetResponse>> subnets() {
         return this.subnets;
     }
     /**
@@ -187,7 +187,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -201,7 +201,7 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

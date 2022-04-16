@@ -29,7 +29,7 @@ public final class CustomScaleRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="auth")
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
-    public Output<List<ScaleRuleAuthArgs>> getAuth() {
+    public Output<List<ScaleRuleAuthArgs>> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
@@ -40,7 +40,7 @@ public final class CustomScaleRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -52,7 +52,7 @@ public final class CustomScaleRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -17,14 +17,14 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     @Import(name="accountKey", required=true)
       private final String accountKey;
 
-    public String getAccountKey() {
+    public String accountKey() {
         return this.accountKey;
     }
 
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     @Import(name="azureFileUrl", required=true)
       private final String azureFileUrl;
 
-    public String getAzureFileUrl() {
+    public String azureFileUrl() {
         return this.azureFileUrl;
     }
 
@@ -46,7 +46,7 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     @Import(name="mountOptions")
       private final @Nullable String mountOptions;
 
-    public Optional<String> getMountOptions() {
+    public Optional<String> mountOptions() {
         return this.mountOptions == null ? Optional.empty() : Optional.ofNullable(this.mountOptions);
     }
 
@@ -57,7 +57,7 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     @Import(name="relativeMountPath", required=true)
       private final String relativeMountPath;
 
-    public String getRelativeMountPath() {
+    public String relativeMountPath() {
         return this.relativeMountPath;
     }
 

@@ -18,7 +18,7 @@ public final class FrontEndConfigurationResponse {
         this.kind = kind;
     }
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
 

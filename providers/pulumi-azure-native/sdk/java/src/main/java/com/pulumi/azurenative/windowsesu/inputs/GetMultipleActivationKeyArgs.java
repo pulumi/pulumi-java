@@ -19,7 +19,7 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
     @Import(name="multipleActivationKeyName", required=true)
       private final String multipleActivationKeyName;
 
-    public String getMultipleActivationKeyName() {
+    public String multipleActivationKeyName() {
         return this.multipleActivationKeyName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

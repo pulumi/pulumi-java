@@ -50,28 +50,28 @@ public final class ServiceInputOutputSpecificationResponse {
      * The description of the Swagger schema.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
      * 
     */
-    public Map<String,TableSpecificationResponse> getProperties() {
+    public Map<String,TableSpecificationResponse> properties() {
         return this.properties;
     }
     /**
      * The title of your Swagger schema.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The type of the entity described in swagger. Always 'object'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

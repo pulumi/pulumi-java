@@ -27,7 +27,7 @@ public final class NfsAccessPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accessRules", required=true)
       private final Output<List<NfsAccessRuleArgs>> accessRules;
 
-    public Output<List<NfsAccessRuleArgs>> getAccessRules() {
+    public Output<List<NfsAccessRuleArgs>> accessRules() {
         return this.accessRules;
     }
 
@@ -38,7 +38,7 @@ public final class NfsAccessPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

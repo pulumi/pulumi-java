@@ -68,7 +68,7 @@ public final class ContainerResourceRequirementsResponse {
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
     */
-    public Optional<Double> getCpu() {
+    public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
@@ -76,21 +76,21 @@ public final class ContainerResourceRequirementsResponse {
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
     */
-    public Optional<Double> getCpuLimit() {
+    public Optional<Double> cpuLimit() {
         return Optional.ofNullable(this.cpuLimit);
     }
     /**
      * The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
      * 
     */
-    public Optional<Integer> getFpga() {
+    public Optional<Integer> fpga() {
         return Optional.ofNullable(this.fpga);
     }
     /**
      * The number of GPU cores in the container.
      * 
     */
-    public Optional<Integer> getGpu() {
+    public Optional<Integer> gpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
@@ -98,7 +98,7 @@ public final class ContainerResourceRequirementsResponse {
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
     */
-    public Optional<Double> getMemoryInGB() {
+    public Optional<Double> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
     /**
@@ -106,7 +106,7 @@ public final class ContainerResourceRequirementsResponse {
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
     */
-    public Optional<Double> getMemoryInGBLimit() {
+    public Optional<Double> memoryInGBLimit() {
         return Optional.ofNullable(this.memoryInGBLimit);
     }
 

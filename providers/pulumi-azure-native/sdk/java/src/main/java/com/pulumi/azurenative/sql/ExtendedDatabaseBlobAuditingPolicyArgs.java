@@ -82,7 +82,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="auditActionsAndGroups")
       private final @Nullable Output<List<String>> auditActionsAndGroups;
 
-    public Output<List<String>> getAuditActionsAndGroups() {
+    public Output<List<String>> auditActionsAndGroups() {
         return this.auditActionsAndGroups == null ? Codegen.empty() : this.auditActionsAndGroups;
     }
 
@@ -93,7 +93,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="blobAuditingPolicyName")
       private final @Nullable Output<String> blobAuditingPolicyName;
 
-    public Output<String> getBlobAuditingPolicyName() {
+    public Output<String> blobAuditingPolicyName() {
         return this.blobAuditingPolicyName == null ? Codegen.empty() : this.blobAuditingPolicyName;
     }
 
@@ -104,7 +104,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -125,7 +125,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="isAzureMonitorTargetEnabled")
       private final @Nullable Output<Boolean> isAzureMonitorTargetEnabled;
 
-    public Output<Boolean> getIsAzureMonitorTargetEnabled() {
+    public Output<Boolean> isAzureMonitorTargetEnabled() {
         return this.isAzureMonitorTargetEnabled == null ? Codegen.empty() : this.isAzureMonitorTargetEnabled;
     }
 
@@ -136,7 +136,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="isStorageSecondaryKeyInUse")
       private final @Nullable Output<Boolean> isStorageSecondaryKeyInUse;
 
-    public Output<Boolean> getIsStorageSecondaryKeyInUse() {
+    public Output<Boolean> isStorageSecondaryKeyInUse() {
         return this.isStorageSecondaryKeyInUse == null ? Codegen.empty() : this.isStorageSecondaryKeyInUse;
     }
 
@@ -147,7 +147,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="predicateExpression")
       private final @Nullable Output<String> predicateExpression;
 
-    public Output<String> getPredicateExpression() {
+    public Output<String> predicateExpression() {
         return this.predicateExpression == null ? Codegen.empty() : this.predicateExpression;
     }
 
@@ -159,7 +159,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="queueDelayMs")
       private final @Nullable Output<Integer> queueDelayMs;
 
-    public Output<Integer> getQueueDelayMs() {
+    public Output<Integer> queueDelayMs() {
         return this.queueDelayMs == null ? Codegen.empty() : this.queueDelayMs;
     }
 
@@ -170,7 +170,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -181,7 +181,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
+    public Output<Integer> retentionDays() {
         return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
@@ -192,7 +192,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -203,7 +203,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="state", required=true)
       private final Output<BlobAuditingPolicyState> state;
 
-    public Output<BlobAuditingPolicyState> getState() {
+    public Output<BlobAuditingPolicyState> state() {
         return this.state;
     }
 
@@ -219,7 +219,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="storageAccountAccessKey")
       private final @Nullable Output<String> storageAccountAccessKey;
 
-    public Output<String> getStorageAccountAccessKey() {
+    public Output<String> storageAccountAccessKey() {
         return this.storageAccountAccessKey == null ? Codegen.empty() : this.storageAccountAccessKey;
     }
 
@@ -230,7 +230,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="storageAccountSubscriptionId")
       private final @Nullable Output<String> storageAccountSubscriptionId;
 
-    public Output<String> getStorageAccountSubscriptionId() {
+    public Output<String> storageAccountSubscriptionId() {
         return this.storageAccountSubscriptionId == null ? Codegen.empty() : this.storageAccountSubscriptionId;
     }
 
@@ -241,7 +241,7 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends com.pulumi.res
     @Import(name="storageEndpoint")
       private final @Nullable Output<String> storageEndpoint;
 
-    public Output<String> getStorageEndpoint() {
+    public Output<String> storageEndpoint() {
         return this.storageEndpoint == null ? Codegen.empty() : this.storageEndpoint;
     }
 

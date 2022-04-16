@@ -27,7 +27,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
     @Import(name="cleanup")
       private final @Nullable Boolean cleanup;
 
-    public Optional<Boolean> getCleanup() {
+    public Optional<Boolean> cleanup() {
         return this.cleanup == null ? Optional.empty() : Optional.ofNullable(this.cleanup);
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
     @Import(name="computeType")
       private final @Nullable String computeType;
 
-    public Optional<String> getComputeType() {
+    public Optional<String> computeType() {
         return this.computeType == null ? Optional.empty() : Optional.ofNullable(this.computeType);
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
     @Import(name="coreCount")
       private final @Nullable Integer coreCount;
 
-    public Optional<Integer> getCoreCount() {
+    public Optional<Integer> coreCount() {
         return this.coreCount == null ? Optional.empty() : Optional.ofNullable(this.coreCount);
     }
 
@@ -60,7 +60,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
     @Import(name="timeToLive")
       private final @Nullable Integer timeToLive;
 
-    public Optional<Integer> getTimeToLive() {
+    public Optional<Integer> timeToLive() {
         return this.timeToLive == null ? Optional.empty() : Optional.ofNullable(this.timeToLive);
     }
 

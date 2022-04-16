@@ -38,7 +38,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -49,7 +49,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
-    public Output<DatasetCompressionArgs> getCompression() {
+    public Output<DatasetCompressionArgs> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -60,7 +60,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fileFilter")
       private final @Nullable Output<Object> fileFilter;
 
-    public Output<Object> getFileFilter() {
+    public Output<Object> fileFilter() {
         return this.fileFilter == null ? Codegen.empty() : this.fileFilter;
     }
 
@@ -82,7 +82,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
-    public Output<Object> getFileName() {
+    public Output<Object> fileName() {
         return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
@@ -93,7 +93,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
+    public Output<DatasetFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -104,7 +104,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
+    public Output<Object> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -115,7 +115,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="format")
       private final @Nullable Output<Object> format;
 
-    public Output<Object> getFormat() {
+    public Output<Object> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -126,7 +126,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -137,7 +137,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Output<Object> getModifiedDatetimeEnd() {
+    public Output<Object> modifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Codegen.empty() : this.modifiedDatetimeEnd;
     }
 
@@ -148,7 +148,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Output<Object> getModifiedDatetimeStart() {
+    public Output<Object> modifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Codegen.empty() : this.modifiedDatetimeStart;
     }
 
@@ -159,7 +159,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -170,7 +170,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
+    public Output<Object> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -181,7 +181,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
+    public Output<Object> structure() {
         return this.structure == null ? Codegen.empty() : this.structure;
     }
 
@@ -193,7 +193,7 @@ public final class FileShareDatasetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

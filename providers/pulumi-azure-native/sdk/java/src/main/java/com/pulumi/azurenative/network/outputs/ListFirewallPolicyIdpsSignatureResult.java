@@ -36,14 +36,14 @@ public final class ListFirewallPolicyIdpsSignatureResult {
      * Number of total records matching the query.
      * 
     */
-    public Optional<Double> getMatchingRecordsCount() {
+    public Optional<Double> matchingRecordsCount() {
         return Optional.ofNullable(this.matchingRecordsCount);
     }
     /**
      * Array containing the results of the query
      * 
     */
-    public List<SingleQueryResultResponse> getSignatures() {
+    public List<SingleQueryResultResponse> signatures() {
         return this.signatures == null ? List.of() : this.signatures;
     }
 

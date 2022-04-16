@@ -31,7 +31,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<Either<String,Action>> action;
 
-    public Output<Either<String,Action>> getAction() {
+    public Output<Either<String,Action>> action() {
         return this.action;
     }
 
@@ -42,7 +42,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alwaysRun")
       private final @Nullable Output<Boolean> alwaysRun;
 
-    public Output<Boolean> getAlwaysRun() {
+    public Output<Boolean> alwaysRun() {
         return this.alwaysRun == null ? Codegen.empty() : this.alwaysRun;
     }
 
@@ -53,7 +53,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applyUpdateBefore")
       private final @Nullable Output<Boolean> applyUpdateBefore;
 
-    public Output<Boolean> getApplyUpdateBefore() {
+    public Output<Boolean> applyUpdateBefore() {
         return this.applyUpdateBefore == null ? Codegen.empty() : this.applyUpdateBefore;
     }
 
@@ -64,7 +64,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -75,7 +75,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType", required=true)
       private final Output<Either<String,ContentType>> contentType;
 
-    public Output<Either<String,ContentType>> getContentType() {
+    public Output<Either<String,ContentType>> contentType() {
         return this.contentType;
     }
 
@@ -86,7 +86,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxRunTime")
       private final @Nullable Output<Integer> maxRunTime;
 
-    public Output<Integer> getMaxRunTime() {
+    public Output<Integer> maxRunTime() {
         return this.maxRunTime == null ? Codegen.empty() : this.maxRunTime;
     }
 
@@ -97,7 +97,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -108,7 +108,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restartAfter")
       private final @Nullable Output<Boolean> restartAfter;
 
-    public Output<Boolean> getRestartAfter() {
+    public Output<Boolean> restartAfter() {
         return this.restartAfter == null ? Codegen.empty() : this.restartAfter;
     }
 
@@ -119,7 +119,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runAsInteractive")
       private final @Nullable Output<Boolean> runAsInteractive;
 
-    public Output<Boolean> getRunAsInteractive() {
+    public Output<Boolean> runAsInteractive() {
         return this.runAsInteractive == null ? Codegen.empty() : this.runAsInteractive;
     }
 
@@ -130,7 +130,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runElevated")
       private final @Nullable Output<Boolean> runElevated;
 
-    public Output<Boolean> getRunElevated() {
+    public Output<Boolean> runElevated() {
         return this.runElevated == null ? Codegen.empty() : this.runElevated;
     }
 

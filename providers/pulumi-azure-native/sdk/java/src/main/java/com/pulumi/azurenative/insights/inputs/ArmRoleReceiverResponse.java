@@ -26,7 +26,7 @@ public final class ArmRoleReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ArmRoleReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="roleId", required=true)
       private final String roleId;
 
-    public String getRoleId() {
+    public String roleId() {
         return this.roleId;
     }
 
@@ -48,7 +48,7 @@ public final class ArmRoleReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
     }
 

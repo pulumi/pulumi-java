@@ -63,42 +63,42 @@ public final class GetVirtualNetworkRuleResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
     */
-    public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
+    public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Virtual Network Rule State
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The ARM resource id of the virtual network subnet.
      * 
     */
-    public String getVirtualNetworkSubnetId() {
+    public String virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 

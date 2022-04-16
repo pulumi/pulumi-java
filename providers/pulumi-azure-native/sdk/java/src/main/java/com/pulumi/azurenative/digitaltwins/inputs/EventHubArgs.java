@@ -28,7 +28,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -39,7 +39,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionStringPrimaryKey")
       private final @Nullable Output<String> connectionStringPrimaryKey;
 
-    public Output<String> getConnectionStringPrimaryKey() {
+    public Output<String> connectionStringPrimaryKey() {
         return this.connectionStringPrimaryKey == null ? Codegen.empty() : this.connectionStringPrimaryKey;
     }
 
@@ -50,7 +50,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionStringSecondaryKey")
       private final @Nullable Output<String> connectionStringSecondaryKey;
 
-    public Output<String> getConnectionStringSecondaryKey() {
+    public Output<String> connectionStringSecondaryKey() {
         return this.connectionStringSecondaryKey == null ? Codegen.empty() : this.connectionStringSecondaryKey;
     }
 
@@ -61,7 +61,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> getDeadLetterSecret() {
+    public Output<String> deadLetterSecret() {
         return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
     }
 
@@ -72,7 +72,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
 
-    public Output<String> getDeadLetterUri() {
+    public Output<String> deadLetterUri() {
         return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
     }
 
@@ -84,7 +84,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -95,7 +95,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
@@ -106,7 +106,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
-    public Output<String> getEntityPath() {
+    public Output<String> entityPath() {
         return this.entityPath == null ? Codegen.empty() : this.entityPath;
     }
 

@@ -28,7 +28,7 @@ public final class RestResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regex")
       private final @Nullable Output<RestResponseRegexArgs> regex;
 
-    public Output<RestResponseRegexArgs> getRegex() {
+    public Output<RestResponseRegexArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 
@@ -39,7 +39,7 @@ public final class RestResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successStatusCodes")
       private final @Nullable Output<List<String>> successStatusCodes;
 
-    public Output<List<String>> getSuccessStatusCodes() {
+    public Output<List<String>> successStatusCodes() {
         return this.successStatusCodes == null ? Codegen.empty() : this.successStatusCodes;
     }
 

@@ -41,21 +41,21 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
      * Last status code for sync and refresh of secret from key vault.
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Details of the error else empty.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
     */
-    public Optional<String> getTimeStampUtc() {
+    public Optional<String> timeStampUtc() {
         return Optional.ofNullable(this.timeStampUtc);
     }
 

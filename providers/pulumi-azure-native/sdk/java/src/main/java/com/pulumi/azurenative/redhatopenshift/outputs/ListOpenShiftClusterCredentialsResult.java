@@ -34,14 +34,14 @@ public final class ListOpenShiftClusterCredentialsResult {
      * The password for the kubeadmin user
      * 
     */
-    public Optional<String> getKubeadminPassword() {
+    public Optional<String> kubeadminPassword() {
         return Optional.ofNullable(this.kubeadminPassword);
     }
     /**
      * The username for the kubeadmin user
      * 
     */
-    public Optional<String> getKubeadminUsername() {
+    public Optional<String> kubeadminUsername() {
         return Optional.ofNullable(this.kubeadminUsername);
     }
 

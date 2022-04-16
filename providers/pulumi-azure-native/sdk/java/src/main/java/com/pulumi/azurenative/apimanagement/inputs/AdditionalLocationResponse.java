@@ -29,7 +29,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="disableGateway")
       private final @Nullable Boolean disableGateway;
 
-    public Optional<Boolean> getDisableGateway() {
+    public Optional<Boolean> disableGateway() {
         return this.disableGateway == null ? Optional.empty() : Optional.ofNullable(this.disableGateway);
     }
 
@@ -40,7 +40,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="gatewayRegionalUrl", required=true)
       private final String gatewayRegionalUrl;
 
-    public String getGatewayRegionalUrl() {
+    public String gatewayRegionalUrl() {
         return this.gatewayRegionalUrl;
     }
 
@@ -51,7 +51,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -62,7 +62,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="privateIPAddresses", required=true)
       private final List<String> privateIPAddresses;
 
-    public List<String> getPrivateIPAddresses() {
+    public List<String> privateIPAddresses() {
         return this.privateIPAddresses;
     }
 
@@ -73,7 +73,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="publicIPAddresses", required=true)
       private final List<String> publicIPAddresses;
 
-    public List<String> getPublicIPAddresses() {
+    public List<String> publicIPAddresses() {
         return this.publicIPAddresses;
     }
 
@@ -84,7 +84,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="sku", required=true)
       private final ApiManagementServiceSkuPropertiesResponse sku;
 
-    public ApiManagementServiceSkuPropertiesResponse getSku() {
+    public ApiManagementServiceSkuPropertiesResponse sku() {
         return this.sku;
     }
 
@@ -95,7 +95,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="virtualNetworkConfiguration")
       private final @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
 
-    public Optional<VirtualNetworkConfigurationResponse> getVirtualNetworkConfiguration() {
+    public Optional<VirtualNetworkConfigurationResponse> virtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkConfiguration);
     }
 
@@ -106,7 +106,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
     @Import(name="zones")
       private final @Nullable List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

@@ -27,7 +27,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<ExportDefinitionArgs> definition;
 
-    public Output<ExportDefinitionArgs> getDefinition() {
+    public Output<ExportDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -38,7 +38,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo", required=true)
       private final Output<ExportDeliveryInfoArgs> deliveryInfo;
 
-    public Output<ExportDeliveryInfoArgs> getDeliveryInfo() {
+    public Output<ExportDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo;
     }
 
@@ -49,7 +49,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -60,7 +60,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exportName")
       private final @Nullable Output<String> exportName;
 
-    public Output<String> getExportName() {
+    public Output<String> exportName() {
         return this.exportName == null ? Codegen.empty() : this.exportName;
     }
 
@@ -71,7 +71,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
 
-    public Output<Either<String,FormatType>> getFormat() {
+    public Output<Either<String,FormatType>> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -82,7 +82,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ExportScheduleArgs> schedule;
 
-    public Output<ExportScheduleArgs> getSchedule() {
+    public Output<ExportScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -93,7 +93,7 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

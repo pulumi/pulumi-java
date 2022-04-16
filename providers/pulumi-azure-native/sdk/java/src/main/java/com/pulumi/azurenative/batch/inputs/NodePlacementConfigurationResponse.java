@@ -25,7 +25,7 @@ public final class NodePlacementConfigurationResponse extends com.pulumi.resourc
     @Import(name="policy")
       private final @Nullable String policy;
 
-    public Optional<String> getPolicy() {
+    public Optional<String> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 

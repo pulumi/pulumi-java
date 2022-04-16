@@ -27,7 +27,7 @@ public final class EventChannelDestinationArgs extends com.pulumi.resources.Reso
     @Import(name="azureSubscriptionId")
       private final @Nullable Output<String> azureSubscriptionId;
 
-    public Output<String> getAzureSubscriptionId() {
+    public Output<String> azureSubscriptionId() {
         return this.azureSubscriptionId == null ? Codegen.empty() : this.azureSubscriptionId;
     }
 
@@ -38,7 +38,7 @@ public final class EventChannelDestinationArgs extends com.pulumi.resources.Reso
     @Import(name="partnerTopicName")
       private final @Nullable Output<String> partnerTopicName;
 
-    public Output<String> getPartnerTopicName() {
+    public Output<String> partnerTopicName() {
         return this.partnerTopicName == null ? Codegen.empty() : this.partnerTopicName;
     }
 
@@ -50,7 +50,7 @@ public final class EventChannelDestinationArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 

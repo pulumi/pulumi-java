@@ -46,7 +46,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Localized descriptions for the Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDescription() {
+    public Output</* @Nullable */ Map<String,String>> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Localized display name for the Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +74,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The link name.
      * 
      */
-    public Output<String> getLinkName() {
+    public Output<String> linkName() {
         return this.linkName;
     }
     /**
@@ -88,7 +88,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The set of properties mappings between the source and target Types.
      * 
      */
-    public Output</* @Nullable */ List<TypePropertiesMappingResponse>> getMappings() {
+    public Output</* @Nullable */ List<TypePropertiesMappingResponse>> mappings() {
         return this.mappings;
     }
     /**
@@ -102,7 +102,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
      * 
      */
-    public Output</* @Nullable */ String> getOperationType() {
+    public Output</* @Nullable */ String> operationType() {
         return this.operationType;
     }
     /**
@@ -130,7 +130,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The properties that represent the participating profile.
      * 
      */
-    public Output<List<ParticipantPropertyReferenceResponse>> getParticipantPropertyReferences() {
+    public Output<List<ParticipantPropertyReferenceResponse>> participantPropertyReferences() {
         return this.participantPropertyReferences;
     }
     /**
@@ -144,7 +144,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -158,7 +158,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReferenceOnly() {
+    public Output</* @Nullable */ Boolean> referenceOnly() {
         return this.referenceOnly;
     }
     /**
@@ -172,7 +172,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Type of source entity.
      * 
      */
-    public Output<String> getSourceEntityType() {
+    public Output<String> sourceEntityType() {
         return this.sourceEntityType;
     }
     /**
@@ -186,7 +186,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Name of the source Entity Type.
      * 
      */
-    public Output<String> getSourceEntityTypeName() {
+    public Output<String> sourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
     /**
@@ -200,7 +200,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Type of target entity.
      * 
      */
-    public Output<String> getTargetEntityType() {
+    public Output<String> targetEntityType() {
         return this.targetEntityType;
     }
     /**
@@ -214,7 +214,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Name of the target Entity Type.
      * 
      */
-    public Output<String> getTargetEntityTypeName() {
+    public Output<String> targetEntityTypeName() {
         return this.targetEntityTypeName;
     }
     /**
@@ -228,7 +228,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -242,7 +242,7 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

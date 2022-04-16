@@ -145,98 +145,98 @@ public final class AmazonS3DatasetResponse {
      * List of tags that can be used for describing the Dataset.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The name of the Amazon S3 bucket. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getBucketName() {
+    public Object bucketName() {
         return this.bucketName;
     }
     /**
      * The data compression method used for the Amazon S3 object.
      * 
     */
-    public Optional<DatasetCompressionResponse> getCompression() {
+    public Optional<DatasetCompressionResponse> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * Dataset description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
     */
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * The format of files.
      * 
     */
-    public Optional<Object> getFormat() {
+    public Optional<Object> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * The key of the Amazon S3 object. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getKey() {
+    public Optional<Object> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The end of S3 object's modified datetime. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getModifiedDatetimeEnd() {
+    public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
      * The start of S3 object's modified datetime. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getModifiedDatetimeStart() {
+    public Optional<Object> modifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
     /**
      * Parameters for dataset.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The prefix filter for the S3 object name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPrefix() {
+    public Optional<Object> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
     */
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
     */
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
@@ -244,14 +244,14 @@ public final class AmazonS3DatasetResponse {
      * Expected value is 'AmazonS3Object'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The version for the S3 object. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getVersion() {
+    public Optional<Object> version() {
         return Optional.ofNullable(this.version);
     }
 

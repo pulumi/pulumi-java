@@ -25,7 +25,7 @@ public final class CustomProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metadataConfigurationPath")
       private final @Nullable String metadataConfigurationPath;
 
-    public Optional<String> getMetadataConfigurationPath() {
+    public Optional<String> metadataConfigurationPath() {
         return this.metadataConfigurationPath == null ? Optional.empty() : Optional.ofNullable(this.metadataConfigurationPath);
     }
 

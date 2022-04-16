@@ -35,14 +35,14 @@ public final class VpnLinkProviderPropertiesResponse {
      * Name of the link provider.
      * 
     */
-    public Optional<String> getLinkProviderName() {
+    public Optional<String> linkProviderName() {
         return Optional.ofNullable(this.linkProviderName);
     }
     /**
      * Link speed.
      * 
     */
-    public Optional<Integer> getLinkSpeedInMbps() {
+    public Optional<Integer> linkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
 

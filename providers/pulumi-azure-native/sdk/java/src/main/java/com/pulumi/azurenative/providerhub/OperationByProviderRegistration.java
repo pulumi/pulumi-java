@@ -36,7 +36,7 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
     @Export(name="actionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> actionType;
 
-    public Output</* @Nullable */ String> getActionType() {
+    public Output</* @Nullable */ String> actionType() {
         return this.actionType;
     }
     /**
@@ -50,7 +50,7 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
      * @return Display information of the operation.
      * 
      */
-    public Output<OperationsDefinitionResponseDisplay> getDisplay() {
+    public Output<OperationsDefinitionResponseDisplay> display() {
         return this.display;
     }
     /**
@@ -64,7 +64,7 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
      * @return Indicates whether the operation applies to data-plane.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsDataAction() {
+    public Output</* @Nullable */ Boolean> isDataAction() {
         return this.isDataAction;
     }
     /**
@@ -78,19 +78,19 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="origin", type=String.class, parameters={})
     private Output</* @Nullable */ String> origin;
 
-    public Output</* @Nullable */ String> getOrigin() {
+    public Output</* @Nullable */ String> origin() {
         return this.origin;
     }
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -104,7 +104,7 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

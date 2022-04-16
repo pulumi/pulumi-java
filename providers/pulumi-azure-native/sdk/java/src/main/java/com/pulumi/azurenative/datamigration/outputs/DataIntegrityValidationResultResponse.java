@@ -34,14 +34,14 @@ public final class DataIntegrityValidationResultResponse {
      * List of failed table names of source and target pair
      * 
     */
-    public Map<String,String> getFailedObjects() {
+    public Map<String,String> failedObjects() {
         return this.failedObjects;
     }
     /**
      * List of errors that happened while performing data integrity validation
      * 
     */
-    public ValidationErrorResponse getValidationErrors() {
+    public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
 

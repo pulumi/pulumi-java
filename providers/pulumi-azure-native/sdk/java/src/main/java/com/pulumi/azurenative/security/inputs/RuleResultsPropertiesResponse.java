@@ -26,7 +26,7 @@ public final class RuleResultsPropertiesResponse extends com.pulumi.resources.In
     @Import(name="results")
       private final @Nullable List<List<String>> results;
 
-    public List<List<String>> getResults() {
+    public List<List<String>> results() {
         return this.results == null ? List.of() : this.results;
     }
 

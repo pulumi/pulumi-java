@@ -44,14 +44,14 @@ public final class EventChannelDestinationResponse {
      * associated with the event channel will be created under this Azure subscription.
      * 
     */
-    public Optional<String> getAzureSubscriptionId() {
+    public Optional<String> azureSubscriptionId() {
         return Optional.ofNullable(this.azureSubscriptionId);
     }
     /**
      * Name of the partner topic associated with the event channel.
      * 
     */
-    public Optional<String> getPartnerTopicName() {
+    public Optional<String> partnerTopicName() {
         return Optional.ofNullable(this.partnerTopicName);
     }
     /**
@@ -59,7 +59,7 @@ public final class EventChannelDestinationResponse {
      * associated with the event channel will be created under this resource group.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
 

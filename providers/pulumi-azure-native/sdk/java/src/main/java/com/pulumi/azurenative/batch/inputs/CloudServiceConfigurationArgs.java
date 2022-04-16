@@ -22,7 +22,7 @@ public final class CloudServiceConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="osFamily", required=true)
       private final Output<String> osFamily;
 
-    public Output<String> getOsFamily() {
+    public Output<String> osFamily() {
         return this.osFamily;
     }
 
@@ -33,7 +33,7 @@ public final class CloudServiceConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
+    public Output<String> osVersion() {
         return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 

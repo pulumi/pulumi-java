@@ -25,7 +25,7 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="azureBlobFileSystemConfiguration")
       private final @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
 
-    public Output<AzureBlobFileSystemConfigurationArgs> getAzureBlobFileSystemConfiguration() {
+    public Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration() {
         return this.azureBlobFileSystemConfiguration == null ? Codegen.empty() : this.azureBlobFileSystemConfiguration;
     }
 
@@ -36,7 +36,7 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="azureFileShareConfiguration")
       private final @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
 
-    public Output<AzureFileShareConfigurationArgs> getAzureFileShareConfiguration() {
+    public Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration() {
         return this.azureFileShareConfiguration == null ? Codegen.empty() : this.azureFileShareConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="cifsMountConfiguration")
       private final @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration;
 
-    public Output<CIFSMountConfigurationArgs> getCifsMountConfiguration() {
+    public Output<CIFSMountConfigurationArgs> cifsMountConfiguration() {
         return this.cifsMountConfiguration == null ? Codegen.empty() : this.cifsMountConfiguration;
     }
 
@@ -58,7 +58,7 @@ public final class MountConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="nfsMountConfiguration")
       private final @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration;
 
-    public Output<NFSMountConfigurationArgs> getNfsMountConfiguration() {
+    public Output<NFSMountConfigurationArgs> nfsMountConfiguration() {
         return this.nfsMountConfiguration == null ? Codegen.empty() : this.nfsMountConfiguration;
     }
 

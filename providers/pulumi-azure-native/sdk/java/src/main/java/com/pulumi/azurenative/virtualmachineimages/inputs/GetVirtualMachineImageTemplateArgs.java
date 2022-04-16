@@ -19,7 +19,7 @@ public final class GetVirtualMachineImageTemplateArgs extends com.pulumi.resourc
     @Import(name="imageTemplateName", required=true)
       private final String imageTemplateName;
 
-    public String getImageTemplateName() {
+    public String imageTemplateName() {
         return this.imageTemplateName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualMachineImageTemplateArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

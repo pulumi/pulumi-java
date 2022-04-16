@@ -23,7 +23,7 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="metricsSourceName", required=true)
       private final Output<String> metricsSourceName;
 
-    public Output<String> getMetricsSourceName() {
+    public Output<String> metricsSourceName() {
         return this.metricsSourceName;
     }
 
@@ -34,7 +34,7 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
 
-    public Output<String> getMonitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -45,7 +45,7 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
 
-    public Output<MetricsTagRulesPropertiesArgs> getProperties() {
+    public Output<MetricsTagRulesPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,14 +56,14 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 

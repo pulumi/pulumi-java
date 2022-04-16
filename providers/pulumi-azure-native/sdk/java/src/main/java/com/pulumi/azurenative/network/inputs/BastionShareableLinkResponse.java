@@ -24,7 +24,7 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="bsl", required=true)
       private final String bsl;
 
-    public String getBsl() {
+    public String bsl() {
         return this.bsl;
     }
 
@@ -35,7 +35,7 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="createdAt", required=true)
       private final String createdAt;
 
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
 
@@ -46,7 +46,7 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -57,7 +57,7 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="vm", required=true)
       private final VMResponse vm;
 
-    public VMResponse getVm() {
+    public VMResponse vm() {
         return this.vm;
     }
 

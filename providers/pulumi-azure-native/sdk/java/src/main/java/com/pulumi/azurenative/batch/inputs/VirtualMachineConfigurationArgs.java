@@ -30,7 +30,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="containerConfiguration")
       private final @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
 
-    public Output<ContainerConfigurationArgs> getContainerConfiguration() {
+    public Output<ContainerConfigurationArgs> containerConfiguration() {
         return this.containerConfiguration == null ? Codegen.empty() : this.containerConfiguration;
     }
 
@@ -41,7 +41,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="dataDisks")
       private final @Nullable Output<List<DataDiskArgs>> dataDisks;
 
-    public Output<List<DataDiskArgs>> getDataDisks() {
+    public Output<List<DataDiskArgs>> dataDisks() {
         return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
@@ -52,7 +52,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="diskEncryptionConfiguration")
       private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
+    public Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration == null ? Codegen.empty() : this.diskEncryptionConfiguration;
     }
 
@@ -63,14 +63,14 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="extensions")
       private final @Nullable Output<List<VMExtensionArgs>> extensions;
 
-    public Output<List<VMExtensionArgs>> getExtensions() {
+    public Output<List<VMExtensionArgs>> extensions() {
         return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="imageReference", required=true)
       private final Output<ImageReferenceArgs> imageReference;
 
-    public Output<ImageReferenceArgs> getImageReference() {
+    public Output<ImageReferenceArgs> imageReference() {
         return this.imageReference;
     }
 
@@ -84,7 +84,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
+    public Output<String> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -95,7 +95,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="nodeAgentSkuId", required=true)
       private final Output<String> nodeAgentSkuId;
 
-    public Output<String> getNodeAgentSkuId() {
+    public Output<String> nodeAgentSkuId() {
         return this.nodeAgentSkuId;
     }
 
@@ -106,7 +106,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="nodePlacementConfiguration")
       private final @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
 
-    public Output<NodePlacementConfigurationArgs> getNodePlacementConfiguration() {
+    public Output<NodePlacementConfigurationArgs> nodePlacementConfiguration() {
         return this.nodePlacementConfiguration == null ? Codegen.empty() : this.nodePlacementConfiguration;
     }
 
@@ -117,7 +117,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
     @Import(name="windowsConfiguration")
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
+    public Output<WindowsConfigurationArgs> windowsConfiguration() {
         return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
     }
 

@@ -25,7 +25,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="filters")
       private final @Nullable List<FilterItems> filters;
 
-    public List<FilterItems> getFilters() {
+    public List<FilterItems> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -36,7 +36,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
 
-    public String getFirewallPolicyName() {
+    public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
 
@@ -47,7 +47,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="orderBy")
       private final @Nullable OrderBy orderBy;
 
-    public Optional<OrderBy> getOrderBy() {
+    public Optional<OrderBy> orderBy() {
         return this.orderBy == null ? Optional.empty() : Optional.ofNullable(this.orderBy);
     }
 
@@ -58,7 +58,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="resultsPerPage")
       private final @Nullable Integer resultsPerPage;
 
-    public Optional<Integer> getResultsPerPage() {
+    public Optional<Integer> resultsPerPage() {
         return this.resultsPerPage == null ? Optional.empty() : Optional.ofNullable(this.resultsPerPage);
     }
 
@@ -80,7 +80,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="search")
       private final @Nullable String search;
 
-    public Optional<String> getSearch() {
+    public Optional<String> search() {
         return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
     }
 
@@ -91,7 +91,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
     @Import(name="skip")
       private final @Nullable Integer skip;
 
-    public Optional<Integer> getSkip() {
+    public Optional<Integer> skip() {
         return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
     }
 

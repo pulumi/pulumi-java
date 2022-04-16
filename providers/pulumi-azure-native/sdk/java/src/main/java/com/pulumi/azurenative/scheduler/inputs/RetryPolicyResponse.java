@@ -22,7 +22,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryCount")
       private final @Nullable Integer retryCount;
 
-    public Optional<Integer> getRetryCount() {
+    public Optional<Integer> retryCount() {
         return this.retryCount == null ? Optional.empty() : Optional.ofNullable(this.retryCount);
     }
 
@@ -33,7 +33,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryInterval")
       private final @Nullable String retryInterval;
 
-    public Optional<String> getRetryInterval() {
+    public Optional<String> retryInterval() {
         return this.retryInterval == null ? Optional.empty() : Optional.ofNullable(this.retryInterval);
     }
 
@@ -44,7 +44,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryType")
       private final @Nullable String retryType;
 
-    public Optional<String> getRetryType() {
+    public Optional<String> retryType() {
         return this.retryType == null ? Optional.empty() : Optional.ofNullable(this.retryType);
     }
 

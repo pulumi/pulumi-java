@@ -31,7 +31,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
 
-    public Optional<String> getAgentExpiryDate() {
+    public Optional<String> agentExpiryDate() {
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
     }
 
@@ -42,7 +42,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
@@ -53,7 +53,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="agentVersionDetails")
       private final @Nullable VersionDetailsResponse agentVersionDetails;
 
-    public Optional<VersionDetailsResponse> getAgentVersionDetails() {
+    public Optional<VersionDetailsResponse> agentVersionDetails() {
         return this.agentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.agentVersionDetails);
     }
 
@@ -64,7 +64,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="dataStores")
       private final @Nullable List<DataStoreResponse> dataStores;
 
-    public List<DataStoreResponse> getDataStores() {
+    public List<DataStoreResponse> dataStores() {
         return this.dataStores == null ? List.of() : this.dataStores;
     }
 
@@ -75,7 +75,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="diskCount")
       private final @Nullable Integer diskCount;
 
-    public Optional<Integer> getDiskCount() {
+    public Optional<Integer> diskCount() {
         return this.diskCount == null ? Optional.empty() : Optional.ofNullable(this.diskCount);
     }
 
@@ -86,7 +86,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="healthErrors")
       private final @Nullable List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
 
@@ -97,7 +97,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -108,7 +108,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -119,7 +119,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
@@ -130,7 +130,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="marsAgentExpiryDate")
       private final @Nullable String marsAgentExpiryDate;
 
-    public Optional<String> getMarsAgentExpiryDate() {
+    public Optional<String> marsAgentExpiryDate() {
         return this.marsAgentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.marsAgentExpiryDate);
     }
 
@@ -141,7 +141,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="marsAgentVersion")
       private final @Nullable String marsAgentVersion;
 
-    public Optional<String> getMarsAgentVersion() {
+    public Optional<String> marsAgentVersion() {
         return this.marsAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.marsAgentVersion);
     }
 
@@ -152,7 +152,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="marsAgentVersionDetails")
       private final @Nullable VersionDetailsResponse marsAgentVersionDetails;
 
-    public Optional<VersionDetailsResponse> getMarsAgentVersionDetails() {
+    public Optional<VersionDetailsResponse> marsAgentVersionDetails() {
         return this.marsAgentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.marsAgentVersionDetails);
     }
 
@@ -163,7 +163,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -174,7 +174,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -185,7 +185,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="osVersion")
       private final @Nullable String osVersion;
 
-    public Optional<String> getOsVersion() {
+    public Optional<String> osVersion() {
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
     }
 
@@ -196,7 +196,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="retentionVolumes")
       private final @Nullable List<RetentionVolumeResponse> retentionVolumes;
 
-    public List<RetentionVolumeResponse> getRetentionVolumes() {
+    public List<RetentionVolumeResponse> retentionVolumes() {
         return this.retentionVolumes == null ? List.of() : this.retentionVolumes;
     }
 
@@ -207,7 +207,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="validationErrors")
       private final @Nullable List<HealthErrorResponse> validationErrors;
 
-    public List<HealthErrorResponse> getValidationErrors() {
+    public List<HealthErrorResponse> validationErrors() {
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
 
@@ -218,7 +218,7 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="versionStatus")
       private final @Nullable String versionStatus;
 
-    public Optional<String> getVersionStatus() {
+    public Optional<String> versionStatus() {
         return this.versionStatus == null ? Optional.empty() : Optional.ofNullable(this.versionStatus);
     }
 

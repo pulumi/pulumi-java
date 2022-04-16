@@ -23,7 +23,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hcxCloudManager", required=true)
       private final String hcxCloudManager;
 
-    public String getHcxCloudManager() {
+    public String hcxCloudManager() {
         return this.hcxCloudManager;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nsxtManager", required=true)
       private final String nsxtManager;
 
-    public String getNsxtManager() {
+    public String nsxtManager() {
         return this.nsxtManager;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vcsa", required=true)
       private final String vcsa;
 
-    public String getVcsa() {
+    public String vcsa() {
         return this.vcsa;
     }
 

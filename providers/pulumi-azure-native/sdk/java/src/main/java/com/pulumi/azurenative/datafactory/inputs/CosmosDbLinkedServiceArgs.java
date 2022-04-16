@@ -37,7 +37,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="accountEndpoint")
       private final @Nullable Output<Object> accountEndpoint;
 
-    public Output<Object> getAccountEndpoint() {
+    public Output<Object> accountEndpoint() {
         return this.accountEndpoint == null ? Codegen.empty() : this.accountEndpoint;
     }
 
@@ -48,7 +48,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="accountKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccountKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
@@ -59,7 +59,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -70,7 +70,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
-    public Output<Object> getAzureCloudType() {
+    public Output<Object> azureCloudType() {
         return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
     }
 
@@ -81,7 +81,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -92,7 +92,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="connectionMode")
       private final @Nullable Output<Either<String,CosmosDbConnectionMode>> connectionMode;
 
-    public Output<Either<String,CosmosDbConnectionMode>> getConnectionMode() {
+    public Output<Either<String,CosmosDbConnectionMode>> connectionMode() {
         return this.connectionMode == null ? Codegen.empty() : this.connectionMode;
     }
 
@@ -103,7 +103,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
-    public Output<Object> getConnectionString() {
+    public Output<Object> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -114,7 +114,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -125,7 +125,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="database")
       private final @Nullable Output<Object> database;
 
-    public Output<Object> getDatabase() {
+    public Output<Object> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -136,7 +136,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -147,7 +147,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -158,7 +158,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -169,7 +169,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="servicePrincipalCredential")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential() {
         return this.servicePrincipalCredential == null ? Codegen.empty() : this.servicePrincipalCredential;
     }
 
@@ -180,7 +180,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="servicePrincipalCredentialType")
       private final @Nullable Output<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType;
 
-    public Output<Either<String,CosmosDbServicePrincipalCredentialType>> getServicePrincipalCredentialType() {
+    public Output<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType() {
         return this.servicePrincipalCredentialType == null ? Codegen.empty() : this.servicePrincipalCredentialType;
     }
 
@@ -191,7 +191,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
@@ -202,7 +202,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
-    public Output<Object> getTenant() {
+    public Output<Object> tenant() {
         return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
@@ -214,7 +214,7 @@ public final class CosmosDbLinkedServiceArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="metricColumn")
       private final @Nullable String metricColumn;
 
-    public Optional<String> getMetricColumn() {
+    public Optional<String> metricColumn() {
         return this.metricColumn == null ? Optional.empty() : Optional.ofNullable(this.metricColumn);
     }
 
@@ -37,7 +37,7 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="metricTriggerType")
       private final @Nullable String metricTriggerType;
 
-    public Optional<String> getMetricTriggerType() {
+    public Optional<String> metricTriggerType() {
         return this.metricTriggerType == null ? Optional.empty() : Optional.ofNullable(this.metricTriggerType);
     }
 
@@ -48,7 +48,7 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="threshold")
       private final @Nullable Double threshold;
 
-    public Optional<Double> getThreshold() {
+    public Optional<Double> threshold() {
         return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
     }
 
@@ -59,7 +59,7 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="thresholdOperator")
       private final @Nullable String thresholdOperator;
 
-    public Optional<String> getThresholdOperator() {
+    public Optional<String> thresholdOperator() {
         return this.thresholdOperator == null ? Optional.empty() : Optional.ofNullable(this.thresholdOperator);
     }
 

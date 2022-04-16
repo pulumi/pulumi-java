@@ -26,7 +26,7 @@ public final class WinRMConfigurationResponse {
      * The list of Windows Remote Management listeners
      * 
     */
-    public List<WinRMListenerResponse> getListeners() {
+    public List<WinRMListenerResponse> listeners() {
         return this.listeners == null ? List.of() : this.listeners;
     }
 

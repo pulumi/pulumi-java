@@ -25,7 +25,7 @@ public final class ManagementResourcePreferencesResponse extends com.pulumi.reso
     @Import(name="preferredManagementResourceId")
       private final @Nullable String preferredManagementResourceId;
 
-    public Optional<String> getPreferredManagementResourceId() {
+    public Optional<String> preferredManagementResourceId() {
         return this.preferredManagementResourceId == null ? Optional.empty() : Optional.ofNullable(this.preferredManagementResourceId);
     }
 

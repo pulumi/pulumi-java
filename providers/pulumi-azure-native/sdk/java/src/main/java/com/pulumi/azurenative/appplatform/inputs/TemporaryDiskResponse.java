@@ -26,7 +26,7 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mountPath")
       private final @Nullable String mountPath;
 
-    public Optional<String> getMountPath() {
+    public Optional<String> mountPath() {
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
     }
 
@@ -37,7 +37,7 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sizeInGB")
       private final @Nullable Integer sizeInGB;
 
-    public Optional<Integer> getSizeInGB() {
+    public Optional<Integer> sizeInGB() {
         return this.sizeInGB == null ? Optional.empty() : Optional.ofNullable(this.sizeInGB);
     }
 

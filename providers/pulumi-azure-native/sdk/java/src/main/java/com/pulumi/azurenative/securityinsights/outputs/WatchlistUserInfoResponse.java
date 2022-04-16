@@ -41,21 +41,21 @@ public final class WatchlistUserInfoResponse {
      * The email of the user.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The name of the user.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The object id of the user.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
 

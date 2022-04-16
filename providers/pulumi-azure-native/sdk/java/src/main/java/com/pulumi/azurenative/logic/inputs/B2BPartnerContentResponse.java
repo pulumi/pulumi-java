@@ -26,7 +26,7 @@ public final class B2BPartnerContentResponse extends com.pulumi.resources.Invoke
     @Import(name="businessIdentities")
       private final @Nullable List<BusinessIdentityResponse> businessIdentities;
 
-    public List<BusinessIdentityResponse> getBusinessIdentities() {
+    public List<BusinessIdentityResponse> businessIdentities() {
         return this.businessIdentities == null ? List.of() : this.businessIdentities;
     }
 

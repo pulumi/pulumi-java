@@ -19,7 +19,7 @@ public final class GetInstancePoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instancePoolName", required=true)
       private final String instancePoolName;
 
-    public String getInstancePoolName() {
+    public String instancePoolName() {
         return this.instancePoolName;
     }
 
@@ -30,7 +30,7 @@ public final class GetInstancePoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

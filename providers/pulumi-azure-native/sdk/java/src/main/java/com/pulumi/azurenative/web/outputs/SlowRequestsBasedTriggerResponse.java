@@ -49,28 +49,28 @@ public final class SlowRequestsBasedTriggerResponse {
      * Request Count.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Request Path.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Time interval.
      * 
     */
-    public Optional<String> getTimeInterval() {
+    public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
     /**
      * Time taken.
      * 
     */
-    public Optional<String> getTimeTaken() {
+    public Optional<String> timeTaken() {
         return Optional.ofNullable(this.timeTaken);
     }
 

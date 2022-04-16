@@ -101,77 +101,77 @@ public final class GetPeeringResult {
      * The properties that define a direct peering.
      * 
     */
-    public Optional<PeeringPropertiesDirectResponse> getDirect() {
+    public Optional<PeeringPropertiesDirectResponse> direct() {
         return Optional.ofNullable(this.direct);
     }
     /**
      * The properties that define an exchange peering.
      * 
     */
-    public Optional<PeeringPropertiesExchangeResponse> getExchange() {
+    public Optional<PeeringPropertiesExchangeResponse> exchange() {
         return Optional.ofNullable(this.exchange);
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The kind of the peering.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The location of the peering.
      * 
     */
-    public Optional<String> getPeeringLocation() {
+    public Optional<String> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU that defines the tier and kind of the peering.
      * 
     */
-    public PeeringSkuResponse getSku() {
+    public PeeringSkuResponse sku() {
         return this.sku;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -43,7 +43,7 @@ public final class MediaGraphClearEndpointResponse {
      * Polymorphic credentials to present to the endpoint.
      * 
     */
-    public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
+    public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
@@ -51,14 +51,14 @@ public final class MediaGraphClearEndpointResponse {
      * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Url for the endpoint.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

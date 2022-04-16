@@ -19,7 +19,7 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     @Import(name="billingAccountName", required=true)
       private final String billingAccountName;
 
-    public String getBillingAccountName() {
+    public String billingAccountName() {
         return this.billingAccountName;
     }
 

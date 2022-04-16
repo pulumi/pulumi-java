@@ -28,7 +28,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
 
-    public Optional<Object> getCopyBehavior() {
+    public Optional<Object> copyBehavior() {
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
     }
 
@@ -39,7 +39,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -50,7 +50,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -61,7 +61,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="metadata")
       private final @Nullable List<MetadataItemResponse> metadata;
 
-    public List<MetadataItemResponse> getMetadata() {
+    public List<MetadataItemResponse> metadata() {
         return this.metadata == null ? List.of() : this.metadata;
     }
 
@@ -72,7 +72,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
@@ -83,7 +83,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
@@ -95,7 +95,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -106,7 +106,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
@@ -117,7 +117,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 

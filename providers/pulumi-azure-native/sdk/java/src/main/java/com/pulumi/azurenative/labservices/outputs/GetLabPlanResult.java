@@ -125,98 +125,98 @@ public final class GetLabPlanResult {
      * The allowed regions for the lab creator to use when creating labs using this lab plan.
      * 
     */
-    public List<String> getAllowedRegions() {
+    public List<String> allowedRegions() {
         return this.allowedRegions == null ? List.of() : this.allowedRegions;
     }
     /**
      * The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
      * 
     */
-    public Optional<AutoShutdownProfileResponse> getDefaultAutoShutdownProfile() {
+    public Optional<AutoShutdownProfileResponse> defaultAutoShutdownProfile() {
         return Optional.ofNullable(this.defaultAutoShutdownProfile);
     }
     /**
      * The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
      * 
     */
-    public Optional<ConnectionProfileResponse> getDefaultConnectionProfile() {
+    public Optional<ConnectionProfileResponse> defaultConnectionProfile() {
         return Optional.ofNullable(this.defaultConnectionProfile);
     }
     /**
      * The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
      * 
     */
-    public Optional<LabPlanNetworkProfileResponse> getDefaultNetworkProfile() {
+    public Optional<LabPlanNetworkProfileResponse> defaultNetworkProfile() {
         return Optional.ofNullable(this.defaultNetworkProfile);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Base Url of the lms instance this lab plan can link lab rosters against.
      * 
     */
-    public Optional<String> getLinkedLmsInstance() {
+    public Optional<String> linkedLmsInstance() {
         return Optional.ofNullable(this.linkedLmsInstance);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Current provisioning state of the lab plan.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
      * 
     */
-    public Optional<String> getSharedGalleryId() {
+    public Optional<String> sharedGalleryId() {
         return Optional.ofNullable(this.sharedGalleryId);
     }
     /**
      * Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
      * 
     */
-    public Optional<SupportInfoResponse> getSupportInfo() {
+    public Optional<SupportInfoResponse> supportInfo() {
         return Optional.ofNullable(this.supportInfo);
     }
     /**
      * Metadata pertaining to creation and last modification of the lab plan.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerSecrets")
       private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
-    public Output<List<CustomerSecretArgs>> getCustomerSecrets() {
+    public Output<List<CustomerSecretArgs>> customerSecrets() {
         return this.customerSecrets == null ? Codegen.empty() : this.customerSecrets;
     }
 
@@ -37,7 +37,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataManagerName", required=true)
       private final Output<String> dataManagerName;
 
-    public Output<String> getDataManagerName() {
+    public Output<String> dataManagerName() {
         return this.dataManagerName;
     }
 
@@ -48,7 +48,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataStoreName")
       private final @Nullable Output<String> dataStoreName;
 
-    public Output<String> getDataStoreName() {
+    public Output<String> dataStoreName() {
         return this.dataStoreName == null ? Codegen.empty() : this.dataStoreName;
     }
 
@@ -59,7 +59,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataStoreTypeId", required=true)
       private final Output<String> dataStoreTypeId;
 
-    public Output<String> getDataStoreTypeId() {
+    public Output<String> dataStoreTypeId() {
         return this.dataStoreTypeId;
     }
 
@@ -70,7 +70,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedProperties")
       private final @Nullable Output<Object> extendedProperties;
 
-    public Output<Object> getExtendedProperties() {
+    public Output<Object> extendedProperties() {
         return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
     }
 
@@ -81,7 +81,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
-    public Output<String> getRepositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
     }
 
@@ -92,7 +92,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
       private final Output<State> state;
 
-    public Output<State> getState() {
+    public Output<State> state() {
         return this.state;
     }
 

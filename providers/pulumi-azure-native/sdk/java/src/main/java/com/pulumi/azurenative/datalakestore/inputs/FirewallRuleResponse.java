@@ -23,7 +23,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="endIpAddress", required=true)
       private final String endIpAddress;
 
-    public String getEndIpAddress() {
+    public String endIpAddress() {
         return this.endIpAddress;
     }
 
@@ -34,7 +34,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -56,7 +56,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startIpAddress", required=true)
       private final String startIpAddress;
 
-    public String getStartIpAddress() {
+    public String startIpAddress() {
         return this.startIpAddress;
     }
 
@@ -67,7 +67,7 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -38,7 +38,7 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
     @Import(name="principalMetadata")
       private final @Nullable Output<Map<String,String>> principalMetadata;
 
-    public Output<Map<String,String>> getPrincipalMetadata() {
+    public Output<Map<String,String>> principalMetadata() {
         return this.principalMetadata == null ? Codegen.empty() : this.principalMetadata;
     }
 
@@ -49,7 +49,7 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
     @Import(name="principalType", required=true)
       private final Output<String> principalType;
 
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType;
     }
 

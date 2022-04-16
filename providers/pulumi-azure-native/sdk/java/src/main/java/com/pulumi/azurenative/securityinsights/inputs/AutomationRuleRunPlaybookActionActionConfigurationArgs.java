@@ -26,7 +26,7 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
     @Import(name="logicAppResourceId")
       private final @Nullable Output<String> logicAppResourceId;
 
-    public Output<String> getLogicAppResourceId() {
+    public Output<String> logicAppResourceId() {
         return this.logicAppResourceId == null ? Codegen.empty() : this.logicAppResourceId;
     }
 
@@ -37,7 +37,7 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

@@ -36,7 +36,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -47,7 +47,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationLicenses")
       private final @Nullable Output<List<String>> applicationLicenses;
 
-    public Output<List<String>> getApplicationLicenses() {
+    public Output<List<String>> applicationLicenses() {
         return this.applicationLicenses == null ? Codegen.empty() : this.applicationLicenses;
     }
 
@@ -58,7 +58,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationPackages")
       private final @Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages;
 
-    public Output<List<ApplicationPackageReferenceArgs>> getApplicationPackages() {
+    public Output<List<ApplicationPackageReferenceArgs>> applicationPackages() {
         return this.applicationPackages == null ? Codegen.empty() : this.applicationPackages;
     }
 
@@ -69,7 +69,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificates")
       private final @Nullable Output<List<CertificateReferenceArgs>> certificates;
 
-    public Output<List<CertificateReferenceArgs>> getCertificates() {
+    public Output<List<CertificateReferenceArgs>> certificates() {
         return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
@@ -80,7 +80,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentConfiguration")
       private final @Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration;
 
-    public Output<DeploymentConfigurationArgs> getDeploymentConfiguration() {
+    public Output<DeploymentConfigurationArgs> deploymentConfiguration() {
         return this.deploymentConfiguration == null ? Codegen.empty() : this.deploymentConfiguration;
     }
 
@@ -91,7 +91,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -102,7 +102,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<BatchPoolIdentityArgs> identity;
 
-    public Output<BatchPoolIdentityArgs> getIdentity() {
+    public Output<BatchPoolIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -113,7 +113,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interNodeCommunication")
       private final @Nullable Output<InterNodeCommunicationState> interNodeCommunication;
 
-    public Output<InterNodeCommunicationState> getInterNodeCommunication() {
+    public Output<InterNodeCommunicationState> interNodeCommunication() {
         return this.interNodeCommunication == null ? Codegen.empty() : this.interNodeCommunication;
     }
 
@@ -124,7 +124,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<List<MetadataItemArgs>> metadata;
 
-    public Output<List<MetadataItemArgs>> getMetadata() {
+    public Output<List<MetadataItemArgs>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -135,7 +135,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountConfiguration")
       private final @Nullable Output<List<MountConfigurationArgs>> mountConfiguration;
 
-    public Output<List<MountConfigurationArgs>> getMountConfiguration() {
+    public Output<List<MountConfigurationArgs>> mountConfiguration() {
         return this.mountConfiguration == null ? Codegen.empty() : this.mountConfiguration;
     }
 
@@ -146,7 +146,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfiguration")
       private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
-    public Output<NetworkConfigurationArgs> getNetworkConfiguration() {
+    public Output<NetworkConfigurationArgs> networkConfiguration() {
         return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
@@ -157,7 +157,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolName")
       private final @Nullable Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName == null ? Codegen.empty() : this.poolName;
     }
 
@@ -168,7 +168,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -179,7 +179,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scaleSettings")
       private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
-    public Output<ScaleSettingsArgs> getScaleSettings() {
+    public Output<ScaleSettingsArgs> scaleSettings() {
         return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 
@@ -190,7 +190,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTask")
       private final @Nullable Output<StartTaskArgs> startTask;
 
-    public Output<StartTaskArgs> getStartTask() {
+    public Output<StartTaskArgs> startTask() {
         return this.startTask == null ? Codegen.empty() : this.startTask;
     }
 
@@ -201,7 +201,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskSchedulingPolicy")
       private final @Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
 
-    public Output<TaskSchedulingPolicyArgs> getTaskSchedulingPolicy() {
+    public Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy() {
         return this.taskSchedulingPolicy == null ? Codegen.empty() : this.taskSchedulingPolicy;
     }
 
@@ -212,14 +212,14 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskSlotsPerNode")
       private final @Nullable Output<Integer> taskSlotsPerNode;
 
-    public Output<Integer> getTaskSlotsPerNode() {
+    public Output<Integer> taskSlotsPerNode() {
         return this.taskSlotsPerNode == null ? Codegen.empty() : this.taskSlotsPerNode;
     }
 
     @Import(name="userAccounts")
       private final @Nullable Output<List<UserAccountArgs>> userAccounts;
 
-    public Output<List<UserAccountArgs>> getUserAccounts() {
+    public Output<List<UserAccountArgs>> userAccounts() {
         return this.userAccounts == null ? Codegen.empty() : this.userAccounts;
     }
 
@@ -230,7 +230,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 

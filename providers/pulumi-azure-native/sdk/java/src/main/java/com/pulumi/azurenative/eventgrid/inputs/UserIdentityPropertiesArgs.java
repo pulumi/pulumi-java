@@ -26,7 +26,7 @@ public final class UserIdentityPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -37,7 +37,7 @@ public final class UserIdentityPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 

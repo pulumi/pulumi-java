@@ -26,7 +26,7 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="thumbprint", required=true)
       private final Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
 
@@ -37,7 +37,7 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="thumbprintSecondary")
       private final @Nullable Output<String> thumbprintSecondary;
 
-    public Output<String> getThumbprintSecondary() {
+    public Output<String> thumbprintSecondary() {
         return this.thumbprintSecondary == null ? Codegen.empty() : this.thumbprintSecondary;
     }
 
@@ -48,7 +48,7 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="x509StoreName")
       private final @Nullable Output<String> x509StoreName;
 
-    public Output<String> getX509StoreName() {
+    public Output<String> x509StoreName() {
         return this.x509StoreName == null ? Codegen.empty() : this.x509StoreName;
     }
 

@@ -29,7 +29,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="allocatedOutboundPorts")
       private final @Nullable Integer allocatedOutboundPorts;
 
-    public Optional<Integer> getAllocatedOutboundPorts() {
+    public Optional<Integer> allocatedOutboundPorts() {
         return this.allocatedOutboundPorts == null ? Optional.empty() : Optional.ofNullable(this.allocatedOutboundPorts);
     }
 
@@ -40,7 +40,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="backendAddressPool", required=true)
       private final SubResourceResponse backendAddressPool;
 
-    public SubResourceResponse getBackendAddressPool() {
+    public SubResourceResponse backendAddressPool() {
         return this.backendAddressPool;
     }
 
@@ -51,7 +51,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableTcpReset")
       private final @Nullable Boolean enableTcpReset;
 
-    public Optional<Boolean> getEnableTcpReset() {
+    public Optional<Boolean> enableTcpReset() {
         return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
     }
 
@@ -62,7 +62,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -73,7 +73,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="frontendIPConfigurations", required=true)
       private final List<SubResourceResponse> frontendIPConfigurations;
 
-    public List<SubResourceResponse> getFrontendIPConfigurations() {
+    public List<SubResourceResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 
@@ -84,7 +84,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -95,7 +95,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
@@ -106,7 +106,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -117,7 +117,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -128,7 +128,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -139,7 +139,7 @@ public final class OutboundRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

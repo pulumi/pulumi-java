@@ -26,7 +26,7 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="city")
       private final @Nullable Output<String> city;
 
-    public Output<String> getCity() {
+    public Output<String> city() {
         return this.city == null ? Codegen.empty() : this.city;
     }
 
@@ -37,7 +37,7 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="countryOrRegion")
       private final @Nullable Output<String> countryOrRegion;
 
-    public Output<String> getCountryOrRegion() {
+    public Output<String> countryOrRegion() {
         return this.countryOrRegion == null ? Codegen.empty() : this.countryOrRegion;
     }
 
@@ -48,7 +48,7 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="district")
       private final @Nullable Output<String> district;
 
-    public Output<String> getDistrict() {
+    public Output<String> district() {
         return this.district == null ? Codegen.empty() : this.district;
     }
 
@@ -59,7 +59,7 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

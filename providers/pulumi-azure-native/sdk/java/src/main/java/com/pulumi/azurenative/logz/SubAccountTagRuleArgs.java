@@ -23,7 +23,7 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
 
-    public Output<String> getMonitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -34,7 +34,7 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
-    public Output<MonitoringTagRulesPropertiesArgs> getProperties() {
+    public Output<MonitoringTagRulesPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,14 +45,14 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 
@@ -63,7 +63,7 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="subAccountName", required=true)
       private final Output<String> subAccountName;
 
-    public Output<String> getSubAccountName() {
+    public Output<String> subAccountName() {
         return this.subAccountName;
     }
 

@@ -27,7 +27,7 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -38,7 +38,7 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
     @Import(name="primaryZone")
       private final @Nullable Output<String> primaryZone;
 
-    public Output<String> getPrimaryZone() {
+    public Output<String> primaryZone() {
         return this.primaryZone == null ? Codegen.empty() : this.primaryZone;
     }
 
@@ -49,7 +49,7 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
     @Import(name="recoveryZone")
       private final @Nullable Output<String> recoveryZone;
 
-    public Output<String> getRecoveryZone() {
+    public Output<String> recoveryZone() {
         return this.recoveryZone == null ? Codegen.empty() : this.recoveryZone;
     }
 

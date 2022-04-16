@@ -26,7 +26,7 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="columnName", required=true)
       private final String columnName;
 
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="customFormatSpecifier")
       private final @Nullable String customFormatSpecifier;
 
-    public Optional<String> getCustomFormatSpecifier() {
+    public Optional<String> customFormatSpecifier() {
         return this.customFormatSpecifier == null ? Optional.empty() : Optional.ofNullable(this.customFormatSpecifier);
     }
 
@@ -48,7 +48,7 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="isEncrypted")
       private final @Nullable Boolean isEncrypted;
 
-    public Optional<Boolean> getIsEncrypted() {
+    public Optional<Boolean> isEncrypted() {
         return this.isEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isEncrypted);
     }
 
@@ -59,7 +59,7 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="propertyName", required=true)
       private final String propertyName;
 
-    public String getPropertyName() {
+    public String propertyName() {
         return this.propertyName;
     }
 

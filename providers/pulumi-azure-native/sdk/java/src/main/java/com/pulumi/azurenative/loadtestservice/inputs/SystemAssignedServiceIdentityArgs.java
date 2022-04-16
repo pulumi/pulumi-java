@@ -27,7 +27,7 @@ public final class SystemAssignedServiceIdentityArgs extends com.pulumi.resource
     @Import(name="type", required=true)
       private final Output<Either<String,SystemAssignedServiceIdentityType>> type;
 
-    public Output<Either<String,SystemAssignedServiceIdentityType>> getType() {
+    public Output<Either<String,SystemAssignedServiceIdentityType>> type() {
         return this.type;
     }
 

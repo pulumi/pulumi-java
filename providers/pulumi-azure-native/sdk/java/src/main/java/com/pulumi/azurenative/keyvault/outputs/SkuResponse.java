@@ -32,14 +32,14 @@ public final class SkuResponse {
      * SKU family name
      * 
     */
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
     /**
      * SKU name to specify whether the key vault is a standard vault or a premium vault.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

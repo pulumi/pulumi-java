@@ -50,28 +50,28 @@ public final class FrontDoorManagedRuleOverrideResponse {
      * Describes the override action to be applied when rule matches.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Describes the exclusions that are applied to this specific rule.
      * 
     */
-    public List<ManagedRuleExclusionResponse> getExclusions() {
+    public List<ManagedRuleExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Identifier for the managed rule.
      * 
     */
-    public String getRuleId() {
+    public String ruleId() {
         return this.ruleId;
     }
 

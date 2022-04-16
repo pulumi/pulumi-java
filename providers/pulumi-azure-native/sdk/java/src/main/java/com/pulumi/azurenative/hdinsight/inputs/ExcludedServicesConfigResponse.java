@@ -25,7 +25,7 @@ public final class ExcludedServicesConfigResponse extends com.pulumi.resources.I
     @Import(name="excludedServicesConfigId")
       private final @Nullable String excludedServicesConfigId;
 
-    public Optional<String> getExcludedServicesConfigId() {
+    public Optional<String> excludedServicesConfigId() {
         return this.excludedServicesConfigId == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesConfigId);
     }
 
@@ -36,7 +36,7 @@ public final class ExcludedServicesConfigResponse extends com.pulumi.resources.I
     @Import(name="excludedServicesList")
       private final @Nullable String excludedServicesList;
 
-    public Optional<String> getExcludedServicesList() {
+    public Optional<String> excludedServicesList() {
         return this.excludedServicesList == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesList);
     }
 

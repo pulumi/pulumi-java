@@ -26,7 +26,7 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="destination", required=true)
       private final String destination;
 
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
 
@@ -37,7 +37,7 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -48,7 +48,7 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="rules", required=true)
       private final List<BlobInventoryPolicyRuleResponse> rules;
 
-    public List<BlobInventoryPolicyRuleResponse> getRules() {
+    public List<BlobInventoryPolicyRuleResponse> rules() {
         return this.rules;
     }
 
@@ -59,7 +59,7 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

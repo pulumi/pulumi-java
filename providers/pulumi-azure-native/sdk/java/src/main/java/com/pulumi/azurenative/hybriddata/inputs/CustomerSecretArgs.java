@@ -26,7 +26,7 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="algorithm", required=true)
       private final Output<SupportedAlgorithm> algorithm;
 
-    public Output<SupportedAlgorithm> getAlgorithm() {
+    public Output<SupportedAlgorithm> algorithm() {
         return this.algorithm;
     }
 
@@ -37,7 +37,7 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyIdentifier", required=true)
       private final Output<String> keyIdentifier;
 
-    public Output<String> getKeyIdentifier() {
+    public Output<String> keyIdentifier() {
         return this.keyIdentifier;
     }
 
@@ -48,7 +48,7 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyValue", required=true)
       private final Output<String> keyValue;
 
-    public Output<String> getKeyValue() {
+    public Output<String> keyValue() {
         return this.keyValue;
     }
 

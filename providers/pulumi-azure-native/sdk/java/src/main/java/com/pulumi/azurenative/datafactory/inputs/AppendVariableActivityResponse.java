@@ -29,7 +29,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -40,7 +40,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -51,7 +51,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -74,7 +74,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 
@@ -85,7 +85,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
     @Import(name="value")
       private final @Nullable Object value;
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 
@@ -96,7 +96,7 @@ public final class AppendVariableActivityResponse extends com.pulumi.resources.I
     @Import(name="variableName")
       private final @Nullable String variableName;
 
-    public Optional<String> getVariableName() {
+    public Optional<String> variableName() {
         return this.variableName == null ? Optional.empty() : Optional.ofNullable(this.variableName);
     }
 

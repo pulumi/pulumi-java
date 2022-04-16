@@ -125,98 +125,98 @@ public final class GetWebApplicationFirewallPolicyResult {
      * A collection of references to application gateways.
      * 
     */
-    public List<ApplicationGatewayResponse> getApplicationGateways() {
+    public List<ApplicationGatewayResponse> applicationGateways() {
         return this.applicationGateways;
     }
     /**
      * The custom rules inside the policy.
      * 
     */
-    public List<WebApplicationFirewallCustomRuleResponse> getCustomRules() {
+    public List<WebApplicationFirewallCustomRuleResponse> customRules() {
         return this.customRules == null ? List.of() : this.customRules;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * A collection of references to application gateway http listeners.
      * 
     */
-    public List<SubResourceResponse> getHttpListeners() {
+    public List<SubResourceResponse> httpListeners() {
         return this.httpListeners;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Describes the managedRules structure.
      * 
     */
-    public ManagedRulesDefinitionResponse getManagedRules() {
+    public ManagedRulesDefinitionResponse managedRules() {
         return this.managedRules;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A collection of references to application gateway path rules.
      * 
     */
-    public List<SubResourceResponse> getPathBasedRules() {
+    public List<SubResourceResponse> pathBasedRules() {
         return this.pathBasedRules;
     }
     /**
      * The PolicySettings for policy.
      * 
     */
-    public Optional<PolicySettingsResponse> getPolicySettings() {
+    public Optional<PolicySettingsResponse> policySettings() {
         return Optional.ofNullable(this.policySettings);
     }
     /**
      * The provisioning state of the web application firewall policy resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the policy.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

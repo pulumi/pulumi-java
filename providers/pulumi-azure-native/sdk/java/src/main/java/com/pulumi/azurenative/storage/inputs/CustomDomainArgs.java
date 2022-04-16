@@ -27,7 +27,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useSubDomainName")
       private final @Nullable Output<Boolean> useSubDomainName;
 
-    public Output<Boolean> getUseSubDomainName() {
+    public Output<Boolean> useSubDomainName() {
         return this.useSubDomainName == null ? Codegen.empty() : this.useSubDomainName;
     }
 

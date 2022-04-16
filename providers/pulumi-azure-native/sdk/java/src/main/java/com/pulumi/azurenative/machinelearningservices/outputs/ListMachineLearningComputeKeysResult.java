@@ -24,7 +24,7 @@ public final class ListMachineLearningComputeKeysResult {
      * The type of compute
      * 
     */
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
 

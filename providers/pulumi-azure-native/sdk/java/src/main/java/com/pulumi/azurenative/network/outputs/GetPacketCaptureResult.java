@@ -95,70 +95,70 @@ public final class GetPacketCaptureResult {
      * Number of bytes captured per packet, the remaining bytes are truncated.
      * 
     */
-    public Optional<Double> getBytesToCapturePerPacket() {
+    public Optional<Double> bytesToCapturePerPacket() {
         return Optional.ofNullable(this.bytesToCapturePerPacket);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * A list of packet capture filters.
      * 
     */
-    public List<PacketCaptureFilterResponse> getFilters() {
+    public List<PacketCaptureFilterResponse> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * ID of the packet capture operation.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the packet capture session.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the packet capture session.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The storage location for a packet capture session.
      * 
     */
-    public PacketCaptureStorageLocationResponse getStorageLocation() {
+    public PacketCaptureStorageLocationResponse storageLocation() {
         return this.storageLocation;
     }
     /**
      * The ID of the targeted resource, only VM is currently supported.
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
     /**
      * Maximum duration of the capture session in seconds.
      * 
     */
-    public Optional<Integer> getTimeLimitInSeconds() {
+    public Optional<Integer> timeLimitInSeconds() {
         return Optional.ofNullable(this.timeLimitInSeconds);
     }
     /**
      * Maximum size of the capture output.
      * 
     */
-    public Optional<Double> getTotalBytesPerSession() {
+    public Optional<Double> totalBytesPerSession() {
         return Optional.ofNullable(this.totalBytesPerSession);
     }
 

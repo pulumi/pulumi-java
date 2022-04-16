@@ -26,7 +26,7 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -37,7 +37,7 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="keyType")
       private final @Nullable String keyType;
 
-    public Optional<String> getKeyType() {
+    public Optional<String> keyType() {
         return this.keyType == null ? Optional.empty() : Optional.ofNullable(this.keyType);
     }
 
@@ -48,7 +48,7 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="lastEnabledTime", required=true)
       private final String lastEnabledTime;
 
-    public String getLastEnabledTime() {
+    public String lastEnabledTime() {
         return this.lastEnabledTime;
     }
 

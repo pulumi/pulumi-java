@@ -44,7 +44,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return Host OS supported by the IoT addon.
      * 
      */
-    public Output<String> getHostPlatform() {
+    public Output<String> hostPlatform() {
         return this.hostPlatform;
     }
     /**
@@ -58,7 +58,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return Platform where the runtime is hosted.
      * 
      */
-    public Output<String> getHostPlatformType() {
+    public Output<String> hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
@@ -72,7 +72,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return IoT device metadata to which appliance needs to be connected.
      * 
      */
-    public Output<IoTDeviceInfoResponse> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoResponse> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
     /**
@@ -86,7 +86,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return IoT edge device to which the IoT Addon needs to be configured.
      * 
      */
-    public Output<IoTDeviceInfoResponse> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoResponse> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
     /**
@@ -102,7 +102,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * Expected value is 'IotEdge'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -116,7 +116,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return Addon Provisioning State
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -144,7 +144,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return Addon type
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -158,7 +158,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -172,7 +172,7 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
      * @return Version of IoT running on the appliance.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

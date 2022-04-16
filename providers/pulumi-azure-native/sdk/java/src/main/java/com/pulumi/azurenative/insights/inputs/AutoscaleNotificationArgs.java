@@ -29,7 +29,7 @@ public final class AutoscaleNotificationArgs extends com.pulumi.resources.Resour
     @Import(name="email")
       private final @Nullable Output<EmailNotificationArgs> email;
 
-    public Output<EmailNotificationArgs> getEmail() {
+    public Output<EmailNotificationArgs> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -40,7 +40,7 @@ public final class AutoscaleNotificationArgs extends com.pulumi.resources.Resour
     @Import(name="operation", required=true)
       private final Output<OperationType> operation;
 
-    public Output<OperationType> getOperation() {
+    public Output<OperationType> operation() {
         return this.operation;
     }
 
@@ -51,7 +51,7 @@ public final class AutoscaleNotificationArgs extends com.pulumi.resources.Resour
     @Import(name="webhooks")
       private final @Nullable Output<List<WebhookNotificationArgs>> webhooks;
 
-    public Output<List<WebhookNotificationArgs>> getWebhooks() {
+    public Output<List<WebhookNotificationArgs>> webhooks() {
         return this.webhooks == null ? Codegen.empty() : this.webhooks;
     }
 

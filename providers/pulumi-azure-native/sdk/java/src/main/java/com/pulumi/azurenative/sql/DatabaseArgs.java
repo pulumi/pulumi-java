@@ -35,7 +35,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoPauseDelay")
       private final @Nullable Output<Integer> autoPauseDelay;
 
-    public Output<Integer> getAutoPauseDelay() {
+    public Output<Integer> autoPauseDelay() {
         return this.autoPauseDelay == null ? Codegen.empty() : this.autoPauseDelay;
     }
 
@@ -46,7 +46,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogCollation")
       private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
-    public Output<Either<String,CatalogCollationType>> getCatalogCollation() {
+    public Output<Either<String,CatalogCollationType>> catalogCollation() {
         return this.catalogCollation == null ? Codegen.empty() : this.catalogCollation;
     }
 
@@ -57,7 +57,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
@@ -84,7 +84,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Output<Either<String,CreateMode>> getCreateMode() {
+    public Output<Either<String,CreateMode>> createMode() {
         return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
@@ -95,7 +95,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -106,7 +106,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticPoolId")
       private final @Nullable Output<String> elasticPoolId;
 
-    public Output<String> getElasticPoolId() {
+    public Output<String> elasticPoolId() {
         return this.elasticPoolId == null ? Codegen.empty() : this.elasticPoolId;
     }
 
@@ -117,7 +117,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="highAvailabilityReplicaCount")
       private final @Nullable Output<Integer> highAvailabilityReplicaCount;
 
-    public Output<Integer> getHighAvailabilityReplicaCount() {
+    public Output<Integer> highAvailabilityReplicaCount() {
         return this.highAvailabilityReplicaCount == null ? Codegen.empty() : this.highAvailabilityReplicaCount;
     }
 
@@ -128,7 +128,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,DatabaseLicenseType>> licenseType;
 
-    public Output<Either<String,DatabaseLicenseType>> getLicenseType() {
+    public Output<Either<String,DatabaseLicenseType>> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -139,7 +139,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -150,7 +150,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="longTermRetentionBackupResourceId")
       private final @Nullable Output<String> longTermRetentionBackupResourceId;
 
-    public Output<String> getLongTermRetentionBackupResourceId() {
+    public Output<String> longTermRetentionBackupResourceId() {
         return this.longTermRetentionBackupResourceId == null ? Codegen.empty() : this.longTermRetentionBackupResourceId;
     }
 
@@ -161,7 +161,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Output<String> getMaintenanceConfigurationId() {
+    public Output<String> maintenanceConfigurationId() {
         return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
     }
 
@@ -172,7 +172,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSizeBytes")
       private final @Nullable Output<Double> maxSizeBytes;
 
-    public Output<Double> getMaxSizeBytes() {
+    public Output<Double> maxSizeBytes() {
         return this.maxSizeBytes == null ? Codegen.empty() : this.maxSizeBytes;
     }
 
@@ -183,7 +183,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minCapacity")
       private final @Nullable Output<Double> minCapacity;
 
-    public Output<Double> getMinCapacity() {
+    public Output<Double> minCapacity() {
         return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
     }
 
@@ -194,7 +194,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readScale")
       private final @Nullable Output<Either<String,DatabaseReadScale>> readScale;
 
-    public Output<Either<String,DatabaseReadScale>> getReadScale() {
+    public Output<Either<String,DatabaseReadScale>> readScale() {
         return this.readScale == null ? Codegen.empty() : this.readScale;
     }
 
@@ -205,7 +205,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recoverableDatabaseId")
       private final @Nullable Output<String> recoverableDatabaseId;
 
-    public Output<String> getRecoverableDatabaseId() {
+    public Output<String> recoverableDatabaseId() {
         return this.recoverableDatabaseId == null ? Codegen.empty() : this.recoverableDatabaseId;
     }
 
@@ -216,7 +216,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recoveryServicesRecoveryPointId")
       private final @Nullable Output<String> recoveryServicesRecoveryPointId;
 
-    public Output<String> getRecoveryServicesRecoveryPointId() {
+    public Output<String> recoveryServicesRecoveryPointId() {
         return this.recoveryServicesRecoveryPointId == null ? Codegen.empty() : this.recoveryServicesRecoveryPointId;
     }
 
@@ -227,7 +227,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestedBackupStorageRedundancy")
       private final @Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
 
-    public Output<Either<String,RequestedBackupStorageRedundancy>> getRequestedBackupStorageRedundancy() {
+    public Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy() {
         return this.requestedBackupStorageRedundancy == null ? Codegen.empty() : this.requestedBackupStorageRedundancy;
     }
 
@@ -238,7 +238,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -249,7 +249,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorableDroppedDatabaseId")
       private final @Nullable Output<String> restorableDroppedDatabaseId;
 
-    public Output<String> getRestorableDroppedDatabaseId() {
+    public Output<String> restorableDroppedDatabaseId() {
         return this.restorableDroppedDatabaseId == null ? Codegen.empty() : this.restorableDroppedDatabaseId;
     }
 
@@ -260,7 +260,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
 
-    public Output<String> getRestorePointInTime() {
+    public Output<String> restorePointInTime() {
         return this.restorePointInTime == null ? Codegen.empty() : this.restorePointInTime;
     }
 
@@ -271,7 +271,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleName")
       private final @Nullable Output<Either<String,SampleName>> sampleName;
 
-    public Output<Either<String,SampleName>> getSampleName() {
+    public Output<Either<String,SampleName>> sampleName() {
         return this.sampleName == null ? Codegen.empty() : this.sampleName;
     }
 
@@ -282,7 +282,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryType")
       private final @Nullable Output<Either<String,SecondaryType>> secondaryType;
 
-    public Output<Either<String,SecondaryType>> getSecondaryType() {
+    public Output<Either<String,SecondaryType>> secondaryType() {
         return this.secondaryType == null ? Codegen.empty() : this.secondaryType;
     }
 
@@ -293,7 +293,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -306,7 +306,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -317,7 +317,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabaseDeletionDate")
       private final @Nullable Output<String> sourceDatabaseDeletionDate;
 
-    public Output<String> getSourceDatabaseDeletionDate() {
+    public Output<String> sourceDatabaseDeletionDate() {
         return this.sourceDatabaseDeletionDate == null ? Codegen.empty() : this.sourceDatabaseDeletionDate;
     }
 
@@ -328,7 +328,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabaseId")
       private final @Nullable Output<String> sourceDatabaseId;
 
-    public Output<String> getSourceDatabaseId() {
+    public Output<String> sourceDatabaseId() {
         return this.sourceDatabaseId == null ? Codegen.empty() : this.sourceDatabaseId;
     }
 
@@ -339,7 +339,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -350,7 +350,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;
 
-    public Output<Boolean> getZoneRedundant() {
+    public Output<Boolean> zoneRedundant() {
         return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
     }
 

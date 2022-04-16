@@ -30,7 +30,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="authenticationMethod")
       private final @Nullable String authenticationMethod;
 
-    public Optional<String> getAuthenticationMethod() {
+    public Optional<String> authenticationMethod() {
         return this.authenticationMethod == null ? Optional.empty() : Optional.ofNullable(this.authenticationMethod);
     }
 
@@ -41,7 +41,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="cassandraVersion")
       private final @Nullable String cassandraVersion;
 
-    public Optional<String> getCassandraVersion() {
+    public Optional<String> cassandraVersion() {
         return this.cassandraVersion == null ? Optional.empty() : Optional.ofNullable(this.cassandraVersion);
     }
 
@@ -52,7 +52,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="clientCertificates")
       private final @Nullable List<CertificateResponse> clientCertificates;
 
-    public List<CertificateResponse> getClientCertificates() {
+    public List<CertificateResponse> clientCertificates() {
         return this.clientCertificates == null ? List.of() : this.clientCertificates;
     }
 
@@ -63,7 +63,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="clusterNameOverride")
       private final @Nullable String clusterNameOverride;
 
-    public Optional<String> getClusterNameOverride() {
+    public Optional<String> clusterNameOverride() {
         return this.clusterNameOverride == null ? Optional.empty() : Optional.ofNullable(this.clusterNameOverride);
     }
 
@@ -74,7 +74,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="delegatedManagementSubnetId")
       private final @Nullable String delegatedManagementSubnetId;
 
-    public Optional<String> getDelegatedManagementSubnetId() {
+    public Optional<String> delegatedManagementSubnetId() {
         return this.delegatedManagementSubnetId == null ? Optional.empty() : Optional.ofNullable(this.delegatedManagementSubnetId);
     }
 
@@ -85,7 +85,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="externalGossipCertificates")
       private final @Nullable List<CertificateResponse> externalGossipCertificates;
 
-    public List<CertificateResponse> getExternalGossipCertificates() {
+    public List<CertificateResponse> externalGossipCertificates() {
         return this.externalGossipCertificates == null ? List.of() : this.externalGossipCertificates;
     }
 
@@ -96,7 +96,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="externalSeedNodes")
       private final @Nullable List<SeedNodeResponse> externalSeedNodes;
 
-    public List<SeedNodeResponse> getExternalSeedNodes() {
+    public List<SeedNodeResponse> externalSeedNodes() {
         return this.externalSeedNodes == null ? List.of() : this.externalSeedNodes;
     }
 
@@ -107,7 +107,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="gossipCertificates", required=true)
       private final List<CertificateResponse> gossipCertificates;
 
-    public List<CertificateResponse> getGossipCertificates() {
+    public List<CertificateResponse> gossipCertificates() {
         return this.gossipCertificates;
     }
 
@@ -118,7 +118,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="hoursBetweenBackups")
       private final @Nullable Integer hoursBetweenBackups;
 
-    public Optional<Integer> getHoursBetweenBackups() {
+    public Optional<Integer> hoursBetweenBackups() {
         return this.hoursBetweenBackups == null ? Optional.empty() : Optional.ofNullable(this.hoursBetweenBackups);
     }
 
@@ -129,7 +129,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="prometheusEndpoint")
       private final @Nullable SeedNodeResponse prometheusEndpoint;
 
-    public Optional<SeedNodeResponse> getPrometheusEndpoint() {
+    public Optional<SeedNodeResponse> prometheusEndpoint() {
         return this.prometheusEndpoint == null ? Optional.empty() : Optional.ofNullable(this.prometheusEndpoint);
     }
 
@@ -140,7 +140,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -151,7 +151,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="repairEnabled")
       private final @Nullable Boolean repairEnabled;
 
-    public Optional<Boolean> getRepairEnabled() {
+    public Optional<Boolean> repairEnabled() {
         return this.repairEnabled == null ? Optional.empty() : Optional.ofNullable(this.repairEnabled);
     }
 
@@ -162,7 +162,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
     @Import(name="seedNodes", required=true)
       private final List<SeedNodeResponse> seedNodes;
 
-    public List<SeedNodeResponse> getSeedNodes() {
+    public List<SeedNodeResponse> seedNodes() {
         return this.seedNodes;
     }
 

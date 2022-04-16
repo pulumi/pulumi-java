@@ -26,7 +26,7 @@ public final class VpnServerConfigRadiusServerRootCertificateArgs extends com.pu
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class VpnServerConfigRadiusServerRootCertificateArgs extends com.pu
     @Import(name="publicCertData")
       private final @Nullable Output<String> publicCertData;
 
-    public Output<String> getPublicCertData() {
+    public Output<String> publicCertData() {
         return this.publicCertData == null ? Codegen.empty() : this.publicCertData;
     }
 

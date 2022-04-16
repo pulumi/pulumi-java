@@ -19,14 +19,14 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization ex
     @Import(name="authorizations")
       private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
 
-    public List<LightHouseAuthorizationResponse> getAuthorizations() {
+    public List<LightHouseAuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
 
     @Import(name="managedByTenantId")
       private final @Nullable String managedByTenantId;
 
-    public Optional<String> getManagedByTenantId() {
+    public Optional<String> managedByTenantId() {
         return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);
     }
 

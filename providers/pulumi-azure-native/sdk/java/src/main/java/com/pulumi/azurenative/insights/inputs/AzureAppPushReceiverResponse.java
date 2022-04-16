@@ -23,7 +23,7 @@ public final class AzureAppPushReceiverResponse extends com.pulumi.resources.Inv
     @Import(name="emailAddress", required=true)
       private final String emailAddress;
 
-    public String getEmailAddress() {
+    public String emailAddress() {
         return this.emailAddress;
     }
 
@@ -34,7 +34,7 @@ public final class AzureAppPushReceiverResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

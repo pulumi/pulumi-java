@@ -152,126 +152,126 @@ public final class GetScriptExecutionResult {
      * Standard error output stream from the powershell execution
      * 
     */
-    public List<String> getErrors() {
+    public List<String> errors() {
         return this.errors;
     }
     /**
      * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
      * 
     */
-    public Optional<String> getFailureReason() {
+    public Optional<String> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
      * Time the script execution was finished
      * 
     */
-    public String getFinishedAt() {
+    public String finishedAt() {
         return this.finishedAt;
     }
     /**
      * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
      * 
     */
-    public List<Object> getHiddenParameters() {
+    public List<Object> hiddenParameters() {
         return this.hiddenParameters == null ? List.of() : this.hiddenParameters;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Standard information out stream from the powershell execution
      * 
     */
-    public List<String> getInformation() {
+    public List<String> information() {
         return this.information;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * User-defined dictionary.
      * 
     */
-    public Map<String,Object> getNamedOutputs() {
+    public Map<String,Object> namedOutputs() {
         return this.namedOutputs == null ? Map.of() : this.namedOutputs;
     }
     /**
      * Standard output stream from the powershell execution
      * 
     */
-    public List<String> getOutput() {
+    public List<String> output() {
         return this.output == null ? List.of() : this.output;
     }
     /**
      * Parameters the script will accept
      * 
     */
-    public List<Object> getParameters() {
+    public List<Object> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The state of the script execution resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Time to live for the resource. If not provided, will be available for 60 days
      * 
     */
-    public Optional<String> getRetention() {
+    public Optional<String> retention() {
         return Optional.ofNullable(this.retention);
     }
     /**
      * A reference to the script cmdlet resource if user is running a AVS script
      * 
     */
-    public Optional<String> getScriptCmdletId() {
+    public Optional<String> scriptCmdletId() {
         return Optional.ofNullable(this.scriptCmdletId);
     }
     /**
      * Time the script execution was started
      * 
     */
-    public String getStartedAt() {
+    public String startedAt() {
         return this.startedAt;
     }
     /**
      * Time the script execution was submitted
      * 
     */
-    public String getSubmittedAt() {
+    public String submittedAt() {
         return this.submittedAt;
     }
     /**
      * Time limit for execution
      * 
     */
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Standard warning out stream from the powershell execution
      * 
     */
-    public List<String> getWarnings() {
+    public List<String> warnings() {
         return this.warnings;
     }
 

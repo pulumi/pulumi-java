@@ -61,42 +61,42 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
      * The on-premises integration runtime host URL.
      * 
     */
-    public String getHostServiceUri() {
+    public String hostServiceUri() {
         return this.hostServiceUri;
     }
     /**
      * The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
      * 
     */
-    public String getIdentityCertThumbprint() {
+    public String identityCertThumbprint() {
         return this.identityCertThumbprint;
     }
     /**
      * Whether the identity certificate is expired.
      * 
     */
-    public Boolean getIsIdentityCertExprired() {
+    public Boolean isIdentityCertExprired() {
         return this.isIdentityCertExprired;
     }
     /**
      * The public key for encrypting a credential when transferring the credential to the integration runtime.
      * 
     */
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
     /**
      * The token generated in service. Callers use this token to authenticate to integration runtime.
      * 
     */
-    public String getServiceToken() {
+    public String serviceToken() {
         return this.serviceToken;
     }
     /**
      * The integration runtime version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

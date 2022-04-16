@@ -93,70 +93,70 @@ public final class GetVirtualNetworkLinkResult {
      * The ETag of the virtual network link.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Azure Region where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
      * 
     */
-    public Optional<Boolean> getRegistrationEnabled() {
+    public Optional<Boolean> registrationEnabled() {
         return Optional.ofNullable(this.registrationEnabled);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The reference of the virtual network.
      * 
     */
-    public Optional<SubResourceResponse> getVirtualNetwork() {
+    public Optional<SubResourceResponse> virtualNetwork() {
         return Optional.ofNullable(this.virtualNetwork);
     }
     /**
      * The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
      * 
     */
-    public String getVirtualNetworkLinkState() {
+    public String virtualNetworkLinkState() {
         return this.virtualNetworkLinkState;
     }
 

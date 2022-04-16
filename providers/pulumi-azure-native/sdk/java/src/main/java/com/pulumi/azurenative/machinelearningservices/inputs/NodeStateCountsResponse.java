@@ -23,7 +23,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="idleNodeCount", required=true)
       private final Integer idleNodeCount;
 
-    public Integer getIdleNodeCount() {
+    public Integer idleNodeCount() {
         return this.idleNodeCount;
     }
 
@@ -34,7 +34,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="leavingNodeCount", required=true)
       private final Integer leavingNodeCount;
 
-    public Integer getLeavingNodeCount() {
+    public Integer leavingNodeCount() {
         return this.leavingNodeCount;
     }
 
@@ -45,7 +45,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="preemptedNodeCount", required=true)
       private final Integer preemptedNodeCount;
 
-    public Integer getPreemptedNodeCount() {
+    public Integer preemptedNodeCount() {
         return this.preemptedNodeCount;
     }
 
@@ -56,7 +56,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="preparingNodeCount", required=true)
       private final Integer preparingNodeCount;
 
-    public Integer getPreparingNodeCount() {
+    public Integer preparingNodeCount() {
         return this.preparingNodeCount;
     }
 
@@ -67,7 +67,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="runningNodeCount", required=true)
       private final Integer runningNodeCount;
 
-    public Integer getRunningNodeCount() {
+    public Integer runningNodeCount() {
         return this.runningNodeCount;
     }
 
@@ -78,7 +78,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="unusableNodeCount", required=true)
       private final Integer unusableNodeCount;
 
-    public Integer getUnusableNodeCount() {
+    public Integer unusableNodeCount() {
         return this.unusableNodeCount;
     }
 

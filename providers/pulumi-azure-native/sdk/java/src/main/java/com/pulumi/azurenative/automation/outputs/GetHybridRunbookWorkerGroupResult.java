@@ -73,49 +73,49 @@ public final class GetHybridRunbookWorkerGroupResult {
      * Sets the credential of a worker group.
      * 
     */
-    public Optional<RunAsCredentialAssociationPropertyResponse> getCredential() {
+    public Optional<RunAsCredentialAssociationPropertyResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Type of the HybridWorkerGroup.
      * 
     */
-    public Optional<String> getGroupType() {
+    public Optional<String> groupType() {
         return Optional.ofNullable(this.groupType);
     }
     /**
      * Gets or sets the list of hybrid runbook workers.
      * 
     */
-    public List<HybridRunbookWorkerLegacyResponse> getHybridRunbookWorkers() {
+    public List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers() {
         return this.hybridRunbookWorkers == null ? List.of() : this.hybridRunbookWorkers;
     }
     /**
      * Gets or sets the id of the resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Gets or sets the name of the group.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource system metadata.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

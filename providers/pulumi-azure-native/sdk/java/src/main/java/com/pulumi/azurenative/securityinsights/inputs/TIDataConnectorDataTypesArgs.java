@@ -26,7 +26,7 @@ public final class TIDataConnectorDataTypesArgs extends com.pulumi.resources.Res
     @Import(name="indicators")
       private final @Nullable Output<TIDataConnectorDataTypesIndicatorsArgs> indicators;
 
-    public Output<TIDataConnectorDataTypesIndicatorsArgs> getIndicators() {
+    public Output<TIDataConnectorDataTypesIndicatorsArgs> indicators() {
         return this.indicators == null ? Codegen.empty() : this.indicators;
     }
 

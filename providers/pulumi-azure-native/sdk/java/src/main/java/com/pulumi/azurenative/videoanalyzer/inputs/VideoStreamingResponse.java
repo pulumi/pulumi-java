@@ -31,7 +31,7 @@ public final class VideoStreamingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="archiveBaseUrl")
       private final @Nullable String archiveBaseUrl;
 
-    public Optional<String> getArchiveBaseUrl() {
+    public Optional<String> archiveBaseUrl() {
         return this.archiveBaseUrl == null ? Optional.empty() : Optional.ofNullable(this.archiveBaseUrl);
     }
 

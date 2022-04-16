@@ -19,7 +19,7 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
     @Import(name="privateDnsZoneGroupName", required=true)
       private final String privateDnsZoneGroupName;
 
-    public String getPrivateDnsZoneGroupName() {
+    public String privateDnsZoneGroupName() {
         return this.privateDnsZoneGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
     @Import(name="privateEndpointName", required=true)
       private final String privateEndpointName;
 
-    public String getPrivateEndpointName() {
+    public String privateEndpointName() {
         return this.privateEndpointName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

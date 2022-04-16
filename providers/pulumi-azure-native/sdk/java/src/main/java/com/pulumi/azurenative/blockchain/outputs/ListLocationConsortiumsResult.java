@@ -26,7 +26,7 @@ public final class ListLocationConsortiumsResult {
      * Gets or sets the collection of consortiums.
      * 
     */
-    public List<ConsortiumResponse> getValue() {
+    public List<ConsortiumResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

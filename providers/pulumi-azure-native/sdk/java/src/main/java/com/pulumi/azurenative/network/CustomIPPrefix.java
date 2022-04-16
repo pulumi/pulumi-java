@@ -45,7 +45,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The prefix range in CIDR notation. Should include the start address and the prefix length.
      * 
      */
-    public Output</* @Nullable */ String> getCidr() {
+    public Output</* @Nullable */ String> cidr() {
         return this.cidr;
     }
     /**
@@ -59,7 +59,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The commissioned state of the Custom IP Prefix.
      * 
      */
-    public Output</* @Nullable */ String> getCommissionedState() {
+    public Output</* @Nullable */ String> commissionedState() {
         return this.commissionedState;
     }
     /**
@@ -73,7 +73,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -87,7 +87,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The extended location of the custom IP prefix.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -101,7 +101,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the custom IP prefix resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +143,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The list of all referenced PublicIpPrefixes.
      * 
      */
-    public Output<List<SubResourceResponse>> getPublicIpPrefixes() {
+    public Output<List<SubResourceResponse>> publicIpPrefixes() {
         return this.publicIpPrefixes;
     }
     /**
@@ -157,7 +157,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The resource GUID property of the custom IP prefix resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -171,7 +171,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -199,7 +199,7 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

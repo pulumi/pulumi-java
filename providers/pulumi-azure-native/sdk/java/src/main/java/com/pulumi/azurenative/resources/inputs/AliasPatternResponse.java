@@ -25,7 +25,7 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="phrase")
       private final @Nullable String phrase;
 
-    public Optional<String> getPhrase() {
+    public Optional<String> phrase() {
         return this.phrase == null ? Optional.empty() : Optional.ofNullable(this.phrase);
     }
 
@@ -36,7 +36,7 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -47,7 +47,7 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="variable")
       private final @Nullable String variable;
 
-    public Optional<String> getVariable() {
+    public Optional<String> variable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
     }
 

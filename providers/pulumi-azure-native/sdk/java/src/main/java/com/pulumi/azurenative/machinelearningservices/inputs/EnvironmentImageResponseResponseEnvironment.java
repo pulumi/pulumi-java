@@ -30,7 +30,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="docker")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
 
-    public Optional<ModelEnvironmentDefinitionResponseResponseDocker> getDocker() {
+    public Optional<ModelEnvironmentDefinitionResponseResponseDocker> docker() {
         return this.docker == null ? Optional.empty() : Optional.ofNullable(this.docker);
     }
 
@@ -41,7 +41,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
@@ -52,7 +52,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="inferencingStackVersion")
       private final @Nullable String inferencingStackVersion;
 
-    public Optional<String> getInferencingStackVersion() {
+    public Optional<String> inferencingStackVersion() {
         return this.inferencingStackVersion == null ? Optional.empty() : Optional.ofNullable(this.inferencingStackVersion);
     }
 
@@ -63,7 +63,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -74,7 +74,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="python")
       private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
 
-    public Optional<ModelEnvironmentDefinitionResponseResponsePython> getPython() {
+    public Optional<ModelEnvironmentDefinitionResponseResponsePython> python() {
         return this.python == null ? Optional.empty() : Optional.ofNullable(this.python);
     }
 
@@ -85,7 +85,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="r")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
 
-    public Optional<ModelEnvironmentDefinitionResponseResponseR> getR() {
+    public Optional<ModelEnvironmentDefinitionResponseResponseR> r() {
         return this.r == null ? Optional.empty() : Optional.ofNullable(this.r);
     }
 
@@ -96,7 +96,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="spark")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
 
-    public Optional<ModelEnvironmentDefinitionResponseResponseSpark> getSpark() {
+    public Optional<ModelEnvironmentDefinitionResponseResponseSpark> spark() {
         return this.spark == null ? Optional.empty() : Optional.ofNullable(this.spark);
     }
 
@@ -107,7 +107,7 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

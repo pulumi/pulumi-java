@@ -59,36 +59,36 @@ public final class VMExtensionResponse {
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
     */
-    public Optional<Boolean> getAutoUpgradeMinorVersion() {
+    public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
     */
-    public Optional<Object> getProtectedSettings() {
+    public Optional<Object> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
      * Collection of extension names after which this extension needs to be provisioned.
      * 
     */
-    public List<String> getProvisionAfterExtensions() {
+    public List<String> provisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
-    public Optional<Object> getSettings() {
+    public Optional<Object> settings() {
         return Optional.ofNullable(this.settings);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public Optional<String> getTypeHandlerVersion() {
+    public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
 

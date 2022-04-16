@@ -48,7 +48,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -62,7 +62,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -76,7 +76,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The resource of private end point.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -104,7 +104,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -118,7 +118,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The provisioning state of the private endpoint connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -132,7 +132,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The sku of the workspace.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -146,7 +146,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -160,7 +160,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -174,7 +174,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class OSDiskImageEncryptionResponse extends com.pulumi.resources.In
     @Import(name="diskEncryptionSetId")
       private final @Nullable String diskEncryptionSetId;
 
-    public Optional<String> getDiskEncryptionSetId() {
+    public Optional<String> diskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
     }
 

@@ -24,7 +24,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
 
-    public Output<String> getBackupPolicyName() {
+    public Output<String> backupPolicyName() {
         return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
     }
 
@@ -35,7 +35,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -46,7 +46,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -68,7 +68,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeIds", required=true)
       private final Output<List<String>> volumeIds;
 
-    public Output<List<String>> getVolumeIds() {
+    public Output<List<String>> volumeIds() {
         return this.volumeIds;
     }
 

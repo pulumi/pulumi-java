@@ -25,7 +25,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="attachedDatabaseConfigurationName")
       private final @Nullable Output<String> attachedDatabaseConfigurationName;
 
-    public Output<String> getAttachedDatabaseConfigurationName() {
+    public Output<String> attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName == null ? Codegen.empty() : this.attachedDatabaseConfigurationName;
     }
 
@@ -36,7 +36,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -47,7 +47,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="clusterResourceId", required=true)
       private final Output<String> clusterResourceId;
 
-    public Output<String> getClusterResourceId() {
+    public Output<String> clusterResourceId() {
         return this.clusterResourceId;
     }
 
@@ -58,7 +58,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -69,7 +69,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="defaultPrincipalsModificationKind", required=true)
       private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
-    public Output<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
+    public Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
 
@@ -80,7 +80,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -91,7 +91,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
     @Import(name="tableLevelSharingProperties")
       private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
-    public Output<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
+    public Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties() {
         return this.tableLevelSharingProperties == null ? Codegen.empty() : this.tableLevelSharingProperties;
     }
 

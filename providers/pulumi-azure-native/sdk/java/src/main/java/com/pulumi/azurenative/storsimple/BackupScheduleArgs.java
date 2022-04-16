@@ -27,7 +27,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backupPolicyName", required=true)
       private final Output<String> backupPolicyName;
 
-    public Output<String> getBackupPolicyName() {
+    public Output<String> backupPolicyName() {
         return this.backupPolicyName;
     }
 
@@ -38,7 +38,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backupScheduleName")
       private final @Nullable Output<String> backupScheduleName;
 
-    public Output<String> getBackupScheduleName() {
+    public Output<String> backupScheduleName() {
         return this.backupScheduleName == null ? Codegen.empty() : this.backupScheduleName;
     }
 
@@ -49,7 +49,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="backupType", required=true)
       private final Output<BackupType> backupType;
 
-    public Output<BackupType> getBackupType() {
+    public Output<BackupType> backupType() {
         return this.backupType;
     }
 
@@ -60,7 +60,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -71,7 +71,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -82,7 +82,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -93,7 +93,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retentionCount", required=true)
       private final Output<Double> retentionCount;
 
-    public Output<Double> getRetentionCount() {
+    public Output<Double> retentionCount() {
         return this.retentionCount;
     }
 
@@ -115,7 +115,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scheduleRecurrence", required=true)
       private final Output<ScheduleRecurrenceArgs> scheduleRecurrence;
 
-    public Output<ScheduleRecurrenceArgs> getScheduleRecurrence() {
+    public Output<ScheduleRecurrenceArgs> scheduleRecurrence() {
         return this.scheduleRecurrence;
     }
 
@@ -126,7 +126,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scheduleStatus", required=true)
       private final Output<ScheduleStatus> scheduleStatus;
 
-    public Output<ScheduleStatus> getScheduleStatus() {
+    public Output<ScheduleStatus> scheduleStatus() {
         return this.scheduleStatus;
     }
 
@@ -137,7 +137,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

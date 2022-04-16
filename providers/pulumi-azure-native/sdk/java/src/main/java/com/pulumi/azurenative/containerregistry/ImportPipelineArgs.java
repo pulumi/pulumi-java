@@ -28,7 +28,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> getIdentity() {
+    public Output<IdentityPropertiesArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -39,7 +39,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="importPipelineName")
       private final @Nullable Output<String> importPipelineName;
 
-    public Output<String> getImportPipelineName() {
+    public Output<String> importPipelineName() {
         return this.importPipelineName == null ? Codegen.empty() : this.importPipelineName;
     }
 
@@ -50,7 +50,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="options")
       private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
-    public Output<List<Either<String,PipelineOptions>>> getOptions() {
+    public Output<List<Either<String,PipelineOptions>>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -72,7 +72,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -83,7 +83,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="source", required=true)
       private final Output<ImportPipelineSourcePropertiesArgs> source;
 
-    public Output<ImportPipelineSourcePropertiesArgs> getSource() {
+    public Output<ImportPipelineSourcePropertiesArgs> source() {
         return this.source;
     }
 
@@ -105,7 +105,7 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="trigger")
       private final @Nullable Output<PipelineTriggerPropertiesArgs> trigger;
 
-    public Output<PipelineTriggerPropertiesArgs> getTrigger() {
+    public Output<PipelineTriggerPropertiesArgs> trigger() {
         return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 

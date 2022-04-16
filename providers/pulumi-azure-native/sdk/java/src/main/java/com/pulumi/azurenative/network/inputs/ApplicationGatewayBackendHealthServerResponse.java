@@ -26,7 +26,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="address")
       private final @Nullable String address;
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="health")
       private final @Nullable String health;
 
-    public Optional<String> getHealth() {
+    public Optional<String> health() {
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="healthProbeLog")
       private final @Nullable String healthProbeLog;
 
-    public Optional<String> getHealthProbeLog() {
+    public Optional<String> healthProbeLog() {
         return this.healthProbeLog == null ? Optional.empty() : Optional.ofNullable(this.healthProbeLog);
     }
 
@@ -59,7 +59,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="ipConfiguration")
       private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
-    public Optional<NetworkInterfaceIPConfigurationResponse> getIpConfiguration() {
+    public Optional<NetworkInterfaceIPConfigurationResponse> ipConfiguration() {
         return this.ipConfiguration == null ? Optional.empty() : Optional.ofNullable(this.ipConfiguration);
     }
 

@@ -24,7 +24,7 @@ public final class ResourceReferenceResponse {
      * The fully qualified resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

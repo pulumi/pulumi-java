@@ -19,7 +19,7 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationName", required=true)
       private final String automationName;
 
-    public String getAutomationName() {
+    public String automationName() {
         return this.automationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

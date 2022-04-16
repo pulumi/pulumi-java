@@ -19,7 +19,7 @@ public final class AzureADMetricsPropertiesFormatResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

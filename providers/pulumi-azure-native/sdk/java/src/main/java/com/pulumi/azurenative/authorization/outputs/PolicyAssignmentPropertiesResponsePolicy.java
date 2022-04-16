@@ -42,21 +42,21 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
      * Id of the policy
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the entity last modified it
      * 
     */
-    public PrincipalResponse getLastModifiedBy() {
+    public PrincipalResponse lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The last modified date time.
      * 
     */
-    public Optional<String> getLastModifiedDateTime() {
+    public Optional<String> lastModifiedDateTime() {
         return Optional.ofNullable(this.lastModifiedDateTime);
     }
 

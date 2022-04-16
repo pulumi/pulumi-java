@@ -23,7 +23,7 @@ public final class IscsiLunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managedDiskAzureResourceId", required=true)
       private final String managedDiskAzureResourceId;
 
-    public String getManagedDiskAzureResourceId() {
+    public String managedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
     }
 
@@ -34,7 +34,7 @@ public final class IscsiLunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

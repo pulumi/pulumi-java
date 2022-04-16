@@ -25,7 +25,7 @@ public final class FacebookPageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accessToken")
       private final @Nullable String accessToken;
 
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
     }
 
@@ -36,7 +36,7 @@ public final class FacebookPageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

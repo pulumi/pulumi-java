@@ -24,7 +24,7 @@ public final class ManagerSkuResponse {
      * Refers to the sku name which should be "Standard"
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

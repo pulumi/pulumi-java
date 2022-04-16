@@ -24,7 +24,7 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mode")
       private final @Nullable Output<Either<String,DataMaskingMode>> mode;
 
-    public Output<Either<String,DataMaskingMode>> getMode() {
+    public Output<Either<String,DataMaskingMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -35,7 +35,7 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -27,7 +27,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
     @Import(name="assignPermissions")
       private final @Nullable Output<Boolean> assignPermissions;
 
-    public Output<Boolean> getAssignPermissions() {
+    public Output<Boolean> assignPermissions() {
         return this.assignPermissions == null ? Codegen.empty() : this.assignPermissions;
     }
 
@@ -38,7 +38,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends com.pulumi.reso
     @Import(name="strongType")
       private final @Nullable Output<String> strongType;
 
-    public Output<String> getStrongType() {
+    public Output<String> strongType() {
         return this.strongType == null ? Codegen.empty() : this.strongType;
     }
 

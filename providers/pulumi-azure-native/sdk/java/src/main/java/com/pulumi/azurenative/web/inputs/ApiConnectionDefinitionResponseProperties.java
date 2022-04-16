@@ -22,7 +22,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="api")
       private final @Nullable ApiReferenceResponse api;
 
-    public Optional<ApiReferenceResponse> getApi() {
+    public Optional<ApiReferenceResponse> api() {
         return this.api == null ? Optional.empty() : Optional.ofNullable(this.api);
     }
 
@@ -33,7 +33,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="changedTime")
       private final @Nullable String changedTime;
 
-    public Optional<String> getChangedTime() {
+    public Optional<String> changedTime() {
         return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
     }
 
@@ -44,7 +44,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
@@ -55,7 +55,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="customParameterValues")
       private final @Nullable Map<String,String> customParameterValues;
 
-    public Map<String,String> getCustomParameterValues() {
+    public Map<String,String> customParameterValues() {
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
     }
 
@@ -66,7 +66,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -77,7 +77,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="nonSecretParameterValues")
       private final @Nullable Map<String,String> nonSecretParameterValues;
 
-    public Map<String,String> getNonSecretParameterValues() {
+    public Map<String,String> nonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
     }
 
@@ -88,7 +88,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="parameterValues")
       private final @Nullable Map<String,String> parameterValues;
 
-    public Map<String,String> getParameterValues() {
+    public Map<String,String> parameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
 
@@ -99,7 +99,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="statuses")
       private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
 
-    public List<ConnectionStatusDefinitionResponse> getStatuses() {
+    public List<ConnectionStatusDefinitionResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 
@@ -110,7 +110,7 @@ public final class ApiConnectionDefinitionResponseProperties extends com.pulumi.
     @Import(name="testLinks")
       private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
-    public List<ApiConnectionTestLinkResponse> getTestLinks() {
+    public List<ApiConnectionTestLinkResponse> testLinks() {
         return this.testLinks == null ? List.of() : this.testLinks;
     }
 

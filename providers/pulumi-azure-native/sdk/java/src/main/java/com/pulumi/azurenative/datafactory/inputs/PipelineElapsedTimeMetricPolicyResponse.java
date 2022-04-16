@@ -25,7 +25,7 @@ public final class PipelineElapsedTimeMetricPolicyResponse extends com.pulumi.re
     @Import(name="duration")
       private final @Nullable Object duration;
 
-    public Optional<Object> getDuration() {
+    public Optional<Object> duration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 

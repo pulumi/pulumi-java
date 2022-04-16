@@ -31,7 +31,7 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="applicationHealthPolicy")
       private final @Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
 
-    public Output<ArmApplicationHealthPolicyArgs> getApplicationHealthPolicy() {
+    public Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy() {
         return this.applicationHealthPolicy == null ? Codegen.empty() : this.applicationHealthPolicy;
     }
 
@@ -42,7 +42,7 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="forceRestart")
       private final @Nullable Output<Boolean> forceRestart;
 
-    public Output<Boolean> getForceRestart() {
+    public Output<Boolean> forceRestart() {
         return this.forceRestart == null ? Codegen.empty() : this.forceRestart;
     }
 
@@ -53,7 +53,7 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="recreateApplication")
       private final @Nullable Output<Boolean> recreateApplication;
 
-    public Output<Boolean> getRecreateApplication() {
+    public Output<Boolean> recreateApplication() {
         return this.recreateApplication == null ? Codegen.empty() : this.recreateApplication;
     }
 
@@ -64,7 +64,7 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="rollingUpgradeMonitoringPolicy")
       private final @Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
 
-    public Output<ArmRollingUpgradeMonitoringPolicyArgs> getRollingUpgradeMonitoringPolicy() {
+    public Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy() {
         return this.rollingUpgradeMonitoringPolicy == null ? Codegen.empty() : this.rollingUpgradeMonitoringPolicy;
     }
 
@@ -75,7 +75,7 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="upgradeMode")
       private final @Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode;
 
-    public Output<Either<String,RollingUpgradeMode>> getUpgradeMode() {
+    public Output<Either<String,RollingUpgradeMode>> upgradeMode() {
         return this.upgradeMode == null ? Codegen.empty() : this.upgradeMode;
     }
 
@@ -86,7 +86,7 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="upgradeReplicaSetCheckTimeout")
       private final @Nullable Output<String> upgradeReplicaSetCheckTimeout;
 
-    public Output<String> getUpgradeReplicaSetCheckTimeout() {
+    public Output<String> upgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout == null ? Codegen.empty() : this.upgradeReplicaSetCheckTimeout;
     }
 

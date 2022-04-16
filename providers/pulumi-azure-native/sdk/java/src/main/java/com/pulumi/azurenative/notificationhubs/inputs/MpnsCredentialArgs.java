@@ -26,7 +26,7 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificateKey")
       private final @Nullable Output<String> certificateKey;
 
-    public Output<String> getCertificateKey() {
+    public Output<String> certificateKey() {
         return this.certificateKey == null ? Codegen.empty() : this.certificateKey;
     }
 
@@ -37,7 +37,7 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mpnsCertificate")
       private final @Nullable Output<String> mpnsCertificate;
 
-    public Output<String> getMpnsCertificate() {
+    public Output<String> mpnsCertificate() {
         return this.mpnsCertificate == null ? Codegen.empty() : this.mpnsCertificate;
     }
 
@@ -48,7 +48,7 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

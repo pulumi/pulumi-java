@@ -35,14 +35,14 @@ public final class ComputeIsolationPropertiesResponse {
      * The flag indicates whether enable compute isolation or not.
      * 
     */
-    public Optional<Boolean> getEnableComputeIsolation() {
+    public Optional<Boolean> enableComputeIsolation() {
         return Optional.ofNullable(this.enableComputeIsolation);
     }
     /**
      * The host sku.
      * 
     */
-    public Optional<String> getHostSku() {
+    public Optional<String> hostSku() {
         return Optional.ofNullable(this.hostSku);
     }
 

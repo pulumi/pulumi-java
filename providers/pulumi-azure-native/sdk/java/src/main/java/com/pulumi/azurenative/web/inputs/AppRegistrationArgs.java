@@ -26,7 +26,7 @@ public final class AppRegistrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -37,7 +37,7 @@ public final class AppRegistrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appSecretSettingName")
       private final @Nullable Output<String> appSecretSettingName;
 
-    public Output<String> getAppSecretSettingName() {
+    public Output<String> appSecretSettingName() {
         return this.appSecretSettingName == null ? Codegen.empty() : this.appSecretSettingName;
     }
 

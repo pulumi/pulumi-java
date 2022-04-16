@@ -26,7 +26,7 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
     @Import(name="doNotPersistState")
       private final @Nullable Boolean doNotPersistState;
 
-    public Optional<Boolean> getDoNotPersistState() {
+    public Optional<Boolean> doNotPersistState() {
         return this.doNotPersistState == null ? Optional.empty() : Optional.ofNullable(this.doNotPersistState);
     }
 
@@ -37,7 +37,7 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

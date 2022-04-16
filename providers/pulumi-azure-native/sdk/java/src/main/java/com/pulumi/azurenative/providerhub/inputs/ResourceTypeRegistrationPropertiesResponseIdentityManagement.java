@@ -17,14 +17,14 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

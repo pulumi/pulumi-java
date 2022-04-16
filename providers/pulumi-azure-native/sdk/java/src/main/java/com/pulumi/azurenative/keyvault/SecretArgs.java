@@ -24,7 +24,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<SecretPropertiesArgs> properties;
 
-    public Output<SecretPropertiesArgs> getProperties() {
+    public Output<SecretPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -35,7 +35,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -46,7 +46,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 
@@ -57,7 +57,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 

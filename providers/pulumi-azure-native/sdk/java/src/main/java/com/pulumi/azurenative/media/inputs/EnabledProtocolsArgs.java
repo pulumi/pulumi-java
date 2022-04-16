@@ -25,7 +25,7 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dash", required=true)
       private final Output<Boolean> dash;
 
-    public Output<Boolean> getDash() {
+    public Output<Boolean> dash() {
         return this.dash;
     }
 
@@ -36,7 +36,7 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="download", required=true)
       private final Output<Boolean> download;
 
-    public Output<Boolean> getDownload() {
+    public Output<Boolean> download() {
         return this.download;
     }
 
@@ -47,7 +47,7 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hls", required=true)
       private final Output<Boolean> hls;
 
-    public Output<Boolean> getHls() {
+    public Output<Boolean> hls() {
         return this.hls;
     }
 
@@ -58,7 +58,7 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="smoothStreaming", required=true)
       private final Output<Boolean> smoothStreaming;
 
-    public Output<Boolean> getSmoothStreaming() {
+    public Output<Boolean> smoothStreaming() {
         return this.smoothStreaming;
     }
 

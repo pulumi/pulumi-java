@@ -47,28 +47,28 @@ public final class AlexaChannelPropertiesResponse {
      * The Alexa skill Id
      * 
     */
-    public String getAlexaSkillId() {
+    public String alexaSkillId() {
         return this.alexaSkillId;
     }
     /**
      * Whether this channel is enabled for the bot
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * Full Uri used to configured the skill in Alexa
      * 
     */
-    public String getServiceEndpointUri() {
+    public String serviceEndpointUri() {
         return this.serviceEndpointUri;
     }
     /**
      * Url fragment used in part of the Uri configured in Alexa
      * 
     */
-    public String getUrlFragment() {
+    public String urlFragment() {
         return this.urlFragment;
     }
 

@@ -26,7 +26,7 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends com.
     @Import(name="subscriptions")
       private final @Nullable List<String> subscriptions;
 
-    public List<String> getSubscriptions() {
+    public List<String> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
 

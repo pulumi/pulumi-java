@@ -35,7 +35,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="arguments")
       private final @Nullable Output<List<Object>> arguments;
 
-    public Output<List<Object>> getArguments() {
+    public Output<List<Object>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -46,7 +46,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="className")
       private final @Nullable Output<String> className;
 
-    public Output<String> getClassName() {
+    public Output<String> className() {
         return this.className == null ? Codegen.empty() : this.className;
     }
 
@@ -57,7 +57,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -68,7 +68,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -79,7 +79,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="entryFilePath", required=true)
       private final Output<Object> entryFilePath;
 
-    public Output<Object> getEntryFilePath() {
+    public Output<Object> entryFilePath() {
         return this.entryFilePath;
     }
 
@@ -90,7 +90,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="getDebugInfo")
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
+    public Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo() {
         return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
     }
 
@@ -101,7 +101,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -112,7 +112,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -123,7 +123,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -134,7 +134,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="proxyUser")
       private final @Nullable Output<Object> proxyUser;
 
-    public Output<Object> getProxyUser() {
+    public Output<Object> proxyUser() {
         return this.proxyUser == null ? Codegen.empty() : this.proxyUser;
     }
 
@@ -145,7 +145,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="rootPath", required=true)
       private final Output<Object> rootPath;
 
-    public Output<Object> getRootPath() {
+    public Output<Object> rootPath() {
         return this.rootPath;
     }
 
@@ -156,7 +156,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="sparkConfig")
       private final @Nullable Output<Map<String,Object>> sparkConfig;
 
-    public Output<Map<String,Object>> getSparkConfig() {
+    public Output<Map<String,Object>> sparkConfig() {
         return this.sparkConfig == null ? Codegen.empty() : this.sparkConfig;
     }
 
@@ -167,7 +167,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="sparkJobLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> getSparkJobLinkedService() {
+    public Output<LinkedServiceReferenceArgs> sparkJobLinkedService() {
         return this.sparkJobLinkedService == null ? Codegen.empty() : this.sparkJobLinkedService;
     }
 
@@ -179,7 +179,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -190,7 +190,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

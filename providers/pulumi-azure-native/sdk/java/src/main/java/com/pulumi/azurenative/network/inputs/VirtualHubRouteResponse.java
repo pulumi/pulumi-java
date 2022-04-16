@@ -26,7 +26,7 @@ public final class VirtualHubRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="addressPrefixes")
       private final @Nullable List<String> addressPrefixes;
 
-    public List<String> getAddressPrefixes() {
+    public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualHubRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="nextHopIpAddress")
       private final @Nullable String nextHopIpAddress;
 
-    public Optional<String> getNextHopIpAddress() {
+    public Optional<String> nextHopIpAddress() {
         return this.nextHopIpAddress == null ? Optional.empty() : Optional.ofNullable(this.nextHopIpAddress);
     }
 

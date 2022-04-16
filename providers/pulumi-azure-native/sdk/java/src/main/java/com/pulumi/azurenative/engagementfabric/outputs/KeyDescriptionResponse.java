@@ -39,21 +39,21 @@ public final class KeyDescriptionResponse {
      * The name of the key
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The rank of the key
      * 
     */
-    public String getRank() {
+    public String rank() {
         return this.rank;
     }
     /**
      * The value of the key
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

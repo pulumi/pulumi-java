@@ -26,13 +26,13 @@ public final class ThrottlingRuleResponse {
         this.requiredFeatures = requiredFeatures;
     }
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
-    public List<ThrottlingMetricResponse> getMetrics() {
+    public List<ThrottlingMetricResponse> metrics() {
         return this.metrics;
     }
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 

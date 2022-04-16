@@ -47,28 +47,28 @@ public final class GetCertificateResult {
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the certificate resource payload.
      * 
     */
-    public CertificatePropertiesResponse getProperties() {
+    public CertificatePropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

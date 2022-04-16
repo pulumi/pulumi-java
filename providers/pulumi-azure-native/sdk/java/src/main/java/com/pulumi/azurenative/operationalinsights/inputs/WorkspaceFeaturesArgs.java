@@ -27,7 +27,7 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterResourceId")
       private final @Nullable Output<String> clusterResourceId;
 
-    public Output<String> getClusterResourceId() {
+    public Output<String> clusterResourceId() {
         return this.clusterResourceId == null ? Codegen.empty() : this.clusterResourceId;
     }
 
@@ -38,7 +38,7 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Output<Boolean> getDisableLocalAuth() {
+    public Output<Boolean> disableLocalAuth() {
         return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
     }
 
@@ -49,7 +49,7 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enableDataExport")
       private final @Nullable Output<Boolean> enableDataExport;
 
-    public Output<Boolean> getEnableDataExport() {
+    public Output<Boolean> enableDataExport() {
         return this.enableDataExport == null ? Codegen.empty() : this.enableDataExport;
     }
 
@@ -60,7 +60,7 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enableLogAccessUsingOnlyResourcePermissions")
       private final @Nullable Output<Boolean> enableLogAccessUsingOnlyResourcePermissions;
 
-    public Output<Boolean> getEnableLogAccessUsingOnlyResourcePermissions() {
+    public Output<Boolean> enableLogAccessUsingOnlyResourcePermissions() {
         return this.enableLogAccessUsingOnlyResourcePermissions == null ? Codegen.empty() : this.enableLogAccessUsingOnlyResourcePermissions;
     }
 
@@ -71,7 +71,7 @@ public final class WorkspaceFeaturesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="immediatePurgeDataOn30Days")
       private final @Nullable Output<Boolean> immediatePurgeDataOn30Days;
 
-    public Output<Boolean> getImmediatePurgeDataOn30Days() {
+    public Output<Boolean> immediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days == null ? Codegen.empty() : this.immediatePurgeDataOn30Days;
     }
 

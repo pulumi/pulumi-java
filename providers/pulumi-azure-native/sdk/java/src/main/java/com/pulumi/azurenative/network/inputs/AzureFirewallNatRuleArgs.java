@@ -29,7 +29,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
+    public Output<List<String>> destinationAddresses() {
         return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
@@ -51,7 +51,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> getDestinationPorts() {
+    public Output<List<String>> destinationPorts() {
         return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
@@ -62,7 +62,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="protocols")
       private final @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
 
-    public Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> getProtocols() {
+    public Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
@@ -84,7 +84,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
+    public Output<List<String>> sourceAddresses() {
         return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
@@ -95,7 +95,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
+    public Output<List<String>> sourceIpGroups() {
         return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 
@@ -106,7 +106,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="translatedAddress")
       private final @Nullable Output<String> translatedAddress;
 
-    public Output<String> getTranslatedAddress() {
+    public Output<String> translatedAddress() {
         return this.translatedAddress == null ? Codegen.empty() : this.translatedAddress;
     }
 
@@ -117,7 +117,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="translatedFqdn")
       private final @Nullable Output<String> translatedFqdn;
 
-    public Output<String> getTranslatedFqdn() {
+    public Output<String> translatedFqdn() {
         return this.translatedFqdn == null ? Codegen.empty() : this.translatedFqdn;
     }
 
@@ -128,7 +128,7 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="translatedPort")
       private final @Nullable Output<String> translatedPort;
 
-    public Output<String> getTranslatedPort() {
+    public Output<String> translatedPort() {
         return this.translatedPort == null ? Codegen.empty() : this.translatedPort;
     }
 

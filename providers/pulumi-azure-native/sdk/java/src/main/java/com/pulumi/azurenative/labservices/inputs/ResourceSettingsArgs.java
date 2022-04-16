@@ -29,7 +29,7 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="galleryImageResourceId")
       private final @Nullable Output<String> galleryImageResourceId;
 
-    public Output<String> getGalleryImageResourceId() {
+    public Output<String> galleryImageResourceId() {
         return this.galleryImageResourceId == null ? Codegen.empty() : this.galleryImageResourceId;
     }
 
@@ -40,7 +40,7 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="referenceVm", required=true)
       private final Output<ReferenceVmArgs> referenceVm;
 
-    public Output<ReferenceVmArgs> getReferenceVm() {
+    public Output<ReferenceVmArgs> referenceVm() {
         return this.referenceVm;
     }
 
@@ -51,7 +51,7 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="size")
       private final @Nullable Output<Either<String,ManagedLabVmSize>> size;
 
-    public Output<Either<String,ManagedLabVmSize>> getSize() {
+    public Output<Either<String,ManagedLabVmSize>> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 

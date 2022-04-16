@@ -24,7 +24,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
-    public Output<String> getAddonName() {
+    public Output<String> addonName() {
         return this.addonName == null ? Codegen.empty() : this.addonName;
     }
 
@@ -35,7 +35,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonType")
       private final @Nullable Output<Either<String,AddonType>> addonType;
 
-    public Output<Either<String,AddonType>> getAddonType() {
+    public Output<Either<String,AddonType>> addonType() {
         return this.addonType == null ? Codegen.empty() : this.addonType;
     }
 
@@ -46,7 +46,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseKey")
       private final @Nullable Output<String> licenseKey;
 
-    public Output<String> getLicenseKey() {
+    public Output<String> licenseKey() {
         return this.licenseKey == null ? Codegen.empty() : this.licenseKey;
     }
 
@@ -57,7 +57,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -68,7 +68,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

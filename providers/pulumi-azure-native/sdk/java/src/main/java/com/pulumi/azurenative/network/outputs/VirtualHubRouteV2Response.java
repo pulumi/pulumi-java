@@ -49,28 +49,28 @@ public final class VirtualHubRouteV2Response {
      * The type of destinations.
      * 
     */
-    public Optional<String> getDestinationType() {
+    public Optional<String> destinationType() {
         return Optional.ofNullable(this.destinationType);
     }
     /**
      * List of all destinations.
      * 
     */
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
      * The type of next hops.
      * 
     */
-    public Optional<String> getNextHopType() {
+    public Optional<String> nextHopType() {
         return Optional.ofNullable(this.nextHopType);
     }
     /**
      * NextHops ip address.
      * 
     */
-    public List<String> getNextHops() {
+    public List<String> nextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
     }
 

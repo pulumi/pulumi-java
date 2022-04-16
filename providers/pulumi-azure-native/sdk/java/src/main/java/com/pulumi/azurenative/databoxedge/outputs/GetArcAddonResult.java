@@ -111,21 +111,21 @@ public final class GetArcAddonResult {
      * Host OS supported by the Arc addon.
      * 
     */
-    public String getHostPlatform() {
+    public String hostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the runtime is hosted.
      * 
     */
-    public String getHostPlatformType() {
+    public String hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -133,70 +133,70 @@ public final class GetArcAddonResult {
      * Expected value is 'ArcForKubernetes'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Addon Provisioning State
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Arc resource group name
      * 
     */
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * Arc resource location
      * 
     */
-    public String getResourceLocation() {
+    public String resourceLocation() {
         return this.resourceLocation;
     }
     /**
      * Arc resource Name
      * 
     */
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
     /**
      * Arc resource subscription Id
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Addon type
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Arc resource version
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

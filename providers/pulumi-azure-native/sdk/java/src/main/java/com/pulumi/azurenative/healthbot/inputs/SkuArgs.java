@@ -25,7 +25,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<SkuName> name;
 
-    public Output<SkuName> getName() {
+    public Output<SkuName> name() {
         return this.name;
     }
 

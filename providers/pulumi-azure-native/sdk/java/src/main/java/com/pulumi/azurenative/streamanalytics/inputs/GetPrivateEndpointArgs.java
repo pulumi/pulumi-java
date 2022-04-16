@@ -19,7 +19,7 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="privateEndpointName", required=true)
       private final String privateEndpointName;
 
-    public String getPrivateEndpointName() {
+    public String privateEndpointName() {
         return this.privateEndpointName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

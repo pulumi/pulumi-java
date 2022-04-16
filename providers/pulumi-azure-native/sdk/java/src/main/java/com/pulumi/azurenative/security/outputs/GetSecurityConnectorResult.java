@@ -112,84 +112,84 @@ public final class GetSecurityConnectorResult {
      * The multi cloud resource's cloud name.
      * 
     */
-    public Optional<String> getCloudName() {
+    public Optional<String> cloudName() {
         return Optional.ofNullable(this.cloudName);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The multi cloud resource identifier (account id in case of AWS connector).
      * 
     */
-    public Optional<String> getHierarchyIdentifier() {
+    public Optional<String> hierarchyIdentifier() {
         return Optional.ofNullable(this.hierarchyIdentifier);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of the resource
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A collection of offerings for the security connector.
      * 
     */
-    public List<Object> getOfferings() {
+    public List<Object> offerings() {
         return this.offerings == null ? List.of() : this.offerings;
     }
     /**
      * The multi cloud account's organizational data
      * 
     */
-    public Optional<SecurityConnectorPropertiesResponseOrganizationalData> getOrganizationalData() {
+    public Optional<SecurityConnectorPropertiesResponseOrganizationalData> organizationalData() {
         return Optional.ofNullable(this.organizationalData);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * A list of key value pairs that describe the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

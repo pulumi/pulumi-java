@@ -26,7 +26,7 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="initialRetryIntervalSeconds")
       private final @Nullable Integer initialRetryIntervalSeconds;
 
-    public Optional<Integer> getInitialRetryIntervalSeconds() {
+    public Optional<Integer> initialRetryIntervalSeconds() {
         return this.initialRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
 
@@ -37,7 +37,7 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="maximumRetryIntervalSeconds")
       private final @Nullable Integer maximumRetryIntervalSeconds;
 
-    public Optional<Integer> getMaximumRetryIntervalSeconds() {
+    public Optional<Integer> maximumRetryIntervalSeconds() {
         return this.maximumRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
 
@@ -48,7 +48,7 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="retryAttempts")
       private final @Nullable Integer retryAttempts;
 
-    public Optional<Integer> getRetryAttempts() {
+    public Optional<Integer> retryAttempts() {
         return this.retryAttempts == null ? Optional.empty() : Optional.ofNullable(this.retryAttempts);
     }
 
@@ -59,7 +59,7 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="retryIntervalBackoffMultiplier")
       private final @Nullable Double retryIntervalBackoffMultiplier;
 
-    public Optional<Double> getRetryIntervalBackoffMultiplier() {
+    public Optional<Double> retryIntervalBackoffMultiplier() {
         return this.retryIntervalBackoffMultiplier == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
 
@@ -70,7 +70,7 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
     @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
 
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
     }
 

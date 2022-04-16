@@ -26,7 +26,7 @@ public final class DailyRetentionFormatResponse extends com.pulumi.resources.Inv
     @Import(name="daysOfTheMonth")
       private final @Nullable List<DayResponse> daysOfTheMonth;
 
-    public List<DayResponse> getDaysOfTheMonth() {
+    public List<DayResponse> daysOfTheMonth() {
         return this.daysOfTheMonth == null ? List.of() : this.daysOfTheMonth;
     }
 

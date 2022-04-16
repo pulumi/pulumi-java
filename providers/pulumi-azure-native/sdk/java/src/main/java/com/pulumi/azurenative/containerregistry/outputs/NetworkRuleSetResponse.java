@@ -43,21 +43,21 @@ public final class NetworkRuleSetResponse {
      * The default action of allow or deny when no other rules match.
      * 
     */
-    public String getDefaultAction() {
+    public String defaultAction() {
         return this.defaultAction;
     }
     /**
      * The IP ACL rules.
      * 
     */
-    public List<IPRuleResponse> getIpRules() {
+    public List<IPRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * The virtual network rules.
      * 
     */
-    public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
+    public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
 

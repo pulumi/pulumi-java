@@ -27,7 +27,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoAnalyze", required=true)
       private final Output<Boolean> autoAnalyze;
 
-    public Output<Boolean> getAutoAnalyze() {
+    public Output<Boolean> autoAnalyze() {
         return this.autoAnalyze;
     }
 
@@ -38,7 +38,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="grades")
       private final @Nullable Output<List<PredictionGradesArgs>> grades;
 
-    public Output<List<PredictionGradesArgs>> getGrades() {
+    public Output<List<PredictionGradesArgs>> grades() {
         return this.grades == null ? Codegen.empty() : this.grades;
     }
 
@@ -71,7 +71,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -82,7 +82,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="involvedInteractionTypes")
       private final @Nullable Output<List<String>> involvedInteractionTypes;
 
-    public Output<List<String>> getInvolvedInteractionTypes() {
+    public Output<List<String>> involvedInteractionTypes() {
         return this.involvedInteractionTypes == null ? Codegen.empty() : this.involvedInteractionTypes;
     }
 
@@ -93,7 +93,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="involvedKpiTypes")
       private final @Nullable Output<List<String>> involvedKpiTypes;
 
-    public Output<List<String>> getInvolvedKpiTypes() {
+    public Output<List<String>> involvedKpiTypes() {
         return this.involvedKpiTypes == null ? Codegen.empty() : this.involvedKpiTypes;
     }
 
@@ -104,7 +104,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="involvedRelationships")
       private final @Nullable Output<List<String>> involvedRelationships;
 
-    public Output<List<String>> getInvolvedRelationships() {
+    public Output<List<String>> involvedRelationships() {
         return this.involvedRelationships == null ? Codegen.empty() : this.involvedRelationships;
     }
 
@@ -115,7 +115,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mappings", required=true)
       private final Output<PredictionMappingsArgs> mappings;
 
-    public Output<PredictionMappingsArgs> getMappings() {
+    public Output<PredictionMappingsArgs> mappings() {
         return this.mappings;
     }
 
@@ -126,7 +126,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="negativeOutcomeExpression", required=true)
       private final Output<String> negativeOutcomeExpression;
 
-    public Output<String> getNegativeOutcomeExpression() {
+    public Output<String> negativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
 
@@ -137,7 +137,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="positiveOutcomeExpression", required=true)
       private final Output<String> positiveOutcomeExpression;
 
-    public Output<String> getPositiveOutcomeExpression() {
+    public Output<String> positiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
 
@@ -148,7 +148,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="predictionName")
       private final @Nullable Output<String> predictionName;
 
-    public Output<String> getPredictionName() {
+    public Output<String> predictionName() {
         return this.predictionName == null ? Codegen.empty() : this.predictionName;
     }
 
@@ -159,7 +159,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryProfileType", required=true)
       private final Output<String> primaryProfileType;
 
-    public Output<String> getPrimaryProfileType() {
+    public Output<String> primaryProfileType() {
         return this.primaryProfileType;
     }
 
@@ -170,7 +170,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -181,7 +181,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopeExpression", required=true)
       private final Output<String> scopeExpression;
 
-    public Output<String> getScopeExpression() {
+    public Output<String> scopeExpression() {
         return this.scopeExpression;
     }
 
@@ -192,7 +192,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scoreLabel", required=true)
       private final Output<String> scoreLabel;
 
-    public Output<String> getScoreLabel() {
+    public Output<String> scoreLabel() {
         return this.scoreLabel;
     }
 

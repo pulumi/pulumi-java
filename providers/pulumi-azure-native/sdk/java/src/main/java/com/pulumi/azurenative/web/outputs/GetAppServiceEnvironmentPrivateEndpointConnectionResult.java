@@ -75,52 +75,52 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionResult {
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Private IPAddresses mapped to the remote private endpoint
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * PrivateEndpoint of a remote private endpoint connection
      * 
     */
-    public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
+    public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The state of a private link connection
      * 
     */
-    public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

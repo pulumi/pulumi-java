@@ -27,7 +27,7 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
     @Import(name="codeConfiguration")
       private final @Nullable GitHubActionCodeConfigurationResponse codeConfiguration;
 
-    public Optional<GitHubActionCodeConfigurationResponse> getCodeConfiguration() {
+    public Optional<GitHubActionCodeConfigurationResponse> codeConfiguration() {
         return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
     }
 
@@ -38,7 +38,7 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
     @Import(name="containerConfiguration")
       private final @Nullable GitHubActionContainerConfigurationResponse containerConfiguration;
 
-    public Optional<GitHubActionContainerConfigurationResponse> getContainerConfiguration() {
+    public Optional<GitHubActionContainerConfigurationResponse> containerConfiguration() {
         return this.containerConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerConfiguration);
     }
 
@@ -49,7 +49,7 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
     @Import(name="generateWorkflowFile")
       private final @Nullable Boolean generateWorkflowFile;
 
-    public Optional<Boolean> getGenerateWorkflowFile() {
+    public Optional<Boolean> generateWorkflowFile() {
         return this.generateWorkflowFile == null ? Optional.empty() : Optional.ofNullable(this.generateWorkflowFile);
     }
 
@@ -60,7 +60,7 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
     @Import(name="isLinux")
       private final @Nullable Boolean isLinux;
 
-    public Optional<Boolean> getIsLinux() {
+    public Optional<Boolean> isLinux() {
         return this.isLinux == null ? Optional.empty() : Optional.ofNullable(this.isLinux);
     }
 

@@ -39,21 +39,21 @@ public final class ApplicationArtifactResponse {
      * The managed application artifact name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The managed application artifact type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The managed application artifact blob uri.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

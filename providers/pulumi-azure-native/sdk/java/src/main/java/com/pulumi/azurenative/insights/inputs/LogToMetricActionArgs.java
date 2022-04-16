@@ -27,7 +27,7 @@ public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="criteria", required=true)
       private final Output<List<CriteriaArgs>> criteria;
 
-    public Output<List<CriteriaArgs>> getCriteria() {
+    public Output<List<CriteriaArgs>> criteria() {
         return this.criteria;
     }
 
@@ -39,7 +39,7 @@ public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

@@ -27,7 +27,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="autoscaleSettingName")
       private final @Nullable Output<String> autoscaleSettingName;
 
-    public Output<String> getAutoscaleSettingName() {
+    public Output<String> autoscaleSettingName() {
         return this.autoscaleSettingName == null ? Codegen.empty() : this.autoscaleSettingName;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notifications")
       private final @Nullable Output<List<AutoscaleNotificationArgs>> notifications;
 
-    public Output<List<AutoscaleNotificationArgs>> getNotifications() {
+    public Output<List<AutoscaleNotificationArgs>> notifications() {
         return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
@@ -82,7 +82,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="profiles", required=true)
       private final Output<List<AutoscaleProfileArgs>> profiles;
 
-    public Output<List<AutoscaleProfileArgs>> getProfiles() {
+    public Output<List<AutoscaleProfileArgs>> profiles() {
         return this.profiles;
     }
 
@@ -93,7 +93,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetResourceLocation")
       private final @Nullable Output<String> targetResourceLocation;
 
-    public Output<String> getTargetResourceLocation() {
+    public Output<String> targetResourceLocation() {
         return this.targetResourceLocation == null ? Codegen.empty() : this.targetResourceLocation;
     }
 
@@ -126,7 +126,7 @@ public final class AutoscaleSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetResourceUri")
       private final @Nullable Output<String> targetResourceUri;
 
-    public Output<String> getTargetResourceUri() {
+    public Output<String> targetResourceUri() {
         return this.targetResourceUri == null ? Codegen.empty() : this.targetResourceUri;
     }
 

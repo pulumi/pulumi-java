@@ -25,7 +25,7 @@ public final class LinuxPatchSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="assessmentMode")
       private final @Nullable String assessmentMode;
 
-    public Optional<String> getAssessmentMode() {
+    public Optional<String> assessmentMode() {
         return this.assessmentMode == null ? Optional.empty() : Optional.ofNullable(this.assessmentMode);
     }
 
@@ -36,7 +36,7 @@ public final class LinuxPatchSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="patchMode")
       private final @Nullable String patchMode;
 
-    public Optional<String> getPatchMode() {
+    public Optional<String> patchMode() {
         return this.patchMode == null ? Optional.empty() : Optional.ofNullable(this.patchMode);
     }
 

@@ -107,77 +107,77 @@ public final class EdifactProtocolSettingsResponse {
      * The EDIFACT acknowledgement settings.
      * 
     */
-    public EdifactAcknowledgementSettingsResponse getAcknowledgementSettings() {
+    public EdifactAcknowledgementSettingsResponse acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
     /**
      * The EDIFACT delimiter override settings.
      * 
     */
-    public List<EdifactDelimiterOverrideResponse> getEdifactDelimiterOverrides() {
+    public List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides() {
         return this.edifactDelimiterOverrides == null ? List.of() : this.edifactDelimiterOverrides;
     }
     /**
      * The EDIFACT envelope override settings.
      * 
     */
-    public List<EdifactEnvelopeOverrideResponse> getEnvelopeOverrides() {
+    public List<EdifactEnvelopeOverrideResponse> envelopeOverrides() {
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
     }
     /**
      * The EDIFACT envelope settings.
      * 
     */
-    public EdifactEnvelopeSettingsResponse getEnvelopeSettings() {
+    public EdifactEnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
     /**
      * The EDIFACT framing settings.
      * 
     */
-    public EdifactFramingSettingsResponse getFramingSettings() {
+    public EdifactFramingSettingsResponse framingSettings() {
         return this.framingSettings;
     }
     /**
      * The EDIFACT message filter.
      * 
     */
-    public EdifactMessageFilterResponse getMessageFilter() {
+    public EdifactMessageFilterResponse messageFilter() {
         return this.messageFilter;
     }
     /**
      * The EDIFACT message filter list.
      * 
     */
-    public List<EdifactMessageIdentifierResponse> getMessageFilterList() {
+    public List<EdifactMessageIdentifierResponse> messageFilterList() {
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
     }
     /**
      * The EDIFACT processing Settings.
      * 
     */
-    public EdifactProcessingSettingsResponse getProcessingSettings() {
+    public EdifactProcessingSettingsResponse processingSettings() {
         return this.processingSettings;
     }
     /**
      * The EDIFACT schema references.
      * 
     */
-    public List<EdifactSchemaReferenceResponse> getSchemaReferences() {
+    public List<EdifactSchemaReferenceResponse> schemaReferences() {
         return this.schemaReferences;
     }
     /**
      * The EDIFACT validation override settings.
      * 
     */
-    public List<EdifactValidationOverrideResponse> getValidationOverrides() {
+    public List<EdifactValidationOverrideResponse> validationOverrides() {
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
     }
     /**
      * The EDIFACT validation settings.
      * 
     */
-    public EdifactValidationSettingsResponse getValidationSettings() {
+    public EdifactValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }
 

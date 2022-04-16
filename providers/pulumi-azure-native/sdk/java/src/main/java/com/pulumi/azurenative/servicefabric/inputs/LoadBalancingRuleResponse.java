@@ -26,7 +26,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="backendPort", required=true)
       private final Integer backendPort;
 
-    public Integer getBackendPort() {
+    public Integer backendPort() {
         return this.backendPort;
     }
 
@@ -37,7 +37,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="frontendPort", required=true)
       private final Integer frontendPort;
 
-    public Integer getFrontendPort() {
+    public Integer frontendPort() {
         return this.frontendPort;
     }
 
@@ -48,7 +48,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="probeProtocol", required=true)
       private final String probeProtocol;
 
-    public String getProbeProtocol() {
+    public String probeProtocol() {
         return this.probeProtocol;
     }
 
@@ -59,7 +59,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="probeRequestPath")
       private final @Nullable String probeRequestPath;
 
-    public Optional<String> getProbeRequestPath() {
+    public Optional<String> probeRequestPath() {
         return this.probeRequestPath == null ? Optional.empty() : Optional.ofNullable(this.probeRequestPath);
     }
 
@@ -70,7 +70,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

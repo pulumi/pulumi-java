@@ -120,42 +120,42 @@ public final class RuleManagementEventDataSourceResponse {
      * the claims.
      * 
     */
-    public Optional<RuleManagementEventClaimsDataSourceResponse> getClaims() {
+    public Optional<RuleManagementEventClaimsDataSourceResponse> claims() {
         return Optional.ofNullable(this.claims);
     }
     /**
      * the event name.
      * 
     */
-    public Optional<String> getEventName() {
+    public Optional<String> eventName() {
         return Optional.ofNullable(this.eventName);
     }
     /**
      * the event source.
      * 
     */
-    public Optional<String> getEventSource() {
+    public Optional<String> eventSource() {
         return Optional.ofNullable(this.eventSource);
     }
     /**
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
     */
-    public Optional<String> getLegacyResourceId() {
+    public Optional<String> legacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
     /**
      * the level.
      * 
     */
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
      * the namespace of the metric.
      * 
     */
-    public Optional<String> getMetricNamespace() {
+    public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
@@ -163,56 +163,56 @@ public final class RuleManagementEventDataSourceResponse {
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The name of the operation that should be checked for. If no name is provided, any operation will match.
      * 
     */
-    public Optional<String> getOperationName() {
+    public Optional<String> operationName() {
         return Optional.ofNullable(this.operationName);
     }
     /**
      * the resource group name.
      * 
     */
-    public Optional<String> getResourceGroupName() {
+    public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
      * the location of the resource.
      * 
     */
-    public Optional<String> getResourceLocation() {
+    public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
      * the resource provider name.
      * 
     */
-    public Optional<String> getResourceProviderName() {
+    public Optional<String> resourceProviderName() {
         return Optional.ofNullable(this.resourceProviderName);
     }
     /**
      * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
     */
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
     /**
      * The status of the operation that should be checked for. If no status is provided, any status will match.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * the substatus.
      * 
     */
-    public Optional<String> getSubStatus() {
+    public Optional<String> subStatus() {
         return Optional.ofNullable(this.subStatus);
     }
 

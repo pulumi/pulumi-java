@@ -26,7 +26,7 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends c
     @Import(name="ref")
       private final @Nullable Output<String> ref;
 
-    public Output<String> getRef() {
+    public Output<String> ref() {
         return this.ref == null ? Codegen.empty() : this.ref;
     }
 

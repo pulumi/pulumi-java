@@ -99,77 +99,77 @@ public final class ListProductDetailsResult {
      * Specifies kind of compute role included in the package.
      * 
     */
-    public String getComputeRole() {
+    public String computeRole() {
         return this.computeRole;
     }
     /**
      * List of attached data disks.
      * 
     */
-    public List<DataDiskImageResponse> getDataDiskImages() {
+    public List<DataDiskImageResponse> dataDiskImages() {
         return this.dataDiskImages;
     }
     /**
      * The URI to the .azpkg file that provides information required for showing product in the gallery.
      * 
     */
-    public String getGalleryPackageBlobSasUri() {
+    public String galleryPackageBlobSasUri() {
         return this.galleryPackageBlobSasUri;
     }
     /**
      * Specifies if product is a Virtual Machine Extension.
      * 
     */
-    public Boolean getIsSystemExtension() {
+    public Boolean isSystemExtension() {
         return this.isSystemExtension;
     }
     /**
      * OS disk image used by product.
      * 
     */
-    public OsDiskImageResponse getOsDiskImage() {
+    public OsDiskImageResponse osDiskImage() {
         return this.osDiskImage;
     }
     /**
      * Specifies the kind of the product (virtualMachine or virtualMachineExtension).
      * 
     */
-    public String getProductKind() {
+    public String productKind() {
         return this.productKind;
     }
     /**
      * Indicates if specified product supports multiple extensions.
      * 
     */
-    public Boolean getSupportMultipleExtensions() {
+    public Boolean supportMultipleExtensions() {
         return this.supportMultipleExtensions;
     }
     /**
      * The URI.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
     /**
      * Specifies product version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * Specifies operating system used by the product.
      * 
     */
-    public String getVmOsType() {
+    public String vmOsType() {
         return this.vmOsType;
     }
     /**
      * Indicates if virtual machine Scale Set is enabled in the specified product.
      * 
     */
-    public Boolean getVmScaleSetEnabled() {
+    public Boolean vmScaleSetEnabled() {
         return this.vmScaleSetEnabled;
     }
 

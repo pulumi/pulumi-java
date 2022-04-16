@@ -34,14 +34,14 @@ public final class ServicePrincipalPropertiesResponse {
      * Application ID of service principal.
      * 
     */
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
      * 
     */
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
 

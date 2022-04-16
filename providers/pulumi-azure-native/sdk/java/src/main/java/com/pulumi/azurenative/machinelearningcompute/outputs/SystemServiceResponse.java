@@ -39,21 +39,21 @@ public final class SystemServiceResponse {
      * The public IP address of the system service
      * 
     */
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
      * The system service type
      * 
     */
-    public String getSystemServiceType() {
+    public String systemServiceType() {
         return this.systemServiceType;
     }
     /**
      * The state of the system service
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

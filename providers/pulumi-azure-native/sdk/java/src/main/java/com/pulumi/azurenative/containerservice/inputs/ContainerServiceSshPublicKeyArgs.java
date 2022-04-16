@@ -25,7 +25,7 @@ public final class ContainerServiceSshPublicKeyArgs extends com.pulumi.resources
     @Import(name="keyData", required=true)
       private final Output<String> keyData;
 
-    public Output<String> getKeyData() {
+    public Output<String> keyData() {
         return this.keyData;
     }
 

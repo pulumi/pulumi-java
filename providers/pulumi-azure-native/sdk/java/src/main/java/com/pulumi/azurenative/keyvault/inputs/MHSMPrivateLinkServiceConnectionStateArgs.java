@@ -29,7 +29,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends com.pulumi.
     @Import(name="actionsRequired")
       private final @Nullable Output<Either<String,ActionsRequired>> actionsRequired;
 
-    public Output<Either<String,ActionsRequired>> getActionsRequired() {
+    public Output<Either<String,ActionsRequired>> actionsRequired() {
         return this.actionsRequired == null ? Codegen.empty() : this.actionsRequired;
     }
 
@@ -40,7 +40,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends com.pulumi.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends com.pulumi.
     @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
-    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {
+    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

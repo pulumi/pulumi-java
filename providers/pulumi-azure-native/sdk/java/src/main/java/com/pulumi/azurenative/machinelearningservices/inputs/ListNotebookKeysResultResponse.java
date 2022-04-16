@@ -15,14 +15,14 @@ public final class ListNotebookKeysResultResponse extends com.pulumi.resources.I
     @Import(name="primaryAccessKey", required=true)
       private final String primaryAccessKey;
 
-    public String getPrimaryAccessKey() {
+    public String primaryAccessKey() {
         return this.primaryAccessKey;
     }
 
     @Import(name="secondaryAccessKey", required=true)
       private final String secondaryAccessKey;
 
-    public String getSecondaryAccessKey() {
+    public String secondaryAccessKey() {
         return this.secondaryAccessKey;
     }
 

@@ -46,28 +46,28 @@ public final class ListDatabaseAccountKeysResult {
      * Base 64 encoded value of the primary read-write key.
      * 
     */
-    public String getPrimaryMasterKey() {
+    public String primaryMasterKey() {
         return this.primaryMasterKey;
     }
     /**
      * Base 64 encoded value of the primary read-only key.
      * 
     */
-    public String getPrimaryReadonlyMasterKey() {
+    public String primaryReadonlyMasterKey() {
         return this.primaryReadonlyMasterKey;
     }
     /**
      * Base 64 encoded value of the secondary read-write key.
      * 
     */
-    public String getSecondaryMasterKey() {
+    public String secondaryMasterKey() {
         return this.secondaryMasterKey;
     }
     /**
      * Base 64 encoded value of the secondary read-only key.
      * 
     */
-    public String getSecondaryReadonlyMasterKey() {
+    public String secondaryReadonlyMasterKey() {
         return this.secondaryReadonlyMasterKey;
     }
 

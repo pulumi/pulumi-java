@@ -112,91 +112,91 @@ public final class ServiceBusBrokeredMessagePropertiesResponse {
      * Gets or sets the content type.
      * 
     */
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * Gets or sets the correlation ID.
      * 
     */
-    public Optional<String> getCorrelationId() {
+    public Optional<String> correlationId() {
         return Optional.ofNullable(this.correlationId);
     }
     /**
      * Gets or sets the force persistence.
      * 
     */
-    public Optional<Boolean> getForcePersistence() {
+    public Optional<Boolean> forcePersistence() {
         return Optional.ofNullable(this.forcePersistence);
     }
     /**
      * Gets or sets the label.
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Gets or sets the message ID.
      * 
     */
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
      * Gets or sets the partition key.
      * 
     */
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * Gets or sets the reply to.
      * 
     */
-    public Optional<String> getReplyTo() {
+    public Optional<String> replyTo() {
         return Optional.ofNullable(this.replyTo);
     }
     /**
      * Gets or sets the reply to session ID.
      * 
     */
-    public Optional<String> getReplyToSessionId() {
+    public Optional<String> replyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
     /**
      * Gets or sets the scheduled enqueue time UTC.
      * 
     */
-    public Optional<String> getScheduledEnqueueTimeUtc() {
+    public Optional<String> scheduledEnqueueTimeUtc() {
         return Optional.ofNullable(this.scheduledEnqueueTimeUtc);
     }
     /**
      * Gets or sets the session ID.
      * 
     */
-    public Optional<String> getSessionId() {
+    public Optional<String> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
     /**
      * Gets or sets the time to live.
      * 
     */
-    public Optional<String> getTimeToLive() {
+    public Optional<String> timeToLive() {
         return Optional.ofNullable(this.timeToLive);
     }
     /**
      * Gets or sets the to.
      * 
     */
-    public Optional<String> getTo() {
+    public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }
     /**
      * Gets or sets the via partition key.
      * 
     */
-    public Optional<String> getViaPartitionKey() {
+    public Optional<String> viaPartitionKey() {
         return Optional.ofNullable(this.viaPartitionKey);
     }
 

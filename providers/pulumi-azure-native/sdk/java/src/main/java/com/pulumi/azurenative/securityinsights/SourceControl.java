@@ -44,7 +44,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return Array of source control content types.
      * 
      */
-    public Output<List<String>> getContentTypes() {
+    public Output<List<String>> contentTypes() {
         return this.contentTypes;
     }
     /**
@@ -58,7 +58,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> getCreatedAt() {
+    public Output</* @Nullable */ String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -72,7 +72,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedBy() {
+    public Output</* @Nullable */ String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -86,7 +86,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedByType() {
+    public Output</* @Nullable */ String> createdByType() {
         return this.createdByType;
     }
     /**
@@ -100,7 +100,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return A description of the source control
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -114,7 +114,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The display name of the source control
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -128,7 +128,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -142,7 +142,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedAt() {
+    public Output</* @Nullable */ String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -156,7 +156,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -170,7 +170,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedByType() {
+    public Output</* @Nullable */ String> lastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
@@ -184,7 +184,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -198,7 +198,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The repository type of the source control
      * 
      */
-    public Output<String> getRepoType() {
+    public Output<String> repoType() {
         return this.repoType;
     }
     /**
@@ -212,7 +212,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return Repository metadata.
      * 
      */
-    public Output<RepositoryResponse> getRepository() {
+    public Output<RepositoryResponse> repository() {
         return this.repository;
     }
     /**
@@ -226,7 +226,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -240,7 +240,7 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

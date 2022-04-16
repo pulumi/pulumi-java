@@ -58,35 +58,35 @@ public final class MatchConditionResponse {
      * Match value.
      * 
     */
-    public List<String> getMatchValues() {
+    public List<String> matchValues() {
         return this.matchValues;
     }
     /**
      * List of match variables.
      * 
     */
-    public List<MatchVariableResponse> getMatchVariables() {
+    public List<MatchVariableResponse> matchVariables() {
         return this.matchVariables;
     }
     /**
      * Whether this is negate condition or not.
      * 
     */
-    public Optional<Boolean> getNegationConditon() {
+    public Optional<Boolean> negationConditon() {
         return Optional.ofNullable(this.negationConditon);
     }
     /**
      * The operator to be matched.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * List of transforms.
      * 
     */
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

@@ -27,7 +27,7 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

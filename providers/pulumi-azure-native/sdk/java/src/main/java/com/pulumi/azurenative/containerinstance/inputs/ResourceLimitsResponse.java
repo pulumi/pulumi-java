@@ -26,7 +26,7 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cpu")
       private final @Nullable Double cpu;
 
-    public Optional<Double> getCpu() {
+    public Optional<Double> cpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
@@ -37,7 +37,7 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="gpu")
       private final @Nullable GpuResourceResponse gpu;
 
-    public Optional<GpuResourceResponse> getGpu() {
+    public Optional<GpuResourceResponse> gpu() {
         return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
     }
 
@@ -48,7 +48,7 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="memoryInGB")
       private final @Nullable Double memoryInGB;
 
-    public Optional<Double> getMemoryInGB() {
+    public Optional<Double> memoryInGB() {
         return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
     }
 

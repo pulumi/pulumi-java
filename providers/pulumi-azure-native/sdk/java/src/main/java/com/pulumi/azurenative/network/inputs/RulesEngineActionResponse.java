@@ -29,7 +29,7 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
     @Import(name="requestHeaderActions")
       private final @Nullable List<HeaderActionResponse> requestHeaderActions;
 
-    public List<HeaderActionResponse> getRequestHeaderActions() {
+    public List<HeaderActionResponse> requestHeaderActions() {
         return this.requestHeaderActions == null ? List.of() : this.requestHeaderActions;
     }
 
@@ -40,7 +40,7 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
     @Import(name="responseHeaderActions")
       private final @Nullable List<HeaderActionResponse> responseHeaderActions;
 
-    public List<HeaderActionResponse> getResponseHeaderActions() {
+    public List<HeaderActionResponse> responseHeaderActions() {
         return this.responseHeaderActions == null ? List.of() : this.responseHeaderActions;
     }
 
@@ -51,7 +51,7 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
     @Import(name="routeConfigurationOverride")
       private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
 
-    public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> getRouteConfigurationOverride() {
+    public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride() {
         return this.routeConfigurationOverride == null ? null : this.routeConfigurationOverride;
     }
 

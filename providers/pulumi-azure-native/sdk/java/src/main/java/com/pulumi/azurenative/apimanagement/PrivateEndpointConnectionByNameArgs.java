@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="properties")
       private final @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties;
 
-    public Output<PrivateEndpointConnectionRequestPropertiesArgs> getProperties() {
+    public Output<PrivateEndpointConnectionRequestPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

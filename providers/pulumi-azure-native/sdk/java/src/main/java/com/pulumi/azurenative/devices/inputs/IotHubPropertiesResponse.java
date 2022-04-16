@@ -38,7 +38,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="authorizationPolicies")
       private final @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies;
 
-    public List<SharedAccessSignatureAuthorizationRuleResponse> getAuthorizationPolicies() {
+    public List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies() {
         return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
     }
 
@@ -49,7 +49,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="cloudToDevice")
       private final @Nullable CloudToDevicePropertiesResponse cloudToDevice;
 
-    public Optional<CloudToDevicePropertiesResponse> getCloudToDevice() {
+    public Optional<CloudToDevicePropertiesResponse> cloudToDevice() {
         return this.cloudToDevice == null ? Optional.empty() : Optional.ofNullable(this.cloudToDevice);
     }
 
@@ -60,7 +60,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="comments")
       private final @Nullable String comments;
 
-    public Optional<String> getComments() {
+    public Optional<String> comments() {
         return this.comments == null ? Optional.empty() : Optional.ofNullable(this.comments);
     }
 
@@ -71,7 +71,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="enableFileUploadNotifications")
       private final @Nullable Boolean enableFileUploadNotifications;
 
-    public Optional<Boolean> getEnableFileUploadNotifications() {
+    public Optional<Boolean> enableFileUploadNotifications() {
         return this.enableFileUploadNotifications == null ? Optional.empty() : Optional.ofNullable(this.enableFileUploadNotifications);
     }
 
@@ -82,7 +82,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="eventHubEndpoints")
       private final @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints;
 
-    public Map<String,EventHubPropertiesResponse> getEventHubEndpoints() {
+    public Map<String,EventHubPropertiesResponse> eventHubEndpoints() {
         return this.eventHubEndpoints == null ? Map.of() : this.eventHubEndpoints;
     }
 
@@ -93,7 +93,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="features")
       private final @Nullable String features;
 
-    public Optional<String> getFeatures() {
+    public Optional<String> features() {
         return this.features == null ? Optional.empty() : Optional.ofNullable(this.features);
     }
 
@@ -104,7 +104,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="hostName", required=true)
       private final String hostName;
 
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
 
@@ -115,7 +115,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipFilterRules")
       private final @Nullable List<IpFilterRuleResponse> ipFilterRules;
 
-    public List<IpFilterRuleResponse> getIpFilterRules() {
+    public List<IpFilterRuleResponse> ipFilterRules() {
         return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
     }
 
@@ -126,7 +126,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="locations", required=true)
       private final List<IotHubLocationDescriptionResponse> locations;
 
-    public List<IotHubLocationDescriptionResponse> getLocations() {
+    public List<IotHubLocationDescriptionResponse> locations() {
         return this.locations;
     }
 
@@ -137,7 +137,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="messagingEndpoints")
       private final @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints;
 
-    public Map<String,MessagingEndpointPropertiesResponse> getMessagingEndpoints() {
+    public Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints() {
         return this.messagingEndpoints == null ? Map.of() : this.messagingEndpoints;
     }
 
@@ -148,7 +148,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="minTlsVersion")
       private final @Nullable String minTlsVersion;
 
-    public Optional<String> getMinTlsVersion() {
+    public Optional<String> minTlsVersion() {
         return this.minTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minTlsVersion);
     }
 
@@ -159,7 +159,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkRuleSets")
       private final @Nullable NetworkRuleSetPropertiesResponse networkRuleSets;
 
-    public Optional<NetworkRuleSetPropertiesResponse> getNetworkRuleSets() {
+    public Optional<NetworkRuleSetPropertiesResponse> networkRuleSets() {
         return this.networkRuleSets == null ? Optional.empty() : Optional.ofNullable(this.networkRuleSets);
     }
 
@@ -170,7 +170,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
 
@@ -181,7 +181,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -192,7 +192,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
@@ -203,7 +203,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="routing")
       private final @Nullable RoutingPropertiesResponse routing;
 
-    public Optional<RoutingPropertiesResponse> getRouting() {
+    public Optional<RoutingPropertiesResponse> routing() {
         return this.routing == null ? Optional.empty() : Optional.ofNullable(this.routing);
     }
 
@@ -214,7 +214,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -225,7 +225,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="storageEndpoints")
       private final @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
 
-    public Map<String,StorageEndpointPropertiesResponse> getStorageEndpoints() {
+    public Map<String,StorageEndpointPropertiesResponse> storageEndpoints() {
         return this.storageEndpoints == null ? Map.of() : this.storageEndpoints;
     }
 

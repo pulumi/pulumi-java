@@ -26,7 +26,7 @@ public final class ZipDeflateReadSettingsResponse extends com.pulumi.resources.I
     @Import(name="preserveZipFileNameAsFolder")
       private final @Nullable Object preserveZipFileNameAsFolder;
 
-    public Optional<Object> getPreserveZipFileNameAsFolder() {
+    public Optional<Object> preserveZipFileNameAsFolder() {
         return this.preserveZipFileNameAsFolder == null ? Optional.empty() : Optional.ofNullable(this.preserveZipFileNameAsFolder);
     }
 
@@ -38,7 +38,7 @@ public final class ZipDeflateReadSettingsResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
     @Import(name="dedicatedCloudServiceName", required=true)
       private final String dedicatedCloudServiceName;
 
-    public String getDedicatedCloudServiceName() {
+    public String dedicatedCloudServiceName() {
         return this.dedicatedCloudServiceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

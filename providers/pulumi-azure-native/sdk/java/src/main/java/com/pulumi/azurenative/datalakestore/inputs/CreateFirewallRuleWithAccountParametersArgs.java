@@ -25,7 +25,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
     @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
 
-    public Output<String> getEndIpAddress() {
+    public Output<String> endIpAddress() {
         return this.endIpAddress;
     }
 
@@ -36,7 +36,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
     @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;
 
-    public Output<String> getStartIpAddress() {
+    public Output<String> startIpAddress() {
         return this.startIpAddress;
     }
 

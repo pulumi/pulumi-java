@@ -26,7 +26,7 @@ public final class LinkedWorkspacePropsArgs extends com.pulumi.resources.Resourc
     @Import(name="linkedWorkspaceResourceId")
       private final @Nullable Output<String> linkedWorkspaceResourceId;
 
-    public Output<String> getLinkedWorkspaceResourceId() {
+    public Output<String> linkedWorkspaceResourceId() {
         return this.linkedWorkspaceResourceId == null ? Codegen.empty() : this.linkedWorkspaceResourceId;
     }
 
@@ -37,7 +37,7 @@ public final class LinkedWorkspacePropsArgs extends com.pulumi.resources.Resourc
     @Import(name="userAssignedIdentityResourceId")
       private final @Nullable Output<String> userAssignedIdentityResourceId;
 
-    public Output<String> getUserAssignedIdentityResourceId() {
+    public Output<String> userAssignedIdentityResourceId() {
         return this.userAssignedIdentityResourceId == null ? Codegen.empty() : this.userAssignedIdentityResourceId;
     }
 

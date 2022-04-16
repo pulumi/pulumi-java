@@ -44,7 +44,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return Current status of the container.
      * 
      */
-    public Output<String> getContainerStatus() {
+    public Output<String> containerStatus() {
         return this.containerStatus;
     }
     /**
@@ -58,7 +58,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The UTC time when container got created.
      * 
      */
-    public Output<String> getCreatedDateTime() {
+    public Output<String> createdDateTime() {
         return this.createdDateTime;
     }
     /**
@@ -72,7 +72,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return DataFormat for Container
      * 
      */
-    public Output<String> getDataFormat() {
+    public Output<String> dataFormat() {
         return this.dataFormat;
     }
     /**
@@ -86,7 +86,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return Details of the refresh job on this container.
      * 
      */
-    public Output<RefreshDetailsResponse> getRefreshDetails() {
+    public Output<RefreshDetailsResponse> refreshDetails() {
         return this.refreshDetails;
     }
     /**
@@ -114,7 +114,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return Container in DataBoxEdge Resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -128,7 +128,7 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

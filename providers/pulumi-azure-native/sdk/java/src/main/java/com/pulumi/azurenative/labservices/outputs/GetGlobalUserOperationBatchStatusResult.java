@@ -25,7 +25,7 @@ public final class GetGlobalUserOperationBatchStatusResult {
      * Gets a collection of items that contain the operation url and status.
      * 
     */
-    public List<OperationBatchStatusResponseItemResponse> getItems() {
+    public List<OperationBatchStatusResponseItemResponse> items() {
         return this.items;
     }
 

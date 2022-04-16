@@ -22,7 +22,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -33,7 +33,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="keyVault", required=true)
       private final KeyVaultReference keyVault;
 
-    public KeyVaultReference getKeyVault() {
+    public KeyVaultReference keyVault() {
         return this.keyVault;
     }
 
@@ -44,7 +44,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 

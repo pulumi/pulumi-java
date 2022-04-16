@@ -29,7 +29,7 @@ public final class PublicIPPrefixSkuArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<Either<String,PublicIPPrefixSkuName>> name;
 
-    public Output<Either<String,PublicIPPrefixSkuName>> getName() {
+    public Output<Either<String,PublicIPPrefixSkuName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -40,7 +40,7 @@ public final class PublicIPPrefixSkuArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tier")
       private final @Nullable Output<Either<String,PublicIPPrefixSkuTier>> tier;
 
-    public Output<Either<String,PublicIPPrefixSkuTier>> getTier() {
+    public Output<Either<String,PublicIPPrefixSkuTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

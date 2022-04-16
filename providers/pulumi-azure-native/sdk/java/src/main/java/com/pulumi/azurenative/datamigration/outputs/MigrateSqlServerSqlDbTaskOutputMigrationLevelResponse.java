@@ -137,56 +137,56 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
      * Summary of database results in the migration
      * 
     */
-    public Map<String,DatabaseSummaryResultResponse> getDatabaseSummary() {
+    public Map<String,DatabaseSummaryResultResponse> databaseSummary() {
         return this.databaseSummary;
     }
     /**
      * Selected databases as a map from database name to database id
      * 
     */
-    public Map<String,String> getDatabases() {
+    public Map<String,String> databases() {
         return this.databases;
     }
     /**
      * Duration of task execution in seconds.
      * 
     */
-    public Double getDurationInSeconds() {
+    public Double durationInSeconds() {
         return this.durationInSeconds;
     }
     /**
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Migration exceptions and warnings.
      * 
     */
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Migration progress message
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Migration Report Result, provides unique url for downloading your migration report.
      * 
     */
-    public MigrationReportResultResponse getMigrationReport() {
+    public MigrationReportResultResponse migrationReport() {
         return this.migrationReport;
     }
     /**
@@ -194,56 +194,56 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
      * Expected value is 'MigrationLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Source server brand version
      * 
     */
-    public String getSourceServerBrandVersion() {
+    public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Source server version
      * 
     */
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current status of migration
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Migration status message
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
     /**
      * Target server brand version
      * 
     */
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server version
      * 
     */
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 

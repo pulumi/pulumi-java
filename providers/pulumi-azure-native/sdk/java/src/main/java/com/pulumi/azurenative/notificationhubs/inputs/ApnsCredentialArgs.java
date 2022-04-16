@@ -26,7 +26,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="apnsCertificate")
       private final @Nullable Output<String> apnsCertificate;
 
-    public Output<String> getApnsCertificate() {
+    public Output<String> apnsCertificate() {
         return this.apnsCertificate == null ? Codegen.empty() : this.apnsCertificate;
     }
 
@@ -37,7 +37,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -48,7 +48,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="appName")
       private final @Nullable Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName == null ? Codegen.empty() : this.appName;
     }
 
@@ -59,7 +59,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificateKey")
       private final @Nullable Output<String> certificateKey;
 
-    public Output<String> getCertificateKey() {
+    public Output<String> certificateKey() {
         return this.certificateKey == null ? Codegen.empty() : this.certificateKey;
     }
 
@@ -70,7 +70,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -81,7 +81,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -92,7 +92,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
@@ -103,7 +103,7 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="token")
       private final @Nullable Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token == null ? Codegen.empty() : this.token;
     }
 

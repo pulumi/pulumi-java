@@ -24,7 +24,7 @@ public final class RestorePointCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class RestorePointCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -46,7 +46,7 @@ public final class RestorePointCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="restorePointCollectionName")
       private final @Nullable Output<String> restorePointCollectionName;
 
-    public Output<String> getRestorePointCollectionName() {
+    public Output<String> restorePointCollectionName() {
         return this.restorePointCollectionName == null ? Codegen.empty() : this.restorePointCollectionName;
     }
 
@@ -57,7 +57,7 @@ public final class RestorePointCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="source")
       private final @Nullable Output<RestorePointCollectionSourcePropertiesArgs> source;
 
-    public Output<RestorePointCollectionSourcePropertiesArgs> getSource() {
+    public Output<RestorePointCollectionSourcePropertiesArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -68,7 +68,7 @@ public final class RestorePointCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

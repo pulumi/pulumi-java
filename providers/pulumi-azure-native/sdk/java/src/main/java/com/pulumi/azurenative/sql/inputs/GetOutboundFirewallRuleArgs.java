@@ -15,7 +15,7 @@ public final class GetOutboundFirewallRuleArgs extends com.pulumi.resources.Invo
     @Import(name="outboundRuleFqdn", required=true)
       private final String outboundRuleFqdn;
 
-    public String getOutboundRuleFqdn() {
+    public String outboundRuleFqdn() {
         return this.outboundRuleFqdn;
     }
 
@@ -26,7 +26,7 @@ public final class GetOutboundFirewallRuleArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -37,7 +37,7 @@ public final class GetOutboundFirewallRuleArgs extends com.pulumi.resources.Invo
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

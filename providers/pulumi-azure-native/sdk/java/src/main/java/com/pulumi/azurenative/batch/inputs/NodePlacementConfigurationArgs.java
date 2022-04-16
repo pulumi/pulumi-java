@@ -26,7 +26,7 @@ public final class NodePlacementConfigurationArgs extends com.pulumi.resources.R
     @Import(name="policy")
       private final @Nullable Output<NodePlacementPolicyType> policy;
 
-    public Output<NodePlacementPolicyType> getPolicy() {
+    public Output<NodePlacementPolicyType> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

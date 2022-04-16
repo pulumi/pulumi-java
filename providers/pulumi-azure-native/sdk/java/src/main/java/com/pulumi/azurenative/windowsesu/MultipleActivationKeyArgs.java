@@ -28,7 +28,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="agreementNumber")
       private final @Nullable Output<String> agreementNumber;
 
-    public Output<String> getAgreementNumber() {
+    public Output<String> agreementNumber() {
         return this.agreementNumber == null ? Codegen.empty() : this.agreementNumber;
     }
 
@@ -39,7 +39,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="installedServerNumber")
       private final @Nullable Output<Integer> installedServerNumber;
 
-    public Output<Integer> getInstalledServerNumber() {
+    public Output<Integer> installedServerNumber() {
         return this.installedServerNumber == null ? Codegen.empty() : this.installedServerNumber;
     }
 
@@ -50,7 +50,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="isEligible")
       private final @Nullable Output<Boolean> isEligible;
 
-    public Output<Boolean> getIsEligible() {
+    public Output<Boolean> isEligible() {
         return this.isEligible == null ? Codegen.empty() : this.isEligible;
     }
 
@@ -61,7 +61,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -72,7 +72,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="multipleActivationKeyName")
       private final @Nullable Output<String> multipleActivationKeyName;
 
-    public Output<String> getMultipleActivationKeyName() {
+    public Output<String> multipleActivationKeyName() {
         return this.multipleActivationKeyName == null ? Codegen.empty() : this.multipleActivationKeyName;
     }
 
@@ -83,7 +83,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> getOsType() {
+    public Output<Either<String,OsType>> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -94,7 +94,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="supportType")
       private final @Nullable Output<Either<String,SupportType>> supportType;
 
-    public Output<Either<String,SupportType>> getSupportType() {
+    public Output<Either<String,SupportType>> supportType() {
         return this.supportType == null ? Codegen.empty() : this.supportType;
     }
 
@@ -116,7 +116,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

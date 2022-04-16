@@ -25,7 +25,7 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="clientSecretUrl")
       private final @Nullable String clientSecretUrl;
 
-    public Optional<String> getClientSecretUrl() {
+    public Optional<String> clientSecretUrl() {
         return this.clientSecretUrl == null ? Optional.empty() : Optional.ofNullable(this.clientSecretUrl);
     }
 
@@ -36,7 +36,7 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="principalId")
       private final @Nullable String principalId;
 
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
@@ -47,7 +47,7 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -58,7 +58,7 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

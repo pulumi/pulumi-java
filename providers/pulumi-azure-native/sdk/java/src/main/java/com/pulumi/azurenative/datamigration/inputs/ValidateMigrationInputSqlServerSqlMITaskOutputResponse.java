@@ -28,7 +28,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="backupFolderErrors", required=true)
       private final List<ReportableExceptionResponse> backupFolderErrors;
 
-    public List<ReportableExceptionResponse> getBackupFolderErrors() {
+    public List<ReportableExceptionResponse> backupFolderErrors() {
         return this.backupFolderErrors;
     }
 
@@ -39,7 +39,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="backupShareCredentialsErrors", required=true)
       private final List<ReportableExceptionResponse> backupShareCredentialsErrors;
 
-    public List<ReportableExceptionResponse> getBackupShareCredentialsErrors() {
+    public List<ReportableExceptionResponse> backupShareCredentialsErrors() {
         return this.backupShareCredentialsErrors;
     }
 
@@ -50,7 +50,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="backupStorageAccountErrors", required=true)
       private final List<ReportableExceptionResponse> backupStorageAccountErrors;
 
-    public List<ReportableExceptionResponse> getBackupStorageAccountErrors() {
+    public List<ReportableExceptionResponse> backupStorageAccountErrors() {
         return this.backupStorageAccountErrors;
     }
 
@@ -61,7 +61,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="databaseBackupInfo")
       private final @Nullable DatabaseBackupInfoResponse databaseBackupInfo;
 
-    public Optional<DatabaseBackupInfoResponse> getDatabaseBackupInfo() {
+    public Optional<DatabaseBackupInfoResponse> databaseBackupInfo() {
         return this.databaseBackupInfo == null ? Optional.empty() : Optional.ofNullable(this.databaseBackupInfo);
     }
 
@@ -72,7 +72,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="existingBackupErrors", required=true)
       private final List<ReportableExceptionResponse> existingBackupErrors;
 
-    public List<ReportableExceptionResponse> getExistingBackupErrors() {
+    public List<ReportableExceptionResponse> existingBackupErrors() {
         return this.existingBackupErrors;
     }
 
@@ -83,7 +83,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -94,7 +94,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -105,7 +105,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="restoreDatabaseNameErrors", required=true)
       private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
-    public List<ReportableExceptionResponse> getRestoreDatabaseNameErrors() {
+    public List<ReportableExceptionResponse> restoreDatabaseNameErrors() {
         return this.restoreDatabaseNameErrors;
     }
 

@@ -19,7 +19,7 @@ public final class GetUserSettingsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userSettingsName", required=true)
       private final String userSettingsName;
 
-    public String getUserSettingsName() {
+    public String userSettingsName() {
         return this.userSettingsName;
     }
 

@@ -28,7 +28,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="backendPort", required=true)
       private final Integer backendPort;
 
-    public Integer getBackendPort() {
+    public Integer backendPort() {
         return this.backendPort;
     }
 
@@ -39,7 +39,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enableFloatingIP")
       private final @Nullable Boolean enableFloatingIP;
 
-    public Optional<Boolean> getEnableFloatingIP() {
+    public Optional<Boolean> enableFloatingIP() {
         return this.enableFloatingIP == null ? Optional.empty() : Optional.ofNullable(this.enableFloatingIP);
     }
 
@@ -50,7 +50,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enableTcpReset")
       private final @Nullable Boolean enableTcpReset;
 
-    public Optional<Boolean> getEnableTcpReset() {
+    public Optional<Boolean> enableTcpReset() {
         return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
     }
 
@@ -61,7 +61,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -72,7 +72,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frontendIPConfiguration")
       private final @Nullable SubResourceResponse frontendIPConfiguration;
 
-    public Optional<SubResourceResponse> getFrontendIPConfiguration() {
+    public Optional<SubResourceResponse> frontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
     }
 
@@ -83,7 +83,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frontendPortRangeEnd", required=true)
       private final Integer frontendPortRangeEnd;
 
-    public Integer getFrontendPortRangeEnd() {
+    public Integer frontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
 
@@ -94,7 +94,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frontendPortRangeStart", required=true)
       private final Integer frontendPortRangeStart;
 
-    public Integer getFrontendPortRangeStart() {
+    public Integer frontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
 
@@ -105,7 +105,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -116,7 +116,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
@@ -127,7 +127,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -138,7 +138,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -149,7 +149,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -160,7 +160,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

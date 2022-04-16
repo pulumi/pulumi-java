@@ -28,7 +28,7 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="associatedRouteTable")
       private final @Nullable Output<SubResourceArgs> associatedRouteTable;
 
-    public Output<SubResourceArgs> getAssociatedRouteTable() {
+    public Output<SubResourceArgs> associatedRouteTable() {
         return this.associatedRouteTable == null ? Codegen.empty() : this.associatedRouteTable;
     }
 
@@ -39,7 +39,7 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="propagatedRouteTables")
       private final @Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables;
 
-    public Output<PropagatedRouteTableArgs> getPropagatedRouteTables() {
+    public Output<PropagatedRouteTableArgs> propagatedRouteTables() {
         return this.propagatedRouteTables == null ? Codegen.empty() : this.propagatedRouteTables;
     }
 
@@ -50,7 +50,7 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="vnetRoutes")
       private final @Nullable Output<VnetRouteArgs> vnetRoutes;
 
-    public Output<VnetRouteArgs> getVnetRoutes() {
+    public Output<VnetRouteArgs> vnetRoutes() {
         return this.vnetRoutes == null ? Codegen.empty() : this.vnetRoutes;
     }
 

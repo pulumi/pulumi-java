@@ -117,77 +117,77 @@ public final class AzureBlobFSDatasetResponse {
      * List of tags that can be used for describing the Dataset.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The data compression method used for the blob storage.
      * 
     */
-    public Optional<DatasetCompressionResponse> getCompression() {
+    public Optional<DatasetCompressionResponse> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * Dataset description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the Azure Data Lake Storage Gen2. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
     */
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * The path of the Azure Data Lake Storage Gen2 storage. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * The format of the Azure Data Lake Storage Gen2 storage.
      * 
     */
-    public Optional<Object> getFormat() {
+    public Optional<Object> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * Parameters for dataset.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
     */
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
     */
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
@@ -195,7 +195,7 @@ public final class AzureBlobFSDatasetResponse {
      * Expected value is 'AzureBlobFSFile'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

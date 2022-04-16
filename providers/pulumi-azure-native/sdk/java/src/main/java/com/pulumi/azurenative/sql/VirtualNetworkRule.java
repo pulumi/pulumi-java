@@ -43,7 +43,7 @@ public class VirtualNetworkRule extends com.pulumi.resources.CustomResource {
      * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnoreMissingVnetServiceEndpoint() {
+    public Output</* @Nullable */ Boolean> ignoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint;
     }
     /**
@@ -57,7 +57,7 @@ public class VirtualNetworkRule extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class VirtualNetworkRule extends com.pulumi.resources.CustomResource {
      * @return Virtual Network Rule State
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -85,7 +85,7 @@ public class VirtualNetworkRule extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -99,7 +99,7 @@ public class VirtualNetworkRule extends com.pulumi.resources.CustomResource {
      * @return The ARM resource id of the virtual network subnet.
      * 
      */
-    public Output<String> getVirtualNetworkSubnetId() {
+    public Output<String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 

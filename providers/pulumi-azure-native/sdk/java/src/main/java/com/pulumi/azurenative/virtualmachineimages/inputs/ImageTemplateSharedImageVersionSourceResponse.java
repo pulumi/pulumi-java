@@ -23,7 +23,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends com.pul
     @Import(name="imageVersionId", required=true)
       private final String imageVersionId;
 
-    public String getImageVersionId() {
+    public String imageVersionId() {
         return this.imageVersionId;
     }
 
@@ -35,7 +35,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends com.pul
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

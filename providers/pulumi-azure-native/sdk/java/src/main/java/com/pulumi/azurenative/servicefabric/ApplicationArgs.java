@@ -30,7 +30,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -52,7 +52,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
-    public Output<ManagedIdentityArgs> getIdentity() {
+    public Output<ManagedIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -74,7 +74,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedIdentities")
       private final @Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
 
-    public Output<List<ApplicationUserAssignedIdentityArgs>> getManagedIdentities() {
+    public Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities() {
         return this.managedIdentities == null ? Codegen.empty() : this.managedIdentities;
     }
 
@@ -85,7 +85,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximumNodes")
       private final @Nullable Output<Double> maximumNodes;
 
-    public Output<Double> getMaximumNodes() {
+    public Output<Double> maximumNodes() {
         return this.maximumNodes == null ? Codegen.empty() : this.maximumNodes;
     }
 
@@ -96,7 +96,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metrics")
       private final @Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics;
 
-    public Output<List<ApplicationMetricDescriptionArgs>> getMetrics() {
+    public Output<List<ApplicationMetricDescriptionArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -107,7 +107,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumNodes")
       private final @Nullable Output<Double> minimumNodes;
 
-    public Output<Double> getMinimumNodes() {
+    public Output<Double> minimumNodes() {
         return this.minimumNodes == null ? Codegen.empty() : this.minimumNodes;
     }
 
@@ -118,7 +118,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -129,7 +129,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="removeApplicationCapacity")
       private final @Nullable Output<Boolean> removeApplicationCapacity;
 
-    public Output<Boolean> getRemoveApplicationCapacity() {
+    public Output<Boolean> removeApplicationCapacity() {
         return this.removeApplicationCapacity == null ? Codegen.empty() : this.removeApplicationCapacity;
     }
 
@@ -140,7 +140,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -151,7 +151,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -162,7 +162,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
@@ -173,7 +173,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeVersion")
       private final @Nullable Output<String> typeVersion;
 
-    public Output<String> getTypeVersion() {
+    public Output<String> typeVersion() {
         return this.typeVersion == null ? Codegen.empty() : this.typeVersion;
     }
 
@@ -184,7 +184,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upgradePolicy")
       private final @Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy;
 
-    public Output<ApplicationUpgradePolicyArgs> getUpgradePolicy() {
+    public Output<ApplicationUpgradePolicyArgs> upgradePolicy() {
         return this.upgradePolicy == null ? Codegen.empty() : this.upgradePolicy;
     }
 

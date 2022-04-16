@@ -26,7 +26,7 @@ public final class PtrRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ptrdname")
       private final @Nullable Output<String> ptrdname;
 
-    public Output<String> getPtrdname() {
+    public Output<String> ptrdname() {
         return this.ptrdname == null ? Codegen.empty() : this.ptrdname;
     }
 

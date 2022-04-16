@@ -25,7 +25,7 @@ public final class VpnServerConfigVpnClientRootCertificateResponse extends com.p
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class VpnServerConfigVpnClientRootCertificateResponse extends com.p
     @Import(name="publicCertData")
       private final @Nullable String publicCertData;
 
-    public Optional<String> getPublicCertData() {
+    public Optional<String> publicCertData() {
         return this.publicCertData == null ? Optional.empty() : Optional.ofNullable(this.publicCertData);
     }
 

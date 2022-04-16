@@ -42,7 +42,7 @@ public class Suppression extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the expiration time stamp.
      * 
      */
-    public Output<String> getExpirationTimeStamp() {
+    public Output<String> expirationTimeStamp() {
         return this.expirationTimeStamp;
     }
     /**
@@ -56,7 +56,7 @@ public class Suppression extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class Suppression extends com.pulumi.resources.CustomResource {
      * @return The GUID of the suppression.
      * 
      */
-    public Output</* @Nullable */ String> getSuppressionId() {
+    public Output</* @Nullable */ String> suppressionId() {
         return this.suppressionId;
     }
     /**
@@ -84,7 +84,7 @@ public class Suppression extends com.pulumi.resources.CustomResource {
      * @return The duration for which the suppression is valid.
      * 
      */
-    public Output</* @Nullable */ String> getTtl() {
+    public Output</* @Nullable */ String> ttl() {
         return this.ttl;
     }
     /**
@@ -98,7 +98,7 @@ public class Suppression extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

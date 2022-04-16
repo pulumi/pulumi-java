@@ -43,7 +43,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Collation of the metadata catalog.
      * 
      */
-    public Output</* @Nullable */ String> getCatalogCollation() {
+    public Output</* @Nullable */ String> catalogCollation() {
         return this.catalogCollation;
     }
     /**
@@ -57,7 +57,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Collation of the managed database.
      * 
      */
-    public Output</* @Nullable */ String> getCollation() {
+    public Output</* @Nullable */ String> collation() {
         return this.collation;
     }
     /**
@@ -71,7 +71,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Creation date of the database.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -85,7 +85,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Geo paired region.
      * 
      */
-    public Output<String> getDefaultSecondaryLocation() {
+    public Output<String> defaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
     /**
@@ -99,7 +99,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Earliest restore point in time for point in time restore.
      * 
      */
-    public Output<String> getEarliestRestorePoint() {
+    public Output<String> earliestRestorePoint() {
         return this.earliestRestorePoint;
     }
     /**
@@ -113,7 +113,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Instance Failover Group resource identifier that this managed database belongs to.
      * 
      */
-    public Output<String> getFailoverGroupId() {
+    public Output<String> failoverGroupId() {
         return this.failoverGroupId;
     }
     /**
@@ -127,7 +127,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -141,7 +141,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +155,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Status of the database.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -169,7 +169,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -183,7 +183,7 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

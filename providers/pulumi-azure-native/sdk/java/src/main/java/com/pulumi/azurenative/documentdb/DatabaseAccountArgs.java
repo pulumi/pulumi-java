@@ -41,7 +41,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -52,7 +52,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="apiProperties")
       private final @Nullable Output<ApiPropertiesArgs> apiProperties;
 
-    public Output<ApiPropertiesArgs> getApiProperties() {
+    public Output<ApiPropertiesArgs> apiProperties() {
         return this.apiProperties == null ? Codegen.empty() : this.apiProperties;
     }
 
@@ -63,7 +63,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="backupPolicy")
       private final @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
 
-    public Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> getBackupPolicy() {
+    public Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy() {
         return this.backupPolicy == null ? Codegen.empty() : this.backupPolicy;
     }
 
@@ -74,7 +74,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="capabilities")
       private final @Nullable Output<List<CapabilityArgs>> capabilities;
 
-    public Output<List<CapabilityArgs>> getCapabilities() {
+    public Output<List<CapabilityArgs>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
@@ -85,7 +85,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="connectorOffer")
       private final @Nullable Output<Either<String,ConnectorOffer>> connectorOffer;
 
-    public Output<Either<String,ConnectorOffer>> getConnectorOffer() {
+    public Output<Either<String,ConnectorOffer>> connectorOffer() {
         return this.connectorOffer == null ? Codegen.empty() : this.connectorOffer;
     }
 
@@ -96,7 +96,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="consistencyPolicy")
       private final @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy;
 
-    public Output<ConsistencyPolicyArgs> getConsistencyPolicy() {
+    public Output<ConsistencyPolicyArgs> consistencyPolicy() {
         return this.consistencyPolicy == null ? Codegen.empty() : this.consistencyPolicy;
     }
 
@@ -107,7 +107,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="cors")
       private final @Nullable Output<List<CorsPolicyArgs>> cors;
 
-    public Output<List<CorsPolicyArgs>> getCors() {
+    public Output<List<CorsPolicyArgs>> cors() {
         return this.cors == null ? Codegen.empty() : this.cors;
     }
 
@@ -118,7 +118,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="databaseAccountOfferType", required=true)
       private final Output<DatabaseAccountOfferType> databaseAccountOfferType;
 
-    public Output<DatabaseAccountOfferType> getDatabaseAccountOfferType() {
+    public Output<DatabaseAccountOfferType> databaseAccountOfferType() {
         return this.databaseAccountOfferType;
     }
 
@@ -129,7 +129,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultIdentity")
       private final @Nullable Output<String> defaultIdentity;
 
-    public Output<String> getDefaultIdentity() {
+    public Output<String> defaultIdentity() {
         return this.defaultIdentity == null ? Codegen.empty() : this.defaultIdentity;
     }
 
@@ -140,7 +140,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="disableKeyBasedMetadataWriteAccess")
       private final @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess;
 
-    public Output<Boolean> getDisableKeyBasedMetadataWriteAccess() {
+    public Output<Boolean> disableKeyBasedMetadataWriteAccess() {
         return this.disableKeyBasedMetadataWriteAccess == null ? Codegen.empty() : this.disableKeyBasedMetadataWriteAccess;
     }
 
@@ -151,7 +151,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableAnalyticalStorage")
       private final @Nullable Output<Boolean> enableAnalyticalStorage;
 
-    public Output<Boolean> getEnableAnalyticalStorage() {
+    public Output<Boolean> enableAnalyticalStorage() {
         return this.enableAnalyticalStorage == null ? Codegen.empty() : this.enableAnalyticalStorage;
     }
 
@@ -162,7 +162,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableAutomaticFailover")
       private final @Nullable Output<Boolean> enableAutomaticFailover;
 
-    public Output<Boolean> getEnableAutomaticFailover() {
+    public Output<Boolean> enableAutomaticFailover() {
         return this.enableAutomaticFailover == null ? Codegen.empty() : this.enableAutomaticFailover;
     }
 
@@ -173,7 +173,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableCassandraConnector")
       private final @Nullable Output<Boolean> enableCassandraConnector;
 
-    public Output<Boolean> getEnableCassandraConnector() {
+    public Output<Boolean> enableCassandraConnector() {
         return this.enableCassandraConnector == null ? Codegen.empty() : this.enableCassandraConnector;
     }
 
@@ -184,7 +184,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableFreeTier")
       private final @Nullable Output<Boolean> enableFreeTier;
 
-    public Output<Boolean> getEnableFreeTier() {
+    public Output<Boolean> enableFreeTier() {
         return this.enableFreeTier == null ? Codegen.empty() : this.enableFreeTier;
     }
 
@@ -195,7 +195,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableMultipleWriteLocations")
       private final @Nullable Output<Boolean> enableMultipleWriteLocations;
 
-    public Output<Boolean> getEnableMultipleWriteLocations() {
+    public Output<Boolean> enableMultipleWriteLocations() {
         return this.enableMultipleWriteLocations == null ? Codegen.empty() : this.enableMultipleWriteLocations;
     }
 
@@ -206,7 +206,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -217,7 +217,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ipRules")
       private final @Nullable Output<List<IpAddressOrRangeArgs>> ipRules;
 
-    public Output<List<IpAddressOrRangeArgs>> getIpRules() {
+    public Output<List<IpAddressOrRangeArgs>> ipRules() {
         return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
@@ -228,7 +228,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isVirtualNetworkFilterEnabled")
       private final @Nullable Output<Boolean> isVirtualNetworkFilterEnabled;
 
-    public Output<Boolean> getIsVirtualNetworkFilterEnabled() {
+    public Output<Boolean> isVirtualNetworkFilterEnabled() {
         return this.isVirtualNetworkFilterEnabled == null ? Codegen.empty() : this.isVirtualNetworkFilterEnabled;
     }
 
@@ -239,7 +239,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="keyVaultKeyUri")
       private final @Nullable Output<String> keyVaultKeyUri;
 
-    public Output<String> getKeyVaultKeyUri() {
+    public Output<String> keyVaultKeyUri() {
         return this.keyVaultKeyUri == null ? Codegen.empty() : this.keyVaultKeyUri;
     }
 
@@ -250,7 +250,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<Either<String,DatabaseAccountKind>> kind;
 
-    public Output<Either<String,DatabaseAccountKind>> getKind() {
+    public Output<Either<String,DatabaseAccountKind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -261,7 +261,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -272,7 +272,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="locations", required=true)
       private final Output<List<LocationArgs>> locations;
 
-    public Output<List<LocationArgs>> getLocations() {
+    public Output<List<LocationArgs>> locations() {
         return this.locations;
     }
 
@@ -283,7 +283,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkAclBypass")
       private final @Nullable Output<NetworkAclBypass> networkAclBypass;
 
-    public Output<NetworkAclBypass> getNetworkAclBypass() {
+    public Output<NetworkAclBypass> networkAclBypass() {
         return this.networkAclBypass == null ? Codegen.empty() : this.networkAclBypass;
     }
 
@@ -294,7 +294,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkAclBypassResourceIds")
       private final @Nullable Output<List<String>> networkAclBypassResourceIds;
 
-    public Output<List<String>> getNetworkAclBypassResourceIds() {
+    public Output<List<String>> networkAclBypassResourceIds() {
         return this.networkAclBypassResourceIds == null ? Codegen.empty() : this.networkAclBypassResourceIds;
     }
 
@@ -305,7 +305,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -316,7 +316,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -327,7 +327,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -338,7 +338,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
+    public Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 

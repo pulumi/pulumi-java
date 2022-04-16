@@ -28,7 +28,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="acknowledgementControlNumberLowerBound", required=true)
       private final Output<Integer> acknowledgementControlNumberLowerBound;
 
-    public Output<Integer> getAcknowledgementControlNumberLowerBound() {
+    public Output<Integer> acknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
     }
 
@@ -39,7 +39,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="acknowledgementControlNumberPrefix")
       private final @Nullable Output<String> acknowledgementControlNumberPrefix;
 
-    public Output<String> getAcknowledgementControlNumberPrefix() {
+    public Output<String> acknowledgementControlNumberPrefix() {
         return this.acknowledgementControlNumberPrefix == null ? Codegen.empty() : this.acknowledgementControlNumberPrefix;
     }
 
@@ -50,7 +50,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="acknowledgementControlNumberSuffix")
       private final @Nullable Output<String> acknowledgementControlNumberSuffix;
 
-    public Output<String> getAcknowledgementControlNumberSuffix() {
+    public Output<String> acknowledgementControlNumberSuffix() {
         return this.acknowledgementControlNumberSuffix == null ? Codegen.empty() : this.acknowledgementControlNumberSuffix;
     }
 
@@ -61,7 +61,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="acknowledgementControlNumberUpperBound", required=true)
       private final Output<Integer> acknowledgementControlNumberUpperBound;
 
-    public Output<Integer> getAcknowledgementControlNumberUpperBound() {
+    public Output<Integer> acknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
     }
 
@@ -72,7 +72,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="batchFunctionalAcknowledgements", required=true)
       private final Output<Boolean> batchFunctionalAcknowledgements;
 
-    public Output<Boolean> getBatchFunctionalAcknowledgements() {
+    public Output<Boolean> batchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
     }
 
@@ -83,7 +83,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="batchImplementationAcknowledgements", required=true)
       private final Output<Boolean> batchImplementationAcknowledgements;
 
-    public Output<Boolean> getBatchImplementationAcknowledgements() {
+    public Output<Boolean> batchImplementationAcknowledgements() {
         return this.batchImplementationAcknowledgements;
     }
 
@@ -94,7 +94,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="batchTechnicalAcknowledgements", required=true)
       private final Output<Boolean> batchTechnicalAcknowledgements;
 
-    public Output<Boolean> getBatchTechnicalAcknowledgements() {
+    public Output<Boolean> batchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
     }
 
@@ -105,7 +105,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="functionalAcknowledgementVersion")
       private final @Nullable Output<String> functionalAcknowledgementVersion;
 
-    public Output<String> getFunctionalAcknowledgementVersion() {
+    public Output<String> functionalAcknowledgementVersion() {
         return this.functionalAcknowledgementVersion == null ? Codegen.empty() : this.functionalAcknowledgementVersion;
     }
 
@@ -116,7 +116,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="implementationAcknowledgementVersion")
       private final @Nullable Output<String> implementationAcknowledgementVersion;
 
-    public Output<String> getImplementationAcknowledgementVersion() {
+    public Output<String> implementationAcknowledgementVersion() {
         return this.implementationAcknowledgementVersion == null ? Codegen.empty() : this.implementationAcknowledgementVersion;
     }
 
@@ -127,7 +127,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="needFunctionalAcknowledgement", required=true)
       private final Output<Boolean> needFunctionalAcknowledgement;
 
-    public Output<Boolean> getNeedFunctionalAcknowledgement() {
+    public Output<Boolean> needFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
     }
 
@@ -138,7 +138,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="needImplementationAcknowledgement", required=true)
       private final Output<Boolean> needImplementationAcknowledgement;
 
-    public Output<Boolean> getNeedImplementationAcknowledgement() {
+    public Output<Boolean> needImplementationAcknowledgement() {
         return this.needImplementationAcknowledgement;
     }
 
@@ -149,7 +149,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="needLoopForValidMessages", required=true)
       private final Output<Boolean> needLoopForValidMessages;
 
-    public Output<Boolean> getNeedLoopForValidMessages() {
+    public Output<Boolean> needLoopForValidMessages() {
         return this.needLoopForValidMessages;
     }
 
@@ -160,7 +160,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="needTechnicalAcknowledgement", required=true)
       private final Output<Boolean> needTechnicalAcknowledgement;
 
-    public Output<Boolean> getNeedTechnicalAcknowledgement() {
+    public Output<Boolean> needTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
     }
 
@@ -171,7 +171,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="rolloverAcknowledgementControlNumber", required=true)
       private final Output<Boolean> rolloverAcknowledgementControlNumber;
 
-    public Output<Boolean> getRolloverAcknowledgementControlNumber() {
+    public Output<Boolean> rolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
     }
 
@@ -182,7 +182,7 @@ public final class X12AcknowledgementSettingsArgs extends com.pulumi.resources.R
     @Import(name="sendSynchronousAcknowledgement", required=true)
       private final Output<Boolean> sendSynchronousAcknowledgement;
 
-    public Output<Boolean> getSendSynchronousAcknowledgement() {
+    public Output<Boolean> sendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;
     }
 

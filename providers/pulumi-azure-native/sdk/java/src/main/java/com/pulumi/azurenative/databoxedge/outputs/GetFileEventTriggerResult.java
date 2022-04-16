@@ -80,14 +80,14 @@ public final class GetFileEventTriggerResult {
      * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
     */
-    public Optional<String> getCustomContextTag() {
+    public Optional<String> customContextTag() {
         return Optional.ofNullable(this.customContextTag);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -95,42 +95,42 @@ public final class GetFileEventTriggerResult {
      * Expected value is 'FileEvent'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Role sink info.
      * 
     */
-    public RoleSinkInfoResponse getSinkInfo() {
+    public RoleSinkInfoResponse sinkInfo() {
         return this.sinkInfo;
     }
     /**
      * File event source details.
      * 
     */
-    public FileSourceInfoResponse getSourceInfo() {
+    public FileSourceInfoResponse sourceInfo() {
         return this.sourceInfo;
     }
     /**
      * Trigger in DataBoxEdge Resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

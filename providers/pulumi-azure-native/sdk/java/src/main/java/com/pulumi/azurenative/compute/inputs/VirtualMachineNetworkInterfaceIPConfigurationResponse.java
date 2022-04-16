@@ -29,7 +29,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
-    public List<SubResourceResponse> getApplicationGatewayBackendAddressPools() {
+    public List<SubResourceResponse> applicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="applicationSecurityGroups")
       private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
-    public List<SubResourceResponse> getApplicationSecurityGroups() {
+    public List<SubResourceResponse> applicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
-    public List<SubResourceResponse> getLoadBalancerBackendAddressPools() {
+    public List<SubResourceResponse> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
 
@@ -62,7 +62,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -73,7 +73,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="primary")
       private final @Nullable Boolean primary;
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
@@ -84,7 +84,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
-    public Optional<String> getPrivateIPAddressVersion() {
+    public Optional<String> privateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
@@ -95,7 +95,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="publicIPAddressConfiguration")
       private final @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
-    public Optional<VirtualMachinePublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
+    public Optional<VirtualMachinePublicIPAddressConfigurationResponse> publicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
@@ -106,7 +106,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

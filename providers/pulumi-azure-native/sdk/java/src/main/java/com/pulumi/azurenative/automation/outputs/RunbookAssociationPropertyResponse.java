@@ -26,7 +26,7 @@ public final class RunbookAssociationPropertyResponse {
      * Gets or sets the name of the runbook.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

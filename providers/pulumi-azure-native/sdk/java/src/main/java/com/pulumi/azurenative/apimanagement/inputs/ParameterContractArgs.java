@@ -28,7 +28,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -39,7 +39,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
     @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
-    public Output<Boolean> getRequired() {
+    public Output<Boolean> required() {
         return this.required == null ? Codegen.empty() : this.required;
     }
 
@@ -72,7 +72,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -83,7 +83,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

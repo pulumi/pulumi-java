@@ -25,7 +25,7 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="address")
       private final @Nullable String address;
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 

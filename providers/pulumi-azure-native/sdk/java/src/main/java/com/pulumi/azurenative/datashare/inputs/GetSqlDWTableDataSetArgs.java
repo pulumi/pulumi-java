@@ -19,7 +19,7 @@ public final class GetSqlDWTableDataSetArgs extends com.pulumi.resources.InvokeA
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlDWTableDataSetArgs extends com.pulumi.resources.InvokeA
     @Import(name="dataSetName", required=true)
       private final String dataSetName;
 
-    public String getDataSetName() {
+    public String dataSetName() {
         return this.dataSetName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSqlDWTableDataSetArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSqlDWTableDataSetArgs extends com.pulumi.resources.InvokeA
     @Import(name="shareName", required=true)
       private final String shareName;
 
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
 

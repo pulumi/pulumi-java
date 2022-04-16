@@ -19,7 +19,7 @@ public final class GetBackendArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="backendId", required=true)
       private final String backendId;
 
-    public String getBackendId() {
+    public String backendId() {
         return this.backendId;
     }
 
@@ -30,7 +30,7 @@ public final class GetBackendArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBackendArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

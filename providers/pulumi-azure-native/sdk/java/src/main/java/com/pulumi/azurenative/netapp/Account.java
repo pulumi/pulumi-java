@@ -46,7 +46,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Active Directories
      * 
      */
-    public Output</* @Nullable */ List<ActiveDirectoryResponse>> getActiveDirectories() {
+    public Output</* @Nullable */ List<ActiveDirectoryResponse>> activeDirectories() {
         return this.activeDirectories;
     }
     /**
@@ -60,7 +60,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Encryption settings
      * 
      */
-    public Output</* @Nullable */ AccountEncryptionResponse> getEncryption() {
+    public Output</* @Nullable */ AccountEncryptionResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -74,7 +74,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Azure lifecycle management
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -116,7 +116,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -130,7 +130,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

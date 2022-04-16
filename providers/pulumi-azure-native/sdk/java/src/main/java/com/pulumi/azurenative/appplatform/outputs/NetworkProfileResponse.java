@@ -72,49 +72,49 @@ public final class NetworkProfileResponse {
      * Name of the resource group containing network resources of Azure Spring Cloud Apps
      * 
     */
-    public Optional<String> getAppNetworkResourceGroup() {
+    public Optional<String> appNetworkResourceGroup() {
         return Optional.ofNullable(this.appNetworkResourceGroup);
     }
     /**
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
      * 
     */
-    public Optional<String> getAppSubnetId() {
+    public Optional<String> appSubnetId() {
         return Optional.ofNullable(this.appSubnetId);
     }
     /**
      * Desired outbound IP resources for Azure Spring Cloud instance.
      * 
     */
-    public NetworkProfileResponseOutboundIPs getOutboundIPs() {
+    public NetworkProfileResponseOutboundIPs outboundIPs() {
         return this.outboundIPs;
     }
     /**
      * Required inbound or outbound traffics for Azure Spring Cloud instance.
      * 
     */
-    public List<RequiredTrafficResponse> getRequiredTraffics() {
+    public List<RequiredTrafficResponse> requiredTraffics() {
         return this.requiredTraffics;
     }
     /**
      * Azure Spring Cloud service reserved CIDR
      * 
     */
-    public Optional<String> getServiceCidr() {
+    public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
     /**
      * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
      * 
     */
-    public Optional<String> getServiceRuntimeNetworkResourceGroup() {
+    public Optional<String> serviceRuntimeNetworkResourceGroup() {
         return Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
     }
     /**
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
      * 
     */
-    public Optional<String> getServiceRuntimeSubnetId() {
+    public Optional<String> serviceRuntimeSubnetId() {
         return Optional.ofNullable(this.serviceRuntimeSubnetId);
     }
 

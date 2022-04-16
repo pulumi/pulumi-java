@@ -91,70 +91,70 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
      * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
      * 
     */
-    public Optional<String> getAadClientId() {
+    public Optional<String> aadClientId() {
         return Optional.ofNullable(this.aadClientId);
     }
     /**
      * (Metrics Advisor Only) The Azure AD Tenant Id.
      * 
     */
-    public Optional<String> getAadTenantId() {
+    public Optional<String> aadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
     /**
      * (Personalization Only) The flag to enable statistics of Bing Search.
      * 
     */
-    public Optional<String> getEventHubConnectionString() {
+    public Optional<String> eventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
     /**
      * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
      * 
     */
-    public Optional<String> getQnaAzureSearchEndpointId() {
+    public Optional<String> qnaAzureSearchEndpointId() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
     /**
      * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
      * 
     */
-    public Optional<String> getQnaAzureSearchEndpointKey() {
+    public Optional<String> qnaAzureSearchEndpointKey() {
         return Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
     /**
      * (QnAMaker Only) The runtime endpoint of QnAMaker.
      * 
     */
-    public Optional<String> getQnaRuntimeEndpoint() {
+    public Optional<String> qnaRuntimeEndpoint() {
         return Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
     /**
      * (Bing Search Only) The flag to enable statistics of Bing Search.
      * 
     */
-    public Optional<Boolean> getStatisticsEnabled() {
+    public Optional<Boolean> statisticsEnabled() {
         return Optional.ofNullable(this.statisticsEnabled);
     }
     /**
      * (Personalization Only) The storage account connection string.
      * 
     */
-    public Optional<String> getStorageAccountConnectionString() {
+    public Optional<String> storageAccountConnectionString() {
         return Optional.ofNullable(this.storageAccountConnectionString);
     }
     /**
      * (Metrics Advisor Only) The super user of Metrics Advisor.
      * 
     */
-    public Optional<String> getSuperUser() {
+    public Optional<String> superUser() {
         return Optional.ofNullable(this.superUser);
     }
     /**
      * (Metrics Advisor Only) The website name of Metrics Advisor.
      * 
     */
-    public Optional<String> getWebsiteName() {
+    public Optional<String> websiteName() {
         return Optional.ofNullable(this.websiteName);
     }
 

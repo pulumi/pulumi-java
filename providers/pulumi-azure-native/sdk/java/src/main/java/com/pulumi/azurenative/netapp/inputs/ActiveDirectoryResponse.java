@@ -27,7 +27,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="activeDirectoryId")
       private final @Nullable String activeDirectoryId;
 
-    public Optional<String> getActiveDirectoryId() {
+    public Optional<String> activeDirectoryId() {
         return this.activeDirectoryId == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryId);
     }
 
@@ -38,7 +38,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="adName")
       private final @Nullable String adName;
 
-    public Optional<String> getAdName() {
+    public Optional<String> adName() {
         return this.adName == null ? Optional.empty() : Optional.ofNullable(this.adName);
     }
 
@@ -49,7 +49,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="aesEncryption")
       private final @Nullable Boolean aesEncryption;
 
-    public Optional<Boolean> getAesEncryption() {
+    public Optional<Boolean> aesEncryption() {
         return this.aesEncryption == null ? Optional.empty() : Optional.ofNullable(this.aesEncryption);
     }
 
@@ -60,7 +60,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="allowLocalNfsUsersWithLdap")
       private final @Nullable Boolean allowLocalNfsUsersWithLdap;
 
-    public Optional<Boolean> getAllowLocalNfsUsersWithLdap() {
+    public Optional<Boolean> allowLocalNfsUsersWithLdap() {
         return this.allowLocalNfsUsersWithLdap == null ? Optional.empty() : Optional.ofNullable(this.allowLocalNfsUsersWithLdap);
     }
 
@@ -71,7 +71,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="backupOperators")
       private final @Nullable List<String> backupOperators;
 
-    public List<String> getBackupOperators() {
+    public List<String> backupOperators() {
         return this.backupOperators == null ? List.of() : this.backupOperators;
     }
 
@@ -82,7 +82,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dns")
       private final @Nullable String dns;
 
-    public Optional<String> getDns() {
+    public Optional<String> dns() {
         return this.dns == null ? Optional.empty() : Optional.ofNullable(this.dns);
     }
 
@@ -93,7 +93,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="domain")
       private final @Nullable String domain;
 
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
     }
 
@@ -104,7 +104,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="kdcIP")
       private final @Nullable String kdcIP;
 
-    public Optional<String> getKdcIP() {
+    public Optional<String> kdcIP() {
         return this.kdcIP == null ? Optional.empty() : Optional.ofNullable(this.kdcIP);
     }
 
@@ -115,7 +115,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ldapOverTLS")
       private final @Nullable Boolean ldapOverTLS;
 
-    public Optional<Boolean> getLdapOverTLS() {
+    public Optional<Boolean> ldapOverTLS() {
         return this.ldapOverTLS == null ? Optional.empty() : Optional.ofNullable(this.ldapOverTLS);
     }
 
@@ -126,7 +126,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ldapSigning")
       private final @Nullable Boolean ldapSigning;
 
-    public Optional<Boolean> getLdapSigning() {
+    public Optional<Boolean> ldapSigning() {
         return this.ldapSigning == null ? Optional.empty() : Optional.ofNullable(this.ldapSigning);
     }
 
@@ -137,7 +137,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="organizationalUnit")
       private final @Nullable String organizationalUnit;
 
-    public Optional<String> getOrganizationalUnit() {
+    public Optional<String> organizationalUnit() {
         return this.organizationalUnit == null ? Optional.empty() : Optional.ofNullable(this.organizationalUnit);
     }
 
@@ -148,7 +148,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -159,7 +159,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="securityOperators")
       private final @Nullable List<String> securityOperators;
 
-    public List<String> getSecurityOperators() {
+    public List<String> securityOperators() {
         return this.securityOperators == null ? List.of() : this.securityOperators;
     }
 
@@ -170,7 +170,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serverRootCACertificate")
       private final @Nullable String serverRootCACertificate;
 
-    public Optional<String> getServerRootCACertificate() {
+    public Optional<String> serverRootCACertificate() {
         return this.serverRootCACertificate == null ? Optional.empty() : Optional.ofNullable(this.serverRootCACertificate);
     }
 
@@ -181,7 +181,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="site")
       private final @Nullable String site;
 
-    public Optional<String> getSite() {
+    public Optional<String> site() {
         return this.site == null ? Optional.empty() : Optional.ofNullable(this.site);
     }
 
@@ -192,7 +192,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="smbServerName")
       private final @Nullable String smbServerName;
 
-    public Optional<String> getSmbServerName() {
+    public Optional<String> smbServerName() {
         return this.smbServerName == null ? Optional.empty() : Optional.ofNullable(this.smbServerName);
     }
 
@@ -203,7 +203,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -214,7 +214,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="statusDetails", required=true)
       private final String statusDetails;
 
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
 
@@ -225,7 +225,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

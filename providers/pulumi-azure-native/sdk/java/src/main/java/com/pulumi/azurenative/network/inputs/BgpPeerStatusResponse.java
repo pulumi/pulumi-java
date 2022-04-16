@@ -24,7 +24,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="asn", required=true)
       private final Double asn;
 
-    public Double getAsn() {
+    public Double asn() {
         return this.asn;
     }
 
@@ -35,7 +35,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="connectedDuration", required=true)
       private final String connectedDuration;
 
-    public String getConnectedDuration() {
+    public String connectedDuration() {
         return this.connectedDuration;
     }
 
@@ -46,7 +46,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="localAddress", required=true)
       private final String localAddress;
 
-    public String getLocalAddress() {
+    public String localAddress() {
         return this.localAddress;
     }
 
@@ -57,7 +57,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="messagesReceived", required=true)
       private final Double messagesReceived;
 
-    public Double getMessagesReceived() {
+    public Double messagesReceived() {
         return this.messagesReceived;
     }
 
@@ -68,7 +68,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="messagesSent", required=true)
       private final Double messagesSent;
 
-    public Double getMessagesSent() {
+    public Double messagesSent() {
         return this.messagesSent;
     }
 
@@ -79,7 +79,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="neighbor", required=true)
       private final String neighbor;
 
-    public String getNeighbor() {
+    public String neighbor() {
         return this.neighbor;
     }
 
@@ -90,7 +90,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="routesReceived", required=true)
       private final Double routesReceived;
 
-    public Double getRoutesReceived() {
+    public Double routesReceived() {
         return this.routesReceived;
     }
 
@@ -101,7 +101,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

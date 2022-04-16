@@ -26,7 +26,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
     @Import(name="bundledScaleUnit")
       private final @Nullable Output<String> bundledScaleUnit;
 
-    public Output<String> getBundledScaleUnit() {
+    public Output<String> bundledScaleUnit() {
         return this.bundledScaleUnit == null ? Codegen.empty() : this.bundledScaleUnit;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
     @Import(name="marketPlaceVersion")
       private final @Nullable Output<String> marketPlaceVersion;
 
-    public Output<String> getMarketPlaceVersion() {
+    public Output<String> marketPlaceVersion() {
         return this.marketPlaceVersion == null ? Codegen.empty() : this.marketPlaceVersion;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
-    public Output<String> getVendor() {
+    public Output<String> vendor() {
         return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 

@@ -26,7 +26,7 @@ public final class ManagementGroupLogSettingsArgs extends com.pulumi.resources.R
     @Import(name="category", required=true)
       private final Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
 
@@ -37,7 +37,7 @@ public final class ManagementGroupLogSettingsArgs extends com.pulumi.resources.R
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

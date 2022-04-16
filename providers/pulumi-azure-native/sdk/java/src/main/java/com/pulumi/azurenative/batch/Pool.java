@@ -48,13 +48,13 @@ public class Pool extends com.pulumi.resources.CustomResource {
     @Export(name="allocationState", type=String.class, parameters={})
     private Output<String> allocationState;
 
-    public Output<String> getAllocationState() {
+    public Output<String> allocationState() {
         return this.allocationState;
     }
     @Export(name="allocationStateTransitionTime", type=String.class, parameters={})
     private Output<String> allocationStateTransitionTime;
 
-    public Output<String> getAllocationStateTransitionTime() {
+    public Output<String> allocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
     }
     /**
@@ -68,7 +68,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
      * 
      */
-    public Output</* @Nullable */ List<String>> getApplicationLicenses() {
+    public Output</* @Nullable */ List<String>> applicationLicenses() {
         return this.applicationLicenses;
     }
     /**
@@ -82,7 +82,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationPackageReferenceResponse>> getApplicationPackages() {
+    public Output</* @Nullable */ List<ApplicationPackageReferenceResponse>> applicationPackages() {
         return this.applicationPackages;
     }
     /**
@@ -96,7 +96,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.
      * 
      */
-    public Output<AutoScaleRunResponse> getAutoScaleRun() {
+    public Output<AutoScaleRunResponse> autoScaleRun() {
         return this.autoScaleRun;
     }
     /**
@@ -110,25 +110,25 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
      */
-    public Output</* @Nullable */ List<CertificateReferenceResponse>> getCertificates() {
+    public Output</* @Nullable */ List<CertificateReferenceResponse>> certificates() {
         return this.certificates;
     }
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     @Export(name="currentDedicatedNodes", type=Integer.class, parameters={})
     private Output<Integer> currentDedicatedNodes;
 
-    public Output<Integer> getCurrentDedicatedNodes() {
+    public Output<Integer> currentDedicatedNodes() {
         return this.currentDedicatedNodes;
     }
     @Export(name="currentLowPriorityNodes", type=Integer.class, parameters={})
     private Output<Integer> currentLowPriorityNodes;
 
-    public Output<Integer> getCurrentLowPriorityNodes() {
+    public Output<Integer> currentLowPriorityNodes() {
         return this.currentLowPriorityNodes;
     }
     /**
@@ -142,7 +142,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
      * 
      */
-    public Output</* @Nullable */ DeploymentConfigurationResponse> getDeploymentConfiguration() {
+    public Output</* @Nullable */ DeploymentConfigurationResponse> deploymentConfiguration() {
         return this.deploymentConfiguration;
     }
     /**
@@ -156,7 +156,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -170,7 +170,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The ETag of the resource, used for concurrency statements.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -184,7 +184,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The type of identity used for the Batch Pool.
      * 
      */
-    public Output</* @Nullable */ BatchPoolIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ BatchPoolIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -198,7 +198,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
      * 
      */
-    public Output</* @Nullable */ String> getInterNodeCommunication() {
+    public Output</* @Nullable */ String> interNodeCommunication() {
         return this.interNodeCommunication;
     }
     /**
@@ -212,7 +212,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -226,7 +226,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
      * 
      */
-    public Output</* @Nullable */ List<MetadataItemResponse>> getMetadata() {
+    public Output</* @Nullable */ List<MetadataItemResponse>> metadata() {
         return this.metadata;
     }
     /**
@@ -240,7 +240,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
      * 
      */
-    public Output</* @Nullable */ List<MountConfigurationResponse>> getMountConfiguration() {
+    public Output</* @Nullable */ List<MountConfigurationResponse>> mountConfiguration() {
         return this.mountConfiguration;
     }
     /**
@@ -254,7 +254,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -268,19 +268,19 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The network configuration for a pool.
      * 
      */
-    public Output</* @Nullable */ NetworkConfigurationResponse> getNetworkConfiguration() {
+    public Output</* @Nullable */ NetworkConfigurationResponse> networkConfiguration() {
         return this.networkConfiguration;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     @Export(name="provisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> provisioningStateTransitionTime;
 
-    public Output<String> getProvisioningStateTransitionTime() {
+    public Output<String> provisioningStateTransitionTime() {
         return this.provisioningStateTransitionTime;
     }
     /**
@@ -294,7 +294,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
      * 
      */
-    public Output<ResizeOperationStatusResponse> getResizeOperationStatus() {
+    public Output<ResizeOperationStatusResponse> resizeOperationStatus() {
         return this.resizeOperationStatus;
     }
     /**
@@ -308,7 +308,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
      * 
      */
-    public Output</* @Nullable */ ScaleSettingsResponse> getScaleSettings() {
+    public Output</* @Nullable */ ScaleSettingsResponse> scaleSettings() {
         return this.scaleSettings;
     }
     /**
@@ -322,7 +322,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
      * 
      */
-    public Output</* @Nullable */ StartTaskResponse> getStartTask() {
+    public Output</* @Nullable */ StartTaskResponse> startTask() {
         return this.startTask;
     }
     /**
@@ -336,7 +336,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return If not specified, the default is spread.
      * 
      */
-    public Output</* @Nullable */ TaskSchedulingPolicyResponse> getTaskSchedulingPolicy() {
+    public Output</* @Nullable */ TaskSchedulingPolicyResponse> taskSchedulingPolicy() {
         return this.taskSchedulingPolicy;
     }
     /**
@@ -350,7 +350,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
      * 
      */
-    public Output</* @Nullable */ Integer> getTaskSlotsPerNode() {
+    public Output</* @Nullable */ Integer> taskSlotsPerNode() {
         return this.taskSlotsPerNode;
     }
     /**
@@ -364,13 +364,13 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     @Export(name="userAccounts", type=List.class, parameters={UserAccountResponse.class})
     private Output</* @Nullable */ List<UserAccountResponse>> userAccounts;
 
-    public Output</* @Nullable */ List<UserAccountResponse>> getUserAccounts() {
+    public Output</* @Nullable */ List<UserAccountResponse>> userAccounts() {
         return this.userAccounts;
     }
     /**
@@ -384,7 +384,7 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
      * 
      */
-    public Output</* @Nullable */ String> getVmSize() {
+    public Output</* @Nullable */ String> vmSize() {
         return this.vmSize;
     }
 

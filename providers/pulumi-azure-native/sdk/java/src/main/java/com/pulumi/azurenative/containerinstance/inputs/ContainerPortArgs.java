@@ -29,7 +29,7 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -40,7 +40,7 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ContainerNetworkProtocol>> protocol;
 
-    public Output<Either<String,ContainerNetworkProtocol>> getProtocol() {
+    public Output<Either<String,ContainerNetworkProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

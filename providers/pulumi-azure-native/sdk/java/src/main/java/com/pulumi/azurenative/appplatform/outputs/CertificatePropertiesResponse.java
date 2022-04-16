@@ -91,70 +91,70 @@ public final class CertificatePropertiesResponse {
      * The activate date of certificate.
      * 
     */
-    public String getActivateDate() {
+    public String activateDate() {
         return this.activateDate;
     }
     /**
      * The certificate version of key vault.
      * 
     */
-    public Optional<String> getCertVersion() {
+    public Optional<String> certVersion() {
         return Optional.ofNullable(this.certVersion);
     }
     /**
      * The domain list of certificate.
      * 
     */
-    public List<String> getDnsNames() {
+    public List<String> dnsNames() {
         return this.dnsNames;
     }
     /**
      * The expiration date of certificate.
      * 
     */
-    public String getExpirationDate() {
+    public String expirationDate() {
         return this.expirationDate;
     }
     /**
      * The issue date of certificate.
      * 
     */
-    public String getIssuedDate() {
+    public String issuedDate() {
         return this.issuedDate;
     }
     /**
      * The issuer of certificate.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
     /**
      * The certificate name of key vault.
      * 
     */
-    public String getKeyVaultCertName() {
+    public String keyVaultCertName() {
         return this.keyVaultCertName;
     }
     /**
      * The subject name of certificate.
      * 
     */
-    public String getSubjectName() {
+    public String subjectName() {
         return this.subjectName;
     }
     /**
      * The thumbprint of certificate.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * The vault uri of user key vault.
      * 
     */
-    public String getVaultUri() {
+    public String vaultUri() {
         return this.vaultUri;
     }
 

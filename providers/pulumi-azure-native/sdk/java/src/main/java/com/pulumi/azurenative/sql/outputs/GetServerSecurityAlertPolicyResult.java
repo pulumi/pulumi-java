@@ -108,84 +108,84 @@ public final class GetServerSecurityAlertPolicyResult {
      * Specifies the UTC creation time of the policy.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
      * 
     */
-    public List<String> getDisabledAlerts() {
+    public List<String> disabledAlerts() {
         return this.disabledAlerts == null ? List.of() : this.disabledAlerts;
     }
     /**
      * Specifies that the alert is sent to the account administrators.
      * 
     */
-    public Optional<Boolean> getEmailAccountAdmins() {
+    public Optional<Boolean> emailAccountAdmins() {
         return Optional.ofNullable(this.emailAccountAdmins);
     }
     /**
      * Specifies an array of e-mail addresses to which the alert is sent.
      * 
     */
-    public List<String> getEmailAddresses() {
+    public List<String> emailAddresses() {
         return this.emailAddresses == null ? List.of() : this.emailAddresses;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the number of days to keep in the Threat Detection audit logs.
      * 
     */
-    public Optional<Integer> getRetentionDays() {
+    public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Specifies the identifier key of the Threat Detection audit storage account.
      * 
     */
-    public Optional<String> getStorageAccountAccessKey() {
+    public Optional<String> storageAccountAccessKey() {
         return Optional.ofNullable(this.storageAccountAccessKey);
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
     */
-    public Optional<String> getStorageEndpoint() {
+    public Optional<String> storageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
     /**
      * SystemData of SecurityAlertPolicyResource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

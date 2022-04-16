@@ -26,7 +26,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keySource")
       private final @Nullable String keySource;
 
-    public Optional<String> getKeySource() {
+    public Optional<String> keySource() {
         return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
     }
 
@@ -37,7 +37,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
-    public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
     }
 

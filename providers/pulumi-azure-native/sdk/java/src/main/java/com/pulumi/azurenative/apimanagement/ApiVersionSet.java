@@ -42,7 +42,7 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Description of API Version Set.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Name of API Version Set
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -98,7 +98,7 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
      */
-    public Output</* @Nullable */ String> getVersionHeaderName() {
+    public Output</* @Nullable */ String> versionHeaderName() {
         return this.versionHeaderName;
     }
     /**
@@ -112,7 +112,7 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
      */
-    public Output</* @Nullable */ String> getVersionQueryName() {
+    public Output</* @Nullable */ String> versionQueryName() {
         return this.versionQueryName;
     }
     /**
@@ -126,7 +126,7 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return An value that determines where the API Version identifier will be located in a HTTP request.
      * 
      */
-    public Output<String> getVersioningScheme() {
+    public Output<String> versioningScheme() {
         return this.versioningScheme;
     }
 

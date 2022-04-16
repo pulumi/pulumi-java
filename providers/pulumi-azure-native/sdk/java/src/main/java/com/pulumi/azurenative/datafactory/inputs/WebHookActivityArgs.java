@@ -33,7 +33,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="authentication")
       private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
-    public Output<WebActivityAuthenticationArgs> getAuthentication() {
+    public Output<WebActivityAuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -44,7 +44,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="body")
       private final @Nullable Output<Object> body;
 
-    public Output<Object> getBody() {
+    public Output<Object> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -55,7 +55,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -66,7 +66,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -77,7 +77,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="headers")
       private final @Nullable Output<Object> headers;
 
-    public Output<Object> getHeaders() {
+    public Output<Object> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -88,7 +88,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="method", required=true)
       private final Output<Either<String,WebHookActivityMethod>> method;
 
-    public Output<Either<String,WebHookActivityMethod>> getMethod() {
+    public Output<Either<String,WebHookActivityMethod>> method() {
         return this.method;
     }
 
@@ -99,7 +99,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -110,7 +110,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="reportStatusOnCallBack")
       private final @Nullable Output<Object> reportStatusOnCallBack;
 
-    public Output<Object> getReportStatusOnCallBack() {
+    public Output<Object> reportStatusOnCallBack() {
         return this.reportStatusOnCallBack == null ? Codegen.empty() : this.reportStatusOnCallBack;
     }
 
@@ -121,7 +121,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -133,7 +133,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -144,7 +144,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -155,7 +155,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

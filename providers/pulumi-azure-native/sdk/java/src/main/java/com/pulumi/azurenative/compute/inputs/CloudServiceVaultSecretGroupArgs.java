@@ -28,7 +28,7 @@ public final class CloudServiceVaultSecretGroupArgs extends com.pulumi.resources
     @Import(name="sourceVault")
       private final @Nullable Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> getSourceVault() {
+    public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
     }
 
@@ -39,7 +39,7 @@ public final class CloudServiceVaultSecretGroupArgs extends com.pulumi.resources
     @Import(name="vaultCertificates")
       private final @Nullable Output<List<CloudServiceVaultCertificateArgs>> vaultCertificates;
 
-    public Output<List<CloudServiceVaultCertificateArgs>> getVaultCertificates() {
+    public Output<List<CloudServiceVaultCertificateArgs>> vaultCertificates() {
         return this.vaultCertificates == null ? Codegen.empty() : this.vaultCertificates;
     }
 

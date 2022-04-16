@@ -43,21 +43,21 @@ public final class GalleryOSDiskImageResponse {
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
      * 
     */
-    public Optional<String> getHostCaching() {
+    public Optional<String> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
     /**
      * This property indicates the size of the VHD to be created.
      * 
     */
-    public Integer getSizeInGB() {
+    public Integer sizeInGB() {
         return this.sizeInGB;
     }
     /**
      * The gallery artifact version source.
      * 
     */
-    public Optional<GalleryArtifactVersionSourceResponse> getSource() {
+    public Optional<GalleryArtifactVersionSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
 

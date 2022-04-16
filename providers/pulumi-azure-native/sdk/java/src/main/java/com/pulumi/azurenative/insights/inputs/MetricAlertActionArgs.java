@@ -27,7 +27,7 @@ public final class MetricAlertActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="actionGroupId")
       private final @Nullable Output<String> actionGroupId;
 
-    public Output<String> getActionGroupId() {
+    public Output<String> actionGroupId() {
         return this.actionGroupId == null ? Codegen.empty() : this.actionGroupId;
     }
 
@@ -38,7 +38,7 @@ public final class MetricAlertActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webHookProperties")
       private final @Nullable Output<Map<String,String>> webHookProperties;
 
-    public Output<Map<String,String>> getWebHookProperties() {
+    public Output<Map<String,String>> webHookProperties() {
         return this.webHookProperties == null ? Codegen.empty() : this.webHookProperties;
     }
 

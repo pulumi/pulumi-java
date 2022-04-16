@@ -24,7 +24,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="authType", required=true)
       private final String authType;
 
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
 
@@ -35,7 +35,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -46,7 +46,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -57,7 +57,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="secret", required=true)
       private final String secret;
 
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

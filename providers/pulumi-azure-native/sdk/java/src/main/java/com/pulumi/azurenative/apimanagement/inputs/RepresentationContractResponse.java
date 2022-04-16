@@ -27,7 +27,7 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
     @Import(name="contentType", required=true)
       private final String contentType;
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
 
@@ -38,7 +38,7 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
     @Import(name="formParameters")
       private final @Nullable List<ParameterContractResponse> formParameters;
 
-    public List<ParameterContractResponse> getFormParameters() {
+    public List<ParameterContractResponse> formParameters() {
         return this.formParameters == null ? List.of() : this.formParameters;
     }
 
@@ -49,7 +49,7 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
     @Import(name="sample")
       private final @Nullable String sample;
 
-    public Optional<String> getSample() {
+    public Optional<String> sample() {
         return this.sample == null ? Optional.empty() : Optional.ofNullable(this.sample);
     }
 
@@ -60,7 +60,7 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
     @Import(name="schemaId")
       private final @Nullable String schemaId;
 
-    public Optional<String> getSchemaId() {
+    public Optional<String> schemaId() {
         return this.schemaId == null ? Optional.empty() : Optional.ofNullable(this.schemaId);
     }
 
@@ -71,7 +71,7 @@ public final class RepresentationContractResponse extends com.pulumi.resources.I
     @Import(name="typeName")
       private final @Nullable String typeName;
 
-    public Optional<String> getTypeName() {
+    public Optional<String> typeName() {
         return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
     }
 

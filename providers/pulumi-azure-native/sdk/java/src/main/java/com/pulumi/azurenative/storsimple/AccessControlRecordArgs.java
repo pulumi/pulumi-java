@@ -23,7 +23,7 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="accessControlRecordName")
       private final @Nullable Output<String> accessControlRecordName;
 
-    public Output<String> getAccessControlRecordName() {
+    public Output<String> accessControlRecordName() {
         return this.accessControlRecordName == null ? Codegen.empty() : this.accessControlRecordName;
     }
 
@@ -34,7 +34,7 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="initiatorName", required=true)
       private final Output<String> initiatorName;
 
-    public Output<String> getInitiatorName() {
+    public Output<String> initiatorName() {
         return this.initiatorName;
     }
 
@@ -45,7 +45,7 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -56,7 +56,7 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -67,7 +67,7 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

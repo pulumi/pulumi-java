@@ -29,7 +29,7 @@ public final class NetworkACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allow")
       private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
 
-    public Output<List<Either<String,WebPubSubRequestType>>> getAllow() {
+    public Output<List<Either<String,WebPubSubRequestType>>> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deny")
       private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
 
-    public Output<List<Either<String,WebPubSubRequestType>>> getDeny() {
+    public Output<List<Either<String,WebPubSubRequestType>>> deny() {
         return this.deny == null ? Codegen.empty() : this.deny;
     }
 

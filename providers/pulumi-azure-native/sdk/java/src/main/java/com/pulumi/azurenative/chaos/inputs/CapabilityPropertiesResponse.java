@@ -23,7 +23,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -34,7 +34,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="parametersSchema", required=true)
       private final String parametersSchema;
 
-    public String getParametersSchema() {
+    public String parametersSchema() {
         return this.parametersSchema;
     }
 
@@ -45,7 +45,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="publisher", required=true)
       private final String publisher;
 
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
 
@@ -56,7 +56,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="targetType", required=true)
       private final String targetType;
 
-    public String getTargetType() {
+    public String targetType() {
         return this.targetType;
     }
 
@@ -67,7 +67,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="urn", required=true)
       private final String urn;
 
-    public String getUrn() {
+    public String urn() {
         return this.urn;
     }
 

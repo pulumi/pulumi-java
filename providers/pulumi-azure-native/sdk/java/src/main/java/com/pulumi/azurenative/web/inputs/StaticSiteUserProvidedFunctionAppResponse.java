@@ -25,7 +25,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="createdOn", required=true)
       private final String createdOn;
 
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
 
@@ -36,7 +36,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="functionAppRegion")
       private final @Nullable String functionAppRegion;
 
-    public Optional<String> getFunctionAppRegion() {
+    public Optional<String> functionAppRegion() {
         return this.functionAppRegion == null ? Optional.empty() : Optional.ofNullable(this.functionAppRegion);
     }
 
@@ -47,7 +47,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="functionAppResourceId")
       private final @Nullable String functionAppResourceId;
 
-    public Optional<String> getFunctionAppResourceId() {
+    public Optional<String> functionAppResourceId() {
         return this.functionAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.functionAppResourceId);
     }
 
@@ -58,7 +58,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -69,7 +69,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -80,7 +80,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -91,7 +91,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

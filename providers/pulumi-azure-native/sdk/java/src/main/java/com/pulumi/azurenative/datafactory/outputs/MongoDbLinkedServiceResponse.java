@@ -134,91 +134,91 @@ public final class MongoDbLinkedServiceResponse {
      * Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getAllowSelfSignedServerCert() {
+    public Optional<Object> allowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Database to verify the username and password. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAuthSource() {
+    public Optional<Object> authSource() {
         return Optional.ofNullable(this.authSource);
     }
     /**
      * The authentication type to be used to connect to the MongoDB database.
      * 
     */
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getDatabaseName() {
+    public Object databaseName() {
         return this.databaseName;
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableSsl() {
+    public Optional<Object> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password for authentication.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
     */
-    public Optional<Object> getPort() {
+    public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getServer() {
+    public Object server() {
         return this.server;
     }
     /**
@@ -226,14 +226,14 @@ public final class MongoDbLinkedServiceResponse {
      * Expected value is 'MongoDb'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }
 

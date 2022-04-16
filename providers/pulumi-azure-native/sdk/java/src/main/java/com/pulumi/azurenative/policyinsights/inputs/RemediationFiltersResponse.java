@@ -26,7 +26,7 @@ public final class RemediationFiltersResponse extends com.pulumi.resources.Invok
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 

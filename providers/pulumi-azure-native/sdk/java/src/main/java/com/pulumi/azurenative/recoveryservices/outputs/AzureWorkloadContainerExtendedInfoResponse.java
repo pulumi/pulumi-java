@@ -44,21 +44,21 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
      * Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
      * 
     */
-    public Optional<String> getHostServerName() {
+    public Optional<String> hostServerName() {
         return Optional.ofNullable(this.hostServerName);
     }
     /**
      * Inquiry Status for the container.
      * 
     */
-    public Optional<InquiryInfoResponse> getInquiryInfo() {
+    public Optional<InquiryInfoResponse> inquiryInfo() {
         return Optional.ofNullable(this.inquiryInfo);
     }
     /**
      * List of the nodes in case of distributed container.
      * 
     */
-    public List<DistributedNodesInfoResponse> getNodesList() {
+    public List<DistributedNodesInfoResponse> nodesList() {
         return this.nodesList == null ? List.of() : this.nodesList;
     }
 

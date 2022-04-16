@@ -28,7 +28,7 @@ public final class SourceLifeCycleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="deleteAfter", required=true)
       private final AbsoluteDeleteOptionResponse deleteAfter;
 
-    public AbsoluteDeleteOptionResponse getDeleteAfter() {
+    public AbsoluteDeleteOptionResponse deleteAfter() {
         return this.deleteAfter;
     }
 
@@ -39,14 +39,14 @@ public final class SourceLifeCycleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceDataStore", required=true)
       private final DataStoreInfoBaseResponse sourceDataStore;
 
-    public DataStoreInfoBaseResponse getSourceDataStore() {
+    public DataStoreInfoBaseResponse sourceDataStore() {
         return this.sourceDataStore;
     }
 
     @Import(name="targetDataStoreCopySettings")
       private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
 
-    public List<TargetCopySettingResponse> getTargetDataStoreCopySettings() {
+    public List<TargetCopySettingResponse> targetDataStoreCopySettings() {
         return this.targetDataStoreCopySettings == null ? List.of() : this.targetDataStoreCopySettings;
     }
 

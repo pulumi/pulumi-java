@@ -26,7 +26,7 @@ public final class AmazonS3CompatibleLocationResponse extends com.pulumi.resourc
     @Import(name="bucketName")
       private final @Nullable Object bucketName;
 
-    public Optional<Object> getBucketName() {
+    public Optional<Object> bucketName() {
         return this.bucketName == null ? Optional.empty() : Optional.ofNullable(this.bucketName);
     }
 
@@ -37,7 +37,7 @@ public final class AmazonS3CompatibleLocationResponse extends com.pulumi.resourc
     @Import(name="fileName")
       private final @Nullable Object fileName;
 
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
     }
 
@@ -48,7 +48,7 @@ public final class AmazonS3CompatibleLocationResponse extends com.pulumi.resourc
     @Import(name="folderPath")
       private final @Nullable Object folderPath;
 
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
@@ -60,7 +60,7 @@ public final class AmazonS3CompatibleLocationResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -71,7 +71,7 @@ public final class AmazonS3CompatibleLocationResponse extends com.pulumi.resourc
     @Import(name="version")
       private final @Nullable Object version;
 
-    public Optional<Object> getVersion() {
+    public Optional<Object> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

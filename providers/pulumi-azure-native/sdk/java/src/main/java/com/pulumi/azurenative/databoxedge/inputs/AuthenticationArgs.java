@@ -26,7 +26,7 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="symmetricKey")
       private final @Nullable Output<SymmetricKeyArgs> symmetricKey;
 
-    public Output<SymmetricKeyArgs> getSymmetricKey() {
+    public Output<SymmetricKeyArgs> symmetricKey() {
         return this.symmetricKey == null ? Codegen.empty() : this.symmetricKey;
     }
 

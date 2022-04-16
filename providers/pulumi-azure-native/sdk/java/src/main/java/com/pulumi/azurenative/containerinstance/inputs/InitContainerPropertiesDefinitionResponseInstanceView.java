@@ -26,7 +26,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="currentState", required=true)
       private final ContainerStateResponse currentState;
 
-    public ContainerStateResponse getCurrentState() {
+    public ContainerStateResponse currentState() {
         return this.currentState;
     }
 
@@ -37,7 +37,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="events", required=true)
       private final List<EventResponse> events;
 
-    public List<EventResponse> getEvents() {
+    public List<EventResponse> events() {
         return this.events;
     }
 
@@ -48,7 +48,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="previousState", required=true)
       private final ContainerStateResponse previousState;
 
-    public ContainerStateResponse getPreviousState() {
+    public ContainerStateResponse previousState() {
         return this.previousState;
     }
 
@@ -59,7 +59,7 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
     @Import(name="restartCount", required=true)
       private final Integer restartCount;
 
-    public Integer getRestartCount() {
+    public Integer restartCount() {
         return this.restartCount;
     }
 

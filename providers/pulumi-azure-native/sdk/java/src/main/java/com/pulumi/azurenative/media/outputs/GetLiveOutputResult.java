@@ -113,91 +113,91 @@ public final class GetLiveOutputResult {
      * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
      * 
     */
-    public String getArchiveWindowLength() {
+    public String archiveWindowLength() {
         return this.archiveWindowLength;
     }
     /**
      * The asset that the live output will write to.
      * 
     */
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
     /**
      * The creation time the live output.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * The description of the live output.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * HTTP Live Streaming (HLS) packing setting for the live output.
      * 
     */
-    public Optional<HlsResponse> getHls() {
+    public Optional<HlsResponse> hls() {
         return Optional.ofNullable(this.hls);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The time the live output was last modified.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * The manifest file name. If not provided, the service will generate one automatically.
      * 
     */
-    public Optional<String> getManifestName() {
+    public Optional<String> manifestName() {
         return Optional.ofNullable(this.manifestName);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The initial timestamp that the live output will start at, any content before this value will not be archived.
      * 
     */
-    public Optional<Double> getOutputSnapTime() {
+    public Optional<Double> outputSnapTime() {
         return Optional.ofNullable(this.outputSnapTime);
     }
     /**
      * The provisioning state of the live output.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource state of the live output.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

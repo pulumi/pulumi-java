@@ -27,7 +27,7 @@ public final class DataFlowStagingInfoArgs extends com.pulumi.resources.Resource
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
+    public Output<Object> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -38,7 +38,7 @@ public final class DataFlowStagingInfoArgs extends com.pulumi.resources.Resource
     @Import(name="linkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedService() {
+    public Output<LinkedServiceReferenceArgs> linkedService() {
         return this.linkedService == null ? Codegen.empty() : this.linkedService;
     }
 

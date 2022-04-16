@@ -27,7 +27,7 @@ public final class ManagedClusterAADProfileResponse extends com.pulumi.resources
     @Import(name="adminGroupObjectIDs")
       private final @Nullable List<String> adminGroupObjectIDs;
 
-    public List<String> getAdminGroupObjectIDs() {
+    public List<String> adminGroupObjectIDs() {
         return this.adminGroupObjectIDs == null ? List.of() : this.adminGroupObjectIDs;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedClusterAADProfileResponse extends com.pulumi.resources
     @Import(name="clientAppID")
       private final @Nullable String clientAppID;
 
-    public Optional<String> getClientAppID() {
+    public Optional<String> clientAppID() {
         return this.clientAppID == null ? Optional.empty() : Optional.ofNullable(this.clientAppID);
     }
 
@@ -49,7 +49,7 @@ public final class ManagedClusterAADProfileResponse extends com.pulumi.resources
     @Import(name="enableAzureRBAC")
       private final @Nullable Boolean enableAzureRBAC;
 
-    public Optional<Boolean> getEnableAzureRBAC() {
+    public Optional<Boolean> enableAzureRBAC() {
         return this.enableAzureRBAC == null ? Optional.empty() : Optional.ofNullable(this.enableAzureRBAC);
     }
 
@@ -60,7 +60,7 @@ public final class ManagedClusterAADProfileResponse extends com.pulumi.resources
     @Import(name="managed")
       private final @Nullable Boolean managed;
 
-    public Optional<Boolean> getManaged() {
+    public Optional<Boolean> managed() {
         return this.managed == null ? Optional.empty() : Optional.ofNullable(this.managed);
     }
 
@@ -71,7 +71,7 @@ public final class ManagedClusterAADProfileResponse extends com.pulumi.resources
     @Import(name="serverAppID")
       private final @Nullable String serverAppID;
 
-    public Optional<String> getServerAppID() {
+    public Optional<String> serverAppID() {
         return this.serverAppID == null ? Optional.empty() : Optional.ofNullable(this.serverAppID);
     }
 
@@ -82,7 +82,7 @@ public final class ManagedClusterAADProfileResponse extends com.pulumi.resources
     @Import(name="serverAppSecret")
       private final @Nullable String serverAppSecret;
 
-    public Optional<String> getServerAppSecret() {
+    public Optional<String> serverAppSecret() {
         return this.serverAppSecret == null ? Optional.empty() : Optional.ofNullable(this.serverAppSecret);
     }
 
@@ -93,7 +93,7 @@ public final class ManagedClusterAADProfileResponse extends com.pulumi.resources
     @Import(name="tenantID")
       private final @Nullable String tenantID;
 
-    public Optional<String> getTenantID() {
+    public Optional<String> tenantID() {
         return this.tenantID == null ? Optional.empty() : Optional.ofNullable(this.tenantID);
     }
 

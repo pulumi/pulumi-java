@@ -23,7 +23,7 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
     @Import(name="planName", required=true)
       private final String planName;
 
-    public String getPlanName() {
+    public String planName() {
         return this.planName;
     }
 
@@ -34,7 +34,7 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
     @Import(name="planProduct", required=true)
       private final String planProduct;
 
-    public String getPlanProduct() {
+    public String planProduct() {
         return this.planProduct;
     }
 
@@ -45,7 +45,7 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
     @Import(name="planPublisher", required=true)
       private final String planPublisher;
 
-    public String getPlanPublisher() {
+    public String planPublisher() {
         return this.planPublisher;
     }
 

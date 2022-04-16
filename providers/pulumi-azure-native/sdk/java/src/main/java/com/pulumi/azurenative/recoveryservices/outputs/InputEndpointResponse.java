@@ -49,28 +49,28 @@ public final class InputEndpointResponse {
      * The input endpoint name.
      * 
     */
-    public Optional<String> getEndpointName() {
+    public Optional<String> endpointName() {
         return Optional.ofNullable(this.endpointName);
     }
     /**
      * The input endpoint private port.
      * 
     */
-    public Optional<Integer> getPrivatePort() {
+    public Optional<Integer> privatePort() {
         return Optional.ofNullable(this.privatePort);
     }
     /**
      * The input endpoint protocol.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The input endpoint public port.
      * 
     */
-    public Optional<Integer> getPublicPort() {
+    public Optional<Integer> publicPort() {
         return Optional.ofNullable(this.publicPort);
     }
 

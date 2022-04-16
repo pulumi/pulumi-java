@@ -41,21 +41,21 @@ public final class PrivateLinkServiceConnectionStateResponse {
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
     */
-    public Optional<String> getActionsRequired() {
+    public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * The description for connection status. For example if connection is rejected it can indicate reason for rejection.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The private link service connection status.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

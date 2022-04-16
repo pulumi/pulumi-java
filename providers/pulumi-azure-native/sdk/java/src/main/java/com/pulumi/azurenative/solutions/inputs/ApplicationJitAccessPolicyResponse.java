@@ -28,7 +28,7 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="jitAccessEnabled", required=true)
       private final Boolean jitAccessEnabled;
 
-    public Boolean getJitAccessEnabled() {
+    public Boolean jitAccessEnabled() {
         return this.jitAccessEnabled;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="jitApprovalMode")
       private final @Nullable String jitApprovalMode;
 
-    public Optional<String> getJitApprovalMode() {
+    public Optional<String> jitApprovalMode() {
         return this.jitApprovalMode == null ? Optional.empty() : Optional.ofNullable(this.jitApprovalMode);
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="jitApprovers")
       private final @Nullable List<JitApproverDefinitionResponse> jitApprovers;
 
-    public List<JitApproverDefinitionResponse> getJitApprovers() {
+    public List<JitApproverDefinitionResponse> jitApprovers() {
         return this.jitApprovers == null ? List.of() : this.jitApprovers;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationJitAccessPolicyResponse extends com.pulumi.resourc
     @Import(name="maximumJitAccessDuration")
       private final @Nullable String maximumJitAccessDuration;
 
-    public Optional<String> getMaximumJitAccessDuration() {
+    public Optional<String> maximumJitAccessDuration() {
         return this.maximumJitAccessDuration == null ? Optional.empty() : Optional.ofNullable(this.maximumJitAccessDuration);
     }
 

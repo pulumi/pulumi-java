@@ -24,7 +24,7 @@ public final class MigrateMISyncCompleteCommandInputResponse {
      * Name of managed instance database
      * 
     */
-    public String getSourceDatabaseName() {
+    public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 

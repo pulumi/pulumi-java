@@ -25,7 +25,7 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends com.pulumi.resou
     @Import(name="ranges", required=true)
       private final Output<String> ranges;
 
-    public Output<String> getRanges() {
+    public Output<String> ranges() {
         return this.ranges;
     }
 
@@ -37,7 +37,7 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends com.pulumi.resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

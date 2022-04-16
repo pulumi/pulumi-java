@@ -27,7 +27,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
     @Import(name="errors")
       private final @Nullable MoveResourceErrorResponse errors;
 
-    public Optional<MoveResourceErrorResponse> getErrors() {
+    public Optional<MoveResourceErrorResponse> errors() {
         return this.errors == null ? Optional.empty() : Optional.ofNullable(this.errors);
     }
 
@@ -38,7 +38,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
     @Import(name="jobStatus")
       private final @Nullable JobStatusResponse jobStatus;
 
-    public Optional<JobStatusResponse> getJobStatus() {
+    public Optional<JobStatusResponse> jobStatus() {
         return this.jobStatus == null ? Optional.empty() : Optional.ofNullable(this.jobStatus);
     }
 
@@ -49,7 +49,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
     @Import(name="moveState", required=true)
       private final String moveState;
 
-    public String getMoveState() {
+    public String moveState() {
         return this.moveState;
     }
 

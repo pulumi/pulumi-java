@@ -27,7 +27,7 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -38,7 +38,7 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -49,7 +49,7 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="issuerUri")
       private final @Nullable Output<String> issuerUri;
 
-    public Output<String> getIssuerUri() {
+    public Output<String> issuerUri() {
         return this.issuerUri == null ? Codegen.empty() : this.issuerUri;
     }
 
@@ -60,7 +60,7 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> getScope() {
+    public Output<List<String>> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

@@ -25,7 +25,7 @@ public final class FileSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="shareId", required=true)
       private final Output<String> shareId;
 
-    public Output<String> getShareId() {
+    public Output<String> shareId() {
         return this.shareId;
     }
 

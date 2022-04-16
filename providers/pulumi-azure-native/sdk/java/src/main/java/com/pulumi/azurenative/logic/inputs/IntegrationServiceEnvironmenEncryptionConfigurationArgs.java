@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
     @Import(name="encryptionKeyReference")
       private final @Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 
-    public Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> getEncryptionKeyReference() {
+    public Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference() {
         return this.encryptionKeyReference == null ? Codegen.empty() : this.encryptionKeyReference;
     }
 

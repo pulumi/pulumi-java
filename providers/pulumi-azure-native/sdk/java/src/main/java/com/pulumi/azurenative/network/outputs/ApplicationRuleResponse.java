@@ -108,35 +108,35 @@ public final class ApplicationRuleResponse {
      * Description of the rule.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
     */
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of FQDN Tags for this rule.
      * 
     */
-    public List<String> getFqdnTags() {
+    public List<String> fqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
     /**
      * Name of the rule.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Array of Application Protocols.
      * 
     */
-    public List<FirewallPolicyRuleApplicationProtocolResponse> getProtocols() {
+    public List<FirewallPolicyRuleApplicationProtocolResponse> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
@@ -144,49 +144,49 @@ public final class ApplicationRuleResponse {
      * Expected value is 'ApplicationRule'.
      * 
     */
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
     */
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
     */
-    public List<String> getSourceIpGroups() {
+    public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
      * List of FQDNs for this rule.
      * 
     */
-    public List<String> getTargetFqdns() {
+    public List<String> targetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }
     /**
      * List of Urls for this rule condition.
      * 
     */
-    public List<String> getTargetUrls() {
+    public List<String> targetUrls() {
         return this.targetUrls == null ? List.of() : this.targetUrls;
     }
     /**
      * Terminate TLS connections for this rule.
      * 
     */
-    public Optional<Boolean> getTerminateTLS() {
+    public Optional<Boolean> terminateTLS() {
         return Optional.ofNullable(this.terminateTLS);
     }
     /**
      * List of destination azure web categories.
      * 
     */
-    public List<String> getWebCategories() {
+    public List<String> webCategories() {
         return this.webCategories == null ? List.of() : this.webCategories;
     }
 

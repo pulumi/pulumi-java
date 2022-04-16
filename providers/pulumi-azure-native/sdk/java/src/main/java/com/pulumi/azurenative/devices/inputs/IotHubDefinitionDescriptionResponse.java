@@ -27,7 +27,7 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="allocationWeight")
       private final @Nullable Integer allocationWeight;
 
-    public Optional<Integer> getAllocationWeight() {
+    public Optional<Integer> allocationWeight() {
         return this.allocationWeight == null ? Optional.empty() : Optional.ofNullable(this.allocationWeight);
     }
 
@@ -38,7 +38,7 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="applyAllocationPolicy")
       private final @Nullable Boolean applyAllocationPolicy;
 
-    public Optional<Boolean> getApplyAllocationPolicy() {
+    public Optional<Boolean> applyAllocationPolicy() {
         return this.applyAllocationPolicy == null ? Optional.empty() : Optional.ofNullable(this.applyAllocationPolicy);
     }
 
@@ -49,7 +49,7 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="connectionString", required=true)
       private final String connectionString;
 
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
 
@@ -60,7 +60,7 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -71,7 +71,7 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -24,7 +24,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -36,7 +36,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="highKey", required=true)
       private final String highKey;
 
-    public String getHighKey() {
+    public String highKey() {
         return this.highKey;
     }
 
@@ -48,7 +48,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="lowKey", required=true)
       private final String lowKey;
 
-    public String getLowKey() {
+    public String lowKey() {
         return this.lowKey;
     }
 
@@ -60,7 +60,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
     @Import(name="partitionScheme", required=true)
       private final String partitionScheme;
 
-    public String getPartitionScheme() {
+    public String partitionScheme() {
         return this.partitionScheme;
     }
 

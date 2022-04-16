@@ -49,28 +49,28 @@ public final class BuildArgumentResponse {
      * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
      * 
     */
-    public Optional<Boolean> getIsSecret() {
+    public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
      * The name of the argument.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of the argument.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value of the argument.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

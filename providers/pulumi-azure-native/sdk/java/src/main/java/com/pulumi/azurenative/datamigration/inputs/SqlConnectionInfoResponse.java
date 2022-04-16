@@ -26,7 +26,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="additionalSettings")
       private final @Nullable String additionalSettings;
 
-    public Optional<String> getAdditionalSettings() {
+    public Optional<String> additionalSettings() {
         return this.additionalSettings == null ? Optional.empty() : Optional.ofNullable(this.additionalSettings);
     }
 
@@ -37,7 +37,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="authentication")
       private final @Nullable String authentication;
 
-    public Optional<String> getAuthentication() {
+    public Optional<String> authentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
@@ -48,7 +48,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="dataSource", required=true)
       private final String dataSource;
 
-    public String getDataSource() {
+    public String dataSource() {
         return this.dataSource;
     }
 
@@ -59,7 +59,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="encryptConnection")
       private final @Nullable Boolean encryptConnection;
 
-    public Optional<Boolean> getEncryptConnection() {
+    public Optional<Boolean> encryptConnection() {
         return this.encryptConnection == null ? Optional.empty() : Optional.ofNullable(this.encryptConnection);
     }
 
@@ -70,7 +70,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -81,7 +81,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="platform")
       private final @Nullable String platform;
 
-    public Optional<String> getPlatform() {
+    public Optional<String> platform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
     }
 
@@ -92,7 +92,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="trustServerCertificate")
       private final @Nullable Boolean trustServerCertificate;
 
-    public Optional<Boolean> getTrustServerCertificate() {
+    public Optional<Boolean> trustServerCertificate() {
         return this.trustServerCertificate == null ? Optional.empty() : Optional.ofNullable(this.trustServerCertificate);
     }
 
@@ -104,7 +104,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -115,7 +115,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

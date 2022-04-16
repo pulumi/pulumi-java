@@ -21,7 +21,7 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="autoStorageContainerName")
       private final @Nullable String autoStorageContainerName;
 
-    public Optional<String> getAutoStorageContainerName() {
+    public Optional<String> autoStorageContainerName() {
         return this.autoStorageContainerName == null ? Optional.empty() : Optional.ofNullable(this.autoStorageContainerName);
     }
 
@@ -32,7 +32,7 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="blobPrefix")
       private final @Nullable String blobPrefix;
 
-    public Optional<String> getBlobPrefix() {
+    public Optional<String> blobPrefix() {
         return this.blobPrefix == null ? Optional.empty() : Optional.ofNullable(this.blobPrefix);
     }
 
@@ -43,7 +43,7 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fileMode")
       private final @Nullable String fileMode;
 
-    public Optional<String> getFileMode() {
+    public Optional<String> fileMode() {
         return this.fileMode == null ? Optional.empty() : Optional.ofNullable(this.fileMode);
     }
 
@@ -54,7 +54,7 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filePath")
       private final @Nullable String filePath;
 
-    public Optional<String> getFilePath() {
+    public Optional<String> filePath() {
         return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
     }
 
@@ -65,7 +65,7 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="httpUrl")
       private final @Nullable String httpUrl;
 
-    public Optional<String> getHttpUrl() {
+    public Optional<String> httpUrl() {
         return this.httpUrl == null ? Optional.empty() : Optional.ofNullable(this.httpUrl);
     }
 
@@ -76,7 +76,7 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="storageContainerUrl")
       private final @Nullable String storageContainerUrl;
 
-    public Optional<String> getStorageContainerUrl() {
+    public Optional<String> storageContainerUrl() {
         return this.storageContainerUrl == null ? Optional.empty() : Optional.ofNullable(this.storageContainerUrl);
     }
 

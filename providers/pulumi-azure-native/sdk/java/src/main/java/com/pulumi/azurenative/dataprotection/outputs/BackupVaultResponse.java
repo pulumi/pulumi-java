@@ -34,14 +34,14 @@ public final class BackupVaultResponse {
      * Provisioning state of the BackupVault resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Storage Settings
      * 
     */
-    public List<StorageSettingResponse> getStorageSettings() {
+    public List<StorageSettingResponse> storageSettings() {
         return this.storageSettings;
     }
 

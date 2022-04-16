@@ -51,28 +51,28 @@ public final class ApplicationJitAccessPolicyResponse {
      * Whether the JIT access is enabled.
      * 
     */
-    public Boolean getJitAccessEnabled() {
+    public Boolean jitAccessEnabled() {
         return this.jitAccessEnabled;
     }
     /**
      * JIT approval mode.
      * 
     */
-    public Optional<String> getJitApprovalMode() {
+    public Optional<String> jitApprovalMode() {
         return Optional.ofNullable(this.jitApprovalMode);
     }
     /**
      * The JIT approvers
      * 
     */
-    public List<JitApproverDefinitionResponse> getJitApprovers() {
+    public List<JitApproverDefinitionResponse> jitApprovers() {
         return this.jitApprovers == null ? List.of() : this.jitApprovers;
     }
     /**
      * The maximum duration JIT access is granted. This is an ISO8601 time period value.
      * 
     */
-    public Optional<String> getMaximumJitAccessDuration() {
+    public Optional<String> maximumJitAccessDuration() {
         return Optional.ofNullable(this.maximumJitAccessDuration);
     }
 

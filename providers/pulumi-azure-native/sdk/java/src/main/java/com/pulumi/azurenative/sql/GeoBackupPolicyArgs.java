@@ -23,7 +23,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -34,7 +34,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="geoBackupPolicyName")
       private final @Nullable Output<String> geoBackupPolicyName;
 
-    public Output<String> getGeoBackupPolicyName() {
+    public Output<String> geoBackupPolicyName() {
         return this.geoBackupPolicyName == null ? Codegen.empty() : this.geoBackupPolicyName;
     }
 
@@ -45,7 +45,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -67,7 +67,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="state", required=true)
       private final Output<GeoBackupPolicyState> state;
 
-    public Output<GeoBackupPolicyState> getState() {
+    public Output<GeoBackupPolicyState> state() {
         return this.state;
     }
 

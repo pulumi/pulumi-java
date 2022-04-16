@@ -36,14 +36,14 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="assessmentType", required=true)
       private final Output<Either<String,AssessmentType>> assessmentType;
 
-    public Output<Either<String,AssessmentType>> getAssessmentType() {
+    public Output<Either<String,AssessmentType>> assessmentType() {
         return this.assessmentType;
     }
 
     @Import(name="categories")
       private final @Nullable Output<List<Either<String,Categories>>> categories;
 
-    public Output<List<Either<String,Categories>>> getCategories() {
+    public Output<List<Either<String,Categories>>> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -54,7 +54,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -65,7 +65,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -76,7 +76,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="implementationEffort")
       private final @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
 
-    public Output<Either<String,ImplementationEffort>> getImplementationEffort() {
+    public Output<Either<String,ImplementationEffort>> implementationEffort() {
         return this.implementationEffort == null ? Codegen.empty() : this.implementationEffort;
     }
 
@@ -87,7 +87,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="partnerData")
       private final @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
 
-    public Output<SecurityAssessmentMetadataPartnerDataArgs> getPartnerData() {
+    public Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData() {
         return this.partnerData == null ? Codegen.empty() : this.partnerData;
     }
 
@@ -98,7 +98,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> getPreview() {
+    public Output<Boolean> preview() {
         return this.preview == null ? Codegen.empty() : this.preview;
     }
 
@@ -109,7 +109,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="remediationDescription")
       private final @Nullable Output<String> remediationDescription;
 
-    public Output<String> getRemediationDescription() {
+    public Output<String> remediationDescription() {
         return this.remediationDescription == null ? Codegen.empty() : this.remediationDescription;
     }
 
@@ -120,14 +120,14 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="severity", required=true)
       private final Output<Either<String,Severity>> severity;
 
-    public Output<Either<String,Severity>> getSeverity() {
+    public Output<Either<String,Severity>> severity() {
         return this.severity;
     }
 
     @Import(name="threats")
       private final @Nullable Output<List<Either<String,Threats>>> threats;
 
-    public Output<List<Either<String,Threats>>> getThreats() {
+    public Output<List<Either<String,Threats>>> threats() {
         return this.threats == null ? Codegen.empty() : this.threats;
     }
 
@@ -138,7 +138,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends com.pulumi.r
     @Import(name="userImpact")
       private final @Nullable Output<Either<String,UserImpact>> userImpact;
 
-    public Output<Either<String,UserImpact>> getUserImpact() {
+    public Output<Either<String,UserImpact>> userImpact() {
         return this.userImpact == null ? Codegen.empty() : this.userImpact;
     }
 

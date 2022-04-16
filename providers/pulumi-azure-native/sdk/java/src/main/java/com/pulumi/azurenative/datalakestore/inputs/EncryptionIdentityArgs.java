@@ -25,7 +25,7 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<EncryptionIdentityType> type;
 
-    public Output<EncryptionIdentityType> getType() {
+    public Output<EncryptionIdentityType> type() {
         return this.type;
     }
 

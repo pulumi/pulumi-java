@@ -44,7 +44,7 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return Defines whether to send email notifications about new security alerts
      * 
      */
-    public Output</* @Nullable */ SecurityContactPropertiesResponseAlertNotifications> getAlertNotifications() {
+    public Output</* @Nullable */ SecurityContactPropertiesResponseAlertNotifications> alertNotifications() {
         return this.alertNotifications;
     }
     /**
@@ -58,7 +58,7 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
      */
-    public Output</* @Nullable */ String> getEmails() {
+    public Output</* @Nullable */ String> emails() {
         return this.emails;
     }
     /**
@@ -72,7 +72,7 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
      */
-    public Output</* @Nullable */ SecurityContactPropertiesResponseNotificationsByRole> getNotificationsByRole() {
+    public Output</* @Nullable */ SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole() {
         return this.notificationsByRole;
     }
     /**
@@ -100,7 +100,7 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return The security contact's phone number
      * 
      */
-    public Output</* @Nullable */ String> getPhone() {
+    public Output</* @Nullable */ String> phone() {
         return this.phone;
     }
     /**
@@ -114,7 +114,7 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

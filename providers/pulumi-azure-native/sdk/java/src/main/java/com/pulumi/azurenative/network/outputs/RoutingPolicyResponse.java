@@ -40,21 +40,21 @@ public final class RoutingPolicyResponse {
      * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
      * 
     */
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations;
     }
     /**
      * The unique name for the routing policy.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The next hop resource id on which this routing policy is applicable to.
      * 
     */
-    public String getNextHop() {
+    public String nextHop() {
         return this.nextHop;
     }
 

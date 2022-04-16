@@ -74,14 +74,14 @@ public final class EventSubscriptionFilterResponse {
      * An array of advanced filters that are used for filtering event subscriptions.
      * 
     */
-    public List<Object> getAdvancedFilters() {
+    public List<Object> advancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
     /**
      * A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
      * 
     */
-    public List<String> getIncludedEventTypes() {
+    public List<String> includedEventTypes() {
         return this.includedEventTypes == null ? List.of() : this.includedEventTypes;
     }
     /**
@@ -89,7 +89,7 @@ public final class EventSubscriptionFilterResponse {
      * should be compared in a case sensitive manner.
      * 
     */
-    public Optional<Boolean> getIsSubjectCaseSensitive() {
+    public Optional<Boolean> isSubjectCaseSensitive() {
         return Optional.ofNullable(this.isSubjectCaseSensitive);
     }
     /**
@@ -98,7 +98,7 @@ public final class EventSubscriptionFilterResponse {
      * Wildcard characters are not supported in this path.
      * 
     */
-    public Optional<String> getSubjectBeginsWith() {
+    public Optional<String> subjectBeginsWith() {
         return Optional.ofNullable(this.subjectBeginsWith);
     }
     /**
@@ -106,7 +106,7 @@ public final class EventSubscriptionFilterResponse {
      * Wildcard characters are not supported in this path.
      * 
     */
-    public Optional<String> getSubjectEndsWith() {
+    public Optional<String> subjectEndsWith() {
         return Optional.ofNullable(this.subjectEndsWith);
     }
 

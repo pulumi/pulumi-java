@@ -39,21 +39,21 @@ public final class PartnerInfoResponse {
      * Resource identifier of the partner server.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Geo location of the partner server.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Replication role of the partner server.
      * 
     */
-    public String getReplicationRole() {
+    public String replicationRole() {
         return this.replicationRole;
     }
 
